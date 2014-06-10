@@ -1,0 +1,3830 @@
+1
+00:00:13,007 --> 00:00:17,008
+welcome everyone welcome welcome to TTC
+
+2
+00:00:17,071 --> 00:00:20,098
+and welcome to our introductory session
+about working
+
+3
+00:00:20,098 --> 00:00:23,166
+with metal now we are incredibly excited
+
+4
+00:00:24,066 --> 00:00:27,105
+to get to talk to you today about metal
+we believe its
+
+5
+00:00:28,005 --> 00:00:32,574
+literally going to be a game-changer for
+you your applications
+
+6
+00:00:32,619 --> 00:00:35,620
+and for Iowa's as you've heard
+
+7
+00:00:35,062 --> 00:00:38,161
+in the keynote metal is our new low
+overhead
+
+8
+00:00:39,061 --> 00:00:43,690
+high-performance an incredibly efficient
+Jeep you programming API
+
+9
+00:00:44,239 --> 00:00:47,271
+provides dramatically reduced overhead
+
+10
+00:00:47,559 --> 00:00:51,470
+for executing work such as graphics and
+computer on the Jeep you
+
+11
+00:00:51,047 --> 00:00:54,526
+and with the support for precompiled
+shakers
+
+12
+00:00:54,949 --> 00:00:58,260
+an incredibly efficient multi-threading
+we designed it
+
+13
+00:00:58,026 --> 00:01:03,027
+run like a dream a seven chip now today
+
+14
+00:01:03,036 --> 00:01:06,067
+in this session I'm gonna talk to you at
+a relatively high level
+
+15
+00:01:06,067 --> 00:01:09,075
+but the background how and why we
+created metal some the conceptual
+
+16
+00:01:10,047 --> 00:01:10,114
+framework
+
+17
+00:01:11,014 --> 00:01:15,095
+for the API also touch briefly on the
+metal shading language
+
+18
+00:01:15,095 --> 00:01:19,179
+and our developer tools sessions that
+follow will go into much more detail
+
+19
+00:01:20,079 --> 00:01:22,121
+about exactly how to use the metal API
+
+20
+00:01:23,021 --> 00:01:26,060
+how to build your applications looking
+things at a high level
+
+21
+00:01:26,006 --> 00:01:30,091
+for this session so first a better
+background on metal itself
+
+22
+00:01:31,045 --> 00:01:34,082
+they also heard in a keynote that metal
+
+23
+00:01:34,082 --> 00:01:37,145
+provides 10x the number of dropped calls
+
+24
+00:01:38,045 --> 00:01:41,108
+your application and what does that
+really mean
+
+25
+00:01:42,008 --> 00:01:45,021
+well it's important to think about rock
+calls
+
+26
+00:01:45,021 --> 00:01:48,056
+in this way each draw call requires it
+own
+
+27
+00:01:48,056 --> 00:01:52,072
+graphics state vector so when you're
+specifying
+
+28
+00:01:52,072 --> 00:01:55,140
+you would like to draw something with
+the Jeep you you also need to tell the
+
+29
+00:01:56,004 --> 00:01:56,076
+Jeep you
+
+30
+00:01:57,012 --> 00:02:00,015
+which caters which states how you want
+to configure the textures and the
+
+31
+00:02:00,042 --> 00:02:01,071
+rendering destinations
+
+32
+00:02:01,071 --> 00:02:06,074
+this is very important in order to get
+the fact you're looking for from the
+
+33
+00:02:06,074 --> 00:02:06,142
+Jeep you
+
+34
+00:02:07,042 --> 00:02:10,126
+but unfortunately previous API's
+changing state vectors
+
+35
+00:02:11,026 --> 00:02:16,108
+extremely expensive you have to
+translate between the API state state
+
+36
+00:02:17,008 --> 00:02:18,367
+that the hardware is going to consume
+
+37
+00:02:18,439 --> 00:02:22,250
+when ice expensive I mean not for the
+Jeep you
+
+38
+00:02:22,025 --> 00:02:26,076
+for the CPU because the CPU that's doing
+that type of translation:
+
+39
+00:02:26,076 --> 00:02:29,152
+let's take a look at a quick example
+
+40
+00:02:30,052 --> 00:02:33,101
+if your application is setting up friend
+rock all
+
+41
+00:02:34,001 --> 00:02:37,007
+you want to specify the Shaytards in the
+state in the textures for each
+
+42
+00:02:37,061 --> 00:02:41,148
+drop operation and I'll do that each
+time you want to specify and Rocco
+
+43
+00:02:42,048 --> 00:02:45,048
+and the CPU gets involved and spent a
+bunch of time
+
+44
+00:02:45,048 --> 00:02:49,063
+translating state changes and this
+request to draw
+
+45
+00:02:49,063 --> 00:02:52,642
+in the harbor commands before sending it
+to the GP you
+
+46
+00:02:53,209 --> 00:02:56,750
+so we had a way to make that much less
+expensive
+
+47
+00:02:56,075 --> 00:03:00,077
+we could give you a lot more dropped
+calls per frame you might ask your
+
+48
+00:03:00,095 --> 00:03:00,144
+supple
+
+49
+00:03:01,044 --> 00:03:04,137
+why do I want more dropped calls per
+frame or more dropped calls
+
+50
+00:03:05,037 --> 00:03:09,126
+but you build much better games and
+applications you can build
+
+51
+00:03:09,459 --> 00:03:12,520
+many more unique objects have many more
+bad guys
+
+52
+00:03:12,052 --> 00:03:16,081
+or other characters in the scene you can
+add a lot more visual variety tears
+
+53
+00:03:16,081 --> 00:03:16,142
+games
+
+54
+00:03:17,042 --> 00:03:20,043
+a probably the most important reason is
+
+55
+00:03:20,043 --> 00:03:23,352
+your game artists and designers are
+going to thank you profusely
+
+56
+00:03:23,739 --> 00:03:27,753
+because you can give them more freedom
+to realize their vision without having
+
+57
+00:03:27,879 --> 00:03:28,310
+to
+
+58
+00:03:28,031 --> 00:03:31,033
+jump through all types draw call
+gymnastics if it
+
+59
+00:03:31,051 --> 00:03:34,067
+what they'd like to see on screen into a
+tiny number dropped calls
+
+60
+00:03:34,067 --> 00:03:37,070
+I'll take a little bit of a look
+
+61
+00:03:37,097 --> 00:03:40,175
+what what life was like before metal now
+
+62
+00:03:41,075 --> 00:03:45,079
+now Apple has a long history a jeep you
+programming API
+
+63
+00:03:45,079 --> 00:03:50,126
+both implementing them maintaining them
+developing we supported standard APIs
+
+64
+00:03:51,026 --> 00:03:57,043
+like OpenGL an open CO sport it has
+across a wide variety of the main spot
+
+65
+00:03:57,043 --> 00:04:00,046
+at the high level and the low-level GP
+programming for things like tutti
+
+66
+00:04:00,073 --> 00:04:04,412
+3d animations and image processing and
+we supported
+
+67
+00:04:05,069 --> 00:04:08,158
+a wide variety up architectures in the
+hardware
+
+68
+00:04:08,959 --> 00:04:12,340
+across platforms computers devices
+
+69
+00:04:12,034 --> 00:04:16,173
+phones iPad and a wide variety
+
+70
+00:04:16,479 --> 00:04:21,340
+GPS and during all this time as we're
+supporting all this variety
+
+71
+00:04:21,034 --> 00:04:24,043
+we realize that their something pretty
+fundamental missing
+
+72
+00:04:24,349 --> 00:04:27,427
+from all of these API's and that
+
+73
+00:04:28,129 --> 00:04:32,940
+was the leveller deep integration Apple
+brings to its products
+
+74
+00:04:32,094 --> 00:04:36,073
+Apple as you know provides the operating
+system
+
+75
+00:04:36,919 --> 00:04:41,090
+the hardware and the products at the
+complete package
+
+76
+00:04:41,009 --> 00:04:44,040
+they're designed to work together
+seamlessly and so we thought to
+
+77
+00:04:44,004 --> 00:04:45,063
+ourselves
+
+78
+00:04:45,099 --> 00:04:48,187
+what if we could take the same approach
+to GP you programming that we take to
+
+79
+00:04:49,087 --> 00:04:51,090
+our products as a whole
+
+80
+00:04:51,009 --> 00:04:54,748
+if we could build these to work
+seamlessly we knew we could do the same
+
+81
+00:04:55,639 --> 00:04:59,644
+for GP programming and that's what we've
+done with metal
+
+82
+00:05:00,139 --> 00:05:03,050
+as I said we have a long history looking
+at these different types of programming
+
+83
+00:05:03,005 --> 00:05:04,011
+APIs
+
+84
+00:05:04,065 --> 00:05:07,144
+and we realized that if we wanted to get
+a ten-fold order of magnitude
+
+85
+00:05:08,044 --> 00:05:09,100
+improvement in performance
+
+86
+00:05:10,000 --> 00:05:15,005
+we're gonna have to do some pretty
+radical things
+
+87
+00:05:15,005 --> 00:05:18,091
+we decided to take a clean sheet
+approach
+
+88
+00:05:19,036 --> 00:05:24,050
+to this design and the key design goals
+that we had
+
+89
+00:05:24,005 --> 00:05:27,048
+were outlined here first we knew
+
+90
+00:05:27,093 --> 00:05:30,144
+you might have the thinnest possible API
+to be that we could create
+
+91
+00:05:31,044 --> 00:05:35,023
+we wanted to be reduce the amount of
+code that was executing
+
+92
+00:05:35,419 --> 00:05:40,447
+in between your application energy you
+to a bare minimum
+
+93
+00:05:40,699 --> 00:05:44,660
+we knew it needed to support the most
+modern cheap you hardware features
+
+94
+00:05:44,066 --> 00:05:48,135
+we didn't want it bogged down with the
+Croft twenty years a previous GP designs
+
+95
+00:05:48,729 --> 00:05:49,800
+we wanted a focused
+
+96
+00:05:49,008 --> 00:05:52,083
+entirely squarely on the future
+
+97
+00:05:53,055 --> 00:05:56,894
+we knew that there are some expensive
+CPU operations that needed to take place
+
+98
+00:05:57,389 --> 00:06:00,960
+we wanted a carefully control when those
+happen and make sure they happen at
+
+99
+00:06:00,096 --> 00:06:03,585
+infrequently as possible
+
+100
+00:06:04,449 --> 00:06:07,502
+and we wanted to give you the developer
+predictable
+
+101
+00:06:07,979 --> 00:06:11,340
+performance so you would know exactly
+when and how
+
+102
+00:06:11,034 --> 00:06:15,583
+those expensive operations to take place
+
+103
+00:06:15,889 --> 00:06:19,620
+we wanted to give you explicit control
+over when the work was
+
+104
+00:06:19,062 --> 00:06:22,155
+executed on the Jeep you say you could
+decide when and how
+
+105
+00:06:23,055 --> 00:06:26,082
+to kick off that work and never be
+surprised by what the implementation
+
+106
+00:06:26,082 --> 00:06:28,150
+might be behind your back
+
+107
+00:06:29,005 --> 00:06:33,102
+and last but not least we knew it had to
+be highly highly optimized for the a7
+
+108
+00:06:34,047 --> 00:06:39,083
+CPU behavior at this week I'm key a few
+moments
+
+109
+00:06:39,083 --> 00:06:42,088
+so how to think about metal where's it
+fit
+
+110
+00:06:43,033 --> 00:06:46,059
+well let's say you have your application
+here represented the topic this diagram
+
+111
+00:06:46,059 --> 00:06:49,061
+in green and you like to talk to the GP
+you
+
+112
+00:06:49,061 --> 00:06:53,069
+apple provides a wide variety API's to
+do just that
+
+113
+00:06:53,069 --> 00:06:56,074
+but they come at different levels
+abstraction different levels
+
+114
+00:06:57,019 --> 00:07:00,084
+a conceptual distance between you and
+the Jeep you
+
+115
+00:07:00,084 --> 00:07:03,118
+so at a high level you have of some
+API's like scene kid
+
+116
+00:07:04,018 --> 00:07:07,053
+and Sprite kit to get high level
+services foreseen grass for
+
+117
+00:07:07,053 --> 00:07:11,137
+2d and 3d animations and they're great
+provide a lot services
+
+118
+00:07:12,037 --> 00:07:16,042
+but they're relatively far from the Jeep
+you in terms of abstraction
+
+119
+00:07:16,087 --> 00:07:20,121
+then of course we have our 2d graphics
+and imaging API such as Coronation
+
+120
+00:07:21,021 --> 00:07:25,065
+core image and core graphics and he's to
+provide a lot of services
+
+121
+00:07:25,065 --> 00:07:30,087
+and if this is the type of operation are
+doing these are perfect API for you
+
+122
+00:07:30,087 --> 00:07:33,666
+and as always we have a standards-based
+3d graphics approach
+
+123
+00:07:34,449 --> 00:07:38,480
+with OpenGL ES but when we wanted to do
+something better
+
+124
+00:07:38,759 --> 00:07:42,380
+and give you high-efficiency GPO Access
+
+125
+00:07:42,038 --> 00:07:46,857
+at the then as possible a bi-layer
+that's where metal comes in
+
+126
+00:07:47,199 --> 00:07:51,000
+so how do we do this
+
+127
+00:07:51,000 --> 00:07:55,069
+well first thing we wanted understand is
+how most modern games
+
+128
+00:07:55,069 --> 00:07:58,210
+try to manage their CPU and GP workloads
+
+129
+00:07:58,021 --> 00:08:02,036
+so most games will target framing
+oftentimes it could be 60 frames a
+
+130
+00:08:02,036 --> 00:08:03,044
+second
+
+131
+00:08:03,044 --> 00:08:07,071
+sometimes thirty in this example are
+using thirty which works out to about 33
+
+132
+00:08:07,071 --> 00:08:10,560
+.3 milliseconds for free
+
+133
+00:08:11,199 --> 00:08:15,030
+on this time and you can see how most
+games will try to optimize
+
+134
+00:08:15,003 --> 00:08:18,012
+for this type of time
+
+135
+00:08:18,093 --> 00:08:21,106
+I'll try to balance the amount of CPU
+work type
+
+136
+00:08:22,006 --> 00:08:26,175
+GP work to fill the entire frame but
+will do so offset so the CP will be
+
+137
+00:08:26,229 --> 00:08:28,530
+working and generated commands for one
+frame
+
+138
+00:08:28,053 --> 00:08:31,192
+and the Jeep you will then consumers
+commands and the next spring
+
+139
+00:08:31,669 --> 00:08:34,703
+and while the CP was doing at the GP was
+busily working
+
+140
+00:08:35,009 --> 00:08:39,047
+on the previous frame and you later sat
+on a time line and you can see how you
+
+141
+00:08:39,389 --> 00:08:39,880
+get
+
+142
+00:08:39,088 --> 00:08:42,119
+relatively perfect parallelism
+
+143
+00:08:43,019 --> 00:08:47,094
+let's look at one frame in particular
+you notice in this example
+
+144
+00:08:47,094 --> 00:08:50,097
+worsening completely balanced bring for
+the CPU
+
+145
+00:08:50,097 --> 00:08:54,122
+energy you are occupying all the time
+
+146
+00:08:55,022 --> 00:08:58,371
+now fortunately real-life is not quite
+so balanced
+
+147
+00:08:58,569 --> 00:09:01,910
+and oftentimes you'll find that the CPU
+can take more time
+
+148
+00:09:01,091 --> 00:09:05,930
+to generate these commands energy P does
+to consume them
+
+149
+00:09:06,749 --> 00:09:09,777
+and it's unfortunate because it often
+leaves the Jeep you
+
+150
+00:09:10,029 --> 00:09:13,720
+idle you're not even using the system to
+its fullest capacity
+
+151
+00:09:13,072 --> 00:09:16,105
+and if you were okay like having a fifty
+percent faster Jeep you
+
+152
+00:09:17,005 --> 00:09:20,092
+but just getting their dark to save
+yourself
+
+153
+00:09:20,092 --> 00:09:24,301
+I'd like to fix this problem I'm just
+gonna give more work to the Jeep you
+
+154
+00:09:25,129 --> 00:09:28,150
+unfortunately what a fine is that to
+give more work to the Jeep you
+
+155
+00:09:28,339 --> 00:09:31,342
+yet the first spin up more work on the
+CPU
+
+156
+00:09:31,369 --> 00:09:33,447
+and if you are already bound by the
+amount of work you could do a CPU this
+
+157
+00:09:34,149 --> 00:09:35,233
+pushes out your frame time even further
+
+158
+00:09:35,989 --> 00:09:39,065
+an hour below or 30 frames per second
+target
+
+159
+00:09:39,749 --> 00:09:42,770
+and to add insult to injury the GP was
+still I'd
+
+160
+00:09:42,959 --> 00:09:45,964
+because now our frame time is actually
+longer energy you can tell that work
+
+161
+00:09:46,459 --> 00:09:48,495
+either
+
+162
+00:09:48,819 --> 00:09:51,900
+so I understand what's happening here
+it's helpful to realize that the CPU
+
+163
+00:09:52,629 --> 00:09:53,360
+workload
+
+164
+00:09:53,036 --> 00:09:57,935
+is actually split into two parts you
+have the applications workload what you
+
+165
+00:09:58,259 --> 00:09:59,304
+guys are providing
+
+166
+00:09:59,709 --> 00:10:02,751
+and they have all the implementation
+work for the GPO API itself whenever you
+
+167
+00:10:03,129 --> 00:10:03,194
+make a note
+
+168
+00:10:03,779 --> 00:10:06,785
+a whenever you make a jeep you
+programming call
+
+169
+00:10:07,379 --> 00:10:11,420
+we're gonna have to translate that in
+the way I described earlier
+
+170
+00:10:11,042 --> 00:10:15,321
+well it's this Jeep you programming API
+time on the CPU that we're focused on
+
+171
+00:10:15,699 --> 00:10:18,850
+with metal and metal dramatically
+
+172
+00:10:18,085 --> 00:10:22,136
+reduces this time down to a bare minimum
+
+173
+00:10:23,036 --> 00:10:27,795
+and this example with actually freed up
+additional CPU time now that the CPU the
+
+174
+00:10:28,119 --> 00:10:28,190
+title
+
+175
+00:10:28,829 --> 00:10:31,885
+and a frame time has become limited by
+the Jeep you and are actually beating
+
+176
+00:10:32,389 --> 00:10:35,424
+are 30 frames per second target so that
+was your goal you cannot render faster
+
+177
+00:10:35,739 --> 00:10:37,784
+than 30 frames per second
+
+178
+00:10:38,189 --> 00:10:41,196
+which have another option you can
+actually use that CPU time
+
+179
+00:10:41,889 --> 00:10:44,943
+to improve your game and make it even
+better
+
+180
+00:10:45,429 --> 00:10:48,438
+you could at my physics army more hey I
+
+181
+00:10:48,519 --> 00:10:51,604
+or other types of Cebu were close your
+application
+
+182
+00:10:52,369 --> 00:10:55,460
+we have a little bit a CPU idle time
+here left we can actually choose to go
+
+183
+00:10:56,279 --> 00:10:57,230
+back to our
+
+184
+00:10:57,023 --> 00:11:00,822
+30 frames per second target and add even
+more dropped calls
+
+185
+00:11:01,029 --> 00:11:04,051
+metal providing up to a 10x increase
+inefficiency
+
+186
+00:11:04,249 --> 00:11:07,268
+and you can either drawn more things
+with the Jeep you or maybe
+
+187
+00:11:07,439 --> 00:11:12,420
+just draw them in a much more flexible
+manner you can get more visual for it.
+
+188
+00:11:12,042 --> 00:11:15,621
+so that's what we're trying to do with
+Mel
+
+189
+00:11:15,999 --> 00:11:19,088
+now why is this GP programming so
+expensive on the CPU
+
+190
+00:11:19,889 --> 00:11:22,924
+understand what we did with metal
+helpful to take a deeper look here too
+
+191
+00:11:23,239 --> 00:11:26,322
+and are three main reasons first
+
+192
+00:11:27,069 --> 00:11:31,350
+you have what's called state validation
+some people think state validation
+
+193
+00:11:31,035 --> 00:11:35,064
+is just having implementation verify
+that you're calling the API in the right
+
+194
+00:11:35,379 --> 00:11:35,465
+way
+
+195
+00:11:36,239 --> 00:11:40,470
+and that's certainly true but it also
+involves encoding the state
+
+196
+00:11:40,047 --> 00:11:43,786
+from the API to the hardware and
+translating
+
+197
+00:11:44,209 --> 00:11:47,231
+and oftentimes looking at different
+aspects of the state and different state
+
+198
+00:11:47,429 --> 00:11:48,455
+objects in the API
+
+199
+00:11:48,689 --> 00:11:52,696
+and for you how to combine them into
+away harbors when I understand
+
+200
+00:11:52,759 --> 00:11:55,835
+this can be expensive and perhaps the
+most expensive version of this
+
+201
+00:11:56,519 --> 00:11:59,538
+actually the shaker compilation itself
+
+202
+00:11:59,709 --> 00:12:02,730
+you take your source code shares for
+your vertex and pixel shaders and they
+
+203
+00:12:02,073 --> 00:12:04,102
+have to be compiled runtime:
+
+204
+00:12:04,759 --> 00:12:07,826
+in to generate the Jeep use Machine Co
+
+205
+00:12:08,429 --> 00:12:11,790
+what's worse is that in a lot of API's
+perform at all
+
+206
+00:12:11,079 --> 00:12:15,568
+state and the shaker code was not
+described in the API in a way that
+
+207
+00:12:16,279 --> 00:12:18,288
+really map wealth with the hardware
+actually
+
+208
+00:12:18,369 --> 00:12:21,466
+was going to expect and so when you
+change certain states
+
+209
+00:12:22,339 --> 00:12:25,357
+you could find that behind the scenes we
+actually had to go back in a recompile
+
+210
+00:12:25,519 --> 00:12:25,607
+your shoulders
+
+211
+00:12:26,399 --> 00:12:30,402
+causing even more CPU work and last
+
+212
+00:12:30,699 --> 00:12:33,753
+they're sending the work to the GP
+itself and this can be expensive
+
+213
+00:12:34,239 --> 00:12:37,266
+the resources the memory the textures
+have to all be managed and given to the
+
+214
+00:12:37,509 --> 00:12:37,565
+Jeep you
+
+215
+00:12:38,069 --> 00:12:42,730
+in the way it can expect and because
+those first two items are so expensive
+
+216
+00:12:42,073 --> 00:12:45,042
+we often have encouraged you with
+previous eight guys to patch up lots of
+
+217
+00:12:45,699 --> 00:12:46,730
+work to send
+
+218
+00:12:46,073 --> 00:12:49,462
+to try to amortize these expensive cost
+across the fewer number
+
+219
+00:12:50,119 --> 00:12:53,670
+draw call just give more per truck all
+the GPO
+
+220
+00:12:53,067 --> 00:12:57,946
+of course this tends to work at the cost
+of flexibility to you the developer and
+
+221
+00:12:58,549 --> 00:12:59,625
+to your game designers
+
+222
+00:13:00,309 --> 00:13:04,318
+but it also increases latency because
+now the GP has more to work on a single
+
+223
+00:13:04,399 --> 00:13:06,424
+charge
+
+224
+00:13:06,649 --> 00:13:10,540
+so we wanted to fix these three key
+areas: expense
+
+225
+00:13:10,054 --> 00:13:14,141
+for GP programming to do that we thought
+about three times
+
+226
+00:13:15,041 --> 00:13:19,070
+3 occurrences in the application life
+cycle to focus in on
+
+227
+00:13:19,439 --> 00:13:22,507
+there's the application built I'm but
+when you're loading the content
+
+228
+00:13:23,119 --> 00:13:26,420
+your game and then when there's when you
+drop and they occur at different
+
+229
+00:13:26,042 --> 00:13:28,331
+frequencies
+
+230
+00:13:28,709 --> 00:13:33,720
+so first application built I'm it's
+basically never occurs
+
+231
+00:13:33,819 --> 00:13:36,857
+I see some surprised look on your faces
+because as developers you think you're
+
+232
+00:13:37,199 --> 00:13:38,199
+building your application
+
+233
+00:13:38,199 --> 00:13:42,199
+all the time that's true
+
+234
+00:13:42,199 --> 00:13:45,224
+but from your customer's perspective
+from the people using your application
+
+235
+00:13:45,449 --> 00:13:49,461
+they never see this so we can move
+things to occur application built I'm
+
+236
+00:13:49,569 --> 00:13:53,594
+if it eliminated the sixpence from
+experience if your game
+
+237
+00:13:53,819 --> 00:13:56,848
+and your content loading time which is
+relatively rare
+
+238
+00:13:57,109 --> 00:14:03,118
+again from a user's perspective throwing
+a low to level a few times per play
+
+239
+00:14:03,199 --> 00:14:06,730
+yep draw calls on the other hand you
+gonna do this thousands ideally
+
+240
+00:14:06,073 --> 00:14:09,712
+thousands of times for free and perform
+at all
+
+241
+00:14:10,369 --> 00:14:13,462
+unfortunately all three of those
+expensive thats operations for that
+
+242
+00:14:14,299 --> 00:14:17,306
+CPU occurred in this last time
+
+243
+00:14:17,369 --> 00:14:21,230
+at your local time thousands of times
+per frame or more likely
+
+244
+00:14:21,023 --> 00:14:25,132
+a few hundred times for frame because
+that's all the CQ could absorb
+
+245
+00:14:25,339 --> 00:14:29,387
+now with metal we've moved is expensive
+operations to occur
+
+246
+00:14:29,819 --> 00:14:33,824
+much more optimally so but shaker
+compilation to occur application built
+
+247
+00:14:34,319 --> 00:14:34,720
+I'm
+
+248
+00:14:34,072 --> 00:14:37,741
+again out in the field of view for the
+users have your game
+
+249
+00:14:38,389 --> 00:14:42,403
+and content loading that's when we do
+state validation
+
+250
+00:14:42,529 --> 00:14:46,529
+this again is relatively rare this means
+the only thing we have to do a draw call
+
+251
+00:14:46,529 --> 00:14:48,558
+time is the most important thing to do
+would rock all time
+
+252
+00:14:48,819 --> 00:14:51,863
+just kick off the work GP you
+
+253
+00:14:52,259 --> 00:14:55,264
+so that's the how and the why we created
+metal
+
+254
+00:14:55,759 --> 00:14:58,784
+now wanna take a deeper look at the API
+itself
+
+255
+00:14:59,009 --> 00:15:01,108
+and we'll take a look at some a
+conceptual framework for the API
+
+256
+00:15:01,999 --> 00:15:03,230
+starting
+
+257
+00:15:03,023 --> 00:15:07,072
+with objects the API
+
+258
+00:15:07,279 --> 00:15:10,338
+the first object to talk about in the
+middle API is the device
+
+259
+00:15:10,869 --> 00:15:13,870
+and this essentially just an abstraction
+on the Jeep you think that's going to
+
+260
+00:15:13,879 --> 00:15:13,973
+consume
+
+261
+00:15:14,819 --> 00:15:18,230
+your rendering in computer commands
+
+262
+00:15:18,023 --> 00:15:22,402
+those commands will be stored and
+submitted to the Jeep you a command Q
+
+263
+00:15:22,609 --> 00:15:25,692
+and the command Q its job simply to
+decide and let you specify
+
+264
+00:15:26,439 --> 00:15:29,513
+what order those commands will be
+executed
+
+265
+00:15:30,179 --> 00:15:34,220
+those commands themselves are stored in
+what's called a command buffer
+
+266
+00:15:34,022 --> 00:15:37,871
+the stores the translated Harbor
+commands ready for consumption
+
+267
+00:15:38,069 --> 00:15:42,138
+by the GP you and command encoder
+
+268
+00:15:42,759 --> 00:15:45,776
+is the API object that's responsible for
+that translation
+
+269
+00:15:45,929 --> 00:15:50,220
+when you create a commanding KOTOR and
+you use it to write a new command buffer
+
+270
+00:15:50,022 --> 00:15:54,061
+thats the translation
+
+271
+00:15:54,259 --> 00:15:57,354
+the state of the API it described in a
+series of State objects
+
+272
+00:15:58,209 --> 00:16:01,240
+for things like higher frame buffers are
+set up higher blending in
+
+273
+00:16:01,519 --> 00:16:04,542
+and your depth and your sampling stay to
+set up these are all described to the AP
+
+274
+00:16:04,749 --> 00:16:04,757
+I
+
+275
+00:16:05,549 --> 00:16:09,600
+objects which will talk about in all
+three sessions today
+
+276
+00:16:10,059 --> 00:16:13,064
+and you have the code your shade or
+silver texture
+
+277
+00:16:13,109 --> 00:16:16,137
+pics shares
+
+278
+00:16:16,389 --> 00:16:19,420
+and last you have your data your
+resources
+
+279
+00:16:19,699 --> 00:16:22,786
+your memory the the textures and and the
+vertex
+
+280
+00:16:23,569 --> 00:16:26,642
+offers and the cheater Constance those
+are all stored in resources
+
+281
+00:16:27,299 --> 00:16:30,367
+so let's take a look next and how these
+objects fit together by walk
+
+282
+00:16:30,979 --> 00:16:35,983
+walking through a bit about how we
+construct the object any
+
+283
+00:16:36,019 --> 00:16:39,042
+the first thing you have is the device
+
+284
+00:16:39,249 --> 00:16:42,304
+37 this if the device is the Jeep you
+think it's gonna consume your commands
+
+285
+00:16:42,799 --> 00:16:45,870
+from that you create the command Q and
+typically you have one of these
+
+286
+00:16:46,509 --> 00:16:49,528
+your application from the command Q you
+create
+
+287
+00:16:49,699 --> 00:16:52,711
+wanna Markham and offers to use to store
+the harbour commands
+
+288
+00:16:52,819 --> 00:16:58,470
+and right into those commands with the
+render command in Kotor in this example
+
+289
+00:16:58,047 --> 00:17:01,686
+now in order to generate those commands
+you need to specify some information
+
+290
+00:17:02,109 --> 00:17:02,207
+render commander
+
+291
+00:17:03,089 --> 00:17:06,100
+and you do that by attaching various
+objects
+
+292
+00:17:06,001 --> 00:17:09,002
+to the random encounter before use it so
+for instance
+
+293
+00:17:09,011 --> 00:17:13,340
+you specify your data buffers and your
+textures you want to use
+
+294
+00:17:13,439 --> 00:17:17,470
+to do this rendering operation you
+notice in this diagram
+
+295
+00:17:17,047 --> 00:17:20,062
+we also show something called the
+texture descriptor and texture
+
+296
+00:17:20,062 --> 00:17:22,111
+descriptor is used to create the
+textures
+
+297
+00:17:23,011 --> 00:17:28,230
+it specifies all the necessary state
+used for texture object creation
+
+298
+00:17:28,329 --> 00:17:31,730
+probably the biggest state object is the
+render pipeline state
+
+299
+00:17:31,073 --> 00:17:34,142
+and it too is constructed from a
+descriptor
+
+300
+00:17:34,799 --> 00:17:38,220
+and the descriptor in this case
+described all love the 3d rendering
+
+301
+00:17:38,022 --> 00:17:39,059
+state you need to create
+
+302
+00:17:39,059 --> 00:17:42,088
+single render pipeline
+
+303
+00:17:42,088 --> 00:17:45,144
+similarly have descriptors freed up and
+stencil state that use to create those
+
+304
+00:17:46,044 --> 00:17:47,050
+objects
+
+305
+00:17:47,005 --> 00:17:50,043
+and we have syriza state
+
+306
+00:17:50,088 --> 00:17:53,377
+for describing render past self
+
+307
+00:17:54,169 --> 00:17:58,360
+how you're going to output directory now
+the reason we split the state up into
+
+308
+00:17:58,036 --> 00:17:58,124
+descriptors
+
+309
+00:17:59,024 --> 00:18:03,573
+and state objects it because once you've
+specified what all the state combination
+
+310
+00:18:03,789 --> 00:18:05,110
+should be
+
+311
+00:18:05,011 --> 00:18:08,023
+metal bakes all of these into a small
+number
+
+312
+00:18:08,023 --> 00:18:11,029
+state objects that now all the state has
+been translated all the shares have been
+
+313
+00:18:11,083 --> 00:18:12,125
+compiled
+
+314
+00:18:13,025 --> 00:18:16,194
+and system is ready to go you can now
+issue your draw calls
+
+315
+00:18:16,419 --> 00:18:19,450
+incredibly quickly without worrying and
+that the implantation
+
+316
+00:18:19,045 --> 00:18:22,047
+gonna have to come around to do some
+late binding translation or figure out
+
+317
+00:18:22,047 --> 00:18:25,075
+what you're trying to do is valid in the
+first place
+
+318
+00:18:25,075 --> 00:18:28,087
+a couple more notes so the source
+
+319
+00:18:28,087 --> 00:18:31,646
+resources the textures and buffers here
+you can change those as you go
+
+320
+00:18:32,429 --> 00:18:37,454
+the render targets themselves are fixed
+forgiven render mankiller
+
+321
+00:18:37,679 --> 00:18:40,775
+we'll talk more about why that's
+important in just a moment
+
+322
+00:18:41,639 --> 00:18:44,676
+now and bring this diagram a little bit
+we can see how objects are actually
+
+323
+00:18:45,009 --> 00:18:46,017
+sending data to the device
+
+324
+00:18:46,809 --> 00:18:50,250
+you have one or more render commanding
+coaters one for each rendering pass
+
+325
+00:18:50,025 --> 00:18:53,424
+writing into the command buffer you can
+also
+
+326
+00:18:53,649 --> 00:18:56,658
+interleave different types of commands
+in this case I'm using computer commands
+
+327
+00:18:57,549 --> 00:18:58,130
+in the middle
+
+328
+00:18:58,013 --> 00:19:01,069
+my in the middle my friend
+
+329
+00:19:01,069 --> 00:19:04,146
+and as we said metal support efficient
+multi-threading you can actually
+
+330
+00:19:05,046 --> 00:19:05,124
+construct
+
+331
+00:19:06,024 --> 00:19:10,123
+multiple command buffers in parallel
+using multiple threats
+
+332
+00:19:11,023 --> 00:19:13,029
+let's talk a little bit more about the
+command submission model itself
+
+333
+00:19:13,083 --> 00:19:15,012
+understand how this works
+
+334
+00:19:15,759 --> 00:19:19,000
+as we said man decoders will in code API
+
+335
+00:19:19,000 --> 00:19:22,047
+here one called the FBI command into the
+harbor state
+
+336
+00:19:22,047 --> 00:19:26,060
+and the store those commands in the hard
+work a member for
+
+337
+00:19:26,006 --> 00:19:30,093
+are three types a commanding voters for
+generate three different types
+
+338
+00:19:31,047 --> 00:19:34,047
+work on the Jeep you we have render cue
+
+339
+00:19:34,047 --> 00:19:37,376
+and let and we'll talk about each of
+them in detail
+
+340
+00:19:37,799 --> 00:19:40,340
+but important unrealized fears even
+interleave these different types of
+
+341
+00:19:40,034 --> 00:19:41,035
+operations
+
+342
+00:19:41,035 --> 00:19:45,063
+in a single command buffer and within a
+single frame very efficiently
+
+343
+00:19:45,063 --> 00:19:48,342
+and is it because the commanding coaters
+themselves in caps like all the state
+
+344
+00:19:48,909 --> 00:19:49,008
+necessary
+
+345
+00:19:49,899 --> 00:19:53,740
+so we don't have to do implicit
+transitions between different types of
+
+346
+00:19:53,074 --> 00:19:54,133
+operations
+
+347
+00:19:54,799 --> 00:19:58,110
+and behind the scenes we don't have to
+try to save and restore
+
+348
+00:19:58,011 --> 00:20:01,049
+all the state necessary for using these
+different types of operations all
+
+349
+00:20:01,049 --> 00:20:05,588
+on your explicit control
+
+350
+00:20:06,029 --> 00:20:08,117
+members themselves are incredibly
+lightweight and most applications are
+
+351
+00:20:08,909 --> 00:20:08,915
+gonna create
+
+352
+00:20:09,509 --> 00:20:14,200
+a large number of these in their frames
+
+353
+00:20:14,002 --> 00:20:19,591
+and you control exactly when and how it
+submitted to the Jeep you
+
+354
+00:20:19,789 --> 00:20:23,470
+once they've been submitted metal
+signals you the application
+
+355
+00:20:23,047 --> 00:20:26,070
+when this command percent completed
+their execution energy you to get
+
+356
+00:20:26,007 --> 00:20:29,010
+very fine-grained control and clear
+notification about exactly what's
+
+357
+00:20:30,000 --> 00:20:30,006
+happening
+
+358
+00:20:30,006 --> 00:20:35,325
+one point I'm and very important to
+realize that these commanding cutters
+
+359
+00:20:35,919 --> 00:20:38,840
+they're not they're not just sending
+some work of it later is going to be
+
+360
+00:20:38,084 --> 00:20:38,903
+consumed
+
+361
+00:20:39,659 --> 00:20:42,747
+by the CPU they're actually generating
+these commands immediately there's no
+
+362
+00:20:43,539 --> 00:20:44,591
+deferred state validation
+
+363
+00:20:45,059 --> 00:20:50,090
+essentially like you're making a direct
+call to the jeep driver
+
+364
+00:20:50,009 --> 00:20:53,058
+as I mentioned you can also
+multi-threaded man according to get even
+
+365
+00:20:53,139 --> 00:20:53,231
+more
+
+366
+00:20:54,059 --> 00:20:57,154
+performance multiple commander first
+being put in para la crosse
+
+367
+00:20:58,009 --> 00:21:01,014
+threads and yet you get to decide
+exactly when
+
+368
+00:21:01,509 --> 00:21:04,850
+those commands to be executed so you
+have the controlled about to split out
+
+369
+00:21:04,085 --> 00:21:06,294
+the order in which the command will be
+constructed
+
+370
+00:21:07,059 --> 00:21:11,120
+while maintaining order you wish for the
+execution on the G
+
+371
+00:21:11,012 --> 00:21:14,048
+and we've provided incredibly efficient
+implementation no atomic clock to make
+
+372
+00:21:14,048 --> 00:21:15,737
+sure you can get scaleable performance
+
+373
+00:21:16,169 --> 00:21:19,228
+across CPU cores so that's the commands
+
+374
+00:21:19,759 --> 00:21:22,850
+next gonna take a look at the resources
+the memory
+
+375
+00:21:22,085 --> 00:21:25,544
+the objects in the API for specifying
+data
+
+376
+00:21:26,309 --> 00:21:29,343
+now we designed the resource model in
+metal
+
+377
+00:21:29,649 --> 00:21:33,687
+explicitly for a7 unified memory system
+
+378
+00:21:34,029 --> 00:21:37,077
+this means that the CPU in the Jeep you
+are sharing the exact same
+
+379
+00:21:37,509 --> 00:21:41,564
+memory for exchanging data there's no
+implicit copies were not coming in
+
+380
+00:21:42,059 --> 00:21:43,083
+behind the scenes and
+
+381
+00:21:43,299 --> 00:21:47,970
+and and taking the data and moving it
+somewhere else for the GP to see it
+
+382
+00:21:47,097 --> 00:21:50,786
+we also manage the CPU and CPU cache
+coherency for you
+
+383
+00:21:51,659 --> 00:21:54,686
+you don't have to worry about flushing
+caches between SEP in the Jeep you
+
+384
+00:21:54,929 --> 00:21:57,974
+you simply have to make sure that you
+schedule your work to occur such that
+
+385
+00:21:58,379 --> 00:21:59,384
+the Jeep you
+
+386
+00:21:59,429 --> 00:22:02,960
+and the CPU are not writing to the same
+to commemorate the same time
+
+387
+00:22:02,096 --> 00:22:05,144
+you don't have to do anything to manage
+cash is and
+
+388
+00:22:06,044 --> 00:22:09,243
+are you taking on this responsibility
+for synchronization
+
+389
+00:22:09,639 --> 00:22:12,727
+between the jeep in the CPU we can offer
+you significantly higher performance
+
+390
+00:22:13,519 --> 00:22:15,750
+because we're not implicitly
+synchronizing things that didn't
+
+391
+00:22:15,075 --> 00:22:17,161
+necessarily need to be synchronized
+
+392
+00:22:18,061 --> 00:22:22,062
+they're two different types resources
+for you too
+
+393
+00:22:22,071 --> 00:22:25,660
+to use in your application the first is
+textures
+
+394
+00:22:26,299 --> 00:22:29,570
+which are simply format image data that
+you use for
+
+395
+00:22:29,057 --> 00:22:33,756
+rendering for Sat for source data or for
+rendering destinations
+
+396
+00:22:34,269 --> 00:22:38,090
+and our data buffers which are
+essentially on Form added ranges
+
+397
+00:22:38,009 --> 00:22:41,050
+memory you can pick them I just a bag
+bites to store your vertex data your
+
+398
+00:22:41,005 --> 00:22:42,904
+share Constance any output memory
+
+399
+00:22:43,399 --> 00:22:46,740
+from your GP workloads
+
+400
+00:22:46,074 --> 00:22:49,093
+the important thing to remember metal is
+that the structure
+
+401
+00:22:49,759 --> 00:22:52,812
+above these resources is immutable you
+cannot change it
+
+402
+00:22:53,289 --> 00:22:58,450
+once you create a texture a given size
+are given level ever given format
+
+403
+00:22:58,045 --> 00:23:02,874
+its it's baked and this let us avoid
+costly resource validation
+
+404
+00:23:03,279 --> 00:23:07,293
+that would previous have taken place and
+other API's or we have to figure out
+
+405
+00:23:07,419 --> 00:23:11,350
+hey now that you've changed how a
+texture is structured is it still valid
+
+406
+00:23:11,035 --> 00:23:11,109
+we still use it
+
+407
+00:23:12,009 --> 00:23:15,035
+as a rendering destination is it on that
+map complete we have to do any of that
+
+408
+00:23:15,035 --> 00:23:16,039
+because you've specified at all
+
+409
+00:23:16,075 --> 00:23:19,133
+up front if you want to use two
+different textures
+
+410
+00:23:20,033 --> 00:23:25,222
+with 322 different formats retexture you
+simply create two different textures
+
+411
+00:23:25,519 --> 00:23:28,597
+and this is actually much more efficient
+we can rapidly switch between ease
+
+412
+00:23:29,299 --> 00:23:32,387
+I on in the middle implementation
+
+413
+00:23:33,179 --> 00:23:37,000
+course you can change the content
+textures buffers
+
+414
+00:23:37,000 --> 00:23:40,039
+and to do that provide several methods
+
+415
+00:23:40,039 --> 00:23:43,051
+so you can update data buffers directly
+is simply get a pointer
+
+416
+00:23:43,159 --> 00:23:46,870
+to the underlying storage there's no
+lock EP I need because again
+
+417
+00:23:46,087 --> 00:23:49,606
+running on a unified memory system and
+for textures
+
+418
+00:23:50,389 --> 00:23:53,870
+we have what's called an implementation
+private storage now that doesn't mean
+
+419
+00:23:53,087 --> 00:23:55,366
+that we're copying the data and moving
+it somewhere else
+
+420
+00:23:56,149 --> 00:23:59,211
+this simply means that we will reformat
+the textures for efficient rendering
+
+421
+00:23:59,769 --> 00:24:02,856
+on the Jeep you we provide some blazing
+fast update routines
+
+422
+00:24:03,639 --> 00:24:07,120
+in metal to do that
+
+423
+00:24:07,012 --> 00:24:10,024
+if union a synchronous update routine
+for your textures are buffers you can do
+
+424
+00:24:10,024 --> 00:24:10,933
+this to be the bullet
+
+425
+00:24:11,149 --> 00:24:16,240
+encoder and we'll talk in just a moment
+about how that works
+
+426
+00:24:17,059 --> 00:24:19,141
+and one other thing you can do with
+resources and textures in particular you
+
+427
+00:24:19,879 --> 00:24:21,850
+can actually share the underlying
+storage
+
+428
+00:24:21,085 --> 00:24:24,157
+across multiple textures and reinterpret
+pixel data
+
+429
+00:24:25,057 --> 00:24:28,786
+differently in each one so for instance
+if you have a texture
+
+430
+00:24:29,299 --> 00:24:33,301
+that is using a single 32-bit integer
+pixel format
+
+431
+00:24:33,499 --> 00:24:37,513
+you have another texture which is using
+a four component RGBA
+
+432
+00:24:37,639 --> 00:24:42,460
+8 pixel format and they can actually
+pointing at the same underlying storage
+
+433
+00:24:42,046 --> 00:24:46,057
+because the pixel size at the same
+between the two
+
+434
+00:24:46,057 --> 00:24:49,996
+and you can also share the texture
+storage with data buffers
+
+435
+00:24:50,509 --> 00:24:53,600
+the this will i you direct access to the
+underlying storage with the CPU and to
+
+436
+00:24:54,419 --> 00:24:56,440
+use the underlying storage as a data
+buffer
+
+437
+00:24:56,044 --> 00:25:02,153
+and we simply assume role in eel role in
+your pics order in this particular case
+
+438
+00:25:02,549 --> 00:25:05,633
+okay those are resources now I'm a talk
+briefly about the commanding voters
+
+439
+00:25:06,389 --> 00:25:07,402
+themselves
+
+440
+00:25:07,519 --> 00:25:10,581
+as I mentioned there are three basic
+commanding other types
+
+441
+00:25:11,139 --> 00:25:14,139
+you have your render computer
+
+442
+00:25:14,139 --> 00:25:19,139
+template commanding cutters and I talk
+about you to these in sequence
+
+443
+00:25:19,139 --> 00:25:23,320
+the first of the render mankiller have a
+better communicator
+
+444
+00:25:23,032 --> 00:25:26,001
+you can think about this as all of the
+harbour commands necessary for
+
+445
+00:25:26,289 --> 00:25:26,341
+generating
+
+446
+00:25:26,809 --> 00:25:30,840
+single rendering pass and bypass I mean
+all the rendering
+
+447
+00:25:30,084 --> 00:25:33,122
+21 frame buffer object one said a friend
+or target
+
+448
+00:25:34,022 --> 00:25:37,551
+if you wanna change to another set
+render targets
+
+449
+00:25:37,749 --> 00:25:41,120
+to another frame buffer you simply as
+another render
+
+450
+00:25:41,012 --> 00:25:45,024
+mankiller and its all the state for
+specifying the vertex and fragment
+
+451
+00:25:45,024 --> 00:25:45,823
+stages
+
+452
+00:25:46,039 --> 00:25:49,590
+the 3d pipeline
+
+453
+00:25:49,059 --> 00:25:52,098
+it legit in early the state changes the
+resources
+
+454
+00:25:52,629 --> 00:25:56,633
+and rock also net surfer instructing
+your your pass the critically
+
+455
+00:25:56,669 --> 00:25:59,670
+there's no draw time compilation
+
+456
+00:25:59,679 --> 00:26:02,686
+you get to control the app developer
+exactly when and how
+
+457
+00:26:03,379 --> 00:26:08,200
+all the state compilation an expensive
+validation actually takes place
+
+458
+00:26:08,002 --> 00:26:11,181
+and you do that the series API calls and
+state objects
+
+459
+00:26:11,379 --> 00:26:14,980
+and I'll show you just a few those here
+as we talked about you have your depth
+
+460
+00:26:14,098 --> 00:26:15,123
+and stencil object
+
+461
+00:26:16,023 --> 00:26:20,312
+sampler objects the render pipeline and
+they describe various aspects
+
+462
+00:26:20,519 --> 00:26:25,450
+love the 3d rendering state
+
+463
+00:26:25,045 --> 00:26:28,504
+basically almost everything fits in the
+render pipeline for you
+
+464
+00:26:28,909 --> 00:26:32,230
+that respect for your shade urs your
+your plan states all
+
+465
+00:26:32,023 --> 00:26:36,072
+higher for text as actually specified
+and all that can fit into the state
+
+466
+00:26:36,279 --> 00:26:38,710
+objects
+
+467
+00:26:38,071 --> 00:26:42,030
+important to realize and metal is that
+not all state objects are created equal
+
+468
+00:26:42,669 --> 00:26:45,733
+some other states are actually very
+expensive to change and for these we put
+
+469
+00:26:46,309 --> 00:26:47,350
+them in what's called
+
+470
+00:26:47,035 --> 00:26:50,234
+immutable are unchangeable said objects
+
+471
+00:26:50,549 --> 00:26:53,710
+and can't change the state's after
+you've created the object
+
+472
+00:26:53,071 --> 00:26:56,134
+these are the types of things that
+affect expensive operation for cause
+
+473
+00:26:57,034 --> 00:27:01,061
+recompilation to occur so things like
+the freight the shakers themselves
+
+474
+00:27:01,061 --> 00:27:04,085
+we don't want to be you don't want us to
+be recompiling them all the time
+
+475
+00:27:04,085 --> 00:27:07,124
+so what you specify those interstate
+object
+
+476
+00:27:07,889 --> 00:27:10,956
+can change them but other things like
+the viewport says are actually really
+
+477
+00:27:11,559 --> 00:27:11,618
+cheap
+
+478
+00:27:12,149 --> 00:27:17,870
+to specify and really keep the change
+and so those remain flexible
+
+479
+00:27:17,087 --> 00:27:20,121
+I talked a few times about how the API
+was designed
+
+480
+00:27:21,021 --> 00:27:24,200
+with the a7 in mind and what are the key
+ways
+
+481
+00:27:24,389 --> 00:27:29,860
+you can see this is and how we handle
+framebuffer loads and stores
+
+482
+00:27:29,086 --> 00:27:32,087
+a seven GP you is 8 I'll days
+
+483
+00:27:32,087 --> 00:27:36,095
+deferred mode render I'm going to go to
+the details of what
+
+484
+00:27:36,095 --> 00:27:41,170
+this means but one important peace that
+is that it has what's called a tile cash
+
+485
+00:27:42,007 --> 00:27:45,012
+and it I'll cash is used at the
+beginning and
+
+486
+00:27:46,002 --> 00:27:49,007
+and the beach rendering pass to to load
+the contents
+
+487
+00:27:49,007 --> 00:27:53,011
+the previous frame buffer or to write up
+to memory
+
+488
+00:27:53,074 --> 00:27:56,993
+and so you need some explicit control
+over the style cash to get
+
+489
+00:27:57,659 --> 00:28:00,684
+optimal performance and make sure not
+doing needless reads and writes the
+
+490
+00:28:00,909 --> 00:28:01,960
+memory
+
+491
+00:28:01,096 --> 00:28:04,171
+in metal you can specify load and store
+actions on the framebuffer
+
+492
+00:28:05,071 --> 00:28:08,150
+to make this incredibly efficient and
+I'll show you an example of how that
+
+493
+00:28:08,789 --> 00:28:10,600
+works here
+
+494
+00:28:10,006 --> 00:28:13,045
+so let's say as an example this is
+before metal
+
+495
+00:28:13,099 --> 00:28:17,918
+you had one frame for what you wanted to
+do to rendering passes
+
+496
+00:28:18,809 --> 00:28:21,846
+and this example your gonna pick the
+color frame buffer gonna reader the
+
+497
+00:28:22,179 --> 00:28:23,190
+beginning
+
+498
+00:28:23,019 --> 00:28:26,608
+in a ride it out one pass through many
+the same for the second pass
+
+499
+00:28:26,779 --> 00:28:30,832
+and you probably want to use a depth
+buffer as well
+
+500
+00:28:31,309 --> 00:28:34,690
+to perform at all you can actually see
+here there was quite a lot a memory
+
+501
+00:28:34,069 --> 00:28:35,078
+bandwidth taking place across these
+passes
+
+502
+00:28:36,059 --> 00:28:39,648
+you end up with two reads and two rights
+preacher the color
+
+503
+00:28:40,179 --> 00:28:43,990
+and the depth buffer which is a lot
+memory traffic
+
+504
+00:28:43,099 --> 00:28:46,118
+well with metal reaction let you specify
+
+505
+00:28:47,009 --> 00:28:50,024
+which are those reason right you
+actually need to occur
+
+506
+00:28:50,159 --> 00:28:53,490
+so for instance you can say well I'm
+gonna render every pixel
+
+507
+00:28:53,049 --> 00:28:56,060
+love my friend anyway there's no point
+in loading but I'll catch the beginning
+
+508
+00:28:56,006 --> 00:28:56,915
+a frame
+
+509
+00:28:57,509 --> 00:29:01,840
+I can say that family and and if you're
+right out that the pass and then read in
+
+510
+00:29:01,084 --> 00:29:01,863
+the second pass
+
+511
+00:29:02,619 --> 00:29:06,090
+you probably would need to actually do
+that but when you look at the depth
+
+512
+00:29:06,009 --> 00:29:07,228
+buffer you can see a lot
+
+513
+00:29:07,309 --> 00:29:10,407
+unnecessary reads and writes and so you
+can specify that we should probably just
+
+514
+00:29:11,289 --> 00:29:13,310
+clear the depth buffer at the beginning
+a frame
+
+515
+00:29:13,499 --> 00:29:16,502
+you're not gonna need its previous
+contents and you don't need to write it
+
+516
+00:29:16,529 --> 00:29:19,580
+out at the end. a friend but you're not
+using a second pastor simply gonna clear
+
+517
+00:29:19,058 --> 00:29:19,147
+it again
+
+518
+00:29:20,047 --> 00:29:23,124
+and then you don't need a ride up there
+either and we can get some dramatic
+
+519
+00:29:24,024 --> 00:29:26,063
+reductions in memory traffic as a result
+
+520
+00:29:26,279 --> 00:29:30,303
+this you can you can reduce the overall
+manner reads and writes
+
+521
+00:29:30,519 --> 00:29:34,470
+to a fraction what it was before you can
+gain significant performance for your
+
+522
+00:29:34,047 --> 00:29:36,006
+application
+
+523
+00:29:36,429 --> 00:29:41,850
+this is just one of the ways in which we
+design metal with the 87 mine
+
+524
+00:29:41,085 --> 00:29:44,234
+right that's rendering now in a look at
+the next area we
+
+525
+00:29:44,999 --> 00:29:49,015
+interviews with metal functionality
+which computer
+
+526
+00:29:49,159 --> 00:29:52,182
+so when I can I spend a lot of time
+today talking about general-purpose
+
+527
+00:29:52,389 --> 00:29:55,860
+data parallel computation the Jeep you
+but for those that you have done this
+
+528
+00:29:55,086 --> 00:29:56,525
+type of operation before
+
+529
+00:29:57,299 --> 00:30:00,570
+you're gonna find that this is a very
+familiar runtime and memory mall
+
+530
+00:30:00,057 --> 00:30:03,166
+uses the same textures and data buffers
+from
+
+531
+00:30:03,679 --> 00:30:07,698
+the metal graphics API's at the same
+basic kinds a
+
+532
+00:30:07,869 --> 00:30:10,911
+memory hierarchy barriers memories and
+love story you might find
+
+533
+00:30:11,289 --> 00:30:14,374
+other data parallel programming API and
+you can scan figure in specify exactly
+
+534
+00:30:15,139 --> 00:30:15,231
+how
+
+535
+00:30:16,059 --> 00:30:21,067
+the work group for your computer
+operations will be executed by the Jeep
+
+536
+00:30:21,139 --> 00:30:24,153
+probably more important to realize with
+metal
+
+537
+00:30:24,279 --> 00:30:28,690
+is that it is the computer operation are
+fully integrated with graphics
+
+538
+00:30:28,069 --> 00:30:31,134
+this means you get a unified API single
+shading language
+
+539
+00:30:32,034 --> 00:30:35,058
+and a single set a fantastic developer
+tools both graphics and computer
+
+540
+00:30:35,058 --> 00:30:35,123
+operations
+
+541
+00:30:36,023 --> 00:30:40,074
+on the Jeep you and probably more
+important for performance
+
+542
+00:30:40,074 --> 00:30:44,120
+we can efficiently Intelli these
+operations between compute rendering
+
+543
+00:30:45,002 --> 00:30:49,471
+and at a copper operations and bullet
+
+544
+00:30:49,669 --> 00:30:52,758
+similarly to graphics there's no
+execution time compilation
+
+545
+00:30:53,559 --> 00:30:56,634
+with the computer operations you control
+exactly when these
+
+546
+00:30:57,309 --> 00:31:00,378
+expensive compilation activities will
+occur
+
+547
+00:31:00,999 --> 00:31:04,001
+and probably a little bit different from
+how graphics looks
+
+548
+00:31:04,019 --> 00:31:07,104
+in metal there's very little state in
+the computer commander
+
+549
+00:31:07,869 --> 00:31:11,080
+there some state for specifying exactly
+which computer knows you're gonna using
+
+550
+00:31:11,008 --> 00:31:15,020
+and i cant figure workers and that's
+pretty much it
+
+551
+00:31:15,002 --> 00:31:19,002
+and that's it if the computer command
+cursing some parts because yes
+
+552
+00:31:19,002 --> 00:31:23,061
+and that brings us to our last command
+in Qatar but commanding her
+
+553
+00:31:23,259 --> 00:31:26,350
+and this is what you use for a
+synchronous got a copy between resources
+
+554
+00:31:27,169 --> 00:31:30,230
+on the GPO and this can happen in
+parallel with your computer
+
+555
+00:31:30,023 --> 00:31:33,028
+and graphics operations you can use
+estoppel textures
+
+556
+00:31:33,073 --> 00:31:38,832
+the copy data between textures and
+offers or to generate your met maps
+
+557
+00:31:39,489 --> 00:31:43,514
+can also update the data buffers
+themselves again topping to and from
+
+558
+00:31:43,739 --> 00:31:45,100
+textures are other buffers
+
+559
+00:31:45,001 --> 00:31:48,570
+and actually fill the buffered
+themselves with constant values
+
+560
+00:31:48,669 --> 00:31:51,703
+simply man alright
+
+561
+00:31:52,009 --> 00:31:55,064
+that's a pretty API high-level summary
+I'm a take a quick tour
+
+562
+00:31:55,559 --> 00:32:00,860
+shading language itself
+
+563
+00:32:00,086 --> 00:32:04,134
+alright so the mail shading language is
+unified shading language
+
+564
+00:32:05,034 --> 00:32:08,123
+this means use the same language syntax
+construct or changeable graphics and
+
+565
+00:32:09,023 --> 00:32:09,120
+computer processing
+
+566
+00:32:10,002 --> 00:32:14,701
+and it's based on C pas plus 11
+essentially a static subset
+
+567
+00:32:14,899 --> 00:32:18,590
+this language and its bill out love LVM
+
+568
+00:32:18,059 --> 00:32:22,148
+incline which means you get incredibly
+high performance an incredibly high
+
+569
+00:32:22,679 --> 00:32:26,704
+quality cogeneration for the Jeep you
+the only thing we really had to do
+
+570
+00:32:26,929 --> 00:32:29,975
+was add some syntax for describing
+certain hardware functionality
+
+571
+00:32:30,389 --> 00:32:33,392
+such as higher and control texture
+sampling restoration
+
+572
+00:32:33,419 --> 00:32:36,426
+and we've added a few things to make
+share offering much more convenient
+
+573
+00:32:37,119 --> 00:32:40,480
+such as function overloading and basic
+template support
+
+574
+00:32:40,048 --> 00:32:43,477
+but that's it if you know C plus plus
+you understand metal
+
+575
+00:32:43,909 --> 00:32:46,968
+shading language
+
+576
+00:32:47,499 --> 00:32:50,573
+they said we added just a few data types
+and some syntax for handling graphics
+
+577
+00:32:51,239 --> 00:32:52,257
+and compete functionality
+
+578
+00:32:52,419 --> 00:32:55,480
+some basic data types you're probably
+find very useful for just a ler
+
+579
+00:32:56,029 --> 00:32:59,070
+factor matrix types
+
+580
+00:32:59,007 --> 00:33:02,044
+and we use what's called the attributes
+syntax to specify a lot
+
+581
+00:33:02,044 --> 00:33:06,093
+the connection between amelli PI and the
+Middle shading language
+
+582
+00:33:06,489 --> 00:33:09,528
+so things like how do you get data in
+and out of your shares you specify those
+
+583
+00:33:09,879 --> 00:33:12,953
+with function arguments and used
+attributes and tax actually identify
+
+584
+00:33:13,619 --> 00:33:16,661
+which textures and buffers you want to
+use or
+
+585
+00:33:17,039 --> 00:33:20,200
+how did implement programmable blending
+initiators you can actually attributes
+
+586
+00:33:20,002 --> 00:33:21,431
+intact to specify
+
+587
+00:33:21,629 --> 00:33:25,632
+pixels you wanna read from the freemen
+for
+
+588
+00:33:25,659 --> 00:33:28,820
+and I'll shading language itself is
+incredibly easy to use its
+
+589
+00:33:28,082 --> 00:33:31,135
+but multiple shares in a single source
+code file and then we will build those
+
+590
+00:33:32,035 --> 00:33:36,204
+source code files with Xcode when you're
+building your application
+
+591
+00:33:36,519 --> 00:33:41,070
+into metal library files and the Middle
+library files are sensually just and
+
+592
+00:33:41,007 --> 00:33:41,606
+archive
+
+593
+00:33:41,669 --> 00:33:45,070
+every male skaters with the metal
+runtime API
+
+594
+00:33:45,007 --> 00:33:47,706
+you can actually load a metal library
+and then you can finalize the
+
+595
+00:33:47,769 --> 00:33:48,778
+compilation into this device is
+
+596
+00:33:49,669 --> 00:33:52,744
+machine specific code we also include
+
+597
+00:33:53,419 --> 00:33:57,950
+awesome standard library very commonly
+used an incredibly performance
+
+598
+00:33:57,095 --> 00:34:01,074
+graphics a few functions
+
+599
+00:34:01,929 --> 00:34:04,350
+one other thing to realize about the
+metal sheeting languages you need to get
+
+600
+00:34:04,035 --> 00:34:05,097
+data in an out if your shoulders
+
+601
+00:34:05,097 --> 00:34:08,256
+so it's best buy use a method called
+argument tables
+
+602
+00:34:09,129 --> 00:34:12,131
+to let you specify which arguments which
+resources
+
+603
+00:34:12,149 --> 00:34:18,040
+which data needs to move between the API
+and changing environment
+
+604
+00:34:18,004 --> 00:34:21,613
+so each command in Kotor will include
+what's called argument table
+
+605
+00:34:21,649 --> 00:34:24,780
+and it is simply a list have the
+resources you want to use an API did you
+
+606
+00:34:24,078 --> 00:34:25,897
+wanna read an access and right
+
+607
+00:34:26,599 --> 00:34:29,960
+in be share themselves there's one table
+
+608
+00:34:29,096 --> 00:34:32,225
+for each type resource
+
+609
+00:34:33,089 --> 00:34:36,092
+and then shaker and the host code
+
+610
+00:34:36,119 --> 00:34:39,138
+simply use index ended at able to refer
+to the same resource
+
+611
+00:34:39,309 --> 00:34:42,450
+see an example on the right here
+
+612
+00:34:42,045 --> 00:34:45,414
+I simply have representation up one of
+the commanding cutters
+
+613
+00:34:45,819 --> 00:34:48,940
+could be render commander for instance
+and
+
+614
+00:34:48,094 --> 00:34:51,103
+you have a table in the command encoder
+that describes
+
+615
+00:34:52,003 --> 00:34:56,582
+the resources so you have a allister all
+the textures you want to use
+
+616
+00:34:56,609 --> 00:34:59,970
+initiators civil
+
+617
+00:34:59,097 --> 00:35:02,926
+tables exist for buffers & samplers I
+simplify this little bit because there's
+
+618
+00:35:03,799 --> 00:35:05,470
+actually wanna be set the tables
+
+619
+00:35:05,047 --> 00:35:08,075
+free to the vertex and fragment later
+stages let's take a look at an example
+
+620
+00:35:08,075 --> 00:35:09,169
+share
+
+621
+00:35:10,069 --> 00:35:13,728
+so this we have a vertex shader and a
+fragment shader in metal sugar-coat on
+
+622
+00:35:14,349 --> 00:35:15,290
+the left you'll see
+
+623
+00:35:15,029 --> 00:35:18,066
+it looks quite familiar you'll get a lot
+more information about how this works
+
+624
+00:35:18,066 --> 00:35:18,164
+and in accession
+
+625
+00:35:19,064 --> 00:35:21,493
+but you can get a good sense of how this
+works just from looking at the code
+
+626
+00:35:22,069 --> 00:35:25,240
+itself right here
+
+627
+00:35:25,024 --> 00:35:28,026
+so in the private shade or were simply
+referring to
+
+628
+00:35:28,044 --> 00:35:31,129
+texture at index wine to identify that
+we would like to use the texture that we
+
+629
+00:35:32,029 --> 00:35:32,088
+set up
+
+630
+00:35:32,088 --> 00:35:36,327
+in the command in Kotor to read in this
+fragment shader
+
+631
+00:35:37,119 --> 00:35:40,168
+and some early in the vertex shader we
+can do the same thing with the buffers
+
+632
+00:35:40,609 --> 00:35:43,684
+and use those as imports to the vertex
+shader and refer back to
+
+633
+00:35:44,359 --> 00:35:47,420
+the argument index table in the
+commander you set up
+
+634
+00:35:47,042 --> 00:35:50,044
+the commanding coaters argument tables
+with the API
+
+635
+00:35:50,044 --> 00:35:53,048
+and simply refer to those resources
+
+636
+00:35:53,048 --> 00:35:57,125
+initiators using attribute syntax in
+function arguments cells
+
+637
+00:35:58,025 --> 00:36:01,644
+and that's it shading language actually
+pretty simple
+
+638
+00:36:01,869 --> 00:36:04,912
+we think you're gonna really like it the
+next I'm not talk about how to build
+
+639
+00:36:05,299 --> 00:36:07,160
+your mental application using our
+awesome
+
+640
+00:36:07,016 --> 00:36:11,725
+developer tools and probably the most
+important those developer tools
+
+641
+00:36:11,869 --> 00:36:15,730
+is the metal shooter compiler
+
+642
+00:36:15,073 --> 00:36:18,212
+now ideally you don't even know this
+exists because we're simply going to
+
+643
+00:36:18,869 --> 00:36:22,530
+build your shaker sources just like we
+build the rest your application sources
+
+644
+00:36:22,053 --> 00:36:25,095
+application built I'm there's no need
+for you to separate
+
+645
+00:36:25,095 --> 00:36:28,103
+out your shoulders and specify them at
+runtime you can actually
+
+646
+00:36:29,003 --> 00:36:33,027
+ship them with your application Rd
+having been precompiled
+
+647
+00:36:33,027 --> 00:36:37,316
+there's no source code that needs to go
+through application appreciators
+
+648
+00:36:37,559 --> 00:36:39,730
+probably more important from the
+developers point of view as we can
+
+649
+00:36:39,073 --> 00:36:42,078
+actually give you errors and warnings
+and guidance about your shoulders
+
+650
+00:36:43,023 --> 00:36:46,142
+at the time you're building your
+application you don't have to wait
+
+651
+00:36:46,349 --> 00:36:49,640
+and tell your customers are running your
+your game to find out that you have an
+
+652
+00:36:49,064 --> 00:36:50,073
+air and one on your shoulders
+
+653
+00:36:51,054 --> 00:36:55,063
+this is awesome O'Shea terse will then
+be compiled
+
+654
+00:36:55,549 --> 00:36:58,550
+into metal libraries by Xcode and then
+compiled to
+
+655
+00:36:58,559 --> 00:37:02,400
+device code at the time you create your
+state objects themselves
+
+656
+00:37:02,004 --> 00:37:05,473
+so again there's no drop time
+compilation and
+
+657
+00:37:05,869 --> 00:37:10,640
+we will cash this compilation spinal
+device machine specific compilation
+
+658
+00:37:10,064 --> 00:37:15,146
+on the device so we won't be continually
+doing even as last translations
+
+659
+00:37:16,046 --> 00:37:19,070
+now for those of you who like to specify
+your your source code
+
+660
+00:37:19,007 --> 00:37:22,014
+at runtime perhaps you're constructing
+strings on the flight we do provide
+
+661
+00:37:22,077 --> 00:37:26,166
+runtime: share compilers well that's not
+be really useful for debugging
+
+662
+00:37:27,066 --> 00:37:30,129
+it too has no drive time compilation
+overhead it operates just like
+
+663
+00:37:31,029 --> 00:37:34,030
+the precompiled headers but for best
+performance
+
+664
+00:37:34,039 --> 00:37:36,988
+we generally recommend you use the
+offline compiler we can give you the
+
+665
+00:37:37,339 --> 00:37:38,680
+most information
+
+666
+00:37:38,068 --> 00:37:41,102
+to help you build the best possible
+shakers if you do it this way
+
+667
+00:37:42,002 --> 00:37:44,090
+let's see what this would look like so
+here's an example you're building your
+
+668
+00:37:44,009 --> 00:37:45,928
+application in Xcode
+
+669
+00:37:46,819 --> 00:37:50,270
+and have a series love metal share files
+
+670
+00:37:50,027 --> 00:37:53,123
+and share files are past to the middle
+computer compiler
+
+671
+00:37:54,023 --> 00:37:57,054
+compiler the mail share sources at the
+time you build your application
+
+672
+00:37:57,054 --> 00:38:00,097
+and a metal library file is generated
+
+673
+00:38:00,097 --> 00:38:04,097
+that metal library file be package with
+your application
+
+674
+00:38:04,097 --> 00:38:08,149
+and so then when you deploy your
+application to a device
+
+675
+00:38:09,049 --> 00:38:12,058
+metal library file goes along for the
+ride that application runtime
+
+676
+00:38:13,039 --> 00:38:16,053
+when you're constructing here pipeline
+objects
+
+677
+00:38:16,053 --> 00:38:20,072
+you specify which vertex and fragment
+shaders you'd like to use
+
+678
+00:38:20,549 --> 00:38:23,624
+from that metal library metal
+implantation and will look up those
+
+679
+00:38:24,299 --> 00:38:24,900
+traitors
+
+680
+00:38:24,009 --> 00:38:28,018
+Steve Rd cash them once before and if
+not will compile them for the final
+
+681
+00:38:28,099 --> 00:38:33,198
+machine device and send it to the Jeep
+
+682
+00:38:34,089 --> 00:38:37,270
+and that's it most this happens
+automatically for you
+
+683
+00:38:37,027 --> 00:38:41,806
+critically exactly when you want it to
+you
+
+684
+00:38:42,049 --> 00:38:45,290
+now few views are open GL yes debugging
+tools in Xcode
+
+685
+00:38:45,029 --> 00:38:48,113
+you feel right at home we have an
+awesome set GP programming
+
+686
+00:38:49,013 --> 00:38:52,054
+debugging and profiling tools integrated
+right in tax code
+
+687
+00:38:52,054 --> 00:38:55,123
+and give you a quick tour those now
+
+688
+00:38:56,023 --> 00:38:59,049
+so this is an example application inside
+tax code where you get
+
+689
+00:38:59,049 --> 00:39:03,128
+visual debugging tools bill right in the
+same environment you're using to build
+
+690
+00:39:03,569 --> 00:39:05,210
+the restaurant location
+
+691
+00:39:05,021 --> 00:39:08,620
+on the left hand side we handle what's
+called the frame Navigator which shows
+
+692
+00:39:08,809 --> 00:39:09,290
+you
+
+693
+00:39:09,029 --> 00:39:12,067
+exactly which metal API calls draw calls
+
+694
+00:39:12,067 --> 00:39:15,706
+I you you issued and in what order they
+occurred and the Middle
+
+695
+00:39:16,309 --> 00:39:19,640
+you have the frame navigator sorry the
+framebuffer view where you can actually
+
+696
+00:39:19,064 --> 00:39:20,068
+see
+
+697
+00:39:20,068 --> 00:39:23,207
+the results those draw calls and state
+operations
+
+698
+00:39:23,819 --> 00:39:27,680
+happening live as you're constructing a
+frame
+
+699
+00:39:27,068 --> 00:39:31,007
+we also have research few where you can
+see all the textures resources
+
+700
+00:39:31,619 --> 00:39:34,690
+data buffers everything you're using a
+constructor frame inspect them
+
+701
+00:39:35,329 --> 00:39:39,333
+and make sure that they're exactly as
+you set them up
+
+702
+00:39:39,369 --> 00:39:42,465
+and at the bottom you can see the metal
+state inspector where you can see all
+
+703
+00:39:43,329 --> 00:39:44,530
+the API state
+
+704
+00:39:44,053 --> 00:39:47,139
+and all the important it's a control and
+information you have
+
+705
+00:39:48,039 --> 00:39:51,088
+about your application metal
+
+706
+00:39:51,088 --> 00:39:54,767
+we also provide some really fantastic
+profiling
+
+707
+00:39:55,559 --> 00:39:58,690
+and performance tools so in this example
+
+708
+00:39:58,069 --> 00:40:01,123
+showing the metal performance report you
+can see things like
+
+709
+00:40:02,023 --> 00:40:05,142
+your frame rate or how much you're using
+the Jeep you
+
+710
+00:40:05,349 --> 00:40:09,401
+you can also see exactly which shade urs
+are the most expensive
+
+711
+00:40:09,869 --> 00:40:13,240
+and you can see how much time they're
+taking per frame
+
+712
+00:40:13,024 --> 00:40:17,025
+this is awesome you can you can also see
+42 the shakers
+
+713
+00:40:17,025 --> 00:40:20,064
+in milliseconds which how much time
+they're taking as a whole
+
+714
+00:40:20,064 --> 00:40:24,095
+but you can get a feel for exactly what
+are the most expensive lines
+
+715
+00:40:24,095 --> 00:40:27,153
+each shares so if you wanna really
+optimize your shares
+
+716
+00:40:28,053 --> 00:40:31,071
+you can find out which line is taking up
+the most time
+
+717
+00:40:31,071 --> 00:40:37,168
+and focusing on that and all built for
+you right inside a tax cut
+
+718
+00:40:38,068 --> 00:40:42,477
+now gap
+
+719
+00:40:43,089 --> 00:40:46,780
+glad you like it so you can also build
+your
+
+720
+00:40:46,078 --> 00:40:49,099
+your shoulders as he said Incitec said
+you can actually edit them as well you
+
+721
+00:40:49,099 --> 00:40:51,120
+get all the familiar syntax highlighting
+
+722
+00:40:52,002 --> 00:40:55,021
+& Co completion and you get warnings and
+errors
+
+723
+00:40:55,039 --> 00:40:59,018
+right for you if i text to we think this
+is really fantastic it makes
+
+724
+00:40:59,369 --> 00:41:02,780
+writing and editing and profiling
+shakers a much more natural part the
+
+725
+00:41:02,078 --> 00:41:02,152
+process
+
+726
+00:41:03,052 --> 00:41:07,073
+and we design metal to work seamlessly
+in this environment
+
+727
+00:41:07,073 --> 00:41:10,078
+alright so that's that developer tools
+the API concepts
+
+728
+00:41:11,023 --> 00:41:14,032
+and shading language as you heard in the
+Keno we've been working
+
+729
+00:41:15,013 --> 00:41:19,045
+with metal some leading game engine
+providers
+
+730
+00:41:19,045 --> 00:41:22,214
+such as Electronic Arts epic unity
+
+731
+00:41:22,619 --> 00:41:25,930
+and Crytek and we've been amazed at what
+they've been able to create
+
+732
+00:41:25,093 --> 00:41:28,212
+in just a short amount of time I'm very
+happy
+
+733
+00:41:29,049 --> 00:41:32,940
+to introduce up on stage Sean Tracy from
+Crytek was gonna show you
+
+734
+00:41:32,094 --> 00:41:36,141
+but they've never create with metal just
+a few weeks John
+
+735
+00:41:37,041 --> 00:41:41,950
+thanks Roger
+
+736
+00:41:42,319 --> 00:41:45,530
+Crytek is known for pushing the
+boundaries and for developing
+
+737
+00:41:45,053 --> 00:41:48,832
+blockbuster hits such as crisis arise
+for the consuls
+
+738
+00:41:49,309 --> 00:41:52,500
+the CryEngine is going mobile and our
+latest game the collectibles was
+
+739
+00:41:52,005 --> 00:41:54,044
+recently released on the App Store
+
+740
+00:41:54,089 --> 00:41:58,018
+integrating medal in a game gives us
+opportunities and we didn't have before
+
+741
+00:41:58,819 --> 00:42:01,848
+and the other performance changes the
+way we think about creating mobile game
+
+742
+00:42:02,109 --> 00:42:02,520
+play
+
+743
+00:42:02,052 --> 00:42:05,621
+and mobile game content today we'd like
+to show you the next version the
+
+744
+00:42:06,089 --> 00:42:06,188
+collectibles
+
+745
+00:42:07,079 --> 00:42:12,730
+and show you how we use metal change the
+game let's take a look
+
+746
+00:42:12,073 --> 00:42:15,452
+in the collectibles you control the
+renegade team mercenaries in today wanna
+
+747
+00:42:16,109 --> 00:42:19,530
+during hit run mission to take out the
+enemy artillery
+
+748
+00:42:19,053 --> 00:42:22,842
+as you can see the environment is
+incredibly dynamic and very rich with
+
+749
+00:42:23,319 --> 00:42:27,392
+wind effecting education and more
+
+750
+00:42:28,049 --> 00:42:33,640
+looks like the enemy set up a roadblock
+had pick up the Chiefs RB
+
+751
+00:42:33,064 --> 00:42:37,273
+Korea see can see that level up
+cinematic destruction simply what
+
+752
+00:42:37,849 --> 00:42:41,894
+awful on mobile for when those jeeps
+exploded over 168 unique pieces that
+
+753
+00:42:42,299 --> 00:42:43,302
+come flying off
+
+754
+00:42:43,329 --> 00:42:46,650
+the tires windshield engine block and
+more
+
+755
+00:42:46,065 --> 00:42:50,066
+using the power metal were able to
+leverage orgy on cash technology
+
+756
+00:42:50,066 --> 00:42:53,074
+at CNN rise on consul and there it is
+
+757
+00:42:54,046 --> 00:42:57,141
+our objective the enemy artillery it's a
+pretty big mother so let's go ahead and
+
+758
+00:42:58,041 --> 00:43:03,076
+call in our AC 130 gunship prayer sport
+
+759
+00:43:03,076 --> 00:43:08,077
+T
+
+760
+00:43:08,086 --> 00:43:10,132
+geocache uses cash based animation
+
+761
+00:43:11,032 --> 00:43:14,090
+to realize extremely complex simulation
+and special effects
+
+762
+00:43:14,009 --> 00:43:18,062
+advice on the destruction and those
+buildings so other players make their
+
+763
+00:43:19,043 --> 00:43:20,080
+way to the next objective
+
+764
+00:43:20,008 --> 00:43:23,042
+take a look at another example of how we
+can use this power
+
+765
+00:43:24,014 --> 00:43:27,015
+to turn the what environment into a
+weapon
+
+766
+00:43:27,015 --> 00:43:30,041
+four-player something trouble ahead
+
+767
+00:43:30,041 --> 00:43:33,088
+yeah they got a tanker right we need to
+block out that road get out here we're
+
+768
+00:43:33,088 --> 00:43:33,171
+gonna be toast
+
+769
+00:43:34,071 --> 00:43:40,970
+start taking up the chimney
+
+770
+00:43:41,609 --> 00:43:45,630
+and battle you stop a tank collectibles
+when that building and Jimmy come down
+
+771
+00:43:45,819 --> 00:43:47,871
+there's over 4,000 raw calls on screen
+
+772
+00:43:48,339 --> 00:43:53,730
+4,000 draw called on an iPad up they've
+got another tank and now im
+
+773
+00:43:53,073 --> 00:43:58,121
+we're at a chimney so mission
+accomplished the get out here
+
+774
+00:43:59,021 --> 00:44:03,026
+at you to perform again with metal gives
+us a ten-fold performance increase
+
+775
+00:44:03,071 --> 00:44:06,078
+that allows us to bring the Crytek DNA
+alive
+
+776
+00:44:06,078 --> 00:44:09,100
+on mobile we look forward to seeing you
+guys in the game
+
+777
+00:44:10,000 --> 00:44:17,000
+thanks a lot
+
+778
+00:44:18,033 --> 00:44:22,035
+alright thanks John that's really
+amazing so four thousand rock also that
+
+779
+00:44:22,053 --> 00:44:23,085
+ten-fold increase
+
+780
+00:44:23,085 --> 00:44:26,091
+are was previously possible before model
+we're truly truly
+
+781
+00:44:27,045 --> 00:44:30,129
+excited to see it in action alright so
+that's metal
+
+782
+00:44:31,029 --> 00:44:34,077
+metal is our new low overhead
+high-performance
+
+783
+00:44:34,077 --> 00:44:37,144
+Jeep you programming API which can
+provide you with dramatic
+
+784
+00:44:38,044 --> 00:44:41,048
+increase inefficiency performance for
+your game
+
+785
+00:44:41,048 --> 00:44:44,140
+we designed it from scratch to run
+
+786
+00:44:45,004 --> 00:44:50,102
+like a dream on a7 chip and our I was
+products and we've streamlined the
+
+787
+00:44:51,038 --> 00:44:51,111
+feature set
+
+788
+00:44:52,011 --> 00:44:55,072
+and the API footprint to focus on the
+most modern GP features
+
+789
+00:44:55,072 --> 00:44:58,163
+such as unified graphics and computer
+and the most modern sheep you game
+
+790
+00:44:59,063 --> 00:45:00,065
+programming techniques
+
+791
+00:45:00,083 --> 00:45:03,178
+such that require fine-grained control
+in addition multi-threading
+
+792
+00:45:04,078 --> 00:45:09,109
+support for precompiled Shaytards and a
+fantastic set a developer tools
+
+793
+00:45:10,009 --> 00:45:13,058
+we believe you're going to have a use
+metal great entirely
+
+794
+00:45:13,058 --> 00:45:16,079
+new class games for your customers
+
+795
+00:45:16,079 --> 00:45:19,111
+we're really looking forward to what you
+guys gonna be able to create
+
+796
+00:45:20,011 --> 00:45:23,017
+with metal we think it's just truly
+truly
+
+797
+00:45:23,017 --> 00:45:27,041
+fantastic thing for more information
+about metal
+
+798
+00:45:27,041 --> 00:45:30,082
+you can come see are evangelist fill up
+and Alan
+
+799
+00:45:30,082 --> 00:45:33,100
+and we have a amazing set of
+documentation about metal
+
+800
+00:45:34,000 --> 00:45:37,099
+honored Felber Relations website you can
+also check out the developer forms we
+
+801
+00:45:37,099 --> 00:45:38,099
+can talk with folks
+
+802
+00:45:38,099 --> 00:45:42,162
+about metal and you can come to the next
+two sessions which were going to meddle
+
+803
+00:45:43,062 --> 00:45:43,130
+in a much
+
+804
+00:45:44,003 --> 00:45:48,027
+lot more level detail you can see how
+Metalworks in your application how to
+
+805
+00:45:48,054 --> 00:45:49,113
+build your first medal application
+
+806
+00:45:50,013 --> 00:45:54,087
+how to build a scenes at a metal and and
+used to control the Jeep you
+
+807
+00:45:54,087 --> 00:45:57,164
+how the middle shading language itself
+works and and we have a second session
+
+808
+00:45:58,064 --> 00:46:01,162
+re cover some more advanced techniques
+such as using multipath routing
+
+809
+00:46:02,062 --> 00:46:06,115
+and compute we're really looking forward
+to what you can get to create this API
+
+810
+00:46:07,015 --> 00:46:08,081
+thank you very much for coming
+

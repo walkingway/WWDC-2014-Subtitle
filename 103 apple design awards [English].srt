@@ -1,0 +1,4869 @@
+1
+00:00:12,017 --> 00:00:15,050
+and please welcome your hosts Sean
+pruden
+
+2
+00:00:15,005 --> 00:00:22,005
+and Jon Garland see the good afternoon
+and thank you for joining us
+
+3
+00:00:27,024 --> 00:00:31,029
+yet thanks for
+
+4
+00:00:31,029 --> 00:00:34,097
+for coming thru spend time with the into
+this long day
+
+5
+00:00:34,097 --> 00:00:37,206
+it's a for many view
+
+6
+00:00:38,079 --> 00:00:41,510
+who are out there last night when I was
+leaving the student event and put all
+
+7
+00:00:41,051 --> 00:00:42,144
+your chairs the got real cool
+
+8
+00:00:43,044 --> 00:00:47,046
+on the sidewalk I'm sure and you spent a
+whole long night waiting for this day
+
+9
+00:00:47,064 --> 00:00:50,503
+in you been here and now you join us to
+celebrate
+
+10
+00:00:51,079 --> 00:00:55,730
+them excellent house at your place
+though award excellence in innovation on
+
+11
+00:00:55,073 --> 00:00:57,078
+both via Web and a with can
+
+12
+00:00:57,078 --> 00:01:00,427
+and every year it gets more and more
+difficult to pick
+
+13
+00:01:01,129 --> 00:01:04,134
+are to find winners because there are so
+many great our
+
+14
+00:01:04,629 --> 00:01:08,370
+yeah so many have you
+
+15
+00:01:08,037 --> 00:01:11,058
+we shared that they think this morning
+that seventy percent of the audience
+
+16
+00:01:11,058 --> 00:01:11,065
+here
+
+17
+00:01:12,028 --> 00:01:16,827
+at WC are new to the show and so many
+have you have never been to this shell
+
+18
+00:01:17,079 --> 00:01:21,115
+the design awards it so we've got pic we
+take a moment to explain how we pick the
+
+19
+00:01:21,439 --> 00:01:22,020
+winners
+
+20
+00:01:22,002 --> 00:01:26,086
+how we we judge the winning aP's using
+through three major
+
+21
+00:01:26,086 --> 00:01:29,100
+we judge if they're winning ups in three
+major areas:
+
+22
+00:01:30,000 --> 00:01:33,369
+the first is around design so
+
+23
+00:01:33,369 --> 00:01:38,450
+for design we look at perhaps that or
+we're looking perhaps the easy to use
+
+24
+00:01:38,045 --> 00:01:42,354
+I caps that are familiar that are
+consistent within themselves but
+
+25
+00:01:42,759 --> 00:01:44,990
+consistent with the operating system as
+well
+
+26
+00:01:44,099 --> 00:01:47,132
+they have a great game looks a really
+excellent gameplay
+
+27
+00:01:48,032 --> 00:01:52,050
+their intuitive and understandable and
+immediately usable by the people who
+
+28
+00:01:52,005 --> 00:01:53,030
+they were built for
+
+29
+00:01:53,075 --> 00:01:57,103
+and then we look at maps are in the
+technology
+
+30
+00:01:58,003 --> 00:02:01,012
+we judge apt around technology so we're
+were
+
+31
+00:02:01,093 --> 00:02:04,962
+evaluating the app's on their use a I
+was through with 10 frameworks
+
+32
+00:02:05,799 --> 00:02:08,850
+to do really cool stuff for dad really I
+
+33
+00:02:08,085 --> 00:02:11,164
+really valuable functionality I or
+looking
+
+34
+00:02:12,064 --> 00:02:15,162
+we're also looking at whether the app
+launches quickly is it responsive
+
+35
+00:02:16,062 --> 00:02:20,104
+does it take a you know there's that
+work the way you would expect it to work
+
+36
+00:02:21,004 --> 00:02:24,012
+and and are there you know our is their
+smooth scrolling
+
+37
+00:02:24,012 --> 00:02:27,091
+I we look at whether or not the app runs
+on the latest OS is
+
+38
+00:02:27,091 --> 00:02:31,140
+weather takes advantage of the newest
+hardware and that takes advantage of
+
+39
+00:02:31,959 --> 00:02:33,390
+things like em 7 a.m.
+
+40
+00:02:33,039 --> 00:02:38,045
+a seven on i OS or multi-core other
+technologies and hardware technologies
+
+41
+00:02:38,045 --> 00:02:38,128
+on OS 10
+
+42
+00:02:39,028 --> 00:02:42,087
+and then thirdly mmm we're looking at
+ups
+
+43
+00:02:42,087 --> 00:02:46,120
+from the point of view innovation and
+innovation really is that
+
+44
+00:02:47,002 --> 00:02:50,007
+that spark a brilliance rate that
+uniqueness
+
+45
+00:02:50,025 --> 00:02:54,051
+the the clever implementation of
+something that you wouldn't have
+
+46
+00:02:54,051 --> 00:02:54,140
+expected
+
+47
+00:02:55,004 --> 00:02:59,031
+in the first place but then when you see
+it I your blown away by it
+
+48
+00:02:59,067 --> 00:03:03,148
+and and there's so many ways the talk
+about innovation it really comes down to
+
+49
+00:03:04,048 --> 00:03:07,089
+the implementation of something that is
+just so
+
+50
+00:03:07,089 --> 00:03:11,142
+crash and so are compelling and done in
+a unique way
+
+51
+00:03:12,042 --> 00:03:16,721
+so those three areas are how we judge
+the app's there's so many more things we
+
+52
+00:03:17,099 --> 00:03:17,840
+look at
+
+53
+00:03:17,084 --> 00:03:20,179
+but in a nutshell their their group in
+those three in there was three years
+
+54
+00:03:21,079 --> 00:03:24,115
+so let's talk about the private the R
+word winners
+
+55
+00:03:25,015 --> 00:03:29,023
+will be given to take home it's pretty
+much wanna every piece of hardware that
+
+56
+00:03:29,023 --> 00:03:29,098
+we make
+
+57
+00:03:29,098 --> 00:03:32,717
+a Mac Pro with Retina Display a 27-inch
+iMac
+
+58
+00:03:33,599 --> 00:03:38,890
+an Apple TV a MacBook Air and MacBook
+Pro and iPad and iPod touch
+
+59
+00:03:38,089 --> 00:03:41,092
+not a bad haul
+
+60
+00:03:41,092 --> 00:03:45,128
+and
+
+61
+00:03:46,028 --> 00:03:49,029
+and last but not least probably the most
+coveted
+
+62
+00:03:49,029 --> 00:03:52,073
+a party the award is yeah I get to take
+home what are these
+
+63
+00:03:52,073 --> 00:03:55,122
+eighty a trophy cubes and a these
+
+64
+00:03:56,022 --> 00:04:00,023
+are you know statically early detect
+touch the touch-sensitive
+
+65
+00:04:00,023 --> 00:04:03,502
+see touch them they light up on the top
+
+66
+00:04:03,709 --> 00:04:06,801
+just like the backup your your MacBook
+Pro the Apple logo light up
+
+67
+00:04:07,629 --> 00:04:10,712
+and I these are to die for must have
+
+68
+00:04:11,459 --> 00:04:14,970
+I Apple products and a few if you're
+going to get one tonight
+
+69
+00:04:14,097 --> 00:04:17,123
+so without any further ado let that get
+to the winners
+
+70
+00:04:18,023 --> 00:04:22,032
+we're gonna start with a few student
+winners in
+
+71
+00:04:22,032 --> 00:04:25,060
+students have been part up w BBC for
+many many years
+
+72
+00:04:25,006 --> 00:04:29,032
+in fact we have got a student
+scholarship program were rewarded
+
+73
+00:04:29,086 --> 00:04:33,152
+200 students this year yeah 200 students
+appear in the house
+
+74
+00:04:34,052 --> 00:04:38,073
+and your student scholarship winner this
+we could you stand up for a moment we
+
+75
+00:04:38,073 --> 00:04:39,129
+just want to award you
+
+76
+00:04:40,029 --> 00:04:47,029
+with some recognition the
+
+77
+00:04:52,081 --> 00:04:53,112
+they fear
+
+78
+00:04:54,012 --> 00:04:57,094
+thank you would be litigated we're
+delighted done some
+
+79
+00:04:57,094 --> 00:05:00,142
+you guys have done some great work got
+to get here and
+
+80
+00:05:01,042 --> 00:05:04,046
+the app's that we looked at were were
+really impressive
+
+81
+00:05:04,082 --> 00:05:07,098
+and so you you deserve to be here
+
+82
+00:05:07,098 --> 00:05:11,124
+this week and we hope that you're gonna
+continue to press a some incredible out
+
+83
+00:05:12,024 --> 00:05:15,035
+that put the more veteran developers
+were in the audience
+
+84
+00:05:15,035 --> 00:05:18,091
+a you know give them a run for the money
+right like the that
+
+85
+00:05:18,091 --> 00:05:21,146
+who have been like somebody that these
+were a student winners that we
+
+86
+00:05:22,046 --> 00:05:23,123
+highlighted in previous years
+
+87
+00:05:24,023 --> 00:05:27,114
+we demo you're on stage some other maybe
+have changed names or what-have-you but
+
+88
+00:05:28,014 --> 00:05:29,055
+they were great aP's
+
+89
+00:05:29,055 --> 00:05:32,130
+written by students over the past three
+years so
+
+90
+00:05:33,003 --> 00:05:38,015
+let's move on to our first winner our
+first winner
+
+91
+00:05:38,042 --> 00:05:41,111
+is panel perfect by have peeled and two
+bros
+
+92
+00:05:42,011 --> 00:05:49,011
+winners we've come up but there are 150
+here
+
+93
+00:05:56,075 --> 00:06:03,075
+number here
+
+94
+00:06:06,189 --> 00:06:07,215
+gone
+
+95
+00:06:07,449 --> 00:06:09,521
+make fifty you again
+
+96
+00:06:10,169 --> 00:06:17,130
+graduation panel perfect is a fun and
+simple way to share beautiful panoramic
+
+97
+00:06:17,013 --> 00:06:19,016
+photos these are two
+
+98
+00:06:19,043 --> 00:06:22,136
+former high school students but it ended
+up with a beefy in 2012 instant
+
+99
+00:06:23,036 --> 00:06:23,112
+scholarship
+
+100
+00:06:24,012 --> 00:06:27,105
+I and built this out when they were
+inspired by our own fix announcement
+
+101
+00:06:28,005 --> 00:06:32,094
+panoramic and John gonna show it now
+yeah it's great stories in the you know
+
+102
+00:06:32,094 --> 00:06:36,133
+watching something and then deciding to
+write an app up
+
+103
+00:06:36,979 --> 00:06:40,030
+I think that I got a great story so
+
+104
+00:06:40,003 --> 00:06:44,100
+had a perfect is this app that allows
+you to view panoramic photos
+
+105
+00:06:45,000 --> 00:06:48,199
+and its a there's just the
+
+106
+00:06:48,199 --> 00:06:51,690
+are a community of people who love
+panoramas that are
+
+107
+00:06:51,069 --> 00:06:55,768
+submitting up photos to the into the app
+so the very familiar user interface
+
+108
+00:06:56,389 --> 00:07:00,430
+just rolling through this these guys are
+using you like it dynamics an image
+
+109
+00:07:00,043 --> 00:07:01,082
+effects for blurs
+
+110
+00:07:01,082 --> 00:07:04,431
+on a on summer the UI which will get you
+in a moment
+
+111
+00:07:05,169 --> 00:07:09,250
+so this not explore this is kinda
+curated set panoramas
+
+112
+00:07:09,025 --> 00:07:12,084
+if we go to nearby the zinc or location
+determine where you are
+
+113
+00:07:12,084 --> 00:07:16,633
+and that we're gonna go in here
+hopefully unload some panels
+
+114
+00:07:17,389 --> 00:07:22,280
+yeah there's some panels that are nearby
+couple imposed by the creators are the
+
+115
+00:07:22,028 --> 00:07:22,099
+up
+
+116
+00:07:22,099 --> 00:07:25,998
+but I let this go into this one we
+double top you can favored it
+
+117
+00:07:26,889 --> 00:07:31,080
+you can like it you can comment on it
+and then you can double top and just go
+
+118
+00:07:31,008 --> 00:07:31,055
+in
+
+119
+00:07:31,055 --> 00:07:35,794
+and gesture through Puri to go and look
+at the entire panorama
+
+120
+00:07:36,289 --> 00:07:40,300
+and they're doing a lower res
+
+121
+00:07:40,003 --> 00:07:43,005
+thumbnails in the feed that you see here
+
+122
+00:07:43,032 --> 00:07:47,441
+and then they're going to the high res
+for panoramas um when you go and look in
+
+123
+00:07:47,729 --> 00:07:51,370
+up to the individual up to the
+individual image so
+
+124
+00:07:51,037 --> 00:07:55,066
+super cool app that really with was
+created to address
+
+125
+00:07:55,066 --> 00:08:00,075
+the experiences that at the time there
+was no support for panoramic images in a
+
+126
+00:08:00,669 --> 00:08:02,160
+lot of social networking aP's
+
+127
+00:08:02,016 --> 00:08:06,058
+and so these guys stepped up and made
+some really cool regulation natural can
+
+128
+00:08:06,058 --> 00:08:06,707
+have a car
+
+129
+00:08:07,229 --> 00:08:14,229
+he alright
+
+130
+00:08:17,659 --> 00:08:21,697
+the next app is up was created because
+
+131
+00:08:22,039 --> 00:08:25,076
+I'll them the incredible movement and
+growth
+
+132
+00:08:25,409 --> 00:08:28,900
+iPad in education and a
+
+133
+00:08:28,009 --> 00:08:32,051
+you know people are changing iPad is
+change the way that we're learning in
+
+134
+00:08:33,032 --> 00:08:33,671
+the classroom
+
+135
+00:08:33,959 --> 00:08:37,570
+changing the way that adults are
+learning and kids are learning and that
+
+136
+00:08:37,057 --> 00:08:38,081
+the mix of iPad
+
+137
+00:08:38,081 --> 00:08:41,083
+in education is really taking off
+because the
+
+138
+00:08:42,001 --> 00:08:46,044
+the incredible new aP's they're
+available interactive textbooks
+
+139
+00:08:46,044 --> 00:08:50,060
+really tremendous content and other
+creators of this next app
+
+140
+00:08:50,006 --> 00:08:55,011
+I solve that saw the growth that was
+going on and also saw specific need that
+
+141
+00:08:55,065 --> 00:08:56,101
+they wanted to step up to
+
+142
+00:08:57,001 --> 00:09:00,036
+and and salt so our winner does that
+
+143
+00:09:00,036 --> 00:09:07,036
+and they are animal adventure by Keith
+Lee
+
+144
+00:09:17,057 --> 00:09:23,099
+the
+
+145
+00:09:23,099 --> 00:09:24,121
+like
+
+146
+00:09:25,021 --> 00:09:27,029
+Graham played him
+
+147
+00:09:27,029 --> 00:09:34,018
+you're welcome animal adventure is a fun
+and engaging
+
+148
+00:09:34,279 --> 00:09:37,371
+out the key to the single digit addition
+money from here the area am
+
+149
+00:09:38,199 --> 00:09:41,206
+it was created by grad been from
+Columbia University who are involved in
+
+150
+00:09:41,269 --> 00:09:42,304
+research in cognition
+
+151
+00:09:42,619 --> 00:09:46,641
+learning and the way kids learn and
+technology sinister professor possum
+
+152
+00:09:46,839 --> 00:09:47,290
+have
+
+153
+00:09:47,029 --> 00:09:50,110
+the story tell from Otto and is building
+a robot that could ruin the world
+
+154
+00:09:51,001 --> 00:09:54,490
+join the outermost to win back blocking
+rebuild the Golden City to its former
+
+155
+00:09:54,589 --> 00:09:54,637
+glory
+
+156
+00:09:55,069 --> 00:09:59,071
+John right thing earlier this happened
+so I'm not going to get into this
+
+157
+00:09:59,089 --> 00:10:02,167
+sinister I you know situation getting
+that whole game play
+
+158
+00:10:02,869 --> 00:10:06,912
+but these folks worked with a from
+Sesame Workshop
+
+159
+00:10:07,299 --> 00:10:10,355
+I am and to create some really great
+artwork in the app
+
+160
+00:10:10,859 --> 00:10:14,220
+the app is focused on teaching children
+basic addition
+
+161
+00:10:14,022 --> 00:10:17,311
+and a for a lot of kids this is a real
+struggle and so
+
+162
+00:10:17,509 --> 00:10:21,470
+his the developer a set out to solve
+this problem
+
+163
+00:10:21,047 --> 00:10:24,336
+so we're going to get into the app will
+skip over the narrative at the beginning
+
+164
+00:10:24,759 --> 00:10:25,760
+here
+
+165
+00:10:25,769 --> 00:10:29,790
+is pretty straightforward stuff from
+both your gonna get the answers right
+
+166
+00:10:29,079 --> 00:10:35,238
+without even yeah but I'm the key here
+is that the app is teaching children
+
+167
+00:10:35,949 --> 00:10:39,007
+addition and when you're first morning
+edition
+
+168
+00:10:39,529 --> 00:10:42,582
+wanna you just you know the first thing
+you do is you cannot thinkers you just
+
+169
+00:10:43,059 --> 00:10:46,360
+kinda like 123 you count them off
+individually install the app
+
+170
+00:10:46,036 --> 00:10:49,205
+let you do that and so I can just tap
+
+171
+00:10:49,529 --> 00:10:53,578
+you know I get five I get some be back
+in the UI
+
+172
+00:10:54,019 --> 00:10:57,098
+I move the slider bar with the packed
+I'll deal 25
+
+173
+00:10:57,809 --> 00:11:00,818
+and I get confirmation that it's the
+right answer or I don't was wrong answer
+
+174
+00:11:01,709 --> 00:11:06,720
+I can also do count on just second
+edition it also wants the child has
+
+175
+00:11:06,819 --> 00:11:08,850
+learned to basically count through the
+numbers
+
+176
+00:11:08,085 --> 00:11:11,684
+you know are the numbers then they can
+start moving onto
+
+177
+00:11:12,449 --> 00:11:15,451
+different times in addition where
+they're gonna take a a big number and
+
+178
+00:11:15,649 --> 00:11:17,661
+add some smaller numbers to it so
+
+179
+00:11:17,769 --> 00:11:21,230
+in this case weekends with the child
+gonna start to learn that you can start
+
+180
+00:11:21,023 --> 00:11:21,912
+with three
+
+181
+00:11:22,119 --> 00:11:25,160
+and then do one more get four right
+
+182
+00:11:25,016 --> 00:11:29,895
+they're getting in the app continues to
+go on and teach all kinds of other tools
+
+183
+00:11:30,039 --> 00:11:31,087
+and techniques for learning
+
+184
+00:11:31,519 --> 00:11:35,546
+addition another one is doubles where
+you're based we start off with a
+
+185
+00:11:35,789 --> 00:11:39,834
+I you know three and four seven and so
+first the chosen you can cut before
+
+186
+00:11:40,239 --> 00:11:44,330
+in two or three into Creed 3 in 1870 ap
+us for these kinds of techniques think
+
+187
+00:11:45,149 --> 00:11:48,237
+they can manage it by Wes technologies
+to do a really great experience with
+
+188
+00:11:49,029 --> 00:11:50,115
+large text great colors
+
+189
+00:11:50,889 --> 00:11:54,908
+and an experience I think that is really
+going to resonate with little kids
+
+190
+00:11:55,079 --> 00:12:02,079
+so congratulations extremely well done
+thank you very much
+
+191
+00:12:10,088 --> 00:12:17,088
+can we get the flight back truck
+
+192
+00:12:20,005 --> 00:12:23,017
+there we are
+
+193
+00:12:23,017 --> 00:12:28,113
+alright everybody loves a great game and
+there are so many games on the App Store
+
+194
+00:12:29,013 --> 00:12:32,111
+and we had with a lot of time looking
+through
+
+195
+00:12:33,011 --> 00:12:37,044
+are the best games and try to figure out
+which one was was the one that needed to
+
+196
+00:12:37,044 --> 00:12:38,080
+be a winner and there are many
+
+197
+00:12:38,008 --> 00:12:41,083
+that needed to be a winner on 42 we can
+only award so many tonight
+
+198
+00:12:42,055 --> 00:12:46,077
+but one other types of gaming want to
+take the games on the App Store this
+
+199
+00:12:46,077 --> 00:12:47,084
+super popular there really loves
+
+200
+00:12:48,047 --> 00:12:51,070
+that originated in the eighties is the
+platformer
+
+201
+00:12:51,007 --> 00:12:54,078
+and I am and in the platformer game
+
+202
+00:12:55,041 --> 00:12:58,123
+us genre what you're doing is you're
+you're basically you know running and
+
+203
+00:12:59,023 --> 00:13:00,071
+jumping moving in jumping
+
+204
+00:13:00,071 --> 00:13:03,153
+I to avoid obstacles and get coins and
+
+205
+00:13:04,053 --> 00:13:07,066
+say people and get money and you know
+whatever you're getting
+
+206
+00:13:07,066 --> 00:13:10,095
+I am the whole point is to not fall off
+the platform
+
+207
+00:13:10,095 --> 00:13:13,142
+right and i'd the way you fall off the
+platform is you get
+
+208
+00:13:14,042 --> 00:13:17,053
+you know spear to you some of the ball
+hits you were
+
+209
+00:13:17,053 --> 00:13:20,057
+something falls on you or whatever but
+the point is that the platform is a
+
+210
+00:13:20,093 --> 00:13:22,135
+pretty loose term but you're moving
+across this thing
+
+211
+00:13:23,035 --> 00:13:27,041
+and it just goes on and on and on in our
+next winter
+
+212
+00:13:27,041 --> 00:13:31,107
+has created I think one of the most
+incredible platformer games today on the
+
+213
+00:13:32,007 --> 00:13:33,093
+App Store their recent arrival
+
+214
+00:13:33,093 --> 00:13:36,119
+and and we're thrilled to wear them with
+something today
+
+215
+00:13:37,019 --> 00:13:40,022
+to Leo's fortune from $13.37
+
+216
+00:13:40,049 --> 00:13:47,049
+memory
+
+217
+00:13:53,097 --> 00:14:00,097
+and
+
+218
+00:14:03,018 --> 00:14:04,032
+run
+
+219
+00:14:04,032 --> 00:14:05,081
+going
+
+220
+00:14:05,369 --> 00:14:08,470
+correctly rather well I'm ratliff
+
+221
+00:14:08,047 --> 00:14:15,047
+naturally in Leo fortune you hunt down a
+cunning and the Furious ball
+
+222
+00:14:15,509 --> 00:14:20,570
+the when you found your phone am for a
+
+223
+00:14:21,119 --> 00:14:24,128
+yeah i coming in the theory is Bobby
+traveling through lush
+
+224
+00:14:24,209 --> 00:14:28,040
+environment such as mark the fourth air
+desert snow-capped mountains
+
+225
+00:14:28,004 --> 00:14:32,016
+and pirate fiddy uncover the truth
+behind Leo stolen fortune
+
+226
+00:14:32,016 --> 00:14:35,061
+great well I'm not gonna go
+
+227
+00:14:35,061 --> 00:14:38,880
+to the snow-capped peaks sir I'm
+underwater anything like that I'm gonna
+
+228
+00:14:39,429 --> 00:14:40,501
+show you the basic gameplay
+
+229
+00:14:41,149 --> 00:14:44,178
+us did you get a sense for for what's
+going on
+
+230
+00:14:44,439 --> 00:14:47,860
+I get the following brought down a
+little bit that be great
+
+231
+00:14:47,086 --> 00:14:52,185
+alright so we'll support him I'll you've
+got about twenty five levels are more
+
+232
+00:14:52,959 --> 00:14:53,790
+that you can just
+
+233
+00:14:53,079 --> 00:14:56,318
+swipe through in a very familiar user a
+user interface
+
+234
+00:14:57,029 --> 00:15:00,078
+I'm a star level one because I wanna
+point out something
+
+235
+00:15:00,519 --> 00:15:03,531
+that is such a great example of their
+attention to detail
+
+236
+00:15:03,639 --> 00:15:06,668
+and the way that they've done things in
+this game so I'm gonna start the
+
+237
+00:15:06,929 --> 00:15:07,007
+tutorial
+
+238
+00:15:07,709 --> 00:15:11,750
+and this is really for the on-boarding
+experience for the app in there are so
+
+239
+00:15:12,119 --> 00:15:15,124
+many APs nowadays that are needing to do
+this they want to get you
+
+240
+00:15:15,619 --> 00:15:18,691
+up up on you know into the app and the
+
+241
+00:15:19,339 --> 00:15:22,430
+help you understand how to use the app
+and you don't need something that's very
+
+242
+00:15:23,249 --> 00:15:23,317
+high
+
+243
+00:15:23,929 --> 00:15:26,931
+you know that super intense but to do
+this well
+
+244
+00:15:27,129 --> 00:15:30,131
+takes a lot of design and I think a lot
+of thinking and
+
+245
+00:15:30,329 --> 00:15:33,334
+its owner she is so the game starts off
+like this and the first thing you're
+
+246
+00:15:33,829 --> 00:15:34,924
+told is where to place your thumbs
+
+247
+00:15:35,779 --> 00:15:38,856
+in order to do that you're immediately
+learning how to hold the iPad to play
+
+248
+00:15:39,549 --> 00:15:39,607
+the game
+
+249
+00:15:40,129 --> 00:15:44,350
+sign up on my left them here right I'm
+here and now the game starts the work
+
+250
+00:15:44,035 --> 00:15:47,214
+and it's got these coach marks so I'm
+gonna move the left thumb
+
+251
+00:15:47,529 --> 00:15:50,860
+we're gonna start the clock points with
+with Leo here
+
+252
+00:15:50,086 --> 00:15:53,092
+okay so here's the platformer experience
+right
+
+253
+00:15:53,092 --> 00:15:56,261
+you're driving along on this so-called
+platform
+
+254
+00:15:57,089 --> 00:16:01,092
+and boom I'm stock I can't get over this
+thing but this on morning experience has
+
+255
+00:16:01,389 --> 00:16:02,412
+these goes thing images
+
+256
+00:16:02,619 --> 00:16:06,619
+and they tell me that if I move my right
+thumb up I can inflate Leo
+
+257
+00:16:06,619 --> 00:16:10,687
+and move him up and down on and now I'm
+dealing with an obstacle in this case
+
+258
+00:16:11,299 --> 00:16:15,372
+but keep going thanks
+
+259
+00:16:16,029 --> 00:16:19,115
+hope some down there no problem I can go
+back up
+
+260
+00:16:19,889 --> 00:16:23,926
+I can play no sorry all come on
+
+261
+00:16:24,259 --> 00:16:29,291
+I what's the problem with these demos
+right okay here we go we land on their
+
+262
+00:16:29,579 --> 00:16:32,790
+room that our here we are we drive
+around
+
+263
+00:16:32,079 --> 00:16:35,478
+enormous the just be a factor in the
+background is this
+
+264
+00:16:36,189 --> 00:16:39,197
+there's this perspective going on you
+got petals
+
+265
+00:16:39,269 --> 00:16:42,351
+flying through the air on other levels
+there's rain falling there's
+
+266
+00:16:43,089 --> 00:16:46,094
+all kinda stuff happening in this this
+is a in the distance
+
+267
+00:16:46,589 --> 00:16:49,655
+and here you're dealing with this
+obstacle in the game with
+
+268
+00:16:50,249 --> 00:16:53,345
+all these kinds of obstacles were we all
+have to solve is to do something in one
+
+269
+00:16:54,209 --> 00:16:54,264
+spot
+
+270
+00:16:54,759 --> 00:16:59,772
+to open a door are some kind of a bridge
+in this case I landed on top I would I
+
+271
+00:16:59,889 --> 00:17:02,930
+and some just getting played him put
+this around and then
+
+272
+00:17:03,299 --> 00:17:06,312
+move along and keep jumping and
+
+273
+00:17:06,429 --> 00:17:09,520
+this is just the real quick view of
+what's going on in this game
+
+274
+00:17:09,052 --> 00:17:13,061
+we just thought they did such a good job
+for example with this kind of a NASCAR
+
+275
+00:17:13,061 --> 00:17:16,490
+which is really hard to get you know to
+do well
+
+276
+00:17:17,039 --> 00:17:20,730
+I'll you going down for mines your hand
+
+277
+00:17:20,073 --> 00:17:23,912
+in a rainstorms all kinda stuff and then
+here
+
+278
+00:17:24,569 --> 00:17:27,643
+again this on boarding experience but
+I'm actually playing at and you see that
+
+279
+00:17:28,309 --> 00:17:29,720
+i'm suppose the jump this guy
+
+280
+00:17:29,072 --> 00:17:33,021
+right film and then now I'm
+
+281
+00:17:33,669 --> 00:17:37,700
+long this is just the first level but
+the game goes on and we just
+
+282
+00:17:37,007 --> 00:17:41,058
+really love this game for that attention
+to detail across all the levels
+
+283
+00:17:42,021 --> 00:17:46,730
+for the great integration with touch for
+the leveraging a by West technologies in
+
+284
+00:17:46,919 --> 00:17:47,700
+graphics
+
+285
+00:17:47,007 --> 00:17:50,736
+for the sound system there's so much
+that these guided right
+
+286
+00:17:51,429 --> 00:17:55,110
+and before I say congratulations this is
+an awesome app
+
+287
+00:17:55,011 --> 00:18:02,011
+taken from
+
+288
+00:18:05,549 --> 00:18:11,480
+and right we all have busy lives
+
+289
+00:18:11,048 --> 00:18:15,072
+and one other things that that I've
+learned over time and other people have
+
+290
+00:18:15,072 --> 00:18:17,361
+learned is that if you can capture
+
+291
+00:18:18,009 --> 00:18:21,210
+some other things that are going on and
+take a moment to record
+
+292
+00:18:21,021 --> 00:18:24,022
+an idea a thought
+
+293
+00:18:24,022 --> 00:18:28,591
+a memory were something happens and it
+triggers a thought you want to capture
+
+294
+00:18:28,789 --> 00:18:32,230
+that that that exercise
+
+295
+00:18:32,023 --> 00:18:35,582
+writing things down for a moment to just
+capturing these little bit something
+
+296
+00:18:35,789 --> 00:18:38,816
+bits have above information throughout
+the day
+
+297
+00:18:39,059 --> 00:18:41,131
+is actually a great way to relieve
+stress it's actually a great way to
+
+298
+00:18:41,779 --> 00:18:43,780
+build memories and in kind of
+
+299
+00:18:43,789 --> 00:18:46,800
+catalog your day it can also be you know
+I
+
+300
+00:18:46,899 --> 00:18:51,965
+idea incubator and so this is something
+it's a good discipline for us all to get
+
+301
+00:18:52,559 --> 00:18:52,990
+into
+
+302
+00:18:52,099 --> 00:18:55,198
+in this developer the developer the next
+up the next winter
+
+303
+00:18:56,098 --> 00:18:59,887
+totally understand this idea and they
+are
+
+304
+00:19:00,769 --> 00:19:07,769
+Bloomville who've made day one
+
+305
+00:19:24,052 --> 00:19:26,074
+hamlet way
+
+306
+00:19:26,074 --> 00:19:33,074
+hamlet play
+
+307
+00:19:38,046 --> 00:19:40,085
+happily them
+
+308
+00:19:40,499 --> 00:19:45,960
+grappling day one lets you record your
+life
+
+309
+00:19:45,096 --> 00:19:48,119
+as you live it from every day moment for
+once in a lifetime event
+
+310
+00:19:49,019 --> 00:19:52,088
+the elegant interface a gay one makes
+journal in your life
+
+311
+00:19:52,259 --> 00:19:57,325
+a simple pleasure rights with the backup
+
+312
+00:19:57,919 --> 00:20:00,940
+it's also available i OS up as well
+
+313
+00:20:01,129 --> 00:20:05,158
+are but we thought we would awarded for
+the Mac can show it off on the Mac
+
+314
+00:20:05,419 --> 00:20:08,420
+because so many of us are so busy and
+developers
+
+315
+00:20:08,429 --> 00:20:11,450
+our max everyday write code we're
+spending time
+
+316
+00:20:11,045 --> 00:20:15,133
+and in Xcode or we're doing using
+various tools he could be a spreadsheet
+
+317
+00:20:16,033 --> 00:20:19,982
+you could be writing some serve a
+document up but along the way
+
+318
+00:20:20,279 --> 00:20:23,440
+something what happened you like your
+phone call I thought pops into mind
+
+319
+00:20:23,044 --> 00:20:27,783
+an email arrives and you might wanna
+record an idea or put something quickly
+
+320
+00:20:28,179 --> 00:20:31,940
+down which is a big part of journaling
+not sitting down to write something huge
+
+321
+00:20:31,094 --> 00:20:32,883
+it's just capturing these little nuggets
+
+322
+00:20:33,729 --> 00:20:36,760
+and so day one test builds a little
+
+323
+00:20:37,039 --> 00:20:41,051
+menu extra you can type in and put some
+sort of entry an indictable straight in
+
+324
+00:20:41,159 --> 00:20:41,166
+the log in then
+
+325
+00:20:41,859 --> 00:20:44,924
+into the into the Journal and then
+you're back to your
+
+326
+00:20:45,509 --> 00:20:48,720
+are or we could just go up here and
+we'll just launch the app
+
+327
+00:20:48,072 --> 00:20:51,091
+and I'll we can a
+
+328
+00:20:51,739 --> 00:20:55,741
+inside the app immediately create
+journal entries so I can say
+
+329
+00:20:55,759 --> 00:20:58,940
+you know here I am at a couple
+
+330
+00:20:58,094 --> 00:21:01,433
+sign words sorry
+
+331
+00:21:02,279 --> 00:21:05,284
+the trophies or
+
+332
+00:21:05,779 --> 00:21:08,950
+great want one
+
+333
+00:21:08,095 --> 00:21:11,554
+things so right
+
+334
+00:21:12,409 --> 00:21:15,478
+there's my entry I can take turns out
+attacks took a trophy
+
+335
+00:21:16,099 --> 00:21:20,690
+picture earlier so I can take this
+picture dropping into here and a once
+
+336
+00:21:20,069 --> 00:21:22,548
+get it either take the date for the
+picture just say
+
+337
+00:21:23,169 --> 00:21:26,255
+leave it unchanged based on the daytime
+entering this journal entry and
+
+338
+00:21:27,029 --> 00:21:30,081
+and I think I'm done I can tag it with
+various tags that are in the system
+
+339
+00:21:30,549 --> 00:21:33,632
+I can add a location that got Maps
+integration like it to use current
+
+340
+00:21:34,379 --> 00:21:35,405
+location about like
+
+341
+00:21:35,639 --> 00:21:39,715
+and I'm done and there's the entry in
+there and I can look at my journal
+
+342
+00:21:40,399 --> 00:21:45,452
+overtime using the the overall view up
+all the journal entries and so here's
+
+343
+00:21:45,929 --> 00:21:46,961
+just a sample Journal
+
+344
+00:21:47,249 --> 00:21:50,272
+thats that we've got in the in the app
+here
+
+345
+00:21:50,479 --> 00:21:54,558
+where you can take a look at all these
+entries um and go back in time and
+
+346
+00:21:55,269 --> 00:21:58,335
+and see what's going on and really that
+is the whole point of journaling is
+
+347
+00:21:58,929 --> 00:21:59,984
+capturing these moments
+
+348
+00:22:00,479 --> 00:22:04,561
+in time as they occur at the pop in your
+mind and we felt that they won
+
+349
+00:22:05,299 --> 00:22:10,190
+did such a great job at this as well
+they've got built in notifications you
+
+350
+00:22:10,019 --> 00:22:11,678
+can set up reminders to
+
+351
+00:22:11,849 --> 00:22:16,190
+to put things into your journal they've
+got inspirational quotes that will pop
+
+352
+00:22:16,019 --> 00:22:18,118
+up when you're gonna create a journal
+entry
+
+353
+00:22:18,289 --> 00:22:22,303
+they can be inspiring and get your
+writing and really that's the essence of
+
+354
+00:22:22,429 --> 00:22:26,470
+a great tool right is that it it gets
+the job done
+
+355
+00:22:26,047 --> 00:22:30,126
+it doesn't get in the way and it's
+perfectly balanced and we selected this
+
+356
+00:22:30,549 --> 00:22:33,220
+tool for being super well design an OS
+10
+
+357
+00:22:33,022 --> 00:22:36,331
+and in being exactly what it needs to be
+
+358
+00:22:36,529 --> 00:22:39,710
+and nothing more so congratulations on a
+job well done
+
+359
+00:22:39,071 --> 00:22:46,071
+here
+
+360
+00:22:54,529 --> 00:22:54,950
+alright
+
+361
+00:22:54,095 --> 00:22:57,108
+our next winter is a
+
+362
+00:22:58,008 --> 00:23:02,026
+it's just such a great example love the
+above the principal
+
+363
+00:23:02,026 --> 00:23:05,325
+%uh minimalist design you know design is
+all about
+
+364
+00:23:05,559 --> 00:23:09,633
+of it and finish it's all about the
+marriage between form and function
+
+365
+00:23:10,299 --> 00:23:14,210
+it's about are you know communicating
+clearly
+
+366
+00:23:14,021 --> 00:23:17,115
+and and I West really
+
+367
+00:23:18,015 --> 00:23:22,021
+helps you to do this right by helping
+you focus on content
+
+368
+00:23:22,075 --> 00:23:25,080
+arm I getting out of the way
+
+369
+00:23:26,025 --> 00:23:29,089
+giving you a a system that allows you to
+draw
+
+370
+00:23:29,089 --> 00:23:32,108
+you know the the you like my with seven
+that is
+
+371
+00:23:33,008 --> 00:23:38,071
+that is minimalist in nature and and you
+know it takes a lot of attention
+
+372
+00:23:38,071 --> 00:23:42,152
+and a lot of focus and refinements to
+actually end up with something that is
+
+373
+00:23:43,052 --> 00:23:48,074
+that is in its purest form that is
+something that's that is exactly what
+
+374
+00:23:48,074 --> 00:23:50,753
+you wanted to be in nothing more there's
+no extra dormant
+
+375
+00:23:51,419 --> 00:23:55,710
+and our next winner did that with their
+game and they are
+
+376
+00:23:55,071 --> 00:24:02,071
+black by cannot be brother them
+
+377
+00:24:12,075 --> 00:24:14,744
+home Bradley
+
+378
+00:24:15,419 --> 00:24:20,400
+the goal in this game
+
+379
+00:24:20,004 --> 00:24:23,083
+to shape a line for all the colored
+circle for while avoiding black hole
+
+380
+00:24:24,019 --> 00:24:28,051
+a long and proud from delightfully
+simple to exceptionally deep and complex
+
+381
+00:24:28,051 --> 00:24:33,088
+it's a stroke of genius John you have
+this app is
+
+382
+00:24:33,088 --> 00:24:37,125
+a is awesome and I wanna just to give
+you not believe this game you need to
+
+383
+00:24:38,025 --> 00:24:39,046
+see it from the start
+
+384
+00:24:39,046 --> 00:24:42,765
+so the basic point the game is you know
+I Sean said you
+
+385
+00:24:43,179 --> 00:24:46,490
+you gesture and you draw the line I
+
+386
+00:24:46,049 --> 00:24:49,115
+to knock out the colored dots and when
+you get to a level where they're black
+
+387
+00:24:50,015 --> 00:24:51,083
+dots you want to avoid those
+
+388
+00:24:51,083 --> 00:24:55,125
+but you know it the first level you're
+just the starting of here with this
+
+389
+00:24:56,025 --> 00:24:56,934
+gesture
+
+390
+00:24:57,159 --> 00:25:01,780
+and you know notices I'm playing here
+that there is no
+
+391
+00:25:01,078 --> 00:25:06,227
+there's nothing extra on-screen it's
+just the dots it's just my gesture
+
+392
+00:25:06,929 --> 00:25:11,530
+and the gesture the rendering of the
+gesture is is almost like calligraphy a
+
+393
+00:25:11,053 --> 00:25:11,122
+minute just
+
+394
+00:25:12,022 --> 00:25:15,061
+the it it has a flair to it it's got
+
+395
+00:25:15,061 --> 00:25:19,088
+its representative at the speed up my
+stroke the exact timing
+
+396
+00:25:19,088 --> 00:25:22,164
+the the link that everything so eager to
+these three
+
+397
+00:25:23,064 --> 00:25:26,115
+so those are easy levels let me jump up
+to
+
+398
+00:25:27,015 --> 00:25:30,034
+up to level eight here for a moment
+which is kinda fun
+
+399
+00:25:30,034 --> 00:25:34,483
+so here I got an instance where I've got
+to avoid the black dots but get the
+
+400
+00:25:34,789 --> 00:25:35,350
+white ones
+
+401
+00:25:35,035 --> 00:25:38,084
+are get the colored ones and and to do
+that I've gotta figure out what gesture
+
+402
+00:25:38,084 --> 00:25:39,653
+to do that we'll repeat
+
+403
+00:25:40,409 --> 00:25:44,210
+across the screen through these colored
+up no
+
+404
+00:25:44,021 --> 00:25:47,720
+the other thing that's super cool what
+this app is that it leverages audio
+
+405
+00:25:47,909 --> 00:25:52,480
+other for for great feedback and so this
+a very fun
+
+406
+00:25:52,048 --> 00:25:56,497
+lightweight a you know sounds that come
+through as you screw up basically
+
+407
+00:25:56,929 --> 00:26:03,929
+so from with yep
+
+408
+00:26:04,169 --> 00:26:07,870
+you know so you're messing up when he
+tried by right
+
+409
+00:26:07,087 --> 00:26:11,148
+knock-knock way not quite
+
+410
+00:26:12,048 --> 00:26:16,377
+Jill not quite anything about this
+
+411
+00:26:16,809 --> 00:26:20,150
+it's like that you like I'll black in
+the sound is
+
+412
+00:26:20,015 --> 00:26:24,020
+with great feedback well after I all
+
+413
+00:26:24,002 --> 00:26:27,971
+now mind john all
+
+414
+00:26:28,169 --> 00:26:33,100
+naw I'm left but it would give up
+
+415
+00:26:33,001 --> 00:26:36,042
+but would be this a thoroughly the
+Devils
+
+416
+00:26:36,051 --> 00:26:39,146
+yeah we love it game for the minimalist
+design the great integration with the
+
+417
+00:26:40,046 --> 00:26:40,109
+touch
+
+418
+00:26:41,009 --> 00:26:45,014
+a you know system %uh ViaWest just that
+expression
+
+419
+00:26:45,014 --> 00:26:48,053
+I'll I'll such as the great engagement
+
+420
+00:26:48,179 --> 00:26:51,860
+it's great expression at the game in a
+very simplistic way
+
+421
+00:26:51,086 --> 00:26:55,139
+with no extra dormant and it so
+congratulations on actual job
+
+422
+00:26:56,039 --> 00:27:03,039
+very much what the
+
+423
+00:27:08,035 --> 00:27:08,060
+may
+
+424
+00:27:08,058 --> 00:27:12,397
+play there right the hope
+
+425
+00:27:12,919 --> 00:27:15,990
+you know we were all
+
+426
+00:27:15,099 --> 00:27:17,182
+you know at the conference this weekend
+we're crazy busy you've got a hundred
+
+427
+00:27:18,082 --> 00:27:20,147
+and what is it 10 fashions to attend and
+
+428
+00:27:21,047 --> 00:27:24,065
+so this is just a great example love how
+busy we are
+
+429
+00:27:24,065 --> 00:27:27,107
+I for not a conference you guys are
+writing code
+
+430
+00:27:28,007 --> 00:27:31,023
+you go to school you're doing you're
+doing light and
+
+431
+00:27:31,023 --> 00:27:35,028
+and if you're anything like me you know
+that it's hard to keep on top I love
+
+432
+00:27:35,073 --> 00:27:38,128
+all the things that are going on in the
+world around us whether it's in our
+
+433
+00:27:39,028 --> 00:27:39,807
+industry
+
+434
+00:27:40,059 --> 00:27:44,010
+whether it's a not enter through enters
+in our industry but something that
+
+435
+00:27:44,001 --> 00:27:46,096
+interests of whether it's sports or
+world news or what have you
+
+436
+00:27:46,096 --> 00:27:50,545
+and so we've got News you know it's not
+look for lack of news sources it's just
+
+437
+00:27:51,409 --> 00:27:53,330
+that there's so much news coming out
+
+438
+00:27:53,033 --> 00:27:56,102
+and it's often hard to pick
+
+439
+00:27:57,002 --> 00:28:00,038
+a quality sources news it's hard to
+
+440
+00:28:00,038 --> 00:28:03,567
+to find one that is you know curated
+
+441
+00:28:03,909 --> 00:28:07,130
+and that's gonna give you what you are
+really interested in
+
+442
+00:28:07,013 --> 00:28:10,040
+in the link that you wanted to be in and
+
+443
+00:28:10,004 --> 00:28:13,393
+more importantly it's even hard to find
+time to read it all
+
+444
+00:28:13,789 --> 00:28:18,790
+and the developer over next stop the
+next stop the winner is
+
+445
+00:28:18,799 --> 00:28:22,870
+set out to solve this dilemma up getting
+information to people
+
+446
+00:28:22,087 --> 00:28:25,108
+in a timely manner in a way that they
+can consume it easily
+
+447
+00:28:26,008 --> 00:28:33,008
+and our winner is Yahoo news digest by
+Yahoo
+
+448
+00:28:59,019 --> 00:29:00,870
+rightfully unfair
+
+449
+00:29:00,087 --> 00:29:03,178
+now out I'm got playing
+
+450
+00:29:04,078 --> 00:29:08,172
+up this apt-get
+
+451
+00:29:09,072 --> 00:29:13,078
+you in the know in no time it delivers
+definitive summaries up all the
+
+452
+00:29:14,032 --> 00:29:16,046
+important to me to known you for the day
+
+453
+00:29:16,046 --> 00:29:19,069
+into beautiful dodger story for both
+
+454
+00:29:19,069 --> 00:29:23,083
+hand curated as well algorithmically
+generated to ensure high-quality
+
+455
+00:29:23,083 --> 00:29:28,175
+and keep you informed of all the key
+headline for the day reload
+
+456
+00:29:29,075 --> 00:29:32,134
+think a quick look at the got the news I
+just so I
+
+457
+00:29:33,034 --> 00:29:36,042
+what you get is these two digested news
+with a buddy
+
+458
+00:29:37,014 --> 00:29:40,078
+stories in them in the morning at 8 a.m.
+and
+
+459
+00:29:40,078 --> 00:29:43,085
+at 6 p.m. in the evening and that's it
+
+460
+00:29:43,085 --> 00:29:46,130
+and so this is what time I go to New
+zaps all the time
+
+461
+00:29:47,003 --> 00:29:50,015
+I wait for these I just arrived and once
+they arrive
+
+462
+00:29:50,042 --> 00:29:53,086
+you can just scroll through on
+
+463
+00:29:53,086 --> 00:29:57,134
+this really simple you why that lists
+the stories the top stories in the day
+
+464
+00:29:58,034 --> 00:30:01,039
+and what they've done really well as
+they've
+
+465
+00:30:01,039 --> 00:30:05,071
+you know done this automatic collection
+of information and aggregation and
+
+466
+00:30:05,071 --> 00:30:07,159
+all the work that they do behind the
+scenes with some Lee but then they're
+
+467
+00:30:08,059 --> 00:30:10,077
+doing human curation at the content
+
+468
+00:30:10,077 --> 00:30:13,108
+in addition with the editors and so the
+car could be you get
+
+469
+00:30:14,008 --> 00:30:17,077
+the news stories are extremely a
+
+470
+00:30:17,077 --> 00:30:20,120
+extremely high quality so here we are
+we're moving through
+
+471
+00:30:21,002 --> 00:30:26,068
+%uh this list in CC Paul political story
+there's a US news story technology world
+
+472
+00:30:26,086 --> 00:30:29,127
+below into the story headlined you've
+got um
+
+473
+00:30:30,027 --> 00:30:33,059
+you've got these little Adams is all
+circles
+
+474
+00:30:33,059 --> 00:30:36,071
+and you can tap them to get the legend
+of what you to these mean
+
+475
+00:30:36,071 --> 00:30:39,083
+basically they're telling you how much
+information there is available for one
+
+476
+00:30:39,083 --> 00:30:39,148
+other stories
+
+477
+00:30:40,048 --> 00:30:43,051
+the so let's go into the story but I'll
+a wanna
+
+478
+00:30:43,078 --> 00:30:47,113
+and you the first time you use it it
+says how to use the app and see you can
+
+479
+00:30:48,013 --> 00:30:48,070
+swipe
+
+480
+00:30:48,007 --> 00:30:51,014
+just right to left around the stories
+
+481
+00:30:51,077 --> 00:30:54,080
+or go back into a story and redid up
+
+482
+00:30:55,007 --> 00:30:58,083
+read it in more detail and I find that
+these are you know if I just take about
+
+483
+00:30:58,083 --> 00:31:00,092
+10 minutes to plow through this I guess
+
+484
+00:31:00,092 --> 00:31:03,187
+I've got of some great information about
+the latest headlines
+
+485
+00:31:04,087 --> 00:31:07,176
+and so you get these great call outs you
+moving through the story that's pretty
+
+486
+00:31:08,076 --> 00:31:08,134
+much it
+
+487
+00:31:09,034 --> 00:31:12,096
+it's well laid-out at the bottom you're
+getting extra information like
+
+488
+00:31:12,096 --> 00:31:14,195
+up photos that may be associated with
+the story they're coming from really
+
+489
+00:31:15,095 --> 00:31:15,189
+good sources
+
+490
+00:31:16,089 --> 00:31:20,089
+there might be a topic breakdown there
+might be a video that loads very very
+
+491
+00:31:20,089 --> 00:31:20,160
+quickly that
+
+492
+00:31:21,006 --> 00:31:24,072
+it's a a quick summary of up the story
+others maps
+
+493
+00:31:25,026 --> 00:31:28,695
+integration if it if it's appropriate
+and then you can go through
+
+494
+00:31:28,929 --> 00:31:33,140
+some top tweets I'll or other social
+networking posts that
+
+495
+00:31:33,014 --> 00:31:38,062
+that apply to this story and and so
+that's how we to the stories is laid out
+
+496
+00:31:38,062 --> 00:31:41,070
+and he just looked through them one by
+one and read them
+
+497
+00:31:41,007 --> 00:31:44,045
+some really great visual effects in a
+kind of a plea for you why
+
+498
+00:31:45,008 --> 00:31:49,064
+in the app another example playful you I
+is the share button these guys kinda pop
+
+499
+00:31:49,064 --> 00:31:50,603
+up from the bottom they kinda
+
+500
+00:31:51,179 --> 00:31:54,310
+down some go away um so
+
+501
+00:31:54,031 --> 00:31:57,078
+really great experience and then when
+you're done I love the
+
+502
+00:31:57,078 --> 00:32:02,083
+the what they've done Spears have a good
+time I love would be done at the very
+
+503
+00:32:02,083 --> 00:32:02,182
+end because
+
+504
+00:32:03,082 --> 00:32:06,083
+you read through this in the news is
+really great but its they've done a
+
+505
+00:32:06,092 --> 00:32:08,183
+great job with Kenny just came up buying
+that's a little bit
+
+506
+00:32:09,083 --> 00:32:12,157
+by giving you feedback on how many the
+story they just saying that you read
+
+507
+00:32:13,057 --> 00:32:16,109
+and so while we dislike through them now
+it doesn't mean we read them but
+
+508
+00:32:17,009 --> 00:32:21,023
+impure you've read them in and at the
+end you just get old hey we're at 7.9
+
+509
+00:32:21,023 --> 00:32:24,051
+and that its I just find it kinda cool
+
+510
+00:32:24,051 --> 00:32:28,097
+the feedback now the this digest that
+we're looking at right here the black
+
+511
+00:32:28,097 --> 00:32:29,162
+background because it's the
+
+512
+00:32:30,062 --> 00:32:33,110
+the other day digest but working top the
+top right corner
+
+513
+00:32:34,001 --> 00:32:37,100
+see that the next hour next I just as
+coming in 11 hours by top the center the
+
+514
+00:32:38,009 --> 00:32:38,838
+screen it says
+
+515
+00:32:38,919 --> 00:32:42,380
+up patience is a virtue love that the
+first time I saw that
+
+516
+00:32:42,038 --> 00:32:45,126
+and I can go back across the last week
+and pick one
+
+517
+00:32:46,026 --> 00:32:49,105
+a maybe a died just that I haven't read
+saw a pic a morning digest:
+
+518
+00:32:50,005 --> 00:32:54,036
+and here the news comes in and it's the
+white background
+
+519
+00:32:54,036 --> 00:32:58,037
+so little bit of attention to detail
+little attention to detail
+
+520
+00:32:58,046 --> 00:33:01,047
+on things like white background for Dane
+is
+
+521
+00:33:01,047 --> 00:33:04,126
+black background for night time that
+news I just very playful interface
+
+522
+00:33:05,026 --> 00:33:08,026
+really well I can agree with touch and
+our
+
+523
+00:33:08,026 --> 00:33:12,034
+you know beautiful typography and layout
+and excellent quality news
+
+524
+00:33:12,034 --> 00:33:19,034
+so really really well done
+congratulations company
+
+525
+00:33:32,269 --> 00:33:33,298
+we talk about great
+
+526
+00:33:33,559 --> 00:33:37,657
+aP's a lot a on the evangelism team we
+work with many have you
+
+527
+00:33:38,539 --> 00:33:41,610
+a on Sean's team she works with many
+many developers
+
+528
+00:33:42,249 --> 00:33:46,350
+are always talking with an opportunity
+but the need to create something that is
+
+529
+00:33:46,035 --> 00:33:49,057
+that is really great it's that is truly
+
+530
+00:33:49,057 --> 00:33:52,726
+impactful in people's lives and what are
+the ways to create
+
+531
+00:33:53,239 --> 00:33:58,283
+a really great game is a porous to use
+technology have a great game loop have a
+
+532
+00:33:58,679 --> 00:33:59,350
+great you know
+
+533
+00:33:59,035 --> 00:34:03,334
+game mechanic et cetera but more
+important than any of that
+
+534
+00:34:03,649 --> 00:34:08,740
+is to add personality to a game that's
+what makes an engaging
+
+535
+00:34:08,074 --> 00:34:11,903
+thats would makes a connection with
+people and some other
+
+536
+00:34:12,569 --> 00:34:16,270
+you know some of the biggest names that
+that we all know you know plants versus
+
+537
+00:34:16,027 --> 00:34:16,856
+zombies
+
+538
+00:34:17,099 --> 00:34:20,198
+cut the rope a a Angry Birds
+
+539
+00:34:21,089 --> 00:34:25,290
+a where's my water by Disney all those
+games
+
+540
+00:34:25,029 --> 00:34:28,074
+had a great game experience but more
+importantly
+
+541
+00:34:28,074 --> 00:34:31,743
+had really great personality very unique
+to their game
+
+542
+00:34:32,409 --> 00:34:35,980
+and this next game does everything right
+
+543
+00:34:35,098 --> 00:34:39,277
+in addition to also adding personality
+to the game and so
+
+544
+00:34:40,159 --> 00:34:43,211
+we're pleased to award a nata to 3
+
+545
+00:34:43,679 --> 00:34:50,679
+by servo the
+
+546
+00:35:00,067 --> 00:35:06,486
+you
+
+547
+00:35:07,089 --> 00:35:11,660
+him
+
+548
+00:35:11,066 --> 00:35:12,245
+deadly
+
+549
+00:35:12,839 --> 00:35:16,580
+them
+
+550
+00:35:16,058 --> 00:35:20,126
+probably addicted to that game
+congratulations I personally am addicted
+
+551
+00:35:21,026 --> 00:35:21,111
+to this game
+
+552
+00:35:22,011 --> 00:35:26,026
+greeted the tiny puzzle that will grow
+on you it's an engaging number matching
+
+553
+00:35:26,026 --> 00:35:28,033
+puzzle but you learn in a minute but
+play and awfully
+
+554
+00:35:28,096 --> 00:35:31,152
+with an endearing have two characters in
+an enchanting found track
+
+555
+00:35:32,052 --> 00:35:35,067
+it's been broadly imitated but never
+equaled John
+
+556
+00:35:35,067 --> 00:35:38,122
+yet so true so I'll
+
+557
+00:35:39,022 --> 00:35:42,046
+you know most you probably play this way
+more than I have
+
+558
+00:35:42,046 --> 00:35:45,074
+on and by the result to be a
+
+559
+00:35:45,074 --> 00:35:48,089
+by your response will be awarded them
+but you know
+
+560
+00:35:48,089 --> 00:35:52,154
+hug her personality you know this game
+is good attitude
+
+561
+00:35:53,054 --> 00:35:56,101
+rights over longer I talked the more
+annoyed they're gonna get
+
+562
+00:35:57,001 --> 00:36:00,016
+because these piles our individual
+characters
+
+563
+00:36:00,016 --> 00:36:04,022
+and weekend find out who they are this
+is Tran
+
+564
+00:36:04,076 --> 00:36:07,135
+we can tap on number right knee
+
+565
+00:36:08,035 --> 00:36:11,051
+these guys got character I love to raise
+the
+
+566
+00:36:11,051 --> 00:36:14,086
+a paying rate and
+
+567
+00:36:14,086 --> 00:36:17,122
+you can see on the part of the files
+that there you know these two eyes and
+
+568
+00:36:18,022 --> 00:36:19,094
+nose or mouth the
+
+569
+00:36:19,094 --> 00:36:23,108
+the tiles or constantly in their blink
+being there
+
+570
+00:36:24,008 --> 00:36:27,065
+there they're doing things with their
+faith their connecting
+
+571
+00:36:27,065 --> 00:36:30,066
+up with each other so the game is your
+you know you're doing one's and two's
+
+572
+00:36:30,075 --> 00:36:31,093
+connect greatly
+
+573
+00:36:31,093 --> 00:36:35,131
+then you can combine three together so
+let's start to move here
+
+574
+00:36:36,031 --> 00:36:39,098
+forget they're playing here a so we can
+combine 12
+
+575
+00:36:39,098 --> 00:36:43,100
+with three hello three years combining
+the sick who is
+
+576
+00:36:44,000 --> 00:36:47,079
+right threes here he saw
+
+577
+00:36:47,079 --> 00:36:51,085
+absolute right and as you play
+
+578
+00:36:51,085 --> 00:36:54,144
+you get this really great experience me
+
+579
+00:36:55,044 --> 00:36:58,049
+who link you know hun title talking to
+you
+
+580
+00:36:58,094 --> 00:37:01,108
+and I love this and this is i think what
+
+581
+00:37:02,008 --> 00:37:06,016
+with this team over the top and helps it
+stand out from the crowd
+
+582
+00:37:06,016 --> 00:37:09,115
+I mean it's not just that I'll sorting
+game the personality
+
+583
+00:37:10,015 --> 00:37:14,031
+is this extra layer huh you know
+brilliant layer
+
+584
+00:37:14,031 --> 00:37:18,590
+on top of the technology so this is why
+we picked this game is a winner it's
+
+585
+00:37:18,869 --> 00:37:23,680
+just great gameplay very engaging great
+technology means an excellent personnel
+
+586
+00:37:23,068 --> 00:37:26,167
+I big very much thank Martin Luther
+
+587
+00:37:27,067 --> 00:37:30,098
+democrat okay
+
+588
+00:37:30,098 --> 00:37:37,098
+I okay
+
+589
+00:37:42,046 --> 00:37:44,049
+rights ok your creative professional
+
+590
+00:37:44,076 --> 00:37:48,127
+%uh the Mac has you know the chances are
+the Mac has been your tool of choice
+
+591
+00:37:49,027 --> 00:37:54,051
+and in you know across all credit
+markets whether professional or consumer
+
+592
+00:37:54,051 --> 00:37:58,094
+a you know in the creative space it's
+pretty much always been the case
+
+593
+00:37:58,094 --> 00:38:01,133
+that the best stops are first on the Mac
+
+594
+00:38:02,033 --> 00:38:05,106
+or their Mac only and our winner in this
+
+595
+00:38:06,006 --> 00:38:09,045
+our next winter %uh stays in this
+tradition
+
+596
+00:38:09,045 --> 00:38:12,714
+and and we'd like to award an ATA
+tonight to
+
+597
+00:38:13,119 --> 00:38:20,119
+in a graft probe i click for photo
+cinema craft bro
+
+598
+00:38:36,044 --> 00:38:39,058
+broccoli
+
+599
+00:38:39,058 --> 00:38:43,155
+correctly than a graph pro is a
+professional tool that allows you to
+
+600
+00:38:44,055 --> 00:38:45,083
+create living photos
+
+601
+00:38:45,083 --> 00:38:49,101
+with its unique live mapping technology
+allows artists to preview their images
+
+602
+00:38:50,001 --> 00:38:51,015
+in real time
+
+603
+00:38:51,015 --> 00:38:54,049
+and it creates ultra high-definition
+output if you're hyper
+
+604
+00:38:54,049 --> 00:38:59,140
+photo right so
+
+605
+00:39:00,004 --> 00:39:03,103
+first thing is you know we all know how
+compelling video is
+
+606
+00:39:04,039 --> 00:39:07,084
+and we see video on the web up for
+advertisements or for
+
+607
+00:39:07,084 --> 00:39:10,128
+you know merchandising or in catalogs or
+whatever I
+
+608
+00:39:11,028 --> 00:39:14,049
+for things that we might be interested
+in we wanna know about
+
+609
+00:39:14,049 --> 00:39:17,106
+and videos really great the problem
+video is it hard to make
+
+610
+00:39:18,006 --> 00:39:22,074
+and it you know that a big footprint
+it's got to be brought down
+
+611
+00:39:22,074 --> 00:39:25,090
+it takes band with and so arm
+
+612
+00:39:25,009 --> 00:39:28,022
+you know there's a better way to do this
+as far as these guys are concerned they
+
+613
+00:39:29,003 --> 00:39:31,079
+built this tool that optimize to create
+something
+
+614
+00:39:31,079 --> 00:39:35,145
+they're calling portals for cinema
+graphs which are basically living images
+
+615
+00:39:36,045 --> 00:39:39,123
+there a combination of a photo in a
+video and
+
+616
+00:39:40,023 --> 00:39:43,084
+they benefit from being a whole lot more
+lightweight then
+
+617
+00:39:43,084 --> 00:39:46,086
+video and a lot more interesting and
+compelling
+
+618
+00:39:47,004 --> 00:39:50,053
+then photos to still photos so
+
+619
+00:39:50,053 --> 00:39:53,127
+arm but i wanna do here is show you
+first the mall
+
+620
+00:39:54,027 --> 00:39:57,044
+just an animated a gear gyps re:
+
+621
+00:39:57,044 --> 00:40:00,122
+Amager that I'm gonna create in a moment
+and
+
+622
+00:40:01,022 --> 00:40:04,078
+now this is sort of an old file format
+on the web but it still prevalent
+
+623
+00:40:04,078 --> 00:40:07,079
+and that to create one these is is
+difficult
+
+624
+00:40:07,088 --> 00:40:10,130
+up to do we're going to do a minute and
+so here's an imager
+
+625
+00:40:11,003 --> 00:40:14,042
+and we're gonna end up with that in that
+started with this
+
+626
+00:40:14,069 --> 00:40:17,076
+this raw video:
+
+627
+00:40:18,039 --> 00:40:20,938
+so this is just video taken at Subway in
+New York
+
+628
+00:40:21,289 --> 00:40:25,303
+and we're gonna start with that in
+quickly in a cup in like three steps
+
+629
+00:40:25,429 --> 00:40:25,504
+create
+
+630
+00:40:26,179 --> 00:40:29,180
+a be an Egyptian create a flex also
+
+631
+00:40:29,189 --> 00:40:32,650
+a me switch over to sell a graph pro
+
+632
+00:40:32,065 --> 00:40:35,164
+now what you do is you open up the the
+raw
+
+633
+00:40:35,749 --> 00:40:40,660
+video that you've got and a in this case
+we got somebody walking by on the left
+
+634
+00:40:40,066 --> 00:40:41,945
+that we've got the train coming in
+
+635
+00:40:42,539 --> 00:40:46,565
+are here if you just look to the left to
+the escalator you'll see as the sloops
+
+636
+00:40:46,799 --> 00:40:50,801
+the train's pulling in and that there's
+the light and it stops right so it's a
+
+637
+00:40:50,819 --> 00:40:51,900
+very short clip
+
+638
+00:40:51,009 --> 00:40:54,188
+but we don't want any that noise in the
+side we don't want any the reflection
+
+639
+00:40:55,079 --> 00:40:58,097
+from the lights and in different things
+that are in the station on the walls
+
+640
+00:40:58,259 --> 00:41:01,260
+and so we start in the topic or we
+choose tram
+
+641
+00:41:01,359 --> 00:41:04,640
+we pull in the tram and we figure out
+exactly
+
+642
+00:41:04,064 --> 00:41:07,903
+you notice the lady on the left we
+decide where we want her to freeze
+
+643
+00:41:08,479 --> 00:41:11,542
+in the image that we're gonna create or
+in the in the cinema grab the run a
+
+644
+00:41:12,109 --> 00:41:14,171
+great we stop it there with the left
+side of the tram
+
+645
+00:41:14,729 --> 00:41:17,752
+the right to the tram I'm just gonna
+pull in here
+
+646
+00:41:17,959 --> 00:41:20,995
+and adjust just slightly so I get the
+light from the train coming into the
+
+647
+00:41:21,319 --> 00:41:22,378
+left to the escalator their EC that
+
+648
+00:41:22,909 --> 00:41:26,002
+their in there so I just pulling in for
+the right side
+
+649
+00:41:26,839 --> 00:41:29,902
+and the next is where the magic happens
+I'm gonna go to the masked all
+
+650
+00:41:30,469 --> 00:41:33,473
+a lil bit too big hear someone who just
+its size go down
+
+651
+00:41:33,869 --> 00:41:36,887
+and I'm gonna mask up the portion
+
+652
+00:41:37,049 --> 00:41:42,070
+love the image that the video that I
+want to keep everything else now becomes
+
+653
+00:41:42,259 --> 00:41:46,312
+up up basically mapped out and then I'm
+gonna go to
+
+654
+00:41:46,789 --> 00:41:49,861
+loop decide what kind of a looper good
+several types the loop so they can do
+
+655
+00:41:50,509 --> 00:41:53,534
+I'll just stick with repeat a I'm in it
+you know
+
+656
+00:41:53,759 --> 00:41:57,817
+leave the speed the way it is a leave
+the lay the wait isn't just increase
+
+657
+00:41:58,339 --> 00:42:00,346
+CrossFit CrossFit is what happens when
+the video
+
+658
+00:42:01,039 --> 00:42:04,134
+and and then it looks back to the
+beginning soldiers make that smooth
+
+659
+00:42:04,989 --> 00:42:09,013
+looks like a continuous movement of the
+escalator and lastly will go to
+
+660
+00:42:09,229 --> 00:42:12,263
+I look a quick lead adjustments I can
+adjust all kinds a
+
+661
+00:42:12,569 --> 00:42:16,900
+the the attributes on this video but
+I'll just go to the can defects that are
+
+662
+00:42:16,009 --> 00:42:16,082
+here
+
+663
+00:42:17,063 --> 00:42:21,262
+and you can see that you can apply these
+super quickly up to this
+
+664
+00:42:21,829 --> 00:42:24,874
+to this image and so let's grab a
+
+665
+00:42:25,279 --> 00:42:28,313
+black and white called Sun and then
+we'll do
+
+666
+00:42:28,619 --> 00:42:31,683
+a render and we can save note is h264
+
+667
+00:42:32,259 --> 00:42:35,266
+or progress up 42 so we'll do that
+
+668
+00:42:35,959 --> 00:42:38,960
+save it to the desktop let's call it
+
+669
+00:42:38,969 --> 00:42:45,052
+demo and what's creating now is it's
+creating this flexible file this
+
+670
+00:42:45,799 --> 00:42:48,804
+us in my graph that the folks at the
+murder a pro
+
+671
+00:42:49,299 --> 00:42:52,331
+are three portal can host on their
+servers for you
+
+672
+00:42:52,619 --> 00:42:56,625
+and it's super lightweight comes down
+works with every browser
+
+673
+00:42:56,679 --> 00:42:59,752
+and is I gives you that exact experience
+
+674
+00:43:00,409 --> 00:43:04,461
+and so the end result is on is basically
+this
+
+675
+00:43:04,929 --> 00:43:07,931
+we did you know you can see in the woman
+on the left is frozen everything about
+
+676
+00:43:07,949 --> 00:43:08,977
+the scene is frozen
+
+677
+00:43:09,229 --> 00:43:13,231
+except the one piece that we want we did
+this in three simple steps
+
+678
+00:43:13,249 --> 00:43:17,290
+this app is brand new on the Mac App
+Store
+
+679
+00:43:17,659 --> 00:43:22,650
+its super gorgeous its really
+streamlined it does one thing extremely
+
+680
+00:43:22,065 --> 00:43:22,664
+well
+
+681
+00:43:23,249 --> 00:43:27,250
+saving in 30 steps and other tools and I
+they have a really great
+
+682
+00:43:27,259 --> 00:43:30,268
+up a model for hosting these things and
+serving them out your site
+
+683
+00:43:31,159 --> 00:43:34,167
+and we just love this app it makes a Mac
+Pro think so
+
+684
+00:43:34,959 --> 00:43:41,959
+really well done work thank you
+
+685
+00:43:50,089 --> 00:43:51,660
+alright we
+
+686
+00:43:51,066 --> 00:43:54,755
+talk about a moment ago about how great
+app her personality
+
+687
+00:43:55,349 --> 00:43:59,424
+I and earlier on I talked about how we
+judge the app's
+
+688
+00:44:00,099 --> 00:44:04,163
+up for the ADA talk about design we talk
+about technology doppler we evaluate our
+
+689
+00:44:04,739 --> 00:44:05,650
+technology
+
+690
+00:44:05,065 --> 00:44:09,154
+adoption we evaluate on innovation and
+we all know that
+
+691
+00:44:09,739 --> 00:44:13,796
+grade up sir also innovative and you
+know innovation is hard to define
+
+692
+00:44:14,309 --> 00:44:17,980
+but it's for that that spark a
+brilliance it's that
+
+693
+00:44:17,098 --> 00:44:22,147
+I that ingredient that if an app has it
+it just makes your job drop
+
+694
+00:44:23,029 --> 00:44:26,032
+right it's a its it's the kind of thing
+that makes
+
+695
+00:44:26,329 --> 00:44:30,380
+a category you know appear out of
+nowhere greater category defining aP's
+
+696
+00:44:30,839 --> 00:44:31,670
+that are innovative
+
+697
+00:44:31,067 --> 00:44:36,114
+there they do something clever arm and
+you know you really know when you see it
+
+698
+00:44:37,014 --> 00:44:40,020
+and we've all run across innovative aP's
+
+699
+00:44:40,002 --> 00:44:44,341
+and we've we've run across one for the
+ADA this year that we thought was
+
+700
+00:44:44,539 --> 00:44:48,543
+that was just over the top in terms of
+about just approaching
+
+701
+00:44:48,579 --> 00:44:51,660
+this game situation in a very clever way
+
+702
+00:44:51,066 --> 00:44:58,066
+our next winner if the by pic by Fino go
+
+703
+00:45:18,041 --> 00:45:25,041
+use time make a tie device sick
+
+704
+00:45:26,036 --> 00:45:30,112
+play for the convention obtain and
+literature a captivating thriller which
+
+705
+00:45:31,012 --> 00:45:31,100
+the written word
+
+706
+00:45:32,000 --> 00:45:35,026
+if both your map as well as your
+narrator and trying
+
+707
+00:45:35,026 --> 00:45:39,027
+story with puzzle and I blending pub
+with no Bella
+
+708
+00:45:39,027 --> 00:45:42,036
+it draws the players into an intriguing
+mystery governor of science and
+
+709
+00:45:42,036 --> 00:45:48,063
+technology
+
+710
+00:45:48,063 --> 00:45:50,072
+right
+
+711
+00:45:50,072 --> 00:45:53,161
+when I'm in landscape mode
+
+712
+00:45:53,809 --> 00:45:57,950
+I just bear with me here for landscape
+mode
+
+713
+00:45:57,095 --> 00:46:00,192
+you're holding the iPad this is a
+narrative that you're reading through to
+
+714
+00:46:01,092 --> 00:46:02,139
+book the you read through
+
+715
+00:46:03,039 --> 00:46:06,088
+and we're starting to have happily three
+the first chapter
+
+716
+00:46:06,088 --> 00:46:10,101
+but as you move here you can see this
+parallax effect behind these images
+
+717
+00:46:11,001 --> 00:46:15,028
+yeah and that is pervasive through the
+app
+
+718
+00:46:15,028 --> 00:46:19,074
+I but not only is are the words on
+screen
+
+719
+00:46:19,074 --> 00:46:22,078
+things that you really need to tell you
+the story um
+
+720
+00:46:23,014 --> 00:46:26,018
+but you're also going to get clues about
+the puzzle you up
+
+721
+00:46:26,018 --> 00:46:30,020
+call because fundamentally this is a
+game but it's a combination of whole
+
+722
+00:46:30,002 --> 00:46:30,651
+game
+
+723
+00:46:30,849 --> 00:46:34,020
+and that's the you're reading along
+you're looking at these photos
+
+724
+00:46:34,002 --> 00:46:37,023
+they do really interesting interactions
+
+725
+00:46:37,023 --> 00:46:41,068
+and are they have a great sound system
+built in so sometimes
+
+726
+00:46:41,068 --> 00:46:45,140
+new approach sounds in your your um know
+they become louder and software is your
+
+727
+00:46:46,004 --> 00:46:46,066
+near them
+
+728
+00:46:47,002 --> 00:46:50,811
+here we've run into an interactive a you
+know an interactive piece
+
+729
+00:46:50,829 --> 00:46:53,856
+which at the moment doesn't do anything
+but we're gonna need it at some point to
+
+730
+00:46:54,099 --> 00:46:55,140
+solve the puzzle
+
+731
+00:46:55,014 --> 00:46:59,403
+and we move on here and you'll see that
+you know while I'm reading this text
+
+732
+00:46:59,529 --> 00:47:02,583
+the text is actually doing all kinds of
+interesting things are moving along
+
+733
+00:47:03,069 --> 00:47:05,145
+don't worry about the fact that sport
+right up there because
+
+734
+00:47:05,829 --> 00:47:08,831
+we're gonna go in different directions
+here in a moment and you see that
+
+735
+00:47:08,849 --> 00:47:12,770
+under strong left but the text is
+actually moving things
+
+736
+00:47:12,077 --> 00:47:15,119
+here I get to the third floor study I
+keep going
+
+737
+00:47:16,019 --> 00:47:20,118
+and here I got a device that I can
+interact with you know
+
+738
+00:47:20,289 --> 00:47:23,940
+Piper combo in or something I keep going
+here
+
+739
+00:47:23,094 --> 00:47:26,117
+and now I've got a choice I could go up
+or down I'm gonna keep going here a
+
+740
+00:47:27,017 --> 00:47:28,636
+little bit and now we're certainly get
+
+741
+00:47:28,789 --> 00:47:31,930
+to a point where we have to rotate the
+device or
+
+742
+00:47:31,093 --> 00:47:34,120
+and now for you guys will be able to
+read it no problem
+
+743
+00:47:35,002 --> 00:47:38,131
+now I'm approaching a sore throat sound
+key
+
+744
+00:47:38,329 --> 00:47:43,150
+frames number in the room where a great
+
+745
+00:47:43,015 --> 00:47:46,067
+media no enough room well
+
+746
+00:47:46,067 --> 00:47:49,186
+I will leave that behind we go here
+
+747
+00:47:49,789 --> 00:47:54,230
+at the turn the device this way to read
+gotta turn the device this way
+
+748
+00:47:54,023 --> 00:47:59,322
+person throwing up our projection I am
+of there we passed that now we're going
+
+749
+00:47:59,529 --> 00:48:01,770
+here we're going this way we're reading
+the text
+
+750
+00:48:01,077 --> 00:48:06,856
+now we're going to put this way and in
+essentially the entire game
+
+751
+00:48:07,549 --> 00:48:13,640
+is you're moving into a dining hall
+
+752
+00:48:13,064 --> 00:48:17,137
+I
+
+753
+00:48:18,037 --> 00:48:20,132
+not gonna get authorization
+
+754
+00:48:21,032 --> 00:48:24,040
+on in what is
+
+755
+00:48:24,004 --> 00:48:27,087
+so innovative what this game is just
+this combination up no
+
+756
+00:48:28,023 --> 00:48:31,030
+novel with game with puzzle interest the
+
+757
+00:48:31,093 --> 00:48:34,094
+you're constantly wrote in your device
+
+758
+00:48:34,094 --> 00:48:38,100
+tapping pinching zooming moving around
+reading this story trying to figure it
+
+759
+00:48:39,054 --> 00:48:39,103
+out
+
+760
+00:48:40,003 --> 00:48:43,089
+and we've never seen anything like this
+really and out so
+
+761
+00:48:43,089 --> 00:48:48,105
+great job congratulations have brought
+about by
+
+762
+00:48:49,005 --> 00:48:56,005
+here
+
+763
+00:48:59,529 --> 00:49:01,593
+talk a little bit before about how we're
+so busy that
+
+764
+00:49:02,169 --> 00:49:05,228
+getting news in a in a adjustable format
+
+765
+00:49:05,759 --> 00:49:09,812
+was at the Lima and the folks from Yahoo
+News I just solve that problem
+
+766
+00:49:10,289 --> 00:49:14,320
+but you know there's also something else
+that we're all doing
+
+767
+00:49:14,599 --> 00:49:17,670
+every day and that is sharing these
+tidbits from our
+
+768
+00:49:18,309 --> 00:49:21,400
+from our lives with family with friends
+with the world
+
+769
+00:49:22,219 --> 00:49:25,308
+if you hear WC in tell the world about
+what's going on
+
+770
+00:49:26,109 --> 00:49:30,155
+but as interesting invaluable as these
+tidbits are
+
+771
+00:49:30,569 --> 00:49:34,569
+they don't I don't think the replace
+
+772
+00:49:34,569 --> 00:49:37,617
+the need for sometimes telling a much
+longer story
+
+773
+00:49:38,049 --> 00:49:41,123
+much more visual story that captures
+
+774
+00:49:41,789 --> 00:49:44,837
+arm an emotion and something much deeper
+than
+
+775
+00:49:45,269 --> 00:49:49,328
+any tweet or any you know Facebook post
+or any other social media posts could
+
+776
+00:49:49,859 --> 00:49:52,951
+could do and our next winner is an app
+that allows
+
+777
+00:49:53,779 --> 00:49:56,857
+for that paper rich storytelling and it
+is storehouse
+
+778
+00:49:57,559 --> 00:50:04,559
+visual storytelling by for her media
+
+779
+00:50:31,859 --> 00:50:35,500
+gradually wrestling
+
+780
+00:50:35,005 --> 00:50:40,050
+instantly travel the world
+
+781
+00:50:40,095 --> 00:50:43,234
+learn a new skill or discover
+interesting people argued for the story
+
+782
+00:50:44,089 --> 00:50:45,760
+created by the store have community
+
+783
+00:50:45,076 --> 00:50:49,415
+or you can simply put together photos
+videos and text to build your own story
+
+784
+00:50:50,099 --> 00:50:57,099
+and you don't have to be a designer to
+put together something stunning alright
+
+785
+00:50:58,069 --> 00:50:58,920
+like a
+
+786
+00:50:58,092 --> 00:51:02,144
+like all over winners tonight this app
+was designed no optimally designed for
+
+787
+00:51:03,044 --> 00:51:06,045
+the device it's running on for iPad for
+iPhone for
+
+788
+00:51:06,045 --> 00:51:09,364
+for West Ham I and didn't nap
+
+789
+00:51:09,769 --> 00:51:13,200
+is the storytelling up it's built
+exclusively for iPad
+
+790
+00:51:13,002 --> 00:51:16,049
+and the stories are told using photos
+and video
+
+791
+00:51:16,067 --> 00:51:19,075
+and so what you do is in in their
+contributed by
+
+792
+00:51:19,075 --> 00:51:22,146
+the community of story a storehouse arm
+users
+
+793
+00:51:23,046 --> 00:51:26,069
+so you know you create account with them
+and then you can just use this to
+
+794
+00:51:26,069 --> 00:51:29,138
+push out your stories to the world or
+two a set of people that you want
+
+795
+00:51:30,038 --> 00:51:34,737
+up to view them and so you know it's to
+some really gorgeous animations here we
+
+796
+00:51:35,079 --> 00:51:36,220
+can flip through
+
+797
+00:51:36,022 --> 00:51:40,661
+these books are the stories that have
+been pushed out into the app
+
+798
+00:51:40,859 --> 00:51:45,250
+i think im gettin video and audio I'm so
+what's going here and take a look at
+
+799
+00:51:45,025 --> 00:51:48,784
+this one Chicago I love this 13 just top
+to go into the story that someone
+
+800
+00:51:49,009 --> 00:51:49,690
+published
+
+801
+00:51:49,069 --> 00:51:53,116
+and we gesture through any good to see
+this you know the great effect on text
+
+802
+00:51:54,016 --> 00:51:57,465
+it happening here you can follow this as
+publisher
+
+803
+00:51:57,609 --> 00:52:01,490
+look at these photos you can apply
+affect the images
+
+804
+00:52:01,049 --> 00:52:04,075
+um you know this is this is pretty
+gorgeous
+
+805
+00:52:04,075 --> 00:52:07,434
+a photography and it's just laid out in
+such a good
+
+806
+00:52:08,109 --> 00:52:11,230
+really compelling way um that makes it
+
+807
+00:52:11,023 --> 00:52:14,025
+really they just a bowl and and easy to
+to
+
+808
+00:52:14,043 --> 00:52:17,402
+to consume and then laying out text on
+it is super easy
+
+809
+00:52:17,789 --> 00:52:20,871
+you ain't so when you're done with the
+with the story could just pinch to get
+
+810
+00:52:21,609 --> 00:52:21,701
+outta bed
+
+811
+00:52:22,529 --> 00:52:26,660
+other using you know you I packed sand
+you I dynamics and
+
+812
+00:52:26,066 --> 00:52:29,143
+stop for the transitions I'm let me go
+into one that's got
+
+813
+00:52:30,043 --> 00:52:33,094
+some videos so it's going to this story
+by photojournalist
+
+814
+00:52:33,094 --> 00:52:36,099
+who went to rwanda um and so
+
+815
+00:52:36,099 --> 00:52:39,192
+this one's got in a much larger photos a
+lot more tact
+
+816
+00:52:40,092 --> 00:52:43,167
+is individual portrait is and quickly
+here really get to
+
+817
+00:52:44,067 --> 00:52:48,166
+video the embedded radio and you don't
+have to tap to start playing the video
+
+818
+00:52:48,769 --> 00:52:52,460
+it just does as the polls are the
+majority vote on screen
+
+819
+00:52:52,046 --> 00:52:56,143
+rape you keep reading again it's a much
+more significant
+
+820
+00:52:57,043 --> 00:53:00,090
+deeper more emotional story that's being
+told here rain
+
+821
+00:53:00,009 --> 00:53:04,035
+and so these are being created by Sheps
+pie fashion
+
+822
+00:53:05,016 --> 00:53:08,405
+fashion designers by photojournalists
+around the world
+
+823
+00:53:08,549 --> 00:53:11,621
+and in families are creating them a
+individuals are creating them so
+
+824
+00:53:12,269 --> 00:53:15,327
+one other want things about this app is
+
+825
+00:53:15,849 --> 00:53:19,700
+on it it lets you create ones books
+through the story sorry
+
+826
+00:53:19,007 --> 00:53:22,079
+super easily so just tap the Create
+button we were at
+
+827
+00:53:23,042 --> 00:53:26,141
+from the photo library let's say we went
+to up
+
+828
+00:53:26,519 --> 00:53:30,740
+the lake we import these the is 14
+images
+
+829
+00:53:30,074 --> 00:53:33,433
+and immediately they're laid out in in
+the format
+
+830
+00:53:34,099 --> 00:53:37,230
+up that the upper right so what's a
+
+831
+00:53:37,023 --> 00:53:40,038
+you know trip to
+
+832
+00:53:40,038 --> 00:53:45,040
+Lake on great memories
+
+833
+00:53:45,004 --> 00:53:48,037
+and
+
+834
+00:53:48,073 --> 00:53:51,362
+we sit down on that okay so now we're
+down in
+
+835
+00:53:52,019 --> 00:53:55,410
+these in the basic you which is
+thumbnail view but
+
+836
+00:53:55,041 --> 00:53:57,890
+it's like I wanna do more than that I
+wanna make something compelling like the
+
+837
+00:53:58,259 --> 00:53:59,317
+chicago won I saw a moment ago
+
+838
+00:53:59,839 --> 00:54:03,680
+so that they won't you know what that
+this this image hereof the but the
+
+839
+00:54:03,068 --> 00:54:05,139
+cyclists is pretty cool so we just
+happen drag
+
+840
+00:54:06,039 --> 00:54:09,258
+make that larger this one of her on the
+on the
+
+841
+00:54:09,609 --> 00:54:13,440
+tree stump is pretty cool so we can just
+happened right that we can double top
+
+842
+00:54:13,044 --> 00:54:16,673
+and and you know and property in the way
+we want
+
+843
+00:54:17,069 --> 00:54:21,124
+go around make something really big like
+this everything else moves are the way
+
+844
+00:54:21,619 --> 00:54:25,640
+great feedback through animation up and
+you can just go on and on and you can
+
+845
+00:54:25,829 --> 00:54:28,130
+add the text you can create the brakes
+you want to
+
+846
+00:54:28,013 --> 00:54:31,412
+and then you can publish this out to the
+store oath a community
+
+847
+00:54:31,529 --> 00:54:34,555
+and people are following you they're
+gonna see I your story
+
+848
+00:54:34,789 --> 00:54:37,880
+up in this case I'm just gonna save it
+as a draft but
+
+849
+00:54:37,088 --> 00:54:41,077
+is just such a compelling up just to
+browse through the stories
+
+850
+00:54:41,869 --> 00:54:44,894
+and and see what people are posting a
+
+851
+00:54:45,119 --> 00:54:48,690
+in there for more significant and more
+meaningful and more emotionally
+
+852
+00:54:48,069 --> 00:54:51,448
+a charge then just something small that
+we would put out to the world which is
+
+853
+00:54:52,069 --> 00:54:54,069
+equally valuable but very different so
+
+854
+00:54:54,069 --> 00:54:58,093
+great adopted by was technologies thanks
+for making something exclusive right had
+
+855
+00:54:58,309 --> 00:54:59,313
+that is so compelling
+
+856
+00:54:59,349 --> 00:55:06,349
+guide
+
+857
+00:55:14,002 --> 00:55:14,421
+now
+
+858
+00:55:14,619 --> 00:55:17,664
+a people have been captivated for you
+know
+
+859
+00:55:18,069 --> 00:55:22,000
+all-time pretty much by the night sky
+
+860
+00:55:22,000 --> 00:55:25,599
+I mean who hasn't sat out you know
+
+861
+00:55:25,599 --> 00:55:29,630
+are on a campground with friends the
+back of a truck
+
+862
+00:55:29,063 --> 00:55:32,282
+on a country road somewhere looking up
+at the night sky watching
+
+863
+00:55:32,849 --> 00:55:36,430
+you know airplane lights watching
+satellite passover
+
+864
+00:55:36,043 --> 00:55:40,702
+identifying are you know constellations
+we're trying to
+
+865
+00:55:41,089 --> 00:55:45,290
+arm you're pointing out things that are
+better-known like the Big Dipper the
+
+866
+00:55:45,029 --> 00:55:46,095
+North Star something like that
+
+867
+00:55:46,095 --> 00:55:49,444
+we've all done that we've all been
+captivated by that
+
+868
+00:55:50,299 --> 00:55:55,010
+and it's certainly a very humbling and
+in powerful experience the see the night
+
+869
+00:55:55,001 --> 00:55:55,053
+sky
+
+870
+00:55:55,053 --> 00:55:59,148
+and the developer for next winter eyes
+created an app that takes that to a
+
+871
+00:56:00,048 --> 00:56:01,052
+whole new level
+
+872
+00:56:01,052 --> 00:56:08,052
+and it is guy guide by fifty star lab
+
+873
+00:56:15,062 --> 00:56:22,062
+you
+
+874
+00:56:23,033 --> 00:56:29,095
+in preparation discovering what's in the
+night sky
+
+875
+00:56:29,095 --> 00:56:33,154
+effort life with guy guide you can
+search for 1000 the celestial objects
+
+876
+00:56:34,054 --> 00:56:36,122
+and simply follow the arrow in the sky
+above you to feed them
+
+877
+00:56:37,022 --> 00:56:40,086
+and sky god works offline you can take
+it with you anywhere
+
+878
+00:56:40,086 --> 00:56:44,142
+I'll take a look at the
+
+879
+00:56:45,042 --> 00:56:48,044
+a look at the lease is up you know first
+and foremost the app
+
+880
+00:56:48,062 --> 00:56:51,120
+a just as everything right technically
+
+881
+00:56:52,002 --> 00:56:55,098
+it is optimized you know to the nth
+degree
+
+882
+00:56:56,016 --> 00:57:01,054
+they're using OpenGL ES 3 they're using
+knock or audio
+
+883
+00:57:01,054 --> 00:57:04,065
+their up you know leveraging all
+
+884
+00:57:04,065 --> 00:57:07,103
+technologies that are appropriate
+relevant for this up and and
+
+885
+00:57:08,003 --> 00:57:12,087
+the performances to stunning one of the
+first things you notice in the apt to
+
+886
+00:57:12,087 --> 00:57:15,128
+and you're hearing it now is this
+justice this ambient music that's
+
+887
+00:57:16,028 --> 00:57:17,071
+playing in the background
+
+888
+00:57:17,071 --> 00:57:20,132
+other composer the music was on the same
+
+889
+00:57:21,032 --> 00:57:25,111
+think I have composed the sounds for
+inet a winner of a couple years ago
+
+890
+00:57:26,011 --> 00:57:29,012
+called osmose great game um
+
+891
+00:57:29,012 --> 00:57:34,033
+in this this soundtrack here this for
+this game is just so compelling
+
+892
+00:57:34,033 --> 00:57:38,046
+so as you're in this you can just you
+know top around and look at the night
+
+893
+00:57:38,046 --> 00:57:38,111
+sky
+
+894
+00:57:39,011 --> 00:57:42,096
+it automatically is showing you the
+various constellations
+
+895
+00:57:42,096 --> 00:57:44,152
+I can top on
+
+896
+00:57:45,052 --> 00:57:49,077
+stars and I'm not stop talking for men
+is it up on the start small stars
+
+897
+00:57:49,077 --> 00:57:50,080
+produce a small
+
+898
+00:57:50,008 --> 00:57:53,032
+sound larger stars produce a large down
+but just
+
+899
+00:57:54,004 --> 00:57:57,333
+you tap around you can almost make your
+own music is your as you're just
+
+900
+00:57:57,369 --> 00:58:04,369
+experiencing this
+
+901
+00:58:12,034 --> 00:58:16,079
+I'm you can you can lift it up because
+the short as the court would like to do
+
+902
+00:58:16,079 --> 00:58:16,125
+that
+
+903
+00:58:17,025 --> 00:58:20,062
+in top lift up missing is that the tax
+you're looking at the sky it turns
+
+904
+00:58:20,062 --> 00:58:24,065
+it activates the compass in gyroscope
+and snaking pan around
+
+905
+00:58:24,065 --> 00:58:28,073
+the sky above us in around us um in this
+case I'm just gonna
+
+906
+00:58:28,073 --> 00:58:31,105
+go search for something that we all are
+familiar with which is the
+
+907
+00:58:32,005 --> 00:58:37,007
+space station and
+
+908
+00:58:37,007 --> 00:58:40,026
+it you know you thought pointing to
+we're going in now you can see the
+
+909
+00:58:40,026 --> 00:58:41,087
+trajectory the space station
+
+910
+00:58:41,087 --> 00:58:44,104
+a which is pretty cool I can zoom in on
+stuff
+
+911
+00:58:45,004 --> 00:58:48,022
+I won't be able to see it in great
+detail Americans
+
+912
+00:58:48,022 --> 00:58:51,107
+you know pretty small on let's go back
+out here
+
+913
+00:58:52,007 --> 00:58:55,013
+and look at different for the
+
+914
+00:58:55,013 --> 00:58:58,077
+the night sky when things you can do is
+you can just because the
+
+915
+00:58:58,077 --> 00:59:01,156
+the noise that the light pollution that
+surround us when we're outside
+
+916
+00:59:02,056 --> 00:59:05,060
+you can actually just top two fingers on
+screen
+
+917
+00:59:05,006 --> 00:59:08,015
+and drag upper down to adjust
+
+918
+00:59:08,069 --> 00:59:11,100
+the amount of stars on screen on the on
+in style guide
+
+919
+00:59:12,000 --> 00:59:15,049
+relative to what you're seeing you know
+when you're out when you're outside
+
+920
+00:59:15,049 --> 00:59:19,067
+so that's kinda cool so it's it's it's a
+good match it also
+
+921
+00:59:19,067 --> 00:59:22,113
+learn a lot about the night sky by
+leveraging at all
+
+922
+00:59:23,013 --> 00:59:26,100
+inside the app and this is the loop so
+this lets you see
+
+923
+00:59:27,000 --> 00:59:31,032
+a difference spectra up beyond what's
+visible to the human eye
+
+924
+00:59:31,032 --> 00:59:34,043
+and so you just bring up the slope you
+can drag it around this guy
+
+925
+00:59:34,043 --> 00:59:38,065
+but he did take this and move through
+
+926
+00:59:38,065 --> 00:59:41,100
+you know microwave infrared HL up
+
+927
+00:59:42,000 --> 00:59:45,024
+and you can leave it there and simply
+move around
+
+928
+00:59:45,024 --> 00:59:48,075
+the night sky and look at different
+things that are going on that
+
+929
+00:59:48,075 --> 00:59:51,110
+you wouldn't know about but might be
+behind one of your most being you know
+
+930
+00:59:52,001 --> 00:59:55,024
+most-favored constellations or something
+um
+
+931
+00:59:55,033 --> 00:59:59,095
+if I tap on an individual item I get
+this blog I am the side here you'll see
+
+932
+00:59:59,095 --> 01:00:00,114
+it on the right side there
+
+933
+01:00:01,014 --> 01:00:04,039
+its its blinking to say you know look at
+me
+
+934
+01:00:04,039 --> 01:00:08,056
+and I can read three information about
+the object serious in this case that I
+
+935
+01:00:08,056 --> 01:00:08,129
+selected
+
+936
+01:00:09,029 --> 01:00:12,064
+I can top something like anna's minor it
+will go to that
+
+937
+01:00:12,064 --> 01:00:17,068
+a I can tap the name over another
+all-star and it'll go there
+
+938
+01:00:18,004 --> 01:00:21,061
+untapped the Sun and it will rotate to
+the Sun so
+
+939
+01:00:21,061 --> 01:00:25,064
+you know this is just scratching the
+surface in this %ah it think rental
+
+940
+01:00:25,064 --> 01:00:29,118
+the attention to detail these guys put
+into it the optimization fry Wes
+
+941
+01:00:30,018 --> 01:00:33,094
+on the soundtrack it's just a pleasure
+to use this app
+
+942
+01:00:33,094 --> 01:00:37,100
+and I think it's at the standard that
+that all over should aspire to
+
+943
+01:00:38,000 --> 01:00:42,009
+in our particular individual categories
+so thank you for great work
+
+944
+01:00:42,009 --> 01:00:49,009
+place
+
+945
+01:00:53,092 --> 01:00:58,139
+I'm now speaking a great work
+
+946
+01:00:59,039 --> 01:01:04,055
+we all aspire to do great things in our
+lives I we've all got these great ideas
+
+947
+01:01:04,055 --> 01:01:07,109
+olive you have got undoubtedly ideas
+already
+
+948
+01:01:08,009 --> 01:01:12,043
+coming to mine for things are going to
+do with I was a and with those 1070
+
+949
+01:01:12,043 --> 01:01:16,120
+I am n you know when we got these great
+ideas
+
+950
+01:01:17,002 --> 01:01:24,002
+it I it we also have these very high
+standard for ourselves in many cases
+
+951
+01:01:24,026 --> 01:01:27,117
+and when you've got these high standards
+it's often difficult though to actually
+
+952
+01:01:28,017 --> 01:01:31,029
+realize them for a variety of reasons
+beyond our own control
+
+953
+01:01:31,029 --> 01:01:35,030
+right wife is away and up taking charge
+
+954
+01:01:35,003 --> 01:01:39,042
+but and that's why some of these great
+ideas and such a big challenge
+
+955
+01:01:39,069 --> 01:01:42,072
+but when you can pull them off its
+
+956
+01:01:42,072 --> 01:01:47,084
+its amazing I and it's definitely
+something that's worth
+
+957
+01:01:47,084 --> 01:01:50,091
+noting definitely notable moment and so
+
+958
+01:01:51,054 --> 01:01:54,100
+arm our next winner is is just an
+incredible ap
+
+959
+01:01:55,000 --> 01:01:58,087
+that are was definitely a big idea
+
+960
+01:01:58,087 --> 01:02:02,101
+I think for them and they set out to do
+something
+
+961
+01:02:03,001 --> 01:02:06,044
+fantastic and I think the achieve that
+
+962
+01:02:06,044 --> 01:02:09,092
+and our final award the FAF ternoon goes
+to
+
+963
+01:02:09,092 --> 01:02:16,092
+Monument Valley by a computer
+
+964
+01:02:43,042 --> 01:02:48,079
+the Tom rattling
+
+965
+01:02:48,079 --> 01:02:51,103
+at Lincoln the whole 20 a
+
+966
+01:02:52,003 --> 01:02:55,072
+Monument Valley is the
+
+967
+01:02:55,072 --> 01:02:58,148
+your real exploration through
+fantastical architecture an impossible
+
+968
+01:02:59,048 --> 01:02:59,125
+geometry
+
+969
+01:03:00,025 --> 01:03:04,056
+guide the filing princess ida three
+mysterious monument uncovering hidden
+
+970
+01:03:04,056 --> 01:03:06,059
+powers unfolding optical Aleutian
+
+971
+01:03:06,086 --> 01:03:13,086
+to outsmart the enigmatic crow people
+
+972
+01:03:13,969 --> 01:03:16,970
+this is such an awesome game and
+
+973
+01:03:17,069 --> 01:03:21,112
+I don't know where the idea came from I
+love to hear the story someday
+
+974
+01:03:21,499 --> 01:03:25,522
+but it is need to set out to do
+something so big
+
+975
+01:03:25,729 --> 01:03:28,806
+and the it the result is amazing so what
+you're doing is you're taking this
+
+976
+01:03:29,499 --> 01:03:30,502
+little princess Ida
+
+977
+01:03:30,799 --> 01:03:33,853
+you've got to get her to the top these
+you know to the top of the themes in
+
+978
+01:03:34,339 --> 01:03:36,180
+this case the top of the tower there
+
+979
+01:03:36,018 --> 01:03:39,114
+we're looking at this very Asher ask I
+3d model
+
+980
+01:03:40,014 --> 01:03:43,603
+and a lot of things don't line up and
+anyway
+
+981
+01:03:43,729 --> 01:03:46,805
+so we'll figure it out as we go number
+one you know you can interact with
+
+982
+01:03:47,489 --> 01:03:50,880
+object on screen so this is pretty
+straightforward with just happened
+
+983
+01:03:50,088 --> 01:03:53,094
+teller where to go he's gonna go up here
+
+984
+01:03:53,094 --> 01:03:56,192
+gonna put her up here but now now what
+do we do %uh but you can
+
+985
+01:03:57,092 --> 01:04:01,241
+you get these hands on screen that term
+so you can turn this
+
+986
+01:04:02,069 --> 01:04:06,087
+and so Walker on here a we're gonna walk
+her around
+
+987
+01:04:06,249 --> 01:04:09,294
+but the surrounding now she's she's
+gonna go and step on this special
+
+988
+01:04:09,699 --> 01:04:10,680
+platform
+
+989
+01:04:10,068 --> 01:04:13,497
+which is now gonna deconstructing but
+
+990
+01:04:14,109 --> 01:04:17,173
+you know when you look at this is like
+okay now where she gonna go she can't
+
+991
+01:04:17,749 --> 01:04:17,825
+climb the
+
+992
+01:04:18,509 --> 01:04:21,578
+that center pole she can't you know what
+we do but
+
+993
+01:04:22,199 --> 01:04:26,262
+was just so cool about this up is that
+
+994
+01:04:26,829 --> 01:04:29,892
+2030 interact with these objects
+
+995
+01:04:30,459 --> 01:04:33,460
+you realize like look what's going on
+here
+
+996
+01:04:33,469 --> 01:04:37,503
+you didn't think that that top bar was
+the same height as the other walkway
+
+997
+01:04:37,809 --> 01:04:37,862
+right
+
+998
+01:04:38,339 --> 01:04:42,402
+but as you start to rotate around
+they've just done this great job
+
+999
+01:04:42,969 --> 01:04:46,047
+have going what you doin
+
+1000
+01:04:46,749 --> 01:04:51,751
+you know it's like it like that
+
+1001
+01:04:51,769 --> 01:04:54,776
+you know those there that has never and
+written exactly the experience
+
+1002
+01:04:55,469 --> 01:04:59,543
+so they're here turn around now she's
+going to get to the final destination
+
+1003
+01:05:00,209 --> 01:05:03,680
+rate answer she gets there we get this
+power
+
+1004
+01:05:03,068 --> 01:05:06,647
+that appears and now we get on to the
+next level
+
+1005
+01:05:07,259 --> 01:05:11,640
+and so she's gonna walk around here in
+this
+
+1006
+01:05:11,064 --> 01:05:14,066
+this just goes on and on and on and it's
+just so
+
+1007
+01:05:14,066 --> 01:05:18,915
+awesome because in this level here she
+suddenly learns to walk sideways
+
+1008
+01:05:19,509 --> 01:05:23,593
+and walk on different surfaces and
+doesn't hear she's going up here
+
+1009
+01:05:24,349 --> 01:05:28,190
+gonna walk around here and just go
+through the
+
+1010
+01:05:28,019 --> 01:05:31,608
+now on track that's going on behind the
+scene a like what is gonna go what is
+
+1011
+01:05:31,779 --> 01:05:31,863
+happening here
+
+1012
+01:05:32,619 --> 01:05:36,641
+right by me but if we turn I don't think
+I've ever had to do this
+
+1013
+01:05:36,839 --> 01:05:41,420
+a was then the demo there can all I know
+what to do I do it again i three
+
+1014
+01:05:41,042 --> 01:05:45,101
+yeah I want to get to the back side
+isn't no I can't do that a camera for
+
+1015
+01:05:45,479 --> 01:05:49,910
+its okay you gotta play the game of a
+missile technology
+
+1016
+01:05:49,091 --> 01:05:54,290
+a great user experience fabulous art
+that's optimized for retina display
+
+1017
+01:05:55,109 --> 01:05:58,145
+and just such an intriguing experience a
+
+1018
+01:05:58,469 --> 01:06:01,524
+and you should just be super proud of
+your work we really appreciate what
+
+1019
+01:06:02,019 --> 01:06:03,022
+you've done for iPad
+
+1020
+01:06:03,049 --> 01:06:09,580
+thank you and regulation
+
+1021
+01:06:09,058 --> 01:06:16,058
+thank you Iraq
+
+1022
+01:06:18,093 --> 01:06:20,512
+so that yet over our 12 winners
+
+1023
+01:06:21,349 --> 01:06:25,960
+for the Apple Design Award in 2014 12
+incredible
+
+1024
+01:06:25,096 --> 01:06:28,395
+up built on and for Iowa
+
+1025
+01:06:29,259 --> 01:06:35,990
+7 no's' 10 maverick either 12 incredible
+developers
+
+1026
+01:06:35,099 --> 01:06:42,099
+we'd love to invite back on stage now
+but come on up to you guys
+
+1027
+01:07:13,066 --> 01:07:15,107
+you know these folks
+
+1028
+01:07:16,007 --> 01:07:19,043
+are have done such great work you've
+just seen
+
+1029
+01:07:19,043 --> 01:07:23,095
+you seen a little a few seconds to be to
+the wraps but already you get a glimpse
+
+1030
+01:07:23,095 --> 01:07:24,167
+the why the zaps a really great
+
+1031
+01:07:25,067 --> 01:07:29,115
+these these guys have set a new
+benchmark with the zaps
+
+1032
+01:07:30,015 --> 01:07:33,054
+for excellence for creativity for
+technology adoption
+
+1033
+01:07:33,054 --> 01:07:36,056
+for innovation for so many things and
+
+1034
+01:07:36,074 --> 01:07:39,167
+and really these ops are set a standard
+that
+
+1035
+01:07:40,067 --> 01:07:43,153
+we're really saying to you is a
+community you know you your work needs
+
+1036
+01:07:44,053 --> 01:07:44,125
+to be
+
+1037
+01:07:45,025 --> 01:07:48,116
+just like these guys it needs to be up
+this quality or higher they accept new
+
+1038
+01:07:49,016 --> 01:07:49,022
+bar
+
+1039
+01:07:49,076 --> 01:07:52,080
+and I think just for a moment I
+
+1040
+01:07:52,008 --> 01:07:55,827
+it be great to just give these people
+and they've worked so hard so created
+
+1041
+01:07:56,619 --> 01:08:03,619
+the thank you for all your hard work
+
+1042
+01:08:09,033 --> 01:08:13,046
+he's doing it and we can't wait to see
+what the developers in you do with I
+
+1043
+01:08:13,046 --> 01:08:14,141
+with me and with Kenya family
+
+1044
+01:08:15,041 --> 01:08:16,056
+thank you very much
+

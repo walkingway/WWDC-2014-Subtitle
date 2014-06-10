@@ -1,0 +1,4121 @@
+1
+00:00:20,789 --> 00:00:22,410
+hello
+
+2
+00:00:22,041 --> 00:00:24,810
+I'm Ian Baird I was frameworks engineer
+
+3
+00:00:25,179 --> 00:00:28,300
+and today I'm here to tell you about
+creating extensions
+
+4
+00:00:28,003 --> 00:00:33,044
+for Iowa's and OS 10 gonna lay out a
+quick agenda for today stock
+
+5
+00:00:33,071 --> 00:00:36,114
+first we're going to talk about
+extensions an extension points
+
+6
+00:00:37,014 --> 00:00:40,703
+then I'm going to invite my colleague
+Matt Campbell
+
+7
+00:00:40,829 --> 00:00:44,870
+from the Notification Center team to the
+stage to tell you more
+
+8
+00:00:44,087 --> 00:00:49,096
+and show you more about creating one of
+the hottest new tickets at BBC 14
+
+9
+00:00:49,096 --> 00:00:54,105
+today extensions
+
+10
+00:00:55,086 --> 00:00:58,089
+and then following on from that we're
+going to invite
+
+11
+00:00:58,089 --> 00:01:01,098
+our colleague I for 10 onto the stage
+
+12
+00:01:01,098 --> 00:01:04,107
+to tell you more about how to create
+share extensions
+
+13
+00:01:04,989 --> 00:01:08,070
+like the one you saw in the keynote with
+Pinterest
+
+14
+00:01:08,007 --> 00:01:11,088
+moving along
+
+15
+00:01:11,088 --> 00:01:14,164
+water extensions well extensions
+
+16
+00:01:15,064 --> 00:01:18,142
+are almost like it's a way for you
+
+17
+00:01:19,042 --> 00:01:23,113
+to extend the system and other
+applications
+
+18
+00:01:24,013 --> 00:01:27,031
+it's almost like more surface area for
+you to be able to apply
+
+19
+00:01:27,031 --> 00:01:30,078
+bits and pieces have your app as you can
+see here
+
+20
+00:01:30,078 --> 00:01:33,086
+we have a screenshot at the Apple
+homepage on an iPad
+
+21
+00:01:34,058 --> 00:01:37,060
+showing the new activity view controller
+
+22
+00:01:37,006 --> 00:01:40,092
+you'll notice a lot of familiar faces a
+lot of familiar icons
+
+23
+00:01:41,046 --> 00:01:44,071
+in that activity view controller you can
+see messages male
+
+24
+00:01:44,071 --> 00:01:47,075
+and we have a new one the butterfly
+
+25
+00:01:47,075 --> 00:01:50,120
+and butterflies sharing extension you
+can see it at home
+
+26
+00:01:51,002 --> 00:01:54,040
+right there with his brother in right in
+the midst
+
+27
+00:01:54,058 --> 00:02:00,074
+at the sharing extensions and we also
+support sharing extensions on LSN
+
+28
+00:02:00,074 --> 00:02:03,115
+in see we have the butterfly sherry
+extension on Yosemite
+
+29
+00:02:04,015 --> 00:02:08,022
+we support Notification Center
+extensions
+
+30
+00:02:08,085 --> 00:02:11,094
+also known as today extensions and as
+you can see
+
+31
+00:02:12,075 --> 00:02:15,654
+notification extensions are really good
+forgiving you
+
+32
+00:02:16,329 --> 00:02:19,401
+at a glance information something where
+you just wanna pull your phone
+
+33
+00:02:20,049 --> 00:02:23,920
+out your pocket take a quick look checks
+in sports scores
+
+34
+00:02:23,092 --> 00:02:26,187
+may be traffic conditions the weather
+and put it back in your pocket
+
+35
+00:02:27,087 --> 00:02:31,128
+gives you at a glance quick access to
+information you want
+
+36
+00:02:32,028 --> 00:02:35,079
+and of course we support this on your
+seventy
+
+37
+00:02:35,079 --> 00:02:39,085
+and you can see it looks gorgeous
+blended right over that new background
+
+38
+00:02:39,085 --> 00:02:42,224
+it's just beautiful stunningly beautiful
+team did a great job
+
+39
+00:02:42,989 --> 00:02:46,020
+next
+
+40
+00:02:46,299 --> 00:02:50,500
+I want to show you the custom action
+extensions you can see here
+
+41
+00:02:50,005 --> 00:02:53,010
+we have our new annotate image extension
+which I'm gonna show you how to build
+
+42
+00:02:54,000 --> 00:02:54,063
+tomorrow
+
+43
+00:02:54,063 --> 00:02:57,125
+right in that role with actions actions
+can be
+
+44
+00:02:58,025 --> 00:03:01,118
+you I in nine you I actions that he saw
+with the Bing translate extension
+
+45
+00:03:02,018 --> 00:03:06,076
+and we support custom actions on the
+west end as well as a matter fact this
+
+46
+00:03:06,076 --> 00:03:06,395
+is
+
+47
+00:03:07,079 --> 00:03:10,570
+the infrastructure for the markup
+extension
+
+48
+00:03:10,057 --> 00:03:13,109
+on a West can you'll notice is a very
+common theme
+
+49
+00:03:14,009 --> 00:03:18,026
+were sharing infrastructure we're making
+it easy for you to build things for both
+
+50
+00:03:18,026 --> 00:03:18,119
+platforms
+
+51
+00:03:19,019 --> 00:03:22,101
+next on Iowa s only
+
+52
+00:03:23,001 --> 00:03:26,047
+we have the I the photo extensions now
+
+53
+00:03:26,047 --> 00:03:29,110
+if there's a photo filter that you've
+been messing I don't know
+
+54
+00:03:30,001 --> 00:03:33,038
+maybe on or an annotation
+
+55
+00:03:33,047 --> 00:03:36,113
+extension you would like to make for
+photos you can build it now
+
+56
+00:03:37,013 --> 00:03:42,110
+right into the photos you why this is
+really cool and we also support
+
+57
+00:03:43,001 --> 00:03:46,013
+document providers document providers
+bring
+
+58
+00:03:46,022 --> 00:03:50,079
+storage and things like that from the
+cloud writing and applications
+
+59
+00:03:50,079 --> 00:03:53,838
+inside a via West this is a first it
+really breaks down a lot of barriers
+
+60
+00:03:54,549 --> 00:03:56,558
+that we've all been living with for
+
+61
+00:03:56,639 --> 00:04:03,639
+I believe 7 releases and next I want to
+tell you about a finder extensions
+
+62
+00:04:03,068 --> 00:04:06,837
+finder extensions are really cool in the
+past if you wanted to be able to bad
+
+63
+00:04:07,449 --> 00:04:07,750
+sure
+
+64
+00:04:07,075 --> 00:04:10,091
+annotate items and folders inside the
+Finder
+
+65
+00:04:10,091 --> 00:04:13,130
+you may have to resort to super sketchy
+behavior
+
+66
+00:04:13,949 --> 00:04:17,018
+like mocking jacked or or some sort of
+hackery
+
+67
+00:04:17,639 --> 00:04:20,705
+and now you don't have to do that now
+you actually have a supported way
+
+68
+00:04:21,299 --> 00:04:24,660
+to daj items in the Finder and we think
+this is really cool
+
+69
+00:04:24,066 --> 00:04:28,325
+and then
+
+70
+00:04:28,919 --> 00:04:31,970
+the last but not least third-party
+keyboards
+
+71
+00:04:31,097 --> 00:04:34,606
+were supporting third-party keyboards in
+I'll ask now
+
+72
+00:04:35,479 --> 00:04:42,330
+using extensions so I told you about
+extensions and some the extension point
+
+73
+00:04:42,033 --> 00:04:43,122
+so we're offering
+
+74
+00:04:43,419 --> 00:04:48,520
+NIOS and a West and next I'd like to
+tell you about delivering extensions
+
+75
+00:04:48,052 --> 00:04:51,055
+extensions are delivered as part of your
+up known as
+
+76
+00:04:51,082 --> 00:04:54,431
+the extension container an extension
+container
+
+77
+00:04:55,169 --> 00:04:58,630
+petain many different types extensions
+
+78
+00:04:58,063 --> 00:05:01,111
+for example it could contain today view
+which it
+
+79
+00:05:02,011 --> 00:05:06,320
+it contain sharing extension and it
+could also contain
+
+80
+00:05:06,419 --> 00:05:09,441
+maybe multiple custom action extensions
+
+81
+00:05:09,639 --> 00:05:12,740
+they're all bound up with in your
+applications bundle
+
+82
+00:05:12,074 --> 00:05:16,078
+and delivered via the App Store
+
+83
+00:05:16,078 --> 00:05:20,084
+extension points wife talked a little
+bit look down extension points earlier
+
+84
+00:05:20,084 --> 00:05:23,126
+well tell tell you what they are
+extension points again are the new
+
+85
+00:05:24,026 --> 00:05:27,082
+bits and pieces have surface area that
+we've exposed on the system
+
+86
+00:05:27,082 --> 00:05:30,116
+for your extensions to buy into for
+example
+
+87
+00:05:31,016 --> 00:05:34,083
+a today view which it binds to the
+Notification Center
+
+88
+00:05:34,083 --> 00:05:37,110
+via the Notification Center extension 30
+today view
+
+89
+00:05:38,001 --> 00:05:41,038
+extension point this means you're never
+going to see
+
+90
+00:05:41,047 --> 00:05:46,123
+I today view extension in the activity
+view controller for example
+
+91
+00:05:47,023 --> 00:05:50,105
+and one thing to remember about all
+extensions is that their purpose
+
+92
+00:05:51,005 --> 00:05:54,071
+build binaries see these are not aP's
+these are not even
+
+93
+00:05:54,071 --> 00:05:58,076
+at apiece if you're out it's not a
+special mode that we launcher app and
+
+94
+00:05:59,021 --> 00:06:02,022
+it's a special purpose binary houses own
+
+95
+00:06:02,022 --> 00:06:05,036
+code signature has its own set of
+entitlements
+
+96
+00:06:05,036 --> 00:06:09,045
+and it has own container Damien's going
+to speak to this further in tomorrow's
+
+97
+00:06:09,045 --> 00:06:10,136
+session
+
+98
+00:06:11,036 --> 00:06:14,047
+so as i sat there not outs and they're
+always
+
+99
+00:06:14,047 --> 00:06:18,105
+accessed via Apple frameworks code you
+never really direct we launched an apple
+
+100
+00:06:19,005 --> 00:06:20,012
+frameworks code
+
+101
+00:06:20,012 --> 00:06:23,079
+is in charge of discovering them for you
+and providing usually the user
+
+102
+00:06:23,079 --> 00:06:27,100
+interaction by which their launch in all
+talk about that later
+
+103
+00:06:28,000 --> 00:06:31,077
+and as I was talking with the developer
+at lunch about this right before we came
+
+104
+00:06:31,077 --> 00:06:32,161
+here these are not facilitating
+
+105
+00:06:33,061 --> 00:06:36,085
+app to app my PC you don't get like
+
+106
+00:06:36,085 --> 00:06:40,147
+a pipe back to the containing out for
+your extension be able to talk to it
+
+107
+00:06:41,047 --> 00:06:45,054
+if you want to build workflows that
+incorporate apk app by PC you can still
+
+108
+00:06:45,054 --> 00:06:46,055
+use things like
+
+109
+00:06:46,064 --> 00:06:49,110
+UI application open /url but
+
+110
+00:06:50,001 --> 00:06:53,095
+what I would ask you to do is reconsider
+some these workflows that you had before
+
+111
+00:06:54,004 --> 00:06:55,029
+that involved
+
+112
+00:06:55,029 --> 00:06:58,125
+sort of contextually switching from one
+application to another on a user's phone
+
+113
+00:06:59,025 --> 00:07:02,121
+and reconsider casting this may be in
+terms of custom actions which are really
+
+114
+00:07:03,021 --> 00:07:07,057
+the spiritual successors to you services
+
+115
+00:07:07,057 --> 00:07:11,066
+so next what our extension points a very
+high level they mark extensible parts
+
+116
+00:07:12,047 --> 00:07:13,106
+for the system
+
+117
+00:07:14,006 --> 00:07:17,088
+they're always packaged in system
+frameworks we don't support
+
+118
+00:07:17,088 --> 00:07:20,093
+third-party extension points and they
+combine
+
+119
+00:07:21,038 --> 00:07:25,045
+API and policies you can imagine again
+with the to debut aged
+
+120
+00:07:25,045 --> 00:07:29,061
+it to debut widget its it's very simple
+it's largely is Matt's going to tell you
+
+121
+00:07:29,061 --> 00:07:32,125
+a view controller but this view
+controller also comes with its own
+
+122
+00:07:33,025 --> 00:07:34,040
+policy
+
+123
+00:07:34,004 --> 00:07:37,071
+policy which incorporates things like
+launch characteristics
+
+124
+00:07:38,007 --> 00:07:42,053
+an important thing to remember about
+extensions most extensions on the system
+
+125
+00:07:42,053 --> 00:07:45,082
+are bound 121 with our hosting out
+
+126
+00:07:45,082 --> 00:07:49,111
+so let me give you an example of this
+what say you write a sharing extension
+
+127
+00:07:50,011 --> 00:07:53,045
+and the sharing extension is invoked in
+Safari
+
+128
+00:07:53,045 --> 00:07:56,129
+instanceof your extension a new process
+is going to be spun up
+
+129
+00:07:57,029 --> 00:08:00,054
+to serve Safari now the user homes out
+
+130
+00:08:00,054 --> 00:08:03,066
+goes over to mail and large is your
+extension again
+
+131
+00:08:03,066 --> 00:08:07,157
+but say maybe to share an attachment a
+brand new process is going to be spun up
+
+132
+00:08:08,057 --> 00:08:12,376
+four-year extension those processes are
+not going to share address spaces
+
+133
+00:08:12,889 --> 00:08:16,210
+this protects you from mistakes your
+code if you're still using Objective C
+
+134
+00:08:16,021 --> 00:08:18,070
+in you have a while pointer something
+like that
+
+135
+00:08:18,007 --> 00:08:21,011
+you're not going to be able to bring
+down all the instances have your
+
+136
+00:08:21,074 --> 00:08:21,165
+extension
+
+137
+00:08:22,065 --> 00:08:26,102
+that are running on the system it's
+really cool
+
+138
+00:08:27,002 --> 00:08:30,066
+the extension point also governs the
+presentation have your extension
+
+139
+00:08:30,066 --> 00:08:33,545
+important thing to remember is that you
+extensions are you I view controllers
+
+140
+00:08:34,139 --> 00:08:35,223
+you can hear this multiple times today
+
+141
+00:08:35,979 --> 00:08:39,760
+but you are you controllers can be
+expose the user in multiple ways
+
+142
+00:08:39,076 --> 00:08:43,275
+and usually since extensions live inside
+the applique inside the user interface
+
+143
+00:08:43,959 --> 00:08:45,058
+another application
+
+144
+00:08:45,949 --> 00:08:50,007
+its up to that application up to the
+system as to how it decides present you
+
+145
+00:08:50,529 --> 00:08:54,541
+you can either be contained or presented
+Notification Center
+
+146
+00:08:54,649 --> 00:08:58,010
+widgets to debut extensions are
+contained
+
+147
+00:08:58,001 --> 00:09:02,070
+while sharing extensions are presented
+
+148
+00:09:02,079 --> 00:09:06,130
+and many extension points support for a
+few extension point support
+
+149
+00:09:06,013 --> 00:09:10,018
+view controller and non view controller
+variance at the extension point
+
+150
+00:09:10,063 --> 00:09:13,063
+for instance custom actions as you'll
+see tomorrow
+
+151
+00:09:13,063 --> 00:09:17,012
+support a view controller variant which
+allows the user to interact with the
+
+152
+00:09:17,579 --> 00:09:20,910
+content before it's transformed and sent
+back to the host
+
+153
+00:09:20,091 --> 00:09:23,169
+as you saw during the keynote when Craig
+tapped the Bing translate extension
+
+154
+00:09:24,069 --> 00:09:27,156
+there was no UI and that was in non-fuel
+extension and we'll tell you more about
+
+155
+00:09:28,056 --> 00:09:30,835
+that later
+
+156
+00:09:31,339 --> 00:09:34,740
+cell how extensions and felt this is
+again
+
+157
+00:09:34,074 --> 00:09:37,077
+going back to our example the show you
+what happens
+
+158
+00:09:37,077 --> 00:09:40,145
+when user decides to tap on the
+butterfly sharing extension
+
+159
+00:09:41,045 --> 00:09:45,144
+user taps and the extension host which
+is safari at this time
+
+160
+00:09:46,044 --> 00:09:49,106
+goes and talks to the Notification
+Center framework
+
+161
+00:09:50,006 --> 00:09:53,025
+the notification sorry not notification
+the social framework
+
+162
+00:09:53,025 --> 00:09:56,112
+and the social framework goes and
+discovers and loads and presents the
+
+163
+00:09:57,012 --> 00:09:58,016
+extension
+
+164
+00:09:58,016 --> 00:10:01,069
+you'll notice that Safari is not
+directly
+
+165
+00:10:01,069 --> 00:10:05,073
+watching the extension at any point its
+balancing through Apple frameworks to do
+
+166
+00:10:05,073 --> 00:10:06,140
+this
+
+167
+00:10:07,004 --> 00:10:12,007
+so in summary extensions are small
+pieces the functionality
+
+168
+00:10:12,043 --> 00:10:16,071
+their purpose built to do one thing and
+get out the way
+
+169
+00:10:16,071 --> 00:10:19,450
+they stand system in New an interesting
+ways
+
+170
+00:10:20,089 --> 00:10:24,110
+we can't wait to see what you guys do
+with these things
+
+171
+00:10:24,011 --> 00:10:28,014
+and a mark extendable parse the system
+as I said new surface area for you to
+
+172
+00:10:28,041 --> 00:10:29,137
+attach the functionality of your app
+
+173
+00:10:30,037 --> 00:10:33,098
+interesting and meaningful ways for our
+users
+
+174
+00:10:33,098 --> 00:10:36,107
+and now to tell you more about
+Notification Center extensions
+
+175
+00:10:37,007 --> 00:10:44,007
+I'd like to invite my colleague not
+gamble to the stage
+
+176
+00:10:47,031 --> 00:10:49,122
+hello I'm at Campbell Newman engineer in
+the
+
+177
+00:10:50,022 --> 00:10:54,031
+I US notifications team and today I'm
+gonna tell you about Notification Center
+
+178
+00:10:54,031 --> 00:10:54,860
+extensions
+
+179
+00:10:55,139 --> 00:11:00,164
+widgets as we call them now we've had
+widgets in some fashion on the
+
+180
+00:11:00,389 --> 00:11:03,434
+system for a while now but for the first
+time
+
+181
+00:11:03,839 --> 00:11:07,860
+you know I was 8 we're giving developers
+the power to add their own content to
+
+182
+00:11:07,086 --> 00:11:08,147
+the notification centers todavia
+
+183
+00:11:09,047 --> 00:11:13,716
+now perhaps most fundamentally
+
+184
+00:11:14,139 --> 00:11:17,144
+we did serve you controllers so that
+means everything you know about you
+
+185
+00:11:17,639 --> 00:11:18,677
+controllers including
+
+186
+00:11:19,019 --> 00:11:23,026
+the life cycle in containment behavior
+in API will serve you well when you're
+
+187
+00:11:23,089 --> 00:11:24,100
+constructing your widget
+
+188
+00:11:24,199 --> 00:11:28,240
+for example the appearance calls he'll
+tell you when
+
+189
+00:11:28,024 --> 00:11:31,056
+your widget is coming and going in the
+Notification Center
+
+190
+00:11:31,056 --> 00:11:35,091
+in a particular interest is you will
+appear as you want to be sure that your
+
+191
+00:11:35,091 --> 00:11:35,157
+view is
+
+192
+00:11:36,057 --> 00:11:39,626
+up and ready to be used by the user by
+the time you're returning from you will
+
+193
+00:11:40,139 --> 00:11:40,790
+appear
+
+194
+00:11:40,079 --> 00:11:44,938
+so speedy have getting ready it's
+important to get ready fast performance
+
+195
+00:11:45,649 --> 00:11:48,940
+the very big consideration with
+notification center widgets
+
+196
+00:11:48,094 --> 00:11:53,293
+so couple tips are be sure to load cache
+data so you're bringing up your view
+
+197
+00:11:54,139 --> 00:11:55,184
+quickly and ready to go
+
+198
+00:11:55,589 --> 00:11:59,990
+and if you have some new data comes in
+you can do your own custom transition
+
+199
+00:11:59,099 --> 00:12:03,948
+also kick off your expensive operations
+as early as possible
+
+200
+00:12:04,839 --> 00:12:09,560
+and definitely in the background and
+when those expensive operations return
+
+201
+00:12:09,056 --> 00:12:15,063
+be sure to catch this data so layout is
+another concern
+
+202
+00:12:15,063 --> 00:12:19,322
+are of course your widgets in your your
+widget has control over its
+
+203
+00:12:19,889 --> 00:12:23,915
+subdue hierarchy in laying all your
+content out but just as with any other
+
+204
+00:12:24,149 --> 00:12:25,350
+parent child
+
+205
+00:12:25,035 --> 00:12:28,094
+you control your relationship the
+Notification Center will be laying out
+
+206
+00:12:28,094 --> 00:12:32,102
+your views frame so that means that the
+notification center is setting
+
+207
+00:12:33,074 --> 00:12:36,353
+the frames you don't set your own widget
+use frame
+
+208
+00:12:37,019 --> 00:12:40,110
+but of course not all content is created
+equal
+
+209
+00:12:40,011 --> 00:12:43,050
+so if you might have need some more room
+
+210
+00:12:43,005 --> 00:12:46,034
+for your content you can indicate your
+preferred height
+
+211
+00:12:46,079 --> 00:12:50,142
+you do this in two ways the for sister
+on a layup
+
+212
+00:12:51,042 --> 00:12:54,271
+if you can are described your Widgets
+
+213
+00:12:54,649 --> 00:12:58,620
+height with constraints then those to be
+honored automatically in Notification
+
+214
+00:12:58,062 --> 00:12:58,110
+Center
+
+215
+00:12:59,001 --> 00:13:04,300
+otherwise abusing more manual layout you
+can use the view controller method Sep
+
+216
+00:13:04,399 --> 00:13:05,750
+referred content size
+
+217
+00:13:05,075 --> 00:13:08,594
+and both at the systems work across both
+I O S
+
+218
+00:13:09,269 --> 00:13:13,325
+and OS 10 so while you
+
+219
+00:13:13,829 --> 00:13:16,878
+will definitely want to set your size as
+early as possible to ensure that you're
+
+220
+00:13:17,319 --> 00:13:18,344
+showing your content
+
+221
+00:13:18,569 --> 00:13:22,810
+are him the right way in Notification
+Center that's not the only time
+
+222
+00:13:22,081 --> 00:13:26,480
+that you can call it if for some reason
+you are showing different content or
+
+223
+00:13:27,209 --> 00:13:29,000
+changes you can call this later
+
+224
+00:13:29,000 --> 00:13:32,769
+for instance let's say that we had a
+button that would show a little bit more
+
+225
+00:13:32,769 --> 00:13:33,680
+content
+
+226
+00:13:33,068 --> 00:13:36,407
+are a little bit more detail about some
+content that we have in our widget
+
+227
+00:13:37,019 --> 00:13:40,890
+you could tie this up to this action
+calculate the new height for this new
+
+228
+00:13:40,089 --> 00:13:43,136
+content and then just call separate for
+content size
+
+229
+00:13:44,036 --> 00:13:48,060
+the Notification Center will take care
+of this it'll automatically resize your
+
+230
+00:13:48,006 --> 00:13:48,485
+widget
+
+231
+00:13:49,079 --> 00:13:53,470
+but that's only half the story which you
+probably want to do is ensure
+
+232
+00:13:53,047 --> 00:13:56,085
+that your content enemies along with
+this transition
+
+233
+00:13:56,085 --> 00:14:00,014
+and you can do that on I Wes with the
+new method
+
+234
+00:14:00,779 --> 00:14:03,834
+view will transition to size with
+transition coordinator
+
+235
+00:14:04,329 --> 00:14:07,385
+so if you're would implement this method
+it'll get called
+
+236
+00:14:07,889 --> 00:14:11,920
+and pass in a transition coordinator and
+with this corner you can call
+
+237
+00:14:12,199 --> 00:14:15,218
+enemy alongside transition passing in
+your
+
+238
+00:14:15,389 --> 00:14:20,110
+a block with your animations and easily
+run in parallel with the system's
+
+239
+00:14:20,011 --> 00:14:23,020
+resize animation and again and then a
+completion to know when everything's
+
+240
+00:14:24,001 --> 00:14:25,060
+finished up
+
+241
+00:14:25,069 --> 00:14:28,380
+now there's a similar story on OS 10
+
+242
+00:14:28,038 --> 00:14:31,237
+in this case its view will transition to
+size
+
+243
+00:14:31,579 --> 00:14:34,592
+again this will be call and you can take
+advantage love
+
+244
+00:14:34,709 --> 00:14:37,783
+and as animation contact to run your own
+animation group
+
+245
+00:14:38,449 --> 00:14:41,482
+and again pass in a completion handler
+see you know when everything's finished
+
+246
+00:14:41,779 --> 00:14:43,000
+up
+
+247
+00:14:43,000 --> 00:14:47,056
+now new IRS 8 is a protocol
+
+248
+00:14:47,056 --> 00:14:50,275
+NC widget providing and one of the I
+
+249
+00:14:50,779 --> 00:14:54,620
+of film at business protocol is would
+you perform update
+
+250
+00:14:54,062 --> 00:14:57,091
+with completion handler and some porn
+implement this one
+
+251
+00:14:57,649 --> 00:15:01,880
+as it'll insurer that your which is
+content stays up-to-date
+
+252
+00:15:01,088 --> 00:15:05,092
+so if this is implemented you'll be
+passing completion handler
+
+253
+00:15:05,092 --> 00:15:09,116
+you want to perform your own update and
+then determine what is the appropriate
+
+254
+00:15:10,016 --> 00:15:13,017
+result to pass back in that block
+
+255
+00:15:13,026 --> 00:15:16,102
+so if you have some new data go ahead
+and use NC update result
+
+256
+00:15:17,002 --> 00:15:20,931
+new data if there's nothing new
+
+257
+00:15:20,949 --> 00:15:24,951
+go ahead news no data and if something
+went horribly wrong
+
+258
+00:15:25,149 --> 00:15:28,241
+pass failed in will try to leave well
+enough alone
+
+259
+00:15:29,069 --> 00:15:32,610
+and then finally be sure to call the
+completion handler with the result
+
+260
+00:15:32,061 --> 00:15:35,149
+I that you have
+
+261
+00:15:36,049 --> 00:15:40,097
+alright let's take a look at this
+
+262
+00:15:40,097 --> 00:15:45,076
+so so you may remember from last year I
+we had a presentation we showed off
+
+263
+00:15:45,949 --> 00:15:50,012
+and awesome I O S application for
+staying in touch with all the clowns
+
+264
+00:15:50,579 --> 00:15:54,110
+better in your clown network call that
+clown town
+
+265
+00:15:54,011 --> 00:15:57,104
+what we're gonna take this application a
+little bit further by adding widgets
+
+266
+00:15:58,004 --> 00:16:01,143
+for the Notification Center
+
+267
+00:16:01,179 --> 00:16:04,214
+now adding a widget is as simple as
+opening up an existing application
+
+268
+00:16:04,529 --> 00:16:06,541
+project
+
+269
+00:16:06,649 --> 00:16:10,170
+and adding any target for both iowa's
+
+270
+00:16:10,017 --> 00:16:13,110
+and OS 10 you'll see there's an
+application extension section
+
+271
+00:16:14,001 --> 00:16:17,052
+and you can just select the today
+extension
+
+272
+00:16:17,061 --> 00:16:20,350
+but I've actually already started work
+on one sarin ago
+
+273
+00:16:20,899 --> 00:16:23,912
+right into our view controller here
+
+274
+00:16:24,029 --> 00:16:27,097
+switch its our view controllers and the
+first thing I'm gonna do
+
+275
+00:16:27,709 --> 00:16:31,040
+is ensure that my which it has the right
+height
+
+276
+00:16:31,004 --> 00:16:36,098
+so I'm using an interface builder
+storyboard for my interface
+
+277
+00:16:36,098 --> 00:16:39,099
+so away from near is a pretty handy
+place
+
+278
+00:16:39,099 --> 00:16:42,166
+to take care of this sector calling
+super and then
+
+279
+00:16:43,066 --> 00:16:48,071
+setting up a little state I'm gonna go
+ahead and get the most recent Posts
+
+280
+00:16:49,016 --> 00:16:52,375
+once I've gotten those update my table
+view
+
+281
+00:16:52,519 --> 00:16:55,563
+I'm this doesn't need to be animator
+just initializing here
+
+282
+00:16:55,959 --> 00:16:59,970
+an important step is making sure to set
+my preferred content sized
+
+283
+00:17:00,069 --> 00:17:04,104
+to this case just the content size at my
+table view
+
+284
+00:17:04,419 --> 00:17:07,424
+so this'll make sure that were
+initialized in the state were showing
+
+285
+00:17:07,919 --> 00:17:11,100
+a single post in our widget which is
+nice
+
+286
+00:17:11,001 --> 00:17:14,300
+but perhaps you want to see a little bit
+more of what's going on in your client
+
+287
+00:17:14,399 --> 00:17:15,520
+network
+
+288
+00:17:15,052 --> 00:17:18,064
+while how bout we add a button
+
+289
+00:17:18,064 --> 00:17:22,149
+an action for Ubuntu show a little bit
+more
+
+290
+00:17:23,049 --> 00:17:26,388
+so the first thing will do is update our
+state
+
+291
+00:17:26,829 --> 00:17:30,470
+and then calculate our preferred height
+which the three using a table view one
+
+292
+00:17:30,047 --> 00:17:30,120
+account the number
+
+293
+00:17:31,002 --> 00:17:35,067
+rose and also make sure to account for
+our full review
+
+294
+00:17:35,085 --> 00:17:40,544
+once we have our preferred height we
+want to set are preferred content size
+
+295
+00:17:41,309 --> 00:17:44,520
+and then make sure we tell ourselves
+that we had to do an update
+
+296
+00:17:44,052 --> 00:17:47,060
+in the future that'll come in handy
+later
+
+297
+00:17:48,032 --> 00:17:52,083
+so again we've set our preferred content
+size so this will be sure to animate the
+
+298
+00:17:52,083 --> 00:17:54,088
+widget to the appropriate Hyatt
+
+299
+00:17:54,088 --> 00:17:58,017
+but we want to make sure that our
+content comes in a really nice animated
+
+300
+00:17:58,809 --> 00:18:01,470
+fashion
+
+301
+00:18:01,047 --> 00:18:04,122
+and to do that will implement view will
+transition to size
+
+302
+00:18:05,022 --> 00:18:09,087
+with transition coordinator and so if we
+have a coordinator
+
+303
+00:18:09,087 --> 00:18:12,184
+then we know that this is an animated
+transition and so will call animate
+
+304
+00:18:13,084 --> 00:18:16,178
+alongside transition completion
+
+305
+00:18:17,078 --> 00:18:21,094
+to make sure to update our table view an
+animated fashion
+
+306
+00:18:21,094 --> 00:18:24,109
+and in the completion be sure I
+
+307
+00:18:25,009 --> 00:18:28,098
+to update the title of our button up
+
+308
+00:18:28,179 --> 00:18:31,216
+if for some reason we didn't get a
+coordinator then we'll just
+
+309
+00:18:31,549 --> 00:18:36,500
+up dinner table without animation and
+then update the button
+
+310
+00:18:36,005 --> 00:18:39,018
+so this will make sure that our I art
+
+311
+00:18:39,063 --> 00:18:43,097
+adding a bar rose comes in a nice
+animated way alongside the system
+
+312
+00:18:43,097 --> 00:18:45,159
+animation that's resizing are widget
+
+313
+00:18:46,059 --> 00:18:51,144
+now one more thing I want to do before
+we give this a try
+
+314
+00:18:52,044 --> 00:18:55,107
+that is making sure that our content
+stays up-to-date so I'm an implement the
+
+315
+00:18:56,007 --> 00:18:56,052
+method
+
+316
+00:18:56,052 --> 00:18:59,151
+widget perform update with completion
+handler
+
+317
+00:19:00,051 --> 00:19:03,095
+so I'll start by getting the recent most
+recent Posts make sure it get any
+
+318
+00:19:03,095 --> 00:19:04,157
+updates
+
+319
+00:19:05,057 --> 00:19:09,656
+and then calculate the result so if we
+already know that we needed to do an
+
+320
+00:19:10,169 --> 00:19:10,970
+update
+
+321
+00:19:10,097 --> 00:19:14,133
+or if we actually did get some new
+content they want to use NC update
+
+322
+00:19:15,033 --> 00:19:16,099
+result new data
+
+323
+00:19:16,099 --> 00:19:21,258
+otherwise we can just go ahead and use
+no data
+
+324
+00:19:22,149 --> 00:19:25,480
+so if we actually did get to new data
+
+325
+00:19:25,048 --> 00:19:28,120
+wanna do a couple things will def want
+to update our table view to ensure that
+
+326
+00:19:29,002 --> 00:19:33,003
+it's reflecting our most recent content
+
+327
+00:19:33,021 --> 00:19:37,094
+and then up their preferred size to
+ensure there which is the right height
+
+328
+00:19:37,094 --> 00:19:41,073
+and in either case we certainly don't
+need any more updates
+
+329
+00:19:41,919 --> 00:19:45,540
+and will call our completion handler
+with our result
+
+330
+00:19:45,054 --> 00:19:48,125
+alright I think we can go ahead and give
+this a shot
+
+331
+00:19:49,025 --> 00:19:54,674
+so I'm gonna go ahead and build and run
+for the simulator
+
+332
+00:19:54,899 --> 00:20:01,899
+now switch over to the simulator no
+
+333
+00:20:02,002 --> 00:20:05,095
+ok and here we have our client an
+application
+
+334
+00:20:05,095 --> 00:20:10,147
+on a home out of this and present the
+Notification Center
+
+335
+00:20:11,047 --> 00:20:16,086
+go to the Edit menu and our which it is
+not there
+
+336
+00:20:16,086 --> 00:20:19,174
+the I actual on
+
+337
+00:20:20,074 --> 00:20:26,493
+to give that one more shot
+
+338
+00:20:27,159 --> 00:20:33,184
+well yes there we go
+
+339
+00:20:33,409 --> 00:20:36,950
+there's our application
+
+340
+00:20:36,095 --> 00:20:41,151
+bring down as one new is it available
+there it is
+
+341
+00:20:42,051 --> 00:20:46,098
+for
+
+342
+00:20:46,098 --> 00:20:50,277
+alright so hit done and here's our
+widget
+
+343
+00:20:51,159 --> 00:20:55,370
+now we can see that Corbin icon has a
+multi-colored suspenders is giving away
+
+344
+00:20:55,037 --> 00:20:59,042
+gonna make sure to take care alright his
+arm or bun
+
+345
+00:20:59,087 --> 00:21:02,159
+we tap that get a new rose animate in
+nicely
+
+346
+00:21:03,059 --> 00:21:06,103
+y la to weddings happening
+
+347
+00:21:07,003 --> 00:21:11,004
+less class is everything back down and
+nice animated fashion
+
+348
+00:21:11,004 --> 00:21:14,009
+is looking pretty good well i def wanna
+know more about these multi-colored
+
+349
+00:21:14,054 --> 00:21:16,127
+suspender somebody go ahead and
+
+350
+00:21:17,027 --> 00:21:20,100
+ha ok I what we've definitely seen
+
+351
+00:21:21,000 --> 00:21:24,929
+if you look at the the system widgets
+that's a pretty common pattern to
+
+352
+00:21:24,929 --> 00:21:28,974
+tap something in the widget and then
+transition to the application and maybe
+
+353
+00:21:29,379 --> 00:21:32,820
+I see some more details or get some more
+contact are well that's definitely
+
+354
+00:21:32,082 --> 00:21:33,174
+something that we're interested in doing
+
+355
+00:21:34,074 --> 00:21:39,463
+so let's return Xcode miss stopped at a
+Burger
+
+356
+00:21:40,129 --> 00:21:44,540
+and since I'm using a table view I want
+to implement able to you
+
+357
+00:21:44,054 --> 00:21:47,573
+dislike throw it in XPath
+
+358
+00:21:48,059 --> 00:21:51,120
+so after we make sure we have a valid
+post
+
+359
+00:21:51,669 --> 00:21:54,720
+ability to manage have an object called
+the extension context
+
+360
+00:21:54,072 --> 00:21:57,137
+now the extension contest is an object
+it you'll have access to you in your
+
+361
+00:21:58,037 --> 00:21:58,044
+widget
+
+362
+00:21:59,007 --> 00:22:02,022
+are in any extension that's running in
+host
+
+363
+00:22:02,022 --> 00:22:05,037
+and it has a tell you some interesting
+things about what's happening
+
+364
+00:22:05,037 --> 00:22:09,076
+in your current host I'd also has a
+couple really interesting methods
+
+365
+00:22:09,409 --> 00:22:13,540
+in our case really take advantage of
+open URL completion handler
+
+366
+00:22:13,054 --> 00:22:16,056
+now I have to find a custom URL scheme
+that share between my widget my
+
+367
+00:22:16,074 --> 00:22:17,079
+application
+
+368
+00:22:17,079 --> 00:22:20,098
+so i cant construct the URL with this
+scheme
+
+369
+00:22:20,809 --> 00:22:26,040
+and then add some identifying
+information for my post
+
+370
+00:22:26,004 --> 00:22:29,863
+and then one final thing I want to do
+just make sure that the Select this row
+
+371
+00:22:29,899 --> 00:22:34,040
+so it's not selected the next time the
+user pose down notification center
+
+372
+00:22:34,004 --> 00:22:40,008
+alright sort build and run this again
+
+373
+00:22:40,008 --> 00:22:45,082
+here's our application present here
+
+374
+00:22:45,082 --> 00:22:48,571
+at this back
+
+375
+00:22:49,309 --> 00:22:53,210
+and here's Corbin again so let's see if
+I tap this hopefully I'll be able to get
+
+376
+00:22:53,021 --> 00:22:55,220
+some more information about the
+suspenders
+
+377
+00:22:55,409 --> 00:22:58,474
+their ego brings us right the
+application gets more detail make sure
+
+378
+00:22:59,059 --> 00:23:06,059
+we don't miss out on the suspenders
+
+379
+00:23:11,045 --> 00:23:14,124
+so few things to remember we deserve you
+controllers
+
+380
+00:23:15,024 --> 00:23:18,025
+everything you know about view
+controllers in the API and behaviors to
+
+381
+00:23:18,025 --> 00:23:19,052
+serve you really well
+
+382
+00:23:19,052 --> 00:23:23,103
+when you're constructing a rigid
+
+383
+00:23:24,003 --> 00:23:27,070
+also be sure your Widgets resume
+immediately you don't want users bring
+
+384
+00:23:27,007 --> 00:23:31,426
+down notification center in tapping in
+not having anything happen
+
+385
+00:23:32,119 --> 00:23:35,740
+now while the notification center
+handles layout not all widgets are
+
+386
+00:23:35,074 --> 00:23:36,173
+created equal you want different heights
+
+387
+00:23:37,073 --> 00:23:40,272
+you can do this with the preferred
+height
+
+388
+00:23:40,929 --> 00:23:45,010
+within the constraints in auto layout or
+explicitly through preferred content
+
+389
+00:23:45,001 --> 00:23:45,650
+size
+
+390
+00:23:45,659 --> 00:23:50,661
+missus across both platforms also you
+want to be sure to you if you into your
+
+391
+00:23:50,679 --> 00:23:52,700
+cart along with the resize animation
+
+392
+00:23:52,007 --> 00:23:55,045
+this again we have API's on both I O S
+and OS 10
+
+393
+00:23:56,008 --> 00:23:59,059
+help you do this
+
+394
+00:23:59,059 --> 00:24:02,070
+and then be sure to handle update
+request to make sure that all the
+
+395
+00:24:02,007 --> 00:24:05,015
+content what's up today
+
+396
+00:24:06,005 --> 00:24:13,005
+now I'd like to invite guy up on stage
+to tell us about share extensions
+
+397
+00:24:15,074 --> 00:24:17,075
+hi so my name is guy Fullerton
+
+398
+00:24:17,075 --> 00:24:20,121
+and I am an engineer on the IRS social
+an account teams
+
+399
+00:24:21,021 --> 00:24:23,074
+and I'm gonna give you everything you
+need to know to implement share
+
+400
+00:24:23,074 --> 00:24:23,141
+extensions
+
+401
+00:24:24,041 --> 00:24:27,098
+so sure extensions
+
+402
+00:24:27,098 --> 00:24:30,109
+our way to take sharing and upload
+functionality
+
+403
+00:24:31,009 --> 00:24:35,015
+in your app and package it up and did
+that presented in the sharing mood
+
+404
+00:24:35,015 --> 00:24:38,038
+standard activity and sharing
+affordances in the operating system
+
+405
+00:24:38,038 --> 00:24:39,127
+shirts go back
+
+406
+00:24:40,027 --> 00:24:44,034
+so like the US activity view and share
+menu in Mac OS 10
+
+407
+00:24:44,034 --> 00:24:47,071
+so this is particularly useful
+
+408
+00:24:47,071 --> 00:24:50,077
+for Social Network aP's or perhaps that
+like to do video
+
+409
+00:24:51,031 --> 00:24:56,115
+or photo hosting for example a lot of
+other stuff so
+
+410
+00:24:57,015 --> 00:25:01,020
+able to come a concrete example but they
+have got a photo blogging application
+
+411
+00:25:01,002 --> 00:25:03,020
+that normally allows major to launch the
+app
+
+412
+00:25:03,038 --> 00:25:07,047
+pick a photo from the photos library
+i'ma take that a little bit maybe make
+
+413
+00:25:08,028 --> 00:25:11,066
+a choose an audience to present it to
+you and then upload it to a photoblog
+
+414
+00:25:11,066 --> 00:25:14,139
+but wouldn't it be great if I could do
+that upload directly from within Photos
+
+415
+00:25:15,039 --> 00:25:15,074
+app
+
+416
+00:25:15,074 --> 00:25:19,089
+well that's what share extension would
+let you do so let's aim I mean photos
+
+417
+00:25:19,089 --> 00:25:22,096
+I select the photo that I like
+
+418
+00:25:22,096 --> 00:25:25,169
+tap the share button pops the activity
+view
+
+419
+00:25:26,069 --> 00:25:30,072
+and you can see my phone about look
+photo blog application icon there any
+
+420
+00:25:30,099 --> 00:25:30,186
+activity view
+
+421
+00:25:31,086 --> 00:25:35,090
+tap that and up slides a compose cheaper
+for a blog
+
+422
+00:25:35,009 --> 00:25:38,086
+let your user type some text to
+annotated choose an audience whether
+
+423
+00:25:39,067 --> 00:25:40,073
+they want to limit the
+
+424
+00:25:40,073 --> 00:25:46,135
+exposure that for and what not and
+posted some going to hammer this home a
+
+425
+00:25:47,035 --> 00:25:48,049
+lot in the next couple days
+
+426
+00:25:48,049 --> 00:25:51,086
+but a lot of extensions are basically
+just view controllers that's where most
+
+427
+00:25:51,086 --> 00:25:53,163
+of the workers and you probably aren't
+familiar with how to do that
+
+428
+00:25:54,063 --> 00:25:57,105
+but share extensions have a couple other
+concerns having to do with their
+
+429
+00:25:58,005 --> 00:25:58,070
+packaging
+
+430
+00:25:58,007 --> 00:26:01,073
+specifically the extensions in populist
+so let's talk about that
+
+431
+00:26:02,036 --> 00:26:05,129
+so normally
+
+432
+00:26:06,029 --> 00:26:09,033
+when a share extension shows up in one
+of these sharing affordances
+
+433
+00:26:09,069 --> 00:26:12,136
+you generally want that extension to
+have been absent name
+
+434
+00:26:13,036 --> 00:26:15,114
+that's going to be the thing the
+musician was for mayor from with looking
+
+435
+00:26:16,014 --> 00:26:17,109
+for when they want to select an
+extension
+
+436
+00:26:18,009 --> 00:26:21,095
+but some applications may have multiple
+share affordances
+
+437
+00:26:21,095 --> 00:26:25,129
+I the photo blog for example might want
+a basic posting share functionality
+
+438
+00:26:26,029 --> 00:26:29,114
+and maybe once a way to specifically set
+the blogs header photo for example
+
+439
+00:26:30,014 --> 00:26:34,042
+so it's important to be able to
+customize your share extensions name
+
+440
+00:26:34,042 --> 00:26:37,086
+and what you do that is with CF Michael
+display name
+
+441
+00:26:37,086 --> 00:26:40,144
+in your info pls just said that to the
+name you want your share extension to
+
+442
+00:26:41,044 --> 00:26:41,113
+show up with
+
+443
+00:26:42,013 --> 00:26:45,056
+and sharing you I will display the name
+appropriately for your extension
+
+444
+00:26:45,056 --> 00:26:50,059
+so the next thing to talk about
+
+445
+00:26:50,059 --> 00:26:54,132
+or activation rules and this is probably
+best explain to an example
+
+446
+00:26:55,032 --> 00:26:59,061
+let's say you're in photos and you have
+a set a trio of things
+
+447
+00:26:59,061 --> 00:27:03,136
+selected you get two photos and a video
+and user wants to share that
+
+448
+00:27:04,036 --> 00:27:07,059
+so they tap the share button a pops the
+
+449
+00:27:07,059 --> 00:27:10,108
+are you actively view where the share
+menu 10 X 10 and
+
+450
+00:27:11,008 --> 00:27:14,027
+behind-the-scenes we've created an
+extension context
+
+451
+00:27:14,027 --> 00:27:18,051
+net extension context is the conduit
+that your extension we used the poll
+
+452
+00:27:18,051 --> 00:27:18,112
+data
+
+453
+00:27:19,012 --> 00:27:22,079
+from the host application into itself so
+this extension context for this
+
+454
+00:27:22,079 --> 00:27:23,092
+particular scenario
+
+455
+00:27:23,092 --> 00:27:26,101
+has three things I'm a reference to two
+of those images
+
+456
+00:27:27,001 --> 00:27:31,017
+and of course a reference to the video
+as well now the user might have a bunch
+
+457
+00:27:31,017 --> 00:27:32,090
+of share extensions on their system
+
+458
+00:27:32,009 --> 00:27:35,034
+and each them wants to get involved in
+different kinda situations
+
+459
+00:27:36,015 --> 00:27:39,058
+and so the activation rules are with
+that lets the system make the right
+
+460
+00:27:39,058 --> 00:27:42,155
+decision about which extensions to put
+in the activity beware the share menu
+
+461
+00:27:43,055 --> 00:27:50,055
+based on the kind of data that any
+extension context their two ways
+
+462
+00:27:51,014 --> 00:27:54,090
+for your extension to supply its
+activation horse the first as a
+
+463
+00:27:54,009 --> 00:27:54,064
+predicate
+
+464
+00:27:55,045 --> 00:27:59,103
+now every extensions in populist has an
+NS extension dictionary
+
+465
+00:28:00,003 --> 00:28:03,015
+and within that and its extension
+dictionary is the NS extension
+
+466
+00:28:03,015 --> 00:28:03,090
+attributes
+
+467
+00:28:03,009 --> 00:28:06,105
+the system uses those attributes as part
+of its decision-making process about
+
+468
+00:28:07,086 --> 00:28:08,129
+which extensions to show
+
+469
+00:28:09,029 --> 00:28:12,120
+but importantly for sharing stanchions
+the end its activation rule
+
+470
+00:28:13,002 --> 00:28:16,075
+I'll with in the NSX pension actuaries
+is what you need to set
+
+471
+00:28:16,093 --> 00:28:20,155
+if you set that to a string that the
+predicate we will run that predicate in
+
+472
+00:28:21,055 --> 00:28:24,107
+the host app and figure out if your
+extension is appropriate and that
+
+473
+00:28:25,007 --> 00:28:27,026
+predicate can be as detailed as you need
+it to be
+
+474
+00:28:27,026 --> 00:28:30,029
+were can be simple if you want to be
+whatever you need to get the job done
+
+475
+00:28:30,056 --> 00:28:35,105
+and this will serve the needs of a lot
+of extensions other extensions however
+
+476
+00:28:36,005 --> 00:28:40,073
+army have a little more fine-grained
+what we found internally is that a lot
+
+477
+00:28:40,073 --> 00:28:41,084
+of our extensions
+
+478
+00:28:41,084 --> 00:28:44,162
+just wanted to know basically just
+wanted to say that they support a basic
+
+479
+00:28:45,062 --> 00:28:45,109
+setup
+
+480
+00:28:46,009 --> 00:28:49,052
+images or videos or some URL's attacked
+
+481
+00:28:49,052 --> 00:28:52,061
+so we offer these condensed rules that
+allow extensions to specify just those
+
+482
+00:28:53,042 --> 00:28:55,130
+particular things without having to
+write a complex predicates
+
+483
+00:28:56,003 --> 00:28:59,096
+now ultimately these condensed rules
+boil down to a predicate and behind the
+
+484
+00:29:00,023 --> 00:29:02,091
+scenes but you don't need it worry about
+that
+
+485
+00:29:02,091 --> 00:29:06,099
+so to specify condense rules you still
+put me in and its activation rule
+
+486
+00:29:06,099 --> 00:29:07,181
+insider and its extension attributes
+
+487
+00:29:08,081 --> 00:29:10,175
+but this time it's a dictionary and
+there are a number of keys you can put
+
+488
+00:29:11,075 --> 00:29:13,141
+in a dictionary that indicate the amount
+of that type of data
+
+489
+00:29:14,041 --> 00:29:18,090
+your extension is interested in
+
+490
+00:29:18,009 --> 00:29:22,076
+now the bottom those two activation
+rules both had to do with web content
+
+491
+00:29:23,057 --> 00:29:28,080
+and they're slightly different we have a
+web URL support and a webpage support
+
+492
+00:29:28,008 --> 00:29:31,081
+and i wanna go into the details about
+these so some
+
+493
+00:29:32,053 --> 00:29:35,131
+share extensions are all about taking
+the link you're currently looking at in
+
+494
+00:29:36,031 --> 00:29:36,100
+Safari
+
+495
+00:29:37,000 --> 00:29:40,032
+and posting it someplace else to some
+vetoes somebody else can click on that
+
+496
+00:29:40,032 --> 00:29:41,113
+link and go see the web page
+
+497
+00:29:42,013 --> 00:29:45,038
+for those kinds of sharing extensions
+you want to specify that you support the
+
+498
+00:29:45,038 --> 00:29:45,133
+web URL
+
+499
+00:29:46,033 --> 00:29:50,119
+max camp now another class assuring
+extensions are all about looking at the
+
+500
+00:29:51,019 --> 00:29:53,057
+page that Safari is currently that
+display
+
+501
+00:29:53,057 --> 00:29:56,155
+and polling data out on that page and
+for those cheering extensions
+
+502
+00:29:57,055 --> 00:30:01,092
+we have the web page with Max count
+activation will
+
+503
+00:30:01,092 --> 00:30:04,157
+now in order to support the web page
+with Max count your extension also needs
+
+504
+00:30:05,057 --> 00:30:07,074
+to supply a javascript that's run
+
+505
+00:30:07,074 --> 00:30:10,152
+to determine what part the web content
+actually stick on the extension
+
+506
+00:30:11,052 --> 00:30:14,061
+contact I'm not gonna go into detail on
+that here but in tomorrow's session we
+
+507
+00:30:15,042 --> 00:30:21,084
+dive into the tape detail on that so
+please check that session a
+
+508
+00:30:21,084 --> 00:30:25,120
+hammering at home yet again extensions
+are basically just view controllers
+
+509
+00:30:26,002 --> 00:30:30,030
+so it's a lot of familiar territory
+share extensions can be implemented with
+
+510
+00:30:30,048 --> 00:30:31,094
+two kinds view controllers
+
+511
+00:30:31,094 --> 00:30:34,126
+on we support among both I O S and OS 10
+
+512
+00:30:35,026 --> 00:30:41,074
+and you can subclass you are you control
+or an issue control as you wish
+
+513
+00:30:41,074 --> 00:30:44,085
+you probably already have you control
+the code in your apt today that you can
+
+514
+00:30:44,085 --> 00:30:45,139
+repurpose per share extension
+
+515
+00:30:46,039 --> 00:30:49,092
+sure maybe you wanna make some tweaks to
+it too to conform better to make it a
+
+516
+00:30:49,092 --> 00:30:49,145
+limited
+
+517
+00:30:50,045 --> 00:30:53,139
+I'm another space you have on the screen
+or what not but you take that existing
+
+518
+00:30:54,039 --> 00:30:54,105
+code
+
+519
+00:30:55,005 --> 00:30:58,044
+massage it a little bit and deploy an
+extension and you can get to look
+
+520
+00:30:58,044 --> 00:31:00,092
+exactly how you want using your own
+branding
+
+521
+00:31:00,092 --> 00:31:03,145
+exist in your life whatever
+
+522
+00:31:04,045 --> 00:31:08,090
+some extensions however want to conform
+to the standard system share should look
+
+523
+00:31:08,009 --> 00:31:11,051
+and for them we offer the SL compose
+service you controller
+
+524
+00:31:12,032 --> 00:31:15,040
+that you can subclass to get among other
+things the standard
+
+525
+00:31:15,004 --> 00:31:18,010
+book standard animations text editing
+
+526
+00:31:19,000 --> 00:31:23,015
+a indication the remaining characters
+based on the characters type so far
+
+527
+00:31:23,015 --> 00:31:26,078
+I the post and Cancel buttons built in
+previewing
+
+528
+00:31:26,078 --> 00:31:30,146
+and other limited matter customization
+
+529
+00:31:31,046 --> 00:31:33,137
+so once you implemented your view
+controller the next thing you need to be
+
+530
+00:31:34,037 --> 00:31:34,120
+concerned about
+
+531
+00:31:35,002 --> 00:31:39,070
+is actually doing the upload or post to
+wherever you're sharing stated
+
+532
+00:31:39,088 --> 00:31:42,110
+the key here is that you need to use an
+issue oral session
+
+533
+00:31:43,001 --> 00:31:46,079
+with a background session configuration
+reason being
+
+534
+00:31:46,088 --> 00:31:49,102
+your extension does not live beyond its
+presentation
+
+535
+00:31:50,002 --> 00:31:53,015
+at least not very long and we'll talk
+more about that tomorrow
+
+536
+00:31:53,015 --> 00:31:56,052
+so you need to make sure that by using a
+background in this URL session
+
+537
+00:31:56,052 --> 00:32:00,123
+you're allowing the system to handle the
+upload for you
+
+538
+00:32:01,023 --> 00:32:04,091
+secret a background in a swirl session
+configuration build an issue I'll
+
+539
+00:32:04,091 --> 00:32:06,095
+session around that
+
+540
+00:32:07,031 --> 00:32:11,122
+build an issue I'll URL request that
+encompasses the items that are
+
+541
+00:32:12,022 --> 00:32:16,101
+being shared and create and upload task
+wrapped around
+
+542
+00:32:17,001 --> 00:32:21,022
+an issue or a crest and then start that
+up a task
+
+543
+00:32:21,022 --> 00:32:25,022
+once you've done that the system is
+gonna handle the upload for you
+
+544
+00:32:25,022 --> 00:32:28,050
+at that point your extension needs to
+tell the host ap
+
+545
+00:32:28,005 --> 00:32:31,051
+that it's done and you can tell down the
+presentation a view controller
+
+546
+00:32:31,096 --> 00:32:34,134
+and you do that by calling a method on
+the extension context called complete
+
+547
+00:32:35,034 --> 00:32:41,068
+request returning items completion
+handler
+
+548
+00:32:41,068 --> 00:32:44,159
+if the user chooses to cancel your sheet
+or whatever your presentation happens to
+
+549
+00:32:45,059 --> 00:32:45,105
+be
+
+550
+00:32:46,005 --> 00:32:49,037
+there's another extension context meant
+that you need call has called cancel
+
+551
+00:32:49,037 --> 00:32:49,096
+request
+
+552
+00:32:49,096 --> 00:32:52,098
+with your
+
+553
+00:32:52,098 --> 00:32:56,139
+so mad already talked about performance
+with request with respect to the
+
+554
+00:32:57,039 --> 00:33:00,055
+today which is and i wanna talk about it
+a little bit different way in terms of
+
+555
+00:33:00,055 --> 00:33:01,071
+share tensions
+
+556
+00:33:01,071 --> 00:33:05,135
+I'm sure extensions often have to grab a
+bunch of data from the host at
+
+557
+00:33:06,035 --> 00:33:09,036
+they might be dealing with 10 photos for
+an enormous video
+
+558
+00:33:09,045 --> 00:33:12,056
+and he can be expensive to be pulling
+that from the host ap
+
+559
+00:33:12,056 --> 00:33:15,080
+while the presentation is happening so
+if you notice
+
+560
+00:33:15,008 --> 00:33:18,061
+that I your your presentation mission is
+staggering
+
+561
+00:33:19,033 --> 00:33:22,070
+you may need for someone that heavy
+lifting until after the presentation is
+
+562
+00:33:22,007 --> 00:33:24,032
+completed
+
+563
+00:33:24,095 --> 00:33:27,170
+if you subclass UAB controller an issue
+controller do whatever makes sense for
+
+564
+00:33:28,007 --> 00:33:28,986
+the rest if your code
+
+565
+00:33:29,679 --> 00:33:33,460
+just two for that task so it's not
+impacting the animation
+
+566
+00:33:33,046 --> 00:33:36,048
+if you subclass SL compose service be
+controller however
+
+567
+00:33:36,066 --> 00:33:39,144
+we will call your subclasses
+presentation animation did finish method
+
+568
+00:33:40,044 --> 00:33:47,044
+giving your I'm you control a good hook
+with which to start the heavy lifting
+
+569
+00:33:48,016 --> 00:33:52,041
+so let's take a look at the photo blog
+ap and a photoblog share extension
+
+570
+00:33:52,041 --> 00:33:57,062
+quick
+
+571
+00:33:57,062 --> 00:34:01,065
+before going into the code I'm gonna
+show you the
+
+572
+00:34:01,065 --> 00:34:04,112
+sure extension running so some legal
+make a little bit more sense
+
+573
+00:34:05,012 --> 00:34:08,050
+so we're gonna go into photos just like
+that for the screenshots I showed
+
+574
+00:34:08,005 --> 00:34:11,052
+pick a different one puppies
+
+575
+00:34:11,097 --> 00:34:15,126
+I'm and I will do just one so
+
+576
+00:34:16,026 --> 00:34:19,645
+no its not be that there we go
+
+577
+00:34:19,879 --> 00:34:23,620
+click on the photo blog sure extension
+and up comes the composer you so this is
+
+578
+00:34:23,062 --> 00:34:24,079
+clearly using
+
+579
+00:34:24,079 --> 00:34:27,155
+the standard system composed she looked
+arrive from são compose service we
+
+580
+00:34:28,055 --> 00:34:28,128
+controller
+
+581
+00:34:29,028 --> 00:34:33,086
+and you can do a couple different things
+a you can type some text
+
+582
+00:34:33,086 --> 00:34:36,152
+and as I'm typing text kinda hard to see
+but there's a little indicator the
+
+583
+00:34:37,052 --> 00:34:40,129
+remaining characters and once I type too
+much text it goes negative
+
+584
+00:34:41,029 --> 00:34:44,037
+and the post button disables this is all
+happening more or less for free all
+
+585
+00:34:45,009 --> 00:34:47,024
+season details when we look at the code
+
+586
+00:34:47,024 --> 00:34:50,025
+the image preview their it happens for
+free
+
+587
+00:34:50,034 --> 00:34:53,613
+the base class will be there for you I
+we also
+
+588
+00:34:53,919 --> 00:34:57,330
+this particular subclass adds an
+audience picker
+
+589
+00:34:57,033 --> 00:35:00,035
+so this photo blog supports the notion
+of posting publicly
+
+590
+00:35:00,035 --> 00:35:03,059
+I or only to my friends were completely
+primarily and you can
+
+591
+00:35:03,059 --> 00:35:08,128
+choose a different audience 3 some text
+here so we're within
+
+592
+00:35:09,028 --> 00:35:13,034
+the allowed range and we can post so
+let's go back in Xcode
+
+593
+00:35:13,034 --> 00:35:17,122
+and see how we implement that
+
+594
+00:35:18,022 --> 00:35:21,028
+so the first thing I did it's hard to
+see sorry but this is skills they can be
+
+595
+00:35:21,082 --> 00:35:24,091
+with the hippie with the first thing I
+did was set the panel display name for
+
+596
+00:35:24,091 --> 00:35:24,180
+my extension
+
+597
+00:35:25,008 --> 00:35:29,016
+2400 block and I set up an activation
+rule
+
+598
+00:35:29,088 --> 00:35:32,127
+I this particular activation will says
+my share extension
+
+599
+00:35:33,027 --> 00:35:35,122
+only once one image that's all you need
+to giving I don't care about anything
+
+600
+00:35:36,022 --> 00:35:40,100
+else this is one time relevant
+
+601
+00:35:41,000 --> 00:35:44,025
+and now my view controller so have mine
+
+602
+00:35:44,025 --> 00:35:47,109
+you controller subclasses from es el
+cumple service we control our
+
+603
+00:35:48,009 --> 00:35:51,073
+now take a look at the implementation
+before Easter & Co to this
+
+604
+00:35:51,073 --> 00:35:54,094
+I want to talk about a couple artificial
+constraints for this demo app so for
+
+605
+00:35:54,094 --> 00:35:54,169
+purposes
+
+606
+00:35:55,069 --> 00:35:59,126
+up showing off the remaining characters
+count and I generally updating the post
+
+607
+00:36:00,026 --> 00:36:00,075
+button
+
+608
+00:36:00,075 --> 00:36:03,154
+I'm gonna say that my photoblog has two
+constraints associated with it
+
+609
+00:36:04,054 --> 00:36:07,108
+the first is that no photo can be posted
+with more than 20 characters
+
+610
+00:36:08,008 --> 00:36:11,015
+a alongside the photo because it's meant
+to just let you see the photo and not
+
+611
+00:36:11,078 --> 00:36:12,129
+get distracted by the text
+
+612
+00:36:13,029 --> 00:36:15,121
+and also it's supposed to be a
+lightweight for a block it doesn't wanna
+
+613
+00:36:16,021 --> 00:36:18,029
+spend it on a storage space on the
+photos
+
+614
+00:36:18,029 --> 00:36:22,033
+so no photo that you post can be bigger
+than one megabyte
+
+615
+00:36:22,033 --> 00:36:25,086
+and this class constraint is
+particularly important because when you
+
+616
+00:36:25,086 --> 00:36:27,103
+pull data from the host application
+
+617
+00:36:28,003 --> 00:36:32,017
+you're not in control of the day decide
+if you've got a photo coming from Photos
+
+618
+00:36:32,017 --> 00:36:32,020
+app
+
+619
+00:36:32,047 --> 00:36:35,106
+it might be quite large and therefore
+its your extensions responsibility down
+
+620
+00:36:36,006 --> 00:36:37,038
+sample that image data
+
+621
+00:36:37,038 --> 00:36:41,039
+to fit within your size constraints
+
+622
+00:36:41,039 --> 00:36:44,044
+so let's start implementing the view
+controller
+
+623
+00:36:44,089 --> 00:36:47,132
+so I'm gonna add an image data property
+to my subclass this is going to be the
+
+624
+00:36:48,032 --> 00:36:50,032
+fully down sampled image data
+
+625
+00:36:50,032 --> 00:36:53,119
+that i'm gonna ultimately upload to the
+photoblog
+
+626
+00:36:54,019 --> 00:36:59,063
+I'm going to keep track of the audience
+that be user wants to post it to you
+
+627
+00:36:59,063 --> 00:37:02,078
+and I'm gonna keep configuration item
+that i'm gonna talk about a little bit
+
+628
+00:37:02,078 --> 00:37:02,087
+later on
+
+629
+00:37:03,068 --> 00:37:06,155
+basically this represents that audience
+bigger table cell down in the bottom
+
+630
+00:37:07,055 --> 00:37:12,149
+have the compose key
+
+631
+00:37:13,049 --> 00:37:16,098
+all right sir you did load we're going
+to you
+
+632
+00:37:16,098 --> 00:37:19,140
+initialize the audience we already have
+a utility routine in our apt knows have
+
+633
+00:37:20,004 --> 00:37:22,091
+attached the right default audience
+based on a number of factors so we're
+
+634
+00:37:23,027 --> 00:37:26,115
+just gonna use that code from the app
+
+635
+00:37:27,015 --> 00:37:31,027
+now a those constraints I was talking
+about the twenty character limit
+
+636
+00:37:31,027 --> 00:37:35,044
+and the down sampling both need to
+affect whether the post button
+
+637
+00:37:35,044 --> 00:37:39,048
+is enabled so if the user is tight more
+than 20 characters
+
+638
+00:37:39,048 --> 00:37:42,057
+we don't want them to be able to post if
+the down samples not finished
+
+639
+00:37:43,038 --> 00:37:46,091
+likewise we don't want them to be able
+to post so we need to make sure the post
+
+640
+00:37:46,091 --> 00:37:48,110
+button is disabled in those cases
+
+641
+00:37:49,001 --> 00:37:52,064
+also since we're using the remaining
+character count indicator
+
+642
+00:37:52,073 --> 00:37:55,142
+we need to make sure that up to date at
+all times the right place to do that
+
+643
+00:37:56,042 --> 00:38:00,067
+is the is content valid method SL
+compose service view controller calls
+
+644
+00:38:00,067 --> 00:38:00,114
+your
+
+645
+00:38:01,014 --> 00:38:04,017
+subclasses is content valid method
+whenever it needs to update the status
+
+646
+00:38:04,044 --> 00:38:06,053
+on the post button to give your chance
+to do those things
+
+647
+00:38:07,034 --> 00:38:11,081
+for temperament some other the first
+thing I want to do is look at the
+
+648
+00:38:11,081 --> 00:38:14,092
+are number of characters that the users
+type so far
+
+649
+00:38:14,092 --> 00:38:17,134
+SL compose service be controller has a
+content text property
+
+650
+00:38:18,034 --> 00:38:23,082
+which is the tax that these are state so
+far so we grab a drink
+
+651
+00:38:23,082 --> 00:38:25,157
+next week after leaving number of
+characters remaining based on our photo
+
+652
+00:38:26,057 --> 00:38:29,121
+blogs constraints
+
+653
+00:38:30,021 --> 00:38:33,065
+then we set eso composers Wii
+controllers characters remaining
+
+654
+00:38:33,065 --> 00:38:33,157
+property
+
+655
+00:38:34,057 --> 00:38:37,596
+this is an NS number by setting that too
+and in this number
+
+656
+00:38:38,109 --> 00:38:41,150
+the base class automatically updates the
+text
+
+657
+00:38:41,015 --> 00:38:44,100
+on the composure she trefor start to
+reflect the number of characters used to
+
+658
+00:38:45,000 --> 00:38:52,000
+have worked
+
+659
+00:38:54,026 --> 00:38:56,035
+to stand here so next we're going to
+same
+
+660
+00:38:57,016 --> 00:39:01,023
+that the post button should be enabled
+if the user is not types too much text
+
+661
+00:39:01,023 --> 00:39:05,099
+and if we already have a fully down
+sample image data otherwise
+
+662
+00:39:05,099 --> 00:39:09,157
+don't enable the post but now we've got
+to get a fully down temple image data
+
+663
+00:39:10,057 --> 00:39:13,059
+and like I said this can be a
+potentially expensive operations we
+
+664
+00:39:13,059 --> 00:39:15,076
+don't know how much data is going to be
+coming over from the house
+
+665
+00:39:15,076 --> 00:39:18,109
+so we wanted to for that to presentation
+animation did finish
+
+666
+00:39:19,009 --> 00:39:23,073
+this method is called by sub called on
+subclasses a vessel compose service few
+
+667
+00:39:23,073 --> 00:39:23,131
+controller
+
+668
+00:39:24,031 --> 00:39:30,072
+after decompose she has slid up on
+screen so the first thing we're gonna do
+
+669
+00:39:30,072 --> 00:39:33,077
+is look at the extension context again
+and in particular look at the input
+
+670
+00:39:33,077 --> 00:39:33,140
+items
+
+671
+00:39:34,004 --> 00:39:37,027
+now I'm gonna go off from the read a
+little bit here but bear with me
+
+672
+00:39:37,063 --> 00:39:40,105
+the extension context can have multiple
+input items
+
+673
+00:39:41,005 --> 00:39:45,084
+on it each input item represents a
+separate upload
+
+674
+00:39:45,084 --> 00:39:50,161
+block for most share extensions you only
+care about doing one
+
+675
+00:39:51,061 --> 00:39:55,075
+uploaded the time but you might imagine
+a particular sharing extension that
+
+676
+00:39:55,075 --> 00:39:56,079
+allowed to do
+
+677
+00:39:56,079 --> 00:40:01,086
+5 posts 21 social network at one go so
+for that has hypothetical chair
+
+678
+00:40:01,086 --> 00:40:03,108
+extension you're gonna need to look at
+all the input items
+
+679
+00:40:04,008 --> 00:40:08,075
+but since this photo blog extension only
+cares about posting one photo at a time
+
+680
+00:40:08,075 --> 00:40:09,099
+with one post at a time
+
+681
+00:40:09,099 --> 00:40:15,172
+we just look at the first input on next
+we're going to iterate over all the
+
+682
+00:40:16,072 --> 00:40:16,166
+attachments
+
+683
+00:40:17,066 --> 00:40:22,099
+on that extension I'm I each extension
+eat each post request could come with
+
+684
+00:40:22,099 --> 00:40:23,121
+multiple pieces a day to
+
+685
+00:40:24,021 --> 00:40:28,032
+like you could go into photos and select
+two photos can choose to share that
+
+686
+00:40:28,032 --> 00:40:31,033
+you would have a extension contacts with
+one item
+
+687
+00:40:31,033 --> 00:40:35,044
+with two attachments so we're going to
+iterate over the attachments and find
+
+688
+00:40:35,044 --> 00:40:36,065
+the photo that we care about
+
+689
+00:40:36,065 --> 00:40:39,132
+so what we do is we
+
+690
+00:40:40,032 --> 00:40:44,050
+we iterate over all the other providers
+in the extension item and we call has I
+
+691
+00:40:44,005 --> 00:40:45,089
+don't conform to type it in a fire
+
+692
+00:40:46,034 --> 00:40:50,040
+passing K U T tight image this is hey I
+don't provider do you have an image in
+
+693
+00:40:50,094 --> 00:40:50,125
+you
+
+694
+00:40:51,025 --> 00:40:54,037
+and if we find out but the answer is yes
+
+695
+00:40:54,037 --> 00:40:57,108
+we're going to do some work we're gonna
+need a poll that particular item
+
+696
+00:40:58,008 --> 00:41:01,080
+fighters data and we're gonna wanna do
+that on a background cue so as to not
+
+697
+00:41:01,008 --> 00:41:05,076
+hi disrupt the main thread and since we
+found the one image that we support
+
+698
+00:41:06,048 --> 00:41:09,132
+we can stop generating now silly
+
+699
+00:41:10,032 --> 00:41:13,047
+actual work pulling the data happens
+with the
+
+700
+00:41:13,047 --> 00:41:16,086
+load item for type identifiers options
+
+701
+00:41:16,086 --> 00:41:20,114
+completion had limited again saying
+gimme some UT type
+
+702
+00:41:21,014 --> 00:41:25,077
+image please and the completion heavily
+handle the past actually has a flexible
+
+703
+00:41:25,077 --> 00:41:28,175
+first parameter indicates the way you
+would like the item provider to supply
+
+704
+00:41:29,075 --> 00:41:29,134
+your data
+
+705
+00:41:30,034 --> 00:41:33,102
+in this case my share extension is
+interested in NSA a
+
+706
+00:41:34,002 --> 00:41:38,028
+so that's what my completion has
+protected and
+
+707
+00:41:38,028 --> 00:41:42,046
+win hi get the screw up for me
+
+708
+00:41:42,046 --> 00:41:45,079
+civic make this a wider that rap so much
+
+709
+00:41:45,079 --> 00:41:48,102
+I'm it's important to note
+
+710
+00:41:49,002 --> 00:41:53,029
+that no doubt have happened in a fire
+completes on an arbitrary cue
+
+711
+00:41:53,029 --> 00:41:56,037
+and since we're going to view controller
+work I'm gonna need to dispatch a sink
+
+712
+00:41:56,037 --> 00:41:57,044
+under the main cue to actually do that
+work
+
+713
+00:41:58,007 --> 00:42:03,016
+and I'm gonna call a method on my psych
+class called image data loaded finish in
+
+714
+00:42:03,016 --> 00:42:03,069
+passive
+
+715
+00:42:03,069 --> 00:42:10,069
+idea let's go implement that
+
+716
+00:42:16,002 --> 00:42:18,051
+so my application already has down
+sampling code
+
+717
+00:42:18,051 --> 00:42:21,072
+right that's what it would need in the
+normal case in normal application case
+
+718
+00:42:21,072 --> 00:42:22,441
+I'm just going to repurpose back
+
+719
+00:42:23,089 --> 00:42:26,740
+and ask it to down sample the image data
+passing mapsize
+
+720
+00:42:26,074 --> 00:42:29,077
+and that's going to complete on an
+arbitrary cue so again
+
+721
+00:42:30,004 --> 00:42:33,027
+once it completes I'm gonna give you
+control it works I dispatch a sink onto
+
+722
+00:42:33,027 --> 00:42:33,121
+the main cue
+
+723
+00:42:34,021 --> 00:42:37,022
+and then I remember the down sample
+image data
+
+724
+00:42:37,022 --> 00:42:40,120
+now that I've got that image data I need
+a post button to get updated
+
+725
+00:42:41,002 --> 00:42:44,045
+and the way I do that is call a method
+on SL compose Wii controller called
+
+726
+00:42:44,063 --> 00:42:48,101
+Valatie content validate content calls
+your subclasses
+
+727
+00:42:49,001 --> 00:42:52,023
+is content validated and gives it
+another chance to determine whether or
+
+728
+00:42:52,023 --> 00:42:52,067
+not
+
+729
+00:42:52,067 --> 00:42:59,067
+that enable the post button
+
+730
+00:43:01,009 --> 00:43:05,014
+okay so when the user taps the post
+button
+
+731
+00:43:05,095 --> 00:43:09,108
+on SL compose new controller subclass I
+we call that subclasses
+
+732
+00:43:10,008 --> 00:43:16,070
+did select post method so let's react to
+that the first thing we're gonna do is
+
+733
+00:43:16,007 --> 00:43:17,008
+perform the upload
+
+734
+00:43:17,071 --> 00:43:21,094
+and after that we need to tell the host
+that are extensions done
+
+735
+00:43:21,094 --> 00:43:24,095
+you can dismiss our view controller and
+again we do that by calling methadone
+
+736
+00:43:25,004 --> 00:43:26,028
+extension contest called
+
+737
+00:43:26,028 --> 00:43:30,030
+complete request returning items
+completion handler so it's at look at
+
+738
+00:43:30,003 --> 00:43:30,087
+the Apple again
+
+739
+00:43:31,014 --> 00:43:34,049
+so the upload is going to be very
+similar to what I already showed on the
+
+740
+00:43:34,049 --> 00:43:35,131
+slides but let's go through it again
+because it's
+
+741
+00:43:36,031 --> 00:43:40,119
+very important for extensions because
+they have a short life span first thing
+
+742
+00:43:41,019 --> 00:43:41,108
+we're gonna do you
+
+743
+00:43:42,008 --> 00:43:45,099
+is create K background in a swirl
+session configuration
+
+744
+00:43:45,099 --> 00:43:50,131
+create an issue or a session from that
+configuration
+
+745
+00:43:51,031 --> 00:43:55,031
+and create a request representing the
+upload
+
+746
+00:43:55,031 --> 00:43:59,035
+now again this is code we stole must all
+but called we borrowed from the main
+
+747
+00:43:59,035 --> 00:43:59,114
+application
+
+748
+00:44:00,014 --> 00:44:03,041
+that building an issuer local request
+from the photo data
+
+749
+00:44:03,041 --> 00:44:06,064
+I from the context that the user is
+typing the audience
+
+750
+00:44:06,064 --> 00:44:09,110
+building upload task around that request
+
+751
+00:44:10,001 --> 00:44:17,001
+and then start that happen now in this
+particular case
+
+752
+00:44:18,042 --> 00:44:23,107
+I well as he lets her back for a second
+so we implemented it's like post method
+
+753
+00:44:24,007 --> 00:44:28,062
+eso composers view controller will also
+call aidid select Cancel method
+
+754
+00:44:28,062 --> 00:44:31,068
+on your subclass but in this particular
+case
+
+755
+00:44:31,068 --> 00:44:34,161
+we don't need to implement the default
+implementation and it's like cancer will
+
+756
+00:44:35,061 --> 00:44:37,135
+go ahead and cancel the extension
+context for you automatically
+
+757
+00:44:38,035 --> 00:44:41,113
+but if your extension needs to do some
+cleanup work in response to a cancel
+
+758
+00:44:42,013 --> 00:44:46,018
+you can override it select Cancel so
+that a No
+
+759
+00:44:46,018 --> 00:44:49,072
+to handle the basic uploading an
+interaction with the sheet
+
+760
+00:44:49,072 --> 00:44:52,124
+but at the bottom of the sheet Murray
+there is that little audience purcell
+
+761
+00:44:53,024 --> 00:44:58,073
+I'll show you how to implement that the
+base class will call your subclasses
+
+762
+00:44:58,073 --> 00:44:59,080
+configuration items method
+
+763
+00:45:00,043 --> 00:45:03,047
+as a way to give your subclass a chance
+to supply
+
+764
+00:45:03,047 --> 00:45:06,103
+that set a table cells to put on me
+bottom out this year she
+
+765
+00:45:07,003 --> 00:45:10,071
+so we can implement the configuration
+items method its are subclasses
+
+766
+00:45:10,071 --> 00:45:11,109
+responsibility
+
+767
+00:45:12,009 --> 00:45:16,017
+to return an array es el cumple she
+configuration items
+
+768
+00:45:16,017 --> 00:45:19,099
+one for each configuration item in the
+table now the example here
+
+769
+00:45:19,099 --> 00:45:22,099
+only has one configuration item but you
+might imagine a
+
+770
+00:45:22,099 --> 00:45:25,138
+share extension that means multiples in
+fact from the built-in system
+
+771
+00:45:26,038 --> 00:45:29,053
+extensions have multiples configuration
+and on the bottom
+
+772
+00:45:29,053 --> 00:45:32,131
+so we instantiate 1 and we said
+
+773
+00:45:33,031 --> 00:45:36,040
+title the title is what's displayed on
+the left side of the table cell
+
+774
+00:45:36,004 --> 00:45:39,065
+and we said its value which is the
+audience displayed on the right side of
+
+775
+00:45:40,001 --> 00:45:40,074
+the table cell
+
+776
+00:45:40,074 --> 00:45:44,085
+and then we need to react to when that
+table sellers tapped
+
+777
+00:45:44,085 --> 00:45:47,134
+and when we do that is by setting a tap
+handle on the configuration
+
+778
+00:45:48,034 --> 00:45:51,131
+now I'm gonna avoid to retain cycle
+between my view controller
+
+779
+00:45:52,031 --> 00:45:55,038
+any configuration item but capturing a
+weak reference to myself
+
+780
+00:45:55,038 --> 00:45:59,064
+inside the tap handler and then what we
+do is we got a strong reference to do
+
+781
+00:45:59,064 --> 00:46:00,078
+that week strong dance
+
+782
+00:46:00,078 --> 00:46:03,080
+and if our view controller is still
+around I'm
+
+783
+00:46:03,098 --> 00:46:06,113
+at that point we know the table cells
+been tapped we want to show that
+
+784
+00:46:07,013 --> 00:46:08,051
+audience paper you why
+
+785
+00:46:08,051 --> 00:46:11,052
+so we've already implemented in audience
+pay-per-view controller
+
+786
+00:46:11,052 --> 00:46:14,107
+it's just a basic table view controller
+that happens to be in. specific for this
+
+787
+00:46:15,007 --> 00:46:15,090
+particular use
+
+788
+00:46:15,009 --> 00:46:21,011
+so we instantiate that we set ourselves
+to be its delegate
+
+789
+00:46:21,092 --> 00:46:24,094
+our custom audience bigger view
+controller class has a delegate method
+
+790
+00:46:24,094 --> 00:46:24,175
+it's called
+
+791
+00:46:25,075 --> 00:46:29,092
+when the user taps an audience so that
+we get to react to the specific audience
+
+792
+00:46:29,092 --> 00:46:29,170
+chosen
+
+793
+00:46:30,007 --> 00:46:34,056
+we're gonna tell it what the currently
+selected audiences so I can check
+
+794
+00:46:35,019 --> 00:46:42,019
+the right thing and then we're gonna
+commented on it so composed service you
+
+795
+00:46:43,004 --> 00:46:46,006
+control a telling it to please enemy
+this other be controller on screen and a
+
+796
+00:46:46,024 --> 00:46:46,082
+methodist
+
+797
+00:46:46,082 --> 00:46:49,144
+push configuration new controller so
+this slides your
+
+798
+00:46:50,044 --> 00:46:53,112
+new view controller in a navigation
+controller like style and resizes the
+
+799
+00:46:54,012 --> 00:46:56,029
+composure she to fit your view
+controllers
+
+800
+00:46:56,029 --> 00:47:01,102
+past desired size and then finally
+
+801
+00:47:02,002 --> 00:47:06,019
+noted we've implemented that we can
+return are single configuration item
+
+802
+00:47:06,019 --> 00:47:07,035
+from configurations
+
+803
+00:47:07,035 --> 00:47:13,036
+alright so here is our delegate method
+that is called when the audience pick
+
+804
+00:47:13,036 --> 00:47:14,073
+your view controller
+
+805
+00:47:14,073 --> 00:47:19,076
+sees the you tap a cell we need to react
+to that we're gonna remember the
+
+806
+00:47:19,076 --> 00:47:20,077
+selected audience
+
+807
+00:47:20,077 --> 00:47:23,084
+we're gonna tell our configuration item
+
+808
+00:47:23,084 --> 00:47:26,093
+hey it's got a new value and by doing
+that the table cell is updated
+
+809
+00:47:26,093 --> 00:47:27,147
+automatically showing the new audience
+
+810
+00:47:28,047 --> 00:47:32,068
+and finally we want to honor dismiss
+
+811
+00:47:32,068 --> 00:47:35,115
+that audience pay-per-view controller
+I'm you don't have to lose
+
+812
+00:47:36,015 --> 00:47:39,056
+it really depends on what your
+configuration items needs are
+
+813
+00:47:39,056 --> 00:47:42,061
+but generally for this kind of simple
+ideas picker want to tap a cell you
+
+814
+00:47:42,061 --> 00:47:43,119
+wanted to swipe away
+
+815
+00:47:44,019 --> 00:47:48,020
+revealing the main computer she so this
+is just a boilerplate code for executing
+
+816
+00:47:48,002 --> 00:47:49,077
+code after a short delay
+
+817
+00:47:49,095 --> 00:47:52,152
+and then we call pop configuration new
+controller
+
+818
+00:47:53,052 --> 00:47:56,103
+so in a navigation controller like way
+this says remove the Thomas B controller
+
+819
+00:47:57,003 --> 00:47:57,089
+from the stack
+
+820
+00:47:57,089 --> 00:48:00,091
+and since we only had one there it
+restores the
+
+821
+00:48:01,009 --> 00:48:04,015
+the fall churches appearance
+
+822
+00:48:04,015 --> 00:48:08,026
+so that is it let's go ahead and rerun
+misguided take a look at it one more
+
+823
+00:48:08,026 --> 00:48:15,026
+time
+
+824
+00:48:17,004 --> 00:48:19,073
+for a blog at thats hometowns
+
+825
+00:48:20,009 --> 00:48:24,045
+go back to photos user photo
+
+826
+00:48:24,045 --> 00:48:27,050
+weekend bring up the photo by extension
+and there it is
+
+827
+00:48:27,095 --> 00:48:33,126
+we can choose an audience make a comment
+
+828
+00:48:34,026 --> 00:48:40,065
+and pursuant so that's how you make a
+shared vision for Iowa's
+
+829
+00:48:40,065 --> 00:48:44,090
+but if you are looking at the expo
+project closely you can see that there's
+
+830
+00:48:44,009 --> 00:48:44,478
+a couple
+
+831
+00:48:45,369 --> 00:48:50,040
+West End targets and their I'm now it
+turns out that shared
+
+832
+00:48:50,004 --> 00:48:53,090
+yeah tights more stuff that's your
+extensions
+
+833
+00:48:53,009 --> 00:48:57,043
+are very portable now it was pretty easy
+for me to take my eyelash extension
+
+834
+00:48:58,024 --> 00:49:03,393
+and massage the coat a little bit for OS
+10 and so that is working here
+
+835
+00:49:03,609 --> 00:49:06,630
+I can go to some photos
+
+836
+00:49:06,063 --> 00:49:12,064
+select a full preview it bring up the
+share menu
+
+837
+00:49:12,073 --> 00:49:15,168
+painters my photo blog item and there's
+my OS 10
+
+838
+00:49:16,068 --> 00:49:23,068
+thought about poor countries he so that
+demo was all about a subclass a vessel
+
+839
+00:49:30,045 --> 00:49:31,464
+compose service view controller
+
+840
+00:49:31,869 --> 00:49:34,930
+but we know a lot of attention
+developers are gonna wanna just subclass
+
+841
+00:49:34,093 --> 00:49:34,160
+from UAB
+
+842
+00:49:35,006 --> 00:49:38,025
+you can't roller and SQ controller and
+we'd love you to do that cuz you can go
+
+843
+00:49:38,619 --> 00:49:41,690
+to town and customize the wine for your
+branding and whatnot
+
+844
+00:49:41,069 --> 00:49:44,165
+but the basic work that you need to do
+beyond implementing the new controller
+
+845
+00:49:45,065 --> 00:49:47,089
+is pretty much what Aaron change in the
+demo
+
+846
+00:49:47,089 --> 00:49:50,152
+you get those in populous concerns you
+need is still set your alarm
+
+847
+00:49:51,052 --> 00:49:54,139
+your display name are you need still
+provide your activation rules
+
+848
+00:49:55,039 --> 00:49:58,071
+and you still need to do your upload
+within an issue or a background section
+
+849
+00:49:58,071 --> 00:50:03,073
+see just learned
+
+850
+00:50:03,091 --> 00:50:07,123
+all about ap extensions you learned a
+little bit about to have a packaged
+
+851
+00:50:08,023 --> 00:50:11,059
+about the different extension points
+have a communication works between the
+
+852
+00:50:11,059 --> 00:50:11,065
+host
+
+853
+00:50:12,019 --> 00:50:15,048
+and the extension itself you learn how
+to make
+
+854
+00:50:15,048 --> 00:50:18,140
+a today which it and a share extension
+on both I O S
+
+855
+00:50:19,004 --> 00:50:22,052
+and OS 10 so go take a look at your
+applications
+
+856
+00:50:22,088 --> 00:50:25,127
+figure out what pieces if you're sharing
+functionality or other functionality
+
+857
+00:50:26,027 --> 00:50:29,122
+you can package up into an act extension
+and deployed so we think this is really
+
+858
+00:50:30,022 --> 00:50:33,098
+cool technology and we're really looking
+forward to all the good features and
+
+859
+00:50:33,098 --> 00:50:35,123
+functionality you're able to supply
+users
+
+860
+00:50:36,023 --> 00:50:43,023
+with your extensions here
+
+861
+00:50:45,006 --> 00:50:49,031
+KK ranges are super evangelist we have
+really comprehensive ap extensions
+
+862
+00:50:49,085 --> 00:50:50,090
+programming guide
+
+863
+00:50:50,009 --> 00:50:53,057
+goes into tons in detail on all the
+SharePoint and all the mechanics in all
+
+864
+00:50:54,038 --> 00:50:54,077
+this
+
+865
+00:50:54,077 --> 00:50:58,118
+tomorrow we have another great extension
+session where we go into detail on more
+
+866
+00:50:59,018 --> 00:51:00,025
+more SharePoint
+
+867
+00:51:00,025 --> 00:51:03,121
+I we also talk about more the underlying
+infrastructure
+
+868
+00:51:04,021 --> 00:51:08,067
+we also go into great detail on the
+JavaScript support for web content
+
+869
+00:51:08,067 --> 00:51:12,080
+and importantly more detail on the
+extension context in an aside a provider
+
+870
+00:51:12,008 --> 00:51:14,014
+so there's tons a good information I
+received a check those out
+
+871
+00:51:15,004 --> 00:51:19,032
+we have two labs where you can talk to a
+sample engineers would love to get you
+
+872
+00:51:19,068 --> 00:51:20,143
+started implementing your share
+extensions
+
+873
+00:51:21,043 --> 00:51:25,047
+one of those labs immediately after this
+so previous downstairs would love to
+
+874
+00:51:25,047 --> 00:51:25,081
+chat
+
+875
+00:51:25,081 --> 00:51:25,133
+thank you
+

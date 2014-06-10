@@ -1,0 +1,4484 @@
+1
+00:00:12,024 --> 00:00:16,033
+either my name's Jacob Shaw and I'm
+really excited to talk
+
+2
+00:00:17,014 --> 00:00:21,058
+a about building adaptive aP's before we
+get started though
+
+3
+00:00:21,058 --> 00:00:25,156
+I wanna tell you what we mean by
+adaptive the first
+
+4
+00:00:26,056 --> 00:00:30,025
+let's go back in the beginning there
+with the iPhone
+
+5
+00:00:30,529 --> 00:00:35,660
+one device one screen was pretty simple
+to build applications for
+
+6
+00:00:35,066 --> 00:00:38,105
+but then when you consider rotation
+
+7
+00:00:38,699 --> 00:00:41,860
+now you have this portrait and landscape
+orientations
+
+8
+00:00:41,086 --> 00:00:44,144
+and then after that we introduced the
+iPad
+
+9
+00:00:45,044 --> 00:00:48,044
+as well as the iPhone 45
+
+10
+00:00:48,044 --> 00:00:51,101
+with its 4-inch display and I have all
+these different
+
+11
+00:00:52,001 --> 00:00:56,014
+devices and all these different screen
+sizes and it can seem intimidating
+
+12
+00:00:56,014 --> 00:00:59,019
+design aP's for well
+
+13
+00:00:59,019 --> 00:01:02,598
+and I with eight we wanna make it simple
+for you to build a
+
+14
+00:01:02,769 --> 00:01:06,000
+to build one application that's both
+universal
+
+15
+00:01:06,000 --> 00:01:09,085
+and is able to adapt taller these
+different devices
+
+16
+00:01:09,085 --> 00:01:13,120
+screen sizes and orientations so today
+
+17
+00:01:14,002 --> 00:01:17,056
+I like to tell you about the new
+concepts that we've added
+
+18
+00:01:17,074 --> 00:01:20,079
+for adaptivity inside you like it and
+then
+
+19
+00:01:21,024 --> 00:01:24,099
+we'll take a look at some of the changes
+we've made to both you controllers
+
+20
+00:01:24,099 --> 00:01:27,548
+and Interface Builder to support this
+new adaptive world
+
+21
+00:01:28,439 --> 00:01:32,340
+alright the start of let's take a look
+
+22
+00:01:32,034 --> 00:01:35,056
+its size classes a new concept that
+we've introduced
+
+23
+00:01:35,056 --> 00:01:38,142
+and I with eight in the past
+
+24
+00:01:39,042 --> 00:01:43,047
+used interface orientation and user
+interface idiom
+
+25
+00:01:43,047 --> 00:01:47,085
+to differentiate between portrait and
+landscape an iPhone and iPad
+
+26
+00:01:47,085 --> 00:01:50,164
+but Iowa State we're recommending
+against using
+
+27
+00:01:51,064 --> 00:01:54,153
+these two concepts and instead were
+advocating
+
+28
+00:01:55,053 --> 00:01:59,099
+this new concept the week off 55 balls
+let me show I'll
+
+29
+00:01:59,099 --> 00:02:02,268
+show you a little bit about what we mean
+by these differences
+
+30
+00:02:03,159 --> 00:02:07,590
+they represented by five class if you
+think about
+
+31
+00:02:07,059 --> 00:02:10,088
+a typical iPad application and the
+screens that it shows
+
+32
+00:02:10,619 --> 00:02:14,780
+you'll see features like split view
+controllers form sheets
+
+33
+00:02:14,078 --> 00:02:17,114
+and popovers but really
+
+34
+00:02:18,014 --> 00:02:22,613
+none of these features are specific to
+the iPad itself we're just using these
+
+35
+00:02:22,739 --> 00:02:26,390
+in this app in this iPad version of the
+application we have because we have this
+
+36
+00:02:26,039 --> 00:02:27,116
+large horizontal campus
+
+37
+00:02:28,016 --> 00:02:31,072
+the display with them now on the other
+hand
+
+38
+00:02:31,072 --> 00:02:33,166
+if you look at a typical iPhone
+application you have a much more
+
+39
+00:02:34,066 --> 00:02:35,087
+constrained layout
+
+40
+00:02:35,087 --> 00:02:39,096
+where things are usually presented
+fullscreen and shown in a single column
+
+41
+00:02:39,879 --> 00:02:43,943
+however this is also not intrinsically
+tied to the fact that it's an iPhone
+
+42
+00:02:44,519 --> 00:02:47,730
+this just a tied to the fact that we
+have this
+
+43
+00:02:47,073 --> 00:02:51,075
+smaller scores of appendicitis you'll
+see the same kind of thing
+
+44
+00:02:51,093 --> 00:02:54,134
+and the master side us but you
+controller
+
+45
+00:02:55,034 --> 00:02:58,433
+and even in the content a popover
+
+46
+00:02:58,739 --> 00:03:03,430
+and both movies on iPad so we call this
+difference
+
+47
+00:03:03,043 --> 00:03:08,132
+regular and compact and we call this
+
+48
+00:03:08,519 --> 00:03:12,522
+access the horizontal side class now
+
+49
+00:03:12,819 --> 00:03:16,220
+if we consider the same kinda
+distinctions in the vertical direction
+
+50
+00:03:16,022 --> 00:03:19,034
+you can see that on things like an iPad
+or an
+
+51
+00:03:19,034 --> 00:03:22,106
+our night phone we have these taller
+full-size bars
+
+52
+00:03:23,006 --> 00:03:26,295
+whereas in a more constrained vertical
+situation
+
+53
+00:03:26,349 --> 00:03:30,310
+like an iPhone in landscape we have both
+convinced bars
+
+54
+00:03:30,031 --> 00:03:33,430
+and now and I with aid we even hide the
+status bar completely
+
+55
+00:03:33,709 --> 00:03:37,090
+and we call these also regular
+
+56
+00:03:37,009 --> 00:03:40,022
+and compact but this time in the
+vertical
+
+57
+00:03:40,022 --> 00:03:44,078
+five-plus now you can think that these
+two sides classes
+
+58
+00:03:44,078 --> 00:03:47,082
+in a similar way the way size works just
+like a size
+
+59
+00:03:48,018 --> 00:03:52,037
+has a horizontal and vertical dimension
+so does the size class
+
+60
+00:03:52,037 --> 00:03:55,436
+so if you put these two concepts
+together
+
+61
+00:03:55,769 --> 00:03:59,090
+you get a two by two grid that defines
+
+62
+00:03:59,009 --> 00:04:02,023
+and you've the possibilities a regular
+and compact
+
+63
+00:04:02,023 --> 00:04:06,342
+in both the horizontal and vertical
+directions and you can have a view
+
+64
+00:04:06,549 --> 00:04:06,624
+controller
+
+65
+00:04:07,299 --> 00:04:11,140
+with any of these four possibilities
+which results in different layouts
+
+66
+00:04:11,014 --> 00:04:15,106
+like it see here in addition to view
+controllers having any of these
+
+67
+00:04:16,006 --> 00:04:19,051
+aside class combinations our devices
+also have
+
+68
+00:04:19,051 --> 00:04:23,077
+default five passes that they'll that
+they'll use an iPad
+
+69
+00:04:23,077 --> 00:04:27,139
+in both landscape and portrait will have
+a regular size class and both horizontal
+
+70
+00:04:28,039 --> 00:04:29,061
+and vertical direction
+
+71
+00:04:29,061 --> 00:04:32,126
+an iPhone women portrait
+
+72
+00:04:33,026 --> 00:04:36,095
+will have a compact core sample size
+class
+
+73
+00:04:36,095 --> 00:04:40,100
+and a regular vertical size class and
+went to landscape
+
+74
+00:04:41,000 --> 00:04:44,013
+it will be compact in both the vertical
+and horizontal
+
+75
+00:04:44,013 --> 00:04:48,055
+five passes so this is all a little
+theoretical
+
+76
+00:04:48,055 --> 00:04:50,137
+let's take a look at a sample
+application to see how this works in
+
+77
+00:04:51,037 --> 00:04:52,041
+practice
+
+78
+00:04:52,077 --> 00:04:55,120
+all right so the sample code that I'll
+be showing you today
+
+79
+00:04:56,002 --> 00:04:59,002
+is available on the WWDC website
+
+80
+00:04:59,002 --> 00:05:02,651
+just go to the sample code section and
+search for adaptive photos
+
+81
+00:05:02,849 --> 00:05:06,923
+the name of our sample app it's a basic
+photo sharing application
+
+82
+00:05:07,589 --> 00:05:11,590
+and this is what it looks like on iphone
+you can see our list
+
+83
+00:05:11,599 --> 00:05:14,860
+our contacts and I can tap on any of
+these
+
+84
+00:05:14,086 --> 00:05:18,124
+to see the photos that they've set sent
+back to me
+
+85
+00:05:19,024 --> 00:05:23,433
+if someone is only sent me a single
+photo I'll go directly to that image
+
+86
+00:05:23,649 --> 00:05:27,180
+and if they sent me multiple photos I
+get the list at the photos that they
+
+87
+00:05:27,018 --> 00:05:28,023
+sent me
+
+88
+00:05:28,068 --> 00:05:33,075
+and then view individual ones
+
+89
+00:05:33,075 --> 00:05:36,138
+now on the photo page you'll notice that
+in addition to the picture
+
+90
+00:05:37,038 --> 00:05:40,137
+were also showing a comment overlay and
+a reading control
+
+91
+00:05:41,037 --> 00:05:45,074
+let me write the photos that they sent
+me
+
+92
+00:05:45,074 --> 00:05:49,053
+alright now when I rotate this
+application to landscape
+
+93
+00:05:49,719 --> 00:05:53,120
+notice that are bars become condensed
+and the status bar
+
+94
+00:05:53,012 --> 00:05:57,014
+disappears entirely
+
+95
+00:05:57,014 --> 00:06:00,038
+this all happens automatically but in
+our application
+
+96
+00:06:00,038 --> 00:06:03,130
+we've done a few more customizations
+inside a photo view
+
+97
+00:06:04,003 --> 00:06:07,010
+when I wrote a the the
+
+98
+00:06:07,037 --> 00:06:10,108
+not comments will have a smaller margins
+and the rain control
+
+99
+00:06:11,008 --> 00:06:16,064
+will shrink down to a smaller size
+
+100
+00:06:16,064 --> 00:06:19,403
+now our application is of course
+universal
+
+101
+00:06:19,979 --> 00:06:26,979
+so let me run it and side at the iPad
+simulator
+
+102
+00:06:27,056 --> 00:06:33,655
+here you notice that I have all the same
+functionality
+
+103
+00:06:34,159 --> 00:06:37,640
+and all the same controls inside my
+photo view
+
+104
+00:06:37,064 --> 00:06:40,093
+but watch when I rotate to landscape
+
+105
+00:06:40,093 --> 00:06:43,119
+all the bars have still have the full
+height
+
+106
+00:06:44,019 --> 00:06:47,101
+and I love my controls here have shut
+down miss it because we still have this
+
+107
+00:06:48,001 --> 00:06:49,830
+large vertical real estate
+
+108
+00:06:49,839 --> 00:06:53,320
+and in our application we're using the
+vertical five class
+
+109
+00:06:53,032 --> 00:06:56,074
+instead of the interface orientation so
+we get the right behavior
+
+110
+00:06:56,074 --> 00:07:00,081
+on both iPhone and iPad
+
+111
+00:07:01,044 --> 00:07:05,107
+now one of the new features we batted an
+eye with a is a resizable simulator
+
+112
+00:07:06,007 --> 00:07:09,058
+so if you notice here at the bottom I
+can type in
+
+113
+00:07:09,058 --> 00:07:16,058
+new dimensions
+
+114
+00:07:16,599 --> 00:07:20,620
+and you'll see the my application has
+resized and everything still looks great
+
+115
+00:07:20,062 --> 00:07:24,088
+because we're using auto layout insists
+that standard system components
+
+116
+00:07:24,088 --> 00:07:27,927
+but in addition to just changing size I
+can also change
+
+117
+00:07:28,719 --> 00:07:33,300
+the psych class and now
+
+118
+00:07:33,003 --> 00:07:36,079
+you'll see they were showing the iPhone
+version of our application even on the
+
+119
+00:07:37,006 --> 00:07:37,735
+iPad
+
+120
+00:07:37,789 --> 00:07:44,789
+just by changing the side bus
+
+121
+00:07:45,024 --> 00:07:48,493
+so I highly recommend you test out your
+application with the new
+
+122
+00:07:48,709 --> 00:07:54,770
+recital simulator and I with a
+
+123
+00:07:54,077 --> 00:07:57,125
+alright so now the you know how five
+passes work in general
+
+124
+00:07:58,025 --> 00:08:01,554
+how do you actually get one at the site
+classes in your application
+
+125
+00:08:01,779 --> 00:08:05,818
+what to do that use the new system we
+call traits
+
+126
+00:08:06,169 --> 00:08:09,262
+traits are essentially properties that
+you can use to determine how
+
+127
+00:08:10,099 --> 00:08:16,116
+the layout your application should
+change at the environment changes
+
+128
+00:08:16,269 --> 00:08:20,271
+they consist a set a property's
+including the horizontal and vertical
+
+129
+00:08:20,289 --> 00:08:22,830
+five classes that we just talked about
+
+130
+00:08:22,083 --> 00:08:26,182
+as well as the user interface idiom and
+also the display scale
+
+131
+00:08:27,082 --> 00:08:30,130
+now all these traits a wrapped up inside
+a container
+
+132
+00:08:31,003 --> 00:08:34,062
+we call I a tree collection this
+includes
+
+133
+00:08:34,089 --> 00:08:39,038
+the trade properties and also their
+values
+
+134
+00:08:39,839 --> 00:08:43,841
+and this new object is called you I
+tried collection
+
+135
+00:08:44,039 --> 00:08:48,550
+you wanted the street collections you
+just need to use a trade environment
+
+136
+00:08:48,055 --> 00:08:51,078
+train by Mansur our new protocol better
+able
+
+137
+00:08:51,078 --> 00:08:54,119
+to return their current trick collection
+and these include
+
+138
+00:08:55,019 --> 00:08:58,104
+screens Windows you controllers
+
+139
+00:08:59,004 --> 00:09:02,099
+and also views all these are able to
+return
+
+140
+00:09:02,099 --> 00:09:05,174
+the current rate collection to you to
+use to determine how your interface
+
+141
+00:09:06,074 --> 00:09:08,110
+should be laid out
+
+142
+00:09:09,001 --> 00:09:12,042
+one other object that's also a trade
+environment is a you at presentation
+
+143
+00:09:12,051 --> 00:09:13,057
+controller
+
+144
+00:09:14,011 --> 00:09:18,016
+this is a new helper object that assists
+with you control a presentation
+
+145
+00:09:18,061 --> 00:09:21,149
+and it's also able to park participate
+and adaptivity
+
+146
+00:09:22,049 --> 00:09:25,076
+we don't have time to talk about today
+about presentation controllers
+
+147
+00:09:25,076 --> 00:09:28,076
+but you can come back tomorrow at 11:30
+to the
+
+148
+00:09:28,076 --> 00:09:31,088
+a look inside presentation controllers
+talk to learn more
+
+149
+00:09:31,088 --> 00:09:34,127
+about how presentation controllers work
+including how the
+
+150
+00:09:35,027 --> 00:09:39,044
+work with traits and adaptivity
+
+151
+00:09:39,044 --> 00:09:44,102
+now all these trained by romance make up
+a hierarchy
+
+152
+00:09:45,002 --> 00:09:49,046
+and the trick elections that they have
+will flow from parent to child
+
+153
+00:09:49,046 --> 00:09:53,091
+so by default the track elections at any
+given child trig environment has
+
+154
+00:09:53,091 --> 00:09:57,103
+will be the ones that it inherited from
+its parent all the way up to the screen
+
+155
+00:09:58,003 --> 00:10:02,027
+which makes up the route treatment
+
+156
+00:10:02,027 --> 00:10:05,088
+now in addition to getting the current
+recollection from train varmint
+
+157
+00:10:05,088 --> 00:10:09,151
+they also have another method and that's
+tree collection did change
+
+158
+00:10:10,051 --> 00:10:13,066
+this gets called whenever the traits
+forgiven trade environment
+
+159
+00:10:13,066 --> 00:10:16,107
+are have just changed you can override
+this
+
+160
+00:10:17,007 --> 00:10:20,031
+in your view controller or view subclass
+snow
+
+161
+00:10:20,031 --> 00:10:23,056
+when you should be changing I love your
+UI elements
+
+162
+00:10:23,056 --> 00:10:28,056
+that depend on traits and was even an
+example that a little bit later
+
+163
+00:10:28,056 --> 00:10:31,083
+in our sample application
+
+164
+00:10:31,083 --> 00:10:34,083
+now let's take a look at a typical trade
+collection
+
+165
+00:10:34,083 --> 00:10:37,171
+the street collection is one you might
+see on an iPhone in portrait
+
+166
+00:10:38,071 --> 00:10:42,140
+we have a compact or sample size class a
+regular vertical side class
+
+167
+00:10:43,004 --> 00:10:46,065
+idioma phone and at this point scale up
+to
+
+168
+00:10:47,001 --> 00:10:50,075
+we call this a fully specified trade
+collection because it has values for all
+
+169
+00:10:50,075 --> 00:10:52,099
+its straight properties
+
+170
+00:10:52,099 --> 00:10:56,193
+out of a possible have a tree collection
+that's missing some up its values
+
+171
+00:10:57,093 --> 00:11:00,135
+and we call these missing values
+unspecified
+
+172
+00:11:01,035 --> 00:11:04,098
+generally though when you ask the train
+environment for trade collection
+
+173
+00:11:04,098 --> 00:11:08,120
+you go back a fully specified track
+collection like the one on the left
+
+174
+00:11:09,002 --> 00:11:12,025
+however if a train by meant like a view
+our view controller
+
+175
+00:11:12,043 --> 00:11:15,051
+is not inside the view hierarchy you
+might get back
+
+176
+00:11:15,051 --> 00:11:19,058
+unspecified values like the track
+collection on the road
+
+177
+00:11:19,058 --> 00:11:22,071
+you also get back these partially
+specified take elections
+
+178
+00:11:22,071 --> 00:11:25,138
+if you create your own trick collection
+using one of our creation methods
+
+179
+00:11:26,038 --> 00:11:29,082
+like trade collection with horizontal
+five-plus which would allow you to
+
+180
+00:11:29,082 --> 00:11:33,103
+create a tree collection just like the
+one on the right
+
+181
+00:11:34,003 --> 00:11:37,056
+now one operation that we can perform on
+multiple trait collections
+
+182
+00:11:37,056 --> 00:11:41,077
+is comparing them to each other and
+comparing a trick collection
+
+183
+00:11:41,077 --> 00:11:46,081
+involves asking if one tree collection
+contains another one
+
+184
+00:11:46,081 --> 00:11:49,124
+now what this means about containment is
+that for any trade
+
+185
+00:11:50,024 --> 00:11:53,056
+thats specified in the Fed second tree
+collection
+
+186
+00:11:53,056 --> 00:11:56,104
+the value at that rate in the first
+recollection has to have the same to
+
+187
+00:11:57,004 --> 00:12:00,097
+has two match exactly so here the second
+track collection
+
+188
+00:12:00,097 --> 00:12:03,143
+only has a specified or sample size
+class
+
+189
+00:12:04,043 --> 00:12:07,112
+and this this horizontal side cuts are
+equal so we'd say that the first rate
+
+190
+00:12:08,012 --> 00:12:10,018
+collection contains the second one
+
+191
+00:12:10,072 --> 00:12:13,100
+and the way you can ask this question
+the up trick collections
+
+192
+00:12:14,000 --> 00:12:19,044
+is by using the contains traits Inc
+Lexion method on you at recollection
+
+193
+00:12:19,044 --> 00:12:22,055
+if we were to change the for example
+size bass at the second track election
+
+194
+00:12:22,055 --> 00:12:23,113
+to regular
+
+195
+00:12:24,013 --> 00:12:27,088
+you can see that now these two
+horizontal size classes don't match
+
+196
+00:12:27,088 --> 00:12:33,161
+so second take: collection is no longer
+contain by the first one
+
+197
+00:12:34,061 --> 00:12:37,085
+now you can perform these comparisons
+yourself in your own code
+
+198
+00:12:37,085 --> 00:12:41,096
+to determine how you should lay out your
+user view controllers
+
+199
+00:12:41,096 --> 00:12:44,138
+but you like it also uses this
+internally for some
+
+200
+00:12:45,038 --> 00:12:48,044
+for some of its functionality and one
+example of that
+
+201
+00:12:48,098 --> 00:12:51,155
+is the appearance proxy the Prince proxy
+is a system
+
+202
+00:12:52,055 --> 00:12:55,057
+that we introduced a while ago for
+customizing
+
+203
+00:12:55,057 --> 00:12:59,148
+the properties up your views and with
+extended it and I was 8
+
+204
+00:13:00,048 --> 00:13:03,090
+to support recollections we now have a
+new method
+
+205
+00:13:03,009 --> 00:13:07,071
+appearance for trait collection they
+returned you a new appearance proxy
+
+206
+00:13:08,052 --> 00:13:12,065
+with a given trait collection that you
+passed in any customization
+
+207
+00:13:12,065 --> 00:13:15,070
+the you perform on that appearance proxy
+will only
+
+208
+00:13:16,015 --> 00:13:19,069
+take a fact on views better that
+
+209
+00:13:19,069 --> 00:13:22,100
+they conform to that take much in the
+past in
+
+210
+00:13:23,000 --> 00:13:27,069
+so but you like it
+
+211
+00:13:27,069 --> 00:13:30,132
+general you pass it passed in a
+partially specified track collection
+
+212
+00:13:31,032 --> 00:13:34,061
+like a horizontal 55 compact and then
+
+213
+00:13:34,061 --> 00:13:38,085
+you be able to customize all the reviews
+when they're inside a compact or sample
+
+214
+00:13:38,085 --> 00:13:39,170
+size bus
+
+215
+00:13:40,007 --> 00:13:44,070
+this is really great for customizing
+olive your views together
+
+216
+00:13:45,033 --> 00:13:49,105
+another class that we've added traipse
+collection support to you I image
+
+217
+00:13:50,005 --> 00:13:54,016
+in the past you'd have a 1x and 2x
+version view images
+
+218
+00:13:54,016 --> 00:13:57,063
+you generally put these in your image
+catalog
+
+219
+00:13:57,063 --> 00:14:00,144
+however and I would state we've expended
+this to allow you to add multiple
+
+220
+00:14:01,044 --> 00:14:02,071
+versions I've your image
+
+221
+00:14:02,071 --> 00:14:05,116
+for different recollections so for
+example
+
+222
+00:14:06,016 --> 00:14:10,049
+we could have this smaller image it's
+used when we have a vertically compact
+
+223
+00:14:10,049 --> 00:14:11,087
+size class
+
+224
+00:14:11,087 --> 00:14:14,132
+and then the other image that we use and
+any other time
+
+225
+00:14:15,032 --> 00:14:19,081
+for any other trade collections now when
+you use one of these images
+
+226
+00:14:19,081 --> 00:14:22,125
+inside the UN ImageView the ImageView
+automatically
+
+227
+00:14:23,025 --> 00:14:26,107
+pull out the right version of the image
+for its current recollection
+
+228
+00:14:27,007 --> 00:14:31,014
+so for example if our ImageView has a
+regular vertical side class
+
+229
+00:14:31,014 --> 00:14:35,015
+would be using this larger image and
+what's really cool
+
+230
+00:14:35,015 --> 00:14:38,019
+is when are image view changes to have a
+contact
+
+231
+00:14:38,019 --> 00:14:42,022
+vertical side class it'll automatically
+update the image that's using
+
+232
+00:14:42,022 --> 00:14:46,060
+to be the smaller image and even change
+its own intrinsic on 10 size
+
+233
+00:14:46,006 --> 00:14:50,070
+to shrink down to exactly match that
+imagesize
+
+234
+00:14:51,024 --> 00:14:54,112
+and that makes it really easy for you to
+use images that have different versions
+
+235
+00:14:55,012 --> 00:14:56,039
+for different recollections
+
+236
+00:14:56,039 --> 00:15:01,111
+and automatically get the right behavior
+and wherever your application adaptive
+
+237
+00:15:02,011 --> 00:15:05,106
+and like I said this all happens
+automatically with you I ImageView
+
+238
+00:15:06,006 --> 00:15:09,025
+we also have a new class called you a
+image asset because you even more
+
+239
+00:15:09,025 --> 00:15:10,124
+control
+
+240
+00:15:11,024 --> 00:15:14,120
+an image asset wraps up all of these
+different versions are the image
+
+241
+00:15:15,002 --> 00:15:18,891
+and it allows you to ask for specific
+image matching a given trait collection
+
+242
+00:15:19,089 --> 00:15:20,720
+that you can pass in
+
+243
+00:15:20,072 --> 00:15:23,691
+and you can even add and remove your own
+representations have an image
+
+244
+00:15:24,339 --> 00:15:28,360
+using other methods on image assets to
+check out the UAE image at that
+
+245
+00:15:28,036 --> 00:15:33,050
+header file if the old BB the detail
+that how this works
+
+246
+00:15:33,005 --> 00:15:37,784
+now one last thing that we can do with
+trade collections is added together
+
+247
+00:15:38,279 --> 00:15:41,370
+we add one trick election to a second we
+get
+
+248
+00:15:41,037 --> 00:15:44,256
+the combined trick collection and we can
+do that
+
+249
+00:15:44,589 --> 00:15:48,450
+with the tree collection with traits
+from collections method
+
+250
+00:15:48,045 --> 00:15:51,045
+anytime that one of the traits is
+unspecified
+
+251
+00:15:51,045 --> 00:15:54,048
+in except for in one at the track
+elections that we're adding
+
+252
+00:15:54,075 --> 00:15:57,169
+will get only the specified trade in the
+final take collection
+
+253
+00:15:58,069 --> 00:16:01,162
+however if there are multiple versions
+up multiple values for the trait that
+
+254
+00:16:02,062 --> 00:16:03,106
+are being added together
+
+255
+00:16:04,006 --> 00:16:07,011
+then the last recollection will be the
+one that wins
+
+256
+00:16:07,056 --> 00:16:11,067
+so here reading compact to regular for
+the horizontal size class
+
+257
+00:16:11,067 --> 00:16:14,076
+to or resulting trade collection also
+have a regular for example 5
+
+258
+00:16:15,057 --> 00:16:20,129
+us and we'll see where this can be used
+a little bit later in our talk
+
+259
+00:16:21,029 --> 00:16:28,029
+now the you know heart rights work but
+the how we use them in our application
+
+260
+00:16:30,075 --> 00:16:37,075
+so let's run our application on the
+iPhone again
+
+261
+00:16:41,066 --> 00:16:45,805
+and we'll take a look again at these two
+views the change their appearance
+
+262
+00:16:46,399 --> 00:16:50,500
+when the vertical five passes change
+
+263
+00:16:50,005 --> 00:16:57,005
+the first one is a rating control and we
+can look at the code for that right here
+
+264
+00:16:57,064 --> 00:17:02,069
+although we're doing in this view it's
+creating image issues
+
+265
+00:17:02,069 --> 00:17:06,122
+and sending images on them they were
+pulling out are at the catalogue
+
+266
+00:17:07,022 --> 00:17:11,025
+there's actually no coding here at all
+the deals with traits our site castles
+
+267
+00:17:11,052 --> 00:17:15,054
+instead we just have assets
+
+268
+00:17:15,072 --> 00:17:18,301
+that define and a regular version of the
+image
+
+269
+00:17:18,949 --> 00:17:22,350
+and vertically compact version of the
+image
+
+270
+00:17:22,035 --> 00:17:25,754
+in our Image you automatically updates
+take this this resizing behavior
+
+271
+00:17:26,069 --> 00:17:29,160
+for ratings control and since we're
+using auto layout
+
+272
+00:17:29,016 --> 00:17:36,016
+our entire control will shrink and
+growth to match those images changing
+
+273
+00:17:37,073 --> 00:17:40,119
+notice that we also have black person
+that these images here and returning
+
+274
+00:17:41,019 --> 00:17:44,080
+to be blue an application this is
+because we've added
+
+275
+00:17:44,008 --> 00:17:51,008
+added image rendering mode support to
+the at the catalogue
+
+276
+00:17:57,002 --> 00:17:57,039
+alright
+
+277
+00:17:57,057 --> 00:18:03,084
+next let's take a look are over labia
+here
+
+278
+00:18:03,084 --> 00:18:06,119
+in our in trendy content size method
+we're looking at
+
+279
+00:18:07,019 --> 00:18:10,608
+the horizontal and vertical five spices
+they were currently in
+
+280
+00:18:10,779 --> 00:18:14,827
+and using that to turn margins to add on
+to our ancient the content size
+
+281
+00:18:15,259 --> 00:18:18,276
+this is how we automatically
+
+282
+00:18:18,429 --> 00:18:21,700
+change between this larger and smaller
+margins as we rotate
+
+283
+00:18:21,007 --> 00:18:24,056
+between a vertically compact and regular
+sized us
+
+284
+00:18:24,749 --> 00:18:27,777
+however we also need to tell the system
+
+285
+00:18:28,029 --> 00:18:34,320
+winwood when it needs to update this in
+turn the content size and we do this
+
+286
+00:18:34,032 --> 00:18:37,691
+by overwriting track collection to
+change here
+
+287
+00:18:37,979 --> 00:18:41,074
+we check if either the vertical or
+horizontal size pot has changed
+
+288
+00:18:41,929 --> 00:18:45,976
+along with the street collection change
+and if it has we just invalidate are
+
+289
+00:18:46,399 --> 00:18:47,426
+entering the content size
+
+290
+00:18:47,669 --> 00:18:51,706
+not all we have to do now
+
+291
+00:18:52,039 --> 00:18:55,063
+one last few in our application is this
+profile view
+
+292
+00:18:55,279 --> 00:18:59,302
+the show some information about the
+current user as well as the last image
+
+293
+00:18:59,509 --> 00:18:59,581
+that sent
+
+294
+00:19:00,229 --> 00:19:05,950
+however when I rotate this landscape
+you'll see that our layout changes
+
+295
+00:19:05,095 --> 00:19:08,134
+to show a side by side view and started
+this
+
+296
+00:19:08,989 --> 00:19:12,440
+up and down D and wouldn't implemented
+that by using
+
+297
+00:19:12,044 --> 00:19:16,082
+trade collections and five passes as
+well if I go to my profile view
+
+298
+00:19:16,082 --> 00:19:16,144
+controller
+
+299
+00:19:17,044 --> 00:19:20,413
+you can see we have a method
+
+300
+00:19:20,809 --> 00:19:23,856
+that updates all OVR on allow
+constraints and it takes
+
+301
+00:19:24,279 --> 00:19:28,200
+a tree collection that we passin checks
+its vertical size class
+
+302
+00:19:28,002 --> 00:19:31,151
+and uses one set of constraints when its
+compact
+
+303
+00:19:31,349 --> 00:19:34,425
+to show the side by side view and uses a
+different set of constraints
+
+304
+00:19:35,109 --> 00:19:40,124
+otherwise show the up-and-down diem
+alright
+
+305
+00:19:40,259 --> 00:19:47,259
+out the packets lied to them next thing
+I like to tell you about
+
+306
+00:19:49,149 --> 00:19:52,218
+is some other details up our view
+controllers have adapted the
+
+307
+00:19:52,839 --> 00:19:57,700
+adopted these concepts a traits and five
+passes to automatically perform
+
+308
+00:19:57,007 --> 00:20:01,476
+be more adapted in your applications one
+of the few controller classes that has
+
+309
+00:20:02,169 --> 00:20:03,175
+changed most and I was 8
+
+310
+00:20:03,769 --> 00:20:06,840
+is US but you controller in the past
+
+311
+00:20:07,479 --> 00:20:11,460
+he often uses but you controller and the
+iPad version of the application
+
+312
+00:20:11,046 --> 00:20:14,695
+and then you have to write a completely
+different you control a hierarchy for
+
+313
+00:20:15,109 --> 00:20:16,320
+your iPhone application
+
+314
+00:20:16,032 --> 00:20:19,321
+when I was 8 we've made this but you
+can't roller
+
+315
+00:20:19,609 --> 00:20:23,320
+available on both platforms you can just
+write one view controller hierarchy
+
+316
+00:20:23,032 --> 00:20:27,231
+that works great iPhone and iPad and
+that's what we've done in our sample
+
+317
+00:20:27,519 --> 00:20:27,590
+application
+
+318
+00:20:28,229 --> 00:20:31,940
+however we've even gone a little bit
+further their
+
+319
+00:20:31,094 --> 00:20:35,463
+and forced this but you can't roller
+have it side by side to call and you
+
+320
+00:20:36,309 --> 00:20:39,366
+an iPhone and landscape just like you
+would have an iPad
+
+321
+00:20:39,879 --> 00:20:44,882
+let me show you exactly how we did that
+let's first take a look
+
+322
+00:20:45,179 --> 00:20:48,720
+at the trade environment hierarchy that
+our application has
+
+323
+00:20:48,072 --> 00:20:52,891
+when is on the iPad here you can see
+that the slip you controller
+
+324
+00:20:53,539 --> 00:20:56,558
+is inheriting it straight collections
+from its parents
+
+325
+00:20:56,729 --> 00:20:59,940
+and this gives it a regular core sample
+size class
+
+326
+00:20:59,094 --> 00:21:03,213
+witness but you controller is in a
+regular for example size class
+
+327
+00:21:04,059 --> 00:21:07,064
+it automatically will show the two
+column view that you expect
+
+328
+00:21:07,559 --> 00:21:10,638
+on on iPad however if we now change
+
+329
+00:21:11,349 --> 00:21:14,357
+to our to what our iPhones trade
+environment looks like
+
+330
+00:21:14,429 --> 00:21:18,570
+and landscape here you'll see that once
+again this but you controller is it
+
+331
+00:21:18,057 --> 00:21:19,566
+inheriting it straight collections
+
+332
+00:21:20,079 --> 00:21:23,095
+but here it has a compact or sample size
+bus
+
+333
+00:21:23,239 --> 00:21:27,300
+industry is it to show the one calling
+the want to change this in our
+
+334
+00:21:27,849 --> 00:21:27,931
+application
+
+335
+00:21:28,669 --> 00:21:32,470
+will insert our own container view
+controller as the parent at this but you
+
+336
+00:21:32,047 --> 00:21:32,053
+control over
+
+337
+00:21:33,007 --> 00:21:37,846
+then we use a new method and I was 8
+called said overwrite rent collection
+
+338
+00:21:37,909 --> 00:21:44,008
+for childhood controller this allows us
+to add our own tree collection
+
+339
+00:21:44,899 --> 00:21:47,902
+to the one that inherited by the child
+the controller
+
+340
+00:21:47,929 --> 00:21:51,976
+in this case we'll be adding a regular
+for sample size pots and a trick
+
+341
+00:21:52,399 --> 00:21:52,462
+question
+
+342
+00:21:53,029 --> 00:21:56,460
+and notice that it's partially specified
+so when we add it together
+
+343
+00:21:56,046 --> 00:21:59,585
+with the inherited trait collection are
+split the controller
+
+344
+00:21:59,999 --> 00:22:03,088
+will now have a regular for sample size
+us in addition to whatever else
+
+345
+00:22:03,889 --> 00:22:07,983
+it inherits from its train bombings and
+this regular sized glass
+
+346
+00:22:08,829 --> 00:22:11,831
+will cause it show the two-column but
+the appearance
+
+347
+00:22:11,849 --> 00:22:14,876
+so what this ends up with when we rotate
+
+348
+00:22:15,119 --> 00:22:21,148
+from portrait to landscape is the wall
+change from one to two columns
+
+349
+00:22:21,409 --> 00:22:25,433
+alright now we've seen how we can change
+the trick questions
+
+350
+00:22:25,649 --> 00:22:28,652
+other charge controllers let's take a
+look in detail
+
+351
+00:22:28,679 --> 00:22:33,690
+how the tree collection transition
+occurs for example when we were kid
+
+352
+00:22:33,789 --> 00:22:36,825
+in this case would be rotating from
+portrait to landscape let's take a look
+
+353
+00:22:37,149 --> 00:22:38,210
+at the time line
+
+354
+00:22:38,021 --> 00:22:41,120
+changes that occurs the first phase we
+have
+
+355
+00:22:41,309 --> 00:22:45,450
+is the setup where we get ready to
+perform this transition
+
+356
+00:22:45,045 --> 00:22:49,024
+then we show animations did indicate the
+visual changes
+
+357
+00:22:49,429 --> 00:22:52,450
+and all that's done we do some clean-up
+
+358
+00:22:52,045 --> 00:22:56,194
+to fit to finalize the transition and I
+was 8
+
+359
+00:22:56,599 --> 00:22:59,674
+winter went recollections change as part
+of this transition we've given you some
+
+360
+00:23:00,349 --> 00:23:00,420
+call backs
+
+361
+00:23:01,059 --> 00:23:05,068
+that you can tie into to participate and
+exchange
+
+362
+00:23:05,149 --> 00:23:08,200
+the first one is will transition to
+trade collection with transition
+
+363
+00:23:08,659 --> 00:23:09,667
+coordinator
+
+364
+00:23:09,739 --> 00:23:12,767
+and this gets called at the very
+beginning at the setup before the track
+
+365
+00:23:13,019 --> 00:23:16,023
+collection has changed to its new value:
+
+366
+00:23:16,059 --> 00:23:20,107
+you can use this to get ready for the
+change that's about to occur
+
+367
+00:23:20,539 --> 00:23:23,539
+after that the tree collection change
+itself happens
+
+368
+00:23:23,539 --> 00:23:26,572
+and immediately following that we call
+tree collection did change
+
+369
+00:23:26,869 --> 00:23:32,710
+as I mentioned earlier you can use this
+in view controllers are view subclasses
+
+370
+00:23:32,071 --> 00:23:35,096
+over that's not the end of the story we
+still have these animation
+
+371
+00:23:35,096 --> 00:23:38,895
+and clean up status and you can actually
+use the will transition to treat
+
+372
+00:23:39,759 --> 00:23:39,836
+collection method
+
+373
+00:23:40,529 --> 00:23:44,594
+the time to those as well transition
+coordinator that you get past
+
+374
+00:23:45,179 --> 00:23:48,179
+in this method has an enemy alongside
+method
+
+375
+00:23:48,179 --> 00:23:51,184
+the last few to add your own animation
+box
+
+376
+00:23:51,229 --> 00:23:54,235
+to this transition they will get run
+along with the transitions
+
+377
+00:23:54,829 --> 00:23:57,925
+own animations for example the rotation
+in this case
+
+378
+00:23:58,789 --> 00:24:01,858
+there's also a way to add your own
+completion box they will get run
+
+379
+00:24:02,479 --> 00:24:07,483
+inside the cleanup stage so let's take a
+look at where we might use these two
+
+380
+00:24:07,519 --> 00:24:10,605
+specific call backs will transition to
+treat collection
+
+381
+00:24:11,379 --> 00:24:14,384
+is great for animating you controller
+changes along with the street collection
+
+382
+00:24:14,879 --> 00:24:15,881
+changes
+
+383
+00:24:16,079 --> 00:24:20,133
+so we use this in our application and
+the profile view that we just saw
+
+384
+00:24:20,619 --> 00:24:24,711
+since we want this change to occur right
+alongside that rotation transition
+
+385
+00:24:25,539 --> 00:24:28,597
+however will transition to trade
+collection is only available on your
+
+386
+00:24:29,119 --> 00:24:29,960
+controllers
+
+387
+00:24:29,096 --> 00:24:32,915
+not on other trade environment like you
+I views
+
+388
+00:24:33,779 --> 00:24:37,810
+and so tree collection did change is
+great for use and you a view subclasses
+
+389
+00:24:38,089 --> 00:24:42,153
+where you want to update your UI as the
+trade to changing
+
+390
+00:24:42,729 --> 00:24:45,746
+so we use this one in our comment
+overlay view
+
+391
+00:24:45,899 --> 00:24:48,951
+the use our earlier
+
+392
+00:24:49,419 --> 00:24:53,440
+another we've seen the straight changes
+let's drill in a little bit deeper
+
+393
+00:24:53,044 --> 00:24:57,003
+into the behavior that happens when its
+purview controller collapses
+
+394
+00:24:57,399 --> 00:25:04,399
+from a two column to one column for you
+
+395
+00:25:04,609 --> 00:25:08,940
+as part of this change there too changes
+that need to occur
+
+396
+00:25:08,094 --> 00:25:11,146
+the first thing that has to happen as we
+need to find a new primary view
+
+397
+00:25:12,046 --> 00:25:12,685
+controller
+
+398
+00:25:13,099 --> 00:25:16,105
+to show in this collapsed bank on state
+
+399
+00:25:16,159 --> 00:25:20,196
+by default split view controller will
+use the primary view controller
+
+400
+00:25:20,529 --> 00:25:23,606
+from your expanded to call on state as
+the new primary controller and you
+
+401
+00:25:24,299 --> 00:25:27,305
+collapsed one calm state as well
+
+402
+00:25:27,359 --> 00:25:30,447
+however you can also change this by
+overriding the spa beauty
+
+403
+00:25:31,239 --> 00:25:34,280
+controller delegate method primary view
+controller for collapsing
+
+404
+00:25:34,649 --> 00:25:38,649
+but you controller this allows you to
+return any view controller you want
+
+405
+00:25:38,649 --> 00:25:41,700
+to be the new primary controller and the
+collapsed version abuse but the
+
+406
+00:25:42,159 --> 00:25:44,192
+controller
+
+407
+00:25:44,489 --> 00:25:47,531
+now want that new primary controller has
+been chosen
+
+408
+00:25:47,909 --> 00:25:50,992
+the next step that has to happen is the
+secondary to controller
+
+409
+00:25:51,739 --> 00:25:54,800
+has to get merged into that primary
+controller
+
+410
+00:25:55,349 --> 00:25:58,442
+and in general but the controller will
+try to automatically do the right thing
+
+411
+00:25:59,279 --> 00:26:00,330
+here as well
+
+412
+00:26:00,789 --> 00:26:03,853
+in fact in our sample application we
+need to add any code
+
+413
+00:26:04,429 --> 00:26:07,470
+to get the behavior the you see here
+where the secondary be controller
+
+414
+00:26:07,839 --> 00:26:11,885
+our photo view automatically gets pushed
+onto the navigation controller stack
+
+415
+00:26:12,299 --> 00:26:15,311
+that we had from our primary view
+controller
+
+416
+00:26:15,419 --> 00:26:18,475
+to generate you will have to do anything
+here however there may be some special
+
+417
+00:26:18,979 --> 00:26:19,690
+cases
+
+418
+00:26:19,069 --> 00:26:22,071
+we want to interact a little bit with
+this change
+
+419
+00:26:22,071 --> 00:26:25,920
+one example that from our sample
+application is the No conversations like
+
+420
+00:26:26,559 --> 00:26:27,612
+that you
+
+421
+00:26:28,089 --> 00:26:31,136
+we show this whenever were in the to
+call and you
+
+422
+00:26:31,559 --> 00:26:34,565
+and nothing has been flooded on the left
+however
+
+423
+00:26:34,619 --> 00:26:37,631
+if we just use the default behavior this
+but you controller
+
+424
+00:26:37,739 --> 00:26:40,950
+would take that secondary view
+controller and push that
+
+425
+00:26:40,095 --> 00:26:43,120
+on top of our navigation stack but this
+
+426
+00:26:44,002 --> 00:26:47,003
+no conversation view doesn't really add
+anything to the single
+
+427
+00:26:47,021 --> 00:26:50,860
+on the hook because there's no way that
+the user can interact with it
+
+428
+00:26:51,049 --> 00:26:54,210
+to really we'd rather have a view the
+looks like this
+
+429
+00:26:54,021 --> 00:26:57,044
+where we just show the top-level
+ListView control or when we get
+
+430
+00:26:57,044 --> 00:26:59,503
+collapsed
+
+431
+00:26:59,899 --> 00:27:02,730
+and it's possible to do that with
+another split you control a delegate
+
+432
+00:27:02,073 --> 00:27:02,146
+method
+
+433
+00:27:03,046 --> 00:27:06,825
+collapse secondary to controller on the
+primary controller
+
+434
+00:27:07,239 --> 00:27:10,282
+and I'll show in detail the code that we
+used to do that in our sample app
+
+435
+00:27:10,669 --> 00:27:13,742
+a little bit later next let's look at
+the
+
+436
+00:27:14,399 --> 00:27:17,493
+transition that happens in the opposite
+direction we expand
+
+437
+00:27:18,339 --> 00:27:23,417
+from a single common view the to calm
+the
+
+438
+00:27:24,119 --> 00:27:27,123
+once again their two stages the need to
+occur
+
+439
+00:27:27,159 --> 00:27:30,247
+we need to find a new primary view
+controller and by default
+
+440
+00:27:31,039 --> 00:27:34,480
+split view controller will also use the
+primary view controller from the
+
+441
+00:27:34,048 --> 00:27:35,077
+collapsed view
+
+442
+00:27:35,509 --> 00:27:38,720
+an expanded view and once again you can
+use
+
+443
+00:27:38,072 --> 00:27:41,151
+us but you control a delegate method to
+change that behavior
+
+444
+00:27:41,799 --> 00:27:46,810
+this one is primary view controller for
+expanding let you control or
+
+445
+00:27:46,909 --> 00:27:49,974
+now want that new primary view
+controller has been chosen
+
+446
+00:27:50,559 --> 00:27:53,940
+we need to take the secondary the
+controller and recreated
+
+447
+00:27:53,094 --> 00:27:56,148
+from the primary controller there was
+collapsed
+
+448
+00:27:57,048 --> 00:28:00,667
+and s but the controller will
+automatically do the right thing here
+
+449
+00:28:01,099 --> 00:28:04,101
+as well eye-popping of our photo view
+
+450
+00:28:04,119 --> 00:28:09,171
+and showing that as the new secondary
+view controller and our expanded view
+
+451
+00:28:09,639 --> 00:28:12,730
+however once again want to do something
+a little bit special
+
+452
+00:28:12,073 --> 00:28:16,096
+for the no conversation you here if
+we're showing the ListView
+
+453
+00:28:16,096 --> 00:28:20,165
+when work collapsed want to recreate
+that no conversation flooded view
+
+454
+00:28:21,029 --> 00:28:24,031
+and make that appear as the new detail
+view controller
+
+455
+00:28:24,049 --> 00:28:27,130
+on the right so we can do that
+
+456
+00:28:27,859 --> 00:28:30,887
+using other but you control a delegate
+method separate secondary view
+
+457
+00:28:31,139 --> 00:28:31,145
+controller
+
+458
+00:28:31,739 --> 00:28:34,748
+from higher maybe controller
+
+459
+00:28:34,829 --> 00:28:37,895
+now adjustment on you that's the view
+controller is doing all these merging
+
+460
+00:28:38,489 --> 00:28:41,700
+and I'm urging the secondary controller
+automatically
+
+461
+00:28:41,007 --> 00:28:44,906
+and that's not entirely true the primary
+control itself
+
+462
+00:28:45,599 --> 00:28:48,614
+is actually helping to do this merging
+and I'm urging
+
+463
+00:28:48,749 --> 00:28:52,690
+and doing this using these two methods
+on you I do controller
+
+464
+00:28:52,069 --> 00:28:55,628
+collapse secondary view controller first
+but the controller and separate
+
+465
+00:28:56,249 --> 00:28:57,265
+secondary view controller
+
+466
+00:28:57,409 --> 00:29:01,409
+first but the controller these get
+called by the split the controller
+
+467
+00:29:01,409 --> 00:29:04,423
+as part of its default implementation at
+the collapsing
+
+468
+00:29:04,549 --> 00:29:08,710
+and I'm collapsing that occurs and %um
+navigation controller
+
+469
+00:29:08,071 --> 00:29:11,750
+implement these to push and pop the
+secondary be controller for you
+
+470
+00:29:12,389 --> 00:29:15,391
+automatically however you can also
+simply
+
+471
+00:29:15,409 --> 00:29:18,457
+implement these and your own container
+view controllers to get the same kind of
+
+472
+00:29:18,889 --> 00:29:18,953
+behavior
+
+473
+00:29:19,529 --> 00:29:22,555
+the navigation controller has or even
+something completely custom
+
+474
+00:29:22,789 --> 00:29:25,871
+for your application
+
+475
+00:29:26,609 --> 00:29:29,660
+now one other change that we've made
+house view controllers work and I with
+
+476
+00:29:30,119 --> 00:29:30,185
+eight
+
+477
+00:29:30,779 --> 00:29:33,787
+is in the way that you show view
+controllers in the past
+
+478
+00:29:34,579 --> 00:29:37,581
+if he had a leak you controller like a
+table view controller
+
+479
+00:29:37,779 --> 00:29:41,793
+and you showed a different one perhaps
+by tapping on the cell
+
+480
+00:29:41,919 --> 00:29:44,944
+that new controller would reach up
+through the view controller hierarchy
+
+481
+00:29:45,169 --> 00:29:48,211
+and grab the navigation controller that
+it with embedded inside have
+
+482
+00:29:48,589 --> 00:29:52,638
+accomplished you controller on that but
+this is a pretty tight coupling between
+
+483
+00:29:53,079 --> 00:29:56,174
+the leaf you controller an exact
+environment that inside a
+
+484
+00:29:57,029 --> 00:30:01,100
+we want to try to move away from this
+pattern and i with eight
+
+485
+00:30:01,739 --> 00:30:05,745
+could
+
+486
+00:30:06,339 --> 00:30:10,440
+so instead reintroducing to new method
+that happy decouple this
+
+487
+00:30:10,044 --> 00:30:13,623
+showed you controller and show detail
+view controller
+
+488
+00:30:14,019 --> 00:30:17,230
+these methods work by starting at the
+Lee you controller
+
+489
+00:30:17,023 --> 00:30:20,642
+and walking up its parent PID controller
+hierarchy until the fine
+
+490
+00:30:20,849 --> 00:30:23,940
+the right container view controller for
+that specific action
+
+491
+00:30:24,759 --> 00:30:29,834
+so let me show you how the specific
+methods work
+
+492
+00:30:30,509 --> 00:30:33,513
+we'll start with show view controller
+and how it behaves
+
+493
+00:30:33,549 --> 00:30:38,572
+win it inside when it's called inside
+the UN navigation controller
+
+494
+00:30:38,779 --> 00:30:41,790
+here it would just push on navigation
+controller
+
+495
+00:30:41,889 --> 00:30:44,977
+so this is a great replacement for that
+self-taught navigation controller push
+
+496
+00:30:45,769 --> 00:30:45,853
+me controller
+
+497
+00:30:46,609 --> 00:30:50,609
+approach the song earlier and what's
+great about this method
+
+498
+00:30:50,609 --> 00:30:53,635
+at that it will actually adapt two
+different view controller containers
+
+499
+00:30:53,869 --> 00:30:56,922
+and do something different for example
+when you're inside this book you
+
+500
+00:30:57,399 --> 00:30:59,492
+controller and you call this method
+
+501
+00:31:00,329 --> 00:31:03,700
+it will instead show the new controller
+on the left side
+
+502
+00:31:03,007 --> 00:31:07,156
+at this but the controller as the new
+primary the controller
+
+503
+00:31:07,849 --> 00:31:11,210
+in fact even when you're not inside any
+container view controller then implement
+
+504
+00:31:11,021 --> 00:31:11,830
+this method
+
+505
+00:31:12,019 --> 00:31:15,025
+will still give you on a Mac behavior
+here
+
+506
+00:31:15,619 --> 00:31:19,621
+will show the view controller at the
+mole you control a presentation
+
+507
+00:31:19,819 --> 00:31:22,822
+so you can always be guaranteed that the
+view controller that you pass to show
+
+508
+00:31:23,119 --> 00:31:24,119
+you controller
+
+509
+00:31:24,119 --> 00:31:29,960
+will be shown and exactly the right way
+for its current environment
+
+510
+00:31:29,096 --> 00:31:33,685
+next let's look at show detail view
+controller this works similarly
+
+511
+00:31:34,549 --> 00:31:37,610
+and implemented by but you controller
+
+512
+00:31:38,159 --> 00:31:41,165
+here this but you can't roller will show
+the view controller you pass
+
+513
+00:31:41,759 --> 00:31:44,796
+on the right and its but however
+
+514
+00:31:45,129 --> 00:31:48,133
+it that's the view controller is
+collapsed as you might see an iPhone
+
+515
+00:31:48,529 --> 00:31:49,560
+application
+
+516
+00:31:49,839 --> 00:31:52,842
+been awhile actually redirect that show
+detail view controller method
+
+517
+00:31:53,139 --> 00:31:57,233
+to show the controller and reset it to
+its own primary view controller
+
+518
+00:31:58,079 --> 00:32:02,080
+let's look at a more concrete example
+where we have a UN navigation controller
+
+519
+00:32:02,179 --> 00:32:05,460
+as the primary controller at this but
+the controller
+
+520
+00:32:05,046 --> 00:32:09,046
+just like in our application here the
+navigation controller
+
+521
+00:32:09,046 --> 00:32:13,915
+it's the showed you can call a method
+and will push just like you saw earlier
+
+522
+00:32:14,329 --> 00:32:17,333
+so this show detail view controller
+gives you great behavior and it's that
+
+523
+00:32:17,369 --> 00:32:17,455
+dick Taylor
+
+524
+00:32:18,229 --> 00:32:21,440
+whale show it on the right hand side if
+it expanded
+
+525
+00:32:21,044 --> 00:32:24,023
+but it will push onto a navigation
+controller that's your primary
+
+526
+00:32:24,419 --> 00:32:25,190
+controller
+
+527
+00:32:25,019 --> 00:32:28,378
+when it collapsed
+
+528
+00:32:28,549 --> 00:32:32,556
+and once again just like with show view
+controller show detail view controller
+
+529
+00:32:32,619 --> 00:32:35,624
+will show that the controller as a model
+presentation
+
+530
+00:32:35,669 --> 00:32:40,950
+if it's not inside any container view
+controller that implemented
+
+531
+00:32:40,095 --> 00:32:43,121
+so these are those two you can talk
+those two methods and what their method
+
+532
+00:32:44,021 --> 00:32:45,350
+signature looks like
+
+533
+00:32:45,539 --> 00:32:48,593
+but in addition to being able to call
+them you can also implement these
+
+534
+00:32:49,079 --> 00:32:52,177
+and your own custom you control methods
+and the but you get exactly the same
+
+535
+00:32:53,059 --> 00:32:53,153
+kind of behavior
+
+536
+00:32:53,999 --> 00:32:57,710
+as navigation controller and split view
+controller get inside a mall at your
+
+537
+00:32:57,071 --> 00:32:57,610
+custom
+
+538
+00:32:58,249 --> 00:33:05,249
+view controllers
+
+539
+00:33:08,859 --> 00:33:11,905
+next I like tell you a little bit apart
+how these methods are actually
+
+540
+00:33:12,319 --> 00:33:13,347
+implemented
+
+541
+00:33:13,599 --> 00:33:16,663
+not using a new method called target you
+controller for action
+
+542
+00:33:17,239 --> 00:33:20,275
+sender this does all the work
+
+543
+00:33:20,599 --> 00:33:23,606
+going up the view controller Harkey
+until the right you controller gets
+
+544
+00:33:24,299 --> 00:33:24,394
+found
+
+545
+00:33:25,249 --> 00:33:28,252
+for example if we call show you
+controller would walk up
+
+546
+00:33:28,279 --> 00:33:31,292
+until we find the navigation controller
+since that the first view controller
+
+547
+00:33:31,409 --> 00:33:32,451
+then implemented
+
+548
+00:33:32,829 --> 00:33:35,856
+or if we called show detail view
+controller will keep walking up the view
+
+549
+00:33:36,099 --> 00:33:37,157
+controller hierarchy
+
+550
+00:33:37,679 --> 00:33:41,718
+and tell you after this but you
+controller interview controller fraction
+
+551
+00:33:42,069 --> 00:33:45,105
+works by looking at the view controller
+and see if it's overridden
+
+552
+00:33:45,429 --> 00:33:49,462
+the action method that you passed in and
+also whether that the controller want to
+
+553
+00:33:49,759 --> 00:33:51,818
+receive that specific action
+
+554
+00:33:52,349 --> 00:33:55,421
+and the great thing about this is the
+10th public you can use it
+
+555
+00:33:56,069 --> 00:33:59,075
+to make your own methods the work just
+like show view controller and show
+
+556
+00:33:59,129 --> 00:34:00,207
+detail view controller
+
+557
+00:34:00,909 --> 00:34:03,971
+and we'll see a some specific examples
+of this as we've used it in our sample
+
+558
+00:34:04,529 --> 00:34:07,542
+application
+
+559
+00:34:07,659 --> 00:34:11,667
+the last topic but I'd like to mention
+is you control a presentation
+
+560
+00:34:11,739 --> 00:34:14,750
+and I with aid we made this adaptive as
+well
+
+561
+00:34:14,075 --> 00:34:17,474
+so if you show a popover you control a
+presentation well now
+
+562
+00:34:18,149 --> 00:34:21,215
+automatically adapt that to a full
+screen presentation when you're in
+
+563
+00:34:21,809 --> 00:34:24,814
+of course %ah plea compact side us once
+again
+
+564
+00:34:25,309 --> 00:34:28,690
+we don't have time to talk about that
+today I highly encourage you to go to
+
+565
+00:34:28,069 --> 00:34:30,548
+the a look inside presentation
+controllers talk
+
+566
+00:34:31,169 --> 00:34:35,200
+which is tomorrow at 11:30 the show you
+all about how presentation controllers
+
+567
+00:34:35,002 --> 00:34:35,791
+work
+
+568
+00:34:35,989 --> 00:34:40,030
+and also hi can use them with traits and
+adapted
+
+569
+00:34:40,399 --> 00:34:43,472
+alright let's look at the demo how all
+those new controller
+
+570
+00:34:44,129 --> 00:34:49,190
+features work in our application
+
+571
+00:34:49,739 --> 00:34:53,500
+first look look at their profile you
+getting let me show you
+
+572
+00:34:53,005 --> 00:34:56,057
+what transition looks like in slow
+motion
+
+573
+00:34:57,002 --> 00:35:01,013
+notice that our labels an ImageView are
+moving right along with the rotation
+
+574
+00:35:01,013 --> 00:35:01,067
+transfer
+
+575
+00:35:01,067 --> 00:35:04,069
+transition
+
+576
+00:35:04,069 --> 00:35:08,115
+and as i indicated the way we do that is
+by calling this
+
+577
+00:35:09,015 --> 00:35:12,444
+at the constraints for take collection
+method inside
+
+578
+00:35:12,579 --> 00:35:16,630
+I will transition to treat collection
+with transition coordinator
+
+579
+00:35:16,063 --> 00:35:19,262
+here we just use the animate alongside
+transition method
+
+580
+00:35:19,829 --> 00:35:24,230
+at the transition coordinator call that
+they constraints method
+
+581
+00:35:24,023 --> 00:35:28,742
+and then to make our view up they play
+out
+
+582
+00:35:28,949 --> 00:35:33,560
+this will automatically cause this
+layout these lab constraints to change
+
+583
+00:35:33,056 --> 00:35:36,825
+alongside that rotation transition
+
+584
+00:35:37,329 --> 00:35:40,366
+alright now let's look at how we can
+override
+
+585
+00:35:40,699 --> 00:35:43,716
+the traits first but the controller to
+automatically
+
+586
+00:35:43,869 --> 00:35:46,900
+get that landscape view that shows two
+columns
+
+587
+00:35:46,009 --> 00:35:49,958
+will just add this fuel transition to
+size method
+
+588
+00:35:50,849 --> 00:35:53,873
+and here if our with is larger than 320
+
+589
+00:35:54,089 --> 00:35:58,170
+14 add this a four straight collection
+
+590
+00:35:58,017 --> 00:36:01,089
+which is a whore has a horizontal site
+that the regular this is one of those
+
+591
+00:36:01,089 --> 00:36:03,018
+partially specified track elections
+
+592
+00:36:03,819 --> 00:36:06,822
+that we talked about earlier
+
+593
+00:36:06,849 --> 00:36:09,876
+when we set that trick collection
+
+594
+00:36:10,119 --> 00:36:13,140
+will use the Set overwrite recollection
+for child view controller method
+
+595
+00:36:13,329 --> 00:36:16,370
+to add it to our child view controller
+which in this case is this but the
+
+596
+00:36:16,739 --> 00:36:17,822
+controller
+
+597
+00:36:18,569 --> 00:36:25,569
+now when I run the application again
+
+598
+00:36:26,009 --> 00:36:29,015
+you'll see we can rotate landscape
+
+599
+00:36:29,069 --> 00:36:34,880
+and get this took on the a
+
+600
+00:36:34,088 --> 00:36:37,927
+and everything just works an iPhone as
+you expect
+
+601
+00:36:38,719 --> 00:36:43,781
+and landscape it works just as it would
+on the iPad
+
+602
+00:36:44,339 --> 00:36:50,140
+now let's book in detail how we and
+minute the collapsing expanding behavior
+
+603
+00:36:50,014 --> 00:36:55,153
+this happens nice but you control a
+delegate method
+
+604
+00:36:55,279 --> 00:36:59,281
+first we had the collapse secondary view
+controller on two primary controller
+
+605
+00:36:59,299 --> 00:37:00,341
+method
+
+606
+00:37:00,719 --> 00:37:06,752
+and here we want to use this from or
+collapsing
+
+607
+00:37:07,049 --> 00:37:10,049
+and we're going from a No showing the no
+conversation view
+
+608
+00:37:10,049 --> 00:37:14,650
+the hiding it and only showing this
+top-level list
+
+609
+00:37:14,065 --> 00:37:18,088
+first well as the secondary view
+controller if it contains a photo
+
+610
+00:37:18,088 --> 00:37:21,169
+and we did this by adding a category
+method to you I view controller
+
+611
+00:37:22,069 --> 00:37:26,154
+to return whether or not any given view
+controller shows a photo
+
+612
+00:37:27,054 --> 00:37:30,073
+and if we do not have any photo in our
+current secondary controller
+
+613
+00:37:30,073 --> 00:37:33,682
+return yes this tells the the but you
+controller
+
+614
+00:37:34,339 --> 00:37:38,520
+the we've handled the collapse ourselves
+and turned off any of its default
+
+615
+00:37:38,052 --> 00:37:38,751
+behaviors
+
+616
+00:37:39,219 --> 00:37:42,292
+which would have pushed thats secondary
+controller on top at the navigation
+
+617
+00:37:42,949 --> 00:37:45,060
+stack
+
+618
+00:37:45,006 --> 00:37:48,415
+we also have some logic here to make
+sure that we don't push
+
+619
+00:37:48,469 --> 00:37:52,250
+a view controller on top venue
+controllers that don't match its current
+
+620
+00:37:52,025 --> 00:37:52,574
+photo
+
+621
+00:37:52,799 --> 00:37:55,920
+you didn't look at the sample
+application yourself
+
+622
+00:37:55,092 --> 00:37:59,119
+see exactly how this works finally we
+return 0 here
+
+623
+00:38:00,019 --> 00:38:03,021
+when there was a photo and this tells us
+but you can tell her that we didn't
+
+624
+00:38:03,039 --> 00:38:04,068
+implement the collapse
+
+625
+00:38:04,068 --> 00:38:09,121
+and so will implement a wall perform
+their behavior itself
+
+626
+00:38:10,021 --> 00:38:13,044
+and that's how we get the automatic
+behavior a pushing this photo view
+
+627
+00:38:13,044 --> 00:38:16,077
+of the navigation stack
+
+628
+00:38:16,077 --> 00:38:19,079
+now if we look in the other direction
+we're expanding
+
+629
+00:38:19,079 --> 00:38:22,165
+arse but the controller we'll take a
+look
+
+630
+00:38:23,065 --> 00:38:26,674
+at all %uh view controllers that are on
+top the navigation stack
+
+631
+00:38:27,259 --> 00:38:31,440
+and any of them contain a photo will
+return L
+
+632
+00:38:31,044 --> 00:38:34,079
+this also indicates to this that you
+controller that we
+
+633
+00:38:34,079 --> 00:38:37,108
+wanted to perform its default behavior
+here
+
+634
+00:38:37,819 --> 00:38:42,900
+so if we had a photo and we are
+expanding
+
+635
+00:38:42,009 --> 00:38:45,084
+the net photo would automatically get
+popped off navigation stack
+
+636
+00:38:46,065 --> 00:38:49,150
+and shine on the right if we didn't
+contain any photo though
+
+637
+00:38:50,005 --> 00:38:53,614
+want to create are empty view controller
+and that's how we re show that no
+
+638
+00:38:54,109 --> 00:38:55,160
+conversation view
+
+639
+00:38:55,016 --> 00:39:00,025
+when we're expanding
+
+640
+00:39:01,006 --> 00:39:03,094
+now let's take a look at how our
+application moves between the
+
+641
+00:39:03,094 --> 00:39:03,177
+controllers
+
+642
+00:39:04,077 --> 00:39:07,163
+first will get the conversation to
+controller
+
+643
+00:39:08,063 --> 00:39:11,302
+this is the one shown here when one of
+our conversations
+
+644
+00:39:11,869 --> 00:39:14,917
+has multiple photos
+
+645
+00:39:15,349 --> 00:39:18,444
+if we look at the method think it's
+called when we slept a table view cell
+
+646
+00:39:19,299 --> 00:39:23,310
+we create our new controller in the car
+show detail view controller
+
+647
+00:39:23,031 --> 00:39:26,100
+on that new controller the show that on
+the right
+
+648
+00:39:27,000 --> 00:39:31,042
+and thus that the controller if we're
+expanded
+
+649
+00:39:31,042 --> 00:39:34,341
+and other mention it will push it on to
+navigation stack
+
+650
+00:39:34,719 --> 00:39:38,773
+if we're collapsed without us having to
+write any device-specific checks
+
+651
+00:39:39,259 --> 00:39:42,790
+in our code
+
+652
+00:39:42,079 --> 00:39:45,608
+we can also look and our list view
+controller which has similar but
+
+653
+00:39:46,319 --> 00:39:48,770
+slightly more complicated behavior
+
+654
+00:39:48,077 --> 00:39:51,156
+and that's so that we can show a single
+view controller immediately
+
+655
+00:39:52,056 --> 00:39:55,118
+if there's only one photo or this
+conversation view controller
+
+656
+00:39:56,018 --> 00:39:59,207
+if there's more than one here
+
+657
+00:39:59,369 --> 00:40:03,391
+we check if for any given bro we should
+show that conversation view
+
+658
+00:40:03,589 --> 00:40:07,130
+and if we're showing that conversation
+view we created and you show you
+
+659
+00:40:07,013 --> 00:40:07,972
+controller
+
+660
+00:40:08,089 --> 00:40:11,420
+this method on always push on so that
+you can
+
+661
+00:40:11,042 --> 00:40:14,131
+onto with navigation controller even
+warmer expanded
+
+662
+00:40:15,031 --> 00:40:18,040
+and the two call India
+
+663
+00:40:18,004 --> 00:40:21,039
+on the other hand if we only have a
+single photo will create that you
+
+664
+00:40:21,075 --> 00:40:21,694
+controller
+
+665
+00:40:22,369 --> 00:40:25,375
+a car show detail view controller which
+gives us the same behavior
+
+666
+00:40:25,969 --> 00:40:31,058
+as we had in the conversation the
+controller case
+
+667
+00:40:31,859 --> 00:40:34,920
+now one more thing the on notice in our
+application
+
+668
+00:40:34,092 --> 00:40:37,096
+is that when we rotate to transition
+between a single
+
+669
+00:40:37,096 --> 00:40:40,168
+and two column view this disclosure
+indicators
+
+670
+00:40:41,068 --> 00:40:44,877
+are hiding and appearing missus to
+maintain
+
+671
+00:40:45,489 --> 00:40:49,250
+the behavior it whenever tapping on a
+row would push
+
+672
+00:40:49,025 --> 00:40:52,098
+we show with the disclosure indicator
+and whenever it wouldn't
+
+673
+00:40:52,098 --> 00:40:55,107
+we don't show the disclosure indicator
+so in a single
+
+674
+00:40:56,088 --> 00:40:59,127
+single column collapse you we push on
+all on all of these
+
+675
+00:41:00,027 --> 00:41:03,876
+rose been the expanded view we only push
+
+676
+00:41:04,119 --> 00:41:07,810
+on these multiple conversations views
+and we did that
+
+677
+00:41:07,081 --> 00:41:10,116
+by infant by adding our own category
+
+678
+00:41:11,016 --> 00:41:15,077
+Tulu controller implements two new
+methods
+
+679
+00:41:15,077 --> 00:41:18,626
+well showing view controller push with
+senator and will show in detail the
+
+680
+00:41:19,319 --> 00:41:21,190
+controller push with senator
+
+681
+00:41:21,019 --> 00:41:24,020
+these correspond to the show view
+controller and show detail view control
+
+682
+00:41:24,029 --> 00:41:26,096
+methods that we talked about earlier
+
+683
+00:41:26,096 --> 00:41:29,114
+and they just return whether calling one
+of those methods would cause a push to
+
+684
+00:41:30,014 --> 00:41:30,056
+occur
+
+685
+00:41:30,056 --> 00:41:35,115
+not which were used to determine whether
+or not to show disclosure indicator
+
+686
+00:41:36,015 --> 00:41:40,454
+the way we implement the is is by using
+the target view controller for action
+
+687
+00:41:40,589 --> 00:41:41,920
+method that we just talked about
+
+688
+00:41:41,092 --> 00:41:44,161
+we passin the same action
+
+689
+00:41:44,989 --> 00:41:49,001
+will showing the controller push with
+senator and then we get back a target
+
+690
+00:41:49,109 --> 00:41:49,195
+the controller
+
+691
+00:41:49,969 --> 00:41:53,055
+that implements that method once we have
+our target be controller
+
+692
+00:41:53,829 --> 00:41:56,866
+we just need to ask it whether it will
+push or not
+
+693
+00:41:57,199 --> 00:42:00,690
+and if we don't have a target quarter
+now
+
+694
+00:42:00,069 --> 00:42:04,070
+then we just need to override those
+methods and navigation controller
+
+695
+00:42:04,079 --> 00:42:07,108
+to return yes that showing a view
+controller here
+
+696
+00:42:07,819 --> 00:42:11,730
+will always push and will override it
+since but you can't roller
+
+697
+00:42:11,073 --> 00:42:14,088
+to return I'll since here showing a view
+controller
+
+698
+00:42:14,088 --> 00:42:18,089
+will show it in the left-hand column as
+I mentioned earlier
+
+699
+00:42:18,089 --> 00:42:21,092
+now the behavior for will show in detail
+view controller push
+
+700
+00:42:22,019 --> 00:42:25,908
+is slightly more complicated because
+here we need to check if we're claps
+
+701
+00:42:26,079 --> 00:42:27,040
+first
+
+702
+00:42:27,004 --> 00:42:31,293
+Jennifer collapsed then what take our
+current primary be controller
+
+703
+00:42:31,329 --> 00:42:34,690
+and will redirect the will showing
+detail view controller method
+
+704
+00:42:34,069 --> 00:42:37,077
+to will show you control her and this is
+the same
+
+705
+00:42:37,077 --> 00:42:40,626
+kinda behavior that sleepy controller
+implements with show detail view
+
+706
+00:42:41,319 --> 00:42:43,413
+controller
+
+707
+00:42:44,259 --> 00:42:47,328
+so we've seen how those are implemented
+let's look at how we used it
+
+708
+00:42:47,949 --> 00:42:51,980
+in a table view controller classes
+
+709
+00:42:52,259 --> 00:42:55,690
+here when we're laying out wanna
+parcells will call
+
+710
+00:42:55,069 --> 00:42:58,093
+will show in detail view controller push
+and that's because
+
+711
+00:42:58,093 --> 00:43:00,166
+the method that we would call when he
+was tapped is show detail view
+
+712
+00:43:01,066 --> 00:43:02,525
+controller
+
+713
+00:43:03,119 --> 00:43:07,127
+will get back the result a whether or
+not that action will push
+
+714
+00:43:07,199 --> 00:43:11,670
+and we said to set the accessory type:
+either disclosure indicator
+
+715
+00:43:11,067 --> 00:43:14,156
+or none just how we get these
+
+716
+00:43:14,759 --> 00:43:18,210
+showing and hiding disclosure indicators
+now
+
+717
+00:43:18,021 --> 00:43:23,860
+we also use I these methods to determine
+whether or not to deflect a row
+
+718
+00:43:24,049 --> 00:43:28,066
+when it gets popped him and you can take
+a look at the sample application
+
+719
+00:43:28,219 --> 00:43:28,960
+yourself
+
+720
+00:43:28,096 --> 00:43:31,192
+the fee that we have that works by using
+the same will showing view controller
+
+721
+00:43:32,092 --> 00:43:35,100
+and will show in detail the controller
+methods
+
+722
+00:43:36,000 --> 00:43:39,339
+the last thing I'd like to show you
+
+723
+00:43:39,339 --> 00:43:43,170
+is a new notification we had an Iowa
+State you a view controller
+
+724
+00:43:43,017 --> 00:43:46,094
+show detail target did change
+notification and this is important for
+
+725
+00:43:46,094 --> 00:43:46,177
+telling our
+
+726
+00:43:47,077 --> 00:43:50,165
+tableview when he needs to update its
+disclosure abuse
+
+727
+00:43:51,065 --> 00:43:54,094
+this notification it's triggered by but
+the controller whenever
+
+728
+00:43:54,094 --> 00:43:58,143
+the target they would have that would be
+used for show detail view controller
+
+729
+00:43:58,989 --> 00:44:00,400
+changes
+
+730
+00:44:00,004 --> 00:44:04,653
+and this is when s but you controller
+expands or collapses
+
+731
+00:44:05,049 --> 00:44:08,052
+so we use this notification
+
+732
+00:44:08,079 --> 00:44:10,900
+to go through all of our cells and
+update their this their displeasure
+
+733
+00:44:10,009 --> 00:44:12,138
+indicators
+
+734
+00:44:13,029 --> 00:44:16,380
+that's all for our sample application
+but I really encourage you to download
+
+735
+00:44:16,038 --> 00:44:16,115
+it from the
+
+736
+00:44:17,015 --> 00:44:20,093
+BBC website remember it's called
+adaptive photos
+
+737
+00:44:20,093 --> 00:44:26,012
+and take a look at how and and plants
+all these features
+
+738
+00:44:26,849 --> 00:44:29,888
+next I'd like to hang things over to
+Tony the talk you
+
+739
+00:44:30,239 --> 00:44:33,251
+about some other changes we've made
+Interface Builder for supporting
+
+740
+00:44:33,359 --> 00:44:39,400
+adaptivity
+
+741
+00:44:39,004 --> 00:44:42,473
+they take up high and Tony rich Rd
+
+742
+00:44:42,869 --> 00:44:45,910
+and I'm an engineer on the Interface
+Builder team
+
+743
+00:44:45,091 --> 00:44:49,030
+Jacob just introduced a few new concepts
+and I was a for developing adaptive you
+
+744
+00:44:49,849 --> 00:44:50,400
+eyes
+
+745
+00:44:50,004 --> 00:44:53,103
+such as size classes entry collections
+now and show you guys a few new features
+
+746
+00:44:54,039 --> 00:45:00,138
+without a tax code to help you work with
+these concepts
+
+747
+00:45:01,038 --> 00:45:05,357
+in Xcode 6 you can customize your layout
+for multiple size classes
+
+748
+00:45:05,699 --> 00:45:09,520
+using a single interface builder
+document means you can now target both
+
+749
+00:45:09,052 --> 00:45:10,871
+the iPhone and the iPad
+
+750
+00:45:11,339 --> 00:45:14,390
+with one story board or is it
+
+751
+00:45:14,849 --> 00:45:18,890
+you can deploy these documents backwards
+to older versions via Wes
+
+752
+00:45:18,089 --> 00:45:24,058
+and you can preview your layout
+
+753
+00:45:24,859 --> 00:45:27,908
+for different devices Korean tations and
+OS versions
+
+754
+00:45:28,349 --> 00:45:34,250
+all with an ex co now documents using
+this feature will require Xcode six and
+
+755
+00:45:34,025 --> 00:45:34,100
+on a layout
+
+756
+00:45:35,000 --> 00:45:39,759
+so they won't be compatible with older
+versions alexco let's head over tax code
+
+757
+00:45:39,759 --> 00:45:44,803
+and take a look
+
+758
+00:45:45,199 --> 00:45:48,710
+okay so here we have the storyboard for
+an adventure game I've designed for the
+
+759
+00:45:48,071 --> 00:45:48,940
+iPad
+
+760
+00:45:49,579 --> 00:45:53,616
+today I want to extend the storyboard to
+target the iPhone before get started let
+
+761
+00:45:53,949 --> 00:45:56,955
+me show you the app running in the
+simulator
+
+762
+00:45:57,549 --> 00:46:01,230
+this is the main menu for my bench area
+I love to have a few buttons that
+
+763
+00:46:01,023 --> 00:46:03,892
+control the content that shows up on the
+right side
+
+764
+00:46:04,099 --> 00:46:07,125
+the play button takes you to this menu
+for choosing your character which had to
+
+765
+00:46:07,359 --> 00:46:09,407
+be a warrior or image
+
+766
+00:46:09,839 --> 00:46:12,891
+the store button takes you to the store
+page and the spine takes you to the
+
+767
+00:46:13,359 --> 00:46:14,368
+six-page
+
+768
+00:46:15,259 --> 00:46:18,311
+as you can see I've implemented issue I
+
+769
+00:46:18,779 --> 00:46:23,910
+using US what you control over here I
+have my primary view controller with
+
+770
+00:46:23,091 --> 00:46:25,190
+those three buttons
+
+771
+00:46:26,009 --> 00:46:29,016
+Akira have my my
+
+772
+00:46:29,079 --> 00:46:32,650
+man character menu and down your I have
+my
+
+773
+00:46:32,065 --> 00:46:36,724
+my store page in my settings page each
+of these three buttons is connected to
+
+774
+00:46:37,309 --> 00:46:40,314
+one in the secondary view controllers
+using airplay segue
+
+775
+00:46:40,809 --> 00:46:43,835
+i mean that that when you tap on those
+buttons the secondary view controller is
+
+776
+00:46:44,069 --> 00:46:45,093
+going to your place
+
+777
+00:46:45,309 --> 00:46:50,317
+by the view controller that's connected
+to that but
+
+778
+00:46:51,109 --> 00:46:54,730
+so as I mentioned today I want to enable
+sigh I want to
+
+779
+00:46:54,073 --> 00:46:57,129
+extend the storyboard start the iPhone
+and to do that I'm going to enable size
+
+780
+00:46:58,029 --> 00:46:59,044
+classes
+
+781
+00:46:59,044 --> 00:47:02,065
+I'm gonna head over to the file
+inspector and check the you size classes
+
+782
+00:47:02,065 --> 00:47:03,514
+box
+
+783
+00:47:04,099 --> 00:47:07,660
+when I do that I get this dialog telling
+me that my document is going to be
+
+784
+00:47:07,066 --> 00:47:08,102
+upgraded
+
+785
+00:47:09,002 --> 00:47:13,081
+upgrading will enable auto layout and it
+will convert your segways to the new
+
+786
+00:47:13,099 --> 00:47:15,121
+adaptive segue types
+
+787
+00:47:15,319 --> 00:47:18,340
+if you do stores story boards before
+you're familiar with the usual segue
+
+788
+00:47:18,529 --> 00:47:19,558
+types like push
+
+789
+00:47:19,819 --> 00:47:23,842
+mortal and replace that allow you to
+display view controller when an event is
+
+790
+00:47:24,049 --> 00:47:25,055
+triggered
+
+791
+00:47:25,109 --> 00:47:29,133
+an expert 6 we've added some new Segway
+types that correspond to the new queue
+
+792
+00:47:29,349 --> 00:47:31,395
+controller API to Jacob discussed
+earlier
+
+793
+00:47:31,809 --> 00:47:34,815
+like show view controller and show
+detail view controller
+
+794
+00:47:34,869 --> 00:47:36,967
+when you enable size classes why
+medically upgrade your Segway so those
+
+795
+00:47:37,849 --> 00:47:39,938
+new types
+
+796
+00:47:40,739 --> 00:47:44,774
+so as you can see after enabled size
+classes my view controller got resize to
+
+797
+00:47:45,089 --> 00:47:45,093
+this
+
+798
+00:47:45,489 --> 00:47:49,940
+480 by 480 square this way represent
+sizes have any with
+
+799
+00:47:49,094 --> 00:47:52,933
+and any height so when you see the
+square your edits were applied to
+
+800
+00:47:53,779 --> 00:47:57,871
+to all onto all size classes unless you
+override your layout for a specific size
+
+801
+00:47:58,699 --> 00:48:00,290
+class
+
+802
+00:48:00,029 --> 00:48:04,067
+in my case I've already designed my
+layout to work well for the iPad
+
+803
+00:48:04,067 --> 00:48:09,069
+and now I want to override my layout for
+the iPhone
+
+804
+00:48:09,069 --> 00:48:12,125
+today I'm going to use this button at
+the bottom of the campus well
+
+805
+00:48:13,025 --> 00:48:18,050
+this button I allows me to choose which
+size classes and editing for
+
+806
+00:48:18,005 --> 00:48:21,057
+each of the squares in this three by
+three grade represents a combination
+
+807
+00:48:22,002 --> 00:48:24,821
+oven with class and a high class
+
+808
+00:48:24,839 --> 00:48:27,873
+currently the middle square is selected
+and Ike response to any with
+
+809
+00:48:28,179 --> 00:48:32,194
+in any heart when this were selected
+you're editing your default layout
+
+810
+00:48:32,329 --> 00:48:35,376
+which is inherited by all the other
+configurations
+
+811
+00:48:35,799 --> 00:48:39,828
+in the top left we have a square for
+compact with in contact height
+
+812
+00:48:40,089 --> 00:48:44,112
+that corresponds to an iPhone in
+landscape
+
+813
+00:48:44,319 --> 00:48:47,347
+in the bottom right we have a square for
+regular with the regular height
+
+814
+00:48:47,599 --> 00:48:50,650
+which corresponds to an iPad
+
+815
+00:48:50,065 --> 00:48:53,148
+and in my case since I'm interested in
+overriding my layout for an iPhone in
+
+816
+00:48:54,048 --> 00:48:54,657
+portrait
+
+817
+00:48:55,089 --> 00:48:58,166
+I'm going to head over to the bottom
+left where I have a square for compact
+
+818
+00:48:58,859 --> 00:48:58,905
+with
+
+819
+00:48:59,319 --> 00:49:03,386
+and regular act
+
+820
+00:49:03,989 --> 00:49:08,000
+when I choose that square I made you
+control it grows in a row and tall
+
+821
+00:49:08,000 --> 00:49:12,079
+to show me that are now editing for
+contact with in regular height
+
+822
+00:49:12,079 --> 00:49:15,758
+also you might have noticed this part
+the bar the campus turns blue to show me
+
+823
+00:49:16,469 --> 00:49:19,533
+I'm no longer editing for the default
+layout
+
+824
+00:49:20,109 --> 00:49:24,133
+as you can see in this configuration my
+image view and my buttons are getting
+
+825
+00:49:24,349 --> 00:49:25,640
+clipped
+
+826
+00:49:25,064 --> 00:49:29,253
+so this is gonna require public Texas
+first I want to give my image viewer
+
+827
+00:49:29,829 --> 00:49:30,980
+smaller image
+
+828
+00:49:30,098 --> 00:49:33,194
+to use when the with this compact and
+second I want to change those buns to be
+
+829
+00:49:34,094 --> 00:49:36,003
+stacked on top of each other vertically
+
+830
+00:49:36,849 --> 00:49:39,876
+rather than sitting side by side like
+they are now
+
+831
+00:49:40,119 --> 00:49:44,270
+let's fix the image you first I'm gonna
+head over to my ass a catalog using the
+
+832
+00:49:44,027 --> 00:49:44,706
+jump are
+
+833
+00:49:44,949 --> 00:49:48,013
+and then ima select my logo image set
+
+834
+00:49:48,589 --> 00:49:51,611
+and over to the inspector and appear
+
+835
+00:49:51,809 --> 00:49:56,250
+for the with that review I'm going to
+choose any and compact
+
+836
+00:49:56,025 --> 00:49:59,046
+that gives me a couple have new on slots
+here
+
+837
+00:49:59,046 --> 00:50:02,285
+the images that are put into the slots
+are gonna be used at runtime instead of
+
+838
+00:50:02,699 --> 00:50:03,290
+my default
+
+839
+00:50:03,029 --> 00:50:07,328
+images whenever the with this compact
+already have a couple images waiting
+
+840
+00:50:07,589 --> 00:50:09,020
+here in the Finder
+
+841
+00:50:09,002 --> 00:50:12,021
+so I'm just gonna drag those over
+
+842
+00:50:12,021 --> 00:50:18,088
+to add to the slots
+
+843
+00:50:18,088 --> 00:50:22,257
+okay nominee head back to the storyboard
+and as you can see the image you has
+
+844
+00:50:23,049 --> 00:50:26,102
+been updated with a smaller image in its
+no longer getting clipped
+
+845
+00:50:26,579 --> 00:50:31,290
+now sixties buttons I wanna start by
+just selecting the buttons
+
+846
+00:50:31,029 --> 00:50:34,958
+so you can now take a look at their
+constraints
+
+847
+00:50:35,219 --> 00:50:38,440
+for those of you who are unfamiliar with
+auto layout and not gonna go into
+
+848
+00:50:38,044 --> 00:50:41,073
+too much detail and layout constraints
+for this demo
+
+849
+00:50:41,469 --> 00:50:44,630
+I recommend checking out our session
+from last year's conference
+
+850
+00:50:44,063 --> 00:50:47,002
+however I do want to point out that
+there is a hidden view here between
+
+851
+00:50:47,569 --> 00:50:48,940
+these two buttons
+
+852
+00:50:48,094 --> 00:50:51,243
+and that you exists only to hold
+constraints
+
+853
+00:50:52,089 --> 00:50:55,420
+it has a a couple constraints entering
+in its container
+
+854
+00:50:55,042 --> 00:50:58,054
+and it has a few more constraints
+pinning the buttons to it
+
+855
+00:50:58,054 --> 00:51:01,091
+the most importantly it has this with
+constraint here
+
+856
+00:51:01,091 --> 00:51:04,139
+analyze me to control how far apart the
+buttons are from each other
+
+857
+00:51:05,039 --> 00:51:08,042
+so fun ever want to move them farther
+apart or closer together
+
+858
+00:51:08,069 --> 00:51:11,808
+I'll just leave it at that. with concern
+
+859
+00:51:12,429 --> 00:51:15,467
+however now that I want these buns to be
+laid out vertically
+
+860
+00:51:15,809 --> 00:51:19,902
+I no longer need this view or any of its
+constraints all the buttons together
+
+861
+00:51:20,739 --> 00:51:23,796
+so that the next thing to do is clear
+the constraints by using this menu at
+
+862
+00:51:24,309 --> 00:51:25,358
+the bottom of the campus
+
+863
+00:51:25,799 --> 00:51:29,650
+and is gonna choose clear constraints
+gonna do that
+
+864
+00:51:29,065 --> 00:51:33,884
+the the constraints disappear from the
+campus
+
+865
+00:51:34,469 --> 00:51:37,660
+and you might wonder if that's gonna
+cause my layout to stop working for the
+
+866
+00:51:37,066 --> 00:51:38,104
+iPad
+
+867
+00:51:39,004 --> 00:51:42,293
+however since I'm currently editing for
+compact with the regular height
+
+868
+00:51:42,329 --> 00:51:45,405
+my edits will only apply to that
+configuration if we take a look at the
+
+869
+00:51:46,089 --> 00:51:47,650
+outline view
+
+870
+00:51:47,065 --> 00:51:51,404
+I you can see that those constraints are
+still there and my document
+
+871
+00:51:51,989 --> 00:51:57,380
+they just been turned off for the
+current editing mode
+
+872
+00:51:57,038 --> 00:52:01,017
+ok it the next thing I do is remove this
+view sense I no longer need it there to
+
+873
+00:52:01,359 --> 00:52:01,455
+hold the buttons
+
+874
+00:52:02,319 --> 00:52:07,270
+next to each other or is Ali so make
+over to the attributes inspector
+
+875
+00:52:07,027 --> 00:52:11,076
+and down here at the bottom we have this
+on this check box it says and stop
+
+876
+00:52:11,319 --> 00:52:15,374
+installed means that the view is present
+in the view hierarchy at runtime
+
+877
+00:52:15,869 --> 00:52:18,954
+as a sub you have its container I want
+this you to be installed
+
+878
+00:52:19,719 --> 00:52:23,730
+in all configurations except for compact
+with the regular height
+
+879
+00:52:23,073 --> 00:52:26,562
+so I'm going to addict I mean use as
+possible in here
+
+880
+00:52:27,219 --> 00:52:31,290
+data customization for compact with and
+regular height
+
+881
+00:52:31,929 --> 00:52:35,970
+when I do that I get a new install
+checkbox and when I unchecked that box
+
+882
+00:52:36,339 --> 00:52:39,373
+the view disappears and if we take
+another look at the
+
+883
+00:52:39,679 --> 00:52:42,980
+at the outlined you over here you can
+see that it's once again still there my
+
+884
+00:52:42,098 --> 00:52:49,098
+document press has been turned off for
+defending
+
+885
+00:52:50,096 --> 00:52:53,435
+okay now I'm just gonna drag around
+these buttons so that they're going to
+
+886
+00:52:54,299 --> 00:52:54,333
+be
+
+887
+00:52:54,639 --> 00:53:01,639
+laid out vertically I rather than
+sitting side by side
+
+888
+00:53:02,859 --> 00:53:05,880
+okay then I'll select the buttons and
+that label their and I'm gonna go back
+
+889
+00:53:06,069 --> 00:53:09,420
+to this menu in this time I'm gonna ask
+Interface Builder to just give me some
+
+890
+00:53:09,042 --> 00:53:12,129
+suggested constraints for those views
+
+891
+00:53:13,029 --> 00:53:16,328
+okay at this point I could hit the wrong
+button
+
+892
+00:53:16,589 --> 00:53:20,610
+and try this out on the iPhone simulator
+but instead what I'm gonna do is show
+
+893
+00:53:20,799 --> 00:53:23,860
+you how you can preview your layout
+directly with an ex co
+
+894
+00:53:24,409 --> 00:53:28,040
+so I'm going to go to the top and I'm
+gonna
+
+895
+00:53:28,004 --> 00:53:32,473
+open the assistant editor
+
+896
+00:53:32,509 --> 00:53:37,190
+them ease the jump are to go over to the
+preview assistant
+
+897
+00:53:37,019 --> 00:53:41,024
+and since I'm interested in proving
+previewing for the iPhone
+
+898
+00:53:41,069 --> 00:53:45,158
+for engine portrait I mean users plus
+button and use iPhone 4 inch
+
+899
+00:53:46,058 --> 00:53:53,058
+and there we go now I can see my layout
+as it would appear on an iPhone portrait
+
+900
+00:53:56,038 --> 00:53:59,063
+if I wanna try it on a landscape I can
+use this button here at the bottom of
+
+901
+00:53:59,063 --> 00:54:00,962
+the preview to rotate it
+
+902
+00:54:01,529 --> 00:54:04,571
+or if I wanna see both orientations at
+the same time I can
+
+903
+00:54:04,949 --> 00:54:08,400
+use the plus button again to add another
+preview
+
+904
+00:54:08,004 --> 00:54:11,593
+and now that lets me see both
+orientations at once
+
+905
+00:54:11,989 --> 00:54:15,830
+as you can see in landscape the buttons
+are are once again sitting out side by
+
+906
+00:54:15,083 --> 00:54:15,160
+side
+
+907
+00:54:16,006 --> 00:54:19,565
+and that's because we only changed our
+layout for compact with the regular
+
+908
+00:54:20,159 --> 00:54:20,940
+height
+
+909
+00:54:20,094 --> 00:54:25,143
+an iPhone in landscape corresponds to
+contact with contact height
+
+910
+00:54:25,989 --> 00:54:29,600
+and so those edits in the plot
+
+911
+00:54:29,006 --> 00:54:36,006
+just in case you didn't believe me now
+actually run this in a similar
+
+912
+00:54:40,017 --> 00:54:44,018
+alright so I here we have my primary
+view controller with those three buttons
+
+913
+00:54:44,027 --> 00:54:48,146
+as you can see it's now four screens
+into running on a phone
+
+914
+00:54:48,389 --> 00:54:51,400
+when I tap the play button it takes me
+to my character menu
+
+915
+00:54:51,004 --> 00:54:54,066
+and those buttons are are stacked
+vertically just like we expected
+
+916
+00:54:55,002 --> 00:55:02,002
+and when I rotate they moved to sit side
+by side
+
+917
+00:55:04,069 --> 00:55:08,310
+let's recap always on the demo first we
+used auto layout
+
+918
+00:55:08,031 --> 00:55:12,580
+his to design a flexible you I that
+works well for multiple size classes
+
+919
+00:55:12,859 --> 00:55:16,420
+for example my ImageView used a
+horizontal center in constraint
+
+920
+00:55:16,042 --> 00:55:21,115
+to visit to position itself for both
+contact with and regular with
+
+921
+00:55:22,015 --> 00:55:25,083
+next I show you how you can override sub
+using constraints
+
+922
+00:55:25,083 --> 00:55:29,092
+for specific size classes when you need
+to I did this to give my buttons a
+
+923
+00:55:29,092 --> 00:55:31,158
+vertical layout for iPhones and portrait
+
+924
+00:55:32,058 --> 00:55:36,150
+at rather and a separate layout for all
+other cases
+
+925
+00:55:37,005 --> 00:55:41,554
+and finally I showed you a can preview
+different devices and orientations OS
+
+926
+00:55:42,049 --> 00:55:42,940
+versions
+
+927
+00:55:42,094 --> 00:55:48,177
+even localizations all with an Xcode
+using the preview assistant editor
+
+928
+00:55:49,077 --> 00:55:53,081
+today you saw a lot of new concepts for
+developing adaptive UIs
+
+929
+00:55:53,081 --> 00:55:56,700
+Jacob introduce you to treat collections
+in size classes which allow you to
+
+930
+00:55:57,429 --> 00:55:58,464
+modify your you why
+
+931
+00:55:58,779 --> 00:56:02,130
+in response to changes in size
+
+932
+00:56:02,013 --> 00:56:06,042
+he also introduce a new API that allows
+you to decouple child view controllers
+
+933
+00:56:06,042 --> 00:56:07,075
+from their containers
+
+934
+00:56:07,075 --> 00:56:11,079
+and to collapse and expand US what you
+controllers
+
+935
+00:56:12,015 --> 00:56:15,017
+finally I show you some new features
+we've added to Interface Builder in
+
+936
+00:56:15,017 --> 00:56:17,236
+Xcode 6
+
+937
+00:56:17,389 --> 00:56:21,210
+if you'd like more information you can
+contact our banja list sorry composed on
+
+938
+00:56:21,021 --> 00:56:23,030
+the developer form
+
+939
+00:56:23,219 --> 00:56:26,240
+we recommend checking out the other view
+controller related sessions from this
+
+940
+00:56:26,429 --> 00:56:27,435
+year's conference
+
+941
+00:56:27,489 --> 00:56:31,150
+and will also be having an interface
+builder session later this afternoon in
+
+942
+00:56:31,015 --> 00:56:32,084
+this room
+
+943
+00:56:32,219 --> 00:56:35,304
+and with that thank you and I hope you
+enjoy developing adaptive you eyes I was
+
+944
+00:56:36,069 --> 00:56:36,094
+a
+

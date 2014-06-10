@@ -1,0 +1,3394 @@
+1
+00:00:11,006 --> 00:00:14,084
+by come to mastering multimedia playback
+
+2
+00:00:15,038 --> 00:00:16,607
+my name is stepping up nigga
+
+3
+00:00:16,949 --> 00:00:17,870
+amended
+
+4
+00:00:17,087 --> 00:00:18,165
+a team
+
+5
+00:00:19,065 --> 00:00:21,162
+if you're using a banged-up a BK to a
+foundation
+
+6
+00:00:22,062 --> 00:00:25,106
+no ISOs and applications this the right
+vision for you
+
+7
+00:00:26,006 --> 00:00:30,090
+the goal of the session to show you how
+easy and powerful
+
+8
+00:00:30,009 --> 00:00:33,009
+me get their tickets when I was 8
+endorsed in Yosemite
+
+9
+00:00:33,009 --> 00:00:37,107
+if more sessions focus on other major
+operations later today
+
+10
+00:00:38,088 --> 00:00:41,122
+and this week you refer it to those at
+the end of this talk
+
+11
+00:00:42,022 --> 00:00:46,037
+in the first part of this talk I'm going
+to introduce you to a ticket by OS
+
+12
+00:00:46,037 --> 00:00:49,044
+and show you why and how we should use
+it in your applications
+
+13
+00:00:49,044 --> 00:00:52,111
+but also give him everything overview of
+the most important
+
+14
+00:00:53,011 --> 00:00:56,075
+API additions and changes and you I'm
+behavior yet for the
+
+15
+00:00:56,075 --> 00:01:01,086
+bf for you this year in a week at
+force10 in the second part of this talk
+
+16
+00:01:01,086 --> 00:01:06,104
+iconic shiny so who 32 best practices
+for using a ticket in eighty foundation
+
+17
+00:01:07,004 --> 00:01:12,059
+you I S and with an application's before
+that in
+
+18
+00:01:12,059 --> 00:01:17,198
+let's take a quick look dark on me to
+stick in Iraq's on the lowest level if
+
+19
+00:01:17,729 --> 00:01:18,900
+the comedy a framework
+
+20
+00:01:18,009 --> 00:01:23,107
+to call home what and yes there a top of
+a commute yes it's a V Foundation
+
+21
+00:01:24,088 --> 00:01:29,077
+a powerful objective-c framework they
+provide to easy access to me yesterday
+
+22
+00:01:29,869 --> 00:01:33,170
+finally when you I kid leather
+
+23
+00:01:33,017 --> 00:01:36,114
+we have to meet up their framework
+burden you I providing you
+
+24
+00:01:37,014 --> 00:01:41,173
+petechiae in the form of handling the
+player controller
+
+25
+00:01:41,299 --> 00:01:44,590
+this year and I was 8
+
+26
+00:01:44,059 --> 00:01:47,118
+reading a new framework but AB kid
+replacing parts of the media player
+
+27
+00:01:48,018 --> 00:01:48,082
+framework
+
+28
+00:01:48,082 --> 00:01:51,921
+AB kid
+
+29
+00:01:52,659 --> 00:01:56,240
+is on you high-level Media Framework
+trying to access the rest of them
+
+30
+00:01:56,024 --> 00:01:57,083
+yesterday
+
+31
+00:01:57,299 --> 00:02:00,680
+not going to show you on this talk with
+disabilities hopes up
+
+32
+00:02:00,068 --> 00:02:04,085
+for the IRS applications to be clear
+
+33
+00:02:04,085 --> 00:02:07,854
+not deprecating and people keep their
+control I and II 8 but we're strongly
+
+34
+00:02:08,619 --> 00:02:12,120
+encouraging you to dock AB kit for me a
+plate against that
+
+35
+00:02:12,012 --> 00:02:15,021
+so you have it
+
+36
+00:02:15,021 --> 00:02:18,105
+on what I mean yes they can I O S for
+those of you
+
+37
+00:02:19,005 --> 00:02:22,024
+with north and background you might see
+that is
+
+38
+00:02:22,024 --> 00:02:26,029
+spirits pretty similar tell me that the
+gun was 10 you're correct
+
+39
+00:02:26,074 --> 00:02:29,743
+infect the same now on both I O S
+
+40
+00:02:30,409 --> 00:02:33,417
+endorsed 10 and will allow you to create
+and maintain
+
+41
+00:02:33,489 --> 00:02:38,330
+cross-platform applications easier than
+ever and now
+
+42
+00:02:38,033 --> 00:02:44,097
+I mean to do today to get 50 s sup to
+now
+
+43
+00:02:44,097 --> 00:02:48,114
+be provided with two options for media
+playback an IRS and people keep their
+
+44
+00:02:49,014 --> 00:02:50,083
+control a
+
+45
+00:02:50,209 --> 00:02:53,223
+and it's the Ivy control a companion mp3
+player the controller
+
+46
+00:02:53,349 --> 00:02:59,385
+and any foundation society might be
+using mp3 player controlling
+
+47
+00:02:59,709 --> 00:03:00,709
+applications
+
+48
+00:03:00,709 --> 00:03:06,500
+which means get that athletic you I
+popular access to the media stack
+
+49
+00:03:06,005 --> 00:03:09,039
+which means you're limited to basically
+a playback
+
+50
+00:03:09,084 --> 00:03:12,953
+all you might be using a foundation
+
+51
+00:03:13,709 --> 00:03:18,510
+and aspects as the mean yes that into
+things beyond basic media playback
+
+52
+00:03:18,051 --> 00:03:23,142
+but you've done for many on play
+together in the face finally
+
+53
+00:03:24,042 --> 00:03:27,061
+some up to you in the audience might be
+the process of getting me a plane ticket
+
+54
+00:03:27,439 --> 00:03:28,470
+applications
+
+55
+00:03:28,047 --> 00:03:32,090
+maybe Tom in these two options you want
+to make your life
+
+56
+00:03:32,009 --> 00:03:35,080
+as developers easier and that's why it's
+something you follow a few
+
+57
+00:03:36,061 --> 00:03:42,129
+every kit provides the boss that's
+played a controlled and behave yes
+
+58
+00:03:43,029 --> 00:03:46,042
+but in your full access to the modern
+yes that
+
+59
+00:03:46,042 --> 00:03:51,090
+for any foundation last yet we entered
+as a beacon rs.10
+
+60
+00:03:51,009 --> 00:03:58,009
+this year hearing every kid over to IRS
+growth maybe can I O S
+
+61
+00:03:58,095 --> 00:04:01,194
+it's right here youll ever facilities
+for media operations
+
+62
+00:04:02,049 --> 00:04:07,390
+on top of AB foundation and you like it
+me a plague on IRS
+
+63
+00:04:07,039 --> 00:04:13,103
+is no easy a and more powerful than ever
+any clear view controller
+
+64
+00:04:14,003 --> 00:04:18,011
+sorry every kid and I US just as any
+player view controller up
+
+65
+00:04:18,011 --> 00:04:22,023
+state-of-the-art you're a subclass
+rights to the same look and feel
+
+66
+00:04:22,023 --> 00:04:25,028
+as I'll be doubly cations and existing
+and him we play our control API
+
+67
+00:04:25,073 --> 00:04:28,115
+he made it really easy for you
+
+68
+00:04:29,015 --> 00:04:32,015
+tied up any player view controller you I
+was at the cations
+
+69
+00:04:32,015 --> 00:04:35,066
+let me show you the necessary steps in
+the demo
+
+70
+00:04:35,066 --> 00:04:40,795
+sonics coat betrayed and you I was
+application
+
+71
+00:04:41,389 --> 00:04:46,340
+we select the amplification template and
+then press the next button
+
+72
+00:04:46,034 --> 00:04:49,833
+as the name we enter every kid player
+
+73
+00:04:50,139 --> 00:04:53,770
+press Next again
+
+74
+00:04:53,077 --> 00:04:56,196
+Sep the project on the desktop
+
+75
+00:04:56,889 --> 00:04:59,954
+now
+
+76
+00:05:00,539 --> 00:05:04,610
+we select the app delegate
+implementation and the first you have to
+
+77
+00:05:04,061 --> 00:05:04,840
+do is to impart
+
+78
+00:05:05,389 --> 00:05:11,500
+AB foundation and at a big hit
+
+79
+00:05:11,005 --> 00:05:18,005
+then medication the finish launching
+with options
+
+80
+00:05:20,063 --> 00:05:23,071
+the first written a replay of the
+Comptroller by calling every play every
+
+81
+00:05:23,071 --> 00:05:24,073
+controller
+
+82
+00:05:24,091 --> 00:05:27,190
+up in it and then
+
+83
+00:05:28,009 --> 00:05:32,380
+betrayed maybe play object calling any
+player with URL
+
+84
+00:05:32,038 --> 00:05:36,091
+and then years and this panel member
+under you at for resource extension
+
+85
+00:05:36,091 --> 00:05:40,147
+and recessed name is going to be a long
+boring and extension m.o.b
+
+86
+00:05:41,047 --> 00:05:44,072
+is that the playoff tix on a plan view
+controller
+
+87
+00:05:44,072 --> 00:05:47,091
+let me set the if they have you control
+at the retreat review controller
+
+88
+00:05:47,091 --> 00:05:50,158
+of our window finally
+
+89
+00:05:51,058 --> 00:05:55,737
+we have to move it move your project
+
+90
+00:05:56,259 --> 00:06:03,259
+and if we now build and run
+
+91
+00:06:04,071 --> 00:06:11,071
+you can see we have a fully functional
+planning application miss was just be
+
+92
+00:06:11,094 --> 00:06:12,097
+lines of code basically
+
+93
+00:06:12,097 --> 00:06:16,136
+but example is probably not what your
+application would look like
+
+94
+00:06:17,036 --> 00:06:22,099
+so let's switch to a different project
+the first run this and show you what it
+
+95
+00:06:22,099 --> 00:06:22,141
+is
+
+96
+00:06:23,041 --> 00:06:27,119
+so this is very simple
+
+97
+00:06:28,019 --> 00:06:31,098
+me a planning application also media
+library will have a reputation
+
+98
+00:06:31,098 --> 00:06:34,156
+and it's using the mustard interview
+control a template
+
+99
+00:06:35,056 --> 00:06:38,095
+send the must have you here we have a
+list of movies
+
+100
+00:06:38,095 --> 00:06:41,183
+and freed up the movie better company
+over
+
+101
+00:06:42,083 --> 00:06:46,116
+the name of the file and Summit the
+Federation anarchic one of the movies
+
+102
+00:06:47,016 --> 00:06:50,025
+you see that in the Detail View we have
+some information about the movie
+
+103
+00:06:51,006 --> 00:06:55,025
+and describe oxy a and the rest of this
+demo and not going to at
+
+104
+00:06:55,025 --> 00:06:58,026
+any player view controller and so you're
+part of it up
+
+105
+00:06:58,026 --> 00:07:02,108
+three-start by modifying the main story
+bought
+
+106
+00:07:03,008 --> 00:07:06,053
+as you can see here already have a
+container view
+
+107
+00:07:06,053 --> 00:07:09,119
+29 object library
+
+108
+00:07:10,019 --> 00:07:13,093
+research for levy controller
+
+109
+00:07:13,093 --> 00:07:16,171
+checkin in San star star bart
+
+110
+00:07:17,071 --> 00:07:21,166
+office or you have it and then using a
+controlled record
+
+111
+00:07:22,066 --> 00:07:25,080
+and she is embedded
+
+112
+00:07:25,008 --> 00:07:28,096
+and that began today play Wii U
+controller up for going to interview
+
+113
+00:07:29,068 --> 00:07:32,104
+now we need to select the Segway
+
+114
+00:07:33,004 --> 00:07:36,010
+an inspector give it and identify a
+
+115
+00:07:36,064 --> 00:07:43,064
+in this case we just year's show movie
+since we're using every player
+
+116
+00:07:43,092 --> 00:07:44,095
+controlling the storyboard
+
+117
+00:07:45,022 --> 00:07:48,061
+lots have too many link against the if
+you could let
+
+118
+00:07:48,061 --> 00:07:52,140
+library from a so falling from UConn
+libraries
+
+119
+00:07:53,004 --> 00:07:57,073
+we had a new framework sweet I pin
+
+120
+00:07:58,009 --> 00:08:01,050
+every kid selected in a press that
+button
+
+121
+00:08:01,005 --> 00:08:05,039
+and now we have to modify didn't have
+the control implementation
+
+122
+00:08:05,084 --> 00:08:10,091
+again the first thing we have to do is
+to impart they had a fire
+
+123
+00:08:11,054 --> 00:08:15,110
+to import a foundation and impart any
+kid
+
+124
+00:08:16,001 --> 00:08:19,075
+know when to implement the prepare for a
+sec with send a
+
+125
+00:08:19,084 --> 00:08:23,142
+limitation the first
+
+126
+00:08:24,042 --> 00:08:27,098
+respect for the be taken into fire when
+make sure that is so movie
+
+127
+00:08:27,098 --> 00:08:30,110
+then
+
+128
+00:08:31,001 --> 00:08:34,062
+get a BKB controller which is the this
+mission control of the Segway
+
+129
+00:08:34,071 --> 00:08:38,130
+and finery be creating a play at the
+same as we did before but using play
+
+130
+00:08:39,003 --> 00:08:39,077
+with you al
+
+131
+00:08:40,004 --> 00:08:44,025
+and as the to the control as a movie
+property which itself Saur
+
+132
+00:08:44,025 --> 00:08:47,081
+and he said there's a tear up let's play
+object
+
+133
+00:08:47,081 --> 00:08:54,081
+on the play Wii controller we know
+burden run
+
+134
+00:08:57,087 --> 00:09:00,154
+conflict in moving can see that the
+movie is not a Kia
+
+135
+00:09:01,054 --> 00:09:05,133
+and we can press player an impressive
+was going button
+
+136
+00:09:06,033 --> 00:09:09,088
+goes into full screen and annotated to
+landscape
+
+137
+00:09:09,088 --> 00:09:14,096
+they can see it's fully working right
+
+138
+00:09:15,068 --> 00:09:18,667
+sex I wanna show you highly-paid the
+controller works and a foundation
+
+139
+00:09:19,279 --> 00:09:24,720
+city for those of you in the audience
+that and you take the foundation a plan
+
+140
+00:09:24,072 --> 00:09:24,149
+view controller
+
+141
+00:09:25,049 --> 00:09:29,838
+but the strong reference in any playoff
+checked this object provides the content
+
+142
+00:09:30,279 --> 00:09:34,366
+and every playoff segment is in a play
+item which says the mutable data
+
+143
+00:09:35,149 --> 00:09:35,230
+structure
+
+144
+00:09:35,959 --> 00:09:40,490
+from in middle and yes at this means
+
+145
+00:09:40,049 --> 00:09:43,051
+knows what content on any play the
+controller if through the following
+
+146
+00:09:43,051 --> 00:09:43,123
+steps:
+
+147
+00:09:44,023 --> 00:09:47,132
+first
+
+148
+00:09:47,339 --> 00:09:52,370
+Creighton ABS it from an issue for see I
+can either be a look if I on this
+
+149
+00:09:52,037 --> 00:09:56,042
+or remote URL it may be s at
+
+150
+00:09:56,087 --> 00:10:02,173
+going to rate maybe play item 17 every
+play item you can trade name play object
+
+151
+00:10:03,073 --> 00:10:08,091
+and finally such as a replay of sex with
+the a player view controller
+
+152
+00:10:08,091 --> 00:10:11,132
+but if you don't
+
+153
+00:10:12,032 --> 00:10:15,035
+need to inspect any properties just
+south of the content and just want to
+
+154
+00:10:15,062 --> 00:10:16,126
+play but every player the Contra
+
+155
+00:10:17,026 --> 00:10:22,068
+in two of us that's at once sex on you
+in the demo
+
+156
+00:10:22,068 --> 00:10:25,080
+indirectly create and every play object
+come in an issue rather
+
+157
+00:10:25,008 --> 00:10:30,012
+imparted to the replay view controller
+and as a chance that the only reason why
+
+158
+00:10:31,002 --> 00:10:32,007
+inspected the ABS too far
+
+159
+00:10:32,007 --> 00:10:37,266
+was in order to implemented on public
+use interface maybe kid
+
+160
+00:10:37,959 --> 00:10:42,620
+don't use anymore said he would take a
+look at the replay the eventual API
+
+161
+00:10:42,062 --> 00:10:46,067
+my notice that set the player property
+there isn't really much more
+
+162
+00:10:46,067 --> 00:10:50,129
+but there's so much stuff just get just
+get automatically
+
+163
+00:10:51,029 --> 00:10:56,118
+the any further set up here's a list of
+the most important every play every
+
+164
+00:10:57,018 --> 00:10:58,073
+battle a few just for your reference
+
+165
+00:10:58,073 --> 00:11:02,170
+might notice that is mostly identical to
+mp3 player controller
+
+166
+00:11:03,007 --> 00:11:08,041
+never reason for that you want to make
+your condition to educate
+
+167
+00:11:09,004 --> 00:11:14,080
+s easy as possible but doesn't you not
+familiar with a movie player controller
+
+168
+00:11:14,008 --> 00:11:20,047
+let me show you what is he just makes
+you look like a plate you control a
+
+169
+00:11:21,019 --> 00:11:24,030
+has a depth player controls is different
+from
+
+170
+00:11:24,003 --> 00:11:29,011
+mp3 player controller and every player
+be on August 10 instead of setting a
+
+171
+00:11:29,038 --> 00:11:30,056
+certain controlled style
+
+172
+00:11:30,056 --> 00:11:33,142
+anyplace you control automatically
+adapts the cup and control set for you
+
+173
+00:11:34,042 --> 00:11:38,043
+justice on the demo when you show a
+movie in bed at
+
+174
+00:11:38,052 --> 00:11:41,131
+unification and use a presence that
+episode types they're pushing button
+
+175
+00:11:42,031 --> 00:11:46,086
+a player you control automatically
+switches to put simply the controls
+
+176
+00:11:46,086 --> 00:11:52,105
+you don't want to show any controls at
+all
+
+177
+00:11:53,005 --> 00:11:59,029
+select the option to hide them be taken
+to assess the democratic control its
+
+178
+00:11:59,029 --> 00:12:03,091
+sofa converts chapters tapping the
+Seebeck what was the comment button
+
+179
+00:12:03,091 --> 00:12:10,091
+fix the previous an acceptor for content
+with this ruling it just subtitles
+
+180
+00:12:13,052 --> 00:12:16,060
+if they're going to let the media
+selection button
+
+181
+00:12:16,006 --> 00:12:21,070
+along the user to select a different
+audio a subtitle track
+
+182
+00:12:22,024 --> 00:12:27,076
+the name it also means
+
+183
+00:12:27,076 --> 00:12:30,140
+they play view controller met get
+switched to defensive player controls
+
+184
+00:12:31,004 --> 00:12:34,021
+for live streaming content don't have to
+do anything
+
+185
+00:12:34,057 --> 00:12:38,066
+finally
+
+186
+00:12:38,579 --> 00:12:41,581
+a play view controller has built-in
+support about at play
+
+187
+00:12:41,779 --> 00:12:46,100
+and HDMI sony's enables airplay
+
+188
+00:12:46,001 --> 00:12:50,023
+pop acts an HDMI adapter application
+automatic present the content on
+
+189
+00:12:50,032 --> 00:12:50,123
+external screen
+
+190
+00:12:51,023 --> 00:12:57,882
+keeping the player controls on the IRS
+device sexy I replied you're going to
+
+191
+00:12:58,089 --> 00:12:58,520
+last
+
+192
+00:12:58,052 --> 00:13:03,861
+ends up again something we've never
+trust a fun every major feature
+
+193
+00:13:04,329 --> 00:13:08,366
+as a better than any kid as well but if
+you look closely
+
+194
+00:13:08,699 --> 00:13:13,970
+we notice one difference as I mentioned
+before
+
+195
+00:13:13,097 --> 00:13:16,151
+a plate you control a america's elect to
+close at four you
+
+196
+00:13:17,051 --> 00:13:20,078
+so this to less less for you to worry
+about
+
+197
+00:13:20,078 --> 00:13:23,497
+but actually there's a lot more
+
+198
+00:13:24,199 --> 00:13:28,060
+let's take a look it up there Graham
+from earlier for bed
+
+199
+00:13:28,006 --> 00:13:32,029
+if you want to replace the country play
+item
+
+200
+00:13:32,029 --> 00:13:35,688
+did you use your place tonight Smith
+play item on any player
+
+201
+00:13:35,949 --> 00:13:39,930
+but if you already know in advance for
+the next item is going to be
+
+202
+00:13:39,093 --> 00:13:42,128
+you can have any foundation navel gazing
+at you
+
+203
+00:13:43,028 --> 00:13:50,028
+to get smooth playback and switching to
+the next play item is an energy player
+
+204
+00:13:51,002 --> 00:13:54,024
+if you play as a subclass of any player
+the closet and
+
+205
+00:13:54,024 --> 00:13:57,243
+you a list a replay items each of which
+is backed by
+
+206
+00:13:57,459 --> 00:14:00,850
+yes it
+
+207
+00:14:00,085 --> 00:14:03,180
+everything I'm showing it today and what
+every player contra excess 582 pass
+
+208
+00:14:04,008 --> 00:14:05,027
+while
+
+209
+00:14:05,099 --> 00:14:08,137
+25 just talked about basically a play
+that
+
+210
+00:14:09,037 --> 00:14:13,122
+with a foundation you can do a lot more
+all
+
+211
+00:14:14,022 --> 00:14:18,026
+every composition the subclass ABS at
+lawsuit a great mighty clip
+
+212
+00:14:18,062 --> 00:14:21,116
+and might attract media compositions
+
+213
+00:14:22,016 --> 00:14:29,016
+as a result the seventy years and our me
+sum up your video editing applications
+
+214
+00:14:29,035 --> 00:14:32,042
+it doesn't matter if you provide
+anyplace you control a maybe play item
+
+215
+00:14:33,005 --> 00:14:40,005
+that ban ABS said on a decomposition
+either works fine
+
+216
+00:14:40,063 --> 00:14:45,068
+a composition sought to enter points to
+you more advanced features
+
+217
+00:14:46,013 --> 00:14:50,014
+for instance it may be a composition
+allows you to apply FN transforms
+
+218
+00:14:50,023 --> 00:14:54,872
+and simple chat to the transitions
+popular content
+
+219
+00:14:55,079 --> 00:14:57,920
+you can even create your own custom
+composite asked to create all kinds of
+
+220
+00:14:57,092 --> 00:15:00,116
+the effects
+
+221
+00:15:01,016 --> 00:15:05,945
+any arguments provides a similar
+functionality for your tracks
+
+222
+00:15:06,089 --> 00:15:09,126
+any given position at the autorads
+working combination any foundation sorry
+
+223
+00:15:09,459 --> 00:15:13,110
+any composition you want to analyze
+
+224
+00:15:13,011 --> 00:15:16,014
+25 with allies raw data during playback
+
+225
+00:15:16,014 --> 00:15:20,023
+you can use them to order processing tap
+
+226
+00:15:20,023 --> 00:15:23,067
+is it just a few classes today finish
+provides you for many operations beyond
+
+227
+00:15:23,067 --> 00:15:26,113
+basic media playback
+
+228
+00:15:27,013 --> 00:15:30,106
+you want to learn more about this topic
+take a appear as BBC sessions
+
+229
+00:15:31,006 --> 00:15:37,008
+like this one from last year and related
+sent a card
+
+230
+00:15:37,026 --> 00:15:42,047
+let's take a look again at all this to
+pay pay via Kentucky chess
+
+231
+00:15:42,047 --> 00:15:45,073
+says that shown in this talk in Pavia
+pantalla
+
+232
+00:15:45,073 --> 00:15:49,139
+just the same he just sort of the same
+features century player controller
+
+233
+00:15:50,039 --> 00:15:53,064
+but due to the full access to any
+foundation
+
+234
+00:15:53,064 --> 00:15:59,069
+you get so much more
+
+235
+00:16:00,014 --> 00:16:03,047
+let me show you what can you do know a
+foundation dedicated
+
+236
+00:16:03,047 --> 00:16:07,123
+your own I was at the cations
+
+237
+00:16:08,023 --> 00:16:11,065
+so there's an iPad version of the movie
+Live evocation that his earlier to show
+
+238
+00:16:11,065 --> 00:16:14,079
+you how to use a player contra
+
+239
+00:16:14,079 --> 00:16:17,608
+and this demo I can now add the effect
+the movies
+
+240
+00:16:18,319 --> 00:16:22,770
+as you can see edit that you could
+affect to this movie
+
+241
+00:16:22,077 --> 00:16:26,091
+right now the effect is your impact I
+want to stop dragging him goes up or
+
+242
+00:16:26,091 --> 00:16:26,172
+down
+
+243
+00:16:27,072 --> 00:16:34,072
+you can see how I can change certain you
+that is in the movie
+
+244
+00:16:35,009 --> 00:16:38,091
+each and they represent you value on the
+columbia and changing ahead and modify
+
+245
+00:16:39,072 --> 00:16:39,801
+set color
+
+246
+00:16:40,449 --> 00:16:43,920
+ship the cuts are different value
+
+247
+00:16:43,092 --> 00:16:48,125
+against up to any frame in the movie for
+just the values
+
+248
+00:16:49,025 --> 00:16:53,061
+see a helmet for instance
+
+249
+00:16:53,061 --> 00:17:00,061
+let's go back to the beginning it's a
+plane
+
+250
+00:17:00,067 --> 00:17:04,206
+says he can see the effects applied in
+real time
+
+251
+00:17:04,809 --> 00:17:07,847
+and on the right edited with digital
+media but also the
+
+252
+00:17:08,189 --> 00:17:13,760
+volume for the left and right on your
+chin up during playback
+
+253
+00:17:13,076 --> 00:17:16,138
+not to do all of this applications is in
+a fantastic position at the I
+
+254
+00:17:17,038 --> 00:17:22,073
+dimension 2400
+
+255
+00:17:22,073 --> 00:17:25,272
+a week it continues to menace the user
+interface just as adults
+
+256
+00:17:25,929 --> 00:17:32,929
+for basic media playback cases
+
+257
+00:17:38,042 --> 00:17:40,133
+not have shown you how easy it is to
+adopt any player view controller
+
+258
+00:17:41,033 --> 00:17:44,075
+many of the cation and what amazing
+things you can do in commission a
+
+259
+00:17:44,075 --> 00:17:44,884
+foundation
+
+260
+00:17:45,559 --> 00:17:48,900
+I hope you can't wait to adopt any
+player view controller the existing
+
+261
+00:17:48,009 --> 00:17:48,088
+applications
+
+262
+00:17:49,069 --> 00:17:52,558
+not too happy with the condition
+
+263
+00:17:53,179 --> 00:17:56,200
+I'm going to highlight the necessary
+steps for the three common scenarios
+
+264
+00:17:56,002 --> 00:18:00,981
+in the first scenario
+
+265
+00:18:01,179 --> 00:18:05,370
+using any player layer and possibly
+implemented on to use interface
+
+266
+00:18:05,037 --> 00:18:09,102
+thought of by replacing any player they
+are back to you I've you
+
+267
+00:18:10,002 --> 00:18:14,028
+and user interface type: eric is
+interface but every player you can trust
+
+268
+00:18:14,028 --> 00:18:14,070
+you
+
+269
+00:18:14,007 --> 00:18:19,084
+then that the player property on a plate
+you control a and set up a play earlier
+
+270
+00:18:20,047 --> 00:18:24,099
+never chance that most of the remaining
+coat with the unchanged
+
+271
+00:18:24,099 --> 00:18:30,105
+lessons and specially I needs if you're
+using and can we play our view
+
+272
+00:18:31,059 --> 00:18:31,124
+controller
+
+273
+00:18:32,024 --> 00:18:36,077
+just her place and he will be clear view
+controller lol in a bit continue for
+
+274
+00:18:36,077 --> 00:18:40,726
+by every player view contra ataque in it
+and then create an associate the replay
+
+275
+00:18:41,419 --> 00:18:42,120
+object
+
+276
+00:18:42,012 --> 00:18:46,035
+attorney before however
+
+277
+00:18:46,035 --> 00:18:49,079
+if you are also accessing the engine
+repair contract property
+
+278
+00:18:49,079 --> 00:18:56,079
+that scenario supplies Tia city using
+and can we play contra on your vacations
+
+279
+00:18:57,559 --> 00:19:01,940
+it in with a couple more properties and
+methods but don't worry
+
+280
+00:19:01,094 --> 00:19:06,100
+the conditions exit quite
+straightforward and can be played on
+
+281
+00:19:07,000 --> 00:19:08,099
+track I can be grouped into two classes
+
+282
+00:19:08,099 --> 00:19:11,658
+uses a pic API across the pacific API
+
+283
+00:19:12,549 --> 00:19:16,520
+in the former case you use a plan you
+can't relate the I
+
+284
+00:19:16,052 --> 00:19:19,066
+analytic a CD player and then play item
+API
+
+285
+00:19:19,066 --> 00:19:23,161
+things like and the movie era la can
+improve the excess lock
+
+286
+00:19:24,061 --> 00:19:27,122
+actually very thin wrapper object around
+every play item X is looking to play at
+
+287
+00:19:28,022 --> 00:19:29,071
+a maryland for instance
+
+288
+00:19:29,071 --> 00:19:33,073
+yet to thank you much just you should
+watch out for them
+
+289
+00:19:33,073 --> 00:19:36,126
+as I mentioned before
+
+290
+00:19:37,026 --> 00:19:40,107
+a player you can trust controlled first
+and then it so there's no set a property
+
+291
+00:19:41,007 --> 00:19:45,996
+also and the movie play contra ought to
+place by default
+
+292
+00:19:46,059 --> 00:19:52,720
+a player does not do that this anything
+you cannot do I do not know how to do
+
+293
+00:19:52,072 --> 00:19:55,151
+with AV Kidney Foundation and switching
+over from
+
+294
+00:19:56,051 --> 00:20:00,051
+from anti-nuclear controller Stockton
+elapse
+
+295
+00:20:00,051 --> 00:20:04,052
+ask us and developer forums Letterkenny
+
+296
+00:20:04,061 --> 00:20:07,510
+if I S in our state
+
+297
+00:20:08,059 --> 00:20:12,190
+being a ticket over from was 10 as on
+you I'll ever need a framework for a
+
+298
+00:20:12,019 --> 00:20:12,027
+foundation
+
+299
+00:20:12,099 --> 00:20:16,144
+a player the Contra provides just enough
+to control its
+
+300
+00:20:17,044 --> 00:20:20,128
+and behavior give you full access to a
+powerful multimedia stack
+
+301
+00:20:21,028 --> 00:20:24,060
+to please consider adopting any player
+controller
+
+302
+00:20:24,006 --> 00:20:27,008
+and you I of the cations finally
+
+303
+00:20:27,062 --> 00:20:30,094
+want to give you a brief update on a
+because 10
+
+304
+00:20:30,094 --> 00:20:34,113
+as he said yesterday in a keynote
+
+305
+00:20:35,013 --> 00:20:38,036
+what's in your seventy receive the I
+refreshed that there is out
+
+306
+00:20:38,036 --> 00:20:43,101
+with a brand new UI for a week as well
+if you're using a replay review
+
+307
+00:20:44,001 --> 00:20:49,019
+applications were received in you I
+automatically going to change a single
+
+308
+00:20:49,019 --> 00:20:49,098
+line of code
+
+309
+00:20:49,098 --> 00:20:53,180
+up to ten in the fight you're not using
+any baby yet
+
+310
+00:20:54,008 --> 00:20:58,267
+despite a good time to adopt the
+introduction of a ticket buyers
+
+311
+00:20:59,059 --> 00:21:03,140
+what's out there in some user interfaces
+and behaviors a player view
+
+312
+00:21:03,014 --> 00:21:10,014
+to make a pledge a controller you want
+to learn more about how to use a clear
+
+313
+00:21:10,015 --> 00:21:10,020
+view
+
+314
+00:21:10,065 --> 00:21:13,072
+to check out last yes moving to a ticket
+in eighty foundation
+
+315
+00:21:14,035 --> 00:21:18,110
+session and finally
+
+316
+00:21:19,001 --> 00:21:22,320
+for brand new class for you this year
+and it was 10
+
+317
+00:21:22,419 --> 00:21:26,520
+he kept on you provide to you never
+capture facilities
+
+318
+00:21:26,052 --> 00:21:29,114
+into a foundation napkins not being
+
+319
+00:21:30,014 --> 00:21:34,065
+intended it as an aficionado is coming
+to the chemical to talk tomorrow morning
+
+320
+00:21:34,065 --> 00:21:39,121
+process in the lab said it is
+interesting to you and now
+
+321
+00:21:40,021 --> 00:21:43,620
+then head over to fill a foundation
+engineer to show you how to get the most
+
+322
+00:21:43,809 --> 00:21:44,360
+out of
+
+323
+00:21:44,036 --> 00:21:47,061
+a ticket and a foundation the IRS and
+authentications
+
+324
+00:21:47,061 --> 00:21:54,061
+thank you Thank You chiffon
+
+325
+00:21:56,084 --> 00:22:00,128
+good morning I'm shyly foul an engineer
+on the V Foundation team
+
+326
+00:22:01,028 --> 00:22:05,045
+and I'm here to talk to you today about
+best practices before we get into the
+
+327
+00:22:05,045 --> 00:22:06,100
+details of these practices
+
+328
+00:22:07,000 --> 00:22:10,079
+for a show of hands how many of you have
+used a B foundation before
+
+329
+00:22:10,079 --> 00:22:13,085
+lots love you
+
+330
+00:22:13,085 --> 00:22:16,164
+for you I would hope this section 3rd as
+an update
+
+331
+00:22:16,929 --> 00:22:20,200
+or refresher on best practices as
+technology
+
+332
+00:22:20,002 --> 00:22:24,054
+a balance with time so do best practices
+for those of you want you to leave the
+
+333
+00:22:24,072 --> 00:22:25,076
+foundation
+
+334
+00:22:25,076 --> 00:22:28,076
+I hope this serves as a guideline on how
+to approach
+
+335
+00:22:28,076 --> 00:22:32,099
+abit let's get started by talking about
+
+336
+00:22:32,099 --> 00:22:35,112
+why you would be interested in adopting
+such practices
+
+337
+00:22:36,012 --> 00:22:40,070
+what's the motivation these practices
+are designed to make your application
+
+338
+00:22:40,007 --> 00:22:43,098
+as efficient and perform and that's
+possible making it responsive
+
+339
+00:22:44,061 --> 00:22:47,130
+doin users not only help with the
+application
+
+340
+00:22:48,003 --> 00:22:51,010
+efficiency but also help make your
+program
+
+341
+00:22:51,037 --> 00:22:54,129
+yeah help improve your program
+correctness making it robust
+
+342
+00:22:55,029 --> 00:22:59,038
+and preventing any thoughts of Hank up
+precious
+
+343
+00:22:59,038 --> 00:23:03,107
+media obligations some banks make use of
+expensively sources like netbooks
+
+344
+00:23:04,007 --> 00:23:08,025
+these best practices our Design so that
+you can make efficient use of such
+
+345
+00:23:08,025 --> 00:23:09,064
+resources
+
+346
+00:23:09,064 --> 00:23:12,135
+and lastly users will be thankful for
+the improvement they see in their
+
+347
+00:23:13,035 --> 00:23:14,063
+battery life
+
+348
+00:23:14,063 --> 00:23:18,145
+as your application uses very little
+about
+
+349
+00:23:19,045 --> 00:23:22,754
+here's a modern media fact we looked at
+only in this top
+
+350
+00:23:23,159 --> 00:23:27,160
+eighty foundation sits on top of coal
+media and its family a framework
+
+351
+00:23:27,169 --> 00:23:31,193
+and on top it AB kid which provides you
+with standard playback controls with
+
+352
+00:23:31,409 --> 00:23:33,414
+just few lines of code
+
+353
+00:23:33,909 --> 00:23:37,220
+the focus for this section today is best
+practices
+
+354
+00:23:37,022 --> 00:23:40,055
+specifically in the areas of inspection
+and playback
+
+355
+00:23:40,055 --> 00:23:43,082
+if you would like to gain more
+information about eighty foundation in
+
+356
+00:23:43,082 --> 00:23:44,085
+general
+
+357
+00:23:44,085 --> 00:23:47,122
+you can look at this stock from the BBC
+2011
+
+358
+00:23:48,022 --> 00:23:52,080
+call exploring AB foundation
+
+359
+00:23:52,008 --> 00:23:55,076
+based on the two major categories for
+any
+
+360
+00:23:56,048 --> 00:23:59,084
+AB foundation object I'm ordered
+separately
+
+361
+00:23:59,084 --> 00:24:04,087
+for the first category we didn't spec
+Shin ABS and is an example
+
+362
+00:24:05,014 --> 00:24:08,082
+with any BS it as a client on this API
+you want in charge
+
+363
+00:24:08,082 --> 00:24:11,170
+of eroding values whenever you need it
+in your application
+
+364
+00:24:12,007 --> 00:24:15,106
+you can initiate I O and men AB
+foundation request
+
+365
+00:24:16,069 --> 00:24:20,087
+the thieves a request for I O we go and
+do all the looting work
+
+366
+00:24:20,087 --> 00:24:24,136
+so you can get a value the best practice
+here
+
+367
+00:24:24,919 --> 00:24:28,500
+is to request values a synchronously why
+a thing is loading
+
+368
+00:24:28,005 --> 00:24:31,094
+rely on to that in just few slides
+
+369
+00:24:32,039 --> 00:24:35,104
+for the other category would display
+back AB player and playwright them
+
+370
+00:24:36,004 --> 00:24:39,019
+other controller object all you have to
+do here
+
+371
+00:24:39,019 --> 00:24:42,058
+it's free and easy items and then he
+should be back
+
+372
+00:24:42,058 --> 00:24:45,129
+eighty foundation and its underlying
+machinery drive
+
+373
+00:24:46,029 --> 00:24:49,048
+in the playback Clark so that the user
+fee
+
+374
+00:24:49,048 --> 00:24:52,977
+media freedoms on bank so when you hit
+play
+
+375
+00:24:53,409 --> 00:24:56,970
+we drive the necessary machinery select
+you use again experience a small
+
+376
+00:24:56,097 --> 00:24:57,152
+playback
+
+377
+00:24:58,052 --> 00:25:01,126
+as time progresses properties change and
+if you would like to keep your
+
+378
+00:25:02,026 --> 00:25:02,101
+application
+
+379
+00:25:03,001 --> 00:25:06,052
+state up to date with the feed on the
+Playback Engine
+
+380
+00:25:06,052 --> 00:25:09,059
+you can use and SQL you observing to be
+notified
+
+381
+00:25:09,059 --> 00:25:16,059
+of such changes and if you are you
+observing is also called at gave you
+
+382
+00:25:17,029 --> 00:25:20,548
+here's a look at are object diagram from
+earlier
+
+383
+00:25:20,809 --> 00:25:25,220
+Stefan show you in a demo how to use
+these objects and create a simple media
+
+384
+00:25:25,022 --> 00:25:26,047
+application
+
+385
+00:25:26,047 --> 00:25:29,146
+now let's use this as a roadmap for
+talking about best practices
+
+386
+00:25:30,046 --> 00:25:35,145
+class by class starting with ABS said
+
+387
+00:25:35,559 --> 00:25:38,890
+as I mentioned earlier with AB asset you
+can use
+
+388
+00:25:38,089 --> 00:25:41,144
+any if you can if you value loading
+while poverty by method
+
+389
+00:25:42,044 --> 00:25:47,086
+which lets you load property a
+synchronously before accessing them
+
+390
+00:25:47,086 --> 00:25:51,135
+for example if you're interested in the
+precise duration opacity
+
+391
+00:25:51,909 --> 00:25:56,320
+you cannot be punishing for the duration
+and redownload just about dried them on
+
+392
+00:25:56,032 --> 00:25:57,034
+to bigger
+
+393
+00:25:57,052 --> 00:26:01,054
+to be able to tell you what the duration
+it but I'm file format it
+
+394
+00:26:01,072 --> 00:26:02,074
+straightforward
+
+395
+00:26:02,074 --> 00:26:06,013
+and that somebody information right up
+ahead so we can download just that the
+
+396
+00:26:06,679 --> 00:26:07,780
+sub ita
+
+397
+00:26:07,078 --> 00:26:10,081
+but that's not always the case
+
+398
+00:26:10,081 --> 00:26:13,090
+sometimes many of us what you're a shin
+any foundation would have to download
+
+399
+00:26:14,071 --> 00:26:16,096
+the entire fund into the media file
+
+400
+00:26:16,096 --> 00:26:21,805
+bar said be coated before we can give
+you the value for a precise duration:
+
+401
+00:26:22,669 --> 00:26:26,669
+you might our why should I do anything
+gonna keep a B foundation has to do all
+
+402
+00:26:26,669 --> 00:26:27,720
+this work
+
+403
+00:26:27,072 --> 00:26:30,491
+the Lord values or it big time to load
+values
+
+404
+00:26:31,139 --> 00:26:35,143
+well you really should I'll I don't
+spend
+
+405
+00:26:35,179 --> 00:26:38,181
+if you tried to access a property think
+honestly by
+
+406
+00:26:38,379 --> 00:26:41,431
+accessing a ghetto before loading the
+property
+
+407
+00:26:41,899 --> 00:26:45,310
+you would be blocking a main thread
+leading to a spin and making your
+
+408
+00:26:45,031 --> 00:26:45,112
+application
+
+409
+00:26:46,012 --> 00:26:49,301
+unresponsive doin user
+
+410
+00:26:49,409 --> 00:26:52,990
+on a stand however you can dispatch this
+work to a background
+
+411
+00:26:52,099 --> 00:26:56,172
+cue to access the get a and you 1 p.s
+penny
+
+412
+00:26:57,072 --> 00:27:00,084
+met on I with loading think lesly from
+
+413
+00:27:00,084 --> 00:27:05,091
+any thread would block your application
+and could lead to a hand a crash
+
+414
+00:27:06,054 --> 00:27:09,100
+this is because as you may already know
+on i OS
+
+415
+00:27:10,000 --> 00:27:13,026
+we have a shared demand by media so they
+be
+
+416
+00:27:13,026 --> 00:27:17,935
+with services media requests on behalf
+of your application
+
+417
+00:27:18,169 --> 00:27:21,242
+if you tried to access a property
+synchronously you would be bang media
+
+418
+00:27:21,899 --> 00:27:22,710
+seventy
+
+419
+00:27:22,071 --> 00:27:25,106
+or forcing me to 72 Lord aware you and
+this might be
+
+420
+00:27:26,006 --> 00:27:29,037
+time this leads to a timeout
+
+421
+00:27:29,037 --> 00:27:32,076
+and media services domination
+
+422
+00:27:32,409 --> 00:27:35,483
+this not only affects your application
+but every other application on the
+
+423
+00:27:36,149 --> 00:27:36,860
+system
+
+424
+00:27:36,086 --> 00:27:42,127
+which relies on media services so please
+don't do that
+
+425
+00:27:43,027 --> 00:27:47,166
+now that we know that a good reason to
+use ABA's even if the value loading
+
+426
+00:27:47,409 --> 00:27:50,500
+there don't want things to remember for
+key
+
+427
+00:27:50,005 --> 00:27:54,007
+only load those properties you and this
+baby using your application
+
+428
+00:27:54,007 --> 00:27:58,206
+every extra property means more work if
+you intend to not use a particular
+
+429
+00:27:58,899 --> 00:27:59,820
+property
+
+430
+00:27:59,082 --> 00:28:02,661
+do not in Goa the wasted work
+
+431
+00:28:03,399 --> 00:28:06,475
+and the second thing is if you and it's
+been the use of a particular property
+
+432
+00:28:07,159 --> 00:28:09,040
+you doing your application
+
+433
+00:28:09,004 --> 00:28:12,053
+you can still request all of them
+together using
+
+434
+00:28:12,053 --> 00:28:15,135
+note values a synchronous people key and
+completion handler
+
+435
+00:28:16,035 --> 00:28:19,059
+you can Boston and i do. he's eighty
+foundation would
+
+436
+00:28:19,059 --> 00:28:22,148
+will go together and your conclusion
+handler is called
+
+437
+00:28:22,679 --> 00:28:26,754
+once we are done loading these
+properties
+
+438
+00:28:27,429 --> 00:28:30,454
+you no longer have to learn tracks
+before playback begin
+
+439
+00:28:30,679 --> 00:28:34,070
+this has changed since the last time we
+talked about best practices
+
+440
+00:28:34,007 --> 00:28:37,025
+in fact this has changed since I was 5
+
+441
+00:28:37,025 --> 00:28:40,664
+you really only need to load those
+property you would directly use in your
+
+442
+00:28:40,889 --> 00:28:43,220
+application
+
+443
+00:28:43,022 --> 00:28:46,037
+now let's look at how ABA think a nifty
+value loading
+
+444
+00:28:46,037 --> 00:28:50,086
+conflates into court in this particular
+example
+
+445
+00:28:50,086 --> 00:28:53,092
+I'm interested in loading the property
+the open
+
+446
+00:28:54,046 --> 00:29:00,055
+I boson an atty the displayable in it
+and I provide a completion handler
+
+447
+00:29:00,055 --> 00:29:04,086
+in my completion handler I first check
+to make sure the properties loaded
+
+448
+00:29:04,086 --> 00:29:07,375
+sometimes things go wrong like if you're
+relying on the netbook resource
+
+449
+00:29:08,149 --> 00:29:12,198
+and usable the light goes out of range
+after blowing can feel
+
+450
+00:29:12,639 --> 00:29:15,713
+so this is a good place to check with
+such adonis
+
+451
+00:29:16,379 --> 00:29:20,750
+once you get the status you can see if
+it's already loaded
+
+452
+00:29:20,075 --> 00:29:23,724
+and then you're gonna be a quoi or up
+for the asset
+
+453
+00:29:24,399 --> 00:29:28,570
+are if there's a failure you can abort
+and appropriate EDA
+
+454
+00:29:28,057 --> 00:29:33,076
+to you end-user one more thing to
+remember with completion handler
+
+455
+00:29:33,076 --> 00:29:36,120
+is if another module has already loaded
+
+456
+00:29:37,002 --> 00:29:40,008
+the keys you're interested in your
+completion handler is called back
+
+457
+00:29:40,008 --> 00:29:43,027
+immediately stay in this example
+
+458
+00:29:43,099 --> 00:29:46,498
+if a beep leo has already landed the
+playable property
+
+459
+00:29:47,389 --> 00:29:50,390
+your completion handler is called
+synchronously on the same
+
+460
+00:29:50,399 --> 00:29:55,399
+thread if you have poured which relies
+on load values a thing that people can
+
+461
+00:29:55,399 --> 00:29:56,330
+use to get done
+
+462
+00:29:56,033 --> 00:30:00,110
+immediately that might not happen though
+the completion handler has executed
+
+463
+00:30:01,001 --> 00:30:05,790
+so that's something to keep in mind to
+prevent a deadlock
+
+464
+00:30:05,889 --> 00:30:09,050
+lift the best practices for Absa
+
+465
+00:30:09,005 --> 00:30:13,334
+not only does he's you're interested in
+using in your application
+
+466
+00:30:13,379 --> 00:30:17,408
+you can use a BA thinking if you value
+noting the list all the fuse together
+
+467
+00:30:17,669 --> 00:30:21,670
+in an atty and you can provide a
+completion handler but despite want your
+
+468
+00:30:21,679 --> 00:30:23,810
+downloading this property
+
+469
+00:30:23,081 --> 00:30:25,950
+and your completion handler check to
+make sure the properties are loaded:
+
+470
+00:30:26,679 --> 00:30:29,090
+before you access them
+
+471
+00:30:29,009 --> 00:30:32,048
+and lastly be prepared for synchronous
+call back
+
+472
+00:30:32,048 --> 00:30:35,073
+if someone else has already loaded the
+property on your behalf
+
+473
+00:30:35,073 --> 00:30:38,078
+yet read if I'd your completion handler
+is buyback
+
+474
+00:30:38,078 --> 00:30:42,176
+immediately those were best practices
+for Absa
+
+475
+00:30:43,076 --> 00:30:47,195
+now let's look at every player and
+playwright and
+
+476
+00:30:47,879 --> 00:30:51,970
+as I mentioned earlier but they be
+clearer and clearer I do
+
+477
+00:30:51,097 --> 00:30:55,098
+the playback engine under the underlying
+playback engine drives the machinery
+
+478
+00:30:56,007 --> 00:30:59,072
+necessary so that your user fees we your
+dreams on bank
+
+479
+00:30:59,072 --> 00:31:03,079
+so you have to do is use and if the
+value observing RKB 0
+
+480
+00:31:03,079 --> 00:31:07,144
+to be notified of the change it so that
+you can update your application state
+
+481
+00:31:08,044 --> 00:31:11,050
+here's an example if you have a
+progressive download item
+
+482
+00:31:12,004 --> 00:31:16,087
+on an HTTP fella as a bee foundation
+download some data
+
+483
+00:31:16,087 --> 00:31:19,185
+you get the ball back with the loaded
+range as a buffer more data
+
+484
+00:31:20,085 --> 00:31:24,904
+you get get on the ball back with the
+updated value for the Lagrange
+
+485
+00:31:25,669 --> 00:31:28,692
+a take an example of bacterial might
+come in handy
+
+486
+00:31:28,899 --> 00:31:33,270
+its playback interruption if you use and
+divide the deceived
+
+487
+00:31:33,027 --> 00:31:38,082
+8 phone call or FaceTime call when
+you're application is being a paedophile
+
+488
+00:31:38,082 --> 00:31:42,180
+your playback is interrupted so that you
+use again on for the call
+
+489
+00:31:43,008 --> 00:31:46,847
+in this case if you do you think AB or
+on the player 38
+
+490
+00:31:47,639 --> 00:31:50,706
+you would see it transitioned is eel
+this is a good
+
+491
+00:31:51,309 --> 00:31:54,314
+there is a good way for you doing be
+notified of such interruption
+
+492
+00:31:54,809 --> 00:31:59,891
+so that your dont and upgrading and
+lately probably back to end
+
+493
+00:32:00,629 --> 00:32:04,000
+and the last example here is media
+services to be fit
+
+494
+00:32:04,000 --> 00:32:08,159
+as I mentioned earlier if your
+application of some other application
+
+495
+00:32:08,159 --> 00:32:11,290
+wasn't paying attention to ABA thinking
+it's p-value loading
+
+496
+00:32:11,029 --> 00:32:15,058
+and try to access a property think
+honestly you have forced media server
+
+497
+00:32:15,058 --> 00:32:16,537
+need to dominate
+
+498
+00:32:17,059 --> 00:32:21,990
+this FX your application do your media
+services %uh defect
+
+499
+00:32:21,099 --> 00:32:25,151
+amend this happened your plate icon
+status transition to feed
+
+500
+00:32:26,051 --> 00:32:29,940
+and this is the place for you did throw
+away all your lead object and rebuild
+
+501
+00:32:30,399 --> 00:32:31,450
+your player and playwright them
+
+502
+00:32:31,909 --> 00:32:36,960
+defending a playback
+
+503
+00:32:37,419 --> 00:32:43,620
+let's look at an example in court make a
+view might come in handy
+
+504
+00:32:43,062 --> 00:32:47,109
+in this example I would like to decide
+when to show or do you only you I in my
+
+505
+00:32:48,009 --> 00:32:49,035
+application
+
+506
+00:32:49,035 --> 00:32:52,614
+your I first created playwright amid an
+acid
+
+507
+00:32:52,929 --> 00:32:56,300
+then I tried to access the tracks
+property of an acid particularly
+
+508
+00:32:56,003 --> 00:32:59,047
+up by video and then I checked to make
+sure
+
+509
+00:32:59,074 --> 00:33:03,233
+that the media Trac then only your
+tracks before I obeyed my UI dual audio
+
+510
+00:33:03,899 --> 00:33:05,977
+only
+
+511
+00:33:06,679 --> 00:33:10,990
+this is not compete he got a firstly
+we're trying to access the tracks
+
+512
+00:33:10,099 --> 00:33:11,133
+property on acid
+
+513
+00:33:12,033 --> 00:33:15,512
+without prior loading it this good
+blocking a main thread and make your
+
+514
+00:33:15,809 --> 00:33:18,050
+application and responsive
+
+515
+00:33:18,005 --> 00:33:21,032
+and the second thing here is an
+assumption that lack of media Trac
+
+516
+00:33:21,032 --> 00:33:24,881
+means audio only you can have
+non-renewal Richard Wright
+
+517
+00:33:25,169 --> 00:33:28,300
+like subtitle in your movies
+
+518
+00:33:28,003 --> 00:33:31,832
+now let's look at how I can do this
+using k Beale
+
+519
+00:33:32,129 --> 00:33:35,590
+I add myself as an observer for the
+presentation size
+
+520
+00:33:35,059 --> 00:33:38,778
+on a playwright and and months AB
+foundation is downloading the
+
+521
+00:33:39,309 --> 00:33:40,314
+presentation face
+
+522
+00:33:40,809 --> 00:33:45,190
+your observational buyback first check
+to make sure that your presentation
+
+523
+00:33:45,019 --> 00:33:45,108
+thighs and feet away
+
+524
+00:33:46,008 --> 00:33:51,047
+you know this way you know not have the
+tracks have a non-zero presentation safe
+
+525
+00:33:51,047 --> 00:33:54,073
+cannot do that make sure you have
+accused
+
+526
+00:33:54,073 --> 00:33:57,082
+1 %uh audio track to do that
+
+527
+00:33:57,082 --> 00:34:01,085
+you can look at the underlying a be at
+the track and make sure that
+
+528
+00:34:01,085 --> 00:34:05,094
+there's ok he's one of them which has a
+AB media characteristic audible
+
+529
+00:34:06,075 --> 00:34:09,694
+this is necessary because sometimes you
+can have movie filed
+
+530
+00:34:10,369 --> 00:34:14,730
+which have non over $10,000 by you know
+for the presentation sized
+
+531
+00:34:14,073 --> 00:34:19,081
+but no audio track like bangor tracks
+
+532
+00:34:19,081 --> 00:34:24,098
+the PBRs be we just used before us
+create a playwright amid an asset
+
+533
+00:34:24,098 --> 00:34:27,179
+then be there just about the value
+observing the property of interest
+
+534
+00:34:28,079 --> 00:34:31,144
+after that me associate the bleary-eyed
+amid the player
+
+535
+00:34:32,044 --> 00:34:35,131
+and in your observation by back you can
+look at the change dictionary
+
+536
+00:34:36,031 --> 00:34:40,083
+to know what the new value is this is
+the day to be when you work with these
+
+537
+00:34:40,083 --> 00:34:41,402
+objects
+
+538
+00:34:42,149 --> 00:34:45,158
+but if you want things to remember when
+you're interacting with these objects in
+
+539
+00:34:46,049 --> 00:34:47,084
+general
+
+540
+00:34:47,399 --> 00:34:51,640
+but not assume the order in which events
+up up
+
+541
+00:34:51,064 --> 00:34:54,064
+as soon as you associate a playwright
+amid the player
+
+542
+00:34:54,064 --> 00:34:57,079
+85 nations dot its underlying machinery
+so that
+
+543
+00:34:57,079 --> 00:35:00,088
+you're using an expedient this mod
+playback
+
+544
+00:35:00,088 --> 00:35:03,121
+on Iowa 7 be made an optimization
+beating this
+
+545
+00:35:04,021 --> 00:35:07,035
+the status to ready to play much more
+quickly
+
+546
+00:35:07,035 --> 00:35:10,044
+so if you want to add yourself as an
+observer after you create a plea over
+
+547
+00:35:11,025 --> 00:35:12,033
+the playwright him
+
+548
+00:35:12,033 --> 00:35:15,048
+you could miss this white notification
+
+549
+00:35:15,048 --> 00:35:19,050
+the pink this you can add yourself as an
+observer before associating you play
+
+550
+00:35:19,068 --> 00:35:20,135
+item in the play okay
+
+551
+00:35:21,035 --> 00:35:24,119
+that way you won Miss any notifications
+
+552
+00:35:25,019 --> 00:35:29,110
+are sometimes in your application you
+might have a particular fan i do.
+
+553
+00:35:30,001 --> 00:35:33,016
+where you would like to add yourself as
+an observer
+
+554
+00:35:33,025 --> 00:35:37,025
+only of good any bank see if a user
+presses a button
+
+555
+00:35:37,025 --> 00:35:40,092
+in touch basis you been used and if the
+value observing
+
+556
+00:35:40,092 --> 00:35:44,158
+option initiated this flag lets you
+access the initial value as well as in
+
+557
+00:35:45,058 --> 00:35:48,122
+you and you
+
+558
+00:35:49,022 --> 00:35:53,026
+the second thing to remember is that AB
+foundation theory licensed the access to
+
+559
+00:35:53,062 --> 00:35:54,068
+every player and playwright him
+
+560
+00:35:55,022 --> 00:35:58,098
+on the main cue it safe to access
+
+561
+00:35:58,098 --> 00:36:01,101
+and register and unregister for
+observers
+
+562
+00:36:02,001 --> 00:36:06,004
+for these objects on the mean cue this
+was done to prevent any possible
+
+563
+00:36:06,004 --> 00:36:07,263
+refinishing
+
+564
+00:36:07,299 --> 00:36:11,060
+as might have been more used to
+interacting with these objects
+
+565
+00:36:11,006 --> 00:36:15,018
+and make you was a natural choice as
+most of these observations buyback
+
+566
+00:36:15,018 --> 00:36:18,044
+lead to your applications in traction
+but you like it objects
+
+567
+00:36:18,044 --> 00:36:21,213
+which also happened on me cue
+
+568
+00:36:21,609 --> 00:36:24,684
+however this does not mean that we are
+doing our work on a min Q
+
+569
+00:36:25,359 --> 00:36:28,359
+we are not effecting the end-user
+responsiveness
+
+570
+00:36:28,359 --> 00:36:31,850
+all loading and playback related what
+happens on the background cue
+
+571
+00:36:31,085 --> 00:36:35,124
+the only feel like the access to these
+objects on the mean cue
+
+572
+00:36:36,024 --> 00:36:39,049
+if in your application you have a
+particular sin i do. for
+
+573
+00:36:39,049 --> 00:36:42,146
+makes you think this requirement is a
+hindrance please come talk to us in our
+
+574
+00:36:43,046 --> 00:36:44,054
+labs
+
+575
+00:36:44,054 --> 00:36:47,113
+of I'll enhancement request they are
+really interested in listening to your
+
+576
+00:36:48,013 --> 00:36:50,079
+feedback on this
+
+577
+00:36:50,079 --> 00:36:53,083
+and the last thing to remember is
+wherever possible
+
+578
+00:36:54,019 --> 00:36:57,081
+set up your playwright him before
+associating it with the player
+
+579
+00:36:57,081 --> 00:37:00,090
+as I mentioned earlier as soon as you
+create a player
+
+580
+00:37:00,009 --> 00:37:03,638
+AB foundation starts driving its
+machinery so that we can get ready for
+
+581
+00:37:04,529 --> 00:37:06,200
+playback
+
+582
+00:37:06,002 --> 00:37:09,851
+for example if you have a streaming item
+as soon as you create a player
+
+583
+00:37:10,049 --> 00:37:15,000
+we go over the network and start
+downloading data from the fourth time
+
+584
+00:37:15,000 --> 00:37:18,029
+and after that if you are def issue a
+thick dude I'm
+
+585
+00:37:18,029 --> 00:37:21,980
+we would have to throw away all the data
+we downloaded and start reloading up
+
+586
+00:37:21,098 --> 00:37:23,166
+fascists to begin playback
+
+587
+00:37:24,066 --> 00:37:28,071
+in order to bring in that whenever
+possible you can always fun video player
+
+588
+00:37:28,071 --> 00:37:28,120
+item
+
+589
+00:37:29,002 --> 00:37:32,081
+before associating it with the play here
+
+590
+00:37:32,279 --> 00:37:36,480
+here's a few examples up the banged-up
+on for the nation's you can do
+
+591
+00:37:36,048 --> 00:37:39,120
+this is definitely not the exhaustive
+list but just a few
+
+592
+00:37:40,002 --> 00:37:45,063
+you can add outputs you can select media
+options like audible and legible
+
+593
+00:37:45,081 --> 00:37:49,145
+you can fact followed and robust
+playback and times I seek the time
+
+594
+00:37:50,045 --> 00:37:57,045
+and after doing all those changes I can
+associate my clear I don't the player
+
+595
+00:37:57,096 --> 00:38:00,114
+in somebody for any player and a ride em
+
+596
+00:38:01,014 --> 00:38:04,733
+use an FTP are you observing to be
+notified of changes
+
+597
+00:38:04,859 --> 00:38:08,220
+at the Playback Engine is driving the
+clock
+
+598
+00:38:08,022 --> 00:38:12,051
+did got so that you use again experience
+this mode play back
+
+599
+00:38:12,051 --> 00:38:16,069
+do not rely on the order in which event
+up to if you really need a budget lol
+
+600
+00:38:16,069 --> 00:38:19,151
+you can always use and if the value
+observing option any Shin
+
+601
+00:38:20,051 --> 00:38:25,380
+auto add yourself as observers before
+you create a player
+
+602
+00:38:25,839 --> 00:38:29,920
+the fear life your access to play and
+play item on the main cue to avoid any
+
+603
+00:38:29,092 --> 00:38:30,175
+boys big race conditions
+
+604
+00:38:31,075 --> 00:38:35,138
+lucky menopausal set up your plan died
+in bed autoconfiguration
+
+605
+00:38:36,038 --> 00:38:40,079
+before creating a player those were the
+best practices for
+
+606
+00:38:40,079 --> 00:38:43,144
+AB player and fan item most of the
+things we don't know about
+
+607
+00:38:44,044 --> 00:38:47,098
+AB player also applied to a BBQ player
+
+608
+00:38:47,098 --> 00:38:52,207
+as you've seen earlier in this top a V
+QPR take a list of playwright and
+
+609
+00:38:53,089 --> 00:38:56,910
+if in your application you have an
+Inspector window
+
+610
+00:38:56,091 --> 00:39:00,960
+for which you would like to access a set
+of keys on each of the brand items
+
+611
+00:39:01,779 --> 00:39:04,870
+you can use AB playwright them spend
+mean an initializer
+
+612
+00:39:04,087 --> 00:39:09,121
+which lets you buy a set of keys which
+AB cube lia aur abbo would yield
+
+613
+00:39:10,021 --> 00:39:14,360
+on your behalf you have a BBQ player
+
+614
+00:39:14,549 --> 00:39:19,270
+the list of items and if you initialize
+each of these items into the set of keys
+
+615
+00:39:19,027 --> 00:39:22,116
+as a BQ player is getting ready to
+initiate any should be back with a
+
+616
+00:39:23,016 --> 00:39:23,104
+particular item
+
+617
+00:39:24,004 --> 00:39:27,099
+reload the 15th in combination with the
+keys require
+
+618
+00:39:27,099 --> 00:39:31,156
+for playback and as playback from
+dresses and we teach the next item
+
+619
+00:39:32,056 --> 00:39:37,058
+we load the second set of keys you
+requested for that particular item
+
+620
+00:39:37,058 --> 00:39:40,149
+this is valid for every player has been
+if you're using replaced got and item
+
+621
+00:39:41,049 --> 00:39:42,096
+but derided
+
+622
+00:39:42,096 --> 00:39:46,108
+you can miss you can use this as an
+alternate to ABA think a nifty value
+
+623
+00:39:47,008 --> 00:39:47,013
+noting
+
+624
+00:39:47,058 --> 00:39:50,587
+answer abusing a v8 thing if you are you
+looking for each of the asset
+
+625
+00:39:51,109 --> 00:39:54,850
+you can initialize each of the brand
+items and we'll take care of you reading
+
+626
+00:39:54,085 --> 00:39:55,162
+the property
+
+627
+00:39:56,062 --> 00:39:59,095
+and if you're using this in 30 periods
+even if the value noting
+
+628
+00:39:59,095 --> 00:40:02,194
+the best place to access your property
+
+629
+00:40:03,049 --> 00:40:06,710
+would be to cameo the playwright and
+status
+
+630
+00:40:06,071 --> 00:40:09,147
+many receive an observation by back for
+the status
+
+631
+00:40:10,047 --> 00:40:13,166
+and if you up to me lol and if the
+sentence is ready to play
+
+632
+00:40:13,589 --> 00:40:18,200
+you acted keys would either be loaded of
+real so then you can use status of value
+
+633
+00:40:18,002 --> 00:40:18,065
+for key
+
+634
+00:40:18,083 --> 00:40:21,362
+to access this property
+
+635
+00:40:22,109 --> 00:40:26,510
+and the last thing to remember but
+eighty cuba is if AB foundation en donde
+
+636
+00:40:26,051 --> 00:40:27,320
+as andado
+
+637
+00:40:27,779 --> 00:40:30,812
+with a body blow playwright him miss
+give that item and move on
+
+638
+00:40:31,109 --> 00:40:35,120
+so that your user experiences
+uninterrupted playback
+
+639
+00:40:35,012 --> 00:40:38,017
+however if you would like to be notified
+of such I don't
+
+640
+00:40:38,017 --> 00:40:45,017
+you can NS email you observe a week you
+play with God and item status
+
+641
+00:40:46,096 --> 00:40:49,495
+those were some tips for using a BQ
+player lastly
+
+642
+00:40:50,359 --> 00:40:53,850
+let's talk about ATP a view controller
+
+643
+00:40:53,085 --> 00:40:57,118
+but the repair your gun drawn on highway
+audio replay review on all with 10
+
+644
+00:40:58,018 --> 00:41:01,076
+it's a good idea to animate your view
+India view hierarchy
+
+645
+00:41:01,076 --> 00:41:04,102
+only when there's some why the funding
+to present
+
+646
+00:41:05,002 --> 00:41:08,097
+only if there's some video frames you
+can chill and to do that
+
+647
+00:41:08,097 --> 00:41:11,135
+you can t value observed ready for
+display on i OS
+
+648
+00:41:12,035 --> 00:41:15,044
+you would observe on the plan view
+controller that as a nice tan you
+
+649
+00:41:15,044 --> 00:41:16,713
+observe on the blame you
+
+650
+00:41:17,109 --> 00:41:20,560
+got himself as an observer put any for
+display
+
+651
+00:41:20,056 --> 00:41:23,114
+and in your observation buyback you can
+check to make sure ready for displays
+
+652
+00:41:24,014 --> 00:41:24,903
+yes
+
+653
+00:41:25,029 --> 00:41:32,029
+before animating your view or before
+like showing you
+
+654
+00:41:32,049 --> 00:41:37,168
+new NIOS 8 and North 10th and not then
+its content to live you
+
+655
+00:41:37,609 --> 00:41:40,690
+but going to leave you you can do your
+custom drying
+
+656
+00:41:40,069 --> 00:41:44,077
+and rendering or would the playable the
+condo LabVIEW is guaranteed to have
+
+657
+00:41:45,049 --> 00:41:47,093
+similar dimensions as the plan view
+
+658
+00:41:47,093 --> 00:41:50,114
+and if you would like to place the order
+drying tube relative to the radio for
+
+659
+00:41:51,014 --> 00:41:51,068
+him
+
+660
+00:41:51,068 --> 00:41:56,072
+you can access the media bronze property
+on the play view controller
+
+661
+00:41:56,072 --> 00:42:00,139
+here's a screenshot above the demo Meath
+audio the did you do what you need on
+
+662
+00:42:01,039 --> 00:42:01,133
+the bottom right
+
+663
+00:42:02,033 --> 00:42:06,022
+was rendered using going to leave you
+
+664
+00:42:06,319 --> 00:42:11,690
+and lastly what chapter navigation: as
+you may have seen in QuickTime Player
+
+665
+00:42:11,069 --> 00:42:15,108
+when you see two chapters using the
+appropriate keyboard shortcut to menu
+
+666
+00:42:16,008 --> 00:42:16,087
+items
+
+667
+00:42:16,087 --> 00:42:20,087
+big-time player briefly flashes the
+Japanese were indicted
+
+668
+00:42:20,087 --> 00:42:23,108
+and if you would like to get similar
+behavior in your applications
+
+669
+00:42:24,008 --> 00:42:27,060
+which we highly recommend you can use
+this API I've
+
+670
+00:42:27,006 --> 00:42:33,008
+a deeply love you this is only on with
+Dan the flash at the number and ID
+
+671
+00:42:33,062 --> 00:42:36,073
+ideally you would do this often seek has
+completed
+
+672
+00:42:36,073 --> 00:42:42,127
+so you can place this code in your
+completion handler for think the time
+
+673
+00:42:43,027 --> 00:42:46,034
+for the best practices for play Wii U
+controller is to observe ready for
+
+674
+00:42:46,097 --> 00:42:49,466
+display to know when to present your
+view on screen
+
+675
+00:42:50,339 --> 00:42:54,200
+so that you use it doesn't have to look
+at black screen
+
+676
+00:42:54,002 --> 00:42:57,048
+thank you then we saw how do you respond
+in to leave you want to do custom
+
+677
+00:42:57,066 --> 00:42:58,015
+rendering
+
+678
+00:42:58,609 --> 00:43:01,830
+over the play a few in the auto the baby
+is below
+
+679
+00:43:01,083 --> 00:43:06,112
+and about that despondent over live you
+and the control said on top
+
+680
+00:43:06,859 --> 00:43:11,180
+and lucky we saw how to flash up to numb
+Japanese number and title
+
+681
+00:43:11,018 --> 00:43:16,029
+during chapter navigation: using every
+period
+
+682
+00:43:16,029 --> 00:43:20,268
+that brings us to the end of I roadmap
+for best practices
+
+683
+00:43:20,529 --> 00:43:24,120
+let's wrap up
+
+684
+00:43:24,012 --> 00:43:28,054
+below that why it's important the Lord
+values a synchronously and how to do
+
+685
+00:43:28,054 --> 00:43:32,543
+that using a BA think a nifty value
+looking for a bf it
+
+686
+00:43:33,029 --> 00:43:37,250
+but every player and playwright im all
+you have to do is use and its key value
+
+687
+00:43:37,025 --> 00:43:37,098
+observing
+
+688
+00:43:37,098 --> 00:43:41,707
+to be notified of changes and made a bet
+some tips for using
+
+689
+00:43:42,589 --> 00:43:46,390
+a BQ player we don't know about how to
+observe
+
+690
+00:43:46,039 --> 00:43:51,238
+ready for display know when to present
+your view India view hierarchy
+
+691
+00:43:51,589 --> 00:43:55,620
+and then we looked at how to customize
+your plan view my custom drawings in
+
+692
+00:43:55,062 --> 00:43:56,721
+going to leave you
+
+693
+00:43:57,279 --> 00:44:01,370
+and displaying chapter numbers during
+navigation
+
+694
+00:44:01,037 --> 00:44:04,121
+that was best practices for a be
+foundational a ticket I lost topic but
+
+695
+00:44:05,021 --> 00:44:06,116
+to me
+
+696
+00:44:07,016 --> 00:44:10,021
+in somebody a big it is now available on
+i OS
+
+697
+00:44:10,021 --> 00:44:15,026
+along with the West End AB can provide
+you with standard playback controls with
+
+698
+00:44:15,026 --> 00:44:17,058
+just few lines of code
+
+699
+00:44:17,058 --> 00:44:21,066
+if you've been using it to get on ice 10
+you get DUI refresh for free
+
+700
+00:44:22,038 --> 00:44:25,227
+you wouldn't have to change anything
+
+701
+00:44:25,569 --> 00:44:29,520
+we looked at the demo which shows how
+powerful eighty foundation can be in
+
+702
+00:44:29,052 --> 00:44:30,871
+combination with AB kid
+
+703
+00:44:31,339 --> 00:44:34,391
+to provide you with an application with
+standard pay back under oath
+
+704
+00:44:34,859 --> 00:44:38,882
+and to add FX and visualizations
+
+705
+00:44:39,089 --> 00:44:42,480
+we highly recommend you to adopt most
+modern
+
+706
+00:44:42,048 --> 00:44:46,114
+up modern media very much and audit your
+current applications
+
+707
+00:44:47,014 --> 00:44:52,021
+to see if they can stand to benefit by
+adopting these best practices
+
+708
+00:44:52,021 --> 00:44:55,102
+for more information you can contact us
+evangelism team
+
+709
+00:44:56,002 --> 00:45:00,591
+or visit art check out %uh programming
+died on a double up a website
+
+710
+00:45:00,609 --> 00:45:04,950
+which guy was born baby foundation and
+maybe get you can also contact us
+
+711
+00:45:04,095 --> 00:45:09,099
+on a developer forums
+
+712
+00:45:09,099 --> 00:45:12,868
+we have some related sessions lined up
+for you for the rest of this week
+
+713
+00:45:13,759 --> 00:45:16,910
+starting midline this of known by
+harnessing meta-data
+
+714
+00:45:16,091 --> 00:45:19,139
+in audiovisual media tomorrow morning
+
+715
+00:45:20,039 --> 00:45:23,050
+we show your camera capture with all its
+new features
+
+716
+00:45:23,005 --> 00:45:26,057
+and AB capture view we mentioned earlier
+in the stock
+
+717
+00:45:27,002 --> 00:45:30,020
+and on Thursday we show you how you can
+directly access
+
+718
+00:45:30,002 --> 00:45:34,007
+a media encoders and decoders that's it
+
+719
+00:45:34,025 --> 00:45:35,108
+thank you for coming and I disagree
+

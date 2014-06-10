@@ -1,0 +1,4632 @@
+1
+00:00:12,068 --> 00:00:19,068
+well everyone
+
+2
+00:00:21,025 --> 00:00:21,076
+so
+
+3
+00:00:21,076 --> 00:00:24,082
+I Mike Stern on the user experience
+evangelist at Apple
+
+4
+00:00:25,036 --> 00:00:29,965
+and thank you all for coming on sticking
+around after a really long day very
+
+5
+00:00:30,289 --> 00:00:31,293
+technical content
+
+6
+00:00:31,329 --> 00:00:34,348
+now this presentation is going to be a
+bit different
+
+7
+00:00:34,519 --> 00:00:37,620
+right this is about design and in
+particular
+
+8
+00:00:37,062 --> 00:00:41,321
+it's about designing intuitive
+interfaces I'd like to
+
+9
+00:00:41,879 --> 00:00:45,430
+start with little exercise Magin
+
+10
+00:00:45,043 --> 00:00:48,047
+if you will that your house and your
+
+11
+00:00:48,047 --> 00:00:52,122
+in your kitchen and the phone rings and
+the person on the other end the line has
+
+12
+00:00:53,022 --> 00:00:54,029
+some really exciting news for you
+
+13
+00:00:54,092 --> 00:00:57,831
+they tell you you one some money
+
+14
+00:00:58,659 --> 00:01:02,280
+not just a little bit of money but like
+a lot of money
+
+15
+00:01:02,028 --> 00:01:06,033
+and they also tell you that in order to
+claim your prize
+
+16
+00:01:06,078 --> 00:01:09,707
+you need to call a phone number
+
+17
+00:01:10,409 --> 00:01:14,490
+and then that hang up the phone
+
+18
+00:01:14,049 --> 00:01:18,142
+so you're sitting there in your kitchen
+and you need to write down this phone
+
+19
+00:01:19,042 --> 00:01:19,047
+number
+
+20
+00:01:19,092 --> 00:01:22,176
+you need to write down this phone number
+before you forget
+
+21
+00:01:23,076 --> 00:01:26,161
+so you're looking around for something
+to
+
+22
+00:01:27,061 --> 00:01:30,116
+to write with your iPhone not around
+right and
+
+23
+00:01:31,016 --> 00:01:34,037
+is casting around and you're starting to
+get a little panicky because you really
+
+24
+00:01:34,037 --> 00:01:35,081
+want to remember this number in
+
+25
+00:01:35,081 --> 00:01:39,092
+right before you forget it you see a pen
+and a piece of paper
+
+26
+00:01:39,092 --> 00:01:42,160
+and you write down the phone number so
+that's a pretty
+
+27
+00:01:43,006 --> 00:01:48,029
+simple scenario right now the end of the
+story by the way thank you
+
+28
+00:01:48,083 --> 00:01:53,172
+thank you very much so you had this very
+clear objective which was to write down
+
+29
+00:01:54,072 --> 00:01:55,081
+this phone number
+
+30
+00:01:55,729 --> 00:02:00,470
+and you found a pen and pad of paper
+with which to accomplish that task
+
+31
+00:02:00,047 --> 00:02:04,065
+and then you wrote down the phone number
+now is it
+
+32
+00:02:04,065 --> 00:02:07,464
+well not really quite that simple
+
+33
+00:02:08,049 --> 00:02:12,090
+you're under pressure you're stressing
+out a little bit
+
+34
+00:02:12,459 --> 00:02:15,860
+and when you're stressed out that can
+affect your memory and it can affect
+
+35
+00:02:15,086 --> 00:02:17,104
+your ability to perform basic
+
+36
+00:02:18,004 --> 00:02:21,013
+cognitive tasks such as remembering the
+phone number
+
+37
+00:02:21,049 --> 00:02:26,049
+and writing it down or picking out a pen
+from a bunch of similar objects
+
+38
+00:02:26,049 --> 00:02:31,088
+things that look just like a pen and
+assuming that you can remember the phone
+
+39
+00:02:31,439 --> 00:02:31,525
+number and
+
+40
+00:02:32,299 --> 00:02:36,620
+find the pen and paper and write it down
+you have to also consider what are all
+
+41
+00:02:36,062 --> 00:02:38,104
+the skills that are necessary for you to
+write
+
+42
+00:02:39,004 --> 00:02:42,623
+for starters writing involves a lot of
+coordination and
+
+43
+00:02:42,659 --> 00:02:45,756
+dexterity just ask a three-year-old
+
+44
+00:02:46,629 --> 00:02:50,970
+they totally suck your writing
+
+45
+00:02:50,097 --> 00:02:52,836
+and so did all love you and so did I
+
+46
+00:02:53,709 --> 00:02:57,640
+when we're that age we went from writing
+like this
+
+47
+00:02:57,064 --> 00:03:01,090
+to writing like that or
+
+48
+00:03:01,009 --> 00:03:07,017
+really something like this writing with
+a pen takes years and years a practice
+
+49
+00:03:07,098 --> 00:03:11,161
+and there's all these small little
+skills that you need to learn along the
+
+50
+00:03:12,061 --> 00:03:12,122
+way
+
+51
+00:03:13,022 --> 00:03:17,043
+there so fluid and natural to you now
+but they weren't always so easy
+
+52
+00:03:17,043 --> 00:03:21,090
+you had to gain the high hand
+coordination to be able to pick up
+
+53
+00:03:21,009 --> 00:03:25,083
+and manipulate small objects and it took
+years to learn how to
+
+54
+00:03:26,064 --> 00:03:31,065
+hold the pen properly position arrest on
+the table on your arm for stability
+
+55
+00:03:31,065 --> 00:03:34,116
+you had to learn how to draw basic
+letterforms
+
+56
+00:03:35,016 --> 00:03:39,039
+right along a straight line you need to
+learn the difference between upper case
+
+57
+00:03:39,039 --> 00:03:40,064
+and lower case letters
+
+58
+00:03:40,064 --> 00:03:43,883
+the list goes on but you don't think
+about
+
+59
+00:03:44,459 --> 00:03:48,330
+any of those things when you're sitting
+in your kitchen and writing down that
+
+60
+00:03:48,033 --> 00:03:48,772
+phone number
+
+61
+00:03:49,069 --> 00:03:54,140
+all those years
+
+62
+00:03:54,014 --> 00:03:58,035
+writing with different types of pens and
+pencils and markers and
+
+63
+00:03:58,035 --> 00:04:02,084
+crayons have given you this tremendous
+amount of muscle memory
+
+64
+00:04:02,084 --> 00:04:05,182
+and that muscle memory frees you to
+remember something
+
+65
+00:04:06,082 --> 00:04:09,167
+like phone number if you had to
+consciously
+
+66
+00:04:10,067 --> 00:04:14,134
+remember all those individual skills it
+would be pretty difficult for you to
+
+67
+00:04:15,034 --> 00:04:16,097
+have accomplished that task
+
+68
+00:04:16,097 --> 00:04:21,182
+in other words
+
+69
+00:04:22,082 --> 00:04:27,082
+it easier for you to have written down
+and remember that phone number
+
+70
+00:04:27,082 --> 00:04:31,153
+because the active writing is so
+intuitive using software
+
+71
+00:04:32,053 --> 00:04:36,116
+is no different the more aP's behaviors
+we expect them to
+
+72
+00:04:37,016 --> 00:04:41,078
+the more intuitive they are to us more
+intuitive outs are to us
+
+73
+00:04:41,078 --> 00:04:44,163
+the easier it is for us to concentrate
+on our true objectives
+
+74
+00:04:45,063 --> 00:04:50,067
+whether that's communicating with
+friends capturing memories of loved ones
+
+75
+00:04:51,003 --> 00:04:58,003
+checking the weather are exploring the
+cosmos the very best
+
+76
+00:04:58,013 --> 00:05:01,051
+user interfaces are so intuitive so
+natural
+
+77
+00:05:01,051 --> 00:05:05,063
+that the disorder disappear and allow us
+to focus on
+
+78
+00:05:05,063 --> 00:05:08,109
+what truly matters that is what we call
+
+79
+00:05:09,009 --> 00:05:13,046
+intuitive so with that in mind
+
+80
+00:05:13,046 --> 00:05:19,065
+what makes a nap intuitive well I put
+together a list of what I believe to be
+
+81
+00:05:19,065 --> 00:05:20,153
+the top five characteristics
+
+82
+00:05:21,053 --> 00:05:25,080
+have intuitive user interface designs
+this is not
+
+83
+00:05:25,008 --> 00:05:29,086
+an exhaustive list we could be here for
+hours and hours and hours
+
+84
+00:05:30,058 --> 00:05:33,153
+talking about all the things that make
+something intuitive we would order pizza
+
+85
+00:05:34,053 --> 00:05:37,146
+get your ex would be a lot of fun but
+unfortunately we don't have the time for
+
+86
+00:05:38,046 --> 00:05:38,108
+that today
+
+87
+00:05:39,008 --> 00:05:42,036
+this list to five things
+
+88
+00:05:42,036 --> 00:05:46,083
+i think is the most basic and essential
+characteristics what makes Iowa
+
+89
+00:05:46,083 --> 00:05:49,146
+for Mac App intuitive and I also want to
+point out
+
+90
+00:05:50,046 --> 00:05:53,059
+up front hear that what's intuitive to
+one person
+
+91
+00:05:53,059 --> 00:05:56,064
+may not be so intuitive to others I mean
+
+92
+00:05:57,009 --> 00:06:00,021
+this is intuitive if you're an airline
+pilot
+
+93
+00:06:00,021 --> 00:06:04,099
+everybody and every square to read
+display is there for very good reason
+
+94
+00:06:04,099 --> 00:06:05,104
+you know were everything is
+
+95
+00:06:06,049 --> 00:06:13,049
+totally natural pretty sure this doesn't
+work
+
+96
+00:06:15,015 --> 00:06:19,030
+I also want to point out that these are
+the most fundamental things the most
+
+97
+00:06:19,003 --> 00:06:20,009
+basic things
+
+98
+00:06:20,036 --> 00:06:23,050
+but the line is just like anything else
+in life I mean
+
+99
+00:06:23,005 --> 00:06:26,034
+sometimes the most basic things are the
+most important
+
+100
+00:06:26,079 --> 00:06:30,958
+the most consequential I've been
+designing for many years and I've seen
+
+101
+00:06:31,669 --> 00:06:33,020
+time and time again
+
+102
+00:06:33,002 --> 00:06:36,015
+even the most seasoned the most
+experienced designers
+
+103
+00:06:36,015 --> 00:06:40,594
+who make poor quality designs because
+they've lost sight of the fundamentals
+
+104
+00:06:40,729 --> 00:06:43,870
+now in order for be
+
+105
+00:06:43,087 --> 00:06:46,093
+a pen to be intuitive needs to get some
+very fundamental
+
+106
+00:06:47,047 --> 00:06:52,996
+for basic things just right and needs to
+be wide enough to grip firmly
+
+107
+00:06:53,419 --> 00:06:56,441
+but not so wide that it can be
+manipulated
+
+108
+00:06:56,639 --> 00:06:59,639
+easily if the pain is too thin
+
+109
+00:06:59,639 --> 00:07:03,840
+are too wide it becomes intuitive
+because we become aware of it
+
+110
+00:07:03,084 --> 00:07:06,177
+for trying to think how we gonna right
+with this pen it doesn't feel quite
+
+111
+00:07:07,077 --> 00:07:07,134
+right
+
+112
+00:07:08,034 --> 00:07:11,105
+or for Penn was too short
+
+113
+00:07:12,005 --> 00:07:17,034
+we will not know how to hold it right we
+pick it up with your fingertips and
+
+114
+00:07:17,034 --> 00:07:19,107
+we'll be riding with it be going all
+over the place in
+
+115
+00:07:20,007 --> 00:07:24,030
+what we right when it looked very good
+would be very conscious at the Penn
+
+116
+00:07:24,003 --> 00:07:29,003
+itself or pen was too long been opposite
+problem
+
+117
+00:07:29,003 --> 00:07:32,025
+the top it up and be swinging all over
+the place and feel heavy
+
+118
+00:07:32,052 --> 00:07:35,115
+our hands which train again will be very
+conscious the pen
+
+119
+00:07:36,015 --> 00:07:40,082
+itself designing a pen to have the right
+diameter
+
+120
+00:07:40,082 --> 00:07:43,088
+for the right length seem like pretty
+basic
+
+121
+00:07:43,088 --> 00:07:46,163
+an obvious things right yet there are
+countless
+
+122
+00:07:47,063 --> 00:07:52,722
+pan and ap designs that failed because
+their designers have lost sight
+
+123
+00:07:53,289 --> 00:07:58,610
+these fundamentals before we dive into
+the say one more thing
+
+124
+00:07:58,061 --> 00:08:01,070
+which is that being intuitive not very
+intuitive
+
+125
+00:08:02,051 --> 00:08:07,068
+actually pretty difficult to do you have
+to understand the fact that you're not
+
+126
+00:08:07,068 --> 00:08:08,150
+designing just for yourself
+
+127
+00:08:09,005 --> 00:08:12,036
+you're designing for other people
+
+128
+00:08:12,081 --> 00:08:15,134
+and those people they don't know the
+things that you know
+
+129
+00:08:16,034 --> 00:08:20,043
+and they frankly probably aren't as
+passionate about your app
+
+130
+00:08:20,043 --> 00:08:24,090
+as you are so gonna tend to be a bit
+impatient
+
+131
+00:08:24,009 --> 00:08:27,148
+easily frustrated fickle right
+
+132
+00:08:28,039 --> 00:08:32,150
+designing an intuitive interface is
+impossible until you can
+
+133
+00:08:32,015 --> 00:08:36,032
+get out of your own head you need to
+recognize your own assumptions about
+
+134
+00:08:36,032 --> 00:08:36,561
+things
+
+135
+00:08:36,849 --> 00:08:39,935
+about crew the people you're designing
+for our what they're trying to
+
+136
+00:08:40,709 --> 00:08:43,110
+accomplish what they know what they
+don't know
+
+137
+00:08:43,011 --> 00:08:47,990
+you need to see clearly need to hear
+clearly
+
+138
+00:08:48,089 --> 00:08:52,520
+figure out what it is that you can do to
+help them
+
+139
+00:08:52,052 --> 00:08:56,151
+succeed if you can do that you will have
+done an amazing thing
+
+140
+00:08:57,051 --> 00:09:00,090
+people appreciate the fact
+
+141
+00:09:00,009 --> 00:09:05,688
+the you cared enough to make a great
+user experience so let's dive in
+
+142
+00:09:06,579 --> 00:09:10,470
+and find out the top five
+characteristics are starting
+
+143
+00:09:10,047 --> 00:09:15,066
+with platform savvy let's go back to
+pens again
+
+144
+00:09:15,066 --> 00:09:18,113
+you see this
+
+145
+00:09:19,013 --> 00:09:22,112
+particular pan but your I could have any
+trouble writing with that because
+
+146
+00:09:23,012 --> 00:09:27,027
+you've used thousands and thousands the
+Pens before and those
+
+147
+00:09:27,027 --> 00:09:29,034
+experiences writing with all those
+different pens is giving you this
+
+148
+00:09:29,097 --> 00:09:30,956
+generalized understanding
+
+149
+00:09:31,829 --> 00:09:35,310
+how all pens work they have
+
+150
+00:09:35,031 --> 00:09:38,068
+shaped your expectations and they're
+going to influence your behavior
+
+151
+00:09:38,068 --> 00:09:42,070
+and when you pick up that pen and you
+write with it
+
+152
+00:09:42,088 --> 00:09:45,092
+Chernoff work like you expected it to
+you
+
+153
+00:09:45,092 --> 00:09:52,092
+and if it didn't you become frustrated
+when someone uses your app for the first
+
+154
+00:09:54,036 --> 00:09:54,081
+time
+
+155
+00:09:54,081 --> 00:09:58,100
+they do so with all sorts of
+expectations about how it's supposed to
+
+156
+00:09:59,000 --> 00:09:59,066
+work
+
+157
+00:09:59,066 --> 00:10:02,073
+these expectations are forms
+
+158
+00:10:02,073 --> 00:10:06,117
+and affected by so many different
+factors but the most important %uh those
+
+159
+00:10:07,017 --> 00:10:10,126
+is that individuals experience using
+other
+
+160
+00:10:10,279 --> 00:10:14,230
+Iowa or Mac caps those could be ones
+that
+
+161
+00:10:14,023 --> 00:10:17,120
+were built into the device when they
+purchased it or they could be ones that
+
+162
+00:10:18,002 --> 00:10:23,080
+many have you here today have made for
+them and let's to take a look at an
+
+163
+00:10:23,098 --> 00:10:23,163
+example
+
+164
+00:10:24,063 --> 00:10:28,086
+swiping a table row to reveal some
+actions
+
+165
+00:10:28,086 --> 00:10:31,565
+in particular let's look at swiping a
+table row to reveal some kind of the
+
+166
+00:10:32,339 --> 00:10:34,400
+week but in our trash but in
+
+167
+00:10:34,949 --> 00:10:38,940
+now we're all really familiar with the
+and we first encountered it may be with
+
+168
+00:10:38,094 --> 00:10:39,243
+male
+
+169
+00:10:40,089 --> 00:10:44,420
+and we thought hey that's its kind in
+the right I don't have to go open
+
+170
+00:10:44,042 --> 00:10:47,118
+the email to see the trash but in so
+that I can delete it I have to go into
+
+171
+00:10:48,018 --> 00:10:49,062
+some kind edit mode
+
+172
+00:10:49,062 --> 00:10:52,271
+I could just use a gesture to delete it
+right away
+
+173
+00:10:52,829 --> 00:10:56,370
+and after doing this a couple times well
+you got into the habit
+
+174
+00:10:56,037 --> 00:10:59,074
+a vid started to learn to expect
+
+175
+00:10:59,074 --> 00:11:02,080
+this behavior this interaction
+
+176
+00:11:02,008 --> 00:11:06,287
+now you open notes for the very first
+time never seen this before
+
+177
+00:11:07,079 --> 00:11:10,390
+and you know notes look a little bit
+different from male but not completely
+
+178
+00:11:10,039 --> 00:11:11,086
+different
+
+179
+00:11:11,086 --> 00:11:14,155
+are some similarities like male
+everything is arrayed in a scrollable
+
+180
+00:11:15,055 --> 00:11:16,090
+view
+
+181
+00:11:16,009 --> 00:11:19,073
+and there's the little gray lines that
+separate them
+
+182
+00:11:20,054 --> 00:11:25,333
+and you know you figure that like email
+messages notes could be deleted
+
+183
+00:11:25,819 --> 00:11:31,270
+so you think to yourself well I should
+be able to swipe to reveal the delete
+
+184
+00:11:31,027 --> 00:11:32,048
+button
+
+185
+00:11:32,048 --> 00:11:35,157
+you don't even have to think about it
+fact
+
+186
+00:11:35,589 --> 00:11:38,990
+probably don't you try
+
+187
+00:11:38,099 --> 00:11:41,105
+swiping to believe because unconsciously
+
+188
+00:11:42,005 --> 00:11:46,072
+you believe that it should work
+intuitively you think it should work
+
+189
+00:11:46,072 --> 00:11:49,093
+and when it does you're rewarded with
+the outcome that you
+
+190
+00:11:49,093 --> 00:11:52,167
+expected and if it did it you'd be
+frustrated
+
+191
+00:11:53,067 --> 00:11:56,135
+you would say why did they not do that
+make so much sense
+
+192
+00:11:57,035 --> 00:12:00,037
+right you now have to get figure out how
+your gonna delete
+
+193
+00:12:00,037 --> 00:12:05,068
+no swiping to delete is a platform
+convention and it's among thousands and
+
+194
+00:12:05,068 --> 00:12:06,103
+thousands a different black
+
+195
+00:12:07,003 --> 00:12:12,016
+foreign conventions that i OS users have
+come to expect
+
+196
+00:12:12,016 --> 00:12:16,018
+and not only do they expect swipe to
+delete to work in whatever situation it
+
+197
+00:12:16,018 --> 00:12:17,917
+would make sense for it to work
+
+198
+00:12:18,079 --> 00:12:21,280
+they expect every aspect is that
+generate I'm
+
+199
+00:12:21,028 --> 00:12:25,090
+interaction to match their previous
+experience
+
+200
+00:12:25,009 --> 00:12:29,067
+from the center direct manipulation to
+how far they need to drag the road to
+
+201
+00:12:30,048 --> 00:12:31,053
+reveal the bulletins
+
+202
+00:12:31,098 --> 00:12:34,937
+maybe even the color and the size of the
+button itself
+
+203
+00:12:35,819 --> 00:12:41,010
+any deviations from these things no
+matter how small or insignificant
+
+204
+00:12:41,001 --> 00:12:44,056
+could be incorrectly perceived by them
+as being
+
+205
+00:12:44,056 --> 00:12:49,093
+meaningfully different or maybe they
+just get this big sense that something's
+
+206
+00:12:49,093 --> 00:12:51,097
+not quite right
+
+207
+00:12:51,097 --> 00:12:54,316
+being consistent with platform
+conventions in other words
+
+208
+00:12:55,189 --> 00:12:59,050
+is a very good thing gestures like pinch
+
+209
+00:12:59,005 --> 00:13:04,011
+swipe pan tap they should work in very
+consistent ways no matter what type
+
+210
+00:13:04,065 --> 00:13:07,074
+ap views
+
+211
+00:13:07,074 --> 00:13:11,101
+same is true for control like switches
+are buttons
+
+212
+00:13:12,001 --> 00:13:15,038
+for navigation bars tables
+
+213
+00:13:15,038 --> 00:13:20,063
+Tavarres and they're also powerful
+conventions
+
+214
+00:13:20,063 --> 00:13:25,085
+about than labels that we used to convey
+certain actions are the icons that we
+
+215
+00:13:25,085 --> 00:13:26,304
+use
+
+216
+00:13:27,069 --> 00:13:31,050
+now you this symbol may have not been
+immediately familiar to you the first
+
+217
+00:13:31,005 --> 00:13:32,039
+time you saw it
+
+218
+00:13:32,039 --> 00:13:36,358
+but after you shared something a couple
+of times he started to get a sense
+
+219
+00:13:36,709 --> 00:13:39,722
+what that symbol represents
+
+220
+00:13:39,839 --> 00:13:43,670
+you know a kind of functionality is
+accessed by tapping
+
+221
+00:13:43,067 --> 00:13:47,486
+that but im and these conventions that
+exist
+
+222
+00:13:48,089 --> 00:13:53,010
+police try less Mac are not at all
+arbitrary
+
+223
+00:13:53,001 --> 00:13:57,048
+swiping to delete isn't just intuitive
+because at the thousands and thousands
+
+224
+00:13:57,048 --> 00:13:57,073
+have
+
+225
+00:13:57,064 --> 00:14:00,623
+outs that support that same exact
+interaction
+
+226
+00:14:01,199 --> 00:14:05,720
+it's consistent are stark its at the
+party that but it's not the whole story
+
+227
+00:14:05,072 --> 00:14:07,041
+its intuitive to us
+
+228
+00:14:07,689 --> 00:14:11,698
+because it's like the real-world
+experiences that we all shared together
+
+229
+00:14:12,589 --> 00:14:15,674
+it's like crossing something of a list
+are you know being a two-year-old
+
+230
+00:14:16,439 --> 00:14:17,050
+meeting
+
+231
+00:14:17,005 --> 00:14:21,031
+food and swiping out here where at you
+don't want it anymore so you gonna swipe
+
+232
+00:14:21,031 --> 00:14:23,430
+to get rid of it
+
+233
+00:14:23,709 --> 00:14:26,980
+there's countless countless conventions
+that exist
+
+234
+00:14:26,098 --> 00:14:28,937
+for any platform for which you're
+designing and it's important to
+
+235
+00:14:29,819 --> 00:14:31,856
+recognize what those conventions are
+
+236
+00:14:32,189 --> 00:14:37,350
+because that's what people are going to
+expect
+
+237
+00:14:37,035 --> 00:14:40,062
+sometimes it's necessary to break those
+conventions
+
+238
+00:14:40,062 --> 00:14:43,135
+this is actually not that common but
+
+239
+00:14:44,035 --> 00:14:47,066
+maybe you're designing an app that's
+never existed before
+
+240
+00:14:47,066 --> 00:14:51,555
+new typeof experience for you designing
+for a new type reviews are new tapas
+
+241
+00:14:52,149 --> 00:14:54,168
+nari or context
+
+242
+00:14:54,339 --> 00:14:58,344
+maybe you're just trying to solve a
+problem that we ate out baller
+
+243
+00:14:58,389 --> 00:15:02,760
+other you guys have never tried to solve
+before right so there is no precedent
+
+244
+00:15:02,076 --> 00:15:05,082
+follow now if that's the case for you
+
+245
+00:15:05,082 --> 00:15:09,411
+you have a responsibility to tell people
+
+246
+00:15:10,149 --> 00:15:13,161
+to inform them that you have decided 22
+
+247
+00:15:13,269 --> 00:15:18,160
+something different with your app now
+let's take a look at an example
+
+248
+00:15:18,016 --> 00:15:21,101
+this is Leo's fortune we saw that one
+ADA yesterday
+
+249
+00:15:22,001 --> 00:15:25,016
+that we ought there on the wooden scale
+
+250
+00:15:25,016 --> 00:15:28,255
+as you can see there's only one button
+on the screen the pause button
+
+251
+00:15:28,399 --> 00:15:31,620
+everything else is done through gestures
+
+252
+00:15:31,062 --> 00:15:35,067
+and these gestures their intuitive but
+they're not standard they're not really
+
+253
+00:15:36,012 --> 00:15:37,671
+obvious
+
+254
+00:15:37,779 --> 00:15:41,835
+so the game provides instruction it
+teaches you about them one at a time
+
+255
+00:15:42,339 --> 00:15:45,550
+you use your left arm to move left and
+right so that it moves forward and
+
+256
+00:15:45,055 --> 00:15:46,087
+backwards
+
+257
+00:15:46,087 --> 00:15:50,296
+for you you swipe up your right thumb to
+inflate Leo so that he can
+
+258
+00:15:51,079 --> 00:15:54,170
+hop over obstacles like this ledge
+
+259
+00:15:54,017 --> 00:15:58,376
+these are non-standard interactions and
+the developers at this game
+
+260
+00:15:58,529 --> 00:16:01,720
+knew that they had to educate people
+about them earl's
+
+261
+00:16:01,072 --> 00:16:04,098
+players would be confused and they would
+become frustrated
+
+262
+00:16:04,098 --> 00:16:07,101
+quit and leave the game wouldn't be a
+very good
+
+263
+00:16:08,001 --> 00:16:11,099
+experience for them now that all I'm
+gonna say
+
+264
+00:16:11,099 --> 00:16:14,147
+when it comes on boarding and help today
+because we have an entire
+
+265
+00:16:15,047 --> 00:16:19,051
+our dedicated to this topic it's a
+really great presentation and I
+
+266
+00:16:19,087 --> 00:16:19,161
+encourage
+
+267
+00:16:20,061 --> 00:16:23,125
+everyone here to go Thursday
+
+268
+00:16:24,025 --> 00:16:27,088
+the mission see you there
+
+269
+00:16:27,088 --> 00:16:30,144
+the next characteristic have intuitive
+user
+
+270
+00:16:31,044 --> 00:16:35,813
+interfaces as that there easy to
+navigate
+
+271
+00:16:36,209 --> 00:16:40,110
+how intuitive navigation systems do
+three things:
+
+272
+00:16:40,011 --> 00:16:45,017
+really well first they just tell you
+where you are
+
+273
+00:16:45,017 --> 00:16:49,366
+the clock out with the tabbar does a
+really good job at that
+
+274
+00:16:49,519 --> 00:16:52,524
+makes it perfectly clear what you're
+lookin
+
+275
+00:16:53,019 --> 00:16:56,470
+and I'm sorry it's so low on the screen
+I know their own cannot crane their
+
+276
+00:16:56,047 --> 00:16:58,123
+necks in order to see it
+
+277
+00:16:59,023 --> 00:17:03,056
+now out to use navigation bar and have a
+title also do a really good job of
+
+278
+00:17:03,056 --> 00:17:06,104
+telling you where you are the title
+serves that purpose
+
+279
+00:17:07,004 --> 00:17:11,027
+the next thing that they do is they show
+you where else you could go
+
+280
+00:17:11,027 --> 00:17:14,062
+show you what your options are so the
+phone app
+
+281
+00:17:14,062 --> 00:17:17,351
+began with the tab bar there's a very
+good job it just means
+
+282
+00:17:17,909 --> 00:17:20,961
+having everything on screen invisible
+pretty simple
+
+283
+00:17:21,429 --> 00:17:24,560
+and the third thing that they do is they
+explain
+
+284
+00:17:24,056 --> 00:17:27,078
+what's there meeting
+
+285
+00:17:27,078 --> 00:17:31,697
+the navigation system informs you about
+what's contained within each section you
+
+286
+00:17:32,399 --> 00:17:33,424
+don't have to go
+
+287
+00:17:33,649 --> 00:17:37,370
+to every single section to figure out
+what's inside
+
+288
+00:17:37,037 --> 00:17:40,059
+let's take a step back for a second
+right
+
+289
+00:17:40,059 --> 00:17:44,101
+why do we need navigation to begin with
+we the navigation
+
+290
+00:17:45,001 --> 00:17:48,034
+because there's way too much information
+and functionality
+
+291
+00:17:48,034 --> 00:17:52,120
+in any given out to display on screen at
+one point in time
+
+292
+00:17:53,002 --> 00:17:56,020
+so we groupings together
+
+293
+00:17:56,038 --> 00:17:59,129
+make these categories or sections
+
+294
+00:18:00,029 --> 00:18:04,056
+and these categories we come up with
+they need to be understandable
+
+295
+00:18:04,056 --> 00:18:07,137
+and logical to people who are using your
+app
+
+296
+00:18:08,037 --> 00:18:11,075
+it shouldn't feel like a mystery what's
+behind
+
+297
+00:18:11,075 --> 00:18:15,984
+for what's inside you to these category
+labels
+
+298
+00:18:16,659 --> 00:18:22,540
+for the phone app succeeds because you
+to these icons and labels that's used
+
+299
+00:18:22,054 --> 00:18:25,183
+makes the content inside is
+self-explanatory meaning it
+
+300
+00:18:25,669 --> 00:18:29,320
+provides a good explanation of what
+takes up key information or
+
+301
+00:18:29,032 --> 00:18:30,049
+functionality
+
+302
+00:18:30,049 --> 00:18:35,146
+is contained within each section out the
+app
+
+303
+00:18:36,046 --> 00:18:41,111
+so in other words intuitive navigation
+systems answer three basic questions
+
+304
+00:18:42,011 --> 00:18:46,033
+where Am I where else can I go
+
+305
+00:18:46,033 --> 00:18:49,052
+and what will I find when I get there
+
+306
+00:18:49,052 --> 00:18:53,053
+now these seem like really basic things
+right everyone hears kinda sparking it's
+
+307
+00:18:53,053 --> 00:18:53,094
+like
+
+308
+00:18:53,094 --> 00:18:58,073
+totally obvious but it turns out that
+designing a navigation system that can
+
+309
+00:18:58,919 --> 00:19:00,994
+accomplish these three things well
+
+310
+00:19:01,669 --> 00:19:04,744
+is pretty challenging to make so with
+that in mind
+
+311
+00:19:05,419 --> 00:19:10,010
+have a few tips for you about how you
+can make your navigation system
+
+312
+00:19:10,001 --> 00:19:14,088
+really intuitive starting with
+progressive disclosure
+
+313
+00:19:14,088 --> 00:19:17,088
+now if you're not familiar with what
+this term is
+
+314
+00:19:17,088 --> 00:19:20,092
+it's pretty simple it just means not
+showing things to people until they
+
+315
+00:19:21,028 --> 00:19:21,897
+actually
+
+316
+00:19:22,149 --> 00:19:25,700
+need it now
+
+317
+00:19:25,007 --> 00:19:29,226
+you do that by kind of creating little
+bit deeper hierarchy here
+
+318
+00:19:29,919 --> 00:19:33,320
+adding a few more steps in a process
+
+319
+00:19:33,032 --> 00:19:36,040
+the seems like it might take more time
+to get to your destination
+
+320
+00:19:37,012 --> 00:19:40,069
+get the outcome that you're after but
+it's worth it
+
+321
+00:19:40,069 --> 00:19:44,147
+because it makes decision making simple
+and an intimidating at every stage in
+
+322
+00:19:45,047 --> 00:19:46,075
+the process
+
+323
+00:19:46,075 --> 00:19:49,160
+so all to me earlier able to get to your
+destination more quickly
+
+324
+00:19:50,006 --> 00:19:53,021
+and more confidently unless that is
+
+325
+00:19:53,075 --> 00:19:56,137
+you use category names that aren't
+logical
+
+326
+00:19:57,037 --> 00:20:01,055
+are not meeting for so in this situation
+if you're reading the
+
+327
+00:20:01,055 --> 00:20:04,059
+fly we're picking a mode of
+transportation for getting from
+
+328
+00:20:04,059 --> 00:20:07,060
+one place to another and if we're doing
+that
+
+329
+00:20:07,069 --> 00:20:11,113
+the first choice we have is do you wanna
+go by air or do you wanna go by land
+
+330
+00:20:12,013 --> 00:20:15,102
+that makes a lot of sense right those
+things are kinda mutually exclusive
+
+331
+00:20:16,002 --> 00:20:17,035
+choices
+
+332
+00:20:17,035 --> 00:20:20,057
+and these labels are pretty good because
+
+333
+00:20:20,057 --> 00:20:23,122
+gonna go by air we figure that 10 the
+items
+
+334
+00:20:24,022 --> 00:20:28,069
+in that category is gonna be a choice to
+go by airplane
+
+335
+00:20:28,069 --> 00:20:33,788
+or for going by land we're gonna have
+options to go by car may be by rail
+
+336
+00:20:34,409 --> 00:20:37,490
+we don't know all the choices that are
+contained inside we get
+
+337
+00:20:37,049 --> 00:20:41,138
+incoming we gonna understanding about
+what things are contained within
+
+338
+00:20:42,038 --> 00:20:45,132
+now if we decide to go by land we get
+the second choice
+
+339
+00:20:46,032 --> 00:20:50,056
+this is the disaster said i've labels
+for us
+
+340
+00:20:50,056 --> 00:20:53,395
+now we can go take a motor
+transportation that
+
+341
+00:20:53,899 --> 00:20:57,973
+uses fuel or doesn't use your now within
+were thinking about
+
+342
+00:20:58,639 --> 00:21:01,710
+well all this okay card uses fuel
+
+343
+00:21:01,071 --> 00:21:04,080
+arm but if I wanna take train
+
+344
+00:21:05,061 --> 00:21:08,077
+that use your I mean
+
+345
+00:21:08,077 --> 00:21:12,086
+like steam power your her call
+
+346
+00:21:12,086 --> 00:21:16,086
+right what if it's electric but a fun
+taking light rail
+
+347
+00:21:16,086 --> 00:21:19,092
+you know maybe that no filament
+electricity but it could be solar
+
+348
+00:21:20,046 --> 00:21:21,054
+powered her
+
+349
+00:21:21,054 --> 00:21:25,663
+wind-powered a nuclear-powered instead
+getting to where I want to go I'm asking
+
+350
+00:21:26,149 --> 00:21:29,330
+all these esoteric questions about the
+nature
+
+351
+00:21:29,033 --> 00:21:33,105
+fuel and the meaning of that word right
+these are not very good labels
+
+352
+00:21:34,005 --> 00:21:38,052
+that uncertainty is causing hesitation
+and it's making me aware
+
+353
+00:21:38,052 --> 00:21:41,661
+up the interface itself and trying to
+code it
+
+354
+00:21:42,129 --> 00:21:45,450
+again use progressive disclosure but
+make sure
+
+355
+00:21:45,045 --> 00:21:48,046
+that it doesn't feel like you're trying
+to figure out what's behind door number
+
+356
+00:21:48,046 --> 00:21:51,015
+three
+
+357
+00:21:51,429 --> 00:21:54,830
+now the next if I have is about being
+predictable
+
+358
+00:21:54,083 --> 00:21:58,134
+everyone like surprises right except
+when it comes to navigation
+
+359
+00:21:59,034 --> 00:22:02,062
+with navigation we do not like surprises
+
+360
+00:22:02,062 --> 00:22:06,094
+whenever addition changes on us
+unexpectedly and in ways that we can
+
+361
+00:22:06,094 --> 00:22:11,129
+explain to rationalize we can get really
+confused and tripped up
+
+362
+00:22:12,029 --> 00:22:15,056
+so let's take a look and how this can
+happen
+
+363
+00:22:15,056 --> 00:22:19,061
+so let's say a word making a banking out
+parade and we have a few choices
+
+364
+00:22:19,061 --> 00:22:23,870
+to select from and then once we register
+and then login
+
+365
+00:22:24,419 --> 00:22:28,310
+is a few other sections that are added
+so navigation is change but
+
+366
+00:22:28,031 --> 00:22:33,130
+I guess I can explain myself why things
+changed in the way that they did
+
+367
+00:22:33,409 --> 00:22:36,700
+or maybe the bank decides they're gonna
+add this awesome new feature giving away
+
+368
+00:22:36,007 --> 00:22:37,012
+free cash
+
+369
+00:22:38,002 --> 00:22:42,053
+right I wanna bank at this bank this is
+a great feature
+
+370
+00:22:42,071 --> 00:22:44,530
+they put it right at the top because
+they think their customers really gonna
+
+371
+00:22:45,169 --> 00:22:45,244
+love it
+
+372
+00:22:45,919 --> 00:22:49,300
+but then someone comes to their senses
+and decides that they're not going to be
+
+373
+00:22:49,003 --> 00:22:50,832
+able to give away that feature
+
+374
+00:22:51,129 --> 00:22:54,760
+for free cash much longer so they
+de-emphasize it may reduce its
+
+375
+00:22:54,076 --> 00:22:54,955
+visibility
+
+376
+00:22:55,639 --> 00:22:59,691
+in the west by pushing it to the bottom
+so it's changed
+
+377
+00:23:00,159 --> 00:23:04,240
+for let's say we look to the analytics
+and app and we've talked to
+
+378
+00:23:04,024 --> 00:23:07,031
+all the people who are using aid we
+figured out that really people want to
+
+379
+00:23:07,031 --> 00:23:07,123
+go to
+
+380
+00:23:08,023 --> 00:23:11,082
+mostly to find location sir figure out
+how to contact the bank so we move that
+
+381
+00:23:11,082 --> 00:23:12,160
+stuff to the top
+
+382
+00:23:13,006 --> 00:23:16,084
+now there's hundreds reasons why
+navigation can change
+
+383
+00:23:17,038 --> 00:23:20,045
+some of them are good and some of them
+are batter just terrible
+
+384
+00:23:21,008 --> 00:23:24,061
+who whatever the reason is there's
+always this downside
+
+385
+00:23:24,061 --> 00:23:27,152
+retraining people on how to do something
+
+386
+00:23:28,052 --> 00:23:31,201
+that they're familiar with takes time
+and it can be really frustrating for
+
+387
+00:23:31,669 --> 00:23:32,530
+people
+
+388
+00:23:32,053 --> 00:23:35,332
+may I think we all had this experience
+where we've been going to like a website
+
+389
+00:23:35,809 --> 00:23:38,340
+or using app for a very long period of
+time
+
+390
+00:23:38,034 --> 00:23:41,373
+and then it was redesigned and all of a
+sudden we're thrown off
+
+391
+00:23:41,679 --> 00:23:45,100
+we have to study the interfaces figure
+out where things went
+
+392
+00:23:45,001 --> 00:23:48,820
+to you we just been used to pressing the
+red thing over there
+
+393
+00:23:48,919 --> 00:23:52,970
+right we weren't even reading the label
+and now we have two study in
+
+394
+00:23:52,097 --> 00:23:56,103
+figure out where that went to even the
+smallest changes can really true people
+
+395
+00:23:57,003 --> 00:23:57,099
+up
+
+396
+00:23:57,099 --> 00:24:00,103
+so by all means changer interface when
+you need to
+
+397
+00:24:01,003 --> 00:24:04,087
+but you carefully and don't do it
+frequently
+
+398
+00:24:04,087 --> 00:24:07,092
+now the next point is is really obvious
+
+399
+00:24:08,037 --> 00:24:12,099
+but it's worth talking about anyway and
+that is that selection
+
+400
+00:24:12,099 --> 00:24:16,187
+needs to be immediately obvious I was
+towel bars for example
+
+401
+00:24:17,087 --> 00:24:20,161
+we use color to show selection
+
+402
+00:24:21,061 --> 00:24:25,510
+and we also you shape so on left hand
+side you can see sometimes icons get
+
+403
+00:24:26,059 --> 00:24:26,970
+filled then
+
+404
+00:24:26,097 --> 00:24:30,098
+and on the right side you can see that
+sometimes they get bigger
+
+405
+00:24:30,098 --> 00:24:33,160
+now part the reason for this is that
+makes it easier to show the selection
+
+406
+00:24:34,006 --> 00:24:36,040
+color see inflection color
+
+407
+00:24:36,094 --> 00:24:41,095
+but there's another reason for using a
+thicker are filled in shape
+
+408
+00:24:41,095 --> 00:24:45,124
+let's take a look at the clock out again
+now we can all see unless you're sitting
+
+409
+00:24:46,024 --> 00:24:46,943
+in the back
+
+410
+00:24:47,159 --> 00:24:52,164
+that the world clock is selected very
+obvious right
+
+411
+00:24:52,659 --> 00:24:56,350
+let's say we didn't have enough time to
+design a totally different set of icons
+
+412
+00:24:56,035 --> 00:24:57,127
+for the activists elected state
+
+413
+00:24:58,027 --> 00:25:01,676
+so instead we just use of state
+
+414
+00:25:01,919 --> 00:25:06,590
+but we tend to the Red we put that into
+the interface
+
+415
+00:25:06,059 --> 00:25:10,101
+all right off the bat you can see that
+selection is a lot less obvious
+
+416
+00:25:11,001 --> 00:25:14,086
+and it's really not obvious if you're
+colorblind
+
+417
+00:25:14,086 --> 00:25:18,089
+just as a common practice something
+always remember to do
+
+418
+00:25:18,089 --> 00:25:21,170
+take screenshots throughout bring them
+into the graphic design tool your choice
+
+419
+00:25:22,007 --> 00:25:26,038
+Andy saturate them and make sure that
+you can still clearly see state
+
+420
+00:25:27,001 --> 00:25:30,920
+and selection this is a really important
+thing to do
+
+421
+00:25:30,929 --> 00:25:34,960
+with the filled in tab Rikon it still at
+least possible
+
+422
+00:25:34,096 --> 00:25:41,096
+to see what selection if the color red
+looks like great see you
+
+423
+00:25:43,053 --> 00:25:50,053
+see I and even if you can see every
+color the spectrum just fine
+
+424
+00:25:50,076 --> 00:25:53,625
+using a field in shape make selection
+more obvious
+
+425
+00:25:54,309 --> 00:25:58,330
+for all of us the case is doing the
+right thing for accessibility improving
+
+426
+00:25:58,033 --> 00:25:59,060
+the experience
+
+427
+00:25:59,006 --> 00:26:02,315
+for everyone next
+
+428
+00:26:02,909 --> 00:26:06,936
+navigation systems that are intuitive
+maximize continuity
+
+429
+00:26:07,179 --> 00:26:11,700
+now in the profession and worldview I
+designed we use this word
+
+430
+00:26:11,007 --> 00:26:14,046
+flow all the time and all it really
+means
+
+431
+00:26:15,009 --> 00:26:18,065
+is is the experience a moving from one
+place
+
+432
+00:26:18,065 --> 00:26:21,204
+to another one you to the next one state
+
+433
+00:26:21,789 --> 00:26:25,260
+two different staters section to a
+different section
+
+434
+00:26:25,026 --> 00:26:29,050
+and the intuitive you it have occasion
+system
+
+435
+00:26:29,005 --> 00:26:33,010
+is designed to minimize disruption to
+maximize
+
+436
+00:26:34,000 --> 00:26:37,289
+a continuity by keeping people oriented
+
+437
+00:26:37,289 --> 00:26:40,610
+as they flow through the experience
+
+438
+00:26:40,061 --> 00:26:44,095
+so let's take an example with the photos
+outcry West and here looking at a
+
+439
+00:26:44,095 --> 00:26:45,136
+greater photos
+
+440
+00:26:46,036 --> 00:26:49,041
+and wheat Apple one of those photos its
+rooms up
+
+441
+00:26:49,086 --> 00:26:53,148
+fills the screen and this is really
+important for usability because
+
+442
+00:26:54,048 --> 00:26:57,367
+without having to think about it you
+know that
+
+443
+00:26:57,799 --> 00:27:01,010
+the photo you tapped on is the one that
+you're now looking at
+
+444
+00:27:01,001 --> 00:27:05,540
+you get that instantaneous confirmation
+again without having to think about it
+
+445
+00:27:05,549 --> 00:27:09,010
+and animations go back is just opposite
+
+446
+00:27:09,001 --> 00:27:13,780
+reversed and this is also important for
+the usability the photos out
+
+447
+00:27:13,789 --> 00:27:17,580
+because now you're back in the GridView
+and you know exactly which photo you're
+
+448
+00:27:17,058 --> 00:27:19,777
+just been looking out to you know how to
+proceed forward
+
+449
+00:27:20,299 --> 00:27:24,360
+or backward from that specific photo
+
+450
+00:27:24,036 --> 00:27:27,048
+now this animation have been done
+differently
+
+451
+00:27:27,048 --> 00:27:32,065
+instead we tapped on the photo and the
+big bustling in from the right
+
+452
+00:27:32,065 --> 00:27:35,133
+we wouldn't have the benefit that
+continuous experience
+
+453
+00:27:36,033 --> 00:27:39,069
+we would have to remember which with the
+photo look like that we had one to look
+
+454
+00:27:39,069 --> 00:27:39,668
+at
+
+455
+00:27:40,289 --> 00:27:44,327
+and then compare it with the image we're
+now looking at the same is true we go
+
+456
+00:27:44,669 --> 00:27:45,682
+back
+
+457
+00:27:45,799 --> 00:27:48,824
+with remember what that forward-looking
+outlook like comparative
+
+458
+00:27:49,049 --> 00:27:52,510
+the photos in a gridview now this is a
+very simple
+
+459
+00:27:52,051 --> 00:27:55,139
+you I animation concept but it's a
+powerful one
+
+460
+00:27:56,039 --> 00:27:59,428
+and it's used in all sorts of different
+I was out so we make
+
+461
+00:27:59,779 --> 00:28:03,857
+as well as on home screen itself
+
+462
+00:28:04,559 --> 00:28:09,210
+an what's more as we use it all over the
+place I know it's 10
+
+463
+00:28:09,021 --> 00:28:16,021
+as well for the very same reasons
+
+464
+00:28:16,539 --> 00:28:20,010
+K
+
+465
+00:28:20,001 --> 00:28:24,023
+the next tip is about providing hence
+provide hints to people
+
+466
+00:28:24,023 --> 00:28:28,111
+when they seem to be getting confused
+this is the app sky guide
+
+467
+00:28:29,011 --> 00:28:33,058
+again also 188 yesterday and it provides
+
+468
+00:28:33,058 --> 00:28:36,084
+information about the entire universe
+right you get to see
+
+469
+00:28:36,084 --> 00:28:39,159
+detailed information about beetlejuice
+and countless other
+
+470
+00:28:40,059 --> 00:28:43,077
+solar bodies that exist now
+
+471
+00:28:43,077 --> 00:28:47,086
+you may think that the way you get that
+information is just by tapping on a star
+
+472
+00:28:48,067 --> 00:28:51,079
+that's pretty logical that pretty
+intuitive right
+
+473
+00:28:51,079 --> 00:28:54,125
+that's how you get information about
+something and just about any out
+
+474
+00:28:55,025 --> 00:29:00,030
+but if you thought that you would be 100
+percent completely and totally wrong
+
+475
+00:29:00,003 --> 00:29:04,046
+the real way that you get information
+about the stars by pressing the iPad and
+
+476
+00:29:04,073 --> 00:29:05,166
+over on the right hand side of the
+screen
+
+477
+00:29:06,066 --> 00:29:09,072
+but that I but it was just sitting there
+the whole time
+
+478
+00:29:09,072 --> 00:29:12,099
+well you wouldn't know that what it
+represented you might think it's just
+
+479
+00:29:12,099 --> 00:29:13,165
+general information about the
+
+480
+00:29:14,065 --> 00:29:17,077
+app itself or you know like the cosmos
+
+481
+00:29:17,077 --> 00:29:20,170
+red so to clarify that for people
+
+482
+00:29:21,007 --> 00:29:25,048
+sky guide is a couple a very simple
+things with animation to help you out
+
+483
+00:29:26,011 --> 00:29:30,026
+when you select a star when you select
+
+484
+00:29:30,026 --> 00:29:34,041
+star I but in fades in and opposes a
+little bit
+
+485
+00:29:34,041 --> 00:29:37,105
+straws your attention to it when you
+deflect the star
+
+486
+00:29:38,005 --> 00:29:42,072
+just fades out and that gives you
+
+487
+00:29:42,072 --> 00:29:45,084
+this understanding that there is a
+relationship between star the have
+
+488
+00:29:45,084 --> 00:29:46,141
+selected an Info button
+
+489
+00:29:47,041 --> 00:29:51,139
+very effective very subtle I mean you're
+not necessarily even thinking about that
+
+490
+00:29:52,039 --> 00:29:55,055
+and what's even cooler than that is it
+
+491
+00:29:55,055 --> 00:29:59,087
+if you happen to think that double
+tapping a star also give you information
+
+492
+00:29:59,087 --> 00:30:00,110
+about the starr
+
+493
+00:30:01,001 --> 00:30:04,020
+as I did than I but in
+
+494
+00:30:04,029 --> 00:30:07,124
+with the key poor thing every time we
+tap on that starr so it's elegantly
+
+495
+00:30:08,024 --> 00:30:09,099
+redirecting your attention
+
+496
+00:30:09,099 --> 00:30:12,112
+back over to the eye but in because they
+can %uh for
+
+497
+00:30:13,012 --> 00:30:16,094
+in for by how you're interacting with
+the app that that's what your intention
+
+498
+00:30:16,094 --> 00:30:17,135
+is to get information about
+
+499
+00:30:18,035 --> 00:30:21,067
+star and there's retraining you
+redirecting
+
+500
+00:30:21,067 --> 00:30:24,126
+K and the last
+
+501
+00:30:25,026 --> 00:30:29,059
+and probably most important if that I
+have is that
+
+502
+00:30:29,059 --> 00:30:33,153
+less is more picking between a smaller
+number of choices
+
+503
+00:30:34,053 --> 00:30:37,128
+it's faster and easier then picking from
+a larger number
+
+504
+00:30:38,028 --> 00:30:41,102
+choices told you it's a lot I really don
+obvious things
+
+505
+00:30:42,002 --> 00:30:47,026
+giving people too many choices can slow
+them down and it can be intimidating
+
+506
+00:30:47,026 --> 00:30:50,118
+you might think that your impressing
+people who are using your out with
+
+507
+00:30:51,018 --> 00:30:52,099
+health feature richer out this
+
+508
+00:30:52,099 --> 00:30:56,121
+but there take way may be very different
+they may think that you're out this too
+
+509
+00:30:57,021 --> 00:30:59,072
+much for their needs are just too
+intimidating
+
+510
+00:30:59,072 --> 00:31:02,095
+we see a long list
+
+511
+00:31:02,095 --> 00:31:05,163
+like this we all know this we start to
+skim over things
+
+512
+00:31:06,063 --> 00:31:09,081
+but wanted to spend hours and hours
+looking at this hour
+
+513
+00:31:09,081 --> 00:31:13,102
+so we're just gonna glanced down really
+quickly but when we do that
+
+514
+00:31:14,002 --> 00:31:19,035
+inevitably we wind up skipping over
+things and the things we skip over
+
+515
+00:31:19,035 --> 00:31:22,092
+may very well have been the things that
+we wanted to select
+
+516
+00:31:22,092 --> 00:31:26,130
+which means if we're skipping over the
+stuff we want to select
+
+517
+00:31:27,003 --> 00:31:31,058
+the people who are using your app for
+not getting what they want out of it
+
+518
+00:31:31,085 --> 00:31:36,131
+they're not realizing your app's for
+potential and if you can't limit the
+
+519
+00:31:37,031 --> 00:31:39,069
+number of choices they are offering to
+people
+
+520
+00:31:39,069 --> 00:31:42,094
+again use progressive disclosure
+
+521
+00:31:42,094 --> 00:31:46,102
+to help keep decision making simple and
+an intimidating at every step in the
+
+522
+00:31:47,002 --> 00:31:50,011
+process now
+
+523
+00:31:50,011 --> 00:31:53,023
+that a lot about navigation
+
+524
+00:31:53,023 --> 00:31:56,032
+and I promise I'm gonna talk about other
+things but I feel like I would be
+
+525
+00:31:57,013 --> 00:32:01,017
+remit if I didn't use this opportunity
+to talk with you
+
+526
+00:32:01,017 --> 00:32:08,017
+about hamburger menus AK
+
+527
+00:32:10,099 --> 00:32:13,171
+flight out menus AKA sidebars
+
+528
+00:32:14,071 --> 00:32:17,137
+AKA basement AKA drawers
+
+529
+00:32:18,037 --> 00:32:22,099
+now these controls are very common
+
+530
+00:32:22,099 --> 00:32:28,108
+on i OS and on other platforms and I'm
+sure many view here work on abs that
+
+531
+00:32:29,008 --> 00:32:30,031
+have been seen
+
+532
+00:32:30,031 --> 00:32:33,128
+you guys made the decision to put in
+your app and I'm sure that you did so
+
+533
+00:32:34,028 --> 00:32:37,097
+with the very best of intentions
+
+534
+00:32:37,097 --> 00:32:42,183
+and I will say that these controls do a
+couple things very well
+
+535
+00:32:43,083 --> 00:32:46,130
+for one thing they save space
+
+536
+00:32:47,003 --> 00:32:51,041
+so rather than taking up a bunch a room
+at the bottom of the screen for a tabbar
+
+537
+00:32:51,068 --> 00:32:56,109
+just taking up a little bit area on the
+top left corner for the hamburger menu
+
+538
+00:32:57,009 --> 00:33:00,097
+and you practically have the entire
+height
+
+539
+00:33:00,097 --> 00:33:03,121
+the screen to show options to people
+
+540
+00:33:04,021 --> 00:33:08,055
+and if that's not enough gonna cram more
+awesomeness NT rap
+
+541
+00:33:08,055 --> 00:33:14,126
+people can scroll right
+
+542
+00:33:15,026 --> 00:33:22,026
+but
+
+543
+00:33:22,057 --> 00:33:27,076
+this is
+
+544
+00:33:27,076 --> 00:33:30,125
+I actually haven't played around the
+latest version of Xcode I really hope
+
+545
+00:33:31,025 --> 00:33:32,052
+that they haven't changed this
+
+546
+00:33:32,052 --> 00:33:37,086
+I don't believe you'll find a hamburger
+menu controller and side effects go
+
+547
+00:33:37,086 --> 00:33:41,149
+now typically we don't provide design
+advice about the things that we don't
+
+548
+00:33:42,049 --> 00:33:42,121
+offer
+
+549
+00:33:43,021 --> 00:33:47,057
+to you guys but I can't help myself
+right I've had so many conversations
+
+550
+00:33:47,057 --> 00:33:48,155
+with people about this control
+
+551
+00:33:49,055 --> 00:33:52,120
+many hours and hours and hours talking
+about it and
+
+552
+00:33:53,002 --> 00:33:56,089
+you know I think it's important that we
+talk about it here today and again I'm
+
+553
+00:33:57,007 --> 00:34:00,046
+not gonna say that there is no place for
+these controls categorically
+
+554
+00:34:00,046 --> 00:34:04,075
+I think there are some maps that could
+maybe use one but I will say that their
+
+555
+00:34:04,075 --> 00:34:06,111
+value is greatly overstated
+
+556
+00:34:07,011 --> 00:34:10,049
+and they have huge usability downsides
+to
+
+557
+00:34:10,049 --> 00:34:15,728
+remember the three key things about an
+intuitive navigation system
+
+558
+00:34:16,169 --> 00:34:19,950
+that they tell you where you are and the
+show you where else you can go
+
+559
+00:34:19,095 --> 00:34:22,150
+hamburger menus are terrible at both
+those things
+
+560
+00:34:23,005 --> 00:34:26,050
+because the menu is not on the screen
+it's not visible
+
+561
+00:34:26,095 --> 00:34:30,110
+only the button to display the menu is
+and in practice
+
+562
+00:34:31,001 --> 00:34:37,006
+talking to developers they found the
+South themselves that people user app
+
+563
+00:34:37,015 --> 00:34:40,294
+don't switch to different sections very
+frequently
+
+564
+00:34:40,429 --> 00:34:45,370
+when they use this menu and the reason
+for that is because the people who use
+
+565
+00:34:45,037 --> 00:34:45,102
+their app
+
+566
+00:34:46,002 --> 00:34:51,020
+don't know where else they can go right
+they don't know because they can see the
+
+567
+00:34:51,002 --> 00:34:53,040
+options are maybe they sought at one
+point in time
+
+568
+00:34:53,058 --> 00:34:58,063
+but they have since forgotten and if you
+use this control you have to recognize
+
+569
+00:34:58,063 --> 00:34:58,146
+that
+
+570
+00:34:59,046 --> 00:35:03,101
+the people who use your out may not
+realize the full potential of your app
+
+571
+00:35:04,001 --> 00:35:08,058
+hamburger menus are also just tedious
+
+572
+00:35:08,058 --> 00:35:12,112
+right if you want to switch sections
+from the Account tab
+
+573
+00:35:13,012 --> 00:35:16,095
+to the transfers tab all you need to do
+tap the button
+
+574
+00:35:16,095 --> 00:35:20,099
+and you're there instantly and if you
+want to go back you tap that counts but
+
+575
+00:35:20,099 --> 00:35:20,151
+in
+
+576
+00:35:21,051 --> 00:35:24,142
+and your back where you started from
+doing the same thing with the hamburger
+
+577
+00:35:25,042 --> 00:35:25,099
+menu
+
+578
+00:35:25,099 --> 00:35:29,172
+involves opening the menu waiting for
+the animation to finish
+
+579
+00:35:30,072 --> 00:35:33,167
+reorienting yourself finding the option
+you're interested in
+
+580
+00:35:34,067 --> 00:35:37,095
+tapping that and then waiting for that
+mission complete getting back to where
+
+581
+00:35:37,095 --> 00:35:37,183
+you were before
+
+582
+00:35:38,083 --> 00:35:41,105
+and if you want to go back you have to
+open the menu again
+
+583
+00:35:42,005 --> 00:35:45,011
+go through the whole process and there
+
+584
+00:35:45,011 --> 00:35:49,016
+you are again it takes at least twice as
+many tops
+
+585
+00:35:49,016 --> 00:35:53,038
+to change sections something that should
+be very busy in fluid
+
+586
+00:35:53,038 --> 00:35:57,083
+is made more difficult and the other
+thing the hamburger many is quite
+
+587
+00:35:57,083 --> 00:35:57,147
+frankly
+
+588
+00:35:58,047 --> 00:36:02,109
+too badly as they don't play nicely with
+back buttons
+
+589
+00:36:03,009 --> 00:36:08,015
+right I seen it for what back buttons
+are supposed to go in that top left
+
+590
+00:36:08,069 --> 00:36:08,166
+corner position
+
+591
+00:36:09,066 --> 00:36:12,075
+but instead is hamburger many there so
+people put the back button right next to
+
+592
+00:36:13,056 --> 00:36:13,059
+it
+
+593
+00:36:13,086 --> 00:36:16,102
+but no longer does this look like a back
+button in anymore
+
+594
+00:36:17,002 --> 00:36:22,066
+it just looks like an arrow is pointing
+to the hamburger menu looks ridiculous
+
+595
+00:36:22,066 --> 00:36:25,068
+and some participants
+
+596
+00:36:25,068 --> 00:36:28,161
+sometimes people recognize that the
+looks ridiculous so when you drill down
+
+597
+00:36:29,061 --> 00:36:31,079
+into the hierarchy have an app
+
+598
+00:36:31,079 --> 00:36:34,133
+hamburger menu goes away now it takes
+
+599
+00:36:35,033 --> 00:36:38,077
+even more steps to switch to a different
+section
+
+600
+00:36:38,077 --> 00:36:41,080
+you have to go back up enough times to
+get to a level higher
+
+601
+00:36:42,007 --> 00:36:45,089
+even out to get to a view that contains
+the hamburger menu
+
+602
+00:36:45,089 --> 00:36:49,175
+and sometimes people try to solve this
+by putting the menu on the right hand
+
+603
+00:36:50,075 --> 00:36:50,129
+side
+
+604
+00:36:51,029 --> 00:36:54,114
+but that's not advisable either that
+location
+
+605
+00:36:55,014 --> 00:36:59,026
+is a really important location usually
+you can put some kinda action there
+
+606
+00:36:59,026 --> 00:37:03,034
+you know like a a plus sign to add
+something or an headed by then
+
+607
+00:37:03,034 --> 00:37:07,038
+and finally
+
+608
+00:37:07,074 --> 00:37:10,097
+the downside being able to show a lot of
+options
+
+609
+00:37:10,097 --> 00:37:15,129
+is that you can show a lot of options is
+that you will show a lot of options
+
+610
+00:37:16,029 --> 00:37:19,082
+the potential for bloat and misuse
+
+611
+00:37:19,082 --> 00:37:25,084
+is tremendous they allow you to add
+offer to stop that your users don't
+
+612
+00:37:25,084 --> 00:37:28,087
+really care about like
+
+613
+00:37:28,087 --> 00:37:32,136
+information about the app for version
+history or credit
+
+614
+00:37:33,036 --> 00:37:40,036
+I hate to break it to you but no one
+cares
+
+615
+00:37:46,007 --> 00:37:46,106
+and the other thing
+
+616
+00:37:47,006 --> 00:37:50,093
+the people wind up taking ads and
+special offers
+
+617
+00:37:50,093 --> 00:37:53,142
+and making them look just like regular
+sections and putting it in there too
+
+618
+00:37:54,042 --> 00:37:57,067
+that sucks on one side either
+
+619
+00:37:57,067 --> 00:38:01,134
+look jurors have any kind have a nasty
+tendency
+
+620
+00:38:02,034 --> 00:38:05,085
+to fill with choc K
+
+621
+00:38:05,085 --> 00:38:12,085
+let's move on
+
+622
+00:38:14,026 --> 00:38:17,111
+thank you okay the next major
+characteristic intuitive navigation
+
+623
+00:38:18,011 --> 00:38:19,083
+system are supported
+
+624
+00:38:19,083 --> 00:38:23,083
+we're not talking about navigation
+intuitive user interfaces
+
+625
+00:38:23,083 --> 00:38:26,141
+is that they are clear now this applies
+
+626
+00:38:27,041 --> 00:38:31,099
+to the information aP's present and the
+functionality that they present
+
+627
+00:38:31,099 --> 00:38:35,108
+information functionality need to be
+straightforward and understandable
+
+628
+00:38:36,008 --> 00:38:40,022
+easy for people to do things are not
+trying to decoder interpret what it is
+
+629
+00:38:40,022 --> 00:38:40,093
+they're saying
+
+630
+00:38:40,093 --> 00:38:43,782
+and clarity is very broad but very
+powerful concept
+
+631
+00:38:44,619 --> 00:38:48,170
+just about everything I said about
+navigation
+
+632
+00:38:48,017 --> 00:38:52,098
+really boils down to just being clear is
+it clear where you are
+
+633
+00:38:52,098 --> 00:38:56,157
+is a clear world you can go is a clear
+what happened information or functions
+
+634
+00:38:57,057 --> 00:38:58,103
+you'll find when you get there
+
+635
+00:38:59,003 --> 00:39:03,052
+the clarity applies to so much more than
+just navigation
+
+636
+00:39:03,052 --> 00:39:07,085
+I would start with language obviously
+
+637
+00:39:07,085 --> 00:39:10,172
+we rely heavily upon the written word to
+communicate with the people who use our
+
+638
+00:39:11,072 --> 00:39:11,721
+up
+
+639
+00:39:12,369 --> 00:39:15,700
+but how well do they understand what
+we're saying
+
+640
+00:39:15,007 --> 00:39:18,094
+it turns out that that's a really hard
+question for us to answer
+
+641
+00:39:19,057 --> 00:39:23,082
+and it's especially hard answer that
+question before they've even had a
+
+642
+00:39:23,082 --> 00:39:23,128
+chance
+
+643
+00:39:24,028 --> 00:39:27,035
+to use the app but there are a few
+things that
+
+644
+00:39:27,098 --> 00:39:30,146
+you can do to increase the likelihood
+that you're speaking
+
+645
+00:39:31,046 --> 00:39:34,134
+and communicating as clearly as possible
+here are
+
+646
+00:39:35,034 --> 00:39:39,070
+Sixways you can be sure you're being as
+clear as possible
+
+647
+00:39:39,007 --> 00:39:42,042
+starting with using
+
+648
+00:39:43,005 --> 00:39:48,030
+simple words now if you're designing it
+out for a large number of people
+
+649
+00:39:48,003 --> 00:39:51,101
+avoid using big words that people may
+have trouble understanding
+
+650
+00:39:52,028 --> 00:39:55,124
+so here's to you this red circle
+
+651
+00:39:56,024 --> 00:39:59,063
+that represents your vocabulary now
+
+652
+00:39:59,063 --> 00:40:02,144
+you use words for your vocabulary to
+write the tax that you're gonna put in
+
+653
+00:40:03,044 --> 00:40:04,058
+your app's interface
+
+654
+00:40:04,058 --> 00:40:07,837
+and that's great wall you're developing
+it but want to ship
+
+655
+00:40:08,359 --> 00:40:13,720
+long come some other people and their
+vocabularies are different than your own
+
+656
+00:40:13,072 --> 00:40:16,147
+they may not be native speakers have
+your angle language
+
+657
+00:40:17,047 --> 00:40:21,059
+they may have different educational
+backgrounds whatever the reason it
+
+658
+00:40:21,059 --> 00:40:22,067
+doesn't really matter
+
+659
+00:40:22,067 --> 00:40:26,088
+the the bottom line is that the number
+of words you share in common
+
+660
+00:40:26,088 --> 00:40:30,130
+is limited so use simpler words that
+most people
+
+661
+00:40:31,003 --> 00:40:35,047
+will understand most to the time those
+words they may not be as
+
+662
+00:40:35,074 --> 00:40:39,108
+precise for descriptive as you would
+like them to be but it's gonna make it
+
+663
+00:40:40,008 --> 00:40:45,046
+easier for more people to enjoy you're
+out the next step
+
+664
+00:40:45,046 --> 00:40:49,131
+is to avoid jargon people shouldn't need
+to be computer scientist to
+
+665
+00:40:50,031 --> 00:40:55,034
+use an app so for example we say
+airplane mode on
+
+666
+00:40:55,034 --> 00:40:58,046
+we want a turnoff radios now turn of
+
+667
+00:40:58,046 --> 00:41:01,046
+radios those are really basic words but
+
+668
+00:41:01,046 --> 00:41:04,097
+most people don't understand your radios
+means in this context they just think
+
+669
+00:41:04,097 --> 00:41:05,190
+it's like and from radio they have in
+their house
+
+670
+00:41:06,009 --> 00:41:09,103
+so we use airplane mode much more
+effective
+
+671
+00:41:10,084 --> 00:41:14,167
+and this isn't just about computer
+mumbo-jumbo have come about everything
+
+672
+00:41:15,067 --> 00:41:18,139
+so let's just say we're making an app
+about renewable energy
+
+673
+00:41:19,039 --> 00:41:22,106
+and this app is intended to be used by
+people who own
+
+674
+00:41:23,006 --> 00:41:26,815
+houses are our office buildings or what
+have you and your interested in doing
+
+675
+00:41:26,869 --> 00:41:28,650
+the right thing for the environment or
+
+676
+00:41:28,065 --> 00:41:32,100
+to saving money they're not necessarily
+really well informed about all the
+
+677
+00:41:33,000 --> 00:41:34,002
+technology is
+
+678
+00:41:34,002 --> 00:41:38,069
+that they can choose from now they
+shouldn't need to know
+
+679
+00:41:38,069 --> 00:41:44,083
+what a photovoltaic module is they're
+gonna say solar panels right
+
+680
+00:41:44,083 --> 00:41:48,124
+it'll take 10 right
+
+681
+00:41:49,024 --> 00:41:52,068
+a better design is one that
+
+682
+00:41:52,068 --> 00:41:55,074
+leads with solar panels leads with the
+commonplace term
+
+683
+00:41:56,028 --> 00:41:59,055
+and if you wanted to find it for people
+
+684
+00:41:59,055 --> 00:42:02,102
+that's great your educating them right
+welds
+
+685
+00:42:03,002 --> 00:42:06,093
+kinda synonymous with photovoltaic
+modules so now when that individual go
+
+686
+00:42:06,093 --> 00:42:08,125
+somewhere else and they see that term or
+they're gonna know
+
+687
+00:42:09,025 --> 00:42:12,084
+what it means but there is a
+
+688
+00:42:12,084 --> 00:42:17,084
+have a qualification here and that is
+that it's critical to know
+
+689
+00:42:17,084 --> 00:42:22,098
+your audience so in this scenario we
+were designing af which is targeted
+
+690
+00:42:22,098 --> 00:42:26,477
+at a consumer at someone with a the
+large audience the people who are
+
+691
+00:42:27,359 --> 00:42:28,390
+described right
+
+692
+00:42:28,039 --> 00:42:31,092
+and we don't know what they with a No
+
+693
+00:42:31,092 --> 00:42:33,167
+and they probably can't take anything
+for granted so we want to use the term
+
+694
+00:42:34,067 --> 00:42:35,073
+like solar panels
+
+695
+00:42:36,027 --> 00:42:39,045
+but imagine we're designing an app which
+was to be used by
+
+696
+00:42:39,045 --> 00:42:44,063
+the technicians the people who install
+solar panels in people's homes
+
+697
+00:42:44,063 --> 00:42:47,134
+well they're probably gonna be a lot
+better informed about the technology
+
+698
+00:42:48,034 --> 00:42:50,108
+maybe they intuitively are just
+naturally would use the word
+
+699
+00:42:51,008 --> 00:42:52,013
+photovoltaic modules
+
+700
+00:42:52,058 --> 00:42:55,140
+more precise in fact they would be
+embarrassed to use an app
+
+701
+00:42:56,004 --> 00:42:59,073
+which says solar panels that will work
+Honeycutt that'd be plucked out by their
+
+702
+00:43:00,009 --> 00:43:01,098
+colleagues
+
+703
+00:43:01,098 --> 00:43:05,180
+so think about you're out now there's
+there's a spectrum
+
+704
+00:43:06,008 --> 00:43:11,012
+it's important to consider retarding at
+targeting a consumer or professional
+
+705
+00:43:12,002 --> 00:43:15,047
+correctly positioning your app on that
+spectrum
+
+706
+00:43:15,065 --> 00:43:18,116
+is the key to making sure that you're
+out
+
+707
+00:43:19,016 --> 00:43:23,071
+is intuitive for the audience who's
+using it
+
+708
+00:43:23,071 --> 00:43:27,080
+now the next step is about being
+descriptive
+
+709
+00:43:27,008 --> 00:43:30,047
+so sometimes I see that was an option
+that says
+
+710
+00:43:31,019 --> 00:43:35,068
+home well what's on the home screen I
+have no idea
+
+711
+00:43:35,068 --> 00:43:38,155
+home is very under scripted in fact
+
+712
+00:43:39,055 --> 00:43:43,063
+it always suggest to be that person
+design out probably comes from web
+
+713
+00:43:43,063 --> 00:43:44,104
+design background
+
+714
+00:43:45,004 --> 00:43:48,025
+when I and I'll West we try to be really
+descriptive
+
+715
+00:43:48,025 --> 00:43:52,050
+about what kinda content or
+functionality you find on that screen
+
+716
+00:43:52,005 --> 00:43:56,037
+to use better words they're more
+descriptive
+
+717
+00:43:56,082 --> 00:43:59,163
+and next be succinct
+
+718
+00:44:00,063 --> 00:44:03,145
+brevity is a virtue neck
+
+719
+00:44:04,045 --> 00:44:11,045
+avoid truncation
+
+720
+00:44:11,088 --> 00:44:15,131
+it's really hard to read text when it's
+not all visible on the screen at one
+
+721
+00:44:16,031 --> 00:44:18,074
+point in time
+
+722
+00:44:18,074 --> 00:44:23,153
+being succinct and using shorter words
+will help
+
+723
+00:44:24,053 --> 00:44:28,054
+and finally you could have the best
+coffee in the whole world
+
+724
+00:44:28,054 --> 00:44:31,102
+I mean beautiful prose but won't do you
+much good
+
+725
+00:44:32,002 --> 00:44:36,005
+if people are having a hard time reading
+it so use a typeface
+
+726
+00:44:36,005 --> 00:44:41,069
+which is legible and make sure that text
+is large enough for people to read
+
+727
+00:44:41,069 --> 00:44:44,076
+at a comfortable viewing distance now
+they're peace
+
+728
+00:44:44,076 --> 00:44:47,155
+pressed against the device for the
+computer screen
+
+729
+00:44:48,055 --> 00:44:52,070
+and if you're making an Iowa sap a
+highly recommends that you use dynamic
+
+730
+00:44:52,007 --> 00:44:53,008
+type
+
+731
+00:44:53,008 --> 00:44:57,013
+this will pretty much assure that text
+is going to be as legible as are built
+
+732
+00:44:57,085 --> 00:44:58,118
+in APs
+
+733
+00:44:59,018 --> 00:45:03,022
+and for those people who have a hard
+time reading about I say
+
+734
+00:45:03,058 --> 00:45:06,067
+well they can adjust font size to suit
+their individual
+
+735
+00:45:06,067 --> 00:45:10,106
+needs just as important
+
+736
+00:45:11,006 --> 00:45:14,099
+as speaking clearly with words is
+communicating clearly
+
+737
+00:45:14,099 --> 00:45:17,197
+with visual symbol in fact a
+well-designed icon
+
+738
+00:45:18,097 --> 00:45:21,195
+can often communicate a concept more
+quickly and more effectively
+
+739
+00:45:22,095 --> 00:45:27,147
+than any word can but icons are really
+tricky to get right
+
+740
+00:45:28,047 --> 00:45:31,065
+I mean what is this icon mean right
+means nothing
+
+741
+00:45:31,065 --> 00:45:35,078
+made by the saw this so we think maybe
+it's like a beach ball floating in a
+
+742
+00:45:35,078 --> 00:45:35,173
+fish tank
+
+743
+00:45:36,073 --> 00:45:40,129
+or its addition a dish rack or it's like
+a super modern
+
+744
+00:45:41,029 --> 00:45:45,085
+door knocker I without any contact I
+have no idea what this means
+
+745
+00:45:45,085 --> 00:45:48,157
+this is terrible icon so what kinda
+icons
+
+746
+00:45:49,057 --> 00:45:53,066
+will work well well there's some icons
+
+747
+00:45:53,066 --> 00:45:56,157
+which are successful because they're
+internationally recognizable
+
+748
+00:45:57,057 --> 00:46:02,115
+such as this information sign we've seen
+information signs in museums
+
+749
+00:46:03,015 --> 00:46:07,021
+in mall and airports and we always know
+what they mean it means getting
+
+750
+00:46:07,021 --> 00:46:10,039
+information about something
+
+751
+00:46:10,039 --> 00:46:15,008
+next their symbols which are so
+pervasive we used in so many types about
+
+752
+00:46:15,359 --> 00:46:19,520
+like this magnifying glass we understand
+what its trying to tell us
+
+753
+00:46:19,052 --> 00:46:22,083
+we know that this relates to searching
+
+754
+00:46:22,083 --> 00:46:27,114
+even if the particular format searching
+may vary
+
+755
+00:46:28,014 --> 00:46:31,096
+and next there's icon that are
+successful because
+
+756
+00:46:31,096 --> 00:46:35,133
+they represent these real ordinary
+commonplace objects that we've
+
+757
+00:46:36,033 --> 00:46:42,072
+all used in our lives we've all own an
+alarm clock or we've only seen one on TV
+
+758
+00:46:42,369 --> 00:46:46,200
+so when we see this icon that looks like
+an alarm clock we know what it's trying
+
+759
+00:46:46,002 --> 00:46:48,077
+to communicate to us
+
+760
+00:46:48,095 --> 00:46:52,166
+so let's put this around a bit what
+types of icons don't work well
+
+761
+00:46:53,066 --> 00:46:56,079
+well if your icon need to label
+
+762
+00:46:56,079 --> 00:47:00,144
+in order to be understandable that's a
+really bad sign
+
+763
+00:47:01,044 --> 00:47:05,049
+if your icon represent a commonplace
+objects that
+
+764
+00:47:05,049 --> 00:47:09,131
+many people have never seen in their
+life
+
+765
+00:47:10,031 --> 00:47:16,073
+at the that's a problem
+
+766
+00:47:16,073 --> 00:47:19,432
+and if you use a really common icon but
+
+767
+00:47:20,089 --> 00:47:24,300
+in a very non-standard unconventional
+way
+
+768
+00:47:24,003 --> 00:47:28,078
+then it's time the go back to the
+drawing board and start over
+
+769
+00:47:29,005 --> 00:47:33,314
+and also if you ever catch yourself for
+someone around you
+
+770
+00:47:33,359 --> 00:47:37,510
+says well I may not be perfectly clear
+but people will learn what it means
+
+771
+00:47:37,051 --> 00:47:38,650
+eventually
+
+772
+00:47:39,109 --> 00:47:43,740
+then I'd like all a few people to meet
+me over here after because I had
+
+773
+00:47:43,074 --> 00:47:46,148
+awesome bridge very much like to sell
+you
+
+774
+00:47:47,048 --> 00:47:51,099
+ok it's not that i Kant can spew learned
+it's just that they're not likely to be
+
+775
+00:47:51,099 --> 00:47:53,130
+learned
+
+776
+00:47:54,003 --> 00:47:57,074
+why would I find out what an icon does I
+don't know what it means but even tap on
+
+777
+00:47:58,001 --> 00:47:59,033
+it or cook it
+
+778
+00:47:59,033 --> 00:48:02,088
+maybe it's going to do something
+destructive and anyway that's a really
+
+779
+00:48:02,088 --> 00:48:04,112
+low bar to set for yourself
+
+780
+00:48:05,012 --> 00:48:09,031
+if you wanna make truly intuitive ap
+don't settle for icons
+
+781
+00:48:09,031 --> 00:48:12,580
+that mean to be learned
+
+782
+00:48:12,859 --> 00:48:16,010
+and also want to mention that icons are
+often used
+
+783
+00:48:16,001 --> 00:48:19,085
+because space is limited to they wind up
+being
+
+784
+00:48:19,085 --> 00:48:22,094
+kinda small to what they were making
+
+785
+00:48:23,075 --> 00:48:26,090
+an icon above a coffee cup
+
+786
+00:48:26,009 --> 00:48:29,718
+we were making it we're using like a
+vector design tool
+
+787
+00:48:30,609 --> 00:48:35,655
+have resumed and 2 30 to 100 percent and
+want to really get creative with their
+
+788
+00:48:36,069 --> 00:48:39,080
+so yet coffee but you know it's hot
+coffee
+
+789
+00:48:39,008 --> 00:48:42,049
+organ at a little bit of steam and we
+want people to know that if they happen
+
+790
+00:48:42,049 --> 00:48:44,052
+to tip the coffee cups gonna be okay
+
+791
+00:48:44,052 --> 00:48:47,101
+because as a saucer which will catch all
+the coffee and
+
+792
+00:48:47,569 --> 00:48:50,870
+you know who likes boring Blake Miller
+coffee
+
+793
+00:48:50,087 --> 00:48:54,576
+mugs right Delfina pictures logo is on
+them in coffee makes us happy so let's
+
+794
+00:48:55,359 --> 00:48:58,290
+put a happy face on it
+
+795
+00:48:58,029 --> 00:49:01,095
+but then when you display at the correct
+resolution
+
+796
+00:49:01,095 --> 00:49:06,146
+all that detail gets kinda lost becomes
+muddy
+
+797
+00:49:07,046 --> 00:49:11,104
+so don't know how all those details it's
+better to render the same simple
+
+798
+00:49:12,004 --> 00:49:15,010
+symbol but with less visual detail
+
+799
+00:49:15,001 --> 00:49:19,097
+will be far more clear when it's
+downsized the crack resolution
+
+800
+00:49:20,006 --> 00:49:25,051
+and if that doesn't work just try using
+a different symbol altogether
+
+801
+00:49:25,051 --> 00:49:29,123
+look it's not always that easy to come
+up with a great icon
+
+802
+00:49:30,023 --> 00:49:33,040
+if you can't find a visual symbol whose
+meaning is
+
+803
+00:49:33,004 --> 00:49:37,069
+universally immediately and clearly
+understood
+
+804
+00:49:38,005 --> 00:49:43,294
+and just stick with text
+
+805
+00:49:43,339 --> 00:49:47,190
+now pictures and words these are really
+key in important ways communicating
+
+806
+00:49:47,019 --> 00:49:50,047
+information but there's another tool
+
+807
+00:49:50,047 --> 00:49:53,110
+in the toolbox that I'd like to talk
+with you about today
+
+808
+00:49:54,001 --> 00:49:58,007
+and that animation animation can
+sometimes communicate things far more
+
+809
+00:49:58,007 --> 00:49:58,081
+clearly
+
+810
+00:49:59,044 --> 00:50:02,143
+then other words or pictures one of my
+favorite examples
+
+811
+00:50:03,043 --> 00:50:06,138
+this is the focus and exposure indicator
+in the camera app
+
+812
+00:50:07,038 --> 00:50:11,099
+this animation the focus and exposure
+indicator this 3 really critical things
+
+813
+00:50:11,099 --> 00:50:12,135
+very well
+
+814
+00:50:13,035 --> 00:50:17,087
+first but first appearing in scaling
+down it's drawing your attention to the
+
+815
+00:50:17,087 --> 00:50:19,151
+object to the part the image which is
+being used
+
+816
+00:50:20,051 --> 00:50:23,055
+to determine the correct focus and
+exposure
+
+817
+00:50:23,091 --> 00:50:27,169
+because it's getting smaller its giving
+you this hits that it's really precise
+
+818
+00:50:28,069 --> 00:50:33,073
+I'd zeroing in on a particular area and
+then when it starts getting smaller
+
+819
+00:50:33,073 --> 00:50:36,164
+it just posted twice which tells you
+that focus and exposure
+
+820
+00:50:37,064 --> 00:50:40,119
+have been locked and then it simply
+
+821
+00:50:41,019 --> 00:50:45,113
+fades away which tells you that that
+process is complete and it's now okay
+
+822
+00:50:46,013 --> 00:50:47,014
+for you to take
+
+823
+00:50:47,023 --> 00:50:50,122
+your photo ready
+
+824
+00:50:51,022 --> 00:50:54,120
+set and go
+
+825
+00:50:55,002 --> 00:50:58,044
+that a lot information contained in a
+very quick
+
+826
+00:50:58,062 --> 00:51:03,090
+and simple animation let's look at
+another example
+
+827
+00:51:03,009 --> 00:51:07,072
+animation when you key in the wrong
+passcode on your lock screen
+
+828
+00:51:08,053 --> 00:51:11,150
+without saying a single word two shakes
+head no
+
+829
+00:51:12,005 --> 00:51:15,074
+that's not the right answer and a clear
+out that your procedure centered and let
+
+830
+00:51:16,019 --> 00:51:19,042
+you try again
+
+831
+00:51:19,042 --> 00:51:22,070
+okay to the second to last
+
+832
+00:51:22,007 --> 00:51:25,056
+major characteristic have intuitive user
+interfaces
+
+833
+00:51:26,019 --> 00:51:30,056
+is that their simple
+
+834
+00:51:30,056 --> 00:51:33,057
+now the common element have not
+overwhelming people with too many
+
+835
+00:51:33,066 --> 00:51:33,765
+options
+
+836
+00:51:34,359 --> 00:51:39,100
+any one point in time for using more
+basic language to communicate with
+
+837
+00:51:39,001 --> 00:51:40,079
+people
+
+838
+00:51:40,088 --> 00:51:45,067
+for reducing extraneous visual or
+limitations from icon
+
+839
+00:51:45,859 --> 00:51:48,880
+is that the user interface in the user
+experience
+
+840
+00:51:48,088 --> 00:51:54,115
+needs to be simple let's go back to that
+pen and paper Knology for a second
+
+841
+00:51:55,015 --> 00:51:58,474
+remember you were in your kitchen and
+you were frantically hunting around for
+
+842
+00:51:58,609 --> 00:52:01,260
+a way to write down that phone number
+
+843
+00:52:01,026 --> 00:52:04,117
+and let's just say that just like before
+the pen was sitting there in the pad of
+
+844
+00:52:05,017 --> 00:52:05,099
+paper
+
+845
+00:52:05,099 --> 00:52:08,117
+sitting there on your kitchen table
+
+846
+00:52:09,017 --> 00:52:14,031
+but there is also some piece in the
+paper and there is also some dishes
+
+847
+00:52:14,031 --> 00:52:17,097
+and their kids toys that pen could be
+
+848
+00:52:17,097 --> 00:52:20,149
+right there but you don't see it because
+they're all these other objects which
+
+849
+00:52:21,049 --> 00:52:23,102
+are demanding your attention
+
+850
+00:52:24,002 --> 00:52:29,080
+complex out are like this in order to do
+the most basic and simple things
+
+851
+00:52:29,008 --> 00:52:33,099
+you have to wade through a bunch of
+things that you don't care about
+
+852
+00:52:34,071 --> 00:52:37,142
+simple out take the 80/20 rule to heart
+
+853
+00:52:38,042 --> 00:52:41,074
+as a lot of definitions for what the 82
+20 rule means
+
+854
+00:52:41,074 --> 00:52:45,074
+one which is that eighty percent of
+people are only going to use 20 percent
+
+855
+00:52:45,074 --> 00:52:49,077
+features for that eighty percent of the
+time people are only gonna use 20
+
+856
+00:52:50,004 --> 00:52:53,323
+percent of the capabilities have any
+given system
+
+857
+00:52:53,359 --> 00:52:57,010
+however you define it the it's pretty
+simple
+
+858
+00:52:57,001 --> 00:53:03,027
+most of the time most people use very
+little what you actually make
+
+859
+00:53:03,027 --> 00:53:07,063
+however you define it the takeaways this
+if you show people information
+
+860
+00:53:07,063 --> 00:53:10,066
+that they don't care about our functions
+they don't need
+
+861
+00:53:10,066 --> 00:53:13,113
+then it's all that stuff is just gonna
+distract them
+
+862
+00:53:14,013 --> 00:53:17,972
+no getting their way and make it harder
+for them to accomplish what it is
+
+863
+00:53:18,089 --> 00:53:22,620
+they want to do now I've been showing a
+lot of my with examples here and I i
+
+864
+00:53:22,062 --> 00:53:24,099
+wanna talk about Mac per second and the
+context
+
+865
+00:53:24,099 --> 00:53:28,102
+simplicity
+
+866
+00:53:29,002 --> 00:53:34,039
+now with the simplicity mean for Mac I
+me max a very different than i OS
+
+867
+00:53:34,039 --> 00:53:39,046
+right me for one thing the screens are
+much larger than iPad let alone an
+
+868
+00:53:39,046 --> 00:53:40,078
+iPhone's
+
+869
+00:53:40,078 --> 00:53:44,887
+so there's a lot of room to show all
+sorts of controls and information
+
+870
+00:53:45,589 --> 00:53:49,300
+and a lot of times that's what people
+really want mean if you're designing a
+
+871
+00:53:49,003 --> 00:53:51,061
+professional application
+
+872
+00:53:51,088 --> 00:53:54,135
+that's a good thing right Mac for all
+about utility
+
+873
+00:53:55,035 --> 00:53:58,044
+and power sumac
+
+874
+00:53:58,044 --> 00:54:00,115
+that are designed for professionals take
+advantage of this by offering
+
+875
+00:54:01,015 --> 00:54:04,048
+sophisticated and advanced workflows
+
+876
+00:54:04,048 --> 00:54:08,079
+and people use the zaps for really
+extended periods of time
+
+877
+00:54:08,079 --> 00:54:13,171
+and as they do so they become
+comfortable managing all that complexity
+
+878
+00:54:14,071 --> 00:54:17,160
+and when they become comfortable
+managing complexity other concerns come
+
+879
+00:54:18,006 --> 00:54:18,093
+to the fore
+
+880
+00:54:19,047 --> 00:54:23,070
+such as being efficient and efficiency
+is all about availability meaning that
+
+881
+00:54:23,007 --> 00:54:24,100
+everything is in plain sight
+
+882
+00:54:25,063 --> 00:54:28,067
+within reach to ca
+
+883
+00:54:29,003 --> 00:54:32,006
+so that's a good thing actually
+
+884
+00:54:32,033 --> 00:54:36,065
+but still keep in mind that if you're
+not just designing for professionals but
+
+885
+00:54:36,065 --> 00:54:38,104
+a wider range of people maybe people who
+
+886
+00:54:39,004 --> 00:54:43,052
+are just went to pick up new skills and
+grow into that profession
+
+887
+00:54:43,052 --> 00:54:47,351
+just new users are trying to learn the
+system you don't wanna drop them into
+
+888
+00:54:47,819 --> 00:54:49,824
+something that looks like this
+
+889
+00:54:50,319 --> 00:54:54,740
+take the time to give them their and
+allow them to graduate to something
+
+890
+00:54:54,074 --> 00:54:58,125
+it's more complicated
+
+891
+00:54:59,025 --> 00:55:04,039
+now finally the number one
+characteristic
+
+892
+00:55:04,039 --> 00:55:07,045
+and that's corny have intuitive user
+interfaces
+
+893
+00:55:07,099 --> 00:55:10,187
+is that they are focused
+
+894
+00:55:11,087 --> 00:55:14,103
+now the designer this Penn is successful
+
+895
+00:55:15,003 --> 00:55:19,096
+because it's perfectly suited for the
+context for which he was made
+
+896
+00:55:19,096 --> 00:55:22,175
+it's a general-purpose writing tool that
+works well in your home or in your
+
+897
+00:55:23,075 --> 00:55:24,644
+office
+
+898
+00:55:25,319 --> 00:55:28,344
+there's nothing about this and that's
+extraneous
+
+899
+00:55:28,569 --> 00:55:32,470
+it's not me more complicated by features
+that people don't really need
+
+900
+00:55:32,047 --> 00:55:37,060
+all that often just serves basic writing
+tasks
+
+901
+00:55:37,006 --> 00:55:40,009
+there's no ability to change the color
+of the pan
+
+902
+00:55:40,009 --> 00:55:43,062
+it's not double sided in case once I
+breaks down
+
+903
+00:55:44,043 --> 00:55:47,114
+doesn't have any kind Elise are pointing
+capability
+
+904
+00:55:48,014 --> 00:55:53,015
+all those features would make this pen
+needlessly complicated
+
+905
+00:55:53,015 --> 00:55:57,704
+the designer's pen is a very Cingular
+and focus purpose
+
+906
+00:55:57,839 --> 00:56:02,500
+every aspect to dispense designed serves
+that goal
+
+907
+00:56:02,005 --> 00:56:06,021
+it's for invites us to pick it up and to
+hold it comfortably with
+
+908
+00:56:06,066 --> 00:56:09,114
+a couple of fingers it obvious how to
+
+909
+00:56:10,014 --> 00:56:13,022
+click open the Penticton quickly closed
+again
+
+910
+00:56:13,022 --> 00:56:16,024
+by pressing on the button at the top
+
+911
+00:56:16,024 --> 00:56:19,031
+it's obvious how to clip it to a shirt
+pocket or a piece a paper so that it's
+
+912
+00:56:19,094 --> 00:56:22,173
+portable we can take it with us
+
+913
+00:56:23,073 --> 00:56:28,099
+in other words its intuitive because the
+intense focus on supporting
+
+914
+00:56:28,099 --> 00:56:31,115
+just a couple have basic tasks like
+writing and drawing and
+
+915
+00:56:32,015 --> 00:56:35,474
+thing portable it is uncomplicated
+
+916
+00:56:35,609 --> 00:56:40,614
+and therefore it is made intuitive to a
+wide range of people and a wide variety
+
+917
+00:56:41,109 --> 00:56:44,830
+have contacts the focus can also mean
+
+918
+00:56:44,083 --> 00:56:47,094
+designing to support very specialized
+turn
+
+919
+00:56:47,094 --> 00:56:51,122
+Neish applications this calligraphy pen
+
+920
+00:56:52,022 --> 00:56:56,871
+is intuitive to a calligrapher
+everything about it they understand it
+
+921
+00:56:57,069 --> 00:56:58,630
+makes total sense to them
+
+922
+00:56:58,063 --> 00:57:01,147
+me the shape and never pen
+
+923
+00:57:02,047 --> 00:57:05,606
+but if you're not a clicker for and you
+pick this up you try to write with it as
+
+924
+00:57:06,029 --> 00:57:07,710
+you would think to intuitively
+
+925
+00:57:07,071 --> 00:57:11,117
+as you would write with a pen the
+results are gonna be pretty ugly
+
+926
+00:57:12,017 --> 00:57:16,416
+you can have a lot of flashes and walls
+in the paper the writing on
+
+927
+00:57:16,569 --> 00:57:20,667
+the paper us the same thing this is
+intuitive to a painter
+
+928
+00:57:21,549 --> 00:57:25,640
+but here not a painter you're gonna make
+a mess
+
+929
+00:57:25,064 --> 00:57:30,100
+the designer these tools is optimized
+for very specialized applications
+
+930
+00:57:31,000 --> 00:57:34,589
+and just like a pen adding any extra
+star
+
+931
+00:57:34,589 --> 00:57:38,230
+will result in a less successful and
+less intuitive
+
+932
+00:57:38,023 --> 00:57:41,117
+design
+
+933
+00:57:42,017 --> 00:57:46,022
+the beauty a bio s is that there are
+hundreds of thousands I mean
+
+934
+00:57:46,067 --> 00:57:49,736
+1.2 million aP's out there
+
+935
+00:57:50,339 --> 00:57:54,240
+and many of the most successful out are
+successful
+
+936
+00:57:54,024 --> 00:57:59,096
+because they to just one or two things
+extraordinarily well
+
+937
+00:57:59,096 --> 00:58:02,139
+in other words they were designed around
+clear and singular
+
+938
+00:58:03,039 --> 00:58:07,065
+purpose
+
+939
+00:58:07,065 --> 00:58:11,110
+focuses means that your app can and
+probably should
+
+940
+00:58:12,001 --> 00:58:15,010
+do less if you're out does less
+
+941
+00:58:15,019 --> 00:58:19,021
+you have more time to iterate to
+prototype
+
+942
+00:58:19,021 --> 00:58:23,340
+to implement polish contest if Europe
+does last
+
+943
+00:58:23,529 --> 00:58:27,770
+you're gonna have less need for
+complicated navigation controls that are
+
+944
+00:58:27,077 --> 00:58:28,108
+difficult to use
+
+945
+00:58:29,008 --> 00:58:34,023
+and you
+
+946
+00:58:34,023 --> 00:58:37,121
+if you're out does less you can spend
+more time crafting
+
+947
+00:58:38,021 --> 00:58:41,076
+just the right wording are picking just
+the right icons
+
+948
+00:58:41,076 --> 00:58:45,101
+and making sure that you have time to
+build and animations that clearly
+
+949
+00:58:46,001 --> 00:58:49,076
+and meaningfully provide user feedback
+and help people to stay
+
+950
+00:58:49,076 --> 00:58:53,095
+oriented
+
+951
+00:58:53,095 --> 00:58:56,504
+a summer the best UI design advice
+
+952
+00:58:57,359 --> 00:59:00,380
+I ever received was that the
+
+953
+00:59:00,569 --> 00:59:05,010
+great software starts small
+
+954
+00:59:05,001 --> 00:59:08,016
+you pick something that you really
+passionate about
+
+955
+00:59:08,016 --> 00:59:12,114
+and is important to real people and you
+try to figure out what it is that you
+
+956
+00:59:13,014 --> 00:59:14,014
+can do
+
+957
+00:59:14,014 --> 00:59:17,047
+to help make things in their life better
+easier
+
+958
+00:59:17,047 --> 00:59:22,916
+faster more fun more delightful
+
+959
+00:59:23,339 --> 00:59:26,339
+and then you dive in
+
+960
+00:59:26,339 --> 00:59:30,670
+and you make that happen and you don't
+ship and tell you how something that is
+
+961
+00:59:30,067 --> 00:59:32,083
+truly great
+
+962
+00:59:32,083 --> 00:59:35,141
+you don't ship until you have something
+that you can
+
+963
+00:59:36,041 --> 00:59:40,660
+and should feel proud a
+
+964
+00:59:41,029 --> 00:59:44,200
+if you've accomplished that your app
+
+965
+00:59:44,002 --> 00:59:48,053
+will become indispensable people want to
+read it
+
+966
+00:59:48,071 --> 00:59:52,133
+because the function it provides them
+perfectly suits their needs
+
+967
+00:59:53,033 --> 00:59:56,089
+exactly what they want and the former
+the app
+
+968
+00:59:56,089 --> 00:59:59,181
+how it's been designed perfectly matches
+the functionality
+
+969
+01:00:00,081 --> 01:00:03,137
+that it offers to them and perhaps
+
+970
+01:00:04,037 --> 01:00:08,040
+most importantly people will sense
+
+971
+01:00:08,004 --> 01:00:11,022
+the care the attention to detail
+
+972
+01:00:11,058 --> 01:00:14,104
+and the love that went into making a
+truly great
+
+973
+01:00:15,004 --> 01:00:18,102
+and truly intuitive ap
+
+974
+01:00:19,002 --> 01:00:24,004
+cat so thank you are I want to point out
+really quickly
+
+975
+01:00:24,022 --> 01:00:26,120
+if you want to continue this
+conversation here's my email address we
+
+976
+01:00:27,002 --> 01:00:29,074
+also have a lot really great design
+resources
+
+977
+01:00:29,092 --> 01:00:33,095
+you available and developer to Apple
+dock on including links to the Human
+
+978
+01:00:33,095 --> 01:00:34,214
+Interface Guidelines
+
+979
+01:00:35,069 --> 01:00:39,142
+a bunch of videos we also be the I was
+Human Interface Guidelines available as
+
+980
+01:00:39,799 --> 01:00:40,600
+an iBook
+
+981
+01:00:40,006 --> 01:00:44,006
+you can go out to get that and also want
+to point out that this is not
+
+982
+01:00:44,006 --> 01:00:48,100
+the last session about design with three
+other really great sessions for you
+
+983
+01:00:49,054 --> 01:00:52,054
+this year are you talking about last one
+there on the left
+
+984
+01:00:52,054 --> 01:00:55,103
+go check it out if you do in app
+purchase we have a
+
+985
+01:00:55,589 --> 01:00:58,612
+really good session with tons of great
+wise and
+
+986
+01:00:58,819 --> 01:01:02,100
+content for you to follow and then this
+session in the middle
+
+987
+01:01:02,001 --> 01:01:05,054
+is awesome it's about prototyping how we
+use it out for
+
+988
+01:01:05,063 --> 01:01:09,732
+to develop ideas and really refined and
+figure out what it is you want to do
+
+989
+01:01:10,299 --> 01:01:12,770
+thank you very much for your time and
+have a great evening
+

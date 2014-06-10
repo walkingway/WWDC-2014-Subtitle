@@ -1,0 +1,3439 @@
+1
+00:00:12,087 --> 00:00:15,133
+well what time to a mall
+
+2
+00:00:16,033 --> 00:00:20,070
+welcome everybody to localization with
+Xcode 6
+
+3
+00:00:20,007 --> 00:00:25,007
+my name is sold in forty Fisher and I'm
+an engineer
+
+4
+00:00:25,007 --> 00:00:30,082
+with the Xcode team later my colleague
+Chris Hansen will join me on stage
+
+5
+00:00:31,045 --> 00:00:34,080
+so you spend time on your
+
+6
+00:00:34,008 --> 00:00:38,727
+applications artwork you spend time on
+your application's code
+
+7
+00:00:39,519 --> 00:00:44,210
+but you may yet have to configure your
+Global Audience
+
+8
+00:00:44,021 --> 00:00:48,029
+the App Store is available in 150
+countries around the world
+
+9
+00:00:49,001 --> 00:00:53,620
+here's a small fraction of them and
+there are literally hundreds of millions
+
+10
+00:00:53,629 --> 00:00:58,120
+users shopping in the stores the
+interesting thing is
+
+11
+00:00:58,012 --> 00:01:01,094
+there's no one dominant language around
+the world
+
+12
+00:01:01,094 --> 00:01:05,103
+I O S is localizing to 40 languages
+
+13
+00:01:06,003 --> 00:01:10,081
+to reach a global audience to take your
+applications to the next level
+
+14
+00:01:10,081 --> 00:01:15,128
+you simply must localize so if this
+sounds like an interesting opportunity
+
+15
+00:01:16,028 --> 00:01:21,054
+you've come to the right place will
+bring you guys up to speed
+
+16
+00:01:21,054 --> 00:01:25,083
+on Apple's award-winning
+
+17
+00:01:25,083 --> 00:01:28,170
+supports for I O S and Mac OS 10
+
+18
+00:01:29,007 --> 00:01:33,025
+and of course will details from the work
+clothes in Xcode
+
+19
+00:01:33,088 --> 00:01:37,105
+to help you get your application
+localized and for the old hands out
+
+20
+00:01:38,005 --> 00:01:38,046
+there
+
+21
+00:01:38,046 --> 00:01:41,054
+we have some new features that I think
+you'll find very interesting
+
+22
+00:01:41,054 --> 00:01:44,142
+I want to take a step back for a moment
+though and introduce a useful
+
+23
+00:01:45,042 --> 00:01:45,123
+distinction
+
+24
+00:01:46,023 --> 00:01:50,057
+internationalization isn't quite the
+same
+
+25
+00:01:50,057 --> 00:01:54,121
+as localization I like to think I've
+
+26
+00:01:55,021 --> 00:01:58,057
+internationalization as a milestone
+
+27
+00:01:58,057 --> 00:02:04,069
+on the path to a localized application
+internationalization
+
+28
+00:02:04,069 --> 00:02:07,418
+is where you structure your application
+to be
+
+29
+00:02:08,039 --> 00:02:11,420
+language in region independent that
+involves
+
+30
+00:02:11,042 --> 00:02:14,083
+corralling the store strings
+
+31
+00:02:14,083 --> 00:02:17,572
+using interface builders auto
+
+32
+00:02:18,319 --> 00:02:22,260
+layout support and then once the
+application is ready
+
+33
+00:02:22,026 --> 00:02:25,077
+then you can proceed to the second step
+
+34
+00:02:25,077 --> 00:02:28,123
+localization I should be clear that's
+
+35
+00:02:29,023 --> 00:02:32,055
+users around the world see your
+applications
+
+36
+00:02:32,055 --> 00:02:36,056
+in very different ways so here's an
+
+37
+00:02:36,065 --> 00:02:39,074
+English application in the US region
+
+38
+00:02:40,055 --> 00:02:44,214
+here's the same application in mexico
+
+39
+00:02:44,709 --> 00:02:48,000
+and you'll notice that in addition to
+being in Spanish
+
+40
+00:02:48,000 --> 00:02:51,007
+it's also got a subtle difference in the
+days
+
+41
+00:02:51,007 --> 00:02:54,099
+here's the same application running in
+Spain
+
+42
+00:02:55,062 --> 00:02:58,067
+also in Spanish but again
+
+43
+00:02:59,012 --> 00:03:03,109
+with a difference in the dates and the
+number formats
+
+44
+00:03:04,009 --> 00:03:07,097
+so your applications going to have to
+handle
+
+45
+00:03:07,097 --> 00:03:10,145
+these subtleties I'm gonna show you how
+
+46
+00:03:11,045 --> 00:03:15,123
+first we'll create and internationalize
+application
+
+47
+00:03:16,023 --> 00:03:21,070
+and then later we'll localize it and
+getting started
+
+48
+00:03:21,007 --> 00:03:27,101
+I'd like to introduce you to Chris
+Hansen think is also
+
+49
+00:03:28,064 --> 00:03:31,119
+so as alton said internationalization
+
+50
+00:03:32,019 --> 00:03:35,104
+is the first step on the route to having
+a fully localized application
+
+51
+00:03:36,004 --> 00:03:39,023
+I'd like to show you how to prepare your
+application
+
+52
+00:03:39,023 --> 00:03:43,172
+and how to leverage Apple spring works
+to prepare for localization
+
+53
+00:03:43,379 --> 00:03:48,900
+so we have some excellent framework
+support for internationalization and
+
+54
+00:03:48,009 --> 00:03:49,017
+localization
+
+55
+00:03:49,098 --> 00:03:54,105
+in I'll ask analyst 10 and it's
+completely pervasive
+
+56
+00:03:55,005 --> 00:03:58,006
+throughout the system frameworks
+otherwise
+
+57
+00:03:58,006 --> 00:04:01,011
+I don't think we'd be able to localize I
+last
+
+58
+00:04:01,011 --> 00:04:05,100
+into 40 languages and what our system
+does
+
+59
+00:04:06,000 --> 00:04:09,056
+is separate your localize double data
+from
+
+60
+00:04:09,056 --> 00:04:12,093
+the rest of your application thus making
+it much
+
+61
+00:04:12,093 --> 00:04:15,232
+easier to produce localized Burton
+
+62
+00:04:16,069 --> 00:04:19,120
+variance up your application there are
+actually
+
+63
+00:04:19,579 --> 00:04:24,330
+all built into a single fun
+
+64
+00:04:24,033 --> 00:04:27,091
+and these localized resources these
+localized data
+
+65
+00:04:27,091 --> 00:04:30,096
+can be images sounds and movies
+
+66
+00:04:31,041 --> 00:04:35,720
+and documentation in addition to the
+user facing taxed
+
+67
+00:04:36,089 --> 00:04:40,240
+in your application and even the user
+facing tax
+
+68
+00:04:40,024 --> 00:04:43,503
+in your source code and as I said
+
+69
+00:04:43,719 --> 00:04:48,180
+it's extremely simple to use
+
+70
+00:04:48,018 --> 00:04:51,030
+now the first step is to start with
+
+71
+00:04:51,003 --> 00:04:54,082
+NS localized strain
+
+72
+00:04:54,379 --> 00:04:57,401
+and of localized string lets you
+internationalize
+
+73
+00:04:57,599 --> 00:05:00,603
+strains that are used in your user
+interface
+
+74
+00:05:00,999 --> 00:05:05,093
+but that come from your source code
+
+75
+00:05:05,939 --> 00:05:09,400
+and the way it Anna localized string
+works
+
+76
+00:05:09,004 --> 00:05:12,833
+it lets you keep nice strings in your
+code
+
+77
+00:05:13,229 --> 00:05:16,930
+such as format strings you don't have to
+replace all the nice
+
+78
+00:05:16,093 --> 00:05:19,112
+readable strings in your code with some
+sort of
+
+79
+00:05:19,949 --> 00:05:23,014
+all uppercase identifiers pointing into
+a resource file
+
+80
+00:05:23,599 --> 00:05:26,658
+instead with annus localized string you
+can keep those strings
+
+81
+00:05:27,189 --> 00:05:31,210
+as they are and still have your
+application
+
+82
+00:05:31,021 --> 00:05:34,068
+fetch localized resources automatically
+
+83
+00:05:34,068 --> 00:05:37,507
+and that's the important part there's no
+explicit
+
+84
+00:05:38,119 --> 00:05:41,120
+loading our management a very localized
+strings needed
+
+85
+00:05:41,219 --> 00:05:44,298
+at all and
+
+86
+00:05:45,009 --> 00:05:48,034
+we have a couple variants annus
+localized string
+
+87
+00:05:48,259 --> 00:05:51,520
+such as annus localized string from
+Table but you can use
+
+88
+00:05:51,052 --> 00:05:54,591
+if you do need to keep different string
+tables
+
+89
+00:05:55,059 --> 00:06:00,140
+for different purposes what's just dive
+into some code
+
+90
+00:06:00,869 --> 00:06:03,960
+here we have the kinda format string
+
+91
+00:06:03,096 --> 00:06:06,115
+little often appear in your code here
+I'm just saying
+
+92
+00:06:07,015 --> 00:06:13,019
+how tall a particular Mountaineers so I
+can assign that to a label
+
+93
+00:06:13,055 --> 00:06:16,414
+now obviously this string is in English
+
+94
+00:06:16,909 --> 00:06:21,937
+and it's completely on localized and on
+international iced
+
+95
+00:06:22,189 --> 00:06:27,271
+so thats not really great for my users
+who use other languages
+
+96
+00:06:28,009 --> 00:06:31,036
+fortunately all I have to do is wrapped
+that
+
+97
+00:06:31,279 --> 00:06:36,330
+with NS localized spring and adding a
+comment explaining what the string is
+
+98
+00:06:36,033 --> 00:06:37,232
+four
+
+99
+00:06:37,529 --> 00:06:40,567
+and I've made that code localized
+
+100
+00:06:40,909 --> 00:06:44,941
+well that comment is important because
+it tells you localize urs
+
+101
+00:06:45,229 --> 00:06:49,281
+your translators just why you're using
+map string
+
+102
+00:06:49,749 --> 00:06:52,825
+because different languages might use
+different terminology
+
+103
+00:06:53,509 --> 00:06:57,556
+based on context so for example
+
+104
+00:06:57,979 --> 00:07:00,991
+a language might say that a person is
+
+105
+00:07:01,099 --> 00:07:04,151
+a certain height tall in a completely
+different way
+
+106
+00:07:04,619 --> 00:07:08,710
+than says on mountain as a certain
+height
+
+107
+00:07:09,529 --> 00:07:13,596
+of course that wasn't quite enough we
+were using string with
+
+108
+00:07:14,199 --> 00:07:17,267
+for map we should actually switch
+
+109
+00:07:17,879 --> 00:07:20,966
+to localized string with format with
+that'll do
+
+110
+00:07:21,749 --> 00:07:24,750
+is it'll insure that when we pass out
+that height
+
+111
+00:07:24,849 --> 00:07:28,858
+as a number but that number is also
+properly format
+
+112
+00:07:29,749 --> 00:07:32,749
+for the user's language and region
+
+113
+00:07:32,749 --> 00:07:35,780
+including such things as localized
+
+114
+00:07:36,059 --> 00:07:40,100
+digits because not everybody uses the
+same
+
+115
+00:07:40,469 --> 00:07:44,488
+digit system the same Arabic numerals
+that we ate use
+
+116
+00:07:44,659 --> 00:07:47,662
+in say the United States
+
+117
+00:07:47,689 --> 00:07:51,050
+and of course as with all of our system
+frameworks
+
+118
+00:07:51,005 --> 00:07:54,584
+missus all available from swift as well
+and in fact
+
+119
+00:07:54,629 --> 00:07:57,636
+I think you'll like how we've are how
+we're handling
+
+120
+00:07:57,699 --> 00:08:02,761
+annus localized string in swept
+
+121
+00:08:03,319 --> 00:08:07,320
+now those localized strains when you
+localize your application into another
+
+122
+00:08:07,419 --> 00:08:07,514
+language
+
+123
+00:08:08,369 --> 00:08:13,407
+Morcombe from a dictionary call the
+local eyes will strings file
+
+124
+00:08:13,749 --> 00:08:18,080
+and this is a nice readable file with in
+Xcode
+
+125
+00:08:18,008 --> 00:08:21,497
+where you can specify
+
+126
+00:08:21,569 --> 00:08:24,616
+all love your localize will strings a
+course
+
+127
+00:08:25,039 --> 00:08:28,114
+salt and will show you how you don't
+even have to offer these files yourself
+
+128
+00:08:28,789 --> 00:08:32,827
+how Xcode will take care of that for you
+
+129
+00:08:33,169 --> 00:08:37,270
+at the very beginning of a particular
+entry in the file
+
+130
+00:08:37,027 --> 00:08:40,032
+you'll see that comments that you put in
+your source code
+
+131
+00:08:40,077 --> 00:08:43,118
+and naps so somebody who is the
+localizing up file
+
+132
+00:08:44,018 --> 00:08:47,101
+will know just what that spring is for
+
+133
+00:08:48,001 --> 00:08:51,030
+then the string exactly as it appears in
+your code
+
+134
+00:08:51,003 --> 00:08:54,058
+will show up as a key in that file
+
+135
+00:08:54,085 --> 00:08:57,144
+and that's how are frameworks
+localization system
+
+136
+00:08:58,044 --> 00:09:03,049
+will look up the string to use in
+another language
+
+137
+00:09:03,049 --> 00:09:07,102
+and finally on the right hand side
+you'll see on modified version of that
+
+138
+00:09:08,002 --> 00:09:09,046
+string
+
+139
+00:09:09,046 --> 00:09:12,069
+now hear this is Justin English file
+
+140
+00:09:12,069 --> 00:09:15,167
+but some languages actually use a
+different word
+
+141
+00:09:16,067 --> 00:09:19,076
+order than English and instead of making
+you
+
+142
+00:09:20,057 --> 00:09:23,133
+write some code to say well if I'm using
+this language
+
+143
+00:09:24,033 --> 00:09:28,036
+then I need to pass my arguments to
+string what format are localized string
+
+144
+00:09:28,063 --> 00:09:29,119
+with format in this order
+
+145
+00:09:30,019 --> 00:09:33,045
+and then in this other language I need
+to pass them in a different order
+
+146
+00:09:33,045 --> 00:09:36,067
+you can pass them all in a stable order
+in your code
+
+147
+00:09:36,067 --> 00:09:39,155
+and you don't have to right anything
+language-specific
+
+148
+00:09:40,055 --> 00:09:44,063
+instead you can use this one dollar sign
+in to dollar sign syntax
+
+149
+00:09:44,063 --> 00:09:47,090
+which Xcode will put in for you
+automatically
+
+150
+00:09:47,009 --> 00:09:52,066
+to indicate what ordered the arguments
+comin
+
+151
+00:09:53,047 --> 00:09:57,101
+and here's an example Justin English how
+you might say the same thing
+
+152
+00:09:58,001 --> 00:10:01,008
+but in a different order and some
+languages
+
+153
+00:10:01,008 --> 00:10:04,103
+world news one order some languages will
+use another order
+
+154
+00:10:05,003 --> 00:10:08,006
+one order might be formal one order
+might be informal
+
+155
+00:10:08,033 --> 00:10:11,034
+it doesn't really matter the point is
+
+156
+00:10:11,043 --> 00:10:17,046
+that Coco will take care out the heavy
+lifting for you
+
+157
+00:10:17,073 --> 00:10:21,081
+now sorta but the next level of we have
+NS formatter
+
+158
+00:10:21,081 --> 00:10:24,160
+a lot of what your app's do is present
+information
+
+159
+00:10:25,006 --> 00:10:28,057
+from objects to users
+
+160
+00:10:29,011 --> 00:10:34,100
+an ounce human-readable tax and that's
+exactly what for matters are four
+
+161
+00:10:35,000 --> 00:10:38,088
+for matters actually translate between
+
+162
+00:10:38,088 --> 00:10:41,105
+objects and human-readable taxed
+
+163
+00:10:42,005 --> 00:10:45,007
+not just from one to the other
+
+164
+00:10:45,007 --> 00:10:49,038
+and they can be used to bowl for
+presenting and interpreting taxed
+
+165
+00:10:49,038 --> 00:10:52,102
+so if you're saying getting numeric
+input from user
+
+166
+00:10:53,002 --> 00:10:56,043
+he'll probably want to use the formatter
+just as much as you want to use a
+
+167
+00:10:56,043 --> 00:10:56,110
+formatter
+
+168
+00:10:57,001 --> 00:11:01,019
+to present numerical output
+
+169
+00:11:01,028 --> 00:11:05,028
+and for matters use the user's current
+locale
+
+170
+00:11:05,028 --> 00:11:08,050
+the craft language region and other
+settings
+
+171
+00:11:08,005 --> 00:11:12,088
+by default you don't have to do any
+special setup or configuration
+
+172
+00:11:13,033 --> 00:11:16,090
+has hella formatter pay use the user's
+
+173
+00:11:16,009 --> 00:11:20,011
+specific language and region
+
+174
+00:11:20,092 --> 00:11:23,134
+so some very simple format or code
+
+175
+00:11:24,034 --> 00:11:27,039
+dates are actually extremely difficult
+
+176
+00:11:27,084 --> 00:11:31,103
+format properly for every language in
+region in the world
+
+177
+00:11:32,003 --> 00:11:35,099
+and that's why we built support to them
+into our system frameworks
+
+178
+00:11:35,099 --> 00:11:40,123
+so that everybody doesn't have to do
+that work
+
+179
+00:11:41,023 --> 00:11:45,114
+here we are configuring the formatter to
+present a medium-length
+
+180
+00:11:46,014 --> 00:11:50,079
+date string now that's a date string
+that might not have the day of the week
+
+181
+00:11:50,079 --> 00:11:53,124
+but might present save them on and the
+day and the year
+
+182
+00:11:54,024 --> 00:11:59,033
+only incense and in a state doesn't just
+carry a day a year and a month
+
+183
+00:11:59,033 --> 00:12:02,033
+also carries a time
+
+184
+00:12:02,033 --> 00:12:05,059
+were telling this formatter that we
+actually don't care about the time
+
+185
+00:12:05,059 --> 00:12:06,063
+that's in the date
+
+186
+00:12:06,063 --> 00:12:10,081
+we just care about the date portion
+other
+
+187
+00:12:10,081 --> 00:12:14,138
+and of course what we have a formatter
+set up we can just keep reusing it
+
+188
+00:12:15,038 --> 00:12:19,056
+so once we have a date we just need to
+pass it through that formatter
+
+189
+00:12:19,056 --> 00:12:22,143
+using a string from date method in that
+case than a state formatter
+
+190
+00:12:23,043 --> 00:12:26,114
+or in the equivalent method for any
+other format urs and we can then
+
+191
+00:12:27,014 --> 00:12:30,021
+a sign up straight or label
+
+192
+00:12:30,084 --> 00:12:33,181
+and of course in swift this all looks
+very similar
+
+193
+00:12:34,081 --> 00:12:37,124
+it's actually a little bit more concise
+though thanks to Swift
+
+194
+00:12:38,024 --> 00:12:41,115
+in New Moon syntax now we have for
+matters for dates
+
+195
+00:12:42,015 --> 00:12:45,050
+as I said but we also have for matters
+
+196
+00:12:45,005 --> 00:12:49,078
+for individual take components and for
+time intervals which are also very hard
+
+197
+00:12:50,023 --> 00:12:50,076
+to get
+
+198
+00:12:50,076 --> 00:12:53,079
+right now all situations we also have
+
+199
+00:12:53,079 --> 00:12:56,144
+for matters for numbers and Ford
+
+200
+00:12:57,044 --> 00:13:00,044
+formatting and number specifically as
+currency
+
+201
+00:13:00,044 --> 00:13:03,127
+which might have slightly different
+rules and even for formatting
+
+202
+00:13:04,027 --> 00:13:08,125
+by counsel such as the number of bytes
+or megabytes uploaded for download
+
+203
+00:13:09,025 --> 00:13:12,069
+that way you don't have to figure out
+how to format that properly in your app
+
+204
+00:13:12,069 --> 00:13:14,133
+stumps out
+
+205
+00:13:15,033 --> 00:13:18,131
+and new in iowa say and OS 10 yosemite
+
+206
+00:13:19,031 --> 00:13:23,105
+we have support for for matters for
+health related quantities
+
+207
+00:13:24,005 --> 00:13:27,042
+such as energy in calories in
+kilocalories
+
+208
+00:13:27,042 --> 00:13:33,080
+we have for matters for length and
+height we have for matters from mass
+
+209
+00:13:33,008 --> 00:13:37,010
+and this way you can present this
+information consistently to user
+
+210
+00:13:37,082 --> 00:13:40,133
+with other APs on the system
+
+211
+00:13:41,033 --> 00:13:45,051
+now underlying all of this is the
+concept of a bundle
+
+212
+00:13:45,051 --> 00:13:48,123
+your caps are actually built into
+directories not single files
+
+213
+00:13:49,023 --> 00:13:52,095
+those directories are called bundles and
+that doesn't just cover your caps that
+
+214
+00:13:52,095 --> 00:13:55,109
+goes here ap extensions and your
+frameworks and everything else on a
+
+215
+00:13:56,009 --> 00:13:58,045
+system to
+
+216
+00:13:58,045 --> 00:14:01,120
+and NS bundle provides an API
+
+217
+00:14:02,002 --> 00:14:07,016
+that's the standard way to access
+resources within those bundles
+
+218
+00:14:07,034 --> 00:14:11,079
+in when you use Ennis bundles APIs
+
+219
+00:14:11,079 --> 00:14:15,174
+they automatically get the most
+appropriate resources for your current
+
+220
+00:14:16,074 --> 00:14:19,172
+language
+
+221
+00:14:20,072 --> 00:14:24,141
+and what's more building bundles is
+directly supported by Xcode
+
+222
+00:14:25,041 --> 00:14:28,130
+so when you have localized resources in
+your application
+
+223
+00:14:29,003 --> 00:14:33,016
+you don't need to write scripts to place
+them in the right place
+
+224
+00:14:33,043 --> 00:14:36,127
+in your app just how Xcode that their
+localize
+
+225
+00:14:37,027 --> 00:14:40,084
+and what language therefore Xcode what
+automatically
+
+226
+00:14:40,084 --> 00:14:44,129
+include them in the right place
+
+227
+00:14:45,029 --> 00:14:49,048
+the INS bundle API is very simple here
+we see
+
+228
+00:14:49,048 --> 00:14:52,095
+getting a resource that represent the
+game menu
+
+229
+00:14:52,095 --> 00:14:56,110
+from our main bundle which represents
+our out and then we're just creating an
+
+230
+00:14:57,001 --> 00:14:57,930
+image with it
+
+231
+00:14:58,029 --> 00:15:03,480
+and assigning it to I you I image via
+
+232
+00:15:03,048 --> 00:15:06,141
+now most of the time these are very
+common operations
+
+233
+00:15:07,041 --> 00:15:10,116
+so we have some shorthand in our
+frameworks for them for example you I
+
+234
+00:15:11,016 --> 00:15:11,075
+image
+
+235
+00:15:11,075 --> 00:15:14,079
+has the image names method and that'll
+just
+
+236
+00:15:15,015 --> 00:15:18,079
+automatically go to and a fumble
+
+237
+00:15:18,079 --> 00:15:21,155
+for your main bundle and after that
+image and it'll even handle differences
+
+238
+00:15:22,055 --> 00:15:26,059
+in things like the path extension for
+you
+
+239
+00:15:26,059 --> 00:15:30,132
+but not everything is going to come from
+one of those methods
+
+240
+00:15:31,032 --> 00:15:36,048
+for example if I wanna play a welcome
+message when my application starts up
+
+241
+00:15:36,048 --> 00:15:39,124
+I'm probably going to want that audio
+message
+
+242
+00:15:40,024 --> 00:15:43,062
+to be localized as well
+
+243
+00:15:43,062 --> 00:15:47,073
+but eighty audio player doesn't simply
+have a
+
+244
+00:15:47,073 --> 00:15:50,125
+player with file method that's okay
+
+245
+00:15:51,025 --> 00:15:55,049
+we can just get for your health
+programming bundle to that message
+
+246
+00:15:55,049 --> 00:15:58,058
+and then pass it along to AV audio
+player because those URL's
+
+247
+00:15:59,039 --> 00:16:02,738
+are just a regular URL's there's nothing
+special about them
+
+248
+00:16:03,089 --> 00:16:08,570
+requires any form translation before
+they can be passed all swear
+
+249
+00:16:08,057 --> 00:16:12,130
+and as always we support this and swept
+
+250
+00:16:13,003 --> 00:16:16,010
+and in swift
+
+251
+00:16:16,037 --> 00:16:19,133
+when years following sort of a chain of
+methods like this
+
+252
+00:16:20,033 --> 00:16:23,111
+you can actually use the let syntax so
+you don't accidentally
+
+253
+00:16:24,011 --> 00:16:27,063
+reassign to one of these variables I
+find out
+
+254
+00:16:27,063 --> 00:16:30,157
+really handy
+
+255
+00:16:31,057 --> 00:16:34,065
+now let's talk about walls
+
+256
+00:16:34,065 --> 00:16:37,069
+syntax could 5 which supported the
+concept called
+
+257
+00:16:37,069 --> 00:16:40,160
+base internationalization in Xcode
+
+258
+00:16:41,006 --> 00:16:44,010
+that helps you internationalize your
+interface
+
+259
+00:16:45,000 --> 00:16:49,019
+by keeping your strengths that are in
+the interface files
+
+260
+00:16:49,019 --> 00:16:52,070
+separate from the from the you why
+components
+
+261
+00:16:52,007 --> 00:16:55,052
+that are in those interface files
+
+262
+00:16:56,015 --> 00:16:59,108
+and of course in Xcode we also make it
+very easy to localize your
+
+263
+00:17:00,008 --> 00:17:04,073
+other project resources as you need to
+
+264
+00:17:04,073 --> 00:17:08,172
+a new in Xcode 6 we have some powerful
+preview features
+
+265
+00:17:09,072 --> 00:17:13,085
+that you preview how your application
+will look in other regions
+
+266
+00:17:13,085 --> 00:17:17,112
+and in other languages both while it's
+running
+
+267
+00:17:18,012 --> 00:17:22,671
+and directly within Xcode in Interface
+Builder
+
+268
+00:17:22,779 --> 00:17:25,860
+but first let's talk a little bit more
+about bass internationalization
+
+269
+00:17:26,589 --> 00:17:29,593
+as I said keeps
+
+270
+00:17:29,629 --> 00:17:32,670
+your strengths and your user facing
+taxed
+
+271
+00:17:33,039 --> 00:17:36,740
+separate from your interface objects
+
+272
+00:17:36,074 --> 00:17:40,075
+so the placeholder text that you put in
+to your
+
+273
+00:17:40,084 --> 00:17:44,173
+I V storyboard or your ZIP files
+
+274
+00:17:44,929 --> 00:17:48,962
+is only representative up your
+development language
+
+275
+00:17:49,259 --> 00:17:53,283
+what this means is that when you have
+other languages
+
+276
+00:17:53,499 --> 00:17:56,550
+added to your project you only need to
+change the strings
+
+277
+00:17:57,009 --> 00:18:01,061
+you don't need to go through any more
+and adjust every single zip file
+
+278
+00:18:01,529 --> 00:18:07,617
+every single storyboard for every single
+language you support
+
+279
+00:18:08,409 --> 00:18:11,456
+and for other resources we just show
+them
+
+280
+00:18:11,879 --> 00:18:15,470
+exactly the same way that we show
+localized strings in Xcode
+
+281
+00:18:15,047 --> 00:18:18,236
+so as an example I have an app here
+
+282
+00:18:18,659 --> 00:18:22,747
+that house a stop sign icon and a yield
+sign i cud what
+
+283
+00:18:23,539 --> 00:18:26,600
+those have text on them so
+
+284
+00:18:26,006 --> 00:18:29,455
+I'm probably going to want a different
+stop sign icon
+
+285
+00:18:30,049 --> 00:18:33,830
+and a different you don't find icon at
+least for the tax possibly even for the
+
+286
+00:18:33,083 --> 00:18:33,662
+shape
+
+287
+00:18:34,409 --> 00:18:39,456
+for English and for Swedish and you can
+do this with
+
+288
+00:18:39,879 --> 00:18:44,320
+any kinda resource images sounds
+
+289
+00:18:44,032 --> 00:18:47,841
+movies documentation
+
+290
+00:18:48,129 --> 00:18:54,180
+and really any kind of resource that you
+can put in Xcode and any project
+
+291
+00:18:54,639 --> 00:18:57,665
+Xcode knows about the structure bundles
+
+292
+00:18:57,899 --> 00:19:00,976
+so you don't have to tell it hey I want
+these
+
+293
+00:19:01,669 --> 00:19:04,690
+over here no I want those over there
+
+294
+00:19:04,069 --> 00:19:08,086
+Xcode just knows and what automatically
+put everything in the right place
+
+295
+00:19:08,086 --> 00:19:11,109
+in your app
+
+296
+00:19:12,009 --> 00:19:15,018
+now new in Xcode 6 we support
+
+297
+00:19:15,099 --> 00:19:19,182
+preview at runtime: this debug time
+preview
+
+298
+00:19:20,082 --> 00:19:24,521
+is accessed through the and its schema
+she where you can set
+
+299
+00:19:25,259 --> 00:19:29,350
+your application language from a pop-up
+
+300
+00:19:29,035 --> 00:19:32,049
+and this pop-up will let you pick the
+system one which
+
+301
+00:19:32,049 --> 00:19:36,054
+it'll let you pick any language into
+which application has been localized
+
+302
+00:19:36,099 --> 00:19:41,368
+and also pick a couple had let you pick
+a couple of pseudo languages
+
+303
+00:19:42,259 --> 00:19:47,351
+that I'll explain a little bit later
+
+304
+00:19:48,179 --> 00:19:52,228
+but that's not all we've also added the
+ability
+
+305
+00:19:52,669 --> 00:19:56,440
+ID's preview assistant to select
+
+306
+00:19:56,044 --> 00:20:01,383
+I'll language in which you want to
+preview your nap
+
+307
+00:20:01,779 --> 00:20:05,490
+so you can preview your interface by
+just selecting
+
+308
+00:20:05,049 --> 00:20:08,348
+any language in which your application
+has been translated
+
+309
+00:20:08,789 --> 00:20:11,840
+from the language pop-up in the lower
+right corner
+
+310
+00:20:12,299 --> 00:20:16,570
+up the preview window
+
+311
+00:20:16,057 --> 00:20:19,656
+now we also support a pseudo language
+
+312
+00:20:20,169 --> 00:20:24,241
+directly within I B for checking your
+auto layout constraints
+
+313
+00:20:24,889 --> 00:20:30,956
+and I'll show you that a little bit
+later too
+
+314
+00:20:31,559 --> 00:20:37,566
+and here it is im than a little bit so
+you can read it
+
+315
+00:20:37,629 --> 00:20:41,460
+now the stages of internationalization
+
+316
+00:20:41,046 --> 00:20:44,069
+are simply to identify the strings that
+you're going to use for your
+
+317
+00:20:44,069 --> 00:20:46,084
+translations
+
+318
+00:20:46,084 --> 00:20:50,283
+to make sure that your application is
+properly using base internationalization
+
+319
+00:20:51,039 --> 00:20:54,062
+and auto layout and then it should
+
+320
+00:20:54,269 --> 00:20:58,850
+localize any other project resources
+that you need
+
+321
+00:20:58,085 --> 00:21:02,354
+my like to show that to you now index
+had sex
+
+322
+00:21:03,119 --> 00:21:06,137
+so here I have an application
+
+323
+00:21:06,299 --> 00:21:09,720
+that when I run it will show some
+earthquake data
+
+324
+00:21:09,072 --> 00:21:13,123
+from the US Geological Survey its Web
+data feed now I'm not actually using
+
+325
+00:21:14,023 --> 00:21:18,352
+live feed so don't be alarmed if you see
+anything in there
+
+326
+00:21:18,559 --> 00:21:21,571
+on the other hand we also want to see
+what might be going on
+
+327
+00:21:21,679 --> 00:21:25,701
+this is California after all
+
+328
+00:21:25,899 --> 00:21:30,830
+and you can see that in this app I have
+
+329
+00:21:30,083 --> 00:21:33,742
+a nice big title I have
+
+330
+00:21:34,489 --> 00:21:37,544
+a label indicating where particular
+earthquake happened
+
+331
+00:21:38,039 --> 00:21:41,210
+I have a graphic indicating that mag and
+well
+
+332
+00:21:41,021 --> 00:21:44,300
+indicating the strength for severity of
+that earthquake
+
+333
+00:21:44,489 --> 00:21:50,532
+the dayton time with that quake and its
+magnitude on the Richter scale
+
+334
+00:21:50,919 --> 00:21:53,977
+and then when I press her when I tap
+
+335
+00:21:54,499 --> 00:21:57,610
+one of these earthquakes
+
+336
+00:21:57,061 --> 00:22:00,630
+I also got action she allowing me to see
+that earthquake
+
+337
+00:22:01,179 --> 00:22:04,350
+on the US Geological Survey website
+
+338
+00:22:04,035 --> 00:22:08,074
+and to see its location in maps
+
+339
+00:22:08,389 --> 00:22:12,427
+now there's a lot of strings a lot of
+text in this interface
+
+340
+00:22:12,769 --> 00:22:17,769
+and where does it all come from well I
+need to figure that out to make sure
+
+341
+00:22:17,769 --> 00:22:21,830
+that my application is properly
+internationalized
+
+342
+00:22:21,083 --> 00:22:24,172
+so to start with let's take a look at
+that action she
+
+343
+00:22:24,919 --> 00:22:28,976
+I happen to know but that's brought up
+for my table views delegate
+
+344
+00:22:29,489 --> 00:22:33,340
+which happens to be my main view
+controller to and I just have
+
+345
+00:22:33,034 --> 00:22:36,693
+a straightforward method called present
+actions for earthquake
+
+346
+00:22:36,999 --> 00:22:40,008
+that shows those actions
+
+347
+00:22:40,899 --> 00:22:43,986
+and here you can see that to present
+their work she I'm using the new in Iowa
+
+348
+00:22:44,769 --> 00:22:45,700
+State class
+
+349
+00:22:45,007 --> 00:22:50,226
+you wyler controller weren't adding
+alert actions
+
+350
+00:22:50,919 --> 00:22:54,933
+but here I'm just passing the title
+
+351
+00:22:55,059 --> 00:22:59,155
+string directly to my UI alert action
+
+352
+00:23:00,019 --> 00:23:05,350
+that means that even if I am running
+this application and Swedish or Hindi
+
+353
+00:23:05,035 --> 00:23:08,084
+I'm still going to see this English
+taxed
+
+354
+00:23:08,399 --> 00:23:13,230
+cell I'm just going to wrap this in NS
+localized string like it took them like
+
+355
+00:23:13,023 --> 00:23:18,023
+I showed you
+
+356
+00:23:18,023 --> 00:23:25,023
+and I'm also going to put in a comment
+indicating what this string is for
+
+357
+00:23:30,007 --> 00:23:31,075
+and that's all I have to do
+
+358
+00:23:31,075 --> 00:23:35,157
+to ensure that this tax will come from
+my localized strings
+
+359
+00:23:36,057 --> 00:23:41,060
+when running in other languages now I
+also have the same problem
+
+360
+00:23:41,006 --> 00:23:45,072
+with my maps action title and even with
+my counsel title
+
+361
+00:23:46,026 --> 00:23:50,026
+I could adjust those here but in the
+interest of time
+
+362
+00:23:50,026 --> 00:23:54,113
+let's just pretend that I did now
+there's
+
+363
+00:23:55,013 --> 00:23:58,182
+course a bunch more text here I should
+be the turned the
+
+364
+00:23:58,299 --> 00:24:01,850
+the name up the earthquake or rather the
+location at the earthquake
+
+365
+00:24:01,085 --> 00:24:04,160
+and the dates and the magnitude
+
+366
+00:24:05,006 --> 00:24:09,040
+up that earthquake now those are going
+to be in my table view cell
+
+367
+00:24:09,094 --> 00:24:12,136
+ok because this is just a standard
+tableview application
+
+368
+00:24:13,036 --> 00:24:18,045
+and when I select my cell I have a handy
+configure with earthquake method
+
+369
+00:24:19,026 --> 00:24:26,026
+that pops up my interface for me now
+finds him in here a little bit
+
+370
+00:24:28,002 --> 00:24:32,101
+you can see that I'm just passing the
+location
+
+371
+00:24:32,299 --> 00:24:35,950
+up that earthquake straight over to my
+location label
+
+372
+00:24:35,095 --> 00:24:38,694
+and that's just tax that comes from the
+USGS datafeed
+
+373
+00:24:39,549 --> 00:24:42,840
+however I'm not passing the date
+
+374
+00:24:42,084 --> 00:24:45,122
+directly to that date label instead
+
+375
+00:24:46,022 --> 00:24:49,107
+I'm passing it through a date for matter
+that I've configured as a property
+
+376
+00:24:50,007 --> 00:24:53,496
+and the same is true with my magnitude
+
+377
+00:24:53,559 --> 00:24:56,970
+I'm not happen it directly I'm not using
+string.format
+
+378
+00:24:56,097 --> 00:24:59,132
+instead I'm passing through a number
+formatter
+
+379
+00:25:00,032 --> 00:25:04,050
+I'm just going to command click that
+property so that shows
+
+380
+00:25:04,005 --> 00:25:07,534
+in Xcode of scroll down just a little
+bit here so this is more visible
+
+381
+00:25:08,029 --> 00:25:11,850
+up and you can see that this property
+
+382
+00:25:11,085 --> 00:25:14,524
+it's just only easily initialized number
+formatter
+
+383
+00:25:15,289 --> 00:25:18,363
+where i'm saying the I want that
+magnitude
+
+384
+00:25:19,029 --> 00:25:24,032
+to be presented in a decimal format and
+because
+
+385
+00:25:24,059 --> 00:25:28,770
+earthquakes he's a logarithmic scale we
+tend to
+
+386
+00:25:28,077 --> 00:25:31,114
+always want to present a fractional
+portion
+
+387
+00:25:32,014 --> 00:25:36,053
+so I just tell my formatter
+
+388
+00:25:36,179 --> 00:25:40,980
+I always want to show the decimal
+separator and then watch a show at least
+
+389
+00:25:40,098 --> 00:25:41,134
+one fractional digits
+
+390
+00:25:42,034 --> 00:25:46,035
+and actually so as to avoid overflowing
+my label
+
+391
+00:25:46,044 --> 00:25:51,052
+I only wanna show one fractional digit
+and for that date
+
+392
+00:25:52,024 --> 00:25:56,933
+I'm just telling my date formatter the
+taiwanese a medium style
+
+393
+00:25:57,149 --> 00:26:00,360
+in for the time
+
+394
+00:26:00,036 --> 00:26:03,835
+I want to use a short style for the day
+I don't really care
+
+395
+00:26:04,159 --> 00:26:08,770
+the earthquake happened on a Saturday or
+a Wednesday I just care about the actual
+
+396
+00:26:08,077 --> 00:26:11,616
+day of the month and the month in the
+year and for the time
+
+397
+00:26:12,309 --> 00:26:15,710
+I don't really care about the
+milliseconds at least in this app
+
+398
+00:26:15,071 --> 00:26:19,076
+I just want to know the sure the minute
+time that earthquake
+
+399
+00:26:19,076 --> 00:26:23,112
+so we've got a lot of work
+
+400
+00:26:24,012 --> 00:26:28,018
+actually make sure that we're getting
+everything from localized resources
+
+401
+00:26:28,072 --> 00:26:32,501
+and or passing our data through for
+matters know what does that actually get
+
+402
+00:26:33,149 --> 00:26:33,154
+us
+
+403
+00:26:33,649 --> 00:26:38,140
+well we haven't translated the app yet
+but if I just stop it
+
+404
+00:26:38,014 --> 00:26:42,663
+and go to my edits scheme sheet I can
+look under the options
+
+405
+00:26:42,789 --> 00:26:46,940
+and I have my application language
+pop-up
+
+406
+00:26:46,094 --> 00:26:49,112
+in my application region pop up
+
+407
+00:26:50,012 --> 00:26:54,051
+now this is big menu sign going to zoom
+back out and I'm going to choose
+
+408
+00:26:54,159 --> 00:26:59,224
+Sweden so I can see how r manager would
+see this application
+
+409
+00:26:59,809 --> 00:27:05,720
+when he is back home in Sweden was going
+to close the sheet
+
+410
+00:27:05,072 --> 00:27:08,080
+and rerun my application and you can see
+
+411
+00:27:09,052 --> 00:27:13,123
+but even know the text is an English
+still a number of things about the
+
+412
+00:27:14,023 --> 00:27:14,702
+application
+
+413
+00:27:14,909 --> 00:27:17,913
+changed for example the date in time
+
+414
+00:27:18,309 --> 00:27:21,342
+are presented differently in Sweden
+evidently
+
+415
+00:27:21,639 --> 00:27:24,681
+the day above the month comes before the
+month
+
+416
+00:27:25,059 --> 00:27:28,250
+whereas in the United States we tend to
+write the month
+
+417
+00:27:28,025 --> 00:27:33,554
+and then the day and Sweeney the is a
+24-hour clock instead of a 12-hour clock
+
+418
+00:27:33,779 --> 00:27:35,220
+like in the United States
+
+419
+00:27:35,022 --> 00:27:38,085
+and finally one of the most noticeable
+differences
+
+420
+00:27:38,085 --> 00:27:41,774
+in Sweden the comma is the decimal
+separator
+
+421
+00:27:42,539 --> 00:27:46,340
+rather than the period and the system
+frameworks
+
+422
+00:27:46,034 --> 00:27:53,034
+handled out for me just by using a
+formatter
+
+423
+00:27:55,082 --> 00:28:00,174
+now let's take a look at our interface
+in Interface Builder
+
+424
+00:28:01,074 --> 00:28:04,087
+I'm just going to select that earthquake
+seen that i'm looking at in the
+
+425
+00:28:04,087 --> 00:28:07,133
+simulator
+
+426
+00:28:08,033 --> 00:28:11,084
+and I'm going to bring up the preview
+assistant
+
+427
+00:28:11,084 --> 00:28:17,088
+that we introduce the next good pop
+
+428
+00:28:17,088 --> 00:28:22,175
+and here I can select the preview
+
+429
+00:28:23,075 --> 00:28:26,101
+and in addition to allowing me to
+preview
+
+430
+00:28:27,001 --> 00:28:31,032
+the application in different
+orientations down in the lower right
+
+431
+00:28:31,032 --> 00:28:36,051
+I kept also select own language in which
+a preview the application
+
+432
+00:28:36,051 --> 00:28:40,053
+so here my move over a little bit you
+can see that I only have my development
+
+433
+00:28:40,053 --> 00:28:40,120
+language
+
+434
+00:28:41,002 --> 00:28:44,056
+actually in this project however
+
+435
+00:28:44,074 --> 00:28:48,108
+under the separator I also have one
+close to two languages I mentioned
+
+436
+00:28:49,008 --> 00:28:53,077
+a double length pseudo language so if I
+select this
+
+437
+00:28:53,077 --> 00:28:56,084
+and zoom out what do I C
+
+438
+00:28:56,084 --> 00:28:59,160
+well all of my labels have had their
+taxed
+
+439
+00:29:00,006 --> 00:29:03,010
+double in this is to simulate
+
+440
+00:29:04,000 --> 00:29:07,036
+running your application in a more
+verbose language
+
+441
+00:29:07,036 --> 00:29:10,094
+a language that uses more tax to say
+something
+
+442
+00:29:10,094 --> 00:29:14,135
+for example German tends to use about 30
+percent more
+
+443
+00:29:15,035 --> 00:29:19,058
+space than English does to say about the
+same thing
+
+444
+00:29:19,058 --> 00:29:22,357
+on the other hand there are some
+languages that use even less space than
+
+445
+00:29:22,879 --> 00:29:25,220
+English to say the same thing
+
+446
+00:29:25,022 --> 00:29:28,109
+and your applications interface needs to
+accommodate them
+
+447
+00:29:29,009 --> 00:29:32,548
+all fortunately auto layout
+
+448
+00:29:32,629 --> 00:29:37,620
+will do most of the work for you and
+this preview assisted
+
+449
+00:29:37,062 --> 00:29:41,111
+lets you see that its actually working
+
+450
+00:29:41,669 --> 00:29:44,960
+for example I actually do help
+
+451
+00:29:44,096 --> 00:29:47,178
+all and auto layout issue in this
+preview
+
+452
+00:29:48,078 --> 00:29:52,347
+you can see that the magnitude field has
+an ellipse the Senate
+
+453
+00:29:53,049 --> 00:29:58,360
+indicating that its text is overflowing
+the label
+
+454
+00:29:58,036 --> 00:30:02,098
+now the largest earthquake that ever
+been recorded was a 9.5
+
+455
+00:30:02,098 --> 00:30:05,107
+so this probably isn't an issue
+
+456
+00:30:06,007 --> 00:30:09,316
+at least for this out however it is
+something
+
+457
+00:30:09,379 --> 00:30:13,382
+that you'll probably want to take into
+consideration
+
+458
+00:30:13,679 --> 00:30:17,280
+a course not all the text in this
+preview was doubled
+
+459
+00:30:17,028 --> 00:30:20,037
+that's because this heading says
+prototype cells
+
+460
+00:30:20,037 --> 00:30:23,135
+and thus are this background that says
+tableview prototype contact
+
+461
+00:30:24,035 --> 00:30:27,103
+those are actually part up interface
+builders user interface
+
+462
+00:30:28,003 --> 00:30:33,037
+and not your own text
+
+463
+00:30:33,037 --> 00:30:36,096
+now if I wanted to localize this graphic
+
+464
+00:30:36,429 --> 00:30:39,720
+because it uses color and color is
+another
+
+465
+00:30:39,072 --> 00:30:42,110
+language and a region dependent
+
+466
+00:30:43,001 --> 00:30:49,016
+are piece of information network also be
+very easy in Xcode
+
+467
+00:30:49,025 --> 00:30:53,084
+we just select the image I wanna
+localize
+
+468
+00:30:53,309 --> 00:30:57,370
+and then open the inspector and go to
+the inspectors
+
+469
+00:30:57,919 --> 00:31:02,860
+localization section and we have this
+nice big a localized fun
+
+470
+00:31:02,086 --> 00:31:06,875
+that will turn any resource into a
+localized resource
+
+471
+00:31:07,649 --> 00:31:10,710
+and that but we'll just bring up a
+pop-up alert
+
+472
+00:31:10,071 --> 00:31:15,750
+asks where I want no what localization I
+want that resource to be a part of
+
+473
+00:31:16,389 --> 00:31:17,454
+initially
+
+474
+00:31:18,039 --> 00:31:21,120
+now it can actually be a part on the
+base
+
+475
+00:31:21,012 --> 00:31:24,109
+internationalization because it doesn't
+have a place
+
+476
+00:31:25,009 --> 00:31:29,033
+as an image into which I can substitute
+strings
+
+477
+00:31:29,033 --> 00:31:32,072
+however I can make it apart might
+English
+
+478
+00:31:32,072 --> 00:31:38,086
+localization and let's talk about what
+we just saw
+
+479
+00:31:38,086 --> 00:31:42,115
+we saw how the system frameworks
+
+480
+00:31:42,889 --> 00:31:45,890
+I last and OS 10
+
+481
+00:31:45,899 --> 00:31:48,960
+will really do a lot of the heavy
+lifting
+
+482
+00:31:48,096 --> 00:31:53,110
+for you and internationalization and
+localization
+
+483
+00:31:54,001 --> 00:31:58,074
+we saw how you can use the debug time
+preview to check your region support
+
+484
+00:31:58,083 --> 00:32:02,382
+because after all even a few don't
+localize your application
+
+485
+00:32:03,129 --> 00:32:07,270
+your users are still going to be in
+different regions all over the world
+
+486
+00:32:07,027 --> 00:32:11,034
+and use different conventions
+
+487
+00:32:11,034 --> 00:32:16,046
+and we saw how you can take advantage of
+design time previews
+
+488
+00:32:16,046 --> 00:32:19,122
+and bass internationalization to ensure
+that your application is properly
+
+489
+00:32:20,022 --> 00:32:21,027
+reactive
+
+490
+00:32:21,072 --> 00:32:26,741
+when it comes to the length a text in
+the interface
+
+491
+00:32:27,389 --> 00:32:31,415
+and of course you can localize other
+project resources to
+
+492
+00:32:31,649 --> 00:32:35,790
+as you need to now to talk about the
+actual process
+
+493
+00:32:35,079 --> 00:32:38,398
+%uh localizing and translating
+application
+
+494
+00:32:39,109 --> 00:32:46,109
+I'm going to hand things back to Bolton
+
+495
+00:32:46,019 --> 00:32:50,478
+thanks Chris so you saw how Chris
+prepared and internationalized
+
+496
+00:32:50,649 --> 00:32:52,600
+application
+
+497
+00:32:52,006 --> 00:32:56,040
+he structured it to be language in
+region independence
+
+498
+00:32:56,094 --> 00:32:59,135
+and you saw how the frameworks provided
+some of the
+
+499
+00:33:00,035 --> 00:33:03,097
+localize data for users around the world
+for free
+
+500
+00:33:03,097 --> 00:33:07,100
+so what's left to do
+
+501
+00:33:08,000 --> 00:33:11,119
+well it turns out that the book and the
+remaining work
+
+502
+00:33:11,119 --> 00:33:15,171
+is to translate your user facing strings
+
+503
+00:33:15,639 --> 00:33:19,190
+and this is still best done by an
+expert's
+
+504
+00:33:19,019 --> 00:33:23,718
+in the language and not just machine
+translation
+
+505
+00:33:23,889 --> 00:33:29,040
+so your challenge is to extract those
+strings
+
+506
+00:33:29,004 --> 00:33:34,373
+from your projects then packing them up
+from your translator
+
+507
+00:33:34,409 --> 00:33:38,830
+for your translator after they've
+translated them you have to
+
+508
+00:33:38,083 --> 00:33:44,432
+integrate them back into your project
+sounds like a lot work
+
+509
+00:33:45,179 --> 00:33:51,090
+well I'm pleased to announce an Xcode 6
+we've streamline this process
+
+510
+00:33:51,009 --> 00:33:54,228
+Xcode will now carefully examine you are
+
+511
+00:33:54,309 --> 00:33:57,780
+I B resources and your source files
+
+512
+00:33:57,078 --> 00:34:01,097
+and extracts the source strings for you
+
+513
+00:34:01,097 --> 00:34:05,101
+who generates and open X left formats
+
+514
+00:34:06,001 --> 00:34:10,022
+now this is a mature standards that's
+accepted by
+
+515
+00:34:10,022 --> 00:34:13,121
+a number of translation companies around
+the world
+
+516
+00:34:13,319 --> 00:34:16,402
+and is compatible with the number
+translation tools
+
+517
+00:34:17,149 --> 00:34:20,990
+so when translators insert their work
+
+518
+00:34:20,099 --> 00:34:23,135
+into the X left they would then
+
+519
+00:34:24,035 --> 00:34:27,344
+returned the exe file to you
+
+520
+00:34:27,659 --> 00:34:30,990
+and then you simply imported into your
+project
+
+521
+00:34:30,099 --> 00:34:33,197
+and then Xcode will meticulously crepes
+the resources are
+
+522
+00:34:34,097 --> 00:34:39,103
+update existing resources to put the
+translations where they need to go
+
+523
+00:34:40,003 --> 00:34:43,622
+so you no longer have to run Jan string
+so I B tool
+
+524
+00:34:43,649 --> 00:34:50,649
+in order to do this
+
+525
+00:34:52,005 --> 00:34:56,124
+thank you actually there now
+
+526
+00:34:56,619 --> 00:35:00,687
+so here's the project that Chris created
+earlier
+
+527
+00:35:01,299 --> 00:35:05,920
+I'm just gonna navigate to the projects
+where you find a lot of the
+
+528
+00:35:05,092 --> 00:35:12,092
+localization related details so here you
+can see that at the moment
+
+529
+00:35:13,000 --> 00:35:17,025
+it's only gots English in this project
+
+530
+00:35:17,025 --> 00:35:22,100
+so
+
+531
+00:35:23,000 --> 00:35:27,599
+if I want to extract the source strings
+from this project I simply go up to the
+
+532
+00:35:27,599 --> 00:35:28,480
+editor menu
+
+533
+00:35:28,048 --> 00:35:33,054
+and choose export for localization a
+choose a destination
+
+534
+00:35:33,054 --> 00:35:36,118
+the home folder and then Xcode
+
+535
+00:35:37,018 --> 00:35:42,025
+generates the exe file based on what is
+found in the project
+
+536
+00:35:42,025 --> 00:35:49,025
+I'll show you that quickly
+
+537
+00:35:54,099 --> 00:35:58,650
+it's simply an XML file and down here
+you can see the
+
+538
+00:35:58,065 --> 00:36:02,134
+source strings the Chris localizer
+internationalize earlier
+
+539
+00:36:03,034 --> 00:36:06,043
+and the comments to the added to the
+translator
+
+540
+00:36:06,043 --> 00:36:09,104
+so now imagine that I
+
+541
+00:36:10,004 --> 00:36:14,006
+send that to my translation team I would
+email letter uploaded to
+
+542
+00:36:14,024 --> 00:36:19,100
+their service and after they've
+completed their work
+
+543
+00:36:20,000 --> 00:36:23,043
+when I want to import these translations
+
+544
+00:36:23,043 --> 00:36:29,046
+I go back to the editor menu and choose
+import localizations
+
+545
+00:36:29,046 --> 00:36:32,122
+here some
+
+546
+00:36:33,022 --> 00:36:36,117
+prepared earlier now I've heard that
+smorgasbord is
+
+547
+00:36:37,017 --> 00:36:40,098
+race in Sweden but personally I've for
+curry in India
+
+548
+00:36:40,098 --> 00:36:46,099
+so we've got some Hindi translations and
+Xcode
+
+549
+00:36:46,099 --> 00:36:49,228
+is inserting those translations
+
+550
+00:36:50,119 --> 00:36:54,192
+into the project now you can see that's
+
+551
+00:36:54,849 --> 00:36:58,200
+Hindi is added to the project's
+
+552
+00:36:58,002 --> 00:37:03,671
+and thats when I disclose the storyboard
+very in Peru
+
+553
+00:37:03,869 --> 00:37:07,380
+there's strings files waiting for us
+
+554
+00:37:07,038 --> 00:37:13,133
+and if I choose to run this application
+
+555
+00:37:14,033 --> 00:37:17,040
+are used to you debug time
+
+556
+00:37:18,003 --> 00:37:22,054
+menu I'll choose Hindi
+
+557
+00:37:22,054 --> 00:37:25,090
+I'll choose to preview its
+
+558
+00:37:25,009 --> 00:37:28,458
+as if the user in India
+
+559
+00:37:29,349 --> 00:37:36,349
+and now
+
+560
+00:37:36,098 --> 00:37:41,207
+you can see that beautiful script in
+place the dates have changed
+
+561
+00:37:42,089 --> 00:37:45,092
+the region the number formatter
+
+562
+00:37:45,119 --> 00:37:49,500
+is the same as in the US and this is one
+of the things I like about the
+
+563
+00:37:49,005 --> 00:37:52,073
+preview feature it's immediately obvious
+that
+
+564
+00:37:53,018 --> 00:37:56,019
+this is not in the right script the
+title of this
+
+565
+00:37:56,019 --> 00:38:00,019
+events so in this case you would ideally
+use
+
+566
+00:38:00,019 --> 00:38:05,092
+a localized feed I also like to point
+out this is available on the command
+
+567
+00:38:05,092 --> 00:38:05,153
+line
+
+568
+00:38:06,053 --> 00:38:10,054
+so you can now use the export
+localization
+
+569
+00:38:10,054 --> 00:38:13,152
+and import localization burbs to build
+this into your
+
+570
+00:38:14,052 --> 00:38:21,052
+localization workflows and to automate
+this process as you want
+
+571
+00:38:25,339 --> 00:38:26,415
+so you seen how
+
+572
+00:38:27,099 --> 00:38:30,290
+Xcode six will now streamline this
+process
+
+573
+00:38:30,029 --> 00:38:33,068
+localizing your application how will
+
+574
+00:38:33,068 --> 00:38:38,089
+help you to communicate with your
+translator
+
+575
+00:38:38,089 --> 00:38:45,089
+in this open X live format so now that
+you've got to localize application
+
+576
+00:38:45,095 --> 00:38:48,143
+you'd like to keep it that way
+
+577
+00:38:49,043 --> 00:38:52,722
+and you'd like to build confidence
+
+578
+00:38:53,109 --> 00:38:56,150
+that it is going to appeal to a global
+audience
+
+579
+00:38:56,015 --> 00:38:59,019
+so I'd like to invite Chris back on
+stage
+
+580
+00:38:59,019 --> 00:39:02,073
+to show you how to best maintain this
+application
+
+581
+00:39:02,073 --> 00:39:05,192
+and build confidence but it's ready for
+a global audience
+
+582
+00:39:05,849 --> 00:39:09,630
+thank is often that's pretty cool stuff
+so
+
+583
+00:39:09,063 --> 00:39:12,762
+of course you probably don't want to put
+off
+
+584
+00:39:13,329 --> 00:39:16,470
+localizing application on children very
+
+585
+00:39:16,047 --> 00:39:19,095
+end up your development process that
+sounds a lot like a waterfall
+
+586
+00:39:19,095 --> 00:39:20,166
+development and we really want to be
+
+587
+00:39:21,066 --> 00:39:24,089
+iterative these days and the
+
+588
+00:39:24,089 --> 00:39:27,094
+export and import workload results and
+show you
+
+589
+00:39:27,094 --> 00:39:30,493
+allows you to do that it allows you to
+do
+
+590
+00:39:31,339 --> 00:39:34,392
+when I like to think up as continuous
+localization
+
+591
+00:39:34,869 --> 00:39:40,520
+because you can x4 and import at will
+this what's your stage a localized
+
+592
+00:39:40,052 --> 00:39:43,891
+as you work and you can use previews
+
+593
+00:39:44,359 --> 00:39:48,250
+to catch missing or bogus translations
+
+594
+00:39:48,025 --> 00:39:53,029
+very easily and
+
+595
+00:39:53,029 --> 00:39:57,046
+week even include some tools that let
+you prepare your application
+
+596
+00:39:57,046 --> 00:40:00,047
+for right-to-left languages like
+
+597
+00:40:00,047 --> 00:40:04,656
+Arabic in hebrew independently of
+translating your application
+
+598
+00:40:05,079 --> 00:40:08,400
+into those languages that can make it
+much
+
+599
+00:40:08,004 --> 00:40:12,087
+easier to actually experiment with your
+user interface
+
+600
+00:40:13,023 --> 00:40:16,872
+even if you don't speak or read Arabic
+or Hebrew
+
+601
+00:40:17,079 --> 00:40:21,670
+so I just like to show you that
+
+602
+00:40:21,067 --> 00:40:27,196
+right in Xcode so let's say
+
+603
+00:40:27,799 --> 00:40:33,170
+I've been working on my project for a
+while and I've just received my spanish
+
+604
+00:40:33,017 --> 00:40:33,966
+translation
+
+605
+00:40:34,119 --> 00:40:38,166
+back from my translator to import
+
+606
+00:40:38,589 --> 00:40:41,640
+all I have to do is as all time showed
+
+607
+00:40:41,064 --> 00:40:44,100
+suck my project and then choose
+
+608
+00:40:45,000 --> 00:40:48,075
+import localizations and I'm going to
+pullin
+
+609
+00:40:48,075 --> 00:40:53,173
+mine Spanish XLA file now what happened
+here
+
+610
+00:40:54,073 --> 00:40:58,096
+unlike with salt and showed you with
+Hindi there appears to be an
+
+611
+00:40:58,096 --> 00:41:01,455
+issue with this translation while
+
+612
+00:41:02,319 --> 00:41:05,750
+it turns out there it's missing
+
+613
+00:41:05,075 --> 00:41:10,094
+the show location and maps functionality
+I must've actually exported the spring
+
+614
+00:41:10,094 --> 00:41:10,189
+localization
+
+615
+00:41:11,089 --> 00:41:15,177
+before I added that feature to my apt
+but thats
+
+616
+00:41:16,077 --> 00:41:19,123
+okay I can still import this
+
+617
+00:41:20,023 --> 00:41:23,023
+incomplete localization and at least
+
+618
+00:41:23,023 --> 00:41:26,079
+see my application as it is right now
+
+619
+00:41:26,079 --> 00:41:29,868
+with all of the localization has been
+completed for Spanish
+
+620
+00:41:30,579 --> 00:41:36,790
+so I'm just going to import that and if
+I disclose my storyboard here
+
+621
+00:41:36,079 --> 00:41:39,408
+I can see that now I have strings in
+both Hindi
+
+622
+00:41:40,119 --> 00:41:47,119
+and Spanish fort now for wanna see how
+my application actually runs
+
+623
+00:41:47,005 --> 00:41:51,334
+as always I can just use my application
+language
+
+624
+00:41:51,829 --> 00:41:54,950
+in this case Spanish now they've had
+that localization
+
+625
+00:41:54,095 --> 00:41:57,179
+and also choose the spin region
+
+626
+00:41:58,079 --> 00:42:01,114
+so I can see me how somebody who speaks
+Spanish
+
+627
+00:42:02,014 --> 00:42:05,243
+in Spain would see my application
+
+628
+00:42:05,369 --> 00:42:08,910
+now I run this
+
+629
+00:42:08,091 --> 00:42:11,164
+I see that earthquakes here
+
+630
+00:42:12,064 --> 00:42:16,117
+isn't localized that must have been
+another thing that might
+
+631
+00:42:17,017 --> 00:42:20,896
+our translator missed and
+
+632
+00:42:21,049 --> 00:42:24,103
+if I tap an earthquake
+
+633
+00:42:24,589 --> 00:42:28,440
+I can see that one of my actions and the
+cancel button
+
+634
+00:42:28,044 --> 00:42:32,103
+are translated but that button that I
+called out earlier
+
+635
+00:42:33,003 --> 00:42:37,342
+has not been
+
+636
+00:42:37,369 --> 00:42:41,240
+now if I'd wanted to see this right in
+Interface Builder
+
+637
+00:42:41,024 --> 00:42:46,048
+I could select my main story port let's
+just select that earthquake seen
+
+638
+00:42:46,048 --> 00:42:49,157
+and bring up the preview window again
+
+639
+00:42:49,589 --> 00:42:55,000
+the preview a system I should say
+
+640
+00:42:55,000 --> 00:42:59,019
+and if I choose my Spanish localization
+and Interface Builder
+
+641
+00:42:59,019 --> 00:43:03,096
+I can see that some of my place over
+labels have been translated
+
+642
+00:43:03,096 --> 00:43:06,163
+however this birth quakes title
+
+643
+00:43:07,063 --> 00:43:10,067
+is not only all in English but it's
+actually
+
+644
+00:43:11,003 --> 00:43:14,302
+been changed all capital letters
+
+645
+00:43:14,329 --> 00:43:17,333
+and that's actually the frameworks
+calling out to me
+
+646
+00:43:17,369 --> 00:43:20,810
+that they will recognize this should be
+coming
+
+647
+00:43:20,081 --> 00:43:23,590
+from a localized resource but it wasn't
+
+648
+00:43:24,319 --> 00:43:28,810
+found I can get the same effect
+
+649
+00:43:28,081 --> 00:43:31,177
+in the edit scheme she when running my
+application
+
+650
+00:43:32,077 --> 00:43:35,102
+by choosing this new shown on localized
+
+651
+00:43:36,002 --> 00:43:39,031
+strings option
+
+652
+00:43:39,031 --> 00:43:43,300
+so if I just stop and rerun my
+application now that I've seen
+
+653
+00:43:43,579 --> 00:43:46,990
+have set that I can see that
+
+654
+00:43:46,099 --> 00:43:53,099
+earthquakes is called out and all
+capital letters
+
+655
+00:44:00,359 --> 00:44:04,640
+now I said you can export and import
+Atwell
+
+656
+00:44:04,064 --> 00:44:08,068
+and one reason that you want to export
+is because
+
+657
+00:44:08,068 --> 00:44:11,068
+you'll be adding features your
+application as you go
+
+658
+00:44:11,068 --> 00:44:16,103
+and you'll want those new features that
+you add to be translated
+
+659
+00:44:17,003 --> 00:44:21,054
+and you export in exactly the same way
+no matter when you do it
+
+660
+00:44:21,054 --> 00:44:25,313
+you simply select your project and shoes
+export for localization
+
+661
+00:44:25,799 --> 00:44:30,190
+but ivory added some localizations to
+this app
+
+662
+00:44:30,019 --> 00:44:33,898
+so what happens or Xcode gives me a
+choice
+
+663
+00:44:34,069 --> 00:44:39,040
+and whether I just want to export
+strings in the development language
+
+664
+00:44:39,004 --> 00:44:43,040
+or if when generating the XLA files
+
+665
+00:44:43,004 --> 00:44:46,006
+I should already include the strings
+
+666
+00:44:46,042 --> 00:44:49,441
+in the translations that house
+
+667
+00:44:49,819 --> 00:44:52,822
+this way I can handle it was actual
+files
+
+668
+00:44:53,119 --> 00:44:56,890
+to my translators and they concede from
+work but they've
+
+669
+00:44:56,089 --> 00:45:00,100
+already done and won't redo it
+
+670
+00:45:01,000 --> 00:45:04,038
+instead they'll only do the work needed
+
+671
+00:45:04,038 --> 00:45:08,041
+for the new and change strings
+
+672
+00:45:08,068 --> 00:45:12,074
+so if I save this and replace the one
+that was already there
+
+673
+00:45:12,074 --> 00:45:15,102
+I can see now in the home folder
+
+674
+00:45:16,002 --> 00:45:19,048
+that I have 3d
+
+675
+00:45:19,048 --> 00:45:22,397
+exported localizations in actual a
+format
+
+676
+00:45:22,829 --> 00:45:29,810
+one in English one in Spanish and one in
+Hindi
+
+677
+00:45:29,081 --> 00:45:32,118
+a finely I'd like to show you what your
+app would look like
+
+678
+00:45:33,018 --> 00:45:36,040
+in a right to left language for
+convenience
+
+679
+00:45:36,004 --> 00:45:42,973
+was gonna bring up the storyboard again
+so we have something to compare against
+
+680
+00:45:43,369 --> 00:45:46,390
+start me up from running in the
+simulator and
+
+681
+00:45:46,579 --> 00:45:49,660
+I'm going to edit my scheme once more
+
+682
+00:45:49,066 --> 00:45:52,124
+this time I'm just gonna set my region
+back to the system region
+
+683
+00:45:53,024 --> 00:45:56,079
+but I'm going to set my language shoe
+the new
+
+684
+00:45:56,079 --> 00:45:59,858
+right to left pseudo language
+
+685
+00:46:00,569 --> 00:46:04,380
+now when you're using a right-to-left
+language
+
+686
+00:46:04,038 --> 00:46:09,042
+on and iPhone or an iPad or Mac
+
+687
+00:46:09,042 --> 00:46:13,045
+it's not just attacks that goes from
+right to left
+
+688
+00:46:13,072 --> 00:46:17,073
+the entire direction other user
+interface
+
+689
+00:46:17,073 --> 00:46:20,672
+is changed based on how the user
+
+690
+00:46:21,329 --> 00:46:24,710
+prefers to read
+
+691
+00:46:24,071 --> 00:46:28,660
+well just also turn off my shown on
+localized string setting here
+
+692
+00:46:29,299 --> 00:46:33,920
+and let's see how auto layout reacts to
+just changing the user interface
+
+693
+00:46:33,092 --> 00:46:39,100
+direction
+
+694
+00:46:40,000 --> 00:46:43,579
+well because we use the concept love
+leading-edge
+
+695
+00:46:43,579 --> 00:46:47,140
+and trailing edge rather than left and
+right
+
+696
+00:46:47,014 --> 00:46:50,933
+in are auto layout for this app
+
+697
+00:46:51,059 --> 00:46:54,920
+most of the app just flips right to left
+
+698
+00:46:54,092 --> 00:46:58,148
+just doesn't Arabic or Hebrew user would
+see it
+
+699
+00:46:59,048 --> 00:47:02,147
+we have our magnitude all the way on the
+left
+
+700
+00:47:02,579 --> 00:47:06,624
+instead of all the way on the right next
+to it
+
+701
+00:47:07,029 --> 00:47:10,110
+is are graphic indicating the severity
+of an earthquake
+
+702
+00:47:10,839 --> 00:47:14,230
+and then we have some text overlapping
+
+703
+00:47:14,023 --> 00:47:17,116
+that indicates that we probably still
+have a little bit of work to do
+
+704
+00:47:18,016 --> 00:47:22,155
+on making this fully support right to
+left taxed
+
+705
+00:47:22,299 --> 00:47:26,430
+now the frameworks do that but I
+probably just have a bug in my
+
+706
+00:47:26,043 --> 00:47:29,115
+auto layout constraints and this preview
+
+707
+00:47:30,015 --> 00:47:36,031
+helped me find before I actually went to
+the trouble of trampling my application
+
+708
+00:47:36,031 --> 00:47:39,040
+and I don't have to understand
+
+709
+00:47:39,319 --> 00:47:46,319
+Hebrew or Arabic in order to debug that
+problem
+
+710
+00:47:46,075 --> 00:47:49,149
+so what we saw with how you can update
+your translations
+
+711
+00:47:50,049 --> 00:47:54,077
+and as you go to keep your app current
+and really continue to do
+
+712
+00:47:54,077 --> 00:48:00,176
+iterative development at the same time
+that you're app is being translated
+
+713
+00:48:00,869 --> 00:48:03,916
+well so far how you can use the various
+kinds a preview
+
+714
+00:48:04,339 --> 00:48:07,435
+to capture missing translations before
+your users
+
+715
+00:48:08,299 --> 00:48:13,305
+and possibly even before your key way
+ever sees them
+
+716
+00:48:13,359 --> 00:48:17,406
+and we saw how you can simulate many
+different behaviors
+
+717
+00:48:17,829 --> 00:48:21,660
+between regional formatting and even
+right to left taxed
+
+718
+00:48:21,066 --> 00:48:24,074
+to ensure your caps work the best they
+can for
+
+719
+00:48:24,074 --> 00:48:28,141
+everyone because that's really what it's
+all about
+
+720
+00:48:29,041 --> 00:48:32,066
+reaching a global audience are
+
+721
+00:48:32,066 --> 00:48:35,124
+frameworks for iowa's analysts 10
+
+722
+00:48:36,024 --> 00:48:39,097
+make that really easy especially
+
+723
+00:48:39,097 --> 00:48:42,131
+if you take advantage a Xcode new work
+clothes
+
+724
+00:48:43,031 --> 00:48:46,079
+for axel F export-import and
+
+725
+00:48:46,079 --> 00:48:49,172
+for previewing localizations at debug
+time
+
+726
+00:48:50,072 --> 00:48:55,081
+and at design-time there are some
+related sessions
+
+727
+00:48:55,081 --> 00:48:59,102
+there is actually one earlier today
+called advanced topics in
+
+728
+00:49:00,002 --> 00:49:01,321
+internationalization
+
+729
+00:49:01,339 --> 00:49:06,381
+the QoS in deep into what you need to do
+in terms of formatting and
+
+730
+00:49:06,759 --> 00:49:11,150
+code to deal with all the subtleties of
+internationalization
+
+731
+00:49:11,015 --> 00:49:14,077
+for example mixing right to left and
+left to right: taxed
+
+732
+00:49:14,077 --> 00:49:18,079
+and that's actually the sequel to a
+session that was held last year
+
+733
+00:49:18,079 --> 00:49:21,096
+that it also encourage you to check out
+in the WWDC
+
+734
+00:49:21,096 --> 00:49:24,100
+ap and as always
+
+735
+00:49:25,000 --> 00:49:29,018
+the advanced topics internationalization
+is going to be available for streaming
+
+736
+00:49:29,018 --> 00:49:30,847
+soon
+
+737
+00:49:31,009 --> 00:49:34,700
+there's also an caps for China get
+together tomorrow
+
+738
+00:49:34,007 --> 00:49:38,079
+at work add up 4:30 for anybody who's
+interested in tapping this
+
+739
+00:49:39,042 --> 00:49:42,471
+huge new market thank you very much
+

@@ -1,0 +1,4072 @@
+1
+00:00:12,013 --> 00:00:18,110
+good morning everyone
+
+2
+00:00:19,001 --> 00:00:22,039
+I'm glad you guys could make it my name
+is Bruce Nile
+
+3
+00:00:22,048 --> 00:00:25,116
+I'm one of the engineers on you like it
+and
+
+4
+00:00:26,016 --> 00:00:29,099
+we're gonna be talking about all the new
+stuff that we've up
+
+5
+00:00:29,099 --> 00:00:33,111
+brought into you like it for Iowa say in
+case
+
+6
+00:00:34,011 --> 00:00:37,035
+on the once told you it's a big release
+
+7
+00:00:37,035 --> 00:00:40,054
+there's a lot of stuff in two weeks ago
+when I was
+
+8
+00:00:40,054 --> 00:00:43,151
+a thinking about what i was gonna say I
+said he's a cake
+
+9
+00:00:44,051 --> 00:00:47,102
+I'm just gonna list all the new features
+on
+
+10
+00:00:48,002 --> 00:00:52,181
+I'm gonna also list all the things that
+are going away
+
+11
+00:00:52,199 --> 00:00:57,190
+and I'm done right well that's what I
+ended up with
+
+12
+00:00:57,019 --> 00:01:01,708
+and I realized I'm I really needed to
+
+13
+00:01:01,879 --> 00:01:05,280
+cut down on what I was going to talk
+about so
+
+14
+00:01:05,028 --> 00:01:08,063
+this is where we ended up and
+
+15
+00:01:08,063 --> 00:01:11,089
+I just want to point out though that
+there's a lot more
+
+16
+00:01:11,089 --> 00:01:16,112
+I than what I'm going to talk about what
+are the most important things that we're
+
+17
+00:01:17,012 --> 00:01:18,017
+introducing
+
+18
+00:01:18,017 --> 00:01:22,076
+in Iowa State in case you haven't heard
+is we are providing
+
+19
+00:01:22,229 --> 00:01:26,670
+API's that are more adaptive on what
+this means is that your
+
+20
+00:01:26,067 --> 00:01:30,936
+user interfaces can more easily respond
+to changes in size
+
+21
+00:01:31,539 --> 00:01:34,546
+I and other changes as well on
+
+22
+00:01:34,609 --> 00:01:37,618
+US would view controller used to be a
+kinda up
+
+23
+00:01:38,509 --> 00:01:42,562
+pretty simple class well it's grown up
+in Iowa State we're gonna talk about
+
+24
+00:01:43,039 --> 00:01:46,122
+some of the new features that you I
+split you controller has to offer
+
+25
+00:01:46,869 --> 00:01:49,911
+we're gonna while we're at it
+
+26
+00:01:50,289 --> 00:01:54,333
+show how it's really easy to hide bars
+in ways that
+
+27
+00:01:54,729 --> 00:01:57,735
+you've probably seen in some of our own
+aP's on
+
+28
+00:01:57,789 --> 00:02:01,530
+then we're gonna shift gears a little
+bit talk about
+
+29
+00:02:01,053 --> 00:02:06,060
+on presentations presentation
+controllers have been introduced
+
+30
+00:02:06,006 --> 00:02:10,048
+and are part of a whole we architectural
+revamping up have you are you
+
+31
+00:02:11,002 --> 00:02:13,008
+controllers are presented and how you
+can create
+
+32
+00:02:13,062 --> 00:02:16,068
+great costume presentations yourselves
+
+33
+00:02:17,022 --> 00:02:22,049
+on that gave us the opportunity by the
+way to redo pop overs as well
+
+34
+00:02:22,049 --> 00:02:26,142
+and pop overs have now become integrated
+with you I view controller presentations
+
+35
+00:02:27,042 --> 00:02:31,125
+finally we're going to talk not finally
+we're also gonna talk about new API
+
+36
+00:02:32,025 --> 00:02:35,032
+that we introduce that builds upon
+transition coordinators
+
+37
+00:02:35,095 --> 00:02:39,119
+on that also helps your applications
+adapt
+
+38
+00:02:40,019 --> 00:02:44,096
+and finally there's a subtle up but
+pretty important change in terms of the
+
+39
+00:02:44,096 --> 00:02:47,115
+the coordinate space is that you
+
+40
+00:02:48,015 --> 00:02:52,038
+a grown to love and we'll talk about
+that briefly when we wrap up
+
+41
+00:02:52,038 --> 00:02:55,093
+sup you've probably seen this picture
+
+42
+00:02:55,093 --> 00:03:01,102
+or a variant of it a few times on many
+hierarchical applications on a phone
+
+43
+00:03:02,002 --> 00:03:03,099
+Mike structure themselves this way
+
+44
+00:03:03,099 --> 00:03:07,144
+inside the navigation controller and
+there might be some detail
+
+45
+00:03:08,044 --> 00:03:12,068
+that you would see when you hit the back
+button
+
+46
+00:03:12,068 --> 00:03:16,129
+and on up
+
+47
+00:03:17,029 --> 00:03:20,115
+iPad you might choose to structure it a
+little bit differently
+
+48
+00:03:21,015 --> 00:03:24,079
+on again this is all kinda familiar
+stuff
+
+49
+00:03:24,079 --> 00:03:28,132
+but there's no particular reason why you
+shouldn't be able to do this on an
+
+50
+00:03:29,032 --> 00:03:29,105
+iPhone
+
+51
+00:03:30,005 --> 00:03:33,010
+I if it suited your application I'm
+
+52
+00:03:33,001 --> 00:03:37,055
+were show how that's possible so
+
+53
+00:03:37,064 --> 00:03:42,078
+prior to iowa say most of your
+application
+
+54
+00:03:42,078 --> 00:03:45,116
+coarse grain structure I am
+
+55
+00:03:46,016 --> 00:03:51,025
+was determined by looking at the device
+type and possibly interface orientation
+
+56
+00:03:51,025 --> 00:03:55,090
+as well as the size in which your user
+interface was being
+
+57
+00:03:55,009 --> 00:04:00,026
+presented and I would say it we've taken
+the first two
+
+58
+00:04:01,007 --> 00:04:05,054
+and abstracted a little bit into to new
+concepts called traits in trade
+
+59
+00:04:05,054 --> 00:04:05,136
+collections
+
+60
+00:04:06,036 --> 00:04:12,052
+size is still available but typically
+size is a finer grain typeof layout
+
+61
+00:04:12,052 --> 00:04:15,076
+operation that can be easily
+accommodated using
+
+62
+00:04:15,076 --> 00:04:19,175
+I technologies like auto layer we're
+gonna talk a little bit more about the
+
+63
+00:04:19,859 --> 00:04:19,927
+former
+
+64
+00:04:20,539 --> 00:04:24,561
+on will also address the latter a little
+bit
+
+65
+00:04:24,759 --> 00:04:27,900
+so what is a trait collection I'm
+
+66
+00:04:27,009 --> 00:04:30,308
+a tree collection simply put is a
+
+67
+00:04:31,199 --> 00:04:37,330
+set I love Trites up too surprising
+
+68
+00:04:37,033 --> 00:04:41,039
+on the phone you might see on the window
+
+69
+00:04:41,039 --> 00:04:45,093
+I'll your application return a trait
+collection
+
+70
+00:04:45,093 --> 00:04:49,118
+that has the following traits: to size
+classes
+
+71
+00:04:50,018 --> 00:04:54,041
+an idiom and a display scale this
+typically is the way
+
+72
+00:04:54,041 --> 00:04:57,092
+a phone straights on
+
+73
+00:04:57,092 --> 00:05:01,174
+our structure want most important traits
+that we've introduced
+
+74
+00:05:02,074 --> 00:05:05,107
+is size clubs in size class
+
+75
+00:05:06,007 --> 00:05:10,088
+deals with on a course leveled the
+available space
+
+76
+00:05:10,088 --> 00:05:14,180
+on that your application has and can
+therefore make decisions about what its
+
+77
+00:05:15,008 --> 00:05:16,072
+structure should be
+
+78
+00:05:17,044 --> 00:05:22,073
+let's look at at that quickly here we
+have kinda cartoonish representation
+
+79
+00:05:22,073 --> 00:05:27,102
+about iPhone
+
+80
+00:05:28,002 --> 00:05:32,031
+and typically the vertical access
+
+81
+00:05:32,031 --> 00:05:37,106
+is going to have a regular size class
+where the horizontal axis is going to
+
+82
+00:05:38,006 --> 00:05:41,070
+have a compact size close
+
+83
+00:05:41,007 --> 00:05:46,196
+if you rotate a phone
+
+84
+00:05:46,889 --> 00:05:51,290
+we say the P size classes are
+constrained in both the vertical and the
+
+85
+00:05:51,029 --> 00:05:55,052
+horizontal dimensions
+
+86
+00:05:55,052 --> 00:05:59,091
+not iPad is a little bit more free
+
+87
+00:05:59,091 --> 00:06:03,096
+its regular in all its dimensions or has
+regular size classes and all its
+
+88
+00:06:04,041 --> 00:06:05,094
+dimensions
+
+89
+00:06:05,094 --> 00:06:11,107
+and that holds true when you rotate it
+as well
+
+90
+00:06:12,007 --> 00:06:15,026
+but that's not the full store
+
+91
+00:06:15,026 --> 00:06:18,034
+this some view controllers like split
+view controller
+
+92
+00:06:18,034 --> 00:06:21,040
+can determine that its children in this
+case the primary
+
+93
+00:06:21,094 --> 00:06:24,143
+control child which is on the left side
+I'm
+
+94
+00:06:25,043 --> 00:06:30,056
+has a more constrained I size class in
+either dimension for size
+
+95
+00:06:30,056 --> 00:06:33,150
+for ops would be a controller it
+constrains the horizontal
+
+96
+00:06:34,005 --> 00:06:39,011
+size clubs
+
+97
+00:06:39,056 --> 00:06:44,122
+sup a size class is all about
+
+98
+00:06:45,022 --> 00:06:48,103
+in forming your application up the
+available space
+
+99
+00:06:49,003 --> 00:06:52,087
+in some course way that you can make
+decisions about how you would
+
+100
+00:06:52,087 --> 00:06:59,087
+substantially alter the application
+structure
+
+101
+00:07:01,037 --> 00:07:06,038
+we have a TI on specific objects that
+vent rate collections
+
+102
+00:07:06,038 --> 00:07:11,041
+and in these cases they have values for
+both the horizontal
+
+103
+00:07:11,068 --> 00:07:14,073
+and the vertical size classes now I like
+to think about
+
+104
+00:07:15,018 --> 00:07:18,040
+the tray collections that come back from
+these objects
+
+105
+00:07:18,004 --> 00:07:23,038
+as defining appoint in a trait space
+
+106
+00:07:23,074 --> 00:07:26,132
+we've introduced a new protocol that
+
+107
+00:07:27,032 --> 00:07:30,063
+a number for objects conform to which is
+a trait environment
+
+108
+00:07:30,063 --> 00:07:33,101
+and you'll see the hierarchy on the
+right is kinda window hierarchy that
+
+109
+00:07:34,001 --> 00:07:37,940
+starts from a screen and proceeds down
+all the way to the leaf
+
+110
+00:07:37,949 --> 00:07:41,530
+view elements that you have all these
+objects conform
+
+111
+00:07:41,053 --> 00:07:44,062
+to the trading varmint protocol which
+means you can ask him for trade
+
+112
+00:07:44,062 --> 00:07:44,153
+collection
+
+113
+00:07:45,053 --> 00:07:48,192
+and what you get back is going to be a
+point in a trait space
+
+114
+00:07:48,669 --> 00:07:52,050
+were every single trait has a value now
+
+115
+00:07:52,005 --> 00:07:56,008
+not not all these objects to find those
+values directly
+
+116
+00:07:56,008 --> 00:07:59,022
+so for example if you ask for the scale
+belief
+
+117
+00:07:59,022 --> 00:08:03,076
+up the scale trade a bully for the view
+it might actually the system might walk
+
+118
+00:08:03,076 --> 00:08:04,085
+all the way up to the screen
+
+119
+00:08:05,066 --> 00:08:08,129
+to get that but the tree collection that
+you get back we'll have a value for that
+
+120
+00:08:09,029 --> 00:08:10,097
+scale
+
+121
+00:08:10,097 --> 00:08:13,119
+finally you will notice that whenever a
+tree
+
+122
+00:08:14,019 --> 00:08:18,103
+changes in a tree collection your object
+the appropriate object will get a tree
+
+123
+00:08:19,003 --> 00:08:22,100
+collection did change just for that
+object is lay at the laid out so you can
+
+124
+00:08:23,000 --> 00:08:26,058
+respond to that
+
+125
+00:08:26,058 --> 00:08:29,097
+so I kind of implied before that you can
+that out
+
+126
+00:08:29,097 --> 00:08:32,166
+you controllers such as what you
+controller can override the transfer
+
+127
+00:08:33,039 --> 00:08:34,083
+chop
+
+128
+00:08:34,479 --> 00:08:38,540
+how do you do this well we've introduced
+a couple new methods
+
+129
+00:08:39,089 --> 00:08:42,113
+on you argue controller which allow you
+to do precisely this
+
+130
+00:08:42,329 --> 00:08:46,391
+said override trade collection can be
+used by a
+
+131
+00:08:46,949 --> 00:08:53,949
+parent indicate what the appropriate
+traits are for anyone up its children
+
+132
+00:08:54,018 --> 00:08:57,091
+the tree collection that you pass in in
+this case isn't a point in a trade space
+
+133
+00:08:57,091 --> 00:08:59,104
+it might just be a single
+
+134
+00:09:00,004 --> 00:09:03,041
+trade value which is then overridden
+
+135
+00:09:03,041 --> 00:09:06,123
+so what I wanted to do was before I go
+to the rest the talk is I put together
+
+136
+00:09:07,023 --> 00:09:09,482
+kinda toy implication
+
+137
+00:09:09,689 --> 00:09:14,180
+which is to highlight some the features
+that we're going to talk about today
+
+138
+00:09:14,018 --> 00:09:17,067
+this is kind of my canonical little
+photo no
+
+139
+00:09:17,067 --> 00:09:20,085
+taking I toy at location
+
+140
+00:09:20,085 --> 00:09:24,097
+what you see here is basically a bit
+pretty standard thing you see a
+
+141
+00:09:24,097 --> 00:09:28,156
+navigation controller on and I can hit
+the back button
+
+142
+00:09:29,029 --> 00:09:33,058
+with this photos and I get a list which
+is the simple table view
+
+143
+00:09:33,319 --> 00:09:37,290
+on I can select things that's great
+
+144
+00:09:37,029 --> 00:09:41,042
+what's interesting is that this is
+actually split view controller
+
+145
+00:09:41,042 --> 00:09:44,093
+notice when I rotate I stay inside
+
+146
+00:09:44,093 --> 00:09:47,562
+a navigation controller however I can do
+something interesting you see there's
+
+147
+00:09:48,399 --> 00:09:49,490
+the split button on the bottom
+
+148
+00:09:50,309 --> 00:09:53,347
+love this a toolbar if I hit it
+
+149
+00:09:53,689 --> 00:09:56,783
+you can now see a little bit more
+clearly that this is in fact really
+
+150
+00:09:57,629 --> 00:10:02,644
+a split view controller you'll also
+notice that when I
+
+151
+00:10:02,779 --> 00:10:06,857
+what's hide dislike in Tappan interact
+with the bars I can't create
+
+152
+00:10:07,559 --> 00:10:12,565
+I can ha I can move that primary
+controller off-screen
+
+153
+00:10:12,619 --> 00:10:16,646
+but one of the things we're gonna show
+is how easy it is to hide the bars if I
+
+154
+00:10:16,889 --> 00:10:18,550
+tap on
+
+155
+00:10:18,055 --> 00:10:21,824
+on a view controller I can also get that
+Safari look
+
+156
+00:10:22,319 --> 00:10:28,100
+where the bars contents really easily
+
+157
+00:10:28,001 --> 00:10:31,230
+alright
+
+158
+00:10:31,329 --> 00:10:34,374
+lech go back into a
+
+159
+00:10:34,779 --> 00:10:40,100
+regular old navigation controller look
+
+160
+00:10:40,001 --> 00:10:43,470
+and look at this note but note button up
+
+161
+00:10:43,569 --> 00:10:46,614
+is going to do a presentation this is a
+
+162
+00:10:47,019 --> 00:10:51,086
+you control your presentation on it
+takes advantage of a couple new classes
+
+163
+00:10:51,689 --> 00:10:52,697
+that I might mention
+
+164
+00:10:52,769 --> 00:10:55,868
+as we go through the talk what's
+interesting is is this is in fact
+
+165
+00:10:56,759 --> 00:11:00,808
+a popover presentation all get into that
+a little bit later cuz it certainly
+
+166
+00:11:01,249 --> 00:11:03,307
+doesn't look like a popover presentation
+
+167
+00:11:03,829 --> 00:11:06,916
+but if I do something special on this
+little toy up
+
+168
+00:11:07,699 --> 00:11:11,850
+well it didn't quite do at that time now
+you'll see that that same thing is in
+
+169
+00:11:11,085 --> 00:11:14,122
+fact a popover will go through that a
+little bit
+
+170
+00:11:15,022 --> 00:11:20,861
+um finally I wanted to talk about a
+little bit about rotation
+
+171
+00:11:21,059 --> 00:11:25,142
+and to do that I'm going to present
+another view controller this time it's a
+
+172
+00:11:25,889 --> 00:11:26,952
+collection view controller
+
+173
+00:11:27,519 --> 00:11:30,568
+which has a bunch a little thumbnail
+photos and if I were to rotate the
+
+174
+00:11:31,009 --> 00:11:32,045
+device now
+
+175
+00:11:32,369 --> 00:11:35,376
+the normal collection view flow layout
+behavior
+
+176
+00:11:35,439 --> 00:11:39,491
+we basically relay things out so that
+everything is worry aunt it now
+
+177
+00:11:39,959 --> 00:11:43,002
+in the horizontal direction however if I
+wanted to
+
+178
+00:11:43,389 --> 00:11:48,391
+change what happened when I rotated so
+that it did something more akin to this
+
+179
+00:11:48,589 --> 00:11:51,651
+on there's some interesting things that
+we can do
+
+180
+00:11:52,209 --> 00:11:56,246
+I and this is a perfect example of when
+you would you sum up the
+
+181
+00:11:56,579 --> 00:12:00,980
+I methods like will rotate interface
+orientation so forth so we're gonna talk
+
+182
+00:12:00,098 --> 00:12:02,367
+about that a little bit as well
+
+183
+00:12:03,249 --> 00:12:09,326
+alright so another taste of what we're
+going to talk about let's go back to the
+
+184
+00:12:10,019 --> 00:12:15,020
+presentation
+
+185
+00:12:15,119 --> 00:12:20,600
+and let's talk about split view
+controller
+
+186
+00:12:20,006 --> 00:12:24,068
+so as I kinda implied split view
+controller is now available
+
+187
+00:12:25,022 --> 00:12:28,881
+on the phone as well as on the iPad
+
+188
+00:12:29,079 --> 00:12:32,600
+and it has this interesting new I
+property
+
+189
+00:12:32,006 --> 00:12:35,935
+it has a property in being collapsed or
+not collapsed
+
+190
+00:12:36,529 --> 00:12:39,596
+now what does it mean for us would be
+controller to be collapsed
+
+191
+00:12:40,199 --> 00:12:43,213
+or expanded well
+
+192
+00:12:43,339 --> 00:12:47,348
+and Spanish fleets split view controller
+it's kind of obvious might look like
+
+193
+00:12:47,429 --> 00:12:48,444
+this:
+
+194
+00:12:48,579 --> 00:12:51,633
+however it's not just a question about
+the two
+
+195
+00:12:52,119 --> 00:12:55,119
+children being visible so
+
+196
+00:12:55,119 --> 00:13:01,970
+I'm highlighting the secondary view
+controller at the split view controller
+
+197
+00:13:01,097 --> 00:13:04,191
+and you're gonna notice that there's a
+little a button off to the left we call
+
+198
+00:13:05,091 --> 00:13:07,320
+it the display mode button item
+
+199
+00:13:08,139 --> 00:13:11,196
+when I click on that in I can expand
+
+200
+00:13:11,709 --> 00:13:14,751
+out this quick view controller and even
+though we're only looking at the
+
+201
+00:13:15,129 --> 00:13:18,980
+secondary controller that's what you
+controller is still
+
+202
+00:13:18,098 --> 00:13:22,173
+expanded it is not collapsed in the
+reason why that is because it's possible
+
+203
+00:13:23,073 --> 00:13:27,082
+to show the primary controller at the
+same time
+
+204
+00:13:27,739 --> 00:13:30,827
+as the secondary control
+
+205
+00:13:31,619 --> 00:13:35,660
+on the other hand this is a collapse
+would be a controller you'll notice that
+
+206
+00:13:36,029 --> 00:13:39,033
+the display mode but night on that was
+on the left side is gone
+
+207
+00:13:39,429 --> 00:13:43,220
+are you can now look no longer show the
+primary and secondary controllers
+
+208
+00:13:43,022 --> 00:13:43,111
+together
+
+209
+00:13:44,011 --> 00:13:48,520
+they've been collapsed and you can now
+get to the primary controller by hitting
+
+210
+00:13:48,619 --> 00:13:49,670
+the back button
+
+211
+00:13:49,067 --> 00:13:52,856
+which is up on the job top left corner
+so that's kinda what the differences
+
+212
+00:13:53,459 --> 00:13:55,533
+between appts what you control or in its
+collapsed a
+
+213
+00:13:56,199 --> 00:14:01,242
+and its expanded state it's important to
+know that
+
+214
+00:14:01,629 --> 00:14:04,680
+what you controllers by default are
+
+215
+00:14:05,139 --> 00:14:09,140
+collapsed when they're in horizontally
+compaq containers
+
+216
+00:14:09,239 --> 00:14:14,480
+so by default on the phone if you use a
+split view controller is going to appear
+
+217
+00:14:14,048 --> 00:14:18,707
+in this collapsed a
+
+218
+00:14:19,139 --> 00:14:22,140
+so I've been plied that you can
+
+219
+00:14:22,149 --> 00:14:27,184
+enable the expanded say have a split
+view controller on the phone already
+
+220
+00:14:27,499 --> 00:14:31,588
+how do you do that well it's actually
+quite simple and straightforward
+
+221
+00:14:32,389 --> 00:14:35,396
+you probably know the answer already on
+
+222
+00:14:36,089 --> 00:14:39,093
+first of all you're gonna take your spot
+you controlling your gonna in bed
+
+223
+00:14:39,129 --> 00:14:45,148
+innate parents container view controller
+
+224
+00:14:45,319 --> 00:14:49,344
+as fol- you're then going to
+
+225
+00:14:49,569 --> 00:14:52,660
+call set override trait collection
+
+226
+00:14:52,066 --> 00:14:56,161
+and you're gonna informed that child
+split view controller that it is now
+
+227
+00:14:57,061 --> 00:15:00,640
+in a horizontally regular environment
+
+228
+00:15:01,189 --> 00:15:05,360
+the second you do that this what you
+controller
+
+229
+00:15:05,036 --> 00:15:10,060
+Morse into its expanded or not collapsed
+a
+
+230
+00:15:10,006 --> 00:15:13,525
+you'll notice that the display mode
+button item which is titled photos in
+
+231
+00:15:14,119 --> 00:15:16,220
+the lower left corner has now become
+
+232
+00:15:16,022 --> 00:15:19,311
+enabled if I wanted to show
+
+233
+00:15:19,509 --> 00:15:22,607
+both controllers together side by side
+
+234
+00:15:23,489 --> 00:15:26,720
+I could click on that display mode
+button item
+
+235
+00:15:26,072 --> 00:15:29,731
+but we've also introduced a property
+called preferred display mode which you
+
+236
+00:15:30,379 --> 00:15:36,290
+can use programmatically
+
+237
+00:15:36,029 --> 00:15:43,029
+if you set the preferred display mode to
+the all visible value
+
+238
+00:15:43,569 --> 00:15:47,582
+it's the same as the same behavior would
+occur as if you clicked on the display
+
+239
+00:15:47,699 --> 00:15:50,774
+mode but night and you'll also notice
+that this play mode but night a Morse
+
+240
+00:15:51,449 --> 00:15:54,522
+into this a kinda diagonal
+
+241
+00:15:55,179 --> 00:15:58,410
+double arrow on these
+
+242
+00:15:58,041 --> 00:16:01,150
+items this display mode item in this
+behavior
+
+243
+00:16:01,519 --> 00:16:04,617
+is all customizable and this is via
+delegate API
+
+244
+00:16:05,499 --> 00:16:07,507
+that you can look at in the header files
+and I'm not gonna have time to talk
+
+245
+00:16:08,299 --> 00:16:11,352
+about today
+
+246
+00:16:11,829 --> 00:16:14,835
+so to go over summer thats API
+
+247
+00:16:14,889 --> 00:16:18,934
+for for display mode is an enumeration
+
+248
+00:16:19,339 --> 00:16:22,366
+enumerated values are automatic hidden
+visible
+
+249
+00:16:22,609 --> 00:16:26,410
+and overlay automatic is the old
+behavior that you
+
+250
+00:16:26,041 --> 00:16:31,590
+are familiar with on iPad's hidden
+invisible or explicit met means by which
+
+251
+00:16:31,959 --> 00:16:32,976
+you can
+
+252
+00:16:33,129 --> 00:16:36,206
+control the layout at the split view
+controller so that the primary and
+
+253
+00:16:36,899 --> 00:16:38,850
+secondary are side by side
+
+254
+00:16:38,085 --> 00:16:41,854
+and overlays an explicit way that you
+can have the primary kinda
+
+255
+00:16:42,619 --> 00:16:47,621
+go over the top but the secondary
+
+256
+00:16:47,819 --> 00:16:50,882
+the displayed mode button item is also
+accessible
+
+257
+00:16:51,449 --> 00:16:55,465
+in this API so you can ask that what you
+controller for it and put it in whatever
+
+258
+00:16:55,609 --> 00:16:56,687
+bar you want
+
+259
+00:16:57,389 --> 00:17:00,401
+although I'm not gonna say it explicitly
+if you were to look in the header files
+
+260
+00:17:00,509 --> 00:17:03,480
+that you are split view controller you
+would find that most
+
+261
+00:17:03,048 --> 00:17:10,048
+above the API the used to be there is
+now deprecated and replaced by new API
+
+262
+00:17:11,052 --> 00:17:14,091
+one thing that I'd like to say is that a
+lot of people have always wanted to
+
+263
+00:17:14,091 --> 00:17:15,127
+control the split
+
+264
+00:17:16,027 --> 00:17:23,027
+which and we made that really easy to do
+
+265
+00:17:23,399 --> 00:17:26,428
+so there's a new math a new property
+preferred primary column with
+
+266
+00:17:26,689 --> 00:17:30,772
+fraction if I were to set that too 1/2
+say
+
+267
+00:17:31,519 --> 00:17:35,547
+the split with changes
+
+268
+00:17:35,799 --> 00:17:39,858
+the API that enables that is this you
+can set a minimum and maximum
+
+269
+00:17:40,389 --> 00:17:44,391
+found at the split with in terms of
+points
+
+270
+00:17:44,409 --> 00:17:47,820
+you specify the split in terms of a
+fraction and you can read back
+
+271
+00:17:47,082 --> 00:17:54,082
+the actual point value: with the primary
+column with property
+
+272
+00:17:55,099 --> 00:17:58,888
+so what we learned here one is is that's
+what you controllers can be
+
+273
+00:17:59,779 --> 00:18:03,803
+used on both the iPhone and the iPad
+this makes it easy to write code
+
+274
+00:18:04,019 --> 00:18:08,730
+it is kinda agnostic about the platform
+that it's going to be deployed on
+
+275
+00:18:08,073 --> 00:18:12,087
+if you have a certain type of
+application layout that makes sense
+
+276
+00:18:12,087 --> 00:18:16,163
+in either a clap state or an expanded
+split view controller state based on the
+
+277
+00:18:17,063 --> 00:18:18,992
+available space
+
+278
+00:18:19,559 --> 00:18:22,610
+create a split view controller and this
+with you controller will adapt
+
+279
+00:18:22,061 --> 00:18:25,100
+accordingly
+
+280
+00:18:26,000 --> 00:18:29,072
+split you controllers are collapsed by
+default in horizontally compact
+
+281
+00:18:29,072 --> 00:18:32,098
+environments
+
+282
+00:18:32,098 --> 00:18:37,297
+the display mode property controls the
+appearance of the primary or left
+
+283
+00:18:38,179 --> 00:18:42,600
+child view controller up the split you
+
+284
+00:18:42,006 --> 00:18:46,080
+and you can also is now specify the
+split with
+
+285
+00:18:47,034 --> 00:18:52,463
+so there are a lot of other API that we
+added to split view controller
+
+286
+00:18:52,769 --> 00:18:55,795
+there's gonna be a talk immediately
+following this one which talks about
+
+287
+00:18:56,029 --> 00:19:00,091
+in more depth Alden new adaptive API's
+that we've added to you I view
+
+288
+00:19:00,649 --> 00:19:01,590
+controller and UIs
+
+289
+00:19:01,059 --> 00:19:04,108
+what you controller that you can get
+attend and get
+
+290
+00:19:05,008 --> 00:19:10,107
+more information so let's talk about
+condensing bars
+
+291
+00:19:10,179 --> 00:19:13,590
+it's all about available space in
+highlighting your content so we wanted
+
+292
+00:19:13,059 --> 00:19:13,124
+to make it
+
+293
+00:19:14,024 --> 00:19:19,097
+easy to do it's really easy now to hide
+your bars
+
+294
+00:19:19,097 --> 00:19:22,186
+just up behind bars on top property
+
+295
+00:19:23,086 --> 00:19:26,182
+and they're gone up
+
+296
+00:19:27,082 --> 00:19:33,061
+if you
+
+297
+00:19:33,799 --> 00:19:36,848
+so what about that great you know can a
+safari looking
+
+298
+00:19:37,289 --> 00:19:41,450
+a condensing bar behavior well we've
+added a property for that tip
+
+299
+00:19:41,045 --> 00:19:48,045
+just set it to yes when you swipe those
+bars can deaths
+
+300
+00:19:53,005 --> 00:19:56,284
+so we've got a couple of other
+properties as well on
+
+301
+00:19:56,779 --> 00:20:00,990
+you know the bars can hide when you're
+in a hurry up vertically compact
+
+302
+00:20:00,099 --> 00:20:01,108
+environment
+
+303
+00:20:02,008 --> 00:20:05,567
+they might condense when the keyboard
+appears on
+
+304
+00:20:05,639 --> 00:20:08,655
+you can control the salt
+programmatically within animate a ball
+
+305
+00:20:08,799 --> 00:20:09,980
+property called
+
+306
+00:20:09,098 --> 00:20:13,109
+navigation bar condensed well at least
+you can control the condensing behavior
+
+307
+00:20:14,009 --> 00:20:14,968
+that way
+
+308
+00:20:15,049 --> 00:20:19,440
+on so yeah
+
+309
+00:20:19,044 --> 00:20:22,069
+that's it for condensing boilers
+
+310
+00:20:22,069 --> 00:20:25,072
+okay now the easy stuff is all done
+
+311
+00:20:25,072 --> 00:20:28,099
+let's talk about presentation
+controllers
+
+312
+00:20:28,099 --> 00:20:32,248
+we have revamped the presentation
+architecture for view controllers
+
+313
+00:20:33,139 --> 00:20:37,240
+on I O S eight
+
+314
+00:20:37,024 --> 00:20:40,543
+you might recall that my West seven we
+allowed
+
+315
+00:20:40,759 --> 00:20:43,801
+developers for the first time to
+customize what the
+
+316
+00:20:44,179 --> 00:20:48,188
+presentation transitions looked like
+
+317
+00:20:48,269 --> 00:20:53,970
+let's go back in kinda talked about how
+that looked and how you did that
+
+318
+00:20:53,097 --> 00:20:56,121
+so first of all what you do is you the
+view controller that you wanted to
+
+319
+00:20:57,021 --> 00:20:57,580
+present
+
+320
+00:20:57,769 --> 00:21:03,210
+you would set the presentation style to
+custom
+
+321
+00:21:03,021 --> 00:21:07,036
+you'd also set a transitioning delegate
+on that presented
+
+322
+00:21:07,036 --> 00:21:10,059
+on my view controller to be presented
+
+323
+00:21:10,059 --> 00:21:13,121
+and then you would just present the way
+you normally do you tell a presenting
+
+324
+00:21:14,021 --> 00:21:16,045
+view controller present view controller
+
+325
+00:21:16,045 --> 00:21:19,234
+at which point the system takes over
+
+326
+00:21:19,639 --> 00:21:22,681
+you like it will ask the transitioning
+delegate
+
+327
+00:21:23,059 --> 00:21:26,142
+for the animation controller that is
+your object
+
+328
+00:21:26,889 --> 00:21:31,620
+that is offended by the transitioning
+delegate that you've set
+
+329
+00:21:31,062 --> 00:21:34,062
+at which point you like it prepares this
+internal
+
+330
+00:21:34,062 --> 00:21:38,711
+object which conforms to this context
+transitioning protocol
+
+331
+00:21:39,269 --> 00:21:44,000
+to set up some information that you need
+to know in order to drive your custom
+
+332
+00:21:44,000 --> 00:21:44,899
+transition
+
+333
+00:21:44,899 --> 00:21:48,470
+the views that are participating in this
+
+334
+00:21:48,047 --> 00:21:53,059
+custom presentation or accessed via this
+view controller for key property
+
+335
+00:21:53,059 --> 00:21:56,978
+and then there's frame information all
+that stuff now this object is passed
+
+336
+00:21:57,509 --> 00:21:58,526
+into
+
+337
+00:21:58,679 --> 00:22:01,687
+another method that is generated by you
+like it
+
+338
+00:22:01,759 --> 00:22:04,822
+to your animation controller animate
+transition
+
+339
+00:22:05,389 --> 00:22:09,500
+you do your animation the presentations
+complete
+
+340
+00:22:09,005 --> 00:22:14,144
+the animation controller goes away and
+everything's good
+
+341
+00:22:14,639 --> 00:22:19,600
+well they were couple problems with that
+let's look at the view hierarchy
+
+342
+00:22:19,006 --> 00:22:22,465
+to see what those problems might have
+been
+
+343
+00:22:23,059 --> 00:22:26,200
+so we have the presenting view
+controller's view
+
+344
+00:22:26,002 --> 00:22:29,971
+when the animation controllers men did
+we set up kind of the environment in
+
+345
+00:22:30,169 --> 00:22:33,192
+which this transition animation is gonna
+take place
+
+346
+00:22:33,399 --> 00:22:36,570
+that's kind of the container view that
+the context the
+
+347
+00:22:36,057 --> 00:22:41,148
+transition in context is pointing to
+that your animation controller accesses
+
+348
+00:22:42,048 --> 00:22:45,111
+when we certainly animate transition
+
+349
+00:22:46,011 --> 00:22:49,700
+message to the animation controller
+
+350
+00:22:49,799 --> 00:22:53,690
+it's the animation controller now that's
+problem in the view hierarchy
+
+351
+00:22:53,069 --> 00:22:57,150
+adding special views adding the
+presented you controller's view
+
+352
+00:22:58,005 --> 00:23:01,644
+and one of the neat things it was a
+feature on
+
+353
+00:23:02,139 --> 00:23:07,730
+in I was seven is that we didn't remove
+the presenting view controller's view
+
+354
+00:23:07,073 --> 00:23:11,137
+and so this is what it ended up with in
+the animation controller went away
+
+355
+00:23:12,037 --> 00:23:15,100
+okay so the first question that comes to
+mind is
+
+356
+00:23:16,000 --> 00:23:19,919
+what object owns all these other these
+views that are lying around
+
+357
+00:23:19,919 --> 00:23:23,933
+that guy Scott added by that animation
+control
+
+358
+00:23:24,059 --> 00:23:28,320
+well there was a good answer for that in
+fact that ended up causing a tight
+
+359
+00:23:28,032 --> 00:23:29,088
+coupling between
+
+360
+00:23:29,088 --> 00:23:32,477
+the animation controllers that we're
+doing a presentation
+
+361
+00:23:33,269 --> 00:23:36,700
+in the animation controllers that we're
+doing a dismissal
+
+362
+00:23:36,007 --> 00:23:40,976
+on sometimes I was easy to manage some
+time to cause problems
+
+363
+00:23:41,669 --> 00:23:44,707
+it often cause problems when you
+controller presentations were being
+
+364
+00:23:45,049 --> 00:23:48,096
+stacked on top of one another
+
+365
+00:23:48,519 --> 00:23:52,532
+so let's look what we do in iowa say
+it's gonna look pretty similar in the
+
+366
+00:23:52,649 --> 00:23:53,360
+beginning
+
+367
+00:23:53,036 --> 00:23:56,735
+you're gonna set the presentation style
+just like before
+
+368
+00:23:57,059 --> 00:24:00,980
+you're gonna set a transitioning
+delegate just like before
+
+369
+00:24:00,098 --> 00:24:03,099
+you're gonna send the present view
+controller message
+
+370
+00:24:04,008 --> 00:24:08,717
+to the present in view controller just
+like before
+
+371
+00:24:08,789 --> 00:24:11,816
+however now the transitioning delegate
+has grown
+
+372
+00:24:12,059 --> 00:24:17,500
+couple new methods you can now get then
+this new object called a presentation
+
+373
+00:24:17,005 --> 00:24:19,284
+control
+
+374
+00:24:19,779 --> 00:24:22,780
+and now it is the presentation
+controller
+
+375
+00:24:22,879 --> 00:24:27,070
+that's responsible for asking the
+transitioning delegate for the animation
+
+376
+00:24:27,007 --> 00:24:29,019
+controller
+
+377
+00:24:29,019 --> 00:24:33,508
+and in fact four driving the actual
+transition now there's a lot of neat
+
+378
+00:24:33,679 --> 00:24:35,715
+things under the hood that are going on
+here
+
+379
+00:24:36,039 --> 00:24:39,128
+and there's gonna be a whole talk are
+tomorrow I believe
+
+380
+00:24:39,929 --> 00:24:42,978
+about presentation controllers in depth
+and how we use that
+
+381
+00:24:43,419 --> 00:24:47,830
+you like it sick introduce a new API as
+well
+
+382
+00:24:47,083 --> 00:24:52,122
+but for now let's look at what's going
+on in the view higher
+
+383
+00:24:53,022 --> 00:24:57,941
+so now you remember you have this view
+hierarchy the car sponsor discussed in
+
+384
+00:24:58,139 --> 00:24:59,110
+transition
+
+385
+00:24:59,011 --> 00:25:03,034
+presentation controller still around and
+it holds a reference to the container
+
+386
+00:25:03,034 --> 00:25:03,096
+view
+
+387
+00:25:03,096 --> 00:25:06,695
+which is where the whole transition is
+happening
+
+388
+00:25:07,559 --> 00:25:10,710
+it also holds a reference to this thing
+called a presented view
+
+389
+00:25:10,071 --> 00:25:14,169
+night I want to point out the present in
+view is not necessarily
+
+390
+00:25:15,069 --> 00:25:18,086
+the view of the view controller that's
+being presented
+
+391
+00:25:18,086 --> 00:25:21,115
+maybe I put a drop shadow around that
+view
+
+392
+00:25:21,889 --> 00:25:25,970
+because that's what my custom
+presentation demand
+
+393
+00:25:25,097 --> 00:25:28,185
+in order to accommodate that
+
+394
+00:25:29,085 --> 00:25:32,614
+we had to augment the context
+transitioning protocol little bit
+
+395
+00:25:33,379 --> 00:25:36,420
+so we added this new method called view
+for a key
+
+396
+00:25:36,789 --> 00:25:41,876
+you controller for key still exists but
+view for key may return a different view
+
+397
+00:25:42,659 --> 00:25:45,731
+then the view controller for key and so
+when you build a custom animation
+
+398
+00:25:46,379 --> 00:25:48,610
+controller you want to make sure that
+you use
+
+399
+00:25:48,061 --> 00:25:52,970
+the view for key methods to figure out
+which views are actually participating
+
+400
+00:25:53,519 --> 00:25:58,340
+in the animation
+
+401
+00:25:58,034 --> 00:26:01,583
+a presentation controller can also at
+other types
+
+402
+00:26:01,889 --> 00:26:07,870
+views that are completely unknown to
+other types of presentation controllers
+
+403
+00:26:07,087 --> 00:26:11,173
+say like a dimming view that it wants to
+put over the entire
+
+404
+00:26:12,073 --> 00:26:15,122
+back up the presentation
+
+405
+00:26:16,022 --> 00:26:19,026
+I mentioned that you know I was seven by
+default
+
+406
+00:26:19,062 --> 00:26:22,821
+presenting view controller's view was
+left in the window hierarchy
+
+407
+00:26:23,379 --> 00:26:27,407
+or presentation controllers have a very
+rich API and if you build your own
+
+408
+00:26:27,659 --> 00:26:30,730
+on you can specify properties such as
+should remove
+
+409
+00:26:30,073 --> 00:26:34,147
+should the presentation a a few
+controllers you be removed or not and if
+
+410
+00:26:35,047 --> 00:26:36,069
+you set it to yes
+
+411
+00:26:36,069 --> 00:26:39,077
+it will automatically get removed
+
+412
+00:26:40,049 --> 00:26:44,057
+there's one other property which is I'm
+breezing here because I think
+
+413
+00:26:44,057 --> 00:26:48,061
+anyone to build a custom presentation
+controller needs to at least be aware of
+
+414
+00:26:48,061 --> 00:26:51,730
+which is the should present in
+fullscreen property what this means is
+
+415
+00:26:52,279 --> 00:26:53,304
+that a presentation
+
+416
+00:26:53,529 --> 00:26:56,840
+will affectively its container will be
+
+417
+00:26:56,084 --> 00:27:01,172
+in the window and its and the frame-up
+that container view of actively be the
+
+418
+00:27:02,072 --> 00:27:03,751
+bounds of the window
+
+419
+00:27:04,399 --> 00:27:07,423
+on if you
+
+420
+00:27:07,639 --> 00:27:11,590
+implement a custom can custom
+presentation controller and separate
+
+421
+00:27:11,059 --> 00:27:11,748
+property
+
+422
+00:27:12,279 --> 00:27:15,284
+to know your presentation will no longer
+
+423
+00:27:15,779 --> 00:27:19,805
+adapt know I know that doesn't make
+quite a lot of sense yet but we're gonna
+
+424
+00:27:20,039 --> 00:27:21,041
+go through
+
+425
+00:27:21,059 --> 00:27:25,116
+some stuff and then it will become more
+clear
+
+426
+00:27:25,629 --> 00:27:29,480
+so let's quickly talk about some the API
+that
+
+427
+00:27:29,048 --> 00:27:32,117
+has been added for presentation
+controllers
+
+428
+00:27:32,549 --> 00:27:35,490
+one is as you'll notice that it and
+appear it conforms to the appearance
+
+429
+00:27:35,049 --> 00:27:36,688
+container protocol
+
+430
+00:27:37,129 --> 00:27:40,222
+the trade environment protocol and this
+new protocol which will talk about in a
+
+431
+00:27:41,059 --> 00:27:42,142
+bit call content container
+
+432
+00:27:42,889 --> 00:27:47,080
+we talked about the container view
+properties in the presented the method
+
+433
+00:27:47,008 --> 00:27:50,096
+and these two other properties as I said
+there's a whole bunch
+
+434
+00:27:50,096 --> 00:27:53,171
+%uh methods in logic available for you
+to create
+
+435
+00:27:54,071 --> 00:27:57,083
+fantastic new custom presentations
+
+436
+00:27:57,083 --> 00:28:00,412
+but that's beyond the scope of this
+stock
+
+437
+00:28:01,159 --> 00:28:04,246
+so armed with this new architecture
+let's talk about some features that we
+
+438
+00:28:05,029 --> 00:28:05,730
+that
+
+439
+00:28:05,073 --> 00:28:08,492
+for civil all the old on
+
+440
+00:28:09,149 --> 00:28:12,190
+iPad only presentations are now
+available
+
+441
+00:28:12,559 --> 00:28:15,608
+on the iPhone by default they're going
+to present
+
+442
+00:28:16,049 --> 00:28:21,600
+to full screen presentations but there
+are some power under the hood here
+
+443
+00:28:21,006 --> 00:28:25,078
+so new presentation styles that are
+available that we've added
+
+444
+00:28:26,032 --> 00:28:29,391
+again that are both available on the
+phone and the iPad
+
+445
+00:28:29,679 --> 00:28:35,711
+is an over full screen presentation and
+over current context presentation
+
+446
+00:28:35,999 --> 00:28:42,999
+and I think I mention before pop overs
+are now presentations as well
+
+447
+00:28:45,072 --> 00:28:49,031
+every presentation has an associated
+presentation controller and you can
+
+448
+00:28:49,679 --> 00:28:50,470
+access the
+
+449
+00:28:50,047 --> 00:28:54,062
+access these with these methods and the
+reason you do so is could you often want
+
+450
+00:28:54,062 --> 00:28:55,085
+to set the delegate
+
+451
+00:28:55,085 --> 00:28:59,914
+on the presentation control now the plot
+thickens because the delegate
+
+452
+00:29:00,679 --> 00:29:04,724
+is in fact the object that is going to
+help your presentations adapt
+
+453
+00:29:05,129 --> 00:29:09,570
+two different rate environments before
+we get into that
+
+454
+00:29:09,057 --> 00:29:12,061
+let's make sure we all understand what
+the new presentation styles are all
+
+455
+00:29:12,061 --> 00:29:13,112
+about
+
+456
+00:29:14,012 --> 00:29:18,020
+over full screen is kinda full screen
+presentation
+
+457
+00:29:18,002 --> 00:29:21,015
+that doesn't remove the presenting two
+controllers for you
+
+458
+00:29:21,033 --> 00:29:24,095
+so you can create interesting on kinda
+overlay
+
+459
+00:29:24,095 --> 00:29:28,934
+pipe so presentations really easily now
+
+460
+00:29:29,789 --> 00:29:35,190
+over current context is pretty similar
+
+461
+00:29:35,019 --> 00:29:38,048
+if you know what current context
+presentations arts presentations that
+
+462
+00:29:38,048 --> 00:29:39,697
+are kinda constrained
+
+463
+00:29:40,129 --> 00:29:44,170
+inside a the presenting view controllers
+
+464
+00:29:44,539 --> 00:29:49,980
+Super T so that's what over current
+context gives you
+
+465
+00:29:49,098 --> 00:29:52,147
+and finally we have pop over
+
+466
+00:29:53,029 --> 00:29:56,570
+we all know what pop over looks like on
+
+467
+00:29:56,057 --> 00:30:00,058
+this is a good opportunity for me to say
+that worth were kinda soft deprecating
+
+468
+00:30:00,058 --> 00:30:02,107
+you i pop over control
+
+469
+00:30:02,629 --> 00:30:05,840
+on we're not hard deprecating it
+
+470
+00:30:05,084 --> 00:30:08,135
+but you should be aware that all the
+popover controller
+
+471
+00:30:09,035 --> 00:30:12,434
+all pop over controller API is now being
+Shane
+
+472
+00:30:12,749 --> 00:30:17,350
+kinda behind the scenes into a popover
+presentation
+
+473
+00:30:17,035 --> 00:30:20,073
+this might create a couple a bit
+differences in behavior
+
+474
+00:30:20,073 --> 00:30:23,902
+for the most part these things are
+functionally equivalent
+
+475
+00:30:24,559 --> 00:30:27,970
+there are a few corner cases though that
+you might run into
+
+476
+00:30:27,097 --> 00:30:31,416
+for example if you have a pop if you
+have code that was presenting a popover
+
+477
+00:30:32,289 --> 00:30:35,295
+and then immediately dismissed it ended
+another presentation
+
+478
+00:30:35,889 --> 00:30:38,931
+the next line you're gonna have to defer
+that on
+
+479
+00:30:39,309 --> 00:30:42,354
+and you can do that pretty easily by
+grabbing a transition coordinator in
+
+480
+00:30:42,759 --> 00:30:43,850
+scheduling the new presentation for
+
+481
+00:30:44,669 --> 00:30:51,350
+after the dismissal up the Popo
+
+482
+00:30:51,035 --> 00:30:54,110
+so let's talk about how presentations
+can adapt
+
+483
+00:30:55,001 --> 00:30:58,960
+to change in Creighton farms as I
+mentioned
+
+484
+00:30:59,059 --> 00:31:02,340
+I all these presentations styles
+
+485
+00:31:02,034 --> 00:31:09,034
+adopt by default and horizontally
+compact environments to full screen
+
+486
+00:31:10,659 --> 00:31:15,100
+now it's possible to change that default
+behavior
+
+487
+00:31:15,001 --> 00:31:18,700
+to be over full screen or to be not
+which means
+
+488
+00:31:18,799 --> 00:31:21,834
+please don't adapt keep my presentation
+controller
+
+489
+00:31:22,149 --> 00:31:26,100
+as is in charge
+
+490
+00:31:26,001 --> 00:31:29,073
+the way you control this behavior as I
+implied was use up the delegate
+
+491
+00:31:29,082 --> 00:31:32,321
+and you're going to override a couple
+arena implement a coupla methods on that
+
+492
+00:31:33,059 --> 00:31:35,460
+delicate
+
+493
+00:31:35,046 --> 00:31:38,099
+so here they are
+
+494
+00:31:38,099 --> 00:31:41,398
+the first is adopted presentation style
+for presentation controller
+
+495
+00:31:42,289 --> 00:31:45,290
+it does what it its name implies
+
+496
+00:31:45,389 --> 00:31:50,820
+it's called when the presentation moves
+into a horizontally compact environment
+
+497
+00:31:50,082 --> 00:31:55,131
+and you return one of those presentation
+styles that I enumerated earlier
+
+498
+00:31:55,869 --> 00:31:58,960
+there's another method that might be a
+little less clear which allows you to
+
+499
+00:31:58,096 --> 00:32:01,905
+actually return a whole new view
+controller that should be presented nap
+
+500
+00:32:02,769 --> 00:32:03,570
+stop
+
+501
+00:32:03,057 --> 00:32:06,876
+and we'll see what that means in a bit
+up
+
+502
+00:32:07,389 --> 00:32:10,460
+there's a popover presentation
+controller delegate which I'm not going
+
+503
+00:32:10,046 --> 00:32:11,855
+to go into detail about
+
+504
+00:32:12,269 --> 00:32:15,990
+but suffice it to say that that they'll
+get in addition to providing the
+
+505
+00:32:15,099 --> 00:32:16,638
+adaptive API's
+
+506
+00:32:17,529 --> 00:32:21,614
+also exposes all the properties and
+methods that you need to get the
+
+507
+00:32:22,379 --> 00:32:23,397
+functionally
+
+508
+00:32:23,559 --> 00:32:27,608
+acquittal and popover behavior you're
+used
+
+509
+00:32:28,049 --> 00:32:31,960
+will see a little bit %uh the code
+example up that short
+
+510
+00:32:31,096 --> 00:32:36,305
+in fact very shortly on so what does it
+mean to present a popover
+
+511
+00:32:37,169 --> 00:32:42,227
+NIOS a well you could use the old API's
+as i sat on you I pop over controller
+
+512
+00:32:42,749 --> 00:32:44,610
+but i wanna show how you would do it
+
+513
+00:32:44,061 --> 00:32:49,700
+using the new APIs
+
+514
+00:32:50,249 --> 00:32:54,320
+sup the first thing you do not too
+surprisingly as you set the presentation
+
+515
+00:32:54,032 --> 00:32:57,108
+style the Popo
+
+516
+00:32:58,008 --> 00:33:01,082
+now interestingly you can grab the
+popover presentation controller before
+
+517
+00:33:01,082 --> 00:33:03,041
+you've even presented anything
+
+518
+00:33:03,779 --> 00:33:06,864
+that's important because you're gonna
+need to do things like say
+
+519
+00:33:07,629 --> 00:33:11,694
+watch the bar but night on that I'm
+pointing to in 10 my arrows look like
+
+520
+00:33:12,279 --> 00:33:15,291
+you might also want a suspect the fire
+preferred contents of
+
+521
+00:33:15,399 --> 00:33:20,465
+so that we know kinda had a size the
+popover
+
+522
+00:33:21,059 --> 00:33:24,580
+and finally you present the pop-up
+
+523
+00:33:24,058 --> 00:33:29,657
+so what's like it'll look like so I
+wrote that code in executed it
+
+524
+00:33:30,179 --> 00:33:34,840
+just the way you saw on the previous
+slide
+
+525
+00:33:34,084 --> 00:33:39,085
+gonna look like that now the first thing
+I want to say is
+
+526
+00:33:39,085 --> 00:33:43,014
+it is a popover presentation
+
+527
+00:33:43,779 --> 00:33:49,940
+the second thing I want to say is
+there's a couple problems
+
+528
+00:33:49,094 --> 00:33:53,098
+so the first problem
+
+529
+00:33:53,098 --> 00:33:57,117
+is that it under laps a status bar this
+is why my favorite books I can't tell
+
+530
+00:33:57,999 --> 00:33:59,053
+you how many bugs I get
+
+531
+00:33:59,539 --> 00:34:03,330
+about my contents underneath the status
+bar
+
+532
+00:34:03,033 --> 00:34:07,097
+I can go into that but I thought I would
+just mention
+
+533
+00:34:07,097 --> 00:34:13,124
+the second thing is it looks pretty bad
+
+534
+00:34:14,024 --> 00:34:18,433
+n a more subtle point that I'm sure all
+you got was
+
+535
+00:34:18,649 --> 00:34:24,320
+it's a popover presentation I can tap
+anywhere to dismiss
+
+536
+00:34:24,032 --> 00:34:27,091
+okay so what are we gonna do what we're
+gonna go to our friend
+
+537
+00:34:27,091 --> 00:34:30,100
+trustee presentation controller delegate
+
+538
+00:34:31,000 --> 00:34:35,014
+or to use some %uh those new adapted
+APIs
+
+539
+00:34:35,014 --> 00:34:38,062
+and in particular I'm going to implement
+I would implement adaptive presentation
+
+540
+00:34:38,062 --> 00:34:39,065
+style for president
+
+541
+00:34:39,065 --> 00:34:42,074
+presented for presentation controller
+
+542
+00:34:42,074 --> 00:34:45,173
+this moment have it return over for
+spring
+
+543
+00:34:46,073 --> 00:34:49,092
+are going to use this brand new view
+object that we introduced
+
+544
+00:34:49,092 --> 00:34:53,121
+I in Iowa State called the UI visual
+effect view which will become your best
+
+545
+00:34:54,021 --> 00:34:57,052
+blurry friend in iowa say
+
+546
+00:34:57,052 --> 00:35:00,104
+and then inside that implementation I
+can adjust the contents
+
+547
+00:35:01,004 --> 00:35:05,019
+like where it's actually position so
+that should address a couple other
+
+548
+00:35:05,019 --> 00:35:07,034
+problems
+
+549
+00:35:07,034 --> 00:35:10,052
+so now I get this
+
+550
+00:35:10,052 --> 00:35:13,130
+kinda nifty blurred view which looks a
+lot better than that ugly white
+
+551
+00:35:14,003 --> 00:35:17,007
+think ivory position my content
+
+552
+00:35:17,034 --> 00:35:20,098
+it's a different adaptation the reason
+is boring so nicely is because I didn't
+
+553
+00:35:20,098 --> 00:35:22,135
+remove the presenting view controller's
+view
+
+554
+00:35:23,035 --> 00:35:27,114
+underneath however we still have the
+problem that there's no way to dismiss
+
+555
+00:35:28,014 --> 00:35:29,085
+the Popo
+
+556
+00:35:29,085 --> 00:35:32,128
+so how do we fix this well
+
+557
+00:35:33,028 --> 00:35:37,070
+you may give recall that there was
+another
+
+558
+00:35:37,007 --> 00:35:41,048
+delegate API that I talked about that I
+deferred kind of explaining why I
+
+559
+00:35:42,011 --> 00:35:48,015
+why it was useful we can go back to the
+delegate in this time
+
+560
+00:35:48,015 --> 00:35:52,016
+we're gonna also implement presentation
+controller view controller for adapted
+
+561
+00:35:52,016 --> 00:35:53,079
+presentation style
+
+562
+00:35:53,079 --> 00:35:56,102
+this is pretty nifty what we're gonna do
+is we're gonna create a navigation
+
+563
+00:35:57,002 --> 00:35:58,100
+controller
+
+564
+00:35:59,000 --> 00:36:05,043
+whose root view controller is the
+currently presented view controller
+
+565
+00:36:05,043 --> 00:36:08,112
+we're gonna added dismiss button to the
+navigation controllers
+
+566
+00:36:09,012 --> 00:36:12,098
+are navigation bar
+
+567
+00:36:12,098 --> 00:36:16,114
+and they were gonna be good to go up so
+now when I hit
+
+568
+00:36:17,014 --> 00:36:20,026
+No
+
+569
+00:36:20,026 --> 00:36:24,047
+I get this great-looking over full
+screen adaption
+
+570
+00:36:24,047 --> 00:36:31,047
+popover presentation there's a done
+button so I can dismiss it
+
+571
+00:36:31,065 --> 00:36:35,150
+such great what if I actually just wanna
+pop up
+
+572
+00:36:36,005 --> 00:36:42,014
+well you can do that too let's go back
+to our trusty delegate friend
+
+573
+00:36:43,004 --> 00:36:47,009
+and insist I'm an adapted presentation
+style for presentation controller
+
+574
+00:36:47,009 --> 00:36:50,067
+all I need to do is return not
+
+575
+00:36:51,048 --> 00:36:54,117
+if I return on the presentation
+controller is not going to be adopted at
+
+576
+00:36:55,017 --> 00:36:56,111
+all
+
+577
+00:36:57,011 --> 00:37:04,011
+and now when I hit note button I get
+actual pop over
+
+578
+00:37:10,072 --> 00:37:13,126
+so it's gonna go over what we saw here
+
+579
+00:37:14,026 --> 00:37:19,028
+first is present cage presentation
+controllers are a new object in Iowa
+
+580
+00:37:19,028 --> 00:37:19,109
+State
+
+581
+00:37:20,009 --> 00:37:25,101
+that make it easier and more consistent
+to create powerful custom presentations
+
+582
+00:37:26,001 --> 00:37:32,029
+they are an improvement over what was
+introduced in Iowa 7
+
+583
+00:37:32,029 --> 00:37:36,098
+every presentation is associated with
+the presentation controller which can be
+
+584
+00:37:36,098 --> 00:37:40,127
+accessed and you can use that
+presentation controller to do various
+
+585
+00:37:41,027 --> 00:37:42,083
+things depending
+
+586
+00:37:42,083 --> 00:37:46,171
+on the presentation control but all
+presentation controllers
+
+587
+00:37:47,071 --> 00:37:51,116
+can use can have a delegate that
+conforms to these adopting
+
+588
+00:37:52,016 --> 00:37:55,034
+delegate particles
+
+589
+00:37:55,034 --> 00:37:59,088
+one thing that is in on the screen is
+that pop overs are also presentation
+
+590
+00:37:59,088 --> 00:38:00,092
+controllers
+
+591
+00:38:00,092 --> 00:38:04,128
+or our presentations that have been
+associated presentation control
+
+592
+00:38:05,028 --> 00:38:08,032
+and finally if you create your own
+presentation controller right mention
+
+593
+00:38:08,032 --> 00:38:09,064
+this earlier
+
+594
+00:38:09,064 --> 00:38:13,119
+if it returned yes to should present in
+full screen it will be able to adapt
+
+595
+00:38:14,019 --> 00:38:18,022
+if on the other hand your presentation
+controllers kinda current context I'll
+
+596
+00:38:18,022 --> 00:38:19,053
+presentation
+
+597
+00:38:19,053 --> 00:38:22,129
+it doesn't really make too much sense
+for that to adapt so it doesn't we're
+
+598
+00:38:23,029 --> 00:38:29,058
+not gonna go through those adaptive
+delegate calls in that case
+
+599
+00:38:29,058 --> 00:38:34,119
+alright that's enough for presentation
+controllers although this topic
+
+600
+00:38:35,019 --> 00:38:40,025
+actually kinda overlaps or has some
+overlap with presentation controllers
+
+601
+00:38:40,079 --> 00:38:44,168
+drug transition coordinators up again
+those were introduced
+
+602
+00:38:45,068 --> 00:38:48,114
+and I was seven on
+
+603
+00:38:49,014 --> 00:38:52,088
+what is it well
+
+604
+00:38:52,088 --> 00:38:55,121
+it's an object that conforms to this
+protocol
+
+605
+00:38:56,021 --> 00:39:02,082
+on in every transition coordinator
+
+606
+00:39:02,082 --> 00:39:06,175
+has in Associated transition
+
+607
+00:39:07,075 --> 00:39:10,107
+and that associated transition
+
+608
+00:39:11,007 --> 00:39:14,022
+is oftentimes deferred
+
+609
+00:39:14,022 --> 00:39:18,041
+and this transition coordinator is kinda
+holding this freeze-dried transition as
+
+610
+00:39:18,041 --> 00:39:21,058
+it gets passed around to their various
+pieces that code
+
+611
+00:39:21,058 --> 00:39:25,059
+they can then use this method called
+enemy alongside transition completion so
+
+612
+00:39:25,068 --> 00:39:27,074
+you can pick you up blocks
+
+613
+00:39:27,074 --> 00:39:30,167
+all the animations that are gonna
+execute in that kind of deferred
+
+614
+00:39:31,067 --> 00:39:35,152
+transition animation that is associated
+with that transition coordinator
+
+615
+00:39:36,052 --> 00:39:39,129
+so that's pretty powerful was introduced
+in Iowa seven and we're taking advantage
+
+616
+00:39:40,029 --> 00:39:45,034
+of this object in a few new API's
+
+617
+00:39:45,079 --> 00:39:48,175
+so to have these are you'll transition
+size
+
+618
+00:39:49,075 --> 00:39:53,126
+with transition coordinator
+
+619
+00:39:54,026 --> 00:39:58,083
+next one is will transition a trait
+collection with transition coordinator
+
+620
+00:39:58,083 --> 00:40:02,126
+now I'm not gonna talk too much about
+will transition to trade collection
+
+621
+00:40:03,026 --> 00:40:06,114
+but I did mention earlier the tree
+collections are kinda associated with
+
+622
+00:40:07,014 --> 00:40:07,075
+course
+
+623
+00:40:07,075 --> 00:40:12,099
+application structure on and one of the
+best ways to
+
+624
+00:40:12,099 --> 00:40:16,190
+adapt a application it's not the only
+way but it's warm
+
+625
+00:40:17,009 --> 00:40:20,073
+is to implement will transition to treat
+collection
+
+626
+00:40:21,054 --> 00:40:24,113
+and when a trait collections such as a
+size class
+
+627
+00:40:25,013 --> 00:40:28,013
+say that may change say if you
+
+628
+00:40:28,013 --> 00:40:31,077
+rotated device or if you set an override
+tree collection
+
+629
+00:40:31,077 --> 00:40:34,150
+this method will be invoked and you can
+actually do some coarse-grained
+
+630
+00:40:35,005 --> 00:40:38,029
+application kinda regenerate
+
+631
+00:40:38,074 --> 00:40:41,141
+if you want now again there's going to
+be a whole talk that goes into a lot
+
+632
+00:40:42,041 --> 00:40:42,128
+more detail
+
+633
+00:40:43,028 --> 00:40:46,115
+on that particular method it's very
+parallel to the other method
+
+634
+00:40:47,015 --> 00:40:50,046
+you will transition to size with
+transition coordinator
+
+635
+00:40:50,046 --> 00:40:53,123
+that i'm gonna talk about by the way did
+I forget to mention this is part of a
+
+636
+00:40:54,023 --> 00:40:57,025
+new protocol called the content you I
+content container
+
+637
+00:40:57,043 --> 00:41:01,084
+I mentioned that you I presentation
+controller conforms to this
+
+638
+00:41:01,084 --> 00:41:06,119
+you a view controller also conforms to
+this protocol
+
+639
+00:41:07,019 --> 00:41:12,027
+these objects support the notion of a
+preferred content sites that you can set
+
+640
+00:41:12,027 --> 00:41:15,051
+and that's kinda the request if you will
+that
+
+641
+00:41:15,051 --> 00:41:18,150
+you like your content size to grow or
+shrink depending on
+
+642
+00:41:19,005 --> 00:41:22,066
+the circumstances that your application
+
+643
+00:41:23,011 --> 00:41:27,092
+when you set that your parent container
+object whatever that might be it might
+
+644
+00:41:27,092 --> 00:41:27,178
+be
+
+645
+00:41:28,078 --> 00:41:32,109
+a parent view controller it might be a
+presentation controller
+
+646
+00:41:33,009 --> 00:41:38,084
+will get a preferred content size did
+change for child content contained
+
+647
+00:41:38,084 --> 00:41:42,140
+in that method the parent can decide
+what to do with the request
+
+648
+00:41:43,004 --> 00:41:47,040
+if it decides that actually wants to
+honor the request
+
+649
+00:41:47,076 --> 00:41:50,171
+it may turn around its called you all
+transition the size the transition
+
+650
+00:41:51,071 --> 00:41:51,147
+coordinator
+
+651
+00:41:52,047 --> 00:41:56,075
+on the child which gives the child
+
+652
+00:41:56,075 --> 00:41:59,086
+the ability to you I
+
+653
+00:41:59,086 --> 00:42:02,179
+animate alongside that size change
+
+654
+00:42:03,079 --> 00:42:06,083
+so let me kinda make a small digression
+
+655
+00:42:07,019 --> 00:42:10,044
+and kinda give a bit of wisdom and I
+
+656
+00:42:10,044 --> 00:42:13,044
+I realize that Anonymous is actually
+jock schaeffer
+
+657
+00:42:13,044 --> 00:42:16,075
+girl I think I heard this from him on
+
+658
+00:42:16,075 --> 00:42:20,156
+and you might wonder why am i throwing
+this random point now
+
+659
+00:42:21,056 --> 00:42:24,065
+first let's see what we mean here on
+
+660
+00:42:24,065 --> 00:42:27,150
+basically by rotating device in general
+that's all it happen
+
+661
+00:42:28,005 --> 00:42:31,008
+the fact that there's an animated
+transformer station is kinda beside the
+
+662
+00:42:31,008 --> 00:42:32,067
+point
+
+663
+00:42:33,039 --> 00:42:36,091
+and most the time your application
+really doesn't need to do anything
+
+664
+00:42:36,091 --> 00:42:39,169
+it's gonna gracefully stretch and do
+whatever it needs to do
+
+665
+00:42:40,069 --> 00:42:45,124
+I as the band's change
+
+666
+00:42:46,024 --> 00:42:50,025
+okay so what does that mean well you'll
+recall that we have these
+
+667
+00:42:50,025 --> 00:42:53,087
+API's that have been around for a long
+time
+
+668
+00:42:53,087 --> 00:42:56,088
+on well we get rid of a
+
+669
+00:42:56,088 --> 00:43:00,177
+and hi I thought you guys all love these
+
+670
+00:43:01,077 --> 00:43:04,155
+I'm so
+
+671
+00:43:05,055 --> 00:43:08,127
+what are the things about these API's
+and I've I think I've been on the stage
+
+672
+00:43:09,027 --> 00:43:11,046
+before saying
+
+673
+00:43:11,046 --> 00:43:15,047
+you shouldn't do layout based on
+interface orientation and you shouldn't
+
+674
+00:43:15,047 --> 00:43:17,108
+use these methods to drive your layout
+
+675
+00:43:18,008 --> 00:43:22,027
+they're really kinda focused message she
+wanted to use them because you wanted to
+
+676
+00:43:22,027 --> 00:43:23,059
+participate
+
+677
+00:43:23,059 --> 00:43:26,085
+in this rotation at so now we've
+generalized
+
+678
+00:43:26,085 --> 00:43:29,160
+we have this other method called you
+will transition a size with transition
+
+679
+00:43:30,006 --> 00:43:30,105
+coordinator
+
+680
+00:43:31,059 --> 00:43:34,134
+it takes over so first of all
+
+681
+00:43:35,034 --> 00:43:38,133
+all those rotation call backs can be
+replaced with this
+
+682
+00:43:39,033 --> 00:43:44,055
+more general notion a fuel transition a
+size with transition coordinator
+
+683
+00:43:44,055 --> 00:43:47,059
+I talked about setting the preferred cut
+10 size and that
+
+684
+00:43:47,059 --> 00:43:50,148
+you get this notification well so if
+your widget in the Notification Center
+
+685
+00:43:51,048 --> 00:43:55,062
+actually wants to request to be
+displayed in a slightly larger
+
+686
+00:43:55,062 --> 00:43:58,128
+space all or smaller space on
+
+687
+00:43:59,028 --> 00:44:02,081
+this this API will be called on your
+widget
+
+688
+00:44:02,081 --> 00:44:05,175
+so that you can in fact animate
+alongside or be no
+
+689
+00:44:06,075 --> 00:44:12,091
+run some code that executes after the
+resizing has taken place
+
+690
+00:44:12,091 --> 00:44:16,096
+I said that you can use your own aP's
+can respond to this
+
+691
+00:44:16,096 --> 00:44:19,140
+now at one point I was going to
+
+692
+00:44:20,004 --> 00:44:23,049
+have a whole buncha slides that showed
+you how did implement your own
+
+693
+00:44:23,085 --> 00:44:24,159
+transition coordinator
+
+694
+00:44:25,059 --> 00:44:29,080
+on I enough time to do that but it's
+relatively straightforward
+
+695
+00:44:29,008 --> 00:44:31,095
+and you can implement your own
+transition coordinator that implement
+
+696
+00:44:32,067 --> 00:44:34,105
+that kind of is associated with your own
+
+697
+00:44:35,005 --> 00:44:39,086
+transition animation and if a child
+changes its size
+
+698
+00:44:39,086 --> 00:44:44,093
+you can call the all transition sizing
+passin that object
+
+699
+00:44:44,093 --> 00:44:47,161
+in the transition coordinator okay
+
+700
+00:44:48,061 --> 00:44:51,062
+so to really be a replacement for
+
+701
+00:44:51,071 --> 00:44:54,167
+kinda the rotation we can to give a
+little bit
+
+702
+00:44:55,067 --> 00:44:58,105
+on can to get down on of a bar
+
+703
+00:44:59,005 --> 00:45:02,050
+high horses have you know
+
+704
+00:45:02,005 --> 00:45:05,010
+the way things should be an acknowledge
+the way things are
+
+705
+00:45:06,000 --> 00:45:10,044
+and we added this target transform but
+not so much the orientation that you
+
+706
+00:45:10,044 --> 00:45:10,136
+really care about
+
+707
+00:45:11,036 --> 00:45:14,045
+is it's like what's the transform thats
+kinda have
+
+708
+00:45:14,045 --> 00:45:18,067
+being that I'm participating in an
+animation
+
+709
+00:45:18,067 --> 00:45:22,104
+the reason this is important and I'm
+gonna get to this later
+
+710
+00:45:23,004 --> 00:45:26,041
+is we've actually changed where
+
+711
+00:45:26,041 --> 00:45:30,078
+the rotation transforms lip some love
+you guys may have noticed that whenever
+
+712
+00:45:30,078 --> 00:45:34,078
+you do a rotation that this larue view
+controller the full screen view
+
+713
+00:45:34,078 --> 00:45:35,124
+controllers
+
+714
+00:45:36,024 --> 00:45:41,069
+I layer that has kind of the af line
+rotation transformation directly
+
+715
+00:45:41,069 --> 00:45:42,108
+associated with it
+
+716
+00:45:43,008 --> 00:45:46,086
+that's no longer the case on IOSA so
+when you get
+
+717
+00:45:46,086 --> 00:45:48,093
+when you believe you will transition a
+size you can ask for the target
+
+718
+00:45:49,056 --> 00:45:49,143
+transform
+
+719
+00:45:50,043 --> 00:45:54,089
+and if it's not identity your insider a
+rotation
+
+720
+00:45:54,089 --> 00:45:59,163
+resize at that you can do some
+interesting things work
+
+721
+00:46:00,063 --> 00:46:03,160
+so to show how these are similar or how
+this is a direct replacement for the old
+
+722
+00:46:04,006 --> 00:46:05,012
+rotation call backs
+
+723
+00:46:06,002 --> 00:46:09,023
+this is some you know skeleton code
+
+724
+00:46:09,041 --> 00:46:12,106
+where view all transition size first
+called my will rotate interface
+
+725
+00:46:13,006 --> 00:46:14,022
+orientation
+
+726
+00:46:14,022 --> 00:46:19,085
+which is exactly when it the old call
+would have been made
+
+727
+00:46:19,085 --> 00:46:22,112
+and then it uses the transition
+coordinator
+
+728
+00:46:23,012 --> 00:46:27,064
+to animate alongside my wheel an image
+
+729
+00:46:27,064 --> 00:46:31,070
+to interface orientation call and
+finally in the completion block
+
+730
+00:46:32,024 --> 00:46:35,032
+is when you would call my did animate
+from interface:
+
+731
+00:46:36,004 --> 00:46:40,009
+orientation so you can kinda see that
+will transition to size
+
+732
+00:46:40,009 --> 00:46:43,030
+on with transition coordinator is
+identical
+
+733
+00:46:43,003 --> 00:46:46,064
+or provide the identical functionality
+is actually more powerful
+
+734
+00:46:46,091 --> 00:46:51,128
+and from my perspective it's a lot
+easier to read code like this:
+
+735
+00:46:52,028 --> 00:46:55,103
+okay I know you guys are all sad and
+that these methods have gone so if you
+
+736
+00:46:56,003 --> 00:46:59,047
+don't implement the old transition size
+a transition coordinator will still call
+
+737
+00:46:59,047 --> 00:46:59,142
+them
+
+738
+00:47:00,042 --> 00:47:04,086
+just don't implemented a subtle point
+that you should be aware of
+
+739
+00:47:04,086 --> 00:47:07,094
+is most you controller transitions on
+
+740
+00:47:08,066 --> 00:47:12,132
+are immediate when the system calls on
+
+741
+00:47:13,032 --> 00:47:16,038
+this method what does that mean it means
+that
+
+742
+00:47:16,038 --> 00:47:19,038
+if you needed to rearrange your
+application structure in some
+
+743
+00:47:19,038 --> 00:47:20,111
+significant way
+
+744
+00:47:21,011 --> 00:47:25,047
+on and you do like push you controller
+something like that
+
+745
+00:47:25,047 --> 00:47:28,063
+the entire view hierarchy is going to be
+updated
+
+746
+00:47:28,063 --> 00:47:34,136
+immediately so you can do need things
+with that in your transition animations
+
+747
+00:47:35,036 --> 00:47:38,075
+unlike I rotation call backs
+
+748
+00:47:38,075 --> 00:47:41,140
+by 24 we're gonna forward you will
+transition to size
+
+749
+00:47:42,004 --> 00:47:46,075
+through the entire presentation I
+hierarchy through the entire
+
+750
+00:47:47,011 --> 00:47:51,075
+on you controller containment hierarchy
+all you need to do is call super to get
+
+751
+00:47:51,075 --> 00:47:52,076
+that behavior
+
+752
+00:47:52,076 --> 00:47:59,076
+if you don't we will no longer propagate
+so you probably want to call super
+
+753
+00:47:59,082 --> 00:48:02,173
+finally I'm gonna say that you really
+only need this I kinda implied it before
+
+754
+00:48:03,073 --> 00:48:06,079
+when you're doing some kind of special
+size transition
+
+755
+00:48:07,033 --> 00:48:11,047
+more often than not auto layout and
+other techniques are going to be
+
+756
+00:48:11,047 --> 00:48:14,083
+layout techniques are gonna more than
+suffice
+
+757
+00:48:14,083 --> 00:48:18,106
+to handle size transition
+
+758
+00:48:19,006 --> 00:48:22,013
+so I wanted to I showed this example
+earlier in the demo and I wanted to show
+
+759
+00:48:22,076 --> 00:48:22,160
+when
+
+760
+00:48:23,006 --> 00:48:27,034
+would be a good time that you might want
+to use you will transition the sauce
+
+761
+00:48:27,088 --> 00:48:31,166
+so here's a collection view controller
+if I rotated
+
+762
+00:48:32,066 --> 00:48:35,120
+what's gonna end up happening if I did
+nothing at all
+
+763
+00:48:36,002 --> 00:48:39,058
+is I get all the default collection view
+flow layout will give me something like
+
+764
+00:48:39,076 --> 00:48:39,085
+this you'll notice
+
+765
+00:48:40,066 --> 00:48:43,138
+kind of Houla the thumbnails have
+shifted around in
+
+766
+00:48:44,038 --> 00:48:47,115
+things every size 10 maybe that's what I
+want
+
+767
+00:48:48,015 --> 00:48:52,054
+but maybe I want something else maybe I
+don't want the collection view
+
+768
+00:48:52,054 --> 00:48:54,120
+controllers you to rotate at all
+
+769
+00:48:55,002 --> 00:48:59,076
+and I want to apply the counter
+transform on each of the cells
+
+770
+00:48:59,094 --> 00:49:03,182
+something like that so this would be a
+great time to use you'll transition size
+
+771
+00:49:04,082 --> 00:49:07,123
+I and let's see how that would look
+
+772
+00:49:08,023 --> 00:49:10,110
+the first thing that you do you get that
+target transform that I was talking
+
+773
+00:49:11,001 --> 00:49:12,093
+about
+
+774
+00:49:13,002 --> 00:49:16,088
+now we're going to invert it you wanna
+grab our old you bounce
+
+775
+00:49:16,088 --> 00:49:20,149
+on and some things up for our transition
+coordinator
+
+776
+00:49:21,049 --> 00:49:24,054
+so inside the alongside block we're
+gonna basically call transition
+
+777
+00:49:24,099 --> 00:49:26,122
+coordinator animate alongside
+
+778
+00:49:27,022 --> 00:49:30,030
+we're going to update the transform
+
+779
+00:49:30,003 --> 00:49:33,075
+to basically undue the rotation
+transform that's taking a fact you'll
+
+780
+00:49:34,002 --> 00:49:37,055
+notice that I'm composing it with the
+existing transform because hell I might
+
+781
+00:49:37,055 --> 00:49:38,149
+be in a different orientation already
+
+782
+00:49:39,049 --> 00:49:42,067
+so I do that
+
+783
+00:49:42,067 --> 00:49:46,092
+and then squirrel away the counter
+rotation which effectively is the
+
+784
+00:49:46,092 --> 00:49:50,127
+transform that is I am animating with
+right now
+
+785
+00:49:51,027 --> 00:49:54,121
+my update my bounds to the old balance
+because I now applied
+
+786
+00:49:55,021 --> 00:49:59,118
+the counter transform on the collection
+view controllers use transform
+
+787
+00:50:00,018 --> 00:50:05,022
+and up we need not wrote the collection
+view controller is a canoe
+
+788
+00:50:05,022 --> 00:50:08,077
+rotate and those cells are going to
+rotate either
+
+789
+00:50:08,077 --> 00:50:11,086
+until I hit the completion block at
+which point I'm gonna apply the counter
+
+790
+00:50:12,067 --> 00:50:15,075
+rotation to Egypt
+
+791
+00:50:15,075 --> 00:50:19,132
+okay so what do we learn on
+
+792
+00:50:20,032 --> 00:50:23,033
+transition coordinators are being used
+in a lot of our
+
+793
+00:50:23,042 --> 00:50:28,046
+adopted API's
+
+794
+00:50:28,082 --> 00:50:32,085
+you can use a transition coordinator in
+response to you
+
+795
+00:50:32,085 --> 00:50:35,089
+preferred content size did change calls
+
+796
+00:50:36,025 --> 00:50:41,074
+over the rotation call backs are being
+deprecated
+
+797
+00:50:41,074 --> 00:50:44,129
+that's about it so let's talk about
+spring court in its and this gets to
+
+798
+00:50:45,029 --> 00:50:46,047
+wear
+
+799
+00:50:46,047 --> 00:50:53,047
+the transforms are being applied when we
+rotate
+
+800
+00:50:54,085 --> 00:50:58,102
+so when I was a I mean I was seven
+
+801
+00:50:59,002 --> 00:51:02,018
+the screen orientation was always fixed
+to you
+
+802
+00:51:02,018 --> 00:51:06,073
+kinda the top left position
+
+803
+00:51:06,073 --> 00:51:11,158
+in Portree its gave she gave you affixed
+unchanging coordinate system
+
+804
+00:51:12,058 --> 00:51:16,097
+if you needed it we ended up
+communicating things like
+
+805
+00:51:16,097 --> 00:51:21,196
+keyboard size an and other things in
+terms of this fixed coordinate system
+
+806
+00:51:22,096 --> 00:51:25,164
+even though the actual interface
+orientation
+
+807
+00:51:26,064 --> 00:51:32,101
+was the current top left corner so I
+would say we're changing that a bit
+
+808
+00:51:33,001 --> 00:51:37,085
+and everything is now interface oriented
+so the keyboard size notifications are
+
+809
+00:51:37,085 --> 00:51:37,130
+going to be
+
+810
+00:51:38,003 --> 00:51:45,003
+interface oriented the other things are
+going to be interface oriented
+
+811
+00:51:46,077 --> 00:51:49,145
+but you still may need a I'm
+
+812
+00:51:50,045 --> 00:51:53,084
+a fixed coordinate system
+
+813
+00:51:53,084 --> 00:51:57,138
+how do you do that well we introduce a
+new protocol called the UI coordinate
+
+814
+00:51:58,038 --> 00:52:01,074
+space and by the way this is not in seed
+ones will come out in a
+
+815
+00:52:01,074 --> 00:52:04,102
+on you know soon to follow seed on
+
+816
+00:52:05,002 --> 00:52:08,064
+we introduced a protocol called you I
+coordinate space
+
+817
+00:52:08,064 --> 00:52:12,131
+couple conversion routines up to and
+from these corn its paces
+
+818
+00:52:13,031 --> 00:52:17,037
+it also implements the balance call
+
+819
+00:52:17,091 --> 00:52:21,096
+you live you conforms to this directly
+which isn't too surprising all the
+
+820
+00:52:21,096 --> 00:52:22,109
+existing conversion
+
+821
+00:52:23,009 --> 00:52:27,068
+routines by the way stay in place US
+Green now has grown
+
+822
+00:52:27,068 --> 00:52:30,095
+a couple properties that band two
+different coordinate space is one is
+
+823
+00:52:30,095 --> 00:52:31,117
+that the fall
+
+824
+00:52:32,017 --> 00:52:35,028
+interface oriented coordinate space and
+the other is the old
+
+825
+00:52:35,028 --> 00:52:38,076
+portrait fixed coordinate space
+
+826
+00:52:38,076 --> 00:52:42,084
+so if I wanted to convert to and from
+
+827
+00:52:42,084 --> 00:52:46,135
+on that fix coordinate space what you
+effectively do as you grab that dick
+
+828
+00:52:47,035 --> 00:52:47,134
+sworn in space
+
+829
+00:52:48,034 --> 00:52:55,034
+of %uh the on the Windows screen and you
+can convert to and from views
+
+830
+00:52:57,000 --> 00:53:04,000
+so let's go over briefly what we
+discussed today
+
+831
+00:53:04,003 --> 00:53:07,097
+we talked a little bit about
+recollections how they affect
+
+832
+00:53:07,097 --> 00:53:11,130
+kinda gross course level application
+structure
+
+833
+00:53:12,003 --> 00:53:16,009
+a viewer application how you can
+override them how view controllers can
+
+834
+00:53:16,009 --> 00:53:17,038
+override them
+
+835
+00:53:18,019 --> 00:53:22,024
+and a little bit about how your view
+controllers and your application can
+
+836
+00:53:22,024 --> 00:53:24,032
+adapt to those changes
+
+837
+00:53:24,032 --> 00:53:28,054
+we introduce some love the new you I
+split new controller
+
+838
+00:53:28,054 --> 00:53:31,113
+I am features and there are a lot of
+them
+
+839
+00:53:32,013 --> 00:53:35,091
+I encourage you to come to look at the
+header files and attend the talk after
+
+840
+00:53:35,091 --> 00:53:36,103
+this to see
+
+841
+00:53:37,003 --> 00:53:41,011
+all the new UN amazing things you can do
+with what you control or
+
+842
+00:53:41,083 --> 00:53:44,127
+there's a new simple properties on
+navigation controller that allow you to
+
+843
+00:53:45,027 --> 00:53:47,119
+condense and high bars
+
+844
+00:53:48,019 --> 00:53:51,057
+we introduce presentation controller and
+particular we've revamped the
+
+845
+00:53:51,057 --> 00:53:55,071
+presentation hierarchy pop overs are now
+presentations we've introduced some new
+
+846
+00:53:55,071 --> 00:53:59,113
+presentation styles
+
+847
+00:54:00,013 --> 00:54:03,045
+you got some new API for transition
+quote that utilize transition
+
+848
+00:54:03,045 --> 00:54:04,093
+coordinators
+
+849
+00:54:04,093 --> 00:54:07,134
+and these are becoming interesting
+objects that are becoming more present
+
+850
+00:54:08,034 --> 00:54:10,095
+in more and more or APIs
+
+851
+00:54:10,095 --> 00:54:13,101
+we've deprecated the old rotation call
+backs or the
+
+852
+00:54:14,001 --> 00:54:19,054
+existing rotation call backs in be
+replaced by that logic can be replaced
+
+853
+00:54:19,054 --> 00:54:19,063
+by this
+
+854
+00:54:20,044 --> 00:54:23,052
+new method you will transition size
+
+855
+00:54:23,052 --> 00:54:27,108
+and finally screen Browns is now
+interface oriented
+
+856
+00:54:28,008 --> 00:54:31,069
+on there's a lot of things in UI kit
+
+857
+00:54:31,069 --> 00:54:35,111
+that are new for IOSA this is just some
+other
+
+858
+00:54:36,011 --> 00:54:39,075
+encourage you the talk right after this
+one is a building adaptive aP's with you
+
+859
+00:54:39,075 --> 00:54:41,111
+i cant thats gonna go into much more
+detail
+
+860
+00:54:42,011 --> 00:54:46,044
+about all these new in great adapted
+API's we haven't you like it
+
+861
+00:54:46,044 --> 00:54:49,101
+tomorrow there's going to be a talk that
+goes into depth about presentation
+
+862
+00:54:50,001 --> 00:54:51,024
+controllers
+
+863
+00:54:51,024 --> 00:54:54,026
+how we internally use them to implement
+
+864
+00:54:54,044 --> 00:54:58,106
+new replacements for search controller
+and work controller
+
+865
+00:54:59,006 --> 00:55:04,045
+on we're there was a talk yesterday
+believe that creating extensions that
+
+866
+00:55:04,045 --> 00:55:07,049
+leverage the fuel transition the size
+API's
+
+867
+00:55:07,085 --> 00:55:10,162
+there's some nice talks on Friday where
+there is a nice talk on Friday
+
+868
+00:55:11,062 --> 00:55:14,094
+about on how you can make your
+
+869
+00:55:14,094 --> 00:55:17,097
+basically your transition animations
+more responsive
+
+870
+00:55:18,024 --> 00:55:23,093
+to user interaction for more information
+please contact our evangelistic parents
+
+871
+00:55:23,093 --> 00:55:26,110
+will be more than happy to get you to
+sample Lapan
+
+872
+00:55:27,001 --> 00:55:30,060
+answer your questions and tell you how
+it all works
+
+873
+00:55:30,069 --> 00:55:33,096
+and have a great rest obscure
+
+874
+00:55:33,096 --> 00:55:34,155
+other conference thank you
+

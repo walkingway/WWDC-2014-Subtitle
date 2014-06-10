@@ -1,0 +1,4029 @@
+1
+00:00:11,065 --> 00:00:14,072
+morning
+
+2
+00:00:14,072 --> 00:00:19,971
+either
+
+3
+00:00:20,619 --> 00:00:22,720
+welcome the session 704
+
+4
+00:00:22,072 --> 00:00:26,163
+building aP's for enterprise and
+education my name is David harjo
+
+5
+00:00:27,063 --> 00:00:30,069
+I'm a software developer and I West and
+today I'll be joint
+
+6
+00:00:31,023 --> 00:00:34,051
+I'll by Alex Parkin who also works with
+me
+
+7
+00:00:34,051 --> 00:00:40,068
+on I S device management so
+
+8
+00:00:40,068 --> 00:00:45,147
+building aP's for the enterprise and for
+the education market
+
+9
+00:00:46,047 --> 00:00:49,055
+really is not that much different from
+
+10
+00:00:49,055 --> 00:00:53,108
+building aP's in the App Store right
+you've got a cap a nap you gotta get an
+
+11
+00:00:54,008 --> 00:00:58,197
+app that solves the problem you have to
+have a nap
+
+12
+00:00:58,269 --> 00:01:03,890
+that is well design and it's gotta be a
+pleasure to use
+
+13
+00:01:03,089 --> 00:01:08,208
+for the user but in an enterprise
+
+14
+00:01:09,009 --> 00:01:14,063
+you've got some unique requirements
+usually your clients devices are very
+
+15
+00:01:14,549 --> 00:01:15,100
+likely
+
+16
+00:01:15,001 --> 00:01:20,093
+going to be manage under mobile device
+management these devices may be
+
+17
+00:01:21,002 --> 00:01:21,991
+supervised
+
+18
+00:01:22,009 --> 00:01:24,880
+and if you're not familiar with what
+supervise means we'll talk about that in
+
+19
+00:01:24,088 --> 00:01:24,130
+a minute
+
+20
+00:01:25,003 --> 00:01:31,026
+and they may be special use cases that
+are kinda peculiar to the business and
+
+21
+00:01:31,053 --> 00:01:32,064
+education market
+
+22
+00:01:32,064 --> 00:01:35,122
+so today what I'm gonna out present to
+you
+
+23
+00:01:36,022 --> 00:01:41,047
+is some tips and tricks to help you to
+write your next enterprise
+
+24
+00:01:41,047 --> 00:01:44,092
+and education aP's I'll so that their
+
+25
+00:01:44,092 --> 00:01:47,161
+done much more pleasurable to use and
+makes you a much better
+
+26
+00:01:48,061 --> 00:01:54,076
+developer in this field so let's get
+started by talking about
+
+27
+00:01:54,076 --> 00:02:00,103
+mobile device management so
+
+28
+00:02:01,003 --> 00:02:06,015
+what's mobile device management mobile
+device management
+
+29
+00:02:06,015 --> 00:02:09,604
+is a protocol that's built into OS and
+OS 10
+
+30
+00:02:09,739 --> 00:02:13,500
+that allows a server
+
+31
+00:02:13,005 --> 00:02:20,005
+to remotely manage that device a server
+that's managing a device using MDM
+
+32
+00:02:21,439 --> 00:02:25,640
+can install network access such as VPN
+
+33
+00:02:25,064 --> 00:02:29,423
+or WiFi it can install celts
+
+34
+00:02:29,999 --> 00:02:33,560
+such as email calendar contacts and so
+forth
+
+35
+00:02:33,056 --> 00:02:37,325
+a new NIOS 8 they can now install books
+
+36
+00:02:37,829 --> 00:02:40,878
+such as PDF's he pops and iBooks offer
+
+37
+00:02:41,319 --> 00:02:45,340
+as well as books from the iBookstore and
+manage them
+
+38
+00:02:45,529 --> 00:02:48,601
+they can install single fine on
+
+39
+00:02:49,249 --> 00:02:52,276
+using Kerberos and in New NIOS
+
+40
+00:02:52,519 --> 00:02:56,480
+8 Kerberos can now use and identity
+certificate
+
+41
+00:02:56,048 --> 00:03:00,677
+so that their identity can be renewed
+without the user ever having to type in
+
+42
+00:03:01,109 --> 00:03:08,109
+a password and most important to you
+
+43
+00:03:10,529 --> 00:03:13,557
+today an MDM server
+
+44
+00:03:13,809 --> 00:03:18,650
+can install and configure your app's so
+this is very important
+
+45
+00:03:18,065 --> 00:03:21,074
+and here's your first trip for
+
+46
+00:03:21,659 --> 00:03:26,180
+today allow MDM to configure your app's
+
+47
+00:03:26,018 --> 00:03:29,307
+and we'll talk about how that can be
+done
+
+48
+00:03:29,469 --> 00:03:36,469
+exactly in a few minutes so little
+device management let's talk a few
+
+49
+00:03:39,023 --> 00:03:39,652
+minutes
+
+50
+00:03:39,859 --> 00:03:42,955
+about manage aP's and accounts so this
+iz
+
+51
+00:03:43,819 --> 00:03:46,900
+little bit of a terminology that we have
+
+52
+00:03:46,009 --> 00:03:50,438
+anything that MDM installs
+
+53
+00:03:51,329 --> 00:03:54,378
+on i OS we call managed
+
+54
+00:03:54,819 --> 00:03:58,826
+these include everything that you saw
+from the last slide
+
+55
+00:03:59,519 --> 00:04:05,591
+manage aP's managed accounts and I was 8
+
+56
+00:04:06,239 --> 00:04:09,248
+as you know you can install third-party
+keyboard extensions the way you install
+
+57
+00:04:10,139 --> 00:04:11,225
+third-party keyword extensions
+
+58
+00:04:11,999 --> 00:04:16,220
+on Iowa State if you can't spell is gone
+ap that has an extension and
+
+59
+00:04:16,022 --> 00:04:19,721
+if that app was installed using MDM
+
+60
+00:04:19,919 --> 00:04:23,966
+that keyboard extension s then
+considered as manager as well
+
+61
+00:04:24,389 --> 00:04:27,398
+and of course
+
+62
+00:04:27,479 --> 00:04:30,720
+in Iowa State we have this great new
+feature call
+
+63
+00:04:30,072 --> 00:04:36,074
+document providers thank you
+
+64
+00:04:36,074 --> 00:04:39,081
+it's a really powerful feature and
+
+65
+00:04:39,081 --> 00:04:42,117
+if you install an app that happens to
+vend
+
+66
+00:04:43,017 --> 00:04:46,018
+document provider extension
+
+67
+00:04:46,018 --> 00:04:49,062
+such asan ap like give access to your
+internet
+
+68
+00:04:49,062 --> 00:04:52,091
+your intranet resources or your
+
+69
+00:04:52,091 --> 00:04:55,134
+your network file storage that app
+
+70
+00:04:56,034 --> 00:05:00,071
+also becomes quote-unquote managed
+
+71
+00:05:00,071 --> 00:05:04,085
+so this is in contrast with things that
+the user install themselves
+
+72
+00:05:04,085 --> 00:05:08,114
+sold if the user goes out and installed
+app from the App Store
+
+73
+00:05:09,014 --> 00:05:12,098
+on their own BYOD device for example
+those things are
+
+74
+00:05:12,098 --> 00:05:15,114
+considered not manage so
+
+75
+00:05:16,014 --> 00:05:19,027
+we have managed switches the stuff that
+and %um installed
+
+76
+00:05:19,027 --> 00:05:22,098
+and you have not managed which is what
+the user installs
+
+77
+00:05:22,098 --> 00:05:25,132
+I so why do we do this
+
+78
+00:05:26,032 --> 00:05:29,054
+well it helps I O S
+
+79
+00:05:29,054 --> 00:05:33,151
+to restrict dataflow so that your
+enterprise data
+
+80
+00:05:34,051 --> 00:05:38,149
+doesn't flow into your users data space
+and vice versa
+
+81
+00:05:39,049 --> 00:05:44,052
+so for example if you are in Manish at
+
+82
+00:05:44,052 --> 00:05:48,061
+and you are looking at a document and
+you cap open in
+
+83
+00:05:49,042 --> 00:05:52,074
+you know that list app that shows up on
+the bottom of your screen
+
+84
+00:05:52,074 --> 00:05:56,074
+his all the app that can handle that
+document
+
+85
+00:05:56,074 --> 00:05:59,170
+I that mister aP's will be filtered down
+
+86
+00:06:00,007 --> 00:06:03,088
+so that because you start from a managed
+ap only other managed aP's
+
+87
+00:06:04,051 --> 00:06:07,116
+and and accounts will show up in that
+list
+
+88
+00:06:08,016 --> 00:06:11,055
+and we do this automatically
+
+89
+00:06:11,055 --> 00:06:14,056
+conversely when you are in
+
+90
+00:06:14,056 --> 00:06:17,059
+on unmanaged ap I
+
+91
+00:06:17,059 --> 00:06:21,152
+and you tap open in the list of gaps
+that you see
+
+92
+00:06:22,052 --> 00:06:26,114
+will not include manage that so in that
+way
+
+93
+00:06:27,014 --> 00:06:30,071
+without the user ever having to do any
+switching off
+
+94
+00:06:30,071 --> 00:06:33,134
+you know work and home I
+
+95
+00:06:34,034 --> 00:06:38,068
+we protect your data and we do this
+everywhere
+
+96
+00:06:38,068 --> 00:06:41,092
+emails so you can't Fort a corporate
+email using
+
+97
+00:06:41,092 --> 00:06:45,092
+dry cloth account for example we do it
+in calendars
+
+98
+00:06:45,092 --> 00:06:48,160
+in attachments we do it a in Iowa State
+
+99
+00:06:49,006 --> 00:06:53,007
+we have managed remains in Safari so if
+you specify
+
+100
+00:06:53,007 --> 00:06:56,061
+certain domains in Safari as belonging
+to your corporate
+
+101
+00:06:57,024 --> 00:07:01,119
+intranet documents that you download
+from those domains
+
+102
+00:07:02,019 --> 00:07:05,108
+will only going to manage that
+
+103
+00:07:06,008 --> 00:07:13,008
+XF
+
+104
+00:07:13,015 --> 00:07:19,042
+and manage aP's get access to per app
+VPN
+
+105
+00:07:19,042 --> 00:07:24,077
+this is a feature with happen sigh I O S
+seven and has proven very popular
+
+106
+00:07:24,077 --> 00:07:27,102
+a and what this is just a review
+
+107
+00:07:28,002 --> 00:07:31,010
+is that Manish capsule get that data
+
+108
+00:07:31,001 --> 00:07:34,290
+tunnel through this VPN but not anything
+else
+
+109
+00:07:34,389 --> 00:07:38,120
+not the user's data so your VPN
+
+110
+00:07:38,012 --> 00:07:41,020
+carries your data and not the user's
+data
+
+111
+00:07:41,002 --> 00:07:47,003
+yet another way two separate enterprise
+and personal data
+
+112
+00:07:47,021 --> 00:07:51,023
+so what's the takeaway rely on I O S
+
+113
+00:07:51,041 --> 00:07:54,115
+to manage the dataflow between aP's
+
+114
+00:07:55,015 --> 00:07:58,050
+and accounts don't try to do it yourself
+
+115
+00:07:58,005 --> 00:08:01,078
+I O S has a great way of allowing this
+to happen
+
+116
+00:08:02,023 --> 00:08:05,034
+in a very clean and intuitive way
+
+117
+00:08:05,034 --> 00:08:09,111
+using the fact that you're managing a
+device over India
+
+118
+00:08:10,011 --> 00:08:17,011
+right so that them
+
+119
+00:08:20,025 --> 00:08:24,164
+next let's talk about supervise devices
+
+120
+00:08:24,389 --> 00:08:29,130
+so what's this a supervised device
+
+121
+00:08:29,013 --> 00:08:34,172
+is a device that has been activated into
+you know so supervision
+
+122
+00:08:34,289 --> 00:08:37,630
+it is it health I O S that the device
+
+123
+00:08:37,063 --> 00:08:42,099
+is owned by the enterprise this is in
+contrast to a device that owned by a
+
+124
+00:08:42,099 --> 00:08:44,156
+user such as bring your own device
+
+125
+00:08:45,056 --> 00:08:48,122
+right supervision can only be set
+
+126
+00:08:49,022 --> 00:08:53,691
+activation there are two ways to step
+back to us supervision
+
+127
+00:08:53,889 --> 00:08:57,290
+reactivation the first way and
+
+128
+00:08:57,029 --> 00:09:00,808
+you sought you saw this in the keynote
+yesterday iOS device and rolling
+
+129
+00:09:01,069 --> 00:09:02,870
+programme
+
+130
+00:09:02,087 --> 00:09:06,104
+with DP a devices that your enterprise
+
+131
+00:09:07,004 --> 00:09:11,012
+purchased from Apple I can be configured
+
+132
+00:09:11,012 --> 00:09:14,012
+so that they're supervised and enrolled
+into your MDM
+
+133
+00:09:14,012 --> 00:09:18,041
+right out of the box you don't have to
+touch it at all
+
+134
+00:09:18,149 --> 00:09:21,720
+you Hannah shrink wrap up to the end
+user the on boxer
+
+135
+00:09:21,072 --> 00:09:28,072
+you walk through the the Setup Assistant
+and they're supervised and enrolled
+
+136
+00:09:29,029 --> 00:09:33,066
+the second way is Apple configurator
+which requires you to take the device
+
+137
+00:09:33,399 --> 00:09:33,402
+out
+
+138
+00:09:33,699 --> 00:09:37,290
+and plug it into USB depending on your
+
+139
+00:09:37,029 --> 00:09:43,628
+I use case in your scenarios wanna be
+should serve any
+
+140
+00:09:43,889 --> 00:09:48,040
+so why do we supervise devices
+
+141
+00:09:48,004 --> 00:09:51,963
+well tell you why you can access the
+whole bunch of different
+
+142
+00:09:51,999 --> 00:09:55,350
+restrictions and controls that we only
+allow
+
+143
+00:09:55,035 --> 00:09:58,454
+I on enterprise own devices
+
+144
+00:09:58,769 --> 00:10:05,769
+such as always on VPN new in Iowa State
+
+145
+00:10:07,139 --> 00:10:11,290
+global GDP proxy Third Party Content
+Filter
+
+146
+00:10:11,029 --> 00:10:14,518
+also new and Iowa State
+
+147
+00:10:14,779 --> 00:10:19,160
+single app mod which lock your device
+into a single ap
+
+148
+00:10:19,016 --> 00:10:22,042
+perfect for kiosks
+
+149
+00:10:22,042 --> 00:10:25,081
+I'll will see some examples of that
+later
+
+150
+00:10:25,459 --> 00:10:29,540
+we've got restriction to prevent the
+user from erasing their own device
+
+151
+00:10:30,269 --> 00:10:34,490
+anyone with students here
+
+152
+00:10:34,049 --> 00:10:38,458
+and preventing enabling restrictions
+also students
+
+153
+00:10:38,899 --> 00:10:41,960
+your local you your settings and many
+more
+
+154
+00:10:42,509 --> 00:10:45,535
+so the takeaway here as: police
+supervisor
+
+155
+00:10:45,769 --> 00:10:48,788
+enterprise on devices if you own it
+
+156
+00:10:48,959 --> 00:10:54,600
+supervisor you won't regret it
+
+157
+00:10:54,006 --> 00:10:57,275
+okay
+
+158
+00:10:57,869 --> 00:11:01,670
+so for the next
+
+159
+00:11:01,067 --> 00:11:05,106
+part of our presentation
+
+160
+00:11:05,709 --> 00:11:08,775
+I'll we're gonna show you some example
+aP's
+
+161
+00:11:09,369 --> 00:11:12,402
+that may illustrate
+
+162
+00:11:12,699 --> 00:11:15,850
+some of the use cases you may face
+
+163
+00:11:15,085 --> 00:11:20,099
+when developing aP's for the enterprise
+
+164
+00:11:20,099 --> 00:11:24,123
+the first ap we're gonna show you is a
+document access ap
+
+165
+00:11:25,023 --> 00:11:28,092
+and this ap is I designed
+
+166
+00:11:28,092 --> 00:11:34,261
+to access a secure document like a
+sensitive documents
+
+167
+00:11:35,089 --> 00:11:39,970
+may be over your intranet and stored on
+the device in a secure
+
+168
+00:11:39,097 --> 00:11:42,196
+matter
+
+169
+00:11:43,069 --> 00:11:46,110
+the second app that we're gonna see is a
+point-of-sale
+
+170
+00:11:46,011 --> 00:11:49,092
+ap this may be something like you use
+
+171
+00:11:49,092 --> 00:11:52,501
+in a retail store to check out customers
+
+172
+00:11:53,329 --> 00:11:56,391
+you know buying items and the third
+
+173
+00:11:56,949 --> 00:12:00,670
+will be something that education may use
+an assessment ap
+
+174
+00:12:00,067 --> 00:12:03,105
+where the student uses your app
+
+175
+00:12:04,005 --> 00:12:08,079
+to take exams rice 03 example ap
+
+176
+00:12:08,079 --> 00:12:12,738
+document access point-of-sale an
+assessment
+
+177
+00:12:13,449 --> 00:12:17,490
+and along the way I we will illustrate
+some of the things that we
+
+178
+00:12:17,049 --> 00:12:20,067
+we talked about earlier
+
+179
+00:12:20,067 --> 00:12:25,130
+so let's start with the first ap
+
+180
+00:12:26,003 --> 00:12:31,039
+k secure document access
+
+181
+00:12:31,066 --> 00:12:35,149
+again this ap a retrieved documents
+securely
+
+182
+00:12:36,049 --> 00:12:42,688
+and displays it to the end user
+
+183
+00:12:43,129 --> 00:12:46,161
+alright so let's talk a little bit
+
+184
+00:12:46,449 --> 00:12:51,472
+about MDM ap configuration
+
+185
+00:12:51,679 --> 00:12:55,681
+so you remember a few minutes ago I
+talked about
+
+186
+00:12:55,699 --> 00:13:00,785
+allowing an MDM server to configure your
+app's
+
+187
+00:13:01,559 --> 00:13:05,300
+well how do you do this
+
+188
+00:13:05,003 --> 00:13:08,212
+it's really very simple all you have to
+do
+
+189
+00:13:08,509 --> 00:13:12,551
+is to watch for the special key in Ennis
+user defaults
+
+190
+00:13:12,929 --> 00:13:16,110
+com dot Apple da configuration
+
+191
+00:13:16,011 --> 00:13:19,600
+don't manage when you read this key
+
+192
+00:13:19,699 --> 00:13:22,732
+from Uranus user defaults you get a
+dictionary
+
+193
+00:13:23,029 --> 00:13:27,066
+that magically appears when the MDM
+server
+
+194
+00:13:27,399 --> 00:13:31,470
+pushes configuration doubt your so the
+MDM server
+
+195
+00:13:31,047 --> 00:13:34,110
+pushes down a dictionary and you can
+access it
+
+196
+00:13:35,001 --> 00:13:38,180
+using this key
+
+197
+00:13:38,279 --> 00:13:44,313
+your app can then respond to
+configuration changes
+
+198
+00:13:44,619 --> 00:13:47,619
+so why do you want to do this well
+
+199
+00:13:47,619 --> 00:13:51,665
+what's the first thing that you wanna do
+when you install an app
+
+200
+00:13:52,079 --> 00:13:55,085
+you want to configure its URL probably
+
+201
+00:13:55,139 --> 00:13:59,195
+had some server I am you may have a nap
+
+202
+00:13:59,699 --> 00:14:02,736
+that this deployed in more than one
+branch
+
+203
+00:14:03,069 --> 00:14:06,082
+of your business and you want to
+configure it
+
+204
+00:14:06,199 --> 00:14:09,210
+for that particular location
+
+205
+00:14:09,309 --> 00:14:13,311
+instead of having the end-user
+reconstructions
+
+206
+00:14:13,509 --> 00:14:16,553
+and say all pappas and perhaps that go
+here go there
+
+207
+00:14:16,949 --> 00:14:21,032
+type this URL in what could go wrong
+
+208
+00:14:21,779 --> 00:14:24,779
+you define your own keys and
+
+209
+00:14:24,779 --> 00:14:27,790
+say hey a if you
+
+210
+00:14:27,079 --> 00:14:31,428
+install my app over MDM push down his
+keys
+
+211
+00:14:32,139 --> 00:14:37,144
+and I'll see them and I'll use them for
+my app without any user intervention
+
+212
+00:14:37,639 --> 00:14:41,850
+right at configuration so
+
+213
+00:14:41,085 --> 00:14:46,167
+you are also great so in this example
+you gonna do some your URL configuration
+
+214
+00:14:47,067 --> 00:14:50,122
+and AST I'll trust that list of
+
+215
+00:14:51,022 --> 00:14:54,381
+server root certificates it's also very
+important I
+
+216
+00:14:54,579 --> 00:14:58,605
+it helps you to prevent man in the
+middle attacks
+
+217
+00:14:58,839 --> 00:15:02,883
+and I will show you how to do that in an
+example in the code examples
+
+218
+00:15:03,279 --> 00:15:08,303
+so I am I were asked Alex to come up
+here
+
+219
+00:15:08,519 --> 00:15:11,920
+and is gonna show you a little code
+example
+
+220
+00:15:11,092 --> 00:15:16,097
+that demonstrates MDM configuration
+
+221
+00:15:16,097 --> 00:15:19,466
+good morning developers so we're going
+to switch
+
+222
+00:15:20,339 --> 00:15:24,370
+over to our down a laptop going to look
+at some comps
+
+223
+00:15:24,649 --> 00:15:28,710
+SAR first application that we're looking
+at today is our secure document access
+
+224
+00:15:29,259 --> 00:15:30,345
+app which we've called secretive
+
+225
+00:15:31,119 --> 00:15:34,215
+in our example so with MDM afton
+figuration
+
+226
+00:15:35,079 --> 00:15:39,130
+the most important thing that you need
+to do is to make sure that you register
+
+227
+00:15:39,589 --> 00:15:43,644
+for the NS users did user defaults to
+change notification
+
+228
+00:15:44,139 --> 00:15:48,188
+this is the notification that will be
+sent out when an MDM after figuration
+
+229
+00:15:48,629 --> 00:15:51,637
+is pushed down to your device see you
+need to be listening to this
+
+230
+00:15:52,429 --> 00:15:55,507
+notification and then rereading the
+default when you receive it
+
+231
+00:15:56,209 --> 00:16:00,218
+so in our example I have a few troller
+when the big stroller leads I'm going to
+
+232
+00:16:00,299 --> 00:16:02,300
+register for this notification
+
+233
+00:16:02,309 --> 00:16:06,720
+am every time I received a I'm going to
+call re default value so that I can
+
+234
+00:16:06,072 --> 00:16:10,661
+get my values back again an in this
+example on going to load up
+
+235
+00:16:11,309 --> 00:16:15,371
+re default values as soon as I get the
+view up so that I can get the first
+
+236
+00:16:15,929 --> 00:16:19,350
+initial lead so in my example here
+
+237
+00:16:19,035 --> 00:16:22,814
+so you remember we talked about that
+Honda Apple dock configuration dot
+
+238
+00:16:23,129 --> 00:16:24,160
+manage key
+
+239
+00:16:24,016 --> 00:16:27,925
+this is the key in NS user defaults for
+we're going to be stuffing BNF
+
+240
+00:16:28,069 --> 00:16:28,165
+dictionary
+
+241
+00:16:29,029 --> 00:16:32,120
+with your configuration and sell your
+notice that
+
+242
+00:16:32,939 --> 00:16:36,947
+suggested some other keys here on in my
+dictionary I'm going to have a key which
+
+243
+00:16:37,019 --> 00:16:37,850
+has a string
+
+244
+00:16:37,085 --> 00:16:41,484
+for my server URL which is going to be
+the URL for the document I'm going to be
+
+245
+00:16:42,249 --> 00:16:43,263
+retrieving
+
+246
+00:16:43,389 --> 00:16:46,452
+and your awesomeness that I have to keep
+or configure a for a server
+
+247
+00:16:47,019 --> 00:16:50,470
+root certificate we're get to this later
+in the presentation
+
+248
+00:16:50,047 --> 00:16:54,111
+but that also one going to be pushing
+down in this and your map configuration
+
+249
+00:16:55,011 --> 00:16:59,400
+and so you know simply default all I do
+is I call on tennis user defaults
+
+250
+00:16:59,499 --> 00:17:02,542
+I make sure I call into that
+configuration key
+
+251
+00:17:02,929 --> 00:17:06,100
+and then from the dictionary I pull out
+the relevant
+
+252
+00:17:06,001 --> 00:17:09,003
+on information I need such as the server
+euro
+
+253
+00:17:09,012 --> 00:17:12,077
+an important thing to know is do you put
+error checking on this
+
+254
+00:17:12,077 --> 00:17:15,516
+make sure they are not loading bad
+values
+
+255
+00:17:16,209 --> 00:17:21,270
+and sell was now what we're doing is all
+switch over to the iPad not push down
+
+256
+00:17:21,819 --> 00:17:25,560
+an example MDM at configuration sup
+
+257
+00:17:25,056 --> 00:17:28,097
+you nurse at my AppleCare called secret
+I secretive
+
+258
+00:17:28,097 --> 00:17:32,184
+and when I open it up I don't have an
+MDM ap configuration
+
+259
+00:17:33,084 --> 00:17:36,137
+here currently I've installed the match
+dapper you right now I don't have my
+
+260
+00:17:37,037 --> 00:17:37,128
+server URL
+
+261
+00:17:38,028 --> 00:17:43,089
+sup over on my MDM server I've loaded up
+a command to send down
+
+262
+00:17:43,089 --> 00:17:46,123
+the match.com om and ap configuration
+
+263
+00:17:47,023 --> 00:17:50,047
+sa mga send that notification down
+
+264
+00:17:50,047 --> 00:17:53,088
+and you notice that we when I received
+the notification for and this user
+
+265
+00:17:53,088 --> 00:17:54,119
+defaults to change
+
+266
+00:17:55,019 --> 00:17:58,107
+on a Mac we've started up a session and
+retrieve this document from the server
+
+267
+00:17:59,007 --> 00:18:00,060
+you're all that was given
+
+268
+00:18:00,006 --> 00:18:05,012
+and so that as MDM ap figuration and
+were returned to their
+
+269
+00:18:05,066 --> 00:18:09,137
+thanks Alex
+
+270
+00:18:10,037 --> 00:18:13,085
+it's like magic your app to configure
+
+271
+00:18:13,085 --> 00:18:16,138
+correctly without having your user do
+anything
+
+272
+00:18:17,038 --> 00:18:21,056
+it's Corey I hope you caught that little
+the
+
+273
+00:18:21,056 --> 00:18:25,108
+remarked that Alex made please validate
+the input that you get
+
+274
+00:18:26,008 --> 00:18:30,089
+from the server because as far as you
+are concerned as an ap writer
+
+275
+00:18:30,089 --> 00:18:33,123
+the server isn't unknown network and the
+T
+
+276
+00:18:34,023 --> 00:18:37,074
+and they're gonna be pushing down keys
+that maybe miss format it
+
+277
+00:18:37,074 --> 00:18:40,145
+or of the wrong type up so please
+validate
+
+278
+00:18:41,045 --> 00:18:44,050
+the keys make sure that your I
+understand what they are
+
+279
+00:18:44,095 --> 00:18:47,123
+also publish what you understand so that
+the server
+
+280
+00:18:48,023 --> 00:18:52,098
+that means can configure you correctly
+
+281
+00:18:52,098 --> 00:18:55,151
+so that's MDM configuration
+
+282
+00:18:56,051 --> 00:18:59,089
+next alright
+
+283
+00:18:59,089 --> 00:19:00,158
+let's talk about single sign
+
+284
+00:19:01,058 --> 00:19:04,126
+on a single sign-on
+
+285
+00:19:05,026 --> 00:19:10,081
+is I Baker Bros we have operate Kerber
+single sign-on
+
+286
+00:19:10,081 --> 00:19:13,090
+on I West that can be applied
+
+287
+00:19:14,071 --> 00:19:17,078
+by the MDM server across the entire
+system
+
+288
+00:19:18,041 --> 00:19:21,123
+so that once you login a
+
+289
+00:19:22,023 --> 00:19:25,100
+you'll be logged in across several
+different aP's
+
+290
+00:19:26,000 --> 00:19:29,005
+when you're accessing the same network
+
+291
+00:19:29,005 --> 00:19:33,073
+resource so using single sign-on
+
+292
+00:19:33,073 --> 00:19:37,118
+couldn't be easier are you just have to
+use
+
+293
+00:19:38,018 --> 00:19:42,076
+HTTP or HTTPS which most of you probably
+are
+
+294
+00:19:42,076 --> 00:19:46,083
+if you use Ennis euro connection or an
+issue oral session
+
+295
+00:19:47,046 --> 00:19:50,053
+Kerber a single fine on is free for you
+
+296
+00:19:51,016 --> 00:19:55,034
+so here's the takeaway don't do anything
+
+297
+00:19:55,034 --> 00:20:00,060
+in and it works it's great the MDM
+server
+
+298
+00:20:00,006 --> 00:20:04,064
+will apply the configuration and your
+caps will either get a £200 okay
+
+299
+00:20:05,018 --> 00:20:09,030
+or a 401 fail it was a 2-under okay
+
+300
+00:20:09,003 --> 00:20:12,080
+assume that the resources available to
+you
+
+301
+00:20:13,007 --> 00:20:16,063
+and just use of course
+
+302
+00:20:16,063 --> 00:20:19,148
+your aP's may provide alternate
+
+303
+00:20:20,048 --> 00:20:23,134
+authentication such as you know HTTP
+digest
+
+304
+00:20:24,034 --> 00:20:27,112
+I and Kerberos authentication
+
+305
+00:20:28,012 --> 00:20:31,081
+will be attempt at first and if that
+doesn't work
+
+306
+00:20:31,081 --> 00:20:34,108
+I A West will fall back to reporting an
+error to your ap
+
+307
+00:20:35,008 --> 00:20:38,043
+and you get the chance to authenticate
+using
+
+308
+00:20:38,043 --> 00:20:42,046
+a difference scheme so
+
+309
+00:20:42,046 --> 00:20:49,046
+don't do anything no example next okay
+
+310
+00:20:51,033 --> 00:20:54,121
+here's something that a that with gotten
+
+311
+00:20:55,021 --> 00:20:59,030
+asked several times how do i download
+
+312
+00:20:59,003 --> 00:21:02,068
+files securely all the way from my
+server
+
+313
+00:21:02,095 --> 00:21:07,108
+down to the flash on IRS I
+
+314
+00:21:08,008 --> 00:21:12,069
+was s you may or may not know all files
+that you create
+
+315
+00:21:12,069 --> 00:21:15,138
+from your app already get this I'll
+
+316
+00:21:16,038 --> 00:21:21,084
+protection level protection complete
+until
+
+317
+00:21:21,084 --> 00:21:24,123
+first user authentication so just a
+recap
+
+318
+00:21:25,023 --> 00:21:29,026
+this means that the file is a cryptid I
+
+319
+00:21:29,026 --> 00:21:32,088
+unreadable after you restart your IRS
+device
+
+320
+00:21:32,088 --> 00:21:35,172
+once you enter your passcode the device
+
+321
+00:21:36,072 --> 00:21:40,085
+the file is readable and it remains
+readable
+
+322
+00:21:40,085 --> 00:21:43,104
+across device lock until
+
+323
+00:21:44,004 --> 00:21:47,082
+you restart the device again so
+
+324
+00:21:47,082 --> 00:21:50,091
+what we wanna do is we want to upgrade
+the
+
+325
+00:21:50,091 --> 00:21:53,179
+this file so if you do nothing and you
+use you're just writer file to disk
+
+326
+00:21:54,079 --> 00:21:58,163
+this is what you gonna get but we won a
+great that so we want to have
+
+327
+00:21:59,063 --> 00:22:05,129
+I the file be a specify test data
+protection complete which means that
+
+328
+00:22:06,029 --> 00:22:07,104
+whenever you lock the device
+
+329
+00:22:08,004 --> 00:22:11,006
+the file because unreadable
+cryptographically
+
+330
+00:22:11,024 --> 00:22:14,033
+and with the next time the user
+
+331
+00:22:14,033 --> 00:22:17,096
+enters the passcode but have the file
+because readable again
+
+332
+00:22:17,096 --> 00:22:20,137
+et cetera so
+
+333
+00:22:21,037 --> 00:22:24,049
+we're gonna use an issue oral sessions
+
+334
+00:22:24,049 --> 00:22:27,122
+data task to do this and
+
+335
+00:22:28,022 --> 00:22:32,043
+as a little a bonus years old maybe this
+document is extra sensitive
+
+336
+00:22:32,043 --> 00:22:35,058
+I you don't want this document to appear
+
+337
+00:22:35,058 --> 00:22:38,060
+in your users backup so
+
+338
+00:22:38,006 --> 00:22:41,103
+I called back up or iTunes backup so
+we're gonna show you
+
+339
+00:22:42,057 --> 00:22:45,090
+how to mark files so that they don't get
+
+340
+00:22:45,009 --> 00:22:48,058
+backed up alright so let such or back to
+Alex
+
+341
+00:22:49,039 --> 00:22:53,044
+and is gonna show you some code to do
+this so
+
+342
+00:22:53,089 --> 00:22:58,094
+back on our demo machine your notice
+that we have on our view controller said
+
+343
+00:22:58,094 --> 00:22:58,152
+it as
+
+344
+00:22:59,052 --> 00:23:02,098
+implementing the delegates %uh NS you're
+all session
+
+345
+00:23:02,098 --> 00:23:05,174
+and and that's your obsession data and
+the reason we've done this is we're
+
+346
+00:23:06,074 --> 00:23:06,147
+going to
+
+347
+00:23:07,047 --> 00:23:10,052
+over we're going to use as Stella get
+call backs during
+
+348
+00:23:10,097 --> 00:23:15,165
+our secure download cell down here in
+secure your /url session that I have set
+
+349
+00:23:16,065 --> 00:23:16,137
+up here
+
+350
+00:23:17,037 --> 00:23:20,070
+I'm going to take that use server you're
+around I pull down from
+
+351
+00:23:20,007 --> 00:23:24,059
+MDM ap configuration I'm going to create
+an and that's your all session
+
+352
+00:23:25,022 --> 00:23:29,107
+data task right here you notice that
+left the completion handler at the nail
+
+353
+00:23:30,007 --> 00:23:33,065
+and the reason I've done this is by
+setting now for the completion handler
+
+354
+00:23:33,065 --> 00:23:36,163
+I will get the don't get call backs for
+the day to task
+
+355
+00:23:37,063 --> 00:23:40,065
+and that's the most important thing for
+me sup
+
+356
+00:23:40,065 --> 00:23:44,080
+in URL session data task did receive
+response
+
+357
+00:23:44,008 --> 00:23:47,045
+I'm going to get this call as soon as we
+make the connection and I'm going to
+
+358
+00:23:48,017 --> 00:23:48,075
+create
+
+359
+00:23:48,075 --> 00:23:52,141
+a file where I'm going to download Mike
+strategic plan pdf
+
+360
+00:23:53,041 --> 00:23:56,098
+and sound your nurse I call NS File
+Manager default manager
+
+361
+00:23:56,098 --> 00:23:59,102
+create file path contents and
+attributes:
+
+362
+00:24:00,002 --> 00:24:04,023
+and the attribute I'm going to pass into
+it is this and that's file protection P
+
+363
+00:24:04,023 --> 00:24:07,041
+and in that and a spa me I'm going to
+specify that
+
+364
+00:24:07,041 --> 00:24:11,072
+I want and a fire protection complete
+myself and what this means is that the
+
+365
+00:24:11,072 --> 00:24:11,148
+file will be
+
+366
+00:24:12,048 --> 00:24:15,140
+unreadable when the device is locked in
+left the files already
+
+367
+00:24:16,004 --> 00:24:19,089
+ok them when the by when the device
+walks and so while I'm downloading
+
+368
+00:24:20,025 --> 00:24:23,028
+I'm going to set the attribute to that
+and sell
+
+369
+00:24:23,028 --> 00:24:26,061
+the other important thing that we
+mentioned already is that we want to
+
+370
+00:24:26,061 --> 00:24:27,078
+turn off
+
+371
+00:24:27,078 --> 00:24:31,133
+on file backup and so why I'm going to
+do is I'm going to sell onto the file
+
+372
+00:24:32,033 --> 00:24:33,052
+URL
+
+373
+00:24:33,052 --> 00:24:36,055
+up resource value and resource mana the
+key
+
+374
+00:24:36,082 --> 00:24:40,111
+I'm going to set it on in is and this
+URL is excluded from backup key
+
+375
+00:24:41,011 --> 00:24:45,034
+and this key will make it so that this
+file will not be backed up in iTunes
+
+376
+00:24:45,034 --> 00:24:48,089
+or and I clout and so were gone on
+
+377
+00:24:48,089 --> 00:24:51,171
+inurl session data task then received a
+net this delegate math is gonna be
+
+378
+00:24:52,071 --> 00:24:53,099
+called every time urge the
+
+379
+00:24:53,099 --> 00:24:57,140
+new data from my server I'm just going
+to store all into that file
+
+380
+00:24:58,004 --> 00:25:02,058
+I create earlier and then at the very
+end in your all session
+
+381
+00:25:02,094 --> 00:25:05,141
+testing complete welfare I'm gonna make
+sure there are no errors in
+
+382
+00:25:06,041 --> 00:25:09,135
+if there were no errors I'm going to
+then change it so that the attribute for
+
+383
+00:25:10,035 --> 00:25:11,068
+an s5 texan key
+
+384
+00:25:11,068 --> 00:25:14,134
+is changed to complete because at this
+point I decided you know when the device
+
+385
+00:25:15,034 --> 00:25:16,103
+locked I want this file to be
+
+386
+00:25:17,003 --> 00:25:20,030
+unreadable and was it that's
+
+387
+00:25:20,003 --> 00:25:24,025
+pretty much it arm I would show you the
+demo but we've already shown you that an
+
+388
+00:25:24,052 --> 00:25:24,128
+MDM ap
+
+389
+00:25:25,028 --> 00:25:30,106
+the rations them let's go back to Dave
+thanks Alex
+
+390
+00:25:31,006 --> 00:25:34,098
+so downloading to a secure file here's
+how you do it
+
+391
+00:25:34,098 --> 00:25:38,150
+you create an issue oral session create
+a file
+
+392
+00:25:39,005 --> 00:25:42,050
+when when the request begins create a
+file with
+
+393
+00:25:42,095 --> 00:25:45,098
+data protection complete unless open
+
+394
+00:25:46,025 --> 00:25:49,048
+so that you can continue to write data
+to that file
+
+395
+00:25:49,048 --> 00:25:52,121
+after downloading it even if the device
+is locked
+
+396
+00:25:53,021 --> 00:25:57,046
+when the file has completely downloaded
+upgrade their protection
+
+397
+00:25:57,046 --> 00:26:00,105
+to file protection complete and up
+
+398
+00:26:01,005 --> 00:26:04,024
+as you can tell third as you can see
+there's an in a swirl method you can
+
+399
+00:26:04,024 --> 00:26:05,027
+call
+
+400
+00:26:05,027 --> 00:26:08,070
+to Sep a bit that says don't back up
+this file
+
+401
+00:26:08,007 --> 00:26:11,026
+to iTunes and I clout
+
+402
+00:26:11,089 --> 00:26:14,140
+alright next
+
+403
+00:26:15,004 --> 00:26:18,013
+HTTPS certificate pending
+
+404
+00:26:18,049 --> 00:26:21,050
+so I we all know that
+
+405
+00:26:21,005 --> 00:26:24,063
+HTTPS is a way for the client to tell
+
+406
+00:26:25,008 --> 00:26:28,047
+weathers talking to the correct server
+
+407
+00:26:28,047 --> 00:26:31,130
+I'll this only works if the certificate
+chain
+
+408
+00:26:32,003 --> 00:26:37,050
+is trustworthy so one of the things that
+we usually do
+
+409
+00:26:37,077 --> 00:26:41,086
+s Wiese we can specify for this
+connection
+
+410
+00:26:41,086 --> 00:26:45,091
+that only the certificates are to be
+trusted and not any other certificate in
+
+411
+00:26:45,091 --> 00:26:45,178
+your database
+
+412
+00:26:46,078 --> 00:26:50,116
+that make otherwise we trust the Ford
+for example Safari
+
+413
+00:26:51,016 --> 00:26:56,039
+I and to do this of course you meters to
+the PS
+
+414
+00:26:56,039 --> 00:26:59,075
+you need to specify York trusted root
+certificates
+
+415
+00:26:59,075 --> 00:27:02,119
+during HTTPS authentication
+
+416
+00:27:03,019 --> 00:27:07,034
+you'd and you do this to prevent man in
+the middle attacks
+
+417
+00:27:07,034 --> 00:27:10,040
+that pretend to be your server
+
+418
+00:27:10,094 --> 00:27:13,186
+and here's to take away you certificate
+pinning
+
+419
+00:27:14,086 --> 00:27:19,095
+instead of doing things like SSID
+detection
+
+420
+00:27:19,095 --> 00:27:22,132
+especially in you know like retail a
+scenarios
+
+421
+00:27:23,032 --> 00:27:26,056
+lot of people use SSID or some
+
+422
+00:27:26,056 --> 00:27:29,080
+other kind of your respect to tell
+whether or not there you know they're in
+
+423
+00:27:29,008 --> 00:27:29,033
+there
+
+424
+00:27:30,005 --> 00:27:34,012
+you know talking to the correct server
+instead of doing that
+
+425
+00:27:34,012 --> 00:27:37,015
+make sure you are talking through the
+correct server regardless
+
+426
+00:27:37,042 --> 00:27:40,083
+of the environment that you're in
+
+427
+00:27:40,083 --> 00:27:43,171
+alright to show you a short example of
+how we do certificate pinning
+
+428
+00:27:44,071 --> 00:27:48,132
+let's switch back to the to alexander's
+code
+
+429
+00:27:49,032 --> 00:27:52,039
+sell your will remember that I mention
+that we had that
+
+430
+00:27:52,039 --> 00:27:55,105
+root certificate key that I set so when
+I push down the MDM
+
+431
+00:27:56,005 --> 00:28:00,036
+ap configuration I push down the data
+for my server's root certificate
+
+432
+00:28:00,036 --> 00:28:03,053
+because I want to check to make sure
+that are not connecting to the wrong
+
+433
+00:28:03,053 --> 00:28:03,127
+server
+
+434
+00:28:04,027 --> 00:28:08,060
+and verify that my users are connecting
+to the server I want them to you
+
+435
+00:28:08,006 --> 00:28:13,019
+so journalists that I have here MFN that
+employees called you are session
+
+436
+00:28:13,073 --> 00:28:16,127
+they receive challenge with completion
+handler and this is going to be call
+
+437
+00:28:17,027 --> 00:28:18,060
+when I try and connect to my
+
+438
+00:28:18,006 --> 00:28:21,061
+HTTP ass server and when I try and
+connect
+
+439
+00:28:22,015 --> 00:28:25,100
+I want to double check that the
+authentication method that was
+
+440
+00:28:26,000 --> 00:28:29,086
+in the challenges protection space is
+and that's your all
+
+441
+00:28:29,086 --> 00:28:32,089
+authentication method server trap if
+cell
+
+442
+00:28:32,089 --> 00:28:35,106
+I'm going to get the sack truss raft
+from the server
+
+443
+00:28:36,006 --> 00:28:40,034
+which is in challenge that protection
+space that server trust
+
+444
+00:28:40,034 --> 00:28:43,081
+and then the next thing I'm going to do
+is under load up that root certificate
+
+445
+00:28:43,081 --> 00:28:47,116
+I got from india Mac figuration I'm in
+this example I've already loaded that
+
+446
+00:28:48,016 --> 00:28:48,102
+why did they
+
+447
+00:28:49,002 --> 00:28:52,055
+and its user defaults re back I put into
+a variable called self
+
+448
+00:28:52,055 --> 00:28:56,083
+that into server root certificate data
+some girl up that data
+
+449
+00:28:56,083 --> 00:28:59,167
+and I'm going to create a sec
+certificate with their and I want double
+
+450
+00:29:00,067 --> 00:29:02,165
+check that the certificate was create
+correctly by making sure that's not
+
+451
+00:29:03,065 --> 00:29:03,140
+normal
+
+452
+00:29:04,004 --> 00:29:08,041
+and if so I'm going to then that be
+anchor certificates
+
+453
+00:29:08,077 --> 00:29:11,112
+on the servers challenge trust that I
+got
+
+454
+00:29:12,012 --> 00:29:15,015
+and resided this is I wanna make sure
+that I
+
+455
+00:29:15,015 --> 00:29:18,029
+only trust the research I've got sent
+down I don't want to trust
+
+456
+00:29:18,029 --> 00:29:22,115
+any ob the default search it gets there
+included in the eye West bikes
+
+457
+00:29:23,015 --> 00:29:26,061
+and by saying the route anger
+certificates I can extend them
+
+458
+00:29:26,061 --> 00:29:29,086
+you know side call also have this method
+Sectra set
+
+459
+00:29:29,086 --> 00:29:33,104
+anchor certificates only if I wanted to
+make it so that I also trust that the
+
+460
+00:29:34,004 --> 00:29:36,011
+fault certificates installed on the vice
+
+461
+00:29:36,011 --> 00:29:39,060
+I would set this yes value at the end to
+now
+
+462
+00:29:39,006 --> 00:29:42,585
+arm if you are only selling it for the
+incur certificates
+
+463
+00:29:43,179 --> 00:29:47,340
+that you trust you do not have to set
+this avoid I in this example show you
+
+464
+00:29:47,034 --> 00:29:47,106
+how you can
+
+465
+00:29:48,006 --> 00:29:51,065
+trust the device assertive gets if you
+want you and sell
+
+466
+00:29:51,065 --> 00:29:55,074
+the last thing that I'm going to do is
+I'm going to do a sec trust evaluate
+
+467
+00:29:55,074 --> 00:29:58,145
+with the servers challenge trust and I'm
+going to get Russ resulting from that
+
+468
+00:29:59,045 --> 00:30:01,063
+transfers on I'm going to make sure that
+you know
+
+469
+00:30:01,063 --> 00:30:05,095
+I didn't receive any errors and make
+sure that the sect Russ result is your
+
+470
+00:30:05,095 --> 00:30:05,187
+unspecified
+
+471
+00:30:06,087 --> 00:30:11,160
+or Percy on and then if I find out that
+I do trust the certificate or five
+
+472
+00:30:12,006 --> 00:30:13,087
+turned off certificate pending
+
+473
+00:30:14,041 --> 00:30:17,107
+I'm going to I'm actually just say camp
+call the completion handler
+
+474
+00:30:18,007 --> 00:30:21,010
+with and this year all session of
+challenge use credential and give it the
+
+475
+00:30:21,037 --> 00:30:23,058
+green ensured that the server gave me
+
+476
+00:30:23,058 --> 00:30:27,146
+if I don't trust the surgeon get I will
+call once their completion handler
+
+477
+00:30:28,046 --> 00:30:31,114
+and this year all session of challenge
+reject protection space
+
+478
+00:30:32,014 --> 00:30:36,038
+and that will tell the app that no I'm
+not going to allow you to download
+
+479
+00:30:36,038 --> 00:30:40,132
+sup in our example on were go back to
+the iPad again
+
+480
+00:30:41,032 --> 00:30:46,046
+sup you know Safari download this file
+in settings upset up the lair
+
+481
+00:30:46,046 --> 00:30:49,072
+can hear concert if company and I'm
+gonna turn in on
+
+482
+00:30:49,072 --> 00:30:52,094
+this and the next thing I'm good to you
+and
+
+483
+00:30:52,094 --> 00:30:56,099
+a right mess want you there so let me
+just reset this
+
+484
+00:30:56,099 --> 00:30:59,188
+sup when I call into the a
+
+485
+00:31:00,088 --> 00:31:03,887
+yeah sup your nurse ignore the crash
+
+486
+00:31:04,679 --> 00:31:09,820
+I this when I called back into the app
+it tried to load up the document again
+
+487
+00:31:09,082 --> 00:31:13,089
+from server and your notice that it's
+telling me that my certificate
+
+488
+00:31:13,089 --> 00:31:16,166
+can buy the server the certificate
+presented by the server is not say as my
+
+489
+00:31:17,066 --> 00:31:18,078
+concert at get
+
+490
+00:31:18,078 --> 00:31:22,120
+so let me go back to my server and I'm
+going to change it so that it presents
+
+491
+00:31:23,002 --> 00:31:26,004
+right certificate
+
+492
+00:31:26,022 --> 00:31:29,070
+cell have set up my server at pics the
+certificate
+
+493
+00:31:29,007 --> 00:31:33,050
+everything's getting I'm going to click
+on my refresh
+
+494
+00:31:34,013 --> 00:31:37,062
+and wiry fresh as Penn certificate was
+cracked this
+
+495
+00:31:37,179 --> 00:31:41,220
+comments I was able to lead the document
+and so that is how you use a kit kat
+
+496
+00:31:41,022 --> 00:31:46,075
+dennings
+
+497
+00:31:46,075 --> 00:31:49,098
+thanks Alex issue TPS certificate
+
+498
+00:31:49,098 --> 00:31:54,132
+pinning I assures you that there's no
+man in the middle attack
+
+499
+00:31:55,032 --> 00:31:59,064
+with the connection for your trusted
+server
+
+500
+00:31:59,064 --> 00:32:02,080
+so what we have we learned from the
+first example
+
+501
+00:32:02,008 --> 00:32:06,050
+ap the document secure document viewer
+
+502
+00:32:07,022 --> 00:32:10,056
+I'll be learned ever that MDM ap
+configuration
+
+503
+00:32:10,056 --> 00:32:13,128
+is awesome right magical
+
+504
+00:32:14,028 --> 00:32:17,082
+server can configure your app's just
+right
+
+505
+00:32:17,082 --> 00:32:21,089
+the user doesn't have to do it and you
+can offer keys
+
+506
+00:32:22,052 --> 00:32:25,060
+to the server admin to configure up
+
+507
+00:32:25,006 --> 00:32:28,011
+at to set up your ap just the way they
+like it and by the way
+
+508
+00:32:29,001 --> 00:32:32,017
+at configuration can be delivered
+
+509
+00:32:32,026 --> 00:32:35,031
+ass you're installing the app so there's
+no race
+
+510
+00:32:35,031 --> 00:32:39,072
+between app installation and
+configuration
+
+511
+00:32:39,072 --> 00:32:42,095
+I'll we also learned that single sign-on
+
+512
+00:32:42,095 --> 00:32:45,187
+is also awesome because you don't have
+to do anything
+
+513
+00:32:46,087 --> 00:32:49,130
+and it works all you have to do is use
+HTTP
+
+514
+00:32:50,003 --> 00:32:54,052
+osha TPS and if you if you're administer
+configured
+
+515
+00:32:54,079 --> 00:32:57,968
+single fine on on the device then it
+will just work
+
+516
+00:32:58,679 --> 00:33:02,880
+or you'll get an of failure
+
+517
+00:33:02,088 --> 00:33:05,101
+we learn how to download files securely
+
+518
+00:33:06,001 --> 00:33:10,007
+using an issue oral session day the task
+and setting
+
+519
+00:33:10,007 --> 00:33:13,046
+the correct protection level at
+different parts of the download
+
+520
+00:33:13,046 --> 00:33:16,098
+as well as excluding from backup an of
+course
+
+521
+00:33:16,098 --> 00:33:19,123
+we saw how to pin are HTTPS
+
+522
+00:33:20,023 --> 00:33:26,038
+certificates that's our first
+
+523
+00:33:26,038 --> 00:33:30,038
+alright next ap point-of-sale
+
+524
+00:33:30,038 --> 00:33:33,132
+for this example we are going to show
+you a little
+
+525
+00:33:34,032 --> 00:33:37,128
+I maybe a device that a sales associate
+
+526
+00:33:38,028 --> 00:33:42,073
+might carry so we have a scanner on the
+left-hand side here in the cab are
+
+527
+00:33:42,073 --> 00:33:45,082
+which will scan barcodes and we have a
+catalog
+
+528
+00:33:46,063 --> 00:33:49,160
+that left them look up prices for
+products that are
+
+529
+00:33:50,006 --> 00:33:53,025
+peebles so
+
+530
+00:33:53,079 --> 00:33:56,091
+the first thing i wanna talk to you
+about is
+
+531
+00:33:56,091 --> 00:33:59,134
+sale at mod so single at mod
+
+532
+00:34:00,034 --> 00:34:03,039
+is a wave that MDM server
+
+533
+00:34:03,084 --> 00:34:07,171
+can't lock the device into just your
+
+534
+00:34:08,071 --> 00:34:11,125
+you can sent a command down and
+
+535
+00:34:12,025 --> 00:34:15,030
+tell the device just run this app if the
+app crashes
+
+536
+00:34:15,003 --> 00:34:18,062
+relaunch as the app the user press the
+home button
+
+537
+00:34:18,089 --> 00:34:22,091
+just got stuck in the a so that's on
+some level will show that later
+
+538
+00:34:22,091 --> 00:34:26,127
+in a in a letter example but first
+
+539
+00:34:27,027 --> 00:34:30,060
+I'd like to talk about I beacon
+
+540
+00:34:30,006 --> 00:34:33,265
+so ID can I beacons awesome
+
+541
+00:34:33,859 --> 00:34:37,550
+it gives you context it tells your
+device
+
+542
+00:34:37,055 --> 00:34:40,060
+attend a culture ap that you're near
+something
+
+543
+00:34:40,006 --> 00:34:43,072
+right you something that you specify
+
+544
+00:34:44,026 --> 00:34:49,145
+up so you can use ID can to provide your
+app with context
+
+545
+00:34:49,379 --> 00:34:53,390
+in this case for the point of sale at we
+want to provide the app
+
+546
+00:34:53,039 --> 00:34:56,102
+the knowledge that you are actually
+using barcode scanner
+
+547
+00:34:57,002 --> 00:35:00,009
+near the checkout register right so you
+take the device
+
+548
+00:35:00,009 --> 00:35:03,093
+elsewhere I it what you do will not
+allow you to scan
+
+549
+00:35:03,093 --> 00:35:06,158
+prices at the scan barker's
+
+550
+00:35:07,058 --> 00:35:11,145
+so using I V can in conjunction with
+other car location technologies
+
+551
+00:35:12,045 --> 00:35:15,102
+such Justin or GPS location gives you a
+relief
+
+552
+00:35:16,002 --> 00:35:20,005
+fine-grained control over how your ap
+used
+
+553
+00:35:20,005 --> 00:35:23,022
+I and it gives you an ability
+
+554
+00:35:23,022 --> 00:35:28,029
+using Indian ap configuration to let the
+admins configure at your app's
+
+555
+00:35:28,092 --> 00:35:31,098
+so that your racket only be used in this
+particular retail store
+
+556
+00:35:32,052 --> 00:35:35,057
+or in that particular contact right
+
+557
+00:35:35,057 --> 00:35:38,063
+so here's a tip use I beacon to verify
+
+558
+00:35:39,017 --> 00:35:42,102
+your location sensitive operation
+
+559
+00:35:43,002 --> 00:35:49,048
+so I'm gonna head of out again and is
+gonna show you a little example
+
+560
+00:35:49,048 --> 00:35:53,114
+so for our point-of-sale ap I have
+letter app called Miller
+
+561
+00:35:54,014 --> 00:35:57,108
+which is for selling baby clothes and
+sell in my example
+
+562
+00:35:58,008 --> 00:36:01,017
+why I have is I have this app does again
+this after we get I'm going to create
+
+563
+00:36:01,098 --> 00:36:05,163
+a CL location manager object and I'm
+going to set the app delegate
+
+564
+00:36:06,063 --> 00:36:09,522
+add the deli up for the location manager
+om
+
+565
+00:36:10,089 --> 00:36:14,310
+in the important thing for the IB chem
+where we're going to this method here
+
+566
+00:36:14,031 --> 00:36:18,095
+a star Mark for redshirt began as that
+what I need to use I need to set up an
+
+567
+00:36:18,095 --> 00:36:21,110
+and thats UUID for the region that I
+want
+
+568
+00:36:22,001 --> 00:36:26,092
+this work in and so I might sample let's
+imagine our point-of-sale example that
+
+569
+00:36:27,001 --> 00:36:28,069
+we have we want are
+
+570
+00:36:28,069 --> 00:36:31,112
+people at the red shirt to be you know
+in a general area we don't want them in
+
+571
+00:36:32,012 --> 00:36:34,027
+the back room scanning things and
+selling
+
+572
+00:36:34,027 --> 00:36:37,030
+things without the speaker security
+cameras around them
+
+573
+00:36:37,057 --> 00:36:40,846
+so for our region I'm going to create
+you ID specified here
+
+574
+00:36:41,359 --> 00:36:44,384
+and I'm going to give an identify your
+for have the app some
+
+575
+00:36:44,609 --> 00:36:48,230
+line this case and decree feel beacon
+region
+
+576
+00:36:48,023 --> 00:36:51,066
+using the proximity you idea created and
+the I don't fire
+
+577
+00:36:51,066 --> 00:36:54,158
+and I'm going to call on to the location
+matter to start monitoring
+
+578
+00:36:55,058 --> 00:36:59,121
+for this region answer why the important
+things that you need to make sure you
+
+579
+00:37:00,021 --> 00:37:00,078
+implement
+
+580
+00:37:00,078 --> 00:37:04,078
+is this method I've location manager did
+determine stay
+
+581
+00:37:04,078 --> 00:37:07,097
+for region this method will be called
+when your app
+
+582
+00:37:07,097 --> 00:37:11,172
+is not is in the background so that your
+app can receive region notification
+
+583
+00:37:12,072 --> 00:37:13,168
+changes so that say you now
+
+584
+00:37:14,068 --> 00:37:17,164
+they close my register ap they walked
+out the store and then they open
+
+585
+00:37:18,064 --> 00:37:21,098
+I'm walked out store you will get and no
+you will
+
+586
+00:37:21,098 --> 00:37:24,193
+receive this met they call back when
+they leave the region
+
+587
+00:37:25,093 --> 00:37:29,502
+and so in this example I'm just going to
+you I have it so that when you are
+
+588
+00:37:30,339 --> 00:37:32,190
+inside the Beacon region
+
+589
+00:37:32,019 --> 00:37:35,025
+I want to start figuring out how far
+away they are from the IP can cause I
+
+590
+00:37:35,079 --> 00:37:36,172
+wanna make sure that my cashiers
+
+591
+00:37:37,072 --> 00:37:40,097
+are right closely BB can I don't want
+them you know
+
+592
+00:37:40,097 --> 00:37:43,141
+all the way on the other side the store
+South I'm gonna start
+
+593
+00:37:44,041 --> 00:37:47,110
+range in the beacons in the region and
+why the things I'm gonna do some good
+
+594
+00:37:48,001 --> 00:37:49,015
+implement this method
+
+595
+00:37:49,024 --> 00:37:52,093
+I've location manager did range begins
+in region
+
+596
+00:37:52,093 --> 00:37:55,140
+and I'm just going to get the closest
+pecan cuz I don't particularly care
+
+597
+00:37:56,004 --> 00:37:59,047
+about which I begin their quest
+hairstyles are close to one
+
+598
+00:37:59,083 --> 00:38:02,141
+number check the proximity to make sure
+that's not far on now
+
+599
+00:38:03,041 --> 00:38:06,077
+if it's not I'm going to say that
+they're near the register otherwise
+
+600
+00:38:06,077 --> 00:38:09,123
+they're not near the register and I set
+that variable appropriately
+
+601
+00:38:10,023 --> 00:38:13,095
+are more the air things are nurses I'm
+also implement the method publication
+
+602
+00:38:13,095 --> 00:38:13,172
+magic did
+
+603
+00:38:14,072 --> 00:38:18,072
+enter region and location measure did X
+a region which will be called when the
+
+604
+00:38:18,072 --> 00:38:23,085
+ap is in the for gramm sup for my
+example I'm going to go over
+
+605
+00:38:23,085 --> 00:38:26,114
+in the trust the iPhone I have over here
+
+606
+00:38:27,014 --> 00:38:30,018
+you nurse I have my moolah at here and
+get a pinata
+
+607
+00:38:30,054 --> 00:38:33,087
+your nurse right here I have my stamp
+barcode
+
+608
+00:38:33,087 --> 00:38:36,166
+view and you know it right now it's time
+them the to return to the register area
+
+609
+00:38:37,066 --> 00:38:39,075
+cuz there's no I begin that concurrently
+
+610
+00:38:39,075 --> 00:38:44,149
+attack sup back here on my demo machine
+zamka startup in I began
+
+611
+00:38:45,049 --> 00:38:48,132
+and so you know it's there as soon as it
+detected that the I became what that was
+
+612
+00:38:49,032 --> 00:38:51,043
+within the region and that was range
+crackly
+
+613
+00:38:51,043 --> 00:38:55,054
+I got this nice layer Barker view cell
+have another nicer camera
+
+614
+00:38:55,054 --> 00:38:58,060
+my cashier scanned just run through the
+park adds
+
+615
+00:38:59,014 --> 00:39:02,091
+and do that and sell this view only show
+up while I'm
+
+616
+00:39:02,091 --> 00:39:05,270
+in the rat in the near the I began
+
+617
+00:39:06,089 --> 00:39:10,040
+that's appropriate for and so when I
+turn this off eventually this app will
+
+618
+00:39:10,004 --> 00:39:11,058
+receive a notification that
+
+619
+00:39:11,058 --> 00:39:16,073
+I've left the region and that this you
+should probably be turned off
+
+620
+00:39:16,073 --> 00:39:19,149
+and was it in your nose I also have a
+catalog section
+
+621
+00:39:20,049 --> 00:39:24,145
+South you know it's now that I turn off
+the I began that I'm no longer near the
+
+622
+00:39:25,045 --> 00:39:27,114
+register and so the view is turned off
+
+623
+00:39:28,014 --> 00:39:35,014
+and that is how years I begins
+
+624
+00:39:35,041 --> 00:39:39,044
+thanks Alex there's so much you can do
+it I beacons
+
+625
+00:39:39,071 --> 00:39:42,073
+out that can provide a really
+
+626
+00:39:42,091 --> 00:39:45,092
+awesome user experience both for your
+admins
+
+627
+00:39:45,092 --> 00:39:49,149
+and for the end users alright next
+
+628
+00:39:50,049 --> 00:39:53,086
+I'd like to talk about network
+reachability
+
+629
+00:39:53,086 --> 00:39:56,164
+network reachability Sasaram API's
+
+630
+00:39:57,064 --> 00:40:00,078
+that lets you know whether our server is
+reachable at all
+
+631
+00:40:00,078 --> 00:40:04,087
+on the network and a best the mall
+
+632
+00:40:04,087 --> 00:40:08,096
+it actually tells you when the server
+become searchable or becomes unreachable
+
+633
+00:40:08,096 --> 00:40:12,110
+so for the following example
+
+634
+00:40:13,001 --> 00:40:16,005
+I want you to know you can use that word
+reachability
+
+635
+00:40:16,014 --> 00:40:19,028
+to provide intelligent offline
+
+636
+00:40:19,028 --> 00:40:22,124
+behavior so back to Alex and he's gonna
+show you how that's done
+
+637
+00:40:23,024 --> 00:40:27,043
+sup back in our Mila
+
+638
+00:40:27,043 --> 00:40:32,072
+I have this method so I call I Crean
+ASEAN network reachability flags
+
+639
+00:40:32,072 --> 00:40:35,140
+and I'm gonna create reachability
+reference which I do you buy
+
+640
+00:40:36,004 --> 00:40:40,007
+as the network reachability crate with
+name and the name and a pass into here's
+
+641
+00:40:40,007 --> 00:40:41,088
+a domain so in my example
+
+642
+00:40:42,051 --> 00:40:45,090
+up above I've defined Apple dock
+comments the domain I want you
+
+643
+00:40:45,009 --> 00:40:49,011
+watch for and see the reachability up
+and so once I do that if the
+
+644
+00:40:49,092 --> 00:40:50,113
+reachability is no
+
+645
+00:40:51,013 --> 00:40:55,068
+I can call SC network reachability get
+flags and then once I do that I can
+
+646
+00:40:55,068 --> 00:40:57,075
+check the flags and I'm going to check
+that
+
+647
+00:40:57,075 --> 00:41:00,111
+SE network reachability flags our reach
+is reachable
+
+648
+00:41:01,011 --> 00:41:04,090
+and using that Pagano when I i can not
+
+649
+00:41:04,009 --> 00:41:07,088
+then a network operations because the
+users and airplane
+
+650
+00:41:08,069 --> 00:41:12,123
+for example now this is nice and get but
+this is just one of matt that I don't
+
+651
+00:41:13,023 --> 00:41:14,080
+wanna be calling this all the time
+
+652
+00:41:14,008 --> 00:41:17,032
+so why I really want to do as I want to
+register this
+
+653
+00:41:18,004 --> 00:41:21,041
+so that every time the reachability
+configuration changes
+
+654
+00:41:21,041 --> 00:41:24,082
+I get notified and so what I've done
+down here
+
+655
+00:41:24,082 --> 00:41:29,096
+as I creatine SE network reachability
+contacts I'm which I'm feeling in a nice
+
+656
+00:41:29,096 --> 00:41:31,142
+little block that created check the
+flags and
+
+657
+00:41:32,042 --> 00:41:35,089
+if the flags say that it's not reachable
+on going to set my
+
+658
+00:41:35,089 --> 00:41:38,161
+of wine bearable appropriately and one
+good years I'm gonna call
+
+659
+00:41:39,061 --> 00:41:43,097
+s the network reachability sec call back
+and get feet at the reachability
+
+660
+00:41:43,097 --> 00:41:47,121
+and I have to give it this method which
+billy change which is written in C
+
+661
+00:41:48,021 --> 00:41:51,117
+on the reason I put earlier in that
+context that im falle
+
+662
+00:41:52,017 --> 00:41:56,019
+with that call boxes I wanna keep all my
+code in objective-c South all I'm going
+
+663
+00:41:56,037 --> 00:41:59,071
+to have my seem at their reachability
+change due up here
+
+664
+00:41:59,071 --> 00:42:03,129
+as I'm just going to have it call that
+block that feed into the infall
+
+665
+00:42:04,029 --> 00:42:07,038
+so that I don't have to mess around with
+seek out that much sup
+
+666
+00:42:08,019 --> 00:42:12,067
+with the SE network reachability I said
+call back i sat the theme at the time
+
+667
+00:42:12,067 --> 00:42:15,089
+calling into in the context and then the
+next thing I need to do is I need to
+
+668
+00:42:15,089 --> 00:42:18,096
+make sure I schedule there so that this
+gets called every once in a while answer
+
+669
+00:42:19,059 --> 00:42:20,104
+the way I do that as I call
+
+670
+00:42:21,004 --> 00:42:25,051
+SC network reachability fat dispatch
+queue: I give the reachability reference
+
+671
+00:42:25,051 --> 00:42:28,100
+that create and I'm not going to call
+this on the main kya my example
+
+672
+00:42:29,000 --> 00:42:32,049
+you can do this another cues I've chosen
+this just for simplicity
+
+673
+00:42:32,049 --> 00:42:35,090
+and so now if we return to my iPhone
+example
+
+674
+00:42:35,009 --> 00:42:39,013
+your nurse I have this nice where
+catalogue baby clothes that I can buy
+
+675
+00:42:40,003 --> 00:42:43,069
+and so why why do you is I'm just going
+to you switch
+
+676
+00:42:43,096 --> 00:42:47,178
+the Anna into airplane mode my switch it
+off you know it's there FC network
+
+677
+00:42:48,078 --> 00:42:50,105
+reachability has changed my label to
+
+678
+00:42:51,005 --> 00:42:55,018
+inform the user that they're currently
+offline and so you can use if the gate
+
+679
+00:42:55,018 --> 00:42:58,046
+behavior that you don't want users to do
+while they are offline like
+
+680
+00:42:58,046 --> 00:43:02,107
+try and added document that you want to
+sync up between multiple users
+
+681
+00:43:03,007 --> 00:43:06,064
+and so that as the network reachability
+full
+
+682
+00:43:06,064 --> 00:43:13,064
+thanks Alex network reachability allows
+you to you provide
+
+683
+00:43:13,091 --> 00:43:17,156
+intelligent offline behavior without
+having to send a request and timing out
+
+684
+00:43:18,056 --> 00:43:20,081
+and things like that you know up front
+
+685
+00:43:20,081 --> 00:43:23,160
+that the network or your particular
+server actually is not
+
+686
+00:43:24,006 --> 00:43:30,006
+reachable and you can take the
+appropriate action so
+
+687
+00:43:30,006 --> 00:43:33,031
+in summary our second app example shows
+us
+
+688
+00:43:33,085 --> 00:43:37,152
+I that you can put it happen to single
+at mote using and EM
+
+689
+00:43:38,052 --> 00:43:41,057
+against example to follow you can use
+
+690
+00:43:42,002 --> 00:43:46,066
+I beacon to provide context for your app
+
+691
+00:43:46,066 --> 00:43:50,083
+and changer app behavior depending on
+whether it's near something
+
+692
+00:43:50,083 --> 00:43:53,144
+you can use this work or location to
+allow your admins
+
+693
+00:43:54,044 --> 00:43:59,070
+to really configure your app's to a very
+fine grain
+
+694
+00:43:59,007 --> 00:44:02,054
+and finally network reachability allows
+you to behave
+
+695
+00:44:03,017 --> 00:44:08,086
+intelligently when a server snot
+available
+
+696
+00:44:08,086 --> 00:44:12,100
+let's talk about a third and final lap
+example assessment
+
+697
+00:44:13,000 --> 00:44:17,036
+so this is your typical example King ap
+
+698
+00:44:17,036 --> 00:44:21,098
+I there are several modes of operation
+here
+
+699
+00:44:21,098 --> 00:44:24,157
+I for exams I
+
+700
+00:44:25,057 --> 00:44:28,060
+but far for our example the flow that we
+want to show you
+
+701
+00:44:28,087 --> 00:44:32,116
+is a student operating on an iPad
+
+702
+00:44:33,016 --> 00:44:36,054
+I taking an exam and
+
+703
+00:44:36,054 --> 00:44:40,055
+we're gonna download the exam packet
+from a document provider
+
+704
+00:44:40,055 --> 00:44:43,086
+from your school's filesystem okay
+
+705
+00:44:43,086 --> 00:44:46,164
+once the user begins taking the exam
+
+706
+00:44:47,064 --> 00:44:51,077
+the exam have a lock them in and depict
+the exam
+
+707
+00:44:51,077 --> 00:44:56,129
+and I'll submit and students will be
+allowed to use the iPad again
+
+708
+00:44:57,029 --> 00:45:00,088
+so let's start with
+
+709
+00:45:00,088 --> 00:45:03,100
+document providers so doctor providers
+
+710
+00:45:04,000 --> 00:45:08,049
+as I mentioned before is a really
+awesome new feature of Iowa State
+
+711
+00:45:08,049 --> 00:45:12,140
+it allows you to exchange documents
+between acts
+
+712
+00:45:13,004 --> 00:45:16,008
+when you install ap after docking a
+provider
+
+713
+00:45:16,044 --> 00:45:19,088
+you are actually installing network
+access
+
+714
+00:45:19,088 --> 00:45:23,092
+for other APs
+
+715
+00:45:23,092 --> 00:45:28,094
+to access document providers use the UI
+document picker view controller
+
+716
+00:45:28,094 --> 00:45:32,183
+this is the same one you use for iPod
+dock folder
+
+717
+00:45:33,083 --> 00:45:36,087
+you stalking a providers to get access
+to enterprise
+
+718
+00:45:37,023 --> 00:45:40,110
+network resources don't build in
+
+719
+00:45:41,001 --> 00:45:44,003
+network protocols into your ap
+
+720
+00:45:44,012 --> 00:45:47,015
+instead rely on the admin to configure
+
+721
+00:45:47,042 --> 00:45:51,139
+network access maps that allows your app
+to access those network resources
+
+722
+00:45:52,039 --> 00:45:55,088
+alright so let's go back to Alex and
+he's gonna show you a little bit of
+
+723
+00:45:55,088 --> 00:45:58,107
+example
+
+724
+00:45:59,007 --> 00:46:02,084
+sup your nurse that I have an
+application which have called pencils
+
+725
+00:46:02,084 --> 00:46:02,151
+down and
+
+726
+00:46:03,051 --> 00:46:06,058
+what pencils downs good years that when
+did a user starts the path
+
+727
+00:46:07,021 --> 00:46:11,119
+I want them to go into their high school
+enter their high schools ap
+
+728
+00:46:12,019 --> 00:46:16,045
+ap document ap and I want them to
+retrieve the tasks and then I'm going to
+
+729
+00:46:16,045 --> 00:46:19,143
+proctor the exam on behalf the high
+school so in this example
+
+730
+00:46:20,043 --> 00:46:23,141
+when I do start s I have this UI
+document picker view controller
+
+731
+00:46:24,041 --> 00:46:27,076
+now I'm going to create one internet
+with document types I'm going to allow
+
+732
+00:46:27,076 --> 00:46:27,152
+in this case
+
+733
+00:46:28,052 --> 00:46:31,067
+some good shoes HTML tax in RTF
+
+734
+00:46:31,067 --> 00:46:34,129
+and I'm going to set the mode in this
+case I'm going to use you I document
+
+735
+00:46:35,029 --> 00:46:36,082
+picture mode import
+
+736
+00:46:36,082 --> 00:46:39,143
+because I want to get the file in keep
+it in my app bundle
+
+737
+00:46:40,043 --> 00:46:43,068
+and the RPM going to do use I'm going to
+set the delegate
+
+738
+00:46:43,068 --> 00:46:46,083
+on DUI document pay-per-view controller
+to myself
+
+739
+00:46:46,083 --> 00:46:49,122
+and I'm going to present that the
+extroverted user now
+
+740
+00:46:50,022 --> 00:46:54,061
+when they go into that document pic I
+can get two different call backs if for
+
+741
+00:46:54,061 --> 00:46:56,160
+example they failed pick something they
+quite done they don't find
+
+742
+00:46:57,006 --> 00:47:01,017
+the test file that they won on their I'm
+going to get this document picker was
+
+743
+00:47:01,071 --> 00:47:02,119
+cancelled call back
+
+744
+00:47:03,019 --> 00:47:06,094
+and in this case I'm just gonna send a
+notification on the console that you
+
+745
+00:47:06,094 --> 00:47:06,137
+know
+
+746
+00:47:07,037 --> 00:47:12,045
+a I can find the document if for example
+they actually depict a document I'll
+
+747
+00:47:12,045 --> 00:47:13,107
+call this document picker
+
+748
+00:47:14,007 --> 00:47:17,023
+depict document you're all will get
+called by the system
+
+749
+00:47:17,023 --> 00:47:20,030
+and while the use of double check that
+there's a natural your own then
+
+750
+00:47:20,003 --> 00:47:24,003
+I'm going to open up the document and if
+I'm successful
+
+751
+00:47:24,003 --> 00:47:27,090
+in opening up the document I'm going to
+request single atm
+
+752
+00:47:28,017 --> 00:47:33,062
+and load up the task for them sup if we
+go over to the simulator we have our
+
+753
+00:47:33,062 --> 00:47:34,062
+example here so
+
+754
+00:47:34,062 --> 00:47:37,091
+I pencils down I go into my apt
+
+755
+00:47:37,091 --> 00:47:40,179
+you know sadness knife where testing
+view some get a quick start tests cuz I
+
+756
+00:47:41,079 --> 00:47:41,156
+wanna start
+
+757
+00:47:42,056 --> 00:47:45,108
+it s with that my high school's given me
+so I don't a location
+
+758
+00:47:46,008 --> 00:47:50,033
+your nurse that I have the MHS stock
+which is a document provider
+
+759
+00:47:50,033 --> 00:47:54,057
+and so I'm going to go into here your
+nurses have this view this view is
+
+760
+00:47:54,057 --> 00:47:55,070
+actually coming from the
+
+761
+00:47:55,007 --> 00:47:58,014
+MHS docs apt I have installed in
+simulator
+
+762
+00:47:58,077 --> 00:48:03,084
+issues not created by your apt and so in
+this case if I want you I can login
+
+763
+00:48:03,084 --> 00:48:07,090
+MHS stop to check my credentials make
+sure I'm actually a high school student
+
+764
+00:48:07,009 --> 00:48:10,058
+Thunder's girl login with someone
+credentials and I'm worse like my
+
+765
+00:48:11,039 --> 00:48:13,056
+program to thank you to do
+
+766
+00:48:13,056 --> 00:48:16,062
+it so your nurse that once I selected a
+my
+
+767
+00:48:16,062 --> 00:48:20,118
+after got that document back in I loaded
+up into my nice their web the ins
+
+768
+00:48:21,018 --> 00:48:25,094
+and started the test and so that's how
+document providers work
+
+769
+00:48:25,094 --> 00:48:31,122
+alright
+
+770
+00:48:32,022 --> 00:48:35,108
+doctor providers are very powerful but
+they're very easy to use
+
+771
+00:48:36,008 --> 00:48:39,054
+as you can tell necks
+
+772
+00:48:39,054 --> 00:48:42,077
+let's talk about on a single at mod so
+
+773
+00:48:42,077 --> 00:48:45,113
+we've mentioned before that MDM can put
+your
+
+774
+00:48:46,013 --> 00:48:49,091
+ap it put your a device into single app
+mod
+
+775
+00:48:49,091 --> 00:48:53,092
+which means that it will only run one ap
+
+776
+00:48:54,001 --> 00:48:58,095
+but in the case of this exam ap we want
+the apt to be able to put itself
+
+777
+00:48:58,095 --> 00:49:01,136
+into single app mod so this mode of
+operation
+
+778
+00:49:02,036 --> 00:49:05,049
+is called autonomous single app mod
+
+779
+00:49:05,049 --> 00:49:09,118
+your app has to be pre-authorized by the
+MDM server to do this
+
+780
+00:49:10,018 --> 00:49:13,047
+and this can only be done on the
+supervised device
+
+781
+00:49:13,047 --> 00:49:16,052
+but once that's in place your app can
+
+782
+00:49:16,052 --> 00:49:20,120
+offers of the hey I want control of the
+iPad for now
+
+783
+00:49:21,002 --> 00:49:24,087
+so use a condom a single at mote to lock
+the user
+
+784
+00:49:25,005 --> 00:49:29,081
+into your ap but please do it sparingly
+
+785
+00:49:29,081 --> 00:49:32,150
+because the user will get stuck in your
+app if you don't get them out
+
+786
+00:49:33,005 --> 00:49:36,074
+your Apple crash and restart crash and
+restart
+
+787
+00:49:37,019 --> 00:49:41,024
+and the user will not get out of it so
+please be careful when you do this
+
+788
+00:49:41,024 --> 00:49:44,047
+but it is a really powerful feature so
+
+789
+00:49:44,047 --> 00:49:48,125
+alex is going to demonstrate how you can
+do this
+
+790
+00:49:49,025 --> 00:49:53,043
+so we're back to my pencils down
+application your nose that here at this
+
+791
+00:49:53,043 --> 00:49:54,121
+requesting a lot mode
+
+792
+00:49:55,021 --> 00:49:58,067
+method that period and what I'm going to
+call into is you why
+
+793
+00:49:58,067 --> 00:50:01,068
+accessibility request got it access
+session
+
+794
+00:50:01,077 --> 00:50:04,084
+this is the method that will star up
+single at Mad
+
+795
+00:50:04,084 --> 00:50:07,085
+m wide use IP temple in a whether I want
+single at mod
+
+796
+00:50:07,094 --> 00:50:11,116
+honor of and the earthing of feed into
+it is a completion block which is
+
+797
+00:50:12,016 --> 00:50:17,075
+Boyd cool did succeed and this Wally and
+I get will tell me if I was able t
+
+798
+00:50:17,075 --> 00:50:21,134
+successfully enter or exit signal at my
+depending on which Matt I set and the
+
+799
+00:50:22,034 --> 00:50:26,098
+other Boolean arm it's very important
+and to balance your calls cuz
+
+800
+00:50:26,098 --> 00:50:29,103
+as we mentioned you will lock the user
+into your at
+
+801
+00:50:30,048 --> 00:50:34,107
+if you don't call back into their to
+turn off single at night as well
+
+802
+00:50:35,007 --> 00:50:38,060
+another important point is to make sure
+that you register
+
+803
+00:50:38,006 --> 00:50:41,028
+the DUI accessibility guided access
+status
+
+804
+00:50:41,082 --> 00:50:44,118
+did change notification this
+notification will be sent out when
+
+805
+00:50:45,018 --> 00:50:45,066
+single
+
+806
+00:50:45,066 --> 00:50:48,147
+at mochi changes and sell why I've done
+is like our
+
+807
+00:50:49,047 --> 00:50:52,096
+create a layer math a call guided access
+to change adaptation
+
+808
+00:50:52,096 --> 00:50:55,179
+and when I received that notification
+I'm just going to update my
+
+809
+00:50:56,079 --> 00:51:00,152
+single at mod arm was it state and so
+your nose here at the have
+
+810
+00:51:01,052 --> 00:51:04,135
+guided access that's changed I set you
+know I'm in seeing a lot
+
+811
+00:51:05,035 --> 00:51:08,098
+if I receive this notification sup
+remove over to
+
+812
+00:51:08,098 --> 00:51:12,154
+are iPad and on this iPad it's a
+supervised by slavery setup
+
+813
+00:51:13,054 --> 00:51:16,061
+I've also pushed down and MDM profile
+that to find that
+
+814
+00:51:17,024 --> 00:51:20,092
+pencils down giving it's by no ID is
+allowed to start
+
+815
+00:51:20,092 --> 00:51:25,095
+arm single at mod autonomously so if I
+go into pencils down
+
+816
+00:51:25,095 --> 00:51:29,152
+and get start my test I'm gonna skip
+over the fire provider section for now
+
+817
+00:51:30,052 --> 00:51:33,145
+and your notice that I am now in my test
+if I tried exit the app
+
+818
+00:51:34,045 --> 00:51:38,049
+by pressing the Home button nothing
+happens and locked into year
+
+819
+00:51:38,085 --> 00:51:43,085
+so let's add I don't know I am
+discretion some justice met the test
+
+820
+00:51:43,085 --> 00:51:47,121
+an at the test was successfully some and
+sell your now nurse if I press the home
+
+821
+00:51:48,021 --> 00:51:48,086
+button
+
+822
+00:51:48,086 --> 00:51:55,086
+I'm able to accept because I bounce the
+call
+
+823
+00:51:56,008 --> 00:51:59,027
+thanks Alex apart in a single at mod
+
+824
+00:51:59,027 --> 00:52:02,051
+very powerful use it sparingly
+
+825
+00:52:02,051 --> 00:52:07,056
+measure the user can get out of it
+eventually
+
+826
+00:52:07,056 --> 00:52:11,108
+so okay summary of the third ap document
+providers
+
+827
+00:52:12,008 --> 00:52:15,059
+super powerful new feature an IRS a use
+it
+
+828
+00:52:15,059 --> 00:52:19,135
+to gain access to network resources in
+your enterprise
+
+829
+00:52:20,035 --> 00:52:24,073
+at a nap equals at network access
+
+830
+00:52:24,073 --> 00:52:27,116
+upon a single at mote allows you to lock
+your own app
+
+831
+00:52:28,016 --> 00:52:33,111
+into single at Mon so the user cannot go
+to a different app
+
+832
+00:52:34,011 --> 00:52:37,030
+so what have we learned today
+
+833
+00:52:37,003 --> 00:52:40,092
+I we learned that we should assume that
+MDM will be used to manage your absent
+
+834
+00:52:41,019 --> 00:52:42,021
+devices
+
+835
+00:52:42,021 --> 00:52:45,021
+when you're writing aP's for business
+and education
+
+836
+00:52:45,021 --> 00:52:48,066
+assume indians gonna be there and as
+going to configure
+
+837
+00:52:48,066 --> 00:52:51,089
+the environment for your ap
+
+838
+00:52:51,089 --> 00:52:54,145
+you can safely assume that enterprise
+own devices
+
+839
+00:52:55,045 --> 00:52:59,051
+will be supervised so check up to check
+out the list of features that are
+
+840
+00:53:00,005 --> 00:53:01,024
+available to you
+
+841
+00:53:01,024 --> 00:53:05,032
+when the device is supervised and use
+them
+
+842
+00:53:05,032 --> 00:53:08,120
+I on the other hand if you're writing
+for bring your own device environment
+
+843
+00:53:09,002 --> 00:53:14,026
+you can re-live that you can assume that
+the devices will not be civil rights
+
+844
+00:53:14,044 --> 00:53:17,075
+so if you're Abbas wanna work in both
+environments
+
+845
+00:53:17,075 --> 00:53:21,172
+be aware of the features that are
+available in each case
+
+846
+00:53:22,072 --> 00:53:25,098
+and finally rely on i OS
+
+847
+00:53:25,098 --> 00:53:30,099
+to provide a great set of system why
+features that your aP's can leverage
+
+848
+00:53:31,008 --> 00:53:34,013
+single sign-on VPN
+
+849
+00:53:34,013 --> 00:53:38,058
+global proxy manage data flow between
+the Manish aP's
+
+850
+00:53:38,058 --> 00:53:42,060
+and the on Minitab some accounts single
+at mod
+
+851
+00:53:42,078 --> 00:53:45,164
+both MDM driven an autonomous
+
+852
+00:53:46,064 --> 00:53:49,136
+document providers I beacon
+
+853
+00:53:50,036 --> 00:53:55,060
+and core location for context
+
+854
+00:53:55,006 --> 00:53:57,100
+alright finally I wanna call your
+attention to a great new portal that
+
+855
+00:53:58,054 --> 00:53:58,141
+we've just
+
+856
+00:53:59,041 --> 00:54:02,088
+put online developer to Apple com slash
+enterprise
+
+857
+00:54:02,088 --> 00:54:09,088
+May for developers just like you
+
+858
+00:54:11,064 --> 00:54:13,141
+for more information our eventual assist
+bald and bold
+
+859
+00:54:14,041 --> 00:54:18,420
+there's that enterprise portal again
+find most of what you need in there
+
+860
+00:54:18,789 --> 00:54:21,835
+and of course the developer forms is a
+great resource
+
+861
+00:54:22,249 --> 00:54:25,256
+some related sessions
+
+862
+00:54:25,319 --> 00:54:29,411
+this morning we had managing Apple
+devices the check out that video
+
+863
+00:54:30,239 --> 00:54:33,252
+we have distributing enterprise aP's
+right here
+
+864
+00:54:33,369 --> 00:54:37,388
+following this session and where if
+you're interested and
+
+865
+00:54:37,559 --> 00:54:40,571
+out big into doc providers talking to
+providers
+
+866
+00:54:40,679 --> 00:54:43,685
+building a document based app is a
+must-attend
+
+867
+00:54:44,279 --> 00:54:47,298
+Thurs 11:30 thank you very much
+

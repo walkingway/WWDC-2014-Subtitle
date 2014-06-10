@@ -1,0 +1,3978 @@
+1
+00:00:13,086 --> 00:00:16,131
+alright good morning everyone good to
+see you all here
+
+2
+00:00:17,031 --> 00:00:22,046
+we're here today to talk to you about
+internationalization now
+
+3
+00:00:22,046 --> 00:00:25,575
+if you've been following along with our
+previous years talks on international
+
+4
+00:00:25,989 --> 00:00:29,390
+support then you know that the App Store
+is available in many many countries
+
+5
+00:00:29,039 --> 00:00:31,046
+worldwide more than 150 by last count
+
+6
+00:00:32,009 --> 00:00:35,064
+so I'm sure evolve major aP's localize
+ball
+
+7
+00:00:35,064 --> 00:00:38,143
+so you concerned about to localize urs
+and make them available in multiple
+
+8
+00:00:39,043 --> 00:00:39,121
+languages
+
+9
+00:00:40,021 --> 00:00:43,037
+is that sufficient of well
+
+10
+00:00:43,037 --> 00:00:47,082
+not necessarily you need to take some
+care with regard to
+
+11
+00:00:47,082 --> 00:00:50,157
+internationalization otherwise you might
+end up with
+
+12
+00:00:51,057 --> 00:00:55,106
+complaints like say half contact names
+
+13
+00:00:55,619 --> 00:00:59,698
+truck show up backwards in Europe or the
+dayton is application unreadable
+
+14
+00:01:00,409 --> 00:01:04,600
+or my text is all messed up working in
+this area we've
+
+15
+00:01:04,006 --> 00:01:07,022
+seen problems like this occur many many
+times and
+
+16
+00:01:07,076 --> 00:01:10,084
+we're here today to tell you how to fix
+them what we're gonna do
+
+17
+00:01:11,056 --> 00:01:14,295
+is first ball will run through
+
+18
+00:01:14,799 --> 00:01:18,820
+what we have its new international
+support and your sanity and I was 8
+
+19
+00:01:19,009 --> 00:01:23,740
+then we'll go into detail about language
+locale when you use what
+
+20
+00:01:23,074 --> 00:01:27,128
+and they were gonna run through a number
+of case studies problems that we've seen
+
+21
+00:01:28,028 --> 00:01:31,031
+and internationalization had how to fix
+up
+
+22
+00:01:31,031 --> 00:01:35,870
+so start off with what's new in
+internationalization
+
+23
+00:01:36,149 --> 00:01:39,184
+and the latest releases are operating
+systems we have a number of nice man
+
+24
+00:01:39,499 --> 00:01:39,557
+features
+
+25
+00:01:40,079 --> 00:01:45,210
+both at the user level and an 80 Iza to
+develop a lot so the usual level
+
+26
+00:01:45,021 --> 00:01:48,320
+we have for Iowa's a number of new
+localizations
+
+27
+00:01:48,509 --> 00:01:52,591
+as a new keyboards I we've agreed on I
+was
+
+28
+00:01:53,329 --> 00:01:56,410
+language region sightings and we have
+some
+
+29
+00:01:57,139 --> 00:02:00,810
+a new prevents tumor calendar support
+then
+
+30
+00:02:00,081 --> 00:02:05,320
+and I API's developer level we have one
+API for string encoding detection
+
+31
+00:02:06,049 --> 00:02:09,890
+we have some interesting new for matters
+and something
+
+32
+00:02:09,089 --> 00:02:12,144
+new called formatting context which are
+going to attempt a few minutes
+
+33
+00:02:13,044 --> 00:02:17,112
+so let's start with a new localization
+two keyboards we have for Iowa us we
+
+34
+00:02:18,012 --> 00:02:20,020
+have new localizations for Hindi
+
+35
+00:02:20,002 --> 00:02:23,037
+for Indian English Canadian French and
+Hong Kong Chinese
+
+36
+00:02:23,055 --> 00:02:26,134
+add some new keyboards for small
+
+37
+00:02:26,629 --> 00:02:29,715
+I for three and a claim which has been
+ghali party in order to
+
+38
+00:02:30,489 --> 00:02:34,170
+to go along with our existing Indian
+Tomo keyboards
+
+39
+00:02:34,017 --> 00:02:38,006
+ami also have keyboards for Indian
+English Filipino and Slovenia
+
+40
+00:02:38,159 --> 00:02:41,310
+and there are a number of other new
+things
+
+41
+00:02:41,031 --> 00:02:44,109
+I like new fonts for various crops
+worldwide
+
+42
+00:02:45,009 --> 00:02:48,158
+second so
+
+43
+00:02:48,239 --> 00:02:51,450
+you may recall that the Mavericks we
+redid the language region settings for
+
+44
+00:02:51,045 --> 00:02:52,724
+last 10 well this time around
+
+45
+00:02:53,129 --> 00:02:57,207
+it's the turn by OS and I was aid we've
+read on the language in region settings
+
+46
+00:02:57,909 --> 00:03:01,170
+and they look something like this now
+
+47
+00:03:01,017 --> 00:03:05,025
+so you can still as always specify the
+primary language localization
+
+48
+00:03:05,025 --> 00:03:09,059
+but now in addition on iowa's you can
+also specify
+
+49
+00:03:09,059 --> 00:03:12,117
+users can specify the whole list their
+preferred language isn't
+
+50
+00:03:13,017 --> 00:03:16,048
+order so one thing this allows you to do
+
+51
+00:03:16,048 --> 00:03:20,056
+is to localize your app's into
+localizations for which Apple does not
+
+52
+00:03:21,028 --> 00:03:21,707
+provide
+
+53
+00:03:21,959 --> 00:03:26,962
+primary I'm OS localization so because
+users can specify those ahead of
+
+54
+00:03:26,989 --> 00:03:31,650
+I wanna localization top-fives and your
+Apple run in those languages for the
+
+55
+00:03:31,065 --> 00:03:32,214
+users who need that
+
+56
+00:03:32,799 --> 00:03:37,680
+I nuclear also is an advanced setting
+that allows specifying
+
+57
+00:03:37,068 --> 00:03:41,114
+the language or the region format
+independently of the localization
+
+58
+00:03:42,014 --> 00:03:47,045
+I we we make them the same by default
+but users can change them if they like
+
+59
+00:03:47,045 --> 00:03:49,314
+and we'll go into that and more detail
+later on
+
+60
+00:03:49,719 --> 00:03:53,774
+we have some improvement store support
+from their calendars
+
+61
+00:03:54,269 --> 00:03:57,363
+so and our calendar applications we now
+
+62
+00:03:58,209 --> 00:04:01,254
+have the support for turning on I as an
+overlay
+
+63
+00:04:01,659 --> 00:04:04,780
+and on account dates in addition to
+
+64
+00:04:04,078 --> 00:04:09,347
+Gregorian dates we also have a couple of
+new calendar options either variants on
+
+65
+00:04:10,049 --> 00:04:11,063
+the Islamic calendar
+
+66
+00:04:11,189 --> 00:04:14,217
+but let's take a closer look at what
+their so
+
+67
+00:04:14,469 --> 00:04:17,780
+this years counter app with up
+
+68
+00:04:17,078 --> 00:04:20,112
+Chinese calendar other counter dates
+turn on you see
+
+69
+00:04:21,012 --> 00:04:25,034
+shoppers and overlay underneath the
+Gregorian dates here it's very useful
+
+70
+00:04:25,034 --> 00:04:29,103
+for our Chinese customers and here's
+what this looks like
+
+71
+00:04:30,003 --> 00:04:35,050
+in Ostend and see here the Gregorian
+dates on the right and other candidates
+
+72
+00:04:35,005 --> 00:04:39,824
+on the left at the API level
+
+73
+00:04:40,319 --> 00:04:45,930
+these are API's available to foundation
+level on both I'll ass and Austan
+
+74
+00:04:45,093 --> 00:04:48,175
+I so you may recall from some producers
+tax sessions we talked about the
+
+75
+00:04:49,075 --> 00:04:51,103
+unfortunate situation that can occur
+
+76
+00:04:52,003 --> 00:04:56,037
+when you have a text file or some other
+time Cup external taxed
+
+77
+00:04:56,037 --> 00:04:59,176
+any don't happen to know what the
+coating it in
+
+78
+00:04:59,509 --> 00:05:03,710
+well in that case York may have no other
+option but to try to
+
+79
+00:05:03,071 --> 00:05:08,073
+ghastly encoding from the text we now
+have a specific API to do that
+
+80
+00:05:08,091 --> 00:05:12,135
+automatically for you based on all the
+evidence that's available from the taxed
+
+81
+00:05:13,035 --> 00:05:16,088
+I and it's very handy in the water
+options
+
+82
+00:05:16,088 --> 00:05:20,377
+you can I have a do the whole conversion
+for you at once or just tell you what it
+
+83
+00:05:21,169 --> 00:05:21,470
+thinks
+
+84
+00:05:21,047 --> 00:05:24,306
+encoding tells here you can be have
+
+85
+00:05:24,729 --> 00:05:28,280
+lost your Namas a conversion and if you
+happen to think you know
+
+86
+00:05:28,028 --> 00:05:31,063
+one coatings fly could be and you can
+specify those or you can
+
+87
+00:05:31,063 --> 00:05:35,972
+require to be one of certain list and
+coatings
+
+88
+00:05:36,539 --> 00:05:39,539
+we also have a number of nice new for
+matters
+
+89
+00:05:39,539 --> 00:05:42,555
+so estate for matters great if the thing
+you try to format
+
+90
+00:05:42,699 --> 00:05:46,690
+here's a date a particular moment in
+time
+
+91
+00:05:46,069 --> 00:05:49,152
+but what if what you're trying to format
+is more like an amount of time next
+
+92
+00:05:50,052 --> 00:05:51,981
+steps for an Interpol
+
+93
+00:05:52,449 --> 00:05:56,110
+we have and a state components for
+matter for displaying
+
+94
+00:05:56,011 --> 00:06:01,030
+durations are amounts of time I a number
+of hours or minutes or weeks or what
+
+95
+00:06:01,003 --> 00:06:02,962
+have you
+
+96
+00:06:03,259 --> 00:06:07,330
+you can specify the amount of time
+either as a start and an end date
+
+97
+00:06:07,033 --> 00:06:10,075
+or a time interval or you can specify
+all the components individually if you
+
+98
+00:06:10,075 --> 00:06:11,102
+like
+
+99
+00:06:12,002 --> 00:06:15,009
+then you can specify outs post reform
+added with
+
+100
+00:06:15,009 --> 00:06:18,018
+wonderful this stuff date and time
+styles
+
+101
+00:06:18,099 --> 00:06:21,310
+and you can also get to specify exactly
+which
+
+102
+00:06:21,031 --> 00:06:24,034
+the components you want displayed
+
+103
+00:06:24,034 --> 00:06:27,863
+and there's some interesting things to
+ya you can turn on
+
+104
+00:06:28,169 --> 00:06:32,590
+and look how sensitive way you can add
+language to it that says
+
+105
+00:06:32,059 --> 00:06:35,146
+about a certain amount of time it is an
+approximate time or
+
+106
+00:06:36,046 --> 00:06:39,065
+the locale I sensitive way of saying
+remaining
+
+107
+00:06:39,065 --> 00:06:42,083
+for example if this is a sort of
+countdown of some sort
+
+108
+00:06:42,083 --> 00:06:45,161
+so here are some examples of this in
+various languages
+
+109
+00:06:46,061 --> 00:06:49,106
+you can as as per se choose various
+styles either a
+
+110
+00:06:50,006 --> 00:06:53,028
+lengthy spell out kind of style
+something shorter something very short
+
+111
+00:06:53,028 --> 00:06:54,028
+Marco me
+
+112
+00:06:54,028 --> 00:06:57,081
+and the last line shows the about option
+
+113
+00:06:57,081 --> 00:07:00,168
+now one thing I'm watchin to notice here
+is that
+
+114
+00:07:01,068 --> 00:07:04,837
+some other news have their first word
+capitalized
+
+115
+00:07:05,449 --> 00:07:08,780
+well that's appropriate sensor showing
+up in the table here
+
+116
+00:07:08,078 --> 00:07:11,155
+but there are other contacts where you
+might want to use
+
+117
+00:07:12,055 --> 00:07:15,324
+not to have the first word couple I say
+if they were showing up the middle of
+
+118
+00:07:15,819 --> 00:07:16,838
+the Suns
+
+119
+00:07:17,009 --> 00:07:22,300
+and all talk about that more and just a
+minute
+
+120
+00:07:22,003 --> 00:07:25,302
+I another new former estate interval for
+matter
+
+121
+00:07:25,599 --> 00:07:29,643
+if what you're trying to display is a
+range of times
+
+122
+00:07:30,039 --> 00:07:33,360
+from some beginning timer day to some
+anti mcdade
+
+123
+00:07:33,036 --> 00:07:36,059
+I you might want in this case
+
+124
+00:07:36,059 --> 00:07:39,068
+to say not to show only once
+
+125
+00:07:39,068 --> 00:07:43,119
+the pieces that are common to the start
+and a and as stated for matter what do
+
+126
+00:07:44,019 --> 00:07:45,075
+that for you
+
+127
+00:07:45,075 --> 00:07:49,464
+you provide the start date in the end
+date: you can specify
+
+128
+00:07:50,139 --> 00:07:53,470
+up again and the above list a date or
+time styles
+
+129
+00:07:53,047 --> 00:07:58,396
+or a template for full control over
+which pieces get displayed
+
+130
+00:07:58,819 --> 00:08:02,280
+so here are some examples of this and
+again in various languages
+
+131
+00:08:02,028 --> 00:08:06,032
+so you can see it can show arrange
+updates arranger times or Ranger
+
+132
+00:08:06,068 --> 00:08:09,122
+dates and times and appropriately
+
+133
+00:08:10,022 --> 00:08:13,093
+the the pieces that are common to the
+start and are only shown
+
+134
+00:08:13,093 --> 00:08:16,159
+once
+
+135
+00:08:17,059 --> 00:08:22,508
+we also have on some specific for
+matters for particular kinds quantities
+
+136
+00:08:23,039 --> 00:08:27,960
+energy electron mass thats and as energy
+for matter as long form at Rs mass for
+
+137
+00:08:27,096 --> 00:08:27,101
+matter
+
+138
+00:08:28,046 --> 00:08:32,053
+this is very usefull for example if
+you're working with healthcare
+
+139
+00:08:32,053 --> 00:08:36,137
+and you're trying to displace a the
+number collars purse has consumed or how
+
+140
+00:08:37,037 --> 00:08:38,136
+tall they are how far their honor
+
+141
+00:08:39,036 --> 00:08:43,078
+how much they weigh and it will show the
+news
+
+142
+00:08:43,078 --> 00:08:48,089
+and America part plus a localized unit
+you can specify the exact minute what
+
+143
+00:08:48,089 --> 00:08:52,089
+or you can request a look how
+appropriate unit whatever standard
+
+144
+00:08:52,089 --> 00:08:55,156
+that particular locale there's a number
+formatter attached to it
+
+145
+00:08:56,056 --> 00:09:00,097
+so you can use all the number formatter
+options for from an american part
+
+146
+00:09:00,097 --> 00:09:04,114
+and there's a special option you can
+check if that mass is particularly for
+
+147
+00:09:05,014 --> 00:09:08,463
+person's weight of the energies
+particular for food cuz there maybe
+
+148
+00:09:08,589 --> 00:09:14,310
+particular standards first display knows
+
+149
+00:09:14,031 --> 00:09:18,082
+so here are some examples that and
+various I live just
+
+150
+00:09:18,082 --> 00:09:21,143
+yeah you can see that the units very
+
+151
+00:09:22,043 --> 00:09:29,043
+and up the numbers you can choose an
+appropriate format for those
+
+152
+00:09:29,085 --> 00:09:33,113
+finally the form and context now
+remember as I mentioned before
+
+153
+00:09:34,013 --> 00:09:38,402
+you may need to have abusive text thats
+format it Piemonte might want to
+
+154
+00:09:38,519 --> 00:09:41,910
+capitalize differently depending on
+where it's showing up
+
+155
+00:09:41,091 --> 00:09:44,390
+and for some language is there are other
+transformations a may need to apply
+
+156
+00:09:45,209 --> 00:09:46,760
+depending on where
+
+157
+00:09:46,076 --> 00:09:51,091
+it shows up in your view what I so we
+have a new properties format in context
+
+158
+00:09:51,091 --> 00:09:52,107
+available for pay
+
+159
+00:09:53,007 --> 00:09:57,022
+number formatter into components for
+matter by Cup format are currently
+
+160
+00:09:57,022 --> 00:10:00,036
+it's the form and context property
+helped one oven
+
+161
+00:10:00,036 --> 00:10:04,118
+enumerated data values specify where
+this format i think is supposed to end
+
+162
+00:10:05,018 --> 00:10:05,112
+up
+
+163
+00:10:06,012 --> 00:10:09,076
+at so that it can be capitalized or
+otherwise appropriately
+
+164
+00:10:09,076 --> 00:10:13,084
+I changed for its context you can choose
+a stand-alone context for example it has
+
+165
+00:10:14,056 --> 00:10:15,395
+gone appear by itself
+
+166
+00:10:15,899 --> 00:10:19,370
+and a field so I might be capitalized
+
+167
+00:10:19,037 --> 00:10:23,123
+the list item contact save it's going to
+be in a menu or something like that
+
+168
+00:10:24,023 --> 00:10:28,095
+the beginning a sentence context again
+usually capitalized
+
+169
+00:10:28,095 --> 00:10:32,484
+and the Middle ascends contacts probably
+will not be capitalized
+
+170
+00:10:33,339 --> 00:10:36,388
+but it may happen that your
+
+171
+00:10:36,829 --> 00:10:40,950
+from an address all is going to show up
+I was gonna be inserted into a localized
+
+172
+00:10:40,095 --> 00:10:40,173
+string
+
+173
+00:10:41,073 --> 00:10:44,492
+and you don't know our priority without
+having a localized string at
+
+174
+00:10:45,149 --> 00:10:48,470
+whether it's gonna be at the start or
+somewhere in the middle so we have
+
+175
+00:10:48,047 --> 00:10:49,656
+another bout you
+
+176
+00:10:50,079 --> 00:10:53,080
+the dynamic value you to specify that
+and then
+
+177
+00:10:53,089 --> 00:10:57,110
+want it inserted into that format
+straying
+
+178
+00:10:57,011 --> 00:11:00,082
+it gets automatically at automatically
+detects whether it is the stark
+
+179
+00:11:00,082 --> 00:11:05,101
+middle animal capitalize it or otherwise
+change inappropriately
+
+180
+00:11:05,839 --> 00:11:09,740
+automatically so that's what's new
+
+181
+00:11:09,074 --> 00:11:12,076
+and now I'm gonna bring up my colleague
+deborah Goldsmith to
+
+182
+00:11:12,094 --> 00:11:16,160
+go into detail about languages and
+locales
+
+183
+00:11:17,006 --> 00:11:21,115
+think attack hi everybody
+
+184
+00:11:21,709 --> 00:11:25,220
+today we're going to talk about
+languages in Lok house
+
+185
+00:11:25,022 --> 00:11:29,081
+the differences between them and how to
+use them
+
+186
+00:11:29,279 --> 00:11:34,010
+so dentures showed us the new language
+in region settings in Iowa State
+
+187
+00:11:34,001 --> 00:11:37,140
+I hear you can see an example on the
+left there's
+
+188
+00:11:37,149 --> 00:11:40,810
+the language settings and you can see
+there's a list to three languages
+
+189
+00:11:40,081 --> 00:11:43,660
+English Simplified Chinese and
+traditional Chinese
+
+190
+00:11:44,389 --> 00:11:47,483
+on the right you see the region or
+locale setting and that showing the
+
+191
+00:11:48,329 --> 00:11:49,336
+region of the United States
+
+192
+00:11:50,029 --> 00:11:54,220
+which together with English makes a
+locality US English
+
+193
+00:11:54,022 --> 00:11:58,023
+so why are there two preferences where
+they used for
+
+194
+00:11:58,032 --> 00:12:03,125
+well the language setting keeps track of
+which languages the user prefers to use
+
+195
+00:12:04,025 --> 00:12:08,604
+the region's or locale setting keeps
+track of which regional conventions they
+
+196
+00:12:08,829 --> 00:12:10,500
+want to follow
+
+197
+00:12:10,005 --> 00:12:14,334
+it's worth pointing out that neither of
+these indicates the language that users
+
+198
+00:12:14,829 --> 00:12:15,841
+using documents
+
+199
+00:12:15,949 --> 00:12:19,730
+that might be the same language but it
+might be something completely different
+
+200
+00:12:19,073 --> 00:12:24,372
+and we'll talk more about that a little
+later on
+
+201
+00:12:25,029 --> 00:12:30,310
+so let's look a little more closely at
+the preferred language last
+
+202
+00:12:30,031 --> 00:12:34,060
+what uses it well probably the most
+important thing that uses the preferred
+
+203
+00:12:34,339 --> 00:12:36,310
+language list is an ass bundle
+
+204
+00:12:36,031 --> 00:12:39,104
+it uses that information to pick the
+localization
+
+205
+00:12:40,004 --> 00:12:43,036
+that your app by uses when it runs
+
+206
+00:12:43,036 --> 00:12:47,375
+but it's also used by in a string and a
+string has sat several
+
+207
+00:12:47,699 --> 00:12:51,701
+language sensitive operations such as
+localized string comparison
+
+208
+00:12:51,899 --> 00:12:55,320
+or breaking text into words or sentences
+
+209
+00:12:55,032 --> 00:12:59,069
+and in a string uses the preferred
+language was to determine which language
+
+210
+00:12:59,069 --> 00:13:00,143
+to use for that
+
+211
+00:13:01,043 --> 00:13:06,125
+it's also used by web can't everytime
+WebKit sends a request to a web server
+
+212
+00:13:07,025 --> 00:13:11,114
+includes in the HTTP header a field
+called accept-language:
+
+213
+00:13:11,339 --> 00:13:14,426
+which is essentially the preferred
+language last the web server looks at
+
+214
+00:13:15,209 --> 00:13:17,750
+that information and uses it to decide
+
+215
+00:13:17,075 --> 00:13:22,149
+which language to use for the page it
+sends back
+
+216
+00:13:23,049 --> 00:13:27,101
+the list is in preference order from the
+user's most preferred language to the
+
+217
+00:13:28,001 --> 00:13:30,035
+one-day wanna see blast
+
+218
+00:13:30,035 --> 00:13:33,264
+any language is that the user is not in
+interested in
+
+219
+00:13:33,579 --> 00:13:37,260
+don't appear in the list at all cell
+affectively
+
+220
+00:13:37,026 --> 00:13:40,465
+it a little more complicated than this
+but effectively when tapped in web sites
+
+221
+00:13:40,699 --> 00:13:40,774
+do
+
+222
+00:13:41,449 --> 00:13:45,454
+is step through the list in order and
+they look for the first language that
+
+223
+00:13:45,949 --> 00:13:47,560
+they support
+
+224
+00:13:47,056 --> 00:13:51,080
+and then they used as their localization
+if they don't find a language that they
+
+225
+00:13:51,008 --> 00:13:52,019
+support
+
+226
+00:13:52,091 --> 00:13:55,182
+then they'll use the default that
+depends on the particular application or
+
+227
+00:13:56,082 --> 00:13:57,461
+website
+
+228
+00:13:58,199 --> 00:14:02,256
+by contrast in a string will use the
+very first language in less
+
+229
+00:14:02,769 --> 00:14:08,310
+always as the language for language
+sensitive operations
+
+230
+00:14:08,031 --> 00:14:13,086
+it's worth pointing out that when the
+user changes the language preference
+
+231
+00:14:13,086 --> 00:14:16,093
+capstone pick it up until the next time
+they restart so
+
+232
+00:14:17,056 --> 00:14:21,124
+they'll keep using the old setting until
+that happens
+
+233
+00:14:22,024 --> 00:14:25,733
+so now let's talk about the a
+low-calorie chin setting
+
+234
+00:14:25,949 --> 00:14:30,610
+in a little bit more detail and see what
+it's used for
+
+235
+00:14:30,061 --> 00:14:34,980
+well most importantly its use for the
+locale in particular the current locale
+
+236
+00:14:35,529 --> 00:14:39,560
+it determines the properties have that
+locale are many different properties
+
+237
+00:14:39,839 --> 00:14:40,220
+that
+
+238
+00:14:40,022 --> 00:14:43,088
+I determine the regional conventions
+
+239
+00:14:43,088 --> 00:14:46,092
+internet controls the behavior for
+matters
+
+240
+00:14:46,092 --> 00:14:49,131
+both the familiar daytime a number for
+matters
+
+241
+00:14:50,031 --> 00:14:54,073
+they've been around for a while and also
+all the new for matters the duck just
+
+242
+00:14:54,073 --> 00:14:55,136
+talked about
+
+243
+00:14:56,036 --> 00:15:00,091
+it controls the behavior calendars are
+both the calendar that you're using
+
+244
+00:15:00,091 --> 00:15:04,174
+for example you might use to cook to
+recover Korean calendar in one country
+
+245
+00:15:05,074 --> 00:15:08,148
+or the Thai Buddhist calendar but it
+also controls
+
+246
+00:15:09,048 --> 00:15:12,112
+other calendar aspects such as what's
+the first day of the week
+
+247
+00:15:13,012 --> 00:15:16,110
+is it Monday Sunday or something else
+
+248
+00:15:17,001 --> 00:15:20,059
+now in contrast to the language
+preference
+
+249
+00:15:20,068 --> 00:15:23,072
+when the user changes full the locale
+preference
+
+250
+00:15:23,072 --> 00:15:26,130
+are aP's don't need to restart their
+supposed to pick up that new setting
+
+251
+00:15:27,003 --> 00:15:33,712
+right away and we'll talk a little bit
+more later on how to do that
+
+252
+00:15:34,009 --> 00:15:40,110
+so what is a locale anyway earlier we
+saw one example the US English look how
+
+253
+00:15:40,011 --> 00:15:44,490
+there was a language and there was a
+region but look house can have
+
+254
+00:15:44,589 --> 00:15:48,310
+many more attributes are there can be an
+optional script
+
+255
+00:15:48,031 --> 00:15:51,480
+for example you might need to indicate
+whether you want to use
+
+256
+00:15:51,759 --> 00:15:55,480
+Arabic cursory like script with a
+particular language
+
+257
+00:15:55,048 --> 00:15:59,062
+are there can also be key words added
+which fine-tune the behavior of the
+
+258
+00:15:59,062 --> 00:16:00,093
+locale
+
+259
+00:16:00,093 --> 00:16:04,106
+so let's look at one hypothetical
+example let's look at a particular
+
+260
+00:16:05,006 --> 00:16:06,835
+user's current locale
+
+261
+00:16:06,889 --> 00:16:09,932
+and print out its identify our
+
+262
+00:16:10,319 --> 00:16:13,620
+there it is cell let's pick it apart
+
+263
+00:16:13,062 --> 00:16:17,341
+and see what each part means so the
+first part is the language
+
+264
+00:16:17,899 --> 00:16:20,910
+that's occurred in this case are
+
+265
+00:16:20,091 --> 00:16:24,123
+the region is India so what the user is
+saying is they want to see
+
+266
+00:16:25,023 --> 00:16:29,030
+their dates times and so forth in the
+urging language in following the
+
+267
+00:16:29,003 --> 00:16:30,041
+regional conventions
+
+268
+00:16:30,068 --> 00:16:35,227
+at the India but the user also has some
+keywords to do some overrides the
+
+269
+00:16:35,839 --> 00:16:36,842
+default for that
+
+270
+00:16:37,139 --> 00:16:40,690
+that particular locale for example the
+default
+
+271
+00:16:40,069 --> 00:16:43,156
+fault calendar in India is ther
+Gregorian calendar
+
+272
+00:16:44,056 --> 00:16:47,335
+but the you this user wants to use the
+Islamic calendar
+
+273
+00:16:47,839 --> 00:16:51,930
+perhaps they do a lot of business with
+people in the Middle East
+
+274
+00:16:51,093 --> 00:16:54,130
+in addition the default currency for
+India is the rupee
+
+275
+00:16:55,003 --> 00:16:59,522
+but this user says they want to use the
+US dollars thirty fault currency
+
+276
+00:16:59,819 --> 00:17:05,880
+again perhaps because they do a lot of
+international business
+
+277
+00:17:05,088 --> 00:17:08,124
+selleck house have a lot of information
+in them but you shouldn't get
+
+278
+00:17:09,024 --> 00:17:12,050
+all the information that you need out of
+the locale
+
+279
+00:17:12,005 --> 00:17:15,334
+there's something she should get from
+elsewhere cell
+
+280
+00:17:15,829 --> 00:17:19,020
+you might think that because there's a
+region in the locale
+
+281
+00:17:19,002 --> 00:17:22,094
+that that's where the user is located
+but the region just indicates their
+
+282
+00:17:22,094 --> 00:17:23,183
+preference for certain things
+
+283
+00:17:24,083 --> 00:17:27,164
+it doesn't mean that's where they
+actually are I can have my region
+
+284
+00:17:28,064 --> 00:17:28,122
+setting
+
+285
+00:17:29,022 --> 00:17:33,031
+as India that doesn't mean I'm in India
+so if you don't need to know where the
+
+286
+00:17:33,031 --> 00:17:34,080
+user is located
+
+287
+00:17:34,008 --> 00:17:40,046
+or more precisely where their devices
+located you score location
+
+288
+00:17:41,018 --> 00:17:44,024
+again the locale has a language says he
+did with it
+
+289
+00:17:44,078 --> 00:17:48,125
+but that's not necessarily the language
+that your application is running in
+
+290
+00:17:49,025 --> 00:17:52,039
+so if you need to ask localization
+questions
+
+291
+00:17:52,039 --> 00:17:55,074
+use an s-band all not an ass locale
+
+292
+00:17:55,074 --> 00:17:59,153
+as I mentioned earlier the language the
+user uses in their documents
+
+293
+00:18:00,053 --> 00:18:03,056
+may not be the same language is either
+the locale or
+
+294
+00:18:03,083 --> 00:18:07,167
+the localization language on typically
+you don't need to know what language is
+
+295
+00:18:08,067 --> 00:18:10,081
+any user document but if you do
+
+296
+00:18:10,081 --> 00:18:15,157
+you can use and its linguistic Thacker
+
+297
+00:18:16,057 --> 00:18:19,091
+again the region in the locale is just a
+preference
+
+298
+00:18:19,091 --> 00:18:23,148
+it's not something you should use for
+regulatory or legal purposes
+
+299
+00:18:24,048 --> 00:18:29,083
+for determining which shock kinda credit
+card to use or whatever for that you
+
+300
+00:18:29,083 --> 00:18:30,149
+have to use other means
+
+301
+00:18:31,049 --> 00:18:36,115
+probably talking to a server
+
+302
+00:18:37,015 --> 00:18:40,061
+again if you doing financial or
+commercial transactions
+
+303
+00:18:40,061 --> 00:18:44,156
+Ardell be in some particular currency
+but that's not necessarily the currency
+
+304
+00:18:45,056 --> 00:18:45,102
+that's
+
+305
+00:18:46,002 --> 00:18:49,009
+indicated by the current locale you
+should use some other means probably
+
+306
+00:18:49,072 --> 00:18:51,164
+having your server tell you which
+currency to use
+
+307
+00:18:52,064 --> 00:18:56,113
+now if you know the currency are if you
+know the three-letter I so code
+
+308
+00:18:57,013 --> 00:19:01,056
+you can set that on a number formatter
+and it will then format amounts in their
+
+309
+00:19:01,056 --> 00:19:01,127
+currency
+
+310
+00:19:02,027 --> 00:19:06,063
+using the user's preferences it 12
+conversion between currency's value have
+
+311
+00:19:06,063 --> 00:19:08,135
+to handle that yourself
+
+312
+00:19:09,035 --> 00:19:12,037
+now we've discussed some of the
+differences between mine which is
+
+313
+00:19:12,037 --> 00:19:16,056
+embark house so happy returns
+preferences
+
+314
+00:19:16,056 --> 00:19:19,147
+will typically you don't have to the
+system handles this for you
+
+315
+00:19:20,047 --> 00:19:24,099
+I'm all the formatter objects including
+the new ones calendars locale objects
+
+316
+00:19:24,099 --> 00:19:28,175
+fill all views that users locale
+preference by default
+
+317
+00:19:29,075 --> 00:19:32,082
+you don't have to do anything I appeared
+
+318
+00:19:32,082 --> 00:19:37,087
+doing localization use NS Bundela now
+will use the user's preferences for you
+
+319
+00:19:37,087 --> 00:19:39,104
+you don't need to read them directly
+
+320
+00:19:40,004 --> 00:19:43,088
+and again if you doing language
+sensitive operations using in a string
+
+321
+00:19:43,088 --> 00:19:46,116
+like a localized comparisons for sorting
+are searching
+
+322
+00:19:47,016 --> 00:19:53,072
+in a string will do the right thing by
+default
+
+323
+00:19:53,072 --> 00:19:56,113
+but you say I am some application in
+mind I have some
+
+324
+00:19:57,013 --> 00:20:00,035
+are kind of decision I need to make
+about behavior
+
+325
+00:20:00,035 --> 00:20:05,036
+my application or I need to get
+localized resources feder elsewhere
+
+326
+00:20:05,045 --> 00:20:08,051
+so I really need to read these
+preferences
+
+327
+00:20:08,051 --> 00:20:11,150
+well even in that case you don't need to
+quite often
+
+328
+00:20:12,005 --> 00:20:15,063
+sell for example you might think you
+need the language that your application
+
+329
+00:20:16,008 --> 00:20:17,032
+is running in
+
+330
+00:20:17,032 --> 00:20:21,039
+in order to control behavior say you
+wanted to do
+
+331
+00:20:21,039 --> 00:20:24,040
+something when it's raining in English
+but you don't want to do that when it's
+
+332
+00:20:24,049 --> 00:20:26,065
+running in Japanese
+
+333
+00:20:26,065 --> 00:20:29,136
+well you don't need to read the
+preference for that you can use in its
+
+334
+00:20:30,036 --> 00:20:33,077
+battle to make this decision for you if
+you wanted to do something
+
+335
+00:20:33,077 --> 00:20:36,163
+when it's raining in English but not
+Japanese put a localized resource in
+
+336
+00:20:37,063 --> 00:20:37,135
+your band all
+
+337
+00:20:38,035 --> 00:20:41,134
+which has the value yes for English but
+no for Japanese
+
+338
+00:20:42,034 --> 00:20:46,080
+and your application will pick up the
+right behavior automatically
+
+339
+00:20:46,008 --> 00:20:49,016
+now if you are getting localized
+information
+
+340
+00:20:50,006 --> 00:20:54,052
+from outside your application then you
+might need to know the language you're
+
+341
+00:20:55,006 --> 00:20:55,071
+running in
+
+342
+00:20:55,071 --> 00:20:59,106
+and we'll talk about that in a little
+bit
+
+343
+00:21:00,006 --> 00:21:03,094
+similarly if you have a setup language
+resources
+
+344
+00:21:03,094 --> 00:21:06,137
+from elsewhere say they're stored on a
+server and you need to pick the right
+
+345
+00:21:07,037 --> 00:21:07,115
+one
+
+346
+00:21:08,015 --> 00:21:11,016
+you might think you'd need to read the
+user's preferred languages
+
+347
+00:21:11,025 --> 00:21:14,106
+but en espanol can handle this for you
+there's a class method
+
+348
+00:21:15,006 --> 00:21:18,038
+preferred localizations from a reggae
+you handled
+
+349
+00:21:18,038 --> 00:21:21,130
+handed an array which is a list of
+language identifiers
+
+350
+00:21:22,003 --> 00:21:26,007
+are which represent your localized
+resources and it will match that against
+
+351
+00:21:26,007 --> 00:21:27,080
+the user's preferences
+
+352
+00:21:28,043 --> 00:21:31,050
+and pick the right one for you to use he
+don't need to read the Preferences
+
+353
+00:21:31,005 --> 00:21:32,006
+directly
+
+354
+00:21:32,051 --> 00:21:36,053
+and this will use the same logic tennis
+bundle uses when picking localize
+
+355
+00:21:36,071 --> 00:21:36,148
+resources
+
+356
+00:21:37,048 --> 00:21:42,102
+have a bundle
+
+357
+00:21:43,002 --> 00:21:46,101
+and again if you need to know the
+language content to the document
+
+358
+00:21:47,001 --> 00:21:50,029
+which is unusual but sometimes necessary
+
+359
+00:21:50,029 --> 00:21:53,038
+you can use any of linguistic tagger one
+thing to keep in mind
+
+360
+00:21:54,019 --> 00:21:57,065
+is that a single document can have more
+than one language
+
+361
+00:21:57,065 --> 00:22:00,107
+and in fact you can have different
+languages appearing even in the same
+
+362
+00:22:01,007 --> 00:22:01,105
+paragraph
+
+363
+00:22:02,005 --> 00:22:06,082
+or send
+
+364
+00:22:06,082 --> 00:22:09,125
+so suppose you do need to get some
+localized information from
+
+365
+00:22:10,025 --> 00:22:14,051
+outside your applications bundle how do
+you go about doing that
+
+366
+00:22:14,051 --> 00:22:17,053
+well the first thing you need to know is
+what language
+
+367
+00:22:17,053 --> 00:22:21,074
+your application is running in right now
+that actually pretty straightforward
+
+368
+00:22:21,074 --> 00:22:25,112
+you just get your main band all you ask
+it for its preferred localizations
+
+369
+00:22:26,012 --> 00:22:29,079
+and the first object in that array will
+be the language code
+
+370
+00:22:29,079 --> 00:22:33,117
+for the language your application is
+using right now
+
+371
+00:22:34,017 --> 00:22:38,086
+so what's an example of something you
+might use that for
+
+372
+00:22:38,086 --> 00:22:41,102
+say your application displays the names
+of currencies
+
+373
+00:22:42,002 --> 00:22:46,026
+you could ask your local icers to
+localize the names of all the currencies
+
+374
+00:22:46,026 --> 00:22:47,029
+for you
+
+375
+00:22:47,029 --> 00:22:50,125
+and put in your application battle but
+that's unnecessary NS locale have fed
+
+376
+00:22:51,025 --> 00:22:53,047
+information
+
+377
+00:22:53,047 --> 00:22:57,113
+so you can ask a locale for the
+localized name of a currency
+
+378
+00:22:58,013 --> 00:23:01,045
+but if he'd do that with the current
+locale you'll get it
+
+379
+00:23:01,045 --> 00:23:05,061
+in the language of the current locale
+which may not be the same language that
+
+380
+00:23:05,061 --> 00:23:07,135
+your application is running in and then
+you have a mismatch
+
+381
+00:23:08,035 --> 00:23:11,050
+where the UI if your app is in one
+language
+
+382
+00:23:11,005 --> 00:23:15,007
+but the currency names are showing up in
+another said to avoid that
+
+383
+00:23:15,052 --> 00:23:18,053
+what we do is we make a locale using
+
+384
+00:23:18,062 --> 00:23:21,129
+the language ID that we computed in the
+previous slide
+
+385
+00:23:22,029 --> 00:23:25,104
+so we take the language I Dr app is
+running in we make a locale from it
+
+386
+00:23:26,004 --> 00:23:31,020
+and then we asked that locale what the
+local ice name for currency yes
+
+387
+00:23:31,002 --> 00:23:34,065
+so here's an example of what you get for
+three different localizations
+
+388
+00:23:34,083 --> 00:23:38,104
+for the ice a currency code si NY
+
+389
+00:23:39,004 --> 00:23:46,004
+English French and Chinese
+
+390
+00:23:46,054 --> 00:23:50,061
+similarly NS locale can give you
+localize beginning in and quotes
+
+391
+00:23:50,061 --> 00:23:54,064
+com in if you want those quotes to match
+
+392
+00:23:54,064 --> 00:23:57,071
+the language that your application is
+running in again
+
+393
+00:23:57,071 --> 00:24:00,159
+you make a locale using that language
+and then query it for the beginning in
+
+394
+00:24:01,059 --> 00:24:02,067
+quotes
+
+395
+00:24:02,067 --> 00:24:05,088
+if you wanted the quotes to match a
+different language
+
+396
+00:24:05,088 --> 00:24:09,119
+say you've retrieved a web page in you
+want to insert quote marks in it
+
+397
+00:24:10,019 --> 00:24:13,046
+then you with used at mine which to
+create the look up Cal
+
+398
+00:24:13,046 --> 00:24:17,104
+inquiry it for the quote marks so here
+again is an example of what you get for
+
+399
+00:24:18,004 --> 00:24:19,068
+three different localizations
+
+400
+00:24:19,068 --> 00:24:26,068
+English French and Japanese
+
+401
+00:24:27,027 --> 00:24:30,028
+site I mentioned a few slides back
+
+402
+00:24:30,037 --> 00:24:33,078
+that the user can change their locale
+preference their region setting
+
+403
+00:24:33,078 --> 00:24:36,080
+and aP's don't need to restart for that
+to take effect
+
+404
+00:24:36,098 --> 00:24:40,161
+APs are supposed to react to it sell let
+me show you when a lot of gaps do
+
+405
+00:24:41,061 --> 00:24:44,153
+when the user changes to look how
+
+406
+00:24:45,053 --> 00:24:49,151
+well unfortunately they don't react to
+it and the user is forced to quit the
+
+407
+00:24:50,051 --> 00:24:50,104
+app
+
+408
+00:24:51,004 --> 00:24:54,097
+and restarted in order for the change to
+take effect
+
+409
+00:24:54,097 --> 00:24:57,195
+say let's talk about how are supposed to
+handle this
+
+410
+00:24:58,095 --> 00:25:02,103
+so the first thing you need to do is
+listen for the notification which is NS
+
+411
+00:25:03,003 --> 00:25:06,026
+current locale to change notification
+
+412
+00:25:06,026 --> 00:25:09,038
+if you have objects around that use the
+locale like
+
+413
+00:25:09,038 --> 00:25:13,067
+for matters or locale object you'll need
+to update
+
+414
+00:25:13,067 --> 00:25:17,067
+their locale property but there's a
+workaround for this
+
+415
+00:25:17,067 --> 00:25:21,166
+if you set up the object in the first
+place to use the auto updating variant
+
+416
+00:25:22,066 --> 00:25:25,067
+at the current locale you don't need to
+do anything
+
+417
+00:25:25,076 --> 00:25:28,174
+they'll be updated automatically but
+there's still some work that needs to be
+
+418
+00:25:29,074 --> 00:25:29,173
+done
+
+419
+00:25:30,073 --> 00:25:33,090
+if you have a date formatter for example
+that
+
+420
+00:25:33,009 --> 00:25:38,060
+is using template formats you'll need to
+regenerate those based on the new locale
+
+421
+00:25:39,041 --> 00:25:43,041
+and of course any strings that you
+format it using your for matters
+
+422
+00:25:43,041 --> 00:25:46,067
+need to be created again to reflect the
+new locale
+
+423
+00:25:46,067 --> 00:25:50,070
+arm and finally if if you want the
+
+424
+00:25:50,007 --> 00:25:53,007
+a change in the lookout to be reflected
+on the display
+
+425
+00:25:53,007 --> 00:25:59,063
+you need to invalidate any views that
+are showing that kind of information
+
+426
+00:26:00,026 --> 00:26:03,073
+so here's a very simple example I am
+
+427
+00:26:03,073 --> 00:26:06,166
+first we set up a listener for the
+nf-kappa current locale to change
+
+428
+00:26:07,066 --> 00:26:08,095
+notification
+
+429
+00:26:08,095 --> 00:26:11,179
+and when the user changes their
+preference here's what we do
+
+430
+00:26:12,079 --> 00:26:15,171
+so soon there's a date formatter the
+first thing I'm going to do
+
+431
+00:26:16,071 --> 00:26:19,167
+is update the locale property with the
+new value of the current locale
+
+432
+00:26:20,067 --> 00:26:24,129
+now again if I'd set that locale
+property with the auto updating current
+
+433
+00:26:25,029 --> 00:26:25,085
+locale
+
+434
+00:26:25,085 --> 00:26:29,123
+I could skip this step this particular
+date formatter
+
+435
+00:26:30,023 --> 00:26:33,040
+is using a day for Mac generated from a
+template
+
+436
+00:26:33,004 --> 00:26:37,013
+and sent that generation depends on the
+lookout I have to do it over again
+
+437
+00:26:38,003 --> 00:26:41,049
+so I call the class method on an estate
+formatter
+
+438
+00:26:41,076 --> 00:26:45,123
+pass at the new locale if the formatter
+in regenerate the date format
+
+439
+00:26:46,023 --> 00:26:49,071
+finally by Mark Knight view 30+ said
+that
+
+440
+00:26:49,071 --> 00:26:52,124
+everything gets three displayed and in
+this case I'm assuming that the draw
+
+441
+00:26:53,024 --> 00:26:54,041
+method of the few
+
+442
+00:26:54,041 --> 00:26:57,087
+will call the for matters to regenerate
+all the strings
+
+443
+00:26:57,087 --> 00:27:02,095
+for dates times and so on and now I'd
+like to ask around me shredded cannot
+
+444
+00:27:03,067 --> 00:27:06,072
+to talk about some case studies
+
+445
+00:27:06,072 --> 00:27:10,077
+current
+
+446
+00:27:10,077 --> 00:27:15,086
+hello I'm cut in the shower and I'd like
+to talk you a little bit about
+
+447
+00:27:15,086 --> 00:27:19,133
+making a rap worked for international
+customers
+
+448
+00:27:20,033 --> 00:27:23,046
+now this is a
+
+449
+00:27:23,046 --> 00:27:28,061
+very normal looking time string and this
+is a time thats appropriately format it
+
+450
+00:27:28,061 --> 00:27:28,126
+for
+
+451
+00:27:29,026 --> 00:27:32,067
+US English what you might not have seen
+before
+
+452
+00:27:32,067 --> 00:27:35,128
+is that I was in a listen actually
+support dates and times in many
+
+453
+00:27:36,028 --> 00:27:36,117
+different languages
+
+454
+00:27:37,017 --> 00:27:40,075
+and you're just a few of them to show
+you the variety so some other
+
+455
+00:27:40,075 --> 00:27:41,107
+differences are of course
+
+456
+00:27:42,007 --> 00:27:46,028
+you might not even have &amp marker
+because he's trying for our time
+
+457
+00:27:46,028 --> 00:27:49,125
+but of course even if that markers there
+it can take many different shapes and
+
+458
+00:27:50,025 --> 00:27:52,074
+sizes and go in different places
+
+459
+00:27:52,074 --> 00:27:55,098
+so what you need to keep in mind about
+this well let's take
+
+460
+00:27:55,098 --> 00:27:58,117
+two examples am on left you have
+
+461
+00:27:59,017 --> 00:28:02,045
+US English on the right you have
+Simplified Chinese
+
+462
+00:28:02,045 --> 00:28:06,057
+has spoken in mainland China
+
+463
+00:28:06,057 --> 00:28:09,096
+this is a common problem that we see in
+many APs which is that
+
+464
+00:28:09,096 --> 00:28:12,195
+a format for US English is applied to
+Chinese
+
+465
+00:28:13,095 --> 00:28:17,182
+to Chinese user this looks very wrong
+
+466
+00:28:18,082 --> 00:28:22,089
+similarly here's a perfectly format a
+date for US English
+
+467
+00:28:23,052 --> 00:28:26,086
+this is not a perfectly formatted date
+in Chinese in fact it looks like
+
+468
+00:28:26,086 --> 00:28:28,149
+nonsense
+
+469
+00:28:29,049 --> 00:28:35,061
+the date on the right is what a Chinese
+either would expect to see in step
+
+470
+00:28:35,061 --> 00:28:39,133
+just to turn the tables around here's a
+date that's well format it for Chinese
+
+471
+00:28:40,033 --> 00:28:40,102
+with
+
+472
+00:28:41,002 --> 00:28:45,071
+the day month and year of course in
+Chinese its year month day
+
+473
+00:28:45,071 --> 00:28:49,164
+and here's what happens if you take that
+order and apply it to an English day
+
+474
+00:28:50,064 --> 00:28:53,107
+as you can see what you would expect to
+see is something on the right hand side
+
+475
+00:28:54,007 --> 00:28:56,106
+and when you see something on the left
+it doesn't just look wrong it looks
+
+476
+00:28:57,006 --> 00:28:58,006
+blatantly wrong
+
+477
+00:28:58,006 --> 00:29:01,035
+like it it's broken so how to me
+
+478
+00:29:01,035 --> 00:29:05,051
+avoid making these faux pas well
+
+479
+00:29:05,051 --> 00:29:09,109
+the first thing is don't use FX format
+fixed formats will work for a fix
+
+480
+00:29:10,009 --> 00:29:12,057
+language and not work for all the
+languages
+
+481
+00:29:12,057 --> 00:29:16,094
+so now you might look at the English UK
+example
+
+482
+00:29:16,094 --> 00:29:19,166
+in the second row and say well I look
+fine its English in it
+
+483
+00:29:20,066 --> 00:29:23,100
+make sense but what you might not
+imagine is
+
+484
+00:29:24,000 --> 00:29:28,017
+even if you just cross the Atlantic the
+format change pretty drastically
+
+485
+00:29:28,017 --> 00:29:32,064
+so in UK English for example its three
+june thru June 3
+
+486
+00:29:32,064 --> 00:29:35,064
+and these 24-hour time by default so
+
+487
+00:29:35,064 --> 00:29:39,077
+you don't have champion marker so what's
+the right way to do this at the API
+
+488
+00:29:39,077 --> 00:29:39,150
+level
+
+489
+00:29:40,005 --> 00:29:43,012
+well localized string from date
+
+490
+00:29:43,057 --> 00:29:47,075
+is going to get you a date that is
+property format it for the current
+
+491
+00:29:47,075 --> 00:29:47,132
+locale
+
+492
+00:29:48,032 --> 00:29:51,091
+and you pass in the date style at times
+style and that
+
+493
+00:29:51,091 --> 00:29:56,098
+determines how of succinct over both you
+want your dates and times to be
+
+494
+00:29:56,098 --> 00:30:00,125
+and if format the data property for all
+you look house
+
+495
+00:30:01,025 --> 00:30:04,071
+now you might come back to me and say
+while past not working for me
+
+496
+00:30:04,071 --> 00:30:08,090
+I need something more custom so the
+first step on your
+
+497
+00:30:08,009 --> 00:30:12,077
+attorney to custom dates should be
+looking at date format from template
+
+498
+00:30:13,058 --> 00:30:16,067
+now this allows you to specify a
+template and within the template
+
+499
+00:30:17,048 --> 00:30:20,049
+the template contains information about
+exactly what
+
+500
+00:30:20,049 --> 00:30:24,074
+elements at the date and time you wanna
+show and then you passing a lookout
+
+501
+00:30:24,074 --> 00:30:27,141
+so that the temple it gets it gives you
+a format
+
+502
+00:30:28,041 --> 00:30:31,097
+back from template and then that format
+is appropriately
+
+503
+00:30:31,097 --> 00:30:34,152
+is appropriate for the locale that you
+passed in and that final you set that
+
+504
+00:30:35,052 --> 00:30:36,055
+format under
+
+505
+00:30:36,055 --> 00:30:39,110
+on the formatter to get your data types
+
+506
+00:30:40,001 --> 00:30:43,022
+of course you might still come back to
+me and say well
+
+507
+00:30:43,031 --> 00:30:47,044
+none of the preset styles work for me
+and not have the template formats
+
+508
+00:30:47,044 --> 00:30:50,099
+I they work for me so what should I do
+well
+
+509
+00:30:50,099 --> 00:30:54,103
+it becomes a little more complicated as
+you can see me but the basic idea is
+
+510
+00:30:55,039 --> 00:31:00,044
+you might have a custom format but you
+probably have not considered
+
+511
+00:31:00,044 --> 00:31:03,066
+every possible look at the world so
+
+512
+00:31:03,066 --> 00:31:06,138
+don't apply or custom format every
+possible how in the world
+
+513
+00:31:07,038 --> 00:31:11,046
+if you have a custom format for US
+English check for
+
+514
+00:31:11,046 --> 00:31:14,059
+English US and apply just English US
+
+515
+00:31:14,059 --> 00:31:17,113
+and of course if your custom formats for
+other locales check for the specific
+
+516
+00:31:18,013 --> 00:31:18,091
+locales
+
+517
+00:31:18,091 --> 00:31:22,139
+and make sure to fall back to the
+default in your health case
+
+518
+00:31:23,039 --> 00:31:28,040
+and that's all there is to dates and
+times next letting want names
+
+519
+00:31:28,004 --> 00:31:32,023
+a very similar to dates and times names
+come in many different languages and
+
+520
+00:31:32,059 --> 00:31:32,131
+scripts
+
+521
+00:31:33,031 --> 00:31:36,126
+and formats here's what happens
+
+522
+00:31:37,026 --> 00:31:40,101
+if you apply a name format candidate for
+Chinese
+
+523
+00:31:41,001 --> 00:31:45,010
+to an English name doesn't look very
+good
+
+524
+00:31:45,001 --> 00:31:49,014
+and believe me that this Chinese name
+looks just as awkward
+
+525
+00:31:49,023 --> 00:31:52,064
+to a Chinese you there because if using
+English informant
+
+526
+00:31:52,064 --> 00:31:55,109
+so what's wrong here well
+
+527
+00:31:56,009 --> 00:32:01,032
+most commonly what we see is that a
+fixed format has been hard coded
+
+528
+00:32:01,032 --> 00:32:05,047
+and when you use a fixed format it's
+only going to work for some names
+
+529
+00:32:05,047 --> 00:32:08,072
+so clearly this is not the right
+approach
+
+530
+00:32:08,072 --> 00:32:11,141
+now what might not be super intuitive is
+that even using
+
+531
+00:32:12,041 --> 00:32:15,044
+a format obtained from the current
+localization
+
+532
+00:32:15,071 --> 00:32:18,098
+will not give you the right formatting
+every time
+
+533
+00:32:18,098 --> 00:32:23,104
+why now if you're living in the US most
+for contacts might be in English
+
+534
+00:32:24,004 --> 00:32:27,007
+but a lot of customers especially those
+in Asia
+
+535
+00:32:27,034 --> 00:32:31,035
+most often have hun tax in at least two
+languages
+
+536
+00:32:31,044 --> 00:32:34,107
+if not more say Chinese and English or
+Japanese English
+
+537
+00:32:35,007 --> 00:32:39,023
+so with the fixed format obtained from
+the current localization
+
+538
+00:32:39,023 --> 00:32:42,040
+you might formats a all Chinese names
+right
+
+539
+00:32:42,004 --> 00:32:46,092
+but you might get on the English names
+wrong so that just not good experience
+
+540
+00:32:47,028 --> 00:32:50,052
+so what should you do well there's a
+great API called
+
+541
+00:32:50,052 --> 00:32:53,086
+a view record copy composite name you
+pass a
+
+542
+00:32:53,086 --> 00:32:56,139
+a record from address book it will give
+you back the name to display
+
+543
+00:32:57,039 --> 00:33:00,043
+just that simple there's no code
+
+544
+00:33:00,043 --> 00:33:03,126
+underneath and this API
+
+545
+00:33:04,026 --> 00:33:07,062
+of course it in cap sleeve a lot of
+logic that we have
+
+546
+00:33:07,062 --> 00:33:10,143
+designed that takes into account the
+language of the contact the user
+
+547
+00:33:11,043 --> 00:33:11,134
+settings
+
+548
+00:33:12,034 --> 00:33:15,059
+and of course it has a lot of
+language-specific logic to then find the
+
+549
+00:33:15,059 --> 00:33:16,130
+right format to show the contact in
+
+550
+00:33:17,003 --> 00:33:22,027
+but you need to worry about that just
+use this API of course you might say
+
+551
+00:33:22,054 --> 00:33:25,059
+my head contact don't come from the
+address book to come from somewhere else
+
+552
+00:33:26,004 --> 00:33:29,060
+that's fine you can take the name
+information that you get from another
+
+553
+00:33:29,006 --> 00:33:29,092
+source
+
+554
+00:33:30,046 --> 00:33:33,083
+create a temporary AB record assign
+these values
+
+555
+00:33:33,083 --> 00:33:37,090
+and then ask for the display name again
+
+556
+00:33:37,009 --> 00:33:40,035
+and of course if you're using boys 10
+then
+
+557
+00:33:41,016 --> 00:33:44,081
+there the display name you can't there
+too and that's really all there is two
+
+558
+00:33:44,081 --> 00:33:44,152
+names
+
+559
+00:33:45,052 --> 00:33:48,127
+just use these APIs and I'll be alright
+
+560
+00:33:49,027 --> 00:33:52,114
+next would like to talk to you about
+right to left text so
+
+561
+00:33:53,014 --> 00:33:57,081
+first of all don't think that just
+because you don't have a right to left
+
+562
+00:33:57,081 --> 00:34:00,096
+localization like Arabic or Hebrew that
+you can stop listening
+
+563
+00:34:00,096 --> 00:34:04,100
+this is important even if you localize
+just in English
+
+564
+00:34:05,000 --> 00:34:09,149
+so what's different about these
+languages well
+
+565
+00:34:09,149 --> 00:34:12,246
+their own right to left that's what's
+different and had actually cause a lot
+
+566
+00:34:13,119 --> 00:34:15,240
+of issues
+
+567
+00:34:15,024 --> 00:34:18,078
+so there are two main topics here one is
+alignment
+
+568
+00:34:18,078 --> 00:34:22,147
+and the others directionality let me
+talk about alignment first
+
+569
+00:34:22,849 --> 00:34:26,100
+this looks like a perfectly innocuous
+line of code
+
+570
+00:34:26,001 --> 00:34:29,077
+said alignment left I mean what's the
+alignment for it not for setting
+
+571
+00:34:29,086 --> 00:34:32,405
+well it works fine for englishtext
+
+572
+00:34:33,179 --> 00:34:36,940
+but if you set Arabic text in left
+alignment
+
+573
+00:34:36,094 --> 00:34:39,833
+it's kind of like setting englishtext in
+Rydal in right alignment
+
+574
+00:34:40,679 --> 00:34:45,010
+you might do it for a the heading or for
+some special cases but you don't
+
+575
+00:34:45,001 --> 00:34:49,008
+format entire paragraphs of text it
+right alignment for English
+
+576
+00:34:49,008 --> 00:34:52,076
+so that texan operate easy to read
+
+577
+00:34:52,076 --> 00:34:56,111
+what's the answer well the answer is we
+should using natural alignment
+
+578
+00:34:57,011 --> 00:35:00,012
+now this lets the underlying frameworks
+
+579
+00:35:00,021 --> 00:35:03,070
+to determine what the appropriate
+alignment is left to right
+
+580
+00:35:03,007 --> 00:35:06,089
+depending on the language in use can
+defuse this
+
+581
+00:35:07,052 --> 00:35:09,119
+you get a nice left alignment for
+English and other left to right:
+
+582
+00:35:10,019 --> 00:35:10,075
+languages
+
+583
+00:35:10,075 --> 00:35:14,123
+and you get nice right alignment for
+Arabic and other try to attract
+
+584
+00:35:15,023 --> 00:35:18,058
+so that sexy let's move on to something
+less easy
+
+585
+00:35:18,058 --> 00:35:22,082
+directionality now tax now at:
+
+586
+00:35:22,082 --> 00:35:25,090
+in contrast alignment determines what
+the
+
+587
+00:35:25,009 --> 00:35:28,018
+logical order and the and Vishal order
+of the word
+
+588
+00:35:28,099 --> 00:35:31,131
+is within a given runoff text like
+within a single sentence
+
+589
+00:35:32,031 --> 00:35:35,089
+so would be /c most commonly and going
+wrong
+
+590
+00:35:35,089 --> 00:35:38,113
+is that and someone is trying actually
+to be helpful
+
+591
+00:35:39,013 --> 00:35:43,060
+and the attacked the fact that the app
+is running Arabic or Hebrew
+
+592
+00:35:43,006 --> 00:35:46,007
+and the hard code the base writing
+
+593
+00:35:46,061 --> 00:35:49,075
+correction to right to left
+
+594
+00:35:49,075 --> 00:35:52,171
+why is this wrong well this is wrong
+because User Content
+
+595
+00:35:53,071 --> 00:35:57,071
+can be in any language as tell you
+mentioned before and you cannot assume
+
+596
+00:35:57,071 --> 00:35:58,155
+the language if User Content
+
+597
+00:35:59,055 --> 00:36:02,116
+now this is a sentence that supposed to
+be an English with one
+
+598
+00:36:03,016 --> 00:36:06,047
+would the word in the middle so it's
+supposed to said that the DC
+
+599
+00:36:06,047 --> 00:36:09,121
+is a fun conference it's not really
+saying that right now because it's using
+
+600
+00:36:10,021 --> 00:36:16,059
+right to left a texan directionality and
+that doesn't make sense
+
+601
+00:36:16,059 --> 00:36:19,070
+so what should you do well for any
+
+602
+00:36:19,007 --> 00:36:23,031
+text view or text field in which you
+expect the user to type content
+
+603
+00:36:23,094 --> 00:36:26,179
+set the writing correction to natural
+now again that lets the
+
+604
+00:36:27,079 --> 00:36:30,156
+underlying frameworks determine what
+
+605
+00:36:31,056 --> 00:36:34,129
+good best guess for the writing texan
+its
+
+606
+00:36:35,029 --> 00:36:38,047
+in this case it will take a look at the
+first few letters
+
+607
+00:36:38,047 --> 00:36:42,068
+the string which is WWDC and since those
+are left to right
+
+608
+00:36:42,068 --> 00:36:46,077
+characters it will take a guess that
+this string should go left to right
+
+609
+00:36:46,077 --> 00:36:50,131
+and in this case that produces the
+expected sentence we did
+
+610
+00:36:51,031 --> 00:36:54,117
+type DC is a must conference
+
+611
+00:36:55,017 --> 00:36:58,063
+so of course as I mentioned
+
+612
+00:36:58,063 --> 00:37:01,156
+it's a best guess and so you might have
+
+613
+00:37:02,056 --> 00:37:05,082
+a sentence like this now since you saw
+it animate in
+
+614
+00:37:05,082 --> 00:37:08,119
+you can't see the order see see can see
+it once more time
+
+615
+00:37:09,019 --> 00:37:13,080
+so Safari first then mosier data in
+Arabic and then Mac
+
+616
+00:37:13,008 --> 00:37:16,013
+so you might be able to tell
+
+617
+00:37:16,085 --> 00:37:20,108
+if you side being typed that the user
+wants to say Safari on Mac
+
+618
+00:37:21,008 --> 00:37:24,089
+but because it started with Latin
+letters would go on left to right
+
+619
+00:37:24,089 --> 00:37:27,122
+the directionality was assumed as left
+to right
+
+620
+00:37:28,022 --> 00:37:33,047
+and so you have the opposite sentence
+Mac on Safari
+
+621
+00:37:33,047 --> 00:37:37,109
+so how do you fix this well
+
+622
+00:37:38,009 --> 00:37:42,024
+this is the sentence you want to get and
+
+623
+00:37:42,024 --> 00:37:45,051
+in order to get dis order of the words
+
+624
+00:37:45,051 --> 00:37:49,105
+what you need to do is you need to
+insert a right to left a mark
+
+625
+00:37:50,005 --> 00:37:53,007
+at the beginning of the sentence this is
+
+626
+00:37:53,007 --> 00:37:56,046
+an invisible character that you insert
+to
+
+627
+00:37:56,046 --> 00:38:00,077
+control the technology the string
+
+628
+00:38:00,077 --> 00:38:03,083
+and of course you might have a case
+
+629
+00:38:04,037 --> 00:38:07,038
+that is the opposite in fact in in which
+you start with
+
+630
+00:38:07,038 --> 00:38:11,062
+say in Arabic word which is right to
+left and OS will guess that
+
+631
+00:38:11,062 --> 00:38:14,071
+the whole sentence is supposed to flow
+from right to left but what you intended
+
+632
+00:38:15,052 --> 00:38:18,089
+was a for the sentence TUF to flow from
+
+633
+00:38:18,089 --> 00:38:20,171
+left to right and if you have a
+translation app you might actually have
+
+634
+00:38:21,071 --> 00:38:23,163
+already encountered a case like this
+
+635
+00:38:24,063 --> 00:38:29,064
+and in this case be solution is to
+insert a left to right mark
+
+636
+00:38:29,064 --> 00:38:34,066
+so what you're probably thinking as well
+that's great but who was supposed to
+
+637
+00:38:34,066 --> 00:38:36,081
+insert these marks interprets strings
+
+638
+00:38:36,081 --> 00:38:40,090
+because you might not have heard about
+them so the answer is
+
+639
+00:38:40,009 --> 00:38:43,012
+well it is you but
+
+640
+00:38:44,002 --> 00:38:47,007
+and probably not exactly you would you
+need to do
+
+641
+00:38:47,007 --> 00:38:50,055
+is to talk to your local actors your
+local eyes ears
+
+642
+00:38:51,018 --> 00:38:54,040
+I and not just earned right to left
+language localize there's like a look
+
+643
+00:38:54,004 --> 00:38:55,055
+let us for Arabic and Hebrew
+
+644
+00:38:55,091 --> 00:38:58,096
+all your localize there's need to
+understand how these marks work
+
+645
+00:38:59,041 --> 00:39:02,103
+because they need to insert these in for
+example if there's
+
+646
+00:39:03,003 --> 00:39:07,095
+/url localize upholstering that starts
+with a format argument
+
+647
+00:39:07,095 --> 00:39:10,114
+now when the user a
+
+648
+00:39:11,014 --> 00:39:14,067
+content comes in that format argument
+could be replaced by
+
+649
+00:39:14,067 --> 00:39:17,129
+an English word are an Arabic word or
+Hebrew word our French word
+
+650
+00:39:18,029 --> 00:39:21,057
+so you don't know at compile-time what
+it's going to be
+
+651
+00:39:21,057 --> 00:39:24,066
+so you need to insert if you're in a
+left-right localization like English or
+
+652
+00:39:25,047 --> 00:39:25,146
+French or German
+
+653
+00:39:26,046 --> 00:39:29,112
+you need to have left to right mark
+their to tell it that even if an Arabic
+
+654
+00:39:30,012 --> 00:39:32,070
+word comes in I want the sentence to
+flow left to right
+
+655
+00:39:32,007 --> 00:39:37,013
+and the same and the opposite for right
+left localizations
+
+656
+00:39:37,076 --> 00:39:40,129
+of course this is just a brief
+introduction
+
+657
+00:39:41,029 --> 00:39:44,063
+to a handling right to left text
+
+658
+00:39:44,063 --> 00:39:47,101
+are actually makes text I should say and
+you should
+
+659
+00:39:48,001 --> 00:39:51,027
+check out our internationalization and
+localization guy for
+
+660
+00:39:51,027 --> 00:39:55,036
+more details about handing more bass
+cases
+
+661
+00:39:55,036 --> 00:39:59,070
+lastly for right to left I should
+mention that
+
+662
+00:39:59,007 --> 00:40:02,010
+Xcode 6 has a great new feature which
+lets you simulate
+
+663
+00:40:03,000 --> 00:40:06,022
+a right to left localization so you can
+run in English
+
+664
+00:40:06,022 --> 00:40:09,037
+but in right to left to see how your
+layout flows in the right level
+
+665
+00:40:09,037 --> 00:40:09,136
+localization
+
+666
+00:40:10,036 --> 00:40:13,104
+and of course I highly encourage you to
+attend the localizing
+
+667
+00:40:14,004 --> 00:40:18,004
+exposition which is later today to learn
+more about exco six and what it brings
+
+668
+00:40:18,004 --> 00:40:21,060
+for localization
+
+669
+00:40:21,006 --> 00:40:26,008
+let's let me talk about the keyboard now
+this is the US English keyboard
+
+670
+00:40:26,008 --> 00:40:30,017
+and as you probably know from yesterday
+we now have predictive typing
+
+671
+00:40:31,007 --> 00:40:34,091
+so what does this mean for you at the
+developer
+
+672
+00:40:35,054 --> 00:40:38,066
+well even more than it for
+
+673
+00:40:38,066 --> 00:40:41,145
+you need to keep track of the height and
+size at the keyboard
+
+674
+00:40:42,045 --> 00:40:45,104
+so I have first of all hope that none of
+you have hard coded the size of the
+
+675
+00:40:46,004 --> 00:40:48,012
+keyboard and you were in your apt
+
+676
+00:40:48,012 --> 00:40:52,078
+on and now of course if you do that
+you're going to get a lot a one-star
+
+677
+00:40:52,078 --> 00:40:52,164
+ratings
+
+678
+00:40:53,064 --> 00:40:56,069
+up so first default notice that
+
+679
+00:40:57,014 --> 00:41:00,015
+even when predictive typing as of
+
+680
+00:41:00,015 --> 00:41:03,073
+likened left there's still a thin bar on
+top the keepers at the height of the
+
+681
+00:41:03,073 --> 00:41:05,147
+keyboard still different from what it
+used to be
+
+682
+00:41:06,047 --> 00:41:09,089
+but not all the keywords and I was are
+
+683
+00:41:09,089 --> 00:41:13,093
+predictive typing enabled so you still
+might have a keyboard like the Bengali
+
+684
+00:41:13,093 --> 00:41:15,100
+keyboard which is new and I was take
+
+685
+00:41:16,000 --> 00:41:19,014
+which does not have even that sand bar
+on top so already you had three
+
+686
+00:41:19,014 --> 00:41:21,100
+different sizes
+
+687
+00:41:22,000 --> 00:41:25,024
+then we also have keyboards like
+Japanese
+
+688
+00:41:25,024 --> 00:41:28,077
+and Chinese in which before these are
+starts typing
+
+689
+00:41:28,077 --> 00:41:31,132
+if the short height and once the start
+typing there's a bar on top because the
+
+690
+00:41:32,032 --> 00:41:32,039
+top I'd
+
+691
+00:41:33,002 --> 00:41:36,044
+so your happiness to accommodate the
+site changes on the fly
+
+692
+00:41:36,044 --> 00:41:40,105
+and of course users will switch back and
+forth between these keyboards
+
+693
+00:41:41,005 --> 00:41:44,007
+not only that but this is something
+you're probably aware of
+
+694
+00:41:44,007 --> 00:41:48,007
+for sure is that when the keyboard comes
+up your UI needs to move
+
+695
+00:41:48,007 --> 00:41:51,011
+away if you don't want to get hidden
+behind the keyboard
+
+696
+00:41:51,047 --> 00:41:54,083
+so how do we do all of this well
+helpfully
+
+697
+00:41:54,083 --> 00:41:58,157
+the keyboard lets you know all when it's
+coming in going out or change in size
+
+698
+00:41:59,057 --> 00:42:02,095
+so all you need to do is watch for those
+notifications
+
+699
+00:42:02,095 --> 00:42:06,130
+now what can you do with these well
+here's an example of
+
+700
+00:42:07,003 --> 00:42:11,004
+Safari when the keyboard comes in as you
+can see
+
+701
+00:42:11,031 --> 00:42:15,037
+the the search field tricks
+
+702
+00:42:15,037 --> 00:42:18,068
+and I'll play it again so you can see
+that
+
+703
+00:42:18,068 --> 00:42:21,102
+these two animations are actually
+happening in tandem
+
+704
+00:42:22,002 --> 00:42:25,008
+so how do you make this happen in your
+apt
+
+705
+00:42:25,008 --> 00:42:28,050
+well the keyboard will show
+
+706
+00:42:28,005 --> 00:42:31,037
+a notification actually contains a lot
+of information first of all
+
+707
+00:42:31,082 --> 00:42:34,107
+it contains information about the frame
+where the people will start and where
+
+708
+00:42:35,007 --> 00:42:35,078
+the key word will
+
+709
+00:42:35,078 --> 00:42:38,087
+ended animation it also contains
+information
+
+710
+00:42:39,068 --> 00:42:42,161
+about the animation duration curve
+sexually you can use
+
+711
+00:42:43,061 --> 00:42:47,095
+these two piece of information together
+and make sure that your UI
+
+712
+00:42:47,095 --> 00:42:51,096
+moves away from the keyboard and also
+moves in tandem with the keyboard that
+
+713
+00:42:51,096 --> 00:42:55,107
+gives a very smooth experience to the
+user
+
+714
+00:42:56,007 --> 00:42:59,053
+we also have hardware keyboards so I O S
+
+715
+00:42:59,053 --> 00:43:02,140
+any IRS device can attach to a hundred
+people via bluetooth
+
+716
+00:43:03,004 --> 00:43:06,070
+and of course the joint assimilated
+there's an option the simulator
+
+717
+00:43:07,006 --> 00:43:10,081
+to do that as well so what does this
+mean for your caps
+
+718
+00:43:10,081 --> 00:43:13,119
+well if you have an app like this which
+has a toolbar
+
+719
+00:43:14,019 --> 00:43:18,073
+above the keyboard the important thing
+to keep in mind is that there's
+
+720
+00:43:18,073 --> 00:43:18,167
+functionality like
+
+721
+00:43:19,067 --> 00:43:23,080
+choose font in this case which you don't
+want the user to lose when the
+
+722
+00:43:23,008 --> 00:43:26,012
+attach a hardware keyboard so
+
+723
+00:43:26,084 --> 00:43:29,112
+this is not what you want when hardware
+keyboard attached
+
+724
+00:43:30,012 --> 00:43:34,055
+what you want is this in which the
+toolbar at the bottom remains
+
+725
+00:43:34,055 --> 00:43:38,076
+even door hardware keyboard attached so
+how do you make this happen
+
+726
+00:43:38,076 --> 00:43:41,127
+well if you do have a view that just
+goes on on top of the keyboard
+
+727
+00:43:42,027 --> 00:43:45,088
+if the one line it's a one line that Co
+change which is
+
+728
+00:43:45,088 --> 00:43:49,091
+to use input excess review into texas
+review
+
+729
+00:43:49,091 --> 00:43:53,114
+allows you to specify a view and that
+view is stuck on top the keyboard
+
+730
+00:43:54,014 --> 00:43:57,059
+in the keyboard takes care animating it
+in and making it out and
+
+731
+00:43:57,059 --> 00:44:00,067
+making sure it docks at the bottom when
+the hardware keyboard attached
+
+732
+00:44:01,039 --> 00:44:06,058
+moving onto another keyboard topic
+keyboard type
+
+733
+00:44:06,058 --> 00:44:09,076
+now keep your types basically allow you
+to
+
+734
+00:44:09,076 --> 00:44:12,082
+specify within the same keyboard
+different
+
+735
+00:44:12,082 --> 00:44:15,178
+specific optimize keyboard type so for
+example here we have
+
+736
+00:44:16,078 --> 00:44:20,085
+email type which is meant for email
+addresses usernames et cetera and as you
+
+737
+00:44:20,085 --> 00:44:20,148
+can see
+
+738
+00:44:21,048 --> 00:44:24,062
+has the at and full stop keys on the
+first plane
+
+739
+00:44:24,062 --> 00:44:27,106
+to let you use the type those
+
+740
+00:44:28,006 --> 00:44:31,061
+of course the punctuation planes are
+also optimize for email type for email
+
+741
+00:44:31,061 --> 00:44:32,083
+address typing
+
+742
+00:44:32,083 --> 00:44:36,101
+and so you have more frequent use
+symbols there
+
+743
+00:44:37,001 --> 00:44:41,068
+what you might not know is that in the
+keyboards for many languages like
+
+744
+00:44:41,068 --> 00:44:44,110
+Simplified Chinese Arabic et cetera
+
+745
+00:44:45,001 --> 00:44:49,028
+many of the commonly use punctuation
+symbols for other languages
+
+746
+00:44:49,037 --> 00:44:53,093
+are not the same symbols that I use for
+email address or URL
+
+747
+00:44:53,093 --> 00:44:56,120
+and so the problem is that if
+
+748
+00:44:57,002 --> 00:45:00,008
+if you expect a certain kind of input in
+your text field and you don't specify
+
+749
+00:45:00,026 --> 00:45:01,031
+the right type
+
+750
+00:45:01,076 --> 00:45:04,103
+if the user might actually be forced to
+switch keyboards just a typing email
+
+751
+00:45:05,003 --> 00:45:05,089
+address or username
+
+752
+00:45:05,089 --> 00:45:09,095
+and that's not a very good experience so
+make sure to specify that I keep your
+
+753
+00:45:09,095 --> 00:45:09,142
+type
+
+754
+00:45:10,042 --> 00:45:13,103
+and of course we have more than just
+email we have URL Twitter
+
+755
+00:45:14,003 --> 00:45:18,011
+number pad in fact we have a whole host
+of different keyboard types
+
+756
+00:45:18,011 --> 00:45:22,029
+and another one that I'd like to call
+your attention to is ASCII capable
+
+757
+00:45:22,029 --> 00:45:25,076
+now if you have a text field a TextView
+in richer expecting content
+
+758
+00:45:25,076 --> 00:45:29,088
+that is only an ASCII go ahead and
+specify the asked capable type that'll
+
+759
+00:45:29,088 --> 00:45:30,170
+make sure that the users keyboard
+
+760
+00:45:31,007 --> 00:45:34,059
+is fished for example from Chinese to an
+ASCII
+
+761
+00:45:35,022 --> 00:45:39,043
+keyboard automatically and they don't
+have to manually switch keyboards to do
+
+762
+00:45:39,043 --> 00:45:41,121
+that
+
+763
+00:45:42,021 --> 00:45:45,073
+you should also know about the auto
+correction type suffer some of your text
+
+764
+00:45:45,073 --> 00:45:46,075
+using text fields
+
+765
+00:45:46,093 --> 00:45:49,110
+auto correction may not be useful in
+fact that might actually hamper user
+
+766
+00:45:50,001 --> 00:45:50,049
+input
+
+767
+00:45:50,058 --> 00:45:54,151
+so make sure to turn our oppression of
+where appropriate
+
+768
+00:45:55,051 --> 00:45:58,083
+similarly auto capitalization is if has
+
+769
+00:45:58,083 --> 00:46:02,086
+for our four options which are very
+useful for different context and these
+
+770
+00:46:03,013 --> 00:46:03,079
+are all
+
+771
+00:46:03,079 --> 00:46:06,094
+also language where say should use these
+appropriately
+
+772
+00:46:06,094 --> 00:46:09,156
+had depending on what kind input you
+expecting a certain text me or text
+
+773
+00:46:10,056 --> 00:46:14,105
+field
+
+774
+00:46:15,005 --> 00:46:18,047
+and lastly I wanna talk about mark text
+
+775
+00:46:18,047 --> 00:46:21,144
+now you might never have seen this if
+you never used the Chinese or Japanese
+
+776
+00:46:22,044 --> 00:46:23,062
+keyboard
+
+777
+00:46:23,062 --> 00:46:26,108
+but for these languages when the user
+types
+
+778
+00:46:27,008 --> 00:46:31,009
+they do not directly type the output
+characters like to do in English
+
+779
+00:46:31,018 --> 00:46:34,018
+but the first type usually a frenetic or
+other kind
+
+780
+00:46:34,018 --> 00:46:37,047
+input string and then
+
+781
+00:46:37,047 --> 00:46:41,145
+they choose candidate from the bar below
+par its about the keyboard
+
+782
+00:46:42,045 --> 00:46:47,059
+so what does this mean for you as a
+developer
+
+783
+00:46:47,059 --> 00:46:52,072
+the important thing to know here is when
+a text you or text feel has marked X
+
+784
+00:46:52,072 --> 00:46:55,154
+in it because when it does have marked X
+in it
+
+785
+00:46:56,054 --> 00:47:00,122
+the number one thing you wanna make sure
+is to not added to the content of that
+
+786
+00:47:01,022 --> 00:47:02,055
+text your text field
+
+787
+00:47:02,055 --> 00:47:05,077
+why because if you do that their mark
+text
+
+788
+00:47:05,077 --> 00:47:08,085
+will get committed to the document
+
+789
+00:47:09,057 --> 00:47:12,113
+pretty much no user wants that to happen
+because that is not the text they were
+
+790
+00:47:13,013 --> 00:47:16,031
+trying to type and you're going to have
+some are some very frustrated users if
+
+791
+00:47:16,031 --> 00:47:17,118
+you do that
+
+792
+00:47:18,018 --> 00:47:21,116
+and of course while the markets as their
+
+793
+00:47:22,016 --> 00:47:25,021
+you can use it for other things like
+auto-completion
+
+794
+00:47:25,021 --> 00:47:28,066
+are are showing some predictions to the
+user
+
+795
+00:47:28,066 --> 00:47:32,107
+but would you should remember is that
+this is not their final text
+
+796
+00:47:33,007 --> 00:47:36,014
+and often the marked X is not going to
+contain
+
+797
+00:47:36,014 --> 00:47:40,021
+meaningful linguistic content because
+it's just the input codes for that
+
+798
+00:47:40,021 --> 00:47:45,049
+in but so use it for life searching for
+if you like but
+
+799
+00:47:45,049 --> 00:47:50,051
+note that it might not be at the user's
+file contact
+
+800
+00:47:50,051 --> 00:47:54,084
+and that is really all
+
+801
+00:47:54,084 --> 00:47:57,105
+the well that's not all but I would say
+that those are the most common think
+
+802
+00:47:58,005 --> 00:47:59,100
+they should keep in mind
+
+803
+00:48:00,000 --> 00:48:04,088
+and let me just reiterate some of the
+items that we talked about earlier
+
+804
+00:48:04,088 --> 00:48:08,115
+that will help prevent you getting a
+one-star rating
+
+805
+00:48:09,015 --> 00:48:12,028
+from someone in Asia or the Middle East
+
+806
+00:48:12,028 --> 00:48:15,119
+so first to fall local as your apt
+
+807
+00:48:16,019 --> 00:48:20,043
+into tender languages on
+
+808
+00:48:20,043 --> 00:48:23,078
+of course I wasn't always 10 both
+support a lot of languages
+
+809
+00:48:23,078 --> 00:48:26,136
+and we added new ones for both platforms
+
+810
+00:48:27,036 --> 00:48:31,039
+and starting in IRS 8 you can localize
+
+811
+00:48:31,039 --> 00:48:38,039
+into many languages that Apple doesn't
+localizing do so don't let that stop you
+
+812
+00:48:38,057 --> 00:48:41,084
+secondly understand the differences
+between language and locale
+
+813
+00:48:41,084 --> 00:48:46,146
+and when to use them and only to use
+them
+
+814
+00:48:47,046 --> 00:48:50,108
+of course format dates times and named
+correctly
+
+815
+00:48:51,008 --> 00:48:56,057
+as you saw it's really easy to do
+
+816
+00:48:56,057 --> 00:48:59,856
+and note that there are a lot of
+
+817
+00:49:00,369 --> 00:49:05,050
+right to left users on both IRS analysts
+and in fact it's one of the most popular
+
+818
+00:49:05,005 --> 00:49:05,093
+languages for
+
+819
+00:49:05,093 --> 00:49:08,111
+input on IRS can I was 10 so
+
+820
+00:49:09,011 --> 00:49:13,035
+regardless of whether you localize into
+Arabic or Hebrew are not the right to
+
+821
+00:49:13,035 --> 00:49:13,134
+left language or not
+
+822
+00:49:14,034 --> 00:49:20,122
+make sure that you're not breaking text
+input for these users
+
+823
+00:49:21,022 --> 00:49:24,022
+keyboards of course come in many
+different shapes and sizes
+
+824
+00:49:24,022 --> 00:49:27,064
+and well actually one shape many thanks
+on
+
+825
+00:49:27,064 --> 00:49:30,116
+and of course becoming new science with
+IRS
+
+826
+00:49:31,016 --> 00:49:35,038
+eight so make sure you keep that in mind
+
+827
+00:49:35,038 --> 00:49:38,042
+of course to the right keyboard type for
+the context so that you make
+
+828
+00:49:38,078 --> 00:49:41,170
+the input experience smooth and easy
+
+829
+00:49:42,007 --> 00:49:45,018
+and don't touch the mark text if
+
+830
+00:49:45,081 --> 00:49:51,176
+a don't ask the document while there's
+mark text in the document
+
+831
+00:49:52,076 --> 00:49:55,093
+how for more information of course I'll
+
+832
+00:49:55,093 --> 00:49:58,148
+you can contact Jake who's our apt remix
+evangelist
+
+833
+00:49:59,048 --> 00:50:02,054
+and we also have the
+internationalization localization guide
+
+834
+00:50:02,054 --> 00:50:03,383
+that I mentioned previously
+
+835
+00:50:03,869 --> 00:50:08,874
+up on their website that you should
+really check out
+
+836
+00:50:09,369 --> 00:50:13,310
+we also have tooth two sessions that you
+should definitely check out
+
+837
+00:50:13,031 --> 00:50:16,037
+one is localizing with Xcode six which
+is later this morning
+
+838
+00:50:16,091 --> 00:50:20,132
+and actually we covered a lot of new
+material this year
+
+839
+00:50:21,032 --> 00:50:25,034
+an act we didn't actually repeat a lot
+of the material from previous years
+
+840
+00:50:25,052 --> 00:50:28,086
+internationalization talks which are
+actually still relevant
+
+841
+00:50:28,086 --> 00:50:31,088
+for your apt today so definitely go
+ahead and check out
+
+842
+00:50:32,006 --> 00:50:36,009
+making a rap world ready which is last
+year's internationalization session
+
+843
+00:50:36,036 --> 00:50:36,089
+thank you very much
+

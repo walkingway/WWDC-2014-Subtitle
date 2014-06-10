@@ -1,0 +1,4211 @@
+1
+00:00:12,179 --> 00:00:15,350
+good afternoon
+
+2
+00:00:15,035 --> 00:00:18,081
+welcome
+
+3
+00:00:18,081 --> 00:00:21,088
+son Patrick einen am a manager in the
+air cocoa frameworks group
+
+4
+00:00:21,088 --> 00:00:24,151
+and welcome to adapting to the new UI
+voz tenuous amity
+
+5
+00:00:25,051 --> 00:00:28,136
+let's get started so I
+
+6
+00:00:29,036 --> 00:00:33,040
+your family your house so it brings a
+pretty fresh look to the Mac be astute
+
+7
+00:00:33,004 --> 00:00:35,086
+observers among you might have noticed
+there's been some changes in the visual
+
+8
+00:00:36,022 --> 00:00:36,079
+department
+
+9
+00:00:36,079 --> 00:00:39,148
+well were here to help you understand
+
+10
+00:00:40,048 --> 00:00:43,053
+what has changed NY so to break it all
+down for you
+
+11
+00:00:43,053 --> 00:00:46,115
+walked through it and to get a better
+understanding a bit and then most most
+
+12
+00:00:47,015 --> 00:00:47,094
+importantly
+
+13
+00:00:47,094 --> 00:00:51,147
+I how to get the most out over this new
+you why in your cocoa applications
+
+14
+00:00:52,047 --> 00:00:55,108
+so how are we gonna do this well
+
+15
+00:00:56,008 --> 00:00:59,837
+first we're going to talk about some
+phenomenal design principles that went
+
+16
+00:00:59,909 --> 00:01:00,970
+into the choices
+
+17
+00:01:00,097 --> 00:01:03,286
+that resulted in the current design that
+you see in Austin yosemite
+
+18
+00:01:04,159 --> 00:01:08,010
+I then we're gonna take it into the tour
+bus
+
+19
+00:01:08,001 --> 00:01:11,090
+and I just take a tour love of your
+family in all the key pieces
+
+20
+00:01:11,009 --> 00:01:14,090
+that have changed but our relevance for
+Coco app developers from developers
+
+21
+00:01:15,071 --> 00:01:15,145
+point of view
+
+22
+00:01:16,045 --> 00:01:20,118
+then we're gonna talk about vibrancy
+which is one of these important elements
+
+23
+00:01:21,018 --> 00:01:24,087
+I am just deconstruct that you can get a
+conceptual basis for understanding how
+
+24
+00:01:24,087 --> 00:01:26,183
+what role it plays and how it works and
+what it does for you
+
+25
+00:01:27,083 --> 00:01:32,112
+then talk about some elements that you
+might bring to your applications fonts
+
+26
+00:01:33,012 --> 00:01:36,045
+colors are working how they should how
+they know what their role is now some
+
+27
+00:01:36,045 --> 00:01:37,133
+things we've done to make working with
+them
+
+28
+00:01:38,033 --> 00:01:42,128
+easier I in in your Sammy and last but
+definitely not least we'll talk about
+
+29
+00:01:43,028 --> 00:01:45,042
+app compatibility in how to mitigate
+
+30
+00:01:45,042 --> 00:01:48,128
+are the risk introducing this big design
+change in having a nap work
+
+31
+00:01:49,028 --> 00:01:54,054
+across different scenarios okay so with
+that i'm gonna hand it over to my
+
+32
+00:01:54,054 --> 00:01:55,108
+colleague morning get right into
+
+33
+00:01:56,008 --> 00:02:00,030
+the design portion stock Mike
+
+34
+00:02:00,003 --> 00:02:07,003
+thank you Patrick hi everyone saw Mike
+Stern I'm
+
+35
+00:02:07,005 --> 00:02:10,073
+user experience evangelist without Paul
+and
+
+36
+00:02:11,018 --> 00:02:14,297
+I I'm not an engineer I'm a designer
+
+37
+00:02:14,459 --> 00:02:17,515
+so what am I doing here at this
+engineering session well we're talking
+
+38
+00:02:18,019 --> 00:02:18,970
+about the new design
+
+39
+00:02:18,097 --> 00:02:20,184
+voters 10 and I thought I would just
+come here for a few minutes to talk
+
+40
+00:02:21,084 --> 00:02:24,111
+about some other high-level principles
+are design teams that
+
+41
+00:02:25,011 --> 00:02:29,030
+guided and inspired the design OS 10
+yosemite
+
+42
+00:02:29,003 --> 00:02:32,066
+now yesterday we announced I was 10 your
+sanity
+
+43
+00:02:32,093 --> 00:02:36,098
+and the most innocent is the 10th
+
+44
+00:02:37,043 --> 00:02:41,100
+police 2000 s10 and in that time span
+
+45
+00:02:42,000 --> 00:02:46,066
+there's been a few really major you I
+releases for OS 10
+
+46
+00:02:46,066 --> 00:02:49,103
+and as with every one of those releases
+
+47
+00:02:50,003 --> 00:02:53,007
+elements like the menu bar Windows
+
+48
+00:02:53,043 --> 00:02:57,122
+the doc have been refined
+
+49
+00:02:58,022 --> 00:03:01,038
+to be friendlier easier to use
+
+50
+00:03:01,038 --> 00:03:04,367
+more approachable but they've also been
+
+51
+00:03:04,709 --> 00:03:09,520
+redesigned to have greater utility power
+and support more sophisticated
+
+52
+00:03:09,052 --> 00:03:14,110
+and advanced workflows you send it is
+just another step in a continuous
+
+53
+00:03:15,001 --> 00:03:15,089
+process
+
+54
+00:03:15,098 --> 00:03:21,105
+evolving OS 10 let's dive in and talk
+about some the principles that
+
+55
+00:03:22,005 --> 00:03:26,017
+really core to this particular redefine
+the first one
+
+56
+00:03:26,017 --> 00:03:29,113
+its simplicity let's take a look at
+these app icons
+
+57
+00:03:30,013 --> 00:03:33,097
+in particular
+
+58
+00:03:33,097 --> 00:03:36,186
+let's look at the calendar icon as
+before
+
+59
+00:03:37,086 --> 00:03:41,179
+calendar was redesigned but it still
+very much looks like a realistic
+
+60
+00:03:42,079 --> 00:03:43,131
+three-dimensional object
+
+61
+00:03:44,031 --> 00:03:47,050
+with realistic highlights realistic
+shadows
+
+62
+00:03:47,005 --> 00:03:51,066
+and even the texture have the paper but
+some other element to the previous icon
+
+63
+00:03:52,011 --> 00:03:53,016
+were removed
+
+64
+00:03:53,016 --> 00:03:56,038
+like the many calendars you where the
+metal rings
+
+65
+00:03:56,038 --> 00:03:59,075
+those elements work really necessary
+
+66
+00:03:59,075 --> 00:04:03,141
+to depict a daily death counter and by
+removing those elements the new icon
+
+67
+00:04:04,041 --> 00:04:07,126
+is more simple it's less cluttered more
+straightforward
+
+68
+00:04:08,026 --> 00:04:11,051
+simplicity also influence the decision
+
+69
+00:04:11,051 --> 00:04:14,093
+to go away from using lucid Agron day as
+the system font
+
+70
+00:04:14,093 --> 00:04:18,762
+and towards using how Vatican Noida
+American Lawyer
+
+71
+00:04:19,599 --> 00:04:22,618
+is a simpler typeface with Sid Agron day
+
+72
+00:04:22,789 --> 00:04:26,610
+is designed to evoke hand-written letter
+forms
+
+73
+00:04:26,061 --> 00:04:30,068
+American oil on the other hand is
+designed to clearly and simply
+
+74
+00:04:31,031 --> 00:04:34,049
+the pics the letterforms and numbers
+
+75
+00:04:34,049 --> 00:04:37,075
+without any ornamentation so the more
+appropriate
+
+76
+00:04:37,075 --> 00:04:40,075
+typeface to use for the new design
+language
+
+77
+00:04:40,075 --> 00:04:43,494
+what does that mean well here's a
+comparison
+
+78
+00:04:44,169 --> 00:04:47,490
+you can see that the ass is a little bit
+more geometric
+
+79
+00:04:47,049 --> 00:04:51,057
+full simpler there's less variation
+between the thickness
+
+80
+00:04:51,057 --> 00:04:56,129
+the stroke weight between then and there
+thick part so the letter
+
+81
+00:04:57,029 --> 00:05:01,055
+the shoulder here for the N has a
+smoother form to it
+
+82
+00:05:01,055 --> 00:05:05,083
+less have an abrupt transition and fonts
+have a more consistent with
+
+83
+00:05:05,083 --> 00:05:08,086
+to them and the next
+
+84
+00:05:08,086 --> 00:05:11,425
+theme is about consistency
+
+85
+00:05:12,199 --> 00:05:15,330
+again let's go back to the app icons now
+
+86
+00:05:15,033 --> 00:05:19,037
+from the beginning ago with 10 app icons
+were rendered to look like
+
+87
+00:05:19,037 --> 00:05:22,806
+they were three-dimensional object to
+that was sitting on a table in front
+
+88
+00:05:23,139 --> 00:05:24,120
+view
+
+89
+00:05:24,012 --> 00:05:28,013
+and they were rotated a bit so they
+could be easily distinguished from
+
+90
+00:05:28,013 --> 00:05:31,111
+documents or folders plugins and
+utilities
+
+91
+00:05:32,011 --> 00:05:35,052
+but over time there was a little bit
+oven divergence going on with every
+
+92
+00:05:35,052 --> 00:05:37,231
+absolute doing its own thing
+
+93
+00:05:37,699 --> 00:05:41,752
+that led to some variation like icons
+that have a really strong perspective
+
+94
+00:05:42,229 --> 00:05:44,370
+and Keystone effect
+
+95
+00:05:44,037 --> 00:05:47,108
+or instead of looking like they're lying
+flat on a table they look to be
+
+96
+00:05:48,008 --> 00:05:51,037
+sitting upright
+
+97
+00:05:51,037 --> 00:05:55,046
+OS 10 brings a a harmonization
+
+98
+00:05:55,046 --> 00:05:59,140
+but the style all the icons so here the
+realistic looking icons you can see they
+
+99
+00:06:00,004 --> 00:06:01,076
+all the same perspective
+
+100
+00:06:02,012 --> 00:06:05,051
+same light source same rendering
+
+101
+00:06:05,051 --> 00:06:08,058
+and the graphical icons these round
+icons are also
+
+102
+00:06:08,058 --> 00:06:11,062
+internally consistent with each other
+
+103
+00:06:11,062 --> 00:06:14,133
+the symbols at the centre them had the
+same and boss affect
+
+104
+00:06:15,033 --> 00:06:21,037
+the shape the convex shape the the form
+is consistent across all im
+
+105
+00:06:21,037 --> 00:06:25,058
+let's go back to type again how America
+know is the new system fun
+
+106
+00:06:25,058 --> 00:06:28,063
+and one of the things that the salt for
+us was an inconsistency that existed
+
+107
+00:06:29,008 --> 00:06:30,029
+before
+
+108
+00:06:30,029 --> 00:06:34,068
+overtime some maps like notes had
+started to use Helvetica Neue as a
+
+109
+00:06:34,068 --> 00:06:36,093
+content fun
+
+110
+00:06:36,093 --> 00:06:41,172
+and outs like iTunes iPhoto iMovie Final
+Cut Pro and logic
+
+111
+00:06:42,009 --> 00:06:47,280
+were using help Eric annoying as a
+content fine as well as a UI font
+
+112
+00:06:47,028 --> 00:06:50,096
+this led to serve unfortunate mismatch
+between the system
+
+113
+00:06:50,096 --> 00:06:55,115
+and those individual aP's
+
+114
+00:06:55,979 --> 00:06:59,045
+so by changing to have Erica know it now
+we have this consistency across the
+
+115
+00:06:59,639 --> 00:07:00,410
+entire
+
+116
+00:07:00,041 --> 00:07:03,107
+Mac experience and another side benefit
+to that
+
+117
+00:07:04,007 --> 00:07:08,090
+there's more consistency between Mac and
+I O S
+
+118
+00:07:08,009 --> 00:07:11,013
+the third major principal at FEMA this
+redesign
+
+119
+00:07:12,003 --> 00:07:16,432
+is about death we believe that software
+interfaces should feel
+
+120
+00:07:16,729 --> 00:07:19,773
+physically the two have physical
+dimensionality and that should be
+
+121
+00:07:20,169 --> 00:07:25,220
+really plausible that dimensionality
+helps you to focus on the things that
+
+122
+00:07:25,022 --> 00:07:26,069
+are in the foreground
+
+123
+00:07:26,069 --> 00:07:29,132
+and pay less attention to those things
+which are in the background
+
+124
+00:07:30,032 --> 00:07:34,351
+now on I O S death is conveyed through
+using translucency
+
+125
+00:07:34,639 --> 00:07:38,940
+for example the Notification Center for
+the control center
+
+126
+00:07:38,094 --> 00:07:41,353
+and the elements that are within those
+you eyes
+
+127
+00:07:42,199 --> 00:07:45,900
+also have translucency meaning similar
+background colors allowed to
+
+128
+00:07:45,009 --> 00:07:51,090
+come through now o.o s10 pickup on S and
+uses the same kinda translucent affect
+
+129
+00:07:52,071 --> 00:07:57,094
+for the Notification Center and other
+parts the UI
+
+130
+00:07:57,094 --> 00:08:01,094
+now on Isleworth course we use motion a
+fax to show deaths as well
+
+131
+00:08:01,094 --> 00:08:04,186
+so when you move the device running your
+hand things have a sense a parallax
+
+132
+00:08:05,086 --> 00:08:09,178
+that's great for something that weighs
+as late as the iPhone or iPad
+
+133
+00:08:10,078 --> 00:08:13,247
+but we're not about to encourage people
+to pick up the iMac and start moving it
+
+134
+00:08:13,949 --> 00:08:15,983
+around to get the same effect
+
+135
+00:08:16,289 --> 00:08:20,383
+so it's still really important to use
+things like gradients
+
+136
+00:08:21,229 --> 00:08:26,248
+drop shadows to convey that sense space
+and correctly order things
+
+137
+00:08:26,419 --> 00:08:31,423
+and easy access
+
+138
+00:08:31,819 --> 00:08:34,897
+the last major principle for this
+redesign is around designing your own
+
+139
+00:08:35,599 --> 00:08:37,673
+content to be content focused
+
+140
+00:08:38,339 --> 00:08:42,180
+content is what's most important not the
+user interface
+
+141
+00:08:42,018 --> 00:08:47,056
+so for example one way to to be content
+focuses to disallow there to be more
+
+142
+00:08:47,056 --> 00:08:50,112
+space for content so now there's this
+unified toolbar
+
+143
+00:08:51,012 --> 00:08:54,097
+that does whether title bar
+
+144
+00:08:54,097 --> 00:08:59,142
+and the toolbar had done before
+
+145
+00:09:00,042 --> 00:09:03,521
+by unifying those elements there's now
+more physical space
+
+146
+00:09:03,899 --> 00:09:07,190
+for the thing that you really care about
+which is the webpage
+
+147
+00:09:07,019 --> 00:09:10,094
+itself and
+
+148
+00:09:10,094 --> 00:09:13,743
+deferring to content /url on content to
+be the focus is also
+
+149
+00:09:14,589 --> 00:09:18,440
+about having a user interface that's
+less heavy less strong so we've stripped
+
+150
+00:09:18,044 --> 00:09:21,072
+away love the textures and highlights in
+the shadows
+
+151
+00:09:21,072 --> 00:09:25,381
+to have a simpler appearance that in
+combination with the translucent window
+
+152
+00:09:26,029 --> 00:09:26,104
+chrome
+
+153
+00:09:26,779 --> 00:09:30,791
+toolbar in this case allows the content
+to really come through in effect the
+
+154
+00:09:30,899 --> 00:09:31,750
+appearance
+
+155
+00:09:31,075 --> 00:09:34,141
+have the entire screen again it lowers
+
+156
+00:09:35,041 --> 00:09:40,106
+your content to be the center your focus
+
+157
+00:09:41,006 --> 00:09:44,032
+so that all I really have you today and
+now I like to
+
+158
+00:09:44,032 --> 00:09:47,171
+handed off to our tour bus driver Rachel
+Gordon
+
+159
+00:09:47,459 --> 00:09:53,800
+thank you very much take
+
+160
+00:09:53,008 --> 00:09:56,042
+thanks Mike good afternoon thanks for
+being here as
+
+161
+00:09:57,014 --> 00:10:00,112
+they mention I'm gonna give you a little
+developers tour the new UI
+
+162
+00:10:01,012 --> 00:10:04,055
+in I OS in Yosemite
+
+163
+00:10:04,055 --> 00:10:07,112
+I let's start off here by taking a look
+at finder
+
+164
+00:10:08,012 --> 00:10:11,044
+and I'm gonna give you actually eighty
+mini tour before the tour
+
+165
+00:10:11,044 --> 00:10:14,076
+the things that I'll cover we'll take a
+look at
+
+166
+00:10:14,076 --> 00:10:19,125
+the toolbars again window control button
+
+167
+00:10:20,025 --> 00:10:24,049
+in New kind of segmented control
+
+168
+00:10:24,049 --> 00:10:28,141
+the sidebar which is translucent now
+
+169
+00:10:29,041 --> 00:10:32,099
+and then will move over to Safari to
+take a look
+
+170
+00:10:32,099 --> 00:10:38,144
+at what might just mention the combine
+to a bar in title bar
+
+171
+00:10:39,044 --> 00:10:42,112
+and then we'll take a look at System
+Preferences to show with an example
+
+172
+00:10:43,012 --> 00:10:48,019
+love are animated controls search field
+
+173
+00:10:48,019 --> 00:10:51,074
+radio buttons pop-up menus
+
+174
+00:10:51,074 --> 00:10:55,100
+and checkboxes now after that
+
+175
+00:10:56,000 --> 00:10:59,044
+we will go over to Notification Center
+
+176
+00:10:59,044 --> 00:11:02,095
+and look at our new vibrant dark
+appearance
+
+177
+00:11:02,095 --> 00:11:06,104
+that's used here and then the context
+menu
+
+178
+00:11:06,959 --> 00:11:10,110
+which uses the vibrant light appearance
+
+179
+00:11:10,011 --> 00:11:13,610
+as do popovers
+
+180
+00:11:13,709 --> 00:11:18,170
+alright back to the top translucent
+toolbars
+
+181
+00:11:18,017 --> 00:11:21,436
+for anyone who's gone and installed
+yosemite already I'm sure you played
+
+182
+00:11:21,589 --> 00:11:23,930
+around this unseen as he's cool things
+
+183
+00:11:23,093 --> 00:11:27,139
+up you can just see them coming through
+the toolbar and give you a sense
+
+184
+00:11:28,039 --> 00:11:31,042
+love your content flying under the
+toolbar
+
+185
+00:11:31,042 --> 00:11:35,271
+how do you get it well all you have to
+have
+
+186
+00:11:35,649 --> 00:11:41,330
+is an Anna school view that is adjacent
+to the toolbar
+
+187
+00:11:41,033 --> 00:11:44,051
+and then it happens automatically for
+you
+
+188
+00:11:44,051 --> 00:11:49,060
+but if you don't have that you can still
+get it by using this new window style
+
+189
+00:11:49,006 --> 00:11:49,064
+masked
+
+190
+00:11:50,018 --> 00:11:54,022
+NS full-size content view window mask
+
+191
+00:11:54,022 --> 00:11:57,058
+simply ordered in with your existing
+Windows style mask
+
+192
+00:11:57,058 --> 00:12:01,063
+and you get the transparent translucent
+to a bar style
+
+193
+00:12:02,008 --> 00:12:06,697
+this can be useful for things such as
+toolbars our title buyers that show and
+
+194
+00:12:06,769 --> 00:12:06,844
+hide
+
+195
+00:12:07,519 --> 00:12:13,588
+over content that is not in a ScrollView
+or the school he is not right at the top
+
+196
+00:12:14,209 --> 00:12:17,800
+lots more details about this in
+tomorrow's advance session adopting
+
+197
+00:12:17,008 --> 00:12:17,917
+advanced features
+
+198
+00:12:18,709 --> 00:12:23,860
+the new UI OS 10 yosemite
+
+199
+00:12:23,086 --> 00:12:26,149
+alright tinted slater's hiding away in
+the bottom right corner
+
+200
+00:12:27,049 --> 00:12:30,081
+this window these are little
+
+201
+00:12:30,081 --> 00:12:33,135
+new thing on yosemite and
+
+202
+00:12:34,035 --> 00:12:38,704
+to get those you just need to have a
+non-directional fighter
+
+203
+00:12:39,019 --> 00:12:45,020
+which is a slider that has Eurotech max
+
+204
+00:12:45,029 --> 00:12:49,350
+alright now let's take a look at the new
+
+205
+00:12:49,035 --> 00:12:54,043
+window control button as well as being
+flatter
+
+206
+00:12:54,043 --> 00:12:57,512
+you also notice that the full screen
+button has moved into the green
+
+207
+00:12:57,899 --> 00:13:00,943
+button if you're sad about that
+
+208
+00:13:01,339 --> 00:13:04,570
+and you'd like zoom behavior back hold
+the Option key
+
+209
+00:13:04,057 --> 00:13:07,075
+and you'll get them behavior I'd also
+like to point out that
+
+210
+00:13:07,075 --> 00:13:10,151
+any window that can't go fullscreen
+reverts to the old
+
+211
+00:13:11,051 --> 00:13:14,750
+in behavior
+
+212
+00:13:15,209 --> 00:13:19,950
+and then next the new kind of separated
+segmented control
+
+213
+00:13:19,095 --> 00:13:22,354
+these are useful for things like
+navigation like this
+
+214
+00:13:23,209 --> 00:13:27,420
+went backwards and forwards button here
+or other kind incremental step
+
+215
+00:13:27,042 --> 00:13:30,086
+operations such as zooming
+
+216
+00:13:30,086 --> 00:13:33,143
+and this is easy to get by sending the
+segment style n/a
+
+217
+00:13:34,043 --> 00:13:37,124
+segment style separated and it's nice to
+know that
+
+218
+00:13:38,024 --> 00:13:41,113
+the style will automatically adjust
+whether in a toolbar
+
+219
+00:13:42,013 --> 00:13:46,032
+were in a window
+
+220
+00:13:46,149 --> 00:13:50,180
+now I'm gonna bring another window onto
+fighter here
+
+221
+00:13:50,018 --> 00:13:53,049
+and we'll take a look at some the subtle
+differences that happen between
+
+222
+00:13:53,049 --> 00:13:57,105
+active and inactive Windows
+
+223
+00:13:58,005 --> 00:14:03,010
+when the window comes forward and
+becomes active the sidebars translucent
+
+224
+00:14:03,055 --> 00:14:07,101
+but when it goes to the background and
+inactive Sabres opaque
+
+225
+00:14:08,001 --> 00:14:11,050
+so it's nice to know that the
+translucency is only in the active
+
+226
+00:14:11,005 --> 00:14:13,010
+window
+
+227
+00:14:14,000 --> 00:14:17,001
+let's take a closer look here at the
+toolbar
+
+228
+00:14:17,001 --> 00:14:20,040
+couple things to know a good chance to
+stay
+
+229
+00:14:20,139 --> 00:14:24,233
+that the metrics we tried to keep them
+as much the same as possible so that
+
+230
+00:14:25,079 --> 00:14:29,420
+all year old control center
+automatically move to the new look
+
+231
+00:14:29,042 --> 00:14:34,049
+even without recompiling should all fit
+in the same state
+
+232
+00:14:34,049 --> 00:14:37,268
+and there's also some subtle things that
+happen when you use
+
+233
+00:14:37,709 --> 00:14:42,360
+template images these are great way take
+take advantage of our automatic
+
+234
+00:14:42,036 --> 00:14:44,055
+adjustment for state changes
+
+235
+00:14:44,055 --> 00:14:49,084
+and so I'm gonna send this window to the
+back and you can see the state changes
+
+236
+00:14:49,579 --> 00:14:54,550
+in the template images particularly that
+selected
+
+237
+00:14:54,055 --> 00:14:58,274
+part that segment to control look at
+image
+
+238
+00:14:58,769 --> 00:15:02,990
+you see it completely change color so
+you can take advantage of that
+
+239
+00:15:02,099 --> 00:15:05,568
+by using template images
+
+240
+00:15:06,459 --> 00:15:10,300
+and let's take a look again at the
+translucent sidebar
+
+241
+00:15:10,003 --> 00:15:15,008
+once again opaque here translucent here
+
+242
+00:15:15,035 --> 00:15:18,714
+and how do you get translucent sidebars
+guess what
+
+243
+00:15:19,029 --> 00:15:22,040
+there for free if if used in an
+
+244
+00:15:22,139 --> 00:15:25,250
+outline viewer and a stable view
+
+245
+00:15:25,025 --> 00:15:28,048
+and use that the highlights style to
+source list
+
+246
+00:15:28,048 --> 00:15:33,111
+which you can do in Interface Builder or
+incurred
+
+247
+00:15:34,011 --> 00:15:37,067
+alright and to just show how easy it was
+a downloaded
+
+248
+00:15:37,067 --> 00:15:41,143
+a sidebar demo which was put together
+for OS 10 lie in 10 points 7
+
+249
+00:15:42,043 --> 00:15:47,392
+an out-of-the-box it had translucent
+fibers
+
+250
+00:15:47,779 --> 00:15:51,130
+now moving over to Safari to take a look
+
+251
+00:15:51,013 --> 00:15:56,055
+at the new kind of to a bar that has a
+hidden title bar
+
+252
+00:15:56,055 --> 00:15:59,214
+hidden under Title Search Eve using this
+new
+
+253
+00:15:59,709 --> 00:16:03,570
+win NS window property title visibility
+
+254
+00:16:03,057 --> 00:16:06,142
+and you can set the title disability and
+this window title hidden
+
+255
+00:16:07,042 --> 00:16:10,137
+in order to get the effect that safari
+hat and I'd like to point out to you
+
+256
+00:16:11,037 --> 00:16:14,086
+that Safari has some special things that
+make this work
+
+257
+00:16:14,086 --> 00:16:17,375
+one of which is that they have put the
+window title
+
+258
+00:16:18,149 --> 00:16:21,250
+into the combined URL and search field
+
+259
+00:16:21,025 --> 00:16:24,924
+and so you can still see the window
+title even though there's no title bar
+
+260
+00:16:25,149 --> 00:16:28,940
+also as andrea pointed out yesterday
+they've left room for
+
+261
+00:16:28,094 --> 00:16:31,175
+users to click in the toolbar in order
+to move the window around
+
+262
+00:16:32,075 --> 00:16:35,086
+you wanna make sure you have room for
+that if you're going to use this new
+
+263
+00:16:35,086 --> 00:16:38,375
+style
+
+264
+00:16:39,149 --> 00:16:42,550
+moving on to animated controls
+
+265
+00:16:42,055 --> 00:16:46,131
+search field now enemy very much like
+they do on i OS
+
+266
+00:16:47,031 --> 00:16:50,112
+with that magnifying glass and the
+placeholder text moving to the left when
+
+267
+00:16:51,012 --> 00:16:54,051
+you click
+
+268
+00:16:54,051 --> 00:16:58,106
+radio buttons have an animation and when
+a nice things about them is as you
+
+269
+00:16:59,006 --> 00:17:01,465
+flecked a radio button
+
+270
+00:17:01,519 --> 00:17:04,528
+the other one deflecting enemy out
+simultaneously
+
+271
+00:17:05,419 --> 00:17:11,380
+nice little touch
+
+272
+00:17:11,038 --> 00:17:16,119
+Xboxes as well are now animated and this
+is a good time for me to point out that
+
+273
+00:17:17,019 --> 00:17:19,019
+that first preference their double-click
+
+274
+00:17:19,019 --> 00:17:23,024
+Windows title bar to minimize if you
+even
+
+275
+00:17:23,024 --> 00:17:27,039
+unchecked which is the default
+double-clicking a window's title bar
+
+276
+00:17:27,039 --> 00:17:32,130
+will do the little hidden feature for
+your and last
+
+277
+00:17:33,003 --> 00:17:36,028
+pop up button when you select a Papa
+
+278
+00:17:36,055 --> 00:17:39,071
+button I and
+
+279
+00:17:39,071 --> 00:17:44,078
+choose an item from the menu you know
+and make back into place in the pop
+
+280
+00:17:44,078 --> 00:17:47,171
+alright
+
+281
+00:17:48,071 --> 00:17:51,132
+moving on to Notification Center
+
+282
+00:17:52,032 --> 00:17:56,126
+and the vibrant dark parents let's take
+a little bit of a closer look
+
+283
+00:17:57,026 --> 00:18:01,034
+as what happens when the background
+changes I want you to pay particular
+
+284
+00:18:01,034 --> 00:18:02,078
+attention to those
+
+285
+00:18:02,078 --> 00:18:06,099
+tabs at the top say today and
+notifications and see how they change
+
+286
+00:18:06,099 --> 00:18:09,153
+as the background changes it looks very
+close
+
+287
+00:18:10,053 --> 00:18:15,059
+to standard transparency but we're
+actually using special blend modes pull
+
+288
+00:18:15,059 --> 00:18:15,146
+the color in
+
+289
+00:18:16,046 --> 00:18:22,117
+a little more than just plain ol
+transparency how did they get it
+
+290
+00:18:23,017 --> 00:18:27,084
+they use this new and a few subclass and
+its visual effect for you
+
+291
+00:18:27,084 --> 00:18:34,084
+as well as the new vibrant dark parents
+which is in an effort parents see you
+
+292
+00:18:34,098 --> 00:18:34,173
+can create
+
+293
+00:18:35,073 --> 00:18:38,154
+and an official affect you get the Anna
+
+294
+00:18:39,054 --> 00:18:43,113
+appearance name vibrant dark apparent
+and set that
+
+295
+00:18:44,013 --> 00:18:49,104
+on the effect you in order to achieve
+this look similarly
+
+296
+00:18:50,004 --> 00:18:55,088
+here's an example the vibrant might
+appearance same deal
+
+297
+00:18:55,088 --> 00:19:01,167
+an official affect you but this time
+using the vibrant light appearance you
+
+298
+00:19:02,067 --> 00:19:03,070
+set that on your fact few
+
+299
+00:19:03,097 --> 00:19:08,145
+and you get this new vibrant I apparent
+lots more
+
+300
+00:19:09,045 --> 00:19:12,110
+about an official affect you and
+vibrancy in tomorrow's talk
+
+301
+00:19:13,001 --> 00:19:17,002
+and now I will hand back to Patrick
+
+302
+00:19:17,002 --> 00:19:20,026
+who will talk to you in more depth about
+vibrancy
+
+303
+00:19:20,044 --> 00:19:24,090
+thank you very much accurate or thank
+you
+
+304
+00:19:24,009 --> 00:19:28,011
+okay so vibrancy
+
+305
+00:19:29,001 --> 00:19:32,095
+size ritual mentioned it's not just
+plain ol transversely what is this for
+
+306
+00:19:33,004 --> 00:19:34,022
+everything well
+
+307
+00:19:34,022 --> 00:19:37,093
+its a pretty important visual building
+block for lost time as you
+
+308
+00:19:37,093 --> 00:19:40,184
+in its makes its way into many different
+applications many different areas
+
+309
+00:19:41,084 --> 00:19:45,109
+are both in light and dark I'm most
+prominently in Notification Center but
+
+310
+00:19:46,009 --> 00:19:46,074
+also other
+
+311
+00:19:46,074 --> 00:19:49,151
+other places in in the US so what is it
+
+312
+00:19:50,051 --> 00:19:53,096
+what is this vibrant thing well or I'm
+gonna try
+
+313
+00:19:53,096 --> 00:19:56,113
+and bear with me here but when I try to
+be constructing breakdowns
+
+314
+00:19:57,013 --> 00:20:00,090
+explain conceptually what it is and was
+trying to do what its goal is
+
+315
+00:20:00,009 --> 00:20:02,082
+to help give you a framework for
+understanding what happens technically
+
+316
+00:20:03,063 --> 00:20:04,098
+with with your application
+
+317
+00:20:04,098 --> 00:20:07,150
+so vibrancy is advance planning
+
+318
+00:20:08,005 --> 00:20:12,072
+on dynamic or adaptive backgrounds so
+what's advanced about it well
+
+319
+00:20:13,017 --> 00:20:17,021
+why I'm about in the world's world's
+were to be
+
+320
+00:20:17,057 --> 00:20:21,062
+Cummings I I think we I'm gonna try to
+make the case for
+
+321
+00:20:21,062 --> 00:20:25,067
+with vibrancy to pose to can not only
+before but we can actually make it equal
+
+322
+00:20:25,067 --> 00:20:29,105
+25 in fact it's all about making
+
+323
+00:20:30,005 --> 00:20:33,006
+vibrancy can actually make the whole
+greater than the sum of the parts things
+
+324
+00:20:33,006 --> 00:20:33,081
+that you put into it
+
+325
+00:20:33,081 --> 00:20:35,128
+Mexican end up with something more
+interesting than the two things you put
+
+326
+00:20:36,028 --> 00:20:38,111
+into it so what two things my talking
+about well
+
+327
+00:20:39,011 --> 00:20:42,039
+it's really all about combining
+foreground and background elements most
+
+328
+00:20:42,039 --> 00:20:43,073
+%uh view our graphics
+
+329
+00:20:43,073 --> 00:20:46,139
+is all about combining some for gramm
+content onto a back on whether it's a
+
+330
+00:20:47,039 --> 00:20:47,111
+button
+
+331
+00:20:48,011 --> 00:20:51,016
+onto a window background whether to Pisa
+text onto
+
+332
+00:20:51,016 --> 00:20:55,080
+a button or window content background
+sober combining those individual pixels
+
+333
+00:20:55,008 --> 00:20:55,097
+in interesting ways
+
+334
+00:20:56,069 --> 00:20:59,154
+well so let's do that we have this
+beautiful puppy background
+
+335
+00:21:00,054 --> 00:21:03,111
+and let's do in traditionally let's we
+have here a gray
+
+336
+00:21:04,011 --> 00:21:07,048
+amid tone grey circle that we put on top
+at this background
+
+337
+00:21:07,048 --> 00:21:10,129
+and we can just put it on and now it's
+okay but it kinda simply blend well
+
+338
+00:21:11,029 --> 00:21:12,081
+it'll come sticks out in fact
+
+339
+00:21:12,081 --> 00:21:16,105
+in this image now traditionally the tool
+we would have at our disposal
+
+340
+00:21:17,005 --> 00:21:20,030
+to calm combiner ball ended in some
+interesting we would be
+
+341
+00:21:20,003 --> 00:21:24,051
+transparency or using al for opacity so
+here I faded
+
+342
+00:21:24,078 --> 00:21:27,157
+this gray circle by about 25 percent
+maybe a little less
+
+343
+00:21:28,057 --> 00:21:31,132
+I'm not a design I so
+
+344
+00:21:32,032 --> 00:21:35,037
+I but you'll notice there's a problem
+with this time
+
+345
+00:21:35,037 --> 00:21:38,062
+is it leaves a little bit I'm on the
+table in terms of
+
+346
+00:21:38,062 --> 00:21:40,154
+that the resulting in stocks because
+what happens with transparent is all you
+
+347
+00:21:41,054 --> 00:21:43,082
+doing to taking that form in the back
+room just
+
+348
+00:21:43,082 --> 00:21:46,083
+taking a fraction fractional midpoint
+between
+
+349
+00:21:46,092 --> 00:21:49,108
+in combining those what it really ends
+up being like is like as if you're
+
+350
+00:21:50,008 --> 00:21:52,069
+taking up for going on in punching a
+scream
+
+351
+00:21:52,069 --> 00:21:55,101
+like punch him doing the loopholes and
+letting the backgrounds through
+
+352
+00:21:56,001 --> 00:21:58,009
+with the and the fact that the
+background that the show through the
+
+353
+00:21:58,081 --> 00:21:58,176
+foreign element
+
+354
+00:21:59,076 --> 00:22:02,102
+into can can amor quién mardian he's in
+as you make it
+
+355
+00:22:03,002 --> 00:22:06,004
+more to opaque it has to come get darker
+and moodier
+
+356
+00:22:06,022 --> 00:22:08,109
+really doesn't that the back room
+doesn't get the combined in an
+
+357
+00:22:09,009 --> 00:22:10,073
+interesting way
+
+358
+00:22:10,073 --> 00:22:13,080
+well what if we did this different what
+if we and the other thing I want to
+
+359
+00:22:13,008 --> 00:22:14,036
+point out is that
+
+360
+00:22:15,008 --> 00:22:18,013
+we're not really doing anything with the
+collar information
+
+361
+00:22:18,013 --> 00:22:22,035
+form in the background weep when we
+combine in this way well what if we
+
+362
+00:22:22,035 --> 00:22:25,048
+to approach the problem differently what
+it look but if we actually took
+
+363
+00:22:25,048 --> 00:22:28,110
+the color information the foreground
+pixel in the background element
+
+364
+00:22:29,001 --> 00:22:33,027
+and combining an interesting way where
+we actually trying to preserve the color
+
+365
+00:22:33,036 --> 00:22:34,100
+turnout in the background
+
+366
+00:22:35,000 --> 00:22:38,079
+I am just using the actual for bank or
+as as a hint as to how much
+
+367
+00:22:38,079 --> 00:22:41,218
+a black color to preserving the generals
+intensity level
+
+368
+00:22:41,929 --> 00:22:45,004
+so that's want that's what I'm Water
+Mill Street in here in this slide
+
+369
+00:22:45,679 --> 00:22:49,320
+is actually a sort of a burn burn effect
+I a burn bland
+
+370
+00:22:49,032 --> 00:22:52,076
+I a four-round same circle same actual
+
+371
+00:22:52,076 --> 00:22:55,735
+gray value here I have changed nothing
+about the program elements still that
+
+372
+00:22:56,419 --> 00:22:57,250
+same
+
+373
+00:22:57,025 --> 00:23:00,046
+gray circle it's just not now I've
+combined with the background in a more
+
+374
+00:23:00,046 --> 00:23:01,144
+interesting where I'm using
+
+375
+00:23:02,044 --> 00:23:05,130
+the gray value to actually direct how
+much of the color information to keep
+
+376
+00:23:06,003 --> 00:23:07,025
+from the background
+
+377
+00:23:07,052 --> 00:23:10,141
+I'm as walls general I'm to melody
+
+378
+00:23:11,041 --> 00:23:14,042
+I what's nice about this is you really
+preserve the character the background as
+
+379
+00:23:14,051 --> 00:23:15,070
+you can see
+
+380
+00:23:15,007 --> 00:23:19,024
+and what also very nice about this is it
+kind of works really well
+
+381
+00:23:19,087 --> 00:23:23,106
+as things change network changing the
+lightness a a quite a bit
+
+382
+00:23:24,006 --> 00:23:27,008
+as we go between the end to the popping
+in the center but
+
+383
+00:23:27,008 --> 00:23:30,357
+get the sort of general contrast ratio
+and engine of book
+
+384
+00:23:30,429 --> 00:23:34,890
+that about composite is actually pretty
+preserve pretty well by that planned
+
+385
+00:23:34,089 --> 00:23:37,153
+and in fact this design is very
+resilient
+
+386
+00:23:38,053 --> 00:23:41,054
+to completely changing back on offer
+something different
+
+387
+00:23:41,054 --> 00:23:44,079
+so once again I from change nothing
+about the foreground element here I just
+
+388
+00:23:44,079 --> 00:23:44,085
+changed
+
+389
+00:23:45,039 --> 00:23:48,046
+now we have this lotus flower background
+I'm endure
+
+390
+00:23:48,046 --> 00:23:51,099
+you'll see that the actual are
+combinations roughly the same overall
+
+391
+00:23:51,099 --> 00:23:52,099
+character
+
+392
+00:23:52,099 --> 00:23:57,114
+as a result well so case that this this
+is a good illustration of the basic
+
+393
+00:23:58,014 --> 00:23:58,019
+setup
+
+394
+00:23:58,064 --> 00:24:02,070
+foreground and background blending using
+sorta for more advanced bland
+
+395
+00:24:02,007 --> 00:24:05,726
+but now how do we build this up into
+what we see you know its 10-year Sammy
+
+396
+00:24:06,419 --> 00:24:10,630
+today to get these are these transfers
+materials well now we need to combine
+
+397
+00:24:10,063 --> 00:24:13,078
+with a different kinda background so
+what's build up this
+
+398
+00:24:13,078 --> 00:24:16,079
+this light material here will first we
+just wanna put a nice
+
+399
+00:24:16,079 --> 00:24:19,156
+my flashlight employer August that's
+transparent
+
+400
+00:24:20,056 --> 00:24:24,415
+over the over the background to give us
+a nice or like substrate onto which the
+
+401
+00:24:24,919 --> 00:24:27,470
+drawer you I because we want it or you
+are directly entered
+
+402
+00:24:27,047 --> 00:24:30,052
+a picture of course I'm and then
+
+403
+00:24:30,097 --> 00:24:34,105
+all we need to do to make it better is
+just blurred as a little bit and
+
+404
+00:24:35,005 --> 00:24:38,007
+and to keep the overall cartoon out in
+the rough shape up your
+
+405
+00:24:38,025 --> 00:24:41,027
+a your your background but still
+preserve
+
+406
+00:24:41,045 --> 00:24:45,063
+but but gift giver a smoother rendering
+up the overall result
+
+407
+00:24:45,063 --> 00:24:48,084
+now you know as I went through and
+brought this up I've changed nothing
+
+408
+00:24:48,084 --> 00:24:48,176
+about the for colonel
+
+409
+00:24:49,076 --> 00:24:51,165
+all I've done is a change that
+background and it's that it's been
+
+410
+00:24:52,065 --> 00:24:53,079
+planning on to
+
+411
+00:24:53,079 --> 00:24:57,127
+and the nice thing about this is is it
+still preserves that same character as
+
+412
+00:24:58,027 --> 00:25:01,073
+as I'm going across in as the back room
+is changing
+
+413
+00:25:01,073 --> 00:25:05,128
+the overall composition really preserves
+its character and still live give you
+
+414
+00:25:06,028 --> 00:25:06,083
+some other
+
+415
+00:25:06,083 --> 00:25:09,182
+be the important color information I
+
+416
+00:25:09,929 --> 00:25:14,500
+up the above the back from that
+underneath and and let it shine through
+
+417
+00:25:14,005 --> 00:25:17,046
+so in fact are I'd like to argue
+
+418
+00:25:17,091 --> 00:25:20,124
+the whole can be greater than the sum
+parts for when you doing
+
+419
+00:25:21,024 --> 00:25:24,061
+when you combine using the right my mods
+
+420
+00:25:24,061 --> 00:25:27,128
+himself some tricky design problems I am
+
+421
+00:25:28,028 --> 00:25:31,075
+so what are these for movement fiber
+materials which we speak so
+
+422
+00:25:31,075 --> 00:25:34,173
+ritual enumerated some the area so we we
+have
+
+423
+00:25:35,073 --> 00:25:39,115
+built up a couple different styles are
+one of which can be seen in menus and
+
+424
+00:25:40,015 --> 00:25:41,023
+pop overs
+
+425
+00:25:41,023 --> 00:25:44,025
+then there's the general light
+appearance which is what you see in the
+
+426
+00:25:44,025 --> 00:25:46,027
+sidebars and source list
+
+427
+00:25:46,027 --> 00:25:50,686
+I'm then there's the translucent title
+bars at another fiber material
+
+428
+00:25:50,929 --> 00:25:54,950
+and of course the dark the dark
+appearance but you saw
+
+429
+00:25:54,095 --> 00:25:58,147
+Notification Center there are a couple
+of key
+
+430
+00:25:59,047 --> 00:26:02,138
+new provinces to be here is a bit what
+I'm mean by this is areas where
+
+431
+00:26:03,038 --> 00:26:06,061
+your application even without taking any
+steps you'll just automatically benefit
+
+432
+00:26:06,061 --> 00:26:08,380
+from this new compositions now
+
+433
+00:26:08,929 --> 00:26:12,270
+were using one of which of course a
+source list
+
+434
+00:26:12,027 --> 00:26:16,094
+I then there's the transmission title
+bar menus and popovers automatically get
+
+435
+00:26:16,094 --> 00:26:16,173
+this
+
+436
+00:26:17,073 --> 00:26:20,150
+as their as their background and of
+course
+
+437
+00:26:21,005 --> 00:26:24,914
+menu bar am status items minibars
+
+438
+00:26:25,409 --> 00:26:30,020
+so I am how do you use vibrancy in your
+app's
+
+439
+00:26:30,002 --> 00:26:33,391
+how to use it effectively well once
+again
+
+440
+00:26:33,409 --> 00:26:36,435
+I it's all about combining for ground
+with background
+
+441
+00:26:36,669 --> 00:26:40,669
+in an appropriate way improper an
+interesting way well
+
+442
+00:26:40,669 --> 00:26:45,090
+and a special effect few is the view
+that actually is performed the role of
+
+443
+00:26:45,009 --> 00:26:46,009
+this background the
+
+444
+00:26:46,009 --> 00:26:49,081
+thing that we've built up in the slide
+before with that white gambler and
+
+445
+00:26:49,081 --> 00:26:54,110
+translucency this provides a subsidy
+onto the canvas into which we're control
+
+446
+00:26:55,001 --> 00:26:58,073
+and it as and it's offered in light and
+dark
+
+447
+00:26:58,082 --> 00:27:02,097
+basic material flavors stuff for you
+bedtime ritual
+
+448
+00:27:02,097 --> 00:27:05,114
+bridge we demonstrated Birmingham
+
+449
+00:27:06,014 --> 00:27:09,098
+and the important thing about in
+official affect you and what it does to
+
+450
+00:27:09,098 --> 00:27:10,177
+your applications that takes care
+
+451
+00:27:11,077 --> 00:27:15,122
+are all love the stuff all of the steps
+needed to make sure that
+
+452
+00:27:16,022 --> 00:27:19,731
+as the content either underneath her
+window or underneath view
+
+453
+00:27:19,929 --> 00:27:23,780
+inside the window as it changes as you
+scroll things around as
+
+454
+00:27:23,078 --> 00:27:27,197
+you drag Windows run as your background
+changes it can automatically update
+
+455
+00:27:27,899 --> 00:27:30,951
+as the company's changes you don't have
+to worry about any that all that is
+
+456
+00:27:31,419 --> 00:27:34,490
+handled for you
+
+457
+00:27:34,049 --> 00:27:37,061
+so much movement and its appearance so
+
+458
+00:27:37,061 --> 00:27:40,122
+in this appearance is in this equation
+is the one that's taking the role of the
+
+459
+00:27:41,022 --> 00:27:41,119
+foreground element
+
+460
+00:27:42,019 --> 00:27:46,105
+is gonna its gonna drive both the
+selection for content as well as
+
+461
+00:27:47,005 --> 00:27:50,052
+drive some other blaming behavior so I
+
+462
+00:27:50,052 --> 00:27:55,083
+it's offered im to to appearance burns
+and his passion environment light
+
+463
+00:27:55,083 --> 00:27:59,108
+animus appearance name vibrant dark
+
+464
+00:28:00,008 --> 00:28:04,011
+and what its role in life is is to
+provide
+
+465
+00:28:04,011 --> 00:28:07,027
+a sort of a panoply of colors controls
+
+466
+00:28:07,027 --> 00:28:10,108
+and template image treatments that are
+appropriate and suitable
+
+467
+00:28:11,008 --> 00:28:14,106
+provide for anyone to pull within Visual
+Effects use and carbon surfaces
+
+468
+00:28:15,006 --> 00:28:19,010
+now this is important because as we have
+as you saw in the
+
+469
+00:28:19,001 --> 00:28:22,820
+I'm in the earlier section %uh vibrancy
+selecting the former No
+
+470
+00:28:22,919 --> 00:28:26,730
+now these the way things combined for
+different in traditionally so selecting
+
+471
+00:28:26,073 --> 00:28:29,262
+something appropriate for 500 is very
+critical
+
+472
+00:28:29,919 --> 00:28:33,130
+and so we need alternate sets up these
+design values
+
+473
+00:28:33,013 --> 00:28:36,079
+alternate versions this for government
+to get the right result
+
+474
+00:28:36,079 --> 00:28:39,158
+on these firemen services so
+
+475
+00:28:40,058 --> 00:28:43,082
+as I said its it's really the in this
+appearance can really be fought over the
+
+476
+00:28:43,082 --> 00:28:46,121
+thing at that helps elect unidentified
+your for content source makes it
+
+477
+00:28:47,021 --> 00:28:48,107
+appropriate in locked in for that
+
+478
+00:28:49,007 --> 00:28:52,029
+for for firing for the material
+
+479
+00:28:52,029 --> 00:28:56,158
+and once it's in effect then apk it can
+automatically
+
+480
+00:28:56,419 --> 00:28:59,790
+pick up the appropriate colours pick up
+the appropriate template remains
+
+481
+00:28:59,079 --> 00:29:01,122
+pick them all up and do with the and
+pick up the right blend months
+
+482
+00:29:02,022 --> 00:29:02,981
+especially
+
+483
+00:29:03,179 --> 00:29:09,240
+I for appropriate for the for the view
+and them to your rendering onto
+
+484
+00:29:09,024 --> 00:29:13,112
+okay so how do you do this well it's
+with such a try to do a downer
+
+485
+00:29:14,012 --> 00:29:19,038
+exciting
+
+486
+00:29:19,038 --> 00:29:22,054
+one
+
+487
+00:29:22,054 --> 00:29:25,147
+okay so I am so what we're gonna do here
+
+488
+00:29:26,047 --> 00:29:30,256
+is I we have a very very very very
+simple application
+
+489
+00:29:30,679 --> 00:29:33,700
+I that's basically just a an image
+editor
+
+490
+00:29:33,007 --> 00:29:36,039
+I'm image editor with some adjustment
+sliders here and what I'm gonna try to
+
+491
+00:29:37,002 --> 00:29:39,020
+show you is how simple it is to just
+
+492
+00:29:39,002 --> 00:29:43,004
+and some vibrancy into your UI
+
+493
+00:29:43,022 --> 00:29:46,094
+how little will ever take so all we all
+we're gonna do is we're gonna but we're
+
+494
+00:29:46,094 --> 00:29:49,073
+going to try to do is win tried to give
+visual effect few
+
+495
+00:29:49,919 --> 00:29:53,993
+and put it inside that little inspector
+in rehearse the controls inside a bit
+
+496
+00:29:54,659 --> 00:29:57,740
+to give it a vibrant vibrant parents
+
+497
+00:29:57,074 --> 00:30:00,081
+so let me go ahead and do that so
+
+498
+00:30:00,081 --> 00:30:03,113
+the first thing I'm gonna do years I'm
+going to
+
+499
+00:30:04,013 --> 00:30:08,096
+create a visual effect few an
+initializer with the inspectors frame
+
+500
+00:30:08,096 --> 00:30:13,102
+and then I'm going to said its
+appearance to be the vibrant dark pants
+
+501
+00:30:14,056 --> 00:30:17,133
+now next and then the only other thing I
+really need to do is I need to re host
+
+502
+00:30:18,033 --> 00:30:18,105
+the
+
+503
+00:30:19,005 --> 00:30:23,059
+I am take out the existing content the
+controls under the existing content view
+
+504
+00:30:23,059 --> 00:30:26,104
+and put them into I'm this new affects
+you
+
+505
+00:30:27,004 --> 00:30:30,006
+and then place it has the content view
+the window
+
+506
+00:30:30,024 --> 00:30:33,075
+so that's all I'm doing here this is a
+really directly relevant to the demo but
+
+507
+00:30:33,075 --> 00:30:34,156
+I just for here for
+
+508
+00:30:35,056 --> 00:30:38,059
+for on steam for disclosure here
+
+509
+00:30:38,086 --> 00:30:42,109
+so I key thing to see here's the
+
+510
+00:30:43,009 --> 00:30:47,318
+parents being put on here and you see
+
+511
+00:30:47,399 --> 00:30:52,520
+presto Chango I have not only some nice
+dark fiber material but I also have
+
+512
+00:30:52,052 --> 00:30:56,069
+I you know alternate slider Ultima
+controls after automatically selected
+
+513
+00:30:56,069 --> 00:30:59,085
+different artwork that's appropriate for
+rival rendering specifically for the
+
+514
+00:30:59,085 --> 00:31:00,152
+dark material
+
+515
+00:31:01,052 --> 00:31:05,099
+the text colors have inverted and
+everything is is updating dynamically
+
+516
+00:31:05,099 --> 00:31:09,104
+now all it took was deploying that
+visual affect you
+
+517
+00:31:10,049 --> 00:31:17,049
+okay so back to the home
+
+518
+00:31:19,004 --> 00:31:23,383
+okay and out that was a very very
+cursory demonstration for a lot more
+
+519
+00:31:23,419 --> 00:31:24,280
+details
+
+520
+00:31:24,028 --> 00:31:27,035
+about all the ins and outs official
+affect you
+
+521
+00:31:27,098 --> 00:31:30,184
+and some other a summer the more
+advanced techniques abusing them to
+
+522
+00:31:31,084 --> 00:31:31,127
+build
+
+523
+00:31:32,027 --> 00:31:35,039
+somebody somebody bill you I someone to
+some other things that we have in our
+
+524
+00:31:35,039 --> 00:31:35,048
+system
+
+525
+00:31:36,029 --> 00:31:40,032
+please go to the to the in-depth talk
+our tomorrow adopting advanced features
+
+526
+00:31:40,059 --> 00:31:41,073
+the new why
+
+527
+00:31:41,073 --> 00:31:44,088
+you know is tenuous amity
+
+528
+00:31:44,088 --> 00:31:47,187
+okay so let's move on
+
+529
+00:31:48,087 --> 00:31:51,156
+to fonts colors an artwork these are the
+elements that are
+
+530
+00:31:52,056 --> 00:31:55,138
+typically things that you you you you as
+an app developer my to make some
+
+531
+00:31:56,038 --> 00:32:01,087
+specific design choices and provide
+material for
+
+532
+00:32:01,429 --> 00:32:04,570
+so was talk of Arts first
+
+533
+00:32:04,057 --> 00:32:07,076
+so what's new and fun but swell
+
+534
+00:32:07,076 --> 00:32:10,154
+about the system fun that's not that big
+it always
+
+535
+00:32:11,054 --> 00:32:14,137
+it's not a big change at all I actually
+it is so
+
+536
+00:32:15,037 --> 00:32:18,816
+this is a here's an illustration of the
+the Mavericks many borrowers Slusser
+
+537
+00:32:19,149 --> 00:32:21,140
+grounding
+
+538
+00:32:21,014 --> 00:32:24,037
+and here's what it looks like today with
+homework anaya
+
+539
+00:32:24,037 --> 00:32:27,059
+I it's actually a pretty significant
+difference
+
+540
+00:32:27,059 --> 00:32:30,148
+it can be seen even more dramatically if
+you compare the two side by side
+
+541
+00:32:31,048 --> 00:32:35,127
+are you notice it's a it's quite the
+sizing kirker six old different but in
+
+542
+00:32:36,027 --> 00:32:37,051
+general it is
+
+543
+00:32:37,051 --> 00:32:42,120
+a lot crisper typographical Ian cervical
+a cleaner layout
+
+544
+00:32:43,002 --> 00:32:48,019
+so let's talk about this new system fun
+
+545
+00:32:48,037 --> 00:32:51,126
+so it's all american I am but is not
+
+546
+00:32:52,026 --> 00:32:55,075
+just plain old your mothers however can
+I it is especially
+
+547
+00:32:55,075 --> 00:33:00,078
+optimized version have an economy that
+has been optimized for lost time
+
+548
+00:33:01,005 --> 00:33:04,050
+and what do I mean by optimized well
+anytime you put
+
+549
+00:33:04,005 --> 00:33:08,043
+a font for corrupting system I wanted a
+pic to key two things to balance
+
+550
+00:33:08,088 --> 00:33:12,094
+are I aesthetics and layout
+compatibility
+
+551
+00:33:12,094 --> 00:33:15,105
+now for first editor all we were
+concerned with we would just be
+
+552
+00:33:16,005 --> 00:33:19,062
+render the font exactly how the type
+designer originally envisioned it
+
+553
+00:33:19,062 --> 00:33:22,331
+try to do our best job in rendering
+remembering the individual letter forms
+
+554
+00:33:22,889 --> 00:33:26,980
+and leave it at that what the problem is
+a for sure switching system fight this
+
+555
+00:33:26,098 --> 00:33:29,146
+means we're updating the typography in
+applications that haven't been modified
+
+556
+00:33:30,046 --> 00:33:31,108
+in an even be aware of it
+
+557
+00:33:32,008 --> 00:33:35,062
+so we have to think about things were
+like the layout may change because
+
+558
+00:33:35,062 --> 00:33:38,351
+optimal response have different size
+characteristics
+
+559
+00:33:38,909 --> 00:33:42,790
+so the version Republican know that
+we've deployed has been specifically to
+
+560
+00:33:42,079 --> 00:33:45,130
+to balance a stray off to try to strike
+a good balance there to make sure that
+
+561
+00:33:46,003 --> 00:33:47,027
+we still get the aesthetic
+
+562
+00:33:47,054 --> 00:33:51,055
+when they were really looking forward to
+scream typography but not at the cost of
+
+563
+00:33:51,055 --> 00:33:54,070
+happy occasion compatibility
+
+564
+00:33:54,007 --> 00:33:57,015
+let me go into that with a little more
+detail explaining
+
+565
+00:33:57,078 --> 00:34:00,967
+so here's here's the an emulation ever
+find a ride home
+
+566
+00:34:01,669 --> 00:34:05,320
+ap bio menu item on the that you might
+see on the menu bar
+
+567
+00:34:05,032 --> 00:34:08,321
+and this is happy to introduce the
+ground
+
+568
+00:34:08,609 --> 00:34:12,560
+and you can see here sorta
+approximations are the
+
+569
+00:34:12,056 --> 00:34:15,062
+the intercooler spacing here and now as
+a switch this
+
+570
+00:34:16,016 --> 00:34:19,095
+to american know your there's some
+interesting things going on here
+
+571
+00:34:19,095 --> 00:34:22,112
+because you must be over offering
+shorter
+
+572
+00:34:23,012 --> 00:34:26,021
+but actually if you if you look
+carefully
+
+573
+00:34:26,129 --> 00:34:29,640
+some other letters actually got bigger
+summon them got shorter so it's not a
+
+574
+00:34:29,064 --> 00:34:32,102
+straightforward thing saying oh yeah how
+america's everything's risking a truck
+
+575
+00:34:33,002 --> 00:34:33,054
+by Sir
+
+576
+00:34:33,054 --> 00:34:36,163
+finish not that much more subtle than
+that can become too dependent some
+
+577
+00:34:36,649 --> 00:34:38,000
+things are getting wider
+
+578
+00:34:38,000 --> 00:34:40,041
+some things are getting shorter
+something's getting more consistent
+
+579
+00:34:40,041 --> 00:34:42,810
+where they were inconsistent with the
+ground between the king
+
+580
+00:34:43,179 --> 00:34:46,278
+capital letter sizes and in the lower
+case letter sizes
+
+581
+00:34:47,169 --> 00:34:50,211
+so it's it's a complicated equation so
+that's why it was important
+
+582
+00:34:50,589 --> 00:34:53,648
+to 22 optimizes metrics appropriately
+
+583
+00:34:54,179 --> 00:34:58,200
+so that they they've the so that they
+solve this compatibility problem
+
+584
+00:34:58,002 --> 00:35:00,085
+you somewhere here you can see them to
+on top of each other in consumer
+
+585
+00:35:01,003 --> 00:35:02,062
+dramatically
+
+586
+00:35:02,089 --> 00:35:05,480
+this difference is you bf in particular
+is actually shorter
+
+587
+00:35:05,048 --> 00:35:08,073
+mister grimes wider I'm sorry its
+
+588
+00:35:08,073 --> 00:35:11,092
+finner in the serb-run in wider im
+
+589
+00:35:11,092 --> 00:35:14,175
+in Hoboken I but almost all the other
+letter forms except maybe the d
+
+590
+00:35:15,075 --> 00:35:18,104
+are actually I considerably shorter
+
+591
+00:35:19,004 --> 00:35:25,533
+so solely are compatible that's a that's
+a big big topic is an important topic
+
+592
+00:35:25,569 --> 00:35:29,130
+and what do we do about it
+
+593
+00:35:29,013 --> 00:35:33,047
+well for for for unmodified applications
+
+594
+00:35:33,047 --> 00:35:36,101
+one technique that we've applied use
+
+595
+00:35:37,001 --> 00:35:41,068
+to apply to wear compression if there's
+a danger of the text ring
+
+596
+00:35:41,068 --> 00:35:44,687
+clipping given existing bouncer for
+example if you have a text field
+
+597
+00:35:45,299 --> 00:35:48,700
+size just so to just fit just perfectly
+I'm
+
+598
+00:35:48,007 --> 00:35:51,016
+on I'm maverick's you know there's a
+chance that some that that same
+
+599
+00:35:52,006 --> 00:35:55,050
+same text field I've if no measures were
+taking would
+
+600
+00:35:56,004 --> 00:35:59,803
+would would be would get clipped are
+with the new fart
+
+601
+00:35:59,839 --> 00:36:03,490
+because some strange choice in there was
+causing the the overall layout to be
+
+602
+00:36:03,049 --> 00:36:04,051
+longer
+
+603
+00:36:04,069 --> 00:36:07,076
+one those circumstances we're just gonna
+imply a bit over interred with
+
+604
+00:36:08,039 --> 00:36:08,128
+compression
+
+605
+00:36:09,028 --> 00:36:12,092
+to try to make sure that it fits so you
+with see all the information and there's
+
+606
+00:36:12,092 --> 00:36:15,491
+no information loss
+
+607
+00:36:16,319 --> 00:36:20,490
+and as I'm and this is active for for
+abs built against Temple in an earlier
+
+608
+00:36:20,049 --> 00:36:22,120
+only so this is an important takeaway
+here because
+
+609
+00:36:23,002 --> 00:36:26,013
+if this this compression medication that
+we do
+
+610
+00:36:26,031 --> 00:36:29,044
+does not apply if your app is targeted
+and built against the
+
+611
+00:36:29,044 --> 00:36:32,058
+1010 STK I'm
+
+612
+00:36:32,058 --> 00:36:35,106
+so this so what does this mean this
+means that you can you don't have to
+
+613
+00:36:36,006 --> 00:36:38,055
+worry about your existing applications
+
+614
+00:36:38,109 --> 00:36:41,930
+having problems with your users but when
+you going forward we encourage you to
+
+615
+00:36:41,093 --> 00:36:42,131
+really look carefully
+
+616
+00:36:43,031 --> 00:36:47,540
+at your at your text in your application
+to make sure that you're using on ole
+
+617
+00:36:47,819 --> 00:36:48,690
+alter that your
+
+618
+00:36:48,069 --> 00:36:51,122
+really you sort of comparing testing
+sure that that the with serve all your
+
+619
+00:36:52,022 --> 00:36:55,094
+text elements is is optimized according
+
+620
+00:36:55,094 --> 00:36:59,138
+and also want to mention that this I be
+this compression technique that we apply
+
+621
+00:37:00,038 --> 00:37:03,207
+is not a silver bullet by any means I
+
+622
+00:37:03,549 --> 00:37:08,080
+in one shouldn't think of it as the
+secure all and the reason is because
+
+623
+00:37:08,008 --> 00:37:11,009
+wear compression is not come without a
+significant cost which is
+
+624
+00:37:11,018 --> 00:37:14,069
+that it can really effect legibility I
+
+625
+00:37:14,069 --> 00:37:18,123
+and that's especially true I'm 1x I'm on
+retina displays where there's very few
+
+626
+00:37:19,023 --> 00:37:20,031
+pixels to work with
+
+627
+00:37:20,031 --> 00:37:22,770
+for every for every cliff in every
+pixels doing a heckuva lot of work and
+
+628
+00:37:23,049 --> 00:37:24,540
+if you're compressing things together
+
+629
+00:37:24,054 --> 00:37:29,123
+really making suffering terms the
+information much ability
+
+630
+00:37:29,609 --> 00:37:32,970
+so how do you use this new system font
+you make sure your app
+
+631
+00:37:32,097 --> 00:37:35,171
+use using the appropriate type
+
+632
+00:37:36,071 --> 00:37:39,145
+well thankfully we have a whole bunch of
+
+633
+00:37:40,045 --> 00:37:44,046
+system fun selectors to choose from and
+that's what we encourage you to use to
+
+634
+00:37:44,046 --> 00:37:45,108
+make sure that you're using the right
+
+635
+00:37:46,008 --> 00:37:49,537
+the right thing so if you're if you're
+doing this in in first builder
+
+636
+00:37:49,609 --> 00:37:53,430
+rest assure that you know if you as long
+as you stick with the standard font
+
+637
+00:37:53,043 --> 00:37:53,932
+elections in the
+
+638
+00:37:54,319 --> 00:37:57,319
+far pop-ups shopping for school you
+should be okay
+
+639
+00:37:57,319 --> 00:38:00,260
+otherwise we encourage you to use the
+system fonts workers are the ones that
+
+640
+00:38:00,026 --> 00:38:00,120
+aren't as font
+
+641
+00:38:01,002 --> 00:38:04,086
+an example there's many more but I'm
+just picking a few to highlight here
+
+642
+00:38:05,004 --> 00:38:09,323
+I response system fantasize and it's fun
+polled system fantasize
+
+643
+00:38:09,359 --> 00:38:12,530
+and a new one actually label fantasize
+actually that's not
+
+644
+00:38:12,053 --> 00:38:16,087
+I don't think that's necessarily new I'm
+is another label from coming out so
+
+645
+00:38:16,087 --> 00:38:19,175
+opener so all of the youth selectors
+
+646
+00:38:20,075 --> 00:38:23,154
+won't make sure that the appropriate UI
+font on its optimized
+
+647
+00:38:24,054 --> 00:38:28,106
+has been selecting is going to be used
+at the proper for you
+
+648
+00:38:29,006 --> 00:38:32,027
+important takeaway here if you remember
+nothing else
+
+649
+00:38:32,027 --> 00:38:35,866
+about the fun sections talk is please do
+not explicitly set your font
+
+650
+00:38:36,109 --> 00:38:39,170
+U-turn code or an IB hope Erica know
+your
+
+651
+00:38:39,017 --> 00:38:43,041
+you know as a literal string cuz that
+that's the actual document content fart
+
+652
+00:38:43,041 --> 00:38:46,076
+that's been not optimized version you'll
+get very unexpected results
+
+653
+00:38:46,076 --> 00:38:50,091
+and it make your application less
+compatible going forward as we continue
+
+654
+00:38:50,091 --> 00:38:50,100
+to improve
+
+655
+00:38:51,081 --> 00:38:56,106
+upon the typography a first time
+
+656
+00:38:57,006 --> 00:39:02,015
+okay so colors so colors are in often
+underappreciated element
+
+657
+00:39:02,069 --> 00:39:06,950
+I'm a few why I which is a shame because
+if you actually look at most windows on
+
+658
+00:39:06,095 --> 00:39:08,154
+most applications about 90 percent the
+pixels
+
+659
+00:39:09,054 --> 00:39:12,147
+if that you know it are actually
+composed of color feel so they're
+
+660
+00:39:13,047 --> 00:39:16,051
+actually pretty important part of
+building your you why
+
+661
+00:39:16,087 --> 00:39:19,095
+and it's especially important on this
+day of a
+
+662
+00:39:19,095 --> 00:39:23,004
+multiple appearances and different I'm
+in different sections of your
+
+663
+00:39:23,859 --> 00:39:26,030
+applications
+
+664
+00:39:26,003 --> 00:39:29,006
+so we have system colors them a
+
+665
+00:39:29,033 --> 00:39:34,048
+I'm I'm Inc in cocoa and these are what
+we urge you to gravitate towards
+
+666
+00:39:34,048 --> 00:39:38,100
+an by system cause I mean two things I
+mean literally the concourse provided by
+
+667
+00:39:39,000 --> 00:39:39,085
+the system
+
+668
+00:39:39,085 --> 00:39:42,128
+in terms of their color selectors an ass
+coloriage but I'm also
+
+669
+00:39:43,028 --> 00:39:47,050
+would like to emphasize that shouldn't
+have colors as a system of colors not
+
+670
+00:39:47,005 --> 00:39:49,022
+just as a set of numbers that you might
+pick up
+
+671
+00:39:49,067 --> 00:39:53,069
+you know from a designer like I'll RGB
+128 142
+
+672
+00:39:53,069 --> 00:39:56,678
+136 no victim is a system as in like
+
+673
+00:39:57,299 --> 00:40:00,990
+what is the semantic color that would be
+appropriate to use here
+
+674
+00:40:00,099 --> 00:40:03,140
+this is where system called can really
+help
+
+675
+00:40:04,004 --> 00:40:07,049
+because many have the standard colors
+like for example in his color control
+
+676
+00:40:07,085 --> 00:40:07,172
+text color
+
+677
+00:40:08,072 --> 00:40:13,090
+in a scholar I I'm secondary select to
+control color and
+
+678
+00:40:13,009 --> 00:40:16,066
+you as a whole host of others have been
+adapted have been optimized
+
+679
+00:40:17,047 --> 00:40:21,068
+are to make sure that they work in all
+areas and under all appearances
+
+680
+00:40:21,068 --> 00:40:24,141
+in your eye and they may also change in
+the future so it's just a good way to
+
+681
+00:40:25,041 --> 00:40:25,129
+bulletproof your
+
+682
+00:40:26,029 --> 00:40:31,038
+yourself I'm for textual elements
+
+683
+00:40:31,299 --> 00:40:34,950
+a in your you why we also I'm
+
+684
+00:40:34,095 --> 00:40:38,734
+would like to encourage you thinking of
+lineout sure you I'm serving information
+
+685
+00:40:39,589 --> 00:40:40,080
+heart
+
+686
+00:40:40,008 --> 00:40:43,024
+hierarchy and by that I mean
+
+687
+00:40:43,024 --> 00:40:47,108
+view my have some sort of primary sort
+of information elements are labels many
+
+688
+00:40:48,008 --> 00:40:51,767
+my some secondary supporting information
+you'll see this pattern and in many in
+
+689
+00:40:51,839 --> 00:40:53,480
+many different applications
+
+690
+00:40:53,048 --> 00:40:56,123
+in Yosemite and we've introduced some
+new
+
+691
+00:40:57,023 --> 00:41:00,041
+color selector specifically to help with
+this
+
+692
+00:41:00,041 --> 00:41:05,068
+the two coach likes our label color and
+secondary label color
+
+693
+00:41:05,068 --> 00:41:07,687
+and the nice thing about these is
+they've been specifically designed to
+
+694
+00:41:08,299 --> 00:41:12,305
+work well in almost any context that you
+might put them on with the menus which
+
+695
+00:41:12,359 --> 00:41:14,650
+have the like five min appearance
+regular Windows
+
+696
+00:41:14,065 --> 00:41:17,069
+Notification Center in its stark
+
+697
+00:41:17,069 --> 00:41:20,218
+I you why no matter what you do
+
+698
+00:41:20,839 --> 00:41:24,490
+it'll look correct
+
+699
+00:41:24,049 --> 00:41:28,101
+so what about control text a button text
+or other things like that
+
+700
+00:41:29,001 --> 00:41:33,022
+well the good news there is the control
+text
+
+701
+00:41:33,022 --> 00:41:36,117
+koko's gonna make sure that control text
+automatically adapts
+
+702
+00:41:37,017 --> 00:41:40,031
+to any particular control stay
+
+703
+00:41:40,031 --> 00:41:44,042
+that your your control me find itself
+and so actually
+
+704
+00:41:44,042 --> 00:41:48,065
+I I would encourage you to if you must
+you have a really compelling overriding
+
+705
+00:41:48,065 --> 00:41:49,754
+reason to do so
+
+706
+00:41:50,339 --> 00:41:55,620
+please let pic kit provide the coloring
+for any textual elements on your buttons
+
+707
+00:41:55,062 --> 00:41:58,145
+and and an image look at images in the
+second because there really are such a
+
+708
+00:41:59,045 --> 00:42:00,164
+wide range of
+
+709
+00:42:00,569 --> 00:42:05,930
+interaction in control States and our
+designers over carefully selected colors
+
+710
+00:42:05,093 --> 00:42:08,102
+and styling for each one of these across
+all the different appearances
+
+711
+00:42:09,083 --> 00:42:12,104
+and doing so well this will let the the
+kid
+
+712
+00:42:13,004 --> 00:42:16,073
+provide optimal parents including
+adapting
+
+713
+00:42:16,073 --> 00:42:19,152
+to the vibrance appearances he richard
+nixon example of what
+
+714
+00:42:20,052 --> 00:42:23,085
+label color and secondary label color
+look like across
+
+715
+00:42:23,085 --> 00:42:26,099
+the light and the dark 51 appearances
+
+716
+00:42:26,099 --> 00:42:29,137
+you can see the pics or preserve their
+design intent there being priming
+
+717
+00:42:30,037 --> 00:42:30,099
+secondary
+
+718
+00:42:30,099 --> 00:42:33,131
+they're both vibrant the site but
+secondary one is a little bit more so
+
+719
+00:42:34,031 --> 00:42:34,790
+that is
+
+720
+00:42:35,069 --> 00:42:38,040
+its leading a little more the background
+through it a little more transistors
+
+721
+00:42:38,004 --> 00:42:40,008
+pick up a little more color the
+background
+
+722
+00:42:40,044 --> 00:42:43,073
+I'm but it'll preserve it'll be afraid
+design choices I
+
+723
+00:42:43,073 --> 00:42:46,128
+on any of these appearances including
+the been on Bourbon appearance
+
+724
+00:42:47,028 --> 00:42:51,837
+regular our column
+
+725
+00:42:52,089 --> 00:42:55,450
+okay so last time here
+
+726
+00:42:55,045 --> 00:42:59,062
+in the section artwork so our workers is
+
+727
+00:42:59,062 --> 00:43:02,078
+only other important elements that you
+might want to integrate
+
+728
+00:43:02,078 --> 00:43:05,140
+into your application and for this word
+
+729
+00:43:06,004 --> 00:43:09,005
+on the thing I wanna mainly highlight is
+
+730
+00:43:09,005 --> 00:43:12,074
+you template images
+
+731
+00:43:12,569 --> 00:43:16,760
+I template images can be an excellent
+way to get maximum flexibility
+
+732
+00:43:16,076 --> 00:43:19,147
+out of your artwork and have it be
+resilient across
+
+733
+00:43:20,047 --> 00:43:23,121
+wide range of you I scenarios in your
+application
+
+734
+00:43:24,021 --> 00:43:27,072
+sorter template images a brief review
+temple images are
+
+735
+00:43:27,072 --> 00:43:30,191
+image resources were the image content
+itself
+
+736
+00:43:30,839 --> 00:43:34,916
+is per just providing the shape up
+off-the-cuff the control of the element
+
+737
+00:43:35,609 --> 00:43:36,650
+that you want to depict
+
+738
+00:43:36,065 --> 00:43:39,734
+it's providing new color information
+it's something you can put color in
+
+739
+00:43:40,319 --> 00:43:42,890
+there but it's going to get ignored
+because it's basically just the shape
+
+740
+00:43:42,089 --> 00:43:44,094
+that it better than is critical
+
+741
+00:43:44,094 --> 00:43:48,166
+and then what happens is makes it
+possible for after to transform it
+
+742
+00:43:49,066 --> 00:43:52,515
+with a context-specific apparently can
+take that shape in a can render and
+
+743
+00:43:53,109 --> 00:43:55,780
+translucent gray one it's disabled or
+commander
+
+744
+00:43:55,078 --> 00:43:59,126
+bright blue one selected and you can me
+to make always interested in style it
+
+745
+00:44:00,026 --> 00:44:03,099
+in a way that's appropriate for specific
+apparent am for specific interaction
+
+746
+00:44:03,099 --> 00:44:08,191
+state
+
+747
+00:44:09,091 --> 00:44:14,115
+okay app compatibility
+
+748
+00:44:15,015 --> 00:44:18,184
+so macros 10 yosemite
+
+749
+00:44:18,319 --> 00:44:21,373
+does bring some big changes to your
+app's look and feel
+
+750
+00:44:21,859 --> 00:44:25,700
+and even perhaps that really haven't
+made any changes %uh the visual
+
+751
+00:44:25,007 --> 00:44:26,043
+differences can be quite
+
+752
+00:44:27,006 --> 00:44:31,305
+quite significant this is dictionary
+hearing even those is a pretty
+
+753
+00:44:31,359 --> 00:44:32,376
+straightforward application
+
+754
+00:44:32,529 --> 00:44:37,040
+you can see the I the differences are
+are notable
+
+755
+00:44:37,004 --> 00:44:42,263
+both in terms of the generous tax as
+well as the layout I some the elements
+
+756
+00:44:42,299 --> 00:44:46,940
+well so what does this mean for your for
+your app
+
+757
+00:44:46,094 --> 00:44:49,127
+and how to think about having a wrap or
+
+758
+00:44:50,027 --> 00:44:53,096
+on Yosemite well
+
+759
+00:44:53,339 --> 00:44:56,360
+first and foremost we really like to
+encourage you to
+
+760
+00:44:56,549 --> 00:45:00,310
+make your app is awesome as it can be on
+your salmon in take advantage of as many
+
+761
+00:45:00,031 --> 00:45:00,096
+of these
+
+762
+00:45:00,096 --> 00:45:04,149
+new you why experiences that we've
+provided the building blocks for
+
+763
+00:45:05,049 --> 00:45:08,418
+I including the including definitely me
+too
+
+764
+00:45:08,859 --> 00:45:14,970
+visual effects %um vibrancy but what
+about deploying a maverick's
+
+765
+00:45:14,097 --> 00:45:16,191
+you know it's quite legitimate to meet
+him to want to have an application that
+
+766
+00:45:17,091 --> 00:45:17,169
+works both
+
+767
+00:45:18,069 --> 00:45:22,164
+on maverick's in and in on your family
+are so that you can have
+
+768
+00:45:23,064 --> 00:45:26,127
+per support all other customers
+
+769
+00:45:27,027 --> 00:45:31,101
+well having it both ways can be quite
+challenging
+
+770
+00:45:32,001 --> 00:45:35,790
+given the changes that we've made into
+designer
+
+771
+00:45:35,799 --> 00:45:38,880
+a fourth time as a case study
+
+772
+00:45:39,609 --> 00:45:43,750
+I I'd like to show Xcode here now this
+is my Xcode running on
+
+773
+00:45:43,075 --> 00:45:48,099
+I maverick's and noticed the up the tab
+which was carefully designed to blend in
+
+774
+00:45:48,099 --> 00:45:50,928
+very well with the title bar mixer well
+here we go
+
+775
+00:45:51,819 --> 00:45:56,000
+in yosemite and are changed the time or
+material and suddenly everything doesn't
+
+776
+00:45:56,000 --> 00:45:57,043
+match
+
+777
+00:45:57,043 --> 00:46:01,047
+well this is Nick illustration of the
+challenges that napkin face if they have
+
+778
+00:46:01,047 --> 00:46:02,066
+to support both
+
+779
+00:46:02,066 --> 00:46:05,165
+the old old you I language as well as
+the new
+
+780
+00:46:06,065 --> 00:46:10,074
+well we all know this had a happy ending
+because this is in fact what the excuse
+
+781
+00:46:10,074 --> 00:46:11,923
+that you're living with right now
+
+782
+00:46:12,589 --> 00:46:17,290
+I looks like on you so many because
+Xcode actually did make an optimization
+
+783
+00:46:17,029 --> 00:46:18,828
+to make sure they look perfect for
+
+784
+00:46:19,089 --> 00:46:24,330
+I'm your semi release
+
+785
+00:46:24,033 --> 00:46:27,045
+so what techniques can you use to
+
+786
+00:46:27,045 --> 00:46:30,050
+set yourself up for success
+
+787
+00:46:30,005 --> 00:46:33,304
+I in the face have these big design
+changes
+
+788
+00:46:33,799 --> 00:46:37,330
+well first and foremost we encourage you
+to stick with the system what we mean by
+
+789
+00:46:37,033 --> 00:46:37,117
+that is
+
+790
+00:46:38,017 --> 00:46:41,206
+where possible I miss you have an
+overriding and
+
+791
+00:46:41,359 --> 00:46:45,330
+reason to do so I stick with standard
+control stick with
+
+792
+00:46:45,033 --> 00:46:48,046
+template images stick with the system
+colors
+
+793
+00:46:48,046 --> 00:46:53,068
+I stick with system fonts all those
+things will be automatically managed and
+
+794
+00:46:53,068 --> 00:46:56,135
+after appropriately by after across both
+platforms
+
+795
+00:46:57,035 --> 00:47:00,063
+and will look reasonable like for
+example the entire title bar all the
+
+796
+00:47:00,063 --> 00:47:00,117
+control
+
+797
+00:47:01,017 --> 00:47:04,064
+all the all the fun selectors all the
+colors to automatically resolve
+
+798
+00:47:04,064 --> 00:47:05,113
+themselves to the proper thing
+
+799
+00:47:06,013 --> 00:47:10,038
+on each platform after there there are
+many cases where that may not be
+
+800
+00:47:10,038 --> 00:47:10,126
+sufficient
+
+801
+00:47:11,026 --> 00:47:14,067
+and we actually do have to write
+different code like for example
+
+802
+00:47:14,067 --> 00:47:17,073
+the selected PAP change in Xcode
+
+803
+00:47:18,027 --> 00:47:21,042
+well you can also to use one-time checks
+to
+
+804
+00:47:21,042 --> 00:47:26,074
+to tailor your code in resources for
+each design
+
+805
+00:47:26,074 --> 00:47:29,943
+so let's go through two techniques there
+are more but these are two primary ones
+
+806
+00:47:30,609 --> 00:47:31,420
+I wanna to
+
+807
+00:47:31,042 --> 00:47:34,140
+to show you for what you might be able
+to do well the first thing could be a
+
+808
+00:47:35,004 --> 00:47:35,081
+simple check
+
+809
+00:47:36,017 --> 00:47:39,166
+so let's say you have an application
+it's actually go deployment target of
+
+810
+00:47:39,319 --> 00:47:39,930
+$10.9
+
+811
+00:47:39,093 --> 00:47:42,138
+and you wanna you wanna potential
+introduce some pirate you are but you
+
+812
+00:47:43,038 --> 00:47:45,437
+know you can't just directly reference
+that stuff
+
+813
+00:47:45,779 --> 00:47:48,806
+I'm you know I'm tonight because it
+doesn't exist well
+
+814
+00:47:49,049 --> 00:47:52,410
+what you can do is you can do using that
+with the
+
+815
+00:47:52,041 --> 00:47:56,046
+stanwyck when can be whoever are Susie
+redeployment targets at the $10.9 you
+
+816
+00:47:56,046 --> 00:47:57,094
+can always check to see if
+
+817
+00:47:57,094 --> 00:48:00,102
+are an important symbol like in this
+case and its appearance name vibrant
+
+818
+00:48:01,002 --> 00:48:01,056
+dark
+
+819
+00:48:01,056 --> 00:48:04,068
+is my MIL in only fits my mail then you
+can go ahead in
+
+820
+00:48:04,068 --> 00:48:08,087
+and use that code and set up a visual
+effects you for example
+
+821
+00:48:08,087 --> 00:48:12,091
+for a piece if your UI that can be very
+remembers nice thing about this code is
+
+822
+00:48:13,027 --> 00:48:13,576
+that
+
+823
+00:48:13,819 --> 00:48:18,410
+it automatically brings in the vibrancy
+when an application is running
+
+824
+00:48:18,041 --> 00:48:21,470
+on yosemite but does whatever
+
+825
+00:48:21,839 --> 00:48:25,190
+me to do before I'll I'm maverick's
+
+826
+00:48:25,019 --> 00:48:28,398
+another approach is to do a version
+check
+
+827
+00:48:28,569 --> 00:48:31,790
+to serve check but Runtime Environment
+my I'm I'm
+
+828
+00:48:31,079 --> 00:48:34,091
+as a little more straight forward Lamar
+old school so one
+
+829
+00:48:34,091 --> 00:48:37,230
+this is the standard technique that we
+recommend for doing that at least for
+
+830
+00:48:38,049 --> 00:48:41,630
+Coco applications trying to Kolkata
+
+831
+00:48:41,063 --> 00:48:44,066
+work I compare the in a second version
+number
+
+832
+00:48:44,093 --> 00:48:48,232
+against the pre published Constance make
+sure you get that to greater than sign
+
+833
+00:48:49,069 --> 00:48:52,690
+correct don't put it the other way you
+end up with a rather surprising results
+
+834
+00:48:52,069 --> 00:48:55,094
+I am and then this would allow you to
+for example select different image
+
+835
+00:48:55,094 --> 00:48:57,453
+resources are going to totally different
+
+836
+00:48:58,299 --> 00:49:01,750
+code our constructions I'm across one
+
+837
+00:49:01,075 --> 00:49:06,874
+version of the OS versus the other
+
+838
+00:49:07,549 --> 00:49:11,970
+up bill so
+
+839
+00:49:11,097 --> 00:49:15,986
+in general what we'd really like to
+encourage you to do
+
+840
+00:49:16,859 --> 00:49:21,100
+is look for opportunities to freshen
+your design
+
+841
+00:49:21,001 --> 00:49:26,040
+in as many places as possible and
+freshen your design everywhere
+
+842
+00:49:26,049 --> 00:49:29,123
+we really think that a majority of your
+customers are going to majority for
+
+843
+00:49:30,023 --> 00:49:31,050
+users i should say
+
+844
+00:49:31,005 --> 00:49:34,104
+are going to be on the US amity design
+and your family
+
+845
+00:49:35,049 --> 00:49:38,095
+in the in in the very near future and
+it's going to be
+
+846
+00:49:38,095 --> 00:49:41,139
+if you do have to make a choice
+
+847
+00:49:42,039 --> 00:49:45,041
+a about opinion is on your word about
+about
+
+848
+00:49:45,041 --> 00:49:49,050
+about I'm changing things on I'm older
+platforms
+
+849
+00:49:49,005 --> 00:49:53,009
+I I would also like to encourage you to
+when in doubt favor the new visual style
+
+850
+00:49:53,009 --> 00:49:54,043
+what I mean by that an actual
+
+851
+00:49:55,024 --> 00:49:59,041
+Xcode is an example of this as a case
+study
+
+852
+00:49:59,041 --> 00:50:02,125
+it's okay to go and bring some of the
+elements that have been introduced
+
+853
+00:50:03,025 --> 00:50:06,077
+him and so I'm L matter to be
+interesting to yosemite and bring them
+
+854
+00:50:06,077 --> 00:50:07,156
+back into your maverick's
+
+855
+00:50:08,056 --> 00:50:11,092
+app UI design language so for example
+
+856
+00:50:11,092 --> 00:50:13,176
+and I don't mean like obviously the
+whole translucency think that that
+
+857
+00:50:14,076 --> 00:50:15,088
+doesn't work on all
+
+858
+00:50:15,088 --> 00:50:19,100
+on maverick's but I for in terms of
+partnerships button cliffs
+
+859
+00:50:20,000 --> 00:50:25,018
+are your icon for example it is totally
+OK and it actually works are reasonably
+
+860
+00:50:25,018 --> 00:50:25,092
+well
+
+861
+00:50:25,092 --> 00:50:29,098
+to take somebody simpler cleaner I
+design styles that are
+
+862
+00:50:29,098 --> 00:50:32,195
+featured in Yosemite and to have them
+show up on your buttons are in your
+
+863
+00:50:33,095 --> 00:50:36,158
+you win the title bar a in your
+application maverick's
+
+864
+00:50:37,058 --> 00:50:42,141
+so I can help relieve some pressure
+
+865
+00:50:43,041 --> 00:50:46,950
+so I A we're getting close to wrapping
+up here
+
+866
+00:50:47,319 --> 00:50:50,350
+so just want to recap what we talked
+about today
+
+867
+00:50:50,035 --> 00:50:53,060
+so we have this there's a brand new user
+first time first time
+
+868
+00:50:53,006 --> 00:50:56,725
+we walk through that we've talked a
+little bit and trying to understand the
+
+869
+00:50:57,319 --> 00:51:02,190
+components a vibrancy in what role the
+players and what it does for you
+
+870
+00:51:02,019 --> 00:51:05,115
+and we talked about adapting your
+applications to these new
+
+871
+00:51:06,015 --> 00:51:11,090
+these new features please a primitive
+another plugin for the advanced session
+
+872
+00:51:11,009 --> 00:51:15,064
+for more in depth exploration above
+using a special affect you
+
+873
+00:51:16,045 --> 00:51:19,090
+using fiber materials and of some other
+from the
+
+874
+00:51:19,009 --> 00:51:23,057
+tips and tricks of getting I getting
+these you eyes together
+
+875
+00:51:24,038 --> 00:51:28,093
+with alacrity
+
+876
+00:51:28,093 --> 00:51:32,462
+so in summary a lot of excitement lots
+of exciting design changes
+
+877
+00:51:33,299 --> 00:51:37,400
+coming to West Ham and I if there's one
+message i'd like to leave with you
+
+878
+00:51:37,004 --> 00:51:40,055
+has stepped to the coca firms can help
+guide you through all this change
+
+879
+00:51:40,091 --> 00:51:44,520
+and please avail yourselves their
+services
+
+880
+00:51:45,339 --> 00:51:48,190
+for more information we have our
+excellent developer evangelist right
+
+881
+00:51:48,019 --> 00:51:51,338
+over here with the fantasy makers to
+experience
+
+882
+00:51:51,509 --> 00:51:54,630
+and handkerchief you know him if you
+have any questions
+
+883
+00:51:54,063 --> 00:51:58,100
+and there are many related sessions I
+including the what's new in Cocoa which
+
+884
+00:51:59,000 --> 00:52:00,013
+happened earlier today
+
+885
+00:52:00,013 --> 00:52:03,089
+are actually yeah earlier today today's
+Tuesday
+
+886
+00:52:03,089 --> 00:52:06,112
+I the there's also the fans talk
+tomorrow
+
+887
+00:52:07,012 --> 00:52:11,251
+I also wanna point out the creating
+extensions for I listen or stem
+
+888
+00:52:11,359 --> 00:52:15,397
+which happen actually is concluding
+happened just an hour ago
+
+889
+00:52:15,739 --> 00:52:17,744
+and the reason I mention as I think the
+talk about Notification Center
+
+890
+00:52:18,239 --> 00:52:20,266
+extensions which is one of the places
+where you use
+
+891
+00:52:20,509 --> 00:52:25,230
+dark fiber an appearance and there are
+also some
+
+892
+00:52:25,023 --> 00:52:28,632
+some there's an Xcode sessions and
+Interface Builder sessions and encourage
+
+893
+00:52:28,839 --> 00:52:29,790
+you to go to we're
+
+894
+00:52:29,079 --> 00:52:32,123
+I'm they're not gonna touch directly on
+some other stuff is very important to
+
+895
+00:52:33,023 --> 00:52:33,612
+see some
+
+896
+00:52:33,819 --> 00:52:36,894
+some the new new features that have been
+exposed in new wine in your preschooler
+
+897
+00:52:37,569 --> 00:52:42,750
+and if you haven't gotten enough my not
+an engineer colleague Mike Stern he's
+
+898
+00:52:42,075 --> 00:52:43,164
+having a
+
+899
+00:52:43,839 --> 00:52:47,858
+talk right following this one called is
+an intuitive user experiences
+
+900
+00:52:48,029 --> 00:52:52,650
+and you can get more neva more design
+wisdom
+
+901
+00:52:52,065 --> 00:52:53,158
+and with that like to wrap up and thank
+you
+

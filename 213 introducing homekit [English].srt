@@ -1,0 +1,3117 @@
+1
+00:00:13,029 --> 00:00:20,029
+hello everybody in
+
+2
+00:00:20,042 --> 00:00:23,048
+thank you very much for my name is Kevin
+McLaughlin
+
+3
+00:00:23,048 --> 00:00:26,257
+and I am here this afternoon to tell you
+about home kit
+
+4
+00:00:26,689 --> 00:00:31,220
+you know it's been a day packed full of
+all kinds of new information that I hope
+
+5
+00:00:31,022 --> 00:00:34,631
+you're very excited to be here as I am
+excited to see everybody here
+
+6
+00:00:34,829 --> 00:00:39,540
+so he heard a little bit about home kit
+already
+
+7
+00:00:39,054 --> 00:00:44,111
+I assume in let's talk about it just as
+we're getting started here
+
+8
+00:00:45,011 --> 00:00:50,023
+so home kid is a new feature for I O S
+
+9
+00:00:50,023 --> 00:00:53,086
+that is bringing
+
+10
+00:00:53,086 --> 00:00:56,675
+has Craig said very well some
+rationality
+
+11
+00:00:57,449 --> 00:01:03,523
+to home automation it provides a great
+opportunity for us
+
+12
+00:01:04,189 --> 00:01:08,390
+you as developers must work together
+
+13
+00:01:08,039 --> 00:01:11,948
+to provide a much more consistent
+experience for our users
+
+14
+00:01:12,299 --> 00:01:16,680
+as they start to get into home
+automation and we want to bring this to
+
+15
+00:01:16,068 --> 00:01:17,117
+a much wider
+
+16
+00:01:18,017 --> 00:01:24,028
+audience then home automation has really
+been accessible to in the past
+
+17
+00:01:24,028 --> 00:01:28,031
+so let's get started so today
+
+18
+00:01:28,031 --> 00:01:31,062
+I will tell you a little bit about the
+features a home kit
+
+19
+00:01:31,062 --> 00:01:35,171
+and we'll go through the core concepts
+how to use the API
+
+20
+00:01:35,729 --> 00:01:39,120
+how to get started and a few advanced
+topics
+
+21
+00:01:39,012 --> 00:01:43,043
+that are either interesting to be and
+hopefully to you or I know are
+
+22
+00:01:43,043 --> 00:01:43,138
+interesting to you
+
+23
+00:01:44,038 --> 00:01:49,093
+so it's good on with it to the first
+feature want to tell you about
+
+24
+00:01:49,093 --> 00:01:53,142
+is something that is really important
+and a score to delivering
+
+25
+00:01:53,979 --> 00:01:57,860
+the consistency they talked about
+
+26
+00:01:57,086 --> 00:02:01,138
+so we have a common database that is
+stored in Iowa
+
+27
+00:02:02,038 --> 00:02:05,103
+and it contains all of the home
+information
+
+28
+00:02:06,003 --> 00:02:09,492
+all the accessory information that has
+been configured
+
+29
+00:02:09,519 --> 00:02:14,080
+and is available to Olive your caps
+
+30
+00:02:14,008 --> 00:02:18,056
+every time a user uses one of your abs
+
+31
+00:02:18,056 --> 00:02:22,061
+to configure a new accessory to set up
+their home to set up some other
+
+32
+00:02:23,006 --> 00:02:24,015
+operation
+
+33
+00:02:24,069 --> 00:02:27,540
+those things are stored through home kit
+
+34
+00:02:27,054 --> 00:02:30,062
+through the framework in this common
+database and then when the user uses
+
+35
+00:02:30,062 --> 00:02:31,113
+another application
+
+36
+00:02:32,013 --> 00:02:37,017
+for some other purpose and they see some
+of their home information
+
+37
+00:02:37,053 --> 00:02:40,062
+in this other applications gonna see the
+same information that they saw
+
+38
+00:02:41,043 --> 00:02:44,069
+or that they set up in there other
+applications miss mean
+
+39
+00:02:44,069 --> 00:02:48,161
+to our users to your users everything is
+going to look
+
+40
+00:02:49,061 --> 00:02:53,119
+a lot more connected it to make a lot
+more sense this is starting to provide
+
+41
+00:02:54,019 --> 00:02:57,428
+that consistent experience everyone we
+want to deliver
+
+42
+00:02:57,599 --> 00:03:02,330
+now building on that
+
+43
+00:03:02,033 --> 00:03:06,109
+as we mentioned yesterday we have a
+great
+
+44
+00:03:07,009 --> 00:03:10,077
+interface for users which is period
+
+45
+00:03:10,077 --> 00:03:14,125
+to users can use Siri
+
+46
+00:03:15,025 --> 00:03:18,027
+to interact with their home kit
+accessories
+
+47
+00:03:18,045 --> 00:03:22,914
+in a very natural way I just speaking
+commands that make sense
+
+48
+00:03:23,319 --> 00:03:26,270
+I talk a little bit about how that
+enabled as we go through the
+
+49
+00:03:26,027 --> 00:03:27,075
+presentation today
+
+50
+00:03:27,075 --> 00:03:30,140
+now in
+
+51
+00:03:31,004 --> 00:03:34,020
+creating home kit we have
+
+52
+00:03:34,056 --> 00:03:37,955
+put in a lot of effort to define a
+
+53
+00:03:38,459 --> 00:03:43,230
+common language for us to use to talk to
+accessories
+
+54
+00:03:43,023 --> 00:03:47,058
+but we can't define
+
+55
+00:03:47,058 --> 00:03:50,059
+every kinda accessory that
+
+56
+00:03:50,068 --> 00:03:53,164
+all are clever accessory manufacturers
+are going to invent
+
+57
+00:03:54,064 --> 00:03:57,141
+have already heard about dozens of
+interesting things
+
+58
+00:03:58,041 --> 00:04:01,108
+that are well beyond
+
+59
+00:04:02,008 --> 00:04:06,095
+what we're starting to you can see here
+garage door light bulbs or like these
+
+60
+00:04:06,095 --> 00:04:07,192
+are things that are common accessory
+
+61
+00:04:08,092 --> 00:04:12,156
+that we have defined in home cannot talk
+about some more about as well anything
+
+62
+00:04:13,056 --> 00:04:14,120
+else is possible
+
+63
+00:04:15,002 --> 00:04:18,054
+we don't want home kit to be
+
+64
+00:04:18,072 --> 00:04:22,074
+restricted in contained we want home kit
+to create
+
+65
+00:04:22,074 --> 00:04:25,153
+innovation in creativity and so
+
+66
+00:04:26,053 --> 00:04:31,150
+anything that an accessory manufacturer
+can imagine and can create
+
+67
+00:04:32,005 --> 00:04:36,009
+they can define and make available
+
+68
+00:04:36,054 --> 00:04:41,081
+through home kit to your applications
+
+69
+00:04:41,081 --> 00:04:44,087
+all that exciting
+
+70
+00:04:45,041 --> 00:04:48,125
+you want to be able to use these
+accessories
+
+71
+00:04:49,025 --> 00:04:53,099
+and so home kit also
+
+72
+00:04:53,099 --> 00:04:59,165
+provides access to your home kit
+accessories when you are not at home
+
+73
+00:05:00,065 --> 00:05:03,103
+this is enabled through i OS device
+connectivity
+
+74
+00:05:04,003 --> 00:05:08,006
+and there's no special requirement for
+your application
+
+75
+00:05:08,006 --> 00:05:13,012
+or for the accessories to take advantage
+of this great feature on K
+
+76
+00:05:13,066 --> 00:05:16,071
+but with all that connectivity
+
+77
+00:05:17,016 --> 00:05:20,745
+come something very important actually a
+pair of things that'll
+
+78
+00:05:20,889 --> 00:05:24,800
+very closely coupled that security and
+privacy
+
+79
+00:05:24,008 --> 00:05:27,062
+we take security and privacy very
+seriously
+
+80
+00:05:28,034 --> 00:05:32,091
+we have spent a lot of time and effort
+attention reviews after reviews making
+
+81
+00:05:32,091 --> 00:05:34,124
+sure that we have a great solution here
+
+82
+00:05:35,024 --> 00:05:41,047
+so we have end-to-end encryption between
+i OS devices & accessories
+
+83
+00:05:41,047 --> 00:05:46,072
+and this enables us to have
+
+84
+00:05:46,072 --> 00:05:50,491
+security so that accessories can be
+misused
+
+85
+00:05:51,139 --> 00:05:55,410
+it also enables us to ensure user
+privacy is maintained
+
+86
+00:05:55,041 --> 00:05:59,055
+we don't think that it's good enough to
+be sorted
+
+87
+00:05:59,055 --> 00:06:04,055
+private your data stored somewhere else
+
+88
+00:06:04,055 --> 00:06:07,093
+we think it's important to be take
+privacy very security
+
+89
+00:06:07,093 --> 00:06:12,137
+yes seriously and do the best as
+possible
+
+90
+00:06:13,037 --> 00:06:16,132
+in keeping with this paradigm of
+insuring
+
+91
+00:06:17,032 --> 00:06:21,056
+privacy and security and making sure
+that our users have really good reliable
+
+92
+00:06:21,056 --> 00:06:27,195
+understandable experiences when they
+start using your home kit applications
+
+93
+00:06:27,699 --> 00:06:31,910
+home papi can only be used when your
+application is in the foreground
+
+94
+00:06:31,091 --> 00:06:34,128
+this ensures that users know exactly
+what's going on there's nothing for them
+
+95
+00:06:35,028 --> 00:06:37,056
+to be afraid out when they take that
+first step
+
+96
+00:06:37,056 --> 00:06:41,141
+or second step into using home
+automation
+
+97
+00:06:42,041 --> 00:06:46,020
+okay that's enough about the high level
+stuff
+
+98
+00:06:46,389 --> 00:06:49,442
+let's get into some other details so
+
+99
+00:06:49,919 --> 00:06:55,400
+to get started with home kit your entry
+point
+
+100
+00:06:55,004 --> 00:06:58,025
+is the home manager
+
+101
+00:06:58,061 --> 00:07:03,087
+the Home Manager provides your pointers
+to the common database
+
+102
+00:07:03,087 --> 00:07:06,090
+accessed through the home's the Home
+Manager
+
+103
+00:07:06,009 --> 00:07:09,088
+allows your application to manage the
+homes
+
+104
+00:07:10,069 --> 00:07:13,136
+which one is primary adding or removing
+homes
+
+105
+00:07:14,036 --> 00:07:18,093
+as necessary and we'll notify you of
+changes
+
+106
+00:07:18,093 --> 00:07:21,093
+now for examples somebody might have
+
+107
+00:07:21,093 --> 00:07:24,452
+for whatever reason multiple home set up
+those may change this is where you get
+
+108
+00:07:25,289 --> 00:07:28,210
+notified about us you can start updating
+your application
+
+109
+00:07:28,021 --> 00:07:31,105
+to match with the user knows they have
+
+110
+00:07:32,005 --> 00:07:36,037
+to the home managers represented by the
+HM Home Manager class
+
+111
+00:07:36,037 --> 00:07:40,060
+you simply created instance I love it
+and then you said
+
+112
+00:07:40,006 --> 00:07:44,945
+a delegate to be your application
+
+113
+00:07:45,539 --> 00:07:48,830
+to use the Home Manager
+
+114
+00:07:48,083 --> 00:07:50,091
+the most important thing the first thing
+you want to do is you want to implement
+
+115
+00:07:51,063 --> 00:07:51,110
+this
+
+116
+00:07:52,001 --> 00:07:56,059
+delegate call back Home Manager did
+update homes
+
+117
+00:07:56,068 --> 00:07:59,367
+when you get this call back that means
+that
+
+118
+00:07:59,979 --> 00:08:04,010
+the whole manager has finished loading
+are preparing the home data
+
+119
+00:08:04,289 --> 00:08:09,210
+and you can now save a pointer to the
+rave homes
+
+120
+00:08:09,021 --> 00:08:13,030
+you can also save what is currently set
+is the primary home
+
+121
+00:08:14,011 --> 00:08:17,087
+now if there aren't any homes
+
+122
+00:08:17,087 --> 00:08:21,146
+then you need to create a home for the
+user to add a home with name
+
+123
+00:08:22,046 --> 00:08:25,134
+and that completes with a
+
+124
+00:08:26,034 --> 00:08:29,173
+completion handler would only fail
+likely if the
+
+125
+00:08:29,479 --> 00:08:32,533
+home had the same name as another home
+
+126
+00:08:33,019 --> 00:08:36,043
+because homes
+
+127
+00:08:36,259 --> 00:08:39,337
+need to be uniquely named so homes
+contain
+
+128
+00:08:40,039 --> 00:08:44,092
+all the data for a home so you have your
+rooms have your accessories and so on
+
+129
+00:08:44,569 --> 00:08:48,810
+notifies you changes to that home
+
+130
+00:08:48,081 --> 00:08:51,160
+and the names have homes are recognized
+by series so that users can refer to
+
+131
+00:08:52,006 --> 00:08:52,485
+them
+
+132
+00:08:53,079 --> 00:08:57,110
+when they're giving commands
+
+133
+00:08:57,389 --> 00:09:00,431
+on a home we have the name
+
+134
+00:09:00,809 --> 00:09:03,871
+we have an array of all the rooms an
+array of all the accessories that are in
+
+135
+00:09:04,429 --> 00:09:08,501
+that home
+
+136
+00:09:09,149 --> 00:09:12,185
+to fill out the concept a date the
+imager the
+
+137
+00:09:12,509 --> 00:09:16,542
+the map a home in every wanna call it me
+to create rooms
+
+138
+00:09:16,839 --> 00:09:19,842
+so on the home you can create a room
+
+139
+00:09:19,869 --> 00:09:22,907
+are at a room with name provider a name
+for the room
+
+140
+00:09:23,249 --> 00:09:27,160
+and again that would only fail typically
+if there was a room that already have
+
+141
+00:09:27,016 --> 00:09:29,845
+the same name
+
+142
+00:09:29,989 --> 00:09:36,014
+so moving on two rooms rooms contain
+accessories
+
+143
+00:09:36,239 --> 00:09:39,244
+room again we'll notify you of changes
+and
+
+144
+00:09:39,739 --> 00:09:43,744
+rooms must be uniquely named with in a
+home
+
+145
+00:09:44,239 --> 00:09:47,241
+solo homer created own namespace
+
+146
+00:09:47,439 --> 00:09:51,466
+everything within a home must have a
+unique name
+
+147
+00:09:51,709 --> 00:09:55,722
+names have rooms are recognized by Siri
+users can also interact with them to
+
+148
+00:09:55,839 --> 00:09:57,040
+maximize natural
+
+149
+00:09:57,004 --> 00:10:01,553
+interactions with their accessories
+rooms are represented by the HM room
+
+150
+00:10:01,589 --> 00:10:03,590
+class
+
+151
+00:10:03,689 --> 00:10:08,704
+and they have an array the accessories
+that are in that room
+
+152
+00:10:08,839 --> 00:10:11,844
+let's move onto accessories so
+
+153
+00:10:11,889 --> 00:10:15,600
+accessory corresponds to a physical
+device
+
+154
+00:10:15,006 --> 00:10:18,595
+accessories are assigned to ruminate
+that can change you can assign an
+
+155
+00:10:19,189 --> 00:10:21,192
+accessory to a different room
+
+156
+00:10:21,489 --> 00:10:24,493
+accessory objects allow you to access
+the device
+
+157
+00:10:24,889 --> 00:10:29,903
+state can I talk to the success three
+right now for example
+
+158
+00:10:30,029 --> 00:10:33,121
+will notify you of changes to that
+accessory again they have to be uniquely
+
+159
+00:10:33,949 --> 00:10:36,007
+named within home
+
+160
+00:10:36,529 --> 00:10:42,553
+and names and accessories also are
+recognized by Siri
+
+161
+00:10:42,769 --> 00:10:45,844
+an accessory is
+
+162
+00:10:46,519 --> 00:10:50,591
+the whole object that the user is
+referring to
+
+163
+00:10:51,239 --> 00:10:55,160
+not talk about how the details that
+accessory
+
+164
+00:10:55,016 --> 00:10:58,755
+are exposed to made available after this
+
+165
+00:10:58,899 --> 00:11:01,955
+so an accessory has a pointer back to
+the room that im
+
+166
+00:11:02,459 --> 00:11:05,720
+and it has appointed to the rave
+services
+
+167
+00:11:05,072 --> 00:11:11,111
+that represent the functionality of that
+accessory good
+
+168
+00:11:11,759 --> 00:11:17,230
+important Delhi a call back for you to
+implement an accessory is the did update
+
+169
+00:11:17,023 --> 00:11:20,342
+reachability call back so
+
+170
+00:11:20,549 --> 00:11:24,170
+an accessory at any point in time may be
+reachable you may be able to communicate
+
+171
+00:11:24,017 --> 00:11:24,091
+with it
+
+172
+00:11:24,091 --> 00:11:27,260
+from your application are you may not
+maybe
+
+173
+00:11:28,079 --> 00:11:31,087
+of may be far away from it
+
+174
+00:11:31,879 --> 00:11:35,975
+this situation we don't have access
+
+175
+00:11:36,839 --> 00:11:40,864
+in this case this car that will be given
+to your application to let you know
+
+176
+00:11:41,089 --> 00:11:44,100
+when that reachability changes see you
+might start out
+
+177
+00:11:44,199 --> 00:11:47,660
+with accessory that is not reachable and
+for some reason it becomes reachable
+
+178
+00:11:47,066 --> 00:11:50,205
+you'll be notified and you can update
+the UI in your application to reflect
+
+179
+00:11:50,799 --> 00:11:51,470
+that
+
+180
+00:11:51,047 --> 00:11:55,072
+these are knows what's going on
+
+181
+00:11:55,072 --> 00:11:59,921
+so to describe a little bit more about
+how accessories look
+
+182
+00:12:00,569 --> 00:12:04,571
+talk about services so services
+represent functionality
+
+183
+00:12:04,769 --> 00:12:08,860
+%uh accessories they contain
+characteristics
+
+184
+00:12:09,679 --> 00:12:14,170
+so you could describe a service as a
+grouping of characteristics for
+
+185
+00:12:14,017 --> 00:12:15,206
+characteristics
+
+186
+00:12:15,359 --> 00:12:19,910
+are specific parameters you can interact
+with and I'll talk about this next
+
+187
+00:12:19,091 --> 00:12:22,110
+so services are interesting that they
+may have
+
+188
+00:12:22,929 --> 00:12:28,016
+name and what that means is there are
+some services that really aren't
+
+189
+00:12:28,799 --> 00:12:31,815
+intended for the user to directly
+interact with them
+
+190
+00:12:31,959 --> 00:12:35,730
+there serve Morgan operational typeof
+functionality
+
+191
+00:12:35,073 --> 00:12:38,792
+so here for example we have a light bulb
+a service that is a lie Paul
+
+192
+00:12:39,449 --> 00:12:42,350
+would typically have a name because he
+is going to want to name it you know
+
+193
+00:12:42,035 --> 00:12:45,134
+that light has a name I refer to it
+
+194
+00:12:45,449 --> 00:12:48,452
+but a service to update firmware on an
+accessory
+
+195
+00:12:48,749 --> 00:12:51,762
+is something that a user typically would
+not need to name
+
+196
+00:12:51,879 --> 00:12:55,350
+and refer to in many different ways it's
+something that your application would
+
+197
+00:12:55,035 --> 00:12:56,774
+take a right for them
+
+198
+00:12:57,089 --> 00:13:01,100
+present at and in more user-friendly way
+than saying oh here's your firmware
+
+199
+00:13:01,199 --> 00:13:02,248
+update service and here's to
+
+200
+00:13:02,689 --> 00:13:05,752
+the day listen to it so
+
+201
+00:13:06,319 --> 00:13:09,392
+in your UI generally will not expose
+unnamed services
+
+202
+00:13:10,049 --> 00:13:14,540
+so this is a way that some other
+messiness if you will or that
+
+203
+00:13:14,054 --> 00:13:18,066
+you can look at it with some the great
+functionality the protocol
+
+204
+00:13:18,066 --> 00:13:22,585
+and at home kit remark don't need to be
+exposed to users you just wanna
+
+205
+00:13:23,179 --> 00:13:26,970
+in Iraq to these accessories that
+they've got
+
+206
+00:13:26,097 --> 00:13:29,486
+names accessory except services must be
+unique within a home
+
+207
+00:13:30,359 --> 00:13:34,387
+and they are recognized by Siri and
+importantly for services
+
+208
+00:13:34,639 --> 00:13:37,642
+we not only recognize names have
+services but also we have
+
+209
+00:13:37,939 --> 00:13:40,960
+Apple defined service types
+
+210
+00:13:41,149 --> 00:13:44,910
+and three understands those types which
+means that users can refer to
+
+211
+00:13:44,091 --> 00:13:48,320
+service types using natural language in
+synonyms other things like that that may
+
+212
+00:13:49,139 --> 00:13:51,144
+not be exactly
+
+213
+00:13:51,639 --> 00:13:54,705
+the name provided to the service
+
+214
+00:13:55,299 --> 00:13:58,540
+services are represented in HM service
+
+215
+00:13:58,054 --> 00:14:01,443
+we have a name an array of
+characteristics the service
+
+216
+00:14:01,929 --> 00:14:06,982
+typeof the service and a pointer back to
+the XSD
+
+217
+00:14:07,459 --> 00:14:10,530
+the services are a collection of
+characteristics
+
+218
+00:14:11,169 --> 00:14:16,174
+a good example justice issues here is
+for light bulbs service
+
+219
+00:14:16,669 --> 00:14:20,678
+your main characteristic is the power
+state
+
+220
+00:14:20,759 --> 00:14:24,765
+I've that light bulb services to the
+power state is a characteristic that you
+
+221
+00:14:24,819 --> 00:14:27,854
+can directly interact with
+
+222
+00:14:28,169 --> 00:14:32,178
+characteristics provide some information
+to meditate about it the characteristics
+
+223
+00:14:32,259 --> 00:14:36,332
+theirself describing see make it a range
+making units
+
+224
+00:14:36,989 --> 00:14:41,043
+step values and so on you can display
+appropriate controls to user when you
+
+225
+00:14:41,529 --> 00:14:46,230
+get a characteristic
+
+226
+00:14:46,023 --> 00:14:49,032
+you get the results to a completion
+handler because it may not be
+
+227
+00:14:49,239 --> 00:14:52,308
+immediate and characteristics are
+recognized by syria although they are
+
+228
+00:14:52,929 --> 00:14:54,970
+not named by the user
+
+229
+00:14:55,339 --> 00:14:59,348
+so we've defined a number of
+characteristic types
+
+230
+00:15:00,239 --> 00:15:04,247
+and and your candor stand with those
+mean caesar's can interact with those
+
+231
+00:15:04,319 --> 00:15:07,600
+giving commands to Siri
+
+232
+00:15:07,006 --> 00:15:11,615
+two characteristics can be a few
+varieties
+
+233
+00:15:12,209 --> 00:15:15,288
+with these main one so some
+characteristics you only read the values
+
+234
+00:15:15,999 --> 00:15:17,091
+from them so you might see what is that
+
+235
+00:15:17,919 --> 00:15:22,730
+current temperature outside are inside
+you have a thermostat it tells you the
+
+236
+00:15:22,073 --> 00:15:25,652
+current ever hear me to write to the
+current temperature you
+
+237
+00:15:26,309 --> 00:15:30,730
+can't directly immediately change that
+with additional command
+
+238
+00:15:30,073 --> 00:15:33,932
+when you read from when you wanna change
+the temperature you need to tell your
+
+239
+00:15:34,589 --> 00:15:37,589
+thermostat that you have a new target
+temperature
+
+240
+00:15:37,589 --> 00:15:40,676
+your target temperature is something
+that you do right to
+
+241
+00:15:41,459 --> 00:15:44,467
+in the ass to read from that because you
+might say is why is it so
+
+242
+00:15:45,259 --> 00:15:49,350
+hot in here what is that current target
+temperature at this
+
+243
+00:15:49,035 --> 00:15:53,624
+thermostat you read that may be right
+and change it
+
+244
+00:15:53,939 --> 00:15:56,985
+and there are some few characteristics
+that you only
+
+245
+00:15:57,399 --> 00:16:02,403
+right to writing right only
+characteristic is something
+
+246
+00:16:02,799 --> 00:16:05,888
+to think about it a little bit but where
+you tell the accessory to do something
+
+247
+00:16:06,689 --> 00:16:08,220
+and it's going to do it
+
+248
+00:16:08,022 --> 00:16:12,081
+in it doesn't matter what it may have to
+say
+
+249
+00:16:12,279 --> 00:16:15,290
+back to you there's no feedback is just
+that the country does it independently
+
+250
+00:16:15,389 --> 00:16:16,470
+on its own
+
+251
+00:16:17,199 --> 00:16:20,252
+so an example here an important one is
+the identify characteristic which is a
+
+252
+00:16:20,729 --> 00:16:22,768
+special characteristic that Paul
+
+253
+00:16:23,119 --> 00:16:27,175
+accessories must support and provides an
+interface
+
+254
+00:16:27,679 --> 00:16:30,773
+where from your application you can
+where user
+
+255
+00:16:31,619 --> 00:16:34,680
+say hey I'd like you to help me find out
+which one which one of my accessories
+
+256
+00:16:35,229 --> 00:16:35,273
+this
+
+257
+00:16:35,669 --> 00:16:38,714
+is you send in identify characteristic
+right
+
+258
+00:16:39,119 --> 00:16:43,160
+to that accessory and then it
+
+259
+00:16:43,016 --> 00:16:47,965
+will do something that identifies itself
+to the user so a light bulb might flash
+
+260
+00:16:48,109 --> 00:16:52,198
+thermostat my blinking LED a garage door
+opener IP camera might be
+
+261
+00:16:52,999 --> 00:16:56,072
+maybe also flashlight whatever it is
+this is accessory specific
+
+262
+00:16:56,729 --> 00:17:00,738
+and the purpose is to help the user know
+which thing and they are about to
+
+263
+00:17:00,819 --> 00:17:02,470
+interact with
+
+264
+00:17:02,047 --> 00:17:05,062
+especially useful when a user for
+example say
+
+265
+00:17:05,062 --> 00:17:08,100
+connects several lights and they say
+okay now I need to set up my lights
+
+266
+00:17:09,000 --> 00:17:10,014
+which one is this
+
+267
+00:17:10,014 --> 00:17:13,953
+right they all have the same default
+information not going to look them up by
+
+268
+00:17:14,079 --> 00:17:15,240
+serial number that's
+
+269
+00:17:15,024 --> 00:17:19,050
+boring so just identify that for me
+
+270
+00:17:19,005 --> 00:17:23,584
+and you send the identify characteristic
+right to direct it accessory
+
+271
+00:17:24,079 --> 00:17:28,090
+it plans to use our notes which one it
+is they can proceed
+
+272
+00:17:28,189 --> 00:17:32,235
+so characteristics are in HM
+characteristic
+
+273
+00:17:32,649 --> 00:17:35,687
+you can read value with completion
+handler to get the value of a
+
+274
+00:17:36,029 --> 00:17:37,620
+characteristic
+
+275
+00:17:37,062 --> 00:17:41,075
+and also right value with completion
+handler
+
+276
+00:17:41,075 --> 00:17:45,494
+him
+
+277
+00:17:46,169 --> 00:17:50,169
+so now we've talked about
+
+278
+00:17:50,169 --> 00:17:53,870
+these these object these things they
+correspond to physical things in the
+
+279
+00:17:53,087 --> 00:17:54,876
+real world
+
+280
+00:17:55,659 --> 00:18:00,697
+we need to be able to find and set up
+these accessories
+
+281
+00:18:01,039 --> 00:18:05,039
+we do that with the accessory browser
+
+282
+00:18:05,039 --> 00:18:09,044
+so this cool lets you in your
+application find out if there are any
+
+283
+00:18:09,539 --> 00:18:10,544
+new accessories available
+
+284
+00:18:11,039 --> 00:18:15,100
+and then help the user had those two
+home
+
+285
+00:18:15,649 --> 00:18:18,820
+so you create in to YouTube accessory
+browser
+
+286
+00:18:18,082 --> 00:18:21,681
+said the delegate and then when
+appropriate
+
+287
+00:18:22,419 --> 00:18:26,430
+you start searching for new accessories
+
+288
+00:18:26,529 --> 00:18:29,533
+you'll find some you'll remove some of
+talk about that next
+
+289
+00:18:29,929 --> 00:18:34,250
+and in later when you're done you stop
+searching for you accessories
+
+290
+00:18:34,025 --> 00:18:37,534
+so it's responsible for power management
+to stop searching for new accessories
+
+291
+00:18:37,759 --> 00:18:38,460
+when
+
+292
+00:18:38,046 --> 00:18:41,485
+no longer necessary to do that if left
+the view
+
+293
+00:18:41,899 --> 00:18:46,580
+leaving application you decided that
+enough time has passed and so on
+
+294
+00:18:46,058 --> 00:18:49,110
+so while you're searching for new
+accessories you'll get
+
+295
+00:18:50,001 --> 00:18:53,035
+this call back
+
+296
+00:18:53,044 --> 00:18:56,135
+did find new accessory will come at a
+pointer to the accessory that was found
+
+297
+00:18:57,035 --> 00:19:00,040
+and you can now for example add this to
+a listed accessories in the UI the user
+
+298
+00:19:00,085 --> 00:19:02,097
+can select from for which ones they want
+to configure
+
+299
+00:19:02,097 --> 00:19:06,896
+be if when you start searching there are
+already some accessories that have been
+
+300
+00:19:07,769 --> 00:19:08,773
+found
+
+301
+00:19:09,169 --> 00:19:12,240
+you can get the list from the to
+surprise her out the RT
+
+302
+00:19:12,024 --> 00:19:15,573
+found new accessories and then you get
+this
+
+303
+00:19:15,789 --> 00:19:18,990
+come back every time anyone is added to
+that list
+
+304
+00:19:18,099 --> 00:19:24,132
+in when you found the new accessories
+and you'd like to set one up the mop
+
+305
+00:19:25,032 --> 00:19:29,125
+you to add that accessory to a whole
+it's important to note
+
+306
+00:19:30,025 --> 00:19:34,034
+that this method is on
+
+307
+00:19:34,259 --> 00:19:38,261
+HM home it's not on the accessory
+browser
+
+308
+00:19:38,279 --> 00:19:42,570
+sorry padded the accessory to a home
+
+309
+00:19:42,057 --> 00:19:45,124
+when the accessory successfully added to
+a home it's time to name the accessory
+
+310
+00:19:46,024 --> 00:19:50,112
+and assign it to a room
+
+311
+00:19:51,012 --> 00:19:53,019
+also while you're searching for new
+accessories she will sometimes get this
+
+312
+00:19:53,082 --> 00:19:53,175
+call back
+
+313
+00:19:54,075 --> 00:19:58,119
+especially you'll get this call back
+when you add an accessory to a home
+
+314
+00:19:59,019 --> 00:20:02,084
+this is did remove new accessory this
+allows you
+
+315
+00:20:02,084 --> 00:20:05,293
+in your UI when you have a listed
+accessories that you are showing to the
+
+316
+00:20:06,049 --> 00:20:06,720
+user which
+
+317
+00:20:06,072 --> 00:20:08,171
+you accessories would you like to
+configure and they do select one and
+
+318
+00:20:09,071 --> 00:20:11,670
+they do add it to a home
+
+319
+00:20:12,309 --> 00:20:17,750
+you get this call back to tell you it
+removed from the listed new accessories
+
+320
+00:20:17,075 --> 00:20:20,104
+in this case because it was added to our
+homes you can update your UI to take
+
+321
+00:20:20,779 --> 00:20:25,110
+that one of the list
+
+322
+00:20:25,011 --> 00:20:29,025
+so that's a 8 quick introduction to how
+to get started
+
+323
+00:20:29,025 --> 00:20:32,122
+basic functionality
+
+324
+00:20:33,022 --> 00:20:36,581
+and if you like I have been recently
+you'd like to
+
+325
+00:20:36,779 --> 00:20:40,843
+get right into it and write something
+and you wonder
+
+326
+00:20:41,419 --> 00:20:46,516
+how we gonna do that we don't have any
+of these hunting accessories yet
+
+327
+00:20:47,389 --> 00:20:51,403
+so we thought about that we came up with
+something we have a great solution which
+
+328
+00:20:51,529 --> 00:20:53,500
+is the home kit accessory simulator
+
+329
+00:20:53,005 --> 00:20:56,664
+and this is available for you in Xcode
+
+330
+00:20:57,159 --> 00:21:01,186
+at this location and it's a great tool
+
+331
+00:21:01,429 --> 00:21:04,450
+and I'm going to show you
+
+332
+00:21:04,045 --> 00:21:07,112
+how that works
+
+333
+00:21:08,012 --> 00:21:12,050
+beautiful
+
+334
+00:21:12,005 --> 00:21:16,039
+so here is our home kit accessory
+simulator macon see
+
+335
+00:21:16,084 --> 00:21:19,084
+that in this case there are a number of
+accessories that have already been
+
+336
+00:21:19,084 --> 00:21:21,084
+created
+
+337
+00:21:21,084 --> 00:21:24,133
+in the simulator but I'll walk you
+through it
+
+338
+00:21:25,033 --> 00:21:27,472
+to making sure it's big enough for
+everybody to see in the back come
+
+339
+00:21:27,769 --> 00:21:31,805
+forward if you can see it
+
+340
+00:21:32,129 --> 00:21:35,133
+so here on the left we have the listed
+accessories that are created and bridges
+
+341
+00:21:35,169 --> 00:21:36,174
+which I'll talk about briefly
+
+342
+00:21:36,669 --> 00:21:39,670
+at the end and on the right there's
+information about
+
+343
+00:21:39,769 --> 00:21:43,470
+the accessories so I'm gonna do as I'm
+gonna go down to this:
+
+344
+00:21:43,047 --> 00:21:47,246
+at accessory but here in the bottom left
+and choose to add a new accessory
+
+345
+00:21:47,669 --> 00:21:51,970
+so make all this
+
+346
+00:21:51,097 --> 00:21:54,175
+assured demo 213
+
+347
+00:21:55,075 --> 00:21:58,214
+in at this accessory CRC now that
+
+348
+00:21:58,889 --> 00:22:02,894
+I've added a new accessory to the
+accessory simulator
+
+349
+00:22:03,389 --> 00:22:08,250
+and let me show you what that looks like
+
+350
+00:22:08,025 --> 00:22:11,164
+in this very very simple
+
+351
+00:22:11,389 --> 00:22:14,405
+sample app that we wrote
+
+352
+00:22:14,549 --> 00:22:18,625
+so this is just the tab tab you can see
+their new accessories I want have been
+
+353
+00:22:19,309 --> 00:22:20,700
+configured accessories
+
+354
+00:22:20,007 --> 00:22:25,566
+on the other his other accessories are
+already configured
+
+355
+00:22:26,259 --> 00:22:30,970
+you see here that we have the chrysler
+general accessory that I've just created
+
+356
+00:22:30,097 --> 00:22:34,172
+has shown up here on the new accessories
+happen
+
+357
+00:22:35,072 --> 00:22:39,521
+but it's not very interesting yet it
+just has an accessory information
+
+358
+00:22:40,169 --> 00:22:43,340
+services created by default because all
+accessories must
+
+359
+00:22:43,034 --> 00:22:47,069
+have an accessory information service so
+I can go up here
+
+360
+00:22:47,069 --> 00:22:52,048
+to added another service so this is a
+garage door so it at a garage door
+
+361
+00:22:52,669 --> 00:22:54,960
+opener service we can see that added
+
+362
+00:22:54,096 --> 00:22:57,108
+with all these characteristics
+
+363
+00:22:58,008 --> 00:23:01,487
+and now since garage door openers
+typically also have a light
+
+364
+00:23:01,559 --> 00:23:06,100
+but satellite and I see we've created
+
+365
+00:23:06,001 --> 00:23:09,010
+our garage door opener accessory and it
+has
+
+366
+00:23:10,000 --> 00:23:13,022
+the Access to Information Service it has
+
+367
+00:23:13,022 --> 00:23:16,331
+the garage door opener service which
+corresponds to the motor but actually
+
+368
+00:23:16,529 --> 00:23:18,582
+opening closes the garage door
+
+369
+00:23:19,059 --> 00:23:23,092
+and we have a light bulb service
+correspond to the white the time that
+
+370
+00:23:23,389 --> 00:23:25,570
+garage door
+
+371
+00:23:25,057 --> 00:23:28,916
+so let's go ahead and configure
+
+372
+00:23:29,429 --> 00:23:32,620
+the successor so
+
+373
+00:23:32,062 --> 00:23:36,107
+when we go to add an accessory to a home
+the user must enter setup code this
+
+374
+00:23:37,007 --> 00:23:39,034
+comes from the accessory
+
+375
+00:23:39,034 --> 00:23:44,057
+began the packaging on i-label around
+the screen or LCD an accessory
+
+376
+00:23:44,057 --> 00:23:49,057
+in the simulator it's your right under
+the name is he said it could
+
+377
+00:23:49,057 --> 00:23:53,776
+which looks like it's 9143
+
+378
+00:23:54,289 --> 00:23:59,950
+let me into that
+
+379
+00:23:59,095 --> 00:24:02,123
+had set that up and you can see now that
+disappears from the listed new
+
+380
+00:24:03,023 --> 00:24:08,071
+accessories because it was successfully
+added to the home
+
+381
+00:24:08,071 --> 00:24:15,071
+now for jump over here to the configured
+accessories tab
+
+382
+00:24:16,269 --> 00:24:19,940
+I think I saw that I have a 8
+
+383
+00:24:19,094 --> 00:24:24,095
+revealing my practicing but here we have
+the garage door
+
+384
+00:24:24,095 --> 00:24:27,184
+accessory that I just added and you can
+see that it has
+
+385
+00:24:28,039 --> 00:24:31,600
+to services any details tab the Details
+tab
+
+386
+00:24:31,006 --> 00:24:35,007
+shows the accessory information
+
+387
+00:24:35,061 --> 00:24:37,157
+is not something that we need to
+interact with but it's there for
+
+388
+00:24:38,057 --> 00:24:40,110
+reference
+
+389
+00:24:41,001 --> 00:24:44,650
+we can also go and see all of the
+characteristics
+
+390
+00:24:44,749 --> 00:24:49,757
+for the garage door and all the
+characteristics for the way
+
+391
+00:24:50,549 --> 00:24:55,190
+and just to show that these are
+connected we can see if I
+
+392
+00:24:55,019 --> 00:24:58,073
+click on a the power characteristic
+
+393
+00:24:58,073 --> 00:25:01,352
+hav the light the power
+
+394
+00:25:02,009 --> 00:25:08,470
+in the by Bob service at the garage door
+goes on and off
+
+395
+00:25:08,047 --> 00:25:11,876
+along with that
+
+396
+00:25:12,299 --> 00:25:15,330
+sort of in the middle up there
+
+397
+00:25:15,033 --> 00:25:18,202
+okay so that shows you the basic you
+serve the
+
+398
+00:25:18,499 --> 00:25:22,505
+economic accessory simulator and also
+showing serve the test your browser in
+
+399
+00:25:22,559 --> 00:25:24,618
+action adding adding accessory and then
+
+400
+00:25:25,149 --> 00:25:29,226
+China services and characteristics let's
+come back to bridges for a moment
+
+401
+00:25:29,919 --> 00:25:32,954
+two bridges are a special type of
+accessory where you have
+
+402
+00:25:33,269 --> 00:25:38,690
+1 accessory that support tom cat
+accessory protocol
+
+403
+00:25:38,069 --> 00:25:41,408
+that connects with iowa's and you have
+some other
+
+404
+00:25:42,029 --> 00:25:45,980
+and point accessories that are connected
+to the bridge because they don't
+
+405
+00:25:45,098 --> 00:25:48,161
+they can't communicate directly with IRS
+for some reason
+
+406
+00:25:49,061 --> 00:25:52,980
+so a typical example maybe a heart that
+has some lights behind it that are using
+
+407
+00:25:53,529 --> 00:25:53,578
+some
+
+408
+00:25:54,019 --> 00:25:57,097
+other protocol so in this case
+
+409
+00:25:57,799 --> 00:26:01,230
+the hub is the
+
+410
+00:26:01,023 --> 00:26:05,052
+first accessory that home kit connects
+to
+
+411
+00:26:05,259 --> 00:26:08,600
+said come down here and i cant had a new
+bridge
+
+412
+00:26:08,006 --> 00:26:11,079
+so let's call this
+
+413
+00:26:12,033 --> 00:26:17,102
+demographic more
+
+414
+00:26:17,399 --> 00:26:21,411
+so it created a bridge now when the
+bridge is created you'll see that it is
+
+415
+00:26:21,519 --> 00:26:22,521
+actually
+
+416
+00:26:22,539 --> 00:26:25,840
+an accessory that's available so if I go
+over to
+
+417
+00:26:25,084 --> 00:26:28,133
+you accessories that has shown up I
+could connect to it right now
+
+418
+00:26:29,033 --> 00:26:32,044
+but it's really very uninteresting
+
+419
+00:26:32,044 --> 00:26:35,047
+we need to add some accessories behind
+this bridge
+
+420
+00:26:35,074 --> 00:26:39,723
+so click on add accessories
+
+421
+00:26:40,389 --> 00:26:46,406
+so let's add a light behind the bridge
+
+422
+00:26:46,559 --> 00:26:51,100
+now we see we've added a light accessory
+connected to this bridge
+
+423
+00:26:51,001 --> 00:26:57,002
+well we're here let's go ahead and add
+another
+
+424
+00:26:57,002 --> 00:27:00,711
+late behind average p now have two
+lights
+
+425
+00:27:00,909 --> 00:27:03,984
+in a/c on the right we show the
+accessories that are connected to the
+
+426
+00:27:04,659 --> 00:27:05,950
+bridge on the left
+
+427
+00:27:05,095 --> 00:27:08,284
+below the bridge we have the actual
+light
+
+428
+00:27:09,139 --> 00:27:13,210
+accessories listed here which show the
+services of those now here
+
+429
+00:27:13,021 --> 00:27:16,060
+these are created only with accessory
+information to start let's go ahead and
+
+430
+00:27:16,006 --> 00:27:17,042
+add
+
+431
+00:27:17,096 --> 00:27:21,015
+lights to them
+
+432
+00:27:21,879 --> 00:27:24,892
+now go back and look at the bridge issue
+that we have a nice view to show you the
+
+433
+00:27:25,009 --> 00:27:28,570
+accessories that are connected behind
+the bridge
+
+434
+00:27:28,057 --> 00:27:32,516
+and of course we can pair with the
+bridge
+
+435
+00:27:33,029 --> 00:27:37,128
+just the same way we did before set this
+up
+
+436
+00:27:38,019 --> 00:27:44,072
+8107 that appears over here we can go
+down to our
+
+437
+00:27:44,549 --> 00:27:47,645
+connected accessories and I are gonna
+see something interesting
+
+438
+00:27:48,509 --> 00:27:51,490
+the dental bridges there and we can
+click on that and see that it just has
+
+439
+00:27:51,049 --> 00:27:52,082
+details which show
+
+440
+00:27:52,082 --> 00:27:55,084
+the accessory information at the bridge
+
+441
+00:27:55,084 --> 00:27:59,373
+but the lights are also here so lights
+that are behind a bridge
+
+442
+00:28:00,129 --> 00:28:03,970
+are presented to you through home kid
+like separate accessories and you can
+
+443
+00:28:03,097 --> 00:28:06,136
+interact directly with those lights even
+though there's something in the middle
+
+444
+00:28:07,036 --> 00:28:10,107
+there's always protocol translation
+other things going on
+
+445
+00:28:11,007 --> 00:28:14,706
+you have to worry about that you get the
+accessory which is what the user really
+
+446
+00:28:14,769 --> 00:28:15,773
+cares about
+
+447
+00:28:16,169 --> 00:28:21,360
+and so you can then interact directly
+with these accessories
+
+448
+00:28:21,036 --> 00:28:27,315
+they can be turned on and off similarly
+
+449
+00:28:27,639 --> 00:28:28,820
+okay
+
+450
+00:28:28,082 --> 00:28:35,082
+so that if the democrats get back to our
+slides perfect
+
+451
+00:28:41,002 --> 00:28:45,064
+so the home can access we simulate urs
+villain Xcode 6 it axed just like real
+
+452
+00:28:45,082 --> 00:28:48,041
+accessories so when you develop your
+application using the simulator
+
+453
+00:28:48,779 --> 00:28:52,070
+using the hunk accessory simulator
+you're doing the real thing
+
+454
+00:28:52,007 --> 00:28:55,062
+when you eventually get real excess res
+to connect to
+
+455
+00:28:55,062 --> 00:28:57,951
+they can work the same way they're gonna
+be exposed to the same way through home
+
+456
+00:28:58,509 --> 00:28:58,970
+kit
+
+457
+00:28:58,097 --> 00:29:01,123
+to this is a great way for you to get
+started
+
+458
+00:29:02,023 --> 00:29:08,322
+and a great way for you to developing
+tester home kit applications to during
+
+459
+00:29:08,529 --> 00:29:08,568
+this
+
+460
+00:29:08,919 --> 00:29:12,955
+presentation so far we've talked about
+all the steps various points along the
+
+461
+00:29:13,279 --> 00:29:13,341
+way
+
+462
+00:29:13,899 --> 00:29:17,360
+for how to get the initial setup
+
+463
+00:29:17,036 --> 00:29:20,062
+have a home in excess getting
+accessories added we talked about this
+
+464
+00:29:20,062 --> 00:29:23,081
+no one run through it for you to the
+summary
+
+465
+00:29:23,639 --> 00:29:27,620
+so first me to create a home you to
+provide the name for the home
+
+466
+00:29:27,062 --> 00:29:30,145
+then we need to add rooms to the home
+user adds
+
+467
+00:29:31,045 --> 00:29:35,107
+provides names for those rooms again all
+these names I will have to be unique
+
+468
+00:29:36,007 --> 00:29:40,586
+in the added any accessories to use it
+as your browser
+
+469
+00:29:40,649 --> 00:29:44,713
+get accessories to the home the user
+provides a name for the accessory the
+
+470
+00:29:45,289 --> 00:29:45,970
+user
+
+471
+00:29:45,097 --> 00:29:50,121
+chooses which room to the texas region
+
+472
+00:29:51,021 --> 00:29:56,970
+for the home and after that the music
+actually going continue using accessory
+
+473
+00:29:57,159 --> 00:29:58,070
+can interact with it
+
+474
+00:29:58,007 --> 00:30:05,007
+three applications other applications to
+Siri now let's
+
+475
+00:30:06,029 --> 00:30:12,030
+move on some more advanced topics
+
+476
+00:30:12,129 --> 00:30:16,860
+have talked a lot about services in
+characteristics
+
+477
+00:30:16,086 --> 00:30:19,735
+and i've talked about
+
+478
+00:30:20,509 --> 00:30:23,511
+something defined by Apple and custom
+one so here
+
+479
+00:30:23,529 --> 00:30:27,556
+on the left you can see a list of
+services there are some of the services
+
+480
+00:30:27,799 --> 00:30:28,840
+we've defined
+
+481
+00:30:28,084 --> 00:30:31,084
+you can see the services correspond to
+in a broadly
+
+482
+00:30:31,084 --> 00:30:34,903
+accessory type: sir functional groupings
+oven
+
+483
+00:30:35,659 --> 00:30:39,610
+characteristics they see on the right
+
+484
+00:30:39,061 --> 00:30:42,240
+as a sampling of some of the
+characteristics that we've defined
+
+485
+00:30:42,789 --> 00:30:46,370
+and are many more the and then
+
+486
+00:30:46,037 --> 00:30:49,125
+as I said earlier to
+
+487
+00:30:50,025 --> 00:30:53,584
+encourage innovation invention
+creativity
+
+488
+00:30:53,809 --> 00:30:57,260
+we allow definition any custom service
+any
+
+489
+00:30:57,026 --> 00:31:00,097
+custom characteristic an accessory
+manufacturer wants to use
+
+490
+00:31:00,097 --> 00:31:06,776
+with all available to you through home
+kit and all of these
+
+491
+00:31:07,649 --> 00:31:10,700
+services and characteristics that are
+defined by
+
+492
+00:31:10,007 --> 00:31:14,866
+Apple are recognized by Syrian
+understood by Siri
+
+493
+00:31:15,559 --> 00:31:20,560
+so that users can interact with them a
+very natural ways
+
+494
+00:31:20,659 --> 00:31:24,320
+turn something on switch something on
+
+495
+00:31:24,032 --> 00:31:31,032
+right there some other ways that users
+
+496
+00:31:32,023 --> 00:31:35,051
+all of us I guess refer to things in our
+home so
+
+497
+00:31:35,051 --> 00:31:39,051
+cook groupings of rooms like upstairs or
+downstairs
+
+498
+00:31:39,051 --> 00:31:44,087
+or maybe the bedrooms two rooms can be
+collected into zones
+
+499
+00:31:44,087 --> 00:31:49,122
+it represented an HM zone isn't it an
+arbitrary grouping of rooms
+
+500
+00:31:50,022 --> 00:31:53,471
+this is just an association it's not an
+ownership relationship
+
+501
+00:31:53,669 --> 00:31:58,755
+so a room can be in any number it sounds
+zones also are uniquely named
+
+502
+00:31:59,529 --> 00:32:06,529
+and zones are recognized by Siri
+
+503
+00:32:08,004 --> 00:32:11,075
+we have another typeof grouping which is
+to help
+
+504
+00:32:12,011 --> 00:32:17,084
+group in refer to functionality that is
+provided by accessories
+
+505
+00:32:17,084 --> 00:32:20,120
+we may want to do something across
+multiple accessories we don't
+
+506
+00:32:21,002 --> 00:32:22,026
+necessarily need to control
+
+507
+00:32:22,044 --> 00:32:26,083
+everything on the accessory so he called
+service group
+
+508
+00:32:26,083 --> 00:32:30,172
+in HM service crew so you can imagine
+you might have
+
+509
+00:32:31,072 --> 00:32:34,104
+night lights in your home or some other
+night later their own accessory but some
+
+510
+00:32:35,004 --> 00:32:36,023
+night lights are to
+
+511
+00:32:36,023 --> 00:32:39,039
+it's a light on a coffee machine at a
+light on a microwave it too late on the
+
+512
+00:32:39,039 --> 00:32:40,128
+refrigerator to light on whatever it is
+
+513
+00:32:41,028 --> 00:32:45,045
+and he can grab all of these light
+services that are actually Night Lights
+
+514
+00:32:45,045 --> 00:32:47,061
+you can group them together into a
+service group
+
+515
+00:32:47,061 --> 00:32:50,144
+and you can he easily display that to
+use you can easily perform operations on
+
+516
+00:32:51,044 --> 00:32:52,051
+all of those
+
+517
+00:32:52,051 --> 00:32:57,051
+Night Lights services can be in any
+number of groups this is Justin
+
+518
+00:32:57,051 --> 00:32:58,053
+Association
+
+519
+00:32:58,053 --> 00:33:01,115
+service which are also named
+
+520
+00:33:02,015 --> 00:33:05,036
+uniquely of course in a home and
+
+521
+00:33:05,036 --> 00:33:12,036
+into service groups are also recognized
+by Siri and now
+
+522
+00:33:13,093 --> 00:33:17,164
+getting into couple more things that are
+that are quite interesting
+
+523
+00:33:18,064 --> 00:33:21,064
+so first her action sets so
+
+524
+00:33:21,064 --> 00:33:24,085
+this is the
+
+525
+00:33:24,085 --> 00:33:29,094
+home kit implementation behind
+collecting accessories into scenes
+
+526
+00:33:29,094 --> 00:33:35,097
+to how this works as we take a bunch of
+actions
+
+527
+00:33:36,024 --> 00:33:39,079
+my actions or something you're going to
+do to an accessory
+
+528
+00:33:39,079 --> 00:33:42,114
+and regroup those together into an
+action set
+
+529
+00:33:43,014 --> 00:33:48,067
+so for example night so we may have a
+night action set
+
+530
+00:33:48,067 --> 00:33:52,122
+or night scene and so this night action
+set my turn off their lights like a door
+
+531
+00:33:53,022 --> 00:33:54,107
+closer I'd turn the thermostat down
+
+532
+00:33:55,007 --> 00:33:58,083
+that could be grouped together to be
+easily refer to
+
+533
+00:33:58,083 --> 00:34:01,094
+for the user and usually executed all at
+once
+
+534
+00:34:01,094 --> 00:34:05,118
+where they all at once I really mean all
+at once
+
+535
+00:34:06,018 --> 00:34:10,086
+the order execution is undefined so you
+can expect
+
+536
+00:34:10,086 --> 00:34:13,171
+that something is always going to happen
+before something else in an action set
+
+537
+00:34:14,071 --> 00:34:16,113
+everything would be done at the same
+time it's all going to get done
+
+538
+00:34:17,013 --> 00:34:21,082
+best efforts to everything action sets
+
+539
+00:34:21,082 --> 00:34:24,421
+again uniquely named and recognized by
+Siri
+
+540
+00:34:25,159 --> 00:34:29,730
+so what are these actions
+
+541
+00:34:29,073 --> 00:34:32,101
+so actions are
+
+542
+00:34:33,001 --> 00:34:37,029
+HM characteristic right actions is a
+very literal name
+
+543
+00:34:37,029 --> 00:34:40,061
+because what you're doing an action is
+you are writing to a characteristic
+
+544
+00:34:40,061 --> 00:34:44,110
+so for example
+
+545
+00:34:44,659 --> 00:34:48,230
+he may have an action that is close the
+garage
+
+546
+00:34:48,023 --> 00:34:51,025
+a single right to a single
+characteristic
+
+547
+00:34:51,025 --> 00:34:54,424
+on the garage the garage door opener
+service
+
+548
+00:34:54,649 --> 00:34:58,160
+and so that a single actions he would
+create action
+
+549
+00:34:58,016 --> 00:35:02,061
+added to the action set so
+
+550
+00:35:02,061 --> 00:35:04,153
+actions that there are interested in
+either starting to lie to do something
+
+551
+00:35:05,053 --> 00:35:05,141
+more complex
+
+552
+00:35:06,041 --> 00:35:10,046
+we also have triggers
+
+553
+00:35:10,091 --> 00:35:15,103
+the triggers Rahm timer trigger so time
+a trigger is set up
+
+554
+00:35:16,003 --> 00:35:20,046
+to fire at a specific date and time they
+can repeat
+
+555
+00:35:20,046 --> 00:35:23,118
+their uniquely named in a home but
+they're not
+
+556
+00:35:24,018 --> 00:35:28,097
+interacted with to spoken commands but
+there's something very special about
+
+557
+00:35:28,097 --> 00:35:28,159
+them
+
+558
+00:35:29,059 --> 00:35:32,106
+which is their actually executed by
+
+559
+00:35:33,006 --> 00:35:36,063
+I O S in the background at the time
+
+560
+00:35:36,063 --> 00:35:39,064
+when that trigger is suppose to be
+
+561
+00:35:39,073 --> 00:35:43,074
+execute when it fires so the trigger is
+set
+
+562
+00:35:43,083 --> 00:35:50,083
+to run in action Sat and
+
+563
+00:35:51,074 --> 00:35:54,163
+that actions that can happen executing
+attacks that can happen
+
+564
+00:35:55,063 --> 00:36:00,065
+even when the latter running or whatever
+because the trigger is managed
+
+565
+00:36:00,065 --> 00:36:07,065
+by IRS she can imagine that
+
+566
+00:36:07,075 --> 00:36:11,112
+even with just being able to specify
+
+567
+00:36:12,012 --> 00:36:15,049
+dates and times collections and actions
+to happen
+
+568
+00:36:15,049 --> 00:36:18,118
+repeating triggers you can start to get
+some pretty interesting functionality
+
+569
+00:36:19,018 --> 00:36:23,022
+so I like to give you a quick Demel
+
+570
+00:36:23,022 --> 00:36:29,100
+action set and triggers work so we have
+here hun get accessories simulator
+
+571
+00:36:30,000 --> 00:36:34,067
+still running and have another
+
+572
+00:36:34,067 --> 00:36:40,074
+very simple sample app to show you
+
+573
+00:36:41,037 --> 00:36:44,106
+place in March this time
+
+574
+00:36:45,006 --> 00:36:48,030
+so here we have in this home is in the
+background
+
+575
+00:36:48,003 --> 00:36:51,028
+we have some action set in some triggers
+already defined
+
+576
+00:36:51,055 --> 00:36:55,090
+so if you look at these actions that we
+have the night action satire
+
+577
+00:36:55,009 --> 00:36:58,047
+example I gave earlier we also have
+
+578
+00:36:59,028 --> 00:37:02,037
+lights on in light of action set
+
+579
+00:37:02,037 --> 00:37:05,092
+so if you look at the night action set
+were displayed here
+
+580
+00:37:05,092 --> 00:37:08,092
+all of the characteristic right that are
+part
+
+581
+00:37:08,092 --> 00:37:12,106
+love this action Sep and
+
+582
+00:37:13,006 --> 00:37:17,031
+free go and look at for example some
+things here so the
+
+583
+00:37:17,031 --> 00:37:20,034
+thermostats target temperature say that
+with
+
+584
+00:37:20,034 --> 00:37:24,060
+said it seventy we can
+
+585
+00:37:24,006 --> 00:37:28,006
+go here and
+
+586
+00:37:28,006 --> 00:37:31,061
+unlock the door for example now you can
+go here in this action said you can see
+
+587
+00:37:32,015 --> 00:37:33,038
+that the
+
+588
+00:37:33,038 --> 00:37:36,093
+door lock is gonna have the lock
+characteristic
+
+589
+00:37:36,093 --> 00:37:40,187
+set to locked the thermostat is going to
+have the target temperature set to 68
+
+590
+00:37:41,087 --> 00:37:44,136
+so I can execute this action set we can
+see that
+
+591
+00:37:45,036 --> 00:37:48,068
+the lock has indeed changed to lock
+thermostat target temperature has
+
+592
+00:37:48,068 --> 00:37:50,071
+changed back to 68
+
+593
+00:37:50,071 --> 00:37:53,114
+and these lights are off
+
+594
+00:37:54,014 --> 00:37:57,087
+so simple way once it's all set up very
+simple way
+
+595
+00:37:57,087 --> 00:38:02,166
+to go in control many accessories same
+time
+
+596
+00:38:03,066 --> 00:38:07,149
+so now let's look at his other two so
+
+597
+00:38:08,049 --> 00:38:12,058
+bites on simply turns on all the way
+
+598
+00:38:13,039 --> 00:38:16,078
+might of obviously turns off the lights
+
+599
+00:38:16,078 --> 00:38:19,110
+to these two actions that's just give me
+the opportunity to show you a very
+
+600
+00:38:20,001 --> 00:38:20,099
+simple
+
+601
+00:38:21,008 --> 00:38:24,100
+demos triggers work so we have here to
+triggers that are created
+
+602
+00:38:25,000 --> 00:38:29,068
+one runs the actions that lights on and
+one runs the action set lights off
+
+603
+00:38:29,068 --> 00:38:32,075
+ok we can see that when I've turned
+
+604
+00:38:33,038 --> 00:38:36,038
+these triggers on Ivan able done that
+these
+
+605
+00:38:36,038 --> 00:38:40,107
+lights just start blinking happen not a
+
+606
+00:38:41,007 --> 00:38:44,080
+a commonly used to use case in the real
+world but a great
+
+607
+00:38:44,008 --> 00:38:48,072
+example for a demo so let's stop that
+
+608
+00:38:49,044 --> 00:38:55,068
+triggers and actions at
+
+609
+00:38:55,068 --> 00:38:58,140
+to go back to the side
+
+610
+00:38:59,004 --> 00:39:03,007
+so using action certain triggers
+together you'll be able to script
+
+611
+00:39:03,043 --> 00:39:08,058
+or allow the user to script some fairly
+complex and interesting interactions
+
+612
+00:39:08,058 --> 00:39:11,136
+and enable you and your users
+
+613
+00:39:12,036 --> 00:39:18,118
+to control many accessories very easily
+very quickly
+
+614
+00:39:19,018 --> 00:39:24,037
+so
+
+615
+00:39:24,037 --> 00:39:27,066
+one more thing I want to tell you about
+home kit
+
+616
+00:39:27,066 --> 00:39:29,145
+as you're looking through our
+documentation going to see there are a
+
+617
+00:39:30,045 --> 00:39:32,093
+lot of delegate methods
+
+618
+00:39:32,093 --> 00:39:35,187
+and you might ask do i do I need
+
+619
+00:39:36,087 --> 00:39:39,155
+I love these delegate methods do I have
+to
+
+620
+00:39:40,055 --> 00:39:43,066
+implement every single one and
+
+621
+00:39:43,066 --> 00:39:47,091
+now more yes there there for a reason
+
+622
+00:39:47,091 --> 00:39:49,146
+they're there because if you remember
+back at the beginning in the
+
+623
+00:39:50,046 --> 00:39:54,054
+presentation we talked about the shared
+database
+
+624
+00:39:54,054 --> 00:39:58,146
+and because the shared at the shared
+database we get this great
+
+625
+00:39:59,046 --> 00:40:03,048
+consistency across the user experience
+
+626
+00:40:03,048 --> 00:40:06,075
+different applications that have
+different specialized purposes
+
+627
+00:40:06,075 --> 00:40:10,152
+users going to see that all the tabs are
+aware of their home
+
+628
+00:40:11,052 --> 00:40:13,066
+they have their home setup they have
+their living room they have their
+
+629
+00:40:13,066 --> 00:40:16,115
+kitchen they have their ceiling lights
+they're gonna see that in every app
+
+630
+00:40:17,015 --> 00:40:21,092
+right in a field great to users using
+
+631
+00:40:21,092 --> 00:40:24,164
+you don't want your apt to get out of
+sync
+
+632
+00:40:25,064 --> 00:40:29,073
+with what the user knows they have set
+up for their home
+
+633
+00:40:29,073 --> 00:40:33,102
+and because at this shared database you
+can be updated
+
+634
+00:40:34,002 --> 00:40:38,089
+in many different ways many of those
+ways are not through your app
+
+635
+00:40:38,089 --> 00:40:43,094
+for some other after some other event
+accessories are changing
+
+636
+00:40:44,039 --> 00:40:47,040
+and so all these delegate methods are
+how
+
+637
+00:40:47,049 --> 00:40:50,052
+we tell you what's changing
+
+638
+00:40:50,079 --> 00:40:53,177
+and some change the name in that room
+that
+
+639
+00:40:54,077 --> 00:40:58,084
+accessory state has changed
+
+640
+00:40:59,047 --> 00:41:03,048
+someone has added a should be so lucky
+at a lake house
+
+641
+00:41:03,048 --> 00:41:06,053
+to their their collection of homes and
+so
+
+642
+00:41:06,053 --> 00:41:09,137
+when these things happen you wanna be
+able to update your app
+
+643
+00:41:10,037 --> 00:41:13,075
+to the user sees that your app is
+connected your apt knows what's going on
+
+644
+00:41:13,075 --> 00:41:17,093
+everything is being communicated to
+these delegate methods are how
+
+645
+00:41:17,093 --> 00:41:22,162
+you do that
+
+646
+00:41:23,062 --> 00:41:26,077
+so that brings us just about the end of
+
+647
+00:41:26,077 --> 00:41:29,089
+my presentation in a fish timers right
+I've got quite a bit faster than
+
+648
+00:41:29,089 --> 00:41:31,156
+expected
+
+649
+00:41:32,056 --> 00:41:37,084
+that's okay right at the end of the day
+what you remember this
+
+650
+00:41:37,084 --> 00:41:41,167
+so home kit is
+
+651
+00:41:42,067 --> 00:41:46,067
+providing you the opportunity
+
+652
+00:41:46,067 --> 00:41:52,074
+to deliver a much more consistent
+experience for home automation
+
+653
+00:41:52,074 --> 00:41:56,100
+through your applications the framework
+has
+
+654
+00:41:57,000 --> 00:42:04,000
+been designed to be easy to use
+
+655
+00:42:04,003 --> 00:42:08,050
+simple to create a home it's simple to
+have an accessory it simple interact
+
+656
+00:42:08,077 --> 00:42:09,170
+with it
+
+657
+00:42:10,007 --> 00:42:13,053
+you can easily get the lists accessories
+that are available on display them to
+
+658
+00:42:14,016 --> 00:42:15,072
+users
+
+659
+00:42:15,072 --> 00:42:18,150
+we've also enable you to get an early
+start an awesome
+
+660
+00:42:19,005 --> 00:42:22,070
+to be able to very effectively easley
+debug and test applications using a hunk
+
+661
+00:42:23,015 --> 00:42:26,067
+accessory simulator
+
+662
+00:42:26,067 --> 00:42:30,142
+and there's information available for
+you
+
+663
+00:42:31,042 --> 00:42:35,044
+if you're curious about how to get
+started here at home kit or making a
+
+664
+00:42:35,062 --> 00:42:37,073
+home kit accessory
+
+665
+00:42:37,073 --> 00:42:41,116
+had developer Apple com such home kit
+for more information we have our great
+
+666
+00:42:42,016 --> 00:42:44,024
+evangelism team
+
+667
+00:42:44,024 --> 00:42:47,081
+was there for you to reach out to and we
+have
+
+668
+00:42:47,081 --> 00:42:51,085
+documentation available at all the
+regular places including
+
+669
+00:42:52,021 --> 00:42:55,057
+unify program for accessory
+manufacturers
+
+670
+00:42:55,057 --> 00:43:02,057
+so that finishes retail want to thank
+you very much
+
+671
+00:43:09,119 --> 00:43:11,500
+if we appreciate the opportunity to talk
+to you enjoy
+
+672
+00:43:11,005 --> 00:43:11,068
+rest the show
+

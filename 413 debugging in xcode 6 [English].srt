@@ -1,0 +1,2675 @@
+1
+00:00:14,056 --> 00:00:15,137
+the morning
+
+2
+00:00:16,037 --> 00:00:19,040
+the debugging an ex got six so he got
+
+3
+00:00:19,004 --> 00:00:23,006
+say now debugging session last year you
+have notice our quest to bring more
+
+4
+00:00:23,006 --> 00:00:26,069
+relevant ebuddy information to your
+fingertips this year we look we're going
+
+5
+00:00:27,023 --> 00:00:28,232
+to continue with this mission
+
+6
+00:00:28,439 --> 00:00:32,920
+up quite forget my colleague reminded me
+to introduce myself
+
+7
+00:00:32,092 --> 00:00:35,871
+but my name is not change from last year
+some still hanging on
+
+8
+00:00:36,699 --> 00:00:40,820
+have stood by you I engineer sup
+
+9
+00:00:40,082 --> 00:00:43,751
+let's look briefly look at what we're
+going to talk about
+
+10
+00:00:44,489 --> 00:00:49,330
+this year I'm gonna talk about a new
+feature in tax cuts 6
+
+11
+00:00:49,033 --> 00:00:53,101
+that will help you with debugging y'all
+use of Grand Central Dispatch
+
+12
+00:00:54,001 --> 00:00:57,540
+which is TCD its teachers call
+
+13
+00:00:57,549 --> 00:01:00,621
+cutie bugging makes up Tristano come up
+
+14
+00:01:01,269 --> 00:01:05,308
+show you amazing new way to explore and
+you but your user interface
+
+15
+00:01:05,659 --> 00:01:09,520
+and then carries gonna talk in detail
+how to integrate
+
+16
+00:01:09,052 --> 00:01:12,069
+y'all the criminal preview into your
+custom class
+
+17
+00:01:12,069 --> 00:01:18,075
+I want to set the stage for a cutie
+bugging
+
+18
+00:01:18,075 --> 00:01:21,150
+so that we on the same page my apologies
+the
+
+19
+00:01:22,005 --> 00:01:25,024
+this is a vid love it too basic for some
+love you but
+
+20
+00:01:25,069 --> 00:01:28,160
+is important that we get the
+fundamentals right so
+
+21
+00:01:29,006 --> 00:01:33,011
+where and application hits a break point
+a
+
+22
+00:01:33,065 --> 00:01:36,161
+the program pas the debugger will go
+through a process known as
+
+23
+00:01:37,061 --> 00:01:42,078
+unwinding what it does is looks at the
+method it contains a break point
+
+24
+00:01:42,078 --> 00:01:45,082
+and follows the prank 3-pointer back to
+the call flight
+
+25
+00:01:46,018 --> 00:01:51,110
+in this case away from that it goes on
+until they were just the beginning of
+
+26
+00:01:52,001 --> 00:01:52,068
+the threat
+
+27
+00:01:52,077 --> 00:01:55,082
+then contact with a series of stacked
+frames
+
+28
+00:01:55,082 --> 00:02:01,099
+known as a back trace so spectrum is an
+instance other invocation other method
+
+29
+00:02:01,099 --> 00:02:05,588
+now back to resign port because you
+helps you understand the control-flow
+
+30
+00:02:06,479 --> 00:02:10,920
+and the state of the application so what
+happens
+
+31
+00:02:10,092 --> 00:02:13,181
+all how does the city impact that traces
+
+32
+00:02:14,081 --> 00:02:17,088
+but first what is GCT it is a
+
+33
+00:02:18,051 --> 00:02:21,143
+technology that is introduced five or
+six years ago
+
+34
+00:02:22,043 --> 00:02:26,111
+I it's not at the time frame as since
+then has taken off like wildfire
+
+35
+00:02:27,011 --> 00:02:30,060
+because it is a very natural way to
+
+36
+00:02:30,006 --> 00:02:34,090
+create concurrent responsive application
+basically you
+
+37
+00:02:35,044 --> 00:02:38,099
+evening bag a task up in the smaller
+work items
+
+38
+00:02:38,099 --> 00:02:41,158
+call blocks and then UN cue the block
+
+39
+00:02:42,058 --> 00:02:45,089
+2aq using two weeks
+
+40
+00:02:45,089 --> 00:02:48,143
+synchronously or a synchronously
+
+41
+00:02:49,043 --> 00:02:53,712
+we're going to focus on the latter
+because it poses a bigger challenge
+
+42
+00:02:54,099 --> 00:02:58,520
+when it comes to debug UN Cuate
+synchronously using
+
+43
+00:02:58,052 --> 00:03:04,056
+the dispatch a sink ATI and then
+
+44
+00:03:04,092 --> 00:03:07,118
+what you're telling the system the OS's
+at some time later
+
+45
+00:03:08,018 --> 00:03:11,018
+it can be Q ya block
+
+46
+00:03:11,018 --> 00:03:14,022
+and final work attracted to start
+executing it
+
+47
+00:03:14,022 --> 00:03:17,038
+imagine that you've had a break point
+
+48
+00:03:17,038 --> 00:03:21,134
+your blog right now so let's look at the
+back trace
+
+49
+00:03:22,034 --> 00:03:25,105
+of track 16 of the debugger
+
+50
+00:03:26,005 --> 00:03:29,007
+has finished unwinding the bottom all
+spring
+
+51
+00:03:29,025 --> 00:03:32,117
+39 represents the start of the work a
+threat
+
+52
+00:03:33,017 --> 00:03:36,036
+which corresponds to the deep healing
+you that
+
+53
+00:03:36,036 --> 00:03:40,040
+so what do you have to do to understand
+the control flow before the and healing
+
+54
+00:03:40,076 --> 00:03:40,130
+event
+
+55
+00:03:41,003 --> 00:03:47,042
+well what I used to do is to find the
+math that that contains the and CUNY ban
+
+56
+00:03:47,069 --> 00:03:50,151
+in this case cash crop image pasted in
+the session every year
+
+57
+00:03:51,051 --> 00:03:55,053
+search for all the calls I saw that put
+break points there
+
+58
+00:03:55,053 --> 00:03:59,622
+relaunch the application go through all
+the crazy you I gestures
+
+59
+00:04:00,099 --> 00:04:04,800
+to make sure I can repeat the up
+something looks the same problem
+
+60
+00:04:04,008 --> 00:04:08,008
+the hit the break point and heaven
+forbid save
+
+61
+00:04:08,008 --> 00:04:11,087
+North call sites also in another respect
+
+62
+00:04:11,879 --> 00:04:15,640
+a sink because them insight to wash
+rinse and repeat
+
+63
+00:04:15,064 --> 00:04:21,433
+but Xcode is not lying to you when it's
+giving you this limited
+
+64
+00:04:22,009 --> 00:04:26,830
+that trace that's because the trip the
+thread that does and queuing
+
+65
+00:04:26,083 --> 00:04:29,232
+did it a synchronously in the past
+
+66
+00:04:29,979 --> 00:04:34,979
+in fact that threat is possibly doing
+something completely different
+
+67
+00:04:34,979 --> 00:04:38,770
+on may be gone from memory so it's not
+bad to
+
+68
+00:04:38,077 --> 00:04:42,476
+accuse anybody of not being being able
+to unwind to the past
+
+69
+00:04:43,169 --> 00:04:47,241
+but in your head must be thinking well
+this is accurate but
+
+70
+00:04:47,889 --> 00:04:50,985
+surely expert can present a more logical
+back trace
+
+71
+00:04:51,849 --> 00:04:56,120
+and we agree with you saw
+
+72
+00:04:56,012 --> 00:04:59,311
+in the scenario that i described above
+
+73
+00:04:59,419 --> 00:05:05,210
+earlier we're going to splice in actual
+sex is gonna splice in the back trace
+
+74
+00:05:05,021 --> 00:05:09,280
+of the ensuing event so they can show
+them to you in a
+
+75
+00:05:09,469 --> 00:05:13,485
+in a more logical manner in the UI
+
+76
+00:05:13,629 --> 00:05:16,642
+any get one what one am more than one
+including events
+
+77
+00:05:16,759 --> 00:05:23,759
+Xcode is gonna follow the chain so they
+show you everything
+
+78
+00:05:24,539 --> 00:05:28,555
+so how do we do that while we work
+through several years of the OS
+
+79
+00:05:28,699 --> 00:05:32,767
+down to the car West we try cause all
+the factories is
+
+80
+00:05:33,379 --> 00:05:37,386
+of the ensuing events so when your
+application has a break point
+
+81
+00:05:37,449 --> 00:05:41,520
+exco to us the debugger do we treat the
+back trace
+
+82
+00:05:41,052 --> 00:05:44,481
+so that we can show them to you in the
+UI
+
+83
+00:05:44,949 --> 00:05:49,520
+the life that frames they have colored
+icons
+
+84
+00:05:49,052 --> 00:05:52,601
+the wreck on a stack frames the angry
+icons but
+
+85
+00:05:53,069 --> 00:05:56,157
+just like the livestock friend you can
+select
+
+86
+00:05:56,949 --> 00:06:00,021
+you get elected and effects but has the
+buck symbols
+
+87
+00:06:00,669 --> 00:06:04,744
+it was you will surely the Southport
+again this case
+
+88
+00:06:05,419 --> 00:06:08,461
+if it doesn't have the votes in Bali
+will show you this assembly that some
+
+89
+00:06:08,839 --> 00:06:13,934
+among us can actually decipher
+
+90
+00:06:14,789 --> 00:06:17,808
+so what why and icons gray ball
+
+91
+00:06:17,979 --> 00:06:22,680
+a wreck on us that brings icon is great
+because it is a visual cue
+
+92
+00:06:22,068 --> 00:06:25,149
+to let you know that its historical
+
+93
+00:06:26,049 --> 00:06:30,698
+and because it doesn't exist in memory
+anymore you cannot interact with that
+
+94
+00:06:31,139 --> 00:06:35,200
+in the console he cannot run expressions
+like peel
+
+95
+00:06:35,749 --> 00:06:38,815
+next call when I show you the its spring
+variables because recording
+
+96
+00:06:39,409 --> 00:06:43,481
+the frame parables would cause the
+application to plot out in memory
+
+97
+00:06:44,129 --> 00:06:48,680
+possibly causing it to be jetsam on the
+device
+
+98
+00:06:48,068 --> 00:06:51,127
+so that wraps up the first part of you
+debugging
+
+99
+00:06:52,027 --> 00:06:55,356
+lean on to the second part
+
+100
+00:06:55,599 --> 00:06:58,599
+axle body for shows you the back traces
+
+101
+00:06:58,599 --> 00:07:01,627
+in the threads view in the back have a
+gator
+
+102
+00:07:01,879 --> 00:07:04,913
+as you can see here press five threat by
+showing it
+
+103
+00:07:05,219 --> 00:07:09,292
+showing you respect race so that just
+means that affect races all organized by
+
+104
+00:07:09,949 --> 00:07:10,580
+his parents
+
+105
+00:07:10,058 --> 00:07:14,627
+threats that's another equally
+interesting views known as
+
+106
+00:07:15,149 --> 00:07:19,240
+Hughes view in the back navigator and
+you pay attention to your top right
+
+107
+00:07:19,024 --> 00:07:22,373
+corner that's a little control known as
+
+108
+00:07:22,589 --> 00:07:25,634
+the process view options collector
+
+109
+00:07:26,039 --> 00:07:29,039
+it is a mouthful that is useful
+
+110
+00:07:29,039 --> 00:07:33,073
+so huge you toggle it to the Q view
+
+111
+00:07:33,379 --> 00:07:38,384
+experts which issue over to emphasize
+the relationship between blocks
+
+112
+00:07:38,429 --> 00:07:41,440
+and Q's so
+
+113
+00:07:41,539 --> 00:07:47,552
+in this slight here you see that a top
+he has won executing block
+
+114
+00:07:47,669 --> 00:07:50,800
+so what about the blocks that yet you
+have thank you
+
+115
+00:07:50,008 --> 00:07:54,617
+but not executing it let's look at this
+scenario
+
+116
+00:07:55,409 --> 00:07:58,461
+so I'm using a serial key US an
+illustration but
+
+117
+00:07:58,929 --> 00:08:01,993
+this happens with concurrent use as well
+
+118
+00:08:02,569 --> 00:08:06,860
+we square is your currently executing
+block
+
+119
+00:08:06,086 --> 00:08:10,115
+as long as it's not finished executing
+
+120
+00:08:10,889 --> 00:08:15,941
+blocks the summit's summit subsequently
+to the key will get stacked up behind it
+
+121
+00:08:16,409 --> 00:08:20,418
+we call this great quest the pending
+blocks
+
+122
+00:08:20,499 --> 00:08:23,567
+Sonex buttsex we're gonna show you
+
+123
+00:08:24,179 --> 00:08:31,179
+the pending blocks as well the Q
+
+124
+00:08:31,379 --> 00:08:35,200
+so in this case we have nine pending
+blocks
+
+125
+00:08:35,002 --> 00:08:38,095
+the pending love select X unlike the
+executing block in that you press the
+
+126
+00:08:39,013 --> 00:08:40,106
+down
+
+127
+00:08:41,006 --> 00:08:45,043
+it will show you the is Rep back choice
+which by definition is a wreck on a back
+
+128
+00:08:45,043 --> 00:08:45,082
+trace
+
+129
+00:08:45,082 --> 00:08:49,176
+a bank unions so we hope that by so
+facing this information you can answer
+
+130
+00:08:50,076 --> 00:08:51,084
+questions
+
+131
+00:08:51,084 --> 00:08:55,127
+like how many pending blocks have I
+similar to the Q
+
+132
+00:08:56,027 --> 00:08:59,027
+MI over saturating the Q
+
+133
+00:08:59,027 --> 00:09:03,028
+and you can literally tens and thousands
+a block spending blocks
+
+134
+00:09:03,037 --> 00:09:07,078
+out there some that are not needed
+
+135
+00:09:07,078 --> 00:09:10,171
+because you may be able to change all
+going down all your
+
+136
+00:09:11,071 --> 00:09:14,071
+granularity so that you do less work
+
+137
+00:09:14,071 --> 00:09:17,129
+i doing that's what is important because
+that would mean saving battery life on
+
+138
+00:09:18,029 --> 00:09:18,095
+your customers
+
+139
+00:09:18,095 --> 00:09:22,136
+devices on top of that will help us
+solve
+
+140
+00:09:23,036 --> 00:09:26,038
+a class of programming problems
+
+141
+00:09:26,056 --> 00:09:29,097
+that I'm going to go into a
+demonstration now
+
+142
+00:09:29,097 --> 00:09:32,160
+so running on a simulator is an
+application called jogger
+
+143
+00:09:33,006 --> 00:09:36,104
+which helps you track your runs in San
+Francisco
+
+144
+00:09:37,058 --> 00:09:41,152
+and keep said while you at you doing
+this to be the BBC
+
+145
+00:09:42,052 --> 00:09:47,111
+by know about jogging in keeping fit we
+can all dream
+
+146
+00:09:48,011 --> 00:09:51,049
+out live a time I get that tracks the RI
+time
+
+147
+00:09:51,049 --> 00:09:55,058
+annual velocity and
+
+148
+00:09:55,058 --> 00:09:58,070
+a map of all the route that I've done
+
+149
+00:09:58,007 --> 00:10:01,030
+and I've done exactly one this year
+
+150
+00:10:01,093 --> 00:10:04,098
+which is one too many gonna
+
+151
+00:10:04,098 --> 00:10:08,112
+if you click on the date you selected
+date you all flight into detail page
+
+152
+00:10:09,012 --> 00:10:13,035
+of my velocity crop some notice that
+
+153
+00:10:13,035 --> 00:10:17,109
+it takes a little time to the slide into
+detail page
+
+154
+00:10:18,009 --> 00:10:21,063
+and I'm sure you have learned from Apple
+and develop help customers that
+
+155
+00:10:21,063 --> 00:10:24,072
+the one you any nation to be sloth small
+
+156
+00:10:24,072 --> 00:10:28,159
+like butter so this is not
+
+157
+00:10:29,059 --> 00:10:33,065
+and I want to figure out why so since I
+know to cook really well under
+
+158
+00:10:34,019 --> 00:10:37,035
+just gonna jump straight into Xcode to
+the class known as
+
+159
+00:10:37,035 --> 00:10:42,054
+graph you crap you is the class the draw
+the graph
+
+160
+00:10:42,054 --> 00:10:45,097
+and I'm gone James I'm gonna jump
+straight to a week from net by going to
+
+161
+00:10:45,097 --> 00:10:47,115
+the implementation feel of the John Barr
+
+162
+00:10:48,015 --> 00:10:52,046
+and start typing awake bag up
+
+163
+00:10:52,046 --> 00:10:56,067
+and i've a method jail here that creates
+my velocity path
+
+164
+00:10:56,067 --> 00:11:00,105
+and I know that is doing a lot of
+heavy-duty work so let's jump in
+
+165
+00:11:01,005 --> 00:11:04,048
+to the definition by doing a command
+click on it
+
+166
+00:11:04,048 --> 00:11:08,054
+but I see here as is spending time
+fetching the velocity data from the
+
+167
+00:11:08,054 --> 00:11:09,105
+database
+
+168
+00:11:10,005 --> 00:11:14,102
+and that it takes a lock to protect it
+
+169
+00:11:15,002 --> 00:11:19,043
+and subsequently go through each data
+point that velocity data
+
+170
+00:11:19,043 --> 00:11:24,052
+to draw that the path and when is done
+releases the lock
+
+171
+00:11:24,052 --> 00:11:27,140
+so doing all this work on the main
+threat so is impeding
+
+172
+00:11:28,004 --> 00:11:31,005
+detail page from sliding and this
+
+173
+00:11:31,005 --> 00:11:34,103
+looks like a good candidate to use
+artist a defect a sink
+
+174
+00:11:35,048 --> 00:11:41,066
+so let's do that going back to away from
+that
+
+175
+00:11:41,066 --> 00:11:44,100
+and I'm gonna pacing that place in a
+chunk of code
+
+176
+00:11:45,000 --> 00:11:52,000
+which I don't have alright
+
+177
+00:12:05,075 --> 00:12:09,090
+alright I'm gonna move the line that
+creates the the path
+
+178
+00:12:09,009 --> 00:12:14,091
+into the dispatch facing block I'm gonna
+dispatched to block to a simple Q
+
+179
+00:12:15,072 --> 00:12:18,171
+of the graph and i'm don calculating the
+path
+
+180
+00:12:19,071 --> 00:12:24,078
+our updated on the main threat but usual
+so this is a free doesn't pretty simple
+
+181
+00:12:24,078 --> 00:12:24,141
+change
+
+182
+00:12:25,041 --> 00:12:28,084
+that's three run by clicking on a run
+but in to see that works
+
+183
+00:12:28,084 --> 00:12:35,084
+ok am going to go to the
+
+184
+00:12:36,055 --> 00:12:40,154
+date second selected so this time
+
+185
+00:12:41,054 --> 00:12:44,116
+when I when I select the date
+
+186
+00:12:45,016 --> 00:12:51,099
+detail page the slide in very quickly
+Richard us
+
+187
+00:12:51,099 --> 00:12:54,117
+but my graph is not drawing
+
+188
+00:12:55,017 --> 00:12:59,091
+cell that them anyways don't you can
+
+189
+00:12:59,091 --> 00:13:03,106
+try to figure out what is the problem
+but one of my favorite way is to look at
+
+190
+00:13:04,006 --> 00:13:05,053
+the speed up the application
+
+191
+00:13:05,053 --> 00:13:08,061
+and to do that and you know I will look
+at the back traces
+
+192
+00:13:08,061 --> 00:13:11,116
+of the application by clicking
+
+193
+00:13:12,016 --> 00:13:19,016
+be pause button in the debug bar and I
+know that
+
+194
+00:13:19,054 --> 00:13:22,117
+want for my grad is down on the grass 0q
+site farm
+
+195
+00:13:23,017 --> 00:13:29,025
+found a threat which is threatening to
+interested open
+
+196
+00:13:29,025 --> 00:13:32,054
+and is it
+
+197
+00:13:32,054 --> 00:13:35,106
+you name it may not be this year to back
+but frame to
+
+198
+00:13:36,006 --> 00:13:40,035
+shows that I'm trying to wait for lock
+looks like it
+
+199
+00:13:40,035 --> 00:13:43,090
+minutes like bring three to come from it
+
+200
+00:13:43,009 --> 00:13:46,063
+and indeed I'm waiting for the lock so
+those of us who have faced
+
+201
+00:13:47,044 --> 00:13:50,076
+this situation before half have a pretty
+standard
+
+202
+00:13:50,076 --> 00:13:54,155
+following path: as that which is to find
+a thread that has the lock
+
+203
+00:13:55,055 --> 00:13:59,069
+so let's do that Michigan if the way to
+
+204
+00:13:59,069 --> 00:14:02,106
+show all the back to recess which which
+is due first
+
+205
+00:14:03,006 --> 00:14:07,104
+collapse be a process item and by
+holding down the option key
+
+206
+00:14:08,004 --> 00:14:13,013
+you can twist it open Sonam than a
+visually just and through
+
+207
+00:14:13,013 --> 00:14:19,058
+to look for the threat that has the lock
+well this is interesting because the
+
+208
+00:14:19,058 --> 00:14:19,137
+sites that
+
+209
+00:14:20,037 --> 00:14:23,118
+threat 22 which is trying to acquire the
+lock
+
+210
+00:14:24,018 --> 00:14:27,049
+I cannot find a threat that has the lock
+
+211
+00:14:27,049 --> 00:14:32,106
+so this is a head-scratcher but what do
+you know I'm just learned something that
+
+212
+00:14:33,006 --> 00:14:34,013
+may be able to help us
+
+213
+00:14:34,013 --> 00:14:37,019
+summit is situated cutie bugging by
+going to the
+
+214
+00:14:37,073 --> 00:14:42,081
+that control and here I'm going to use
+the
+
+215
+00:14:43,053 --> 00:14:47,076
+filter bach to focus on lie crop sale Q
+
+216
+00:14:47,076 --> 00:14:52,079
+so that s cell
+
+217
+00:14:52,079 --> 00:14:55,088
+is safe here I'm one running block which
+is
+
+218
+00:14:55,088 --> 00:14:58,096
+my the law the block waiting for the
+lock
+
+219
+00:14:59,068 --> 00:15:02,099
+and I one pending block
+
+220
+00:15:02,099 --> 00:15:05,128
+to show my pending lock I'm gonna go to
+ninety Batman widan
+
+221
+00:15:06,028 --> 00:15:11,051
+about workflow and turn on I wish
+opening blocking cues
+
+222
+00:15:11,051 --> 00:15:14,136
+by out pop my pending block
+
+223
+00:15:15,036 --> 00:15:18,067
+minute twisted open and select the first
+frame
+
+224
+00:15:18,067 --> 00:15:24,080
+which espy sauce court subplot a
+celebration drop kar
+
+225
+00:15:24,008 --> 00:15:28,012
+is a method which enhanced this morning
+as well to use dispatch
+
+226
+00:15:28,084 --> 00:15:31,145
+a sink so that can to work of the main
+track
+
+227
+00:15:32,045 --> 00:15:35,080
+and looks like in my haste what I did is
+
+228
+00:15:35,008 --> 00:15:38,015
+I acquire the lock before I did the
+dispatch
+
+229
+00:15:38,087 --> 00:15:42,154
+a sink so what's going on is this
+
+230
+00:15:43,054 --> 00:15:47,108
+I had an execution block waiting for
+lock
+
+231
+00:15:48,008 --> 00:15:51,073
+and SPECT right after it is my pending
+block
+
+232
+00:15:51,073 --> 00:15:54,104
+which unfortunately has the lock so
+
+233
+00:15:55,004 --> 00:15:59,012
+the pending block cannot move because
+has to wait for the execution block to
+
+234
+00:15:59,012 --> 00:15:59,069
+finish
+
+235
+00:15:59,069 --> 00:16:02,143
+so this is the kind of a deadlock
+
+236
+00:16:03,043 --> 00:16:07,096
+albeit in and non-classical way so
+
+237
+00:16:07,096 --> 00:16:10,195
+thankfully the solution is pretty simple
+I just have to move the line that does
+
+238
+00:16:11,095 --> 00:16:11,163
+the locking
+
+239
+00:16:12,063 --> 00:16:16,064
+closer to the place ways protecting
+
+240
+00:16:16,073 --> 00:16:19,079
+its data which is full of the media to
+
+241
+00:16:20,033 --> 00:16:24,079
+this ensures that it doesn't try to get
+the lock
+
+242
+00:16:24,079 --> 00:16:27,084
+and killers dq and start executing
+
+243
+00:16:27,084 --> 00:16:31,141
+cell with this second round of simple
+change
+
+244
+00:16:32,041 --> 00:16:39,041
+receive this works
+
+245
+00:16:42,829 --> 00:16:47,910
+okay let's get to the point where I can
+select the date again and walla
+
+246
+00:16:48,639 --> 00:16:51,703
+everything looks correct now so
+
+247
+00:16:52,279 --> 00:16:56,490
+without it cue debugging what you would
+have to do what I would have to do is to
+
+248
+00:16:56,049 --> 00:16:59,061
+such follow the places where I
+
+249
+00:16:59,061 --> 00:17:03,097
+my velocity did a lot of issues and
+usually look at them and
+
+250
+00:17:03,097 --> 00:17:07,191
+reason really hot about house used and
+that error prone and tedious
+
+251
+00:17:08,091 --> 00:17:11,178
+in summary you're gonna get cue
+debugging an expert thinks
+
+252
+00:17:12,078 --> 00:17:16,113
+which has two parts: record a back
+traces gonna get you
+
+253
+00:17:17,013 --> 00:17:21,039
+show you back trace all me and healing
+if and when you're using effect you
+
+254
+00:17:21,039 --> 00:17:21,088
+think
+
+255
+00:17:21,088 --> 00:17:25,377
+and pending blocks Bice hopefully bicep
+basing this
+
+256
+00:17:26,169 --> 00:17:29,990
+information you all can optimize the use
+of GC
+
+257
+00:17:29,099 --> 00:17:32,124
+with that many bring up try to talk
+about unibody
+
+258
+00:17:33,024 --> 00:17:40,024
+here
+
+259
+00:17:41,005 --> 00:17:43,012
+hi my name is Troy and thank you for
+coming to our
+
+260
+00:17:44,002 --> 00:17:50,004
+debugging and Xcode 6 as you may know
+Xcode is a fantastic tool
+
+261
+00:17:50,022 --> 00:17:53,048
+for discovering things about your
+application they may be hidden
+
+262
+00:17:53,048 --> 00:17:57,115
+through the debug humming just should
+have two new features through the
+
+263
+00:17:58,015 --> 00:18:02,028
+pending blocks and recorded I stack
+traces that are
+
+264
+00:18:02,028 --> 00:18:06,083
+hitting pieces of information about your
+application that Xcode X 160
+
+265
+00:18:06,083 --> 00:18:09,095
+we all know that not all the bugs
+
+266
+00:18:09,095 --> 00:18:13,098
+in applications are hid some of them are
+extremely visible there staring us right
+
+267
+00:18:13,098 --> 00:18:13,180
+in the face
+
+268
+00:18:14,008 --> 00:18:18,016
+from the user if a server applications
+and since these are visual bugs
+
+269
+00:18:19,006 --> 00:18:22,019
+wouldn't it be great if we could do but
+then visually as well
+
+270
+00:18:22,073 --> 00:18:27,117
+and now an extra tix you can so it kinda
+bugs in my talking about
+
+271
+00:18:28,017 --> 00:18:32,019
+these are the bugs were you have I miss
+position viewer clipping is wrong
+
+272
+00:18:32,037 --> 00:18:35,073
+he's a very squish through the stretch
+news
+
+273
+00:18:35,073 --> 00:18:38,110
+and these are the views that are missing
+entirely because the visibility or
+
+274
+00:18:39,001 --> 00:18:45,007
+is hidden attribute is set incorrectly
+in your application but
+
+275
+00:18:45,007 --> 00:18:49,061
+that's not all that this I knew aspect
+to the debugger an extra helps with
+
+276
+00:18:50,024 --> 00:18:53,095
+you can use it when you're not even to
+bucking it's an application like this
+
+277
+00:18:53,095 --> 00:18:56,100
+and I would like to add a new button
+down here
+
+278
+00:18:57,045 --> 00:19:00,053
+and
+
+279
+00:19:01,025 --> 00:19:05,079
+I don't know maybe its new code base to
+me maybe it's been awhile since I've
+
+280
+00:19:05,079 --> 00:19:05,117
+read this
+
+281
+00:19:06,017 --> 00:19:12,046
+I don't know what this view is behind a
+wouldn't it be great if I could just
+
+282
+00:19:12,046 --> 00:19:14,072
+click with the mouse and find out what
+that you it's
+
+283
+00:19:14,072 --> 00:19:17,126
+well now you can't this
+
+284
+00:19:18,026 --> 00:19:21,030
+YouTube under featured integrated all
+throughout exco
+
+285
+00:19:21,003 --> 00:19:25,012
+so let's take a look at the expo window
+and figure out where the different
+
+286
+00:19:25,039 --> 00:19:25,115
+pieces are
+
+287
+00:19:26,015 --> 00:19:29,038
+so we know what we're talking about
+where talk about this
+
+288
+00:19:29,038 --> 00:19:32,109
+YouTube and the future here's the Xcode
+whenever we all know and love
+
+289
+00:19:33,009 --> 00:19:36,082
+we application is running down at the
+bottom there's
+
+290
+00:19:36,082 --> 00:19:40,156
+body but by this is where you fine I you
+familiar items such as baked pies and
+
+291
+00:19:41,056 --> 00:19:41,065
+continue buttons
+
+292
+00:19:42,046 --> 00:19:45,064
+well now there's a new button here which
+is the debug
+
+293
+00:19:45,064 --> 00:19:48,143
+you hire keeping right here simply click
+this
+
+294
+00:19:49,043 --> 00:19:53,091
+and exclude is going to import the user
+interface if your application
+
+295
+00:19:53,091 --> 00:19:57,142
+into the main editor window X ca but
+it's not just
+
+296
+00:19:58,042 --> 00:20:01,051
+imported as a static image if imported
+
+297
+00:20:01,051 --> 00:20:05,124
+separate pieces so that exco can
+actually exploded out into three
+
+298
+00:20:06,024 --> 00:20:06,100
+dimensions
+
+299
+00:20:07,000 --> 00:20:11,046
+and rotated around if you want senior
+
+300
+00:20:11,046 --> 00:20:14,051
+your application in this 3d view is very
+illuminating and allows you to
+
+301
+00:20:14,096 --> 00:20:18,104
+at traverse the hair DC with a parent
+views RC with the siblings are
+
+302
+00:20:19,076 --> 00:20:22,121
+but if you want a more concrete
+representation I V view hierarchy
+
+303
+00:20:23,021 --> 00:20:29,059
+we turn to the debug navigator this is
+as high maint at about the place we find
+
+304
+00:20:29,059 --> 00:20:30,081
+your threads on your tears
+
+305
+00:20:30,081 --> 00:20:33,106
+at available here in this
+
+306
+00:20:34,006 --> 00:20:38,015
+I process few options selector if you
+select
+
+307
+00:20:38,096 --> 00:20:42,101
+the view option in there now is three
+excuse abuse down below we have
+
+308
+00:20:43,001 --> 00:20:49,025
+the your view hierarchy in the
+application which is right here
+
+309
+00:20:49,025 --> 00:20:54,050
+down below we have some filtering
+options to help you
+
+310
+00:20:54,005 --> 00:20:58,060
+team that list we have a show only
+primary views and we have a show only
+
+311
+00:20:59,005 --> 00:21:00,012
+displayed here from a stop on earth
+
+312
+00:21:00,075 --> 00:21:03,108
+second one because this was important if
+you have a view that's missing in your
+
+313
+00:21:04,008 --> 00:21:04,084
+application
+
+314
+00:21:04,084 --> 00:21:09,173
+maybe the day is hidden and sat on it
+and so Xcode is also going to hide in
+
+315
+00:21:10,073 --> 00:21:11,079
+the next to you why
+
+316
+00:21:11,079 --> 00:21:14,107
+but Xcode knows about it could show it
+to you so
+
+317
+00:21:15,007 --> 00:21:18,012
+I use can simply turn of this option
+
+318
+00:21:18,012 --> 00:21:22,103
+an external show all of your viewers
+even the ones they're hidden finally
+
+319
+00:21:23,003 --> 00:21:23,084
+there's the
+
+320
+00:21:23,084 --> 00:21:27,109
+bass string comparison there which will
+do an exact match at that list in the I
+
+321
+00:21:28,009 --> 00:21:32,009
+navigator to help you drill down T
+exactly the item you're looking for
+
+322
+00:21:32,009 --> 00:21:35,100
+now let's turn our attention over to the
+right hand side
+
+323
+00:21:36,000 --> 00:21:39,012
+at the Xcode window this is the
+inspector area
+
+324
+00:21:39,012 --> 00:21:42,015
+and you might be familiar with this if
+you've ever used interface because these
+
+325
+00:21:42,015 --> 00:21:42,110
+are very similar
+
+326
+00:21:43,001 --> 00:21:47,002
+we have a Object Inspector and there's a
+site inspector as well
+
+327
+00:21:47,011 --> 00:21:51,014
+here we see the Object Inspector for you
+I am HBO
+
+328
+00:21:51,014 --> 00:21:54,075
+and not only that this is the specific
+you I am at you
+
+329
+00:21:54,075 --> 00:21:57,152
+because we're selecting we're clicking
+on 1/8
+
+330
+00:21:58,052 --> 00:22:01,099
+in our application so we actually have
+the address for that object as well
+
+331
+00:22:01,099 --> 00:22:05,101
+which is resident in memory on your Mac
+or on your I was device
+
+332
+00:22:06,001 --> 00:22:10,068
+we have thumbnail and all the other
+interesting actually to that
+
+333
+00:22:10,068 --> 00:22:14,070
+about that view listed in this inspector
+
+334
+00:22:14,007 --> 00:22:17,051
+finally we have a site inspector this is
+gonna show you the size and position
+
+335
+00:22:18,014 --> 00:22:21,035
+as you might expect it's also going to
+show a list
+
+336
+00:22:21,035 --> 00:22:25,063
+I V auto layout constraints that are
+affecting that view
+
+337
+00:22:25,063 --> 00:22:29,071
+with two exceptions down at the bottom
+ec2 constraints which are deemphasized
+
+338
+00:22:30,043 --> 00:22:33,128
+these are not affecting the layout have
+you currently but they're still attached
+
+339
+00:22:34,028 --> 00:22:34,124
+to the view
+
+340
+00:22:35,024 --> 00:22:38,105
+and I still have meaning in this case we
+have felt that with
+
+341
+00:22:39,005 --> 00:22:43,073
+I have too high 320 and in the print the
+CDC that's content size that's because
+
+342
+00:22:43,073 --> 00:22:44,107
+the system at it this
+
+343
+00:22:45,007 --> 00:22:49,079
+implicitly to this view to represent the
+content size
+
+344
+00:22:49,079 --> 00:22:52,170
+to de-emphasize cuz up above buried
+ended with two explicit constraints
+
+345
+00:22:53,007 --> 00:22:57,045
+they were added in Interface Builder and
+is also have a with the 320 in this case
+
+346
+00:22:58,008 --> 00:22:58,065
+but they
+
+347
+00:22:58,065 --> 00:23:01,120
+might not always match so this is a
+great place to check
+
+348
+00:23:02,002 --> 00:23:05,005
+if you're think you're having constraint
+issues as we're gonna see
+
+349
+00:23:05,005 --> 00:23:09,083
+and a demo which I'd like to show you
+right now
+
+350
+00:23:10,028 --> 00:23:13,127
+alright here we have the application
+that humming started with
+
+351
+00:23:14,027 --> 00:23:17,103
+and if you have superego eyes for maybe
+not you'll notice that
+
+352
+00:23:18,003 --> 00:23:21,097
+there's a pretty bag visual back down
+here I wonder if the beauty fucking
+
+353
+00:23:21,097 --> 00:23:24,190
+in Xcode can help us find that
+
+354
+00:23:25,009 --> 00:23:28,015
+something to switch over to Xcode find
+this
+
+355
+00:23:28,096 --> 00:23:32,180
+debug you hire key button and simply
+pressing
+
+356
+00:23:33,008 --> 00:23:36,029
+what's happening now is Xcode going
+through all the news in
+
+357
+00:23:37,001 --> 00:23:41,001
+the application and pulling them back
+into the Xcode window
+
+358
+00:23:41,001 --> 00:23:44,012
+now we see user interface right here
+
+359
+00:23:44,012 --> 00:23:47,073
+and already you're getting at better
+look at what might be
+
+360
+00:23:47,073 --> 00:23:50,104
+issue and its application you see some
+other views summit
+
+361
+00:23:51,004 --> 00:23:54,030
+images in this you I collection view are
+outside
+
+362
+00:23:54,003 --> 00:23:57,017
+the view where they're supposed to be
+contained
+
+363
+00:23:57,044 --> 00:24:01,095
+that's a that's a pretty interesting
+fact to help diagnose the problem but
+
+364
+00:24:01,095 --> 00:24:08,095
+it doesn't help us solve the problem
+sorin have to dig deeper
+
+365
+00:24:09,012 --> 00:24:12,021
+to explode the view hierarchy I've your
+application all you need to do is simply
+
+366
+00:24:13,002 --> 00:24:13,060
+click
+
+367
+00:24:13,006 --> 00:24:16,008
+and drag anywhere in the congress
+
+368
+00:24:16,062 --> 00:24:19,078
+this allows us to see the the
+parent-child relationship between
+
+369
+00:24:19,078 --> 00:24:21,113
+somebody's views
+
+370
+00:24:22,013 --> 00:24:26,076
+I have open on the right hand side the
+assistant editor which is an automatic
+
+371
+00:24:26,076 --> 00:24:26,163
+mode
+
+372
+00:24:27,063 --> 00:24:30,137
+this allows extra to track the
+
+373
+00:24:31,037 --> 00:24:34,095
+file that I click over here in their
+view to bugger
+
+374
+00:24:34,095 --> 00:24:37,124
+with a source code file that matches
+with it
+
+375
+00:24:38,024 --> 00:24:42,113
+so if I click here I get the source code
+file for
+
+376
+00:24:43,013 --> 00:24:46,016
+you energy I manage
+
+377
+00:24:46,043 --> 00:24:50,116
+traverse backwards update higher pitched
+tell you get to the custom self it
+
+378
+00:24:51,016 --> 00:24:54,019
+has been written for this class the pair
+to the issue I am to you
+
+379
+00:24:54,046 --> 00:24:57,095
+is the UI view and this is the content
+view that sell
+
+380
+00:24:57,095 --> 00:25:01,099
+and the one behind that is the run
+details collection Buechel
+
+381
+00:25:01,099 --> 00:25:05,102
+which is custom code in my application
+
+382
+00:25:06,029 --> 00:25:09,054
+mother going to open up the inspector
+here
+
+383
+00:25:09,054 --> 00:25:12,066
+and check out some other positions I
+these views as it gets
+
+384
+00:25:12,066 --> 00:25:15,073
+it looks like is probably a position
+back here the traversing
+
+385
+00:25:16,036 --> 00:25:19,044
+back up the stack starting with one of
+these
+
+386
+00:25:19,044 --> 00:25:22,052
+user id has a missing image I am going
+to click here
+
+387
+00:25:23,024 --> 00:25:26,042
+and see the position is 160 45
+
+388
+00:25:26,042 --> 00:25:29,085
+its child is 4545
+
+389
+00:25:29,085 --> 00:25:34,092
+because the position is relative to its
+parent
+
+390
+00:25:34,092 --> 00:25:37,184
+but where is this final view I'm gonna
+go over to the navigator
+
+391
+00:25:38,084 --> 00:25:41,141
+and find love you have selected is this
+your way you live you
+
+392
+00:25:42,041 --> 00:25:45,085
+and I can simply find where child is I
+don't know where it is in
+
+393
+00:25:45,085 --> 00:25:48,103
+special space but I know where it is and
+real
+
+394
+00:25:49,003 --> 00:25:53,009
+hierarchy of the view so if I click here
+I see that the position
+
+395
+00:25:53,009 --> 00:25:56,102
+is a 160 45 and remember that's based on
+the parent
+
+396
+00:25:57,002 --> 00:26:00,073
+so what I'm actually looking at is this
+view over here I thought there was a
+
+397
+00:26:00,073 --> 00:26:00,082
+working one
+
+398
+00:26:01,063 --> 00:26:04,091
+but view has been shifted of a
+
+399
+00:26:04,091 --> 00:26:08,154
+cell and its that's the reason it's
+missing
+
+400
+00:26:09,054 --> 00:26:12,110
+so let's go back up to the the cell
+
+401
+00:26:13,001 --> 00:26:17,030
+class and take a look at the
+implementation class
+
+402
+00:26:17,039 --> 00:26:21,058
+I mean idk man click on the class name
+here to dive into the implementation
+
+403
+00:26:21,058 --> 00:26:24,060
+and here you see a red a fairly simple
+implementation
+
+404
+00:26:24,078 --> 00:26:28,131
+for cell view all it does is it
+overrides the unit with frame
+
+405
+00:26:29,031 --> 00:26:32,036
+it creates a new UI ImageView and then
+add that
+
+406
+00:26:32,036 --> 00:26:36,052
+as the cut isometric view of the content
+the right down here
+
+407
+00:26:36,052 --> 00:26:40,105
+are thinking about p information we
+found earlier
+
+408
+00:26:41,005 --> 00:26:44,103
+we know there's a position issue and I
+can see that were passing the frame
+
+409
+00:26:45,003 --> 00:26:45,058
+wrecked
+
+410
+00:26:45,058 --> 00:26:48,095
+befell to this subview
+
+411
+00:26:48,095 --> 00:26:52,095
+that's not what I want I want this the
+sub you to have the same bounce as the
+
+412
+00:26:52,095 --> 00:26:52,131
+cell
+
+413
+00:26:53,031 --> 00:26:58,123
+so instead a friend req I'm gonna tape
+self that bounce
+
+414
+00:26:59,023 --> 00:27:04,060
+the should be enough to fix our problems
+I'm gonna build and run
+
+415
+00:27:04,006 --> 00:27:08,081
+switch over to the simulator
+
+416
+00:27:09,035 --> 00:27:13,123
+and Jack back into you are friend
+details view
+
+417
+00:27:14,023 --> 00:27:17,038
+sure enough we have the out fully
+functioning
+
+418
+00:27:17,038 --> 00:27:20,050
+you I collection do with dollar images
+tightly spaced
+
+419
+00:27:20,005 --> 00:27:23,008
+as expected now that bugs fixed
+
+420
+00:27:23,008 --> 00:27:26,041
+I do see another issue see this I
+
+421
+00:27:27,013 --> 00:27:30,112
+this label up here San Fran is sketchy
+keen a camper San Francisco but this is
+
+422
+00:27:31,012 --> 00:27:31,091
+a serious
+
+423
+00:27:31,091 --> 00:27:35,149
+running app this is an app for those of
+us that go every morning and we don't
+
+424
+00:27:36,049 --> 00:27:36,128
+call
+
+425
+00:27:37,028 --> 00:27:40,030
+this fair city San Fran is a San
+Francisco
+
+426
+00:27:40,003 --> 00:27:44,004
+isolates let's go back to bed have if
+you go back and see if we can understand
+
+427
+00:27:44,004 --> 00:27:51,004
+what might be going on there
+
+428
+00:27:53,096 --> 00:27:56,149
+I mean it take a moment to admire the
+fully functioning
+
+429
+00:27:57,049 --> 00:28:00,142
+you a collection view looks great I mean
+it then turn back to you
+
+430
+00:28:01,042 --> 00:28:05,044
+two-dimensional know this button down
+here allows us to reset the View Rd
+
+431
+00:28:05,044 --> 00:28:09,048
+and I'm going to cook on this label
+
+432
+00:28:09,048 --> 00:28:12,076
+alright I know that I'm using auto
+layout and miss
+
+433
+00:28:12,076 --> 00:28:15,132
+application so let's go ahead and see if
+there's anything having to do with
+
+434
+00:28:16,032 --> 00:28:16,126
+constraints
+
+435
+00:28:17,026 --> 00:28:20,028
+there might be an issue down here is the
+
+436
+00:28:20,028 --> 00:28:24,067
+fasho constraints find this shows all
+the constraints
+
+437
+00:28:24,067 --> 00:28:28,099
+and it also dims out the views that are
+not currently related to those
+
+438
+00:28:28,099 --> 00:28:31,174
+to that new or its constraints this
+allows us to really focus in on the work
+
+439
+00:28:32,074 --> 00:28:35,100
+at hand
+
+440
+00:28:36,000 --> 00:28:39,179
+when I zoom in
+
+441
+00:28:39,179 --> 00:28:43,650
+it's plain to see that there are two
+constraints attached to this label
+
+442
+00:28:43,065 --> 00:28:47,088
+and if I look over here I see the
+witness 95
+
+443
+00:28:47,088 --> 00:28:50,105
+there's any explicit constrain have 95
+
+444
+00:28:51,005 --> 00:28:54,014
+down at the bottom the contents I've is
+a hundred and 9.5
+
+445
+00:28:54,095 --> 00:28:57,181
+so clearly somebody added a complex was
+a constraint and Interface Builder
+
+446
+00:28:58,081 --> 00:29:01,109
+and that clipping me implicit size
+
+447
+00:29:02,009 --> 00:29:05,054
+a that label so I'm just gonna switch
+over to
+
+448
+00:29:05,054 --> 00:29:08,063
+my storyboard find that label and
+
+449
+00:29:08,063 --> 00:29:12,100
+delete that explicit constrain
+
+450
+00:29:13,000 --> 00:29:17,179
+if I had the time to show you guys I
+would had a constraint-based
+
+451
+00:29:17,179 --> 00:29:20,950
+properly limited that label 13 go beyond
+the bounds on the screen but
+
+452
+00:29:20,095 --> 00:29:23,116
+I'm sure you can find in Interface
+Builder section for example
+
+453
+00:29:24,016 --> 00:29:27,059
+this afternoon at 3:15 that will at
+
+454
+00:29:27,059 --> 00:29:31,154
+go into more detail about out allow
+constraints
+
+455
+00:29:32,054 --> 00:29:36,070
+and I we have the full string that label
+
+456
+00:29:36,007 --> 00:29:39,099
+so we've seen it the view to biker is a
+fantastic way
+
+457
+00:29:40,062 --> 00:29:44,109
+to both look take a look at your your
+application and I invite you to do just
+
+458
+00:29:45,009 --> 00:29:45,074
+that
+
+459
+00:29:45,074 --> 00:29:48,079
+go back today just after the session
+
+460
+00:29:48,079 --> 00:29:51,101
+open up your computers just try hitting
+the view bigger bang on your application
+
+461
+00:29:52,001 --> 00:29:53,099
+I think you'll find it eliminating
+
+462
+00:29:53,099 --> 00:29:56,161
+and the integration with Xcode is
+fantastic
+
+463
+00:29:57,061 --> 00:30:00,083
+now I'd like to turn it over to carry
+was gonna teach you a little bit more
+
+464
+00:30:00,083 --> 00:30:01,172
+about quick look
+
+465
+00:30:01,919 --> 00:30:07,080
+previews
+
+466
+00:30:07,008 --> 00:30:11,037
+think it right my name is carrying and
+how is everyone enjoying the conference
+
+467
+00:30:11,037 --> 00:30:15,076
+so far
+
+468
+00:30:15,076 --> 00:30:18,077
+great I know that we are very excited to
+be here as well
+
+469
+00:30:18,077 --> 00:30:23,080
+to show some great new debugging
+features in Xcode set
+
+470
+00:30:23,008 --> 00:30:26,032
+but first let's take a step back
+
+471
+00:30:27,004 --> 00:30:30,019
+last year Xcode 5 debut with
+
+472
+00:30:30,019 --> 00:30:35,025
+is getting feature whereby as you are
+running and debugging your application
+
+473
+00:30:35,025 --> 00:30:38,027
+you can get a live quick look preview
+
+474
+00:30:38,027 --> 00:30:41,096
+above your data simply by clicking on
+
+475
+00:30:41,096 --> 00:30:44,555
+the quick look icon in the debug bar
+
+476
+00:30:45,419 --> 00:30:49,010
+you can get those pop over that will
+show you a preview you could even
+
+477
+00:30:49,001 --> 00:30:52,044
+simply by hovering over the source a
+variable
+
+478
+00:30:52,044 --> 00:30:56,283
+in the source editor get a quickly
+preview right from there
+
+479
+00:30:56,679 --> 00:30:59,970
+just by clicking on the quickly icon in
+
+480
+00:30:59,097 --> 00:31:02,106
+the paper that appears now
+
+481
+00:31:03,006 --> 00:31:06,014
+but X good five debuted with the fault
+support for
+
+482
+00:31:06,086 --> 00:31:09,095
+a number of important and common object
+types
+
+483
+00:31:09,095 --> 00:31:12,101
+like images and busy it has
+
+484
+00:31:13,055 --> 00:31:16,097
+and even things like map locations
+
+485
+00:31:16,097 --> 00:31:19,120
+well we've got a lot of great feedback
+from this feature and I know that it's
+
+486
+00:31:20,002 --> 00:31:20,044
+been
+
+487
+00:31:20,062 --> 00:31:23,147
+very useful to number developers
+including myself
+
+488
+00:31:24,047 --> 00:31:27,138
+so to build on the success index had sex
+
+489
+00:31:28,038 --> 00:31:32,111
+there is support for to new object types
+
+490
+00:31:33,011 --> 00:31:36,015
+the first is views
+
+491
+00:31:36,051 --> 00:31:39,086
+so wetherbee you i've you are in an
+issue
+
+492
+00:31:39,086 --> 00:31:42,160
+you can get a quick look preview %uh
+that
+
+493
+00:31:43,006 --> 00:31:47,062
+simply by clicking in the variables you
+and clicking on the
+
+494
+00:31:48,016 --> 00:31:51,020
+quickly icon or my favorite is just hit
+the spacebar
+
+495
+00:31:51,056 --> 00:31:54,138
+and it'll bring up a nice preview and
+considering how
+
+496
+00:31:55,038 --> 00:31:59,061
+common views are in most applications I
+think this will be a very powerful
+
+497
+00:31:59,061 --> 00:32:01,074
+feature
+
+498
+00:32:01,074 --> 00:32:04,133
+now this second object-type that was at
+
+499
+00:32:05,033 --> 00:32:09,040
+is well I honestly don't know
+
+500
+00:32:09,004 --> 00:32:12,029
+that's because it's your own custom
+class
+
+501
+00:32:12,065 --> 00:32:15,123
+so now for the first time if you have a
+class
+
+502
+00:32:16,023 --> 00:32:19,101
+that does some custom drying and perhaps
+returns
+
+503
+00:32:20,001 --> 00:32:25,023
+a I'm an image or a busy a path or
+something like that
+
+504
+00:32:25,023 --> 00:32:28,101
+you can now get a preview that as well
+
+505
+00:32:29,001 --> 00:32:32,420
+before now there wasn't great support
+for that
+
+506
+00:32:32,429 --> 00:32:36,380
+so if you were to try and get a preview
+you would get this
+
+507
+00:32:36,038 --> 00:32:39,587
+default view which had some pertinent
+information like the name and the
+
+508
+00:32:39,929 --> 00:32:41,540
+address and the type
+
+509
+00:32:41,054 --> 00:32:44,057
+but no preview so
+
+510
+00:32:44,057 --> 00:32:48,066
+I would like to show you how to fix that
+
+511
+00:32:48,066 --> 00:32:52,125
+there's a simple method that you can
+implement in your classes implementation
+
+512
+00:32:53,025 --> 00:32:57,076
+and it's called debug quick look object
+
+513
+00:32:57,076 --> 00:33:01,111
+now in this class you can either call
+your drying code or implemented in there
+
+514
+00:33:02,011 --> 00:33:06,082
+but the important point is from this
+method you return something that Xcode
+
+515
+00:33:06,082 --> 00:33:10,159
+knows how to show so wanted the default
+supported types
+
+516
+00:33:11,059 --> 00:33:15,091
+should be returned from this method and
+then you'll be good to go
+
+517
+00:33:15,091 --> 00:33:19,138
+and I would like to show you that now
+
+518
+00:33:20,038 --> 00:33:23,116
+so here we have the jogger application
+that we've been seeing in previous
+
+519
+00:33:24,016 --> 00:33:27,101
+jammers and I'm gonna click the routes
+button
+
+520
+00:33:28,001 --> 00:33:32,032
+and we'll see on things around from this
+morning
+
+521
+00:33:32,032 --> 00:33:35,035
+if thats indeed the case
+
+522
+00:33:35,062 --> 00:33:38,066
+and okay so this class has a
+
+523
+00:33:39,002 --> 00:33:42,090
+and object class called route half
+overlay
+
+524
+00:33:42,009 --> 00:33:45,051
+which accesses the run data to
+
+525
+00:33:46,032 --> 00:33:50,631
+generate this busy a path that then gets
+overlaid onto the map
+
+526
+00:33:50,919 --> 00:33:55,000
+so let's look at that a little further
+I'm gonna click on the map
+
+527
+00:33:55,000 --> 00:33:59,022
+and I'm gonna hate this a well scrolls
+really fast
+
+528
+00:33:59,022 --> 00:34:02,050
+gonna hit this breakpoint and the same
+trying to debug
+
+529
+00:34:02,005 --> 00:34:06,434
+some issue here now down in the
+variables view we can see we've got a
+
+530
+00:34:06,929 --> 00:34:09,890
+number of local variables like this
+point
+
+531
+00:34:09,089 --> 00:34:12,180
+and if I click on the quick look icon I
+can see
+
+532
+00:34:13,008 --> 00:34:16,587
+a preview of the point this is our route
+path overlay
+
+533
+00:34:17,379 --> 00:34:21,406
+and if I click on not I'm gonna hit the
+spacebar and what it just comes up with
+
+534
+00:34:21,649 --> 00:34:26,500
+is just some generic information but we
+can do better than that
+
+535
+00:34:26,005 --> 00:34:29,005
+some gonna stop here
+
+536
+00:34:29,005 --> 00:34:33,012
+gonna go to our route path overlay
+
+537
+00:34:34,002 --> 00:34:38,096
+and I've got the method that I was
+talking about debug quick look object
+
+538
+00:34:39,014 --> 00:34:42,019
+it's a sort of a long title but
+
+539
+00:34:42,019 --> 00:34:45,053
+try and remember okay and if I i'm
+comment that
+
+540
+00:34:45,053 --> 00:34:48,342
+and what this method does it's not
+really important because it's going to
+
+541
+00:34:48,819 --> 00:34:49,930
+be different for
+
+542
+00:34:49,093 --> 00:34:53,042
+every custom class but what it does is
+it it accesses
+
+543
+00:34:53,879 --> 00:34:58,200
+each of the 360 for some odd points
+
+544
+00:34:58,002 --> 00:35:01,017
+a map location the for that Ron
+
+545
+00:35:01,035 --> 00:35:04,274
+and then generates about as a power
+
+546
+00:35:04,589 --> 00:35:07,800
+skills in a little bit and then returns
+from at
+
+547
+00:35:07,008 --> 00:35:10,021
+does a path because Xcode 6 knows how to
+
+548
+00:35:10,093 --> 00:35:14,162
+render or quickly preview a busy a power
+
+549
+00:35:15,062 --> 00:35:18,281
+so the now that we've implemented either
+an able to
+
+550
+00:35:18,839 --> 00:35:25,839
+I'm gonna run and bike again
+
+551
+00:35:27,008 --> 00:35:32,065
+go to our routes click on the map
+
+552
+00:35:32,065 --> 00:35:36,073
+and if all goes well we should see and
+ice
+
+553
+00:35:36,073 --> 00:35:39,118
+detailed preview a each of those point
+today to from
+
+554
+00:35:40,018 --> 00:35:46,157
+the start until the ambulance picked up
+on me when he collapsed
+
+555
+00:35:46,319 --> 00:35:49,390
+I
+
+556
+00:35:49,039 --> 00:35:52,076
+attack so when everything today
+
+557
+00:35:52,076 --> 00:35:56,172
+we've she we've seen humming show us how
+we can vary easily and more effectively
+
+558
+00:35:57,072 --> 00:36:00,106
+debug Hughes and blocks
+
+559
+00:36:01,006 --> 00:36:05,072
+with the new cute a bug in future and
+then trace showed us how
+
+560
+00:36:05,072 --> 00:36:08,153
+we can more a effectively or easily
+explore
+
+561
+00:36:09,053 --> 00:36:12,140
+our applications view hierarchy I've
+used this
+
+562
+00:36:13,004 --> 00:36:16,006
+very effectively myself I several times
+
+563
+00:36:16,006 --> 00:36:19,225
+been very helpful and then I showed you
+how to add
+
+564
+00:36:19,819 --> 00:36:24,100
+quick look previews for your own custom
+classes
+
+565
+00:36:24,001 --> 00:36:27,056
+on and remember you can also now preview
+
+566
+00:36:27,065 --> 00:36:30,102
+any view so for more information you can
+contact
+
+567
+00:36:31,002 --> 00:36:36,002
+are great developer tools evangelist a
+bill on I also got a link here to the
+
+568
+00:36:36,002 --> 00:36:37,051
+documentation for
+
+569
+00:36:37,051 --> 00:36:41,400
+quick look previews which documentation
+will show you
+
+570
+00:36:41,859 --> 00:36:45,550
+will a full list of exactly all the
+default supported types
+
+571
+00:36:45,055 --> 00:36:48,090
+in Xcode sex and then
+
+572
+00:36:48,009 --> 00:36:51,085
+don't forget the developer forms
+
+573
+00:36:52,066 --> 00:36:55,071
+there's a lot of great debugging
+sessions this week so be sure to check
+
+574
+00:36:56,016 --> 00:36:58,073
+them out
+
+575
+00:36:58,073 --> 00:36:58,122
+thank you very much
+

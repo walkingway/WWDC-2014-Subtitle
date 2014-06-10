@@ -1,0 +1,3961 @@
+1
+00:00:11,047 --> 00:00:15,058
+Hyatt hello and welcome to the advanced
+graphics animations
+
+2
+00:00:15,058 --> 00:00:15,857
+why what's up
+
+3
+00:00:16,379 --> 00:00:20,393
+ok I'm actual up next with that he will
+take over in the middle of the talk
+
+4
+00:00:20,519 --> 00:00:23,602
+and was to less talky going to cover the
+following topics:
+
+5
+00:00:24,349 --> 00:00:27,400
+the first part will be talking about the
+quantitation pipeline and how it
+
+6
+00:00:27,859 --> 00:00:29,140
+interacts with the application
+
+7
+00:00:29,014 --> 00:00:32,103
+after this I'm introduce a few rendering
+concept that are required to understand
+
+8
+00:00:33,003 --> 00:00:36,035
+our new two classes you I blow effect
+and you haven't the effect
+
+9
+00:00:36,035 --> 00:00:40,096
+and after this Michael takeover and
+walking through existing profiling tools
+
+10
+00:00:40,096 --> 00:00:45,121
+and demonstrate a few case studies 228 a
+framework to be looking at and at a
+
+11
+00:00:46,021 --> 00:00:46,114
+distance talk
+
+12
+00:00:47,014 --> 00:00:51,047
+from in the fourth but a top you looking
+at coordination and told in taxes OpenGL
+
+13
+00:00:51,047 --> 00:00:54,776
+on some hardware was metal with the
+graphics software and then
+
+14
+00:00:55,199 --> 00:00:58,256
+in the second half of my part ever talk
+about you I blow effect on your lap and
+
+15
+00:00:58,769 --> 00:01:00,280
+the fact that a part of you like it
+
+16
+00:01:00,028 --> 00:01:03,807
+so let's get started with the
+coordination pipeline
+
+17
+00:01:04,059 --> 00:01:07,111
+so it all starts in the application
+
+18
+00:01:07,579 --> 00:01:10,615
+the application with a few high keep
+either indirectly with you like it or
+
+19
+00:01:10,939 --> 00:01:11,993
+directly was cool animation
+
+20
+00:01:12,479 --> 00:01:16,700
+wanting was not a thing now is that the
+application process
+
+21
+00:01:16,007 --> 00:01:19,073
+is actually not doing the actual
+rendering work for coordination instep
+
+22
+00:01:20,036 --> 00:01:20,074
+this
+
+23
+00:01:20,074 --> 00:01:23,993
+if you are a key is committed to Reynoso
+up which is a separate process
+
+24
+00:01:24,659 --> 00:01:28,200
+and israel also has a server-side
+version of coordination that receives
+
+25
+00:01:28,002 --> 00:01:28,781
+this your lucky
+
+26
+00:01:28,979 --> 00:01:32,530
+if your keys then rendered visco
+animation
+
+27
+00:01:32,053 --> 00:01:36,067
+miss orange elemental a obvious to you
+few accelerated
+
+28
+00:01:36,067 --> 00:01:39,826
+and then one secure key is being
+rendered we can finally displayed to the
+
+29
+00:01:40,429 --> 00:01:40,433
+user
+
+30
+00:01:40,829 --> 00:01:44,853
+so do things interesting part is now
+haha doesn't look like time by
+
+31
+00:01:45,069 --> 00:01:47,160
+submitting the application so therefore
+I would like to introduce the flow
+
+32
+00:01:47,979 --> 00:01:48,810
+Ingrid
+
+33
+00:01:48,081 --> 00:01:51,110
+the vertical lines represent a vertical
+blanking interrupts
+
+34
+00:01:52,001 --> 00:01:55,068
+and Cynthia rendering at sixty have are
+you I the distance between doors were
+
+35
+00:01:55,077 --> 00:01:55,135
+declines
+
+36
+00:01:56,035 --> 00:01:59,040
+16.67 milliseconds so
+
+37
+00:01:59,085 --> 00:02:02,314
+the full thing that happens in the
+application be receive an event
+
+38
+00:02:03,079 --> 00:02:06,350
+probably because the touch and therefore
+the usual case
+
+39
+00:02:06,035 --> 00:02:09,724
+but anything to him in this case is that
+the 12 update a few hockey
+
+40
+00:02:10,039 --> 00:02:14,510
+and this happens in the face that we
+call the contraction faces in
+
+41
+00:02:14,051 --> 00:02:17,052
+is no application at the end of the
+faith
+
+42
+00:02:17,061 --> 00:02:20,114
+if you are accused and and called and
+sent Reynoso
+
+43
+00:02:21,014 --> 00:02:24,040
+the full thing that are in the summer
+and the house is difficult to secure a
+
+44
+00:02:24,004 --> 00:02:24,049
+key
+
+45
+00:02:24,085 --> 00:02:27,171
+the end the summer then have to wait for
+the next piece Inc
+
+46
+00:02:28,071 --> 00:02:32,072
+in order to made for bus that we get
+back from a state you can actually went
+
+47
+00:02:32,072 --> 00:02:32,117
+to
+
+48
+00:02:33,017 --> 00:02:36,073
+and then it finally stopped issuing talk
+of
+
+49
+00:02:36,073 --> 00:02:41,082
+to for the Jeep you with OpenGL metal
+again then want this is completed
+
+50
+00:02:42,063 --> 00:02:45,145
+hopefully teach PDP resources not
+available he can finally start rendering
+
+51
+00:02:46,045 --> 00:02:50,046
+and soldier accused of doing is
+rendering work hopefully this rendering
+
+52
+00:02:50,055 --> 00:02:50,060
+book
+
+53
+00:02:51,005 --> 00:02:54,028
+finishes before the next we think
+because then we can
+
+54
+00:02:54,028 --> 00:02:57,032
+swap in the frame buffer and showed if
+you are key to the user
+
+55
+00:02:57,068 --> 00:03:00,166
+as you can see this very steps spent
+over moves for frames in this case it's
+
+56
+00:03:01,066 --> 00:03:01,150
+three frames
+
+57
+00:03:02,005 --> 00:03:05,099
+and let's say we would now lost continue
+with the next 10 leavin to commit
+
+58
+00:03:06,044 --> 00:03:06,097
+transaction
+
+59
+00:03:06,097 --> 00:03:08,192
+after-hours played that we would only be
+able to her and that's when he heard not
+
+60
+00:03:09,092 --> 00:03:09,178
+at 60 Hertz
+
+61
+00:03:10,078 --> 00:03:13,091
+so therefore what we're doing is BR
+overlaying
+
+62
+00:03:13,091 --> 00:03:16,157
+the stages so in parallel with the drugs
+that you can see here people
+
+63
+00:03:17,057 --> 00:03:22,058
+do the next 10-20 vent and the event
+commit transaction and so we end up with
+
+64
+00:03:22,058 --> 00:03:26,107
+following step diagram in next few
+flights I would like to
+
+65
+00:03:27,007 --> 00:03:30,049
+focus on commit transaction stage
+because that's what effect application
+
+66
+00:03:30,049 --> 00:03:30,146
+developers the most
+
+67
+00:03:31,046 --> 00:03:34,079
+so let's take a look at commit
+transaction
+
+68
+00:03:34,079 --> 00:03:38,080
+commit transaction itself consists of
+all fails the first phase this delay of
+
+69
+00:03:38,008 --> 00:03:38,056
+faith
+
+70
+00:03:39,028 --> 00:03:43,084
+does that he set up the fuse then the
+next phase is to display faced as they
+
+71
+00:03:43,084 --> 00:03:43,169
+draw to fuse
+
+72
+00:03:44,069 --> 00:03:47,123
+the sub faces steep repair commit face
+heavy
+
+73
+00:03:48,023 --> 00:03:51,040
+to some additional 20 mission work and
+the last phase
+
+74
+00:03:51,004 --> 00:03:54,043
+is maybe actually pick it up the Laos
+and seventh-rounder so
+
+75
+00:03:54,079 --> 00:03:58,120
+in the committee let's look in detail at
+those four phases
+
+76
+00:03:59,002 --> 00:04:04,003
+first then they'll face and layout faced
+the layouts a fuse alright I invoked
+
+77
+00:04:04,003 --> 00:04:08,522
+does the few creation happens does the
+BF left with short he was that's a few
+
+78
+00:04:08,819 --> 00:04:12,970
+and is very popular content and to some
+lightweight database lookup something
+
+79
+00:04:12,097 --> 00:04:14,122
+like this because we don't want to stall
+here too long
+
+80
+00:04:15,022 --> 00:04:18,068
+like this could be for example localized
+strings because we need him at this
+
+81
+00:04:18,068 --> 00:04:19,347
+point in order to put
+
+82
+00:04:19,959 --> 00:04:23,550
+to a labor layout because of this the
+faith
+
+83
+00:04:23,055 --> 00:04:28,071
+usually Cebu bond oil about the second
+phase of the display 5
+
+84
+00:04:28,071 --> 00:04:31,078
+disadvantage or contents the store
+activity overridden audio stream drawing
+
+85
+00:04:32,041 --> 00:04:35,063
+one thing what both noting here is that
+this
+
+86
+00:04:35,063 --> 00:04:39,112
+faith is actually Cebu on a rebound
+because the rendering is so for us to
+
+87
+00:04:40,012 --> 00:04:40,104
+rise to use your
+
+88
+00:04:41,004 --> 00:04:44,603
+cool graphics was rendering and Soviet
+leaders rendering with
+
+89
+00:04:44,639 --> 00:04:49,310
+CG context so the point is here that we
+want to minimize the work that we do
+
+90
+00:04:49,031 --> 00:04:52,360
+with call graphics to avoid a lot
+performance in the stage
+
+91
+00:04:52,639 --> 00:04:57,690
+next faithful to prepare faced this is
+the image decoding image conversion
+
+92
+00:04:57,069 --> 00:04:57,128
+happens
+
+93
+00:04:58,028 --> 00:05:02,041
+image tickling should be straightforward
+the 75th and images and if you are a key
+
+94
+00:05:02,041 --> 00:05:02,137
+and
+
+95
+00:05:03,037 --> 00:05:06,106
+this trip XO PNG's I getting the call it
+at this point
+
+96
+00:05:07,006 --> 00:05:10,058
+image conversion it's not quite so
+straightforward what happens here is
+
+97
+00:05:10,058 --> 00:05:13,058
+that we might have images that I in a
+format that has cheated on
+
+98
+00:05:13,058 --> 00:05:16,107
+that is not supported by the GP you and
+definitely need to convert
+
+99
+00:05:17,007 --> 00:05:20,074
+his images a good example is could be
+indexed bitmaps leave want to avoid
+
+100
+00:05:20,074 --> 00:05:23,131
+certain image formats
+
+101
+00:05:24,031 --> 00:05:26,120
+in the last faced the cliff face the
+package up the layers and send them to
+
+102
+00:05:27,002 --> 00:05:28,041
+run the server
+
+103
+00:05:28,059 --> 00:05:31,358
+this process is because if you have to
+trade with really a tree and is
+
+104
+00:05:31,889 --> 00:05:35,570
+expensive the latter is complex or do
+that's why we want to keep the left rear
+
+105
+00:05:35,057 --> 00:05:36,376
+strut as possible
+
+106
+00:05:36,889 --> 00:05:43,310
+to make sure that that it's part of the
+faces is efficient as can be
+
+107
+00:05:43,031 --> 00:05:46,057
+so let's take a look how this works
+animation animations themself
+
+108
+00:05:46,057 --> 00:05:49,123
+three-stage process I'm two of those
+happen in fact application
+
+109
+00:05:50,023 --> 00:05:54,049
+at the last eight happens on the in the
+summer the first they just let me Chris
+
+110
+00:05:54,049 --> 00:05:57,060
+where we create animation update of your
+key this happens usually was the
+
+111
+00:05:57,006 --> 00:05:58,008
+animators duration:
+
+112
+00:05:58,008 --> 00:06:01,097
+animations Meffert then the second stage
+is every
+
+113
+00:06:02,069 --> 00:06:05,074
+prepared committee animation this is
+where earlier a few
+
+114
+00:06:05,074 --> 00:06:08,085
+been called and direct and that promise
+of familiar
+
+115
+00:06:08,085 --> 00:06:12,144
+and it is because is out for fails we
+are just looking at
+
+116
+00:06:13,044 --> 00:06:15,132
+the only difference here is that with
+the committee don't just committed if
+
+117
+00:06:16,032 --> 00:06:16,661
+you are a key
+
+118
+00:06:16,949 --> 00:06:20,970
+recommit as well D animation and it's a
+reason because we would like to hand off
+
+119
+00:06:20,097 --> 00:06:23,190
+the animation booked Reynoso so that we
+can
+
+120
+00:06:24,009 --> 00:06:27,010
+continue to update your animations
+result using inter-process communication
+
+121
+00:06:28,000 --> 00:06:32,071
+to talk back to the application of
+awesome backed with the application
+
+122
+00:06:32,071 --> 00:06:35,122
+so look for proficiency reasons
+
+123
+00:06:36,022 --> 00:06:39,971
+saw let's take a look at a few rendering
+conflate the required to have
+
+124
+00:06:40,169 --> 00:06:45,270
+understand and you visual effects that
+yet providing you with what I was eight
+
+125
+00:06:45,027 --> 00:06:48,033
+for his part of a talker I'm covering
+three areas first time it's pandering to
+
+126
+00:06:48,033 --> 00:06:50,059
+this whole or GP was work
+
+127
+00:06:50,059 --> 00:06:53,108
+then I'm going to introduce the concept
+of render passes because on the effect
+
+128
+00:06:54,008 --> 00:06:56,097
+for use with for in the path of
+
+129
+00:06:56,169 --> 00:07:00,040
+and then I'm doing a fourth example by
+showing you home asking works is when a
+
+130
+00:07:00,004 --> 00:07:02,075
+passive
+
+131
+00:07:02,075 --> 00:07:05,076
+so let's take a look at times rendering
+with famous rendering the screen is
+
+132
+00:07:05,076 --> 00:07:07,122
+split into title and I and pixels
+
+133
+00:07:08,022 --> 00:07:11,025
+have put your screen shot together and
+all it to the grits bacon he actually
+
+134
+00:07:11,052 --> 00:07:12,011
+bought it has
+
+135
+00:07:12,479 --> 00:07:16,523
+thanks would be like the time for the
+children so that it fits into
+
+136
+00:07:16,919 --> 00:07:22,470
+into the SLC cash and the ID is here
+that the geometry split 2-2 tie back its
+
+137
+00:07:22,047 --> 00:07:27,306
+and I would like to demonstrate this a
+by using the phone taken as an example
+
+138
+00:07:27,729 --> 00:07:31,040
+as you can see the full I can spend much
+but I'll and
+
+139
+00:07:31,004 --> 00:07:34,085
+before i cant others when it is he a
+layup and the CLA NCAA israel's
+
+140
+00:07:34,085 --> 00:07:37,102
+two triangles and if you look at the two
+triangles
+
+141
+00:07:38,002 --> 00:07:42,053
+they're still spending multiple
+triangles through to the tiles
+
+142
+00:07:42,053 --> 00:07:44,151
+and thought if you were doing now it
+will not stop splitting up those trying
+
+143
+00:07:45,051 --> 00:07:45,057
+of
+
+144
+00:07:46,011 --> 00:07:50,570
+many committed but I'll so that each
+type can be rented individually
+
+145
+00:07:50,669 --> 00:07:53,766
+the idea fear the beard do with process
+novel who geometry so at some point we
+
+146
+00:07:54,639 --> 00:07:57,720
+have to geometry for each to collect
+that and then we can make decisions
+
+147
+00:07:57,072 --> 00:08:00,081
+on what pictures are visible and then
+decide but pick such a two-run three-run
+
+148
+00:08:01,062 --> 00:08:01,138
+each pixel shader
+
+149
+00:08:02,038 --> 00:08:05,050
+when he wants public's home
+
+150
+00:08:05,005 --> 00:08:08,024
+obviously if you do banning this doesn't
+quite work that we still have to you
+
+151
+00:08:08,069 --> 00:08:12,093
+problem overdrawn
+
+152
+00:08:12,093 --> 00:08:15,135
+so let's take a look at what type up
+when Rick passes I'll
+
+153
+00:08:16,035 --> 00:08:19,664
+so let a few applications has built a
+few her keeps coordination
+
+154
+00:08:19,979 --> 00:08:24,210
+it's committed to render so and comic
+when mission you call it it
+
+155
+00:08:24,021 --> 00:08:27,078
+and now it needs to end it and it will
+use OpenGL metal
+
+156
+00:08:27,078 --> 00:08:30,687
+and it's like I'm just saying metal for
+simplicity Tremlett
+
+157
+00:08:31,389 --> 00:08:35,392
+and it will generate with hope your
+comment but that is then submitted to GP
+
+158
+00:08:35,419 --> 00:08:35,480
+you
+
+159
+00:08:36,029 --> 00:08:41,190
+at the Jeep Europe received this command
+before and stop doing at work
+
+160
+00:08:41,019 --> 00:08:44,278
+the first thing that you do is what text
+processing those that about action
+
+161
+00:08:44,449 --> 00:08:44,487
+around
+
+162
+00:08:44,829 --> 00:08:47,831
+and ideas here that would transform all
+about this isn't a screen space at this
+
+163
+00:08:48,029 --> 00:08:49,050
+stage
+
+164
+00:08:49,005 --> 00:08:52,054
+so that we can do tend to the second
+stage with his bitches get retailing
+
+165
+00:08:52,054 --> 00:08:55,058
+actually tell the geometry fought
+advocates
+
+166
+00:08:55,058 --> 00:08:58,157
+and this part of the state Scott but I
+left side you will be able to find
+
+167
+00:08:59,057 --> 00:09:02,112
+in the instruments in the open OpenGL ES
+driver instrument
+
+168
+00:09:03,012 --> 00:09:06,013
+and %uh palo utilization
+
+169
+00:09:06,022 --> 00:09:09,075
+the output of the state's is written and
+something called the parents about from
+
+170
+00:09:09,075 --> 00:09:12,081
+and the next stage is not starting
+millions that
+
+171
+00:09:12,081 --> 00:09:15,085
+the leave made no answer or geometry is
+processed and sits in the family to
+
+172
+00:09:16,021 --> 00:09:16,025
+buffer
+
+173
+00:09:16,061 --> 00:09:19,083
+or into the pan with a purpose for
+because the problem is if the problem is
+
+174
+00:09:19,083 --> 00:09:20,147
+full we have to flush it
+
+175
+00:09:21,047 --> 00:09:24,086
+and it's actually performance it on
+because they meet with automatic
+
+176
+00:09:24,086 --> 00:09:24,160
+processing
+
+177
+00:09:25,006 --> 00:09:28,100
+and gets front load the pics a shift
+work
+
+178
+00:09:29,054 --> 00:09:34,083
+and except to say that status as a set
+up extra stage
+
+179
+00:09:34,083 --> 00:09:37,114
+the stage is actually call to render a
+stage and you can find again in the
+
+180
+00:09:38,014 --> 00:09:40,029
+instruments or your structural
+
+181
+00:09:40,029 --> 00:09:43,127
+a and that the name ring writers Asian
+and the output of the stage is written
+
+182
+00:09:44,027 --> 00:09:44,120
+to something called
+
+183
+00:09:45,002 --> 00:09:48,027
+you in the buffer K
+
+184
+00:09:48,045 --> 00:09:52,072
+South take a look at a practical example
+by looking at masking
+
+185
+00:09:52,072 --> 00:09:55,076
+let's assume of your keys way to go the
+command buffer is
+
+186
+00:09:55,076 --> 00:09:58,135
+sitting miss the few and you can stop
+processing
+
+187
+00:09:59,035 --> 00:10:02,060
+for the full thing happens in the fourth
+pastors that be rendered the
+
+188
+00:10:02,006 --> 00:10:06,020
+delay I'm off to a texture in this case
+that this camera icon
+
+189
+00:10:06,074 --> 00:10:09,133
+them in the second pass P render the
+their content with extra
+
+190
+00:10:10,033 --> 00:10:13,602
+and in this case with this kinda blew
+material
+
+191
+00:10:13,899 --> 00:10:17,700
+and then in the last part that he called
+it compositing possibly apply to master
+
+192
+00:10:17,007 --> 00:10:18,206
+the content texture
+
+193
+00:10:18,899 --> 00:10:22,250
+and composite to rate the result a
+screen and up is dis light blue camera
+
+194
+00:10:22,025 --> 00:10:24,101
+icon
+
+195
+00:10:25,001 --> 00:10:29,002
+saw let's take a look at you I'd love a
+factor for those that don't know
+
+196
+00:10:29,011 --> 00:10:32,048
+you I blow effect can be used with you
+as a visual effect few and
+
+197
+00:10:32,048 --> 00:10:37,105
+does not public API since I was 8 it
+basically allows you to use the broth
+
+198
+00:10:38,005 --> 00:10:42,007
+that introduces I was having and be
+providing you with three different law
+
+199
+00:10:42,025 --> 00:10:43,083
+stuff that I want to demonstrate your
+
+200
+00:10:43,083 --> 00:10:46,182
+to piss regular I O S wallpaper and
+apply to three blocks that that you have
+
+201
+00:10:47,082 --> 00:10:47,141
+to it
+
+202
+00:10:48,041 --> 00:10:51,470
+extra light light and dark a
+
+203
+00:10:51,839 --> 00:10:54,895
+so let's take a look how does look
+performance wife
+
+204
+00:10:55,399 --> 00:10:58,930
+I'm using Google Docs time as an example
+for rendering process the doc style
+
+205
+00:10:58,093 --> 00:11:01,096
+actually using the law was the model for
+an apostle and
+
+206
+00:11:02,023 --> 00:11:05,052
+the I think your mind number in the past
+depends on how to be difficult to other
+
+207
+00:11:05,052 --> 00:11:05,136
+nations
+
+208
+00:11:06,036 --> 00:11:09,129
+for certain pop pop up
+
+209
+00:11:10,029 --> 00:11:14,127
+for the fourth past year end of the
+content that was going to be blood
+
+210
+00:11:15,027 --> 00:11:18,216
+then in the second part of be captured a
+confident on scale it
+
+211
+00:11:18,459 --> 00:11:22,497
+the downscale depends on the hardware so
+in disc fly to cap it at a certain size
+
+212
+00:11:22,839 --> 00:11:24,680
+with the readable
+
+213
+00:11:24,068 --> 00:11:27,119
+then in like the past few play the
+actual blog arisen which
+
+214
+00:11:28,019 --> 00:11:31,101
+separated so we do for the horizontal
+and vertical blom
+
+215
+00:11:32,001 --> 00:11:35,073
+there's actually a con brio optimization
+because do with anything a pass but
+
+216
+00:11:35,073 --> 00:11:36,104
+let's assume our
+
+217
+00:11:37,004 --> 00:11:40,030
+blower car would be eleven by 11 this
+would mean we would need to read how
+
+218
+00:11:40,003 --> 00:11:42,162
+twenty-one samples per pixel
+
+219
+00:11:42,459 --> 00:11:45,770
+by separating it to be or need to read
+11 samples per pixel
+
+220
+00:11:45,077 --> 00:11:49,586
+cage bus so after the 4th path we have
+to love
+
+221
+00:11:50,279 --> 00:11:53,370
+horizontally and vertically blot small
+tiny area
+
+222
+00:11:53,037 --> 00:11:56,110
+and so what's left in the last part is
+that need to upscale display or intended
+
+223
+00:11:57,001 --> 00:12:00,052
+in this case we end up them to sell a
+doctor
+
+224
+00:12:00,061 --> 00:12:05,097
+so that looks fine but let's take a look
+how this looks like performance wise
+
+225
+00:12:05,097 --> 00:12:08,656
+so what it as a test I critical full
+screen layout and
+
+226
+00:12:09,529 --> 00:12:13,800
+applied to your bluff effect to it and
+measure the performance and a staggering
+
+227
+00:12:13,008 --> 00:12:14,047
+can see three roles
+
+228
+00:12:14,839 --> 00:12:19,200
+the first rule group effort I'll
+activity second-rower interactivity
+
+229
+00:12:19,002 --> 00:12:22,073
+and to the last row I put in the black
+interrupt you can actually see you
+
+230
+00:12:22,091 --> 00:12:26,114
+what friend boundaries are and again be
+running at 60 votes are you I
+
+231
+00:12:27,014 --> 00:12:31,893
+so time you have as 16.67 seconds
+
+232
+00:12:32,019 --> 00:12:35,480
+so let's focus on on a single frame
+
+233
+00:12:35,048 --> 00:12:39,157
+as you can see a first look here the
+first Tyler path is happening before the
+
+234
+00:12:39,589 --> 00:12:41,670
+first when their paths and that's
+because
+
+235
+00:12:41,067 --> 00:12:44,092
+the Thailand the process all geometries
+with emphasize what we just saw on a
+
+236
+00:12:44,092 --> 00:12:46,123
+previous life
+
+237
+00:12:47,023 --> 00:12:50,062
+so let's go quickly what passes against
+the footpath if the
+
+238
+00:12:50,269 --> 00:12:54,307
+content past the time for this penance
+really depends really on if you are a
+
+239
+00:12:54,649 --> 00:12:55,140
+key
+
+240
+00:12:55,014 --> 00:12:58,403
+in this case it's just the simple image
+so it might take longer in use in
+
+241
+00:12:58,529 --> 00:12:59,160
+real-world
+
+242
+00:12:59,016 --> 00:13:03,064
+you I'm then in the second panel 3
+downscale
+
+243
+00:13:03,064 --> 00:13:06,118
+and capture the content it's actually
+fairly fast
+
+244
+00:13:07,018 --> 00:13:10,020
+at his pre-match consul cost then
+
+245
+00:13:10,002 --> 00:13:13,043
+the surpasses yours on two brothers
+again constant calls for two pretty fast
+
+246
+00:13:13,061 --> 00:13:13,122
+because the
+
+247
+00:13:14,022 --> 00:13:17,641
+only played on a very small area and
+then in the fourth piles
+
+248
+00:13:17,839 --> 00:13:21,170
+me to refer to comply or again very fast
+and
+
+249
+00:13:21,017 --> 00:13:25,186
+we end up with a blow to region and then
+in the last past the upscale
+
+250
+00:13:25,339 --> 00:13:28,364
+and tint people are
+
+251
+00:13:28,589 --> 00:13:31,660
+the one thing you will notice now others
+gaps between those passes left my time
+
+252
+00:13:31,066 --> 00:13:32,435
+here in Orange
+
+253
+00:13:33,029 --> 00:13:36,660
+and those cats I actually did you idle
+time and to happen because we do here
+
+254
+00:13:36,066 --> 00:13:37,088
+rent a context switch
+
+255
+00:13:37,088 --> 00:13:40,126
+in on this John a jeep you and this can
+actually quite
+
+256
+00:13:41,026 --> 00:13:43,855
+at up quite quickly because the time
+spent here and at other times per
+
+257
+00:13:44,089 --> 00:13:45,600
+possible to your point want to
+
+258
+00:13:45,006 --> 00:13:48,078
+your point to a few seconds so in this
+case was four passes we have bought at a
+
+259
+00:13:49,032 --> 00:13:52,033
+time of 0.4 to 0.8 milliseconds
+
+260
+00:13:52,033 --> 00:13:57,662
+which is a good thing if you can track
+of our 16.67 milliseconds
+
+261
+00:13:57,959 --> 00:14:01,170
+let's take a look out a book performs on
+the various devices from
+
+262
+00:14:01,017 --> 00:14:04,026
+so again this is the full screen blow to
+use that I used before and
+
+263
+00:14:05,007 --> 00:14:08,216
+measured as well on iPad 3 such
+innovation
+
+264
+00:14:08,279 --> 00:14:11,040
+and as you can see the iPod Touch
+generation performs much worse than the
+
+265
+00:14:11,004 --> 00:14:12,793
+iPad app
+
+266
+00:14:12,829 --> 00:14:16,470
+in the interest in the in the case of
+text the lead lawyer the timing
+
+267
+00:14:16,047 --> 00:14:20,036
+is 18 point 15 in the second for the
+country and that 60% of the type of
+
+268
+00:14:20,459 --> 00:14:21,980
+wrong about him
+
+269
+00:14:21,098 --> 00:14:24,135
+and polite and actually around fourteen
+point five milliseconds
+
+270
+00:14:25,035 --> 00:14:28,714
+which leads us about 20 seconds for you
+i've which is not really enough for
+
+271
+00:14:29,029 --> 00:14:31,000
+entering any compelling you I'm
+
+272
+00:14:31,000 --> 00:14:34,025
+so the decision be made on I was seven
+already was that we would is able to
+
+273
+00:14:34,025 --> 00:14:35,067
+bring on certain devices
+
+274
+00:14:35,067 --> 00:14:38,067
+and the iPod Touch generation is one of
+those devices and with this
+
+275
+00:14:38,067 --> 00:14:41,082
+the former on the iPad situation changes
+to this
+
+276
+00:14:41,082 --> 00:14:44,137
+you basically just apply it in play on
+top so that we can actually do believe
+
+277
+00:14:45,037 --> 00:14:46,038
+he is the same as
+
+278
+00:14:46,047 --> 00:14:49,116
+with possibly effect
+
+279
+00:14:50,016 --> 00:14:55,375
+saw and to either it on what devices we
+don't want to be only 22 tinting
+
+280
+00:14:55,519 --> 00:14:59,440
+on the iPad 2 and iPad such generational
+be just the private in Danby skip the
+
+281
+00:14:59,044 --> 00:15:00,313
+blow steps
+
+282
+00:15:00,709 --> 00:15:04,200
+on iPad 4th generation iPod air iPad
+Mini iPad Mini
+
+283
+00:15:04,002 --> 00:15:10,511
+was richard is playing or iPhones and
+iPod Touch do both the Bryant attending
+
+284
+00:15:10,709 --> 00:15:14,734
+soul in summary for the you I visual
+effects few with you I play fact
+
+285
+00:15:14,959 --> 00:15:18,040
+you I blow effect it would have to ask
+impasses depending on the style
+
+286
+00:15:18,769 --> 00:15:22,390
+when he died two weeks redrawn so it's
+actually fine if you have
+
+287
+00:15:22,039 --> 00:15:25,178
+a large blur area and you don't have
+that content behind it because they only
+
+288
+00:15:25,529 --> 00:15:27,200
+apply to blow one's
+
+289
+00:15:27,002 --> 00:15:30,881
+effective very costly so the United can
+be easily Jeep you belong to
+
+290
+00:15:31,079 --> 00:15:35,110
+so therefore you should keep the balance
+of the few a small as possible
+
+291
+00:15:35,011 --> 00:15:40,073
+and therefore as well he should make
+sure to put it for defect
+
+292
+00:15:40,073 --> 00:15:43,073
+saw next let's take a look at you I
+violence effect
+
+293
+00:15:43,073 --> 00:15:45,168
+you have aren t affect the city is in
+effect issues on top of the blender from
+
+294
+00:15:46,068 --> 00:15:49,537
+interviews for content which can make
+sure that content thanks out and doesn't
+
+295
+00:15:50,149 --> 00:15:52,380
+go unnoticed the broth
+
+296
+00:15:52,038 --> 00:15:55,069
+so let's take a look how does look like
+at this hour three blocks that again
+
+297
+00:15:55,069 --> 00:15:58,091
+and let's assume the bonds to render the
+camera icon from
+
+298
+00:15:58,091 --> 00:16:01,092
+I'm asking example from before on top
+
+299
+00:16:01,092 --> 00:16:04,148
+and this could look like this if you
+don't use any balance effect and as you
+
+300
+00:16:05,048 --> 00:16:06,135
+can see was the light style
+
+301
+00:16:07,035 --> 00:16:10,044
+there might be too large booty issues
+because the great stuff leading
+
+302
+00:16:10,044 --> 00:16:13,693
+out so what decided to us that we edit
+some
+
+303
+00:16:14,089 --> 00:16:17,160
+if I'm into effect and the primacy
+effect and at the pump through and then
+
+304
+00:16:17,016 --> 00:16:20,037
+you end up with nice private look
+
+305
+00:16:20,037 --> 00:16:23,069
+saw let's take a look how does affect
+performance
+
+306
+00:16:23,069 --> 00:16:26,111
+so back to or in the past agro
+
+307
+00:16:27,011 --> 00:16:31,048
+the first five passes are in this case
+for the doctor or the broadcast
+
+308
+00:16:31,048 --> 00:16:34,143
+and then in a six pack of beer another
+their content to a texture
+
+309
+00:16:35,043 --> 00:16:38,642
+and then in the final compositing pass
+we take the
+
+310
+00:16:39,029 --> 00:16:43,000
+their content and apply filter and
+composited on top of the block
+
+311
+00:16:43,000 --> 00:16:46,032
+don't be fooled here from the for the
+cause actually quite expensive and I
+
+312
+00:16:46,032 --> 00:16:50,057
+wanna shoulders and next couple of
+flights
+
+313
+00:16:50,057 --> 00:16:53,376
+so this is our order and I come from
+before the South the the steps what a
+
+314
+00:16:53,889 --> 00:16:57,810
+blow and lets at on now the steps for
+the vibrancy effect
+
+315
+00:16:57,081 --> 00:17:01,480
+so in perfect a meeting in here from
+content that is ok mr. Aiken
+
+316
+00:17:02,209 --> 00:17:06,221
+and damn obviously the cost for this
+past depends on what you're entering
+
+317
+00:17:06,329 --> 00:17:06,380
+their
+
+318
+00:17:06,839 --> 00:17:09,844
+what very few very few have key looks
+like
+
+319
+00:17:10,339 --> 00:17:12,432
+and then last past the apply the filter
+and as you can see the for the cause
+
+320
+00:17:13,269 --> 00:17:14,322
+actually very expand the fifth
+
+321
+00:17:14,799 --> 00:17:18,130
+actually the most expensive path we have
+here
+
+322
+00:17:18,013 --> 00:17:21,712
+one thing to keep in mind here is that I
+apply to balance the effect of which can
+
+323
+00:17:21,829 --> 00:17:22,970
+carry on
+
+324
+00:17:22,097 --> 00:17:25,816
+the recommendation is to not apply to
+pharmacy effect with with Marion stat to
+
+325
+00:17:26,689 --> 00:17:32,701
+only apply it to us more content areas
+to avoid to tissues performance penalty
+
+326
+00:17:32,809 --> 00:17:37,030
+about time for life a the did you have
+no spam or caps because you have more in
+
+327
+00:17:37,003 --> 00:17:39,032
+a pass a Saudi g2 I'll a time
+
+328
+00:17:39,032 --> 00:17:44,098
+has increased as well if not six caps
+and this can add up to 0.6 pool 21.2 mi
+
+329
+00:17:44,098 --> 00:17:44,151
+seconds
+
+330
+00:17:45,051 --> 00:17:48,350
+by the time about you
+
+331
+00:17:48,809 --> 00:17:54,040
+saw let's take a look how does look on
+my putts a generation and iPad a.m.
+
+332
+00:17:54,004 --> 00:17:57,078
+does the base cost from before 4.59 many
+seconds for the iPod Touch I actually
+
+333
+00:17:57,078 --> 00:17:58,147
+don't blow
+
+334
+00:17:59,047 --> 00:18:02,140
+and a different times for the iPad and
+depending on the blast I'll
+
+335
+00:18:03,004 --> 00:18:07,041
+solitaire on and what we can see is for
+the fourth been effective therapy is
+
+336
+00:18:07,077 --> 00:18:10,176
+spending on iPad saturation about 27 to
+26 many seconds just
+
+337
+00:18:11,076 --> 00:18:15,104
+for applying the vibrancy effect on the
+iPod
+
+338
+00:18:16,004 --> 00:18:19,011
+air we spend about 17.48 me second
+flexalite style and
+
+339
+00:18:19,074 --> 00:18:23,090
+around 40 milliseconds for light and oxo
+you don't have a lot of time left on a
+
+340
+00:18:23,009 --> 00:18:24,048
+gp2 any other rendering
+
+341
+00:18:25,029 --> 00:18:28,108
+I mean 22nd from the best case here
+sought to emphasize again we should
+
+342
+00:18:29,008 --> 00:18:32,046
+really restrictive RNC effect on a small
+area to avoid is huge
+
+343
+00:18:32,046 --> 00:18:35,113
+keep your head so in summary
+
+344
+00:18:36,013 --> 00:18:39,027
+the UI vibrancy effect at to a screen
+pass earth
+
+345
+00:18:39,027 --> 00:18:42,436
+you i havent effect use expensive
+company is an expensive compositing for
+
+346
+00:18:42,679 --> 00:18:43,742
+the full content
+
+347
+00:18:44,309 --> 00:18:47,334
+therefore you should only use the
+vibrancy effect on the small regions
+
+348
+00:18:47,559 --> 00:18:51,540
+arm again like the blonde only to return
+to read wrong
+
+349
+00:18:51,054 --> 00:18:54,183
+and you I'm into effect is very costly
+on all devices
+
+350
+00:18:54,669 --> 00:18:58,090
+so with less was the Blue Earth you I
+can the BG view bound
+
+351
+00:18:58,009 --> 00:19:01,060
+keep the bounds of the fuse as small as
+possible I make sure to
+
+352
+00:19:01,006 --> 00:19:04,011
+budget for defects so
+
+353
+00:19:04,065 --> 00:19:06,134
+next I would like to give a couple of
+optimization techniques take the
+
+354
+00:19:07,034 --> 00:19:08,038
+techniques on the way I
+
+355
+00:19:08,038 --> 00:19:11,119
+ones with relation authorization can be
+used the composite which once was the
+
+356
+00:19:12,019 --> 00:19:13,057
+Jeep you
+
+357
+00:19:13,057 --> 00:19:16,121
+this can be neighbors they should trust
+their eyes property on a clar and
+
+358
+00:19:17,021 --> 00:19:20,120
+a few things to keep in mind when doing
+this first
+
+359
+00:19:20,309 --> 00:19:24,010
+extra of composite a creative MB update
+the content foolish only used it for
+
+360
+00:19:24,001 --> 00:19:25,057
+static content
+
+361
+00:19:25,057 --> 00:19:28,916
+secondly you should I use it because the
+cache size for us relations limited to
+
+362
+00:19:29,429 --> 00:19:31,740
+25.5 times of the screen size
+
+363
+00:19:31,074 --> 00:19:34,119
+so if you stop setting dress dress
+property of on last part of your
+
+364
+00:19:35,019 --> 00:19:38,058
+few hockey you might lower the cash over
+and over and end up as a lot of
+
+365
+00:19:38,058 --> 00:19:38,104
+additional
+
+366
+00:19:39,004 --> 00:19:42,004
+ski passes last
+
+367
+00:19:42,004 --> 00:19:45,013
+up arrest was impressed with images I
+because from the cash
+
+368
+00:19:45,013 --> 00:19:49,026
+if they are you someone how many seconds
+so you wanna make sure that use this
+
+369
+00:19:49,026 --> 00:19:51,185
+only for image that conversely you stand
+up for
+
+370
+00:19:51,419 --> 00:19:54,420
+in Tripoli's them just because then you
+working through every time a mosque
+
+371
+00:19:54,429 --> 00:19:56,580
+impasse
+
+372
+00:19:56,058 --> 00:19:59,109
+so typically use cases are to avoid
+ridge or redrawing expensive
+
+373
+00:20:00,009 --> 00:20:03,071
+effect was that the content seek redress
+rice for example a blow
+
+374
+00:20:03,071 --> 00:20:06,114
+and the other thing is to have what we
+doing a complex you are key so we could
+
+375
+00:20:07,014 --> 00:20:10,028
+breast rice for few are key in composite
+is on top of a blur
+
+376
+00:20:10,028 --> 00:20:13,119
+wonderbra so the last thing
+
+377
+00:20:14,019 --> 00:20:18,095
+I have here is capacity capacity can be
+disabled was the last capacity property
+
+378
+00:20:18,095 --> 00:20:19,119
+I see a layup
+
+379
+00:20:20,019 --> 00:20:24,388
+a capacity but actually in terms of
+capacity for Laos not a pixels means
+
+380
+00:20:24,559 --> 00:20:27,610
+your past the property is not equal on
+points year old
+
+381
+00:20:27,061 --> 00:20:30,064
+and for last long trip the content that
+means that China Laos
+
+382
+00:20:30,091 --> 00:20:34,114
+or a background image and but isn't on
+the status of your account to be
+
+383
+00:20:35,014 --> 00:20:35,089
+composited
+
+384
+00:20:35,089 --> 00:20:39,097
+before it's being blended and if America
+nations was told of its not need
+
+385
+00:20:40,069 --> 00:20:43,074
+be very careful with this was this
+
+386
+00:20:43,074 --> 00:20:50,074
+I would like a plan talk to Mike 42
+
+387
+00:20:52,016 --> 00:20:56,089
+so I am i crossing software engineer on
+the island on Steam
+
+388
+00:20:56,089 --> 00:21:00,134
+and the first thing on talk about are
+tools so
+
+389
+00:21:01,034 --> 00:21:04,132
+before I get into tools though I do want
+to mention prompt investigation might
+
+390
+00:21:05,032 --> 00:21:08,047
+so basically what are the questions
+running through my head when
+
+391
+00:21:08,047 --> 00:21:11,131
+I encounter performance issue want to
+start tracking down the source about
+
+392
+00:21:12,031 --> 00:21:15,062
+so first thing I want to know is what is
+the frame right
+
+393
+00:21:15,062 --> 00:21:18,063
+you know it's always good to know where
+you're starting performance wise so that
+
+394
+00:21:18,072 --> 00:21:20,161
+you can gauge how the changes you make
+are affecting performance
+
+395
+00:21:21,061 --> 00:21:25,068
+so our goal is always 60 frames per
+second we want to ensure that we have
+
+396
+00:21:26,031 --> 00:21:28,058
+smooth scrolling and I smooth animations
+
+397
+00:21:28,058 --> 00:21:31,141
+to provide a good user experience so our
+target should always be 60 frames per
+
+398
+00:21:32,041 --> 00:21:34,060
+second next up
+
+399
+00:21:34,006 --> 00:21:38,028
+I wanna know are we see peerage if you
+down you know obviously the
+
+400
+00:21:38,082 --> 00:21:41,161
+slow realization the better because will
+let us had our performance targets
+
+401
+00:21:42,061 --> 00:21:47,146
+and also give us better battery life
+netting 10
+
+402
+00:21:48,046 --> 00:21:51,083
+other any unnecessary is there any
+unnecessary CP rendering
+
+403
+00:21:51,083 --> 00:21:54,160
+so basically are we overriding for all
+right somewhere where we really
+
+404
+00:21:55,006 --> 00:21:55,092
+shouldn't be
+
+405
+00:21:56,046 --> 00:21:59,055
+you know kind understanding what
+rendering and how rendering
+
+406
+00:21:59,055 --> 00:22:04,090
+we want the Jeep you do as much with us
+as make sense next thing on a No
+
+407
+00:22:04,009 --> 00:22:08,048
+is do we have too many offspring passes
+as actual pointed out previously
+
+408
+00:22:09,029 --> 00:22:13,070
+of green passes basically give the Jeep
+you idle time because I have to contact
+
+409
+00:22:13,007 --> 00:22:13,064
+switches
+
+410
+00:22:14,027 --> 00:22:17,120
+so we want to have fewer offspring
+passes fewer the better
+
+411
+00:22:18,002 --> 00:22:22,015
+next up I wanna know is there too much
+blending in the Y
+
+412
+00:22:22,033 --> 00:22:25,034
+on we obviously want to do less funding
+because blending
+
+413
+00:22:25,043 --> 00:22:28,044
+is more expensive for the Jeep you to do
+then rendering
+
+414
+00:22:28,053 --> 00:22:31,084
+as normal a player so responding better
+
+415
+00:22:31,084 --> 00:22:35,091
+necks I want to know is are there any
+strange image formats were sizes
+
+416
+00:22:36,054 --> 00:22:40,061
+basically want to avoid on-the-fly
+conversion image formats
+
+417
+00:22:41,024 --> 00:22:44,048
+as I 2.0 previously if you are
+
+418
+00:22:44,048 --> 00:22:47,049
+rendering an image that is nice in the
+color format is not supported by the
+
+419
+00:22:47,058 --> 00:22:47,122
+Jeep you
+
+420
+00:22:48,022 --> 00:22:52,096
+then it has to be converted by the CPU
+and so we want to try and wait anything
+
+421
+00:22:52,096 --> 00:22:53,112
+on the fly like that
+
+422
+00:22:54,012 --> 00:22:58,058
+next up on an order any expensive user a
+fax
+
+423
+00:22:58,058 --> 00:23:01,083
+learn vibrancy are awesome but we want
+to make sure that we're using them
+
+424
+00:23:01,083 --> 00:23:02,110
+sparingly in a way
+
+425
+00:23:03,001 --> 00:23:07,062
+that will give us the sprawling
+performance that we want and lastly
+
+426
+00:23:07,071 --> 00:23:10,160
+oh noes or anything unexpected in the
+View Park on you know
+
+427
+00:23:11,006 --> 00:23:14,035
+if you have a situation we are
+constantly adding removing views you
+
+428
+00:23:14,089 --> 00:23:16,137
+know you could introduce a bike
+accidentally that's a
+
+429
+00:23:17,037 --> 00:23:20,114
+you know insert a nation forgets to
+remove them or you know your
+
+430
+00:23:21,014 --> 00:23:24,075
+adding use your parking forgetting to
+remove them you wanna make sure that you
+
+431
+00:23:24,075 --> 00:23:25,169
+only have the views that you really need
+
+432
+00:23:26,069 --> 00:23:30,098
+mom you know in your heart key because
+you want to avoid excessive CPU use a
+
+433
+00:23:30,098 --> 00:23:30,186
+back forty
+
+434
+00:23:31,086 --> 00:23:35,137
+so now let's get into some other tools
+that will give us the answers to these
+
+435
+00:23:36,037 --> 00:23:36,102
+questions
+
+436
+00:23:37,002 --> 00:23:40,088
+so first up on talk about instruments
+and particularly will talk about
+
+437
+00:23:40,088 --> 00:23:43,100
+are the coronation instrument in the
+OpenGL ES driver instrument
+
+438
+00:23:44,000 --> 00:23:47,094
+then I will say a few things about the
+simulator that you can do with colored
+
+439
+00:23:47,094 --> 00:23:47,171
+about options
+
+440
+00:23:48,071 --> 00:23:51,078
+and I will briefly talk about a new
+feature in Xcode
+
+441
+00:23:52,041 --> 00:23:57,073
+for life you debugging device so first
+up
+
+442
+00:23:57,073 --> 00:24:00,172
+if you want instruments and select the
+coronation temple
+
+443
+00:24:01,072 --> 00:24:04,166
+that will give you a document that
+contains
+
+444
+00:24:05,066 --> 00:24:08,068
+a coronation instrument and a time
+profile learns from
+
+445
+00:24:08,068 --> 00:24:11,071
+if you select the coronation instrument
+
+446
+00:24:11,071 --> 00:24:14,108
+you can then choose which is the six you
+wanna show
+
+447
+00:24:15,008 --> 00:24:18,027
+in this case its only frames per second
+
+448
+00:24:18,027 --> 00:24:22,055
+so will choose that and then when you
+take a trace it will show you your frame
+
+449
+00:24:22,055 --> 00:24:26,057
+rate so you can see in the column here
+shows you the frames per second for each
+
+450
+00:24:26,057 --> 00:24:27,069
+interval that this
+
+451
+00:24:27,069 --> 00:24:31,162
+trace was running for you see this in
+sample intervals likewise
+
+452
+00:24:32,062 --> 00:24:35,108
+wanna see what the CPU's doing are you
+can select the time profiler
+
+453
+00:24:36,008 --> 00:24:41,075
+instrument and so you slept and you can
+then see an aggregate the call stack
+
+454
+00:24:41,075 --> 00:24:44,126
+what the CPU was doing while you were
+taking a trace
+
+455
+00:24:45,026 --> 00:24:48,109
+so this is where you would look for you
+know I am i overriding drive rack too
+
+456
+00:24:49,009 --> 00:24:50,094
+much spending too much time in a
+threatening
+
+457
+00:24:50,094 --> 00:24:54,171
+thread doing things that I shouldn't be
+next up let's talk about some other
+
+458
+00:24:55,071 --> 00:24:59,073
+color debug options that are part of the
+coronation instrument so if you select
+
+459
+00:24:59,073 --> 00:25:00,089
+the coronation instrument
+
+460
+00:25:00,089 --> 00:25:03,152
+you can see the color debug options over
+here on the right
+
+461
+00:25:04,052 --> 00:25:08,078
+so let's go through what those are first
+up
+
+462
+00:25:08,078 --> 00:25:12,079
+we have color-blind a player's and so
+this will tent this will 10 players
+
+463
+00:25:12,079 --> 00:25:15,127
+green better appcake and two players red
+have to be planted
+
+464
+00:25:16,027 --> 00:25:19,125
+as we said previously you know layers
+that have to be blind it is more work
+
+465
+00:25:20,025 --> 00:25:20,116
+for the Jeep you
+
+466
+00:25:21,016 --> 00:25:24,047
+and so you ideally want to see less red
+
+467
+00:25:24,047 --> 00:25:27,121
+you know and more cream but there are
+gonna be cases where you can avoid it
+
+468
+00:25:28,021 --> 00:25:32,107
+on for example in this particular case
+we have a white people view
+
+469
+00:25:33,007 --> 00:25:36,009
+with white people who sells and we
+noticed that our labels
+
+470
+00:25:36,027 --> 00:25:40,103
+are you know having to be blended here
+so if we made our labels in this case
+
+471
+00:25:41,003 --> 00:25:44,074
+opaque then we wouldn't have to worry
+about doing the blind
+
+472
+00:25:44,074 --> 00:25:48,121
+on so that would be one opposition we
+can make in this particular case
+
+473
+00:25:49,021 --> 00:25:54,024
+next up color hit screens and missus red
+this shows you how you're using or
+
+474
+00:25:54,024 --> 00:25:54,122
+abusing
+
+475
+00:25:55,022 --> 00:25:59,022
+on the should Rasta rise property on see
+a liar
+
+476
+00:25:59,022 --> 00:26:02,070
+so what this will do is it will it will
+tense cash it's green
+
+477
+00:26:02,007 --> 00:26:06,089
+cache misses red so you know as a 2.0
+previously keep in mind that your cache
+
+478
+00:26:07,052 --> 00:26:08,140
+size is only two and a half sine
+
+479
+00:26:09,004 --> 00:26:12,026
+times the size of the screen and items
+
+480
+00:26:12,062 --> 00:26:15,084
+are affected from the cash if they're
+not used than a hundred milliseconds so
+
+481
+00:26:15,084 --> 00:26:19,092
+you know it's good to use this
+particular coloring book option to see
+
+482
+00:26:19,092 --> 00:26:22,095
+how the cow you're utilizing the cash
+with
+
+483
+00:26:23,022 --> 00:26:26,109
+you know what you have such a rush to
+respond
+
+484
+00:26:27,009 --> 00:26:30,022
+when you first launcher app you're going
+to see a lot of washing right because
+
+485
+00:26:30,022 --> 00:26:32,098
+you obviously have to render it once
+before can be cashed
+
+486
+00:26:32,098 --> 00:26:35,134
+but after that you don't wanna see a
+whole lotta flashes red because
+
+487
+00:26:36,034 --> 00:26:39,038
+you know as we have previously you know
+any thing you're doing is going to incur
+
+488
+00:26:39,074 --> 00:26:41,080
+offering passes you have to render a
+
+489
+00:26:41,008 --> 00:26:44,017
+and then stick it in cash so
+
+490
+00:26:44,089 --> 00:26:47,121
+next item is color copy images on
+
+491
+00:26:48,021 --> 00:26:51,089
+you as we said before if an image is in
+a format as in the color format
+
+492
+00:26:51,089 --> 00:26:54,098
+that the chief you can't work directly
+with it will have to be converted by the
+
+493
+00:26:54,098 --> 00:26:55,141
+CPU
+
+494
+00:26:56,041 --> 00:26:59,044
+so in this particular example you know
+this is a simple
+
+495
+00:26:59,071 --> 00:27:04,073
+far photo browsing arm were just getting
+images from an online source more not
+
+496
+00:27:04,073 --> 00:27:05,089
+really checking her size
+
+497
+00:27:05,089 --> 00:27:09,123
+or their or their color format on its
+own if it were case we're getting images
+
+498
+00:27:10,023 --> 00:27:11,108
+that are 16 bits per component
+
+499
+00:27:12,008 --> 00:27:16,037
+and so you can see that they're tutored
+sign here that is telling us that these
+
+500
+00:27:16,037 --> 00:27:19,043
+images had to be converted by the CPU
+and commit phase
+
+501
+00:27:19,043 --> 00:27:22,077
+before they can actually be rendered so
+you know for this
+
+502
+00:27:22,077 --> 00:27:24,164
+particular case we don't wanna do this
+on the fly because I will fax growing
+
+503
+00:27:25,064 --> 00:27:26,069
+performance
+
+504
+00:27:26,069 --> 00:27:29,124
+on with so you can beforehand
+
+505
+00:27:30,024 --> 00:27:34,076
+you know convert your images to the size
+and color format you're expecting
+
+506
+00:27:34,076 --> 00:27:37,115
+and it's best to do this in you in the
+background so you're not eating up time
+
+507
+00:27:38,015 --> 00:27:42,059
+on the main thread while you're trying
+to scroll or doing other things
+
+508
+00:27:42,059 --> 00:27:45,152
+so the next option is color misaligned
+images this will tent
+
+509
+00:27:46,052 --> 00:27:49,129
+images yellow that are being scaled
+until images purple
+
+510
+00:27:50,029 --> 00:27:53,036
+that are not pixel on you know as it had
+previously it's always good to make sure
+
+511
+00:27:53,099 --> 00:27:55,184
+that images are in the color format the
+size that you want
+
+512
+00:27:56,084 --> 00:27:59,089
+because the last thing you want to be
+doing is you know doing conversions and
+
+513
+00:27:59,089 --> 00:27:59,176
+scaling
+
+514
+00:28:00,076 --> 00:28:03,119
+on the fly while you're scrolling so the
+same prince will be applied
+
+515
+00:28:04,019 --> 00:28:07,056
+in a previous life who also apply here
+to get rid of the scaling
+
+516
+00:28:07,056 --> 00:28:11,155
+fly so next up is color of green yellow
+
+517
+00:28:12,055 --> 00:28:16,066
+so this will 10 layers yellow based on
+the number of green passes
+
+518
+00:28:16,066 --> 00:28:21,158
+that each layer occurs so be more yellow
+you see the more of green passes we have
+
+519
+00:28:22,058 --> 00:28:25,150
+if you notice the NAP are and the
+toolbar are tinted yellow
+
+520
+00:28:26,005 --> 00:28:29,012
+that's because there are players with
+these layers that are
+
+521
+00:28:29,057 --> 00:28:32,129
+actually during the concept behind it so
+we expect those but I do find it curious
+
+522
+00:28:33,029 --> 00:28:34,035
+that the images
+
+523
+00:28:34,035 --> 00:28:38,052
+are having offering passes so we'll take
+a look at that later on the presentation
+
+524
+00:28:38,052 --> 00:28:41,084
+and see how to work around this issue
+
+525
+00:28:41,084 --> 00:28:44,117
+so next is collar Open GL fast path blue
+
+526
+00:28:45,017 --> 00:28:48,080
+and so what this will do is this will 10
+layers blue that are being planted by
+
+527
+00:28:48,008 --> 00:28:49,042
+the display hardware
+
+528
+00:28:50,014 --> 00:28:54,059
+on this is actually a good thing you
+wanna see because if we have content
+
+529
+00:28:54,059 --> 00:28:56,118
+with being bent blinded by the display
+hardware
+
+530
+00:28:57,018 --> 00:29:00,027
+the Nets less work for the Jeep you have
+to do so in this case if you see
+
+531
+00:29:00,027 --> 00:29:01,031
+something show up in blue
+
+532
+00:29:01,067 --> 00:29:04,068
+that's a good thing on
+
+533
+00:29:04,077 --> 00:29:07,175
+last option is flash up the two regions
+and so what this will do is it will
+
+534
+00:29:08,075 --> 00:29:08,120
+flash
+
+535
+00:29:09,002 --> 00:29:13,014
+her to the screen yellow that are being
+updated on this particular example is
+
+536
+00:29:13,032 --> 00:29:14,068
+with the clocks out the ship's
+
+537
+00:29:14,068 --> 00:29:18,071
+in I last are you notice that the yellow
+regions here
+
+538
+00:29:18,098 --> 00:29:22,181
+are the second-hand ideally you only
+want to see
+
+539
+00:29:23,081 --> 00:29:26,119
+part to the screen flashing yellow the
+you're actually updating again because
+
+540
+00:29:27,019 --> 00:29:28,021
+it means less work for the
+
+541
+00:29:28,039 --> 00:29:32,120
+GP you must work the CPU so if you turn
+this on you don't want to see
+
+542
+00:29:33,002 --> 00:29:36,011
+a lot a flashing yellow unless you
+actually are updating
+
+543
+00:29:36,029 --> 00:29:40,086
+that much of the screen so in summary
+
+544
+00:29:40,086 --> 00:29:44,101
+some other questions that the coronation
+instrument will help you get to
+
+545
+00:29:45,001 --> 00:29:49,030
+I will help you figure with from readers
+is there any unnecessary CP rendering
+
+546
+00:29:49,003 --> 00:29:49,055
+because
+
+547
+00:29:49,082 --> 00:29:52,101
+it does include the time profiler
+instrument
+
+548
+00:29:53,001 --> 00:29:56,067
+on panel also with the colored by the
+options you can see are things like
+
+549
+00:29:56,067 --> 00:29:58,156
+other too many offering passes how much
+when things going on
+
+550
+00:29:59,056 --> 00:30:04,114
+and you have any strange image format
+your size is that not expecting
+
+551
+00:30:05,014 --> 00:30:08,033
+and so one additional point on color and
+options some
+
+552
+00:30:08,033 --> 00:30:11,036
+love the color and options are available
+in the eye with simulator so you can see
+
+553
+00:30:11,063 --> 00:30:12,120
+the example here
+
+554
+00:30:13,002 --> 00:30:16,041
+a few things to point out with this the
+
+555
+00:30:16,059 --> 00:30:20,068
+colors might be slightly different
+because the version CA that's running
+
+556
+00:30:20,068 --> 00:30:23,150
+inside the simulators actually person at
+the aid atlanta with 10 on iowa's
+
+557
+00:30:24,005 --> 00:30:27,078
+so if you see any discrepancies always
+trust what you see on device
+
+558
+00:30:28,023 --> 00:30:31,038
+because that your customers actually
+gonna be using home
+
+559
+00:30:31,038 --> 00:30:34,073
+so this is a good future because you can
+have you like for your testing team go
+
+560
+00:30:34,073 --> 00:30:34,144
+off
+
+561
+00:30:35,044 --> 00:30:39,056
+and poke around your app and see if you
+have any unexpected offering passes or
+
+562
+00:30:39,056 --> 00:30:43,073
+any conversion or anything that looks
+suspicious
+
+563
+00:30:43,073 --> 00:30:47,077
+so next topic on talk about the OpenGL
+ES driver in
+
+564
+00:30:47,077 --> 00:30:51,083
+so if you watch instruments and select
+the OpenGL ES driver template
+
+565
+00:30:52,037 --> 00:30:55,098
+that will give you a document that
+contains the OpenGL ES driver instrument
+
+566
+00:30:55,098 --> 00:30:59,196
+and and and the time profiler instrument
+so if you select the OpenGL ES driver
+
+567
+00:31:00,096 --> 00:31:01,144
+instrument
+
+568
+00:31:02,044 --> 00:31:06,059
+you can choose from which the CITIC
+Pacific's you want to actually collect
+
+569
+00:31:06,059 --> 00:31:09,060
+when I'm investigating things I tend to
+go for
+
+570
+00:31:09,069 --> 00:31:12,121
+advice realization which will show you
+how much the Jeep use in use during the
+
+571
+00:31:13,021 --> 00:31:13,120
+truth
+
+572
+00:31:14,002 --> 00:31:17,010
+i render entirely realization does
+correspond to the renderer
+
+573
+00:31:18,000 --> 00:31:21,022
+entirely phases that axles I talked
+about previously
+
+574
+00:31:21,022 --> 00:31:23,110
+and then of course the coronation frames
+per second because I want to know what
+
+575
+00:31:24,001 --> 00:31:27,036
+the actual frame rate is that we're
+seeing
+
+576
+00:31:27,045 --> 00:31:30,066
+so if you take a trace
+
+577
+00:31:30,066 --> 00:31:33,100
+and then select the coroner the OpenGL
+yes driver
+
+578
+00:31:34,000 --> 00:31:37,062
+instrument you can then look at the
+statistics
+
+579
+00:31:37,062 --> 00:31:40,094
+and see if approved for example in this
+case you know we are getting 60 frames
+
+580
+00:31:40,094 --> 00:31:41,101
+per second
+
+581
+00:31:42,001 --> 00:31:45,040
+and our device utilization is in like
+the mid
+
+582
+00:31:45,004 --> 00:31:48,011
+lower 70's so you know depends on what
+
+583
+00:31:49,001 --> 00:31:52,043
+you are your rendering so you know you
+may want to investigate this
+
+584
+00:31:52,052 --> 00:31:55,149
+gold like that all boils down to what
+you're actually rendering for this case
+
+585
+00:31:56,049 --> 00:31:59,098
+and likewise since we have the time
+overall arrangement here you can see
+
+586
+00:31:59,098 --> 00:32:00,149
+with the CPU's doing
+
+587
+00:32:01,049 --> 00:32:05,074
+so if you select that you can then again
+look at an aggregate cost tax
+
+588
+00:32:05,074 --> 00:32:08,143
+what's going on in the CPU during this
+time to this is always useful because
+
+589
+00:32:09,043 --> 00:32:10,114
+you can highlight certain regions
+
+590
+00:32:11,014 --> 00:32:13,017
+you know if you notice that you're
+dropping free in 3 knows a lot of
+
+591
+00:32:13,044 --> 00:32:14,106
+activity you can zoom in and see
+
+592
+00:32:15,006 --> 00:32:19,084
+what the CPU was doing during a
+particular time
+
+593
+00:32:19,084 --> 00:32:22,087
+so in summary with the OpenGL ES driver
+instrument you know this will give you
+
+594
+00:32:23,014 --> 00:32:25,038
+answers to questions like What is your
+frame rate
+
+595
+00:32:25,038 --> 00:32:29,040
+are you can see what the CPU and CPU
+were doing and you can also use the time
+
+596
+00:32:29,004 --> 00:32:30,039
+profiler instrument
+
+597
+00:32:30,075 --> 00:32:35,094
+to see other any unnecessary CPU
+rendering going on
+
+598
+00:32:35,094 --> 00:32:39,103
+so next up is a really cool feature that
+was added Xcode
+
+599
+00:32:40,003 --> 00:32:44,052
+for live you debugging on device so if
+you open your project in Xcode
+
+600
+00:32:44,052 --> 00:32:48,097
+and then run it and then click the
+Follow button on the bottom here
+
+601
+00:32:48,097 --> 00:32:52,100
+on what it will actually do is it will
+grab the view hierarchy of the device
+
+602
+00:32:53,000 --> 00:32:56,074
+and you can then go poking around the
+view hierarchy in C what exact use are
+
+603
+00:32:56,074 --> 00:32:56,152
+in your
+
+604
+00:32:57,052 --> 00:33:00,090
+you why so this is always good because
+you can expect to see a better if
+
+605
+00:33:00,009 --> 00:33:01,084
+there's anything unexpected there
+
+606
+00:33:02,065 --> 00:33:05,143
+you know maybe something is building up
+you have a legal thing animations or
+
+607
+00:33:06,043 --> 00:33:06,096
+something
+
+608
+00:33:06,096 --> 00:33:09,163
+or constraints so this is good to
+actually see what the view hierarchy is
+
+609
+00:33:10,063 --> 00:33:11,068
+on your device
+
+610
+00:33:11,068 --> 00:33:14,114
+versus say what you conceptually think
+it is when you're writing your co
+
+611
+00:33:15,014 --> 00:33:18,028
+home if you select an individual item
+arm
+
+612
+00:33:18,028 --> 00:33:21,105
+or noonan individual view you can look
+at the properties for its ok in this
+
+613
+00:33:22,005 --> 00:33:23,104
+case we selected the UI view
+
+614
+00:33:24,004 --> 00:33:27,043
+and you can see details about what
+property in image is currently being
+
+615
+00:33:27,043 --> 00:33:30,100
+rendered by that you
+
+616
+00:33:31,000 --> 00:33:35,049
+so summary for Xcode you debugging this
+will let you poke around in your view
+
+617
+00:33:35,049 --> 00:33:37,112
+hierarchy see what's actually being
+rendered on device
+
+618
+00:33:38,012 --> 00:33:41,055
+you know which is helpful because you
+can see if you have any expensive use
+
+619
+00:33:41,055 --> 00:33:44,104
+are you looking at their properties
+you've seen with the Browns are what not
+
+620
+00:33:45,004 --> 00:33:48,029
+and it also good to see if you have
+anything building up unexpectedly
+
+621
+00:33:48,029 --> 00:33:51,066
+you are key
+
+622
+00:33:51,066 --> 00:33:54,109
+so next up was talk about some case
+studies so what I want to do with this
+
+623
+00:33:55,009 --> 00:33:57,015
+is i wanna talk about a couple different
+scenarios
+
+624
+00:33:57,069 --> 00:34:01,071
+and measure performance across different
+devices and then we'll figure out how we
+
+625
+00:34:01,089 --> 00:34:03,102
+can work around these performance
+problems
+
+626
+00:34:04,002 --> 00:34:07,047
+and keep the same visual appearance but
+you know get the performance gain
+
+627
+00:34:07,047 --> 00:34:12,091
+we want so first up was talk about a
+fictitious photo application
+
+628
+00:34:12,091 --> 00:34:15,139
+so this is just a simple application
+with the table view were each table view
+
+629
+00:34:16,039 --> 00:34:16,130
+cell has
+
+630
+00:34:17,003 --> 00:34:21,031
+image and a couple lines attacks and
+there's also a small shadow
+
+631
+00:34:21,058 --> 00:34:24,647
+behind each image so if we take this to
+me
+
+632
+00:34:25,169 --> 00:34:30,360
+measure the performance on an iPhone 5
+us using your Julius driver engine
+
+633
+00:34:30,036 --> 00:34:33,043
+you know we can see that we're hitting
+50 frames per second so
+
+634
+00:34:33,043 --> 00:34:36,085
+that's good 60 frames per second or
+target so awesome
+
+635
+00:34:36,085 --> 00:34:39,087
+ship it not just yet arm
+
+636
+00:34:40,005 --> 00:34:43,022
+we you know actually love all over
+customers and we wanna make sure
+
+637
+00:34:43,022 --> 00:34:46,201
+everybody has a good user experience
+regardless of what device they run
+
+638
+00:34:46,399 --> 00:34:49,460
+so let's take a look at some of the
+other devices that
+
+639
+00:34:49,046 --> 00:34:52,094
+we support in Iowa City see how to
+perform it stacks up
+
+640
+00:34:52,094 --> 00:34:55,099
+so first off let's look at the iPod
+Touch
+
+641
+00:34:55,099 --> 00:34:58,115
+so I'm curious what's growing feels like
+iPod Touch
+
+642
+00:34:59,015 --> 00:35:03,027
+so you know again we'll take your iPod
+Touch and will use the OpenGL ES driver
+
+643
+00:35:03,027 --> 00:35:04,030
+instrument
+
+644
+00:35:04,003 --> 00:35:08,080
+and you know sure enough we notice our
+frame rate is in the mid-thirties
+
+645
+00:35:09,007 --> 00:35:13,083
+which is nowhere near our target so that
+would be a lousy scrolling experience
+
+646
+00:35:13,083 --> 00:35:16,182
+and if we look the device utilization we
+see that
+
+647
+00:35:17,082 --> 00:35:20,126
+you know this is like mid to high 70's
+home
+
+648
+00:35:21,026 --> 00:35:23,099
+this strikes me is really kinda odd
+because all we're doing is we're
+
+649
+00:35:23,099 --> 00:35:24,107
+screwing around a couple
+
+650
+00:35:25,007 --> 00:35:29,078
+image thumbnails and syntax so I don't
+really expect this much
+
+651
+00:35:29,078 --> 00:35:32,155
+GPO activity so was sleeping figure out
+what's going on here
+
+652
+00:35:33,055 --> 00:35:36,072
+so first in 10 is you know
+
+653
+00:35:36,072 --> 00:35:39,078
+what's in my view our keys or anything
+unexpected here so
+
+654
+00:35:39,078 --> 00:35:43,132
+we use the X could be bucking feature we
+grab the view hierarchy
+
+655
+00:35:44,032 --> 00:35:47,090
+I don't really see anything surprising
+here so we've got unity will you sell
+
+656
+00:35:47,009 --> 00:35:48,041
+with an ImageView
+
+657
+00:35:49,022 --> 00:35:53,041
+into labels nothing on nothing out of
+the ordinary here so
+
+658
+00:35:53,041 --> 00:35:57,129
+receiving figure out something else so
+if we use the coronation instrument
+
+659
+00:35:58,029 --> 00:36:01,033
+you know remembering that often passes
+are expensive what if we have any of
+
+660
+00:36:01,069 --> 00:36:02,147
+being passes are unexpected
+
+661
+00:36:03,047 --> 00:36:06,064
+and sure enough this is the slide in a
+reference previously
+
+662
+00:36:06,064 --> 00:36:09,139
+so you know we have of green passes for
+the images
+
+663
+00:36:10,039 --> 00:36:13,112
+which again strikes me as curious let's
+take a look at the code and see what
+
+664
+00:36:14,012 --> 00:36:16,025
+we're doing how are we setting this up
+
+665
+00:36:16,025 --> 00:36:19,029
+so as I said each each
+
+666
+00:36:19,029 --> 00:36:22,106
+image from now as shadow how
+regenerating
+
+667
+00:36:23,006 --> 00:36:26,077
+so in this case we were asking for
+animation very shadow for us
+
+668
+00:36:26,077 --> 00:36:29,088
+and we're doing that just by sending
+shot a radio show to offset
+
+669
+00:36:29,088 --> 00:36:32,157
+you know and other properties on
+basically what we're doing this
+
+670
+00:36:33,057 --> 00:36:36,066
+coronation have to figure out what the
+shapeless shadow looks like
+
+671
+00:36:37,047 --> 00:36:41,048
+I mean when it does this it has to take
+of green passes to render the content
+
+672
+00:36:41,048 --> 00:36:43,122
+and then look at the office China love
+which is rendered to figure out where
+
+673
+00:36:44,022 --> 00:36:45,035
+the shadow belongs
+
+674
+00:36:45,035 --> 00:36:49,077
+and then go through all the actual work
+doing the the shuttle itself
+
+675
+00:36:49,077 --> 00:36:52,099
+is there a better way you know what we
+can do to avoid this and it turns out
+
+676
+00:36:52,099 --> 00:36:53,107
+there's
+
+677
+00:36:54,007 --> 00:36:57,093
+on if we add the following line to
+there's the Shining Path property
+
+678
+00:36:57,093 --> 00:37:01,102
+arm you know were only scrolling image
+from Nelson just basically racks various
+
+679
+00:37:02,002 --> 00:37:02,086
+sizes
+
+680
+00:37:02,086 --> 00:37:05,133
+we can usually figure out you know what
+the shape of the shadow needs to look
+
+681
+00:37:06,033 --> 00:37:07,101
+like because again they're all just
+
+682
+00:37:08,001 --> 00:37:12,062
+you know various sized rectangles are so
+if we take advantage of the shadow power
+
+683
+00:37:12,062 --> 00:37:15,110
+property and at that to our code
+
+684
+00:37:16,001 --> 00:37:19,029
+then coronation doesn't have to eat up
+any offspring passes
+
+685
+00:37:19,038 --> 00:37:22,125
+to actually generate the shadows so
+let's play let's make this change will
+
+686
+00:37:23,025 --> 00:37:24,026
+add this line
+
+687
+00:37:24,026 --> 00:37:27,070
+and mystical look with the coronation
+instrument to see
+
+688
+00:37:27,007 --> 00:37:30,093
+if this really did get rid of are often
+passes in sure enough it did
+
+689
+00:37:31,056 --> 00:37:35,138
+so this is great less often passes means
+you know left idle time on the Jeep you
+
+690
+00:37:36,038 --> 00:37:39,074
+so let's take a tray since you were
+strong performance looks like
+
+691
+00:37:39,074 --> 00:37:43,142
+so again looking an iPod Touch will use
+the OpenGL ES driver instrument
+
+692
+00:37:44,042 --> 00:37:47,127
+and we noticed that we are indeed
+hitting 60 frames per second
+
+693
+00:37:48,027 --> 00:37:51,114
+that's great and check out the device
+utilization
+
+694
+00:37:52,014 --> 00:37:55,983
+you know we are now in like the
+mid-thirties as opposed to
+
+695
+00:37:56,109 --> 00:37:59,640
+you know both mid-seventies before are
+
+696
+00:37:59,064 --> 00:38:02,105
+so this this is great you know less
+chief you work means we're hitting a
+
+697
+00:38:03,005 --> 00:38:04,022
+performance targets
+
+698
+00:38:04,022 --> 00:38:08,060
+and also means better battery life so
+that's a good thing
+
+699
+00:38:08,006 --> 00:38:11,083
+so awesome can we ship it now arm
+
+700
+00:38:12,037 --> 00:38:15,082
+not just yet we still have one more
+device: we should look at
+
+701
+00:38:15,082 --> 00:38:18,139
+so with take a look an iPhone 4s and see
+how
+
+702
+00:38:19,039 --> 00:38:22,044
+scrolling is with her new changes now so
+
+703
+00:38:22,089 --> 00:38:25,096
+we are in fact in 60 frames per second
+that's good
+
+704
+00:38:26,059 --> 00:38:29,140
+and again device utilization seem sane
+me a 30 percent is a lot better than
+
+705
+00:38:30,004 --> 00:38:31,071
+mid-seventies
+
+706
+00:38:32,007 --> 00:38:36,081
+so to summarize when we had coronation
+
+707
+00:38:36,081 --> 00:38:40,113
+doing in figure 100 shadow for us
+
+708
+00:38:41,013 --> 00:38:44,109
+are you notice there's a drop of when
+you look at older devices
+
+709
+00:38:45,009 --> 00:38:48,015
+so the iPhone 5s can handle this no
+problem
+
+710
+00:38:48,015 --> 00:38:51,106
+but as you look at the iPhone 5 the
+iPhone 4s the iPhone iPod Touch
+
+711
+00:38:52,006 --> 00:38:55,102
+you notice that performance drops off
+because again all the devices can handle
+
+712
+00:38:56,002 --> 00:38:59,023
+the amount of green passes the newer
+devices can
+
+713
+00:38:59,023 --> 00:39:02,087
+and when we make this change in take
+advantage the shadow path property
+
+714
+00:39:02,087 --> 00:39:05,105
+you know notice we're hitting our target
+everywhere for 60 frames per second
+
+715
+00:39:06,005 --> 00:39:09,087
+so this was good we can ship this and
+happy covers so
+
+716
+00:39:09,087 --> 00:39:12,126
+after we can finally shipped so
+
+717
+00:39:13,026 --> 00:39:16,052
+in summary of screen passes are
+expensive
+
+718
+00:39:16,052 --> 00:39:18,061
+you know you always want to use
+coronation instruments to find out if
+
+719
+00:39:19,042 --> 00:39:20,081
+you had any unnecessary
+
+720
+00:39:20,081 --> 00:39:23,154
+our screen passes and no the API's in
+the view hierarchy that you're using
+
+721
+00:39:24,054 --> 00:39:27,063
+to understand first thing you can do to
+avoid in this case
+
+722
+00:39:27,063 --> 00:39:31,072
+it was using shadow and as always you
+know measure performance across multiple
+
+723
+00:39:32,053 --> 00:39:33,056
+devices
+
+724
+00:39:33,056 --> 00:39:36,147
+you know you can see what the Jeep you
+utilization is by looking at the OpenGL
+
+725
+00:39:37,047 --> 00:39:38,051
+ES driver internet
+
+726
+00:39:38,087 --> 00:39:42,094
+and you can see with the CPU is up to by
+using the time profiler instrument
+
+727
+00:39:43,057 --> 00:39:46,061
+and as always you know again know your
+view our keynote any hidden costs for
+
+728
+00:39:46,097 --> 00:39:47,121
+what your
+
+729
+00:39:48,021 --> 00:39:51,034
+for what you're trying to render and
+this is especially true for things we
+
+730
+00:39:51,034 --> 00:39:52,090
+have inside a people who sells
+
+731
+00:39:52,009 --> 00:39:55,052
+because we want to ensure that we have
+smooth scrolling so it is particularly
+
+732
+00:39:56,033 --> 00:39:59,117
+important with York you build up in the
+people who saw
+
+733
+00:40:00,017 --> 00:40:04,085
+so next case anyone looking at is a
+fictitious contact application
+
+734
+00:40:04,085 --> 00:40:07,091
+so again this is just a simple table
+view we have
+
+735
+00:40:08,045 --> 00:40:11,097
+you know around from now and we have
+online attacks
+
+736
+00:40:11,097 --> 00:40:14,141
+so not a whole lot going on here so
+
+737
+00:40:15,041 --> 00:40:18,116
+if we look at performance across
+different devices we notice that you
+
+738
+00:40:19,016 --> 00:40:21,025
+know the iPhone 5s the oven vibrating 60
+frames per second
+
+739
+00:40:22,006 --> 00:40:25,021
+that's good but the iPhone 4s the iPod
+Touch
+
+740
+00:40:25,021 --> 00:40:28,095
+are quite there so you know again we
+want everybody to have a good user
+
+741
+00:40:28,095 --> 00:40:30,179
+experience regardless if the hardware
+that are you think so
+
+742
+00:40:31,079 --> 00:40:34,153
+let's take a look at this and see why
+we're not getting the target frame rate
+
+743
+00:40:35,053 --> 00:40:37,099
+on these devices
+
+744
+00:40:37,099 --> 00:40:40,156
+so first thing I want to do is take an
+open field museum delia's drive
+
+745
+00:40:41,056 --> 00:40:41,133
+arrangement
+
+746
+00:40:42,033 --> 00:40:44,095
+and take a trace you know it's always
+good to know where you're starting to
+
+747
+00:40:44,095 --> 00:40:47,123
+the you understand how the changes you
+make are affecting performance
+
+748
+00:40:48,023 --> 00:40:51,032
+so take a trace notice there are
+strolling
+
+749
+00:40:51,032 --> 00:40:54,117
+is you know only in the mid-forties it's
+not good
+
+750
+00:40:55,017 --> 00:40:58,026
+and look at the device realization that
+way she was asians really high here
+
+751
+00:40:59,007 --> 00:41:03,016
+arm thats rather interesting again
+because we're just rendering a couple
+
+752
+00:41:03,016 --> 00:41:07,047
+you know images and syntax so that that
+that that would that look suspicious to
+
+753
+00:41:07,047 --> 00:41:07,055
+me
+
+754
+00:41:08,027 --> 00:41:11,092
+so we'll take a closer look again you
+know we use the coronation instrument
+
+755
+00:41:11,092 --> 00:41:14,157
+and see if there's any unnecessary or
+unexpected of green passes
+
+756
+00:41:15,057 --> 00:41:18,075
+so you know we noticed the images here
+are
+
+757
+00:41:18,075 --> 00:41:22,103
+incurring often passes so kinda curious
+let's take a look at how we are
+
+758
+00:41:23,003 --> 00:41:23,072
+rendering
+
+759
+00:41:23,072 --> 00:41:28,077
+and how we are setting up these round
+thumbnails
+
+760
+00:41:29,022 --> 00:41:32,057
+so basically what we're doing is we're
+starting off this particular case
+
+761
+00:41:32,057 --> 00:41:35,082
+we're starting off with Square
+thumbnails and we are on the fly
+
+762
+00:41:35,082 --> 00:41:38,126
+asking for a donation to round them off
+for us and we're doing this by using
+
+763
+00:41:39,026 --> 00:41:40,084
+corner radius unmasking
+
+764
+00:41:40,084 --> 00:41:43,093
+on so this is worthy of being passes are
+coming from so
+
+765
+00:41:43,093 --> 00:41:46,107
+you know again anything that we can do
+to avoid on screen passes
+
+766
+00:41:47,007 --> 00:41:50,070
+you know will improve performance across
+all devices
+
+767
+00:41:50,007 --> 00:41:53,026
+so is therefore is there a better way to
+do this I
+
+768
+00:41:53,089 --> 00:41:56,089
+ideally if you can't regenerate your
+family else round
+
+769
+00:41:56,089 --> 00:41:58,175
+then that would be great because and you
+just be rendering images and you
+
+770
+00:41:59,075 --> 00:42:01,077
+wouldn't be trying to do all of this
+
+771
+00:42:01,077 --> 00:42:04,112
+masking having all these often passes on
+the fly
+
+772
+00:42:05,012 --> 00:42:08,088
+so you know if you can pre generate them
+that's great
+
+773
+00:42:08,088 --> 00:42:12,107
+if you can then another trick you could
+do is remember this
+
+774
+00:42:13,007 --> 00:42:16,073
+you I was just away table view with
+white people who sells and just you know
+
+775
+00:42:16,073 --> 00:42:17,084
+white background
+
+776
+00:42:17,084 --> 00:42:21,112
+so we could fake it in this case you
+know we could render the square content
+
+777
+00:42:22,012 --> 00:42:25,100
+for the square from now and then render
+a waiting for to circle on top a bit too
+
+778
+00:42:26,000 --> 00:42:26,049
+kinda
+
+779
+00:42:26,049 --> 00:42:29,076
+you know in essence cutaway the rest to
+the image on
+
+780
+00:42:29,076 --> 00:42:31,083
+this will be reducing our on screen
+passes but the increasing the amount a
+
+781
+00:42:32,046 --> 00:42:32,143
+blending
+
+782
+00:42:33,043 --> 00:42:36,120
+you know but it still turns out to be a
+nap performance when because the Jeep
+
+783
+00:42:37,002 --> 00:42:37,089
+you can plan
+
+784
+00:42:38,007 --> 00:42:41,009
+a lot faster than it can do on screen
+passes so
+
+785
+00:42:41,009 --> 00:42:44,014
+let's make this change %uh just doing
+the
+
+786
+00:42:44,014 --> 00:42:48,028
+you know faking and see how that affects
+performance
+
+787
+00:42:48,028 --> 00:42:51,031
+so will take an open to release driver
+will take tracing your
+
+788
+00:42:51,031 --> 00:42:55,080
+she leaves driver instrument to refrain
+readers and sure enough we're getting 60
+
+789
+00:42:55,359 --> 00:42:56,820
+frames per second
+
+790
+00:42:56,082 --> 00:42:59,082
+and notice how much last the device
+utilization
+
+791
+00:42:59,082 --> 00:43:02,165
+so again we're 30 percent verses you
+know mid to upper eighties
+
+792
+00:43:03,065 --> 00:43:06,122
+on one quick word on this on you notice
+before
+
+793
+00:43:07,022 --> 00:43:09,911
+you're actually keep you down but we
+weren't actually a hundred percent for
+
+794
+00:43:10,109 --> 00:43:11,240
+Jeep you time
+
+795
+00:43:11,024 --> 00:43:14,060
+that's because you know when you have
+%ah screen passes there is a idle time
+
+796
+00:43:14,006 --> 00:43:17,085
+when the Jeep you have to change
+contacts or do you switch contacts
+
+797
+00:43:18,039 --> 00:43:21,073
+so you know you still might be cheap you
+down but not quite
+
+798
+00:43:21,073 --> 00:43:25,119
+hitting 100 percent CPU usage because
+the situation with fostering passes so
+
+799
+00:43:26,019 --> 00:43:26,056
+that's
+
+800
+00:43:26,056 --> 00:43:30,102
+something to keep in mind so if we
+summarize performance across
+
+801
+00:43:31,002 --> 00:43:34,841
+all the devices you know before we were
+just using masking
+
+802
+00:43:34,859 --> 00:43:37,920
+we notice that there was a point drop
+off on all devices
+
+803
+00:43:37,092 --> 00:43:41,126
+on after we made this change you know
+and we made the trade offer doing having
+
+804
+00:43:42,026 --> 00:43:44,063
+more blending for last on screen passes
+
+805
+00:43:44,063 --> 00:43:47,104
+we are now hitting 60 frames per second
+everywhere which is which is good this
+
+806
+00:43:48,004 --> 00:43:50,026
+is what we want
+
+807
+00:43:50,026 --> 00:43:53,048
+so in summary notice there's a theme
+here
+
+808
+00:43:53,048 --> 00:43:58,063
+I often passes are expensive so you know
+again you can use coronation to find
+
+809
+00:43:58,063 --> 00:43:59,090
+where you have any unexpected
+
+810
+00:43:59,009 --> 00:44:02,071
+of green passes and you know it's always
+good to know your API
+
+811
+00:44:03,052 --> 00:44:06,145
+and what you using do to avoid them on
+and of course you know
+
+812
+00:44:07,045 --> 00:44:10,110
+always measure performance across
+different devices you know OpenGL ES
+
+813
+00:44:11,001 --> 00:44:14,002
+truck OpenGL ES driver instrument will
+give you GPUs
+
+814
+00:44:14,002 --> 00:44:18,021
+activity and time profile arrangement
+will show you CPU activity
+
+815
+00:44:18,039 --> 00:44:21,087
+and again you know always know what your
+view hierarchy is you know if you have
+
+816
+00:44:21,087 --> 00:44:22,101
+any kind of strange
+
+817
+00:44:23,001 --> 00:44:27,058
+or those are looking performance issues
+
+818
+00:44:27,058 --> 00:44:29,155
+so overall summary you know what were
+the questions below our original
+
+819
+00:44:30,055 --> 00:44:33,067
+questions and what will be used to
+
+820
+00:44:33,067 --> 00:44:36,090
+to actually find these answers so here's
+a nice little table
+
+821
+00:44:36,009 --> 00:44:40,070
+you know it that shows what we actually
+used to get down to the question so
+
+822
+00:44:41,051 --> 00:44:44,066
+this is always a good starting point for
+figuring out before you start giving new
+
+823
+00:44:44,066 --> 00:44:44,070
+code
+
+824
+00:44:45,006 --> 00:44:47,079
+try to figure out what's going on is
+good to see what's actually happening on
+
+825
+00:44:47,079 --> 00:44:50,090
+device
+
+826
+00:44:50,009 --> 00:44:53,011
+so overall summary on axle
+
+827
+00:44:54,001 --> 00:44:58,006
+talked about the coronation pipeline and
+talked about some rendering concepts
+
+828
+00:44:58,006 --> 00:45:03,029
+and then talked about new UI kit
+features for blur and vibrancy a fact
+
+829
+00:45:03,083 --> 00:45:06,149
+and then I went over profiling tools and
+then this an example
+
+830
+00:45:07,049 --> 00:45:11,133
+case studies so if you have any
+questions feel free to contact you to
+
+831
+00:45:12,033 --> 00:45:14,126
+the apt remarks evangelist or the
+developer tools Angeles
+
+832
+00:45:15,026 --> 00:45:19,032
+so feel free to contact Jay per day if
+you're curious about coordination
+
+833
+00:45:19,032 --> 00:45:20,046
+documentation
+
+834
+00:45:20,046 --> 00:45:26,058
+that available online as well as the
+devil performs as a great resource
+
+835
+00:45:26,058 --> 00:45:29,063
+and other related sessions are happening
+at the BBC
+
+836
+00:45:29,063 --> 00:45:33,147
+you might find this interesting so these
+might be worth checking out
+
+837
+00:45:34,047 --> 00:45:35,686
+so thanks and have a wonderful
+

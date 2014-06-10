@@ -1,0 +1,3691 @@
+1
+00:00:12,026 --> 00:00:19,026
+good morning
+
+2
+00:00:19,077 --> 00:00:20,926
+welcome to the new iTunes Connect
+
+3
+00:00:21,619 --> 00:00:24,635
+I'm Dave and half full Engineering
+Manager
+
+4
+00:00:24,779 --> 00:00:28,250
+here at iTunes Connect we have a lot of
+great things to talk about today
+
+5
+00:00:28,025 --> 00:00:31,038
+to do so I'm gonna hit the clicker over
+on the deaths were here
+
+6
+00:00:31,038 --> 00:00:35,040
+it all starts with the new design
+
+7
+00:00:35,004 --> 00:00:38,032
+we want to take you over to walk through
+some of the features
+
+8
+00:00:38,068 --> 00:00:41,069
+the we've added the man who follows
+
+9
+00:00:41,069 --> 00:00:45,161
+seconding app reviews it's a great
+chance for you to upload
+
+10
+00:00:46,061 --> 00:00:49,094
+video fifteen to thirty seconds dynamic
+
+11
+00:00:49,094 --> 00:00:53,853
+view of what makes you're at magical at
+Bundall
+
+12
+00:00:54,699 --> 00:00:57,710
+you can bundle up to 10 ap together
+
+13
+00:00:57,809 --> 00:01:01,170
+with an easy setup low and iTunes
+Connect
+
+14
+00:01:01,017 --> 00:01:05,022
+app analytics very excited about the the
+best and an interview
+
+15
+00:01:05,067 --> 00:01:12,067
+love your app with data only Apple can
+provide and laugh
+
+16
+00:01:15,099 --> 00:01:22,099
+has swype beta testing
+
+17
+00:01:23,001 --> 00:01:25,037
+we're very excited about this give you a
+little more
+
+18
+00:01:25,037 --> 00:01:28,040
+insight and up and a what we have
+planned
+
+19
+00:01:28,067 --> 00:01:31,152
+protest by beta testing restart with the
+homepage
+
+20
+00:01:32,052 --> 00:01:35,057
+by to inspect an all-new design we have
+
+21
+00:01:35,057 --> 00:01:38,063
+the same sections as today with great
+new icon
+
+22
+00:01:39,017 --> 00:01:42,020
+if you have any news for announcements
+for you
+
+23
+00:01:42,047 --> 00:01:45,118
+like perhaps you have finally this
+contract the relief that's gonna go
+
+24
+00:01:46,018 --> 00:01:49,567
+right there on the top we came here to
+work today
+
+25
+00:01:49,729 --> 00:01:54,010
+so let's jump into my apt and do we have
+
+26
+00:01:54,001 --> 00:01:57,029
+the first thing you notice is
+
+27
+00:01:57,029 --> 00:02:01,065
+wall to wall aP's which I give as much
+space you can for always outfit more apt
+
+28
+00:02:01,065 --> 00:02:01,924
+onto the page
+
+29
+00:02:02,509 --> 00:02:05,850
+at the same time giving
+
+30
+00:02:05,085 --> 00:02:08,178
+each ap a little more space debris the
+full name of the app
+
+31
+00:02:09,078 --> 00:02:13,172
+the complete iTunes Connect data easier
+tell the difference between waiting for
+
+32
+00:02:14,072 --> 00:02:14,135
+review
+
+33
+00:02:15,035 --> 00:02:18,894
+an interview also without a little badge
+there to show
+
+34
+00:02:19,209 --> 00:02:23,910
+the difference when Iowa and Matt Capps
+became
+
+35
+00:02:23,091 --> 00:02:26,420
+to my apt page to check on have data
+from a nap
+
+36
+00:02:27,239 --> 00:02:30,680
+see if the hair salon app has been
+approved and ready to go
+
+37
+00:02:30,068 --> 00:02:35,657
+they're the top when i search bar type
+in hair salon
+
+38
+00:02:36,269 --> 00:02:39,720
+and all the hair salon aP's go to the
+top I see it all green
+
+39
+00:02:39,072 --> 00:02:42,091
+green is good my has been approved is
+ready for sale
+
+40
+00:02:42,739 --> 00:02:47,680
+a month ago check and see how it's done
+we've also added
+
+41
+00:02:47,068 --> 00:02:50,081
+some filtering can see there in the
+
+42
+00:02:50,081 --> 00:02:53,087
+top right hand corner search by
+
+43
+00:02:53,087 --> 00:02:56,926
+status you can filter the I have 24
+different status is
+
+44
+00:02:57,709 --> 00:03:00,712
+23 are ready for sale I have one prepare
+for upload
+
+45
+00:03:00,739 --> 00:03:04,745
+phone click on one of the status is of
+filtering all the other option show
+
+46
+00:03:04,799 --> 00:03:08,690
+just the app's with this iTunes Connect
+status someone you like the ListView
+
+47
+00:03:08,069 --> 00:03:11,078
+we've improved that as well more APs
+
+48
+00:03:11,078 --> 00:03:14,287
+on one page the same search
+
+49
+00:03:14,989 --> 00:03:19,080
+and filtering that we're right on the
+icon view also exist on the first few
+
+50
+00:03:19,008 --> 00:03:24,012
+you can sort by the different column
+names change that up and what's great
+
+51
+00:03:24,012 --> 00:03:28,191
+is if you leave my apps page and come
+back with you find out if iTunes Connect
+
+52
+00:03:28,299 --> 00:03:31,310
+when you come back to my apt will take
+you right back to the list
+
+53
+00:03:31,031 --> 00:03:35,066
+we're gonna go back into the icon view
+and jump into an A
+
+54
+00:03:35,066 --> 00:03:40,705
+we've done here combine the at pages and
+the Virgin pages
+
+55
+00:03:41,299 --> 00:03:44,380
+and 21 because the top we have app-icon
+going across
+
+56
+00:03:45,109 --> 00:03:48,134
+we have different tabs pricing
+
+57
+00:03:48,359 --> 00:03:51,500
+in a purchases manager Game Center
+
+58
+00:03:51,005 --> 00:03:54,394
+we take you by default to the version
+have
+
+59
+00:03:54,889 --> 00:03:58,955
+and to the ready for sale version in my
+app see the screenshots
+
+60
+00:03:59,549 --> 00:04:02,593
+right there from mean eliminated as a
+goes
+
+61
+00:04:02,989 --> 00:04:07,150
+what we want to do is create a new
+version so click on the upper
+
+62
+00:04:07,015 --> 00:04:10,072
+right hand corner there's the new
+version button amber provided with the
+
+63
+00:04:10,072 --> 00:04:10,123
+window
+
+64
+00:04:11,023 --> 00:04:16,029
+to enter in our version number you
+notice there's no what's new text
+
+65
+00:04:16,029 --> 00:04:20,103
+on this window with information still
+required but we understand
+
+66
+00:04:21,003 --> 00:04:24,007
+did you don't always have all the
+marketing data ready we want to take
+
+67
+00:04:24,043 --> 00:04:25,094
+action to create a new version
+
+68
+00:04:25,094 --> 00:04:28,131
+and in fact we've added this to the new
+Apple as well
+
+69
+00:04:29,031 --> 00:04:32,036
+you create a new app all you need is a
+name
+
+70
+00:04:32,036 --> 00:04:39,036
+a bundle ID and sq this is the new
+iTunes Connect right
+
+71
+00:04:41,098 --> 00:04:44,171
+in come back when you're ready to do
+those descriptions those screenshots
+
+72
+00:04:45,071 --> 00:04:48,073
+and what-have-you arthritic for this new
+version
+
+73
+00:04:48,091 --> 00:04:51,172
+iraq rate a new sub have there with the
+
+74
+00:04:52,072 --> 00:04:59,072
+one that they rode out to copied over
+the screen shots in a previous version
+
+75
+00:05:00,002 --> 00:05:02,096
+like normal we can see that the what's
+new in this version: Tech hasn't been
+
+76
+00:05:02,096 --> 00:05:02,163
+filled in
+
+77
+00:05:03,063 --> 00:05:07,852
+I can fill it and now either way I keep
+scrolling down and I see the rest of
+
+78
+00:05:08,419 --> 00:05:11,490
+my version information I can change that
+
+79
+00:05:11,049 --> 00:05:14,104
+right now easy to edit I can save in
+
+80
+00:05:15,004 --> 00:05:20,021
+come back later but we came here today
+
+81
+00:05:20,021 --> 00:05:23,056
+to create iPad versions that make it
+universal
+
+82
+00:05:23,056 --> 00:05:26,695
+somebody click on the iPad tab
+
+83
+00:05:27,199 --> 00:05:30,510
+and what I need for an iPad is
+
+84
+00:05:30,051 --> 00:05:33,107
+new screenshots thats really only
+merited a difference between iPhones and
+
+85
+00:05:34,007 --> 00:05:34,050
+iPad
+
+86
+00:05:34,005 --> 00:05:37,097
+as reach out to great 5 snapshot
+
+87
+00:05:38,042 --> 00:05:42,049
+what's going on in my app right now but
+we also want
+
+88
+00:05:43,012 --> 00:05:46,028
+to give a more dynamic experience
+
+89
+00:05:46,028 --> 00:05:49,079
+one uploader app review giving people
+
+90
+00:05:49,079 --> 00:05:52,175
+more inside what is it about my app that
+magical
+
+91
+00:05:53,075 --> 00:05:56,077
+the make people want to click on
+
+92
+00:05:56,077 --> 00:06:00,106
+so we're gonna go ahead and upload the a
+preview here as well
+
+93
+00:06:01,006 --> 00:06:04,018
+now we could 2 screenshot 1
+
+94
+00:06:04,018 --> 00:06:07,073
+than opposed to reach out to and then
+upload screenshot 3
+
+95
+00:06:07,073 --> 00:06:11,105
+and then upload the video but this is
+the new iTunes Connect
+
+96
+00:06:12,005 --> 00:06:19,005
+and was gonna drag and drop all six
+files at once
+
+97
+00:06:20,077 --> 00:06:23,085
+and then they come you can see the a
+previous gonna be first followed by the
+
+98
+00:06:24,057 --> 00:06:27,083
+screenshot moved on a preview is
+
+99
+00:06:27,083 --> 00:06:30,109
+for to default poster frame the poster
+frame
+
+100
+00:06:31,009 --> 00:06:34,013
+is the image that people see on the App
+Store before they click Play
+
+101
+00:06:34,049 --> 00:06:38,054
+on your video if you don't like this
+poster frame
+
+102
+00:06:38,054 --> 00:06:41,117
+its easy to change the new iTunes
+Connect
+
+103
+00:06:42,017 --> 00:06:45,035
+we have our over the poster frame image
+
+104
+00:06:45,035 --> 00:06:48,099
+weekly at a poster frame and up pops
+
+105
+00:06:48,099 --> 00:06:51,147
+the video itself and the poster frame
+that we selected
+
+106
+00:06:52,047 --> 00:06:55,079
+we can press play on the video find a
+spot we want we can
+
+107
+00:06:55,079 --> 00:06:58,170
+drag drop anytime we find a friend we
+like we click
+
+108
+00:06:59,007 --> 00:07:02,102
+supposed to bring up to go I know my
+case the friend that I would like to use
+
+109
+00:07:03,065 --> 00:07:06,070
+that the animal videos I'm just gonna
+scrub on through
+
+110
+00:07:06,007 --> 00:07:09,078
+finest 1i like that's great
+
+111
+00:07:10,041 --> 00:07:13,046
+i click said his poster frame
+
+112
+00:07:13,046 --> 00:07:16,053
+that's all there is to it I'm done
+
+113
+00:07:16,053 --> 00:07:21,118
+wing coop at first with the phone
+
+114
+00:07:22,018 --> 00:07:25,101
+now I have my new poster frame but my
+app review
+
+115
+00:07:26,001 --> 00:07:30,020
+my screenshots any other changes that I
+wanna make and click Save
+
+116
+00:07:30,002 --> 00:07:33,004
+I'm good to go
+
+117
+00:07:33,004 --> 00:07:36,013
+this one looks like in the App Store the
+same idea we have the poster
+
+118
+00:07:36,049 --> 00:07:40,066
+frame video right here fall about the
+screenshots
+
+119
+00:07:40,066 --> 00:07:43,075
+we've talked a lot about the app review
+its take a look and see what one look
+
+120
+00:07:43,075 --> 00:07:50,075
+like
+
+121
+00:07:54,076 --> 00:07:57,161
+think
+
+122
+00:07:58,061 --> 00:08:05,061
+best old
+
+123
+00:08:07,084 --> 00:08:14,084
+just
+
+124
+00:08:18,092 --> 00:08:21,126
+not that there's a really great I'm
+excited to see what you come up with
+
+125
+00:08:22,026 --> 00:08:27,123
+for the enticing people to Dowager up
+
+126
+00:08:28,023 --> 00:08:31,092
+a few things to mention remember in app
+reviews the UI walkthrough
+
+127
+00:08:31,092 --> 00:08:34,143
+they wanna see your app what is it about
+your app that's great
+
+128
+00:08:35,043 --> 00:08:38,050
+they don't want to be sold to was not an
+ad
+
+129
+00:08:39,013 --> 00:08:42,222
+in capture this be a stray from I with 8
+
+130
+00:08:42,339 --> 00:08:47,100
+under oath 10 yosemite
+
+131
+00:08:47,001 --> 00:08:50,930
+app reviews are up to thirty seconds in
+length
+
+132
+00:08:51,029 --> 00:08:55,250
+and we accept both H 264 empro as
+content
+
+133
+00:08:55,025 --> 00:09:02,025
+and this app reviews
+
+134
+00:09:03,004 --> 00:09:07,085
+now we move on Apple's upon both is a
+great feature
+
+135
+00:09:07,085 --> 00:09:10,181
+to bundle together after the think I'm
+
+136
+00:09:11,081 --> 00:09:14,129
+guinere customers in q1 maps or just one
+choice
+
+137
+00:09:15,029 --> 00:09:18,107
+answer to many and want to download the
+first epic you want to have a nap and
+
+138
+00:09:19,007 --> 00:09:19,276
+I'll
+
+139
+00:09:19,339 --> 00:09:23,690
+is what after opening my bundle
+
+140
+00:09:23,069 --> 00:09:26,097
+so you have all the apt in your head
+with iTunes Connect Asia I think about
+
+141
+00:09:26,097 --> 00:09:27,146
+you got you some other
+
+142
+00:09:28,019 --> 00:09:32,410
+you can have up to 10 in this case I'm
+gonna pick for them
+
+143
+00:09:32,041 --> 00:09:35,136
+increase happened and this is great and
+offers more value
+
+144
+00:09:36,036 --> 00:09:39,445
+for the people on the App Store it's a
+single install to get
+
+145
+00:09:39,769 --> 00:09:44,807
+all is a great app that once we've
+included in this complete my bundle
+
+146
+00:09:45,149 --> 00:09:48,220
+same feature we give for music ever TV
+
+147
+00:09:48,022 --> 00:09:52,079
+where somebody's already purchased one
+or more the app to your bundle
+
+148
+00:09:52,079 --> 00:09:54,086
+the No get a discounted price to
+purchase the rest your bundle to
+
+149
+00:09:55,049 --> 00:09:55,898
+encourage them
+
+150
+00:09:56,339 --> 00:10:03,339
+to get all your caps
+
+151
+00:10:04,017 --> 00:10:05,676
+so I was step one flicking what abt
+
+152
+00:10:05,829 --> 00:10:10,360
+go my bundle the next thing we're gonna
+want is the meta data showing the iTunes
+
+153
+00:10:10,036 --> 00:10:10,075
+Store
+
+154
+00:10:10,075 --> 00:10:13,214
+we're gonna need a bundle name in
+description
+
+155
+00:10:13,889 --> 00:10:19,600
+public in its green shot a preview
+that's what categories rating
+
+156
+00:10:19,006 --> 00:10:23,425
+marketing URL's privacy earl's all these
+different pieces as we won't make this a
+
+157
+00:10:24,019 --> 00:10:24,088
+simple
+
+158
+00:10:24,709 --> 00:10:28,100
+as possible for you and we realize that
+we have a lot to this information
+
+159
+00:10:28,001 --> 00:10:31,076
+already so start with information that
+is
+
+160
+00:10:31,085 --> 00:10:34,089
+specific to the bundle its bond on its
+own name
+
+161
+00:10:35,025 --> 00:10:39,031
+need a description about the bundle
+obviously it has on price
+
+162
+00:10:39,085 --> 00:10:42,143
+has on skew and
+
+163
+00:10:43,043 --> 00:10:46,057
+marking your also you can market the
+spinal on its own
+
+164
+00:10:46,057 --> 00:10:50,316
+the rivers information that comes from
+the first app
+
+165
+00:10:50,829 --> 00:10:55,110
+with Becky ap the first after this
+bundle
+
+166
+00:10:55,011 --> 00:10:59,240
+so the first screenshot will come from
+that app the first at preview
+
+167
+00:10:59,339 --> 00:11:02,426
+you see in the App Store come from that
+app the categories
+
+168
+00:11:03,209 --> 00:11:09,480
+your bundle will match that the first
+app and after contact information after
+
+169
+00:11:09,048 --> 00:11:09,141
+the information
+
+170
+00:11:10,041 --> 00:11:15,097
+all that we pulled from the first app is
+well as well as the privacy URL
+
+171
+00:11:15,097 --> 00:11:18,163
+the rest of the information
+
+172
+00:11:19,063 --> 00:11:22,632
+from your money will come from all the
+absent a bundle
+
+173
+00:11:23,199 --> 00:11:27,800
+if you have three APs that are four plus
+and one app is $12 plus
+
+174
+00:11:27,008 --> 00:11:31,016
+your bundle will be rated 12+ for if you
+want rebuttal to be made for kids
+
+175
+00:11:32,006 --> 00:11:39,006
+all of the app's and bundle must be made
+for kids threat to the screenshot an app
+
+176
+00:11:39,839 --> 00:11:40,490
+reviews
+
+177
+00:11:40,049 --> 00:11:43,628
+will come from the other apps your
+bundle equal share for every app in your
+
+178
+00:11:44,069 --> 00:11:44,540
+bundle
+
+179
+00:11:44,054 --> 00:11:47,093
+and for keywords will take
+
+180
+00:11:47,093 --> 00:11:50,562
+all the keywords from all the app's in
+the bundle and apply those
+
+181
+00:11:51,399 --> 00:11:55,690
+you don't have to reenter any new
+keywords but take a look and see how we
+
+182
+00:11:55,069 --> 00:11:56,070
+do it on iTunes Connect
+
+183
+00:11:56,079 --> 00:11:59,318
+we come back to my apt page
+
+184
+00:12:00,029 --> 00:12:04,120
+we click new app bundle
+
+185
+00:12:04,012 --> 00:12:08,231
+first thing we want to enter as our
+
+186
+00:12:08,339 --> 00:12:15,339
+new app on a name talking toy box we
+start selecting the app's
+
+187
+00:12:18,039 --> 00:12:22,041
+at this point I realized K the first app
+is important its key
+
+188
+00:12:22,059 --> 00:12:25,062
+so I know which 41 my app bundle
+
+189
+00:12:25,062 --> 00:12:28,109
+but I would like to make this one that
+primary ap
+
+190
+00:12:29,009 --> 00:12:34,020
+that's like my apt I can now see
+
+191
+00:12:34,002 --> 00:12:37,024
+I my screenshot have already been
+popular for me
+
+192
+00:12:37,042 --> 00:12:40,065
+from that first app I can fill in
+
+193
+00:12:40,065 --> 00:12:43,073
+the app bundle description the marketing
+you /url
+
+194
+00:12:43,073 --> 00:12:46,106
+privacy policy world as already been
+done
+
+195
+00:12:47,006 --> 00:12:50,070
+scroll down further any deflect
+
+196
+00:12:50,007 --> 00:12:54,010
+priced here need to be a discounted
+price tier
+
+197
+00:12:54,073 --> 00:12:57,089
+left one tear left my family after the
+bundle
+
+198
+00:12:57,089 --> 00:13:01,153
+it is a discount it was given a few and
+then the rest information has already
+
+199
+00:13:02,053 --> 00:13:02,134
+been filled in
+
+200
+00:13:03,034 --> 00:13:07,123
+categories the rating I'm good to go at
+this point I'm done I've created by
+
+201
+00:13:08,023 --> 00:13:08,092
+Apple
+
+202
+00:13:08,092 --> 00:13:11,159
+I made it is a minute one thing to
+remember with that bundles
+
+203
+00:13:12,059 --> 00:13:15,110
+is that once they've been submitted the
+app store you can change the apt and a
+
+204
+00:13:16,001 --> 00:13:16,048
+bundle
+
+205
+00:13:16,057 --> 00:13:19,153
+the immutable wanna make
+
+206
+00:13:20,053 --> 00:13:24,080
+a bundle with now five after six after
+service for than just creating a bundle
+
+207
+00:13:24,008 --> 00:13:28,036
+meant that to the App Store here's a
+look like on the App Store
+
+208
+00:13:29,008 --> 00:13:32,056
+you can see your app-icon you can see
+all the app's and the bundle
+
+209
+00:13:32,056 --> 00:13:36,082
+that a preview screenshots come down
+below
+
+210
+00:13:36,082 --> 00:13:39,134
+him up to 10 paid aP's
+
+211
+00:13:40,034 --> 00:13:44,093
+and Apple you have to give that
+discounted price
+
+212
+00:13:44,093 --> 00:13:48,116
+the first preview and screenshot come
+from the first
+
+213
+00:13:49,016 --> 00:13:52,038
+ap really to all the other apt you're
+gonna right there
+
+214
+00:13:52,038 --> 00:13:56,053
+on the App Store and with complete my
+bundle people have already purchased one
+
+215
+00:13:56,053 --> 00:13:57,053
+or more those abs
+
+216
+00:13:57,053 --> 00:14:00,057
+we discover price purchase the rest your
+bundle
+
+217
+00:14:00,093 --> 00:14:04,108
+get the whole package and that's up on
+those with that like to turn the time
+
+218
+00:14:05,008 --> 00:14:05,092
+over to Tristan
+
+219
+00:14:05,092 --> 00:14:12,092
+to talk about app analytics thank you
+Dave
+
+220
+00:14:14,076 --> 00:14:18,107
+when a mistress in cuz Minka engineering
+manager working on app analytics
+
+221
+00:14:19,007 --> 00:14:22,024
+really excited today to show you what
+we've been up to
+
+222
+00:14:22,024 --> 00:14:26,043
+before we get into it talk about what it
+takes to build a great out
+
+223
+00:14:26,043 --> 00:14:29,116
+we're all here this week to learn tips
+and tricks on building a great app
+
+224
+00:14:30,016 --> 00:14:35,095
+we know it all starts a great idea every
+app it's in the store today that she's
+
+225
+00:14:35,095 --> 00:14:35,169
+great success
+
+226
+00:14:36,069 --> 00:14:39,155
+starts with a great idea how do you
+capture that and present bad
+
+227
+00:14:40,055 --> 00:14:43,101
+to your customers you doubt thoughtful
+design
+
+228
+00:14:44,001 --> 00:14:48,019
+pixel perfect design intuitive design
+you focus on really
+
+229
+00:14:48,019 --> 00:14:53,110
+concrete flows that make sense your
+customers we write 13 code we all here
+
+230
+00:14:54,001 --> 00:14:55,005
+right but free code
+
+231
+00:14:55,014 --> 00:15:01,050
+worked on my device we testing testing
+testing more
+
+232
+00:15:01,005 --> 00:15:05,031
+so we have automated unit test I'm a DUI
+tests were gonna talk more about
+
+233
+00:15:05,076 --> 00:15:08,122
+our beta testing services well this is a
+really important part
+
+234
+00:15:09,022 --> 00:15:13,097
+writing and creating a great app finally
+we submit to the store
+
+235
+00:15:13,097 --> 00:15:16,191
+these are all pieces develop a
+responsibility that were familiar with
+
+236
+00:15:17,091 --> 00:15:17,167
+today
+
+237
+00:15:18,067 --> 00:15:21,115
+and Apple does a fantastic job
+supporting you throughout this process
+
+238
+00:15:22,015 --> 00:15:25,071
+great schools with Xcode more great
+tools and services were talking about
+
+239
+00:15:25,071 --> 00:15:25,119
+today
+
+240
+00:15:26,019 --> 00:15:29,072
+but we know that our job is not done as
+developers
+
+241
+00:15:29,072 --> 00:15:32,121
+13 summit to the store there's this
+whole new set of responsibilities
+
+242
+00:15:33,021 --> 00:15:36,030
+we're not all done and
+
+243
+00:15:36,003 --> 00:15:40,045
+this is after launching this is what app
+analytics is all about these new
+
+244
+00:15:40,072 --> 00:15:41,090
+responsibilities
+
+245
+00:15:41,009 --> 00:15:44,105
+can influence this chart hopefully if
+you have absolute store
+
+246
+00:15:45,086 --> 00:15:48,098
+this chart is familiar to you you have
+your downloads over time
+
+247
+00:15:48,098 --> 00:15:52,167
+it's increasing and you see point to
+acceleration over time as well
+
+248
+00:15:53,067 --> 00:15:56,113
+let's talk about what it takes to
+influence not and why app analytics is
+
+249
+00:15:57,013 --> 00:16:00,016
+really important so first
+
+250
+00:16:00,016 --> 00:16:03,033
+our app store presence we can see on
+this chart now I have that
+
+251
+00:16:03,033 --> 00:16:06,039
+orange dot my see that App Store
+presence really
+
+252
+00:16:06,093 --> 00:16:09,160
+canned influence my downloads
+
+253
+00:16:10,006 --> 00:16:13,089
+abstr present is your name your
+description
+
+254
+00:16:14,043 --> 00:16:19,079
+your keywords we have these albinos now
+we also have or App Store previews
+
+255
+00:16:19,079 --> 00:16:22,176
+these are great ways to get your out to
+have more downloads more customers
+
+256
+00:16:23,076 --> 00:16:26,078
+morton people using your out marketing
+
+257
+00:16:26,078 --> 00:16:29,142
+once you have a great app you want to
+get the word out as developers
+
+258
+00:16:30,042 --> 00:16:33,069
+we don't just come into the store with
+committed to our social networks we send
+
+259
+00:16:33,069 --> 00:16:34,104
+it to our friends and our family
+
+260
+00:16:35,004 --> 00:16:38,079
+we create a home page has she seen
+newsletters markings are really
+
+261
+00:16:38,079 --> 00:16:38,171
+important piece
+
+262
+00:16:39,071 --> 00:16:42,144
+new updates when you're building an
+application
+
+263
+00:16:43,044 --> 00:16:48,137
+and submitted to the store your
+customers crave new content
+
+264
+00:16:49,037 --> 00:16:53,042
+new levels new ways to engage
+
+265
+00:16:53,042 --> 00:16:56,090
+existing customers in new ways to
+attract more customers you're out me
+
+266
+00:16:56,009 --> 00:17:00,075
+stay fresh and unique and to do that you
+go through this constant release
+
+267
+00:17:01,056 --> 00:17:04,077
+and build cycle
+
+268
+00:17:04,077 --> 00:17:08,101
+Nexus advertising advertising and
+marketing often used in the same
+
+269
+00:17:09,001 --> 00:17:12,018
+same vocabulary that advertises a little
+bit different
+
+270
+00:17:12,018 --> 00:17:16,070
+as a developer you may choose to pay for
+or advertising and that's a big decision
+
+271
+00:17:16,007 --> 00:17:19,052
+you want to know if it was worth the
+advertising investment
+
+272
+00:17:20,015 --> 00:17:23,074
+you got it nice return on that app
+analytics is there to help you
+
+273
+00:17:23,074 --> 00:17:27,155
+inform those decisions
+
+274
+00:17:28,055 --> 00:17:31,062
+all these dots all these wines you want
+to monitor
+
+275
+00:17:32,025 --> 00:17:35,026
+measure and see how they're changing
+over time
+
+276
+00:17:35,026 --> 00:17:38,103
+an app analytics is there to provide
+those answers and that is why
+
+277
+00:17:39,003 --> 00:17:43,008
+we use app analytics because Apple X
+provides answers
+
+278
+00:17:43,053 --> 00:17:47,092
+it helps you answer questions like house
+map doing
+
+279
+00:17:47,092 --> 00:17:50,156
+our people returning to my app
+
+280
+00:17:51,056 --> 00:17:55,113
+our people converting on here in app
+purchases
+
+281
+00:17:56,013 --> 00:18:00,098
+app analytics helps you make good
+advertising decisions
+
+282
+00:18:00,098 --> 00:18:02,106
+and this is what I'm really excited
+about app analytics helps you reveal
+
+283
+00:18:03,078 --> 00:18:04,125
+missed opportunities
+
+284
+00:18:05,025 --> 00:18:08,112
+without penalty if you can see that your
+app store presence is greatly United
+
+285
+00:18:09,012 --> 00:18:09,095
+States
+
+286
+00:18:09,095 --> 00:18:12,108
+and a lot of customers are looking at
+your apt United States
+
+287
+00:18:13,008 --> 00:18:17,082
+actually turning into real customers as
+opposed to potential customers
+
+288
+00:18:17,082 --> 00:18:20,126
+the same may not be the case in Germany
+with
+
+289
+00:18:21,026 --> 00:18:25,053
+app analytics we can see that the
+potential customers in German Germany
+
+290
+00:18:25,053 --> 00:18:28,144
+can become actual customers if we focus
+on our German house for presence
+
+291
+00:18:29,044 --> 00:18:33,068
+localization really understanding the
+German culture and understanding that
+
+292
+00:18:33,068 --> 00:18:36,107
+marketing to Germany maybe a completely
+different
+
+293
+00:18:37,007 --> 00:18:40,013
+different animal and we can do that with
+our app store presence
+
+294
+00:18:40,013 --> 00:18:43,072
+now panel X 1.0 those areas
+
+295
+00:18:43,072 --> 00:18:46,108
+finally after we launch it's all about
+building a better route
+
+296
+00:18:47,008 --> 00:18:50,054
+an app analytics is there to tell us and
+point us in the right direction to do
+
+297
+00:18:50,054 --> 00:18:50,151
+that
+
+298
+00:18:51,051 --> 00:18:56,124
+that is why Alex's important
+
+299
+00:18:57,024 --> 00:19:00,116
+so with that how we look at this Apple
+how are we looking at ap Analects is a
+
+300
+00:19:01,016 --> 00:19:02,037
+product or service
+
+301
+00:19:02,037 --> 00:19:05,071
+for app developers we're focusing on
+this concept a
+
+302
+00:19:05,071 --> 00:19:09,116
+the customer life cycle and this
+involves acquisition to engagement we
+
+303
+00:19:10,016 --> 00:19:12,024
+want US developers to be covered from
+
+304
+00:19:12,024 --> 00:19:15,072
+the point rapid the store to the pointer
+customers are using Yap
+
+305
+00:19:15,072 --> 00:19:18,119
+let's look at that from the customer's
+perspective we start with our first
+
+306
+00:19:19,019 --> 00:19:19,068
+measure
+
+307
+00:19:19,068 --> 00:19:22,085
+here is your app store product page we
+have trip guider
+
+308
+00:19:22,085 --> 00:19:26,086
+nap we made up for this presentation the
+first thing we see
+
+309
+00:19:26,086 --> 00:19:29,111
+iOS App Store use really excited for the
+first time
+
+310
+00:19:30,011 --> 00:19:33,108
+Apple's providing you developers with a
+view a viewer app store views
+
+311
+00:19:34,008 --> 00:19:40,032
+all tench active
+
+312
+00:19:40,032 --> 00:19:43,050
+this is data on the Apple can provide
+come straight from the App Store
+
+313
+00:19:43,005 --> 00:19:46,072
+to you developers next we have
+
+314
+00:19:47,017 --> 00:19:50,035
+ap units and sales the state here
+
+315
+00:19:50,035 --> 00:19:53,122
+attract any time potential customer
+turns into an actual customer
+
+316
+00:19:54,022 --> 00:19:57,030
+and touches your buy button inside your
+product page you have a stated today and
+
+317
+00:19:58,002 --> 00:19:58,047
+felt
+
+318
+00:19:58,047 --> 00:20:01,114
+and trends if you're familiar with
+iTunes Connect but this is different
+
+319
+00:20:02,014 --> 00:20:05,038
+were time this data into a complete
+picture with abstract use
+
+320
+00:20:05,038 --> 00:20:08,137
+the first time you can see your App
+Store views and how that drops
+
+321
+00:20:09,037 --> 00:20:12,071
+for out units
+
+322
+00:20:12,071 --> 00:20:15,137
+max we've combined app store data
+Billings data
+
+323
+00:20:16,037 --> 00:20:20,071
+and now we have device data we have
+installs
+
+324
+00:20:20,071 --> 00:20:23,144
+a customer purchases your application
+but they may install it on multiple
+
+325
+00:20:24,044 --> 00:20:24,113
+devices
+
+326
+00:20:25,013 --> 00:20:30,019
+this is why I installed an app units are
+two different to differ metrics
+
+327
+00:20:30,019 --> 00:20:33,058
+want your customer install the
+application starts engaging
+
+328
+00:20:33,058 --> 00:20:36,060
+we have a new world with device measures
+
+329
+00:20:36,006 --> 00:20:39,025
+we have sessions active devices
+
+330
+00:20:39,079 --> 00:20:42,128
+we have retention have this concept
+stickiness as well
+
+331
+00:20:43,028 --> 00:20:46,081
+sticking this is great it's a single
+measure that you can track over time
+
+332
+00:20:46,081 --> 00:20:49,084
+to ensure that your both growing and
+retaining customers
+
+333
+00:20:50,011 --> 00:20:55,020
+there's one measure you want to look at
+stickiness
+
+334
+00:20:55,002 --> 00:20:59,026
+finally if your application has been a
+purchases we track that as well
+
+335
+00:20:59,044 --> 00:21:02,110
+the first time you can see the entire
+customer lifecycle from the point the
+
+336
+00:21:03,001 --> 00:21:03,072
+user
+
+337
+00:21:03,081 --> 00:21:07,145
+became a real customer to when they're
+converting on an app purchases
+
+338
+00:21:08,045 --> 00:21:11,077
+concept about urself to using
+
+339
+00:21:11,077 --> 00:21:15,092
+any business intelligence today he may
+be looking at average revenue per user
+
+340
+00:21:15,092 --> 00:21:18,166
+this is average sales we provide that
+this in combination with sticking asking
+
+341
+00:21:19,066 --> 00:21:20,135
+so you really powerful story
+
+342
+00:21:21,035 --> 00:21:25,096
+how he raps doing and how your customers
+are performing
+
+343
+00:21:25,096 --> 00:21:28,175
+such the customers view this let's look
+at your view the developer
+
+344
+00:21:29,075 --> 00:21:32,124
+we have our app store reviews we have
+our app unit
+
+345
+00:21:33,024 --> 00:21:36,028
+active devices retention in app
+purchases this final
+
+346
+00:21:36,064 --> 00:21:39,125
+starts to drop in that make sense
+because not every potential customer
+
+347
+00:21:40,025 --> 00:21:43,096
+becomes an actual customer
+
+348
+00:21:43,096 --> 00:21:46,105
+was just look like when we start to ask
+more questions house
+
+349
+00:21:47,005 --> 00:21:50,058
+look by platform we start to filter this
+data by
+
+350
+00:21:50,058 --> 00:21:53,116
+iPhone iPad iPod Touch we can see the
+composition
+
+351
+00:21:54,016 --> 00:21:59,090
+a bar after views across all the Apple
+platforms
+
+352
+00:21:59,009 --> 00:22:02,024
+you can also answer that App Store
+presence question
+
+353
+00:22:03,005 --> 00:22:07,056
+should I be localizing for Germany here
+I can see my app store reviews in europe
+
+354
+00:22:07,056 --> 00:22:10,141
+quite high but my app units in Europe a
+little lower
+
+355
+00:22:11,041 --> 00:22:14,066
+and this makes sense as well and there's
+an opportunity there this is where
+
+356
+00:22:14,066 --> 00:22:15,128
+analytics can help you
+
+357
+00:22:16,028 --> 00:22:19,119
+reveal missed opportunities if we just
+localize rap
+
+358
+00:22:20,019 --> 00:22:23,057
+potentially making it more apt units and
+that will help us get
+
+359
+00:22:23,057 --> 00:22:26,123
+more active devices more retention more
+and I purchases
+
+360
+00:22:27,023 --> 00:22:31,038
+maybe it's that simple and we don't have
+to release another version number out to
+
+361
+00:22:31,038 --> 00:22:31,081
+get
+
+362
+00:22:31,081 --> 00:22:34,157
+more downloads in Germany
+
+363
+00:22:35,057 --> 00:22:38,152
+this is great let's talk about what it
+actually looks like I'm sure you guys
+
+364
+00:22:39,052 --> 00:22:42,150
+what we've been working on I think
+that's why we're here
+
+365
+00:22:43,005 --> 00:22:47,064
+app analytics shows up as a new feature
+inside the new iTunes Connect
+
+366
+00:22:48,009 --> 00:22:51,030
+here beside my apt
+
+367
+00:22:51,003 --> 00:22:54,022
+first few that we see when we click
+inside and the latex
+
+368
+00:22:54,049 --> 00:22:57,136
+is are out west this is the old reviewed
+your entire mobile business
+
+369
+00:22:58,036 --> 00:23:02,068
+here I can see my trip guide a rapid the
+top I can see all of my other app
+
+370
+00:23:02,068 --> 00:23:05,074
+my sweet can see filters
+
+371
+00:23:05,074 --> 00:23:08,090
+I can see the ability to change my time
+
+372
+00:23:08,009 --> 00:23:12,037
+my date let's look at these metrics so
+here's the key by dole's
+
+373
+00:23:13,018 --> 00:23:17,055
+for an application going from the left
+to the right I see that life cycle again
+
+374
+00:23:17,055 --> 00:23:18,062
+it's consistent
+
+375
+00:23:18,062 --> 00:23:21,159
+start with maps reviews on the map units
+I see my sessions
+
+376
+00:23:22,059 --> 00:23:25,059
+and myself
+
+377
+00:23:25,059 --> 00:23:29,113
+see if they're rising falling in this
+period
+
+378
+00:23:30,013 --> 00:23:33,017
+hover over these I get toward tips
+telling me with the previous period was
+
+379
+00:23:33,017 --> 00:23:34,054
+as well
+
+380
+00:23:34,054 --> 00:23:37,117
+ecoFLEX one selecting one of these
+brings us into the heart this product
+
+381
+00:23:38,017 --> 00:23:39,104
+which is our metrics page
+
+382
+00:23:40,004 --> 00:23:42,090
+first thing you'll notice is that great
+trend we can see how we're doing
+
+383
+00:23:42,009 --> 00:23:43,036
+overtime
+
+384
+00:23:44,017 --> 00:23:47,062
+in this situation we're looking at data
+from a I can see
+
+385
+00:23:47,062 --> 00:23:50,130
+all remain at my application is increase
+in App Store views
+
+386
+00:23:51,003 --> 00:23:55,011
+which is awesome can also change my
+interval below I can change is from days
+
+387
+00:23:55,038 --> 00:23:57,102
+to weeks to months
+
+388
+00:23:58,002 --> 00:24:02,029
+talk about those measures again here I
+have those life cycle metrics I have my
+
+389
+00:24:02,029 --> 00:24:03,031
+sales
+
+390
+00:24:03,049 --> 00:24:06,143
+my store data I have my engagement date
+on my device data
+
+391
+00:24:07,043 --> 00:24:10,058
+conflict any ideas and change the chart
+
+392
+00:24:10,058 --> 00:24:14,117
+let's look at breaking this down by
+particular platform as like you buy
+
+393
+00:24:15,017 --> 00:24:18,018
+now I can see how this actually looks
+
+394
+00:24:18,018 --> 00:24:21,037
+across all the Apple devices like see my
+iPhone
+
+395
+00:24:21,037 --> 00:24:24,044
+phone my iPad my ipod touch and it looks
+like
+
+396
+00:24:25,007 --> 00:24:27,070
+the trend is about the same on all been
+there all perform an equally in this
+
+397
+00:24:27,007 --> 00:24:28,030
+case it's great
+
+398
+00:24:28,093 --> 00:24:32,157
+but a customer can't have and iPhone and
+iPad
+
+399
+00:24:33,057 --> 00:24:36,094
+the same time they're not same device
+they're two different devices
+
+400
+00:24:36,094 --> 00:24:39,129
+so we look at that as a stacked area I
+got a chart type
+
+401
+00:24:40,029 --> 00:24:45,029
+as Lex stacked area that I can now see
+the composition
+
+402
+00:24:45,029 --> 00:24:48,122
+a iPhone iPod iPod Touch and some of
+these were equal
+
+403
+00:24:49,022 --> 00:24:53,025
+a hundred percent whatever metric and
+looking at there's different chart types
+
+404
+00:24:53,052 --> 00:24:56,099
+for different scenarios and looking at
+App Store views
+
+405
+00:24:56,099 --> 00:25:00,145
+here yet area what's the best will
+choose the sensible default based on the
+
+406
+00:25:01,045 --> 00:25:03,139
+measure you looking at
+
+407
+00:25:04,039 --> 00:25:07,040
+what's what to another measure okay App
+Store units
+
+408
+00:25:07,049 --> 00:25:10,107
+here there's no issues here Analytics is
+providing an answer that
+
+409
+00:25:11,007 --> 00:25:14,091
+my conversions from pageviews ap units
+
+410
+00:25:14,091 --> 00:25:17,097
+hasn't dropped drastically its a little
+bit lower
+
+411
+00:25:17,097 --> 00:25:20,138
+but the trend is the same and on that
+both devices the same
+
+412
+00:25:21,038 --> 00:25:24,113
+so not a lot of opportunity to improve
+my iPad
+
+413
+00:25:25,013 --> 00:25:28,049
+App Store presence because it's
+performing the same as my iPhone maybe
+
+414
+00:25:28,049 --> 00:25:30,052
+I'm prove them all together
+
+415
+00:25:30,079 --> 00:25:33,113
+go to another measure in app purchases
+and this is
+
+416
+00:25:34,013 --> 00:25:37,061
+where our team decided that on may 15
+
+417
+00:25:37,061 --> 00:25:41,066
+we would lower the price in app
+purchases as a result we got a lot more
+
+418
+00:25:42,011 --> 00:25:46,059
+app purchases that occurred and we can
+see that would happen Alex
+
+419
+00:25:46,059 --> 00:25:49,088
+see despite their we can see that across
+all platforms
+
+420
+00:25:49,088 --> 00:25:54,133
+performed much better as a result of our
+change
+
+421
+00:25:55,033 --> 00:25:59,080
+we also had intuition that change in our
+in our purchases
+
+422
+00:25:59,008 --> 00:26:02,012
+would help give more customers more
+content
+
+423
+00:26:02,084 --> 00:26:05,155
+and that would result in more engagement
+more active devices
+
+424
+00:26:06,055 --> 00:26:09,112
+so with that we select in app purchases
+compared to
+
+425
+00:26:10,012 --> 00:26:14,020
+reflect active devices and now
+
+426
+00:26:14,002 --> 00:26:17,008
+we see are active devices one up had
+dinner and a person I can see these
+
+427
+00:26:17,008 --> 00:26:18,051
+layer on top of each other
+
+428
+00:26:19,023 --> 00:26:23,087
+telling me the story that yes are
+changes to in app purchases really did
+
+429
+00:26:23,087 --> 00:26:23,096
+impact
+
+430
+00:26:24,077 --> 00:26:28,084
+active devices as well we've got more
+revenue from a nap purchases
+
+431
+00:26:28,084 --> 00:26:34,129
+and we've got more retention more
+engagement from our active devices
+
+432
+00:26:35,029 --> 00:26:38,032
+such metrics and that's the measures
+that we provide
+
+433
+00:26:38,032 --> 00:26:41,103
+there's some questions we haven't
+answered yet
+
+434
+00:26:42,003 --> 00:26:45,067
+and we can answer that was sources what
+are sources
+
+435
+00:26:45,067 --> 00:26:49,079
+sources are all about how people finder
+app
+
+436
+00:26:49,079 --> 00:26:52,112
+as developers you work really hard on
+your map your app store presence
+
+437
+00:26:53,012 --> 00:26:57,028
+and you have no idea right now how
+people are getting to your app's per
+
+438
+00:26:57,028 --> 00:26:57,111
+page
+
+439
+00:26:58,011 --> 00:27:03,066
+we're excited that sources solves that
+problem first two types
+
+440
+00:27:03,066 --> 00:27:06,144
+we have a website we have campaigns
+
+441
+00:27:07,044 --> 00:27:09,136
+web sites are really simple with the
+link to your App Store page: you're
+
+442
+00:27:10,036 --> 00:27:11,117
+familiar with these links today
+
+443
+00:27:12,017 --> 00:27:16,031
+anytime you have a link to your friends
+your family market insights
+
+444
+00:27:16,031 --> 00:27:19,089
+that link is now trapped in for mobile
+website as a refer
+
+445
+00:27:19,089 --> 00:27:22,163
+source and we can see that map analytics
+
+446
+00:27:23,063 --> 00:27:26,126
+in campaigns on that same link with the
+campaign I D
+
+447
+00:27:27,026 --> 00:27:30,084
+this is a friendly link friendly name
+that you supplied to the URL
+
+448
+00:27:30,084 --> 00:27:33,145
+let's talk about what that looks like
+three simple this is the URL that
+
+449
+00:27:34,045 --> 00:27:37,063
+hopefully you're familiar with
+
+450
+00:27:37,063 --> 00:27:42,131
+we had a provider ID we get this
+provider ID inside iTunes Connect
+
+451
+00:27:43,031 --> 00:27:46,085
+and then you add your campaign ID
+friendly name you want as friendly as
+
+452
+00:27:46,085 --> 00:27:48,144
+possible because you're going to view
+this name
+
+453
+00:27:49,044 --> 00:27:54,046
+afterwards we'll show you that in a
+second inside your sources list
+
+454
+00:27:54,064 --> 00:27:57,090
+if you're using I add today to advertise
+your application
+
+455
+00:27:57,009 --> 00:28:00,095
+this is automatic you do not have to go
+to I add and setup
+
+456
+00:28:01,076 --> 00:28:04,133
+campaign names for the purposes about
+analytics
+
+457
+00:28:05,033 --> 00:28:08,102
+it will all happen seamlessly any
+campaign create Naiad will be
+
+458
+00:28:09,002 --> 00:28:11,008
+automatically trapped in available
+
+459
+00:28:11,008 --> 00:28:15,057
+inside app analytics and you can really
+see the effectiveness a bad
+
+460
+00:28:15,057 --> 00:28:18,083
+inside appena lakes without any effort
+
+461
+00:28:18,083 --> 00:28:22,139
+so what does this look like come here we
+select sources
+
+462
+00:28:23,039 --> 00:28:27,039
+again brought to the source is less here
+I see my top web sites
+
+463
+00:28:27,039 --> 00:28:31,042
+miss I doubt I can see top campaign I
+have the same key by Dolce
+
+464
+00:28:31,042 --> 00:28:34,096
+that I had in my application list as
+well we're really trying to
+
+465
+00:28:34,096 --> 00:28:37,192
+reinforce the story about position to
+engagement and keep it consistent for
+
+466
+00:28:38,092 --> 00:28:41,113
+you guys
+
+467
+00:28:42,013 --> 00:28:45,032
+and flat top campaign to get brought
+over to my talk campaign last
+
+468
+00:28:45,032 --> 00:28:49,054
+these are a view of all those friendly
+names that we set up
+
+469
+00:28:49,054 --> 00:28:52,059
+zoom in on one of these here I can see
+spring email blast that was my family
+
+470
+00:28:53,004 --> 00:28:53,073
+name
+
+471
+00:28:53,073 --> 00:28:57,118
+I see maps reviews my units my sales in
+my sessions that same
+
+472
+00:28:58,018 --> 00:29:01,092
+life cycle this is great we select that
+
+473
+00:29:01,092 --> 00:29:04,095
+and we're into this source details we
+think that
+
+474
+00:29:04,095 --> 00:29:07,113
+if you're marketers you're gonna love
+this page are gonna sit on this page and
+
+475
+00:29:08,013 --> 00:29:10,051
+share with your colleagues
+
+476
+00:29:10,051 --> 00:29:13,140
+we can see all those key measures and
+nice visual we see a broken down over
+
+477
+00:29:14,004 --> 00:29:15,023
+time as well
+
+478
+00:29:15,059 --> 00:29:18,144
+every day has a bar on these key
+measures we also see additional measures
+
+479
+00:29:19,044 --> 00:29:19,123
+that you can only get
+
+480
+00:29:20,023 --> 00:29:23,116
+on them metrics page
+
+481
+00:29:24,016 --> 00:29:27,032
+you can see this broken down by
+different data types as well so
+
+482
+00:29:27,032 --> 00:29:30,057
+here we're looking at maps were abused
+by regen by territory
+
+483
+00:29:30,057 --> 00:29:34,059
+by platform changing those drop downs I
+can change the measure that i'm looking
+
+484
+00:29:34,059 --> 00:29:34,132
+at
+
+485
+00:29:35,032 --> 00:29:38,104
+see exactly how this campaign is
+performing how this website is
+
+486
+00:29:39,004 --> 00:29:39,099
+performing
+
+487
+00:29:39,099 --> 00:29:44,185
+and what exactly the customers are doing
+as well
+
+488
+00:29:45,085 --> 00:29:48,154
+so that sources we think that you're
+gonna love sources today
+
+489
+00:29:49,054 --> 00:29:52,090
+you know that people are downloading
+you're out installing the app you don't
+
+490
+00:29:52,009 --> 00:29:53,015
+know is whether coming from and
+
+491
+00:29:54,005 --> 00:29:58,038
+were solving that problem so we've
+answered the question
+
+492
+00:29:58,083 --> 00:30:01,085
+how are people doing the app they can
+bring on an app purchases
+
+493
+00:30:02,003 --> 00:30:05,069
+where they coming from we have an answer
+in detail
+
+494
+00:30:05,069 --> 00:30:09,091
+our people returning are they retained
+what does that say to life cycle look
+
+495
+00:30:09,091 --> 00:30:09,157
+like
+
+496
+00:30:10,057 --> 00:30:14,090
+and we answer that with retention just
+do a quick
+
+497
+00:30:14,009 --> 00:30:17,033
+education on retention why it's
+important this is
+
+498
+00:30:18,014 --> 00:30:21,073
+obvious a hundred percent of your
+customers our customers on the purchase
+
+499
+00:30:21,073 --> 00:30:21,158
+date
+
+500
+00:30:22,058 --> 00:30:26,064
+it's really simple moving along
+
+501
+00:30:26,064 --> 00:30:29,072
+45 percent our customers on day two
+
+502
+00:30:30,044 --> 00:30:33,096
+35 percent on day 7 and 20 percent and
+8:30
+
+503
+00:30:33,096 --> 00:30:37,096
+hopefully these numbers are scary but
+there's an opportunity there
+
+504
+00:30:37,096 --> 00:30:40,128
+you can get them higher in hiring you
+focus on this is really important
+
+505
+00:30:41,028 --> 00:30:44,057
+because if you have no more customers a
+day 30 or 90
+
+506
+00:30:44,057 --> 00:30:47,099
+you're really gonna may have to focus on
+the next stop
+
+507
+00:30:47,099 --> 00:30:51,171
+or improving your contact your marketing
+to get more
+
+508
+00:30:52,071 --> 00:30:55,075
+how we show this new UI we select
+retention and I can see
+
+509
+00:30:56,011 --> 00:31:00,014
+my purchase date on the left May 23rd
+
+510
+00:31:00,014 --> 00:31:03,017
+I can see my days later on the right
+here i'm looking at
+
+511
+00:31:03,044 --> 00:31:06,097
+day 7 as a little story
+
+512
+00:31:06,097 --> 00:31:10,097
+so up the active devices the purchase on
+May 23rd
+
+513
+00:31:10,097 --> 00:31:14,111
+18 percent remain active seven days
+later
+
+514
+00:31:15,011 --> 00:31:19,038
+this great single view of how by
+retention on May 23rd was doing
+
+515
+00:31:19,038 --> 00:31:22,052
+as developers as marketers prague
+managers
+
+516
+00:31:22,052 --> 00:31:25,058
+we want to look at this with oliver
+purchase States stacked on top of each
+
+517
+00:31:26,012 --> 00:31:26,066
+other
+
+518
+00:31:26,066 --> 00:31:30,120
+so that's the view we're providing in
+same May 24th
+
+519
+00:31:31,002 --> 00:31:35,014
+and now we show you the rest this matrix
+so may 2013
+
+520
+00:31:35,032 --> 00:31:38,036
+June 3rd I can see my retention stacked
+
+521
+00:31:38,036 --> 00:31:43,081
+single quick view of how my desk the
+seven retention is
+
+522
+00:31:43,081 --> 00:31:46,115
+and you don't have to do anything this
+is amazing so
+
+523
+00:31:47,015 --> 00:31:54,015
+we're providing
+
+524
+00:31:55,045 --> 00:31:59,054
+metrics sources retention your app list
+
+525
+00:31:59,054 --> 00:32:03,071
+what do you need to do nothing there is
+no STK
+
+526
+00:32:03,071 --> 00:32:10,071
+no third-party code running in your
+app's no performance degradation
+
+527
+00:32:12,092 --> 00:32:16,107
+you don't have to write any new code
+this is not a Apple provided library
+
+528
+00:32:17,007 --> 00:32:17,104
+that you have to
+
+529
+00:32:18,004 --> 00:32:21,046
+in bed in your app you don't have to
+instantiated initialize it
+
+530
+00:32:21,046 --> 00:32:26,093
+no code is required no app updates
+required you do not have to recompile re
+
+531
+00:32:26,093 --> 00:32:28,120
+sign recently route to the store
+
+532
+00:32:29,002 --> 00:32:32,049
+you really have to do nothing to take
+advantage of this
+
+533
+00:32:32,067 --> 00:32:35,143
+we're doing this because it's all built
+into the App Store and Iowa State
+
+534
+00:32:36,043 --> 00:32:41,044
+everything from the store metrics to the
+sales metrics to the device metrics is
+
+535
+00:32:41,044 --> 00:32:45,052
+all automatic in the app's when I was
+eight
+
+536
+00:32:46,024 --> 00:32:49,049
+and what we kept in mind while doing
+this privacy
+
+537
+00:32:49,049 --> 00:32:52,090
+app analytics has been every really
+highly requested feature and
+
+538
+00:32:52,009 --> 00:32:55,091
+iTunes Connect we're excited to bring it
+to you guys were excited to bring it to
+
+539
+00:32:56,072 --> 00:32:56,121
+you
+
+540
+00:32:57,021 --> 00:33:00,074
+with privacy at the forefront we're not
+in this business
+
+541
+00:33:00,074 --> 00:33:04,126
+to sell your data we're not in this
+business to rate informative blog posts
+
+542
+00:33:05,026 --> 00:33:09,100
+about your data Apple is providing app
+analytics as a service to developers and
+
+543
+00:33:10,000 --> 00:33:11,012
+we
+
+544
+00:33:11,012 --> 00:33:14,090
+lumber customers as much as you do and
+we respect your privacy
+
+545
+00:33:14,009 --> 00:33:18,060
+as much as we know you would like to as
+well rest assured that as we're building
+
+546
+00:33:19,041 --> 00:33:20,042
+this product
+
+547
+00:33:20,042 --> 00:33:23,126
+as this product rules out the privacy is
+at the forefront we're not making any
+
+548
+00:33:24,026 --> 00:33:25,034
+compromises in this area
+
+549
+00:33:26,006 --> 00:33:29,041
+we're really excited about that we think
+that's a really unique thing
+
+550
+00:33:29,041 --> 00:33:33,072
+that we're offering filing maybe the
+best news
+
+551
+00:33:33,072 --> 00:33:40,072
+it's free ap Alex pletely free
+
+552
+00:33:43,048 --> 00:33:46,104
+what's a great views what a great way to
+see your data really missed
+
+553
+00:33:47,004 --> 00:33:48,013
+opportunities
+
+554
+00:33:48,013 --> 00:33:50,072
+answering questions we think you guys
+are gonna love this we think that you
+
+555
+00:33:50,072 --> 00:33:50,126
+know I love
+
+556
+00:33:51,026 --> 00:33:54,075
+the setup time nothing love the cost
+
+557
+00:33:54,075 --> 00:33:57,144
+we're excited about this feature that
+like to bring up Daniel
+
+558
+00:33:58,044 --> 00:34:03,059
+to talk about Test Lite beta testing
+
+559
+00:34:03,059 --> 00:34:06,155
+thanks Kristin hi my name is Daniel meow
+
+560
+00:34:07,055 --> 00:34:10,107
+the software engineer and i cant connect
+
+561
+00:34:11,007 --> 00:34:15,008
+now most have you heard Durrington keen
+on Monday that we're announcing
+
+562
+00:34:15,008 --> 00:34:19,079
+just like this well we're very excited
+to have this opportunity today
+
+563
+00:34:19,079 --> 00:34:23,093
+to bring you more details about this
+great feature now
+
+564
+00:34:23,093 --> 00:34:28,137
+before we get started have your views
+Tesla in the past
+
+565
+00:34:29,037 --> 00:34:33,102
+great well whether you use test flight
+or not
+
+566
+00:34:34,002 --> 00:34:37,341
+I'm sure we can all agree that great
+
+567
+00:34:37,359 --> 00:34:40,740
+beta testing tools go a long way
+
+568
+00:34:40,074 --> 00:34:44,087
+we'd all like to see less obvious
+
+569
+00:34:44,087 --> 00:34:47,576
+and more the so
+
+570
+00:34:48,359 --> 00:34:52,700
+before you go into the details let's
+talk a little bit about the history of
+
+571
+00:34:52,007 --> 00:34:55,008
+their distribution
+
+572
+00:34:55,008 --> 00:35:02,008
+in the beginning beer distribution look
+a lot like this
+
+573
+00:35:04,003 --> 00:35:07,094
+whenever you want to test your app on
+your device you connect your device to
+
+574
+00:35:07,094 --> 00:35:07,165
+your computer
+
+575
+00:35:08,065 --> 00:35:13,014
+transfer your binary over contest from
+there at some point
+
+576
+00:35:13,599 --> 00:35:16,730
+you probably decided may be helpful to
+have others
+
+577
+00:35:16,073 --> 00:35:20,125
+also take a look at your app before you
+publish it to the App Store so each time
+
+578
+00:35:21,025 --> 00:35:22,071
+you want at a tester
+
+579
+00:35:22,071 --> 00:35:27,126
+you ask the tester for the device UDID
+you got the developer portal
+
+580
+00:35:28,026 --> 00:35:32,067
+data provisioning profiles and then you
+would send
+
+581
+00:35:32,067 --> 00:35:36,216
+your tester your the binary they would
+connect their devices to their computer
+
+582
+00:35:36,819 --> 00:35:41,920
+transfer the binary over and it was star
+testing course you have to do this for
+
+583
+00:35:41,092 --> 00:35:42,154
+every single one of your testers
+
+584
+00:35:43,054 --> 00:35:46,145
+so what do we do for you during this
+period
+
+585
+00:35:47,045 --> 00:35:50,119
+how did we change your beta distribution
+experience well
+
+586
+00:35:51,019 --> 00:35:58,019
+we went from this to this
+
+587
+00:35:58,044 --> 00:36:02,092
+we think we can do better with a new
+test liberia testing platform
+
+588
+00:36:02,092 --> 00:36:05,168
+you can distribute your app not one
+
+589
+00:36:06,068 --> 00:36:13,068
+not a hundred not 500
+
+590
+00:36:20,001 --> 00:36:27,001
+but up to 1,000 testers either testers
+not devices
+
+591
+00:36:30,014 --> 00:36:34,036
+in fact you to your testers contest on
+multiple devices
+
+592
+00:36:34,036 --> 00:36:40,051
+next
+
+593
+00:36:40,051 --> 00:36:47,051
+you didn provisioning profile you no
+longer need to worry about these
+
+594
+00:36:57,039 --> 00:37:01,110
+all you need to get a Tesla started is
+an email address let's talk a little bit
+
+595
+00:37:02,001 --> 00:37:03,052
+about the two sides if
+
+596
+00:37:03,061 --> 00:37:07,072
+the new platform you start out in iTunes
+Connect
+
+597
+00:37:07,072 --> 00:37:10,146
+as you work on your project you upload
+your build iTunes Connect
+
+598
+00:37:11,046 --> 00:37:17,082
+from iTunes connecting amenities build
+manage the testers
+
+599
+00:37:17,082 --> 00:37:20,084
+distribute these builds to your testers
+
+600
+00:37:20,084 --> 00:37:23,089
+and other testing
+
+601
+00:37:23,089 --> 00:37:30,089
+can come back to get inside into their
+activity know what your testers receive
+
+602
+00:37:31,008 --> 00:37:31,107
+an invitation
+
+603
+00:37:32,079 --> 00:37:35,125
+to testify I mean to test your app
+
+604
+00:37:36,025 --> 00:37:39,033
+they download the test flight
+
+605
+00:37:39,033 --> 00:37:43,092
+I was at and from here they can manage
+what at they want their testing
+
+606
+00:37:43,092 --> 00:37:46,163
+they can perform one tap installed an
+update
+
+607
+00:37:47,063 --> 00:37:50,116
+and they can send your feedback
+
+608
+00:37:51,016 --> 00:37:54,032
+so
+
+609
+00:37:54,032 --> 00:37:58,051
+well we're working on these features we
+discover that
+
+610
+00:37:58,051 --> 00:38:02,126
+building great app requires a flexible
+process everything from
+
+611
+00:38:03,026 --> 00:38:08,054
+interning with your development team to
+distribute a wider audience so we came
+
+612
+00:38:08,054 --> 00:38:09,055
+up with
+
+613
+00:38:09,055 --> 00:38:13,079
+internal in beta testers no internal
+testers
+
+614
+00:38:13,079 --> 00:38:18,087
+I mean I figure I can connect users beta
+tester
+
+615
+00:38:19,059 --> 00:38:25,106
+as anyone with an email address you can
+have up to 25 internal testers
+
+616
+00:38:26,006 --> 00:38:30,028
+and up to 1000 beta testers
+
+617
+00:38:30,028 --> 00:38:33,123
+as you upload build
+
+618
+00:38:34,023 --> 00:38:37,031
+to iTunes Connect your internal testers
+will have
+
+619
+00:38:37,031 --> 00:38:43,058
+access to these bills right away and
+better app review will be required
+
+620
+00:38:43,058 --> 00:38:47,079
+for you to unlock a thousand testers
+while you're building review
+
+621
+00:38:47,079 --> 00:38:51,113
+you continue to upload new build and
+your internal testers can contain a test
+
+622
+00:38:52,013 --> 00:38:59,013
+and you can get you to manage it has and
+i cant connect finally
+
+623
+00:38:59,031 --> 00:39:04,037
+sandbox account as he could be a tester
+signs into the EIA what's up
+
+624
+00:39:04,091 --> 00:39:07,137
+for the first time go on a Mac we have
+
+625
+00:39:08,037 --> 00:39:12,071
+a sandbox account created for them what
+this means is that
+
+626
+00:39:12,071 --> 00:39:15,157
+you don't need to come and i cant
+connect anymore to create account we
+
+627
+00:39:16,057 --> 00:39:17,095
+want your testers will attest
+
+628
+00:39:17,095 --> 00:39:20,137
+all aspects of your application
+including in app purchases
+
+629
+00:39:21,037 --> 00:39:24,128
+so let's see what this all looks like
+
+630
+00:39:25,028 --> 00:39:28,084
+here we are
+
+631
+00:39:28,084 --> 00:39:31,150
+we're back on the version pager the you
+i cant connect
+
+632
+00:39:32,005 --> 00:39:37,083
+you know it's a pre-release have will be
+quick this
+
+633
+00:39:38,028 --> 00:39:43,054
+will feel mister the bills that we've
+upload in Xcode float so you wanna test
+
+634
+00:39:43,054 --> 00:39:47,139
+bill number 103 in order to do this we
+first have to enter meta-data
+
+635
+00:39:48,039 --> 00:39:51,102
+protesters so they have something to see
+when they receive their habitation
+
+636
+00:39:52,002 --> 00:39:55,008
+we click
+
+637
+00:39:55,062 --> 00:39:59,089
+into this bill we enter things like a
+description
+
+638
+00:39:59,089 --> 00:40:02,097
+we also tell the tester what we like in
+the test
+
+639
+00:40:03,069 --> 00:40:09,096
+specifically on this bill after we've
+had this information
+
+640
+00:40:09,096 --> 00:40:14,159
+inputted we hit say ever come back to
+build
+
+641
+00:40:15,059 --> 00:40:20,127
+13 on the Billboard we come to the
+corner
+
+642
+00:40:21,027 --> 00:40:25,042
+we could protesting switch turn on
+testing
+
+643
+00:40:25,042 --> 00:40:28,107
+and that build is now available to our
+internal testers
+
+644
+00:40:29,007 --> 00:40:32,082
+what they want upload
+
+645
+00:40:32,082 --> 00:40:35,130
+another built for internal testers keep
+carrying
+
+646
+00:40:36,003 --> 00:40:40,005
+maybe upload one more
+
+647
+00:40:40,005 --> 00:40:46,009
+now we're confident that 105 is a bill
+that we want distribute more broadly to
+
+648
+00:40:46,009 --> 00:40:46,096
+our beta testers
+
+649
+00:40:47,077 --> 00:40:51,082
+in order to do this we click the submit
+button
+
+650
+00:40:51,082 --> 00:40:55,181
+next to the bill and after review
+
+651
+00:40:56,081 --> 00:40:59,138
+this is now also available for beta
+testers
+
+652
+00:41:00,038 --> 00:41:04,039
+you notice here that there's a
+thirty-day 30-day exploration
+
+653
+00:41:04,039 --> 00:41:07,060
+on this bill so we know exactly when we
+need to upload the next bill
+
+654
+00:41:07,006 --> 00:41:12,022
+protesters now second
+
+655
+00:41:12,076 --> 00:41:19,076
+take a look at managing beta testers
+here we are on a beta testers with
+
+656
+00:41:20,075 --> 00:41:24,114
+we see everybody that we've added 24
+invited
+
+657
+00:41:25,014 --> 00:41:29,062
+we see what they're doing we can see
+that some protesters have installed the
+
+658
+00:41:29,062 --> 00:41:29,095
+app
+
+659
+00:41:29,095 --> 00:41:32,107
+and they're already testing some have
+
+660
+00:41:33,007 --> 00:41:36,062
+accepted the invite but they haven't
+installed yet
+
+661
+00:41:36,062 --> 00:41:39,134
+and some other not even accepted the
+invitation via
+
+662
+00:41:40,034 --> 00:41:45,075
+for the ones who have installed we see
+the latest bill that they've installed
+
+663
+00:41:45,075 --> 00:41:48,082
+everyone to add another tester
+
+664
+00:41:49,045 --> 00:41:55,071
+we can't hear the top click the plus
+button
+
+665
+00:41:55,071 --> 00:41:58,080
+at a few email addresses it's a minute
+
+666
+00:41:58,008 --> 00:42:01,053
+and it has a ready to go
+
+667
+00:42:02,025 --> 00:42:05,114
+so that I can connect sign now let's
+take a look at the tester experience
+
+668
+00:42:06,014 --> 00:42:10,063
+in Iowa here we are on the device
+
+669
+00:42:10,063 --> 00:42:13,079
+this is the Mail app and this is an
+invitation that we received from a
+
+670
+00:42:13,079 --> 00:42:14,082
+developer
+
+671
+00:42:15,009 --> 00:42:18,014
+we see the name that app that we're
+we've been invited the test
+
+672
+00:42:18,059 --> 00:42:24,085
+we see it link that says open test
+flight what's going to happen
+
+673
+00:42:24,085 --> 00:42:30,139
+here we are the test light up from here
+we can install app
+
+674
+00:42:31,039 --> 00:42:35,086
+and what we've done that we can just are
+testing
+
+675
+00:42:35,086 --> 00:42:39,092
+few things to note here send feedback
+link
+
+676
+00:42:39,092 --> 00:42:46,092
+you as a tester can tap this to send
+feedback to develop providing
+
+677
+00:42:47,037 --> 00:42:49,134
+there's also the what the test section
+which we talked about earlier the
+
+678
+00:42:50,034 --> 00:42:52,041
+developer telling us
+
+679
+00:42:52,041 --> 00:42:57,078
+what they like as a test specifically on
+the latest bill
+
+680
+00:42:57,078 --> 00:43:01,121
+now if we tap the test flight link in
+the top corner
+
+681
+00:43:02,021 --> 00:43:05,087
+this will take us back allister app that
+we're actively testing
+
+682
+00:43:05,087 --> 00:43:09,136
+from here we can open any of the zaps we
+can take a look at the what it has no
+
+683
+00:43:10,036 --> 00:43:15,115
+we look at the version that we're
+testing
+
+684
+00:43:16,015 --> 00:43:19,093
+not go back to the home screen for a
+minute here we see that that we've
+
+685
+00:43:19,093 --> 00:43:20,187
+installed and we'll see a bad
+
+686
+00:43:21,087 --> 00:43:24,174
+and little orange bag next to the name
+of the app
+
+687
+00:43:25,074 --> 00:43:28,101
+that we have just installed this
+indicates that this app is currently
+
+688
+00:43:29,001 --> 00:43:30,058
+being tested
+
+689
+00:43:30,058 --> 00:43:33,096
+the Beta Beta bill the via
+
+690
+00:43:33,096 --> 00:43:36,187
+0 for begun a vacation
+
+691
+00:43:37,087 --> 00:43:40,170
+with a telling us that there's a new
+bill develop a protest
+
+692
+00:43:41,007 --> 00:43:44,062
+so the top that
+
+693
+00:43:45,025 --> 00:43:48,062
+but take us back into the app and a test
+flight
+
+694
+00:43:48,062 --> 00:43:52,157
+from here we can uppity up
+
+695
+00:43:53,057 --> 00:43:56,101
+and we're on our way
+
+696
+00:43:57,001 --> 00:44:01,083
+and that's test flight the EIA what's up
+
+697
+00:44:01,083 --> 00:44:05,167
+so in summary we have up to a thousand
+testers for each other APs
+
+698
+00:44:06,067 --> 00:44:09,159
+with their testing we no longer need to
+manage
+
+699
+00:44:10,059 --> 00:44:13,114
+you the ID's or provisioning profile
+
+700
+00:44:14,014 --> 00:44:20,043
+we can perform one tap installs and
+updates
+
+701
+00:44:20,043 --> 00:44:23,140
+sandbox account automatically created
+for us to
+
+702
+00:44:24,004 --> 00:44:27,068
+for testers to build a test in app
+purchases
+
+703
+00:44:28,004 --> 00:44:33,022
+and is on you test flight out for Iowa
+
+704
+00:44:33,022 --> 00:44:36,030
+and that beta testing
+
+705
+00:44:36,003 --> 00:44:43,003
+activity
+
+706
+00:44:44,026 --> 00:44:45,065
+alright thank you Daniel
+
+707
+00:44:45,065 --> 00:44:49,122
+very few things to wrap up here before
+we conclude
+
+708
+00:44:50,022 --> 00:44:54,047
+every year we ask after view if you had
+a few
+
+709
+00:44:54,047 --> 00:44:57,926
+tips and tricks we can give to
+developers at the developer's conference
+
+710
+00:44:58,349 --> 00:44:59,350
+what would they be
+
+711
+00:44:59,359 --> 00:45:04,190
+after you did a great job I look right
+before I got on stage
+
+712
+00:45:04,019 --> 00:45:07,042
+ninety-four percent of all updates
+review within five days
+
+713
+00:45:07,042 --> 00:45:11,731
+and here are some suggestions I can help
+pitcher up their app review
+
+714
+00:45:12,109 --> 00:45:15,970
+number one apt name versus keywords
+
+715
+00:45:15,097 --> 00:45:19,726
+your apt name is not the place to list
+all those different words that you want
+
+716
+00:45:20,599 --> 00:45:22,540
+people to search on so they can find
+
+717
+00:45:22,054 --> 00:45:27,120
+your app that's what keywords for idea
+Bay
+
+718
+00:45:28,002 --> 00:45:32,002
+if you serve ads ads must be present in
+your
+
+719
+00:45:32,002 --> 00:45:36,064
+the description and screenshots
+
+720
+00:45:36,082 --> 00:45:40,148
+must match your app and I would add to
+this app review will probably on the
+
+721
+00:45:41,048 --> 00:45:41,120
+fourth next year
+
+722
+00:45:42,002 --> 00:45:45,131
+when you're ready to commit and a
+purchases
+
+723
+00:45:45,329 --> 00:45:48,810
+for view you need to make sure that all
+aspects their purchase work
+
+724
+00:45:48,081 --> 00:45:51,114
+if you need a service up and running
+said other renewables work
+
+725
+00:45:52,014 --> 00:45:55,953
+danny's re ready now when you to
+purchase is life
+
+726
+00:45:56,079 --> 00:46:00,900
+on the App Store but when you submit it
+after view every app get metadata
+
+727
+00:46:00,009 --> 00:46:00,978
+rejected
+
+728
+00:46:01,869 --> 00:46:05,230
+and used to meet again without making a
+change
+
+729
+00:46:05,023 --> 00:46:09,114
+for that matter data it will just get
+rejected a second time I say that
+
+730
+00:46:10,014 --> 00:46:11,067
+because they say it happens
+
+731
+00:46:11,067 --> 00:46:15,131
+just a friendly no as always makes you
+have
+
+732
+00:46:16,031 --> 00:46:19,035
+rights for all the content the keyword
+in your app
+
+733
+00:46:19,071 --> 00:46:22,074
+this would apply to screenshot app
+reviews
+
+734
+00:46:23,001 --> 00:46:26,054
+anything and lastly testing
+
+735
+00:46:26,054 --> 00:46:31,133
+I'm very happy that this has Lori
+Saldana with this year
+
+736
+00:46:31,619 --> 00:46:35,150
+one thing I've noticed is that
+
+737
+00:46:35,015 --> 00:46:38,092
+if you're going iPhone app in East also
+work
+
+738
+00:46:38,092 --> 00:46:42,149
+iPad not to be outdone
+
+739
+00:46:43,049 --> 00:46:46,092
+that mission teams that hey we have some
+suggestions want help
+
+740
+00:46:46,092 --> 00:46:50,011
+give people some things to think about
+before they submit the app to app review
+
+741
+00:46:50,839 --> 00:46:55,890
+IDFA again answer his questions
+correctly in iTunes Connect
+
+742
+00:46:56,349 --> 00:46:59,800
+you serve ads accusing idea pay makes
+you
+
+743
+00:46:59,008 --> 00:47:03,023
+answer those questions right way get her
+number about
+
+744
+00:47:03,095 --> 00:47:07,097
+delivered within I have all the right
+icon sure all the required icons
+
+745
+00:47:08,015 --> 00:47:13,694
+are in your project before you submit
+tool chains and bad signature
+
+746
+00:47:13,829 --> 00:47:18,640
+these kinda invalid binary messages can
+all be solved by making sure the you
+
+747
+00:47:18,064 --> 00:47:21,070
+upload in crate your ap and the
+
+748
+00:47:21,007 --> 00:47:25,026
+latest version of Xcode and Mac App than
+boxing
+
+749
+00:47:25,089 --> 00:47:29,097
+if you can if not a Mac app to the App
+Store makes you check that box in Xcode
+
+750
+00:47:29,097 --> 00:47:33,100
+before doing so a low note but
+
+751
+00:47:34,027 --> 00:47:38,079
+iTunes Connect for Iowa how many have
+you already gotten the latest update we
+
+752
+00:47:38,079 --> 00:47:39,103
+released a few weeks ago
+
+753
+00:47:40,003 --> 00:47:43,072
+this is our first for rare step into the
+redesign
+
+754
+00:47:43,072 --> 00:47:48,128
+updated pages cells and trends take a
+look at your
+
+755
+00:47:49,028 --> 00:47:53,125
+five weeks due to weaker twenty six
+weeks information
+
+756
+00:47:54,025 --> 00:47:57,032
+new page view
+
+757
+00:47:57,095 --> 00:48:01,754
+I can factor I alaska Palmer and you can
+release the latest version live into the
+
+758
+00:48:02,609 --> 00:48:03,130
+App Store
+
+759
+00:48:03,013 --> 00:48:08,040
+so today we talked about
+
+760
+00:48:08,004 --> 00:48:12,009
+the new design for iTunes Connect a
+knife
+
+761
+00:48:12,045 --> 00:48:16,053
+new UI as well as some cleaner flows app
+reviews
+
+762
+00:48:17,025 --> 00:48:20,030
+fifteen to thirty seconds I've dynamic
+video
+
+763
+00:48:20,075 --> 00:48:26,092
+so you can show what makes your at
+magical ap bundles
+
+764
+00:48:26,092 --> 00:48:29,190
+on up to 10% off your caps together
+providing
+
+765
+00:48:30,009 --> 00:48:33,048
+people in the App Store with one
+installed to get all the zaps
+
+766
+00:48:34,029 --> 00:48:38,838
+app analytics the best end in view
+
+767
+00:48:39,099 --> 00:48:42,160
+a viewer app with data only Apple can
+provide
+
+768
+00:48:42,016 --> 00:48:45,090
+and test by beta testing if you haven't
+been
+
+769
+00:48:45,009 --> 00:48:48,011
+beta testing your app until now you have
+no reason not to
+
+770
+00:48:48,092 --> 00:48:51,501
+like I was a
+
+771
+00:48:52,329 --> 00:48:56,140
+and within your seventy these features
+will be released later this fall
+
+772
+00:48:56,014 --> 00:49:01,023
+for more information try to imagine with
+them at apple.com
+
+773
+00:49:01,023 --> 00:49:05,048
+there's the Contact Us form in iTunes
+Connect this really is the best way to
+
+774
+00:49:05,048 --> 00:49:07,071
+get your questions answered by the right
+person
+
+775
+00:49:07,071 --> 00:49:11,071
+we take a lot of time to navigate those
+emails based off your questions
+
+776
+00:49:11,071 --> 00:49:14,103
+appropriately this iTunes Connect app
+guide
+
+777
+00:49:15,003 --> 00:49:18,312
+get on developer datacom
+
+778
+00:49:18,339 --> 00:49:22,060
+as well as the forms want to get
+information there
+
+779
+00:49:22,006 --> 00:49:26,021
+we have some related sessions later
+today uprising in a purchases if you
+
+780
+00:49:26,021 --> 00:49:29,150
+have any questions on how exactly do
+that %uh purchases
+
+781
+00:49:29,339 --> 00:49:33,387
+check that out what's new and I had
+workbench
+
+782
+00:49:33,819 --> 00:49:39,720
+as Tristan mention privacy matters so we
+have a session on user privacy and Iowa
+
+783
+00:49:39,072 --> 00:49:44,079
+and I was 10 tomorrow advanced user
+interfaces with question views
+
+784
+00:49:44,079 --> 00:49:47,131
+this is a great session will talk about
+that show how we use did
+
+785
+00:49:48,031 --> 00:49:51,080
+in creating I can disconnect Iowa
+
+786
+00:49:51,359 --> 00:49:54,385
+and the social mission earlier creating
+great app reviews
+
+787
+00:49:54,619 --> 00:49:58,730
+again right before the bash tomorrow
+encourages check that one out as well
+
+788
+00:49:58,073 --> 00:50:00,094
+and with that that's all we have today
+hope you have a great day of the
+
+789
+00:50:00,094 --> 00:50:00,119
+conference
+

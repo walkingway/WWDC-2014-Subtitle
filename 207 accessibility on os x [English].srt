@@ -1,0 +1,3919 @@
+1
+00:00:12,056 --> 00:00:16,088
+well come o come for session till seven
+accessibility and North
+
+2
+00:00:16,088 --> 00:00:19,182
+10 my name is patty Hou I'm souter
+engineer on the last 10
+
+3
+00:00:20,082 --> 00:00:23,084
+accessibility team today
+
+4
+00:00:23,084 --> 00:00:27,117
+my colleague Chris Dillon I and II are
+extremely excited to tell you
+
+5
+00:00:28,017 --> 00:00:31,050
+about this brand new API we have to
+install for you
+
+6
+00:00:31,005 --> 00:00:36,744
+that's designed to make your life
+simpler but before I talk about that I
+
+7
+00:00:37,239 --> 00:00:38,520
+want to just touch up
+
+8
+00:00:38,052 --> 00:00:41,063
+on the importance of accessibility
+
+9
+00:00:41,063 --> 00:00:45,100
+and what it means for your application
+to be accessible to everyone
+
+10
+00:00:46,000 --> 00:00:52,023
+then out show you some examples of how
+to use this new API
+
+11
+00:00:52,023 --> 00:00:55,030
+to make some UI accessible
+
+12
+00:00:55,003 --> 00:01:00,010
+and then also show you some tools they
+can use to verify a changes
+
+13
+00:01:00,037 --> 00:01:03,039
+then then latter half of the session
+
+14
+00:01:03,039 --> 00:01:06,066
+Chris will come up and give you like
+them all
+
+15
+00:01:06,066 --> 00:01:13,066
+of making a game accessible so Apple
+would really care about providing
+
+16
+00:01:13,095 --> 00:01:18,194
+the best platform for all users to have
+that great and wonderful experience
+
+17
+00:01:19,094 --> 00:01:23,152
+when using your application how I feel
+our users
+
+18
+00:01:24,052 --> 00:01:28,053
+I me users with various range abilities
+
+19
+00:01:28,062 --> 00:01:31,136
+dang close those who may be visually
+challenged
+
+20
+00:01:32,036 --> 00:01:36,052
+and me arm excuse me
+
+21
+00:01:36,052 --> 00:01:39,053
+those who may be visually challenged and
+have trouble seeing
+
+22
+00:01:39,053 --> 00:01:42,136
+the collars and the graphics on that
+cation those
+
+23
+00:01:43,036 --> 00:01:46,050
+who are deaf and hard-of-hearing who may
+not be
+
+24
+00:01:46,005 --> 00:01:49,008
+real to hear the south the back in
+application
+
+25
+00:01:49,053 --> 00:01:52,127
+those who may have mobility limitation
+
+26
+00:01:53,027 --> 00:01:56,068
+and then I people use the physical mouse
+or keyboard
+
+27
+00:01:56,068 --> 00:02:03,068
+what a cheap the goal of making sure
+that everyone could have equal access
+
+28
+00:02:04,006 --> 00:02:10,065
+Apple workroom lonely heart provide
+hud's up accessibility solutions
+
+29
+00:02:10,119 --> 00:02:14,940
+built right into OS 10 and now includes
+products such as
+
+30
+00:02:14,094 --> 00:02:17,126
+voice-over design for the visually
+impaired user
+
+31
+00:02:18,026 --> 00:02:23,032
+switch control designed for model
+compare users who may only people to use
+
+32
+00:02:23,032 --> 00:02:24,035
+a single swish
+
+33
+00:02:24,035 --> 00:02:29,038
+to operate the computer close captioning
+
+34
+00:02:29,038 --> 00:02:32,043
+for the deaf and hard-of-hearing and
+tons and tons of
+
+35
+00:02:32,088 --> 00:02:35,187
+other great accessibility features don't
+want a left n
+
+36
+00:02:36,087 --> 00:02:39,143
+but all of these features are simply
+
+37
+00:02:40,043 --> 00:02:43,110
+tolls for the user to use your
+application
+
+38
+00:02:44,001 --> 00:02:47,070
+after all years
+
+39
+00:02:47,079 --> 00:02:50,608
+your application that they're looking at
+whether not as to
+
+40
+00:02:51,319 --> 00:02:55,260
+re an article or two watch a movie
+
+41
+00:02:55,026 --> 00:02:58,122
+use your application that their
+interacting with
+
+42
+00:02:59,022 --> 00:03:03,080
+what whether it's to play a game or to
+write a term paper
+
+43
+00:03:03,008 --> 00:03:07,011
+is your application at the Emerald Bay
+
+44
+00:03:07,083 --> 00:03:12,088
+that they're looking forward to use
+every day so how do you make sure that
+
+45
+00:03:13,033 --> 00:03:14,035
+your application
+
+46
+00:03:14,053 --> 00:03:17,592
+a successful to everyone well with
+
+47
+00:03:18,069 --> 00:03:21,590
+build the foundation for T for you to
+build your application
+
+48
+00:03:21,059 --> 00:03:24,151
+and we have this Walcott accessibility
+API
+
+49
+00:03:25,051 --> 00:03:29,097
+take it implement make sure your
+applications accessible to everyone
+
+50
+00:03:29,097 --> 00:03:32,136
+so I want to spend the rest of the
+session
+
+51
+00:03:33,036 --> 00:03:37,088
+telling you about this API but the first
+thing I wanna tell you
+
+52
+00:03:37,088 --> 00:03:40,120
+s give you are the big picture a hall
+
+53
+00:03:41,002 --> 00:03:46,087
+this accessibility API work and system
+saw first there's your application
+
+54
+00:03:47,005 --> 00:03:50,008
+and then we have what we call a sister
+
+55
+00:03:50,008 --> 00:03:54,777
+suffer such as voice-over in such
+control help users
+
+56
+00:03:54,849 --> 00:03:58,770
+to perceive understand interact with
+your application
+
+57
+00:03:58,077 --> 00:04:01,172
+and that happens through a channel well
+are what we call
+
+58
+00:04:02,072 --> 00:04:05,131
+a accessibility API
+
+59
+00:04:06,031 --> 00:04:10,048
+and so that's why i wanna talk to you
+about today
+
+60
+00:04:10,048 --> 00:04:14,049
+estas accessibility API which for all
+last 10
+
+61
+00:04:14,058 --> 00:04:17,707
+yosemite I'll we create a funk roundup
+
+62
+00:04:18,229 --> 00:04:22,630
+this brand new API I am excited to tell
+you about this
+
+63
+00:04:22,063 --> 00:04:27,782
+sort with well worth were first Zionist
+a PI we have few things in mind
+
+64
+00:04:28,349 --> 00:04:31,390
+actually just one goal
+
+65
+00:04:31,759 --> 00:04:35,768
+and that is to simplify to make it easy
+for you to use
+
+66
+00:04:35,849 --> 00:04:39,860
+and to show you just how easy is to use
+this API
+
+67
+00:04:39,086 --> 00:04:42,111
+al walk you through a few examples
+
+68
+00:04:43,011 --> 00:04:47,440
+so what you see on the screen for sale
+is a window that contains
+
+69
+00:04:47,539 --> 00:04:52,270
+like a media player controller so what
+we're gonna do is focus on
+
+70
+00:04:52,027 --> 00:04:55,033
+the UI's in the middle why CEOs
+
+71
+00:04:55,033 --> 00:04:58,772
+airs everyone play and follow a button
+
+72
+00:04:59,069 --> 00:05:02,069
+well how do I come to that conclusion
+because
+
+73
+00:05:02,069 --> 00:05:05,120
+visually you could see three distinct
+
+74
+00:05:05,012 --> 00:05:10,061
+icons and each of those i Carl represent
+something
+
+75
+00:05:10,169 --> 00:05:15,266
+well if you're not sided eat the Pegasus
+to suffer like voice-over
+
+76
+00:05:16,139 --> 00:05:19,580
+to help you perceive what's on the
+screen
+
+77
+00:05:19,058 --> 00:05:23,397
+what this is what a voice-over user
+we'll probably see
+
+78
+00:05:23,919 --> 00:05:28,240
+just a bunch of buttons they will know
+what to do with them
+
+79
+00:05:28,024 --> 00:05:31,853
+even worse if you implement them
+
+80
+00:05:32,069 --> 00:05:35,330
+as custom views dorsey
+
+81
+00:05:35,033 --> 00:05:40,452
+nothing not terribly accessible is it
+
+82
+00:05:40,749 --> 00:05:44,796
+while today I'm gonna show you how to
+make the issue lies accessible
+
+83
+00:05:45,219 --> 00:05:49,226
+so what do first we'll focus on just one
+button in the middle
+
+84
+00:05:49,289 --> 00:05:52,550
+the play button
+
+85
+00:05:52,055 --> 00:05:55,394
+if you say you're using app to control
+you're in luck
+
+86
+00:05:55,889 --> 00:06:01,960
+because you get most of that
+accessibility for free
+
+87
+00:06:02,599 --> 00:06:06,646
+by default ako already fill in all the
+accessibility information
+
+88
+00:06:07,069 --> 00:06:12,091
+for that he's a view I knowing that it's
+a button I ever afters not psychic
+
+89
+00:06:12,289 --> 00:06:15,382
+it's not gonna be with the No what the
+funk showed that Biden what do
+
+90
+00:06:16,219 --> 00:06:19,261
+that's something only you the developer
+well now
+
+91
+00:06:19,639 --> 00:06:22,704
+and so that's where you come in to help
+label
+
+92
+00:06:23,289 --> 00:06:26,327
+this button so this too late to do it
+
+93
+00:06:26,669 --> 00:06:30,830
+you going to exclude Co %uh identity
+inspector
+
+94
+00:06:30,083 --> 00:06:33,482
+under the accessibility I didn't ease
+section
+
+95
+00:06:34,229 --> 00:06:38,295
+you could just added description play
+
+96
+00:06:38,889 --> 00:06:41,947
+so this is you could do that and as a
+file or if you'd like to do this
+
+97
+00:06:42,469 --> 00:06:44,050
+programmatically
+
+98
+00:06:44,005 --> 00:06:47,114
+you can simply going to your
+initialization Co
+
+99
+00:06:47,159 --> 00:06:50,218
+and in your button cells simply set the
+
+100
+00:06:50,749 --> 00:06:57,749
+accessibility label property to beat the
+localized string that you wanted to be
+
+101
+00:06:58,569 --> 00:07:02,770
+and with just that low now a voice-over
+user could be
+
+102
+00:07:02,077 --> 00:07:06,926
+be able to perceive this as a play
+button
+
+103
+00:07:07,619 --> 00:07:10,621
+what makes it so easy well
+
+104
+00:07:10,639 --> 00:07:14,644
+with the new API which is a method based
+API with Cumbernauld
+
+105
+00:07:14,689 --> 00:07:18,698
+attributes into properties sold just
+like
+
+106
+00:07:18,779 --> 00:07:21,823
+any some object to see property
+
+107
+00:07:22,219 --> 00:07:25,256
+you could now yet and set the property
+
+108
+00:07:25,589 --> 00:07:32,589
+directly armed object itself see no
+longer have to subclass
+
+109
+00:07:34,036 --> 00:07:37,515
+cell whenever possible your staff to
+control
+
+110
+00:07:37,839 --> 00:07:41,871
+before any reason you can use apt-get
+after controlling have to do your own
+
+111
+00:07:42,159 --> 00:07:45,200
+stuff like creating custom view for each
+of the UI
+
+112
+00:07:45,569 --> 00:07:51,593
+when this case obviously was over a long
+nap yet to see anything on the screen
+
+113
+00:07:51,809 --> 00:07:55,901
+scenario wondering great is a lot more
+have to do
+
+114
+00:07:56,729 --> 00:07:59,734
+well the good thing is
+
+115
+00:08:00,229 --> 00:08:03,320
+s just as easy if used to spread your
+API
+
+116
+00:08:04,139 --> 00:08:07,187
+you cunt any use to accessibility
+property I just mention
+
+117
+00:08:07,619 --> 00:08:11,663
+I gave you an example Dr tweaking one
+that the property the label property
+
+118
+00:08:12,059 --> 00:08:16,085
+there's tons a property CPU's but won a
+talent for developers
+
+119
+00:08:16,319 --> 00:08:19,384
+knowing exactly which property you have
+to implement
+
+120
+00:08:19,969 --> 00:08:23,015
+so now we've introduce accessibility
+park all
+
+121
+00:08:23,429 --> 00:08:26,468
+that's designed to take that guesswork
+out of the equation
+
+122
+00:08:26,819 --> 00:08:31,080
+ilk how the park also guide you through
+the whole implementation process so you
+
+123
+00:08:31,008 --> 00:08:34,013
+know exactly which property you have to
+implement
+
+124
+00:08:34,013 --> 00:08:37,025
+now we have forecast that should cover
+most of the commonly
+
+125
+00:08:37,025 --> 00:08:40,100
+used type love you ice out there
+
+126
+00:08:41,000 --> 00:08:45,055
+so how do you go about implementing this
+while farce you have to pick up or call
+
+127
+00:08:45,055 --> 00:08:49,063
+so we have a look at the park all seeker
+choose from so you should pick one
+
+128
+00:08:49,063 --> 00:08:53,122
+that RESPA that corresponds to doesn't
+look and
+
+129
+00:08:54,022 --> 00:08:58,451
+feel love you I the way Dr the function
+love that you I
+
+130
+00:08:58,649 --> 00:09:03,850
+us so in our case we have example while
+showing earlier with the play button
+
+131
+00:09:03,085 --> 00:09:07,804
+in looks and behaves like a button so
+we're gonna pick the button protocol
+
+132
+00:09:08,569 --> 00:09:12,880
+sawyer interface filed simply say I here
+to diana's
+
+133
+00:09:12,088 --> 00:09:15,092
+accessibility button
+
+134
+00:09:15,092 --> 00:09:18,491
+so now he at that you compile
+
+135
+00:09:19,319 --> 00:09:23,630
+the good thing is now exculpate compiler
+will tell you
+
+136
+00:09:23,063 --> 00:09:27,066
+give you some warning and tell you what
+you need to implement so in this case
+
+137
+00:09:27,093 --> 00:09:30,166
+are you have to implement the
+accessibility perform Press
+
+138
+00:09:31,066 --> 00:09:37,110
+and accessibility label methods so it's
+gonna do that
+
+139
+00:09:38,001 --> 00:09:43,008
+selling your implementation file simply
+for the accessibility label
+
+140
+00:09:43,008 --> 00:09:48,071
+method just return a localized string
+the were play
+
+141
+00:09:49,043 --> 00:09:53,202
+for the accessibility perform Press you
+simply need to
+
+142
+00:09:53,589 --> 00:09:57,675
+perform the action a pressing a button
+
+143
+00:09:58,449 --> 00:10:01,531
+so what's next there's no next step
+
+144
+00:10:02,269 --> 00:10:06,290
+that's all that's just how easy is too
+important an
+
+145
+00:10:06,029 --> 00:10:11,087
+accessibility even for custom view
+
+146
+00:10:11,087 --> 00:10:15,926
+so what makes it so easy what's because
+packets doing a lot of work on your
+
+147
+00:10:16,709 --> 00:10:17,790
+behalf
+
+148
+00:10:17,079 --> 00:10:21,155
+by simply using this protocol ako what
+inferred that
+
+149
+00:10:22,055 --> 00:10:28,106
+East elements are accessibility elements
+and depending on which protocol you use
+
+150
+00:10:29,006 --> 00:10:32,092
+have Caleb on a popularly information
+like what the role it
+
+151
+00:10:32,092 --> 00:10:35,094
+so if for example if I use the MS
+accessibility
+
+152
+00:10:35,094 --> 00:10:38,993
+fun Procol ako wala macklin for Dad the
+role for this
+
+153
+00:10:39,839 --> 00:10:44,120
+this button
+
+154
+00:10:44,012 --> 00:10:48,351
+size the to see how easy is to use I
+also have her give you a little bit more
+
+155
+00:10:48,459 --> 00:10:50,464
+detail by these protocol
+
+156
+00:10:50,509 --> 00:10:53,990
+I am so the first mother's to Bass Pro
+call
+
+157
+00:10:53,099 --> 00:10:57,099
+was what we call the MS accessibility
+alman protocol
+
+158
+00:10:57,099 --> 00:11:01,156
+has a few require method like the
+fraying and accessibility parent
+
+159
+00:11:02,056 --> 00:11:06,064
+dust-up basic information that all
+accessibility Alysha half
+
+160
+00:11:07,036 --> 00:11:11,755
+and the bill on top of that we have all
+the other protocols
+
+161
+00:11:12,079 --> 00:11:15,086
+like the button Procol I just talked
+about which has
+
+162
+00:11:15,149 --> 00:11:19,237
+to require method accessibility label
+inaccessibility perform Press
+
+163
+00:11:20,029 --> 00:11:24,690
+can St Salt earlier ex-cop compiler
+already won its about
+
+164
+00:11:24,069 --> 00:11:30,072
+those methods
+
+165
+00:11:30,099 --> 00:11:34,135
+so that's just how easy a simple man a a
+custom view
+
+166
+00:11:35,035 --> 00:11:38,110
+on by the way the Protocols of snow so
+you don't have to implement
+
+167
+00:11:39,001 --> 00:11:43,027
+if you don't want to but it's relief
+really can be
+
+168
+00:11:43,036 --> 00:11:48,705
+so let's go through another example
+that's a little bit more complicated
+
+169
+00:11:49,029 --> 00:11:55,750
+on the screen you see are six different
+in the shapes
+
+170
+00:11:55,075 --> 00:11:58,166
+the way to developer may have
+implemented is simply a custom view
+
+171
+00:11:59,066 --> 00:12:03,045
+what they're doing their own drawing
+
+172
+00:12:03,639 --> 00:12:07,696
+safety have something like this
+
+173
+00:12:08,209 --> 00:12:12,660
+someone like a voice-over user was still
+need to be able to know that there's six
+
+174
+00:12:12,066 --> 00:12:15,160
+this think you I sitting on a screen
+
+175
+00:12:16,006 --> 00:12:20,985
+so you have two rappers again and
+accessibility representation
+
+176
+00:12:21,579 --> 00:12:27,000
+foot each other image that's been purse
+play on the screen
+
+177
+00:12:27,000 --> 00:12:30,062
+so how do you do that for you I stagger
+rendering yourself
+
+178
+00:12:30,062 --> 00:12:33,065
+and you don't have a in as few backing
+
+179
+00:12:33,092 --> 00:12:37,051
+well for the interview who are from the
+lowest I'll all simple call we have
+
+180
+00:12:37,879 --> 00:12:40,360
+something call for you our men
+
+181
+00:12:40,036 --> 00:12:43,041
+and now with the new API we have a
+formalized version
+
+182
+00:12:43,086 --> 00:12:46,365
+that car and this accessibility helmet
+
+183
+00:12:47,139 --> 00:12:51,202
+you can use this class to support all
+the issue I've that do not have a back
+
+184
+00:12:51,769 --> 00:12:54,290
+in s few
+
+185
+00:12:54,029 --> 00:12:57,081
+so let's see how you go about
+implementing thats
+
+186
+00:12:57,081 --> 00:13:00,105
+sell for the example earlier with the
+image
+
+187
+00:13:01,005 --> 00:13:04,048
+the six shape images foot each of those
+
+188
+00:13:04,048 --> 00:13:07,106
+in a you want to create an NS
+accessibility
+
+189
+00:13:08,006 --> 00:13:12,030
+Alama instance for that
+
+190
+00:13:12,003 --> 00:13:16,005
+sell you create one of the sisters and
+then he set up some of the accessibility
+
+191
+00:13:16,005 --> 00:13:18,324
+properties for that such as:
+
+192
+00:13:18,819 --> 00:13:21,902
+with the parent s what their role is
+well in this case which is gonna say
+
+193
+00:13:22,649 --> 00:13:23,220
+these are
+
+194
+00:13:23,022 --> 00:13:27,025
+initial and then give it a unique label
+
+195
+00:13:27,025 --> 00:13:30,118
+and then set up with a friend this
+
+196
+00:13:31,018 --> 00:13:35,085
+so when that custom view containing
+custom view is being asked for the
+
+197
+00:13:35,085 --> 00:13:36,764
+accessibility children
+
+198
+00:13:37,529 --> 00:13:41,541
+then this is where year returned your
+array up NS accessibility
+
+199
+00:13:41,649 --> 00:13:44,657
+alumax
+
+200
+00:13:45,449 --> 00:13:48,500
+and one thing I do wanna know is you
+should keep geese
+
+201
+00:13:48,959 --> 00:13:52,850
+I accessibility Alma alive as long as
+they are
+
+202
+00:13:52,085 --> 00:13:56,092
+on-screen that's because assistive
+suffer like voice-over
+
+203
+00:13:56,092 --> 00:14:01,321
+could be asking information about these
+objects at anytime through I PC costs
+
+204
+00:14:02,149 --> 00:14:05,153
+so as long as there are screaming a
+
+205
+00:14:05,189 --> 00:14:10,660
+cash in a row
+
+206
+00:14:10,066 --> 00:14:14,185
+pic sub that was pretty simple even for
+something like that where you
+
+207
+00:14:14,779 --> 00:14:19,833
+are rendering own UI so there might be a
+few viewing audience who
+
+208
+00:14:20,319 --> 00:14:24,346
+may have already implemented
+accessibility with it all API
+
+209
+00:14:24,589 --> 00:14:29,160
+your application you're wondering why
+how does this apply to me
+
+210
+00:14:29,016 --> 00:14:33,041
+what he already at accessibility into
+your application
+
+211
+00:14:33,041 --> 00:14:36,073
+there is no actual work for you you all
+
+212
+00:14:36,073 --> 00:14:40,162
+API ko will continue to work just fine
+
+213
+00:14:40,819 --> 00:14:45,110
+because the new API as binary and source
+compatible
+
+214
+00:14:45,011 --> 00:14:49,170
+so you don't have to worry up but if you
+do you like to try out the new
+
+215
+00:14:49,269 --> 00:14:52,269
+API and we do encourage you to do so
+
+216
+00:14:52,269 --> 00:14:56,990
+you could continue to do so the whole
+Cole will continue to work alongside
+
+217
+00:14:56,099 --> 00:14:59,808
+the new code
+
+218
+00:15:00,699 --> 00:15:03,781
+so I just told you why should make your
+application accessible
+
+219
+00:15:04,519 --> 00:15:07,540
+and a run through a few examples houten
+
+220
+00:15:07,054 --> 00:15:11,136
+use this brainy API to make some UI
+successful
+
+221
+00:15:12,036 --> 00:15:16,080
+you saw how quickly and easily wheeling
+we were able to
+
+222
+00:15:16,008 --> 00:15:19,027
+a meets all the threes
+
+223
+00:15:19,099 --> 00:15:22,308
+examples that show you
+
+224
+00:15:23,199 --> 00:15:27,060
+and it really is fast anoche sometime
+
+225
+00:15:27,006 --> 00:15:31,062
+for you to develop and making sure your
+act as accessible
+
+226
+00:15:31,062 --> 00:15:36,071
+cell with some eckstein you may have my
+hand I really hope you could take some
+
+227
+00:15:36,629 --> 00:15:37,673
+of that time too
+
+228
+00:15:38,069 --> 00:15:41,157
+do some testing because after all
+
+229
+00:15:41,949 --> 00:15:45,030
+no the co you act you wanna make sure
+you will be
+
+230
+00:15:45,759 --> 00:15:48,822
+usable by everyone so how do you go Bell
+
+231
+00:15:49,389 --> 00:15:52,490
+and making sure that your app is
+accessible
+
+232
+00:15:52,049 --> 00:15:56,588
+after you make those changes what we
+have to toss it to use
+
+233
+00:15:57,029 --> 00:16:01,040
+the first test accessibility inspector
+
+234
+00:16:01,139 --> 00:16:05,660
+this is a tool that display all the
+accessibility information for
+
+235
+00:16:05,066 --> 00:16:08,085
+any piece %uh view i'd is currently on
+that the mouse
+
+236
+00:16:08,085 --> 00:16:11,254
+and with the new OS for share after
+inspector
+
+237
+00:16:12,019 --> 00:16:15,086
+will now displayed their accessibility
+properties
+
+238
+00:16:15,689 --> 00:16:19,745
+love that you I so this is really
+helpful so you know exactly which
+
+239
+00:16:20,249 --> 00:16:24,360
+properties he may need to treat
+
+240
+00:16:24,036 --> 00:16:27,054
+the second for we have
+
+241
+00:16:27,054 --> 00:16:30,973
+is called voice-over voice-over as a
+screen reader
+
+242
+00:16:31,459 --> 00:16:35,482
+artist design for the visually
+challenged users to be able to
+
+243
+00:16:35,689 --> 00:16:38,702
+explore and interact with the content
+
+244
+00:16:38,819 --> 00:16:41,826
+have the screen can get the use else
+
+245
+00:16:41,889 --> 00:16:45,928
+will get feedback throws speech or
+terrell
+
+246
+00:16:46,279 --> 00:16:49,980
+said how do you go about using less well
+first you gotta turn are
+
+247
+00:16:49,098 --> 00:16:52,247
+if you just remembered the shortcut
+command f5
+
+248
+00:16:53,129 --> 00:16:57,930
+now we turn our or it going to the
+accessibility Prof paying
+
+249
+00:16:57,093 --> 00:17:00,097
+there's a enable voice over checkbox
+
+250
+00:17:00,097 --> 00:17:03,106
+simply check that and yucatan voice-over
+are
+
+251
+00:17:04,087 --> 00:17:08,088
+so the very first time he turned voice
+over our its gonna prompt you
+
+252
+00:17:08,097 --> 00:17:11,106
+to see if you wanna go tho tutorial cell
+if you just click on the
+
+253
+00:17:12,087 --> 00:17:17,106
+learn click the Learn More button then a
+run through a tutorial with you
+
+254
+00:17:18,006 --> 00:17:22,089
+so I really encourage you to try that
+man through the tutorial
+
+255
+00:17:22,089 --> 00:17:25,538
+now voice-over SF very powerful tool
+
+256
+00:17:26,339 --> 00:17:30,200
+so has hundreds of commands but today
+
+257
+00:17:30,002 --> 00:17:34,025
+I'm gonna show you just five simple
+commands he could use
+
+258
+00:17:34,043 --> 00:17:37,062
+to be proficient in testing with
+voice-over
+
+259
+00:17:37,062 --> 00:17:42,066
+so the first that yes how you navigate
+found one piece %uh view I to another
+
+260
+00:17:42,066 --> 00:17:46,138
+and thats control optional by errol for
+just remember that once he have was
+
+261
+00:17:47,038 --> 00:17:48,084
+overturned on
+
+262
+00:17:48,084 --> 00:17:51,093
+any time you press Control and option
+
+263
+00:17:51,093 --> 00:17:54,148
+any other key pressed at the same time
+what on a manic later
+
+264
+00:17:55,048 --> 00:17:58,070
+into voice over command
+
+265
+00:17:58,007 --> 00:18:02,061
+sup where contraption buyout got
+annexing if you want to reverse
+
+266
+00:18:03,024 --> 00:18:06,031
+you do control option left arrow
+
+267
+00:18:06,031 --> 00:18:10,092
+if you wanna press a button are actively
+something simply do control options
+
+268
+00:18:10,092 --> 00:18:10,191
+space
+
+269
+00:18:11,091 --> 00:18:14,100
+this is very similar to pressing space
+
+270
+00:18:15,000 --> 00:18:19,008
+be spacebar are something that has a
+keyboard focus
+
+271
+00:18:19,008 --> 00:18:23,103
+and then we have to what commands wires
+as intergroup which is contraption shift
+
+272
+00:18:24,075 --> 00:18:25,102
+on a roll
+
+273
+00:18:26,002 --> 00:18:29,098
+a relief group contraption shift apparel
+
+274
+00:18:29,098 --> 00:18:32,164
+so what is group well voice-over have
+this concept
+
+275
+00:18:33,064 --> 00:18:37,102
+up group and it goes like this: if you
+have on the screen
+
+276
+00:18:38,002 --> 00:18:41,004
+I am what I have on the screen is just
+someone
+
+277
+00:18:41,022 --> 00:18:46,053
+when does not have you I while to two
+people navigate quickly to
+
+278
+00:18:46,053 --> 00:18:50,071
+certain piece %uh view I nm Momin was
+over have this concept
+
+279
+00:18:50,071 --> 00:18:54,071
+grouping so honest greasy three
+different groups one is a toolbar
+
+280
+00:18:54,071 --> 00:18:57,137
+the other one is the tabla folders
+
+281
+00:18:58,037 --> 00:19:01,102
+Hassall a the collection
+
+282
+00:19:02,002 --> 00:19:05,097
+the love indigenous sought to be able to
+
+283
+00:19:05,097 --> 00:19:10,154
+interact or just no enter and exit these
+group
+
+284
+00:19:11,054 --> 00:19:14,103
+like I said earlier he said he could
+just press to enter group
+
+285
+00:19:15,003 --> 00:19:19,038
+or leave group command so was just the
+five
+
+286
+00:19:19,038 --> 00:19:24,103
+voice-over commands along you should be
+pretty good and testing with voice-over
+
+287
+00:19:25,003 --> 00:19:28,012
+so not that show you the tools and
+
+288
+00:19:28,093 --> 00:19:31,101
+run you through some example do a using
+API dimple
+
+289
+00:19:32,073 --> 00:19:36,087
+simple man you are I am some the UI
+example such young
+
+290
+00:19:36,087 --> 00:19:39,186
+earlier i would like to bring up presto
+one to come up
+
+291
+00:19:40,086 --> 00:19:43,094
+to give you a like them all love making
+the tic tac toe game
+
+292
+00:19:44,066 --> 00:19:51,066
+accessible
+
+293
+00:19:54,081 --> 00:19:58,126
+thanks patty hi my name is Chris and I'm
+a software engineer on the OS 10
+
+294
+00:19:59,026 --> 00:20:00,060
+accessibility team
+
+295
+00:20:00,006 --> 00:20:04,045
+and I'm really excited to show you just
+how simple and just how easy it is to
+
+296
+00:20:04,099 --> 00:20:05,175
+accessibility to your app
+
+297
+00:20:06,075 --> 00:20:09,097
+with our brand new API to do this
+
+298
+00:20:09,097 --> 00:20:12,136
+I've written a little to stop here and
+it's it's a very simple game of
+
+299
+00:20:13,036 --> 00:20:14,042
+tic-tac-toe
+
+300
+00:20:14,042 --> 00:20:17,068
+so in this case the board is full the
+game is over and says
+
+301
+00:20:17,068 --> 00:20:21,073
+the O player has won I can come in and
+restart the game
+
+302
+00:20:22,018 --> 00:20:26,063
+out play some pieces on the board I can
+even turn on the AI opponents in
+
+303
+00:20:26,063 --> 00:20:30,072
+and play against a taken flap this is
+very simple application and I i want to
+
+304
+00:20:31,053 --> 00:20:33,077
+use this covers are launching point to
+show you
+
+305
+00:20:33,077 --> 00:20:36,103
+how you wouldn't mind all the different
+techniques the padded just told you
+
+306
+00:20:37,003 --> 00:20:40,034
+in this application but before I do that
+
+307
+00:20:40,034 --> 00:20:43,117
+I want to give you an idea of what this
+application look like to someone who's
+
+308
+00:20:44,017 --> 00:20:47,082
+using voice over so they may have just
+heard from social media that
+
+309
+00:20:47,082 --> 00:20:50,177
+this is the great new apt to have or
+that you wrote in the wanna check it out
+
+310
+00:20:51,077 --> 00:20:54,148
+and this is our first experience with it
+and want to keep that in mind
+
+311
+00:20:55,048 --> 00:20:59,076
+so I'm going to use the keyboard command
+to turn on voice-over
+
+312
+00:20:59,076 --> 00:21:03,080
+so here two things have happened when I
+turn voice over on you are currently on
+
+313
+00:21:03,008 --> 00:21:04,107
+attack element
+
+314
+00:21:05,079 --> 00:21:08,138
+the first is that the caption panel has
+shown up in the bottom
+
+315
+00:21:09,038 --> 00:21:13,040
+are bottom corner and all this does is a
+house all of the tax that's currently
+
+316
+00:21:13,004 --> 00:21:14,023
+being spoken
+
+317
+00:21:14,059 --> 00:21:17,091
+so this is really really helpful if I'm
+collaborating
+
+318
+00:21:17,091 --> 00:21:20,140
+with someone who's using voice over and
+they often have their speech kinda
+
+319
+00:21:21,004 --> 00:21:22,042
+really really fast
+
+320
+00:21:22,078 --> 00:21:25,086
+so here I can read all of the tax that
+being spoken
+
+321
+00:21:25,086 --> 00:21:29,099
+helps me on collaborating the second
+thing you'll see
+
+322
+00:21:29,099 --> 00:21:33,134
+is that there's a black box stronger
+around the axe wins
+
+323
+00:21:34,034 --> 00:21:38,046
+label and we call this the voiceover
+cursor you can kind of thing for doesn't
+
+324
+00:21:38,046 --> 00:21:39,101
+alternate keyboard focus
+
+325
+00:21:40,001 --> 00:21:43,008
+so just like I can produce space on a
+keyboard focused on women to do
+
+326
+00:21:43,071 --> 00:21:44,073
+something with that element
+
+327
+00:21:44,091 --> 00:21:48,099
+when I press one of the many voice-over
+commands keeper commands
+
+328
+00:21:48,099 --> 00:21:53,104
+that normally act on currently
+voice-over focused element
+
+329
+00:21:54,049 --> 00:21:57,106
+so now what I'd like to do is turn on a
+unload
+
+330
+00:21:58,006 --> 00:22:01,015
+in voiceover contract had commander and
+all it allows me to do is just
+
+331
+00:22:01,096 --> 00:22:05,096
+explore the UI with my finger just like
+voice over on iowa's
+
+332
+00:22:05,096 --> 00:22:08,133
+I can I move around the interface and
+voice-over will speak
+
+333
+00:22:09,033 --> 00:22:12,039
+the descriptions all the items
+underneath my finger
+
+334
+00:22:12,093 --> 00:22:16,099
+internet on what trackpad commander on
+
+335
+00:22:16,099 --> 00:22:19,141
+and down this going to explore around
+the interface and you'll see a blue
+
+336
+00:22:20,041 --> 00:22:21,046
+circle where mime
+
+337
+00:22:21,046 --> 00:22:24,111
+wherever my fingers close button
+
+338
+00:22:25,011 --> 00:22:31,060
+minimize button damned zoom button great
+so the tow bars looking good
+
+339
+00:22:31,006 --> 00:22:34,065
+but you'll notice anywhere where there's
+no elements there's the sounding play it
+
+340
+00:22:35,019 --> 00:22:38,051
+says this is an empty space
+
+341
+00:22:38,051 --> 00:22:41,115
+tic-tac-toe kind titles gun
+
+342
+00:22:42,015 --> 00:22:47,088
+empty space here axe whens cat the label
+shows up fine
+
+343
+00:22:47,088 --> 00:22:52,172
+more empty spaces are we've had our
+first problem
+
+344
+00:22:53,072 --> 00:22:56,134
+there's nothing being reported here for
+accessibility for this truck box
+
+345
+00:22:57,034 --> 00:23:00,069
+so this is one of the problems will have
+to fix difficulty
+
+346
+00:23:00,069 --> 00:23:04,113
+difficulties 52 social level button
+button
+
+347
+00:23:05,013 --> 00:23:10,034
+him to button button not delete 1.41
+percent
+
+348
+00:23:10,034 --> 00:23:13,051
+so we saw there's a problem with the
+bonds are just as bun
+
+349
+00:23:13,051 --> 00:23:16,126
+so far not decided you so I don't
+understand what's going on with the fam
+
+350
+00:23:17,026 --> 00:23:20,029
+what to do when I click a
+
+351
+00:23:20,056 --> 00:23:23,068
+more empty space
+
+352
+00:23:23,068 --> 00:23:26,070
+and again the restart game month the
+same way there's there's absolutely no
+
+353
+00:23:26,088 --> 00:23:28,099
+information for tough people do that
+
+354
+00:23:28,099 --> 00:23:32,140
+what about the grid while I had the same
+problem here
+
+355
+00:23:33,004 --> 00:23:36,078
+the grid isn't even being reported
+turquoise over of
+
+356
+00:23:37,014 --> 00:23:40,103
+so as you can see the user experience
+for this application is quite poor
+
+357
+00:23:41,003 --> 00:23:44,059
+when using voice over a lot in the major
+fun challenge for the top
+
+358
+00:23:44,059 --> 00:23:48,077
+just doesn't show up I can't play a
+piece i cant restart the game account
+
+359
+00:23:48,077 --> 00:23:51,082
+I a cam played NCAA are you can I can
+click the checkbox
+
+360
+00:23:52,027 --> 00:23:56,069
+and so what I'd like to do it take you
+through each of these individual amounts
+
+361
+00:23:56,069 --> 00:24:02,138
+and show you how out to make them
+accessible
+
+362
+00:24:03,038 --> 00:24:06,083
+so here's my Xcode project and before
+even talk about the code
+
+363
+00:24:06,083 --> 00:24:10,129
+I just want to orient you to the Canada
+layout at this project
+
+364
+00:24:11,029 --> 00:24:15,037
+so over here to the classic NBC style
+apso have all my models and these are
+
+365
+00:24:16,009 --> 00:24:17,010
+the files
+
+366
+00:24:17,019 --> 00:24:20,104
+that encapsulated you know those tic tac
+toe board in the game rules and
+
+367
+00:24:21,004 --> 00:24:25,018
+how what it means to win the game record
+a touch any other model files here this
+
+368
+00:24:25,018 --> 00:24:27,109
+is the games that we don't need that
+
+369
+00:24:28,009 --> 00:24:32,034
+the next folder is all the views so we
+have a lot to custom UI in this
+
+370
+00:24:32,034 --> 00:24:33,110
+application
+
+371
+00:24:34,001 --> 00:24:37,090
+and we need to use to backed them and
+these are all the files are used to do
+
+372
+00:24:37,099 --> 00:24:38,132
+that
+
+373
+00:24:39,032 --> 00:24:43,074
+this is where we're gonna be spending a
+majority over time in the code
+
+374
+00:24:43,074 --> 00:24:46,127
+now said the controller section the app
+delegate is currently empty
+
+375
+00:24:47,027 --> 00:24:50,035
+and the tic tac to view controller is
+the thing that hooks up all the UI
+
+376
+00:24:51,007 --> 00:24:54,028
+interactions with the model objects
+
+377
+00:24:54,028 --> 00:24:57,046
+the last thing and I want to point out
+as the main menu Neb
+
+378
+00:24:57,046 --> 00:25:00,073
+this is the one and only need for this
+entire project
+
+379
+00:25:00,073 --> 00:25:03,087
+and this is actually where we're gonna
+start
+
+380
+00:25:03,087 --> 00:25:07,091
+to the first elements were gonna work on
+are the plus and minus buttons here for
+
+381
+00:25:08,027 --> 00:25:09,065
+the difficulty
+
+382
+00:25:09,065 --> 00:25:11,158
+if you remember this is one of the items
+that we could land on but there's no
+
+383
+00:25:12,058 --> 00:25:13,145
+contextual information about
+
+384
+00:25:14,045 --> 00:25:17,104
+what these buttons dan so I'd like to
+show you how to add accessibility to
+
+385
+00:25:18,004 --> 00:25:20,023
+time two different with
+
+386
+00:25:20,023 --> 00:25:23,024
+the first is actually quite simple I I'm
+just going to select
+
+387
+00:25:23,033 --> 00:25:27,109
+that element and Interface Builder and
+end up in the top right
+
+388
+00:25:28,009 --> 00:25:31,091
+I can open up the panel and the third
+
+389
+00:25:31,091 --> 00:25:34,175
+icon from the locked is the identity
+inspector
+
+390
+00:25:35,075 --> 00:25:39,101
+and in here as the accessible the
+identity information:
+
+391
+00:25:40,001 --> 00:25:43,013
+this is we're going to add the
+description for the spine
+
+392
+00:25:43,013 --> 00:25:47,036
+so what does this button do well when I
+click it it decreases the difficulty
+
+393
+00:25:47,036 --> 00:25:51,111
+some gather I'm just contact on here
+
+394
+00:25:52,011 --> 00:25:56,015
+great not allowed to do very simple
+
+395
+00:25:56,051 --> 00:25:59,113
+so what about if I decided I want to do
+the same thing
+
+396
+00:26:00,013 --> 00:26:03,030
+but in code well turns out that's really
+simple to
+
+397
+00:26:03,003 --> 00:26:06,022
+taking over to my view controller
+
+398
+00:26:06,049 --> 00:26:13,049
+and my week from near here I can play
+out the button cell
+
+399
+00:26:16,047 --> 00:26:20,050
+and I have an outlet
+
+400
+00:26:20,005 --> 00:26:24,041
+2.1 and then I can use one of the new
+accessibility property is to just sad
+
+401
+00:26:24,086 --> 00:26:28,104
+the accessibility label
+
+402
+00:26:29,004 --> 00:26:36,004
+and remember you always want to %uh
+localize the strings
+
+403
+00:26:37,024 --> 00:26:42,024
+and this is the increase difficulty
+button
+
+404
+00:26:42,024 --> 00:26:45,026
+I'm just glad that in
+
+405
+00:26:45,026 --> 00:26:48,072
+okay just like that that's all I need to
+do and
+
+406
+00:26:48,072 --> 00:26:52,118
+our without now in a voiceover user
+lands on his plus-minus puns
+
+407
+00:26:53,018 --> 00:26:58,020
+will be writers the increased difficulty
+or the decrease difficulty button
+
+408
+00:26:58,038 --> 00:27:01,066
+so why do we get that accessibility for
+free why did they even show up in the
+
+409
+00:27:01,066 --> 00:27:02,069
+first place
+
+410
+00:27:02,096 --> 00:27:06,119
+won't this custom classes actually
+subclasses and thats button
+
+411
+00:27:07,019 --> 00:27:10,025
+so we've done a lot to work behind the
+scenes to be fixable the in
+
+412
+00:27:10,079 --> 00:27:14,085
+to all the standard up controls so
+whenever possible try to use those cuz
+
+413
+00:27:14,085 --> 00:27:16,094
+we done as much work as possible for you
+
+414
+00:27:16,094 --> 00:27:18,175
+the one thing you need to do is just add
+a description which is which is quite
+
+415
+00:27:19,075 --> 00:27:21,137
+simple
+
+416
+00:27:22,037 --> 00:27:25,060
+so now we've worked on the plus or minus
+buttons let's move on to the restart
+
+417
+00:27:25,006 --> 00:27:26,010
+game button
+
+418
+00:27:26,064 --> 00:27:30,066
+now you might recall that this was one
+other item side by nothing was reported
+
+419
+00:27:30,084 --> 00:27:31,163
+there for accessibility
+
+420
+00:27:32,063 --> 00:27:35,097
+let's take a look at why
+
+421
+00:27:35,097 --> 00:27:40,145
+so have a class with button and the
+first thing I immediately notice
+
+422
+00:27:41,045 --> 00:27:45,117
+isn't it in and ask you some class son
+doing a lot of actual work behind the
+
+423
+00:27:46,017 --> 00:27:46,080
+scenes
+
+424
+00:27:46,008 --> 00:27:50,030
+to make this view act and look like a
+bum this includes all my own keyboard
+
+425
+00:27:51,002 --> 00:27:51,065
+and
+
+426
+00:27:51,065 --> 00:27:54,071
+now so than handling as walls hold my
+own drying
+
+427
+00:27:54,071 --> 00:27:57,108
+handing out on an extra work here while
+
+428
+00:27:58,008 --> 00:28:01,012
+how do I am accessibility to the so on
+
+429
+00:28:01,048 --> 00:28:04,049
+turns out it's also quite simple all I
+need to do his pic
+
+430
+00:28:04,049 --> 00:28:09,063
+the accessibility protocol that best
+represents the subject
+
+431
+00:28:09,063 --> 00:28:12,075
+and the protocol for this as the an ass
+accessibility
+
+432
+00:28:12,075 --> 00:28:16,123
+button protocol none other from conform
+to that protocol
+
+433
+00:28:17,023 --> 00:28:20,032
+I can move into my infant Asian file
+
+434
+00:28:21,013 --> 00:28:25,028
+and the first thing I see if I get to
+new warnings
+
+435
+00:28:25,028 --> 00:28:28,101
+so this is really really helpful for me
+because now I know exactly what I need
+
+436
+00:28:29,001 --> 00:28:29,065
+to implement
+
+437
+00:28:29,065 --> 00:28:33,067
+to at accessibility to the south custom
+control
+
+438
+00:28:33,067 --> 00:28:36,116
+to the two methods here are accessible
+the label and accessibility perform
+
+439
+00:28:37,016 --> 00:28:37,074
+props
+
+440
+00:28:37,074 --> 00:28:40,077
+sought to take those one at a time
+
+441
+00:28:41,004 --> 00:28:44,037
+have a section here for accessibility
+and the first one
+
+442
+00:28:44,037 --> 00:28:48,079
+is accessible the label
+
+443
+00:28:48,079 --> 00:28:52,170
+tree now what do I want to be returned
+here
+
+444
+00:28:53,007 --> 00:28:56,079
+I happen to know that this bun is only
+ever used to
+
+445
+00:28:57,042 --> 00:29:04,042
+draw the restart game 1 so the label for
+this is just going to be restarted
+
+446
+00:29:11,029 --> 00:29:12,298
+at the
+
+447
+00:29:12,559 --> 00:29:15,658
+to now I can go back up to the top in my
+file a nurse at warning has gone away
+
+448
+00:29:16,549 --> 00:29:19,612
+so only have one more matter to
+implement and that accessibility perform
+
+449
+00:29:20,179 --> 00:29:20,700
+Press
+
+450
+00:29:20,007 --> 00:29:27,007
+for to do that warm prompt:
+
+451
+00:29:29,065 --> 00:29:33,140
+so what should happen here well when I
+use the mouse to interact with the
+
+452
+00:29:34,004 --> 00:29:34,062
+spartan
+
+453
+00:29:34,098 --> 00:29:38,117
+when I click it something happens right
+that seem something should happen
+
+454
+00:29:39,017 --> 00:29:42,071
+when an accessible declined so pay I
+want to activate this item
+
+455
+00:29:42,071 --> 00:29:45,105
+so in my case I happen to have
+
+456
+00:29:46,005 --> 00:29:50,090
+in method compress down or perform press
+rather
+
+457
+00:29:50,009 --> 00:29:54,031
+and perform crosses what gets called
+when the mouse hand in large excels
+
+458
+00:29:55,012 --> 00:29:59,020
+yes this button has been pressed so I
+want to call that same exact method
+
+459
+00:29:59,002 --> 00:30:06,002
+now you notice accessible to perform
+price return
+
+460
+00:30:08,036 --> 00:30:11,100
+returns a boolean and this is a yes or
+no did I handle this
+
+461
+00:30:12,000 --> 00:30:15,559
+a band and and always handle in so yes I
+return
+
+462
+00:30:15,559 --> 00:30:20,220
+yes and with that I can go back up to
+the top in my file
+
+463
+00:30:20,022 --> 00:30:23,110
+and I C all of my mornings have gone
+away Sutter
+
+464
+00:30:24,001 --> 00:30:27,044
+the protocol has got me through what I
+need to do that accessibility
+
+465
+00:30:27,053 --> 00:30:32,078
+implemented our and I'm from another
+
+466
+00:30:32,078 --> 00:30:35,154
+are the slower rate sections finished I
+want to work on the artificial
+
+467
+00:30:36,054 --> 00:30:36,120
+intelligence
+
+468
+00:30:37,002 --> 00:30:40,097
+checkbox if you recall again this was
+another element that was invisible to
+
+469
+00:30:41,015 --> 00:30:42,019
+accessibility at all
+
+470
+00:30:42,019 --> 00:30:46,108
+so I have my header file here for the
+check box
+
+471
+00:30:47,008 --> 00:30:50,037
+and again I see the same situation I
+haven't the button
+
+472
+00:30:50,037 --> 00:30:53,045
+it's an an issue some cock so do a lot
+of work
+
+473
+00:30:53,045 --> 00:30:57,144
+to make it look and act like a checkbox
+some this case
+
+474
+00:30:58,044 --> 00:31:01,050
+and you to pick a protocol in the
+protocol for this
+
+475
+00:31:02,004 --> 00:31:05,028
+the Anna success ability checkbox
+protocol
+
+476
+00:31:05,028 --> 00:31:08,052
+and now
+
+477
+00:31:08,052 --> 00:31:12,124
+when I go into my implementation file I
+get a few new warnings
+
+478
+00:31:13,024 --> 00:31:17,119
+to this tells me what I need to do to
+make the check box accessible to the
+
+479
+00:31:18,019 --> 00:31:19,057
+three warnings I have here
+
+480
+00:31:19,057 --> 00:31:22,057
+accessible the value accessible the
+label
+
+481
+00:31:22,057 --> 00:31:25,116
+and accessibility perform price semantic
+those
+
+482
+00:31:26,016 --> 00:31:30,061
+I one at a time to the first one
+
+483
+00:31:30,061 --> 00:31:32,137
+and we've seen this one before the
+excitable the label something to that
+
+484
+00:31:33,037 --> 00:31:33,846
+first
+
+485
+00:31:34,179 --> 00:31:40,740
+so what should be the label for the
+strike box
+
+486
+00:31:40,074 --> 00:31:43,082
+well this is a control diet designed I
+follow my reuse
+
+487
+00:31:44,054 --> 00:31:48,071
+I in other places factually haven't I've
+are around that keeps the check box
+
+488
+00:31:48,071 --> 00:31:48,127
+taxed
+
+489
+00:31:49,027 --> 00:31:52,112
+and this is the string actually gets
+rendered an and Ron are in the dryer act
+
+490
+00:31:53,012 --> 00:31:53,017
+math and
+
+491
+00:31:53,062 --> 00:31:56,108
+so I can just return
+
+492
+00:31:57,008 --> 00:32:00,020
+the check box text here great
+
+493
+00:32:00,002 --> 00:32:04,003
+for my morning has gone away the next 1i
+want to work on
+
+494
+00:32:04,003 --> 00:32:07,068
+is accessibility perform Press so just
+like the bond money
+
+495
+00:32:07,095 --> 00:32:10,127
+interact with us control using the mouse
+something happens
+
+496
+00:32:11,027 --> 00:32:15,054
+it and changes the checked state I need
+that same something to happen
+
+497
+00:32:15,054 --> 00:32:19,061
+when the trouble to clients say hey I
+want to interact with the filament
+
+498
+00:32:19,061 --> 00:32:22,133
+so that's the accessibility perform
+price
+
+499
+00:32:23,033 --> 00:32:29,038
+and I have
+
+500
+00:32:29,083 --> 00:32:33,104
+a method called title track stain and
+this is what it's called
+
+501
+00:32:34,004 --> 00:32:37,020
+from the mass handling logic and just
+like with the bun
+
+502
+00:32:37,002 --> 00:32:40,036
+return yes I didn't fact handle birth
+
+503
+00:32:40,054 --> 00:32:46,077
+thus action not to go back up to the top
+issue that I still have one
+
+504
+00:32:46,077 --> 00:32:49,138
+more methane you to implement and this
+is acceptable devalue
+
+505
+00:32:50,038 --> 00:32:54,057
+at this point I ask myself all what is
+the value for a check box where my
+
+506
+00:32:54,057 --> 00:32:54,148
+supposed to return
+
+507
+00:32:55,048 --> 00:33:00,079
+refer to really really hard to try to
+answer all these questions in one place
+
+508
+00:33:00,079 --> 00:33:03,100
+we tried to make and a successful the
+protocol file
+
+509
+00:33:04,000 --> 00:33:07,095
+the one stop shop for this missus were
+all the protocols are implementing
+
+510
+00:33:07,095 --> 00:33:11,172
+are defined so in another tower how the
+spur close file
+
+511
+00:33:12,072 --> 00:33:16,139
+and there's the and a successful the
+check box protocol right here
+
+512
+00:33:17,039 --> 00:33:21,072
+and I see under the required methods the
+excitable the value
+
+513
+00:33:21,072 --> 00:33:24,084
+returns an annus number okay so the
+answer is my first question
+
+514
+00:33:24,084 --> 00:33:27,170
+and says I return yeah subtract or know
+if I'm track
+
+515
+00:33:28,007 --> 00:33:31,008
+great it's not have this information
+
+516
+00:33:31,008 --> 00:33:34,066
+can come down here and implement an
+actor
+
+517
+00:33:35,038 --> 00:33:38,046
+so here I have another
+
+518
+00:33:38,046 --> 00:33:43,145
+I I've are around which is and I checked
+or not and I can use that to return
+
+519
+00:33:43,559 --> 00:33:50,559
+yeah or no
+
+520
+00:33:54,008 --> 00:33:56,977
+return
+
+521
+00:33:57,049 --> 00:34:00,960
+okay snacking a back up to the top in my
+file I see all the warnings have gone
+
+522
+00:34:00,096 --> 00:34:00,555
+away
+
+523
+00:34:01,419 --> 00:34:04,970
+so this is all I need to do to him from
+and accessible checkbox
+
+524
+00:34:04,097 --> 00:34:09,746
+to now the entire right hand side over
+application
+
+525
+00:34:10,619 --> 00:34:15,200
+has added the Sun basic a class ability
+to it so let's work on the next part
+
+526
+00:34:15,002 --> 00:34:17,053
+which is the grid and this is perhaps
+the most difficult part
+
+527
+00:34:17,071 --> 00:34:22,084
+again I'm gonna go back into my project
+
+528
+00:34:22,084 --> 00:34:25,343
+and I have a a view representing the
+board
+
+529
+00:34:26,099 --> 00:34:29,470
+means the board for you and here I
+notice it again
+
+530
+00:34:29,047 --> 00:34:33,083
+nanosphere some doing all of my own
+drawing here and in fact this class
+
+531
+00:34:33,083 --> 00:34:37,169
+draws the board and all the pieces so
+
+532
+00:34:38,069 --> 00:34:42,107
+and it made a successful and I need to
+pick a protocol now to what protocol
+
+533
+00:34:43,007 --> 00:34:47,546
+do I need well the way that I like to
+think about the tic tac toe board
+
+534
+00:34:47,609 --> 00:34:51,060
+it's really a collection up squares rain
+
+535
+00:34:51,006 --> 00:34:55,008
+every time I interact with the border
+it's not so much a bored I wanna play
+
+536
+00:34:55,008 --> 00:34:58,024
+the square I want to put my piece there
+I want to get three no
+
+537
+00:34:58,024 --> 00:35:02,073
+bro to win I want to block my opponent
+from getting three in a row and so this
+
+538
+00:35:02,073 --> 00:35:05,115
+the sport is really a collection to me
+and the way that that's
+
+539
+00:35:06,015 --> 00:35:10,053
+the protocol that you can use to
+represent that the CNS accessibility
+
+540
+00:35:10,053 --> 00:35:10,099
+group
+
+541
+00:35:10,099 --> 00:35:14,114
+protocol it's a collection of things
+great
+
+542
+00:35:15,014 --> 00:35:22,014
+to now go to my implementation file and
+i notice I have
+
+543
+00:35:23,093 --> 00:35:30,093
+no warning showing up
+
+544
+00:35:32,809 --> 00:35:34,861
+and no one's so does this mean while
+
+545
+00:35:35,329 --> 00:35:38,377
+I have no required methods that they
+need to implement for the acceptable
+
+546
+00:35:38,809 --> 00:35:39,815
+degree protocol
+
+547
+00:35:39,869 --> 00:35:43,720
+by just like with Reese what we saw the
+other elements
+
+548
+00:35:43,072 --> 00:35:47,911
+I can still and accessibility to and I
+so what's the first thing I want to do
+
+549
+00:35:48,559 --> 00:35:52,880
+while the board you when I land on its a
+group
+
+550
+00:35:52,088 --> 00:35:56,117
+and i won some label to describe it to
+just like with all the other controls
+
+551
+00:35:57,017 --> 00:36:00,046
+I'm going to add I'll a label here
+
+552
+00:36:00,046 --> 00:36:04,099
+inaccessible the labels very simple so
+what am I gonna return here
+
+553
+00:36:04,099 --> 00:36:07,150
+while just it's the tic tac toe board
+some the voiceover
+
+554
+00:36:08,005 --> 00:36:11,021
+actress for land on the third south this
+at the tic tac toe board group
+
+555
+00:36:11,066 --> 00:36:15,117
+okay so have a group had contains things
+fall
+
+556
+00:36:16,017 --> 00:36:19,716
+what are these things the individual
+squares
+
+557
+00:36:19,869 --> 00:36:22,913
+but you to the squares doesn't have a
+backing view to them
+
+558
+00:36:23,309 --> 00:36:26,361
+so I need to create some object to
+represent 22 accessibility
+
+559
+00:36:26,829 --> 00:36:29,857
+and the way that we've done this is with
+the anna's accessibility
+
+560
+00:36:30,109 --> 00:36:34,206
+element patty should win the slides how
+you treat instanceof this in line
+
+561
+00:36:35,079 --> 00:36:38,890
+and what I've chosen to do here's
+discrete a subclass a bit in another
+
+562
+00:36:38,089 --> 00:36:38,143
+file
+
+563
+00:36:39,043 --> 00:36:42,096
+so I have a subclass here
+
+564
+00:36:42,096 --> 00:36:46,255
+called the tic-tac-toe square
+accessibility element
+
+565
+00:36:47,119 --> 00:36:50,640
+and the subclass I love and a successful
+the element
+
+566
+00:36:50,064 --> 00:36:53,973
+has one initializer which takes a row or
+column in the delegate
+
+567
+00:36:54,549 --> 00:36:57,880
+and has three properties a row or column
+in a delegate
+
+568
+00:36:57,088 --> 00:37:00,088
+the delegate method are the delegate
+
+569
+00:37:00,088 --> 00:37:03,797
+is just a class that can answer
+questions about hey what pieces
+
+570
+00:37:04,589 --> 00:37:08,460
+are at this location on the board is the
+game over is that still in progress
+
+571
+00:37:08,046 --> 00:37:11,100
+to cancel all the questions that this
+piece is going to need
+
+572
+00:37:12,000 --> 00:37:17,042
+had to ask so have the element
+representing an
+
+573
+00:37:17,042 --> 00:37:20,119
+mall I'm gonna pick a protocol now to
+use to implement it
+
+574
+00:37:21,019 --> 00:37:24,688
+so what bast encapsulates what a squared
+us
+
+575
+00:37:24,859 --> 00:37:27,880
+but when I click on it something happens
+like
+
+576
+00:37:27,088 --> 00:37:30,287
+place my piece there I put my piece area
+player great
+
+577
+00:37:31,079 --> 00:37:35,132
+Allah and elements where you click them
+to interact with them and they do
+
+578
+00:37:35,609 --> 00:37:35,708
+something about month
+
+579
+00:37:36,599 --> 00:37:39,623
+I can conform to the accessibility
+button protocol here
+
+580
+00:37:39,839 --> 00:37:43,700
+and now when I move into my
+implementation file
+
+581
+00:37:43,007 --> 00:37:48,416
+again a buncha warnings for the items
+that I need to implement
+
+582
+00:37:49,109 --> 00:37:53,460
+to the fore warnings I get here are
+accessible the parent
+
+583
+00:37:53,046 --> 00:37:56,098
+label reform process and frame need to
+be and
+
+584
+00:37:56,098 --> 00:38:01,487
+important in semitic is one at a time
+for or the frame
+
+585
+00:38:02,369 --> 00:38:07,010
+and for the parent Anderson return
+whatever my super classes implementation
+
+586
+00:38:07,001 --> 00:38:07,360
+of
+
+587
+00:38:07,369 --> 00:38:12,770
+some point is we need to be sad so keep
+that in mind defensible the labels a
+
+588
+00:38:12,077 --> 00:38:13,146
+little bit more interesting
+
+589
+00:38:13,839 --> 00:38:17,790
+and this is the description for
+particular square
+
+590
+00:38:17,079 --> 00:38:20,147
+so I'm going to do ask my delegated
+
+591
+00:38:21,047 --> 00:38:26,186
+for hey what's the square at my row and
+column and this is actually an instant
+
+592
+00:38:26,609 --> 00:38:27,220
+for the model
+
+593
+00:38:27,022 --> 00:38:31,023
+object representing a square on the
+board and then
+
+594
+00:38:31,023 --> 00:38:34,049
+I can ask the board using one of its
+class methods
+
+595
+00:38:34,049 --> 00:38:38,050
+was the description for the square so
+this is going to return something like
+
+596
+00:38:38,005 --> 00:38:41,031
+this is and axe square at the top ride
+turn
+
+597
+00:38:41,076 --> 00:38:44,375
+00 square in the centre or an empty
+square at the bottom left
+
+598
+00:38:45,059 --> 00:38:49,270
+and a so when a land on the Salman
+that's what I want to be spoken
+
+599
+00:38:49,027 --> 00:38:54,115
+up and in the last night the menu to
+implement as accessibility perform price
+
+600
+00:38:55,015 --> 00:38:59,184
+so when this item is priced what should
+I do while I wanna play my piece there I
+
+601
+00:38:59,319 --> 00:38:59,394
+wanna play that's
+
+602
+00:39:00,069 --> 00:39:04,072
+where I wanna make my mark their and my
+delegate knows how to play a square in a
+
+603
+00:39:04,369 --> 00:39:07,480
+row and column some just gonna ask it to
+do that and again
+
+604
+00:39:07,048 --> 00:39:13,167
+return yes I handled the salon so I can
+go back up to the top of my file
+
+605
+00:39:13,599 --> 00:39:16,740
+and I see that all the warnings have
+gone away such great
+
+606
+00:39:16,074 --> 00:39:19,663
+have now a class that represents an
+individual square
+
+607
+00:39:20,329 --> 00:39:25,380
+for accessibility that doesn't have a
+backing view so now I need to go back to
+
+608
+00:39:25,038 --> 00:39:25,757
+my group
+
+609
+00:39:26,099 --> 00:39:29,190
+I need to create instances up this class
+
+610
+00:39:29,019 --> 00:39:32,090
+to represent each square some back in my
+board view
+
+611
+00:39:32,009 --> 00:39:35,082
+I want to say this a group house
+children
+
+612
+00:39:36,063 --> 00:39:39,079
+views elements and the way to do that
+with
+
+613
+00:39:39,079 --> 00:39:43,618
+rupi is to override the accessibility
+children Mattoon
+
+614
+00:39:44,329 --> 00:39:47,376
+some gonna walk through
+
+615
+00:39:47,799 --> 00:39:50,804
+it looks like a lot occurred I promise
+it's not gonna walk through it line by
+
+616
+00:39:50,849 --> 00:39:51,970
+line with the Stars
+
+617
+00:39:51,097 --> 00:39:54,123
+so the first thing is I'm
+
+618
+00:39:55,023 --> 00:39:58,030
+overriding accessible to children right
+so I'm
+
+619
+00:39:58,093 --> 00:40:01,147
+the accessible to children gather and
+returning an array from
+
+620
+00:40:02,047 --> 00:40:05,606
+and I have this I've are around so if
+I've already created my children don't
+
+621
+00:40:06,029 --> 00:40:07,970
+need to create them again
+
+622
+00:40:07,097 --> 00:40:11,716
+if i havent I create an array to hold
+all of Rd Trussville the children
+
+623
+00:40:12,589 --> 00:40:17,730
+and I set up two variables are many
+using under my competitions
+
+624
+00:40:17,073 --> 00:40:20,150
+now wanting to do is create an instance
+about accessibility element
+
+625
+00:40:21,005 --> 00:40:24,021
+for every square on the board some kinda
+I'm
+
+626
+00:40:24,066 --> 00:40:27,100
+iterate over all the rows and all the
+columns
+
+627
+00:40:28,000 --> 00:40:33,098
+and then instantiate 10 those accessible
+the elements for the square
+
+628
+00:40:33,098 --> 00:40:36,103
+now remember that the parent in the
+frame we're just returned as whatever
+
+629
+00:40:37,048 --> 00:40:39,074
+super classes implementation once
+
+630
+00:40:39,074 --> 00:40:41,081
+so I need to make sure that they're such
+somewhere and that's why I'm gonna do it
+
+631
+00:40:42,044 --> 00:40:43,079
+here
+
+632
+00:40:43,079 --> 00:40:46,084
+so I can certainly try to build the
+parent using a property and I just said
+
+633
+00:40:47,029 --> 00:40:48,808
+to myself because the parent
+
+634
+00:40:49,069 --> 00:40:52,410
+have a square is the board
+
+635
+00:40:52,041 --> 00:40:56,092
+and they need to set the frame typically
+the accessibility frames
+
+636
+00:40:56,092 --> 00:40:59,171
+always been given in screen coordinates
+and important for us because that's what
+
+637
+00:41:00,071 --> 00:41:02,200
+we use to draw a voice-over cursor
+
+638
+00:41:02,839 --> 00:41:06,710
+around a particular element I'm we were
+thinking about this
+
+639
+00:41:06,071 --> 00:41:09,126
+with the new API in saying no be really
+cool if we could just say here's my
+
+640
+00:41:10,026 --> 00:41:11,042
+friend
+
+641
+00:41:11,042 --> 00:41:14,731
+relative to my parent and they don't
+have to do any work when the window
+
+642
+00:41:15,109 --> 00:41:18,390
+moves her my parent was around to
+recalculate my frame
+
+643
+00:41:18,039 --> 00:41:22,047
+and screen space so we've added the
+snakes convenience property to
+
+644
+00:41:22,047 --> 00:41:26,072
+and a successful the element as colic
+sensibility freemen parent space and it
+
+645
+00:41:26,072 --> 00:41:27,151
+does exactly that
+
+646
+00:41:28,051 --> 00:41:32,054
+I can calculate the actual are tracked
+that I'm using during the
+
+647
+00:41:32,054 --> 00:41:36,115
+for drawing and thats a given in my
+parents pace
+
+648
+00:41:37,015 --> 00:41:40,704
+and I can suck that as the accessible
+the freemen parents face and now
+
+649
+00:41:40,839 --> 00:41:44,400
+whenever something moves we have enough
+information are on hour and
+
+650
+00:41:44,004 --> 00:41:49,055
+to recalculate where the frame its you
+don't have to do any of that bookkeeping
+
+651
+00:41:49,091 --> 00:41:52,174
+so now we've created the successful the
+element for each square
+
+652
+00:41:53,074 --> 00:41:57,633
+you want to make sure that we at the
+mall to the array in the study said
+
+653
+00:41:58,299 --> 00:42:01,680
+you want to make sure that you cash
+these elements so
+
+654
+00:42:01,068 --> 00:42:04,417
+at any point I'll in your applications
+lifetime where this
+
+655
+00:42:05,029 --> 00:42:08,380
+I am has been drawn on screen the
+accessible the
+
+656
+00:42:08,038 --> 00:42:13,116
+element representing it has to be there
+for trust building to be able to query
+
+657
+00:42:14,016 --> 00:42:17,475
+and then lastly remember we overrode the
+gather here
+
+658
+00:42:17,619 --> 00:42:22,140
+so need to make sure re actually return
+these children
+
+659
+00:42:22,014 --> 00:42:26,016
+so it and I can go back up to the top in
+my file and I down just made this really
+
+660
+00:42:26,016 --> 00:42:27,405
+complicated you I
+
+661
+00:42:27,549 --> 00:42:30,990
+accessible must not not much extra work
+
+662
+00:42:30,099 --> 00:42:33,103
+I see that all my warnings have gone
+away we didn't have any warnings here
+
+663
+00:42:34,039 --> 00:42:35,091
+for example
+
+664
+00:42:35,091 --> 00:42:39,500
+but this is now added a basic level
+accessibility to my app
+
+665
+00:42:40,319 --> 00:42:47,319
+and so let's take a look at power what
+that looks like now
+
+666
+00:42:48,043 --> 00:42:51,076
+in the way I'm gonna verify that my
+changes worked
+
+667
+00:42:51,076 --> 00:42:54,875
+is by using one which was pretty much in
+italics us a building inspector
+
+668
+00:42:55,559 --> 00:43:00,020
+you can launch it from the Xcode menu
+under open developer tool
+
+669
+00:43:00,002 --> 00:43:03,025
+an excess a building inspector
+
+670
+00:43:03,025 --> 00:43:06,076
+and again what this does is it shows you
+the accessibility information
+
+671
+00:43:06,076 --> 00:43:09,151
+for the item under the mouse so here
+there there's
+
+672
+00:43:10,051 --> 00:43:13,095
+three sections that are showing up the
+very top
+
+673
+00:43:13,095 --> 00:43:17,120
+is the accessibility hierarchy so if
+this is analogous to scan like the view
+
+674
+00:43:18,002 --> 00:43:19,161
+hierarchy
+
+675
+00:43:19,359 --> 00:43:22,700
+if you're such a bill the omens are
+inaccessible the hierarchy they're not
+
+676
+00:43:22,007 --> 00:43:24,026
+can be available to accessibility
+clients
+
+677
+00:43:24,089 --> 00:43:27,166
+much like a view to find the view
+hierarchy won't be shown
+
+678
+00:43:28,066 --> 00:43:31,093
+the next sections the attributes for
+these are all the properties that we've
+
+679
+00:43:31,093 --> 00:43:31,972
+now added
+
+680
+00:43:32,809 --> 00:43:37,190
+onto accessible the elements and you can
+see each other values
+
+681
+00:43:37,019 --> 00:43:40,088
+Khan and there's also some some more a
+complicated ones like prime tries
+
+682
+00:43:40,088 --> 00:43:41,174
+attributes
+
+683
+00:43:42,074 --> 00:43:45,101
+so the very first thing that we worked
+on was the plus or minus one
+
+684
+00:43:46,001 --> 00:43:49,013
+remember this was to increase and
+decrease the difficulty we need to
+
+685
+00:43:49,013 --> 00:43:50,017
+decide to label their
+
+686
+00:43:50,017 --> 00:43:53,020
+has a standard app to control I'm
+
+687
+00:43:53,002 --> 00:43:57,831
+and I can see is that dick sucked you
+
+688
+00:43:58,029 --> 00:44:02,140
+down here is showing up as decreased
+difficulties this has got me know that
+
+689
+00:44:02,014 --> 00:44:02,039
+this
+
+690
+00:44:02,359 --> 00:44:09,359
+elements now labeled it's going to be
+spoken when it's not gay but voice-over
+
+691
+00:44:10,119 --> 00:44:13,119
+same thing with the increased difficulty
+bun
+
+692
+00:44:13,119 --> 00:44:18,000
+the label as as there which is gone
+
+693
+00:44:18,000 --> 00:44:21,329
+what about the restart game button I
+remember this wasn't even available to
+
+694
+00:44:21,329 --> 00:44:22,410
+accessibility
+
+695
+00:44:22,041 --> 00:44:26,064
+and now we see that in the hierarchy is
+inaccessible the button
+
+696
+00:44:26,064 --> 00:44:29,141
+and also has a label a restart game
+disagree it's gonna be read on as a
+
+697
+00:44:30,041 --> 00:44:32,120
+restart game button
+
+698
+00:44:33,002 --> 00:44:37,351
+similarly with the check box it's now in
+the view hierarchy which is
+
+699
+00:44:37,549 --> 00:44:40,622
+which is awesome so I'll show up to
+acceptable the client's
+
+700
+00:44:41,279 --> 00:44:46,520
+it says that the check box it has a
+label love AI opponent
+
+701
+00:44:46,052 --> 00:44:50,791
+and now the grid so the grid shows up as
+a group
+
+702
+00:44:51,259 --> 00:44:54,630
+and I wanna be acceptable the proper
+uses the accessible to children
+
+703
+00:44:54,063 --> 00:44:57,762
+and we see that has nine items and
+they're all bonds
+
+704
+00:44:58,329 --> 00:45:01,960
+so if you take a look at just one button
+it says it has i
+
+705
+00:45:01,096 --> 00:45:04,144
+it's in the hierarchy as well as it has
+a label for its the empty top
+
+706
+00:45:05,044 --> 00:45:08,122
+of next one South MT top
+
+707
+00:45:09,022 --> 00:45:13,601
+and to top right you'll notice here also
+there's a an action section on the bond
+
+708
+00:45:13,799 --> 00:45:15,210
+same perform Prasanth
+
+709
+00:45:15,021 --> 00:45:18,390
+this is what this almond supports for
+actions Sosa
+
+710
+00:45:18,579 --> 00:45:22,910
+that actually really great okay so now
+that I've
+
+711
+00:45:22,091 --> 00:45:26,116
+audited my app with excess a building
+inspector I'm fairly certain that the
+
+712
+00:45:27,016 --> 00:45:28,077
+personally I've implemented
+
+713
+00:45:28,077 --> 00:45:32,126
+is correct so now I'm gonna turn on
+voice over I'm gonna order that using
+
+714
+00:45:32,819 --> 00:45:36,990
+voice over
+
+715
+00:45:36,099 --> 00:45:39,978
+voice over on tic-tac-toe tic-tac-toe
+window
+
+716
+00:45:40,869 --> 00:45:44,890
+a high pollen uncheck checkbox has
+keyboard focus
+
+717
+00:45:44,089 --> 00:45:48,478
+great so we can now land on the element
+check an opponent checkbox
+
+718
+00:45:49,279 --> 00:45:52,520
+I can activate it difficult decrease
+difficulty
+
+719
+00:45:52,052 --> 00:45:55,123
+button Press Press Press decrease
+difficulty
+
+720
+00:45:56,023 --> 00:45:59,106
+button the buns are labeled them they
+support the ACF increased effect
+
+721
+00:46:00,006 --> 00:46:03,305
+restart game button Press restart game
+
+722
+00:46:03,359 --> 00:46:06,630
+button you can press to reset the game
+if I have a game in progress
+
+723
+00:46:06,063 --> 00:46:10,115
+big tax tic tac toe board group I also
+land on the board group
+
+724
+00:46:11,015 --> 00:46:14,734
+interact with tic tac toe board group
+nine items
+
+725
+00:46:14,869 --> 00:46:18,720
+empty top left button and I can move
+into the script to see the different
+
+726
+00:46:18,072 --> 00:46:18,138
+power
+
+727
+00:46:19,038 --> 00:46:23,090
+peace and the top button now by place
+apiece they're using activate options
+
+728
+00:46:23,009 --> 00:46:26,618
+Press ext top button MD top left button
+
+729
+00:46:27,509 --> 00:46:30,561
+Press X top left button I'm so over of
+
+730
+00:46:31,029 --> 00:46:35,052
+I can play a full game of tic-tac-toe
+now this is really exciting and I hope
+
+731
+00:46:35,259 --> 00:46:35,343
+you seen that
+
+732
+00:46:36,099 --> 00:46:39,660
+was just a few lines of code which
+really walk you through what you need to
+
+733
+00:46:39,066 --> 00:46:39,104
+do that
+
+734
+00:46:40,004 --> 00:46:43,083
+add accessibility to something something
+like this
+
+735
+00:46:43,119 --> 00:46:47,135
+and I hope you really see that the level
+the castle is quite drastic
+
+736
+00:46:47,279 --> 00:46:51,363
+before there's hardly any in and now
+there's on us for support
+
+737
+00:46:52,119 --> 00:46:55,430
+so there's a couple more things that you
+can do here
+
+738
+00:46:55,043 --> 00:46:59,074
+to make this app even more excitable
+Minister point out one
+
+739
+00:46:59,074 --> 00:47:02,088
+suppose for example that I'm playing
+this game with
+
+740
+00:47:02,088 --> 00:47:06,124
+a a user who is using voice over and
+they're on the check box
+
+741
+00:47:07,024 --> 00:47:11,403
+focuses on the check box they can
+activity I am using
+
+742
+00:47:11,619 --> 00:47:17,210
+Command Option space but I can also go
+in and click the checkbox with my maps
+
+743
+00:47:17,021 --> 00:47:21,180
+so how does a voice-over user know if
+I've change the state of something
+
+744
+00:47:21,369 --> 00:47:25,412
+out from underneath them while we solve
+this problem using accessibility
+
+745
+00:47:25,799 --> 00:47:26,800
+notifications
+
+746
+00:47:26,809 --> 00:47:31,660
+and this has been some questions about
+which ones do I use wonder I use than
+
+747
+00:47:31,066 --> 00:47:34,775
+and we really tried to answer that with
+the new protocols file
+
+748
+00:47:35,369 --> 00:47:39,410
+so again this is your one-stop shop and
+you can really go back there
+
+749
+00:47:39,041 --> 00:47:42,123
+and here in the check box protocol
+declaration there's a comment which
+
+750
+00:47:43,023 --> 00:47:45,902
+tells me about the notifications on you
+to post
+
+751
+00:47:46,109 --> 00:47:50,130
+son this case it sells the accessibility
+value change notification
+
+752
+00:47:50,319 --> 00:47:53,450
+needs to be posted whenever the
+accessibility value changes
+
+753
+00:47:53,045 --> 00:47:56,069
+recall that search act or unchecked
+state
+
+754
+00:47:56,069 --> 00:47:59,075
+so for any point changes for any reason
+I need her
+
+755
+00:47:59,075 --> 00:48:02,104
+are some this notification as really
+easy to do
+
+756
+00:48:03,004 --> 00:48:08,073
+min go back to my check box you if you
+recall we had the title track stay and
+
+757
+00:48:08,109 --> 00:48:08,750
+missus
+
+758
+00:48:08,075 --> 00:48:12,094
+work on activated when used the
+accessibility activate action
+
+759
+00:48:12,094 --> 00:48:15,149
+and here's where need to push the
+notification I can be there with
+
+760
+00:48:16,049 --> 00:48:19,092
+and its accessibility post notification
+
+761
+00:48:19,092 --> 00:48:23,521
+the element this notification should be
+associated with us the check box itself
+
+762
+00:48:24,349 --> 00:48:27,790
+and the notification type as an annus
+accessibility
+
+763
+00:48:27,079 --> 00:48:31,658
+value change notification at a
+
+764
+00:48:32,369 --> 00:48:35,435
+so again from the more advanced
+accessible via items now
+
+765
+00:48:36,029 --> 00:48:39,210
+done actually take that much more code
+you there
+
+766
+00:48:39,021 --> 00:48:42,052
+and so now if you were to run the shop
+again and your clobbering with the
+
+767
+00:48:42,052 --> 00:48:43,621
+voiceover use on you click to bun
+
+768
+00:48:44,089 --> 00:48:48,480
+there now be announced the new state
+will now be announced to them
+
+769
+00:48:48,048 --> 00:48:51,397
+so that's the end that the demo now and
+I hope what you've seen is that we've
+
+770
+00:48:51,829 --> 00:48:52,910
+tried to make it
+
+771
+00:48:52,091 --> 00:48:56,122
+as easy as possible for you
+
+772
+00:48:57,022 --> 00:49:00,063
+out accessibility with our new API
+
+773
+00:49:00,063 --> 00:49:03,482
+I should also mention dad we have
+
+774
+00:49:04,049 --> 00:49:07,127
+a sample app you may have seen from
+Patna college you accessible DUI
+
+775
+00:49:07,829 --> 00:49:08,980
+examples
+
+776
+00:49:08,098 --> 00:49:11,967
+and what it is is a collection are all
+different types of elements
+
+777
+00:49:12,849 --> 00:49:16,540
+so here there's a button taxed images
+
+778
+00:49:16,054 --> 00:49:19,088
+we also have more complicated you I like
+layout areas
+
+779
+00:49:19,088 --> 00:49:22,166
+collapsible outline views people views
+and what we've done
+
+780
+00:49:23,066 --> 00:49:26,150
+is implemented you should use using
+different methods so for example
+
+781
+00:49:27,005 --> 00:49:30,072
+subclassing from a standard app controls
+making and
+
+782
+00:49:31,017 --> 00:49:35,094
+a subclass a tentative you but also Open
+GL CA layers we have examples for all
+
+783
+00:49:35,094 --> 00:49:36,213
+those
+
+784
+00:49:37,059 --> 00:49:40,110
+and for this release we've gone through
+ripped out the excess ability that we
+
+785
+00:49:40,569 --> 00:49:41,270
+had
+
+786
+00:49:41,027 --> 00:49:45,586
+and additive right back in with the new
+API and what we found was a drastic
+
+787
+00:49:45,829 --> 00:49:48,922
+code savings many many fewer lines of
+code
+
+788
+00:49:49,759 --> 00:49:53,786
+and we hope to do is have this available
+as a reference for you say hey I want
+
+789
+00:49:54,029 --> 00:49:55,107
+learn how to use this protocol
+
+790
+00:49:55,809 --> 00:49:58,950
+you have an example on a concrete
+implementation I we've done
+
+791
+00:49:58,095 --> 00:50:01,102
+this is available along with the
+tic-tac-toe app on developer dot dot dot
+
+792
+00:50:02,065 --> 00:50:02,129
+dot com
+
+793
+00:50:03,029 --> 00:50:06,798
+today please go check it out download it
+we also have
+
+794
+00:50:07,059 --> 00:50:10,500
+in this particular example a nice read
+me file the house
+
+795
+00:50:10,005 --> 00:50:15,844
+have a developer quick start on how to
+use our API
+
+796
+00:50:16,339 --> 00:50:20,890
+so with an and summary really took this
+release to think about
+
+797
+00:50:20,089 --> 00:50:24,568
+how can we make it easier to
+accessibility to your application
+
+798
+00:50:25,369 --> 00:50:30,442
+and what we came away with was a
+brand-new really easy to use API
+
+799
+00:50:31,099 --> 00:50:34,730
+and is really easy to use because all
+the accessible the attributes
+
+800
+00:50:34,073 --> 00:50:37,171
+are now property is on the object for
+the really easy to set up
+
+801
+00:50:38,071 --> 00:50:41,095
+house at the trouble the protocols which
+guide you through
+
+802
+00:50:41,095 --> 00:50:44,168
+the items that you need to implement in
+order to meet your custom
+
+803
+00:50:45,068 --> 00:50:49,164
+you I a trustable and then lastly we
+formalize the four you own a cloth
+
+804
+00:50:50,064 --> 00:50:53,068
+into an a successful the element and
+there for you
+
+805
+00:50:53,068 --> 00:50:57,117
+to be accessible the backin object when
+there's no UI view 4 and her an issue
+
+806
+00:50:58,017 --> 00:51:00,021
+back in
+
+807
+00:51:00,021 --> 00:51:03,870
+would like to encourage you to test with
+voice over it ships with every Mac
+
+808
+00:51:04,059 --> 00:51:08,040
+and its a great way for you to see what
+our customers are going to experience
+
+809
+00:51:08,004 --> 00:51:11,039
+using assistive technology with your
+application
+
+810
+00:51:11,039 --> 00:51:14,048
+if you'd like to just an empty bag a
+little bit more
+
+811
+00:51:14,048 --> 00:51:17,847
+we have accessible inspector there to
+really getting at what exactly is going
+
+812
+00:51:18,279 --> 00:51:19,160
+on with your
+
+813
+00:51:19,016 --> 00:51:22,016
+accessibility element and lastly
+
+814
+00:51:22,016 --> 00:51:25,020
+we want to support you in this
+transition to the new API
+
+815
+00:51:25,002 --> 00:51:28,921
+we really want to contribute encourage
+you to use it and so we built is really
+
+816
+00:51:29,119 --> 00:51:31,180
+great developer examples that we've been
+
+817
+00:51:31,018 --> 00:51:34,018
+that we've now released and we hope you
+can use as a reference
+
+818
+00:51:34,018 --> 00:51:37,937
+cash for your implementation
+
+819
+00:51:38,099 --> 00:51:41,142
+if you'd like more information about our
+team works of the building
+
+820
+00:51:41,529 --> 00:51:44,680
+our framework in general please feel
+free to reach out to our
+
+821
+00:51:44,068 --> 00:51:47,897
+ap frameworks a band or strict parents
+his emails barron's on
+
+822
+00:51:48,509 --> 00:51:51,910
+Apple to come if you have more technical
+questions
+
+823
+00:51:51,091 --> 00:51:54,440
+can take a look at the documentation and
+developer Apple dot com
+
+824
+00:51:55,259 --> 00:51:59,020
+as well as ask questions on the dub
+forums
+
+825
+00:51:59,002 --> 00:52:02,291
+if you like this session and your
+interest in finding out how accessible
+
+826
+00:52:02,309 --> 00:52:02,386
+the works
+
+827
+00:52:03,079 --> 00:52:07,190
+on our other platforms there's a new
+accessibility and IR suction
+
+828
+00:52:07,019 --> 00:52:10,074
+in this room right after this
+presentation and then our web
+
+829
+00:52:10,074 --> 00:52:11,143
+accessibility
+
+830
+00:52:11,809 --> 00:52:15,190
+presentation on Friday at 9am
+
+831
+00:52:15,019 --> 00:52:18,050
+thank you so much for coming to our
+session really appreciate you being here
+
+832
+00:52:18,005 --> 00:52:22,844
+and from all the sample we hope you have
+a fantastic rest at WWDC
+
+833
+00:52:23,339 --> 00:52:23,344
+thank you very much
+

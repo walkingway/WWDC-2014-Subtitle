@@ -1,0 +1,4518 @@
+1
+00:00:12,091 --> 00:00:16,096
+I my name is really been a I'm the entry
+matter
+
+2
+00:00:17,041 --> 00:00:20,057
+on the client side
+
+3
+00:00:20,057 --> 00:00:23,076
+so up until today
+
+4
+00:00:23,076 --> 00:00:26,108
+Apple had me i cud technologies and a
+loop like
+
+5
+00:00:27,008 --> 00:00:31,081
+this to you we had i car driver i cud
+Chordata iPod the library
+
+6
+00:00:31,081 --> 00:00:34,105
+and how they interacted with the iPod
+the
+
+7
+00:00:35,005 --> 00:00:39,026
+Apple icon server was kinda miss through
+said today were
+
+8
+00:00:39,026 --> 00:00:42,034
+lifting sum up the mystery
+
+9
+00:00:42,034 --> 00:00:46,052
+in increasing pocket so let's look at
+this
+
+10
+00:00:46,052 --> 00:00:50,141
+what we're going to cover here in the
+session so first we're going to start
+
+11
+00:00:51,041 --> 00:00:51,870
+with
+
+12
+00:00:52,239 --> 00:00:56,305
+what is cloud kids we're going to walk
+
+13
+00:00:56,899 --> 00:01:00,630
+are you through the couple of steps you
+need to enable market in Europe cation
+
+14
+00:01:00,063 --> 00:01:00,159
+and start using it
+
+15
+00:01:01,059 --> 00:01:04,107
+we're going you walk through with the
+different
+
+16
+00:01:05,007 --> 00:01:08,014
+API's we're going to talk about
+
+17
+00:01:08,077 --> 00:01:12,091
+how pocket and tracked with the Apple
+the iPad user accounts
+
+18
+00:01:12,091 --> 00:01:16,106
+and last but not least we'll cover
+
+19
+00:01:17,006 --> 00:01:20,175
+when to use cloud kid as opposed to
+other existing
+
+20
+00:01:20,229 --> 00:01:23,257
+iPod API's we already have on the pipe
+bombs
+
+21
+00:01:23,509 --> 00:01:27,630
+so let's start with his pockets
+
+22
+00:01:27,063 --> 00:01:32,086
+I you'll notice the new batch but the
+whole session is new so it's your only
+
+23
+00:01:32,086 --> 00:01:32,177
+on that slide
+
+24
+00:01:33,077 --> 00:01:38,816
+and clock is the way to give you access
+to our cloud servers
+
+25
+00:01:39,509 --> 00:01:42,534
+and we really mean it's at
+
+26
+00:01:42,759 --> 00:01:46,420
+clock is the foundation for both I Club
+Drive
+
+27
+00:01:46,042 --> 00:01:50,063
+an iPod for library both teachers were
+written from scratch
+
+28
+00:01:50,063 --> 00:01:54,070
+on top of pocket cock is supported on
+those
+
+29
+00:01:54,007 --> 00:01:58,071
+Western and I O S it's a new public
+frame or pocket that free markets
+
+30
+00:01:59,034 --> 00:02:03,563
+check it out yes UK clock its uses
+
+31
+00:02:03,869 --> 00:02:06,905
+yeah I clarke ounce infrastructure debt
+means that
+
+32
+00:02:07,229 --> 00:02:10,450
+if there's a logged in I clout counts
+
+33
+00:02:10,045 --> 00:02:13,048
+on the device will use that to attend
+fide
+
+34
+00:02:13,075 --> 00:02:17,123
+the user if there's non will provide
+read only unanimous access
+
+35
+00:02:18,023 --> 00:02:21,072
+clock it supports both
+
+36
+00:02:21,072 --> 00:02:25,097
+a concept of public and private
+databases you can see public databases
+
+37
+00:02:25,097 --> 00:02:28,183
+as a superb day dad that's all you user
+can access
+
+38
+00:02:29,083 --> 00:02:32,148
+to private databases are meant to stored
+
+39
+00:02:33,048 --> 00:02:37,133
+the the actual data just don t have a
+specific user
+
+40
+00:02:38,033 --> 00:02:43,126
+clark et support both structured and all
+data
+
+41
+00:02:44,026 --> 00:02:47,060
+you can use it to store large falls on
+the on
+
+42
+00:02:47,006 --> 00:02:51,047
+I cloud servers and we'll take care of
+the transmitting them efficiently
+
+43
+00:02:52,001 --> 00:02:56,087
+happen from the icon servers importantly
+
+44
+00:02:56,087 --> 00:03:01,103
+clout kids is a transport technology it
+does in providing local persistence
+
+45
+00:03:02,003 --> 00:03:06,044
+its enables you to send and receive data
+from the servers
+
+46
+00:03:06,044 --> 00:03:09,071
+so let's start
+
+47
+00:03:09,071 --> 00:03:12,079
+how do you enable more clout kids in
+your application
+
+48
+00:03:12,079 --> 00:03:17,115
+so first you're launching a gate Europe
+cations capabilities pain in Xcode
+
+49
+00:03:18,015 --> 00:03:22,030
+see that big I cloud off switch you want
+to turn on
+
+50
+00:03:22,003 --> 00:03:27,094
+and you on issued checked the car kit
+check box here
+
+51
+00:03:28,021 --> 00:03:31,034
+at that point already there's no
+four-step
+
+52
+00:03:31,034 --> 00:03:35,080
+your app is reach you read and write
+data to
+
+53
+00:03:35,008 --> 00:03:39,075
+Apple's iPod server and to walk you
+through the PRI on how to do this
+
+54
+00:03:40,047 --> 00:03:43,080
+I'm going to hand over to Paul to chat
+about it
+
+55
+00:03:43,008 --> 00:03:50,008
+thank you Maria so as Libby said my
+name's Paul
+
+56
+00:03:52,021 --> 00:03:55,058
+I work on the clout to climb from work
+and I'm very excited to talk you guys
+
+57
+00:03:55,058 --> 00:03:55,106
+today
+
+58
+00:03:56,006 --> 00:03:59,072
+about cloud cap we're gonna start of
+organist are talking about the
+
+59
+00:03:59,072 --> 00:04:00,080
+fundamental clark et objects
+
+60
+00:04:01,052 --> 00:04:04,054
+these are going to be the set of objects
+that your initially exposed to you
+
+61
+00:04:04,072 --> 00:04:07,154
+when you open up and start playing with
+the craft kit framework jus running for
+
+62
+00:04:08,054 --> 00:04:09,054
+a quick list to them
+
+63
+00:04:09,054 --> 00:04:12,070
+we're going to talk about containers and
+we're going to talk about databases
+
+64
+00:04:12,007 --> 00:04:15,008
+we're going to talk about records we're
+going to talk about
+
+65
+00:04:15,008 --> 00:04:19,007
+record zones and record identifiers
+
+66
+00:04:19,799 --> 00:04:23,130
+we're going to talk about references and
+we're going to talk about assets
+
+67
+00:04:23,013 --> 00:04:26,105
+it's quite a list this is gonna be a
+really fun and really jam-packed session
+
+68
+00:04:27,005 --> 00:04:31,018
+so let's get started let's get started
+and we're gonna talk about containers
+
+69
+00:04:31,018 --> 00:04:35,837
+this is sort of the idealized model up
+your application talking I clout
+
+70
+00:04:35,999 --> 00:04:41,090
+arm know you guys are application
+developers you gotta climb developers
+
+71
+00:04:41,009 --> 00:04:44,062
+and you know what that your application
+running on the client
+
+72
+00:04:44,062 --> 00:04:47,331
+whether that client is a iPhone
+wetherbee a mac book
+
+73
+00:04:47,889 --> 00:04:51,925
+yours is not the only process running on
+the client rather yours is one of many
+
+74
+00:04:52,249 --> 00:04:55,316
+now on your client your process is going
+to be
+
+75
+00:04:55,919 --> 00:05:00,310
+silence the Inbox in some ways I in some
+cases it to you
+
+76
+00:05:00,031 --> 00:05:04,730
+literal sandbox certainly in others
+running your own memory space
+
+77
+00:05:05,009 --> 00:05:08,960
+this concept of taking your client
+actually running it separated from other
+
+78
+00:05:08,096 --> 00:05:08,102
+clients
+
+79
+00:05:09,056 --> 00:05:12,087
+is pretty powerful it is not a couple
+damages
+
+80
+00:05:12,087 --> 00:05:16,152
+it helps with security it also stability
+and it helps the privacy
+
+81
+00:05:17,052 --> 00:05:20,105
+so as we're figuring out how we want to
+Bill Clark it we thought to ourselves
+
+82
+00:05:21,005 --> 00:05:22,037
+how can you take the
+
+83
+00:05:22,037 --> 00:05:25,586
+you three advantages and replicate them
+up in the server
+
+84
+00:05:25,919 --> 00:05:29,977
+and so here's what we did just as your
+client is one of many
+
+85
+00:05:30,499 --> 00:05:33,500
+I'm sorry your application is one of
+many running on the client
+
+86
+00:05:33,509 --> 00:05:38,460
+so too depart if I call that you're
+talking to is one of many up on I clout
+
+87
+00:05:38,046 --> 00:05:42,109
+arm week all these different silos
+containers
+
+88
+00:05:43,009 --> 00:05:46,062
+so containers containers are exposing
+the coated free-market
+
+89
+00:05:46,062 --> 00:05:49,701
+as the CK container class CK's are
+prefixed you can see this all over the
+
+90
+00:05:50,259 --> 00:05:51,460
+place
+
+91
+00:05:51,046 --> 00:05:55,155
+by default one application talk to one
+container
+
+92
+00:05:55,569 --> 00:05:58,600
+containers afford us the ability to
+segregate data
+
+93
+00:05:58,879 --> 00:06:02,110
+means that your application can read and
+write data type cloud
+
+94
+00:06:02,011 --> 00:06:05,720
+another application can read and write
+it i cloud and the two data sets up on
+
+95
+00:06:05,819 --> 00:06:08,900
+the server will not be intermingled
+
+96
+00:06:08,009 --> 00:06:12,918
+in addition to desegregation this
+containers asiana I cloud storage allows
+
+97
+00:06:13,809 --> 00:06:16,620
+us to encapsulate user information
+
+98
+00:06:16,062 --> 00:06:19,331
+now as we mentioned Clark it involves
+
+99
+00:06:19,889 --> 00:06:24,080
+using the I card account infrastructure
+and we want to give you some limited
+
+100
+00:06:24,008 --> 00:06:26,147
+access to that i cud account
+
+101
+00:06:26,219 --> 00:06:28,740
+and we want to make sure that we're
+doing so in a problem privacy
+
+102
+00:06:28,074 --> 00:06:30,113
+conscientious manner
+
+103
+00:06:30,779 --> 00:06:33,930
+so in order to do that we encapsulate
+user information
+
+104
+00:06:33,093 --> 00:06:36,102
+user information available to your
+application is going to be container
+
+105
+00:06:37,002 --> 00:06:37,068
+scoped
+
+106
+00:06:37,068 --> 00:06:41,237
+and therefore different and the the
+viewer user information seen by another
+
+107
+00:06:41,849 --> 00:06:44,210
+application
+
+108
+00:06:44,021 --> 00:06:47,068
+containers are managed by you the
+developer you can be managing them
+
+109
+00:06:47,068 --> 00:06:50,677
+view the WWD our portal it's important
+to note
+
+110
+00:06:51,289 --> 00:06:55,960
+that the namespace the love containers
+is global to all developers
+
+111
+00:06:55,096 --> 00:06:57,945
+so when you choose a name for your
+container make sure that you're using it
+
+112
+00:06:58,809 --> 00:06:59,817
+University in
+
+113
+00:06:59,889 --> 00:07:02,972
+you're using a reverse DNS name
+
+114
+00:07:03,719 --> 00:07:06,764
+now a right up there just like a little
+while ago I said that
+
+115
+00:07:07,169 --> 00:07:11,360
+by default there is one container to one
+application the one to one mapping
+
+116
+00:07:11,036 --> 00:07:14,080
+we think that this is going to be
+successful for 99 percent abuse cases
+
+117
+00:07:14,008 --> 00:07:17,008
+and certainly as you go start using
+cloud it's going to be great as you
+
+118
+00:07:17,008 --> 00:07:18,437
+start exploring the framework
+
+119
+00:07:19,229 --> 00:07:22,900
+but we recognize there are some
+scenarios were you need a more complex
+
+120
+00:07:22,009 --> 00:07:22,838
+mapping
+
+121
+00:07:23,729 --> 00:07:28,460
+so we support many many model we mean is
+that multiple applications can
+
+122
+00:07:28,046 --> 00:07:28,745
+coordinate
+
+123
+00:07:29,159 --> 00:07:32,203
+on the same II clout container also
+
+124
+00:07:32,599 --> 00:07:37,661
+a single application can talk to
+multiple like our containers
+
+125
+00:07:38,219 --> 00:07:42,281
+on the databases what are the chief
+purpose is a cloudy is the ability to
+
+126
+00:07:42,839 --> 00:07:44,960
+take your object model in your
+application
+
+127
+00:07:44,096 --> 00:07:48,096
+and replicate that up to the server and
+so when we start thinking about how we
+
+128
+00:07:48,096 --> 00:07:50,195
+want to present is modeling to you
+
+129
+00:07:51,059 --> 00:07:54,103
+we thought to ourselves how can we
+divide up application objects
+
+130
+00:07:54,499 --> 00:07:58,503
+obviously all objects in my application
+are not treated equally
+
+131
+00:07:58,539 --> 00:08:00,830
+and one of the first things that we
+noticed was that is a fundamental
+
+132
+00:08:00,083 --> 00:08:00,912
+difference
+
+133
+00:08:01,659 --> 00:08:04,718
+in the the audience of data
+
+134
+00:08:05,249 --> 00:08:08,297
+some data is intended to be used by the
+user that created it
+
+135
+00:08:08,729 --> 00:08:10,825
+if you imagine an application where I'm
+writing up notes and i wanna see my
+
+136
+00:08:11,689 --> 00:08:12,760
+notes everywhere else that's my data
+
+137
+00:08:13,399 --> 00:08:16,444
+I created I consume it on the other hand
+
+138
+00:08:16,849 --> 00:08:20,912
+there are others use for what we call
+public data this is data that can be
+
+139
+00:08:21,479 --> 00:08:24,680
+a created by the user for the benefit of
+the community
+
+140
+00:08:24,068 --> 00:08:28,297
+think perhaps a review on a restaurant
+or could be information that you the
+
+141
+00:08:28,909 --> 00:08:32,921
+developer has uploaded I cloud because
+it's useful to your application
+
+142
+00:08:33,029 --> 00:08:37,570
+in either case the audience is not a
+single user but a community of people
+
+143
+00:08:37,057 --> 00:08:40,124
+so how do we solve the fact that we've
+got these different types of data
+
+144
+00:08:41,024 --> 00:08:44,086
+with break open container and have a
+look inside
+
+145
+00:08:44,086 --> 00:08:47,088
+inside a container you gonna notice
+first and foremost the public database
+
+146
+00:08:48,006 --> 00:08:51,024
+this is the soup this is where all the
+public and community to
+
+147
+00:08:51,024 --> 00:08:55,082
+cool Lipscomb Ingles additional you're
+gonna notice that there's private
+
+148
+00:08:55,082 --> 00:08:55,169
+databases
+
+149
+00:08:56,069 --> 00:08:58,127
+and you're going to find there's
+individual private database for each
+
+150
+00:08:59,027 --> 00:08:59,034
+user
+
+151
+00:08:59,097 --> 00:09:03,118
+your application now this is where the
+fifty thousand foot overview of what the
+
+152
+00:09:04,018 --> 00:09:06,042
+I cloud infrastructure looks like but
+
+153
+00:09:06,042 --> 00:09:09,091
+you know how much you guys care about
+that would you guys are interested in is
+
+154
+00:09:09,091 --> 00:09:12,119
+what is this infrastructure look like to
+me the client running on a phone are
+
+155
+00:09:13,019 --> 00:09:14,024
+running on a Mac
+
+156
+00:09:14,069 --> 00:09:16,133
+obviously you're only going to have
+access to the currently logged in I
+
+157
+00:09:17,033 --> 00:09:18,059
+cloud user
+
+158
+00:09:18,059 --> 00:09:21,131
+the rather than seeing a public database
+in a good deal in private databases
+
+159
+00:09:22,031 --> 00:09:25,033
+your views gonna look a little more like
+this you can have a choice between a
+
+160
+00:09:25,033 --> 00:09:26,055
+public database
+
+161
+00:09:26,055 --> 00:09:28,134
+or the private database that is
+correlated to the currently logged a
+
+162
+00:09:29,034 --> 00:09:31,039
+nightclub user
+
+163
+00:09:31,039 --> 00:09:34,110
+so databases databases are exposing our
+EP I
+
+164
+00:09:35,001 --> 00:09:39,014
+as a CK database class every application
+is access to them
+
+165
+00:09:39,023 --> 00:09:44,057
+the public and the proper with have a
+look at a little bit of code
+
+166
+00:09:44,057 --> 00:09:47,075
+the container is the initial entry point
+into clout kept
+
+167
+00:09:47,075 --> 00:09:50,091
+here we see that I'm talking to my
+default container and getting its public
+
+168
+00:09:50,091 --> 00:09:50,186
+database
+
+169
+00:09:51,086 --> 00:09:54,135
+I can also talk to the default container
+get a private database
+
+170
+00:09:55,035 --> 00:09:58,039
+which have a look at the differences
+between these two databases
+
+171
+00:09:58,039 --> 00:10:01,094
+as we mentioned the desired audience is
+going to be different
+
+172
+00:10:01,094 --> 00:10:04,099
+between the public address on the
+privateers the public BB is per share
+
+173
+00:10:04,099 --> 00:10:04,167
+data
+
+174
+00:10:05,067 --> 00:10:08,115
+the private TV is for the users own data
+
+175
+00:10:09,015 --> 00:10:12,026
+as such we have different requirements
+for whether or not and i cud account
+
+176
+00:10:12,026 --> 00:10:12,110
+needs to exist
+
+177
+00:10:13,001 --> 00:10:16,034
+on the client in the private database
+since I'm
+
+178
+00:10:16,043 --> 00:10:19,070
+reading and writing a user's data if we
+have no notion of the user
+
+179
+00:10:19,007 --> 00:10:23,031
+that is if you don't have a login i cud
+account there's really no utility in
+
+180
+00:10:23,094 --> 00:10:24,185
+moving this information to and from
+there
+
+181
+00:10:25,085 --> 00:10:28,139
+the server so we require and i cud
+account to be logged in if you want to
+
+182
+00:10:29,039 --> 00:10:30,098
+use the private database
+
+183
+00:10:30,098 --> 00:10:33,127
+in the public database since the
+audience is more communal we'll are you
+
+184
+00:10:34,027 --> 00:10:40,045
+read only anonymous access to the public
+database
+
+185
+00:10:40,045 --> 00:10:43,060
+you'll recall from yesterday's talk that
+
+186
+00:10:43,006 --> 00:10:46,023
+Clark it is free with minutes so we've
+got some
+
+187
+00:10:46,077 --> 00:10:50,093
+pretty aggressive quotas that being said
+we still need to account
+
+188
+00:10:50,093 --> 00:10:53,159
+for weird it is being used so that we
+can talk to you when we start
+
+189
+00:10:54,059 --> 00:10:55,116
+approaching those limits
+
+190
+00:10:56,016 --> 00:11:00,045
+a data stored in a public database is
+accounted for on the developer's corner
+
+191
+00:11:00,045 --> 00:11:04,064
+data stored in the private databases
+accounted for on the user's korda
+
+192
+00:11:04,064 --> 00:11:07,149
+by default data written to the public
+databases world readable
+
+193
+00:11:08,049 --> 00:11:11,128
+detour into the private database is use
+a readable again it's the users own data
+
+194
+00:11:12,028 --> 00:11:12,080
+so
+
+195
+00:11:12,008 --> 00:11:15,104
+they're really the only ones to have
+access to it in the private database
+
+196
+00:11:16,076 --> 00:11:19,133
+we recognize that editing that world
+readable is not an appropriate
+
+197
+00:11:20,033 --> 00:11:22,094
+permission for a lot of data in the
+public database
+
+198
+00:11:22,094 --> 00:11:26,110
+so we give you the ability to edit these
+permissions on a record class
+
+199
+00:11:27,001 --> 00:11:31,042
+level the mechanism by which edit these
+permissions is something that we call
+
+200
+00:11:31,051 --> 00:11:33,093
+the I cloud dashboard roles
+
+201
+00:11:33,093 --> 00:11:37,094
+i cud dashboard is the administrative
+interface into clapped
+
+202
+00:11:37,094 --> 00:11:40,176
+I but you got to come back on Thursday
+for the advanced talking go into a lot
+
+203
+00:11:41,076 --> 00:11:43,092
+of detail about the the dashboard
+
+204
+00:11:43,092 --> 00:11:47,108
+suffice it to say there's an ability to
+set the seals so that a user is a member
+
+205
+00:11:48,008 --> 00:11:49,031
+verbal
+
+206
+00:11:49,031 --> 00:11:54,057
+and the role can have a certain enlarged
+access to a class of records
+
+207
+00:11:54,057 --> 00:11:57,152
+in the private database things start out
+lockdown there's no need at them
+
+208
+00:11:58,052 --> 00:12:01,149
+the users who we want to create a to end
+users going to be worried that data
+
+209
+00:12:02,049 --> 00:12:05,088
+and when I see that the user is going to
+be able to read that data I really mean
+
+210
+00:12:05,088 --> 00:12:05,120
+it
+
+211
+00:12:06,002 --> 00:12:10,044
+you is the developer do not have access
+into somebody else's private database
+
+212
+00:12:10,062 --> 00:12:14,091
+their data is their own right to those
+databases
+
+213
+00:12:14,091 --> 00:12:17,094
+let's talk about records
+
+214
+00:12:17,094 --> 00:12:20,107
+I'm so here's our model that we have so
+far we've got a container within
+
+215
+00:12:21,007 --> 00:12:22,026
+containers are databases
+
+216
+00:12:22,026 --> 00:12:25,054
+let's keep going down the rabbit hole
+crack open a database inside the
+
+217
+00:12:25,054 --> 00:12:28,106
+database we see that it's for records
+
+218
+00:12:29,006 --> 00:12:32,022
+records are exposing our framework is
+the CK record class
+
+219
+00:12:32,022 --> 00:12:35,022
+there the mechanism by which you move
+structured data
+
+220
+00:12:35,022 --> 00:12:38,113
+to and from clark et CK records rap
+
+221
+00:12:39,013 --> 00:12:44,031
+key/value pairs lest you think that a CK
+record is just a glorified dictionary
+
+222
+00:12:44,031 --> 00:12:46,095
+there are some additional attributes
+that make it worthwhile is being its own
+
+223
+00:12:46,095 --> 00:12:46,182
+class
+
+224
+00:12:47,082 --> 00:12:51,108
+to start off with records have a record
+type: if Clark it is a mechanism by
+
+225
+00:12:52,008 --> 00:12:54,030
+which you take your object graph from
+your application
+
+226
+00:12:54,003 --> 00:12:57,040
+and moving into Clark Kent and would
+continue that analogy
+
+227
+00:12:57,067 --> 00:13:00,108
+instance of an object in your
+application is equivalent to tourists
+
+228
+00:13:01,008 --> 00:13:05,009
+instanceof a CK record similarly the
+class of the object
+
+229
+00:13:05,009 --> 00:13:08,011
+in your application is equivalent to the
+record type:
+
+230
+00:13:08,011 --> 00:13:11,026
+the CK record
+
+231
+00:13:11,026 --> 00:13:15,040
+records have a just in time schema you
+do not need to talk about it about what
+
+232
+00:13:15,004 --> 00:13:16,090
+your day looks like before you headed
+
+233
+00:13:17,026 --> 00:13:23,033
+before you hand crafted your data and
+issue date it will figure it out
+
+234
+00:13:23,096 --> 00:13:26,170
+clark et season seek a record also
+supports a raft a
+
+235
+00:13:27,007 --> 00:13:30,095
+meta-data for example ABC a record
+understands when it was created
+
+236
+00:13:31,058 --> 00:13:34,136
+who created it it understands when a
+record was last modified
+
+237
+00:13:35,036 --> 00:13:38,075
+who last modified and lastly a record
+contains the notion
+
+238
+00:13:38,075 --> 00:13:41,079
+to change tack a change tag is a virgin
+
+239
+00:13:41,079 --> 00:13:44,168
+a record in dade represent a specific
+revision of this record
+
+240
+00:13:45,068 --> 00:13:48,068
+an issue so that we can have a
+lightweight way determining whether or
+
+241
+00:13:48,068 --> 00:13:52,105
+not the client to server have the same
+version of a record
+
+242
+00:13:53,005 --> 00:13:56,104
+let's talk a bit about little bit about
+record values CK records rap key/value
+
+243
+00:13:57,004 --> 00:13:57,066
+pairs
+
+244
+00:13:57,066 --> 00:14:01,067
+what are the acceptable value type C
+important to seek a record
+
+245
+00:14:01,067 --> 00:14:04,076
+well we've got your usual suspects your
+Youkilis types
+
+246
+00:14:04,076 --> 00:14:07,125
+strings your numbers your date is in
+your dates we think
+
+247
+00:14:08,025 --> 00:14:11,091
+that especially the public database
+domain location is an interesting
+
+248
+00:14:11,091 --> 00:14:11,100
+scenario
+
+249
+00:14:12,081 --> 00:14:16,166
+so see location is a native type you can
+set on a CK record
+
+250
+00:14:17,066 --> 00:14:20,129
+you can set CK references and CK assets
+were gonna go over what those are just a
+
+251
+00:14:21,029 --> 00:14:22,087
+moment
+
+252
+00:14:22,087 --> 00:14:25,131
+and Leslie me tell you can be a single
+instance I could have a string
+
+253
+00:14:26,031 --> 00:14:30,122
+or dates were can be a homogeneous
+terrain I can have an array of numbers
+
+254
+00:14:31,022 --> 00:14:34,040
+or in a rave CK assets
+
+255
+00:14:34,004 --> 00:14:37,012
+which have a look at a lil bit of code
+
+256
+00:14:38,002 --> 00:14:41,043
+here with you seek a record seek a
+record initializer takes a record high
+
+257
+00:14:41,061 --> 00:14:41,139
+because at the
+
+258
+00:14:42,039 --> 00:14:45,071
+invaluable necessary piece of a record
+you can
+
+259
+00:14:45,071 --> 00:14:48,166
+for said objects and get our checks from
+a record using a dictionary syntax
+
+260
+00:14:49,066 --> 00:14:53,109
+were a key that subscribing syntax we
+also give you the ability to enumerate
+
+261
+00:14:54,009 --> 00:14:59,020
+ok he's on a record so you can dump the
+entire key/value pair
+
+262
+00:14:59,002 --> 00:15:02,098
+with have a look at a specific example
+now throughout the stalk my example is
+
+263
+00:15:03,016 --> 00:15:05,101
+going to be an application that created
+for me my friends
+
+264
+00:15:06,001 --> 00:15:09,007
+this application allows us to create
+pardons and we're gonna stick party
+
+265
+00:15:09,061 --> 00:15:10,153
+records in the public database
+
+266
+00:15:11,053 --> 00:15:14,088
+it's gone a party might be a structured
+data it's gonna have a summary a start
+
+267
+00:15:14,088 --> 00:15:15,104
+date and end date
+
+268
+00:15:16,004 --> 00:15:19,023
+I am I also have additional metadata
+that we associate with it
+
+269
+00:15:19,023 --> 00:15:22,052
+pictures at the party et cetera so
+
+270
+00:15:22,052 --> 00:15:25,115
+how do I create a party record well a
+great one just as you might imagine with
+
+271
+00:15:26,015 --> 00:15:26,098
+the party record
+
+272
+00:15:26,098 --> 00:15:29,141
+with the party record time I can now set
+values on it
+
+273
+00:15:30,041 --> 00:15:33,072
+and I can reveal use from it using
+either dictionary or keep subscribing
+
+274
+00:15:33,072 --> 00:15:34,123
+syntax
+
+275
+00:15:35,023 --> 00:15:38,062
+the records let's talk about records
+owns
+
+276
+00:15:38,062 --> 00:15:41,065
+some this is the model that we've just
+presented and it was kind of a lie but
+
+277
+00:15:41,092 --> 00:15:43,115
+was a useful lifetime
+
+278
+00:15:44,015 --> 00:15:47,096
+arm so a records
+
+279
+00:15:47,096 --> 00:15:51,131
+had don't exist by themselves just has
+objects in your application don't just
+
+280
+00:15:52,031 --> 00:15:56,045
+by themselves is gonna be a natural
+grouping objects within your application
+
+281
+00:15:56,045 --> 00:15:59,122
+similar we similarly we won a way to
+express this grouping
+
+282
+00:16:00,022 --> 00:16:03,030
+in cloud cap fundamentally we're trying
+to be a clerk at to take as much if
+
+283
+00:16:04,002 --> 00:16:04,061
+you're
+
+284
+00:16:04,061 --> 00:16:07,136
+knowledge about your object graph and
+reflect that up to the server
+
+285
+00:16:08,036 --> 00:16:10,133
+so the way that we group records is
+really something that we call a record
+
+286
+00:16:11,033 --> 00:16:12,076
+zone
+
+287
+00:16:12,076 --> 00:16:15,080
+there can be multiple records within a
+record zone and there can be multiple
+
+288
+00:16:15,008 --> 00:16:17,091
+records zones within a database
+
+289
+00:16:18,063 --> 00:16:21,076
+every database has the default records
+on
+
+290
+00:16:21,076 --> 00:16:24,129
+some databases support additional
+customer exams
+
+291
+00:16:25,029 --> 00:16:28,037
+record zones are the default granularity
+which are going to do atomic
+
+292
+00:16:29,009 --> 00:16:32,104
+commits and change tracking its other
+there's an interesting to you and put
+
+293
+00:16:33,004 --> 00:16:37,075
+you back on Thursday for the offense
+talk we're gonna go over hold on to that
+
+294
+00:16:37,075 --> 00:16:40,146
+so those were records arms what's on my
+record identifiers
+
+295
+00:16:41,046 --> 00:16:45,058
+record identifiers get caught up there
+are a tubal
+
+296
+00:16:45,058 --> 00:16:48,090
+the represented both the client provided
+record name
+
+297
+00:16:48,009 --> 00:16:51,088
+and also the zone in which that record
+name exists
+
+298
+00:16:52,069 --> 00:16:55,147
+so what are their characteristics number
+one they're created by the client
+
+299
+00:16:56,047 --> 00:16:59,070
+um you get to specify the the idea
+
+300
+00:16:59,007 --> 00:17:02,091
+the record name up the record but
+because we are
+
+301
+00:17:03,054 --> 00:17:06,473
+coupling this record name which is
+scoped her records own
+
+302
+00:17:06,959 --> 00:17:10,470
+along with the reference to the owning
+records on
+
+303
+00:17:10,047 --> 00:17:13,085
+they become a fully normalize
+representation on the record
+
+304
+00:17:13,085 --> 00:17:16,904
+its before path to it
+
+305
+00:17:17,669 --> 00:17:20,270
+we think that it's going to be fairly
+common for you try and bridge in
+
+306
+00:17:20,027 --> 00:17:21,029
+external data set
+
+307
+00:17:21,047 --> 00:17:26,079
+into clout if you're doing so and if
+your external data set has a unique key
+
+308
+00:17:26,079 --> 00:17:29,126
+on using the unique E as the CK record
+id:
+
+309
+00:17:30,026 --> 00:17:33,029
+allows you to have a foreign key back
+into your external data set
+
+310
+00:17:33,029 --> 00:17:37,033
+totaling approved usage let's have a
+look at some code
+
+311
+00:17:37,069 --> 00:17:40,108
+here we are you know creating a record
+if you're not already
+
+312
+00:17:41,008 --> 00:17:44,043
+and we got multiple initializes for CK
+record you can either choose to provide
+
+313
+00:17:44,043 --> 00:17:46,061
+as a record id: where you can choose not
+to
+
+314
+00:17:46,061 --> 00:17:49,114
+if you choose not to provide a record
+id: we're going to assign arena
+
+315
+00:17:50,014 --> 00:17:53,053
+UUID to the record also note here that
+
+316
+00:17:53,053 --> 00:17:57,076
+when I created my record id: I chose not
+to give it to the ozone
+
+317
+00:17:57,076 --> 00:18:00,097
+throughout corporate API if you choose
+not to give us a record zone
+
+318
+00:18:00,097 --> 00:18:03,148
+we're going to assume that you meant the
+default zone so here
+
+319
+00:18:04,048 --> 00:18:07,075
+I am creating a record id: with the name
+a well-known party
+
+320
+00:18:07,075 --> 00:18:11,384
+that exists within the default zone so
+does a record ID's
+
+321
+00:18:12,059 --> 00:18:15,620
+now let's talk about references just as
+there's a natural groupings
+
+322
+00:18:15,062 --> 00:18:18,154
+records that we want to expose be a
+record zone is also gonna be a natural
+
+323
+00:18:19,054 --> 00:18:21,097
+relationship between objects
+
+324
+00:18:21,097 --> 00:18:24,159
+for example let's say that in addition
+to being able to read %uh parties I can
+
+325
+00:18:25,059 --> 00:18:26,068
+find different clones
+
+326
+00:18:26,068 --> 00:18:29,157
+parties because what is the point to the
+party if you don't have a few claims
+
+327
+00:18:30,057 --> 00:18:33,082
+so I heard one some way above
+representing this
+
+328
+00:18:33,082 --> 00:18:36,169
+a the object relationship that I have
+between parties and clowns up to the
+
+329
+00:18:37,069 --> 00:18:37,151
+server
+
+330
+00:18:38,051 --> 00:18:41,075
+and we we do that is you something that
+we call references
+
+331
+00:18:41,075 --> 00:18:44,100
+now you note here that in this contrived
+example
+
+332
+00:18:45,000 --> 00:18:48,047
+parties own clowns that is we've got a
+parent-child relationship
+
+333
+00:18:48,047 --> 00:18:52,071
+with the party is apparent in the clown
+as a child and that the reference goes
+
+334
+00:18:52,071 --> 00:18:55,920
+from the the child object from the clown
+up to its parent object
+
+335
+00:18:56,559 --> 00:19:00,320
+we call that a back reference
+
+336
+00:19:00,032 --> 00:19:03,066
+references are exposing our EP I as the
+CK reference class
+
+337
+00:19:03,066 --> 00:19:06,074
+they are away when the server understand
+the relationship between records
+
+338
+00:19:07,046 --> 00:19:09,108
+when the server understands the
+relationship between records they can do
+
+339
+00:19:10,008 --> 00:19:11,027
+very interesting things
+
+340
+00:19:11,027 --> 00:19:15,566
+such as cascade elites if the REC if the
+server notices that you've deleted
+
+341
+00:19:15,809 --> 00:19:20,170
+the record and that record is the parent
+in a parent-child relationship
+
+342
+00:19:20,017 --> 00:19:23,068
+the server will automatically go ahead
+and cascade delete all the children of
+
+343
+00:19:23,068 --> 00:19:23,111
+that I'd
+
+344
+00:19:24,011 --> 00:19:28,105
+with any database this scope and scale
+of clout cat
+
+345
+00:19:29,005 --> 00:19:32,079
+dangling pointers are going to become
+unnecessary an inconvenient truth about
+
+346
+00:19:32,079 --> 00:19:34,087
+your use a cracka
+
+347
+00:19:34,087 --> 00:19:37,142
+arm by the time you such a record and
+you read a reference
+
+348
+00:19:38,042 --> 00:19:41,098
+when you go and fetch the target of that
+reference that target may not exist
+
+349
+00:19:41,098 --> 00:19:45,116
+so it's important that your code is
+resuming into this
+
+350
+00:19:46,016 --> 00:19:50,027
+again as I mentioned you up for back
+references it's not a requirement but
+
+351
+00:19:50,027 --> 00:19:50,118
+it's more efficient
+
+352
+00:19:51,018 --> 00:19:54,062
+if references go from child objects to
+parent objects:
+
+353
+00:19:54,062 --> 00:19:57,096
+this is the tip of the iceberg in a very
+large topic called data modeling
+
+354
+00:19:57,096 --> 00:20:00,165
+on and if you come back on Thursday were
+gonna tell you a whole bunch about data
+
+355
+00:20:01,065 --> 00:20:04,068
+modeling and Clark a
+
+356
+00:20:04,068 --> 00:20:08,133
+with have a look at some code here we
+see my creating a reference between
+
+357
+00:20:09,033 --> 00:20:12,130
+to seek a record instances that I have
+in memory
+
+358
+00:20:13,003 --> 00:20:16,100
+but it's not necessary that I have the
+target a reference in memory
+
+359
+00:20:17,027 --> 00:20:20,066
+I can make a reference that point at a
+record id:
+
+360
+00:20:20,066 --> 00:20:24,070
+this allows me to refer to a record that
+I got you know reason to believe exists
+
+361
+00:20:24,007 --> 00:20:25,049
+up on the server
+
+362
+00:20:26,012 --> 00:20:28,111
+if I were to say this record and the
+target didn't exist that actually be
+
+363
+00:20:29,011 --> 00:20:29,710
+creating
+
+364
+00:20:29,809 --> 00:20:33,340
+dangling pointer and that's okay because
+the code you're going to write is going
+
+365
+00:20:33,034 --> 00:20:33,109
+to support
+
+366
+00:20:34,009 --> 00:20:37,105
+and be resilient in the face sitting
+with pointers
+
+367
+00:20:38,005 --> 00:20:42,047
+so those references now let's talk about
+assets
+
+368
+00:20:42,047 --> 00:20:45,142
+here we have a model again just a
+refresher container database record
+
+369
+00:20:46,042 --> 00:20:49,063
+and now let's take the the idea that I
+want to write a
+
+370
+00:20:49,063 --> 00:20:53,112
+record I wanna read a party record up to
+the server let's say that I want to
+
+371
+00:20:53,679 --> 00:20:55,710
+associate a large file with that record
+
+372
+00:20:55,071 --> 00:20:57,110
+would say for example that we're going
+to have a get together after
+
+373
+00:20:58,001 --> 00:20:59,016
+presentation
+
+374
+00:20:59,025 --> 00:21:02,028
+and I'm gonna redo a screenplay that
+I've been working on
+
+375
+00:21:02,028 --> 00:21:05,042
+now I know I understand that there's
+different characteristics between these
+
+376
+00:21:05,042 --> 00:21:05,127
+different leaders
+
+377
+00:21:06,027 --> 00:21:09,032
+I understand that the record about the
+party's is structured
+
+378
+00:21:09,032 --> 00:21:12,037
+you know it's got a summer you've got a
+start date and end date
+
+379
+00:21:12,037 --> 00:21:16,058
+and you just innately I believe that I
+want the server to understand does
+
+380
+00:21:16,058 --> 00:21:19,067
+those bits about the record if you
+contrast that
+
+381
+00:21:19,067 --> 00:21:22,101
+to the screenplay well the screenplay is
+just essentially a back up its
+
+382
+00:21:23,001 --> 00:21:26,059
+right I don't feel any real need to tell
+the server how much can play breaks down
+
+383
+00:21:26,059 --> 00:21:29,103
+into amazing acts and you know dashing
+scenes
+
+384
+00:21:30,003 --> 00:21:34,034
+but I do know that I want to treat them
+as just an opaque bag
+
+385
+00:21:34,034 --> 00:21:37,100
+so how do we solve this Lawrence all
+this and we're going to
+
+386
+00:21:38,000 --> 00:21:41,014
+we're gonna solve the fact that it has
+different characteristics like this
+
+387
+00:21:41,014 --> 00:21:44,077
+in two different ways upon the server
+we're going to introduce a notion that
+
+388
+00:21:44,077 --> 00:21:44,158
+we call book
+
+389
+00:21:45,058 --> 00:21:48,907
+storage as you might expect bookstore
+just great for storing
+
+390
+00:21:49,429 --> 00:21:52,920
+book data similarly on the client
+
+391
+00:21:52,092 --> 00:21:56,100
+you're going to tell clark et about the
+different characteristics if your data
+
+392
+00:21:57,000 --> 00:22:01,045
+by treating some a bit as a CK record
+and other bits of it as a CK asset
+
+393
+00:22:01,045 --> 00:22:04,066
+ICP Asset is the representation of his
+bag of dicks
+
+394
+00:22:04,066 --> 00:22:07,137
+now when you ask like to save this
+record the profits are going to go on
+
+395
+00:22:08,037 --> 00:22:09,038
+the appropriate database
+
+396
+00:22:09,047 --> 00:22:13,111
+structure data in the public database
+book data in bookstore
+
+397
+00:22:14,011 --> 00:22:17,028
+so assets assets are exposing our
+framework
+
+398
+00:22:17,028 --> 00:22:20,053
+as the CK asset class they represent
+large
+
+399
+00:22:20,053 --> 00:22:23,952
+unstructured data because you don't
+necessarily want large unstructured data
+
+400
+00:22:24,429 --> 00:22:25,120
+in memory
+
+401
+00:22:25,012 --> 00:22:30,057
+the way you communicate assets 21 from
+Clark it is your files on disk
+
+402
+00:22:30,057 --> 00:22:33,103
+assets are owned by records this gives
+us a nice tight coupling between a
+
+403
+00:22:34,003 --> 00:22:36,028
+record in an asset
+
+404
+00:22:36,028 --> 00:22:39,101
+with this allows the server to do is
+garbage collector assets
+
+405
+00:22:40,001 --> 00:22:43,015
+even though that we're storing the state
+into separate areas
+
+406
+00:22:43,015 --> 00:22:46,054
+when the server to Texas the lead for
+record you can go ahead and let me clean
+
+407
+00:22:46,054 --> 00:22:49,095
+up any assets that were owned by that
+record
+
+408
+00:22:49,095 --> 00:22:52,100
+lastly because we expect seek asset to
+be large a pic data
+
+409
+00:22:53,045 --> 00:22:56,111
+we go through some great things to try
+and move that data to and from the
+
+410
+00:22:57,011 --> 00:22:58,110
+server as efficiently as possible
+
+411
+00:22:59,001 --> 00:23:02,050
+this is also the inside a cloud get
+we're gonna send only the pics that
+
+412
+00:23:02,059 --> 00:23:06,028
+the minimal amount of bets that we can
+
+413
+00:23:06,559 --> 00:23:11,250
+let's have a look at some code here in
+creating a asi que asset based on file
+
+414
+00:23:11,025 --> 00:23:13,087
+URL to my screenplay on desk
+
+415
+00:23:13,087 --> 00:23:16,142
+and just like any other seek a record
+value support in class
+
+416
+00:23:17,042 --> 00:23:20,058
+I'm setting in on seek a record
+
+417
+00:23:20,058 --> 00:23:23,112
+so these are the fundamental objects in
+cloud cap the first thing you talked to
+
+418
+00:23:24,012 --> 00:23:25,013
+was a container
+
+419
+00:23:25,013 --> 00:23:29,014
+within a container to different
+databases databases contains records
+
+420
+00:23:29,023 --> 00:23:33,086
+records are wrapped in group within
+record zones you identify record via a
+
+421
+00:23:33,086 --> 00:23:37,285
+record identify your I records are
+related to one another via
+
+422
+00:23:38,059 --> 00:23:42,090
+references and large book data is
+transmitted to and from Clark it be a
+
+423
+00:23:42,009 --> 00:23:45,033
+Sikh assets
+
+424
+00:23:45,033 --> 00:23:49,130
+alright because me through the nouns now
+it's getting to the burbs for
+
+425
+00:23:50,003 --> 00:23:53,102
+clerk it we offer two different API's
+for using cloud get
+
+426
+00:23:54,029 --> 00:23:58,112
+we call them the operationally PI and
+convenience API the operational EPI
+
+427
+00:23:59,012 --> 00:24:03,015
+has every single bill was for you might
+while care about
+
+428
+00:24:03,042 --> 00:24:06,120
+arm and in some cases the you're gonna
+want to tweak
+
+429
+00:24:07,002 --> 00:24:10,068
+every single don't whistle to fit your
+applications model
+
+430
+00:24:10,086 --> 00:24:13,134
+but not every application really wants
+to do all this tweaking
+
+431
+00:24:14,034 --> 00:24:17,121
+and not every application has enough
+knowledge to set these bets correctly
+
+432
+00:24:18,021 --> 00:24:20,096
+sometimes you want to let the framework
+make some of these decisions on your
+
+433
+00:24:20,096 --> 00:24:21,152
+behalf
+
+434
+00:24:22,052 --> 00:24:25,076
+and so on we offer the convenience API
+
+435
+00:24:25,076 --> 00:24:28,100
+it's convenient it's gonna be what you
+do I want to start of playing with when
+
+436
+00:24:29,000 --> 00:24:30,086
+you start looking at Club ca
+
+437
+00:24:30,086 --> 00:24:34,160
+for many uses a crowd its although
+you're going to need touch
+
+438
+00:24:35,006 --> 00:24:38,067
+so quickly we're gonna go over how you
+save a record in the community API
+
+439
+00:24:39,021 --> 00:24:43,120
+pay fetcher record from the server via
+the community PI and how you can take
+
+440
+00:24:43,309 --> 00:24:48,540
+even saved fetched a record modify it
+and save it back up to the server
+
+441
+00:24:48,054 --> 00:24:52,087
+let's start of a saving a record
+
+442
+00:24:52,087 --> 00:24:56,153
+here in creating a record you guys are
+now very well familiar with this
+
+443
+00:24:57,053 --> 00:25:00,061
+when I wanna see the record I have to
+choose which database I want to save it
+
+444
+00:25:00,061 --> 00:25:03,750
+into here I'm going to save the date
+into the public database
+
+445
+00:25:04,299 --> 00:25:08,590
+and how do I do that well I call the
+same record with completion handler
+
+446
+00:25:08,059 --> 00:25:12,082
+method now I want you guys to note three
+separate things about this
+
+447
+00:25:12,082 --> 00:25:15,571
+this code right here first ball it's
+very simple
+
+448
+00:25:16,309 --> 00:25:19,200
+right you guys are providing a lot of
+options your delegating a lot of the
+
+449
+00:25:19,002 --> 00:25:20,008
+bells and whistles like
+
+450
+00:25:20,026 --> 00:25:23,061
+how important is this what interview
+should I send this data over
+
+451
+00:25:23,061 --> 00:25:26,108
+you delegating the choices of the clock
+
+452
+00:25:27,008 --> 00:25:31,054
+second its a synchronous as Libyan
+mention the car kit does not have
+
+453
+00:25:31,054 --> 00:25:35,075
+local persistence we r transport
+technology we're gonna transported up to
+
+454
+00:25:35,075 --> 00:25:35,138
+the server
+
+455
+00:25:36,038 --> 00:25:40,457
+stored on the server and transported
+back down other clients
+
+456
+00:25:40,799 --> 00:25:43,887
+so when you see the record via clark et
+we're going to attend to say that record
+
+457
+00:25:44,679 --> 00:25:46,210
+directly to the server
+
+458
+00:25:46,021 --> 00:25:49,029
+if it fails we're going to tell you
+about that immediately for you know as
+
+459
+00:25:49,029 --> 00:25:51,038
+quickly as we can
+
+460
+00:25:51,038 --> 00:25:54,124
+now we don't want to block fred's and we
+don't want you to block the user
+
+461
+00:25:55,024 --> 00:26:00,037
+so we don't wanna make this a sickness
+call so here we can a synchronous call
+
+462
+00:26:00,037 --> 00:26:02,122
+now the third thing I want you to know
+is that even though this is a very
+
+463
+00:26:03,022 --> 00:26:04,037
+simple method
+
+464
+00:26:04,037 --> 00:26:07,079
+we do provide an error as part of the
+call back now
+
+465
+00:26:07,079 --> 00:26:10,083
+if you've been to WWC in the past or if
+you watch any presentations using
+
+466
+00:26:11,019 --> 00:26:12,053
+something that looks like this
+
+467
+00:26:12,053 --> 00:26:15,089
+get Apple Developer appear and the Apple
+developer says
+
+468
+00:26:15,089 --> 00:26:18,111
+you need to hit 0 errors their return
+from our framework
+
+469
+00:26:19,011 --> 00:26:22,016
+no I'm not going liars it's true you do
+need to handle where is returned from
+
+470
+00:26:22,061 --> 00:26:22,122
+frameworks
+
+471
+00:26:23,022 --> 00:26:26,088
+in many applications it's the difference
+between you know a good and functioning
+
+472
+00:26:26,088 --> 00:26:28,162
+application and a great application
+
+473
+00:26:29,062 --> 00:26:32,136
+Clark it is a little bit different Clark
+it by its very nature is gonna be
+
+474
+00:26:33,036 --> 00:26:34,040
+talking over the network
+
+475
+00:26:34,076 --> 00:26:38,134
+networks are inherently lossy phones
+like the fall of a network of time
+
+476
+00:26:39,034 --> 00:26:43,041
+so in Cloquet the difference between
+handling a reverse is not a millionaire
+
+477
+00:26:43,041 --> 00:26:46,062
+is really the difference between a
+functional in a nonfunctional ap
+
+478
+00:26:46,062 --> 00:26:49,108
+their handling has got to be one of the
+first things that you look at when you
+
+479
+00:26:50,008 --> 00:26:53,487
+start using Kaka I'm gonna be a little
+too glib throughout the slides here but
+
+480
+00:26:53,559 --> 00:26:56,600
+every time she comment imagine what
+you're seeing just some really nice
+
+481
+00:26:56,006 --> 00:27:00,031
+a rambling
+
+482
+00:27:00,085 --> 00:27:02,166
+so let's talk about never received a
+record up to the server how do we set a
+
+483
+00:27:03,066 --> 00:27:07,073
+record back down from the server
+
+484
+00:27:07,073 --> 00:27:10,152
+I'm gonna start by deciding which
+database I want to touch a record from
+
+485
+00:27:10,809 --> 00:27:14,730
+and then going to construct a record id:
+the identifiers the record I can affect
+
+486
+00:27:14,073 --> 00:27:17,077
+down here I've gotten this name
+
+487
+00:27:17,077 --> 00:27:22,098
+either be some side channel or something
+it's built in my application
+
+488
+00:27:22,098 --> 00:27:25,142
+I then can ask the database to fetch a
+record with ID with completion handler
+
+489
+00:27:26,042 --> 00:27:31,119
+again a synchronous simple amazing a
+rambling
+
+490
+00:27:32,019 --> 00:27:35,050
+once I fetched a record get the car back
+up here
+
+491
+00:27:35,005 --> 00:27:38,062
+I want you to know to that the
+successful return value is an actual
+
+492
+00:27:39,007 --> 00:27:40,063
+seek a record instance
+
+493
+00:27:40,063 --> 00:27:44,102
+and this is alive honest to god seek a
+record what's am having so much fun at
+
+494
+00:27:44,669 --> 00:27:45,880
+his party I pulled
+
+495
+00:27:45,088 --> 00:27:48,133
+that I want to last a little bit longer
+I can take a record of it
+
+496
+00:27:49,033 --> 00:27:52,057
+I can pump out the end it by half an
+hour and I can set that record
+
+497
+00:27:52,057 --> 00:27:56,061
+that value back on the record once I've
+done that I can take my CK record
+
+498
+00:27:56,061 --> 00:27:58,103
+instance in just like one that created
+locally
+
+499
+00:27:59,003 --> 00:28:02,008
+I can turn around and save it back up to
+the database
+
+500
+00:28:02,008 --> 00:28:05,016
+again with amazing your headline
+
+501
+00:28:05,016 --> 00:28:09,035
+arts that's the convenience API the
+initial typical flow the you're gonna go
+
+502
+00:28:09,035 --> 00:28:10,070
+through when talking with clout get
+
+503
+00:28:10,007 --> 00:28:13,045
+gonna be saving record setting records
+and taking those
+
+504
+00:28:14,008 --> 00:28:17,049
+records are you fetched modifying them
+and bring them back up the
+
+505
+00:28:17,049 --> 00:28:21,111
+to the server so now let's say my party
+application starts becoming really
+
+506
+00:28:22,011 --> 00:28:22,104
+popular
+
+507
+00:28:23,004 --> 00:28:27,027
+and it's grown my user base is no longer
+me my friends but it's it's all love you
+
+508
+00:28:27,027 --> 00:28:30,066
+you know everyone's really excited about
+joining into the party's
+
+509
+00:28:30,309 --> 00:28:33,610
+what are some other problems I'm gonna
+run into well
+
+510
+00:28:33,061 --> 00:28:36,150
+let's assume that when I started out I
+was a relatively naive developer
+
+511
+00:28:37,005 --> 00:28:40,028
+and because the developer on stage that
+Clark it's all about taking your
+
+512
+00:28:40,073 --> 00:28:42,262
+autograph and we'll get to and from the
+cloud
+
+513
+00:28:42,919 --> 00:28:47,990
+that's exactly what I did I had a 1:1
+mapping my objects went up to the cloud
+
+514
+00:28:47,099 --> 00:28:50,418
+and every client I would fetch the
+entire cloud state and I would become i
+
+515
+00:28:51,309 --> 00:28:54,830
+object graph were some problems are
+gonna run into him
+
+516
+00:28:54,083 --> 00:28:57,164
+well at that point we've got big data
+and a very tiny phone
+
+517
+00:28:58,064 --> 00:29:01,089
+the more popular my %uh becomes the more
+data on the database
+
+518
+00:29:01,089 --> 00:29:04,104
+the less reasonable it is to have a cash
+for that entire data
+
+519
+00:29:05,004 --> 00:29:08,083
+locally on my device so how we gonna
+solve this
+
+520
+00:29:08,083 --> 00:29:11,101
+know what thing but what we want to do
+we want to keep a
+
+521
+00:29:12,001 --> 00:29:15,072
+the large data in the cloud the cloud is
+very good storing large datasets
+
+522
+00:29:15,072 --> 00:29:18,124
+my client wants to view a slice of that
+data
+
+523
+00:29:19,024 --> 00:29:22,038
+because I'm reading application for my
+users and my users have their own
+
+524
+00:29:22,038 --> 00:29:23,073
+preferences
+
+525
+00:29:23,073 --> 00:29:26,096
+I want each client to be able to view a
+difference by so that data
+
+526
+00:29:26,096 --> 00:29:30,149
+and each individual client might want to
+change its view that data
+
+527
+00:29:31,049 --> 00:29:34,116
+we saw this is be something that we call
+queries
+
+528
+00:29:35,016 --> 00:29:39,033
+clients his queries to focus their
+viewpoint so that they can see a small
+
+529
+00:29:39,033 --> 00:29:39,094
+section
+
+530
+00:29:39,094 --> 00:29:42,162
+a large dataset that exists up on the
+cloud
+
+531
+00:29:43,062 --> 00:29:47,371
+so what is a clearing well as you might
+imagine it it's exposing our EP I
+
+532
+00:29:47,929 --> 00:29:51,770
+as the CK query class a query combines
+
+533
+00:29:51,077 --> 00:29:54,356
+three different things it combines a
+record type: a predicate
+
+534
+00:29:55,049 --> 00:29:59,740
+and optionally a sort descriptor if
+you've used and it's pretty good in the
+
+535
+00:29:59,074 --> 00:30:01,082
+past you know that as predicate is very
+expressive
+
+536
+00:30:02,054 --> 00:30:06,063
+cock it supports most urbanised Kritika
+we document the parts that we do
+
+537
+00:30:07,044 --> 00:30:09,108
+and if you had a predicate that we don't
+understand we're gonna throw an
+
+538
+00:30:10,008 --> 00:30:10,071
+exception
+
+539
+00:30:10,071 --> 00:30:13,103
+so you're gonna learn pretty quickly
+which ones are not supported
+
+540
+00:30:14,003 --> 00:30:17,044
+let's have a look at some that are
+supported
+
+541
+00:30:17,044 --> 00:30:20,051
+here we see a predicate that would match
+records we're name is equal to a value
+
+542
+00:30:21,014 --> 00:30:23,069
+that I had in memory
+
+543
+00:30:23,069 --> 00:30:26,107
+predicates allow you to use dynamic keys
+so they don't have to know the key name
+
+544
+00:30:27,007 --> 00:30:30,033
+at compile-time we can do relative
+
+545
+00:30:30,033 --> 00:30:34,062
+ordering comparisons as opposed to strip
+the qualities
+
+546
+00:30:34,062 --> 00:30:36,128
+we mention that location is an
+interesting aspect in the public
+
+547
+00:30:37,028 --> 00:30:37,095
+database
+
+548
+00:30:37,095 --> 00:30:40,113
+you can query with location as a filter
+
+549
+00:30:41,013 --> 00:30:46,442
+this is every location within 100 meters
+up we're standing here in moscow
+
+550
+00:30:46,559 --> 00:30:49,970
+crockett support to organization search
+so what this
+
+551
+00:30:49,097 --> 00:30:52,102
+predicate is going to do is it going to
+talk in eyes that
+
+552
+00:30:53,002 --> 00:30:56,061
+string after session and it's going to
+come up with two different organs
+
+553
+00:30:56,061 --> 00:30:59,095
+after in session this predicate will
+match
+
+554
+00:30:59,095 --> 00:31:02,182
+any record that has those two tokens as
+values
+
+555
+00:31:03,082 --> 00:31:05,931
+these two tokens don't need to exist
+side by side they don't even need to
+
+556
+00:31:06,669 --> 00:31:08,450
+exist in the same key value pair
+
+557
+00:31:08,045 --> 00:31:11,123
+but so long as the record has the token
+after and the record has the talk in
+
+558
+00:31:12,023 --> 00:31:12,115
+session
+
+559
+00:31:13,015 --> 00:31:16,060
+the record will be a match and lastly
+
+560
+00:31:16,006 --> 00:31:20,032
+corporate support compound predicates
+join using the and operator
+
+561
+00:31:20,086 --> 00:31:24,138
+he was the predicate that does that
+
+562
+00:31:25,038 --> 00:31:28,112
+here we see the creation of a query I
+and as we mentioned its
+
+563
+00:31:29,012 --> 00:31:34,061
+combining both the record tied and a
+predicate how do I perform queries after
+
+564
+00:31:34,169 --> 00:31:36,170
+have created them
+
+565
+00:31:36,179 --> 00:31:39,410
+well just like setting records
+performing a query is going to be a
+
+566
+00:31:39,041 --> 00:31:39,110
+database
+
+567
+00:31:40,001 --> 00:31:43,057
+specific operation some going to choose
+the data base on which I want to perform
+
+568
+00:31:43,066 --> 00:31:43,695
+a query
+
+569
+00:31:44,289 --> 00:31:48,260
+even in the simply PI in the cabinets
+API
+
+570
+00:31:48,026 --> 00:31:51,095
+we give me the ability to restrict these
+queries by record zones
+
+571
+00:31:51,095 --> 00:31:54,123
+you see here that when not using the
+passing records on filter
+
+572
+00:31:55,023 --> 00:31:59,099
+so this query is going to search across
+the entire public database
+
+573
+00:31:59,099 --> 00:32:02,123
+let's have a look at what happens in the
+area completion hamper
+
+574
+00:32:03,023 --> 00:32:06,044
+first course amazing air handling second
+
+575
+00:32:06,044 --> 00:32:09,044
+if we don't have errors which have a
+look at the results
+
+576
+00:32:09,044 --> 00:32:12,403
+and you'll see here that the results are
+actually seek a record instances
+
+577
+00:32:12,799 --> 00:32:16,530
+he's alive objects if I wanted to I
+could pulled it off with them
+
+578
+00:32:16,053 --> 00:32:22,064
+I could set it up on them I could even
+choose to see them back to the server
+
+579
+00:32:22,064 --> 00:32:25,843
+so we to think about queries is that
+queries are polls
+
+580
+00:32:26,419 --> 00:32:30,220
+and polls are great in some scenarios
+the great for slicing through large
+
+581
+00:32:30,022 --> 00:32:30,111
+datasets
+
+582
+00:32:31,011 --> 00:32:34,109
+if your application once the startup in
+for example show all the parties at the
+
+583
+00:32:35,009 --> 00:32:36,098
+top 10 parties at or near me
+
+584
+00:32:36,098 --> 00:32:40,119
+a query is absolutely the way to go but
+there's other things he might be tempted
+
+585
+00:32:41,019 --> 00:32:42,033
+to use a query for thats
+
+586
+00:32:42,033 --> 00:32:45,120
+are not perfect if you find yourself
+issuing the same query
+
+587
+00:32:46,002 --> 00:32:50,053
+over and over and over again and you're
+getting bout a statically mostly seem
+
+588
+00:32:50,071 --> 00:32:55,087
+data result set well then you've got a
+large mostly static data set
+
+589
+00:32:55,087 --> 00:32:58,133
+inquiries are bad for that use case for
+a few reasons
+
+590
+00:32:59,033 --> 00:33:02,132
+the bad for battery life get the car for
+the week the device up
+
+591
+00:33:02,429 --> 00:33:06,880
+poll run the same query go back more or
+less the same results
+
+592
+00:33:06,088 --> 00:33:09,109
+the bad for network traffic all those
+questions but to the server
+
+593
+00:33:10,009 --> 00:33:14,009
+if they're not going down new and
+interesting data why do we bother
+
+594
+00:33:14,009 --> 00:33:17,088
+and also bad for the user experience on
+
+595
+00:33:17,169 --> 00:33:20,570
+by definition you're only gonna learn
+about new results
+
+596
+00:33:20,057 --> 00:33:23,116
+are on the period love how often your
+polling
+
+597
+00:33:24,016 --> 00:33:27,405
+uses nowadays have come to expect push
+
+598
+00:33:27,549 --> 00:33:31,160
+through supposed to using a client
+generated query in the scenario
+
+599
+00:33:31,016 --> 00:33:34,025
+which you really want is you want the
+server to be running the query on your
+
+600
+00:33:34,169 --> 00:33:35,460
+behalf
+
+601
+00:33:35,046 --> 00:33:38,052
+you on the server to be running the
+query on your behalf in the background
+
+602
+00:33:38,052 --> 00:33:41,090
+you want that to happen after every
+single record say weather was you or
+
+603
+00:33:41,009 --> 00:33:43,031
+somebody else that save the record
+
+604
+00:33:44,012 --> 00:33:48,681
+and Leslie of course you want pushes
+when the the results that changes
+
+605
+00:33:48,789 --> 00:33:52,650
+well we've given you this and we call
+that subscriptions
+
+606
+00:33:52,065 --> 00:33:58,152
+yeah
+
+607
+00:33:59,052 --> 00:34:01,055
+so subscriptions are exposing our API
+
+608
+00:34:01,082 --> 00:34:04,821
+as seek a subscription class they
+combine the record type:
+
+609
+00:34:05,559 --> 00:34:10,290
+a predicate and push pushes delivered
+via the Apple Push service
+
+610
+00:34:10,029 --> 00:34:13,628
+if you've used a BS in the past year
+largely familiar with this but note
+
+611
+00:34:13,889 --> 00:34:16,988
+Clark it pushes are slightly augmented
+they contain crockett specific
+
+612
+00:34:17,879 --> 00:34:17,955
+information
+
+613
+00:34:18,639 --> 00:34:22,190
+about what caused the push to happen
+let's have a look at and sample
+
+614
+00:34:22,019 --> 00:34:26,708
+here we have a phone and that phone is
+interested in parties that are going to
+
+615
+00:34:26,879 --> 00:34:28,200
+be happening in the future
+
+616
+00:34:28,002 --> 00:34:32,033
+this phone when it sees that happening
+wants to be alerted with the push that
+
+617
+00:34:32,051 --> 00:34:33,056
+says party time
+
+618
+00:34:33,056 --> 00:34:36,405
+the phones gonna go ahead and say that
+after I cloud
+
+619
+00:34:36,909 --> 00:34:40,570
+and i cud gonna you know shuffled away
+with all the other subscriptions
+
+620
+00:34:40,057 --> 00:34:43,916
+now along comes the Mac the Mac creates
+a new record
+
+621
+00:34:44,429 --> 00:34:48,050
+itself record Thai Party and its
+happening tonight and because the Mac
+
+622
+00:34:48,005 --> 00:34:51,084
+didn't choose to give us a record id: we
+we created that
+
+623
+00:34:51,129 --> 00:34:55,182
+random UUID you see the Mac goes ahead
+and save that to the eye
+
+624
+00:34:55,659 --> 00:35:00,080
+2i cloud i cud is in a loop through all
+those descriptions that it had knows
+
+625
+00:35:00,008 --> 00:35:00,012
+about
+
+626
+00:35:00,048 --> 00:35:03,104
+eventually it's going to come across
+this one its gonna check and say
+
+627
+00:35:04,004 --> 00:35:07,065
+yeah okay this is a new party and yet
+happening in the future
+
+628
+00:35:07,065 --> 00:35:11,099
+so that point is going to create a push
+and it's going to take some information
+
+629
+00:35:11,099 --> 00:35:14,728
+from the subscription here to open the
+the alert string party time
+
+630
+00:35:15,619 --> 00:35:18,730
+it's going to take other information
+from the record itself
+
+631
+00:35:18,073 --> 00:35:21,135
+here were pulling in the record id:
+another constructed
+
+632
+00:35:22,035 --> 00:35:25,102
+augmented payload I can send that
+augment the payload done all clients
+
+633
+00:35:26,002 --> 00:35:30,088
+that are registered an interest in it
+should look at some code
+
+634
+00:35:30,088 --> 00:35:34,090
+how do I create a subscription well a
+subscription
+
+635
+00:35:34,009 --> 00:35:38,014
+combines a record type: and a predator
+because
+
+636
+00:35:39,004 --> 00:35:43,039
+a subscription is also in charge telling
+the server how you want to be alerted
+
+637
+00:35:43,075 --> 00:35:47,113
+we introduce the notion called seek a
+notification in for here we're
+
+638
+00:35:48,013 --> 00:35:48,098
+requesting
+
+639
+00:35:48,098 --> 00:35:52,191
+that the server badges are icon that it
+plays a particular sound pulled out my
+
+640
+00:35:53,091 --> 00:35:53,174
+resources
+
+641
+00:35:54,074 --> 00:35:58,131
+and that it shows an alert string bass
+on a string in my localized strings file
+
+642
+00:35:59,031 --> 00:36:03,032
+I can associate the notification for
+with the subscription
+
+643
+00:36:03,041 --> 00:36:06,108
+and I've created everything I need my
+subscription let's go ahead and save it
+
+644
+00:36:07,008 --> 00:36:07,100
+to the server
+
+645
+00:36:08,000 --> 00:36:11,004
+as you might imagine view the community
+PRI
+
+646
+00:36:11,004 --> 00:36:14,030
+its simple it's a sickness and it's got
+great error handling
+
+647
+00:36:14,003 --> 00:36:19,062
+with what about how you gonna be
+handling subscriptions how you can help
+
+648
+00:36:19,359 --> 00:36:20,900
+pushes as they come in
+
+649
+00:36:20,009 --> 00:36:23,078
+if you used a PS in the past you're
+probably familiar with this code snippet
+
+650
+00:36:24,059 --> 00:36:27,102
+this is your application delegate
+implementing the application
+
+651
+00:36:28,002 --> 00:36:31,093
+did receive remote notification method
+now
+
+652
+00:36:31,093 --> 00:36:35,131
+in most scenarios if you know the format
+of the push peeler that's coming in
+
+653
+00:36:36,031 --> 00:36:38,128
+you just then iterate through the
+dictionary pulling up the key/value
+
+654
+00:36:39,028 --> 00:36:40,033
+pairs that you care about
+
+655
+00:36:40,033 --> 00:36:43,097
+however because Clark it was when the
+generated this push
+
+656
+00:36:43,097 --> 00:36:47,174
+we ask that you look like a kid do that
+parsing so we are the way you do that is
+
+657
+00:36:48,074 --> 00:36:49,118
+BS EQ notification
+
+658
+00:36:50,018 --> 00:36:54,052
+than that really long when I'm not gonna
+name once we've actually
+
+659
+00:36:54,052 --> 00:36:58,056
+parts down to seek a notification you
+can pull off BPS level information from
+
+660
+00:36:58,056 --> 00:37:02,155
+it and you can also pull off clark et
+level information from it here we're
+
+661
+00:37:03,055 --> 00:37:04,080
+taking the record id:
+
+662
+00:37:04,008 --> 00:37:07,055
+over the saved record the cause the push
+to happen
+
+663
+00:37:08,027 --> 00:37:13,079
+so between queries in subscriptions we
+have an answer to the Big Data tiny
+
+664
+00:37:13,079 --> 00:37:13,165
+phone problem
+
+665
+00:37:14,065 --> 00:37:18,082
+you can leave a large data up in the
+cloud and you can use these two
+
+666
+00:37:18,082 --> 00:37:22,096
+capabilities to give your users a quick
+view
+
+667
+00:37:22,096 --> 00:37:27,193
+into that market now I wanna talk about
+cloud kid user accounts
+
+668
+00:37:28,093 --> 00:37:31,102
+as a Libyan mentioned
+
+669
+00:37:32,002 --> 00:37:35,067
+club kid is built on top of the icon
+account infrastructure
+
+670
+00:37:35,067 --> 00:37:39,076
+so what does that mean I want to focus a
+little bit on how
+
+671
+00:37:39,076 --> 00:37:43,092
+how accounts are exposed to you
+explicitly throughout the API
+
+672
+00:37:43,092 --> 00:37:46,531
+when you think about an account system
+the first thing you think about as
+
+673
+00:37:47,359 --> 00:37:48,230
+authentication
+
+674
+00:37:48,023 --> 00:37:51,085
+and Clark it supports authentication via
+the log and i cud user
+
+675
+00:37:51,085 --> 00:37:54,104
+but that's not you know that sort of
+behind the scenes you guys don't care
+
+676
+00:37:54,869 --> 00:37:55,980
+about that that's implicit
+
+677
+00:37:55,098 --> 00:37:58,119
+let's talk about the explicit things
+what do we give you
+
+678
+00:37:59,019 --> 00:38:03,060
+on because we don't have my card
+accounts we give you identity
+
+679
+00:38:03,006 --> 00:38:06,027
+wave identifying the user we give you a
+meditator
+
+680
+00:38:06,081 --> 00:38:09,089
+the ability to save and retrieve
+information about users
+
+681
+00:38:09,089 --> 00:38:12,132
+we do all this and privacy country and
+just manner
+
+682
+00:38:13,032 --> 00:38:17,100
+we don't disclose anything if the user
+has an agreed to it and lastly we give
+
+683
+00:38:18,000 --> 00:38:20,049
+users the ability to discover their
+friends
+
+684
+00:38:20,049 --> 00:38:23,146
+they're using your application let's
+dive in the twenties
+
+685
+00:38:24,046 --> 00:38:27,142
+first we're going to talk about identity
+so
+
+686
+00:38:28,042 --> 00:38:31,064
+here's our model we've got a client or
+application running on the client and
+
+687
+00:38:31,064 --> 00:38:33,110
+all these different users in the private
+databases
+
+688
+00:38:34,001 --> 00:38:37,046
+up in the container your specific client
+
+689
+00:38:37,055 --> 00:38:40,594
+is going to be. linked to one and only
+one of those users
+
+690
+00:38:41,089 --> 00:38:44,580
+with this is related to the
+
+691
+00:38:44,058 --> 00:38:47,150
+User's that log in BI cloud locally on
+your device
+
+692
+00:38:48,005 --> 00:38:51,028
+because this is i cloud we've got a rich
+backing store
+
+693
+00:38:51,073 --> 00:38:54,077
+user information and because I club is
+the one
+
+694
+00:38:55,013 --> 00:38:59,076
+that is hosting your container we can
+correlate users
+
+695
+00:38:59,076 --> 00:39:02,079
+for example here we see that the user
+whose email addresses
+
+696
+00:39:02,079 --> 00:39:06,088
+C&I klout.com is linked to your current
+client
+
+697
+00:39:07,069 --> 00:39:10,118
+so given the setup how are we going to
+present and identity
+
+698
+00:39:11,018 --> 00:39:14,070
+how we're going to let you know your
+client your application
+
+699
+00:39:14,007 --> 00:39:17,079
+no what users logged in well naively you
+might think
+
+700
+00:39:18,042 --> 00:39:21,139
+there was given email address we're not
+going to do that obviously
+
+701
+00:39:22,039 --> 00:39:25,053
+on that spot private user identifiable
+information
+
+702
+00:39:25,053 --> 00:39:28,067
+we don't want to give that out so
+instead what we do
+
+703
+00:39:28,067 --> 00:39:32,766
+is on a container by container basis we
+gonna come up with the random I D
+
+704
+00:39:33,369 --> 00:39:36,530
+this is a ride in a fire that is stable
+so that is
+
+705
+00:39:36,053 --> 00:39:39,075
+your application no matter what client
+it's running on
+
+706
+00:39:39,075 --> 00:39:42,106
+talking to this container will get the
+same identify your
+
+707
+00:39:43,006 --> 00:39:48,038
+but it's not identifying the user via
+any personal information
+
+708
+00:39:48,038 --> 00:39:51,105
+so we feel confident giving you this a
+identify your
+
+709
+00:39:52,005 --> 00:39:55,027
+you can take this identify and do with
+it what you will
+
+710
+00:39:55,027 --> 00:39:58,072
+note that different applications running
+on your phone
+
+711
+00:39:58,072 --> 00:40:00,156
+because they're talking two different
+contacts using because we're talking to
+
+712
+00:40:01,056 --> 00:40:02,365
+different containers
+
+713
+00:40:02,869 --> 00:40:06,500
+are going to get back different
+containers coat record identifiers
+
+714
+00:40:06,005 --> 00:40:09,061
+for the same user this goes back to what
+we talked about in the beginning that
+
+715
+00:40:10,006 --> 00:40:13,092
+we've got user in caps elation
+
+716
+00:40:13,092 --> 00:40:17,291
+so user identity we expose user identity
+VR API
+
+717
+00:40:18,119 --> 00:40:22,124
+as a user record id: it is a stable
+identifiers for this user
+
+718
+00:40:22,619 --> 00:40:25,780
+it will be the same for your application
+no matter where your application is
+
+719
+00:40:25,078 --> 00:40:27,079
+running
+
+720
+00:40:27,088 --> 00:40:30,141
+its coat to the container so two
+different applications are going to come
+
+721
+00:40:31,041 --> 00:40:32,099
+up with different identifiers
+
+722
+00:40:32,099 --> 00:40:35,218
+for the same user is a feature
+
+723
+00:40:36,109 --> 00:40:39,114
+and lastly this is an independent API
+this is a section of the car kit
+
+724
+00:40:39,609 --> 00:40:40,630
+framework
+
+725
+00:40:40,063 --> 00:40:43,105
+you can use as in collaboration with the
+database API or
+
+726
+00:40:44,005 --> 00:40:47,042
+you can use is completely separately
+we've given you enough support
+
+727
+00:40:47,042 --> 00:40:50,135
+that if you wanted to you could
+implement a login VI clout flow
+
+728
+00:40:51,035 --> 00:40:54,083
+in your application using the car kit
+framework
+
+729
+00:40:54,083 --> 00:41:00,175
+let's have a look at the code up
+
+730
+00:41:01,075 --> 00:41:04,174
+I'll have a look at the code because
+identity is a container scoped
+
+731
+00:41:05,074 --> 00:41:09,078
+notion and not a database scope notion
+we go to our container to learn about
+
+732
+00:41:09,078 --> 00:41:09,167
+our user
+
+733
+00:41:10,067 --> 00:41:13,071
+here we're asking our container to fetch
+the use a record id:
+
+734
+00:41:14,007 --> 00:41:18,099
+now because we have we may have to talk
+to the server to figure this out
+
+735
+00:41:18,099 --> 00:41:21,101
+for example the first time you access
+and try and learn about a record id:
+
+736
+00:41:22,019 --> 00:41:25,095
+we have to go to the server to do their
+translation I come up with the container
+
+737
+00:41:25,095 --> 00:41:25,177
+scope and fell
+
+738
+00:41:26,077 --> 00:41:32,078
+so a synchronous and we have to do a
+rambling thats user identity
+
+739
+00:41:32,078 --> 00:41:35,173
+let's talk about use a meditator and
+quickly to recap the problem
+
+740
+00:41:36,073 --> 00:41:39,078
+we have here is we have a stable
+identify your
+
+741
+00:41:39,078 --> 00:41:42,100
+and we've got a desire to set key/value
+pairs
+
+742
+00:41:43,000 --> 00:41:47,039
+based on that identify your I don't know
+about you but to me that sounds very
+
+743
+00:41:47,039 --> 00:41:49,040
+much like it was a record was built to
+do
+
+744
+00:41:49,004 --> 00:41:52,081
+so we expose users as user records
+
+745
+00:41:53,017 --> 00:41:57,102
+looking inside a container with a lid
+database we see that there is one
+
+746
+00:41:58,002 --> 00:42:02,097
+use a record in the private database
+that use a record represents your user
+
+747
+00:42:02,097 --> 00:42:05,150
+there are many user records inside the
+public database
+
+748
+00:42:06,005 --> 00:42:10,067
+represent which one the uses of your
+application one of them will have a
+
+749
+00:42:11,012 --> 00:42:11,096
+record id:
+
+750
+00:42:11,096 --> 00:42:14,157
+that matches you are currently logged in
+I cloud users record id:
+
+751
+00:42:15,057 --> 00:42:18,065
+so user meta-data
+
+752
+00:42:18,065 --> 00:42:22,142
+exposed to be our framework as a user
+record there's one per database that you
+
+753
+00:42:23,042 --> 00:42:27,125
+that represents your current user use a
+record in the public database like any
+
+754
+00:42:28,025 --> 00:42:28,030
+other
+
+755
+00:42:28,075 --> 00:42:33,101
+default record our world readable the
+treated mostly
+
+756
+00:42:34,001 --> 00:42:37,086
+like a ordinary record with the record
+type that we expose in the free market
+
+757
+00:42:37,086 --> 00:42:41,087
+seek a record type: use a record but
+there are couple caveats
+
+758
+00:42:41,087 --> 00:42:45,139
+first of these records are reserved by
+the system
+
+759
+00:42:46,039 --> 00:42:50,062
+you do not create the use a record
+rather you fetch an existing one from
+
+760
+00:42:50,062 --> 00:42:50,148
+the server
+
+761
+00:42:51,048 --> 00:42:54,089
+what that means is that you can be
+assured that when you fetch
+
+762
+00:42:54,089 --> 00:42:57,098
+the record for your current user but it
+has not been scooped
+
+763
+00:42:57,098 --> 00:43:00,125
+it was indeed I cloud that created the
+record in the first place
+
+764
+00:43:01,025 --> 00:43:05,048
+secondly we think that it doesn't make
+sense for you to be able to query the
+
+765
+00:43:05,048 --> 00:43:07,111
+entire setup use a record in public
+database
+
+766
+00:43:08,011 --> 00:43:11,043
+doesn't really make sense to be able to
+say I want to look at all users
+
+767
+00:43:11,043 --> 00:43:14,122
+whose first name begins with Kay too
+little bit too coarse grained
+
+768
+00:43:15,022 --> 00:43:18,118
+for something that's so up that we want
+to protect privacy around
+
+769
+00:43:19,018 --> 00:43:22,037
+so we don't allow you to query use a
+records
+
+770
+00:43:22,037 --> 00:43:25,052
+but we're gonna gonna fix and couple
+slides
+
+771
+00:43:25,052 --> 00:43:28,095
+are so what's it look like here
+
+772
+00:43:28,095 --> 00:43:31,130
+we have the same code that we saw
+earlier were fetching use a record id:
+
+773
+00:43:32,003 --> 00:43:36,070
+want to have that seek a record id: I
+can go ahead and I can fetch that record
+
+774
+00:43:36,097 --> 00:43:39,155
+from either database that I choose here
+I'm choosing to fetch
+
+775
+00:43:40,055 --> 00:43:44,093
+a record with that identify your from
+the public database assuming that I
+
+776
+00:43:44,093 --> 00:43:45,098
+don't get an error
+
+777
+00:43:45,098 --> 00:43:48,103
+I now have a live seek a record that
+represents
+
+778
+00:43:49,048 --> 00:43:52,107
+this user and I can treat it like I
+would any other city record
+
+779
+00:43:53,007 --> 00:43:57,054
+I can poll records aren't using I can
+pull key/value pairs of a bit
+
+780
+00:43:57,054 --> 00:44:00,062
+I can secular repairs on it me if I
+wanted to I could go ahead and save it
+
+781
+00:44:01,034 --> 00:44:02,036
+back to the server
+
+782
+00:44:02,054 --> 00:44:05,068
+now I'll talk to privacy
+
+783
+00:44:05,068 --> 00:44:10,119
+we care very much about our users
+privacy therefore we disclose
+
+784
+00:44:11,019 --> 00:44:14,056
+no information no personally identifying
+user information
+
+785
+00:44:14,056 --> 00:44:18,064
+about the current user by default now we
+recognize
+
+786
+00:44:18,064 --> 00:44:22,101
+that in some cases you replication is
+going to want to have limited access
+
+787
+00:44:23,001 --> 00:44:27,060
+to meditate about the user so if I
+
+788
+00:44:27,006 --> 00:44:30,029
+you want that data you can request that
+from Clark
+
+789
+00:44:30,083 --> 00:44:34,091
+when you do we're gonna go to the user
+to make sure they're okay with that you
+
+790
+00:44:35,063 --> 00:44:36,072
+see an example of the party application
+
+791
+00:44:37,053 --> 00:44:40,125
+requesting the ability for my user
+account to be discoverable within the
+
+792
+00:44:41,025 --> 00:44:41,097
+application
+
+793
+00:44:41,097 --> 00:44:46,169
+the user can either accused to a lower
+than either assuming that the user has
+
+794
+00:44:47,069 --> 00:44:51,168
+a acquiesced to this privacy request we
+can go on to the next phase which is
+
+795
+00:44:52,068 --> 00:44:52,135
+discovery
+
+796
+00:44:53,035 --> 00:44:57,109
+let's talk a little bit about user
+discovery user image we've got our
+
+797
+00:44:58,009 --> 00:45:01,060
+clients talking to a container in the
+container is backed by I cloud
+
+798
+00:45:01,006 --> 00:45:05,037
+and I cloud has all this rich user
+information if you look a little bit
+
+799
+00:45:05,091 --> 00:45:05,146
+more
+
+800
+00:45:06,046 --> 00:45:09,093
+on the client side we see that there's
+actually two different processes
+
+801
+00:45:09,093 --> 00:45:09,174
+involved here
+
+802
+00:45:10,074 --> 00:45:13,108
+there's your client process and then
+there's the clark et process
+
+803
+00:45:14,008 --> 00:45:17,034
+and it's the cloud kit process that's
+the one that actually talking
+
+804
+00:45:17,034 --> 00:45:22,053
+over the wire so let's examine what user
+discovery would look like
+
+805
+00:45:22,053 --> 00:45:26,115
+if you want to discover information
+about user given a record id:
+
+806
+00:45:27,015 --> 00:45:30,021
+you take that record id: and you can
+send it off to clark et
+
+807
+00:45:30,075 --> 00:45:33,153
+Clark it is going to interns ended up to
+the container
+
+808
+00:45:34,053 --> 00:45:37,108
+once it hits the container we're going
+to ask the icon account info
+
+809
+00:45:38,008 --> 00:45:42,035
+to exchange it for different information
+for information about that user
+
+810
+00:45:42,035 --> 00:45:45,053
+if that user has opted in to discover
+ability
+
+811
+00:45:45,053 --> 00:45:48,138
+we're going to get information back that
+information can traverse back to clark
+
+812
+00:45:49,038 --> 00:45:49,107
+et
+
+813
+00:45:50,007 --> 00:45:53,066
+and back be the process boundary over to
+your client
+
+814
+00:45:53,066 --> 00:45:57,134
+but we're not restricted to just record
+ID's if the user enters an email address
+
+815
+00:45:58,034 --> 00:46:01,077
+we can do the same sort of dance this
+e-mail address is sent from your client
+
+816
+00:46:01,077 --> 00:46:02,148
+overclock it
+
+817
+00:46:03,048 --> 00:46:06,059
+Clark it wasn't gonna have shut up a
+whole 12 times that we're not sending
+
+818
+00:46:06,059 --> 00:46:07,071
+personal info of
+
+819
+00:46:07,071 --> 00:46:11,086
+the of the client also that up to the
+container
+
+820
+00:46:11,086 --> 00:46:15,087
+the container texting is it with I cloud
+and if the targeted this discovery has
+
+821
+00:46:15,087 --> 00:46:16,173
+opted in to discover ability
+
+822
+00:46:17,073 --> 00:46:21,141
+we're gonna get a result setback those
+results can go back to Clark at
+
+823
+00:46:22,041 --> 00:46:25,068
+and concurs back up to your client
+
+824
+00:46:25,068 --> 00:46:27,124
+now I'd like to think that we're pretty
+good about naming things and Clark it
+
+825
+00:46:28,024 --> 00:46:29,056
+but this one we sorta
+
+826
+00:46:29,056 --> 00:46:32,058
+can really do well I'm so we offer
+different leave
+
+827
+00:46:32,058 --> 00:46:35,127
+doing use a discovery that we call the
+whole address book into if you discover
+
+828
+00:46:36,027 --> 00:46:37,092
+the whole ladders ok
+
+829
+00:46:37,092 --> 00:46:40,100
+arm and the way this works is that your
+client is going to say
+
+830
+00:46:41,072 --> 00:46:45,073
+I would like to discover the user record
+ID's and more information
+
+831
+00:46:45,082 --> 00:46:48,091
+about every user that his friends with
+
+832
+00:46:48,091 --> 00:46:52,126
+by currently locked and i cud user you
+send the request over to the clerk at
+
+833
+00:46:53,026 --> 00:46:54,042
+process
+
+834
+00:46:54,042 --> 00:46:58,086
+the Cloquet process is then gonna pull
+in the user's address book
+
+835
+00:46:58,086 --> 00:47:00,123
+we're going to take over you know the
+address in the address book we're gonna
+
+836
+00:47:01,023 --> 00:47:02,111
+have some up
+
+837
+00:47:03,011 --> 00:47:06,038
+organs and you know it the
+non-personally identifying version about
+
+838
+00:47:06,038 --> 00:47:11,059
+address book up to the car container the
+containers gonna send it after I cloud
+
+839
+00:47:11,059 --> 00:47:15,147
+and for those members of my address book
+that have adopted into discoverability
+
+840
+00:47:16,047 --> 00:47:19,053
+I'm gonna learn information about them
+that information going to come back to
+
+841
+00:47:20,007 --> 00:47:20,080
+Clark it
+
+842
+00:47:20,008 --> 00:47:23,105
+as gonna be sent over the process
+boundary to your client
+
+843
+00:47:24,077 --> 00:47:27,110
+now if you'll note at no point did your
+client in this
+
+844
+00:47:28,001 --> 00:47:31,038
+with the flow have access to the user's
+address book
+
+845
+00:47:31,047 --> 00:47:35,071
+what this means is that we can give you
+the support without you requiring that
+
+846
+00:47:35,071 --> 00:47:36,103
+your user allows
+
+847
+00:47:37,003 --> 00:47:40,027
+your application to the address book
+mean that you don't have to have the
+
+848
+00:47:40,027 --> 00:47:41,120
+blue alert which is now the white alert
+
+849
+00:47:42,002 --> 00:47:46,013
+giving your application access to the
+address book you can leverage it
+
+850
+00:47:46,031 --> 00:47:53,031
+without access to it
+
+851
+00:47:54,042 --> 00:47:57,065
+so use a discovery he's in the three
+different kinds of inputs that we can
+
+852
+00:47:57,065 --> 00:47:58,097
+have for you to discovery
+
+853
+00:47:58,097 --> 00:48:01,170
+in sort of a user record id: email
+address or request
+
+854
+00:48:02,007 --> 00:48:06,026
+to view the entire address book what do
+you get back from user discovery
+
+855
+00:48:06,089 --> 00:48:09,135
+well you get back to use a record id: in
+the latter two cases that new
+
+856
+00:48:10,035 --> 00:48:11,080
+information
+
+857
+00:48:11,008 --> 00:48:14,105
+you also get back first and last name
+this user
+
+858
+00:48:15,077 --> 00:48:18,100
+now of course it bears repeating first
+and last name
+
+859
+00:48:19,000 --> 00:48:22,043
+is personally identifying information so
+you're only going to get discovery
+
+860
+00:48:22,043 --> 00:48:22,129
+results
+
+861
+00:48:23,029 --> 00:48:28,095
+for users that have opted in to discover
+ability
+
+862
+00:48:28,095 --> 00:48:33,179
+let's have a look at some code here here
+we are asking our default container
+
+863
+00:48:34,079 --> 00:48:40,150
+to discover all of my users that are
+part of my address book
+
+864
+00:48:41,005 --> 00:48:44,009
+in the response again a synchronous
+error handling arm
+
+865
+00:48:44,009 --> 00:48:48,718
+in be successful response case what we
+see is that we get backing CK discovered
+
+866
+00:48:49,609 --> 00:48:53,420
+userinfo object and the user info from
+that I can pull
+
+867
+00:48:53,042 --> 00:48:56,096
+use a record id: and a first and last
+name
+
+868
+00:48:56,096 --> 00:48:59,128
+so these are really the the four temples
+love how we
+
+869
+00:49:00,028 --> 00:49:03,028
+do user accounts we give you a stable
+identify your
+
+870
+00:49:03,028 --> 00:49:06,090
+we give you the ability to store and
+retrieve metadata about
+
+871
+00:49:06,009 --> 00:49:09,071
+users we protect users privacy
+
+872
+00:49:10,052 --> 00:49:12,060
+and we give your users the ability to
+discover their friends in your
+
+873
+00:49:13,032 --> 00:49:14,085
+application
+
+874
+00:49:14,085 --> 00:49:17,092
+now to tell you when it's appropriate to
+use Clark it for so many other I cloud
+
+875
+00:49:18,055 --> 00:49:20,073
+technologies that we already have
+exposed
+
+876
+00:49:20,073 --> 00:49:27,073
+I'd like to buy back up to Libya burning
+
+877
+00:49:30,026 --> 00:49:34,090
+thank you Paul so pocket
+
+878
+00:49:34,009 --> 00:49:37,016
+is the new framework but it doesn't
+obsolete or deprecate
+
+879
+00:49:38,006 --> 00:49:43,033
+any of the existing tools its really
+just a new toy in your toolbox
+
+880
+00:49:43,087 --> 00:49:46,104
+I am let's look at all the
+
+881
+00:49:47,004 --> 00:49:51,072
+for tools you now have and look at were
+different use cases were we think they
+
+882
+00:49:51,072 --> 00:49:51,149
+make sense
+
+883
+00:49:52,049 --> 00:49:55,076
+and their appropriate to use so first
+
+884
+00:49:55,076 --> 00:49:59,105
+I clarke you go to store I clarke you go
+to store
+
+885
+00:50:00,005 --> 00:50:03,009
+keeps small pillow /div data up to date
+
+886
+00:50:03,009 --> 00:50:07,102
+between europe and jackpot servers this
+is done asynchronously
+
+887
+00:50:08,002 --> 00:50:12,031
+Europe doesn't really need to care about
+when and how this is dawn
+
+888
+00:50:12,031 --> 00:50:15,073
+we think this is great for small amount
+of data like
+
+889
+00:50:15,073 --> 00:50:18,128
+application preferences game States
+
+890
+00:50:19,028 --> 00:50:23,037
+conflict resolution is free sample last
+writer wins
+
+891
+00:50:23,037 --> 00:50:27,083
+so thats I caught you value store
+
+892
+00:50:27,083 --> 00:50:32,134
+I Club Drive built on top of the
+existing I called documents EPI
+
+893
+00:50:33,034 --> 00:50:38,077
+I am it that doing so would provide 24
+of Lancashire North then
+
+894
+00:50:38,077 --> 00:50:42,090
+all the files on the icon try but the
+user are downloading on North
+
+895
+00:50:42,009 --> 00:50:46,036
+then it's completely unstructured and
+and truly title file system
+
+896
+00:50:47,017 --> 00:50:51,076
+used to follow coordination API's shoes
+read and write data
+
+897
+00:50:51,076 --> 00:50:54,145
+in your application i cud container on
+the filesystem
+
+898
+00:50:55,045 --> 00:50:58,078
+Jack hard drive human takes care of
+applauding
+
+899
+00:50:58,078 --> 00:51:01,163
+and downloading those changes happened
+to happened from
+
+900
+00:51:02,063 --> 00:51:05,115
+on the icon servers I am
+
+901
+00:51:06,015 --> 00:51:10,047
+we think it's great for document center
+caps or abstain need to deal with an
+
+902
+00:51:10,047 --> 00:51:12,129
+existing file formats
+
+903
+00:51:13,029 --> 00:51:16,040
+I told Chordata built on top of
+
+904
+00:51:16,004 --> 00:51:19,043
+I hard drive replicates of again
+
+905
+00:51:19,079 --> 00:51:23,142
+specific user data between all the users
+devices
+
+906
+00:51:24,042 --> 00:51:27,050
+it's great for keeping private richter
+day don't think
+
+907
+00:51:27,005 --> 00:51:31,012
+but because its downloads all the data
+to all devices your
+
+908
+00:51:32,002 --> 00:51:37,049
+also constrain to the size of a small
+device in that case
+
+909
+00:51:37,067 --> 00:51:41,072
+and tourist club kid the new kid on the
+block and we think there are a number of
+
+910
+00:51:42,017 --> 00:51:45,074
+interesting use cases were cock it makes
+sense
+
+911
+00:51:45,074 --> 00:51:48,128
+and I am compliments pre-world
+
+912
+00:51:49,028 --> 00:51:53,032
+the existing technologies so first any
+public the dow
+
+913
+00:51:53,068 --> 00:51:57,152
+if your app if you need to give access
+to all the users of your apt to
+
+914
+00:51:58,052 --> 00:52:01,106
+large data sets and pocket public
+databases
+
+915
+00:52:02,006 --> 00:52:05,008
+are pretty good a compelling I'm
+
+916
+00:52:05,026 --> 00:52:10,027
+tool clock it supports both structured
+and bought the dow
+
+917
+00:52:10,027 --> 00:52:13,031
+so you can use it to store law large
+files an iPod
+
+918
+00:52:13,067 --> 00:52:16,068
+and we take care of downloading and
+uploading them
+
+919
+00:52:16,077 --> 00:52:20,078
+of to the I taught servers
+
+920
+00:52:20,078 --> 00:52:24,087
+ask Paul describe talk it supports has
+good support for large data sets were
+
+921
+00:52:25,068 --> 00:52:27,073
+your app will want to give
+
+922
+00:52:27,073 --> 00:52:30,081
+a specific slice specific view I am
+
+923
+00:52:30,081 --> 00:52:34,163
+after wards tested to the user at a
+given point I'm
+
+924
+00:52:35,063 --> 00:52:38,120
+club kid lets you I
+
+925
+00:52:39,002 --> 00:52:42,038
+youth league thing I cry the up
+
+926
+00:52:42,056 --> 00:52:46,105
+account infrastructure whether you need
+to identify the user
+
+927
+00:52:46,609 --> 00:52:50,490
+or to led the user discover his
+
+928
+00:52:50,049 --> 00:52:53,054
+friends using your app Clark it is the
+
+929
+00:52:53,099 --> 00:52:59,138
+Naples you to do that last but not least
+compared to the other three technologies
+
+930
+00:53:00,038 --> 00:53:04,106
+we think rockets is closer to the mail
+in some way
+
+931
+00:53:05,006 --> 00:53:10,555
+in this case if when you're using pocket
+Europe is really in control of
+
+932
+00:53:10,609 --> 00:53:14,520
+when the app is uploading or downloading
+from the server
+
+933
+00:53:14,052 --> 00:53:17,057
+your your app is killing the operations
+
+934
+00:53:17,057 --> 00:53:20,128
+Union and that's also why you need to do
+this all summer and Ling done for all
+
+935
+00:53:21,028 --> 00:53:24,076
+that you will do
+
+936
+00:53:24,076 --> 00:53:28,104
+so in summary what have we covered today
+
+937
+00:53:29,004 --> 00:53:33,020
+clock it gives you access to our cloud
+servers
+
+938
+00:53:33,002 --> 00:53:37,040
+it supports both public and private data
+
+939
+00:53:37,058 --> 00:53:41,133
+it supports both structured and all data
+you can use it for large falls
+
+940
+00:53:42,033 --> 00:53:46,108
+and it leverage the existing Akribos
+account infrastructure which means that
+
+941
+00:53:47,008 --> 00:53:50,025
+you over 400 million I clarke
+
+942
+00:53:50,025 --> 00:53:54,048
+accounts out there or sure for you to
+take advantage of
+
+943
+00:53:54,048 --> 00:53:57,054
+Apple is building on it in a big way
+have both
+
+944
+00:53:58,008 --> 00:54:02,035
+I called drive and I thought for library
+were built from scratch on top of clout
+
+945
+00:54:02,035 --> 00:54:04,044
+kids
+
+946
+00:54:04,044 --> 00:54:07,055
+we're super excited to see what you're
+going to build
+
+947
+00:54:07,055 --> 00:54:10,078
+on top of this new framework arm
+
+948
+00:54:10,078 --> 00:54:14,114
+so for more information Davis or
+evangelists we have
+
+949
+00:54:15,014 --> 00:54:18,073
+some awesome framework reference on the
+OPORD Apple dot com website
+
+950
+00:54:18,073 --> 00:54:22,117
+as well developer forums we have an
+Advent sprocket session
+
+951
+00:54:23,017 --> 00:54:26,055
+on Thursday and Jacob is going to tell
+you everything you want to know about
+
+952
+00:54:26,055 --> 00:54:27,061
+that I'm mulling
+
+953
+00:54:28,015 --> 00:54:32,047
+and advanced record manipulations thank
+you very much for being here and thank
+
+954
+00:54:32,047 --> 00:54:32,140
+you for attention
+

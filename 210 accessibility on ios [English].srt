@@ -1,0 +1,3683 @@
+1
+00:00:12,018 --> 00:00:15,807
+hi everyone I'm Claire and I'm on the
+island successfully team
+
+2
+00:00:15,969 --> 00:00:20,550
+here at Apple today I'll be sharing with
+you about accessibility I i OS
+
+3
+00:00:20,055 --> 00:00:23,444
+and how you can get all your app's to be
+used by everyone
+
+4
+00:00:23,939 --> 00:00:29,000
+our talk today is going to be in two
+parts
+
+5
+00:00:29,000 --> 00:00:32,084
+first are given introduction to
+accessibility
+
+6
+00:00:32,084 --> 00:00:35,169
+I'll talk about some the features we
+offer I was currently
+
+7
+00:00:36,069 --> 00:00:39,278
+as well as a new things coming in I was
+8
+
+8
+00:00:39,899 --> 00:00:43,590
+in a second hardest talk
+
+9
+00:00:43,059 --> 00:00:47,508
+I'll be showing you how you can make
+your app successful both by adding
+
+10
+00:00:48,039 --> 00:00:49,080
+visual accommodations
+
+11
+00:00:49,449 --> 00:00:56,449
+and by implementing magic accessibility
+
+12
+00:00:58,629 --> 00:01:00,682
+so first what is accessibility
+
+13
+00:01:01,159 --> 00:01:04,241
+accessibility is all about making things
+usable
+
+14
+00:01:04,979 --> 00:01:09,200
+for everyone I O S we look at four broad
+areas
+
+15
+00:01:09,002 --> 00:01:12,351
+have your needs we want users with
+
+16
+00:01:12,549 --> 00:01:16,581
+physical motor challenges users with
+learning needs
+
+17
+00:01:16,869 --> 00:01:21,876
+users with hearing loss and uses a
+different vision needs
+
+18
+00:01:21,939 --> 00:01:25,944
+to be able to experience I West fully
+our goal is equal access
+
+19
+00:01:26,439 --> 00:01:31,780
+for everyone so let's look at some
+examples
+
+20
+00:01:31,078 --> 00:01:35,172
+how e-commerce this some users may have
+a physical impairment that prevents them
+
+21
+00:01:36,072 --> 00:01:37,127
+from using the touchscreen
+
+22
+00:01:38,027 --> 00:01:41,186
+in fact there only infer device maybe
+
+23
+00:01:41,429 --> 00:01:44,810
+a switch a switch could be something
+like a button
+
+24
+00:01:44,081 --> 00:01:47,150
+mounted on a wheelchair had best so how
+do we make
+
+25
+00:01:48,005 --> 00:01:52,624
+the rich touch interface I'll ask usual
+by someone who can only use a switch
+
+26
+00:01:53,119 --> 00:01:57,700
+I answer is switch control
+
+27
+00:01:57,007 --> 00:02:00,956
+when special the naval a cursor appears
+
+28
+00:02:01,649 --> 00:02:04,750
+on the street and moves for item
+
+29
+00:02:04,075 --> 00:02:09,086
+to Adam with a specific time when the
+user
+
+30
+00:02:09,086 --> 00:02:12,605
+activator switch that wasn't interact
+with the highlighted on
+
+31
+00:02:13,379 --> 00:02:16,415
+so they can do things like top or scroll
+
+32
+00:02:16,739 --> 00:02:20,772
+necklace look at
+
+33
+00:02:21,069 --> 00:02:24,125
+learning I was devices have an
+incredibly powerful
+
+34
+00:02:24,629 --> 00:02:27,760
+in the classroom because other easy to
+use interface
+
+35
+00:02:27,076 --> 00:02:32,083
+and they're engaging aP's for the same
+reasons they've been great for children
+
+36
+00:02:32,083 --> 00:02:35,087
+with autism for the theaters we faced
+some
+
+37
+00:02:35,087 --> 00:02:39,566
+unique challenges that first for one
+much I have a daughter then
+
+38
+00:02:40,349 --> 00:02:43,730
+is learning an app they might decide to
+press the home button
+
+39
+00:02:43,073 --> 00:02:48,302
+and now the device is full distractions
+so to address this issue
+
+40
+00:02:48,959 --> 00:02:52,020
+we create a guided access which the way
+for our parents
+
+41
+00:02:52,569 --> 00:02:55,700
+for educators to keep the device in a
+specific ap
+
+42
+00:02:55,007 --> 00:02:58,056
+when God actors at the naval
+
+43
+00:02:59,019 --> 00:03:02,034
+pressing the Home button where the lock
+button have no effect
+
+44
+00:03:02,034 --> 00:03:06,047
+and so the child can have an
+uninterrupted learning experience
+
+45
+00:03:06,047 --> 00:03:11,124
+free from distractions next let's look
+at hearing
+
+46
+00:03:12,024 --> 00:03:15,097
+many users were hearing loss use hearing
+aids
+
+47
+00:03:15,097 --> 00:03:19,140
+to help amplify the sound around them
+but traditional hearing aids come with a
+
+48
+00:03:20,004 --> 00:03:20,042
+couple
+
+49
+00:03:20,078 --> 00:03:25,093
+issues first they require that you carry
+are not with you
+
+50
+00:03:25,093 --> 00:03:28,109
+so that you can adjust the volume and
+that can be cumbersome
+
+51
+00:03:29,009 --> 00:03:33,053
+and second call quality can be less than
+after all
+
+52
+00:03:33,053 --> 00:03:36,119
+when using hearing it we have a phone
+next to a hearing aid
+
+53
+00:03:37,019 --> 00:03:40,051
+you the hearing Fi's all the town
+including
+
+54
+00:03:40,051 --> 00:03:43,097
+background noise or picks up the signal
+
+55
+00:03:43,097 --> 00:03:47,115
+from the phone electromagnetic field but
+that signal can also be noisy
+
+56
+00:03:48,015 --> 00:03:52,214
+trading static so to address these two
+issues
+
+57
+00:03:52,349 --> 00:03:56,610
+we partnered with hearing in
+manufacturers around the globe
+
+58
+00:03:56,061 --> 00:03:59,122
+treat me for iPhone hearing aids these
+hearing aid
+
+59
+00:04:00,022 --> 00:04:03,291
+connect directly to your iPhone and you
+can do things like
+
+60
+00:04:03,489 --> 00:04:07,340
+adjust the following the hearing aids
+without the need for a separate remote
+
+61
+00:04:07,034 --> 00:04:10,683
+in addition audio stream directly from
+your iPhone
+
+62
+00:04:10,989 --> 00:04:14,200
+you're hearing aid so becomes
+effectively a Bluetooth headset
+
+63
+00:04:14,002 --> 00:04:17,151
+and thats improves clock Ali
+dramatically
+
+64
+00:04:17,349 --> 00:04:21,390
+finally let's look
+
+65
+00:04:21,759 --> 00:04:26,410
+at the broad area vision when the iPhone
+was first introduced
+
+66
+00:04:26,041 --> 00:04:29,700
+many people were concerned that blind
+users would not be able to take
+
+67
+00:04:30,069 --> 00:04:31,400
+advantage of its features
+
+68
+00:04:31,004 --> 00:04:34,083
+could do you think about it how do you
+use a touch screen
+
+69
+00:04:35,019 --> 00:04:39,027
+if you don't see the screen it's going
+to be difficult because
+
+70
+00:04:39,027 --> 00:04:42,071
+you wanna say really know what your
+touching and you might accidentally tap
+
+71
+00:04:42,071 --> 00:04:43,077
+a button that you didn't mean to tap
+
+72
+00:04:44,031 --> 00:04:48,086
+so to address this we created Voice
+number
+
+73
+00:04:48,086 --> 00:04:51,184
+when Voice number is unable you can
+touch
+
+74
+00:04:52,084 --> 00:04:56,373
+anywhere on screen to hear what they
+just touched before they take an action
+
+75
+00:04:57,129 --> 00:04:57,195
+like
+
+76
+00:04:57,789 --> 00:05:04,789
+tapping a button we also have
+accommodations in our settings
+
+77
+00:05:05,569 --> 00:05:09,560
+for users with low vision who may not
+necessarily need the full power
+
+78
+00:05:09,056 --> 00:05:12,065
+a voice-over for example some users
+
+79
+00:05:12,569 --> 00:05:16,572
+for for Boulder funds in which case they
+can enable Bowl text
+
+80
+00:05:16,599 --> 00:05:21,430
+to get picture text some users may be
+higher contrast
+
+81
+00:05:21,043 --> 00:05:24,108
+and if so we offer several options
+including the ability to reduce
+
+82
+00:05:25,008 --> 00:05:26,617
+transparency on the system
+
+83
+00:05:26,689 --> 00:05:32,714
+and finally for users who are more
+sensitive to motion
+
+84
+00:05:32,939 --> 00:05:36,939
+we offer reduced motion setting which
+provides more subtle transitions
+
+85
+00:05:36,939 --> 00:05:40,948
+for example when you launch an app with
+this notion enabled
+
+86
+00:05:41,839 --> 00:05:46,880
+crossfade interview
+
+87
+00:05:47,249 --> 00:05:50,328
+somewhat we offer I was currently to
+support equal access
+
+88
+00:05:51,039 --> 00:05:54,830
+but we've been working hard and I'd like
+to hide or some other new features were
+
+89
+00:05:54,083 --> 00:05:57,165
+offering an Iowa State
+
+90
+00:05:58,065 --> 00:06:01,111
+first guided access time limits
+
+91
+00:06:02,011 --> 00:06:06,130
+time limits are all about transitions
+when a child is immersed
+
+92
+00:06:06,229 --> 00:06:10,232
+an app and then it's time to move on to
+the next activity
+
+93
+00:06:10,259 --> 00:06:13,295
+that transition can cause some anxiety
+
+94
+00:06:13,619 --> 00:06:16,658
+with time limits a caretaker can assign
+a specific amount
+
+95
+00:06:17,009 --> 00:06:20,065
+a time that a child should use an app
+when the town is
+
+96
+00:06:20,569 --> 00:06:24,710
+almost reached the child receives a
+warning helping them to prepare to move
+
+97
+00:06:24,071 --> 00:06:24,750
+on to the next
+
+98
+00:06:25,389 --> 00:06:28,460
+activity and when the time limit is over
+
+99
+00:06:29,099 --> 00:06:33,145
+the device locks next worrying Alex
+Tyler s
+
+100
+00:06:33,559 --> 00:06:36,584
+summer you may have already met Alex but
+for those who haven't
+
+101
+00:06:36,809 --> 00:06:39,837
+to let him introduce himself hi
+
+102
+00:06:40,089 --> 00:06:44,167
+everyone I'm Alex and I mean US English
+voice
+
+103
+00:06:44,869 --> 00:06:47,883
+I've been living on Macs for years and
+now
+
+104
+00:06:48,009 --> 00:06:52,037
+I'm excited to make myself at home on my
+OS
+
+105
+00:06:52,289 --> 00:06:56,680
+to Alex will be available in all of our
+assistive technologies that you speech
+
+106
+00:06:56,068 --> 00:06:59,617
+including voice-over speaks election
+
+107
+00:07:00,229 --> 00:07:04,260
+and a new feature introducing I was
+eight called speak street
+
+108
+00:07:04,539 --> 00:07:07,547
+screen is great for anyone might have
+trouble reading the screen
+
+109
+00:07:08,339 --> 00:07:11,580
+when it enabled you can do a simple
+gesture or
+
+110
+00:07:11,058 --> 00:07:15,063
+ask Siri to speak the streams you and
+advice will start reading whatever's
+
+111
+00:07:16,008 --> 00:07:20,087
+on street you also get options like the
+ability to Paul's
+
+112
+00:07:20,159 --> 00:07:25,610
+rewind organ slow down the speech
+
+113
+00:07:25,061 --> 00:07:29,550
+and finally I'd like to highlight soon
+someone you may have been using zoom for
+
+114
+00:07:30,099 --> 00:07:31,270
+years on I West
+
+115
+00:07:31,027 --> 00:07:38,027
+but we've reimagined I was 8 and add a
+whole new way for you to interact with
+
+116
+00:07:38,369 --> 00:07:43,466
+but before I introduce at let's first
+talk about what's the Indus currently
+
+117
+00:07:44,339 --> 00:07:48,960
+zoom magnifies the entire screen and
+then use three fingers gestures
+
+118
+00:07:48,096 --> 00:07:51,108
+to navigate this approach comes
+
+119
+00:07:52,008 --> 00:07:57,027
+with a few issues first if you're using
+three finger gestures
+
+120
+00:07:57,099 --> 00:08:00,114
+that means you're covering up a
+significant part of the screen
+
+121
+00:08:00,249 --> 00:08:04,251
+especially on iPhones
+
+122
+00:08:04,449 --> 00:08:07,461
+also using free finger gestures mean
+it's hard to use a phone
+
+123
+00:08:07,569 --> 00:08:10,572
+on the go you can't use the phone in a
+single hand
+
+124
+00:08:10,869 --> 00:08:14,550
+you always need have one had to hold it
+and the other hand to do three things:
+
+125
+00:08:14,055 --> 00:08:16,152
+gestures
+
+126
+00:08:17,052 --> 00:08:21,281
+finally typing can be tricky with you
+enable
+
+127
+00:08:21,749 --> 00:08:25,778
+you have the choice between zooming in
+on the content you're creating
+
+128
+00:08:26,039 --> 00:08:29,800
+or having access to the full keyboard
+but you can't have both
+
+129
+00:08:29,008 --> 00:08:32,497
+at the same time
+
+130
+00:08:33,289 --> 00:08:36,960
+so to address all these issues for
+introducing a new window
+
+131
+00:08:36,096 --> 00:08:39,164
+note for Zim and I like democrat to you
+now
+
+132
+00:08:40,064 --> 00:08:44,067
+this is window too soon not only part
+the screen
+
+133
+00:08:44,067 --> 00:08:47,108
+is magnified I can change what part
+knife I
+
+134
+00:08:48,008 --> 00:08:52,066
+by dragging the edge at the window with
+a single finger
+
+135
+00:08:52,066 --> 00:08:55,995
+I can also tap the edges the window to
+get resize handles
+
+136
+00:08:56,589 --> 00:08:59,664
+so I can change how much the screen
+night fight
+
+137
+00:09:00,339 --> 00:09:03,520
+if I tap on the a row at the edge in the
+window
+
+138
+00:09:03,052 --> 00:09:06,073
+I get a menu with several options
+including the ability to adjust my
+
+139
+00:09:06,073 --> 00:09:10,106
+Zimbio
+
+140
+00:09:11,006 --> 00:09:15,055
+now it's going to notes I would create a
+new note and
+
+141
+00:09:15,055 --> 00:09:18,654
+watch what happens when the key or comes
+up
+
+142
+00:09:19,149 --> 00:09:22,193
+Zuma no automatically got out of the way
+the keyboard so I have full
+
+143
+00:09:22,589 --> 00:09:26,601
+access the keyboard but my constant
+
+144
+00:09:26,709 --> 00:09:29,940
+an ally tight
+
+145
+00:09:29,094 --> 00:09:32,157
+notice how the zoom into follows makers
+are so I can always see what I just
+
+146
+00:09:33,057 --> 00:09:34,119
+typed
+
+147
+00:09:35,019 --> 00:09:38,045
+sadat some what we've been doing here at
+Apple float
+
+148
+00:09:38,045 --> 00:09:42,078
+equal access for everyone but for the
+second part of the story
+
+149
+00:09:42,078 --> 00:09:45,083
+we need your help I was is a great
+platform could
+
+150
+00:09:46,028 --> 00:09:49,046
+all the app's you guys create and it's
+up to you
+
+151
+00:09:49,046 --> 00:09:53,084
+to make sure that your abs can be used
+by everyone
+
+152
+00:09:53,084 --> 00:09:59,175
+to that end I'll be showing you now how
+you can do that with our API
+
+153
+00:10:00,075 --> 00:10:04,077
+utah real is going to be in two parts
+first I'll show you how to add visual
+
+154
+00:10:04,095 --> 00:10:05,110
+accommodations
+
+155
+00:10:06,001 --> 00:10:09,085
+for users with different vision needs
+and second I'll be showing you how to
+
+156
+00:10:09,094 --> 00:10:11,103
+implement some magic accessibility
+
+157
+00:10:12,003 --> 00:10:16,006
+sudden assistive technology like
+voice-over can navigate your app
+
+158
+00:10:16,033 --> 00:10:20,058
+earlier in the stock showed some other
+visual accommodations we offer i OS
+
+159
+00:10:20,058 --> 00:10:24,061
+for you to a different vision aids now
+of writing API
+
+160
+00:10:24,088 --> 00:10:27,127
+see you can make those accommodations in
+your app's as well
+
+161
+00:10:28,027 --> 00:10:31,120
+we have a way for you to detect whether
+the user has all text
+
+162
+00:10:32,002 --> 00:10:36,030
+redo transparency starting colors or
+reduce motion enabled
+
+163
+00:10:36,048 --> 00:10:39,049
+and that makes it really easy for you to
+make specific adjustments
+
+164
+00:10:39,058 --> 00:10:42,100
+in your app for those users
+
+165
+00:10:43,000 --> 00:10:46,089
+suddenly show you how you can do that
+now using a sample app we created for
+
+166
+00:10:46,089 --> 00:10:47,165
+this presentation
+
+167
+00:10:48,065 --> 00:10:51,080
+okay so first we're going to identify
+some areas are ap
+
+168
+00:10:51,008 --> 00:10:55,023
+that need visual accommodations to do
+that I've got my simulator
+
+169
+00:10:55,095 --> 00:10:58,121
+and I'm enabled several the
+accessibility settings
+
+170
+00:10:59,021 --> 00:11:02,105
+in this case I got ball text reduce
+motion
+
+171
+00:11:03,005 --> 00:11:06,094
+and underneath increase contrast I've
+also got reduce transparency
+
+172
+00:11:06,094 --> 00:11:10,130
+and dark colors that way when the
+billion dollar after Xcode
+
+173
+00:11:11,003 --> 00:11:14,095
+we'll see what the user with those
+settings we'll see
+
+174
+00:11:15,022 --> 00:11:20,073
+not going to Xcode and when I click on
+building run
+
+175
+00:11:20,073 --> 00:11:24,125
+so this is a simple dating app at the
+top you have the title the app which is
+
+176
+00:11:25,025 --> 00:11:28,124
+hello goodbye notice how the title is
+very bold
+
+177
+00:11:29,024 --> 00:11:33,036
+and the background is fully opaque that
+because we're using a standard
+
+178
+00:11:33,036 --> 00:11:34,062
+navigation controller
+
+179
+00:11:34,062 --> 00:11:37,129
+so we get the ball text and reduce
+transparency behaviors
+
+180
+00:11:38,029 --> 00:11:42,033
+for free but because we're doing some
+custom UI in our apt
+
+181
+00:11:42,069 --> 00:11:45,132
+there's still some work we need to do
+you probably already noticed
+
+182
+00:11:46,032 --> 00:11:50,094
+how we have transparent overlays over a
+photo background
+
+183
+00:11:50,094 --> 00:11:54,179
+when reduced transparency is on you
+should really be making those opaque
+
+184
+00:11:55,079 --> 00:11:59,093
+in addition the text in the buttons
+should be thicker because we have all
+
+185
+00:11:59,093 --> 00:12:01,178
+text enable
+
+186
+00:12:02,078 --> 00:12:05,129
+now going to click on the profile but
+
+187
+00:12:06,029 --> 00:12:09,046
+so here's where the user I can adjust my
+settings
+
+188
+00:12:09,046 --> 00:12:14,088
+again we have the transparent overlay
+and the text that should be bolder
+
+189
+00:12:14,088 --> 00:12:18,166
+at the bottom issue we have a preview
+tap which I can slide up
+
+190
+00:12:19,066 --> 00:12:23,083
+to see how other users on this app will
+see my profile
+
+191
+00:12:23,083 --> 00:12:27,129
+knows how my info is in great text under
+each beheadings
+
+192
+00:12:28,029 --> 00:12:31,033
+when the user has dark in color enabled
+it would be better if that text for
+
+193
+00:12:31,069 --> 00:12:32,070
+darker
+
+194
+00:12:32,079 --> 00:12:36,137
+to provide higher contrast against the
+white background
+
+195
+00:12:37,037 --> 00:12:42,071
+now going to click on back and I'm going
+to go into the match is page
+
+196
+00:12:42,071 --> 00:12:45,102
+so here's where I can see matches that
+the app is adjusting for me
+
+197
+00:12:46,002 --> 00:12:50,076
+and I can say hello or goodbye to each
+one
+
+198
+00:12:50,076 --> 00:12:53,119
+I want this guy's elevator pitch so I
+want to say hello
+
+199
+00:12:54,019 --> 00:12:58,060
+and watch what happens when I swipe up
+
+200
+00:12:58,006 --> 00:13:01,010
+noticed how the next match enemies
+on-screen
+
+201
+00:13:02,000 --> 00:13:05,088
+as those coming from far away two dozen
+example
+
+202
+00:13:05,088 --> 00:13:08,097
+an animation where we should provide an
+alternate
+
+203
+00:13:08,097 --> 00:13:13,105
+for users who are more sensitive to
+motion
+
+204
+00:13:14,005 --> 00:13:18,104
+and now let's do all this using the API
+Xcode
+
+205
+00:13:19,004 --> 00:13:22,032
+to the first thing you're going to dress
+in the text let's make sure that it's
+
+206
+00:13:22,032 --> 00:13:24,041
+thicker when bolt act is on
+
+207
+00:13:24,041 --> 00:13:27,080
+to do that I'm going to click on the
+style utilities file on the left
+
+208
+00:13:27,008 --> 00:13:30,079
+which is where all our colors and fonts
+are defined and then click on the drop
+
+209
+00:13:31,051 --> 00:13:32,120
+down to the top
+
+210
+00:13:33,002 --> 00:13:37,009
+to find our phat methods
+
+211
+00:13:37,027 --> 00:13:40,049
+years have both of these methods are
+returning Avenir light
+
+212
+00:13:40,049 --> 00:13:43,065
+at the custom font now if we were using
+the system
+
+213
+00:13:43,065 --> 00:13:46,113
+bond or the preferred font for textile
+API
+
+214
+00:13:47,013 --> 00:13:50,068
+we would be getting Paul text for free
+but because we expect
+
+215
+00:13:50,068 --> 00:13:54,071
+be picked a specific font two years we
+also need to pick a fight to use when
+
+216
+00:13:54,071 --> 00:13:56,072
+Paul Texas enable
+
+217
+00:13:56,081 --> 00:13:59,145
+to do that I'd like to create
+
+218
+00:14:00,045 --> 00:14:03,112
+a helper method in the return the font
+name
+
+219
+00:14:04,012 --> 00:14:08,027
+all we're doing here is first checking
+your book butterball text is enabled
+
+220
+00:14:08,027 --> 00:14:12,081
+and it is we can return a thicker
+version are fought
+
+221
+00:14:12,081 --> 00:14:15,124
+otherwise we can return the same but
+we've been using
+
+222
+00:14:16,024 --> 00:14:19,096
+and now we just need to use our helper
+
+223
+00:14:19,096 --> 00:14:24,131
+you not to fun its
+
+224
+00:14:25,031 --> 00:14:29,095
+not take careful text now let's look at
+those transparent overlays
+
+225
+00:14:29,095 --> 00:14:32,191
+I'm gonna click on the drop down at the
+top and find where that transparent
+
+226
+00:14:33,091 --> 00:14:33,189
+overly color
+
+227
+00:14:34,089 --> 00:14:38,101
+is defined notice how right now
+returning
+
+228
+00:14:39,001 --> 00:14:43,040
+eighty percent white when we do
+transparency is enabled we should return
+
+229
+00:14:43,004 --> 00:14:44,007
+a 100 percent white
+
+230
+00:14:44,007 --> 00:14:48,036
+so we do that here
+
+231
+00:14:48,099 --> 00:14:52,133
+okay now let's make sure that the great
+text in the profile preview
+
+232
+00:14:53,033 --> 00:14:56,039
+is doctor went dark in colors on to do
+that
+
+233
+00:14:56,093 --> 00:15:00,162
+and when I click on the drop down again
+and fined for that colors to find
+
+234
+00:15:01,062 --> 00:15:04,069
+so here we just returning gray let's
+first check
+
+235
+00:15:05,032 --> 00:15:08,055
+whether the user has dark in color the
+naval and if so
+
+236
+00:15:08,055 --> 00:15:12,101
+weakening trend black instead
+
+237
+00:15:13,001 --> 00:15:16,097
+finally look at that zooming animation
+we saw on a Mac cheese page
+
+238
+00:15:16,097 --> 00:15:19,170
+where the new match appears as though
+it's coming from far away
+
+239
+00:15:20,007 --> 00:15:24,054
+to to address that I'm going to click on
+the matches you controller on the left
+
+240
+00:15:25,017 --> 00:15:31,115
+now but open the drop-down and find
+worry enemy the cards
+
+241
+00:15:32,015 --> 00:15:35,020
+no talk here resuming the new card
+interview
+
+242
+00:15:35,065 --> 00:15:39,093
+now for users who have reduced motion
+enable a better experience
+
+243
+00:15:39,093 --> 00:15:42,115
+would be to fade the card interview
+because that animation
+
+244
+00:15:43,015 --> 00:15:46,091
+does not utilize a motion effect so
+
+245
+00:15:46,091 --> 00:15:49,152
+I'm going to create helper method the
+phage the card interview
+
+246
+00:15:50,052 --> 00:15:54,133
+all we're doing is setting the Alpha the
+card with animation
+
+247
+00:15:55,033 --> 00:15:59,036
+and that the point we would normally
+issued card let's first check
+
+248
+00:15:59,063 --> 00:16:02,107
+whether reduce motion the naval if it is
+
+249
+00:16:03,007 --> 00:16:06,012
+we use our famous but instead
+
+250
+00:16:06,012 --> 00:16:09,076
+we can use assuming method for other
+uses
+
+251
+00:16:09,076 --> 00:16:15,090
+K now let's build a runner after these
+changes
+
+252
+00:16:15,009 --> 00:16:18,036
+here's our app again notice have a
+transparent overlays are done
+
+253
+00:16:19,017 --> 00:16:23,025
+and have been replaced by opaque white
+because reduce transparent even able
+
+254
+00:16:23,097 --> 00:16:26,906
+in addition the text in about as much
+thicker
+
+255
+00:16:27,779 --> 00:16:30,820
+when I click on profile
+
+256
+00:16:30,082 --> 00:16:35,083
+again the same issues have been resolved
+here I can slide up on a few tab
+
+257
+00:16:35,083 --> 00:16:38,100
+and now notice how my information is
+darker
+
+258
+00:16:39,000 --> 00:16:42,075
+and higher contrast against the white
+background
+
+259
+00:16:42,075 --> 00:16:47,076
+now and click on back and click on the
+matches but
+
+260
+00:16:47,076 --> 00:16:50,078
+again I'm going to say hello to my
+favorite match and watch what happens
+
+261
+00:16:50,096 --> 00:16:53,111
+when I do that
+
+262
+00:16:54,011 --> 00:16:59,020
+the next match page on to view because
+we have reduced motion enable
+
+263
+00:17:00,001 --> 00:17:03,010
+so that's how easy it is for you to make
+visual accommodations in your app
+
+264
+00:17:03,091 --> 00:17:07,102
+for users were different vision needs
+
+265
+00:17:08,002 --> 00:17:11,681
+next let's look at implementing semantic
+accessibility
+
+266
+00:17:11,699 --> 00:17:14,900
+that boys are are users and switch
+control user's
+
+267
+00:17:14,009 --> 00:17:18,041
+can also use your app
+
+268
+00:17:19,022 --> 00:17:23,085
+somatic accessibility is what allows an
+assistive technology like by seller
+
+269
+00:17:23,085 --> 00:17:27,314
+to get information from a nap and to
+control the app
+
+270
+00:17:28,079 --> 00:17:34,124
+doing things like tapping buttons are
+adjusting sliders
+
+271
+00:17:34,529 --> 00:17:37,900
+here's an example assume at the
+accessibility at work
+
+272
+00:17:37,009 --> 00:17:41,045
+let's say I've got the calculator app
+open and voice-overs enable
+
+273
+00:17:42,026 --> 00:17:45,069
+when i touch on top of the five button
+voice-over
+
+274
+00:17:45,069 --> 00:17:48,123
+intersect that touch and then asks the
+app
+
+275
+00:17:49,023 --> 00:17:52,108
+what it has at that point
+
+276
+00:17:53,008 --> 00:17:56,012
+the app respond with an element that
+represents the firefighter
+
+277
+00:17:56,048 --> 00:17:59,857
+and that allows voice-over to draw
+cursor around the five
+
+278
+00:18:00,289 --> 00:18:04,830
+and to speak five so that I know what I
+just touched
+
+279
+00:18:04,083 --> 00:18:07,882
+if I then decide to tap the five adn I
+can do a double tap
+
+280
+00:18:08,629 --> 00:18:11,668
+anymore on screen and that tells
+voice-over activate
+
+281
+00:18:12,019 --> 00:18:16,350
+the selected item so that's how
+voice-over users
+
+282
+00:18:16,035 --> 00:18:23,035
+can use a calculator app
+
+283
+00:18:23,639 --> 00:18:26,940
+so how do you make sure that your app
+for Savoy server in this way
+
+284
+00:18:26,094 --> 00:18:29,963
+as well well the good news is that
+
+285
+00:18:30,809 --> 00:18:34,090
+most demanding accessibility is already
+built anti OS
+
+286
+00:18:34,009 --> 00:18:37,032
+so you get a lot of stuff for free but
+you should still
+
+287
+00:18:37,032 --> 00:18:40,131
+audit your app with voice over on the
+device
+
+288
+00:18:40,419 --> 00:18:43,482
+and there are couple questions you
+should ask yourself
+
+289
+00:18:44,049 --> 00:18:48,111
+first can voice-over speak everything
+that needs to be seen
+
+290
+00:18:48,669 --> 00:18:53,692
+second can voice-over do everything that
+a user would want to do
+
+291
+00:18:53,899 --> 00:18:57,610
+now I'm going to be referring a lot to
+voice over in the stop but all the work
+
+292
+00:18:57,061 --> 00:18:59,124
+for going to do in our apt also applies
+to switch control
+
+293
+00:19:00,024 --> 00:19:04,453
+just keep that in mind
+
+294
+00:19:04,669 --> 00:19:07,850
+to some an audit your app for semantic
+accessibility
+
+295
+00:19:07,085 --> 00:19:11,014
+I recommend that you go to your
+accessibility settings on the device
+
+296
+00:19:11,779 --> 00:19:15,830
+and set your accessibility shortcut to
+voice our that will allow you
+
+297
+00:19:16,289 --> 00:19:22,295
+to crypt triple click the home button to
+quickly enable or disable voice over
+
+298
+00:19:22,889 --> 00:19:27,912
+if you never use voice over before here
+are some tips to get you started
+
+299
+00:19:28,119 --> 00:19:31,195
+when you tap something that selects and
+speaks
+
+300
+00:19:31,879 --> 00:19:37,110
+so for example in this screen if I tap
+on the accessibility table cell
+
+301
+00:19:37,011 --> 00:19:42,097
+the cursor moves there and the device
+speaks accessibility
+
+302
+00:19:42,097 --> 00:19:45,148
+if I double tap anywhere on screen that
+%uh boys over to
+
+303
+00:19:46,048 --> 00:19:50,367
+activate the selected item so in this
+case if I did that
+
+304
+00:19:50,799 --> 00:19:54,960
+accessibility table cell would get
+pressed and we were moved accessibility
+
+305
+00:19:54,096 --> 00:19:57,169
+page
+
+306
+00:19:58,069 --> 00:20:01,073
+when I swipe to the right that selects
+and speaks
+
+307
+00:20:02,009 --> 00:20:05,688
+the next element right now the back
+button is selected
+
+308
+00:20:05,769 --> 00:20:11,850
+so if I tried to the right the
+navigation title become select
+
+309
+00:20:11,085 --> 00:20:14,764
+and finally when you have a ScrollView
+you can use three finger swipes
+
+310
+00:20:15,529 --> 00:20:19,830
+to scroll so I want to see more the
+accessibility settings
+
+311
+00:20:19,083 --> 00:20:26,083
+i cant three-finger swipe up just roll
+down by page
+
+312
+00:20:26,909 --> 00:20:29,955
+for that all you need to know to do an
+audit of your own apt with oyster
+
+313
+00:20:30,369 --> 00:20:34,600
+and now lets show you how he knew that
+with our sample app
+
+314
+00:20:34,006 --> 00:20:37,065
+so here they're dating app running on
+the device when I triple click the home
+
+315
+00:20:38,019 --> 00:20:39,097
+button
+
+316
+00:20:39,097 --> 00:20:42,159
+boys over on for sorry company
+
+317
+00:20:43,059 --> 00:20:46,018
+the first then we'll do with ask
+ourselves that question can voice-over
+
+318
+00:20:46,549 --> 00:20:48,554
+speak everything that needs to be seen
+
+319
+00:20:49,049 --> 00:20:52,054
+to first I'm going to tap on the title
+at the top
+
+320
+00:20:52,549 --> 00:20:56,240
+hello goodbye heading okay so voice-over
+can see that
+
+321
+00:20:56,024 --> 00:21:01,403
+now let's touch on the logo
+
+322
+00:21:01,619 --> 00:21:05,360
+it's kinda quiet but that sound you just
+heard means that voice-over doesn't
+
+323
+00:21:05,036 --> 00:21:07,295
+think there's anything under my finger
+
+324
+00:21:07,619 --> 00:21:12,230
+so it looks like most other users won't
+be able to read this logo
+
+325
+00:21:12,023 --> 00:21:15,202
+now I'm gonna tap on the Profile button
+profile
+
+326
+00:21:15,409 --> 00:21:18,447
+button and literacies that when I swiped
+right
+
+327
+00:21:18,789 --> 00:21:21,850
+at select the next outlet so I do that
+matches button
+
+328
+00:21:22,399 --> 00:21:25,435
+water finds a match but if I select the
+right
+
+329
+00:21:25,759 --> 00:21:29,960
+one more time we hear that sound with me
+there's nothing else
+
+330
+00:21:29,096 --> 00:21:33,110
+after the salomon which is correct in
+this case so it looks like this view is
+
+331
+00:21:34,001 --> 00:21:37,780
+in pretty good shape except for the
+missing logo
+
+332
+00:21:37,879 --> 00:21:40,881
+now what did happen profile profile
+
+333
+00:21:40,899 --> 00:21:43,962
+button and when a double tap activated
+profile
+
+334
+00:21:44,529 --> 00:21:48,730
+profile back back button let's wipe the
+right a few times
+
+335
+00:21:48,073 --> 00:21:51,502
+to see what boys overseas profile
+
+336
+00:21:52,159 --> 00:21:55,164
+heading your age nineteen percent
+
+337
+00:21:55,659 --> 00:22:00,667
+adjustable swipe up or down with one
+finger to adjust the value
+
+338
+00:22:00,739 --> 00:22:03,828
+tonight a little strange we just heard
+your age
+
+339
+00:22:04,629 --> 00:22:07,672
+followed by nineteen percent it would
+make a lot more sense
+
+340
+00:22:08,059 --> 00:22:11,070
+if voice-over said the age here which is
+actually 37
+
+341
+00:22:11,007 --> 00:22:14,926
+and the instruction set a swipe offer
+down to adjust the night
+
+342
+00:22:14,989 --> 00:22:18,100
+so I swipe up watch what happens 28
+percent
+
+343
+00:22:18,001 --> 00:22:21,170
+by a jumping up by 10 years
+
+344
+00:22:21,269 --> 00:22:24,480
+so it doesn't look like bush ever users
+will be able to set their age
+
+345
+00:22:24,048 --> 00:22:27,207
+accurately right now in our apt
+
+346
+00:22:27,639 --> 00:22:30,731
+now I'm going to strike the right if you
+are times to see what else was overseas
+
+347
+00:22:31,559 --> 00:22:34,690
+47 copies
+
+348
+00:22:34,069 --> 00:22:37,808
+music swing dance wine text field
+
+349
+00:22:38,429 --> 00:22:42,330
+double tap to edit let's make sure that
+moisture users Canada two hotties
+
+350
+00:22:42,033 --> 00:22:46,033
+so I'm a double tap text field is
+editing
+
+351
+00:22:46,033 --> 00:22:49,842
+music swing dance wine and people came
+up
+
+352
+00:22:50,139 --> 00:22:53,187
+so that looks like whatever users will
+be able to do that
+
+353
+00:22:53,619 --> 00:22:56,621
+let's just make sure that the Done
+button which appeared in the top right
+
+354
+00:22:56,639 --> 00:22:59,663
+is also visible to voice-over salt app
+on that
+
+355
+00:22:59,879 --> 00:23:04,907
+done button and it is I double tap
+
+356
+00:23:05,159 --> 00:23:09,360
+that it has added editing so it looks
+like my hobbies are in good shape
+
+357
+00:23:09,036 --> 00:23:12,815
+and the elevator pitch field is very
+similar hobbies so we'll skip that
+
+358
+00:23:13,139 --> 00:23:17,176
+for now now I'm gonna touch on the
+Preview tab at the bottom
+
+359
+00:23:17,509 --> 00:23:21,582
+preview so it's just saying preview
+
+360
+00:23:22,239 --> 00:23:27,257
+and if I couldn't see the screen without
+visual indication a cab
+
+361
+00:23:27,419 --> 00:23:31,600
+in Miami clear to me what this does I
+mean I might try to double tap it
+
+362
+00:23:31,006 --> 00:23:34,103
+and so when I do that preview nothing
+happens because
+
+363
+00:23:35,057 --> 00:23:40,406
+this tab doesn't respond to attack in
+needs to have a slide gesture up
+
+364
+00:23:40,919 --> 00:23:44,966
+the right now bush ever users cannot
+preview their profile
+
+365
+00:23:45,389 --> 00:23:48,392
+now I'm gonna touch on the back button
+back back button
+
+366
+00:23:48,419 --> 00:23:51,466
+and double-tap hello goodbye heading
+
+367
+00:23:51,889 --> 00:23:54,931
+I'm a tap on matches now matches button
+
+368
+00:23:55,309 --> 00:23:58,314
+and double-tap matches matches back
+
+369
+00:23:58,809 --> 00:24:01,814
+back button okay again we're gonna swept
+the right a few times
+
+370
+00:24:02,309 --> 00:24:05,600
+to see what voice overseas matches
+heading
+
+371
+00:24:05,006 --> 00:24:08,895
+swipe up their own to say hello slide
+down a road to say goodbye
+
+372
+00:24:09,489 --> 00:24:12,494
+Alexis okay that's also a little strange
+
+373
+00:24:12,989 --> 00:24:15,996
+on visually when you look at this logo
+
+374
+00:24:16,059 --> 00:24:19,134
+are thus label you see swipe up to say
+hello
+
+375
+00:24:19,809 --> 00:24:22,855
+but voiceover saying swipe up a row to
+say hello
+
+376
+00:24:23,269 --> 00:24:26,960
+not because voice-overs reading each
+other's characters literally
+
+377
+00:24:26,096 --> 00:24:30,184
+so it would be better if voice-over
+described as in a more natural way
+
+378
+00:24:31,084 --> 00:24:34,753
+now a swipe to the right to get to the
+photo gauge
+
+379
+00:24:35,509 --> 00:24:41,587
+except we didn't get to the phone a now
+to try touching it directly
+
+380
+00:24:42,289 --> 00:24:45,320
+and again I get that sound which means
+whatever doesn't think there's a voter
+
+381
+00:24:45,032 --> 00:24:47,371
+there
+
+382
+00:24:47,659 --> 00:24:51,682
+now some are you might be wondering
+whether that even import
+
+383
+00:24:51,889 --> 00:24:57,450
+you after all voice our User doesn't see
+the photo right
+
+384
+00:24:57,045 --> 00:25:00,133
+but you're not is important so for a
+couple reasons
+
+385
+00:25:01,033 --> 00:25:05,082
+first on a voice-over user using this
+app I need to know
+
+386
+00:25:05,082 --> 00:25:08,401
+that other people in a sap can see my
+photo
+
+387
+00:25:09,139 --> 00:25:12,155
+even if I don't take full advantage to
+the photo it's important to know that
+
+388
+00:25:12,299 --> 00:25:13,382
+it's there
+
+389
+00:25:14,129 --> 00:25:16,950
+and second remember that semantic
+accessibility is not just about
+
+390
+00:25:16,095 --> 00:25:16,814
+voice-over
+
+391
+00:25:17,669 --> 00:25:20,693
+so it's always a good idea to expose any
+meaningful info
+
+392
+00:25:20,909 --> 00:25:23,993
+from your app okay now wanna touch I
+
+393
+00:25:24,749 --> 00:25:27,761
+age again age
+
+394
+00:25:27,869 --> 00:25:30,871
+and one swipe to the right a few times
+
+395
+00:25:30,889 --> 00:25:34,950
+parties 32 cooking bubble tea with
+friends
+
+396
+00:25:34,095 --> 00:25:37,324
+travel you're paying close attention
+
+397
+00:25:38,179 --> 00:25:41,480
+you may have noticed how boys are went
+from age
+
+398
+00:25:41,048 --> 00:25:44,117
+to hobbies and then back to 32
+
+399
+00:25:44,549 --> 00:25:48,561
+so when you're looking at the visual
+layout at this profile card is clear
+
+400
+00:25:48,669 --> 00:25:51,740
+what this means but moisture users are
+often
+
+401
+00:25:52,379 --> 00:25:55,445
+swiping to to the different elements
+because that can be easier than
+
+402
+00:25:56,039 --> 00:25:59,840
+touching exactly where an element is and
+so it's important
+
+403
+00:25:59,084 --> 00:26:03,122
+have a logical order for how the
+talented
+
+404
+00:26:04,022 --> 00:26:07,351
+it's also important for switch control
+user's switch control
+
+405
+00:26:07,549 --> 00:26:10,690
+the experts control cursor will move
+from element alman
+
+406
+00:26:10,069 --> 00:26:14,248
+in the same order and it's important or
+defeat predictable
+
+407
+00:26:14,869 --> 00:26:19,908
+so that a switch control user can
+activate the switch at the right time
+
+408
+00:26:20,259 --> 00:26:24,730
+okay lasting remember that our second
+question was
+
+409
+00:26:24,073 --> 00:26:28,160
+can voice-over do everything that needs
+to be due done in asap
+
+410
+00:26:29,006 --> 00:26:32,575
+the prior to the match is pages so allow
+users to say hello
+
+411
+00:26:33,169 --> 00:26:37,202
+or goodbye to the matches but more so
+for years
+
+412
+00:26:37,499 --> 00:26:40,586
+won't be able to do this right now
+because swipe gestures
+
+413
+00:26:41,369 --> 00:26:44,432
+get intercepted by voice sir and when
+you provide a different way
+
+414
+00:26:44,999 --> 00:26:48,074
+for moisture years to do the same
+actions not the kinda process you can
+
+415
+00:26:48,749 --> 00:26:48,815
+take
+
+416
+00:26:49,409 --> 00:26:53,970
+with your own apt to see whether it is
+semantically accessible
+
+417
+00:26:53,097 --> 00:26:57,120
+now let's look at resolving those issues
+beyond countered for someone to
+
+418
+00:26:58,002 --> 00:27:00,841
+introduce the most basic accessibility
+API
+
+419
+00:27:01,039 --> 00:27:05,040
+there are only two properties here and
+he remember nothing else from the stock
+
+420
+00:27:05,049 --> 00:27:08,144
+please remember these two just by using
+these two property
+
+421
+00:27:08,999 --> 00:27:13,003
+you can solve a lot of accessibility
+issues
+
+422
+00:27:13,039 --> 00:27:18,087
+the most important property you need no
+is the is excess Billy Allen property
+
+423
+00:27:18,519 --> 00:27:21,531
+this is the boy in that determines
+whether a view is visible
+
+424
+00:27:21,639 --> 00:27:27,663
+to voice-over by default returned yes
+for standard UI controls and labels
+
+425
+00:27:27,879 --> 00:27:30,950
+which is why even though we haven't done
+any semantic accessibility work
+
+426
+00:27:30,095 --> 00:27:35,914
+in our apt yet a lot of the text is
+already visible to voice our
+
+427
+00:27:36,769 --> 00:27:40,781
+and a second most important property you
+need to know in the accessibility label
+
+428
+00:27:40,889 --> 00:27:41,901
+property
+
+429
+00:27:42,009 --> 00:27:45,032
+this describes love you and by several
+speak this
+
+430
+00:27:45,239 --> 00:27:50,332
+when a voice over your touches on a view
+
+431
+00:27:51,169 --> 00:27:54,460
+if you train your views and Interface
+Builder you can set the property
+
+432
+00:27:54,046 --> 00:27:56,125
+directly from Xcode you I
+
+433
+00:27:56,539 --> 00:28:00,590
+on the right hand side Xcode you'll find
+an identity inspector
+
+434
+00:28:00,059 --> 00:28:03,968
+and there's an accessibility section
+there the accessibility
+
+435
+00:28:04,499 --> 00:28:09,320
+enable text box corresponds to is
+excessively and
+
+436
+00:28:09,032 --> 00:28:15,391
+and the label field correspond to access
+Billy label
+
+437
+00:28:15,679 --> 00:28:18,850
+if you creating your views in code it's
+still really easy to set these
+
+438
+00:28:18,085 --> 00:28:18,157
+properties
+
+439
+00:28:19,057 --> 00:28:23,116
+as shown here
+
+440
+00:28:23,629 --> 00:28:26,820
+so now with look at using these two
+properties
+
+441
+00:28:26,082 --> 00:28:30,911
+and see how much more accessible we can
+make ap it's the first thing
+
+442
+00:28:31,649 --> 00:28:34,690
+we're going to do and make sure that
+whatever users can read the logo on the
+
+443
+00:28:35,059 --> 00:28:37,071
+first page
+
+444
+00:28:37,179 --> 00:28:40,191
+to do that I'm going to go
+
+445
+00:28:40,299 --> 00:28:43,570
+click on the Start controller on the
+left which is where
+
+446
+00:28:43,057 --> 00:28:46,886
+and we create that lip I'm gonna click
+on the drop down
+
+447
+00:28:47,399 --> 00:28:50,600
+and find our view did learn math
+
+448
+00:28:50,006 --> 00:28:53,465
+to hear the lookout just image right now
+
+449
+00:28:54,059 --> 00:28:57,105
+and first we're going to set is
+exceptionally Alan to yes
+
+450
+00:28:57,519 --> 00:29:00,615
+so that voice-over can see it then we
+also need to make sure voice-over
+
+451
+00:29:01,479 --> 00:29:02,567
+describes it correctly
+
+452
+00:29:03,359 --> 00:29:07,361
+so we give it and accessibility label in
+this case we're just going to give it
+
+453
+00:29:07,559 --> 00:29:11,630
+but expect inside the lookout notice
+also that were local I'd in a string
+
+454
+00:29:12,269 --> 00:29:17,308
+because voice-over speak in many
+languages
+
+455
+00:29:17,659 --> 00:29:20,720
+next let's make sure that the photo that
+
+456
+00:29:20,072 --> 00:29:23,651
+in the profile card can also be seen by
+voice
+
+457
+00:29:24,299 --> 00:29:28,307
+do that I'm going to click on the car
+review class on the left
+
+458
+00:29:28,379 --> 00:29:33,393
+and I would over the drop down to find
+where we add our profile views:
+
+459
+00:29:33,519 --> 00:29:37,597
+so here's we're adding the fire again we
+set it just really element PS
+
+460
+00:29:38,299 --> 00:29:41,570
+and we get inappropriate access Billy
+label
+
+461
+00:29:41,057 --> 00:29:46,134
+in this case we're just gonna call it
+profile photo
+
+462
+00:29:47,034 --> 00:29:51,083
+filing let's look at the instructions
+for saying hello or goodbye
+
+463
+00:29:51,083 --> 00:29:55,042
+right now voice-over is saying swipe a
+row to say hello
+
+464
+00:29:55,789 --> 00:29:59,100
+let's fix that so to you that I'm going
+to click
+
+465
+00:29:59,001 --> 00:30:02,890
+on the matches you can chill are on the
+left and organ open the dropped out of
+
+466
+00:30:02,989 --> 00:30:03,840
+the top
+
+467
+00:30:03,084 --> 00:30:07,633
+to find where we add those fighting
+instructions
+
+468
+00:30:08,389 --> 00:30:11,395
+so here's the label that says
+instructions
+
+469
+00:30:11,989 --> 00:30:14,998
+it's already inaccessibility element by
+default so all we need to do is change
+
+470
+00:30:15,889 --> 00:30:18,340
+the accessibility label
+
+471
+00:30:18,034 --> 00:30:21,057
+we're going to give it one that is just
+like the tax on the label
+
+472
+00:30:21,057 --> 00:30:28,057
+except for replacing those unico que
+rose with words
+
+473
+00:30:28,071 --> 00:30:34,160
+now I'm going to build and run the app
+with these changes
+
+474
+00:30:34,799 --> 00:30:39,822
+extras folder to Abes double tap to open
+
+475
+00:30:40,029 --> 00:30:43,127
+hello goodbye extras folder to aP's
+
+476
+00:30:44,009 --> 00:30:49,033
+double tap to open
+
+477
+00:30:49,249 --> 00:30:52,278
+hello goodbye
+
+478
+00:30:52,539 --> 00:30:57,587
+here half again with these changes the
+first thing I do is touch the logo
+
+479
+00:30:58,019 --> 00:31:03,960
+hello goodbye meet your match image now
+voice-over users can read this
+
+480
+00:31:03,096 --> 00:31:06,107
+next time wanna touch on the matches but
+matches
+
+481
+00:31:07,007 --> 00:31:10,066
+button and double-tap
+
+482
+00:31:10,129 --> 00:31:13,133
+matches back back button let's first
+look
+
+483
+00:31:13,529 --> 00:31:17,531
+at what the instructions say right now
+so I got to say hello
+
+484
+00:31:17,549 --> 00:31:21,600
+slide down to say goodbye guess that
+much easier to understand
+
+485
+00:31:22,059 --> 00:31:25,077
+and now when I swipe to the right
+profile photo
+
+486
+00:31:25,239 --> 00:31:30,278
+image voice-over is able to see the
+photo in the profile
+
+487
+00:31:30,629 --> 00:31:33,664
+so that's how you do with just these two
+properties already made
+
+488
+00:31:33,979 --> 00:31:37,350
+other partner accessible
+
+489
+00:31:37,035 --> 00:31:40,804
+but because we got some more custom UI
+in our apt some additional
+
+490
+00:31:41,119 --> 00:31:47,200
+API will need to use to give voice our
+users a really great experience
+
+491
+00:31:47,929 --> 00:31:50,953
+first I like to introduce the concept
+accessibility treats
+
+492
+00:31:51,169 --> 00:31:54,255
+trace describe the function I love you
+
+493
+00:31:55,029 --> 00:31:59,940
+for example in the familiar timer app
+each other we all the time
+
+494
+00:31:59,094 --> 00:32:02,273
+had the trait up adjustable and that
+means that
+
+495
+00:32:03,119 --> 00:32:07,080
+its value can be changed up or down
+
+496
+00:32:07,008 --> 00:32:10,027
+the start button have the trade a button
+
+497
+00:32:10,099 --> 00:32:16,192
+and that gives the user a hint that this
+is something that can be activated
+
+498
+00:32:17,029 --> 00:32:20,086
+again if you're creating your views
+Interface Builder is really easy to set
+
+499
+00:32:20,599 --> 00:32:20,670
+the street
+
+500
+00:32:21,309 --> 00:32:24,393
+directly from excuse you I in the same
+section we talked about earlier
+
+501
+00:32:25,149 --> 00:32:29,460
+you'll see a bunch of checkboxes for
+traits somebody check boxes may already
+
+502
+00:32:29,046 --> 00:32:30,105
+be checked
+
+503
+00:32:30,519 --> 00:32:33,568
+in which case I would definitely
+recommend leaving the salon
+
+504
+00:32:34,009 --> 00:32:40,830
+but at check boxes next to trace that
+you think are important for you
+
+505
+00:32:40,083 --> 00:32:43,542
+encoded also straightforward to set the
+excess Billy trace
+
+506
+00:32:44,289 --> 00:32:48,470
+but just remember that it is a bitmask
+so if you want to at a trade
+
+507
+00:32:48,047 --> 00:32:51,326
+in addition to others use a bitwise or
+operator
+
+508
+00:32:51,749 --> 00:32:56,847
+as shown here to combine them
+
+509
+00:32:57,729 --> 00:33:00,743
+next let's talk about accessibility
+value
+
+510
+00:33:00,869 --> 00:33:03,877
+excessively value is a string on
+properties so in that way it's similar
+
+511
+00:33:04,669 --> 00:33:06,210
+to accessibility label
+
+512
+00:33:06,021 --> 00:33:09,920
+if you use accessibility value for
+things that are dynamic
+
+513
+00:33:10,109 --> 00:33:14,122
+for example uses on views that have the
+adjustable train
+
+514
+00:33:14,239 --> 00:33:17,720
+to describe a numerical value
+
+515
+00:33:17,072 --> 00:33:21,241
+right now in our ap the H latter had an
+accessibility value
+
+516
+00:33:21,889 --> 00:33:25,952
+nineteen percent that's a case where we
+can override accessibility value
+
+517
+00:33:26,519 --> 00:33:31,595
+to return the age instead
+
+518
+00:33:32,279 --> 00:33:37,318
+next we'll talk about actions to actions
+are how voice-over can control your app
+
+519
+00:33:37,669 --> 00:33:42,706
+to really common ones Rd internet and
+document actions
+
+520
+00:33:43,039 --> 00:33:46,320
+to the reaction that are associated
+specifically for views that have the
+
+521
+00:33:46,032 --> 00:33:47,321
+adjustable chain
+
+522
+00:33:47,609 --> 00:33:53,330
+and they allow the user to increase or
+decrease an element's value
+
+523
+00:33:53,033 --> 00:33:57,302
+again in our apt a fly to right now can
+be in Trenton or decorated
+
+524
+00:33:57,599 --> 00:34:00,618
+but right now it's doing that by ten
+years
+
+525
+00:34:00,789 --> 00:34:07,789
+we can overriding netted to allow the
+user to change your aid by a single year
+
+526
+00:34:09,024 --> 00:34:12,193
+another really important action is the
+activity action
+
+527
+00:34:12,409 --> 00:34:15,503
+and that's what happens when a user
+double taps normally when you double tap
+
+528
+00:34:16,349 --> 00:34:17,260
+something that just
+
+529
+00:34:17,026 --> 00:34:20,079
+taps the view but you can override this
+method
+
+530
+00:34:20,079 --> 00:34:24,081
+argues that respond to a specific
+gesture and I we wash our users can do
+
+531
+00:34:24,081 --> 00:34:25,098
+that action as well
+
+532
+00:34:25,098 --> 00:34:28,182
+easily for example in our apt we can use
+this for the Preview tab
+
+533
+00:34:29,082 --> 00:34:34,158
+which currently only response to a
+sliding gesture
+
+534
+00:34:35,058 --> 00:34:38,100
+and finally we have notifications which
+a liar
+
+535
+00:34:39,000 --> 00:34:42,084
+app to tell boys are when something has
+changed one really important
+
+536
+00:34:42,084 --> 00:34:43,100
+notification is
+
+537
+00:34:44,000 --> 00:34:47,609
+the lab change notification should you
+should send this
+
+538
+00:34:47,609 --> 00:34:53,638
+when you're changing the layout oh yeah
+for example adding or removing years
+
+539
+00:34:53,899 --> 00:34:58,420
+for example in our app right now when
+you revealed a preview
+
+540
+00:34:58,042 --> 00:35:02,114
+washer/dryer might not realize that new
+elements have come on stream
+
+541
+00:35:03,014 --> 00:35:07,037
+once you post a lab change notification
+more server checks to find
+
+542
+00:35:07,037 --> 00:35:12,121
+the elements that are there currently
+
+543
+00:35:13,021 --> 00:35:16,086
+now we've put all this together in our
+sample app to resolve some more those
+
+544
+00:35:16,086 --> 00:35:17,102
+issues we encountered
+
+545
+00:35:18,002 --> 00:35:21,016
+so the first thing we're going to do is
+make sure that Bush every year's
+
+546
+00:35:21,016 --> 00:35:24,024
+can editor H to do that
+
+547
+00:35:24,096 --> 00:35:29,140
+I'm going to go to Xcode and click on
+the each letter class on the left
+
+548
+00:35:30,004 --> 00:35:33,030
+here let's override accessibility value
+
+549
+00:35:33,066 --> 00:35:36,151
+now when you can return the age instead
+of a percentage
+
+550
+00:35:37,051 --> 00:35:41,066
+all we're doing is taking the value fire
+which corresponds the age
+
+551
+00:35:41,066 --> 00:35:44,118
+and making it into a string
+
+552
+00:35:45,018 --> 00:35:48,022
+next let's make sure the boys are users
+can add
+
+553
+00:35:48,022 --> 00:35:52,103
+or remove to the range by was single
+year
+
+554
+00:35:53,003 --> 00:35:57,021
+so to do that with override excessively
+entrant all are doing here
+
+555
+00:35:57,021 --> 00:36:00,080
+adding one decided value we also send
+
+556
+00:36:00,008 --> 00:36:03,105
+the value chains controlled and now way
+other parts were you I'd that
+
+557
+00:36:04,077 --> 00:36:09,114
+rely on the sliders value can update
+accordingly
+
+558
+00:36:10,014 --> 00:36:14,039
+we do the same thing presently document
+
+559
+00:36:14,039 --> 00:36:18,090
+and now one nuance to this after these
+changes
+
+560
+00:36:18,009 --> 00:36:21,078
+are each slider has all the information
+that the user needs to know
+
+561
+00:36:22,059 --> 00:36:27,086
+namely the user's age so from a semantic
+accessibility standpoint
+
+562
+00:36:27,086 --> 00:36:30,173
+that label showing up next to the slider
+is redundant
+
+563
+00:36:31,073 --> 00:36:34,074
+and Mike even be confusing so
+
+564
+00:36:34,074 --> 00:36:37,122
+just hide to do that
+
+565
+00:36:38,022 --> 00:36:41,047
+I'm going to click on the profile the
+controller on the left
+
+566
+00:36:41,047 --> 00:36:47,114
+and open the drop-down to find where we
+add that label
+
+567
+00:36:48,014 --> 00:36:54,050
+to hide it we simply set it successfully
+element to know
+
+568
+00:36:54,005 --> 00:37:00,016
+okay next let's make sure that bush ever
+users can preview their profiles
+
+569
+00:37:00,061 --> 00:37:03,080
+to do that let's go in Xcode and click
+
+570
+00:37:03,008 --> 00:37:06,047
+on RP label class
+
+571
+00:37:07,019 --> 00:37:11,086
+so here's our roadmap for this we're
+going to override accessibility activate
+
+572
+00:37:11,086 --> 00:37:14,102
+on the preview label so that we can
+control what happens when the user
+
+573
+00:37:15,002 --> 00:37:16,057
+double taps
+
+574
+00:37:16,057 --> 00:37:19,153
+but we need to tell the profile
+controller to show or hide the previous
+
+575
+00:37:20,053 --> 00:37:20,149
+civil me away
+
+576
+00:37:21,049 --> 00:37:25,067
+to communicate that to do that
+
+577
+00:37:25,067 --> 00:37:28,078
+let's set up a delegate protocol
+
+578
+00:37:28,078 --> 00:37:32,104
+an almost dark purple had a single map
+in ever going to call when the labeled
+
+579
+00:37:33,004 --> 00:37:35,008
+acted
+
+580
+00:37:35,008 --> 00:37:38,064
+course we also set up a dog property so
+that
+
+581
+00:37:38,064 --> 00:37:41,069
+you can color can set up a delegate
+
+582
+00:37:42,014 --> 00:37:46,022
+now let's go to the implementation file
+
+583
+00:37:46,022 --> 00:37:49,080
+here going to override excessively
+activity
+
+584
+00:37:49,008 --> 00:37:53,073
+all we're doing is leading the delegate
+no that the labels activity
+
+585
+00:37:54,045 --> 00:37:59,057
+and we return yes to indicate that the
+action succeed
+
+586
+00:37:59,057 --> 00:38:03,091
+while we're here but also at abutment
+rate to the preview label
+
+587
+00:38:03,091 --> 00:38:06,137
+and that way Bouchard users will have I
+will have a hint
+
+588
+00:38:07,037 --> 00:38:10,079
+that they can double tap acted
+
+589
+00:38:10,079 --> 00:38:13,087
+to do that I'm bored override
+excessively traits
+
+590
+00:38:14,059 --> 00:38:18,112
+and first for calling super to get any
+treaty would have by default
+
+591
+00:38:19,012 --> 00:38:22,034
+then we use the bitwise OR operator
+
+592
+00:38:22,034 --> 00:38:26,040
+to combine that with the button tree
+
+593
+00:38:26,004 --> 00:38:29,061
+okay now let's go back to our profile
+you can chill or
+
+594
+00:38:29,097 --> 00:38:32,142
+to implement the delegate protocol
+
+595
+00:38:33,042 --> 00:38:37,047
+so for someone to scroll to top it off
+I'll and declared that this you can
+
+596
+00:38:37,092 --> 00:38:37,133
+chill or
+
+597
+00:38:38,033 --> 00:38:42,089
+implants that article next I'm going to
+open the drop-down
+
+598
+00:38:42,089 --> 00:38:46,093
+and find where we at that preview label
+
+599
+00:38:46,093 --> 00:38:49,099
+to the view here
+
+600
+00:38:49,099 --> 00:38:53,112
+we've set but you can tailor as its
+delegate
+
+601
+00:38:54,012 --> 00:39:01,012
+to finally let implement that protocol
+my scroll to the bottom
+
+602
+00:39:01,009 --> 00:39:04,097
+and here we implemented the only
+delegate protocol method we have
+
+603
+00:39:05,078 --> 00:39:09,133
+so when the preview labels acted will
+first check whether the previews
+
+604
+00:39:10,033 --> 00:39:11,078
+currently showing
+
+605
+00:39:11,078 --> 00:39:16,151
+if it is we can hide it otherwise we
+reveal it
+
+606
+00:39:17,051 --> 00:39:21,062
+one additional thing recall that when
+you hire sure the preview
+
+607
+00:39:21,062 --> 00:39:24,110
+you're changing the layout at the screen
+so we should tell voice-over that's
+
+608
+00:39:25,001 --> 00:39:26,008
+happened
+
+609
+00:39:26,008 --> 00:39:29,027
+to do that let's go to implementation
+have revealed card
+
+610
+00:39:29,099 --> 00:39:32,101
+and dismiss card I'm gonna click on the
+drop down to the top
+
+611
+00:39:33,019 --> 00:39:36,104
+and find those two methods
+
+612
+00:39:37,004 --> 00:39:40,100
+both these methods are enemy in the car
+honor of spring
+
+613
+00:39:41,000 --> 00:39:46,016
+in the completion for that animation we
+post lab change notification
+
+614
+00:39:46,016 --> 00:39:51,034
+miss do the same thing down here when
+dismissing the preview
+
+615
+00:39:51,034 --> 00:39:58,034
+okay now is building an app with these
+changes
+
+616
+00:39:58,071 --> 00:39:59,149
+hello goodbye
+
+617
+00:40:00,049 --> 00:40:03,123
+double tap to open extras folder
+
+618
+00:40:04,023 --> 00:40:07,069
+to aP's double tap to open hello goodbye
+
+619
+00:40:07,069 --> 00:40:11,458
+okay so here we are in the apt without
+changes for signs have on the Profile
+
+620
+00:40:12,079 --> 00:40:12,510
+button
+
+621
+00:40:12,051 --> 00:40:16,139
+profile button and I'm going to double
+tap to activate profile
+
+622
+00:40:17,039 --> 00:40:20,228
+profile back back button first
+
+623
+00:40:20,579 --> 00:40:24,430
+let's touch on the age lighter 37
+adjustable
+
+624
+00:40:24,043 --> 00:40:27,192
+swipe up or down with one finger to
+adjust the value
+
+625
+00:40:27,579 --> 00:40:31,650
+tonight at us much clearer we're
+actually seeing the age now
+
+626
+00:40:31,065 --> 00:40:34,754
+and when I swiped up to adjust the value
+38
+
+627
+00:40:35,339 --> 00:40:39,460
+it goes up by a single year when I
+select the right
+
+628
+00:40:39,046 --> 00:40:43,695
+copies notice how we've skipped over
+that redundant label to the right
+
+629
+00:40:44,109 --> 00:40:47,650
+now I'm going to touch on the pre tap
+
+630
+00:40:47,065 --> 00:40:50,127
+preview button this time
+
+631
+00:40:51,027 --> 00:40:54,042
+because its editor button I know I can
+do something with this
+
+632
+00:40:54,042 --> 00:40:58,116
+song on a double tap preview and not
+have a preview appears
+
+633
+00:40:59,016 --> 00:41:02,020
+so much like to the right profile photo
+image
+
+634
+00:41:02,002 --> 00:41:05,661
+I conceive stuff inside the preview if I
+tap on
+
+635
+00:41:05,859 --> 00:41:08,877
+see you again preview button and
+double-tap
+
+636
+00:41:09,039 --> 00:41:13,041
+preview that hide the previews so I
+checked the right now
+
+637
+00:41:13,059 --> 00:41:18,133
+I hear that sound most ever knows that
+the preview has gone off street so
+
+638
+00:41:18,799 --> 00:41:19,650
+that's how we can make
+
+639
+00:41:19,065 --> 00:41:26,065
+even custom UI accessible to voice to
+resolve the last remaining issues we
+
+640
+00:41:26,073 --> 00:41:29,089
+encountered during our audit we're going
+to use a new API
+
+641
+00:41:29,089 --> 00:41:35,818
+added in Iowa State first let's talk
+about the UI accessibility container
+
+642
+00:41:36,619 --> 00:41:37,270
+protocol
+
+643
+00:41:37,027 --> 00:41:40,126
+something you may already realized that
+that isn't new
+
+644
+00:41:40,369 --> 00:41:43,437
+but we've updated and I'll 8 to make it
+much easier to use
+
+645
+00:41:44,049 --> 00:41:49,020
+for those who are familiar with this
+protocol you access Billy container
+
+646
+00:41:49,002 --> 00:41:52,040
+is a wage paternalistic cessna Lee Ellis
+for love you
+
+647
+00:41:52,004 --> 00:41:57,038
+you need to do this if you have elements
+not correspond to views
+
+648
+00:41:57,074 --> 00:42:00,169
+for example you might have a view with
+the drying it
+
+649
+00:42:01,069 --> 00:42:04,117
+and you might want different parts for
+the drying to be separate accessibility
+
+650
+00:42:05,017 --> 00:42:05,686
+allen's
+
+651
+00:42:05,839 --> 00:42:08,970
+in that case you would create an
+exceptionally element
+
+652
+00:42:08,097 --> 00:42:11,104
+for each part the drying and returned
+those elements using
+
+653
+00:42:12,067 --> 00:42:16,506
+the UI testily container protocol and
+you can see last year's talk
+
+654
+00:42:17,109 --> 00:42:22,700
+for a great example how to create your
+own elements but what many people don't
+
+655
+00:42:22,007 --> 00:42:22,106
+realize is that
+
+656
+00:42:23,069 --> 00:42:26,074
+this protocol is also a great way to
+return existing allen's
+
+657
+00:42:27,019 --> 00:42:30,067
+in a specific order so for example
+
+658
+00:42:30,067 --> 00:42:34,166
+if voice-over is navigating things in a
+different order from what we want we
+
+659
+00:42:35,066 --> 00:42:37,093
+cannot use this protocol to return those
+
+660
+00:42:37,093 --> 00:42:40,093
+element in the or that we want bush over
+to see them
+
+661
+00:42:40,093 --> 00:42:46,117
+and now for what's changed
+
+662
+00:42:47,017 --> 00:42:51,094
+so currently in order to use this
+protocol there are three methods
+
+663
+00:42:51,094 --> 00:42:54,117
+you need to override you know I was 8
+
+664
+00:42:55,017 --> 00:42:58,100
+there's a single property call
+accessibility elements
+
+665
+00:42:59,000 --> 00:43:02,069
+which you can set to return a list
+
+666
+00:43:02,069 --> 00:43:05,146
+the talents and notice how now you don't
+need to override some class
+
+667
+00:43:05,839 --> 00:43:10,000
+and you don't have to deal with three
+separate methods so we think people are
+
+668
+00:43:10,000 --> 00:43:10,009
+going to find that much
+
+669
+00:43:10,009 --> 00:43:14,066
+easier to use Big Pimpin
+
+670
+00:43:15,047 --> 00:43:18,123
+next up we're introducing a new
+
+671
+00:43:19,023 --> 00:43:24,039
+class called the custom action you
+should use custom actions when you have
+
+672
+00:43:24,039 --> 00:43:26,018
+more than one action for an element
+
+673
+00:43:26,369 --> 00:43:30,200
+for example in the app switcher
+
+674
+00:43:30,002 --> 00:43:33,101
+each ap thumbnails can you to be tapped
+to launch the app
+
+675
+00:43:34,019 --> 00:43:38,102
+or you can slide up to close the app and
+some
+
+676
+00:43:39,002 --> 00:43:43,321
+we expose a custom action for closing
+the app and now a voice-over users can
+
+677
+00:43:43,339 --> 00:43:44,680
+do that action easily
+
+678
+00:43:44,068 --> 00:43:49,227
+without needing to do the sliding
+gesture in our sample app we can also
+
+679
+00:43:49,839 --> 00:43:50,841
+use this API
+
+680
+00:43:51,039 --> 00:43:54,960
+to allow water users to say hello or
+goodbye to the matches
+
+681
+00:43:54,096 --> 00:43:59,143
+the custom action class looks like this
+
+682
+00:44:00,043 --> 00:44:03,142
+you create a custom action object for
+the name
+
+683
+00:44:03,529 --> 00:44:07,520
+that moisture uses to describe it and
+you also given a target
+
+684
+00:44:07,052 --> 00:44:11,611
+and a selector so similar to what you
+would pass to you I but and that
+
+685
+00:44:12,079 --> 00:44:14,107
+determines what happens when the action
+is performed
+
+686
+00:44:14,359 --> 00:44:18,630
+once you create a larger custom action
+objects
+
+687
+00:44:18,063 --> 00:44:22,077
+you can assign them to love you using
+the accessibility custom actions
+
+688
+00:44:22,077 --> 00:44:27,119
+array property now let's use this
+
+689
+00:44:28,019 --> 00:44:31,098
+in our apt to fix the remaining issues
+first
+
+690
+00:44:31,098 --> 00:44:34,121
+we're going to do is make sure that boys
+are navigate
+
+691
+00:44:35,021 --> 00:44:38,640
+the use in the profile card in the
+correct order
+
+692
+00:44:38,829 --> 00:44:43,150
+namely we don't want to go from age to
+hani's and back to 32
+
+693
+00:44:43,015 --> 00:44:49,474
+to fix that was click on the car view
+class on the left
+
+694
+00:44:49,609 --> 00:44:52,658
+here's our method worry at all the
+profile views: when I scroll to the
+
+695
+00:44:53,099 --> 00:44:54,950
+bottom
+
+696
+00:44:54,095 --> 00:44:57,164
+after all OVR sub you haven't read in we
+can set the
+
+697
+00:44:58,064 --> 00:45:01,150
+accessibility element property a park
+argue to an array
+
+698
+00:45:02,005 --> 00:45:05,344
+%uh its abuse any order you want them to
+appear
+
+699
+00:45:05,839 --> 00:45:12,839
+notice how I put the age title right
+next to the each value
+
+700
+00:45:13,075 --> 00:45:16,075
+okay next
+
+701
+00:45:16,075 --> 00:45:19,184
+let's make sure that whatever you just
+can't say hello or goodbye to the
+
+702
+00:45:19,859 --> 00:45:21,750
+matches
+
+703
+00:45:21,075 --> 00:45:25,944
+to do that I'm going to click on the
+match if you controller on the left
+
+704
+00:45:26,619 --> 00:45:30,619
+first let's find out what we're doing
+when a user swatch offer down without
+
+705
+00:45:30,619 --> 00:45:32,730
+voice-over enable
+
+706
+00:45:32,073 --> 00:45:36,122
+someone a click on the drop-down and
+find our swipe gesture recognizer
+
+707
+00:45:37,022 --> 00:45:44,022
+handlers to put these cameras are simply
+calling into math is called say hello
+
+708
+00:45:44,041 --> 00:45:49,046
+and say goodbye and which are
+implemented by the pup
+
+709
+00:45:49,046 --> 00:45:52,665
+these methods are also great candidates
+for the selector that we pass
+
+710
+00:45:53,079 --> 00:45:57,510
+to the custom action objects the only
+thing we need to change
+
+711
+00:45:57,051 --> 00:46:01,055
+it make sure that they return booleans
+to indicate whether the action sixty it
+
+712
+00:46:01,091 --> 00:46:04,176
+in most cases you can just return yes
+
+713
+00:46:05,076 --> 00:46:08,147
+now one more thing when you say hello or
+goodbye
+
+714
+00:46:09,047 --> 00:46:12,055
+to a match the layout changes so again
+we're going to post
+
+715
+00:46:13,027 --> 00:46:17,091
+only at change notification both these
+methods are calling into a helper
+
+716
+00:46:17,091 --> 00:46:20,092
+call animate cards for hello which is
+implemented
+
+717
+00:46:21,001 --> 00:46:24,290
+read about
+
+718
+00:46:24,299 --> 00:46:27,306
+so in the completion for this animation
+
+719
+00:46:27,369 --> 00:46:31,470
+we should post are we have change
+notification
+
+720
+00:46:31,047 --> 00:46:36,176
+okay so that's how to set up a need now
+let's create those custom action objects
+
+721
+00:46:36,599 --> 00:46:39,960
+I'm going to click on the drop down to
+the top
+
+722
+00:46:39,096 --> 00:46:43,755
+and find where we add to cart to the
+matches page
+
+723
+00:46:44,619 --> 00:46:47,930
+to hear a credit card and were
+
+724
+00:46:47,093 --> 00:46:51,282
+assigning swipe gesture recognizers to
+it
+
+725
+00:46:52,119 --> 00:46:56,133
+alongside the swipe gesture recognizers
+but now create our custom actions
+
+726
+00:46:56,259 --> 00:47:01,288
+for someone to create an action for
+saying hello
+
+727
+00:47:01,549 --> 00:47:04,710
+here's how that works we give it a name
+which in this case
+
+728
+00:47:04,071 --> 00:47:07,980
+is simply say hello we pass in the view
+controller
+
+729
+00:47:08,619 --> 00:47:12,662
+at the target and a selector we pass in
+the method that we just modified
+
+730
+00:47:13,049 --> 00:47:16,940
+to return a boolean we do the same thing
+
+731
+00:47:16,094 --> 00:47:19,189
+for saying goodbye now
+
+732
+00:47:20,089 --> 00:47:23,148
+we want the user to be able to say hello
+or goodbye wherever they are in the
+
+733
+00:47:24,048 --> 00:47:25,637
+profile card
+
+734
+00:47:26,069 --> 00:47:30,490
+so for every element in the car view
+
+735
+00:47:30,049 --> 00:47:33,338
+ruinous set it successfully custom
+actions poverty
+
+736
+00:47:33,779 --> 00:47:38,790
+to an array of these two actions
+
+737
+00:47:38,079 --> 00:47:45,079
+okay now let's build and run with these
+changes
+
+738
+00:47:52,024 --> 00:47:52,119
+double tap to open
+
+739
+00:47:53,019 --> 00:47:57,037
+hello goodbye hello goodbye
+
+740
+00:47:57,037 --> 00:48:00,116
+okay what happened matches matches
+
+741
+00:48:01,016 --> 00:48:04,020
+button and double tap to activate
+matches
+
+742
+00:48:04,002 --> 00:48:08,018
+matches back back button to the first
+thing I'm going to you
+
+743
+00:48:08,036 --> 00:48:11,135
+is top on the photo and starts wiping to
+the right to see what order Voice
+
+744
+00:48:12,035 --> 00:48:13,086
+oversees the talents
+
+745
+00:48:13,086 --> 00:48:16,140
+profile photo image age
+
+746
+00:48:17,004 --> 00:48:20,015
+32 copies cooking
+
+747
+00:48:20,051 --> 00:48:23,056
+bubble tea with friends travel not much
+
+748
+00:48:23,056 --> 00:48:26,079
+easier to understand next let's touch
+
+749
+00:48:26,079 --> 00:48:29,164
+any element in the profile card in this
+case I'm gonna touch on the photo
+
+750
+00:48:30,064 --> 00:48:33,102
+and listen to what it says profile photo
+image
+
+751
+00:48:34,002 --> 00:48:38,056
+swipe up or down to select a custom
+action so we're given the option to
+
+752
+00:48:38,056 --> 00:48:39,131
+choose when the actions we created
+
+753
+00:48:40,031 --> 00:48:45,039
+when I swipe down say hello I hear the
+description of the action
+
+754
+00:48:45,039 --> 00:48:51,083
+if I want to take that action I can
+double tap now butcher users
+
+755
+00:48:51,083 --> 00:48:56,087
+can also say hello or goodbye to the
+matches not how easy it is to use the
+
+756
+00:48:57,023 --> 00:48:57,102
+new API
+
+757
+00:48:58,002 --> 00:49:05,002
+we've added and I was aid so we kinda
+talked and Bartok
+
+758
+00:49:08,093 --> 00:49:13,158
+and there if you take away that like you
+have when you leave first
+
+759
+00:49:14,058 --> 00:49:17,131
+I lets users are divers keep in mind
+that
+
+760
+00:49:18,031 --> 00:49:22,036
+there maybe you just wrap who'd have
+different needs but you should accompany
+
+761
+00:49:22,036 --> 00:49:25,127
+when you accommodate more users
+
+762
+00:49:26,027 --> 00:49:30,050
+your widening your user base when more
+people can use your app
+
+763
+00:49:30,005 --> 00:49:34,006
+more people well and finally
+
+764
+00:49:34,051 --> 00:49:38,093
+and accessibility is a low effort
+high-reward business
+
+765
+00:49:38,093 --> 00:49:41,101
+we just seen how with only a few co
+changes
+
+766
+00:49:42,001 --> 00:49:45,042
+we took a nap that was just unusable for
+many users
+
+767
+00:49:45,042 --> 00:49:49,080
+and made into an experience that they
+too can enjoy so
+
+768
+00:49:49,008 --> 00:49:53,063
+without needing a lot of work you can
+make a real difference to users
+
+769
+00:49:54,035 --> 00:49:59,040
+for more information you can contact
+
+770
+00:49:59,085 --> 00:50:02,087
+are evangelist shake their hands or you
+think cell
+
+771
+00:50:02,087 --> 00:50:06,093
+the accessibility programming guy for
+ISL s there's also the developer forms
+
+772
+00:50:07,047 --> 00:50:12,141
+you can ask other developers your
+questions there some earlier sessions to
+
+773
+00:50:13,041 --> 00:50:13,098
+this one
+
+774
+00:50:13,098 --> 00:50:16,193
+prior to this talk we had a talk about
+accessibility on OS 10
+
+775
+00:50:17,093 --> 00:50:20,141
+if you missed it you can watch the video
+tomorrow
+
+776
+00:50:21,041 --> 00:50:24,050
+W talk about designing aP's for people
+on the autistic spectrum
+
+777
+00:50:25,031 --> 00:50:28,031
+and on Friday can learn how to make
+
+778
+00:50:28,031 --> 00:50:33,044
+even complex web applications excess
+thank you all for coming
+
+779
+00:50:33,044 --> 00:50:36,044
+I hope you enjoyed the talk and have a
+great rest at the conference
+
