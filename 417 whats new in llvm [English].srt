@@ -1,0 +1,3611 @@
+1
+00:00:12,066 --> 00:00:17,085
+good morning welcome
+
+2
+00:00:17,085 --> 00:00:20,183
+like to see a number folks out I'll
+Brighton early to talk about
+
+3
+00:00:21,083 --> 00:00:24,136
+all the heart-pounding excitement in the
+world compilers
+
+4
+00:00:25,036 --> 00:00:28,074
+and i'm jim crow spock
+
+5
+00:00:28,074 --> 00:00:31,823
+and I'm really happy to be here today to
+share with you
+
+6
+00:00:32,489 --> 00:00:36,070
+all of the new things that we have
+Italian a VM
+
+7
+00:00:36,007 --> 00:00:40,014
+when we normally talk about
+
+8
+00:00:40,014 --> 00:00:43,113
+LOVE am and what first comes to mind
+when we think about it
+
+9
+00:00:43,239 --> 00:00:46,320
+is the Apple LLVM compiler itself
+
+10
+00:00:46,032 --> 00:00:49,032
+is what we all used to build our ouch
+
+11
+00:00:49,032 --> 00:00:53,301
+and that for real really first encounter
+LBM
+
+12
+00:00:53,589 --> 00:00:58,661
+but it's much more than that ela via
+misused
+
+13
+00:00:59,309 --> 00:01:03,280
+in a wide variety of products and tools
+
+14
+00:01:03,028 --> 00:01:07,082
+that we all use every day but this
+developers
+
+15
+00:01:07,082 --> 00:01:11,089
+and as end-users over the years
+
+16
+00:01:11,089 --> 00:01:15,188
+Albion has grown to be a really key
+technology here at Apple
+
+17
+00:01:16,088 --> 00:01:23,088
+for building tools for performance and
+for modernization and that has been
+
+18
+00:01:24,219 --> 00:01:28,360
+no exception this year as we have moved
+swiftly along
+
+19
+00:01:28,036 --> 00:01:31,895
+with a broad variety %uh new
+improvements
+
+20
+00:01:32,219 --> 00:01:36,810
+start with back in September
+
+21
+00:01:36,081 --> 00:01:39,180
+we introduced the Apple 87 processor
+
+22
+00:01:39,909 --> 00:01:42,937
+which has been just absolutely
+magnificent
+
+23
+00:01:43,189 --> 00:01:47,217
+and what it allowed us to do bring truly
+desktop class performance
+
+24
+00:01:47,469 --> 00:01:51,850
+to your mobile device and I will be in
+place
+
+25
+00:01:51,085 --> 00:01:54,106
+a key role in that's and now
+
+26
+00:01:55,006 --> 00:02:00,067
+we're encouraging more view to use this
+technology in your outbox
+
+27
+00:02:00,067 --> 00:02:05,156
+so building for 64-bit in iowa's is now
+the default
+
+28
+00:02:05,759 --> 00:02:09,610
+as record 5.1 carrying on into Xcode 6
+
+29
+00:02:09,061 --> 00:02:13,125
+when you rebuild your app do using
+standard architectures
+
+30
+00:02:14,025 --> 00:02:19,106
+arm 64 will be included this does not
+impact your deployment store you can
+
+31
+00:02:20,006 --> 00:02:21,009
+continue
+
+32
+00:02:21,009 --> 00:02:24,035
+deploy back to Iowa 4.3 we still build
+
+33
+00:02:24,035 --> 00:02:27,100
+for RB 7 for 32-bit all
+
+34
+00:02:28,000 --> 00:02:32,038
+the development work clothes that you're
+familiar with for the simulator
+
+35
+00:02:32,038 --> 00:02:35,104
+the debugger profiling all these things
+
+36
+00:02:36,004 --> 00:02:41,012
+continue to work transparently just as
+you're familiar with in a 64-bit
+
+37
+00:02:41,012 --> 00:02:44,078
+environment now one thing to be aware of
+
+38
+00:02:44,078 --> 00:02:48,129
+is that because on 64 is an entirely new
+architecture
+
+39
+00:02:49,029 --> 00:02:52,111
+your entire application must be built
+64-bit
+
+40
+00:02:53,011 --> 00:02:56,045
+not just a few libraries here are a few
+files there
+
+41
+00:02:56,045 --> 00:03:00,069
+but the whole app so if you're relying
+on third-party libraries
+
+42
+00:03:00,069 --> 00:03:03,091
+and those libraries have not yet adopted
+
+43
+00:03:03,091 --> 00:03:07,187
+64-bit please work with your vendors and
+encourage them
+
+44
+00:03:08,087 --> 00:03:14,111
+to update and support 64-bit development
+so that your app can
+
+45
+00:03:15,011 --> 00:03:18,023
+then migrate as well and get the
+benefits
+
+46
+00:03:18,023 --> 00:03:23,036
+during migration there are few things
+that we'd like to
+
+47
+00:03:23,036 --> 00:03:26,100
+bring to your attention that might come
+up a few
+
+48
+00:03:27,000 --> 00:03:30,075
+advancements we've made a few things
+that we've tightened up in the
+
+49
+00:03:30,075 --> 00:03:30,173
+specification
+
+50
+00:03:31,073 --> 00:03:34,088
+and what possible impact about P rappers
+
+51
+00:03:34,088 --> 00:03:39,121
+to start with in 64-bit I allows
+
+52
+00:03:40,021 --> 00:03:44,037
+all functions must have a prototype this
+has been good style
+
+53
+00:03:44,037 --> 00:03:47,037
+cents time immemorial
+
+54
+00:03:47,037 --> 00:03:50,096
+I and it's been required for c plus plus
+since
+
+55
+00:03:50,096 --> 00:03:54,128
+start its ban highly suggested in C
+
+56
+00:03:55,028 --> 00:03:58,082
+before any modern version not using
+prototype is deprecated
+
+57
+00:03:58,082 --> 00:04:01,114
+and has been for very long time now
+
+58
+00:04:02,014 --> 00:04:05,015
+so we're taking advantage of this
+
+59
+00:04:05,015 --> 00:04:08,020
+in arm 64 to generate more efficient
+
+60
+00:04:08,065 --> 00:04:12,069
+calling convention code in particular
+for periodic functions like print out
+
+61
+00:04:13,005 --> 00:04:13,071
+but be
+
+62
+00:04:13,071 --> 00:04:17,570
+number of arguments the function varies
+by call type
+
+63
+00:04:18,209 --> 00:04:23,440
+talk when you have order code that
+you're using that may not use prototypes
+
+64
+00:04:23,044 --> 00:04:26,078
+what is normally a warning has now been
+promoted
+
+65
+00:04:26,078 --> 00:04:30,105
+to an hour so the compiler will
+highlight to you in your code
+
+66
+00:04:31,005 --> 00:04:34,090
+exactly where this is happening so that
+you know
+
+67
+00:04:34,009 --> 00:04:38,081
+porch prototypes to go and pure header
+files to move on
+
+68
+00:04:39,062 --> 00:04:43,104
+one place that this does sometimes come
+up in a little bit more
+
+69
+00:04:44,004 --> 00:04:47,061
+subtle way is Reina C++ and objective-c
+
+70
+00:04:47,061 --> 00:04:51,148
+interworking code with direct
+indications objective-c message send
+
+71
+00:04:52,048 --> 00:04:55,052
+to help find this we have a new Xcode
+setting
+
+72
+00:04:55,052 --> 00:04:59,141
+to enable strict tracking a bob see
+message sent
+
+73
+00:05:00,041 --> 00:05:05,050
+this is a recommended setting and when
+you first upgrade your projects helped
+
+74
+00:05:05,005 --> 00:05:06,010
+code six will
+
+75
+00:05:06,055 --> 00:05:09,062
+encourage you to adopt the setting
+
+76
+00:05:09,062 --> 00:05:12,134
+and what's tricky is that every
+indication about
+
+77
+00:05:13,034 --> 00:05:17,046
+message sound effectively has a
+different type
+
+78
+00:05:17,046 --> 00:05:21,079
+it has the type up what the final
+receiving method
+
+79
+00:05:21,079 --> 00:05:24,126
+is going to be for example here
+
+80
+00:05:25,026 --> 00:05:28,100
+trivial piece of code that's a invoking
+
+81
+00:05:29,000 --> 00:05:34,022
+method foo with strict checking in a
+bowl
+
+82
+00:05:34,022 --> 00:05:37,691
+the compiler will now tell us that we
+need to tell
+
+83
+00:05:37,889 --> 00:05:40,914
+yet what the final pipe is
+
+84
+00:05:41,139 --> 00:05:44,280
+there's a straightforward to do too
+little bit verbose but very
+
+85
+00:05:44,028 --> 00:05:46,028
+straightforward we simply at the tight
+
+86
+00:05:46,028 --> 00:05:49,083
+up the final receiving method done it
+here with the pipe daft this could be
+
+87
+00:05:49,083 --> 00:05:50,152
+done with the direct typecast
+
+88
+00:05:51,052 --> 00:05:55,113
+on all on one line if you prefer just to
+make sure that the compiler knows
+
+89
+00:05:56,013 --> 00:06:00,032
+what the final receiving type up the
+method is so that it can generate
+
+90
+00:06:00,032 --> 00:06:04,100
+the right code to get the final result
+correct
+
+91
+00:06:05,000 --> 00:06:08,029
+another place that we have tightened
+things up
+
+92
+00:06:08,029 --> 00:06:11,063
+and taken advantage of our new baby I am
+64
+
+93
+00:06:11,063 --> 00:06:14,063
+is the objective-c boolean type
+
+94
+00:06:14,063 --> 00:06:18,072
+dorm any if you are at doubt stump the
+experts last night this topic actually
+
+95
+00:06:18,639 --> 00:06:19,714
+came up as a question
+
+96
+00:06:20,389 --> 00:06:25,100
+I've rather amusing like I have tried on
+that will be great
+
+97
+00:06:25,001 --> 00:06:28,064
+so ball is basically now a blowpipe
+
+98
+00:06:28,073 --> 00:06:31,115
+previously its ban assigned character
+
+99
+00:06:32,015 --> 00:06:35,101
+and sometimes our code our code as well
+not just
+
+100
+00:06:36,001 --> 00:06:40,380
+I in yours would put values into the
+billion pipe that work
+
+101
+00:06:40,389 --> 00:06:44,180
+strictly Boolean now the compiler
+
+102
+00:06:44,018 --> 00:06:47,076
+is going to be taking advantage of the
+striper definition
+
+103
+00:06:47,076 --> 00:06:51,104
+so what can happen is that if your code
+does that the results between 32 and I
+
+104
+00:06:52,004 --> 00:06:52,077
+laugh
+
+105
+00:06:52,077 --> 00:06:55,103
+and 64-bit iowa's may differ
+
+106
+00:06:56,003 --> 00:06:59,037
+so if you start seeing some odd
+behaviors with Boolean
+
+107
+00:06:59,037 --> 00:07:04,096
+this is something to look out for
+
+108
+00:07:04,096 --> 00:07:10,098
+we also have pointers and for now 64-bit
+architecture this is kinda the core of
+
+109
+00:07:10,098 --> 00:07:14,121
+what this is all about the pointer to
+launch an app 64bits
+
+110
+00:07:15,021 --> 00:07:19,087
+so old code would often do horrible
+things like hasting
+
+111
+00:07:19,087 --> 00:07:23,666
+integers two pointers in back and forth
+and hopefully we don't write code that
+
+112
+00:07:24,449 --> 00:07:29,050
+does hurt anymore but we all have this
+legacy code we have to live with
+
+113
+00:07:29,005 --> 00:07:32,066
+and now this can bite us if we're not
+careful
+
+114
+00:07:32,066 --> 00:07:35,099
+this is very similar to what we've all
+dealt with on
+
+115
+00:07:35,099 --> 00:07:39,161
+the 32bit to 64bit Intel transition if
+we went through that
+
+116
+00:07:40,061 --> 00:07:44,090
+that she'll probably haven't magically
+just solve that the compiler
+
+117
+00:07:44,009 --> 00:07:47,051
+to for example here forecasting an
+integer
+
+118
+00:07:48,032 --> 00:07:51,033
+which came from a point or somewhere
+else for casting that too
+
+119
+00:07:51,033 --> 00:07:56,034
+avoid star but now the compiler can help
+a little bit it can at least
+
+120
+00:07:56,034 --> 00:07:59,115
+inform us that the problem is coming up
+
+121
+00:08:00,015 --> 00:08:03,016
+and tell us that well we have a problem
+here that
+
+122
+00:08:03,016 --> 00:08:07,063
+we need to look at make sure that this
+is really what's happening
+
+123
+00:08:07,063 --> 00:08:11,072
+now if we ignore this warning the
+runtime
+
+124
+00:08:11,639 --> 00:08:15,600
+in the kernel is going to be a little
+bit more forceful about us
+
+125
+00:08:15,006 --> 00:08:19,355
+if we had dereference that pointer we're
+going to get a hard-fought
+
+126
+00:08:19,949 --> 00:08:23,043
+because the page 0 is mapped to always
+give a fault so
+
+127
+00:08:23,889 --> 00:08:28,380
+if we miss any of these through other
+mornings for still getting error
+
+128
+00:08:28,038 --> 00:08:31,042
+paying attention the compilers can be a
+lot friendlier little be
+
+129
+00:08:31,078 --> 00:08:34,087
+night unfurling tell you the line number
+source file for the problem is
+
+130
+00:08:35,068 --> 00:08:38,125
+the Colonels just gonna tell you did
+something bad
+
+131
+00:08:39,025 --> 00:08:42,674
+to address this we use the C language
+
+132
+00:08:42,899 --> 00:08:48,100
+type toughs that are 64 and 32 bit claim
+that we say we have we won a signed
+
+133
+00:08:48,001 --> 00:08:49,073
+integer unsigned integer
+
+134
+00:08:49,082 --> 00:08:52,511
+there is an appropriate height for
+saving a pointer value
+
+135
+00:08:53,249 --> 00:08:57,301
+or poor indexing into an array for
+comparing the differences between two
+
+136
+00:08:57,769 --> 00:08:58,838
+pointers
+
+137
+00:08:59,459 --> 00:09:03,495
+for example we would modify our previous
+code simply use the int punter
+
+138
+00:09:03,819 --> 00:09:06,856
+hi which one are compiling for 32-bit
+iowa's
+
+139
+00:09:07,189 --> 00:09:10,266
+we a 32-bit signed integer and for
+64-bit iowa's
+
+140
+00:09:10,959 --> 00:09:14,410
+will be a 64-bit signed integer
+
+141
+00:09:14,041 --> 00:09:18,960
+slightly more sharply this can come up
+in structure layouts
+
+142
+00:09:19,329 --> 00:09:22,334
+when we use a longer pointer these now
+bro
+
+143
+00:09:22,379 --> 00:09:27,441
+which change but the size and sometimes
+the alignment the offset other fields in
+
+144
+00:09:27,999 --> 00:09:29,056
+our structures
+
+145
+00:09:29,569 --> 00:09:33,600
+we have to be careful that this is done
+in a way that's safe
+
+146
+00:09:33,879 --> 00:09:36,886
+the most of the time this is going to
+work transparently because the
+
+147
+00:09:36,949 --> 00:09:37,988
+structures were used
+
+148
+00:09:38,339 --> 00:09:41,433
+entirely within our application and
+everything gets the new definition and
+
+149
+00:09:42,279 --> 00:09:44,180
+works fine
+
+150
+00:09:44,018 --> 00:09:48,097
+fight if we're doing something like a
+representation oven on disk file format
+
+151
+00:09:48,097 --> 00:09:51,186
+communicating across a network to
+another process
+
+152
+00:09:52,059 --> 00:09:57,061
+that is going to rely on the exact
+layout of a structure
+
+153
+00:09:57,079 --> 00:10:00,133
+that can go bad so again on any of those
+data structures
+
+154
+00:10:00,619 --> 00:10:04,160
+we want to use DC
+
+155
+00:10:04,016 --> 00:10:08,555
+fixed type fixed size types to make sure
+that we get what we want
+
+156
+00:10:08,699 --> 00:10:14,704
+whether we're building for 64 bit I'll
+ask corporate 32-bit iowa's
+
+157
+00:10:14,749 --> 00:10:19,762
+so in summary building for 64 bit I'll
+ask is easy
+
+158
+00:10:19,879 --> 00:10:23,720
+it's their fall the compiler will help
+find
+
+159
+00:10:23,072 --> 00:10:26,231
+and resolve any issues
+
+160
+00:10:26,879 --> 00:10:29,967
+this isn't the only thing that we've
+been up to we've also been making
+
+161
+00:10:30,759 --> 00:10:31,660
+advances
+
+162
+00:10:31,066 --> 00:10:34,545
+in objective-c
+
+163
+00:10:35,139 --> 00:10:40,156
+and the compiler can help here too the
+language has continued to move forward
+
+164
+00:10:40,309 --> 00:10:43,368
+so love this one really helps with
+interoperability with swift as well
+
+165
+00:10:43,899 --> 00:10:46,987
+she may be seeing in that pocket highly
+encourage you to check it out
+
+166
+00:10:47,779 --> 00:10:50,814
+not happening at the same time as this
+one took a look on the video
+
+167
+00:10:51,129 --> 00:10:54,166
+when that comes out on the BBC ap
+
+168
+00:10:54,499 --> 00:10:58,800
+and where we write new code
+
+169
+00:10:58,008 --> 00:11:01,089
+we've been using all of these
+advancements in the language
+
+170
+00:11:02,061 --> 00:11:05,530
+to get modern best practices more
+expressive code
+
+171
+00:11:06,079 --> 00:11:10,084
+but then we have all this older legacy
+code
+
+172
+00:11:10,129 --> 00:11:13,173
+the would like to adopt all these
+features and as well but
+
+173
+00:11:13,569 --> 00:11:17,600
+that a lot a code to go read through and
+manually find all these things
+
+174
+00:11:17,006 --> 00:11:21,100
+so we have a tool that will help us
+identify the opportunities
+
+175
+00:11:22,054 --> 00:11:26,061
+where we can use these new features I
+think the best way
+
+176
+00:11:26,061 --> 00:11:32,200
+to talk about that is to show you with
+the demo
+
+177
+00:11:32,749 --> 00:11:35,817
+now rather than use some contrived
+
+178
+00:11:36,429 --> 00:11:40,220
+example code here I thought well maybe
+look at something that we all are
+
+179
+00:11:40,022 --> 00:11:42,024
+familiar with at least as users
+
+180
+00:11:42,024 --> 00:11:45,024
+and our WTTC ap
+
+181
+00:11:45,024 --> 00:11:48,863
+that code has been with us for a while
+we updated every year
+
+182
+00:11:49,079 --> 00:11:54,079
+and what the modern eyes are we wanted
+to use that to look at it and find out
+
+183
+00:11:54,079 --> 00:11:54,167
+if they're
+
+184
+00:11:54,959 --> 00:11:59,015
+perhaps some places in the code base
+that we missed for opportunities
+
+185
+00:11:59,519 --> 00:12:02,585
+to use new objective c- features so
+let's look
+
+186
+00:12:03,179 --> 00:12:07,110
+and see what a few those things that we
+found our
+
+187
+00:12:07,011 --> 00:12:10,460
+we go under edit to re factor between
+convert
+
+188
+00:12:10,559 --> 00:12:13,615
+our project modern Objective C syntax
+
+189
+00:12:14,119 --> 00:12:17,800
+begun a dialogue box telling us what
+we've just selected to make sure that we
+
+190
+00:12:17,008 --> 00:12:19,075
+got the right thing
+
+191
+00:12:20,047 --> 00:12:23,086
+we can select whether to which targets
+in our project to modernize
+
+192
+00:12:23,086 --> 00:12:28,315
+from this in this case for looking at
+the BBC app itself
+
+193
+00:12:29,089 --> 00:12:33,143
+in a previous version the tax code to
+modernize would go through and just look
+
+194
+00:12:33,629 --> 00:12:34,470
+for
+
+195
+00:12:34,047 --> 00:12:37,166
+objective Singh liberals and
+subscription but now we have
+
+196
+00:12:37,589 --> 00:12:42,630
+more options now personally I prefer not
+to do all of these at once that tends to
+
+197
+00:12:42,999 --> 00:12:43,052
+be
+
+198
+00:12:43,529 --> 00:12:46,604
+a little too much to swap back and forth
+so I tend want to select
+
+199
+00:12:47,279 --> 00:12:51,283
+a few things by to look for instance
+type
+
+200
+00:12:51,319 --> 00:12:55,420
+here that we can get our initialization
+weapons more strongly typed
+
+201
+00:12:55,042 --> 00:12:59,054
+going to try and find if we missed any
+read/write properties for recon Burke
+
+202
+00:12:59,054 --> 00:13:02,133
+up explicit getter setter methods
+
+203
+00:13:02,619 --> 00:13:07,665
+Android ebook to use in ASCII new
+foreign racin value so the compiler
+
+204
+00:13:08,079 --> 00:13:12,096
+can cooperate with the run time to give
+better results
+
+205
+00:13:12,249 --> 00:13:15,920
+click Next the compiler will run
+
+206
+00:13:15,092 --> 00:13:19,161
+over our code and turns out we do indeed
+have a few more suggestions for what we
+
+207
+00:13:20,061 --> 00:13:21,580
+can look at
+
+208
+00:13:22,129 --> 00:13:25,850
+but do keep in mind that these are just
+suggestions
+
+209
+00:13:25,085 --> 00:13:28,754
+that we need to go through and look at
+the side by side death here
+
+210
+00:13:29,519 --> 00:13:33,594
+we have the new code on the left the old
+code on the right
+
+211
+00:13:34,269 --> 00:13:38,275
+we look to hear this work fine
+everything looks good here we're
+
+212
+00:13:38,329 --> 00:13:40,403
+converting to Ian's
+
+213
+00:13:41,069 --> 00:13:45,107
+secure our next one this looks a little
+bit
+
+214
+00:13:45,449 --> 00:13:48,532
+different because we still have this and
+I sent a juror over here
+
+215
+00:13:49,279 --> 00:13:52,302
+that what I could be straightforward
+cleanup but
+
+216
+00:13:52,509 --> 00:13:54,603
+I brother come back to this later I just
+want to deal with the things we can do
+
+217
+00:13:55,449 --> 00:13:57,420
+automatically right now
+
+218
+00:13:57,042 --> 00:14:00,581
+so I tell the monitor to discard that
+change
+
+219
+00:14:00,959 --> 00:14:05,991
+it mounts make sure that doing that yes
+I'm absolutely sure
+
+220
+00:14:06,279 --> 00:14:11,279
+can do the same here we could also tell
+it to ignore all the changes in this
+
+221
+00:14:11,279 --> 00:14:11,325
+file
+
+222
+00:14:11,739 --> 00:14:14,740
+this check button here
+
+223
+00:14:14,839 --> 00:14:17,868
+and out also found a place where we can
+use an instant
+
+224
+00:14:18,129 --> 00:14:22,187
+type not all looks good so we tell it to
+
+225
+00:14:22,709 --> 00:14:26,766
+save and Xcode will now tell us that all
+we can
+
+226
+00:14:27,279 --> 00:14:30,284
+update our project as well take snapshot
+
+227
+00:14:30,329 --> 00:14:33,411
+that sound great but what it do that as
+backup for good
+
+228
+00:14:34,149 --> 00:14:37,161
+now our project to save its been rebuilt
+
+229
+00:14:37,269 --> 00:14:40,277
+and the objective-c modernize our works
+
+230
+00:14:41,069 --> 00:14:45,096
+tuber update our code and help us find
+places for we can take advantage
+
+231
+00:14:45,339 --> 00:14:49,350
+up new features that isn't the only
+place
+
+232
+00:14:49,449 --> 00:14:53,980
+that we've made advances for objective-c
+
+233
+00:14:53,098 --> 00:14:56,111
+had for interoperability to tell you
+more about that
+
+234
+00:14:57,011 --> 00:15:02,480
+I'd like to ride up my friend coworker
+Bob Wilson
+
+235
+00:15:02,579 --> 00:15:07,627
+the clock
+
+236
+00:15:08,059 --> 00:15:11,072
+thank you Jim so modulus
+
+237
+00:15:11,189 --> 00:15:14,970
+are another way that LTM can help
+modernize your code
+
+238
+00:15:14,097 --> 00:15:17,676
+we produce models just last year but in
+case you missed that
+
+239
+00:15:18,549 --> 00:15:21,594
+let's start with some background
+
+240
+00:15:21,999 --> 00:15:25,013
+so be four models we had precompiled
+headers
+
+241
+00:15:25,139 --> 00:15:29,202
+which are often ineffective way to speed
+up the compilation of your code
+
+242
+00:15:29,769 --> 00:15:32,855
+but they do have some limitations you
+can only have one mod
+
+243
+00:15:33,629 --> 00:15:37,634
+one precompiled header at a time and
+more importantly
+
+244
+00:15:37,679 --> 00:15:42,681
+the whole approach abusing a textual
+inclusion of a header file
+
+245
+00:15:42,699 --> 00:15:46,700
+as a way of importing framework is just
+fragile
+
+246
+00:15:46,799 --> 00:15:50,843
+we have a deal with the issue where a
+header file get included more than once
+
+247
+00:15:51,239 --> 00:15:56,540
+in a single compilation we have also
+problem have headers being fragile
+
+248
+00:15:56,054 --> 00:15:59,693
+and what I mean by that is that the
+meaning up the header
+
+249
+00:16:00,179 --> 00:16:03,218
+can change depending on the environment
+where it's important
+
+250
+00:16:03,569 --> 00:16:06,580
+and let me show you that with an example
+
+251
+00:16:06,679 --> 00:16:09,744
+so here I've defined macro count to the
+value 100
+
+252
+00:16:10,329 --> 00:16:13,346
+and I'm port the foundation framework
+now
+
+253
+00:16:13,499 --> 00:16:18,581
+inside the foundation had her there's
+and include for the NSR a definition
+
+254
+00:16:19,319 --> 00:16:22,356
+and an SRA has a high bar count
+
+255
+00:16:22,689 --> 00:16:25,702
+so the macro Scout get substituted
+
+256
+00:16:25,819 --> 00:16:28,845
+as literal taxed in that place and we
+end up with
+
+257
+00:16:29,079 --> 00:16:33,157
+completely broken code where instead of
+the I Heart name we have a value of 100
+
+258
+00:16:33,859 --> 00:16:37,290
+this is what I mean by hatter's being
+fragile
+
+259
+00:16:37,029 --> 00:16:40,488
+modules solve this problem by replacing
+the model
+
+260
+00:16:40,749 --> 00:16:44,758
+textual inclusion with semantic import
+
+261
+00:16:44,839 --> 00:16:48,861
+there's a lot more detail about models
+in the advances in objective-c
+
+262
+00:16:49,059 --> 00:16:52,148
+presentation from last year's WWDC I
+encourage you to watch that if you're
+
+263
+00:16:52,949 --> 00:16:55,034
+not familiar with modules
+
+264
+00:16:55,799 --> 00:17:01,100
+until now models have only been
+available for the system frameworks
+
+265
+00:17:01,001 --> 00:17:04,360
+new in Xcode 6 you can now define
+modules
+
+266
+00:17:04,459 --> 00:17:08,533
+for your own frameworks as well for C++
+and objective-c
+
+267
+00:17:09,199 --> 00:17:13,390
+besides fixing the problems we just
+looked at this also gives you away
+
+268
+00:17:13,039 --> 00:17:17,208
+%uh importing your own framework into
+your swift code
+
+269
+00:17:17,559 --> 00:17:20,470
+and as jim mentioned there's another
+session on integrating swift with
+
+270
+00:17:20,047 --> 00:17:21,266
+objective-c
+
+271
+00:17:21,689 --> 00:17:24,787
+I encourage you to watch the video to
+learn more about that
+
+272
+00:17:25,669 --> 00:17:28,683
+so if you want to do this how
+
+273
+00:17:28,809 --> 00:17:33,710
+it's really very easy for most
+frameworks it's possible to define
+
+274
+00:17:33,071 --> 00:17:37,148
+a single umbrella Heather that imports
+all of the framework API
+
+275
+00:17:38,048 --> 00:17:41,237
+and this is what we recommend that you
+do as
+
+276
+00:17:41,669 --> 00:17:44,693
+is the easiest way to adopt a module
+
+277
+00:17:44,909 --> 00:17:48,220
+once you've done that simply go to the
+Xcode build settings
+
+278
+00:17:48,022 --> 00:17:51,050
+for your framework and in the packaging
+section
+
+279
+00:17:51,005 --> 00:17:55,006
+set defines Marshall TS and that's it
+
+280
+00:17:55,006 --> 00:17:59,054
+it really is very easy now if you have a
+more complicated framework
+
+281
+00:18:00,008 --> 00:18:04,011
+where that that single umbrella hat er
+is not sufficient you can use a custom
+
+282
+00:18:04,038 --> 00:18:05,577
+module map
+
+283
+00:18:05,919 --> 00:18:11,931
+and there's more information to describe
+how that works on the LVM website
+
+284
+00:18:12,039 --> 00:18:15,380
+after you've created a Marshall you want
+to use it
+
+285
+00:18:15,038 --> 00:18:19,110
+how do you do that there's a an at
+import keyword
+
+286
+00:18:20,001 --> 00:18:25,310
+followed by the module name that tells
+the compiler I want to import this model
+
+287
+00:18:25,409 --> 00:18:28,760
+if you haven't had a chance to update
+your code and you're still
+
+288
+00:18:28,076 --> 00:18:31,119
+have a pound import to include the
+umbrella header
+
+289
+00:18:32,019 --> 00:18:36,608
+compiler smart enough to know that this
+is now a modular framework
+
+290
+00:18:36,779 --> 00:18:41,980
+and it will go ahead treat that has an
+implicit modular important anyway
+
+291
+00:18:41,098 --> 00:18:44,194
+so just as a guideline though we do
+recommend you use at import
+
+292
+00:18:45,094 --> 00:18:49,053
+when you're importing your framework
+into a separate target within your
+
+293
+00:18:49,899 --> 00:18:49,990
+project
+
+294
+00:18:50,809 --> 00:18:54,710
+just because it makes it clear in the
+source that you really intend for this
+
+295
+00:18:54,071 --> 00:18:57,010
+to be a modular import
+
+296
+00:18:57,649 --> 00:19:01,220
+one exception to that his within the
+implementation have your framework
+
+297
+00:19:01,022 --> 00:19:02,049
+itself
+
+298
+00:19:02,049 --> 00:19:05,146
+it doesn't make any sense to to import a
+framework into itself
+
+299
+00:19:06,046 --> 00:19:09,755
+and so in that case you really need to
+use pound import to textually include
+
+300
+00:19:10,169 --> 00:19:11,170
+the framework at urs
+
+301
+00:19:11,269 --> 00:19:14,860
+just within the implementation of the
+framework
+
+302
+00:19:14,086 --> 00:19:17,905
+and beside those guidelines we have a
+few other rules about models that you
+
+303
+00:19:18,679 --> 00:19:20,190
+should be aware of
+
+304
+00:19:20,019 --> 00:19:23,033
+first don't expose any non modular
+
+305
+00:19:23,033 --> 00:19:28,098
+hatter's in your framework a PI it's
+fine to import another module like cocoa
+
+306
+00:19:28,098 --> 00:19:32,017
+but if I have an important something
+like post crest at age which presumably
+
+307
+00:19:32,899 --> 00:19:34,990
+is not a model
+
+308
+00:19:34,099 --> 00:19:37,106
+you can put that down inside the
+implementation your framework
+
+309
+00:19:38,069 --> 00:19:41,150
+but don't expose in the API
+
+310
+00:19:42,005 --> 00:19:46,034
+one other issue is that models can
+change the semantics
+
+311
+00:19:46,529 --> 00:19:50,490
+up your code we saw earlier the problem
+a fragile Hatter
+
+312
+00:19:50,049 --> 00:19:53,458
+where macro definition inadvertently
+broke the code
+
+313
+00:19:53,899 --> 00:19:58,080
+sometimes you might want to do this on
+purpose and I'm showing here an example
+
+314
+00:19:58,008 --> 00:20:01,077
+arrived to find a macro debug as a flag
+
+315
+00:20:01,149 --> 00:20:06,340
+to enable additional debugging API in my
+framework
+
+316
+00:20:06,034 --> 00:20:09,120
+by switching that framework to be a
+module the debug macro
+
+317
+00:20:10,002 --> 00:20:15,081
+defined in my source code no longer has
+any a fact which is not what I wanted
+
+318
+00:20:15,279 --> 00:20:18,306
+now that limitation only applies to
+macros that are defined
+
+319
+00:20:18,549 --> 00:20:21,648
+in the source code so if you really want
+to do something like this
+
+320
+00:20:22,539 --> 00:20:25,612
+one alternative is to define the macro
+on the command line
+
+321
+00:20:26,269 --> 00:20:29,346
+or in the Xcode build settings
+
+322
+00:20:30,039 --> 00:20:33,088
+so that is user-defined modulus it's
+really pretty straight forward in the
+
+323
+00:20:33,529 --> 00:20:33,615
+common case
+
+324
+00:20:34,389 --> 00:20:37,402
+had gives you fast compilation clear
+semantics
+
+325
+00:20:37,519 --> 00:20:41,606
+and away in our operating with swift
+code
+
+326
+00:20:42,389 --> 00:20:46,405
+so far we've been talking a lot about
+ways that LBM help to modernize your
+
+327
+00:20:46,549 --> 00:20:47,710
+code and adopt
+
+328
+00:20:47,071 --> 00:20:50,137
+modern objective-c modules but
+
+329
+00:20:51,037 --> 00:20:54,426
+let's turn now and look at performance
+which is the other team up this
+
+330
+00:20:54,759 --> 00:20:56,840
+presentation
+
+331
+00:20:56,084 --> 00:20:59,098
+profile guided optimization or p.geo
+
+332
+00:20:59,098 --> 00:21:02,123
+is a new feature in Xcode 6
+
+333
+00:21:03,023 --> 00:21:06,046
+penny gives you away getting even more
+performance
+
+334
+00:21:06,046 --> 00:21:09,125
+out of your code me give you to
+
+335
+00:21:09,539 --> 00:21:13,627
+overall high-level understanding of what
+this is about
+
+336
+00:21:14,419 --> 00:21:17,455
+one at the inherent challenges for the
+compiler is that
+
+337
+00:21:17,779 --> 00:21:21,320
+it has no way of knowing what the input
+to your program is going to be
+
+338
+00:21:21,032 --> 00:21:24,881
+the only input to the compiler is your
+source code
+
+339
+00:21:25,169 --> 00:21:30,203
+so the compiler have to assume that all
+inputs are equally likely
+
+340
+00:21:30,509 --> 00:21:34,090
+there are some cases where it can gas
+that certain code pass will be more
+
+341
+00:21:34,009 --> 00:21:35,084
+common than others
+
+342
+00:21:35,084 --> 00:21:38,273
+for example it can assume that going
+through a loop
+
+343
+00:21:39,029 --> 00:21:42,032
+is gonna happen more often than cold
+outside and that will
+
+344
+00:21:42,059 --> 00:21:47,081
+but those are just gases and they're a
+lot of things that is simply can't now
+
+345
+00:21:47,279 --> 00:21:51,700
+if we provide a profile has an
+additional input to the compiler
+
+346
+00:21:51,007 --> 00:21:55,019
+he can now try to optimize for the
+common case
+
+347
+00:21:55,082 --> 00:22:00,086
+hand do a better job optimization what I
+mean by profile here
+
+348
+00:22:01,022 --> 00:22:05,231
+is simply account how many times each
+statement in your apt executes
+
+349
+00:22:05,429 --> 00:22:09,090
+in a typical run if you're out
+
+350
+00:22:09,009 --> 00:22:12,047
+you may be wondering how do I get a
+profile like that
+
+351
+00:22:12,047 --> 00:22:15,120
+again we can use the compiler here to
+generate a special
+
+352
+00:22:16,002 --> 00:22:20,571
+instrument it out that as it runs is
+gonna count how many times
+
+353
+00:22:20,769 --> 00:22:24,130
+each statement executes and then when
+you're out finishes
+
+354
+00:22:24,013 --> 00:22:27,792
+with the special instrumental version he
+will write out that profile
+
+355
+00:22:27,909 --> 00:22:31,340
+which the week and then use for p.geo
+
+356
+00:22:31,034 --> 00:22:35,075
+so how does the compiler use that
+profile information
+
+357
+00:22:35,075 --> 00:22:39,614
+there are an awful lot away so many
+optimizations can benefit from this
+
+358
+00:22:40,289 --> 00:22:43,324
+but I'm highlighting just three here
+that are particularly valuable
+
+359
+00:22:43,639 --> 00:22:48,190
+want us to the in liar if we know that a
+function is really hot
+
+360
+00:22:48,019 --> 00:22:51,098
+and by that I mean its its run a lot
+over and over
+
+361
+00:22:51,269 --> 00:22:55,080
+be in water can be much more aggressive
+about inlining
+
+362
+00:22:55,008 --> 00:22:58,099
+when we're generating the code we can
+try to lay out the the comment passed
+
+363
+00:22:58,099 --> 00:22:58,198
+through your code
+
+364
+00:22:59,098 --> 00:23:02,757
+so that they're contiguous which makes
+it easy for the processor to run
+
+365
+00:23:03,639 --> 00:23:07,000
+fast and the register allocator can also
+
+366
+00:23:07,000 --> 00:23:12,759
+try to keep values in registers
+throughout those most common paths
+
+367
+00:23:12,759 --> 00:23:16,850
+let's look at an example just to give
+you a better understanding of this
+
+368
+00:23:16,085 --> 00:23:20,146
+this is some C plus plus code this going
+to iterate over a set of colored objects
+
+369
+00:23:21,046 --> 00:23:24,059
+and for each one is going to update the
+position of the object
+
+370
+00:23:24,059 --> 00:23:27,120
+so the top I've got a loop over the
+object
+
+371
+00:23:28,002 --> 00:23:31,090
+and freaked when I'm gonna call my
+update position function
+
+372
+00:23:32,008 --> 00:23:36,012
+and update position is gonna look and
+feel if the object is red
+
+373
+00:23:36,012 --> 00:23:40,051
+it moves in a very simple horizontal
+lines to the code is really simple
+
+374
+00:23:40,159 --> 00:23:43,246
+but if the object is blue let's assume
+that that the movement is much more
+
+375
+00:23:44,029 --> 00:23:44,102
+complicated
+
+376
+00:23:44,759 --> 00:23:48,130
+got a very large block of code here
+
+377
+00:23:48,013 --> 00:23:52,047
+now the compiler has no way of knowing
+whether red objects or blue object
+
+378
+00:23:52,047 --> 00:23:56,134
+are more likely so it just assumes there
+them both equally likely
+
+379
+00:23:57,034 --> 00:24:00,107
+but with PDR I might be able to know
+that rat object
+
+380
+00:24:01,007 --> 00:24:06,116
+are form far more common some I'm
+highlighting and read here the hot code
+
+381
+00:24:06,179 --> 00:24:09,184
+which is the code to generate over the
+set of objects and then to handle the
+
+382
+00:24:09,679 --> 00:24:10,778
+rat object
+
+383
+00:24:11,669 --> 00:24:14,830
+I'm gonna color code the cold code in
+blue
+
+384
+00:24:14,083 --> 00:24:18,542
+which is blue object which are rare for
+some reason in this application
+
+385
+00:24:19,289 --> 00:24:23,362
+and then let's look at how the compiler
+would handle this code
+
+386
+00:24:24,019 --> 00:24:27,090
+here's kinda that the fall code layout
+that matches
+
+387
+00:24:27,009 --> 00:24:30,048
+roughly the original source or order
+gotta
+
+388
+00:24:30,129 --> 00:24:34,167
+the hot loop outside and an update
+position function down below
+
+389
+00:24:34,509 --> 00:24:38,480
+with a little bit of hot code in it
+
+390
+00:24:38,048 --> 00:24:41,082
+inlining is one of the most important
+optimizations
+
+391
+00:24:41,082 --> 00:24:45,119
+can't would really like to in line at
+update position function
+
+392
+00:24:46,019 --> 00:24:49,088
+but the compiler can't in line
+everything
+
+393
+00:24:49,259 --> 00:24:53,311
+for the code would blow beyond point
+where it would be useful
+
+394
+00:24:53,779 --> 00:24:56,854
+but in this case I the the update
+position function is big because all
+
+395
+00:24:57,529 --> 00:25:00,565
+that cold code for handling the blue
+object
+
+396
+00:25:00,889 --> 00:25:04,860
+and so it wouldn't normally be in line
+but because p.geo tells us there's some
+
+397
+00:25:04,086 --> 00:25:05,172
+really hot code here
+
+398
+00:25:06,072 --> 00:25:09,137
+be in line or can be much more
+aggressive about that in this particular
+
+399
+00:25:10,037 --> 00:25:11,596
+case
+
+400
+00:25:11,929 --> 00:25:14,940
+so we take that the loop iterating over
+the object
+
+401
+00:25:14,094 --> 00:25:17,703
+had split that half and movie in
+
+402
+00:25:18,549 --> 00:25:22,555
+the update position code right in line
+so this is much better now we've got a
+
+403
+00:25:23,149 --> 00:25:24,450
+lot of the hot code
+
+404
+00:25:24,045 --> 00:25:27,109
+right together but we've still got a big
+chunk of
+
+405
+00:25:28,009 --> 00:25:32,208
+book this cold for blue object the cold
+cold right in the middle of our loop
+
+406
+00:25:32,289 --> 00:25:36,700
+AP geo can help this as well opt by
+changing the code layout
+
+407
+00:25:36,007 --> 00:25:39,816
+it knows that that code is called and
+can move it down below
+
+408
+00:25:40,509 --> 00:25:43,730
+out of the way and we end up with a nice
+tight loop
+
+409
+00:25:43,073 --> 00:25:46,242
+can run really fast and it also I'll
+
+410
+00:25:46,899 --> 00:25:51,110
+typically enables other optimizations on
+that hot code
+
+411
+00:25:51,011 --> 00:25:54,082
+so obviously this is a simple fighting
+sample but hopefully gives you feel love
+
+412
+00:25:54,082 --> 00:25:54,801
+the power
+
+413
+00:25:55,539 --> 00:25:59,960
+p.geo and just how much you can help the
+optimizer
+
+414
+00:25:59,096 --> 00:26:03,515
+so you may want to use it when does it
+make sense
+
+415
+00:26:04,379 --> 00:26:08,384
+the compiler does a really good job
+optimizing by default
+
+416
+00:26:08,879 --> 00:26:12,954
+with p.geo if you do just a little bit
+of extra work together the profile
+
+417
+00:26:13,629 --> 00:26:16,990
+you can do even better so obviously if
+you're
+
+418
+00:26:16,099 --> 00:26:19,868
+if you're happy with the performance
+you're already getting you probably not
+
+419
+00:26:20,759 --> 00:26:21,788
+motivated to do that
+
+420
+00:26:22,049 --> 00:26:26,090
+even that little bit of extra work but
+if you need more performance
+
+421
+00:26:26,009 --> 00:26:29,010
+by all means give it a try
+
+422
+00:26:29,019 --> 00:26:33,508
+and let me show you some examples up
+just how much it can help
+
+423
+00:26:33,679 --> 00:26:36,690
+this is a graph showing the the speedup
+
+424
+00:26:36,789 --> 00:26:40,791
+compared with p.geo compared to a case
+I'm just a normal optimized bill
+
+425
+00:26:40,809 --> 00:26:44,860
+and I'm looking at four different
+applications here the Apple LLVM
+
+426
+00:26:44,086 --> 00:26:45,157
+compiler itself
+
+427
+00:26:46,057 --> 00:26:50,296
+applying p.geo to to the compiler itself
+sq like database
+
+428
+00:26:50,809 --> 00:26:54,610
+up the Perl interpreter Angie zip file
+compression
+
+429
+00:26:54,061 --> 00:26:58,460
+mpg ok if the speedups ranging from
+about 4 percent all the way up to 18
+
+430
+00:26:59,009 --> 00:27:00,085
+percent
+
+431
+00:27:00,769 --> 00:27:03,868
+so not all out for benefit this much it
+really varies depending on the app
+
+432
+00:27:04,759 --> 00:27:09,764
+but clearly there's a lot of potential
+here
+
+433
+00:27:09,809 --> 00:27:12,843
+so if you want to try it how do you go
+about that
+
+434
+00:27:13,149 --> 00:27:17,248
+p.geo is really easy to use the first
+step is to collect the profile
+
+435
+00:27:18,139 --> 00:27:21,250
+I'm gonna come back and talk about that
+in just a minute
+
+436
+00:27:21,025 --> 00:27:24,704
+what you've done that simply go in the
+Xcode build settings for your project
+
+437
+00:27:24,929 --> 00:27:25,230
+and
+
+438
+00:27:25,023 --> 00:27:29,722
+find the use optimization profile
+setting and set it to yes typically
+
+439
+00:27:29,929 --> 00:27:35,002
+just for the release configuration and
+that's it you enable p.geo
+
+440
+00:27:35,659 --> 00:27:39,480
+once you've done that as you continue
+developing your app you make changes you
+
+441
+00:27:39,048 --> 00:27:41,085
+fix bugs you add new features
+
+442
+00:27:41,085 --> 00:27:46,110
+the code becomes gradually outta sync
+with the profile you collected earlier
+
+443
+00:27:47,001 --> 00:27:51,063
+and when that happens the compiler will
+will simply fail to use that profile
+
+444
+00:27:51,072 --> 00:27:55,123
+information on break anything it did he
+just gradually lose the the optimization
+
+445
+00:27:56,023 --> 00:27:56,082
+benefit
+
+446
+00:27:56,082 --> 00:27:59,097
+when that happens it will give you a
+warning
+
+447
+00:27:59,097 --> 00:28:03,098
+so if you see warnings like this saying
+that your profile may be out today
+
+448
+00:28:04,007 --> 00:28:07,616
+as you see more and more of them it's a
+good indication she it's time to go back
+
+449
+00:28:07,679 --> 00:28:10,730
+an update your your profile
+
+450
+00:28:10,073 --> 00:28:14,119
+so let's turn now and look at how do you
+generate the profile
+
+451
+00:28:15,019 --> 00:28:19,878
+Xcode 6 has a new command generate
+optimization profile
+
+452
+00:28:20,049 --> 00:28:23,090
+when you run this command exco will
+build the special
+
+453
+00:28:23,009 --> 00:28:26,468
+instrumental version if you're out and
+then right and you can then
+
+454
+00:28:26,549 --> 00:28:29,554
+interact with the running app to
+generate the profile when it finishes
+
+455
+00:28:30,049 --> 00:28:34,075
+running will write out the profile and
+add it to your project
+
+456
+00:28:34,309 --> 00:28:38,321
+has your running a route keep in mind
+its important to exercise
+
+457
+00:28:38,429 --> 00:28:41,590
+all the code that's important for your
+performance
+
+458
+00:28:41,059 --> 00:28:45,648
+if I V game with three different levels
+and I only play the first level
+
+459
+00:28:46,179 --> 00:28:49,480
+my game the compilers can assume that
+that's the one thing that really matters
+
+460
+00:28:49,048 --> 00:28:49,977
+and not
+
+461
+00:28:50,409 --> 00:28:54,320
+work as hard on other levels
+
+462
+00:28:54,032 --> 00:28:57,096
+now you may be wondering if I if I've
+been really hard game
+
+463
+00:28:57,096 --> 00:29:00,149
+it may take a while to play the whole
+thing to completion
+
+464
+00:29:01,049 --> 00:29:04,112
+up that could be a problem right so X
+could have
+
+465
+00:29:05,012 --> 00:29:09,033
+another option which is to use your
+performance test
+
+466
+00:29:09,033 --> 00:29:14,035
+as inputs to drive the profiling
+performance test our new feature
+
+467
+00:29:14,035 --> 00:29:18,104
+in Xcode 6 if you'd like to learn more
+about them there's a session right here
+
+468
+00:29:18,419 --> 00:29:18,490
+tomorrow morning
+
+469
+00:29:19,129 --> 00:29:22,490
+on testing in Xcode 6 and
+
+470
+00:29:22,049 --> 00:29:25,218
+white shoes if if you care about
+performance you want to set up
+
+471
+00:29:25,659 --> 00:29:28,721
+these performance test anyway to catch
+regressions in your co just to keep
+
+472
+00:29:29,279 --> 00:29:31,279
+track of how you're doing
+
+473
+00:29:31,279 --> 00:29:34,284
+and what you gone to that trouble to set
+them up
+
+474
+00:29:34,779 --> 00:29:40,100
+in most cases they're pretty good inputs
+for driving this profile
+
+475
+00:29:40,001 --> 00:29:43,076
+again though keep in mind it's important
+that your test
+
+476
+00:29:43,085 --> 00:29:46,744
+cover the code in a way that's reflects
+a typical usage if your app
+
+477
+00:29:47,509 --> 00:29:51,538
+going back to my my free level game if I
+write lots a test for the first level
+
+478
+00:29:51,799 --> 00:29:54,740
+and only a few for the second and third
+level
+
+479
+00:29:54,074 --> 00:29:57,096
+again the compilers gonna end up
+optimizing more heavily
+
+480
+00:29:57,096 --> 00:30:02,905
+for that first level another benefit of
+using test is it gives you a great way
+
+481
+00:30:03,769 --> 00:30:06,772
+evaluating how much does p.geo help me
+
+482
+00:30:06,799 --> 00:30:11,850
+can just run your tests let me show you
+that with a demo now
+
+483
+00:30:12,309 --> 00:30:16,309
+so with the release of the swift
+language we thought it would be fun to
+
+484
+00:30:16,309 --> 00:30:17,580
+make it a demo app
+
+485
+00:30:17,058 --> 00:30:21,062
+that would celebrate that and so rather
+than this with language we thought of
+
+486
+00:30:21,098 --> 00:30:22,185
+this with birds
+
+487
+00:30:23,085 --> 00:30:28,144
+we made an application that uses the
+Boyds artificial life simulation
+
+488
+00:30:28,909 --> 00:30:33,070
+to simulate of La Crosse Wis
+
+489
+00:30:33,007 --> 00:30:37,076
+and I can create a whole bunch of them
+here and let them fly around
+
+490
+00:30:37,139 --> 00:30:40,154
+and the way this this boyd's application
+works
+
+491
+00:30:40,289 --> 00:30:45,700
+his that each bird are buoyed compares
+its position to all the other ones on
+
+492
+00:30:45,007 --> 00:30:46,206
+the screen
+
+493
+00:30:46,899 --> 00:30:50,100
+and it calculates the distance between
+them to find that
+
+494
+00:30:50,001 --> 00:30:53,820
+the flock up the birds nearest to it and
+then
+
+495
+00:30:53,919 --> 00:30:58,002
+each boy has a competing urges on the
+one hand it wants to move
+
+496
+00:30:58,749 --> 00:31:01,804
+closer to the center of the flock the
+same time
+
+497
+00:31:02,299 --> 00:31:07,335
+it doesn't want to get to close and so
+if it gets too close to another one
+
+498
+00:31:07,659 --> 00:31:11,723
+it will move apart and the performance
+if that is we add
+
+499
+00:31:12,299 --> 00:31:16,310
+more and more of these boys could become
+a problem
+
+500
+00:31:16,409 --> 00:31:20,460
+so we set up a performance test to track
+that
+
+501
+00:31:20,919 --> 00:31:24,100
+and this is a a really simple
+performance test
+
+502
+00:31:24,001 --> 00:31:27,099
+on we set up a scene with two hundred
+boyd's
+
+503
+00:31:28,008 --> 00:31:31,597
+and measure the time it takes to update
+their positions a hundred times
+
+504
+00:31:31,669 --> 00:31:35,570
+and that's our performance just so let's
+run that because I care about
+
+505
+00:31:35,057 --> 00:31:36,036
+performance
+
+506
+00:31:36,549 --> 00:31:40,584
+I'm gonna edit my current scheme to make
+sure that my test
+
+507
+00:31:40,899 --> 00:31:43,905
+step is going to use the release build
+configuration
+
+508
+00:31:44,499 --> 00:31:47,610
+so that we get optimize results
+
+509
+00:31:47,061 --> 00:31:50,820
+and I'll go to the product test menu
+
+510
+00:31:51,369 --> 00:31:57,382
+can run my performance test here
+
+511
+00:31:57,499 --> 00:32:01,200
+all right and now because I have to run
+the test before I don't have a baseline
+
+512
+00:32:01,002 --> 00:32:04,093
+so let's go ahead and set the baseline
+
+513
+00:32:05,011 --> 00:32:09,084
+based on that first drive and now let's
+try adding
+
+514
+00:32:09,084 --> 00:32:13,503
+p.geo into the product menu perform
+action
+
+515
+00:32:14,259 --> 00:32:16,347
+down at the bottom here's this new
+command I told you about generate
+
+516
+00:32:17,139 --> 00:32:19,148
+optimization profile
+
+517
+00:32:20,039 --> 00:32:23,600
+I get two choices I can either run the
+application
+
+518
+00:32:23,006 --> 00:32:26,042
+or I can use my performance test and I
+I'd like to show you how it works with
+
+519
+00:32:26,096 --> 00:32:28,165
+the performance test
+
+520
+00:32:29,029 --> 00:32:32,340
+I just click building run and Xcode
+
+521
+00:32:32,034 --> 00:32:35,036
+very helpfully warns me that I haven't
+yet enabled
+
+522
+00:32:35,036 --> 00:32:39,355
+p.geo in a build settings and it offers
+to do that so let's go ahead
+
+523
+00:32:39,679 --> 00:32:43,711
+and let it enable that it's now building
+a special instrumental version of our
+
+524
+00:32:43,999 --> 00:32:44,062
+apt
+
+525
+00:32:44,629 --> 00:32:48,681
+and running it using a performance test
+
+526
+00:32:49,149 --> 00:32:52,185
+and when those tests finish
+
+527
+00:32:52,509 --> 00:32:55,610
+II gotta I got a warning here in fine
+air
+
+528
+00:32:55,061 --> 00:32:58,830
+let me just explain what's happened here
+is that because we've run the app
+
+529
+00:32:59,379 --> 00:33:03,200
+with a lot of it instrumentation code it
+runs more slowly
+
+530
+00:33:03,002 --> 00:33:07,331
+but this is just been used to generate
+the profile so that's not a problem
+
+531
+00:33:07,529 --> 00:33:10,603
+when you go back to the project
+navigator minute and show you
+
+532
+00:33:11,269 --> 00:33:14,285
+that expert has added this new
+optimization profiles
+
+533
+00:33:14,429 --> 00:33:17,451
+holder an insider that if you can see it
+
+534
+00:33:17,649 --> 00:33:20,723
+there's my profile data so that's great
+
+535
+00:33:21,389 --> 00:33:26,340
+p.geo is enabled we have a profile let's
+rerun those performance tests
+
+536
+00:33:26,034 --> 00:33:33,034
+go back to run product test and see how
+much does it help
+
+537
+00:33:33,072 --> 00:33:38,135
+tests are running now and while we get a
+21 percent improvement just like that
+
+538
+00:33:39,035 --> 00:33:46,035
+we don't have to change the code or do
+anything else
+
+539
+00:33:49,069 --> 00:33:52,258
+so that is p.geo hi it's a great new
+feature
+
+540
+00:33:52,879 --> 00:33:56,879
+to help you get even more performance
+when you care about getting every last
+
+541
+00:33:56,879 --> 00:33:58,906
+drop out your code
+
+542
+00:33:59,149 --> 00:34:02,190
+continuing on this team up performance
+I'd like to
+
+543
+00:34:02,019 --> 00:34:05,458
+turned the stage over to not approach
+him my colleague to talk about
+
+544
+00:34:05,629 --> 00:34:09,550
+advances he and vectorization
+
+545
+00:34:09,055 --> 00:34:16,055
+thank you bob I
+
+546
+00:34:16,098 --> 00:34:19,125
+so I last year with Xcode 5
+
+547
+00:34:20,025 --> 00:34:23,104
+we've introduced a new optimization
+called look victories Asian
+
+548
+00:34:24,004 --> 00:34:29,005
+and I would like to remind you with
+lifters asian ex
+
+549
+00:34:29,005 --> 00:34:33,063
+so modern processors have victor is an
+issue Victor instructions
+
+550
+00:34:33,063 --> 00:34:36,145
+these instructions can process more
+posts killers at once
+
+551
+00:34:37,045 --> 00:34:40,064
+and the victory station is the compiler
+optimization
+
+552
+00:34:40,064 --> 00:34:44,099
+that accelerates loops using these
+vector instructions
+
+553
+00:34:44,099 --> 00:34:47,124
+and let's see how it's done you keep if
+you can see the cold and the screen here
+
+554
+00:34:48,024 --> 00:34:49,123
+you'll see that a simple program
+
+555
+00:34:50,023 --> 00:34:55,026
+that accumulates all the numbers India
+rate into one variable into some
+
+556
+00:34:55,026 --> 00:34:58,077
+and the natural way affects King
+executing this code
+
+557
+00:34:58,077 --> 00:35:01,148
+is to load one number at a time and save
+it into the variable some
+
+558
+00:35:02,048 --> 00:35:06,051
+min load another number and save it into
+some but there's a better way
+
+559
+00:35:06,051 --> 00:35:10,080
+above excluding this code what to look
+back to rate does
+
+560
+00:35:10,008 --> 00:35:14,039
+for you automatically is that each
+introduces a new temporary variable
+
+561
+00:35:15,011 --> 00:35:19,011
+temp for this is a vector register
+vector temporary
+
+562
+00:35:19,011 --> 00:35:22,028
+bearable and this allows us to load
+
+563
+00:35:22,028 --> 00:35:25,056
+for numbers at a time and ad for numbers
+that time
+
+564
+00:35:25,056 --> 00:35:28,138
+and we do it for the entire right so
+this is obviously much faster because
+
+565
+00:35:29,038 --> 00:35:30,043
+we're processing
+
+566
+00:35:30,043 --> 00:35:34,049
+for numbers at once as data processing
+one number at a time
+
+567
+00:35:35,003 --> 00:35:38,095
+and when you finish scanning the array
+we need to take the four numbers from
+
+568
+00:35:38,095 --> 00:35:38,138
+that
+
+569
+00:35:39,038 --> 00:35:42,094
+$10 pre-reg stir and add it together but
+it doesn't matter because usually are
+
+570
+00:35:42,094 --> 00:35:43,187
+arrays pretty big
+
+571
+00:35:44,087 --> 00:35:47,130
+so so this is how look pictures Asian
+accelerates
+
+572
+00:35:48,003 --> 00:35:52,042
+loops and makes you could run faster so
+that you don't have to change your code
+
+573
+00:35:52,069 --> 00:35:55,151
+so in Xcode six with improvement
+fertilization
+
+574
+00:35:56,051 --> 00:35:59,124
+in a number of ways were first the ball
+we've improved and now says have
+
+575
+00:36:00,024 --> 00:36:01,071
+complicated leaps
+
+576
+00:36:01,071 --> 00:36:04,086
+this means that that they'll p.m. will
+be able to analyze
+
+577
+00:36:04,086 --> 00:36:08,092
+more complicated loops and vectorized
+more loot in your code
+
+578
+00:36:08,092 --> 00:36:11,096
+just great we've also integrated to look
+back to either
+
+579
+00:36:11,096 --> 00:36:15,099
+with p.geo the Bob just just mentioned
+so this means that when p.geo is
+
+580
+00:36:16,026 --> 00:36:17,026
+available
+
+581
+00:36:17,026 --> 00:36:20,028
+to look back to either will be able to
+make better decisions
+
+582
+00:36:20,046 --> 00:36:23,142
+when Vick raising your code we've also
+Inc improved
+
+583
+00:36:24,042 --> 00:36:28,074
+the x86 and ARM 64 coach in support now
+this means two things:
+
+584
+00:36:28,074 --> 00:36:31,145
+first ball the loop vector Hazare has
+better understand
+
+585
+00:36:32,045 --> 00:36:35,081
+processor so it can't predict better
+when
+
+586
+00:36:35,081 --> 00:36:38,092
+it is profitable perfect riser coat
+
+587
+00:36:38,092 --> 00:36:41,191
+and the second thing that means is that
+when it across your cold
+
+588
+00:36:42,091 --> 00:36:45,128
+ill generate better more optimized code
+sequences
+
+589
+00:36:46,028 --> 00:36:49,093
+so that you called would run faster
+
+590
+00:36:49,093 --> 00:36:52,130
+and the last feature that i wanna talk
+to you about his specialization
+
+591
+00:36:53,003 --> 00:36:56,059
+a blue parables
+
+592
+00:36:56,086 --> 00:36:59,184
+so most variables in your code
+
+593
+00:37:00,084 --> 00:37:04,138
+are only known at runtime these
+variables can be
+
+594
+00:37:05,038 --> 00:37:08,047
+arguments or computed a
+
+595
+00:37:08,047 --> 00:37:11,074
+more expressions and and compiler
+doesn't know the values of these
+
+596
+00:37:11,074 --> 00:37:11,163
+variables
+
+597
+00:37:12,063 --> 00:37:15,120
+at compile-time only at runtime
+
+598
+00:37:16,002 --> 00:37:20,028
+and in many times the fact riser cannot
+picture as your code
+
+599
+00:37:20,046 --> 00:37:23,109
+unless the value of these variables is
+known to be constant
+
+600
+00:37:24,009 --> 00:37:27,023
+so let's take a look at the example they
+showed you earlier so this is a simple
+
+601
+00:37:27,023 --> 00:37:27,090
+loop
+
+602
+00:37:27,009 --> 00:37:30,033
+and I modify I modified it a little bit
+and I introduced
+
+603
+00:37:31,014 --> 00:37:35,030
+the step purple so now instead of
+consecutively scanning
+
+604
+00:37:35,003 --> 00:37:38,085
+all the elements in the array we jump
+and skip some elements and
+
+605
+00:37:39,012 --> 00:37:42,109
+we we going to step up variable step
+
+606
+00:37:43,009 --> 00:37:47,018
+know kept that rises code because these
+elements are not consecutive in memory
+
+607
+00:37:47,099 --> 00:37:48,151
+we can't use these vector
+
+608
+00:37:49,051 --> 00:37:52,109
+registers to load few elements and then
+added together
+
+609
+00:37:53,009 --> 00:37:56,053
+it won't work unless step is equal to 1
+
+610
+00:37:56,053 --> 00:37:59,120
+well in many cases step is equal to 1
+
+611
+00:38:00,002 --> 00:38:04,051
+so what we do well we've introduced a
+new optimization
+
+612
+00:38:04,069 --> 00:38:08,132
+called specialization what we do is
+would create more people versions of the
+
+613
+00:38:09,032 --> 00:38:09,121
+loop
+
+614
+00:38:10,021 --> 00:38:13,092
+in one version of the loop we assume
+that step is equal to 1
+
+615
+00:38:13,092 --> 00:38:17,092
+and then went back to write the code and
+make the code run faster
+
+616
+00:38:17,092 --> 00:38:21,100
+but in another version of the loop we
+don't assume anything
+
+617
+00:38:22,000 --> 00:38:25,004
+and code runs as is scaler
+
+618
+00:38:25,004 --> 00:38:28,010
+and them we had cold for selecting
+
+619
+00:38:28,046 --> 00:38:31,051
+at runtime which version of the loop to
+run
+
+620
+00:38:31,096 --> 00:38:35,151
+if that happened to be one them fall who
+that will then we go next YouTube Akris
+
+621
+00:38:36,051 --> 00:38:36,057
+version
+
+622
+00:38:37,011 --> 00:38:41,066
+but if step is not equal to 1 then we we
+execute a regular version
+
+623
+00:38:41,066 --> 00:38:45,067
+and this compiler this new I am feature
+allows the new pic dresser
+
+624
+00:38:45,076 --> 00:38:49,109
+to back rise: a lot more looks means
+great
+
+625
+00:38:50,009 --> 00:38:53,084
+okay so this was looked back to his
+Asian but in Xcode 6
+
+626
+00:38:53,084 --> 00:38:56,139
+we've also added a new kind of the trees
+Asian this is
+
+627
+00:38:57,039 --> 00:39:00,094
+this this new pic riser is not to affect
+riser it's called
+
+628
+00:39:00,094 --> 00:39:05,103
+SLP pics riser which which stands for
+super word level parallelism
+
+629
+00:39:06,003 --> 00:39:09,007
+and it extracts parallelism beyond oops
+
+630
+00:39:09,007 --> 00:39:12,028
+with this Zazzle perfect riser does it
+take looks for
+
+631
+00:39:12,028 --> 00:39:19,028
+multiple scalars in your code and glue
+them together into a vector instructions
+
+632
+00:39:19,068 --> 00:39:23,140
+let's see how it's done saw on the
+screen you see a very simple struct
+
+633
+00:39:24,004 --> 00:39:27,025
+destruct has two members X&Y
+
+634
+00:39:27,061 --> 00:39:30,122
+their consecutive in memory and we have
+a simple function
+
+635
+00:39:31,022 --> 00:39:34,045
+that converts unit from feet 2
+centimeters
+
+636
+00:39:34,045 --> 00:39:38,062
+now this is a very simple conversion all
+we have to do his load
+
+637
+00:39:38,062 --> 00:39:41,155
+the ex member multiplied by Constantin
+do it again and we do something for why
+
+638
+00:39:42,055 --> 00:39:45,140
+and of course the natural wave executing
+this code
+
+639
+00:39:46,004 --> 00:39:49,045
+is to get consecutively load variable
+axe
+
+640
+00:39:49,081 --> 00:39:54,085
+more quiet 7 back load verbal why
+
+641
+00:39:54,085 --> 00:39:57,121
+multiplied and save it back bet again
+
+642
+00:39:58,021 --> 00:40:02,042
+there's a better way of doing it and
+this is what the Hasselbeck riser does
+
+643
+00:40:02,042 --> 00:40:05,123
+we can load X&Y together because they're
+consecutive memory
+
+644
+00:40:06,023 --> 00:40:09,023
+multiplying together again
+
+645
+00:40:09,023 --> 00:40:12,032
+and seven back to memory and this is
+
+646
+00:40:12,032 --> 00:40:16,036
+ethyl be victors Asian
+
+647
+00:40:16,072 --> 00:40:19,084
+acid privatization is a very beneficial
+
+648
+00:40:19,084 --> 00:40:23,116
+for some kind of application mainly in
+america applications and we see
+
+649
+00:40:24,016 --> 00:40:27,099
+great speed ups it may not speed-up all
+programs
+
+650
+00:40:27,099 --> 00:40:30,111
+but it definately speed up a lot of fun
+to make Lee
+
+651
+00:40:31,011 --> 00:40:35,020
+com complex applications
+
+652
+00:40:36,001 --> 00:40:39,039
+so to summarize I we've improved look
+for clues Asian
+
+653
+00:40:39,039 --> 00:40:42,111
+in Xcode 6 and we've introduced a new
+kind victories Ishant
+
+654
+00:40:43,011 --> 00:40:46,088
+called SLP victimization
+
+655
+00:40:46,088 --> 00:40:50,104
+now in Xcode 5 when we introduced to a
+pic dresser we did not enabled by
+
+656
+00:40:51,004 --> 00:40:51,065
+default
+
+657
+00:40:51,065 --> 00:40:54,089
+and you have to go into one of the
+settings and select computerization and
+
+658
+00:40:54,089 --> 00:40:54,130
+then
+
+659
+00:40:55,003 --> 00:40:59,084
+love kisses Asian worked well in Xcode 6
+you don't have to do anything because
+
+660
+00:41:00,011 --> 00:41:04,027
+both the new SOPA Victoria riser and
+improved load factor as ur
+
+661
+00:41:04,027 --> 00:41:07,033
+are enabled by default when you build
+your application
+
+662
+00:41:07,033 --> 00:41:10,037
+in release mode this means they don't
+need to do anything just compiled
+
+663
+00:41:10,037 --> 00:41:10,044
+application
+
+664
+00:41:11,007 --> 00:41:18,007
+in release mode and improved LVM will
+make your code run faster
+
+665
+00:41:18,009 --> 00:41:21,077
+okay so we talked about number of
+performance features
+
+666
+00:41:22,058 --> 00:41:26,059
+in Eltham we talk about PJ we talk about
+the Tories Asian
+
+667
+00:41:26,068 --> 00:41:29,157
+which are but but both of these features
+are features of a static
+
+668
+00:41:30,057 --> 00:41:33,146
+see and and seek with a compiler but LVM
+
+669
+00:41:34,046 --> 00:41:38,055
+is a central technology here at Apple
+that's used by many projects
+
+670
+00:41:38,055 --> 00:41:41,062
+norm the project that I wanna talk to
+you about today is accelerating
+
+671
+00:41:42,025 --> 00:41:47,036
+JavaScript code
+
+672
+00:41:47,036 --> 00:41:50,040
+well WebKit is another
+
+673
+00:41:50,076 --> 00:41:54,129
+is another important technology it's the
+heart the Safari web browser
+
+674
+00:41:55,029 --> 00:41:59,055
+and WebKit needs to execute JavaScript
+code because JavaScript is everywhere
+
+675
+00:41:59,055 --> 00:42:02,150
+and every web page and WebKit has an
+interpreter
+
+676
+00:42:03,005 --> 00:42:06,013
+so when you load your Facebook page or
+any other page WebKit start excluding
+
+677
+00:42:07,003 --> 00:42:08,096
+your code
+
+678
+00:42:09,023 --> 00:42:12,084
+with the interpreter but what kit also
+has
+
+679
+00:42:12,084 --> 00:42:16,102
+to JIT compilers to XLR to accelerate
+your code
+
+680
+00:42:17,002 --> 00:42:20,031
+when WebKit sees that you execute the
+same function the same JavaScript
+
+681
+00:42:20,031 --> 00:42:21,059
+functions
+
+682
+00:42:21,059 --> 00:42:25,077
+over and over again to top let's take
+little bit of time
+
+683
+00:42:25,077 --> 00:42:28,094
+to compile it real quickly so that he
+will run a little bit faster than the
+
+684
+00:42:28,094 --> 00:42:28,187
+interpreter
+
+685
+00:42:29,087 --> 00:42:33,106
+so this is the fast jet in WebKit sees
+
+686
+00:42:34,006 --> 00:42:37,075
+that you execute function many times
+then says
+
+687
+00:42:37,075 --> 00:42:41,082
+alright that so that's also take a time
+and optimize this function real quick
+
+688
+00:42:41,082 --> 00:42:44,166
+so that people run a little bit more
+faster little bit faster
+
+689
+00:42:45,066 --> 00:42:48,069
+so so we have the interpreter
+
+690
+00:42:48,069 --> 00:42:51,106
+we have Fastjet and we have to
+optimizing jet
+
+691
+00:42:52,006 --> 00:42:55,012
+and there are trade-offs then there's
+the trade-off between compile-time
+
+692
+00:42:55,066 --> 00:43:00,112
+and the quality of the code and this
+works really great
+
+693
+00:43:01,012 --> 00:43:05,046
+accept that JavaScript is evolving
+people start writing
+
+694
+00:43:05,046 --> 00:43:08,134
+large compute-intensive applications in
+javascript
+
+695
+00:43:09,034 --> 00:43:13,071
+people can compile C-plus bus programs
+into JavaScript
+
+696
+00:43:13,071 --> 00:43:16,087
+can run them in the in the browser you
+can even compile
+
+697
+00:43:16,087 --> 00:43:19,096
+a quake three and run it in your browser
+today which have
+
+698
+00:43:19,096 --> 00:43:22,158
+but some people like it it for I
+
+699
+00:43:23,058 --> 00:43:26,130
+dads it's great I
+
+700
+00:43:27,003 --> 00:43:31,005
+Beitenu you taste and we need a new
+compiler
+
+701
+00:43:31,032 --> 00:43:36,131
+to support this use case and this is
+where LBM comes into the picture
+
+702
+00:43:37,031 --> 00:43:40,083
+so we're adding LBM as the fourth tier
+compiler
+
+703
+00:43:40,083 --> 00:43:43,091
+to WebKit
+
+704
+00:43:43,091 --> 00:43:46,122
+functions that run many many many times
+
+705
+00:43:47,022 --> 00:43:50,041
+are now compiled with LVM and they'll be
+amnesty
+
+706
+00:43:50,041 --> 00:43:54,078
+tuned for making the most out of your
+code for really trying hard
+
+707
+00:43:54,078 --> 00:43:57,177
+to optimize your code and to generate
+excellent up
+
+708
+00:43:58,077 --> 00:44:02,134
+code quality and again there's a trade
+up from compile-time
+
+709
+00:44:03,034 --> 00:44:07,066
+and quality of the code so WebKit really
+wait for you to execute that function
+
+710
+00:44:07,066 --> 00:44:10,075
+many many times as you do in computing
+test applications that run in the
+
+711
+00:44:11,056 --> 00:44:13,074
+browser
+
+712
+00:44:13,074 --> 00:44:16,091
+but compiling Java Script with LVM
+
+713
+00:44:16,091 --> 00:44:19,116
+is very different from compiling see
+your objective c-
+
+714
+00:44:20,016 --> 00:44:23,016
+because JavaScript it's a great language
+tutor
+
+715
+00:44:23,016 --> 00:44:26,021
+it's a dynamic language and if you look
+at the code on the screen you'll see
+
+716
+00:44:26,021 --> 00:44:26,084
+that
+
+717
+00:44:26,084 --> 00:44:29,170
+there are no types there's this am
+
+718
+00:44:30,007 --> 00:44:33,075
+argument here but what is n YouTube
+integer
+
+719
+00:44:34,038 --> 00:44:39,071
+is a double the class can be a lot of
+different things
+
+720
+00:44:39,071 --> 00:44:44,134
+tile I recompiled well luckily
+
+721
+00:44:45,034 --> 00:44:49,063
+WebKit excluded dysfunction many many
+many many times before
+
+722
+00:44:49,063 --> 00:44:53,070
+with the interpreter so it knows that in
+the last thousand times
+
+723
+00:44:54,033 --> 00:45:00,099
+and was an integer so now we can compile
+this code assuming that and his mentor
+
+724
+00:45:00,099 --> 00:45:03,183
+accept that someone may decide to pass
+
+725
+00:45:04,083 --> 00:45:07,160
+in and that's not an integer someone may
+decide asa a double
+
+726
+00:45:08,006 --> 00:45:12,023
+for class and then everything will break
+and can't allow that
+
+727
+00:45:12,077 --> 00:45:15,153
+so what do we do we'll technique that's
+very similar to what we did with the bed
+
+728
+00:45:16,053 --> 00:45:16,149
+riser
+
+729
+00:45:17,049 --> 00:45:20,143
+we had checks will make assumptions and
+we have checks we assume that n is an
+
+730
+00:45:21,043 --> 00:45:22,078
+integer
+
+731
+00:45:22,078 --> 00:45:25,104
+we assume that and does not overflow
+
+732
+00:45:26,004 --> 00:45:29,051
+and then we verify our some chance at
+runtime
+
+733
+00:45:29,051 --> 00:45:32,127
+okay that's great but what is the fall
+back what we do
+
+734
+00:45:33,027 --> 00:45:36,049
+when are some options fail we have to go
+back to the interpreter
+
+735
+00:45:36,049 --> 00:45:39,051
+because only the interpreter can handle
+all these cases
+
+736
+00:45:39,069 --> 00:45:42,142
+all these extreme cases
+
+737
+00:45:43,042 --> 00:45:47,043
+but moving back to do interpreter is not
+simple because we started executing the
+
+738
+00:45:47,052 --> 00:45:50,059
+code in function may change as we can
+just start executing it from the
+
+739
+00:45:50,059 --> 00:45:51,073
+beginning
+
+740
+00:45:51,073 --> 00:45:54,080
+so we developed a technology that's
+called on stack replacement
+
+741
+00:45:55,043 --> 00:45:58,122
+which is the connects the that is used
+to migrate to state
+
+742
+00:45:59,022 --> 00:46:02,090
+up the program from the jetted code in
+LVM
+
+743
+00:46:02,009 --> 00:46:05,024
+back to WebKit in LBM needs to track
+
+744
+00:46:06,005 --> 00:46:09,031
+all the variables in your program and
+someone may be in registers
+
+745
+00:46:09,031 --> 00:46:13,073
+something maybe on the stack and now
+we're able to migrate them from LBM
+
+746
+00:46:13,073 --> 00:46:16,107
+into web to WebKit and continued
+execution
+
+747
+00:46:17,007 --> 00:46:20,058
+in WebKit now this doesn't happen arm
+
+748
+00:46:20,058 --> 00:46:23,146
+all the time to very extreme case but
+when it happens we have to handle these
+
+749
+00:46:24,046 --> 00:46:26,052
+cases
+
+750
+00:46:27,006 --> 00:46:32,007
+okay novak now I compiling code with LVM
+is very beneficial
+
+751
+00:46:32,016 --> 00:46:36,027
+especially for compute-intensive
+applications and especially
+
+752
+00:46:36,027 --> 00:46:40,060
+for these c plus plus applications
+compiled into JavaScript wrong in the
+
+753
+00:46:40,006 --> 00:46:43,042
+browser
+
+754
+00:46:43,096 --> 00:46:46,110
+and we're really excited about Scott its
+script
+
+755
+00:46:47,001 --> 00:46:50,088
+so now I we use LVM socks on rice
+
+756
+00:46:50,097 --> 00:46:53,168
+I we use LVM as the fourth beer compiler
+and
+
+757
+00:46:54,068 --> 00:46:57,140
+in Safari both for x86 and I'm 64 on I
+wesson
+
+758
+00:46:58,004 --> 00:47:02,100
+I was 10 and get excellent performance
+pickups
+
+759
+00:47:03,036 --> 00:47:07,052
+summer as the stock today we talked
+about modernizing objective-c code
+
+760
+00:47:07,052 --> 00:47:10,071
+and we also talked about a number or
+performance features
+
+761
+00:47:10,071 --> 00:47:13,167
+if you have any more questions you can
+contact our our developer tool
+
+762
+00:47:14,067 --> 00:47:15,111
+evangelist they've too long
+
+763
+00:47:16,011 --> 00:47:20,056
+or you can go to the Apple website or to
+the LBM website
+
+764
+00:47:20,056 --> 00:47:24,071
+I am there are few related sessions and
+I'm and I encourage you to attend these
+
+765
+00:47:24,071 --> 00:47:27,150
+sessions or to watch them online
+
+766
+00:47:28,005 --> 00:47:31,104
+thank you very much and the have a good
+week
+
+767
+00:47:32,049 --> 00:47:32,074
+I
+

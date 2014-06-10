@@ -1,0 +1,3681 @@
+1
+00:00:11,006 --> 00:00:14,007
+however when I'm temperature
+
+2
+00:00:14,061 --> 00:00:20,065
+good morning thanks for coming
+
+3
+00:00:21,001 --> 00:00:22,034
+so I'm going to talk to you about
+
+4
+00:00:22,034 --> 00:00:28,223
+web inspector and modern JavaScript but
+first
+
+5
+00:00:28,529 --> 00:00:32,750
+amid just talk about modern JavaScript
+so
+
+6
+00:00:32,075 --> 00:00:35,142
+what exactly is modern JavaScript well
+
+7
+00:00:36,042 --> 00:00:39,117
+let's go through some other history have
+JavaScript which
+
+8
+00:00:40,017 --> 00:00:44,033
+is also known as ECMAScript as something
+you may know
+
+9
+00:00:44,033 --> 00:00:47,068
+but it had a long history it's been
+around
+
+10
+00:00:47,068 --> 00:00:51,107
+since the 90's and it had a lawyer a
+momentum
+
+11
+00:00:52,007 --> 00:00:55,906
+back in the 90's when it was first part
+in the browser wars
+
+12
+00:00:55,969 --> 00:00:59,670
+but it kinda ive sputtered and stalled
+
+13
+00:00:59,067 --> 00:01:02,079
+but Javascript is alive and well
+nowadays
+
+14
+00:01:02,079 --> 00:01:06,298
+everyone's using it for webapps to
+server applications
+
+15
+00:01:07,009 --> 00:01:11,330
+and some other standards bodies have
+been
+
+16
+00:01:11,033 --> 00:01:16,074
+battling over some what should be
+included in the next version of Java
+
+17
+00:01:16,074 --> 00:01:16,080
+Script
+
+18
+00:01:17,034 --> 00:01:20,088
+and I'm happy to say that
+
+19
+00:01:20,088 --> 00:01:23,186
+they finally started coming together
+
+20
+00:01:24,086 --> 00:01:28,102
+and started releasing what is known as
+
+21
+00:01:29,002 --> 00:01:32,058
+ECMAScript 6 and this
+
+22
+00:01:32,058 --> 00:01:36,067
+sixth addition brings a lot of cool
+things
+
+23
+00:01:36,067 --> 00:01:40,081
+an it's really just JavaScript and
+that's how I'm gonna refer to it
+
+24
+00:01:40,081 --> 00:01:45,116
+in in this modern JavaScript world
+
+25
+00:01:46,016 --> 00:01:49,019
+there's a lot of great things in this is
+a summer them
+
+26
+00:01:49,019 --> 00:01:52,788
+there's some tea structuring maps
+promises
+
+27
+00:01:52,959 --> 00:01:56,830
+and let's go over some of these new
+features that are also
+
+28
+00:01:56,083 --> 00:01:59,155
+now available and I was a an OS 10 use a
+MIDI
+
+29
+00:02:00,055 --> 00:02:04,059
+so
+
+30
+00:02:04,059 --> 00:02:08,120
+when they're available I mean you can
+use them in Safari
+
+31
+00:02:09,002 --> 00:02:12,035
+a war your I with applications are Mac
+applications
+
+32
+00:02:12,053 --> 00:02:16,072
+and not just in web views but also
+JavaScript or contact
+
+33
+00:02:16,072 --> 00:02:19,075
+so let's talk over somebody's
+
+34
+00:02:19,075 --> 00:02:24,116
+let's first talk about some math
+additions
+
+35
+00:02:25,016 --> 00:02:28,265
+JavaScript has had a mass objects
+
+36
+00:02:28,409 --> 00:02:31,650
+pretty much since day one but
+
+37
+00:02:31,065 --> 00:02:34,109
+JavaScript nowadays is super fast with
+
+38
+00:02:35,009 --> 00:02:38,087
+the modern lol VM jet that we have
+
+39
+00:02:38,087 --> 00:02:41,796
+and I would say an OS 10 you seventy you
+
+40
+00:02:42,579 --> 00:02:46,370
+need these super fast math functions to
+do complex things like
+
+41
+00:02:46,037 --> 00:02:50,126
+web GL or complex scientific
+calculations
+
+42
+00:02:50,459 --> 00:02:54,495
+and mostly you will recognize a lot of
+things
+
+43
+00:02:54,819 --> 00:02:58,290
+in in this list that you used in the
+past for
+
+44
+00:02:58,029 --> 00:03:01,030
+your your own applications and they're
+now available
+
+45
+00:03:01,039 --> 00:03:05,838
+in modern JavaScript so that's the map
+additions
+
+46
+00:03:06,189 --> 00:03:09,241
+now let's talk about maps and sets
+
+47
+00:03:09,709 --> 00:03:13,810
+so what do I mean by maps and sets
+
+48
+00:03:13,081 --> 00:03:17,090
+well in JavaScript you might think
+
+49
+00:03:17,009 --> 00:03:20,658
+this as a map this is something that you
+
+50
+00:03:21,549 --> 00:03:26,810
+create as a generic object and it's
+really just a property bag you can throw
+
+51
+00:03:26,081 --> 00:03:28,010
+whatever you want on the subject
+
+52
+00:03:28,739 --> 00:03:31,831
+you can set simple strings and
+
+53
+00:03:32,659 --> 00:03:38,200
+any object can be the value and you can
+remove things from that map
+
+54
+00:03:38,002 --> 00:03:42,094
+well these maps have some limitations
+their string coercion
+
+55
+00:03:43,012 --> 00:03:46,081
+when you're when it comes to the key
+everything
+
+56
+00:03:46,189 --> 00:03:49,241
+that is the key needs to be coerced into
+a string so it's not going to give you
+
+57
+00:03:49,709 --> 00:03:52,760
+exactly what you want if you want to use
+it for
+
+58
+00:03:52,076 --> 00:03:55,084
+a property back that's tracking some
+node
+
+59
+00:03:55,084 --> 00:03:59,323
+it won't work well
+
+60
+00:04:00,079 --> 00:04:03,107
+in modern JavaScript there's now a map
+object
+
+61
+00:04:03,359 --> 00:04:07,180
+and it does pretty much the same thing
+that you would do
+
+62
+00:04:07,018 --> 00:04:11,084
+with an object has a little bit
+different syntax an API
+
+63
+00:04:11,084 --> 00:04:15,183
+but it's pretty much all the same the
+most powerful thing you can do
+
+64
+00:04:15,939 --> 00:04:19,730
+with the map object is you can use any
+value
+
+65
+00:04:19,073 --> 00:04:22,135
+as the key and a lot of people will use
+this
+
+66
+00:04:23,035 --> 00:04:26,127
+to track DOM nodes that they have in the
+page
+
+67
+00:04:27,027 --> 00:04:30,031
+adding some additional data on the side
+
+68
+00:04:30,067 --> 00:04:33,106
+instead have tacking it onto the DOM
+node itself
+
+69
+00:04:34,006 --> 00:04:37,055
+so it really allows you to convict
+compartmentalize data that you're
+
+70
+00:04:37,055 --> 00:04:40,294
+tracking on the page
+
+71
+00:04:40,789 --> 00:04:44,940
+but there's some issues with that if you
+add it to the map
+
+72
+00:04:44,094 --> 00:04:48,043
+that map is gonna hold a hard reference
+to it and that's why modern JavaScript
+
+73
+00:04:48,889 --> 00:04:49,900
+has a week
+
+74
+00:04:49,009 --> 00:04:52,071
+map and that means whenever the
+
+75
+00:04:53,052 --> 00:04:57,083
+the the key disappears or gets garbage
+collected
+
+76
+00:04:57,083 --> 00:05:00,131
+it's also removed from the map so in
+this case
+
+77
+00:05:01,031 --> 00:05:04,058
+I have a node in my week map and win
+
+78
+00:05:04,058 --> 00:05:07,096
+that node is removed by doing every move
+collar or
+
+79
+00:05:07,096 --> 00:05:10,128
+remove child in that page
+
+80
+00:05:11,028 --> 00:05:14,093
+it will no longer be on the map in the
+data that's associated with it will also
+
+81
+00:05:14,093 --> 00:05:18,111
+get garbage collected
+
+82
+00:05:19,011 --> 00:05:23,018
+so that's maps and sets and there's also
+a set object
+
+83
+00:05:23,018 --> 00:05:26,084
+that I didn't cover but it's pretty
+straightforward it only allows
+
+84
+00:05:26,084 --> 00:05:30,109
+the key to be added to them the set
+
+85
+00:05:31,009 --> 00:05:35,065
+so now let's talk about the structuring
+
+86
+00:05:35,065 --> 00:05:38,794
+if you got excited about some other new
+features in swift
+
+87
+00:05:39,379 --> 00:05:42,900
+this'll be right up your alley as far as
+
+88
+00:05:42,009 --> 00:05:46,106
+jobs here goes it allows you to return
+like multiple objects
+
+89
+00:05:47,087 --> 00:05:52,181
+in an array in this case I have an array
+of 20 two numbers here
+
+90
+00:05:53,081 --> 00:05:57,086
+and traditionally I would have to
+collect that in a result object
+
+91
+00:05:58,031 --> 00:06:02,140
+and I would have to break each piece of
+from
+
+92
+00:06:02,419 --> 00:06:06,650
+from not afraid to use it in a separate
+variable that made more sense
+
+93
+00:06:06,065 --> 00:06:09,234
+in the scope I was using it
+
+94
+00:06:09,819 --> 00:06:12,822
+but with the structuring weaken
+
+95
+00:06:12,849 --> 00:06:17,590
+break that down to one line now my
+function that's returning to
+
+96
+00:06:17,059 --> 00:06:22,062
+to results that maybe didn't make sense
+is there a but it was what I could use
+
+97
+00:06:22,062 --> 00:06:23,099
+to return
+
+98
+00:06:23,099 --> 00:06:26,131
+multiple things at once I can now
+
+99
+00:06:27,031 --> 00:06:30,039
+save those into the alpha and beta
+variables
+
+100
+00:06:31,011 --> 00:06:34,310
+rate there and one line in
+
+101
+00:06:34,409 --> 00:06:37,415
+this might look like in Arabi when it's
+on
+
+102
+00:06:38,009 --> 00:06:41,097
+when it's on the the left side we're
+dealing with
+
+103
+00:06:41,889 --> 00:06:45,710
+the destruction syntax
+
+104
+00:06:45,071 --> 00:06:49,137
+and it's not just for a race you can the
+structure objects
+
+105
+00:06:50,037 --> 00:06:53,069
+and this is when it becomes more of a
+pad pattern matching
+
+106
+00:06:53,069 --> 00:06:57,478
+so he in my example here say I have a
+point object
+
+107
+00:06:58,099 --> 00:07:01,900
+and normally I would have to save it off
+into a result
+
+108
+00:07:01,009 --> 00:07:05,052
+and break each piece out if I wanted to
+use some more concise intact
+
+109
+00:07:06,033 --> 00:07:09,059
+for those those variables
+
+110
+00:07:09,059 --> 00:07:14,112
+but now I have object is structuring in
+this case
+
+111
+00:07:15,012 --> 00:07:19,036
+in if I'd why a different variable name
+then the property
+
+112
+00:07:19,036 --> 00:07:23,134
+I can separate them by Colin so X is the
+value that's coming out of the object
+
+113
+00:07:24,034 --> 00:07:27,043
+pattern matching and at my axe
+
+114
+00:07:27,349 --> 00:07:30,353
+is the variable name in the local scope
+in this case
+
+115
+00:07:30,389 --> 00:07:35,220
+but if I want to use the same name I can
+omit the second piece
+
+116
+00:07:35,022 --> 00:07:38,055
+and just use why and why is now a local
+variable
+
+117
+00:07:38,055 --> 00:07:42,044
+in the scope
+
+118
+00:07:42,539 --> 00:07:45,567
+and you can do some really fancy things
+that I don't have examples for but you
+
+119
+00:07:45,819 --> 00:07:45,885
+can
+
+120
+00:07:46,479 --> 00:07:51,360
+deeply nest these pattern matches and
+objects with the raisin vice versa
+
+121
+00:07:51,036 --> 00:07:54,081
+so you can really break apart your
+object if that if that's what works for
+
+122
+00:07:54,081 --> 00:07:57,105
+your application
+
+123
+00:07:58,005 --> 00:08:01,864
+so that's the structuring
+
+124
+00:08:01,909 --> 00:08:04,914
+now let's talk about what we call the
+spread operator
+
+125
+00:08:05,409 --> 00:08:09,447
+and this is something that is barred
+from many languages
+
+126
+00:08:09,789 --> 00:08:12,827
+but it comes in I'll very
+
+127
+00:08:13,169 --> 00:08:17,181
+very handy and I love using it and its
+
+128
+00:08:17,289 --> 00:08:22,330
+it really is takes away some other
+common idioms that you would do
+
+129
+00:08:22,033 --> 00:08:26,109
+before if you're building up arguments
+that you want to call on a function
+
+130
+00:08:27,009 --> 00:08:30,308
+as an array before you would have to
+resort to
+
+131
+00:08:30,389 --> 00:08:33,780
+dot collar don't apply and
+
+132
+00:08:33,078 --> 00:08:37,165
+pass in those arguments but now with the
+spread operator
+
+133
+00:08:38,065 --> 00:08:41,108
+which is represented by three dots
+prefixing
+
+134
+00:08:42,008 --> 00:08:46,074
+an object and in this case it's have
+it's an array
+
+135
+00:08:46,074 --> 00:08:49,158
+but secretly the spread operator works
+on anything
+
+136
+00:08:50,058 --> 00:08:54,079
+it even works on maps in a burqa and key
+value
+
+137
+00:08:54,079 --> 00:08:57,093
+sequences so
+
+138
+00:08:57,093 --> 00:09:00,172
+anything that's has support for
+iteration which I'll talk about a bit
+
+139
+00:09:01,072 --> 00:09:04,078
+can be spread and this will spread it
+out and call my function
+
+140
+00:09:05,032 --> 00:09:10,073
+to with the three arguments that are in
+the array
+
+141
+00:09:10,073 --> 00:09:13,100
+one thing that you could never do in
+javascript and you can
+
+142
+00:09:14,000 --> 00:09:18,036
+only do now with the spread operator is
+called the constructor
+
+143
+00:09:18,036 --> 00:09:22,087
+with an array and put or a a map input
+
+144
+00:09:22,087 --> 00:09:25,142
+you can now take your part amid a
+
+145
+00:09:26,042 --> 00:09:29,116
+and spread them across the day
+constructor instead of having to
+
+146
+00:09:30,016 --> 00:09:31,102
+manually do
+
+147
+00:09:32,002 --> 00:09:39,002
+is zero wind too and break it out like
+that
+
+148
+00:09:39,075 --> 00:09:43,079
+the spread operator is also useful in
+construction I love
+
+149
+00:09:43,079 --> 00:09:47,100
+array literals say you have something
+that's pretty repetitious
+
+150
+00:09:48,000 --> 00:09:51,035
+you wanna have a separate form and a
+combined form
+
+151
+00:09:51,035 --> 00:09:54,122
+normally you'd have to either repeat the
+data or push and pop
+
+152
+00:09:55,022 --> 00:09:59,118
+and an ad at everything concatenate
+everything together
+
+153
+00:10:00,018 --> 00:10:04,086
+but with the spread operator you can
+just spread those other races
+
+154
+00:10:04,086 --> 00:10:08,121
+right out into the new array that you're
+constructing so this is a handy way to
+
+155
+00:10:09,021 --> 00:10:10,021
+do
+
+156
+00:10:10,021 --> 00:10:15,024
+pretty complex concatenation and you can
+understand what it's doing
+
+157
+00:10:15,051 --> 00:10:19,052
+without having to parse different calls
+to different
+
+158
+00:10:19,061 --> 00:10:22,100
+array functions
+
+159
+00:10:23,000 --> 00:10:29,007
+so that's the spread operator now let's
+talk about something new a new
+
+160
+00:10:29,007 --> 00:10:32,053
+for loop that's available in javascript
+JavaScript has
+
+161
+00:10:33,016 --> 00:10:36,069
+traditional loops which you can iterate
+over an array
+
+162
+00:10:36,069 --> 00:10:39,088
+by doing and an index in a length
+
+163
+00:10:39,088 --> 00:10:43,181
+and you still might need to use this if
+you care about the index for the length
+
+164
+00:10:44,081 --> 00:10:50,174
+and you're doing some complex operation
+based on those
+
+165
+00:10:51,074 --> 00:10:56,135
+some people have avoided the syntax
+because
+
+166
+00:10:57,035 --> 00:11:00,052
+its it's ugly and they you something for
+
+167
+00:11:00,052 --> 00:11:04,053
+called for each on an array that let you
+integrate
+
+168
+00:11:04,062 --> 00:11:07,077
+over individual items in you hand the
+lead
+
+169
+00:11:07,077 --> 00:11:10,082
+get the item right there that you can
+work with
+
+170
+00:11:10,082 --> 00:11:14,134
+but this creates a closure it does a lot
+of complex things that
+
+171
+00:11:15,034 --> 00:11:20,063
+you did might not want to deal with
+overhead wise
+
+172
+00:11:20,063 --> 00:11:24,124
+well with the the new for Lopez in
+modern JavaScript
+
+173
+00:11:25,024 --> 00:11:30,053
+this is all you have to write to iterate
+over an array
+
+174
+00:11:30,053 --> 00:11:33,088
+in this will iterate over every item in
+the array
+
+175
+00:11:33,088 --> 00:11:38,164
+if you break early it'll stop but it
+starts at the the first item
+
+176
+00:11:39,064 --> 00:11:42,132
+but it's not just for a raise say you
+have a set you can head to rate over
+
+177
+00:11:43,032 --> 00:11:45,094
+that set
+
+178
+00:11:45,094 --> 00:11:48,176
+and if you have a map you can iterate
+over the key in value
+
+179
+00:11:49,076 --> 00:11:52,084
+very similar to what you can do in swift
+
+180
+00:11:52,084 --> 00:11:55,089
+so now you have the key in value right
+there
+
+181
+00:11:55,089 --> 00:11:58,091
+to process both at the same time instead
+of doing
+
+182
+00:11:58,091 --> 00:12:01,126
+actual lines of code using the four and
+loop
+
+183
+00:12:02,026 --> 00:12:06,102
+which is available jobs good now you can
+do it right here with four of
+
+184
+00:12:07,002 --> 00:12:12,005
+and forearm is the only way to iterate
+over the keys and values
+
+185
+00:12:12,005 --> 00:12:15,057
+in maps for and will not do what you
+expect
+
+186
+00:12:15,057 --> 00:12:19,080
+and for reasons I'm not going to go into
+
+187
+00:12:19,008 --> 00:12:22,049
+but maybe you want to iterate over we
+clap
+
+188
+00:12:23,021 --> 00:12:26,023
+that's not supported for
+
+189
+00:12:26,023 --> 00:12:29,089
+reasons that involve the garbage
+collection
+
+190
+00:12:29,089 --> 00:12:32,126
+you cannot iterate over the keys and
+values over we clap
+
+191
+00:12:33,026 --> 00:12:37,026
+in this is part in the spec
+
+192
+00:12:37,026 --> 00:12:42,067
+so that's four of loops
+
+193
+00:12:42,067 --> 00:12:47,159
+now one other new things and modern
+JavaScript that I'm really excited about
+
+194
+00:12:48,059 --> 00:12:52,097
+its promises it solves a long-standing
+problem
+
+195
+00:12:52,097 --> 00:12:55,176
+love JavaScript now the job description
+moving more and more
+
+196
+00:12:56,076 --> 00:13:00,097
+a synchronous everything's a synchronous
+you you don't wanna be blocking your
+
+197
+00:13:00,097 --> 00:13:01,106
+application
+
+198
+00:13:02,087 --> 00:13:05,181
+and say you have a function that you've
+written
+
+199
+00:13:06,081 --> 00:13:11,093
+that load the URL maybe a dozen XHR
+behind the scenes for you
+
+200
+00:13:11,093 --> 00:13:15,136
+to wrap up all the different browser
+incompatibilities they're out there
+
+201
+00:13:16,036 --> 00:13:19,051
+so this will load URL
+
+202
+00:13:19,051 --> 00:13:22,066
+and that's a little do you can't get the
+data
+
+203
+00:13:22,066 --> 00:13:25,163
+to get the data you might be inclined to
+do return result
+
+204
+00:13:26,063 --> 00:13:29,066
+that gives you the data that that was
+loaded but this
+
+205
+00:13:29,093 --> 00:13:32,137
+this is synchronous you can get away
+with this in a
+
+206
+00:13:33,037 --> 00:13:39,045
+in a shipping product without blocking
+your user interface
+
+207
+00:13:39,045 --> 00:13:42,141
+so you have to resort to a call back
+function
+
+208
+00:13:43,041 --> 00:13:46,084
+and JavaScript make this real easy I do
+this every day
+
+209
+00:13:46,084 --> 00:13:49,092
+when JavaScript pass in a call back
+function
+
+210
+00:13:49,092 --> 00:13:54,166
+and it worked and it's very usable and
+it's very handy
+
+211
+00:13:55,066 --> 00:13:59,075
+but when it gets deeply nested and
+
+212
+00:13:59,075 --> 00:14:02,139
+you're passing in multiple information
+in
+
+213
+00:14:03,039 --> 00:14:06,046
+it just gets confusing and hard to
+follow you have all these load calls in
+
+214
+00:14:07,009 --> 00:14:08,080
+this case
+
+215
+00:14:08,008 --> 00:14:11,101
+were which one is handling which
+information
+
+216
+00:14:12,073 --> 00:14:15,081
+well this is what promises of with
+promises
+
+217
+00:14:16,053 --> 00:14:19,079
+you can write something like this where
+
+218
+00:14:19,079 --> 00:14:22,171
+the first load returns a promise
+
+219
+00:14:23,071 --> 00:14:26,164
+and immediately on returning I promise I
+can call the then function
+
+220
+00:14:27,064 --> 00:14:31,135
+and that's pretty much the only API you
+need to be concerned about with promises
+
+221
+00:14:32,035 --> 00:14:35,069
+and you can pass a call back to that
+then function
+
+222
+00:14:35,069 --> 00:14:39,153
+which will get called win that promise
+is for filled
+
+223
+00:14:40,053 --> 00:14:43,091
+and that call back
+
+224
+00:14:43,091 --> 00:14:47,123
+can return another promise and this is
+where its magical
+
+225
+00:14:48,023 --> 00:14:51,076
+you can chain keep chaining all on that
+
+226
+00:14:51,076 --> 00:14:55,158
+soon these call backs are in line here
+just for clarity for you
+
+227
+00:14:56,058 --> 00:15:00,153
+but they might be they might be named
+functions that you have somewhere else
+
+228
+00:15:01,053 --> 00:15:08,053
+and it makes it very clear that this is
+the order operations
+
+229
+00:15:09,001 --> 00:15:14,006
+so that's promises and taking it to the
+next level
+
+230
+00:15:14,051 --> 00:15:18,109
+you can then use and another API a
+global API
+
+231
+00:15:19,009 --> 00:15:24,064
+promised at all and what this does is
+you can pass in an array
+
+232
+00:15:24,064 --> 00:15:28,140
+above promises and it will return a new
+promise
+
+233
+00:15:29,004 --> 00:15:33,035
+in that new promise that it returns
+
+234
+00:15:33,071 --> 00:15:36,152
+is dependent on all those promises
+finishing
+
+235
+00:15:37,052 --> 00:15:40,089
+if any of them a row your then object
+
+236
+00:15:40,089 --> 00:15:43,141
+can get past the call back that gets
+called for errors
+
+237
+00:15:44,041 --> 00:15:50,104
+but in this case done will get called
+when only all those promises succeed
+
+238
+00:15:51,004 --> 00:15:54,066
+or or for filled
+
+239
+00:15:54,066 --> 00:15:57,153
+but maybe you only care about the first
+one your loading Ubuntu images and once
+
+240
+00:15:58,053 --> 00:16:00,091
+you got one image you ready to go
+
+241
+00:16:00,091 --> 00:16:03,174
+that's where promised that race comes in
+it will call
+
+242
+00:16:04,074 --> 00:16:11,074
+your call back win the first one of
+those promises fulfilled
+
+243
+00:16:11,088 --> 00:16:16,104
+so that's a quick glance the promises
+
+244
+00:16:17,004 --> 00:16:20,055
+that pretty much wraps it up with modern
+JavaScript at least the parts that we've
+
+245
+00:16:20,055 --> 00:16:24,055
+already implemented and decided we're
+ready for consumption
+
+246
+00:16:24,055 --> 00:16:27,121
+there's a lot that's being done in
+ECMAScript 6
+
+247
+00:16:28,021 --> 00:16:31,072
+that is not ready and it's going to be
+coming down the pipeline
+
+248
+00:16:31,072 --> 00:16:35,079
+but these pieces we feel you're ready to
+use in your application
+
+249
+00:16:35,079 --> 00:16:40,173
+in browsers that support them
+
+250
+00:16:41,073 --> 00:16:45,129
+so now let's talk about the web
+inspector
+
+251
+00:16:46,029 --> 00:16:49,036
+so if you're not familiar with the web
+inspector
+
+252
+00:16:49,099 --> 00:16:54,101
+this is what it looks like and we've had
+this year I for a while
+
+253
+00:16:55,001 --> 00:16:58,049
+but we've done a lot we've fixed a lot
+of bugs with
+
+254
+00:16:58,049 --> 00:17:02,126
+added a lot of features but the main
+thing we've done this year
+
+255
+00:17:03,026 --> 00:17:07,035
+is made the web inspector available in
+more places
+
+256
+00:17:07,035 --> 00:17:11,037
+we've listened to your feedback n you
+want to be able to inspect your map
+
+257
+00:17:11,037 --> 00:17:15,060
+Mac application you want to be able to
+inspect your javascript or context
+
+258
+00:17:15,006 --> 00:17:18,071
+and that's exactly what you can do with
+IOSA
+
+259
+00:17:19,025 --> 00:17:22,114
+and I was ten years seventy
+
+260
+00:17:22,339 --> 00:17:26,396
+so with Safari you've been able to
+inspect
+
+261
+00:17:26,909 --> 00:17:31,740
+your I O S aP's and Iowa Safari by
+tethering up to
+
+262
+00:17:31,074 --> 00:17:35,076
+your computer but now
+
+263
+00:17:35,094 --> 00:17:39,120
+you can inspect your Mac application
+
+264
+00:17:40,002 --> 00:17:43,017
+and right there
+
+265
+00:17:43,035 --> 00:17:46,104
+from Safari see a list if your Mac
+applications
+
+266
+00:17:46,419 --> 00:17:50,100
+so what's that look like but first
+
+267
+00:17:50,001 --> 00:17:54,049
+like I said you want to inspect your
+javascript for contacts
+
+268
+00:17:54,058 --> 00:17:57,109
+but web inspectors all about the web
+
+269
+00:17:58,009 --> 00:18:02,178
+and it's only been able to work with
+WebKit up until this point
+
+270
+00:18:02,259 --> 00:18:07,275
+but now web inspector can connect to
+your job corps based applications
+
+271
+00:18:07,419 --> 00:18:11,432
+so even if you're not using a WebView
+but you're using javascript core for
+
+272
+00:18:11,549 --> 00:18:13,570
+some logic in your game
+
+273
+00:18:13,759 --> 00:18:17,813
+you can now add about that JavaScript
+right now weapons factor
+
+274
+00:18:18,299 --> 00:18:22,360
+and it's really great so let's let's
+show you what it looks like
+
+275
+00:18:22,909 --> 00:18:27,210
+so Mac app app at inspection
+
+276
+00:18:27,021 --> 00:18:31,110
+like I said we'll show up right next
+year i OS devices in the development you
+
+277
+00:18:32,001 --> 00:18:35,430
+in this case I have to Mac App and
+
+278
+00:18:35,529 --> 00:18:39,710
+the second one here JS pawn is a
+javascript crap
+
+279
+00:18:39,071 --> 00:18:42,159
+the first one is a WebView but the right
+there side by side
+
+280
+00:18:43,059 --> 00:18:46,062
+the first class citizens
+
+281
+00:18:46,062 --> 00:18:49,125
+and like I said you can also stock a
+next year i OS applications
+
+282
+00:18:50,025 --> 00:18:54,121
+in Iowa Safari from the same development
+you
+
+283
+00:18:55,021 --> 00:19:00,360
+but for Mac App inspection we require
+you to add an entitlement
+
+284
+00:19:00,549 --> 00:19:03,633
+to your apt we you don't want anyone
+else
+
+285
+00:19:04,389 --> 00:19:08,391
+debugging your job your contacts or
+stealing your JavaScript code from your
+
+286
+00:19:08,409 --> 00:19:10,498
+Mac application that you've worked so
+hard on
+
+287
+00:19:11,299 --> 00:19:15,335
+so we require you to have this
+entitlement on your applications that
+
+288
+00:19:15,659 --> 00:19:15,960
+your
+
+289
+00:19:15,096 --> 00:19:19,157
+developing locally and it's very simple
+to do
+
+290
+00:19:20,057 --> 00:19:23,266
+and I'll give you a demo love it here in
+a little bit
+
+291
+00:19:23,779 --> 00:19:27,730
+bill what about jobs get core inspection
+
+292
+00:19:27,073 --> 00:19:31,992
+what's that look like well it looks just
+like the web inspector
+
+293
+00:19:32,649 --> 00:19:35,690
+this is the same web inspector that he
+saw a little bit ago
+
+294
+00:19:36,059 --> 00:19:39,320
+the other one was for the webview this
+one's for JavaScript
+
+295
+00:19:39,032 --> 00:19:42,037
+or contact there's a couple buttons that
+are missing
+
+296
+00:19:42,082 --> 00:19:45,651
+that don't applied to jobs Cooper
+context like styles
+
+297
+00:19:46,389 --> 00:19:50,391
+in the DOM and things like that but for
+the most part
+
+298
+00:19:50,409 --> 00:19:57,000
+its everything you need to debug your
+job corps application
+
+299
+00:19:57,000 --> 00:20:00,149
+and you have the full council you can do
+a rebel
+
+300
+00:20:00,149 --> 00:20:04,172
+evaluate JavaScript or see consul
+dialogues consul dialogue is now
+
+301
+00:20:04,379 --> 00:20:05,820
+available
+
+302
+00:20:05,082 --> 00:20:09,191
+in your javascript per application so if
+you have your own log function you can
+
+303
+00:20:09,929 --> 00:20:12,730
+now a bandana and start using confidante
+log
+
+304
+00:20:12,073 --> 00:20:18,119
+in get all the great benefits the weapon
+sectors log functions
+
+305
+00:20:19,019 --> 00:20:23,087
+but if you don't do anything the consuls
+pretty much all you have available
+
+306
+00:20:23,087 --> 00:20:27,846
+and I'll tell you why we don't know what
+youre valuating in your javascript for
+
+307
+00:20:28,629 --> 00:20:29,684
+contact
+
+308
+00:20:30,179 --> 00:20:33,990
+if you're evaluating large scripts those
+are something you probably wanted about
+
+309
+00:20:33,099 --> 00:20:37,162
+but you could be evaluating something
+every 200 milliseconds
+
+310
+00:20:38,062 --> 00:20:41,119
+and that would quickly pollute the
+sidebar here see you
+
+311
+00:20:42,019 --> 00:20:45,046
+any script that you want to debug in the
+weapon sector
+
+312
+00:20:45,046 --> 00:20:48,073
+will we will lead you to Supplier a URL
+
+313
+00:20:48,073 --> 00:20:51,772
+or just a plain name for that script
+
+314
+00:20:52,429 --> 00:20:56,570
+and we've given you a couple new API's
+for this
+
+315
+00:20:56,057 --> 00:21:00,071
+there's always been the evaluate script
+functions
+
+316
+00:21:00,071 --> 00:21:03,144
+we now have a new Objective C one that
+takes a source URL
+
+317
+00:21:04,044 --> 00:21:07,097
+in this URL can be a file URL it can be
+any URL the
+
+318
+00:21:07,097 --> 00:21:10,149
+the weather sector really doesn't take
+it
+
+319
+00:21:11,049 --> 00:21:14,071
+take it other than to get the name at
+this point
+
+320
+00:21:14,071 --> 00:21:17,097
+but if it's a far you're a little have a
+little bit extra benefits and I'll talk
+
+321
+00:21:17,097 --> 00:21:19,796
+to you about that a little bit
+
+322
+00:21:20,669 --> 00:21:24,360
+but JS a value it's kept has always
+supported the source URL
+
+323
+00:21:24,036 --> 00:21:28,465
+but a lot of people just passing all to
+it so if you're using the old capi
+
+324
+00:21:28,789 --> 00:21:33,460
+make sure to start passing a source URL
+for things that you want to bug
+
+325
+00:21:33,046 --> 00:21:36,137
+that way they will show up in the web
+inspector
+
+326
+00:21:37,037 --> 00:21:40,120
+and that's for scripts but what about
+your contacts identifying a Contax is
+
+327
+00:21:41,002 --> 00:21:44,191
+pretty difficult with does give we don't
+know what it is
+
+328
+00:21:44,389 --> 00:21:48,440
+the by default it'll just say JS context
+in the development you
+
+329
+00:21:48,899 --> 00:21:52,902
+but if you have multiple contacts you
+don't wanna see a list that says Jess
+
+330
+00:21:52,929 --> 00:21:55,320
+contact as context as context
+
+331
+00:21:55,032 --> 00:21:58,094
+you want 10 identify those and
+
+332
+00:21:58,094 --> 00:22:01,107
+as the developer you should know what
+you're using that context or and we
+
+333
+00:22:02,007 --> 00:22:02,986
+pride
+
+334
+00:22:03,049 --> 00:22:06,083
+these new API's that lie you to name
+your contacts
+
+335
+00:22:06,389 --> 00:22:09,600
+in the name is only use for debugging
+it'll on the show up in surprise
+
+336
+00:22:09,006 --> 00:22:11,545
+development you
+
+337
+00:22:12,139 --> 00:22:15,152
+so let's just give a demo this so I have
+a
+
+338
+00:22:15,269 --> 00:22:18,840
+I'd at a sample application that we
+released a while ago
+
+339
+00:22:18,084 --> 00:22:22,523
+a at at a previous WBC jet spong
+
+340
+00:22:23,279 --> 00:22:27,460
+and it's a simple pong game but I I have
+
+341
+00:22:27,046 --> 00:22:30,120
+some things I need to do to it to make
+it work with Jess contacts in Section
+
+342
+00:22:31,002 --> 00:22:34,080
+the first thing I need to do is make
+sure the entitlement as their
+
+343
+00:22:34,098 --> 00:22:37,109
+in if you're in the App Store you
+probably already have an entitlements
+
+344
+00:22:38,009 --> 00:22:38,818
+file
+
+345
+00:22:38,899 --> 00:22:43,470
+in this case already have an app sandbox
+and that will give me an entitlement
+
+346
+00:22:43,047 --> 00:22:46,956
+and I have it right here in the sidebar
+JS on entitlements
+
+347
+00:22:47,379 --> 00:22:53,190
+so let's go in and at the entitlement
+that we need
+
+348
+00:22:53,019 --> 00:22:58,024
+and I said it was calm diet
+
+349
+00:22:58,024 --> 00:23:02,026
+Apple security
+
+350
+00:23:02,044 --> 00:23:08,135
+get task I'll and it's a boolean
+
+351
+00:23:09,035 --> 00:23:14,046
+and we'll go ahead see yes
+
+352
+00:23:14,046 --> 00:23:19,058
+so that's all I need to do to allow JS
+contacts inspection in my application
+
+353
+00:23:19,058 --> 00:23:26,058
+and I'll go ahead and say that and I'll
+go ahead and build and run it
+
+354
+00:23:26,059 --> 00:23:29,478
+and it's a very simple pong game the AIA
+is controlled by
+
+355
+00:23:30,009 --> 00:23:34,063
+JavaScript that you can modify here in
+the amp I'm not gonna talk about that
+
+356
+00:23:34,549 --> 00:23:39,622
+but now I can go to Safari and in the
+development you
+
+357
+00:23:40,279 --> 00:23:43,580
+I will see Mac Pro and I will see
+
+358
+00:23:43,058 --> 00:23:48,367
+JS pong and my JS contact and I didn't
+name the context yet so it's
+
+359
+00:23:48,889 --> 00:23:51,954
+getting the default name and I'll go
+ahead and inspect that
+
+360
+00:23:52,539 --> 00:23:55,575
+and you'll see the resources are empty
+I'm not seeing that
+
+361
+00:23:55,899 --> 00:23:58,962
+are that AI script that I've loaded but
+I'm
+
+362
+00:23:59,529 --> 00:24:03,990
+if I wanted to bug that on need to give
+that a name
+
+363
+00:24:03,099 --> 00:24:07,038
+but at this point I have access to the
+Consul if you don't do anything
+
+364
+00:24:07,929 --> 00:24:11,830
+you can do evaluations here in the
+console
+
+365
+00:24:11,083 --> 00:24:15,552
+you King get access to any Global's that
+you might have available in your
+
+366
+00:24:16,299 --> 00:24:18,385
+contacts
+
+367
+00:24:19,159 --> 00:24:22,980
+and you will see exceptions and logs in
+errors
+
+368
+00:24:22,098 --> 00:24:25,257
+and in this case we have an example
+exception
+
+369
+00:24:26,139 --> 00:24:29,820
+in this will give you a Bactrian not
+just your javascript
+
+370
+00:24:29,082 --> 00:24:33,097
+but have your native code so you can see
+exactly where
+
+371
+00:24:33,097 --> 00:24:37,676
+that function or script was evaluated
+all the way to your native codes you can
+
+372
+00:24:38,549 --> 00:24:44,190
+trace it back to the exist the origin
+
+373
+00:24:44,019 --> 00:24:47,021
+so let's go back into Xcode and
+
+374
+00:24:47,021 --> 00:24:51,700
+name some of these so it's pretty simple
+others comment this out
+
+375
+00:24:51,889 --> 00:24:56,940
+this is this on a my contacts Hong Kong
+tax I only have one context but if I had
+
+376
+00:24:56,094 --> 00:24:57,109
+multiple ones that would be
+
+377
+00:24:58,009 --> 00:25:01,094
+imperative for me to name them
+
+378
+00:25:01,094 --> 00:25:06,098
+and when ima valuating the AI scripts
+all I have to do
+
+379
+00:25:06,098 --> 00:25:10,877
+is constructor URL in this case I'm just
+making a URL with the string
+
+380
+00:25:11,759 --> 00:25:14,796
+and it really doesn't have a fun and
+location
+
+381
+00:25:15,129 --> 00:25:18,166
+and I'll just use the new with source
+URL
+
+382
+00:25:18,499 --> 00:25:21,526
+method and
+
+383
+00:25:21,769 --> 00:25:25,460
+pass in that URL now let's build in Iran
+
+384
+00:25:25,046 --> 00:25:30,465
+and see what happens in the weapon
+sector
+
+385
+00:25:30,879 --> 00:25:34,220
+will go ahead and reconnect to the pawn
+game in
+
+386
+00:25:34,022 --> 00:25:37,181
+in the resource sidebar we now have that
+
+387
+00:25:37,379 --> 00:25:41,240
+AI scripts and in the in the app
+
+388
+00:25:41,024 --> 00:25:44,283
+we didn't syntax highlight it but the
+web inspector knows exactly how the
+
+389
+00:25:44,499 --> 00:25:46,600
+syntax highlight JavaScript
+
+390
+00:25:46,006 --> 00:25:49,030
+so we can set breakpoints right here
+
+391
+00:25:49,084 --> 00:25:52,090
+and since the script is called every
+iteration
+
+392
+00:25:53,044 --> 00:25:56,044
+the movement it should break right away
+
+393
+00:25:56,044 --> 00:25:59,061
+and now I'm in the debugger I have
+
+394
+00:25:59,061 --> 00:26:02,108
+access to the call stack there's nothing
+other than this
+
+395
+00:26:03,008 --> 00:26:07,008
+function being called but if there is a
+deeply nested cost like you would see it
+
+396
+00:26:07,008 --> 00:26:09,024
+right there in the sidebar
+
+397
+00:26:09,024 --> 00:26:12,093
+and I can also im bring open the scope
+chain
+
+398
+00:26:12,309 --> 00:26:16,440
+in weekend just like you would any
+JavaScript context
+
+399
+00:26:16,044 --> 00:26:20,353
+you can now inspect the objects that
+you're getting passed around
+
+400
+00:26:20,749 --> 00:26:26,761
+or your global scope in this case
+
+401
+00:26:26,869 --> 00:26:29,897
+and we can do with any degree does and
+step through
+
+402
+00:26:30,149 --> 00:26:34,151
+and do anything you would do in a normal
+the biker
+
+403
+00:26:34,169 --> 00:26:39,470
+in addition to hovering over variables
+to see the current value
+
+404
+00:26:39,047 --> 00:26:42,076
+or evaluate things in this current scope
+
+405
+00:26:42,499 --> 00:26:45,499
+in the council so in this case
+
+406
+00:26:45,499 --> 00:26:52,499
+let's try modifying the ball here
+
+407
+00:26:54,072 --> 00:26:57,119
+maybe we wanna to modify the rules upon
+here
+
+408
+00:26:58,019 --> 00:27:02,948
+and make something really easy to hit so
+I've gone ahead and modified that and I
+
+409
+00:27:03,119 --> 00:27:03,173
+have
+
+410
+00:27:03,659 --> 00:27:06,748
+a update function here
+
+411
+00:27:07,549 --> 00:27:10,634
+that will redraw my my scene and you can
+see the ball
+
+412
+00:27:11,399 --> 00:27:15,440
+increased in size as I met after I made
+that change
+
+413
+00:27:15,044 --> 00:27:19,863
+in this is working with I objective-c
+bridge subjects the ball object here
+
+414
+00:27:20,259 --> 00:27:23,840
+is a bridge objective-c object that you
+
+415
+00:27:23,084 --> 00:27:27,923
+can use as you would a normal JavaScript
+object
+
+416
+00:27:28,679 --> 00:27:32,440
+so that's JS context inspection and
+we'll go ahead and plan
+
+417
+00:27:32,044 --> 00:27:36,643
+love all stays the same size and keeps
+on going
+
+418
+00:27:37,039 --> 00:27:42,100
+so again anywhere view any JavaScript
+context that you have in your
+
+419
+00:27:42,001 --> 00:27:42,770
+application
+
+420
+00:27:42,869 --> 00:27:45,960
+can be the bag now as long as you have
+the right to limit
+
+421
+00:27:45,096 --> 00:27:49,875
+in this also applies for I O S so only
+builds that you build and run
+
+422
+00:27:50,739 --> 00:27:53,756
+onto your device or into the Iowa
+simulator
+
+423
+00:27:53,909 --> 00:27:57,921
+will be inspected bull any app from the
+App Store will not be allowed to be
+
+424
+00:27:58,029 --> 00:28:00,104
+inspected by anyone else
+
+425
+00:28:00,779 --> 00:28:04,580
+so that's all you need and again
+
+426
+00:28:04,058 --> 00:28:07,109
+name your contacts and name your scripts
+so you can easily identify them we heard
+
+427
+00:28:08,009 --> 00:28:11,948
+about it
+
+428
+00:28:12,029 --> 00:28:16,190
+so now let's talk about something that
+we've had the weather sector for wild
+
+429
+00:28:16,019 --> 00:28:21,047
+the time line and something new this
+year is the source code time
+
+430
+00:28:21,047 --> 00:28:25,132
+so what do I mean by that what sorts of
+problems does it solve
+
+431
+00:28:26,032 --> 00:28:29,381
+so source code timelines
+
+432
+00:28:29,669 --> 00:28:32,691
+help you answer this question what
+happened when
+
+433
+00:28:32,889 --> 00:28:35,927
+I clicked on something on the page
+
+434
+00:28:36,269 --> 00:28:39,280
+maybe it's a new project that you're
+working on maybe it's something you
+
+435
+00:28:39,379 --> 00:28:41,434
+wrote years ago and you don't remember
+how it works
+
+436
+00:28:41,929 --> 00:28:44,973
+and you wanna find that line the code
+that handles this click so you can fix a
+
+437
+00:28:45,369 --> 00:28:45,970
+bug
+
+438
+00:28:45,097 --> 00:28:48,666
+or so you can just modify it
+
+439
+00:28:49,539 --> 00:28:53,562
+first a new behavior that your your
+client is asking you to add
+
+440
+00:28:53,769 --> 00:28:58,230
+so when this quick happens there's a lot
+of stuff that's probably going on
+
+441
+00:28:58,023 --> 00:29:02,352
+but you really only care about code that
+you wrote maybe you have some analysts
+
+442
+00:29:02,559 --> 00:29:02,615
+code
+
+443
+00:29:03,119 --> 00:29:06,330
+or a lot of other code that it might be
+hard to decipher
+
+444
+00:29:06,033 --> 00:29:10,842
+or see the airline inner interleaved
+functions in a vet calls and all these
+
+445
+00:29:11,139 --> 00:29:12,200
+things that happen in a
+
+446
+00:29:12,002 --> 00:29:15,078
+big modern web application
+
+447
+00:29:15,096 --> 00:29:19,133
+so when I click on that
+
+448
+00:29:20,033 --> 00:29:23,742
+you start wondering were okay what
+script is handling this
+
+449
+00:29:24,039 --> 00:29:28,045
+this button and it turns out it's this
+one
+
+450
+00:29:28,639 --> 00:29:32,643
+but with the new web inspector we can
+dig deeper
+
+451
+00:29:32,679 --> 00:29:36,980
+in this script I can now see a time line
+representation
+
+452
+00:29:36,098 --> 00:29:39,377
+what the Scriptures doing
+
+453
+00:29:40,259 --> 00:29:43,297
+so I can see over time where the mouse
+events are coming in
+
+454
+00:29:43,639 --> 00:29:47,667
+where the clicks events where the timer
+was added where the timers are firing
+
+455
+00:29:47,919 --> 00:29:51,600
+where I might be doing forced layout
+which is
+
+456
+00:29:51,006 --> 00:29:56,015
+a pretty evil thing to do in a modern
+weapon web app
+
+457
+00:29:56,069 --> 00:29:59,278
+so what's it look like in the web
+inspector
+
+458
+00:29:59,899 --> 00:30:04,330
+well here's the new web inspector time
+line
+
+459
+00:30:04,033 --> 00:30:07,034
+and you can see in the sidebar here
+
+460
+00:30:07,034 --> 00:30:10,973
+we have all OVR scripts and resources
+
+461
+00:30:11,279 --> 00:30:15,340
+from the page birkenau in their
+hierarchy of how they're included
+
+462
+00:30:15,034 --> 00:30:20,060
+by you the developer in the page
+
+463
+00:30:20,006 --> 00:30:24,082
+and you can expand each script to see
+what that script is doing
+
+464
+00:30:25,036 --> 00:30:29,036
+and where the line of code was and in
+this case
+
+465
+00:30:29,036 --> 00:30:32,095
+you'll see a whole time line where
+things are happening repeatedly you'll
+
+466
+00:30:32,095 --> 00:30:33,674
+start seeing patterns
+
+467
+00:30:34,529 --> 00:30:38,440
+and allow you to identify problem areas
+if something's firing too much
+
+468
+00:30:38,044 --> 00:30:42,136
+too little not at all if you don't see
+it in the list
+
+469
+00:30:43,036 --> 00:30:47,545
+and if you want to dig deeper into the
+code all you have to do is click right
+
+470
+00:30:47,869 --> 00:30:49,340
+there in the sidebar
+
+471
+00:30:49,034 --> 00:30:52,943
+in it'll take you right to that location
+you can mouse up and down through the
+
+472
+00:30:53,249 --> 00:30:54,249
+sidebar
+
+473
+00:30:54,249 --> 00:30:58,277
+and have your code on one side in your
+time line data in the sidebar
+
+474
+00:30:58,529 --> 00:31:03,080
+see you can gathered good overview of
+what the script is doing
+
+475
+00:31:03,008 --> 00:31:06,427
+really quick
+
+476
+00:31:06,499 --> 00:31:12,523
+so that source code timelines and I'll
+give you a demo here in a little minute
+
+477
+00:31:12,739 --> 00:31:17,776
+so something else that's new in the
+weather sector is a breakpoint probes
+
+478
+00:31:18,109 --> 00:31:23,350
+so you might have some information that
+you want to know
+
+479
+00:31:23,035 --> 00:31:27,614
+win you when that mouse is clicked or
+what when your mouse is moving
+
+480
+00:31:27,929 --> 00:31:31,951
+and those things are kinda hard to debug
+in the debugger you often have to resort
+
+481
+00:31:32,149 --> 00:31:33,320
+to print after bagging
+
+482
+00:31:33,032 --> 00:31:37,101
+because you don't want to constantly be
+switching contacts between your app
+
+483
+00:31:37,389 --> 00:31:40,488
+in the page and the web inspector
+
+484
+00:31:41,379 --> 00:31:44,427
+so you often resort to print after
+bagging
+
+485
+00:31:44,859 --> 00:31:48,330
+in your clutter go after consul with
+thousands of lines
+
+486
+00:31:48,033 --> 00:31:51,952
+in its hard to decipher specially if
+you're debugging multiple areas
+
+487
+00:31:52,249 --> 00:31:55,285
+better not related and you don't care if
+their inner
+
+488
+00:31:55,609 --> 00:31:59,070
+the about the interleaved data so that's
+
+489
+00:31:59,007 --> 00:32:03,106
+this is where break point probe covers
+it and let you see these properties
+
+490
+00:32:03,169 --> 00:32:07,183
+that you might care about without having
+to break out to the web sector
+
+491
+00:32:07,309 --> 00:32:12,318
+so let's just go ahead and give a demo
+this
+
+492
+00:32:12,399 --> 00:32:17,340
+so let's go to Safari here and I have a
+simple
+
+493
+00:32:17,034 --> 00:32:22,743
+stacked the block game
+
+494
+00:32:23,049 --> 00:32:27,130
+that I want to to it's been a while
+since this was written so I wanna see
+
+495
+00:32:27,859 --> 00:32:28,820
+what's going on
+
+496
+00:32:28,082 --> 00:32:31,121
+let's let's go ahead and use the time
+line panel for this
+
+497
+00:32:32,021 --> 00:32:36,180
+I'll go ahead and bring up the web
+inspector in the developing you
+
+498
+00:32:36,369 --> 00:32:40,406
+show web inspector and we'll go to the
+Timeline panel
+
+499
+00:32:40,739 --> 00:32:44,795
+by default the timelines empty it it's
+not recording all the time
+
+500
+00:32:45,299 --> 00:32:48,383
+and it only automatically records when
+you reload the page
+
+501
+00:32:49,139 --> 00:32:53,156
+or when you press the record button
+appear in the quarter
+
+502
+00:32:53,309 --> 00:32:56,352
+and this can record any length of time
+that you would like to
+
+503
+00:32:56,739 --> 00:32:59,970
+to record but when you when I reload the
+page
+
+504
+00:32:59,097 --> 00:33:02,160
+it'll only record a little bit so I'm
+just gonna go ahead and start recording
+
+505
+00:33:03,006 --> 00:33:04,155
+here
+
+506
+00:33:04,749 --> 00:33:08,570
+and see what this page is doing as I
+interact with this game
+
+507
+00:33:08,057 --> 00:33:13,116
+and you'll see the events and although
+the work that the engine is doing
+
+508
+00:33:13,629 --> 00:33:17,668
+in response these events start filling
+up on the time line
+
+509
+00:33:18,019 --> 00:33:21,024
+and I'll go ahead and stop this
+
+510
+00:33:21,519 --> 00:33:24,820
+in my application has three scripts but
+
+511
+00:33:24,082 --> 00:33:27,671
+the logic is all unblock such as: all
+the other stuff
+
+512
+00:33:28,409 --> 00:33:31,950
+stuff I didn't even write I don't even
+know what's going on there
+
+513
+00:33:31,095 --> 00:33:35,184
+so I can ignore those but they're doing
+some work in normally that would
+
+514
+00:33:36,039 --> 00:33:39,116
+that would clutter up my UI but their
+collapse here so they're not taking up
+
+515
+00:33:39,809 --> 00:33:40,858
+in space
+
+516
+00:33:41,299 --> 00:33:44,305
+I'll go ahead and expand the script that
+I care about here
+
+517
+00:33:44,899 --> 00:33:49,100
+and I can see that timers are firing
+
+518
+00:33:49,001 --> 00:33:52,570
+pretty pretty at a pretty good clip
+
+519
+00:33:52,669 --> 00:33:56,570
+as I'm interacting with the page and
+there's he key events that are firing
+
+520
+00:33:56,057 --> 00:33:58,145
+everytime i press a key
+
+521
+00:33:59,045 --> 00:34:02,604
+summer the other feet new features have
+the time line here we can now zoom in
+
+522
+00:34:03,009 --> 00:34:03,097
+scale the
+
+523
+00:34:03,889 --> 00:34:07,980
+the overview panel so if you wanna dig
+in to see
+
+524
+00:34:07,098 --> 00:34:10,797
+where things are happening across
+domains
+
+525
+00:34:11,679 --> 00:34:14,704
+in this case we have three timelines the
+network requests
+
+526
+00:34:14,929 --> 00:34:19,550
+layout rendering and JavaScript and all
+3 play a key role
+
+527
+00:34:19,055 --> 00:34:23,074
+in the performance of your page so if
+you see anything
+
+528
+00:34:23,074 --> 00:34:27,132
+interesting happening in a specific time
+range you can zoom in on it
+
+529
+00:34:28,032 --> 00:34:32,039
+make its make a selection and that
+informational show up below
+
+530
+00:34:32,039 --> 00:34:35,041
+in the time line
+
+531
+00:34:35,041 --> 00:34:40,129
+and you can also drag the surrounds the
+scroll and scrub through your time
+
+532
+00:34:41,029 --> 00:34:44,108
+as things are happening on the on the
+page
+
+533
+00:34:45,008 --> 00:34:48,030
+so in this case let me reword and I'll
+
+534
+00:34:48,003 --> 00:34:51,080
+I'll show you the networks
+
+535
+00:34:52,007 --> 00:34:55,029
+and in this case it's a local file but
+we now have
+
+536
+00:34:55,029 --> 00:34:59,076
+network load information and you see
+those on the network time line
+
+537
+00:34:59,076 --> 00:35:01,141
+and you'll notice that the time line
+just automatically stopped recording
+
+538
+00:35:02,041 --> 00:35:02,115
+their
+
+539
+00:35:03,015 --> 00:35:07,032
+it records up to a certain amount of
+time unless you manually hit the record
+
+540
+00:35:07,032 --> 00:35:07,107
+button again
+
+541
+00:35:08,007 --> 00:35:13,065
+to to record more information so let's
+look into the network time line here
+
+542
+00:35:13,065 --> 00:35:17,086
+and we can see although the network
+details that you might be familiar with
+
+543
+00:35:17,086 --> 00:35:20,134
+in the previous never time-line they're
+all there
+
+544
+00:35:21,034 --> 00:35:24,093
+and you can sort for these columns by
+whatever information you
+
+545
+00:35:24,093 --> 00:35:27,150
+find most interesting if you're looking
+for a large script
+
+546
+00:35:28,005 --> 00:35:32,037
+you can sort by transfer size and see
+the biggest script
+
+547
+00:35:32,082 --> 00:35:35,087
+show up right there was corrected
+
+548
+00:35:36,032 --> 00:35:40,055
+start time you can also do
+
+549
+00:35:40,055 --> 00:35:43,103
+click on the other time lines and get
+detailed tablet
+
+550
+00:35:44,003 --> 00:35:47,040
+linear data love what was happening in
+that time range
+
+551
+00:35:47,004 --> 00:35:50,032
+and again this is all time in space so
+you can see as
+
+552
+00:35:50,068 --> 00:35:53,109
+these they are rendering events filter
+out they
+
+553
+00:35:54,009 --> 00:35:58,038
+they disappear from the this play below
+
+554
+00:35:58,038 --> 00:36:01,100
+JavaScript and events is a special view
+
+555
+00:36:02,000 --> 00:36:05,032
+and if you're looking for the old
+profile data
+
+556
+00:36:05,032 --> 00:36:09,064
+this is where its move to so as a
+recording time line
+
+557
+00:36:09,064 --> 00:36:13,068
+we will now capture profiles all those
+entry point since your javascript
+
+558
+00:36:14,004 --> 00:36:17,047
+so whenever script is evaluated you can
+expand the
+
+559
+00:36:17,047 --> 00:36:20,102
+see all of the functions that were
+called
+
+560
+00:36:21,002 --> 00:36:25,096
+in your script and how much time each
+individual functions took
+
+561
+00:36:25,096 --> 00:36:30,144
+to make up that piece that entry point
+
+562
+00:36:31,044 --> 00:36:34,047
+so that's a brief glance at the time
+line but there is one cool thing that
+
+563
+00:36:34,074 --> 00:36:35,112
+people always forget about
+
+564
+00:36:36,012 --> 00:36:39,098
+when they're talking about the time line
+and that's the filter
+
+565
+00:36:39,098 --> 00:36:45,103
+the filter bars vastly under-appreciated
+in the weather sector and even Xcode
+
+566
+00:36:46,003 --> 00:36:50,041
+where it comes from where you can filter
+down this list
+
+567
+00:36:50,041 --> 00:36:53,041
+to find what exactly you want
+
+568
+00:36:53,041 --> 00:36:56,058
+so in this case I look I did a filter
+for event
+
+569
+00:36:56,058 --> 00:36:59,112
+and it found at event listener right
+there and then brought it to the front
+
+570
+00:37:00,012 --> 00:37:04,098
+expanded those profiles and showed me
+that exact function I was looking for
+
+571
+00:37:04,098 --> 00:37:08,154
+so that's the filter bar and I encourage
+you to start using filtering more often
+
+572
+00:37:09,054 --> 00:37:11,140
+in the weapon sector and even Xcode
+
+573
+00:37:12,004 --> 00:37:16,081
+will go back to my block application and
+bring up the weapon sector
+
+574
+00:37:17,017 --> 00:37:20,071
+and let's go ahead and
+
+575
+00:37:20,071 --> 00:37:23,134
+go to the resource sidebar here and
+
+576
+00:37:24,034 --> 00:37:27,129
+I really want it improve this key
+function listener
+
+577
+00:37:28,029 --> 00:37:32,043
+this keel cue the slur its use in key
+code which is pretty
+
+578
+00:37:32,043 --> 00:37:36,048
+arcane and there's some new API key
+identifiers that's been out for
+
+579
+00:37:36,093 --> 00:37:40,111
+for years that I could use that would
+give string representations
+
+580
+00:37:41,011 --> 00:37:45,086
+at these for my cases instead of the
+numbers
+
+581
+00:37:45,086 --> 00:37:48,112
+so what all do like I said that when a
+
+582
+00:37:49,012 --> 00:37:52,020
+when we set a breakpoint anytime that
+key is pressed its gonna interrupt
+
+583
+00:37:52,092 --> 00:37:56,110
+my process so now to do another key I
+have to hit continue
+
+584
+00:37:57,001 --> 00:38:02,069
+and log what I wanted and press another
+key figure out what I'm doing here
+
+585
+00:38:02,078 --> 00:38:05,172
+but with this breakpoint we can add
+
+586
+00:38:06,072 --> 00:38:09,148
+a break point action
+
+587
+00:38:10,048 --> 00:38:13,057
+and I'll go ahead edit this break point
+which will bring up the breakpoint
+
+588
+00:38:13,057 --> 00:38:15,096
+action pop over
+
+589
+00:38:15,096 --> 00:38:18,151
+and let's go ahead and add a probe
+
+590
+00:38:19,051 --> 00:38:22,074
+so we have a few actions available I'm
+not going to cover the them
+
+591
+00:38:22,074 --> 00:38:26,075
+but they're pretty self-explanatory
+probe expression in this case is
+
+592
+00:38:26,075 --> 00:38:30,136
+is brand new and we'll go ahead and
+evaluate an expression that were
+
+593
+00:38:31,036 --> 00:38:32,045
+interested in
+
+594
+00:38:32,045 --> 00:38:35,054
+and we have an event object here and
+
+595
+00:38:35,054 --> 00:38:41,055
+I want to know what that key identifiers
+
+596
+00:38:41,064 --> 00:38:45,079
+and that's all I need to type and I want
+to automatically continue after
+
+597
+00:38:45,079 --> 00:38:49,168
+evaluating so it doesn't pause in the
+divider
+
+598
+00:38:50,068 --> 00:38:54,117
+so we'll go ahead and break out here and
+when I added that probe
+
+599
+00:38:55,017 --> 00:38:59,034
+it added a new sidebar Adam called
+probes and this is where that day they
+
+600
+00:38:59,034 --> 00:38:59,130
+will show up
+
+601
+00:39:00,003 --> 00:39:03,045
+in a table so I'm gonna go back
+
+602
+00:39:03,072 --> 00:39:06,120
+to my game interact with it and now it's
+
+603
+00:39:07,002 --> 00:39:11,046
+logging that key identifiers everytime i
+press the key
+
+604
+00:39:11,064 --> 00:39:15,141
+and showing me the values that I can now
+take in input into my code
+
+605
+00:39:16,041 --> 00:39:19,049
+improve my code and I didn't this would
+have been a
+
+606
+00:39:19,049 --> 00:39:22,141
+a back-and-forth process or a lot of
+assumption of what these identifiers
+
+607
+00:39:23,041 --> 00:39:23,123
+were
+
+608
+00:39:24,023 --> 00:39:27,060
+now I can see the mall in a table and go
+back to my case
+
+609
+00:39:27,006 --> 00:39:31,055
+and modify them
+
+610
+00:39:32,009 --> 00:39:35,011
+so that's probes
+
+611
+00:39:35,011 --> 00:39:38,093
+so that's a little bit about Brad Pitt
+pros answers good time lines
+
+612
+00:39:38,093 --> 00:39:41,135
+and I encourage you to play around them
+and see how they can fit into your
+
+613
+00:39:42,035 --> 00:39:45,110
+debugging workflow
+
+614
+00:39:46,001 --> 00:39:49,068
+so now let's talk about accessibility
+new in there
+
+615
+00:39:49,077 --> 00:39:53,091
+women sector we have and accessibility
+details for you
+
+616
+00:39:53,091 --> 00:39:56,182
+and this is pretty
+
+617
+00:39:57,082 --> 00:40:00,166
+pretty important if you're working on a
+major website
+
+618
+00:40:01,066 --> 00:40:05,145
+you want to be accessible to everyone
+Apple cares a lot about accessibility
+
+619
+00:40:06,045 --> 00:40:11,048
+and we do a lot of work to make
+accessibility matter
+
+620
+00:40:11,048 --> 00:40:15,065
+but it only goes so far as to how much
+you put into it
+
+621
+00:40:15,065 --> 00:40:19,089
+when you're developing your own
+applications and that goes for IRS
+
+622
+00:40:19,089 --> 00:40:22,154
+applications and web applications
+
+623
+00:40:23,054 --> 00:40:26,067
+and on the web we have something called
+Aria
+
+624
+00:40:26,067 --> 00:40:29,088
+and its recently hit a milestone in our
+area one
+
+625
+00:40:29,088 --> 00:40:32,159
+or is about to and
+
+626
+00:40:33,059 --> 00:40:36,113
+that allows you to a fine for a DOM node
+
+627
+00:40:37,013 --> 00:40:40,026
+what that download does as a role
+
+628
+00:40:40,026 --> 00:40:43,034
+in those roles are translated into
+things that the per
+
+629
+00:40:44,006 --> 00:40:47,048
+that the person using the computer with
+voice-over
+
+630
+00:40:47,048 --> 00:40:50,071
+can hear or see
+
+631
+00:40:50,071 --> 00:40:53,095
+with with your with your web application
+
+632
+00:40:53,095 --> 00:40:56,100
+and in this case i have a web page
+
+633
+00:40:57,000 --> 00:41:00,053
+there has an alert in a similar alert
+
+634
+00:41:00,053 --> 00:41:03,088
+and those are notoriously hard to debug
+
+635
+00:41:03,088 --> 00:41:07,135
+or hard for cited a non side the person
+to see
+
+636
+00:41:08,035 --> 00:41:11,062
+when they pop up in a web page because
+
+637
+00:41:11,062 --> 00:41:15,086
+they're not gonna be able to see that
+contents
+
+638
+00:41:15,086 --> 00:41:19,168
+unless you annotated with re-air roles
+
+639
+00:41:20,068 --> 00:41:24,093
+in in this case the the voiceover
+machinery
+
+640
+00:41:24,093 --> 00:41:27,102
+and accessibility machinery in webview
+
+641
+00:41:28,083 --> 00:41:31,135
+exposes a lot of details like child
+relationships
+
+642
+00:41:32,035 --> 00:41:35,082
+and these relationships are not
+necessarily the same
+
+643
+00:41:35,082 --> 00:41:38,103
+as a normal DOM node relationship where
+
+644
+00:41:39,003 --> 00:41:42,101
+where your parent could be someone
+that's deeply
+
+645
+00:41:43,001 --> 00:41:46,029
+I'd a deep ancestor view
+
+646
+00:41:46,029 --> 00:41:49,048
+and we show those in the sidebar here
+
+647
+00:41:49,048 --> 00:41:52,072
+as a parent-child relationship and
+they're all linkable so I can click on
+
+648
+00:41:52,072 --> 00:41:52,140
+them
+
+649
+00:41:53,004 --> 00:41:56,079
+and go directly to these other child
+
+650
+00:41:57,015 --> 00:42:01,092
+nodes that are part of my alert and see
+that this button has the right role for
+
+651
+00:42:01,092 --> 00:42:01,190
+a button
+
+652
+00:42:02,009 --> 00:42:06,068
+and it will allow people it won't allow
+people to focus that by the last people
+
+653
+00:42:07,049 --> 00:42:09,091
+to click it
+
+654
+00:42:09,091 --> 00:42:12,126
+and that's a brief summary have what you
+can do with the weather sector
+
+655
+00:42:13,026 --> 00:42:16,080
+and accessibility there's a session
+tomorrow morning
+
+656
+00:42:16,008 --> 00:42:19,017
+that covers accessibility and the web
+
+657
+00:42:19,089 --> 00:42:22,155
+and I encourage you to go check it out
+if you add if you have a website
+
+658
+00:42:23,055 --> 00:42:30,055
+or whether you in your IRS or Mac
+application please do make it accessible
+
+659
+00:42:31,029 --> 00:42:35,063
+so that's accessibility details now
+let's talk about something that's
+
+660
+00:42:35,063 --> 00:42:39,105
+that's really fun which is color
+
+661
+00:42:40,005 --> 00:42:44,032
+colors one of those things we as people
+
+662
+00:42:44,032 --> 00:42:47,045
+can understand numbers but colors
+
+663
+00:42:47,045 --> 00:42:51,079
+there's millions of them and its very
+visual
+
+664
+00:42:51,079 --> 00:42:55,085
+in a very personal process picking the
+right color
+
+665
+00:42:55,085 --> 00:42:58,086
+and if you're like me in the
+
+666
+00:42:58,086 --> 00:43:01,150
+you're working on a web page you might
+have a client come in and say
+
+667
+00:43:02,005 --> 00:43:05,016
+I want discover salmon or
+
+668
+00:43:05,061 --> 00:43:08,140
+this color toe it it's hard to
+
+669
+00:43:09,004 --> 00:43:14,050
+for them to take those words and you can
+translate that into the right color
+
+670
+00:43:14,086 --> 00:43:16,095
+wouldn't it be great if you could just
+bring up color picker right there in the
+
+671
+00:43:17,076 --> 00:43:18,079
+web page
+
+672
+00:43:18,079 --> 00:43:22,116
+and modify right there in front of them
+so that's what we've added in the web
+
+673
+00:43:23,016 --> 00:43:26,021
+inspector and I'll give you a demo
+
+674
+00:43:26,021 --> 00:43:29,039
+so I haven't icon that I've been mocking
+up and often
+
+675
+00:43:29,039 --> 00:43:33,042
+I do these things in the web as that's
+something I understand I can
+
+676
+00:43:33,042 --> 00:43:37,071
+I can play around with it a lot easier
+than maybe I could do in Photoshop
+
+677
+00:43:37,071 --> 00:43:40,144
+and this icon's little small so I'll
+just go ahead and bring up the web
+
+678
+00:43:41,044 --> 00:43:44,128
+inspector here
+
+679
+00:43:45,028 --> 00:43:48,032
+and I have a
+
+680
+00:43:48,068 --> 00:43:51,130
+class that I can I had to make a little
+bigger for you
+
+681
+00:43:52,003 --> 00:43:56,067
+so now I have my icon has a couple
+colors it's got this color for the cliff
+
+682
+00:43:56,094 --> 00:44:00,107
+in its got a gradient in the background
+
+683
+00:44:01,007 --> 00:44:04,029
+I can bring up the style sidebar
+
+684
+00:44:04,029 --> 00:44:07,105
+and see those colors and
+
+685
+00:44:08,005 --> 00:44:12,060
+in this case I'm using some named color
+CSS has hundreds have named colors
+
+686
+00:44:12,006 --> 00:44:17,037
+but maybe it's not the right to: that's
+a little bit more green than I expected
+
+687
+00:44:17,091 --> 00:44:20,109
+or the light blue is is
+
+688
+00:44:21,009 --> 00:44:24,078
+not enough see farmer whatever your
+clients telling you to
+
+689
+00:44:24,078 --> 00:44:27,112
+to make this color so I can
+
+690
+00:44:28,012 --> 00:44:31,037
+click on these color swatches and get
+
+691
+00:44:31,037 --> 00:44:35,040
+a color editor or
+
+692
+00:44:35,004 --> 00:44:38,013
+I can switch over to the CSS resource
+
+693
+00:44:39,003 --> 00:44:42,049
+and get the exact same experience but in
+this case
+
+694
+00:44:42,076 --> 00:44:45,101
+we want your source code to be front
+center so we don't even add those color
+
+695
+00:44:46,001 --> 00:44:47,050
+swatches
+
+696
+00:44:47,005 --> 00:44:50,005
+but we have a new feature that lets you
+
+697
+00:44:50,005 --> 00:44:53,040
+get a data detector like experience
+
+698
+00:44:53,085 --> 00:44:56,086
+when we detected that the color we will
+show
+
+699
+00:44:56,086 --> 00:45:00,124
+a color we'll next to as you have for it
+
+700
+00:45:01,024 --> 00:45:05,062
+and when you click on that we'll we
+bring up the color pop over
+
+701
+00:45:05,062 --> 00:45:09,139
+in in this case we can just click around
+you can see the color updating live
+
+702
+00:45:10,039 --> 00:45:13,064
+right there on the web page
+
+703
+00:45:13,064 --> 00:45:18,138
+and I can find the right color that i'm
+looking for. for the school
+
+704
+00:45:19,038 --> 00:45:23,076
+and if it's a name color it will default
+back to the name color syntax
+
+705
+00:45:23,076 --> 00:45:26,114
+but if it's not something that's named
+it will just give you the
+
+706
+00:45:27,014 --> 00:45:32,110
+RGB syntax or RGBA if you picked it now
+for
+
+707
+00:45:33,001 --> 00:45:36,070
+but we didn't stop there we now let you
+do
+
+708
+00:45:36,079 --> 00:45:40,152
+gradients ingredients are even more hard
+to visualize thing color
+
+709
+00:45:41,052 --> 00:45:46,073
+because you have that interplay the
+colors transitioning from one to another
+
+710
+00:45:46,073 --> 00:45:49,095
+and it's hard to see those in your mind
+
+711
+00:45:49,095 --> 00:45:53,095
+but we can go ahead and edit this
+gradient
+
+712
+00:45:53,095 --> 00:45:57,146
+and it gives you a simple slider they
+might be familiar with
+
+713
+00:45:58,046 --> 00:46:02,072
+in from other you eyes and I can drag
+these around
+
+714
+00:46:02,072 --> 00:46:05,133
+and you'll see it's updating the source
+code as a drag this the percentage is
+
+715
+00:46:06,033 --> 00:46:07,046
+changing
+
+716
+00:46:07,046 --> 00:46:11,090
+and when I let go it updates the page
+live so I can see exactly
+
+717
+00:46:11,009 --> 00:46:14,017
+what is applying to this page
+
+718
+00:46:15,007 --> 00:46:21,092
+but you can't just edit the color stops
+you can edit the type a gradient
+
+719
+00:46:22,055 --> 00:46:28,086
+or you can pic let me radio so it's
+coming out from the center
+
+720
+00:46:28,086 --> 00:46:31,094
+and I can click on these colors and get
+the color wheel
+
+721
+00:46:31,094 --> 00:46:35,151
+and start editing each of these color
+sups directly
+
+722
+00:46:36,051 --> 00:46:42,110
+so I can find the the exact look i'm
+looking for
+
+723
+00:46:43,001 --> 00:46:46,024
+drag the surrounds
+
+724
+00:46:46,033 --> 00:46:52,039
+maybe we want it to be more starburst
+look
+
+725
+00:46:52,039 --> 00:46:55,127
+little bit more yellow
+
+726
+00:46:56,027 --> 00:47:00,054
+or the client might say oh I i won a
+linear gradient in this case
+
+727
+00:47:00,054 --> 00:47:03,103
+so let's go back to that traditional I O
+S look
+
+728
+00:47:04,003 --> 00:47:07,062
+for for gradients as start picking some
+
+729
+00:47:07,062 --> 00:47:11,070
+pretty wild colors here so that's
+
+730
+00:47:11,007 --> 00:47:16,014
+the gradient editor in the at the new
+web inspector
+
+731
+00:47:17,004 --> 00:47:21,065
+and what I didn't show you here
+
+732
+00:47:22,001 --> 00:47:29,001
+let's go back in reload here
+
+733
+00:47:30,016 --> 00:47:37,016
+if I make any of these changes say I
+want to go back and save it
+
+734
+00:47:37,087 --> 00:47:40,122
+let's make this a red and that works
+
+735
+00:47:41,022 --> 00:47:44,078
+that looks like a sunset in the weapon
+sector
+
+736
+00:47:44,078 --> 00:47:47,150
+I can just go ahead and hit command s
+that will bring up the traditional save
+
+737
+00:47:48,005 --> 00:47:49,017
+dialog
+
+738
+00:47:49,062 --> 00:47:53,144
+go ahead and replace it and now if I
+close the weapon sector reload the page
+
+739
+00:47:54,044 --> 00:47:57,068
+I have that grading color right there
+
+740
+00:47:57,068 --> 00:48:00,091
+the icon the different size because I
+was modifying the DOM and
+
+741
+00:48:00,091 --> 00:48:03,147
+that doesn't save but if you're editing
+a CSS resource
+
+742
+00:48:04,047 --> 00:48:08,081
+or any other local file resource you can
+save those right back to desk
+
+743
+00:48:08,081 --> 00:48:12,085
+from the web inspector so that's color
+and great in editing
+
+744
+00:48:13,021 --> 00:48:16,100
+and I hope you play around with it and
+try it out it it's really fun
+
+745
+00:48:17,000 --> 00:48:20,077
+to just get down and dirty with those
+those colors
+
+746
+00:48:20,077 --> 00:48:23,094
+and the gradient syntax is something
+that
+
+747
+00:48:23,094 --> 00:48:26,156
+I still have trouble remembering but the
+weather sector will just help you right
+
+748
+00:48:27,056 --> 00:48:27,141
+there
+
+749
+00:48:28,041 --> 00:48:32,120
+get the right syntax and and let you go
+on to do more important things in your
+
+750
+00:48:33,002 --> 00:48:35,067
+code
+
+751
+00:48:35,085 --> 00:48:38,131
+so that's a summary of all the new
+features and just the
+
+752
+00:48:39,031 --> 00:48:44,090
+a brief introduction have all the new
+features in the weather sector
+
+753
+00:48:44,009 --> 00:48:48,092
+so I encourage you to take advantage of
+the new jobs for playing which features
+
+754
+00:48:49,073 --> 00:48:53,155
+as you're able to you release and use
+the new Braun and browsers
+
+755
+00:48:54,055 --> 00:48:57,111
+or use I was a exclusively or Mac OS
+
+756
+00:48:58,011 --> 00:49:02,013
+you seventy exclusively you can start
+using some of these new language in
+
+757
+00:49:02,031 --> 00:49:05,073
+syntax users
+
+758
+00:49:05,073 --> 00:49:08,104
+the weapon sector is now available again
+for
+
+759
+00:49:09,004 --> 00:49:12,015
+your Mac applications if you have a
+WebView that you've always wanted to see
+
+760
+00:49:12,015 --> 00:49:13,104
+what it's doing in your application
+
+761
+00:49:14,004 --> 00:49:17,071
+there's been a few ways to do it but you
+can now officially use the weapons
+
+762
+00:49:17,071 --> 00:49:20,114
+factor in your Mac application
+
+763
+00:49:21,014 --> 00:49:25,017
+and I want you to enjoy debugging your
+javascript contacts this is something
+
+764
+00:49:25,044 --> 00:49:25,099
+that
+
+765
+00:49:25,099 --> 00:49:28,117
+may seem simple oh yeah there's now a
+debugger
+
+766
+00:49:29,017 --> 00:49:32,044
+but yeah and now there's a dub auger
+
+767
+00:49:32,044 --> 00:49:35,110
+you can now do about this javascript
+that's been plaguing you
+
+768
+00:49:36,001 --> 00:49:39,002
+or giving you these weird errors or its
+
+769
+00:49:39,002 --> 00:49:42,017
+always been hard to debug these contacts
+because
+
+770
+00:49:42,035 --> 00:49:47,114
+there's been no departure that's been
+able to give you that information
+
+771
+00:49:48,014 --> 00:49:52,051
+and again it's really important to make
+your web applications accessible
+
+772
+00:49:52,051 --> 00:49:55,052
+and here I was applications accessible
+
+773
+00:49:55,061 --> 00:49:59,138
+and be a colorful person enjoy color
+editing and the weapon sector and great
+
+774
+00:50:00,038 --> 00:50:02,075
+in editing
+
+775
+00:50:02,075 --> 00:50:06,107
+and again for more information you can
+contact evangelism at this e-mail
+
+776
+00:50:07,007 --> 00:50:08,035
+address
+
+777
+00:50:08,035 --> 00:50:12,050
+or the developer technical support and
+even Apple forms
+
+778
+00:50:12,005 --> 00:50:15,008
+I'm on the Apple forms if you have a
+question about the weather specter
+
+779
+00:50:15,053 --> 00:50:19,057
+or anything web related or one of our
+team will be able to answer it or I
+
+780
+00:50:19,057 --> 00:50:21,081
+would
+
+781
+00:50:21,081 --> 00:50:24,143
+there again there's a couple more
+sessions that my interest you as web
+
+782
+00:50:25,043 --> 00:50:26,127
+developers or IRS
+
+783
+00:50:27,027 --> 00:50:30,099
+developers that have web or JavaScript
+contact
+
+784
+00:50:30,099 --> 00:50:33,188
+you can go to the session tomorrow
+morning and learn all you need to know
+
+785
+00:50:34,088 --> 00:50:36,093
+about accessibility in your web
+application
+
+786
+00:50:37,038 --> 00:50:41,123
+in then stay in that same room and learn
+about responsible have designed for you
+
+787
+00:50:42,023 --> 00:50:43,032
+making your web
+
+788
+00:50:43,032 --> 00:50:46,038
+aP's scale from desktop size I
+
+789
+00:50:46,038 --> 00:50:48,066
+iPhones and that's it thanks a lot
+

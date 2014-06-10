@@ -1,0 +1,3384 @@
+1
+00:00:12,011 --> 00:00:16,033
+good afternoon everyone my name is
+honors I'm an engineer on the Safari and
+
+2
+00:00:16,033 --> 00:00:16,061
+what
+
+3
+00:00:16,061 --> 00:00:21,073
+a team and i'll be joined later by my
+colleague bath and the session has
+
+4
+00:00:21,073 --> 00:00:22,079
+session till sex
+
+5
+00:00:22,079 --> 00:00:27,113
+introducing the modern web can API we've
+got a lot a really cool things to show
+
+6
+00:00:28,013 --> 00:00:28,078
+you
+
+7
+00:00:28,078 --> 00:00:33,085
+self let's go started for first fighting
+
+8
+00:00:33,085 --> 00:00:36,123
+I want to give you a brief overview of
+what can actually yes
+
+9
+00:00:37,023 --> 00:00:40,602
+one way you can think about it
+
+10
+00:00:40,809 --> 00:00:44,330
+yes that white kid is the layout and
+rendering engine
+
+11
+00:00:44,033 --> 00:00:47,109
+behind Safari on Mac and I'll
+
+12
+00:00:48,009 --> 00:00:51,075
+Sol
+
+13
+00:00:51,075 --> 00:00:54,141
+what kept parsers and render Saget him
+how
+
+14
+00:00:55,041 --> 00:00:58,104
+it loads into space images it runs
+JavaScript and so forth
+
+15
+00:00:59,004 --> 00:01:03,028
+another way to look at it
+
+16
+00:01:03,028 --> 00:01:08,085
+yes that WebKit starts where the so far
+user interface than
+
+17
+00:01:08,085 --> 00:01:13,153
+but what good is also used by a lot of
+other APs
+
+18
+00:01:14,053 --> 00:01:17,058
+such as male for displaying rich HTML
+email
+
+19
+00:01:17,058 --> 00:01:20,144
+and iBooks for rendering gorgeous
+
+20
+00:01:21,044 --> 00:01:26,126
+e-books and even applications you
+wouldn't normally think per
+
+21
+00:01:27,026 --> 00:01:30,065
+for use in but can't like messages for
+its conversation you
+
+22
+00:01:30,065 --> 00:01:34,068
+and of course most important of all
+
+23
+00:01:34,095 --> 00:01:37,152
+your apt you done some really amazing
+things with WebKit
+
+24
+00:01:38,052 --> 00:01:41,070
+so
+
+25
+00:01:41,007 --> 00:01:44,676
+if you're using WebKit in Europe today
+on I O S
+
+26
+00:01:45,369 --> 00:01:48,860
+you're using you I webview so let's have
+a quick show of hands
+
+27
+00:01:48,086 --> 00:01:51,087
+how many view are using you I webview in
+a nap today
+
+28
+00:01:51,096 --> 00:01:57,005
+while on our span
+
+29
+00:01:57,869 --> 00:02:00,948
+you would be using a WebView an how many
+are you are using a WebView
+
+30
+00:02:01,659 --> 00:02:05,350
+call now
+
+31
+00:02:05,035 --> 00:02:08,944
+over the years we've receive a lotta
+
+32
+00:02:09,259 --> 00:02:12,590
+requests from you especially on iowa's
+
+33
+00:02:12,059 --> 00:02:17,081
+for something a bit more powerful and we
+really think
+
+34
+00:02:17,081 --> 00:02:20,176
+we have something that you're gonna like
+and that is the modern web today
+
+35
+00:02:21,076 --> 00:02:25,079
+guy so what do you wanna learn today
+
+36
+00:02:25,079 --> 00:02:28,168
+you'll see how to adopt
+
+37
+00:02:29,068 --> 00:02:35,106
+the modern working in PI and to you said
+in your apt we'll take a look at a few
+
+38
+00:02:36,006 --> 00:02:38,012
+new coffee church an
+
+39
+00:02:38,066 --> 00:02:41,093
+how to integrate those in your app an
+
+40
+00:02:41,093 --> 00:02:47,372
+them will I'm a bit deeper and you can
+see how you can customize the way WebKit
+
+41
+00:02:48,209 --> 00:02:49,560
+votes web pages
+
+42
+00:02:49,056 --> 00:02:55,875
+and even customize the web content
+itself for the modern web committee i
+
+43
+00:02:56,379 --> 00:03:00,390
+class for class
+
+44
+00:03:00,489 --> 00:03:03,980
+this API is exactly the same on iowa's
+
+45
+00:03:03,098 --> 00:03:06,114
+analyst yeah
+
+46
+00:03:07,014 --> 00:03:12,363
+from of course there are some
+
+47
+00:03:12,489 --> 00:03:16,830
+minor changes due to the way we hook
+into ap kitten you like it
+
+48
+00:03:16,083 --> 00:03:19,180
+but its pretty much the same
+
+49
+00:03:20,008 --> 00:03:23,337
+are also taking advantage
+
+50
+00:03:24,129 --> 00:03:27,450
+the latest and greatest language and
+cocoa futures
+
+51
+00:03:27,045 --> 00:03:30,058
+so you can spend less time writing group
+called
+
+52
+00:03:30,058 --> 00:03:35,131
+and more time focusing on making your
+apt way and we tried
+
+53
+00:03:36,031 --> 00:03:39,040
+really hard to reduce the surface
+
+54
+00:03:39,319 --> 00:03:42,750
+area while still giving you access to a
+ton of cool features
+
+55
+00:03:42,075 --> 00:03:45,077
+and we're using
+
+56
+00:03:45,095 --> 00:03:49,169
+the multiprocessor architecture that
+we're also using Safari on POF
+
+57
+00:03:50,069 --> 00:03:53,448
+our stand since I N and now on I'll ass
+
+58
+00:03:54,069 --> 00:03:58,200
+when when I am a in fact
+
+59
+00:03:58,002 --> 00:04:01,049
+one of the goals we had with this modern
+API wise
+
+60
+00:04:01,067 --> 00:04:05,966
+to take a bottle features that were
+previously only available to Safari
+
+61
+00:04:06,569 --> 00:04:13,290
+and give you access to them for example
+super smooth 60 frames-per-second
+
+62
+00:04:13,029 --> 00:04:14,054
+scrolling
+
+63
+00:04:14,054 --> 00:04:20,113
+using harburg Federation coronation the
+full power
+
+64
+00:04:21,013 --> 00:04:24,030
+other JavaScript nitro engine on both
+Western
+
+65
+00:04:24,003 --> 00:04:31,003
+and I'll and this includes
+
+66
+00:04:32,031 --> 00:04:36,630
+the fourth tier LVM base compiler that
+greg was telling you about yesterday
+
+67
+00:04:36,909 --> 00:04:40,490
+we've taken the back forwards swipes
+
+68
+00:04:40,049 --> 00:04:43,218
+and abused assume gestures and
+
+69
+00:04:43,659 --> 00:04:48,210
+from Safari and built them right into
+web
+
+70
+00:04:48,021 --> 00:04:51,410
+and we have a really cool way for your
+have
+
+71
+00:04:51,599 --> 00:04:56,681
+to talk to web pages and vice versa
+
+72
+00:04:57,419 --> 00:05:00,500
+now I mention that work at s
+multi-process
+
+73
+00:05:01,229 --> 00:05:04,322
+and what what does this really mean
+
+74
+00:05:05,159 --> 00:05:08,172
+it means the web content runs
+
+75
+00:05:08,289 --> 00:05:14,308
+in a separate process completely
+isolated from your
+
+76
+00:05:14,479 --> 00:05:19,516
+like this now why is this a good idea
+
+77
+00:05:19,849 --> 00:05:23,893
+while it's great for responsiveness
+what's but so you uploaded a web page
+
+78
+00:05:24,289 --> 00:05:28,430
+and the web page is running a lot of
+scraps and
+
+79
+00:05:28,043 --> 00:05:32,124
+I'm doing a lot of layouts your Apple
+Store for Responsive
+
+80
+00:05:33,024 --> 00:05:36,453
+even if it happens and if you vote on
+the web page that is
+
+81
+00:05:36,669 --> 00:05:40,240
+creating a lot of JavaScript object and
+using our memory
+
+82
+00:05:40,024 --> 00:05:43,633
+well make sure to handle that gracefully
+instead of having your app
+
+83
+00:05:43,849 --> 00:05:46,857
+jetsam
+
+84
+00:05:47,649 --> 00:05:51,800
+it's also a really good for battery life
+and power usage
+
+85
+00:05:51,008 --> 00:05:55,187
+says each webpage runs separately in
+Assam process
+
+86
+00:05:55,979 --> 00:05:59,985
+we can put individual web pages into our
+low power mode
+
+87
+00:06:00,039 --> 00:06:05,700
+for things like back on tabs a fully
+uprooted Windows
+
+88
+00:06:05,007 --> 00:06:08,045
+now this is all completely transparent
+to you
+
+89
+00:06:09,008 --> 00:06:12,107
+when you create a wk webview that is our
+new
+
+90
+00:06:13,007 --> 00:06:16,106
+webview class in the morning PI
+
+91
+00:06:16,169 --> 00:06:20,270
+what's been up about condom process
+
+92
+00:06:20,027 --> 00:06:25,032
+when you create another wk webview will
+spring up another web content prop
+
+93
+00:06:25,032 --> 00:06:30,131
+now we do this up to eliminate and then
+when used create more public a wave use
+
+94
+00:06:31,031 --> 00:06:35,046
+they'll share the web.com process
+
+95
+00:06:35,046 --> 00:06:38,745
+an when you TLK two KK where views
+
+96
+00:06:39,159 --> 00:06:42,750
+we tear down the process is for you and
+
+97
+00:06:42,075 --> 00:06:46,170
+you don't have to worry about a thing
+
+98
+00:06:47,007 --> 00:06:50,646
+let's talk about hard adopt the modern
+went to the PI
+
+99
+00:06:51,339 --> 00:06:54,383
+so Beth and I are both huge Wikipedia
+fans
+
+100
+00:06:54,779 --> 00:06:59,140
+we love we compete reading Wikipedia we
+read it all the time
+
+101
+00:06:59,014 --> 00:07:02,071
+and so we figured a it will be a kinda
+cool idea
+
+102
+00:07:02,071 --> 00:07:07,840
+to write a dedicated work computer
+browser app using the modern API
+
+103
+00:07:08,479 --> 00:07:12,496
+this is what it looks like it's called
+KK pedia now if you think this is just
+
+104
+00:07:12,649 --> 00:07:13,694
+the topic a WebView
+
+105
+00:07:14,099 --> 00:07:17,870
+inside an honest window your absolutely
+right
+
+106
+00:07:17,087 --> 00:07:21,186
+by don't worry we're we're gonna add
+some more features to it
+
+107
+00:07:22,086 --> 00:07:25,575
+but 100 recreate this topic a WebView
+and 100
+
+108
+00:07:26,349 --> 00:07:31,406
+to reload the web page while creating a
+public a WebView is really easy
+
+109
+00:07:31,919 --> 00:07:36,370
+just as with any any other view you call
+our and then call in for frame
+
+110
+00:07:36,037 --> 00:07:39,058
+and that's it and how do you want a web
+page
+
+111
+00:07:39,058 --> 00:07:43,017
+you get there I'll
+
+112
+00:07:43,539 --> 00:07:47,620
+you get the URL request and the new Call
+KK webview
+
+113
+00:07:48,349 --> 00:07:53,387
+load request and that although the
+webpage
+
+114
+00:07:53,729 --> 00:07:56,766
+saw what's all good if you have a nap
+
+115
+00:07:57,099 --> 00:08:01,250
+with a single webview but for wk PDR
+
+116
+00:08:01,025 --> 00:08:04,304
+we really wanna have support multiple
+windows
+
+117
+00:08:04,529 --> 00:08:09,555
+you can have on the one article showing
+up one's
+
+118
+00:08:09,789 --> 00:08:14,940
+an when you do this jurors always some
+states that you wanna share between your
+
+119
+00:08:14,094 --> 00:08:15,063
+web use
+
+120
+00:08:15,909 --> 00:08:19,935
+such as preference the setup process is
+to you
+
+121
+00:08:20,169 --> 00:08:23,231
+to you to create your your web pages in
+and
+
+122
+00:08:23,789 --> 00:08:27,830
+visited links and the way to do this
+
+123
+00:08:27,083 --> 00:08:30,156
+yes to create a single configuration
+object
+
+124
+00:08:31,056 --> 00:08:34,132
+and then when you create your KK web
+views
+
+125
+00:08:35,032 --> 00:08:38,035
+you pass upon the configuration and
+
+126
+00:08:38,062 --> 00:08:41,114
+government sure that all the state
+strictly share between
+
+127
+00:08:42,014 --> 00:08:45,026
+swept this is what it looks like in cone
+
+128
+00:08:45,026 --> 00:08:49,225
+first you create your wk webview
+configuration
+
+129
+00:08:49,459 --> 00:08:54,471
+and then use incredibly clear whether
+you buy used network frame
+
+130
+00:08:54,579 --> 00:08:57,980
+configuration and you given
+configuration
+
+131
+00:08:57,098 --> 00:09:01,161
+and that's all you have to do
+
+132
+00:09:02,061 --> 00:09:06,210
+or head back to the Wikipedia now even
+though this is not gonna be a
+
+133
+00:09:06,759 --> 00:09:06,846
+full-fledged
+
+134
+00:09:07,629 --> 00:09:12,940
+rouser there are still some brosser like
+futures that we wanna had
+
+135
+00:09:12,094 --> 00:09:15,863
+such as: a back forward button
+
+136
+00:09:16,709 --> 00:09:19,777
+title and a progress indicator
+
+137
+00:09:20,389 --> 00:09:23,480
+so let's take a look at how we would do
+this
+
+138
+00:09:23,048 --> 00:09:29,105
+and let's cover much to write and star
+with the back forward
+
+139
+00:09:30,005 --> 00:09:33,005
+for the Earth's we have a bunch action
+methods
+
+140
+00:09:33,005 --> 00:09:37,013
+and a week a WebView here are some other
+
+141
+00:09:37,085 --> 00:09:41,064
+you can totally sup in Interface Builder
+your UI elements
+
+142
+00:09:41,829 --> 00:09:44,870
+without having to write any code and so
+
+143
+00:09:44,087 --> 00:09:48,174
+for TTP Dr the ones were interested in
+our go back go former
+
+144
+00:09:49,074 --> 00:09:52,130
+and these are also auto validating which
+means that
+
+145
+00:09:53,003 --> 00:09:57,042
+I'm when you have hope these up to your
+UI it'll automatically update the
+
+146
+00:09:57,069 --> 00:09:58,718
+enable/disable state
+
+147
+00:09:59,339 --> 00:10:02,490
+based on whether you can go back
+performers you don't have to worry about
+
+148
+00:10:02,049 --> 00:10:05,097
+that
+
+149
+00:10:05,097 --> 00:10:10,122
+so what about the title and the progress
+in
+
+150
+00:10:11,022 --> 00:10:16,027
+for that we have a bunch of properties
+KK web
+
+151
+00:10:16,072 --> 00:10:21,080
+herself them these are CoCo Key value
+observing compliant
+
+152
+00:10:21,008 --> 00:10:24,011
+which means that you can use the normal
+
+153
+00:10:25,001 --> 00:10:30,014
+Coco kevo methods listen for any changes
+to the property values
+
+154
+00:10:30,023 --> 00:10:33,081
+an if you're in a western you can use
+cocoa bindings
+
+155
+00:10:33,081 --> 00:10:37,350
+to hook them up to your UI without
+having to write a single line of code
+
+156
+00:10:38,079 --> 00:10:42,540
+so for WP Dr we're interested in the
+page title
+
+157
+00:10:42,054 --> 00:10:46,062
+just the prime property an whether the
+page is loading or not
+
+158
+00:10:46,062 --> 00:10:49,581
+and that's from owning property
+
+159
+00:10:50,139 --> 00:10:53,226
+okay the WPS really starting to come
+along here
+
+160
+00:10:54,009 --> 00:10:57,041
+but it's still not a dedicated
+
+161
+00:10:57,329 --> 00:11:02,680
+Wikipedia
+
+162
+00:11:02,068 --> 00:11:05,097
+now what do I mean by that well
+
+163
+00:11:05,097 --> 00:11:08,155
+what so you go to the web article in
+Wikipedia
+
+164
+00:11:09,055 --> 00:11:12,062
+and you click this
+
+165
+00:11:12,062 --> 00:11:16,211
+link to the website homepage
+
+166
+00:11:16,769 --> 00:11:19,813
+that open the link inside that we keep
+your browser
+
+167
+00:11:20,209 --> 00:11:23,271
+but we want this to be a dedicated
+Wikipedia have
+
+168
+00:11:23,829 --> 00:11:27,930
+and we don't avoid any external links
+
+169
+00:11:27,093 --> 00:11:30,422
+so what we wanna do you is customized
+the way
+
+170
+00:11:31,259 --> 00:11:36,050
+pages are loaded but before I can tell
+you about that
+
+171
+00:11:36,005 --> 00:11:39,834
+I A need to explain how page loading
+actually works
+
+172
+00:11:39,879 --> 00:11:42,943
+Mike
+
+173
+00:11:43,519 --> 00:11:46,526
+so first something happens
+
+174
+00:11:46,589 --> 00:11:49,597
+that triggers a paged this can be one
+too many things
+
+175
+00:11:50,389 --> 00:11:54,414
+for example the user signaling
+
+176
+00:11:54,639 --> 00:11:59,620
+are using back forward buttons could be
+JavaScript setting the windows of
+
+177
+00:11:59,062 --> 00:12:01,971
+occasion property
+
+178
+00:12:02,529 --> 00:12:05,540
+are could be a subframe bushing because
+subframes
+
+179
+00:12:05,054 --> 00:12:09,473
+and frames are just documents inside
+each other
+
+180
+00:12:09,959 --> 00:12:16,540
+hand as we saw earlier it could be you
+calling KK web you more
+
+181
+00:12:16,054 --> 00:12:21,056
+then we send a request after the server
+
+182
+00:12:21,056 --> 00:12:24,075
+and we get back a response
+
+183
+00:12:24,579 --> 00:12:27,850
+this could be a positive response or
+
+184
+00:12:27,085 --> 00:12:30,624
+the server could give back them back for
+a for which means
+
+185
+00:12:31,389 --> 00:12:36,600
+sorry I know don't know what this
+resources from
+
+186
+00:12:36,006 --> 00:12:39,235
+and then service and back some data
+
+187
+00:12:39,829 --> 00:12:43,350
+and we're done now
+
+188
+00:12:43,035 --> 00:12:46,122
+what you can do with WebKit yes to have
+your
+
+189
+00:12:47,022 --> 00:12:50,261
+ap sorta inject itself
+
+190
+00:12:50,459 --> 00:12:54,470
+after the action and response phase
+
+191
+00:12:54,047 --> 00:12:57,047
+and to decide whether
+
+192
+00:12:57,047 --> 00:13:01,136
+to continue to load or whether to cancel
+
+193
+00:13:02,036 --> 00:13:05,067
+and the way you do this yes by
+implementing methods
+
+194
+00:13:05,067 --> 00:13:09,104
+on the topic your web use navigation
+dock
+
+195
+00:13:10,004 --> 00:13:14,533
+there are two methods that corresponds
+to the very to the two different phases
+
+196
+00:13:14,569 --> 00:13:18,050
+first one is decide party for navigation
+action
+
+197
+00:13:18,005 --> 00:13:21,024
+for the action the second one
+
+198
+00:13:21,069 --> 00:13:25,163
+is the fight party for navigation
+response for response
+
+199
+00:13:26,009 --> 00:13:29,350
+and with both of these target methods
+you get
+
+200
+00:13:29,035 --> 00:13:32,524
+data objects that contain enough
+information
+
+201
+00:13:32,839 --> 00:13:35,926
+for you to be able to make an informed
+decision about whether you want to
+
+202
+00:13:36,709 --> 00:13:37,410
+continue
+
+203
+00:13:37,041 --> 00:13:40,049
+the low turn so
+
+204
+00:13:40,049 --> 00:13:43,648
+fortify pasta for navigation action that
+object yes
+
+205
+00:13:44,089 --> 00:13:48,093
+wk navigation action
+
+206
+00:13:48,129 --> 00:13:54,040
+it has properties for example the
+navigation pipe let you find out which
+
+207
+00:13:54,004 --> 00:13:55,030
+type of navigation
+
+208
+00:13:55,003 --> 00:13:58,009
+actually started the loan like everyone
+said
+
+209
+00:13:58,036 --> 00:14:01,055
+playing Inc like to refer was a go back
+come forward
+
+210
+00:14:01,055 --> 00:14:04,644
+request so request
+
+211
+00:14:05,139 --> 00:14:09,145
+is the request we're gonna send to the
+server
+
+212
+00:14:09,199 --> 00:14:13,237
+and with the modifier flags property you
+can even tell if the user hell down
+
+213
+00:14:13,579 --> 00:14:16,350
+Schefter commander option
+
+214
+00:14:16,035 --> 00:14:20,524
+I kindling
+
+215
+00:14:20,839 --> 00:14:25,410
+for decide party for navigation response
+you get a wk navigation response
+
+216
+00:14:25,041 --> 00:14:30,070
+checked there's also house properties
+
+217
+00:14:30,439 --> 00:14:37,439
+response s the age to be response that
+we get back from the server
+
+218
+00:14:37,629 --> 00:14:41,660
+and in addition to these data objects
+you also get a decision handler
+
+219
+00:14:41,066 --> 00:14:44,099
+in the form of a block
+
+220
+00:14:44,099 --> 00:14:48,168
+this is how your app can decide whether
+you want to go through the log
+
+221
+00:14:49,059 --> 00:14:52,068
+our council you do this
+
+222
+00:14:52,959 --> 00:14:57,290
+by calling the block with one of two
+value
+
+223
+00:14:57,029 --> 00:15:01,035
+so for decide party for navigation
+action your past
+
+224
+00:15:01,035 --> 00:15:06,444
+wk navigation action Policy Council or
+allow
+
+225
+00:15:06,759 --> 00:15:09,759
+and for decide policy for navigation
+response
+
+226
+00:15:09,759 --> 00:15:12,828
+you pass either KK navigation response
+Policy Council
+
+227
+00:15:13,449 --> 00:15:17,537
+or allow now you can either call these
+blocks
+
+228
+00:15:18,329 --> 00:15:21,335
+right away more you can call them
+
+229
+00:15:21,389 --> 00:15:25,680
+sometimes later which can be really
+useful if you wanna put up some UI
+
+230
+00:15:25,068 --> 00:15:31,587
+and that the user decide whether the
+large you continue on
+
+231
+00:15:32,199 --> 00:15:35,660
+now I'd like to ask my colleague bath up
+on stage
+
+232
+00:15:35,066 --> 00:15:42,066
+to show week npr how to add some these
+features
+
+233
+00:15:44,066 --> 00:15:48,995
+hi everyone and that takin understand I
+work together on safari in WebKit but
+
+234
+00:15:49,589 --> 00:15:50,970
+lately we've been working
+
+235
+00:15:50,097 --> 00:15:55,396
+on our pet projects wk pedia so I have a
+super bare-bones version of the app to
+
+236
+00:15:56,269 --> 00:15:56,356
+show you
+
+237
+00:15:57,139 --> 00:16:00,207
+and together we'll use all the
+information under just gave us to build
+
+238
+00:16:00,819 --> 00:16:01,876
+it up and turn it into
+
+239
+00:16:02,389 --> 00:16:06,180
+a dedicated breast so I'll show you what
+we have
+
+240
+00:16:06,018 --> 00:16:10,023
+and then lower on improving
+
+241
+00:16:10,023 --> 00:16:16,912
+its gonna build in
+
+242
+00:16:17,119 --> 00:16:20,660
+here we go wKP as it stands it's really
+just a
+
+243
+00:16:20,066 --> 00:16:24,365
+wk webview and a window yet I love the
+great wk
+
+244
+00:16:24,959 --> 00:16:28,001
+features super fast scrolling we get the
+super-fast
+
+245
+00:16:28,379 --> 00:16:32,422
+JavaScript engine with fourth-year him
+just in time compiler
+
+246
+00:16:32,809 --> 00:16:35,831
+can click on links navigate new pages
+
+247
+00:16:36,029 --> 00:16:40,050
+so that's great but I'm clearly missing
+some basic browsing features
+
+248
+00:16:40,005 --> 00:16:44,010
+if I look at the same website in Safari
+for example
+
+249
+00:16:44,001 --> 00:16:47,230
+if I click on a new link then
+
+250
+00:16:47,329 --> 00:16:51,408
+I get some progress indication at the
+top indicating how the loads going
+
+251
+00:16:52,119 --> 00:16:55,153
+URL bar gives me some indication web
+page
+
+252
+00:16:55,459 --> 00:16:59,476
+on I can go back these are things that
+we clearly want in our effort to feel
+
+253
+00:16:59,629 --> 00:17:01,170
+like a web browser
+
+254
+00:17:01,017 --> 00:17:04,073
+cell them I give you a quick tour
+
+255
+00:17:04,073 --> 00:17:09,161
+the code furs this is our main class
+it's a browser window controller
+
+256
+00:17:10,061 --> 00:17:14,099
+and that Nintendo controller if we look
+at the implementation file
+
+257
+00:17:14,099 --> 00:17:18,548
+this is where we have a property for the
+WK webview
+
+258
+00:17:19,439 --> 00:17:23,490
+and down here in windowed this is where
+we allocate a review
+
+259
+00:17:23,049 --> 00:17:27,122
+and it's a reload our initial request
+okay but we want
+
+260
+00:17:28,022 --> 00:17:35,022
+them so let's go interface their
+
+261
+00:17:40,429 --> 00:17:44,730
+to get to here
+
+262
+00:17:44,073 --> 00:17:47,097
+you know first make the toolbar visible
+
+263
+00:17:47,097 --> 00:17:50,296
+lunch and double click it start
+
+264
+00:17:51,169 --> 00:17:55,370
+adding some items so first we wanted
+back and forward buttons
+
+265
+00:17:55,037 --> 00:17:58,132
+wild red those in
+
+266
+00:17:59,032 --> 00:18:03,521
+and if we go over panel here lemme
+
+267
+00:18:03,809 --> 00:18:06,868
+highlight on here
+
+268
+00:18:07,399 --> 00:18:10,440
+up for you you can see I've already
+heard these buttons
+
+269
+00:18:10,809 --> 00:18:14,610
+up to the appropriate method the back
+button sorry hooked up to the
+
+270
+00:18:14,061 --> 00:18:19,880
+go back action for but already hooked up
+to go forward for those should work
+
+271
+00:18:20,429 --> 00:18:24,500
+then we want some indication have the
+page that runs we don't wanna URL field
+
+272
+00:18:24,005 --> 00:18:25,534
+here cuz we want the
+
+273
+00:18:26,029 --> 00:18:29,140
+dedicated browser app we don't want
+people to type in
+
+274
+00:18:29,014 --> 00:18:33,023
+random URL will use the search field and
+Wikipedia to get two different pages
+
+275
+00:18:33,023 --> 00:18:36,342
+we just want taxed but we wanted to
+reflect
+
+276
+00:18:36,549 --> 00:18:39,640
+the title I love the Wikipedia page
+they're actually on
+
+277
+00:18:39,064 --> 00:18:42,070
+so that's very easy
+
+278
+00:18:42,007 --> 00:18:46,051
+over here can
+
+279
+00:18:47,014 --> 00:18:50,019
+so for this text you just want to bind
+it to you
+
+280
+00:18:50,019 --> 00:18:53,022
+the file's owner which is that browser
+window controller class
+
+281
+00:18:53,049 --> 00:18:57,060
+show you a minute ago and then leon is
+that the monarchy path
+
+282
+00:18:57,006 --> 00:19:01,021
+to with you title
+
+283
+00:19:01,075 --> 00:19:05,075
+and so that's one of those KVL compliant
+properties on Wed the
+
+284
+00:19:05,075 --> 00:19:08,158
+wk webview that under telling us about
+this should be all that we have to do
+
+285
+00:19:09,058 --> 00:19:10,087
+this should automatically
+
+286
+00:19:10,087 --> 00:19:13,246
+update whenever the title value changes
+
+287
+00:19:14,029 --> 00:19:18,370
+just get all that Kb oh good
+
+288
+00:19:18,037 --> 00:19:21,096
+right and finally we just want some
+progress indication dragon
+
+289
+00:19:21,096 --> 00:19:24,144
+ok looks about right let see
+
+290
+00:19:25,044 --> 00:19:30,120
+how that works building ran
+
+291
+00:19:31,002 --> 00:19:35,028
+okay so we have some progress here I'll
+up a little
+
+292
+00:19:35,046 --> 00:19:38,089
+we have back four buttons great we'll
+see if they work in a second
+
+293
+00:19:38,089 --> 00:19:41,089
+we have title reflects the page that
+were on
+
+294
+00:19:41,089 --> 00:19:44,978
+San Francisco are spinner doesn't seem
+to be doing quite the right thing it's
+
+295
+00:19:45,779 --> 00:19:46,710
+just kind of always
+
+296
+00:19:46,071 --> 00:19:49,159
+there and it's not indicating any load
+progress yet
+
+297
+00:19:50,059 --> 00:19:53,136
+fine I've navigate to any page great the
+title updated right away
+
+298
+00:19:54,036 --> 00:19:57,048
+like San Diego cook my back button
+
+299
+00:19:57,048 --> 00:20:00,049
+and we went back awesome forward great
+
+300
+00:20:00,049 --> 00:20:03,049
+okay so we've made a lot of improvements
+we need to fix that
+
+301
+00:20:03,049 --> 00:20:07,052
+spinner I'll feel like this titles is
+really long
+
+302
+00:20:07,052 --> 00:20:10,126
+they all seem to have this suffix
+wikipedia the free encyclopedia
+
+303
+00:20:11,026 --> 00:20:14,089
+I think you'll be more useful in our app
+if we truncated the title down just to
+
+304
+00:20:14,089 --> 00:20:14,978
+be the beginning
+
+305
+00:20:15,779 --> 00:20:19,220
+we can handle that very easily and
+Interface Builder as well
+
+306
+00:20:19,022 --> 00:20:23,026
+let make those to fix
+
+307
+00:20:23,062 --> 00:20:27,221
+first let's fix that been
+
+308
+00:20:27,779 --> 00:20:32,750
+to fix that we want you
+
+309
+00:20:32,075 --> 00:20:35,111
+go over here again
+
+310
+00:20:36,011 --> 00:20:39,110
+the animation section and we want to
+bind
+
+311
+00:20:40,001 --> 00:20:44,003
+the file's owner again and again that
+their browser window controller class
+
+312
+00:20:44,012 --> 00:20:47,036
+and hear the monarchy path the webview
+
+313
+00:20:47,036 --> 00:20:52,114
+not loading and again that's one of
+those Kb a complaint properties
+
+314
+00:20:53,014 --> 00:20:56,063
+that should be all we have to do to get
+this enemy whenever
+
+315
+00:20:56,063 --> 00:21:00,110
+whether you don't loading through is one
+other thing I wanna do
+
+316
+00:21:01,001 --> 00:21:05,210
+though she's over here I want you
+
+317
+00:21:05,309 --> 00:21:08,370
+on check display when then
+
+318
+00:21:08,037 --> 00:21:11,706
+should go away when it's not him
+
+319
+00:21:12,039 --> 00:21:15,051
+okay and now I wanna tranki that title
+
+320
+00:21:15,159 --> 00:21:20,340
+also so I did already write some code
+that would do that
+
+321
+00:21:20,034 --> 00:21:23,060
+on down year looking here
+
+322
+00:21:23,006 --> 00:21:26,695
+so this is just a simple code that I
+wrote that were taken and its training
+
+323
+00:21:27,289 --> 00:21:28,590
+and see if it had
+
+324
+00:21:28,059 --> 00:21:32,137
+this is suffix at the end and then
+return a string that doesn't have that
+
+325
+00:21:33,037 --> 00:21:33,095
+part
+
+326
+00:21:33,095 --> 00:21:36,098
+so I already wrote some code that and I
+can invoke it
+
+327
+00:21:37,025 --> 00:21:40,034
+from within Interface Builder
+
+328
+00:21:40,034 --> 00:21:43,853
+right over year using the value
+transformer
+
+329
+00:21:44,159 --> 00:21:48,160
+option the early Wikipedia title that
+value transformer
+
+330
+00:21:48,169 --> 00:21:51,820
+that will take the title and invoke this
+method
+
+331
+00:21:51,082 --> 00:21:54,941
+with the title and then the result will
+be what's reflected
+
+332
+00:21:55,679 --> 00:21:59,600
+to a bar
+
+333
+00:21:59,006 --> 00:22:06,006
+building run again
+
+334
+00:22:06,082 --> 00:22:11,531
+okay so progress has been made let's try
+cooking another link we get spinner
+
+335
+00:22:12,269 --> 00:22:16,273
+animating goes away when are gone our
+title is now
+
+336
+00:22:16,309 --> 00:22:20,320
+much smaller more useful thing for our
+apt
+
+337
+00:22:20,032 --> 00:22:23,074
+we still have our back four buttons this
+is looking great this is really
+
+338
+00:22:23,074 --> 00:22:27,076
+feeling like a browser but I haven't
+done anything yet
+
+339
+00:22:27,094 --> 00:22:31,333
+to make it a dedicated Wikipedia rather
+sides just now writing URL field
+
+340
+00:22:32,179 --> 00:22:36,890
+but if I go to a link like this and
+click on its going to still open
+
+341
+00:22:36,089 --> 00:22:39,598
+right in my app which is not the
+behavior that i'm looking for that
+
+342
+00:22:40,399 --> 00:22:44,470
+sort of defeats the purpose being a
+dedicated Wikipedia
+
+343
+00:22:44,047 --> 00:22:47,048
+so we can easily fix this by
+implementing
+
+344
+00:22:47,057 --> 00:22:50,896
+the navigation delegate just like under
+products
+
+345
+00:22:51,409 --> 00:22:58,409
+do that right now go back to the code
+
+346
+00:22:58,051 --> 00:23:01,086
+okay self first
+
+347
+00:23:01,086 --> 00:23:04,385
+I want add one line of code
+
+348
+00:23:05,159 --> 00:23:08,340
+here to set the navigation delegate
+
+349
+00:23:08,034 --> 00:23:11,233
+here in setting the navigation delegate
+to self
+
+350
+00:23:11,539 --> 00:23:15,390
+so this way WebKit will know to look
+here in my class
+
+351
+00:23:15,039 --> 00:23:18,057
+to see if there's any implementation
+these delicate
+
+352
+00:23:18,057 --> 00:23:21,075
+delegate method and everyone
+
+353
+00:23:21,075 --> 00:23:25,169
+implement to delegate
+
+354
+00:23:26,069 --> 00:23:29,908
+implement decide policy for navigation
+action so let's quickly stepped through
+
+355
+00:23:30,529 --> 00:23:31,210
+this
+
+356
+00:23:31,021 --> 00:23:34,730
+so first I wanna get the URL that the ap
+
+357
+00:23:34,919 --> 00:23:38,008
+navigate you and then I if host URL
+
+358
+00:23:38,809 --> 00:23:43,190
+did not have a Wikipedia .org suffix
+then on Wikipedia link
+
+359
+00:23:43,019 --> 00:23:47,087
+then in that case I want to pass
+navigation off to the default browser
+
+360
+00:23:47,087 --> 00:23:50,138
+system that's what will happen with this
+line of code Safari should open that
+
+361
+00:23:51,038 --> 00:23:52,047
+link instead
+
+362
+00:23:52,047 --> 00:23:55,119
+but we still need to tell are wk webview
+that it shouldn't go ahead with the
+
+363
+00:23:56,019 --> 00:23:57,218
+navigation also
+
+364
+00:23:57,389 --> 00:24:02,450
+will invoke the decision handler block
+with the WK navigation action policy
+
+365
+00:24:02,045 --> 00:24:05,123
+camp value and while you're here I
+thought it would be cool just add a
+
+366
+00:24:06,023 --> 00:24:06,084
+feature
+
+367
+00:24:06,084 --> 00:24:09,158
+to command click a link in open it in a
+new window and my own app so that's what
+
+368
+00:24:10,058 --> 00:24:11,527
+I added down here
+
+369
+00:24:12,049 --> 00:24:15,120
+the first day I'm finding out navigation
+is happening
+
+370
+00:24:15,012 --> 00:24:18,036
+with the command down is
+
+371
+00:24:18,036 --> 00:24:21,050
+then I'm going to create a brand new
+browser window controller
+
+372
+00:24:21,005 --> 00:24:25,044
+and I'm giving that this navigation
+request
+
+373
+00:24:25,539 --> 00:24:29,480
+and then again it since I don't want
+this wk with you too also
+
+374
+00:24:29,048 --> 00:24:32,487
+navigate new page I am the decision
+handler block
+
+375
+00:24:32,919 --> 00:24:36,930
+with the camp value and other as if we
+didn't fall into any of those
+
+376
+00:24:37,029 --> 00:24:41,080
+situations then well invoked the
+decision handler block
+
+377
+00:24:41,008 --> 00:24:48,008
+with allow let save and built in
+
+378
+00:24:48,062 --> 00:24:53,151
+okay great so regular page loading still
+work so that's good
+
+379
+00:24:54,051 --> 00:24:58,560
+let see click on think an awesome
+
+380
+00:24:59,019 --> 00:25:03,085
+successfully handled that navigation
+after the default browser
+
+381
+00:25:03,679 --> 00:25:07,010
+and if I command click a link
+
+382
+00:25:07,001 --> 00:25:11,003
+I get it and new window in my own apt to
+these are in its own process
+
+383
+00:25:11,021 --> 00:25:14,108
+monument API pretty cool
+
+384
+00:25:15,008 --> 00:25:18,099
+cell this is awesome in just a few
+minutes with bill up a dedicated
+
+385
+00:25:18,099 --> 00:25:21,100
+browser app using the modern WebKit API
+
+386
+00:25:22,009 --> 00:25:25,075
+but I still feel like there are a few
+modern features
+
+387
+00:25:25,075 --> 00:25:28,158
+that I am lacking here for example again
+if we look
+
+388
+00:25:29,058 --> 00:25:33,647
+back in Safari really uses the back
+button anymore I mean I
+
+389
+00:25:34,169 --> 00:25:37,610
+typically slide back Chester to go back
+
+390
+00:25:37,061 --> 00:25:41,075
+and I also want to be able to double tap
+to zoom in 10 check out
+
+391
+00:25:41,075 --> 00:25:44,104
+I try to do those things in my ap
+nothing
+
+392
+00:25:44,779 --> 00:25:47,780
+happen double tap no
+
+393
+00:25:47,789 --> 00:25:51,370
+nothing's happening but it's really
+really easy to add these features I'm
+
+394
+00:25:51,037 --> 00:25:52,134
+going to really quickly even on
+
+395
+00:25:53,034 --> 00:25:56,973
+should have had to do it quite yet but
+just need to add to
+
+396
+00:25:57,279 --> 00:26:04,279
+lines code back up here in window
+deadline
+
+397
+00:26:06,269 --> 00:26:11,260
+okay so this for sign a code allows back
+for navigation jesters at that yes
+
+398
+00:26:11,026 --> 00:26:15,575
+they can see the backboard swiping and
+allows magnification I'll get double tap
+
+399
+00:26:15,809 --> 00:26:16,340
+unhinged
+
+400
+00:26:16,034 --> 00:26:22,119
+them that built in
+
+401
+00:26:23,019 --> 00:26:26,758
+okay now by go forward should be able to
+use
+
+402
+00:26:26,929 --> 00:26:29,952
+right back awesome can double tap
+
+403
+00:26:30,159 --> 00:26:34,161
+pinch right out of them so there you
+have it with bill
+
+404
+00:26:34,179 --> 00:26:39,090
+a modern would use the modern yeah I to
+build a dedicated
+
+405
+00:26:39,009 --> 00:26:43,095
+Wikipedia browser app with modern
+feeling features in just a few minutes
+
+406
+00:26:43,095 --> 00:26:46,109
+so many headed back to under is gonna
+teach you a lot the
+
+407
+00:26:47,009 --> 00:26:50,848
+more advanced features that you can do
+with this API and I'll be back up later
+
+408
+00:26:50,929 --> 00:26:52,004
+to show you how you can integrate
+
+409
+00:26:52,679 --> 00:26:56,340
+features into our iPad version at wk
+pedia
+
+410
+00:26:56,034 --> 00:27:01,058
+back to you under
+
+411
+00:27:01,058 --> 00:27:05,074
+thanks for I was really cool I
+especially like the extra touch
+
+412
+00:27:05,074 --> 00:27:08,613
+at the end where are you the gesture
+support let's recap
+
+413
+00:27:09,279 --> 00:27:13,240
+how bed so for the navigation jesters
+
+414
+00:27:13,024 --> 00:27:16,075
+thats swipe to go back and forward just
+said
+
+415
+00:27:16,075 --> 00:27:19,077
+the other aspect forward navigation
+jesters property
+
+416
+00:27:19,095 --> 00:27:23,954
+yes on your KK what for June gestures
+
+417
+00:27:24,809 --> 00:27:27,850
+on a western you said
+
+418
+00:27:27,085 --> 00:27:30,158
+a while magnification property yes
+
+419
+00:27:31,058 --> 00:27:35,145
+on iowa's this is handled by the
+underlying UIScrollView
+
+420
+00:27:36,045 --> 00:27:41,058
+and it's already on by default you don't
+have to do anything
+
+421
+00:27:41,058 --> 00:27:45,083
+so what's talk about the Wikipedia for
+iPad
+
+422
+00:27:45,083 --> 00:27:48,892
+this is what it looks like its really
+great I use it all the time for reading
+
+423
+00:27:49,639 --> 00:27:52,726
+Wikipedia articles on my way to work
+
+424
+00:27:53,509 --> 00:27:57,330
+but I've noticed something bad
+
+425
+00:27:57,033 --> 00:28:02,086
+bothers me a little see I like to read
+certain sections
+
+426
+00:28:02,086 --> 00:28:05,645
+an article and that means that
+
+427
+00:28:06,419 --> 00:28:11,630
+I have to go find the table conference I
+have to scroll down to it
+
+428
+00:28:11,063 --> 00:28:14,732
+I find a section I wanna read hi up on
+that
+
+429
+00:28:15,299 --> 00:28:18,450
+playing and then when I read it
+
+430
+00:28:18,045 --> 00:28:21,364
+I need to scroll all the way back up
+source flight back
+
+431
+00:28:21,769 --> 00:28:25,570
+and look for another section read so
+
+432
+00:28:25,057 --> 00:28:28,111
+I told Matt about this and she said well
+why don't you some other more advanced
+
+433
+00:28:29,011 --> 00:28:31,022
+features on the modern work API
+
+434
+00:28:31,022 --> 00:28:34,047
+to take care Mike
+
+435
+00:28:34,047 --> 00:28:38,145
+why don't we just got red a few more
+condoms from the web page
+
+436
+00:28:39,045 --> 00:28:42,060
+an while we're at it we can also get rid
+of this
+
+437
+00:28:42,006 --> 00:28:46,335
+sidebar to the left to make more room
+for the article
+
+438
+00:28:46,929 --> 00:28:49,965
+and them we can put the table of
+contents
+
+439
+00:28:50,289 --> 00:28:55,080
+natively in the UI we have this little
+button in the top left corner
+
+440
+00:28:55,008 --> 00:29:00,061
+and when you tap it you get the table
+contents in a native UI tableview
+
+441
+00:29:00,061 --> 00:29:03,980
+and burn your landscape mode you can
+always admissible because
+
+442
+00:29:04,529 --> 00:29:08,730
+the extra space so what we really want
+to do here
+
+443
+00:29:08,073 --> 00:29:11,110
+yes customize web page content from from
+
+444
+00:29:12,001 --> 00:29:16,062
+Wikipedia and we want to use two
+features to do this
+
+445
+00:29:16,071 --> 00:29:19,071
+one is called user scripts
+
+446
+00:29:19,071 --> 00:29:22,158
+the other one is called script message
+
+447
+00:29:23,058 --> 00:29:29,096
+these are both handled by an object
+called KK User Conference controller
+
+448
+00:29:29,096 --> 00:29:33,805
+public a user content controller is part
+of the configuration
+
+449
+00:29:34,669 --> 00:29:38,200
+so it's a property on the topic a
+WebView configuration
+
+450
+00:29:38,002 --> 00:29:44,361
+called User Content controller
+
+451
+00:29:44,559 --> 00:29:48,960
+talk about users Users Group our way
+
+452
+00:29:48,096 --> 00:29:51,122
+for you app developers
+
+453
+00:29:52,022 --> 00:29:56,711
+to take some javascript an injected into
+the web page
+
+454
+00:29:56,909 --> 00:30:02,915
+and I have to do something this will
+happen automatically for every web page
+
+455
+00:30:03,509 --> 00:30:09,509
+see you don't have to manually call it
+every time the page
+
+456
+00:30:09,509 --> 00:30:14,200
+when you add a user scripts you need to
+consider two things
+
+457
+00:30:14,002 --> 00:30:19,971
+the first one s when you want to use a
+script to write
+
+458
+00:30:20,169 --> 00:30:23,330
+you can either run you use a script that
+document start
+
+459
+00:30:23,033 --> 00:30:26,109
+this yes right after the document
+element has been created
+
+460
+00:30:27,009 --> 00:30:32,198
+by before any the document has been
+parsed
+
+461
+00:30:32,279 --> 00:30:35,318
+or you can run them a document and which
+is
+
+462
+00:30:35,669 --> 00:30:38,678
+after the document is finished parsing
+by
+
+463
+00:30:38,759 --> 00:30:41,813
+before any server resources such as
+images necessarily
+
+464
+00:30:42,299 --> 00:30:47,372
+changed this corresponds to the DOM
+content loading
+
+465
+00:30:48,029 --> 00:30:52,980
+voted you also want to consider where
+the scripture
+
+466
+00:30:52,098 --> 00:30:55,777
+run you can run them either for of
+frames
+
+467
+00:30:56,659 --> 00:31:00,990
+both the mainframe and the subframes or
+
+468
+00:31:00,099 --> 00:31:04,100
+just for the mainframe
+
+469
+00:31:05,009 --> 00:31:09,088
+so how do you create a user
+
+470
+00:31:09,169 --> 00:31:12,231
+first you get the script string from
+somewhere
+
+471
+00:31:12,789 --> 00:31:16,860
+in my case I'm just have it as a string
+literal in my co
+
+472
+00:31:16,086 --> 00:31:20,005
+then you create KK user script object
+
+473
+00:31:20,779 --> 00:31:24,828
+and passes the source code and here I've
+highlighted the when and where
+
+474
+00:31:25,269 --> 00:31:28,356
+so we want this user scripts run had
+document start I'm
+
+475
+00:31:29,139 --> 00:31:33,240
+but only for the main
+
+476
+00:31:33,024 --> 00:31:36,086
+and then you tell the user content
+controller to go ahead at the user's
+
+477
+00:31:36,086 --> 00:31:39,157
+and that's it
+
+478
+00:31:40,057 --> 00:31:43,616
+now what user scripts to you
+
+479
+00:31:44,129 --> 00:31:48,158
+Users group can do anything that scripts
+running on the web page
+
+480
+00:31:48,419 --> 00:31:52,440
+into so that includes using the DOM API
+
+481
+00:31:52,629 --> 00:31:56,100
+to change the document structures
+
+482
+00:31:56,001 --> 00:31:59,820
+adding event listeners for on-loan
+events are
+
+483
+00:31:59,919 --> 00:32:03,967
+kleczka answer key for events or any
+other
+
+484
+00:32:04,399 --> 00:32:07,463
+you can buy an external resources like
+images and even acknowledged if you
+
+485
+00:32:08,039 --> 00:32:10,073
+request
+
+486
+00:32:10,379 --> 00:32:13,392
+hand you can also communicate back
+
+487
+00:32:13,509 --> 00:32:18,523
+to the application and this is for a
+script messages come in
+
+488
+00:32:18,649 --> 00:32:21,723
+script passengers are messengers user
+scripts and
+
+489
+00:32:22,389 --> 00:32:27,464
+cue the application
+
+490
+00:32:28,139 --> 00:32:32,155
+they consist J Sunday so
+
+491
+00:32:32,299 --> 00:32:36,470
+objects arranged strings et cetera
+
+492
+00:32:36,047 --> 00:32:40,070
+when you something from your web page we
+automatically convert them to the
+
+493
+00:32:40,007 --> 00:32:41,085
+corresponding objective-c types
+
+494
+00:32:42,048 --> 00:32:48,987
+so Anna dictionaries and as a raise and
+a string
+
+495
+00:32:49,419 --> 00:32:52,830
+when you wanna listen for scrip
+messengers in your you wanna read
+
+496
+00:32:52,083 --> 00:32:56,642
+register script message
+
+497
+00:32:57,389 --> 00:33:01,403
+this involves creating an object that
+conforms to wk script message hambre
+
+498
+00:33:01,529 --> 00:33:03,606
+protocol
+
+499
+00:33:04,299 --> 00:33:07,374
+this protocol has one method that you
+have to implement that receives script
+
+500
+00:33:08,049 --> 00:33:11,480
+message
+
+501
+00:33:11,048 --> 00:33:15,357
+and then you tell the user content
+roller at the script message handler
+
+502
+00:33:15,789 --> 00:33:18,823
+and you give it a name
+
+503
+00:33:19,129 --> 00:33:22,182
+and his name is really important because
+it is how
+
+504
+00:33:22,659 --> 00:33:27,190
+your web page communicate back to you
+
+505
+00:33:27,019 --> 00:33:31,087
+so when you've had a script message
+handler we expose a window dot web get
+
+506
+00:33:31,087 --> 00:33:31,160
+that message
+
+507
+00:33:32,006 --> 00:33:37,058
+numbers dot your name that post message:
+function
+
+508
+00:33:38,012 --> 00:33:41,951
+yours how are you use this post function
+you get your
+
+509
+00:33:42,059 --> 00:33:45,083
+your message and Jason form from
+somewhere
+
+510
+00:33:45,299 --> 00:33:50,384
+and the new car parts message and you
+pass on the message
+
+511
+00:33:51,149 --> 00:33:54,210
+so on the receiving side webcam will
+call
+
+512
+00:33:54,759 --> 00:33:59,740
+that receives grit message on the
+correct use a script message handler
+
+513
+00:33:59,074 --> 00:34:03,103
+and the body property other KK script
+message
+
+514
+00:34:03,769 --> 00:34:10,769
+object along here well have your message
+automatically convert
+
+515
+00:34:10,909 --> 00:34:13,909
+there are also some other properties
+publicly script message
+
+516
+00:34:13,909 --> 00:34:16,983
+you can find out which web page posted a
+message
+
+517
+00:34:17,649 --> 00:34:23,770
+and the name that was used post them
+
+518
+00:34:23,077 --> 00:34:26,110
+one interesting thing about script
+messages yes
+
+519
+00:34:27,001 --> 00:34:30,084
+that it's just not use a script the
+concern script messages
+
+520
+00:34:30,093 --> 00:34:34,161
+your web page can also send messages
+
+521
+00:34:35,061 --> 00:34:38,076
+this is really cool if you have a
+website an
+
+522
+00:34:38,076 --> 00:34:41,087
+happen you want a Web site to you to be
+able to communicate
+
+523
+00:34:41,087 --> 00:34:46,101
+when you're out fired it also means if
+you have a generic browser
+
+524
+00:34:47,001 --> 00:34:50,014
+can vote any website you don't wanna
+blindly
+
+525
+00:34:50,014 --> 00:34:53,079
+trust messages that are posted by
+
+526
+00:34:53,079 --> 00:34:56,170
+so make sure you do the right message
+allegation and check that the object is
+
+527
+00:34:57,007 --> 00:35:02,053
+the expected type
+
+528
+00:35:03,016 --> 00:35:06,052
+now I'd like to ask have to come up on
+stage again
+
+529
+00:35:06,052 --> 00:35:13,052
+and show off Wikipedia for I
+
+530
+00:35:15,089 --> 00:35:16,162
+think Sunday
+
+531
+00:35:17,062 --> 00:35:21,119
+so I'll show you wk PDF for iPad and
+then we'll add them user scripts and
+
+532
+00:35:22,019 --> 00:35:23,035
+script messaging
+
+533
+00:35:23,035 --> 00:35:28,054
+to add these features okay so back into
+Xcode
+
+534
+00:35:28,054 --> 00:35:33,101
+so I'm using the same Xcode project for
+both versions the wKP actually
+
+535
+00:35:34,001 --> 00:35:37,033
+so I'm just gonna close up the OS 10
+version
+
+536
+00:35:37,033 --> 00:35:42,064
+open I'll could and switch my scheme to
+the IRS
+
+537
+00:35:42,064 --> 00:35:45,147
+team that now and I building run I'll be
+building and running
+
+538
+00:35:46,047 --> 00:35:53,047
+for the iPad simulator alright let me
+show you what we have
+
+539
+00:36:05,329 --> 00:36:07,424
+i right here wk pedia for the iPad
+
+540
+00:36:08,279 --> 00:36:11,337
+so again idea that we want to use user
+scripts for
+
+541
+00:36:11,859 --> 00:36:14,933
+as you want to hide some this content
+but I had this side by
+
+542
+00:36:15,599 --> 00:36:19,160
+so that we can maximize the screen space
+on the smaller screen
+
+543
+00:36:19,016 --> 00:36:22,615
+and we also want to hide this table of
+contents section
+
+544
+00:36:22,759 --> 00:36:27,450
+and then we want to extract all the data
+from the table of contents section
+
+545
+00:36:27,045 --> 00:36:30,614
+and put it into are you a table view
+that we already have in place
+
+546
+00:36:31,019 --> 00:36:34,140
+so we can do this with two user scripts
+first
+
+547
+00:36:34,014 --> 00:36:38,443
+we will you it at a user script to hide
+the things on the page the one hit in
+
+548
+00:36:38,569 --> 00:36:42,596
+and then we'll go back in filler in are
+you a table with another one
+
+549
+00:36:42,839 --> 00:36:49,839
+alright so first im gonna add a
+javascript file to my project
+
+550
+00:36:49,099 --> 00:36:53,116
+have one here
+
+551
+00:36:54,016 --> 00:37:01,016
+called high debt JS so this is a really
+simple
+
+552
+00:37:02,339 --> 00:37:06,170
+JavaScript file first I'm creating a
+style
+
+553
+00:37:06,017 --> 00:37:09,106
+element and I'm attending into the
+document
+
+554
+00:37:09,259 --> 00:37:12,343
+and the style man I'm giving it just
+three styles so we used
+
+555
+00:37:13,099 --> 00:37:16,170
+this if I web inspector to look at what
+the Wikipedia code
+
+556
+00:37:16,809 --> 00:37:19,886
+looks like right now and we saw that the
+table of contents wanna hide
+
+557
+00:37:20,579 --> 00:37:23,640
+as the class name a to.see so on adding
+
+558
+00:37:23,064 --> 00:37:27,233
+another style to that class I'm setting
+it to display none
+
+559
+00:37:27,809 --> 00:37:30,885
+and making that being important so that
+it will override any other just
+
+560
+00:37:31,569 --> 00:37:34,664
+any other displaced felt they had set on
+it and the side panel
+
+561
+00:37:35,519 --> 00:37:39,526
+has earned idea MW panel some setting
+that to display known as well
+
+562
+00:37:39,589 --> 00:37:43,607
+and finally I just wanna just imagine on
+the content to make sure it fills an
+
+563
+00:37:43,769 --> 00:37:45,802
+extra area now that the side panels gone
+
+564
+00:37:46,099 --> 00:37:50,196
+okay so this is the JavaScript that I
+want my apt in books and now it isn't it
+
+565
+00:37:51,069 --> 00:37:52,120
+add some code to invoke it
+
+566
+00:37:52,579 --> 00:37:56,652
+so web view controller this is my main
+
+567
+00:37:57,309 --> 00:38:01,700
+class in my iPad version you'll see this
+is where again we have a
+
+568
+00:38:01,007 --> 00:38:04,012
+property for a wk web you should like
+awfully familiar
+
+569
+00:38:05,002 --> 00:38:08,025
+0 here I have
+
+570
+00:38:08,043 --> 00:38:12,067
+a currently empty method called add user
+scripts to content controller
+
+571
+00:38:12,067 --> 00:38:15,070
+so you can see this is and vote from
+load view
+
+572
+00:38:15,007 --> 00:38:19,009
+so in its passing in the WK zircon 10
+controller which is the party the
+
+573
+00:38:19,009 --> 00:38:20,158
+configuration so
+
+574
+00:38:21,049 --> 00:38:25,220
+honors mention the configuration earlier
+on in the tax owed
+
+575
+00:38:25,022 --> 00:38:28,421
+user's group for example is something
+that's party the configuration so that's
+
+576
+00:38:28,619 --> 00:38:28,691
+an example
+
+577
+00:38:29,339 --> 00:38:33,500
+why you want your different wk levees to
+share a configuration so they all get
+
+578
+00:38:33,005 --> 00:38:33,043
+these
+
+579
+00:38:33,088 --> 00:38:36,092
+scripts i right
+
+580
+00:38:36,092 --> 00:38:42,188
+let's invoke this script just 39 zip
+code so first we're creating an a string
+
+581
+00:38:43,088 --> 00:38:46,100
+with the contents above URL hideout JS
+
+582
+00:38:47,000 --> 00:38:50,059
+they're gonna take that file that I just
+added to the project
+
+583
+00:38:50,059 --> 00:38:53,133
+and turn it into an stream then I am
+creating
+
+584
+00:38:53,799 --> 00:38:57,220
+wk user script object with
+
+585
+00:38:57,022 --> 00:39:00,351
+that string and getting an injection
+time a
+
+586
+00:39:00,549 --> 00:39:03,580
+wk script injection time a document
+stacked
+
+587
+00:39:03,859 --> 00:39:06,868
+so this means the script will be
+injected and it will run right after the
+
+588
+00:39:07,759 --> 00:39:10,762
+document element is created before
+anything else happens that's good that's
+
+589
+00:39:11,059 --> 00:39:12,140
+what I want to happen
+
+590
+00:39:12,014 --> 00:39:15,463
+for this script because I wanna make
+sure those styles are there right away I
+
+591
+00:39:15,589 --> 00:39:17,230
+don't want the chance for the
+
+592
+00:39:17,023 --> 00:39:21,024
+table of contents inside by to appear
+and only then does my script incident
+
+593
+00:39:21,024 --> 00:39:21,098
+disappear
+
+594
+00:39:21,098 --> 00:39:24,099
+Abby terrible so documents that that's
+what I want and
+
+595
+00:39:24,099 --> 00:39:27,124
+yeah for the mainframe mommy okay then
+find that it needs
+
+596
+00:39:28,024 --> 00:39:31,123
+add the user scripts to the User Content
+controller
+
+597
+00:39:31,339 --> 00:39:34,438
+and that should be all I have to do so
+let's build in
+
+598
+00:39:35,329 --> 00:39:42,329
+and success
+
+599
+00:39:45,099 --> 00:39:48,660
+the side panel is gone no longer there
+is Heather
+
+600
+00:39:48,066 --> 00:39:51,147
+article taking up the full with have the
+page and
+
+601
+00:39:52,047 --> 00:39:55,936
+we also have hidden table of contents
+section ago right into the history
+
+602
+00:39:56,359 --> 00:39:57,210
+section
+
+603
+00:39:57,021 --> 00:40:01,110
+awesome so now let's add a second user
+script
+
+604
+00:40:01,299 --> 00:40:05,325
+to get the data from that table of
+contents section put into your table
+
+605
+00:40:05,559 --> 00:40:05,930
+view
+
+606
+00:40:05,093 --> 00:40:09,492
+so first add
+
+607
+00:40:10,329 --> 00:40:17,329
+second JavaScript file to our project so
+this goes through
+
+608
+00:40:18,071 --> 00:40:22,130
+set table of contents section at bundles
+up all the data we want puts it into an
+
+609
+00:40:22,769 --> 00:40:22,820
+array
+
+610
+00:40:23,279 --> 00:40:26,337
+and then it sends it this is the
+important part and as a message
+
+611
+00:40:26,859 --> 00:40:29,926
+back tonight ap so let's make sure this
+could get invoked
+
+612
+00:40:30,529 --> 00:40:33,554
+and then I'll show you the code that
+runs when the JavaScript send a message
+
+613
+00:40:33,779 --> 00:40:36,940
+back
+
+614
+00:40:36,094 --> 00:40:39,172
+cell back here in my ad user scripts to
+content control method
+
+615
+00:40:40,072 --> 00:40:45,611
+add a little bit more cologne
+
+616
+00:40:46,259 --> 00:40:49,334
+okay I'm creating another NS string with
+the content
+
+617
+00:40:50,009 --> 00:40:53,720
+URL this case this time it's with my
+fetched at JS
+
+618
+00:40:53,072 --> 00:40:56,611
+class saw putting a javascript internet
+streaming
+
+619
+00:40:57,259 --> 00:41:00,267
+then creating a wk user script with that
+string
+
+620
+00:41:01,059 --> 00:41:04,130
+and this 1i want to be injected at the
+document and
+
+621
+00:41:04,013 --> 00:41:07,922
+time so this time I want to make sure
+that the don has been built up
+
+622
+00:41:08,039 --> 00:41:11,960
+that it has all those elements
+representing a table of contents in it
+
+623
+00:41:11,096 --> 00:41:12,123
+before my script around
+
+624
+00:41:13,023 --> 00:41:16,402
+otherwise it's not gonna find anything
+
+625
+00:41:16,609 --> 00:41:19,683
+and again for the mainframe only add
+that as a user script and then
+
+626
+00:41:20,349 --> 00:41:24,390
+this is important line according to call
+this so that
+
+627
+00:41:24,039 --> 00:41:28,068
+javaScript can call back into my app ads
+script message handler
+
+628
+00:41:28,068 --> 00:41:31,147
+set itself and give it a name did
+vegetable content
+
+629
+00:41:31,759 --> 00:41:35,761
+so in the JavaScript goes back into my
+app
+
+630
+00:41:35,779 --> 00:41:39,150
+make a wider this is the method that
+will be
+
+631
+00:41:39,015 --> 00:41:43,044
+call did receive script message so what
+I'm doing and that
+
+632
+00:41:43,044 --> 00:41:46,593
+method is I'm making sure that this is
+scripts that I am expecting to be
+
+633
+00:41:46,989 --> 00:41:48,170
+calling needed fetch
+
+634
+00:41:48,017 --> 00:41:51,666
+table of contents and if so I i'm
+calling into my
+
+635
+00:41:51,819 --> 00:41:56,130
+you a table view class with a method
+that I have written their
+
+636
+00:41:56,013 --> 00:41:59,702
+so shit to you so here in my
+
+637
+00:41:59,819 --> 00:42:03,000
+you a table view could I am just
+
+638
+00:42:03,000 --> 00:42:06,068
+gonna make sure that this message body:
+this is the
+
+639
+00:42:06,068 --> 00:42:09,071
+data that was sent to me straight from
+the JavaScript making sure it's an array
+
+640
+00:42:09,098 --> 00:42:09,190
+because that's it
+
+641
+00:42:10,009 --> 00:42:13,368
+I'm expecting that I call make entries
+which is
+
+642
+00:42:14,259 --> 00:42:17,262
+implement read it here I go through that
+array
+
+643
+00:42:17,289 --> 00:42:19,362
+they make sure it's all the data that I
+am expecting it to be that I have
+
+644
+00:42:20,019 --> 00:42:21,170
+written my script
+
+645
+00:42:21,017 --> 00:42:24,196
+send over its string representing the
+title
+
+646
+00:42:24,349 --> 00:42:27,392
+if the URL representing the URL that
+that title
+
+647
+00:42:27,779 --> 00:42:30,930
+navigate to so that we can have our
+after navigate to that
+
+648
+00:42:30,093 --> 00:42:33,098
+URL when the user taps on it
+
+649
+00:42:33,098 --> 00:42:36,098
+and if I have all that data like I'm
+expecting it
+
+650
+00:42:36,098 --> 00:42:39,987
+I create a table of contents entry an
+attitude ray
+
+651
+00:42:40,869 --> 00:42:43,950
+and then finally back here this is
+rainbow that
+
+652
+00:42:43,095 --> 00:42:47,694
+method I'm gonna tell the table view to
+reload did at this point and then that
+
+653
+00:42:48,549 --> 00:42:52,575
+edition all be in there okay show
+
+654
+00:42:52,809 --> 00:42:56,890
+set this all up let's see if it worked
+
+655
+00:42:56,089 --> 00:43:03,089
+filled in
+
+656
+00:43:05,479 --> 00:43:08,508
+he reacted pedia everything's hidden
+still great
+
+657
+00:43:08,769 --> 00:43:11,790
+content did not quite work alright
+
+658
+00:43:11,979 --> 00:43:15,043
+so I suspect that I have a bug in my
+
+659
+00:43:15,619 --> 00:43:20,180
+JavaScript and what one thing that's
+really cool is that I can actually
+
+660
+00:43:20,018 --> 00:43:21,107
+inspect
+
+661
+00:43:21,269 --> 00:43:26,277
+all other web content in my wk webview
+using the Safari web inspector
+
+662
+00:43:26,349 --> 00:43:30,180
+an even inspect the user's group that I
+have injected which is pretty cool
+
+663
+00:43:30,018 --> 00:43:33,115
+but oh really you can do this it here at
+the other people won't be able to
+
+664
+00:43:34,015 --> 00:43:34,096
+inspect your app
+
+665
+00:43:34,096 --> 00:43:37,115
+sell any open the inspector
+
+666
+00:43:38,015 --> 00:43:42,234
+see if it make sure this happens on
+
+667
+00:43:42,369 --> 00:43:48,630
+pages to new page still no table of
+contents okay
+
+668
+00:43:48,063 --> 00:43:55,063
+0
+
+669
+00:44:02,042 --> 00:44:02,051
+here five
+
+670
+00:44:03,032 --> 00:44:06,123
+for into my resources panel helen is in
+
+671
+00:44:07,023 --> 00:44:10,091
+actually you can see that I have my
+
+672
+00:44:10,091 --> 00:44:13,176
+user scripts over here under the extra
+script section
+
+673
+00:44:14,076 --> 00:44:17,128
+so under user script you this is a
+script I want to
+
+674
+00:44:18,028 --> 00:44:22,053
+look at so I can add a break point there
+and just reload right in the inspector
+
+675
+00:44:22,053 --> 00:44:25,060
+i right that
+
+676
+00:44:25,006 --> 00:44:28,014
+okay let's step through here's the links
+
+677
+00:44:28,068 --> 00:44:31,130
+all right do we get into the Luke we do
+great
+
+678
+00:44:32,003 --> 00:44:35,084
+get the tax tax break I'll okay
+
+679
+00:44:36,011 --> 00:44:39,077
+well there's a bug we had two breaks in
+a row so we never got to the code added
+
+680
+00:44:39,077 --> 00:44:40,124
+any other state to enter a
+
+681
+00:44:41,024 --> 00:44:44,116
+so this should be an easy ride to fix
+now that I spotted it
+
+682
+00:44:45,016 --> 00:44:48,070
+so let's go back into Xcode
+
+683
+00:44:48,007 --> 00:44:52,058
+there she is
+
+684
+00:44:53,021 --> 00:45:00,021
+all right let's build in
+
+685
+00:45:05,027 --> 00:45:07,081
+we have a table of contents so now
+
+686
+00:45:07,081 --> 00:45:11,155
+I have a table of contents if I could
+around here
+
+687
+00:45:12,055 --> 00:45:16,057
+I'll navigate to the right section in
+the document because I was sure to
+
+688
+00:45:16,057 --> 00:45:17,139
+include that data when I passed it
+
+689
+00:45:18,039 --> 00:45:21,065
+back from the script and there you have
+it
+
+690
+00:45:21,065 --> 00:45:24,087
+sell it today with bill a
+
+691
+00:45:24,087 --> 00:45:27,096
+dedicated Wikipedia browser app for Mac
+
+692
+00:45:27,096 --> 00:45:30,137
+and for IRS with added some advanced
+features
+
+693
+00:45:31,037 --> 00:45:34,131
+maker at interact with our web content
+and we've done it all with a
+
+694
+00:45:35,031 --> 00:45:39,054
+modern market API that's all I have for
+your hand and act on it now
+
+695
+00:45:39,054 --> 00:45:43,078
+thanks well this is real economy
+
+696
+00:45:43,078 --> 00:45:46,081
+my we keep your browsing so much more
+efficient on my way to work
+
+697
+00:45:47,008 --> 00:45:51,050
+so the modern working API
+
+698
+00:45:51,005 --> 00:45:55,016
+available for I was a and honest I'm so
+many
+
+699
+00:45:55,061 --> 00:46:02,061
+same API on both platforms you get to
+fall JavaScript nitro engine
+
+700
+00:46:02,076 --> 00:46:07,090
+including the fourth your compiler its
+multi-process
+
+701
+00:46:07,009 --> 00:46:10,012
+which is right for Responsive
+
+702
+00:46:11,002 --> 00:46:14,030
+and also for barry
+
+703
+00:46:14,048 --> 00:46:17,071
+and with users crap
+
+704
+00:46:17,071 --> 00:46:20,143
+and scrip messages web pages can talk to
+your
+
+705
+00:46:21,043 --> 00:46:24,051
+up by Spurs now
+
+706
+00:46:25,023 --> 00:46:28,082
+we've only showed a handful classes here
+
+707
+00:46:28,082 --> 00:46:31,129
+but the modern weaponry PI has much more
+to offer
+
+708
+00:46:32,029 --> 00:46:36,045
+so here's what I want you to do
+
+709
+00:46:36,045 --> 00:46:39,126
+adopt the modern web API
+
+710
+00:46:40,026 --> 00:46:44,047
+if you think writing a new app ice
+
+711
+00:46:44,047 --> 00:46:47,096
+would strongly consider using the new
+API
+
+712
+00:46:47,096 --> 00:46:52,119
+if you already have an app that is using
+either you I wuv you
+
+713
+00:46:53,019 --> 00:46:56,085
+or what have you don't worry those
+replies are still there
+
+714
+00:46:56,085 --> 00:46:59,127
+but we are committed to this new API the
+modern world
+
+715
+00:47:00,027 --> 00:47:03,053
+API and some features by
+
+716
+00:47:03,053 --> 00:47:06,061
+faster JavaScript her only gonna be
+available
+
+717
+00:47:06,061 --> 00:47:09,100
+new API am
+
+718
+00:47:10,000 --> 00:47:14,054
+this is america i would really love to
+hear what you think about it
+
+719
+00:47:14,054 --> 00:47:17,083
+so I radars come to the lab
+
+720
+00:47:17,083 --> 00:47:21,083
+bring your call I'm post and the
+developer for
+
+721
+00:47:21,083 --> 00:47:24,114
+if you wanna contact
+
+722
+00:47:25,014 --> 00:47:28,015
+are frameworks evangelism
+
+723
+00:47:28,015 --> 00:47:33,034
+there's more information on webcam
+answer for you freedom summer
+
+724
+00:47:33,034 --> 00:47:37,056
+and a modern working API is part of the
+weapon open source projects you can go
+
+725
+00:47:37,056 --> 00:47:37,109
+to work
+
+726
+00:47:38,009 --> 00:47:42,082
+dorgan check it out I'm you can also go
+to the developer forums
+
+727
+00:47:42,082 --> 00:47:48,125
+and post your questions and more mature
+related sessions
+
+728
+00:47:49,025 --> 00:47:54,071
+if you haven't up on a Web site you
+wanna make sure they work together
+
+729
+00:47:54,071 --> 00:47:58,114
+there's a great session this afternoon
+call your up your website and Safari
+
+730
+00:47:59,014 --> 00:48:03,049
+on Thursday there's a session about the
+web inspector
+
+731
+00:48:03,049 --> 00:48:07,050
+on Friday morning there's a really
+interesting session we're engineers
+
+732
+00:48:07,005 --> 00:48:11,009
+on the a work team talk about best
+practices for sharing called between
+
+733
+00:48:11,009 --> 00:48:14,057
+analyst and thank you very much for
+coming
+
