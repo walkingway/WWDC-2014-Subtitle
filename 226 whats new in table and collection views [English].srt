@@ -1,0 +1,3603 @@
+1
+00:00:12,022 --> 00:00:17,075
+thanks so much for coming to what's new
+in table 1 collect
+
+2
+00:00:17,075 --> 00:00:21,604
+cover special beer enough to my heart as
+we give it every year
+
+3
+00:00:22,279 --> 00:00:25,390
+well not exactly this session but
+something on collection to have these
+
+4
+00:00:25,039 --> 00:00:26,048
+really get to talk about
+
+5
+00:00:26,048 --> 00:00:30,140
+and that's really because table views
+and collection views
+
+6
+00:00:31,004 --> 00:00:34,098
+are tool that get used in nearly every
+single application
+
+7
+00:00:35,034 --> 00:00:40,183
+and we recognize that as we went through
+to add a lot of improvement ISA
+
+8
+00:00:40,489 --> 00:00:43,690
+we really wanted to do things that made
+
+9
+00:00:43,069 --> 00:00:47,076
+your life easy here doing awesome things
+with the tools that
+
+10
+00:00:48,039 --> 00:00:51,095
+as I said just about everybody uses so
+
+11
+00:00:51,095 --> 00:00:54,169
+what we're gonna talk about today is a
+is a few fundamental improvements
+
+12
+00:00:55,069 --> 00:00:58,132
+to both table view and collection beyond
+and mobile
+
+13
+00:00:59,032 --> 00:01:02,041
+beginning with tableview in particular
+
+14
+00:01:02,041 --> 00:01:05,124
+the big thing that we're going to be
+talking about today is how did too
+
+15
+00:01:06,024 --> 00:01:10,933
+dynamic type adoption in your table
+views we're going to be asking that
+
+16
+00:01:11,149 --> 00:01:15,450
+Hall applications that deal with tax
+than I was 8
+
+17
+00:01:15,045 --> 00:01:19,074
+adopt dynamic type and you'll see in
+fact that all of our system app
+
+18
+00:01:19,074 --> 00:01:22,159
+have already done that so users are
+going to expect that your application to
+
+19
+00:01:23,059 --> 00:01:23,103
+death
+
+20
+00:01:24,003 --> 00:01:27,912
+I'm gonna show you that it's really
+quite simple to do and I think I have a
+
+21
+00:01:27,939 --> 00:01:28,680
+lot of fun with it
+
+22
+00:01:28,068 --> 00:01:31,139
+the mechanism but we're giving you know
+for
+
+23
+00:01:32,039 --> 00:01:35,083
+adopting dynamic type itself sizing
+South
+
+24
+00:01:35,083 --> 00:01:38,092
+we think this strategy
+
+25
+00:01:38,092 --> 00:01:45,092
+thank you this this strategy is really
+
+26
+00:01:46,078 --> 00:01:49,121
+going to improve the way that we
+architect our table views
+
+27
+00:01:50,021 --> 00:01:53,120
+number one because you can encapsulate
+logic right in the cells
+
+28
+00:01:54,002 --> 00:01:57,047
+into the fact that you can't do that
+make it so much
+
+29
+00:01:57,065 --> 00:02:02,078
+easier to have cells that are not a
+hard-coded compiled time known
+
+30
+00:02:02,078 --> 00:02:02,139
+heightened
+
+31
+00:02:03,039 --> 00:02:06,378
+which means you can easily adapt to
+dynamic
+
+32
+00:02:06,729 --> 00:02:10,814
+fun changes so additionally we've got
+some new things and collection view
+
+33
+00:02:11,579 --> 00:02:15,640
+and number one really great is we're
+bringing felt sizing felt the collection
+
+34
+00:02:15,064 --> 00:02:15,109
+view
+
+35
+00:02:16,009 --> 00:02:22,043
+also and
+
+36
+00:02:22,043 --> 00:02:25,136
+for all love you custom layout authors I
+know there's a lot of you out there
+
+37
+00:02:26,036 --> 00:02:27,036
+because
+
+38
+00:02:27,036 --> 00:02:30,084
+every week at least I see a new app that
+has
+
+39
+00:02:30,084 --> 00:02:34,093
+a really great layout that really
+impresses me we have
+
+40
+00:02:34,849 --> 00:02:38,270
+something we want to talk about which is
+smart
+
+41
+00:02:38,027 --> 00:02:41,126
+invalidation which will allow you to
+write great layout
+
+42
+00:02:42,026 --> 00:02:49,026
+that are also super performant so we
+begin by talking about
+
+43
+00:02:51,769 --> 00:02:57,010
+tableview and dynamic type adoption if
+you've never seen this screen
+
+44
+00:02:57,001 --> 00:03:00,450
+from Iowa seven is only introduce
+dynamic type
+
+45
+00:03:00,459 --> 00:03:03,920
+this in a screen in settings where you
+can
+
+46
+00:03:03,092 --> 00:03:06,156
+change the text size to fit
+
+47
+00:03:07,056 --> 00:03:10,134
+what feels appropriate for you and if
+you're somebody who likes
+
+48
+00:03:11,034 --> 00:03:14,683
+packed a little bit bigger so that you
+can you can see things easier
+
+49
+00:03:14,989 --> 00:03:18,310
+when you can fly that over and and
+magically the tax
+
+50
+00:03:18,031 --> 00:03:22,130
+changes are in the Interfaith and impact
+in Iowa State all internal aP's
+
+51
+00:03:23,003 --> 00:03:26,007
+will adapt and change our text size
+based on
+
+52
+00:03:26,007 --> 00:03:29,091
+on the slider value that you've set so
+that
+
+53
+00:03:30,054 --> 00:03:34,033
+great because it makes your phone truly
+feel like your phone
+
+54
+00:03:34,519 --> 00:03:37,563
+and adapts to your needs and turns all
+of the internal
+
+55
+00:03:37,959 --> 00:03:41,760
+after doing this adoption I'm we will
+expect
+
+56
+00:03:41,076 --> 00:03:44,585
+third party apps to do that as well so
+
+57
+00:03:45,269 --> 00:03:48,280
+let's talk briefly about what it takes
+to get there
+
+58
+00:03:48,379 --> 00:03:51,650
+well we can do it by
+
+59
+00:03:51,065 --> 00:03:54,153
+using built-in labels built-in labels in
+tableview cells
+
+60
+00:03:55,053 --> 00:03:59,104
+have dynamic fun on them automatically
+and Iowa State
+
+61
+00:04:00,004 --> 00:04:04,343
+so if you're using the tax label the
+detailed text label
+
+62
+00:04:04,379 --> 00:04:09,000
+they have I already dynamic fun and as
+the you change the tax five
+
+63
+00:04:09,000 --> 00:04:13,076
+those labels are going to change sides
+if you have your own custom labels
+
+64
+00:04:13,076 --> 00:04:17,113
+it's really as simple as adding a
+preferred font
+
+65
+00:04:18,013 --> 00:04:21,016
+to that label this is another API that
+existed
+
+66
+00:04:21,043 --> 00:04:25,080
+in Iowa 7 so hot new was just expecting
+everyone to use it now
+
+67
+00:04:25,008 --> 00:04:28,617
+so simply changing your fonts from
+
+68
+00:04:29,409 --> 00:04:32,720
+something that may have been you know
+setting up onto the particular sign
+
+69
+00:04:32,072 --> 00:04:36,171
+to instead using a preferred font you
+now have been am a type
+
+70
+00:04:37,071 --> 00:04:41,097
+in your label but Matt brings in a
+wrinkled
+
+71
+00:04:41,097 --> 00:04:44,156
+things and that wrinkle is now
+
+72
+00:04:45,056 --> 00:04:48,063
+all things are dynamic and its dynamic
+
+73
+00:04:48,063 --> 00:04:52,080
+because I've the sizeof the taxpayer can
+change based on what the users that
+
+74
+00:04:52,008 --> 00:04:55,043
+so everything come a simple table views
+
+75
+00:04:56,015 --> 00:04:59,096
+like settings for like messages
+
+76
+00:04:59,096 --> 00:05:02,127
+I guess but notes actually I'm messages
+
+77
+00:05:03,027 --> 00:05:06,074
+and Mail or contact I'm
+
+78
+00:05:06,074 --> 00:05:09,146
+be there all simple table views that the
+and I was seven
+
+79
+00:05:10,046 --> 00:05:14,505
+the row height was known at build time
+you can say I hate up a 44-point Cairo
+
+80
+00:05:14,919 --> 00:05:16,110
+and that's always
+
+81
+00:05:16,011 --> 00:05:19,077
+true put on high alert 8 that's not true
+
+82
+00:05:19,077 --> 00:05:22,132
+you to change their text size all of
+those row heights
+
+83
+00:05:23,032 --> 00:05:26,035
+change so even the simplest
+
+84
+00:05:26,035 --> 00:05:31,113
+table views from Iowa 7 now need to
+think about being dynamic
+
+85
+00:05:32,013 --> 00:05:39,013
+in Iowa a so we have a few strategies to
+achieve dynamic
+
+86
+00:05:39,169 --> 00:05:42,270
+one is the simplest case
+
+87
+00:05:42,027 --> 00:05:45,103
+if you're like one of those very simple
+table view that we saw
+
+88
+00:05:46,003 --> 00:05:49,036
+on the previous page then you can use
+
+89
+00:05:49,036 --> 00:05:52,845
+BRB existing property row height
+
+90
+00:05:53,169 --> 00:05:56,216
+and even though you dynamic you can
+still use that property
+
+91
+00:05:56,639 --> 00:06:00,810
+because when the text size changes when
+you get a new high
+
+92
+00:06:00,081 --> 00:06:04,102
+you can change the value of that
+property to something different
+
+93
+00:06:05,002 --> 00:06:08,010
+and in fact this strategy has are
+
+94
+00:06:08,001 --> 00:06:11,006
+an advantage if if you truly are
+
+95
+00:06:11,006 --> 00:06:15,101
+you know unknown hyped that will be the
+same for each sound
+
+96
+00:06:16,055 --> 00:06:19,424
+because if you can set this property for
+all our
+
+97
+00:06:19,919 --> 00:06:24,120
+same size South then you get the back
+throwing performance possible
+
+98
+00:06:24,012 --> 00:06:27,090
+because no calculations mean to be done
+on the fly
+
+99
+00:06:27,009 --> 00:06:31,104
+while scrolling the next strategy is
+something you're probably of familiar
+
+100
+00:06:32,085 --> 00:06:33,274
+with for using
+
+101
+00:06:34,039 --> 00:06:38,610
+dynamic sized cells and that
+implementing the delegate method
+
+102
+00:06:38,061 --> 00:06:42,125
+tableview hype for an index that
+strategy is still valid
+
+103
+00:06:43,025 --> 00:06:46,534
+and something you can use an ISA if
+you'd like to
+
+104
+00:06:46,759 --> 00:06:52,330
+size ourselves one at a time I give a
+high for each row
+
+105
+00:06:52,033 --> 00:06:55,035
+you can still do that of course
+
+106
+00:06:55,053 --> 00:06:59,058
+the disadvantage to this and why we
+wanted something new
+
+107
+00:07:00,003 --> 00:07:03,022
+is that if you implement that delegate
+method
+
+108
+00:07:03,022 --> 00:07:07,621
+all love your row heights are act for up
+front when the tables loaded
+
+109
+00:07:07,819 --> 00:07:10,885
+here if you have twenty thousand rows
+we're gonna ask for
+
+110
+00:07:11,479 --> 00:07:15,340
+height a all love those rose when we
+love the table
+
+111
+00:07:15,034 --> 00:07:18,121
+and of course no cells have yet been
+created see a delegate needs to
+
+112
+00:07:19,021 --> 00:07:20,025
+understand
+
+113
+00:07:20,025 --> 00:07:23,100
+without creating cells what height
+
+114
+00:07:24,000 --> 00:07:27,002
+to make those cells based on your
+contract and that's been a challenge up
+
+115
+00:07:27,002 --> 00:07:28,074
+to this point
+
+116
+00:07:28,074 --> 00:07:31,087
+so that's why we have the third strategy
+which is
+
+117
+00:07:31,087 --> 00:07:37,876
+South I think cells
+
+118
+00:07:38,659 --> 00:07:40,770
+so let's talk a little bit about
+
+119
+00:07:40,077 --> 00:07:43,082
+you know why this is in NY you know this
+is a big deal
+
+120
+00:07:44,027 --> 00:07:47,090
+if we take a simple table cell like that
+in mail
+
+121
+00:07:47,009 --> 00:07:51,148
+there's a lot of parameters around
+sizing this Sal
+
+122
+00:07:52,039 --> 00:07:56,430
+I we you know we look at this and okayed
+it is actually a lot going on here
+
+123
+00:07:56,043 --> 00:07:59,074
+there are three different font and in
+order to size
+
+124
+00:07:59,074 --> 00:08:02,149
+the cell correctly we need to know about
+the size and all those points and how
+
+125
+00:08:03,049 --> 00:08:03,130
+big they draw
+
+126
+00:08:04,003 --> 00:08:07,212
+additionally there are margin
+
+127
+00:08:07,509 --> 00:08:12,527
+between the text we need to know how big
+does margins are in there are several
+
+128
+00:08:12,689 --> 00:08:15,712
+about so we have to not respond we have
+to know these margins
+
+129
+00:08:15,919 --> 00:08:20,840
+at the lot and knowledge if we were to
+do dynamic sizing in the delegate
+
+130
+00:08:20,084 --> 00:08:24,105
+so in 8 I'll show you how things work
+
+131
+00:08:25,005 --> 00:08:28,011
+and I get out of the way so you can
+really see this I'm
+
+132
+00:08:28,065 --> 00:08:32,374
+imagine that we've got a few rows on
+screen and then we've got
+
+133
+00:08:32,959 --> 00:08:37,110
+a fourth row that's not yet on screen
+and I was
+
+134
+00:08:37,011 --> 00:08:40,110
+a if you're using self sizing cells and
+in fact
+
+135
+00:08:40,209 --> 00:08:43,630
+part of this is going to be using the
+Iowa 7 API
+
+136
+00:08:43,063 --> 00:08:47,136
+which is giving an estimated furrows
+something we introduced last year
+
+137
+00:08:48,036 --> 00:08:53,079
+so that fourth row is going to be size
+using an estimated high-fat you provide
+
+138
+00:08:53,079 --> 00:08:56,144
+here either via the property estimated
+height I
+
+139
+00:08:57,044 --> 00:09:00,057
+order to delegate method for that too
+now
+
+140
+00:09:00,057 --> 00:09:03,826
+when you scroll running use our schools
+rather
+
+141
+00:09:04,339 --> 00:09:07,680
+at that time we need to bring
+
+142
+00:09:07,068 --> 00:09:12,347
+on screen row for which up to this point
+only has an estimated high
+
+143
+00:09:12,959 --> 00:09:18,720
+cutback time we will create the cell
+after creating it
+
+144
+00:09:18,072 --> 00:09:22,141
+we were asked to sell how big it should
+be van
+
+145
+00:09:23,041 --> 00:09:26,087
+we use that size it different from the
+estimated size
+
+146
+00:09:26,087 --> 00:09:29,112
+to adjust the content 5
+
+147
+00:09:30,012 --> 00:09:33,038
+the table view and only then
+
+148
+00:09:33,038 --> 00:09:37,187
+after adjusting the content eyes and
+taken aside from the cell do we actually
+
+149
+00:09:37,529 --> 00:09:41,604
+put that sell on screen and so
+
+150
+00:09:42,279 --> 00:09:45,334
+what you probably don't wanna now is
+what
+
+151
+00:09:45,829 --> 00:09:48,891
+what happens in step 2 how do how do we
+actually sigh for sale
+
+152
+00:09:49,449 --> 00:09:53,290
+we're talking about now and there are
+two ways that you can communicate
+
+153
+00:09:53,029 --> 00:09:56,438
+information about how big your cell is
+from the cell
+
+154
+00:09:56,699 --> 00:09:59,786
+back to the table view so that we can
+get you the right thing
+
+155
+00:10:00,569 --> 00:10:07,569
+and number one is you can use on a layup
+if you're
+
+156
+00:10:10,002 --> 00:10:14,011
+already using either way I know that
+many have you are you may simply have to
+
+157
+00:10:14,029 --> 00:10:14,032
+do
+
+158
+00:10:14,329 --> 00:10:17,720
+nothing here you constraints if they re-
+I
+
+159
+00:10:17,072 --> 00:10:20,681
+determine unambiguously the signs have
+the cell
+
+160
+00:10:21,329 --> 00:10:25,440
+then we would just use those constraints
+impact
+
+161
+00:10:25,044 --> 00:10:28,052
+the way that we've implemented this and
+I was a is that
+
+162
+00:10:29,024 --> 00:10:32,037
+tableview calls system way out five
+fanning five
+
+163
+00:10:32,037 --> 00:10:35,136
+on your cell and system outside but
+inside
+
+164
+00:10:36,036 --> 00:10:39,445
+smart enough to understand if you
+implement constrain
+
+165
+00:10:39,769 --> 00:10:42,790
+in your cell and if so
+
+166
+00:10:42,079 --> 00:10:45,122
+the outer layer engine delivers a size
+and
+
+167
+00:10:46,022 --> 00:10:50,036
+if you haven't implemented out about
+constraints system we have five pink
+
+168
+00:10:50,036 --> 00:10:50,635
+size
+
+169
+00:10:50,959 --> 00:10:55,220
+calls I size that that and then
+
+170
+00:10:55,022 --> 00:10:58,081
+you can simply return a size manually
+based on your own
+
+171
+00:10:58,081 --> 00:11:01,142
+logic so by adding size that fits
+
+172
+00:11:02,042 --> 00:11:05,055
+you don't have to use on a layout if you
+don't want to
+
+173
+00:11:05,055 --> 00:11:09,072
+if you are using out a layout at notre
+Pere you want to add your constraints
+
+174
+00:11:09,072 --> 00:11:13,091
+to the Content Viewer cell you always
+think about
+
+175
+00:11:13,091 --> 00:11:16,187
+whatever content you have goes in the
+South content view and this
+
+176
+00:11:17,087 --> 00:11:21,806
+plays into what the API contract is when
+we are sizing your cell
+
+177
+00:11:22,589 --> 00:11:27,600
+because I their survey there's an In N
+Out situation
+
+178
+00:11:27,699 --> 00:11:30,730
+the into your style is a wet
+
+179
+00:11:30,073 --> 00:11:33,182
+in that wit is the with the content via
+
+180
+00:11:33,839 --> 00:11:37,690
+what your cell returns is the height
+
+181
+00:11:37,069 --> 00:11:40,168
+up the content you so when year
+
+182
+00:11:41,068 --> 00:11:44,787
+implementing 5 that pits for example the
+size that we send you
+
+183
+00:11:45,399 --> 00:11:48,468
+will have the resolved with what the
+with the content view was going to be
+
+184
+00:11:49,089 --> 00:11:52,440
+and then the value that you return has a
+resolved
+
+185
+00:11:52,044 --> 00:11:55,423
+height and even still with your
+constraints you should think about how
+
+186
+00:11:55,819 --> 00:11:57,250
+you build your constraints
+
+187
+00:11:57,025 --> 00:12:01,100
+as assuming that you got a whip the
+content view has a wet
+
+188
+00:12:02,000 --> 00:12:06,039
+and I was predetermined by the table
+view based on how wide the table view is
+
+189
+00:12:06,039 --> 00:12:08,708
+you know whether you have an image
+viewer accessory views that will make a
+
+190
+00:12:09,059 --> 00:12:10,510
+shrink the content view
+
+191
+00:12:10,051 --> 00:12:13,240
+and then from that with your constraints
+
+192
+00:12:13,699 --> 00:12:17,760
+define height base on the content that
+you have
+
+193
+00:12:17,076 --> 00:12:21,087
+so I'd like to spend the rest of the
+time much to the table view time
+
+194
+00:12:21,087 --> 00:12:25,091
+telling you are showing you encode how
+to actually do this
+
+195
+00:12:26,027 --> 00:12:29,316
+I we're gonna see that this is quite
+
+196
+00:12:29,559 --> 00:12:32,900
+simple at its base but I also
+
+197
+00:12:32,009 --> 00:12:35,084
+kinda wanna run through I
+
+198
+00:12:36,065 --> 00:12:40,314
+gotchas but you might run into that
+other people have run into
+
+199
+00:12:40,899 --> 00:12:45,920
+in the past so that you can come to keep
+the idea in your head
+
+200
+00:12:45,092 --> 00:12:49,126
+hey this is simple but if I go back to
+my hotel if I go back to my company and
+
+201
+00:12:50,026 --> 00:12:51,073
+I start implementing best
+
+202
+00:12:51,073 --> 00:12:55,122
+and it just doesn't seem to work come
+back and watch this video
+
+203
+00:12:55,779 --> 00:13:00,860
+because there's a good chance I will
+have covered what is causing
+
+204
+00:13:00,086 --> 00:13:03,088
+your code do not do what you think it's
+going to do
+
+205
+00:13:03,088 --> 00:13:06,297
+so
+
+206
+00:13:07,089 --> 00:13:11,260
+let's start off by I going to starting
+
+207
+00:13:11,026 --> 00:13:14,093
+and working out excise right now I've
+got it
+
+208
+00:13:14,093 --> 00:13:18,138
+set to be the smallest thing all pawns
+put it to
+
+209
+00:13:19,038 --> 00:13:22,307
+regular on and
+
+210
+00:13:22,649 --> 00:13:27,520
+this application I've got right now just
+has a very simple table view
+
+211
+00:13:27,052 --> 00:13:30,231
+and it doesn't do a whole lot it just
+has a
+
+212
+00:13:30,699 --> 00:13:33,748
+one line text label and
+
+213
+00:13:34,189 --> 00:13:37,240
+cells that are all predetermined to be
+
+214
+00:13:37,024 --> 00:13:41,093
+44 points tall so
+
+215
+00:13:41,309 --> 00:13:44,335
+one thing about this that is interesting
+
+216
+00:13:44,569 --> 00:13:48,651
+if I ma I was a as you take a look at
+that and if I i
+
+217
+00:13:49,389 --> 00:13:53,391
+change my text by and I bring it all the
+way up
+
+218
+00:13:53,589 --> 00:13:56,600
+van run the app again
+
+219
+00:13:56,699 --> 00:14:01,742
+you see nothing changes
+
+220
+00:14:02,129 --> 00:14:05,350
+and that's the problem we want something
+to change I
+
+221
+00:14:05,035 --> 00:14:08,122
+say we won our apt to be adaptive to
+what the user wants
+
+222
+00:14:09,022 --> 00:14:13,221
+cell cent in this case I'm using a
+custom
+
+223
+00:14:13,419 --> 00:14:16,423
+label called headline label here I
+
+224
+00:14:16,819 --> 00:14:20,819
+create it right in my cells initializer
+the problem is that
+
+225
+00:14:20,819 --> 00:14:23,844
+I have sat the have my labels font
+
+226
+00:14:24,069 --> 00:14:28,115
+to be a specific 5 and actually what I
+want is to use
+
+227
+00:14:28,529 --> 00:14:32,581
+and dynamic by typed popped and so on
+just change the
+
+228
+00:14:33,049 --> 00:14:38,078
+to preferred far for textile you I
+fought textile
+
+229
+00:14:38,339 --> 00:14:42,433
+have mine is perfect and a fire on that
+now
+
+230
+00:14:43,279 --> 00:14:47,303
+will see that the tax didn't get better
+
+231
+00:14:47,519 --> 00:14:50,537
+and that's great it is adapting to a
+future wanted
+
+232
+00:14:50,699 --> 00:14:53,734
+but this looks a little weird now
+
+233
+00:14:54,049 --> 00:14:58,049
+because missiles are the same size but
+they were before
+
+234
+00:14:58,049 --> 00:15:01,092
+I want the cells to grow along with
+
+235
+00:15:01,479 --> 00:15:05,505
+attacked because the five giant axe
+small cells
+
+236
+00:15:05,739 --> 00:15:08,773
+things are weird so
+
+237
+00:15:09,079 --> 00:15:12,165
+what I'm going to do is a use
+
+238
+00:15:12,939 --> 00:15:17,942
+constraints via auto layout
+
+239
+00:15:18,239 --> 00:15:21,311
+and I've got a whole bunch of them here
+I'm gonna walk through them we could do
+
+240
+00:15:21,959 --> 00:15:22,011
+this
+
+241
+00:15:22,479 --> 00:15:25,535
+I'm an Interface Builder as well but I
+thought
+
+242
+00:15:26,039 --> 00:15:30,125
+if we walk through the sink code it'll
+cause a little bit more understanding
+
+243
+00:15:30,899 --> 00:15:32,954
+about what we're actually doing
+
+244
+00:15:33,449 --> 00:15:37,458
+I'm so I have four sets of constraint
+logic here
+
+245
+00:15:37,539 --> 00:15:40,626
+I'm what I'm doing with this first one
+is
+
+246
+00:15:41,409 --> 00:15:44,474
+setting what happens at the top on
+selling from spacing
+
+247
+00:15:45,059 --> 00:15:48,074
+at the top of my label something that
+the first
+
+248
+00:15:48,209 --> 00:15:51,266
+first base line is equal to
+
+249
+00:15:51,779 --> 00:15:55,854
+the top of the content view plot the
+constant
+
+250
+00:15:56,529 --> 00:15:59,578
+and a multiplier and the reason I you
+know i i
+
+251
+00:16:00,019 --> 00:16:04,043
+pick these values somewhat arbitrarily
+but the reason that there's a multiplier
+
+252
+00:16:04,259 --> 00:16:08,271
+as I want the space between the first
+base line and the top to grow
+
+253
+00:16:08,379 --> 00:16:11,461
+not simply equal to the Grove
+
+254
+00:16:12,199 --> 00:16:15,284
+the font but I want it to
+
+255
+00:16:16,049 --> 00:16:20,128
+grow a little bit more so that we we get
+even more space between
+
+256
+00:16:20,839 --> 00:16:23,884
+the top attacks than the top as the fun
+grows
+
+257
+00:16:24,289 --> 00:16:28,720
+so then I do something very similar
+setting
+
+258
+00:16:28,072 --> 00:16:31,098
+a padding at the bottom
+
+259
+00:16:31,098 --> 00:16:34,517
+so that's just setting an attribute
+bottom
+
+260
+00:16:35,399 --> 00:16:38,415
+for my content view to be based offer
+
+261
+00:16:38,559 --> 00:16:41,581
+the lack baseline a the label
+
+262
+00:16:41,779 --> 00:16:45,821
+again with Irvin I are confident that I
+just picked
+
+263
+00:16:46,199 --> 00:16:50,237
+and a multiplier for the same reason I
+have a multiplier
+
+264
+00:16:50,579 --> 00:16:54,583
+up here again these values are not magic
+values they're largely values
+
+265
+00:16:54,979 --> 00:17:00,024
+but I picked out of thin air I'm so I
+can sleep having at the top
+
+266
+00:17:00,429 --> 00:17:03,475
+and the bottom have my contact and as
+the content grows
+
+267
+00:17:03,889 --> 00:17:07,510
+then I will still have that padding and
+the fellow will actually grow
+
+268
+00:17:07,051 --> 00:17:10,098
+with it the last thing
+
+269
+00:17:10,098 --> 00:17:13,937
+I did here for height and I am wanted to
+have a minimum
+
+270
+00:17:14,819 --> 00:17:18,750
+the Human Interface Guidelines says we
+wanna touchable things like table views
+
+271
+00:17:18,075 --> 00:17:18,148
+be at least
+
+272
+00:17:19,048 --> 00:17:24,497
+44 points tall so I thought a constraint
+that says I want my content views
+
+273
+00:17:24,929 --> 00:17:27,980
+height to be greater than or equal to 44
+
+274
+00:17:28,439 --> 00:17:31,445
+simple back so even if it excites gets
+very
+
+275
+00:17:32,039 --> 00:17:35,039
+small I actually still want to keep the
+cell to be at least
+
+276
+00:17:35,039 --> 00:17:38,073
+44 points tall to meet the human
+interface guideline
+
+277
+00:17:38,379 --> 00:17:42,383
+for the I'm horizontal axis
+
+278
+00:17:42,419 --> 00:17:45,440
+I've just use a a simple I'm
+
+279
+00:17:45,044 --> 00:17:48,053
+visual format language to say but I want
+fifteen-point margins
+
+280
+00:17:49,034 --> 00:17:53,583
+around my headline label and I'm just
+adding goes to the Iraq
+
+281
+00:17:53,889 --> 00:18:00,240
+at all those constraints my content view
+another have done that don't want it to
+
+282
+00:18:00,024 --> 00:18:00,423
+happen
+
+283
+00:18:00,639 --> 00:18:03,718
+well
+
+284
+00:18:04,429 --> 00:18:07,466
+at actually looks but same
+
+285
+00:18:07,799 --> 00:18:11,840
+and I have something really scary
+
+286
+00:18:11,084 --> 00:18:15,123
+here I have a bunch have auto layout
+constraints
+
+287
+00:18:15,879 --> 00:18:22,879
+failing messages
+
+288
+00:18:25,399 --> 00:18:29,320
+thankfully there's a solution
+
+289
+00:18:29,032 --> 00:18:32,057
+so I mention this earlier but
+
+290
+00:18:32,057 --> 00:18:36,058
+part love being dynamic herself sizing
+cell
+
+291
+00:18:36,058 --> 00:18:39,100
+I aware and using that in your
+application
+
+292
+00:18:40,000 --> 00:18:43,058
+is that you use row height after mation
+
+293
+00:18:43,058 --> 00:18:46,145
+rather than literal row height in your
+table view
+
+294
+00:18:47,045 --> 00:18:50,100
+so if we look at my view controller
+imputed load
+
+295
+00:18:51,000 --> 00:18:54,139
+previously I was setting the row height
+244
+
+296
+00:18:54,139 --> 00:18:57,214
+well if we do that and we have some
+citing cells
+
+297
+00:18:57,889 --> 00:19:00,987
+this helps I think I think again because
+I've said row height is 44
+
+298
+00:19:01,869 --> 00:19:05,200
+and that for the end all be all for
+tableview
+
+299
+00:19:05,002 --> 00:19:08,201
+what I really want now in Iowa State
+
+300
+00:19:08,399 --> 00:19:12,240
+is to that the estimated or
+
+301
+00:19:12,024 --> 00:19:15,059
+so when you run into this problem try to
+remember
+
+302
+00:19:15,059 --> 00:19:18,848
+Luke said use estimated row height not
+row height
+
+303
+00:19:19,379 --> 00:19:24,320
+IIFA and then when you run it
+
+304
+00:19:24,032 --> 00:19:30,084
+got look solution didn't even work
+
+305
+00:19:30,084 --> 00:19:33,893
+well so has one other got sick here
+which
+
+306
+00:19:34,649 --> 00:19:37,674
+actually will be fixed in the next feed
+
+307
+00:19:37,899 --> 00:19:44,899
+but I wanted to show you
+
+308
+00:19:45,048 --> 00:19:50,073
+wanted to show you so you don't think
+I'm a liar where'd you go
+
+309
+00:19:50,073 --> 00:19:55,982
+back to your room a so if your cell cut
+or if your table view is coming out over
+
+310
+00:19:56,639 --> 00:19:58,600
+never storyboard
+
+311
+00:19:58,006 --> 00:20:02,054
+I then it are row heights property will
+be
+
+312
+00:20:03,008 --> 00:20:07,010
+that's when it comes out about
+storyboard
+
+313
+00:20:07,001 --> 00:20:11,820
+we want it to be the default is actually
+the new default for row heights
+
+314
+00:20:11,919 --> 00:20:16,010
+and I was 8 is
+
+315
+00:20:16,001 --> 00:20:19,890
+you I'm tableview automatic to mention
+that means
+
+316
+00:20:19,899 --> 00:20:23,200
+had a however I figure it out I
+
+317
+00:20:23,002 --> 00:20:26,057
+based on other information and this is
+already
+
+318
+00:20:26,075 --> 00:20:29,076
+the default for programmatically create
+a table views
+
+319
+00:20:29,076 --> 00:20:32,159
+and as i've seen to will be the default
+for
+
+320
+00:20:33,059 --> 00:20:36,238
+table view that come out of storyboards
+and names as well
+
+321
+00:20:36,769 --> 00:20:39,845
+it interesting actually to know this in
+general
+
+322
+00:20:40,529 --> 00:20:44,568
+that this default has this default value
+is changed because it used to be 44
+
+323
+00:20:44,919 --> 00:20:49,510
+and now it's automatic to mention
+because if you were doing math
+
+324
+00:20:49,051 --> 00:20:52,083
+based on the value table B row height
+
+325
+00:20:52,083 --> 00:20:55,158
+and just expecting be defaultValue to be
+
+326
+00:20:56,058 --> 00:20:59,107
+something that is reasonable to map on
+I'm
+
+327
+00:21:00,007 --> 00:21:04,069
+that's not true unless you have actually
+set the right value
+
+328
+00:21:04,069 --> 00:21:09,798
+so if you run into weird things like
+olive your table cell suddenly shrunk to
+
+329
+00:21:10,419 --> 00:21:13,490
+nowhere are no hype rather I'm
+
+330
+00:21:14,129 --> 00:21:19,132
+look and see if you doing math with the
+rope a property
+
+331
+00:21:19,159 --> 00:21:22,590
+so now that I'm done back how
+
+332
+00:21:22,059 --> 00:21:26,638
+thank God no more weird layout
+constraint method is an actually
+
+333
+00:21:27,169 --> 00:21:30,330
+mice overgrown abet they they
+
+334
+00:21:30,033 --> 00:21:34,222
+look more natural for this text size
+
+335
+00:21:34,519 --> 00:21:37,720
+not bad it's true there's
+
+336
+00:21:37,072 --> 00:21:40,134
+there something else I can do here
+
+337
+00:21:41,034 --> 00:21:46,833
+now and is go back to my cell
+
+338
+00:21:47,139 --> 00:21:51,240
+and i wanna make those labels which are
+all clipping of
+
+339
+00:21:51,024 --> 00:21:56,057
+the end of the screen not do that
+anymore
+
+340
+00:21:56,057 --> 00:21:59,406
+so let me take
+
+341
+00:21:59,919 --> 00:22:02,995
+have I'm label number line
+
+342
+00:22:03,679 --> 00:22:06,773
+make it vero so it should
+
+343
+00:22:07,619 --> 00:22:13,350
+growth the high above the label
+according to the content but then it
+
+344
+00:22:13,035 --> 00:22:17,604
+fire on that now now myself all become
+
+345
+00:22:17,919 --> 00:22:21,250
+alright by based on
+
+346
+00:22:21,025 --> 00:22:25,040
+them
+
+347
+00:22:25,004 --> 00:22:25,050
+and
+
+348
+00:22:25,086 --> 00:22:29,134
+that at high don't have any delegate
+method how tall prove it to you
+
+349
+00:22:30,034 --> 00:22:34,050
+nothin for suffered an expat I mean
+
+350
+00:22:34,005 --> 00:22:39,079
+got about right so that's it that's all
+you need to know
+
+351
+00:22:40,024 --> 00:22:43,051
+to migrate your table
+
+352
+00:22:43,051 --> 00:22:47,056
+from and Iowa seven style table
+
+353
+00:22:47,056 --> 00:22:50,060
+to an Iowa 8 style table and
+
+354
+00:22:50,096 --> 00:22:53,135
+I could you do this right away because
+you want to be ready by the time
+
+355
+00:22:54,035 --> 00:22:57,094
+we ship ISA to have your fully adaptive
+aP's
+
+356
+00:22:57,094 --> 00:23:00,103
+that respond to dynamic type and I'm
+just fabulous for users
+
+357
+00:23:01,084 --> 00:23:05,112
+so that tableview and Iowa 8 and we're
+gonna spend
+
+358
+00:23:06,012 --> 00:23:09,066
+the rest to this park talking about
+collection view features that I
+
+359
+00:23:09,066 --> 00:23:10,067
+mentioned earlier
+
+360
+00:23:10,067 --> 00:23:14,111
+and I would be a good match will come up
+to enlighten a
+
+361
+00:23:15,011 --> 00:23:21,086
+as it were
+
+362
+00:23:21,086 --> 00:23:26,120
+budget I my name is a really good person
+I love collection views
+
+363
+00:23:27,002 --> 00:23:30,089
+so today we have
+
+364
+00:23:31,007 --> 00:23:35,058
+to new features in correction do for you
+
+365
+00:23:35,058 --> 00:23:39,107
+first one of course is self sizing cells
+
+366
+00:23:40,007 --> 00:23:43,116
+we added that to Table View and
+
+367
+00:23:43,179 --> 00:23:47,188
+of course we had to enhance
+
+368
+00:23:47,269 --> 00:23:50,366
+connection with you to support their
+sizing cells but
+
+369
+00:23:51,239 --> 00:23:56,080
+connection issue is quite in every class
+
+370
+00:23:56,008 --> 00:24:00,177
+and a key thing you didn't connections
+you is
+
+371
+00:24:00,249 --> 00:24:03,280
+you can actually build your own layouts
+
+372
+00:24:03,559 --> 00:24:07,604
+and when we implemented self-closing
+cells
+
+373
+00:24:08,009 --> 00:24:12,024
+we headed a new infrastructure to do
+that
+
+374
+00:24:12,159 --> 00:24:15,220
+and what we wanted to do is to actually
+open
+
+375
+00:24:15,769 --> 00:24:19,782
+that's for your custom layouts so if you
+have
+
+376
+00:24:19,899 --> 00:24:22,934
+a custo me out you can actually
+implement
+
+377
+00:24:23,249 --> 00:24:26,335
+the same sale closing sales techniques
+we have
+
+378
+00:24:27,109 --> 00:24:31,820
+in or default layout so
+
+379
+00:24:31,082 --> 00:24:35,011
+social things out we think it's a major
+
+380
+00:24:35,749 --> 00:24:38,751
+new feature in connection with you
+
+381
+00:24:38,769 --> 00:24:41,804
+we serve holding cells you can strip or
+easy be
+
+382
+00:24:42,119 --> 00:24:46,580
+dynamic type we're making that have
+anymore
+
+383
+00:24:46,058 --> 00:24:49,267
+in you I collections you flow layout
+which
+
+384
+00:24:49,789 --> 00:24:53,350
+is or deport layout
+
+385
+00:24:53,035 --> 00:24:56,704
+we provide in you like it and
+
+386
+00:24:57,019 --> 00:25:00,080
+it's ready for your own
+
+387
+00:25:00,008 --> 00:25:03,597
+stone wraps but first
+
+388
+00:25:03,669 --> 00:25:06,980
+elected a very quick demo
+
+389
+00:25:06,098 --> 00:25:10,777
+of self-loathing cell in you I
+connection with you
+
+390
+00:25:11,659 --> 00:25:15,704
+flown a doubt so this
+
+391
+00:25:16,109 --> 00:25:22,080
+is very simple correction to you I could
+try to make that seem for
+
+392
+00:25:22,008 --> 00:25:25,107
+bouts I couldn't so it's a floaty I
+which
+
+393
+00:25:25,179 --> 00:25:29,275
+and we just sets the item size:
+
+394
+00:25:30,139 --> 00:25:33,142
+ornamental elements on the screen
+
+395
+00:25:33,169 --> 00:25:38,850
+to be the same TG size so we don't even
+have a gauge
+
+396
+00:25:38,085 --> 00:25:41,374
+we just use the item size:
+
+397
+00:25:42,139 --> 00:25:45,440
+property on you I can assure you for a
+way out
+
+398
+00:25:45,044 --> 00:25:49,003
+and your connections you say out
+
+399
+00:25:49,399 --> 00:25:53,422
+here are extremely simple it's basically
+just a label
+
+400
+00:25:53,629 --> 00:25:56,980
+and everything ills sized
+
+401
+00:25:56,098 --> 00:25:59,124
+the same way so of course
+
+402
+00:26:00,024 --> 00:26:03,043
+it's not great and
+
+403
+00:26:03,259 --> 00:26:07,700
+when you want to actually I just your
+item size:
+
+404
+00:26:07,007 --> 00:26:11,576
+based on the content of that sell you
+can actually do that
+
+405
+00:26:12,269 --> 00:26:15,296
+right now you have to implement
+delegates
+
+406
+00:26:15,539 --> 00:26:20,320
+on the UI connection you for layout to
+compute the correct size
+
+407
+00:26:20,032 --> 00:26:23,961
+for a given item and banned the sale
+
+408
+00:26:24,249 --> 00:26:28,690
+is going to be sized with what they're
+doing layout
+
+409
+00:26:28,069 --> 00:26:32,082
+which arms but it's written convenience
+
+410
+00:26:32,082 --> 00:26:35,145
+because basically in your data source
+
+411
+00:26:36,045 --> 00:26:39,344
+in your delegates you have to compute
+
+412
+00:26:39,749 --> 00:26:44,785
+a size based on the phone to ring to
+using this label
+
+413
+00:26:45,109 --> 00:26:48,183
+and then yourself is
+
+414
+00:26:48,849 --> 00:26:52,900
+implemented with the label or so you're
+basically duplicating code
+
+415
+00:26:53,359 --> 00:26:57,378
+and that's what great so
+
+416
+00:26:57,549 --> 00:27:01,646
+what I'm going to do now is agree to use
+the exact same connection to you
+
+417
+00:27:02,519 --> 00:27:05,528
+the same flow layout the same cell class
+
+418
+00:27:05,609 --> 00:27:09,830
+I'm not going to change to a different
+layout
+
+419
+00:27:09,083 --> 00:27:13,120
+I'm just going to enable surprising
+sounds
+
+420
+00:27:14,002 --> 00:27:19,231
+on you I collection you floated out and
+that's what we had
+
+421
+00:27:19,429 --> 00:27:22,496
+its dynamically sized
+
+422
+00:27:23,099 --> 00:27:28,101
+floated out steelworks the same usual
+way
+
+423
+00:27:28,299 --> 00:27:32,330
+by dynamically plowing adding said House
+
+424
+00:27:32,033 --> 00:27:36,044
+line by line and it's a new feature
+
+425
+00:27:36,044 --> 00:27:39,263
+in you I correction you floated out the
+only thing you have to do
+
+426
+00:27:39,659 --> 00:27:42,830
+is to have yourself class
+
+427
+00:27:42,083 --> 00:27:45,512
+imprinted with us totally out or
+
+428
+00:27:46,259 --> 00:27:53,259
+using size that fits so
+
+429
+00:27:58,029 --> 00:28:01,086
+what do you size sales
+
+430
+00:28:01,599 --> 00:28:06,960
+with you i connection with you the usual
+way the classic
+
+431
+00:28:06,096 --> 00:28:09,645
+way to size items on screen
+
+432
+00:28:10,509 --> 00:28:13,593
+with a connection with you is to
+actually have the layout
+
+433
+00:28:14,349 --> 00:28:18,960
+compute I terms size and position on
+screen
+
+434
+00:28:18,096 --> 00:28:22,119
+so in that case and that was what was
+happening with
+
+435
+00:28:23,019 --> 00:28:26,428
+I with 6 and a US$7
+
+436
+00:28:26,599 --> 00:28:30,710
+are the question you lay out defied
+
+437
+00:28:30,071 --> 00:28:33,290
+everything but fair is just
+
+438
+00:28:33,929 --> 00:28:38,220
+we are just in forcing aside from the
+cell
+
+439
+00:28:38,022 --> 00:28:41,351
+so US age we riding
+
+440
+00:28:41,549 --> 00:28:44,578
+this self sizing sales mode
+
+441
+00:28:44,839 --> 00:28:49,200
+which mean that's just like with us
+tableview
+
+442
+00:28:49,002 --> 00:28:52,401
+you can actually use constraints on
+yourself
+
+443
+00:28:52,599 --> 00:28:55,642
+thank you or if you're using
+
+444
+00:28:56,029 --> 00:29:02,043
+money or layout just have to ride side
+that fits
+
+445
+00:29:02,169 --> 00:29:05,175
+but when setting sales
+
+446
+00:29:05,769 --> 00:29:10,826
+own screen was a connection with you a
+note but the computer a set of
+
+447
+00:29:11,339 --> 00:29:15,371
+after use ed in B that reduce we have
+
+448
+00:29:15,659 --> 00:29:18,697
+position size but all things like
+
+449
+00:29:19,039 --> 00:29:22,200
+I'm up or even transform
+
+450
+00:29:22,002 --> 00:29:26,014
+and we are actually opening thats
+
+451
+00:29:26,032 --> 00:29:29,491
+also at the cell level it mean that's
+
+452
+00:29:29,779 --> 00:29:34,070
+if you override prefer layout attributes
+
+453
+00:29:34,007 --> 00:29:37,776
+fitting attributes in your cancer class
+
+454
+00:29:37,839 --> 00:29:40,857
+you can actually twitch whether layout
+
+455
+00:29:41,019 --> 00:29:46,034
+itself computes its extremely powerful
+
+456
+00:29:46,169 --> 00:29:49,263
+so to summarize the first mode
+
+457
+00:29:50,109 --> 00:29:53,185
+the classic mode the layout decides
+
+458
+00:29:53,869 --> 00:29:56,925
+computer attributes and the collection
+use going to create a cell
+
+459
+00:29:57,429 --> 00:30:00,511
+and enforce that size
+
+460
+00:30:01,249 --> 00:30:05,440
+the second mode is rearmed is going to
+compute
+
+461
+00:30:05,044 --> 00:30:09,353
+an approximation provide attributes
+
+462
+00:30:09,749 --> 00:30:13,470
+the question who's going to do the usual
+saying
+
+463
+00:30:13,047 --> 00:30:16,108
+you creates a out and then
+
+464
+00:30:17,008 --> 00:30:20,057
+just their is going to add just if
+needed
+
+465
+00:30:20,057 --> 00:30:25,123
+that size and the server node
+
+466
+00:30:26,023 --> 00:30:30,172
+the yard gain estimate yet reviews
+
+467
+00:30:30,379 --> 00:30:33,425
+but then the cell can act on each week
+
+468
+00:30:33,839 --> 00:30:36,970
+any property on the layout attributes
+
+469
+00:30:36,097 --> 00:30:43,097
+including France for
+
+470
+00:30:45,429 --> 00:30:49,990
+so we're making thats available as a new
+feature of
+
+471
+00:30:49,099 --> 00:30:53,170
+you are corrections you for layout
+
+472
+00:30:54,007 --> 00:30:57,012
+ok any use that took
+
+473
+00:30:58,002 --> 00:31:02,005
+it's like three easy step 1:
+
+474
+00:31:02,023 --> 00:31:05,071
+we have a new property its estimated
+
+475
+00:31:05,071 --> 00:31:08,500
+item size:
+
+476
+00:31:09,139 --> 00:31:12,212
+because I'm correction view we're really
+talking about
+
+477
+00:31:12,869 --> 00:31:15,938
+with and height it's a CG size
+
+478
+00:31:16,559 --> 00:31:20,616
+but or from thats it's basically the
+same model
+
+479
+00:31:21,129 --> 00:31:25,183
+nuke describe for table views
+
+480
+00:31:25,669 --> 00:31:28,830
+how do you enable thats just sets
+
+481
+00:31:28,083 --> 00:31:32,052
+this property when non-zero CG size
+
+482
+00:31:32,799 --> 00:31:36,940
+that was that what step two is
+
+483
+00:31:36,094 --> 00:31:39,183
+there is no step 2:
+
+484
+00:31:40,029 --> 00:31:43,970
+if you want to use fair finding sellouts
+
+485
+00:31:43,097 --> 00:31:47,376
+in your own predictions you've shown a
+doubt its 1 like
+
+486
+00:31:48,249 --> 00:31:52,080
+that was my dinner I replaced item size:
+
+487
+00:31:52,008 --> 00:31:56,267
+with estimated item size: and that's it
+
+488
+00:31:56,339 --> 00:32:02,347
+that's critical
+
+489
+00:32:03,139 --> 00:32:07,183
+now I'd like to talk about
+
+490
+00:32:07,579 --> 00:32:11,200
+how that works and how that changes
+things
+
+491
+00:32:11,002 --> 00:32:14,028
+in the corrections you model
+
+492
+00:32:14,046 --> 00:32:18,375
+safe sizing heels really a collaboration
+between
+
+493
+00:32:18,789 --> 00:32:22,460
+36 layout the connection to you
+
+494
+00:32:22,046 --> 00:32:26,255
+careless out
+
+495
+00:32:26,669 --> 00:32:29,670
+the first being a funny out
+
+496
+00:32:29,769 --> 00:32:32,772
+is going to do is to compute
+
+497
+00:32:32,799 --> 00:32:35,870
+a first-pass a first approximation
+
+498
+00:32:36,509 --> 00:32:42,520
+of your layout and based on this
+information what's going to happen as
+
+499
+00:32:42,619 --> 00:32:46,686
+the correction view is going to teach
+you
+
+500
+00:32:47,289 --> 00:32:51,240
+creates missteps
+
+501
+00:32:51,024 --> 00:32:55,025
+we're going to send size these items
+
+502
+00:32:55,025 --> 00:32:58,604
+again using all the way out or sigh that
+fits
+
+503
+00:32:58,829 --> 00:33:03,000
+or preferred layout attributes for
+fitting
+
+504
+00:33:03,000 --> 00:33:07,369
+attributes and then
+
+505
+00:33:07,369 --> 00:33:12,700
+we r ok to be sending back that updated
+information
+
+506
+00:33:12,007 --> 00:33:16,116
+to the layout the layout can now decide
+
+507
+00:33:16,809 --> 00:33:21,940
+if it wants to react to that
+
+508
+00:33:21,094 --> 00:33:24,583
+in actually said and fine or
+
+509
+00:33:25,429 --> 00:33:29,476
+layout attributes we need work to reduce
+place there's
+
+510
+00:33:29,899 --> 00:33:34,750
+on-screen so a very important thing
+
+511
+00:33:34,075 --> 00:33:38,224
+about this mother is its actually the
+same old are you
+
+512
+00:33:38,899 --> 00:33:41,973
+were using miss correction you so layout
+
+513
+00:33:42,639 --> 00:33:46,683
+is in charge and is always in charge
+
+514
+00:33:47,079 --> 00:33:50,128
+but the catch is
+
+515
+00:33:50,569 --> 00:33:54,980
+now we have the way to actually
+communicate
+
+516
+00:33:54,098 --> 00:33:58,100
+to the layout thats maybe we should
+actually
+
+517
+00:33:59,000 --> 00:34:04,299
+I just things because of their size may
+be slightly different
+
+518
+00:34:04,299 --> 00:34:09,480
+from this first approximation we
+completed before
+
+519
+00:34:09,048 --> 00:34:13,074
+that's up very jittery an extremely
+powerful
+
+520
+00:34:13,074 --> 00:34:16,753
+mechanism so
+
+521
+00:34:17,419 --> 00:34:20,690
+no I'd like to talk about
+
+522
+00:34:20,069 --> 00:34:23,498
+custom layouts and smart invitation
+
+523
+00:34:24,119 --> 00:34:27,123
+but
+
+524
+00:34:27,159 --> 00:34:30,980
+first I'm going to refresh your memory
+about how
+
+525
+00:34:30,098 --> 00:34:35,257
+correction view layout in politician
+works
+
+526
+00:34:36,139 --> 00:34:39,208
+so if you have a custom layout
+
+527
+00:34:39,829 --> 00:34:43,290
+if you cut it into a custom layout you
+know that's
+
+528
+00:34:43,029 --> 00:34:46,104
+the first time we try to prove
+themselves
+
+529
+00:34:47,004 --> 00:34:51,993
+or supernova reviews or decoration views
+on-screen
+
+530
+00:34:52,029 --> 00:34:56,041
+the first met her we are calling on your
+custom layout
+
+531
+00:34:56,149 --> 00:34:59,242
+is prefer layout
+
+532
+00:35:00,079 --> 00:35:04,130
+usually that's when you can actually
+
+533
+00:35:04,013 --> 00:35:07,642
+freaking cute things or cash
+
+534
+00:35:07,759 --> 00:35:10,791
+some attributes have
+
+535
+00:35:11,079 --> 00:35:16,155
+Eric idea but what's your layout is
+going to be
+
+536
+00:35:16,839 --> 00:35:20,888
+because Nick thing we're going to ask
+you is
+
+537
+00:35:21,329 --> 00:35:24,381
+the overall size
+
+538
+00:35:24,849 --> 00:35:28,875
+of your just on layout
+
+539
+00:35:29,109 --> 00:35:32,230
+and beat them thats and based on what's
+
+540
+00:35:32,023 --> 00:35:35,142
+section up this layout
+
+541
+00:35:35,349 --> 00:35:39,422
+we want to show on screen going to ask
+
+542
+00:35:40,079 --> 00:35:43,890
+the layout to provide
+
+543
+00:35:43,089 --> 00:35:46,478
+earliest of attributes
+
+544
+00:35:47,279 --> 00:35:50,730
+for I Thames in a given racked
+
+545
+00:35:50,073 --> 00:35:53,140
+for instance usury the he's able to
+bounce
+
+546
+00:35:54,004 --> 00:35:58,062
+all the collection de
+
+547
+00:35:58,098 --> 00:36:01,145
+based on this are attributes the next
+thing
+
+548
+00:36:02,045 --> 00:36:07,068
+is the correction you is going to do the
+usual work
+
+549
+00:36:07,068 --> 00:36:10,114
+of securian creating
+
+550
+00:36:11,014 --> 00:36:14,047
+say hours possibly corning size that
+fits
+
+551
+00:36:14,047 --> 00:36:18,145
+or applying to layout constraints
+
+552
+00:36:19,045 --> 00:36:24,054
+so in that case you would return
+
+553
+00:36:24,054 --> 00:36:27,083
+arm 6 in six-plus
+
+554
+00:36:27,569 --> 00:36:31,571
+this approach a review attributes
+describing what is
+
+555
+00:36:31,589 --> 00:36:35,060
+in this rack
+
+556
+00:36:35,006 --> 00:36:38,064
+now you might actually
+
+557
+00:36:38,064 --> 00:36:41,513
+later invalidate this layout
+
+558
+00:36:42,089 --> 00:36:46,141
+I for instance because you want to apply
+some special effects
+
+559
+00:36:46,609 --> 00:36:50,040
+when you scroll like a cover for all I
+
+560
+00:36:50,004 --> 00:36:55,033
+each are effect in that case you have
+two core
+
+561
+00:36:55,069 --> 00:36:58,650
+invalidate layouts which is basically a
+way
+
+562
+00:36:58,065 --> 00:37:03,098
+to tell the correction you that's okay
+we are starting to gain
+
+563
+00:37:03,098 --> 00:37:08,167
+what's going to happen is going to
+corporate or lay out a gain
+
+564
+00:37:09,049 --> 00:37:13,990
+and that 4-cycle stocks okay
+
+565
+00:37:13,099 --> 00:37:16,141
+so oh you speak
+
+566
+00:37:17,041 --> 00:37:20,117
+through the sole a small problem here
+
+567
+00:37:21,017 --> 00:37:26,074
+if each time week or are you calling
+validate layout
+
+568
+00:37:26,074 --> 00:37:29,106
+you after we compute all these
+attributes
+
+569
+00:37:30,006 --> 00:37:35,092
+not the best way to have I performance
+layout
+
+570
+00:37:35,092 --> 00:37:39,116
+so we actually have
+
+571
+00:37:40,016 --> 00:37:43,043
+a great solution for you for this
+problem
+
+572
+00:37:43,043 --> 00:37:46,064
+be lazy or smart
+
+573
+00:37:46,064 --> 00:37:50,043
+or leaving an spot which basically means
+
+574
+00:37:50,619 --> 00:37:53,642
+we compute only what you need
+
+575
+00:37:53,849 --> 00:37:57,160
+and that a strategy you can use
+
+576
+00:37:57,016 --> 00:38:00,205
+right now in iis7 wheels
+
+577
+00:38:00,349 --> 00:38:03,900
+something week or invalidation context
+
+578
+00:38:03,009 --> 00:38:06,478
+because that's a class that we
+introduced in the US
+
+579
+00:38:07,369 --> 00:38:11,680
+sever and this class
+
+580
+00:38:11,068 --> 00:38:15,187
+is basically a tour for your custom
+layout
+
+581
+00:38:15,799 --> 00:38:18,880
+to indicate what changed
+
+582
+00:38:18,088 --> 00:38:21,172
+because it's your layout so you know
+what to do
+
+583
+00:38:22,072 --> 00:38:25,077
+to invention context you know US seven
+were
+
+584
+00:38:26,022 --> 00:38:30,027
+leticia way to provide fine grain
+
+585
+00:38:30,027 --> 00:38:33,118
+information your layout when things are
+
+586
+00:38:34,018 --> 00:38:37,046
+invalidated
+
+587
+00:38:37,046 --> 00:38:40,127
+we were actually using the A's in many
+different contexts class
+
+588
+00:38:41,027 --> 00:38:44,081
+ready for things like partition
+
+589
+00:38:44,081 --> 00:38:48,094
+in you a petition you floated out and no
+
+590
+00:38:48,094 --> 00:38:52,177
+where you think that's force their
+sizing staffs
+
+591
+00:38:53,077 --> 00:38:56,121
+so US$7
+
+592
+00:38:57,021 --> 00:39:01,090
+when using the traditional text it's
+actually easy
+
+593
+00:39:01,279 --> 00:39:04,380
+you have to be fine a correction view
+
+594
+00:39:04,038 --> 00:39:07,977
+invalidation complex up last exposed at
+
+595
+00:39:08,319 --> 00:39:11,980
+your layout lever and
+
+596
+00:39:11,098 --> 00:39:14,197
+instead of corning invalidate layout
+which is the
+
+597
+00:39:15,097 --> 00:39:18,426
+very generates remove everything
+
+598
+00:39:19,299 --> 00:39:22,397
+I in validation method you can actually
+call or
+
+599
+00:39:23,279 --> 00:39:27,286
+invalidate layout with context and pass
+
+600
+00:39:27,349 --> 00:39:31,290
+an instance of your class where your
+probably
+
+601
+00:39:31,029 --> 00:39:34,046
+I added some information about what you
+should do
+
+602
+00:39:34,046 --> 00:39:39,345
+in a given invalidation situation
+
+603
+00:39:39,759 --> 00:39:42,763
+we also provided an override
+
+604
+00:39:42,799 --> 00:39:47,040
+point for a bounce change which ills are
+
+605
+00:39:47,004 --> 00:39:51,018
+a common thing you want to do so if
+you're a layout is continuously
+
+606
+00:39:51,018 --> 00:39:55,099
+invalidating on scrolling on bounce
+change
+
+607
+00:39:55,099 --> 00:39:58,142
+or rotation you can actually just a ride
+that's
+
+608
+00:39:59,042 --> 00:40:03,063
+and return your invitation context
+wheels information you can you
+
+609
+00:40:03,063 --> 00:40:09,063
+them you're right after filtration
+
+610
+00:40:09,063 --> 00:40:12,099
+we actually adage no US seven induce
+
+611
+00:40:12,099 --> 00:40:15,188
+invitation context two additional
+information
+
+612
+00:40:16,088 --> 00:40:19,175
+sometimes wherein we invalidates
+
+613
+00:40:20,075 --> 00:40:23,854
+it's because the data source changed
+
+614
+00:40:24,529 --> 00:40:27,750
+you have items coming in on
+
+615
+00:40:27,075 --> 00:40:31,044
+or out or we just have to invalidate
+
+616
+00:40:31,719 --> 00:40:35,781
+everything in some situations these were
+two properties
+
+617
+00:40:36,339 --> 00:40:39,406
+the correction you with setting up for
+you and you could use
+
+618
+00:40:40,009 --> 00:40:43,880
+in your layout implementation
+
+619
+00:40:43,088 --> 00:40:46,143
+so I US several in very difficult thanks
+were really
+
+620
+00:40:47,043 --> 00:40:50,722
+a class for your own use pasick
+
+621
+00:40:51,109 --> 00:40:55,150
+so what's changing in the US 8
+
+622
+00:40:55,015 --> 00:40:58,104
+now US age you need additional context
+
+623
+00:40:59,004 --> 00:41:03,803
+our real way we establish a
+communication between
+
+624
+00:41:03,839 --> 00:41:07,841
+your way out and the corrections you
+
+625
+00:41:07,859 --> 00:41:12,460
+you can tell the correction view that's
+
+626
+00:41:12,046 --> 00:41:18,114
+here is my invalidation situation maybe
+you can actually help me with that
+
+627
+00:41:19,014 --> 00:41:22,021
+and information you can pass
+
+628
+00:41:22,021 --> 00:41:25,026
+the correction view can be useful for
+things like
+
+629
+00:41:25,071 --> 00:41:29,970
+high-performance floating editors sticky
+rice like in tableview
+
+630
+00:41:30,609 --> 00:41:33,655
+when you scroll and you have this
+section
+
+631
+00:41:34,069 --> 00:41:37,830
+Heather on top
+
+632
+00:41:37,083 --> 00:41:42,352
+and the use cases Sep citing steps
+
+633
+00:41:43,099 --> 00:41:48,560
+apps
+
+634
+00:41:48,056 --> 00:41:51,131
+because when sales can actually change
+their size
+
+635
+00:41:52,031 --> 00:41:56,116
+it might actually change overall
+correlation view concise
+
+636
+00:41:57,016 --> 00:42:00,215
+it might change the upsets and
+
+637
+00:42:00,359 --> 00:42:03,400
+in addition context are a great way to
+tell
+
+638
+00:42:03,004 --> 00:42:06,007
+the correction you that's your layout
+
+639
+00:42:06,043 --> 00:42:09,075
+is attacking without citing change
+
+640
+00:42:09,075 --> 00:42:12,084
+the first
+
+641
+00:42:13,065 --> 00:42:16,088
+fine grain invalidation
+
+642
+00:42:16,088 --> 00:42:20,140
+we added three new methods
+
+643
+00:42:21,004 --> 00:42:24,047
+on in very difficult action a US$8
+
+644
+00:42:24,083 --> 00:42:27,612
+invalided items that connects pass
+
+645
+00:42:28,359 --> 00:42:31,435
+invalidate super rotary elements of
+kinda
+
+646
+00:42:32,119 --> 00:42:35,630
+at index pass and invalidate
+
+647
+00:42:35,063 --> 00:42:39,071
+decoration views of kinda express
+
+648
+00:42:39,071 --> 00:42:45,123
+and you can access this later what's
+great about thats
+
+649
+00:42:46,023 --> 00:42:49,065
+first you can actually call
+
+650
+00:42:49,065 --> 00:42:53,091
+this methods several times we're going
+to aggregates
+
+651
+00:42:53,091 --> 00:42:57,106
+that information one that mean
+
+652
+00:42:58,006 --> 00:43:03,063
+for your layout let's take a very simple
+
+653
+00:43:03,063 --> 00:43:06,302
+rely layout
+
+654
+00:43:06,869 --> 00:43:10,070
+with Section Editors and
+
+655
+00:43:10,007 --> 00:43:15,022
+you want me implements a sticky header
+on top
+
+656
+00:43:15,022 --> 00:43:19,071
+in I US
+
+657
+00:43:19,071 --> 00:43:23,105
+7 you basically had to invalidate the
+entire
+
+658
+00:43:24,005 --> 00:43:27,014
+rack US
+
+659
+00:43:27,014 --> 00:43:30,040
+8 you only thing that is actually moving
+
+660
+00:43:30,004 --> 00:43:36,005
+if that's a problem to review so what
+you really want to use
+
+661
+00:43:36,041 --> 00:43:40,123
+is on your invitation context terror us
+
+662
+00:43:41,023 --> 00:43:45,039
+that's I'm invalidating thats appellate
+review
+
+663
+00:43:45,039 --> 00:43:50,088
+at index pass the road in that case
+
+664
+00:43:50,088 --> 00:43:54,147
+we know that only one thing is actually
+changing
+
+665
+00:43:55,047 --> 00:43:58,696
+so we're going to ask for a layout okay
+
+666
+00:43:59,119 --> 00:44:04,330
+give me an updated version over that's
+occurring to reach you
+
+667
+00:44:04,033 --> 00:44:07,040
+we are directing going to court this
+fine grain method
+
+668
+00:44:08,003 --> 00:44:12,050
+on your layout which is already here
+
+669
+00:44:12,005 --> 00:44:15,096
+may I don't use for support a review of
+kinda
+
+670
+00:44:16,041 --> 00:44:19,045
+section editor action express
+
+671
+00:44:19,081 --> 00:44:22,129
+and one think we are not going to do
+
+672
+00:44:23,029 --> 00:44:26,029
+escorting layout
+
+673
+00:44:26,029 --> 00:44:30,092
+a fuse for elements in Iraq so instead
+of asking you for
+
+674
+00:44:30,092 --> 00:44:34,104
+14 attributes
+
+675
+00:44:35,004 --> 00:44:38,043
+in that's invalidation situation
+
+676
+00:44:38,043 --> 00:44:41,962
+we are just going to ask you for a while
+its
+
+677
+00:44:42,349 --> 00:44:49,349
+I'm using for high-performance layouts
+years a situation where you want to use
+
+678
+00:44:54,004 --> 00:44:56,009
+an invitation context is for
+
+679
+00:44:56,045 --> 00:44:59,127
+sayre sizing selves if you want we
+implements
+
+680
+00:45:00,027 --> 00:45:03,052
+self-loathing sayre in your own custom
+layout
+
+681
+00:45:03,052 --> 00:45:06,101
+well you can actually tell
+
+682
+00:45:07,001 --> 00:45:10,045
+the correction you that's the common
+size
+
+683
+00:45:10,045 --> 00:45:13,954
+is going to change that sailed well as
+
+684
+00:45:14,359 --> 00:45:17,640
+bigger-than-expected so you at two
+
+685
+00:45:17,064 --> 00:45:21,129
+and your arch you're often cites and
+
+686
+00:45:22,029 --> 00:45:25,058
+you can do that's wheels the first thing
+
+687
+00:45:25,058 --> 00:45:30,059
+or property on the very difficult axed
+which is a common size adjustment
+
+688
+00:45:30,068 --> 00:45:33,099
+so you can give us the Delta
+
+689
+00:45:33,099 --> 00:45:36,101
+the change between what was computed
+before
+
+690
+00:45:37,019 --> 00:45:41,058
+and the new size but of course because
+
+691
+00:45:41,058 --> 00:45:45,107
+a cell might not be what will you
+expected
+
+692
+00:45:46,007 --> 00:45:49,074
+its mean that you're upset where you are
+
+693
+00:45:49,074 --> 00:45:53,089
+in the collection you can change and you
+can tell that
+
+694
+00:45:53,089 --> 00:45:56,141
+to you can sets the content of that
+
+695
+00:45:57,041 --> 00:46:00,250
+adjustment in the reddish in context
+
+696
+00:46:00,619 --> 00:46:04,200
+and man the picture is going to do the
+right thing
+
+697
+00:46:04,002 --> 00:46:07,063
+and at Shaw ste the position so
+
+698
+00:46:07,081 --> 00:46:11,098
+you don't see in the John from
+opposition to another
+
+699
+00:46:11,098 --> 00:46:14,100
+just because your layout updated itself
+
+700
+00:46:15,000 --> 00:46:19,009
+you either
+
+701
+00:46:19,009 --> 00:46:22,017
+feature we adding
+
+702
+00:46:22,098 --> 00:46:25,181
+to help you with us self-serving set out
+in your custom layout
+
+703
+00:46:26,081 --> 00:46:29,106
+is away invalidates
+
+704
+00:46:30,006 --> 00:46:34,054
+for specific attributes
+
+705
+00:46:34,054 --> 00:46:38,115
+and that's a new method all you a
+petition to lay out
+
+706
+00:46:39,015 --> 00:46:42,097
+if a cell return a different size for
+instance
+
+707
+00:46:42,097 --> 00:46:46,183
+different layout attributes meaning to
+ask you if
+
+708
+00:46:47,083 --> 00:46:50,172
+we should invalidate Sunday Oct and
+because we walked
+
+709
+00:46:51,072 --> 00:46:54,096
+fine grain invalidation
+
+710
+00:46:54,096 --> 00:46:57,167
+we have Nova right point
+
+711
+00:46:58,067 --> 00:47:02,486
+many additional tax for prefer
+attributes
+
+712
+00:47:03,089 --> 00:47:07,950
+based on the original or attributes
+
+713
+00:47:07,095 --> 00:47:11,234
+so gain first step your layout
+
+714
+00:47:12,089 --> 00:47:16,330
+computers a first approximation
+
+715
+00:47:16,033 --> 00:47:20,076
+we satisfies the staff's which my
+changes attribute
+
+716
+00:47:20,076 --> 00:47:23,675
+and we passed you these attributes
+
+717
+00:47:24,359 --> 00:47:28,000
+in your layout and a gain the layout is
+still
+
+718
+00:47:28,000 --> 00:47:35,000
+the final decision-maker what should be
+on screen
+
+719
+00:47:35,339 --> 00:47:41,060
+so just like to summarize that technique
+for a custom layouts
+
+720
+00:47:41,006 --> 00:47:44,105
+is a very simple line based
+
+721
+00:47:45,005 --> 00:47:48,066
+store layout something I bats
+
+722
+00:47:48,066 --> 00:47:52,094
+but that's my overall corrections you
+lay out I have
+
+723
+00:47:52,094 --> 00:47:56,101
+five sellouts and I going to compute
+
+724
+00:47:57,064 --> 00:48:00,743
+that first approximation by you think
+the usual or
+
+725
+00:48:01,319 --> 00:48:04,720
+layout attributes for elements in Iraq
+
+726
+00:48:04,072 --> 00:48:07,461
+so I'm going to assume that's all my
+stairs
+
+727
+00:48:08,109 --> 00:48:12,510
+at exactly the same size
+
+728
+00:48:12,051 --> 00:48:17,630
+but then collection is going to create
+this there's
+
+729
+00:48:18,089 --> 00:48:21,810
+and say our size and the for sale
+
+730
+00:48:21,081 --> 00:48:25,120
+let's say adjusting the size
+
+731
+00:48:25,849 --> 00:48:29,650
+based on size that fits or fully out
+
+732
+00:48:29,065 --> 00:48:33,094
+or preferred me out tributes
+
+733
+00:48:33,094 --> 00:48:36,097
+and abuse me because of that size change
+
+734
+00:48:36,097 --> 00:48:40,140
+my layout is not over when i waltz
+
+735
+00:48:41,004 --> 00:48:44,008
+so I we have to have dates
+
+736
+00:48:44,044 --> 00:48:48,068
+the position for is all the steps
+
+737
+00:48:48,068 --> 00:48:52,092
+so in my layout implementation
+
+738
+00:48:52,092 --> 00:48:55,541
+I can decide if a cell
+
+739
+00:48:56,369 --> 00:49:00,369
+as different attributes from what i
+computed before
+
+740
+00:49:00,369 --> 00:49:04,640
+that I should actually updates the is
+also sells
+
+741
+00:49:04,064 --> 00:49:07,088
+attributes for the reals
+
+742
+00:49:07,088 --> 00:49:11,116
+one last problem migration you put on
+size
+
+743
+00:49:12,016 --> 00:49:15,050
+is no longer are correct
+
+744
+00:49:15,005 --> 00:49:22,005
+if I want to make that call system so in
+my in addition context
+
+745
+00:49:24,016 --> 00:49:27,045
+I'm going to tell the correction you
+that's
+
+746
+00:49:27,045 --> 00:49:31,141
+we should ajuste connections you put in
+size
+
+747
+00:49:32,041 --> 00:49:35,049
+and actually it's not the
+
+748
+00:49:35,049 --> 00:49:40,122
+out only thing I need to do because my
+previous state whereas
+
+749
+00:49:41,022 --> 00:49:44,079
+three sellouts in this was able to
+bounce
+
+750
+00:49:44,079 --> 00:49:47,138
+mystery those for sale to sickle cell
+and part
+
+751
+00:49:47,849 --> 00:49:50,851
+other sorts out for the next thing
+
+752
+00:49:50,869 --> 00:49:54,910
+is tending the corrections you that's
+
+753
+00:49:54,091 --> 00:49:57,127
+based on this new seller information
+
+754
+00:49:58,027 --> 00:50:01,080
+we need to actually adjust the offsets
+
+755
+00:50:01,008 --> 00:50:04,051
+so be sure to be we r in the exact same
+
+756
+00:50:05,023 --> 00:50:11,052
+States
+
+757
+00:50:11,052 --> 00:50:14,151
+it's of course completely lay out
+specific you could imagine using this
+
+758
+00:50:15,051 --> 00:50:16,106
+technique for
+
+759
+00:50:17,006 --> 00:50:21,053
+circle layouts line layout screen
+layouts
+
+760
+00:50:21,053 --> 00:50:24,098
+be is more layouts up
+
+761
+00:50:24,098 --> 00:50:27,115
+it's an amazing way to implement
+
+762
+00:50:28,015 --> 00:50:31,028
+extremely high performance layouts
+
+763
+00:50:31,028 --> 00:50:34,119
+and add new features like dynamic type
+
+764
+00:50:35,019 --> 00:50:38,106
+and go through the like to bring back
+
+765
+00:50:39,006 --> 00:50:46,006
+Europe's
+
+766
+00:50:46,094 --> 00:50:49,103
+thanks so much love you
+
+767
+00:50:50,003 --> 00:50:53,008
+by the public on a theme here I
+
+768
+00:50:53,008 --> 00:50:56,092
+that is we've brought felt siding fells
+
+769
+00:50:56,092 --> 00:51:00,141
+tableview brought self I think cells to
+collection view in the former flow
+
+770
+00:51:01,041 --> 00:51:01,050
+layout
+
+771
+00:51:02,031 --> 00:51:06,073
+and we've also brought fell sizing cells
+to your custom layout
+
+772
+00:51:06,073 --> 00:51:09,120
+if you choose to adopt that methodology
+
+773
+00:51:10,002 --> 00:51:15,008
+I so what I want you to go home with his
+remember that every app
+
+774
+00:51:15,026 --> 00:51:18,099
+should be adopting dynamic type if
+you've got text in your app that is
+
+775
+00:51:18,099 --> 00:51:20,107
+which I imagine if every single one of
+them
+
+776
+00:51:21,079 --> 00:51:24,163
+II when you're doing your
+
+777
+00:51:25,063 --> 00:51:29,148
+think about using self sizing cells
+it'll probably help your cause
+
+778
+00:51:30,048 --> 00:51:33,146
+and if you're using collection viewer
+specifically
+
+779
+00:51:34,046 --> 00:51:38,050
+if you are the author uva custom
+collection view layout
+
+780
+00:51:38,005 --> 00:51:42,090
+this I can't stress enough use
+invalidation contact
+
+781
+00:51:43,035 --> 00:51:46,054
+this is like the key to the world for
+writing
+
+782
+00:51:46,054 --> 00:51:49,056
+high-performance layout in collection
+view
+
+783
+00:51:49,056 --> 00:51:52,063
+in fact things were going to the lab
+
+784
+00:51:52,063 --> 00:51:56,071
+right after this I'm I know some people
+are going to come with
+
+785
+00:51:57,043 --> 00:52:00,472
+performance I questions
+
+786
+00:52:00,859 --> 00:52:04,290
+I'm going to tell you my first question
+for you
+
+787
+00:52:04,029 --> 00:52:07,808
+will be are you using invalidation
+contact
+
+788
+00:52:08,069 --> 00:52:11,167
+and so if you're not learn how to use
+them they're spectacular
+
+789
+00:52:12,049 --> 00:52:15,770
+I there's another great talk on
+collection view
+
+790
+00:52:15,077 --> 00:52:18,096
+later today particularly for those who
+view who are
+
+791
+00:52:18,096 --> 00:52:23,114
+writing custom layouts this is advanced
+user interfaces with collection views
+
+792
+00:52:24,014 --> 00:52:27,993
+and there's some really great tips in
+here for how to
+
+793
+00:52:28,119 --> 00:52:32,166
+accomplish non-standard things and
+things that aren't built into
+
+794
+00:52:32,589 --> 00:52:35,600
+the flow out that we ship and get truly
+great
+
+795
+00:52:35,006 --> 00:52:39,245
+interfaces that use collection PO for
+more information
+
+796
+00:52:39,839 --> 00:52:43,150
+always feel free to contact our
+framework have endorsed Jake parents and
+
+797
+00:52:43,015 --> 00:52:44,724
+check out the documentation thanks to
+come
+

@@ -1,0 +1,3989 @@
+1
+00:00:12,879 --> 00:00:16,260
+good morning welcome to BBC in this is
+
+2
+00:00:16,026 --> 00:00:19,965
+new in the tax code
+
+3
+00:00:20,199 --> 00:00:24,630
+yes our a lot of new stuff yesterday
+today
+
+4
+00:00:24,063 --> 00:00:27,852
+we thought we would take a deep dive
+into a few specific areas
+
+5
+00:00:28,419 --> 00:00:32,860
+have Xcode sex before we do though
+
+6
+00:00:32,086 --> 00:00:35,137
+let's take a look at what happens with
+what time that we were here together
+
+7
+00:00:36,037 --> 00:00:40,064
+I hope you guys are using and enjoying
+its good 5.1
+
+8
+00:00:40,064 --> 00:00:45,065
+since last year
+
+9
+00:00:45,065 --> 00:00:48,116
+one of the biggest new things that we
+added with support for
+
+10
+00:00:49,016 --> 00:00:55,110
+I laugh 64-bit and you have an amazing
+job adopting 64-bit your apt
+
+11
+00:00:56,001 --> 00:00:59,017
+to take full advantage of our latest
+devices
+
+12
+00:00:59,026 --> 00:01:05,925
+we've also made significant improvements
+for our layout in Interface Builder
+
+13
+00:01:06,159 --> 00:01:11,710
+and added new API's to make your own
+classes work with the bugger pick work
+
+14
+00:01:11,071 --> 00:01:15,096
+this fall
+
+15
+00:01:15,096 --> 00:01:22,096
+will be releasing Xcode sex with an even
+more beautiful and functional interface
+
+16
+00:01:22,979 --> 00:01:29,979
+to go along with with 10 yosemite let's
+take a quick look at some of the new
+
+17
+00:01:30,032 --> 00:01:31,076
+features an ex had sex
+
+18
+00:01:31,076 --> 00:01:37,133
+first of all we have a brand new
+programming language for Copa
+
+19
+00:01:38,033 --> 00:01:39,037
+development called swept
+
+20
+00:01:39,073 --> 00:01:42,167
+and sweaters etc reading up on its own
+
+21
+00:01:43,067 --> 00:01:49,083
+but we didn't stop there playgrounds
+provide alive and responsive environment
+
+22
+00:01:49,083 --> 00:01:50,105
+for you to develop code
+
+23
+00:01:51,005 --> 00:01:55,039
+whether you're exploring new
+technologies like stray cat physics
+
+24
+00:01:55,039 --> 00:01:55,878
+courses
+
+25
+00:01:56,229 --> 00:01:59,890
+or just playing around with swift itself
+you're going to love
+
+26
+00:01:59,089 --> 00:02:05,178
+the experience to play perhaps
+playgrounds also offer
+
+27
+00:02:06,078 --> 00:02:10,131
+a great learning environment the swift
+language guided tour
+
+28
+00:02:11,031 --> 00:02:14,048
+is actually a playground where you can
+try things out
+
+29
+00:02:14,048 --> 00:02:19,807
+right as you're reading and learning
+about swept and of course
+
+30
+00:02:20,239 --> 00:02:26,370
+swiftest fully integrated into Xcode
+everything from code completion
+
+31
+00:02:26,037 --> 00:02:29,073
+to connect from source in Interface
+Builder works beautifully with swept
+
+32
+00:02:29,073 --> 00:02:33,052
+when you're working in swept
+
+33
+00:02:33,709 --> 00:02:37,771
+Xcode knows if you have to see the
+interface for framework laughs
+
+34
+00:02:38,329 --> 00:02:43,393
+actual show it to you in swept and when
+you after a quick help
+
+35
+00:02:43,969 --> 00:02:50,969
+you get help in swept a quick up
+actually had another new track
+
+36
+00:02:51,269 --> 00:02:57,292
+0 messed up that build to
+
+37
+00:02:57,499 --> 00:03:01,040
+it we have another new track that works
+well with sweats and inferred pipes
+
+38
+00:03:01,004 --> 00:03:04,007
+if you're ever curious about what type
+is being inferred
+
+39
+00:03:04,034 --> 00:03:11,034
+by swept quick up can tell you and
+
+40
+00:03:11,879 --> 00:03:16,090
+you can freely make swept into your
+existing objective-c applications
+
+41
+00:03:16,009 --> 00:03:19,014
+will be showing you how easy that is
+
+42
+00:03:19,059 --> 00:03:26,059
+in a few minutes now let's talk about
+
+43
+00:03:27,689 --> 00:03:31,870
+some other tax codes design tools and
+the new features their
+
+44
+00:03:31,087 --> 00:03:36,906
+you're probably all familiar with using
+storyboards and develop your I OS
+
+45
+00:03:37,689 --> 00:03:37,780
+applications
+
+46
+00:03:38,599 --> 00:03:42,646
+an Xcode sex you can use to reports
+develop your life can applications as
+
+47
+00:03:43,069 --> 00:03:43,114
+well
+
+48
+00:03:43,519 --> 00:03:46,611
+NIOS
+
+49
+00:03:47,439 --> 00:03:50,650
+the new adopted by:
+
+50
+00:03:50,065 --> 00:03:53,764
+let you have a single story board for
+universal applications
+
+51
+00:03:54,349 --> 00:03:59,400
+while still retaining foale control over
+customizing your interface for both
+
+52
+00:03:59,859 --> 00:04:00,861
+iPhone and iPad
+
+53
+00:04:01,059 --> 00:04:06,980
+and if you use custom pancho your
+application
+
+54
+00:04:06,098 --> 00:04:10,126
+you can now see them right on the campus
+and Interface Builder
+
+55
+00:04:11,026 --> 00:04:18,026
+we have some brand new
+
+56
+00:04:20,769 --> 00:04:23,781
+level editor editors in Xcode 62
+
+57
+00:04:23,889 --> 00:04:27,990
+like thus make it level editor that lets
+you visually a sample seems
+
+58
+00:04:27,099 --> 00:04:34,099
+active sex has a brand new way to
+localize your applications
+
+59
+00:04:35,004 --> 00:04:40,005
+you can export call your local liable
+content into actually
+
+60
+00:04:40,005 --> 00:04:43,016
+which is the industry standard format
+that's understood by a lot of
+
+61
+00:04:43,061 --> 00:04:44,087
+translation services
+
+62
+00:04:44,087 --> 00:04:47,130
+and when you get those translations back
+
+63
+00:04:48,003 --> 00:04:51,097
+just import an actual will help you to
+merge Latin content
+
+64
+00:04:52,024 --> 00:04:56,423
+right into your project
+
+65
+00:04:56,639 --> 00:05:00,667
+and with Iowa State's support for
+frameworks
+
+66
+00:05:00,919 --> 00:05:07,690
+you can now build ID components just by
+adding a few attributes to your classes
+
+67
+00:05:07,069 --> 00:05:10,069
+you can get them to show operate in
+Ivy's campus
+
+68
+00:05:10,069 --> 00:05:13,608
+and configure them in the inspector
+
+69
+00:05:14,229 --> 00:05:18,251
+will be showing you how easy it is to
+make your views
+
+70
+00:05:18,449 --> 00:05:24,150
+into I B components
+
+71
+00:05:24,015 --> 00:05:29,068
+out actual sex makes debugging better
+than ever
+
+72
+00:05:29,068 --> 00:05:33,106
+often when you're debugging the using
+cues
+
+73
+00:05:34,006 --> 00:05:38,105
+it's not quite enough just to see the
+code that's running on the Q
+
+74
+00:05:39,005 --> 00:05:42,007
+so an excuse sex we now show you
+
+75
+00:05:42,025 --> 00:05:47,108
+how about block caught on to the Q also
+
+76
+00:05:48,008 --> 00:05:52,015
+when you're developing the new app
+extensions departing support is
+
+77
+00:05:52,015 --> 00:05:55,019
+easy and automatic for example appeared
+
+78
+00:05:55,055 --> 00:05:58,134
+developing it to debut extension just
+hit run Xcode
+
+79
+00:05:59,034 --> 00:06:03,233
+bring up notification center on the
+device an actual automatically attach to
+
+80
+00:06:03,539 --> 00:06:04,370
+your extension
+
+81
+00:06:04,037 --> 00:06:08,040
+for debugging
+
+82
+00:06:08,004 --> 00:06:11,773
+X good sex have some brand new debug
+ages
+
+83
+00:06:12,169 --> 00:06:15,930
+to help you identify problems with desk
+and file i/o
+
+84
+00:06:15,093 --> 00:06:19,180
+this game that work I'll
+
+85
+00:06:20,008 --> 00:06:25,847
+and viewed about going gives you deep
+inside individual problems
+
+86
+00:06:26,639 --> 00:06:30,642
+will be showing you how easy it is to
+identify and fix problems with your view
+
+87
+00:06:30,669 --> 00:06:31,712
+hierarchy and constraints
+
+88
+00:06:32,099 --> 00:06:36,161
+using view the bike
+
+89
+00:06:36,719 --> 00:06:40,520
+exco sex has some all-new
+
+90
+00:06:40,052 --> 00:06:43,411
+performance features as well
+
+91
+00:06:43,879 --> 00:06:49,885
+that will help you to make your app's
+faster and leader
+
+92
+00:06:50,479 --> 00:06:54,504
+our premier performance will instruments
+has a brand new interface
+
+93
+00:06:54,729 --> 00:06:58,810
+with the new workflows that make it
+easier than ever to analyzer app
+
+94
+00:06:58,081 --> 00:07:03,130
+performance
+
+95
+00:07:04,003 --> 00:07:07,592
+last year we introduce tax code server
+and one of the biggest request that we
+
+96
+00:07:07,889 --> 00:07:07,938
+got
+
+97
+00:07:08,379 --> 00:07:12,080
+was for the ability to customize what
+happens when you're running continuous
+
+98
+00:07:12,008 --> 00:07:13,657
+integration
+
+99
+00:07:13,729 --> 00:07:17,830
+so an excuse sex we've added support for
+traders to allow you to
+
+100
+00:07:17,083 --> 00:07:22,222
+to add custom behavior to your boss
+
+101
+00:07:22,969 --> 00:07:26,830
+and we've added support in the actually
+pass for a more
+
+102
+00:07:26,083 --> 00:07:31,792
+in Xcode am in Xcode server for
+performance casts
+
+103
+00:07:32,539 --> 00:07:37,020
+its easy to make a performance past you
+just wrap your code
+
+104
+00:07:37,002 --> 00:07:41,371
+in a measure block performance pass
+
+105
+00:07:41,389 --> 00:07:44,475
+what Xcode measure the speed your code
+
+106
+00:07:45,249 --> 00:07:49,347
+and tell you whenever it has improved
+regressed
+
+107
+00:07:50,229 --> 00:07:53,276
+and in order to help you to make your
+apt even faster
+
+108
+00:07:53,699 --> 00:07:58,793
+you can now profile your performance
+passed directly in instruments
+
+109
+00:07:59,639 --> 00:08:06,639
+with just a choice from this context
+menu
+
+110
+00:08:09,059 --> 00:08:16,059
+it from little things right Xcode also
+includes all new reports
+
+111
+00:08:16,071 --> 00:08:20,152
+that show you exactly higher performance
+tests are doing and world
+
+112
+00:08:21,052 --> 00:08:25,086
+will be showing you how easy it is to
+start writing performance pass for your
+
+113
+00:08:25,086 --> 00:08:25,161
+projects
+
+114
+00:08:26,061 --> 00:08:31,085
+and using them to make your out better
+so that's just
+
+115
+00:08:31,085 --> 00:08:35,088
+a quick two were have some love the
+feature areas in Xcode sex and now we'd
+
+116
+00:08:36,015 --> 00:08:36,021
+like to die
+
+117
+00:08:36,075 --> 00:08:39,994
+diving deeper and give you a detailed
+look and a few other things
+
+118
+00:08:40,669 --> 00:08:43,790
+areas to get us started with that
+
+119
+00:08:43,079 --> 00:08:49,131
+let me introduce Daniel dunbar thanks
+Mike
+
+120
+00:08:50,031 --> 00:08:55,031
+this talk is called what's new in Xcode
+and obviously the big new thing this
+
+121
+00:08:55,031 --> 00:08:55,095
+year
+
+122
+00:08:55,095 --> 00:08:59,132
+it swept I'm sure you're all really
+excited about this new language we
+
+123
+00:09:00,032 --> 00:09:01,041
+unveiled yesterday
+
+124
+00:09:01,041 --> 00:09:05,063
+I imagine many are wondering how quickly
+can I start using this
+
+125
+00:09:05,063 --> 00:09:10,087
+my own applications so like to kick off
+our team is this morning
+
+126
+00:09:10,087 --> 00:09:13,164
+by showing you just how easy it is
+integrates with into an existing
+
+127
+00:09:14,064 --> 00:09:17,100
+application we've created this new
+
+128
+00:09:18,000 --> 00:09:22,042
+photo scavenger gay let me show it to
+you now a game
+
+129
+00:09:22,042 --> 00:09:26,090
+is called shutterbugs when I open it up
+miltie
+
+130
+00:09:26,009 --> 00:09:30,066
+a game start with this great looking
+fine on screen that take the user right
+
+131
+00:09:31,047 --> 00:09:33,129
+into the game that's been working great
+
+132
+00:09:34,029 --> 00:09:37,084
+better app has really been taking off
+recently and users tell us
+
+133
+00:09:37,084 --> 00:09:42,086
+they want to be able to play multiple
+games at one time so for version two
+
+134
+00:09:42,086 --> 00:09:45,179
+we'd like to introduce a new games
+landing screen that shows users there in
+
+135
+00:09:46,079 --> 00:09:46,153
+progress
+
+136
+00:09:47,053 --> 00:09:50,145
+and complete games and of course we'd
+like to do it and swept
+
+137
+00:09:51,045 --> 00:09:54,108
+now my designers RT updated the
+storyboard
+
+138
+00:09:55,008 --> 00:09:58,037
+to include this tableview controller
+shown here
+
+139
+00:09:58,037 --> 00:10:02,080
+all we need to do to finish off this new
+feature implement the code for
+
+140
+00:10:02,008 --> 00:10:07,093
+so I know I'm gonna eventually want to
+cut themselves class for my table
+
+141
+00:10:08,065 --> 00:10:11,130
+so start with that in a goat abuse
+
+142
+00:10:12,003 --> 00:10:15,079
+and select new file from the pop-up menu
+a course
+
+143
+00:10:16,006 --> 00:10:21,073
+I wanna I O S Cocoa Touch glass and the
+first thing you'll notice on the screen
+
+144
+00:10:21,073 --> 00:10:24,087
+that there's a new language user at the
+bottom the let you
+
+145
+00:10:24,087 --> 00:10:27,094
+decide whether you want a swift or in
+Objective C Class
+
+146
+00:10:27,094 --> 00:10:30,112
+course I want swept and in this case
+
+147
+00:10:31,012 --> 00:10:34,085
+I wanna subclass buit will be cell a
+call it
+
+148
+00:10:34,085 --> 00:10:38,127
+games table view cell job that in my
+project
+
+149
+00:10:39,027 --> 00:10:42,104
+annex could take me to the source the
+subclass template
+
+150
+00:10:43,004 --> 00:10:47,013
+are a great way to get started with the
+new language so
+
+151
+00:10:47,094 --> 00:10:50,100
+for us the main thing will need it a
+couple
+
+152
+00:10:51,000 --> 00:10:54,038
+up properties that we can use to connect
+Ruit
+
+153
+00:10:54,038 --> 00:10:58,056
+so let me add that to start with as you
+can see
+
+154
+00:10:58,056 --> 00:11:02,060
+property declarations in sweat are very
+clean and simple
+
+155
+00:11:02,006 --> 00:11:06,087
+and we just needed to add this ID outlet
+attributes so that we could connect to
+
+156
+00:11:07,041 --> 00:11:07,069
+it
+
+157
+00:11:07,069 --> 00:11:10,073
+from Interface Builder now that's in
+place
+
+158
+00:11:10,073 --> 00:11:17,073
+let me go back to my storyboard so
+
+159
+00:11:17,095 --> 00:11:21,158
+also like Mike prototype cell and I need
+to associate a class with
+
+160
+00:11:22,058 --> 00:11:26,154
+by pulled on that menu either in its
+base builder has already recognized our
+
+161
+00:11:27,054 --> 00:11:29,121
+new class using are swept indexing
+support
+
+162
+00:11:30,021 --> 00:11:34,038
+just like games table view cell you may
+notice
+
+163
+00:11:34,038 --> 00:11:37,047
+there's a new model field here another
+great way
+
+164
+00:11:38,028 --> 00:11:41,035
+that Swift improve the coding experience
+is by officiating classes
+
+165
+00:11:41,098 --> 00:11:45,116
+with the models that their declared in
+that allows he short
+
+166
+00:11:46,016 --> 00:11:49,054
+comfortable class names while still
+ensuring that your classes
+
+167
+00:11:49,054 --> 00:11:54,060
+won't collide across targets and project
+with that in place
+
+168
+00:11:55,014 --> 00:12:00,018
+we can set up our our connections a
+close the utilities panel
+
+169
+00:12:00,054 --> 00:12:05,056
+and open our source code in the
+assistant editor and now
+
+170
+00:12:05,074 --> 00:12:08,141
+I can I can wire at my connections just
+like you would expect
+
+171
+00:12:09,041 --> 00:12:12,055
+set the name the state labor law
+
+172
+00:12:12,055 --> 00:12:15,099
+and we have a custom progress here yet
+
+173
+00:12:15,099 --> 00:12:18,113
+that should be enough to let us get
+started with our custom cell
+
+174
+00:12:19,013 --> 00:12:25,082
+now let's fill in the details of the
+Comptroller re-added the basic subclass
+
+175
+00:12:25,082 --> 00:12:25,141
+template
+
+176
+00:12:26,041 --> 00:12:30,058
+with that with a couple tweaks but we
+need to fill in the details
+
+177
+00:12:30,058 --> 00:12:33,091
+so the first thing that every controller
+class need
+
+178
+00:12:33,091 --> 00:12:36,169
+is access to the model data that it's
+going to present
+
+179
+00:12:37,069 --> 00:12:40,078
+for our application most of our model
+data is stored
+
+180
+00:12:40,078 --> 00:12:47,078
+in a user session class let me at a
+property to hold that now
+
+181
+00:12:49,031 --> 00:12:53,065
+I'll call it user session and declare
+its tight
+
+182
+00:12:53,065 --> 00:12:56,088
+naturally we have live issue support in
+sweat
+
+183
+00:12:56,088 --> 00:12:59,104
+and BiPAP this open I can see felony
+
+184
+00:13:00,004 --> 00:13:03,056
+there's an undeclared type here user
+session
+
+185
+00:13:03,056 --> 00:13:07,057
+haven't imported that class yet now in
+swift
+
+186
+00:13:07,066 --> 00:13:11,101
+all the classes in one target are
+automatically visible
+
+187
+00:13:12,001 --> 00:13:15,076
+each on the source miss wit
+implementation piles
+
+188
+00:13:15,076 --> 00:13:18,080
+you no longer need to worry about
+manually importing the headers
+
+189
+00:13:19,016 --> 00:13:22,016
+for each other classes that you use
+
+190
+00:13:22,016 --> 00:13:26,081
+get
+
+191
+00:13:26,081 --> 00:13:29,137
+however you do still need to import the
+modules
+
+192
+00:13:30,037 --> 00:13:34,043
+for the framework that you depend upon
+to go along with I O estate
+
+193
+00:13:34,097 --> 00:13:37,140
+new framework support Xcode now has
+support
+
+194
+00:13:38,004 --> 00:13:41,943
+for unit to find models Arab your own
+frameworks
+
+195
+00:13:42,339 --> 00:13:46,376
+and those models can be used in both
+swept and objective-c
+
+196
+00:13:46,709 --> 00:13:50,540
+we party state started taking advantage
+to that in our application
+
+197
+00:13:50,054 --> 00:13:55,055
+by moving all over model code: into this
+new core shutterbugs framework
+
+198
+00:13:55,064 --> 00:13:58,065
+vacancy
+
+199
+00:13:58,074 --> 00:14:01,082
+that means to use this in my proctor to
+fix this problem
+
+200
+00:14:02,054 --> 00:14:06,097
+all I need to do is tight import core
+shutterbugs
+
+201
+00:14:06,097 --> 00:14:09,104
+just like I would for any other
+framework on the system
+
+202
+00:14:10,004 --> 00:14:13,087
+and of course the air goes away
+
+203
+00:14:13,087 --> 00:14:16,138
+now our table view is gonna have two
+different sections
+
+204
+00:14:17,038 --> 00:14:21,067
+by 11 per the in progress games and then
+one for the complete games
+
+205
+00:14:21,067 --> 00:14:24,126
+so I want to start by creating utility
+method but let me easily get
+
+206
+00:14:25,026 --> 00:14:30,045
+the appropriate lists for each section
+
+207
+00:14:30,045 --> 00:14:34,113
+I'm gonna call it game list for section
+and what I want to return here
+
+208
+00:14:35,013 --> 00:14:38,077
+is the result up user sessions
+
+209
+00:14:38,077 --> 00:14:41,142
+get filter game last night you can see
+that
+
+210
+00:14:42,042 --> 00:14:45,110
+even though this is a method that we
+declared in our objectives the source
+
+211
+00:14:46,001 --> 00:14:46,047
+code
+
+212
+00:14:46,056 --> 00:14:49,058
+in another framework I still get code
+completion and
+
+213
+00:14:49,058 --> 00:14:53,115
+even the documentation for that method
+in mice with source code
+
+214
+00:14:54,015 --> 00:14:58,018
+so complete that out and what I want to
+get is the in progress list
+
+215
+00:14:58,045 --> 00:15:01,074
+when the section number 0
+
+216
+00:15:01,074 --> 00:15:06,117
+I'm also gonna add a cast here to a
+gamer it
+
+217
+00:15:07,017 --> 00:15:11,019
+what I'm doing here is taking advantage
+ups with tight collection support
+
+218
+00:15:11,037 --> 00:15:14,106
+the tell the compiler that each object
+in this array
+
+219
+00:15:15,006 --> 00:15:19,905
+is an instance at the gate my game class
+that way whenever I use this array later
+
+220
+00:15:19,959 --> 00:15:20,900
+in the code
+
+221
+00:15:20,009 --> 00:15:24,014
+was with compiler will know the exact
+height each object
+
+222
+00:15:25,004 --> 00:15:29,313
+one more utility I'd like in a table
+view you frequently want to get the data
+
+223
+00:15:29,709 --> 00:15:31,800
+associated with a particular cell
+
+224
+00:15:31,008 --> 00:15:34,057
+an accel as represented by an index to
+so created
+
+225
+00:15:35,029 --> 00:15:40,038
+up a method that lets me easily get the
+game for a particular index
+
+226
+00:15:40,038 --> 00:15:43,081
+in a call that one game for index Pat
+and it returns an
+
+227
+00:15:43,081 --> 00:15:46,145
+option on getting with those methods in
+place
+
+228
+00:15:47,045 --> 00:15:50,097
+should be easy to write our table the
+datasource
+
+229
+00:15:50,097 --> 00:15:53,173
+let me drop at it
+
+230
+00:15:54,073 --> 00:15:58,097
+what I'm doing here setting the number
+sections to be too
+
+231
+00:15:58,097 --> 00:16:01,175
+I'm gonna return an appropriate number
+rose for each section
+
+232
+00:16:02,075 --> 00:16:07,077
+using that first utility method yet and
+are used game for index pack
+
+233
+00:16:07,077 --> 00:16:11,132
+to easily get the particular game and
+then propagate its data into our custom
+
+234
+00:16:12,032 --> 00:16:12,097
+cell
+
+235
+00:16:12,097 --> 00:16:16,101
+whenever we need to DQ a new cell
+
+236
+00:16:17,037 --> 00:16:20,118
+and also added to prepare for Segway
+matted to set up a destination view
+
+237
+00:16:21,018 --> 00:16:21,101
+controllers
+
+238
+00:16:22,001 --> 00:16:26,080
+when the transition happens okay we're
+almost done
+
+239
+00:16:26,089 --> 00:16:29,860
+but I'd like to do one more thing before
+we call a controller
+
+240
+00:16:29,086 --> 00:16:33,093
+rap you can see that I'm Rd modifying
+the separator
+
+241
+00:16:33,093 --> 00:16:38,098
+inset on this table to to give our table
+a little bit of a custom look
+
+242
+00:16:38,098 --> 00:16:41,207
+that's alright but I've just heard about
+I O S 8
+
+243
+00:16:42,089 --> 00:16:47,160
+new separator affect property I'd like
+to try it out here
+
+244
+00:16:47,016 --> 00:16:50,099
+I know that it's called tableview that
+separator
+
+245
+00:16:50,099 --> 00:16:54,162
+fact but I can't remember exact object
+and i'm suppose two assigned to that
+
+246
+00:16:55,062 --> 00:16:56,521
+property
+
+247
+00:16:57,079 --> 00:17:00,350
+when X good six it we jumped a
+definition
+
+248
+00:17:00,035 --> 00:17:04,774
+it'll take us right to you a table view
+but it's rendered in swept
+
+249
+00:17:05,089 --> 00:17:08,280
+even though this is actually in
+Objective C header in the system
+
+250
+00:17:08,028 --> 00:17:08,112
+framework
+
+251
+00:17:09,012 --> 00:17:13,211
+Xcode has dynamically translated it to
+the swift interface just like the
+
+252
+00:17:13,319 --> 00:17:15,050
+compiler would see
+
+253
+00:17:15,005 --> 00:17:18,014
+and even though this is happening on the
+fly we take great care
+
+254
+00:17:18,014 --> 00:17:22,323
+to preserve all other API comment that
+you need to use these libraries
+
+255
+00:17:22,449 --> 00:17:24,280
+effectively
+
+256
+00:17:24,028 --> 00:17:27,063
+now that I'm here I can see that
+separator a fact
+
+257
+00:17:27,063 --> 00:17:30,095
+is a UI visual effect if I navigate on
+
+258
+00:17:30,095 --> 00:17:34,110
+on words that up now I remember
+
+259
+00:17:35,001 --> 00:17:39,068
+what I want the %um vibrancy of that
+munies a dark color style to go with
+
+260
+00:17:39,077 --> 00:17:40,125
+that
+
+261
+00:17:41,025 --> 00:17:46,102
+so let me add that Micah
+
+262
+00:17:47,002 --> 00:17:50,065
+now when I go to specify the style here
+I'm gonna take advantage
+
+263
+00:17:50,065 --> 00:17:53,146
+switched advance type imprints and that
+lets me type
+
+264
+00:17:54,046 --> 00:17:58,117
+just tight dot dark the compiler is
+going on automatically in
+
+265
+00:17:59,017 --> 00:18:02,028
+for the right enumeration type to use
+here
+
+266
+00:18:02,028 --> 00:18:06,040
+because it's obvious from the context
+that save me having to type the full and
+
+267
+00:18:06,004 --> 00:18:07,010
+numeration name
+
+268
+00:18:07,046 --> 00:18:10,645
+it can really save a lot of typing okay
+
+269
+00:18:11,059 --> 00:18:15,780
+that should do a prior controller but
+there's one last thing we need to set up
+
+270
+00:18:15,078 --> 00:18:19,090
+remember that user session property that
+I started off by creating
+
+271
+00:18:19,009 --> 00:18:23,107
+we've never initialized anywhere said to
+fix that let's take a very quick look at
+
+272
+00:18:24,088 --> 00:18:24,122
+the
+
+273
+00:18:25,022 --> 00:18:28,055
+other sites with development using yours
+with classes
+
+274
+00:18:28,055 --> 00:18:33,058
+inside objective-c the place that we
+want to initialize this object
+
+275
+00:18:33,085 --> 00:18:36,177
+is in the signing controllers prepare
+for Segway met
+
+276
+00:18:37,077 --> 00:18:42,077
+and if I go to signing controller United
+this is an objective-c file
+
+277
+00:18:42,077 --> 00:18:45,133
+and of course in objective-c before you
+use your classes
+
+278
+00:18:46,033 --> 00:18:50,064
+you need to import them but a class is
+defined in sweats so
+
+279
+00:18:50,064 --> 00:18:53,163
+how can we do that well when you're
+using swept in a target
+
+280
+00:18:54,063 --> 00:18:57,102
+Xcode what automatically generate a new
+header for you
+
+281
+00:18:58,002 --> 00:19:01,010
+that contains the declaration that each
+have your sweat classes
+
+282
+00:19:01,082 --> 00:19:06,178
+all that you need to do to use those
+buses it import that header
+
+283
+00:19:07,078 --> 00:19:10,357
+for this target no be called shutterbugs
+dash wept
+
+284
+00:19:11,059 --> 00:19:15,040
+and I've added important now he also
+noticed I'm taking advantage
+
+285
+00:19:15,004 --> 00:19:18,008
+a the at imports and tax in objective-c
+
+286
+00:19:18,008 --> 00:19:22,039
+because to to import my own core
+shutterbugs primer
+
+287
+00:19:22,039 --> 00:19:27,044
+so does in place I can fill in the rest
+to prepare for Segway
+
+288
+00:19:27,044 --> 00:19:32,115
+I get the games view controller and all
+set its user session property
+
+289
+00:19:33,015 --> 00:19:36,111
+way you'll notice is that even though
+gains table view controller
+
+290
+00:19:37,011 --> 00:19:40,025
+is in Objective C Class that we to find
+air
+
+291
+00:19:40,025 --> 00:19:44,096
+site is a swift class that we just a
+fine we can use it in objective-c
+
+292
+00:19:44,096 --> 00:19:47,177
+just like any other class and we can
+assign this property
+
+293
+00:19:48,077 --> 00:19:52,119
+and if I came back to this code later
+and I'd forgotten what the type was
+
+294
+00:19:53,019 --> 00:19:56,028
+I can even use quick help to get the
+view
+
+295
+00:19:56,028 --> 00:20:00,119
+as objective-c would see it it even
+includes the description on my property
+
+296
+00:20:01,019 --> 00:20:04,025
+even though I only ever wrote that one
+place
+
+297
+00:20:04,025 --> 00:20:07,109
+in mice with sore spot so it doesn't
+
+298
+00:20:08,009 --> 00:20:11,024
+with those in place but see how it looks
+
+299
+00:20:11,024 --> 00:20:14,063
+in a building run an Xcode will launch
+our app
+
+300
+00:20:14,063 --> 00:20:19,069
+in the iPhone by the simulator
+
+301
+00:20:19,069 --> 00:20:23,110
+there's a great-looking sign on screen
+if I click to play shutterbugs
+
+302
+00:20:24,001 --> 00:20:28,034
+there you have it a new landing screen
+completed Inc
+
+303
+00:20:28,043 --> 00:20:35,043
+completed entirely in sweat and with
+this great-looking by pretty effective
+
+304
+00:20:39,092 --> 00:20:42,127
+we've integrated switch support
+throughout Xcode 6
+
+305
+00:20:43,027 --> 00:20:46,074
+so that you can use the same great
+development features that your
+
+306
+00:20:46,074 --> 00:20:50,081
+are you familiar with to immediately
+start working with any language
+
+307
+00:20:51,044 --> 00:20:54,061
+and with that I like to turn things over
+to John Hess
+
+308
+00:20:54,061 --> 00:20:58,092
+to talk to you about our brand new tools
+for visual interface development
+
+309
+00:20:58,092 --> 00:21:04,158
+thanks
+
+310
+00:21:05,058 --> 00:21:08,092
+thanks Daniel I'd like to show all
+appear how you can take advantage of the
+
+311
+00:21:08,092 --> 00:21:09,138
+new features back said six
+
+312
+00:21:10,038 --> 00:21:13,717
+the design the visual aspect the
+application a tad over to the demo
+
+313
+00:21:14,059 --> 00:21:15,550
+missing
+
+314
+00:21:15,055 --> 00:21:18,123
+I have respect for my designer to
+implement a circular ImageView
+
+315
+00:21:19,023 --> 00:21:22,030
+it's gonna take us where images and by
+crop into a circle
+
+316
+00:21:22,003 --> 00:21:25,003
+and optionally be saturated color
+
+317
+00:21:25,003 --> 00:21:28,012
+now I'm finding Xcode new playground
+feature to be indispensable when working
+
+318
+00:21:29,002 --> 00:21:30,073
+on be just like that
+
+319
+00:21:30,091 --> 00:21:33,107
+I love giving being able to see the
+result in my code
+
+320
+00:21:34,007 --> 00:21:39,014
+side by side as I write my code I have a
+playground set up just for this
+
+321
+00:21:39,077 --> 00:21:43,082
+it start the sample image in europe a
+basic function to manipulate a graphics
+
+322
+00:21:44,027 --> 00:21:47,030
+contact and returning new image
+
+323
+00:21:47,003 --> 00:21:50,098
+well paced innovative new code they will
+take an animal
+
+324
+00:21:51,025 --> 00:21:54,114
+an impediment optionally be saturated
+
+325
+00:21:55,014 --> 00:21:58,018
+and two-sample call to render my image
+
+326
+00:21:58,054 --> 00:22:01,141
+here in the prime Wine I can see all the
+result in my code
+
+327
+00:22:02,041 --> 00:22:05,048
+and by pressing this button I can bring
+in a persistent preview
+
+328
+00:22:06,011 --> 00:22:10,830
+any %uh values that are starting image
+
+329
+00:22:10,929 --> 00:22:14,820
+in here that you out but right now all
+three look the same
+
+330
+00:22:14,082 --> 00:22:17,126
+because I haven't done anything the
+process the image I'm just taking my
+
+331
+00:22:18,026 --> 00:22:19,054
+source image
+
+332
+00:22:19,054 --> 00:22:22,060
+and drawing a rock at the destination
+okay
+
+333
+00:22:23,014 --> 00:22:27,035
+the first step is the crop to a circle
+America rated as a path
+
+334
+00:22:27,035 --> 00:22:30,114
+for the noble and thrive in our square
+at that the clipping path
+
+335
+00:22:31,014 --> 00:22:35,040
+and now we have circular images things
+look good
+
+336
+00:22:35,004 --> 00:22:38,103
+I'd also like a desaturase my image I
+mean it simply wash over it with the
+
+337
+00:22:39,039 --> 00:22:40,208
+white color
+
+338
+00:22:40,559 --> 00:22:45,200
+you the special court rafik 10 that
+attract out the color and said adding
+
+339
+00:22:45,002 --> 00:22:46,049
+white on top
+
+340
+00:22:46,067 --> 00:22:50,104
+and I can see that our third call
+produces a desaturated image
+
+341
+00:22:51,004 --> 00:22:56,027
+things a great I'm ready to start using
+this in my application
+
+342
+00:22:56,027 --> 00:23:02,054
+gonna grab a copy this code
+
+343
+00:23:02,054 --> 00:23:05,096
+and head over the mic what I've been
+working on
+
+344
+00:23:05,096 --> 00:23:08,111
+here's my prepare image function not
+implemented yet
+
+345
+00:23:09,011 --> 00:23:12,066
+so we're gonna pace than my coat on the
+playground and I'm ready to start using
+
+346
+00:23:12,066 --> 00:23:13,161
+that to my storyboard
+
+347
+00:23:14,061 --> 00:23:18,087
+all option click here open it in its
+just that
+
+348
+00:23:18,087 --> 00:23:21,091
+and down in the lower left corner you
+see the square BO
+
+349
+00:23:21,091 --> 00:23:25,147
+this is where I'd like my circular
+ImageView to water to be
+
+350
+00:23:26,047 --> 00:23:29,119
+and interpersonal there's an inspector I
+can people still in its essence
+
+351
+00:23:30,019 --> 00:23:33,023
+regular you I be on
+
+352
+00:23:33,023 --> 00:23:39,050
+of high Interface Builder auto we you'll
+see it build in the module name as well
+
+353
+00:23:39,005 --> 00:23:42,184
+my circular ImageView by with the
+finding a framework
+
+354
+00:23:42,679 --> 00:23:45,742
+while my story boards in the main
+application so the model name in the pot
+
+355
+00:23:46,309 --> 00:23:51,720
+name together complete the reference my
+class
+
+356
+00:23:51,072 --> 00:23:54,123
+now still awaits where here at this
+point
+
+357
+00:23:55,023 --> 00:23:58,044
+Interface Builder is doing what it
+always make a beloved doing
+
+358
+00:23:58,044 --> 00:24:02,050
+it saying this you a view will be a
+sensible circular ImageView
+
+359
+00:24:02,005 --> 00:24:06,564
+hour runtime a record six we can make
+any sense and the circular ImageView
+
+360
+00:24:07,059 --> 00:24:10,910
+at design time as well let me show you
+how to do that
+
+361
+00:24:10,091 --> 00:24:14,105
+we've added a couple new source after
+beard you can add your classes
+
+362
+00:24:15,005 --> 00:24:19,099
+the first is I be desirable goes right
+here at the copier class
+
+363
+00:24:19,099 --> 00:24:22,103
+goes in the same place for objective-c
+spelled a little bit differently
+
+364
+00:24:23,039 --> 00:24:27,096
+but has the exact same result
+interpersonal was able to pay per class
+
+365
+00:24:27,096 --> 00:24:30,122
+build our framework instantiated and
+render
+
+366
+00:24:31,022 --> 00:24:34,048
+live in the campus you can see here
+
+367
+00:24:34,048 --> 00:24:40,085
+now you may be wondering wears hats lol
+coming from
+
+368
+00:24:40,085 --> 00:24:43,130
+down here my source file I have
+overwritten the new method prepare for
+
+369
+00:24:44,003 --> 00:24:45,042
+InterBase dollar
+
+370
+00:24:45,069 --> 00:24:49,075
+this is going to be invoked honor view
+right before renders into the campus
+
+371
+00:24:49,075 --> 00:24:52,107
+and at the last minute chance for us to
+do any additional setup
+
+372
+00:24:53,007 --> 00:24:58,039
+here I'm simply making sure that we
+always have an image repair
+
+373
+00:24:58,039 --> 00:25:01,041
+now I like just configure my image
+
+374
+00:25:01,041 --> 00:25:05,098
+directly there based on their an offer I
+saturation as well
+
+375
+00:25:05,098 --> 00:25:08,104
+no problem we have two new store another
+news or Saturday a
+
+376
+00:25:09,058 --> 00:25:12,134
+I the inspector Paul I can put it here
+in front of my property
+
+377
+00:25:13,034 --> 00:25:16,983
+and when I returned Interface Builder
+
+378
+00:25:17,289 --> 00:25:22,480
+I can see an inspector they have two new
+bo2 directly drive these values
+
+379
+00:25:22,048 --> 00:25:25,377
+but pick another image alright
+
+380
+00:25:25,809 --> 00:25:28,820
+that looks great but when user comes
+here
+
+381
+00:25:28,082 --> 00:25:31,113
+I can refocus on this photograph
+
+382
+00:25:32,013 --> 00:25:35,282
+not distracted by the bright colors in
+this player image
+
+383
+00:25:35,399 --> 00:25:39,580
+that are saturating comes into play but
+it comes down to bed
+
+384
+00:25:39,058 --> 00:25:44,037
+can see the campus is upping highway and
+things were good
+
+385
+00:25:44,559 --> 00:25:47,630
+makes her look at another image ho Yanks
+
+386
+00:25:48,269 --> 00:25:51,322
+she gets wet and
+
+387
+00:25:51,799 --> 00:25:54,700
+not sure what's going on here but I
+suspect it probably has something to do
+
+388
+00:25:54,007 --> 00:25:57,048
+with my prepare image much and I just
+wrote
+
+389
+00:25:58,011 --> 00:26:02,012
+gonna go ahead and put a breakpoint
+there
+
+390
+00:26:02,021 --> 00:26:05,830
+and with my view selected I can't use
+
+391
+00:26:06,019 --> 00:26:10,340
+the bugs like the beers interprets voice
+and a cake topper request to render this
+
+392
+00:26:10,034 --> 00:26:11,060
+view why the campus
+
+393
+00:26:11,006 --> 00:26:18,006
+so that I can see just what's going on
+
+394
+00:26:20,006 --> 00:26:22,075
+now not sure the problem is here
+
+395
+00:26:23,029 --> 00:26:26,077
+but stepping into the code now actually
+I can see right away
+
+396
+00:26:26,077 --> 00:26:29,082
+bring up a quick help a quick work on
+this rectangle
+
+397
+00:26:30,027 --> 00:26:33,053
+I can see it really is a rectangle it's
+much wider than it is call
+
+398
+00:26:33,053 --> 00:26:36,072
+and Interface Builder taking a
+rectangular image my view is
+
+399
+00:26:36,072 --> 00:26:39,138
+in squishing it down and that's where
+we're getting this product image
+
+400
+00:26:40,038 --> 00:26:43,069
+I think what I want instead is to
+produce
+
+401
+00:26:43,069 --> 00:26:47,071
+a square image and draw the source image
+centered in the destination
+
+402
+00:26:47,071 --> 00:26:52,073
+interface dollars in automatically pick
+up my changes
+
+403
+00:26:52,073 --> 00:26:55,164
+rear-ended a campus and I can see we're
+in business things were great
+
+404
+00:26:56,064 --> 00:27:00,723
+alright I'm done with the scene
+
+405
+00:27:01,299 --> 00:27:05,110
+mine accidents that happen this is
+typically
+
+406
+00:27:05,011 --> 00:27:09,059
+the head over to my iPad storyboard and
+make much the same sad about it
+
+407
+00:27:09,059 --> 00:27:14,152
+because without had arrived at
+storyboard
+
+408
+00:27:15,052 --> 00:27:19,053
+and I can see that I have a lot of work
+to do. I haven't even started on the
+
+409
+00:27:19,062 --> 00:27:19,124
+scene yet
+
+410
+00:27:20,024 --> 00:27:23,107
+no problem Xcode 6 all this for us as
+well
+
+411
+00:27:24,007 --> 00:27:28,041
+we have a new feature universal story
+boards that allow it to build a single
+
+412
+00:27:28,041 --> 00:27:31,810
+storyboard target both the iPad and
+iPhone
+
+413
+00:27:32,179 --> 00:27:35,410
+gonna head back over to my iPhone
+storyboard thank you
+
+414
+00:27:35,041 --> 00:27:41,047
+and i wanna show you just how easy it is
+to get started with universal story
+
+415
+00:27:41,047 --> 00:27:41,095
+boards
+
+416
+00:27:41,095 --> 00:27:45,147
+and the file inspector
+
+417
+00:27:46,047 --> 00:27:49,756
+there's a new checkbox used by squatters
+I'm gonna go ahead and label them
+
+418
+00:27:50,179 --> 00:27:54,100
+size factors are foundational new
+technology reform
+
+419
+00:27:54,001 --> 00:27:57,050
+underpinnings the new adaptive user
+interfaces and I was a
+
+420
+00:27:57,059 --> 00:28:00,096
+what size boxes I can customize
+
+421
+00:28:00,096 --> 00:28:06,112
+which using constraints participate any
+to my way out adopting size matters
+
+422
+00:28:07,012 --> 00:28:11,014
+also upgrade all the same way to my
+storyboard to the new adaptive
+
+423
+00:28:11,032 --> 00:28:12,761
+counterparts from ISA
+
+424
+00:28:13,049 --> 00:28:16,640
+segways the for example no to present a
+popover on iPad
+
+425
+00:28:16,064 --> 00:28:19,095
+in a moral condition on the iPhone now
+
+426
+00:28:19,095 --> 00:28:24,064
+you can see Interface Builder is
+rendering my campus here as square
+
+427
+00:28:24,919 --> 00:28:27,983
+this is an abstract representation its
+met her mind you
+
+428
+00:28:28,559 --> 00:28:32,510
+you're not heading for specific device
+you're editing for all devices
+
+429
+00:28:32,051 --> 00:28:35,082
+if I wanna see how things look on
+specific device
+
+430
+00:28:35,082 --> 00:28:39,071
+I can open enhance preview editor an
+Ecotec
+
+431
+00:28:39,809 --> 00:28:43,440
+here you can see there are allowed as a
+great job
+
+432
+00:28:43,044 --> 00:28:46,090
+a trampoline my interface the screen
+have a porn site on
+
+433
+00:28:46,009 --> 00:28:51,046
+I can zoom out and I can add more
+
+434
+00:28:52,027 --> 00:28:55,060
+screens as well here's some interface
+will be presented
+
+435
+00:28:55,006 --> 00:28:58,080
+on an iPad in portrait and
+
+436
+00:28:59,034 --> 00:29:02,122
+you can see as well the auto layout has
+translated my eyes train all the way up
+
+437
+00:29:03,022 --> 00:29:06,036
+but I have a custom layout just for iPad
+
+438
+00:29:06,036 --> 00:29:09,120
+Karachi that would Peter well
+
+439
+00:29:10,002 --> 00:29:13,061
+but it started the first-order
+businesses that is part of our
+
+440
+00:29:13,079 --> 00:29:17,147
+should be short behind shorten it up and
+how Interface Builder
+
+441
+00:29:18,047 --> 00:29:21,082
+up at the conference Obama constraints
+from the brain to campus
+
+442
+00:29:21,082 --> 00:29:24,150
+and wall you can see they both got sore
+
+443
+00:29:25,005 --> 00:29:28,082
+well I'm editing both interfaces they
+want to do universal storyboard
+
+444
+00:29:29,027 --> 00:29:32,121
+how do I edit just wanted them me on do
+this change
+
+445
+00:29:33,021 --> 00:29:38,065
+down here in the bottom center at the
+campus is a new control
+
+446
+00:29:38,065 --> 00:29:42,122
+for picking which side last year adding
+then right now we're reading this I spot
+
+447
+00:29:43,022 --> 00:29:44,030
+for anywhere
+
+448
+00:29:44,003 --> 00:29:48,028
+at any high the basis for all them all
+layouts and Karen s
+
+449
+00:29:48,055 --> 00:29:51,089
+as represented as this choice here in
+the center
+
+450
+00:29:51,089 --> 00:29:55,103
+as I move away from the banner things
+get more specific
+
+451
+00:29:56,003 --> 00:29:59,132
+down here in the bottom right corner
+
+452
+00:29:59,159 --> 00:30:02,224
+is the regular where regular height
+layout it's the largest
+
+453
+00:30:02,809 --> 00:30:06,810
+and it's the basis of my iPad layout I'm
+going to use it
+
+454
+00:30:06,909 --> 00:30:10,280
+and Interface Builder enlarges the
+campus to remind me that I'm working
+
+455
+00:30:10,028 --> 00:30:15,102
+in a specific size box now but go ahead
+make the parts order again
+
+456
+00:30:16,002 --> 00:30:19,023
+and update the contents
+
+457
+00:30:19,023 --> 00:30:23,026
+and now you can see that the iPad
+
+458
+00:30:23,053 --> 00:30:26,087
+has changed while I thought has remained
+just wait I designed it
+
+459
+00:30:26,087 --> 00:30:29,276
+down here in the bottom left at the
+scene
+
+460
+00:30:30,059 --> 00:30:33,700
+I have a completely new way out in mind
+rather than as editing the constraint
+
+461
+00:30:33,007 --> 00:30:33,606
+conference
+
+462
+00:30:34,299 --> 00:30:39,325
+I want new constraints no problem off
+select all previous years
+
+463
+00:30:39,559 --> 00:30:42,750
+and have been a bit over clear the
+constraints
+
+464
+00:30:42,075 --> 00:30:45,734
+in only the size class and reposition
+
+465
+00:30:46,409 --> 00:30:53,409
+I'm gonna have the image front and
+center
+
+466
+00:30:56,048 --> 00:30:59,125
+read about their me a little our and
+
+467
+00:31:00,025 --> 00:31:04,034
+I signs the same issue arbitrarily I
+need to pay and its size
+
+468
+00:31:04,034 --> 00:31:09,087
+all start with an explosive with
+constraint and now
+
+469
+00:31:09,087 --> 00:31:12,121
+I said that the with should be you know
+some complimentary happened to be
+
+470
+00:31:13,021 --> 00:31:17,050
+120 points I want too high to be the
+same around and duplicating the constant
+
+471
+00:31:17,005 --> 00:31:18,012
+you since last year
+
+472
+00:31:19,002 --> 00:31:26,002
+I can add an aspect ratio constraint
+saying the weapon height should be equal
+
+473
+00:31:43,054 --> 00:31:47,058
+her
+
+474
+00:31:47,094 --> 00:31:48,139
+I could continue those at
+
+475
+00:31:49,039 --> 00:31:52,088
+position abuse underneath and have been
+a faithful gather many constraints
+
+476
+00:31:52,088 --> 00:31:55,169
+to produce an iPad layout there was
+unique that I've had her face while
+
+477
+00:31:56,069 --> 00:31:57,128
+maintaining my iPhone buyout
+
+478
+00:31:58,028 --> 00:32:01,297
+just the way that it was now they can
+turn it over
+
+479
+00:32:01,549 --> 00:32:08,549
+take can ordinary what's new with the
+biking and xxx
+
+480
+00:32:13,081 --> 00:32:14,084
+alright thanks John
+
+481
+00:32:15,011 --> 00:32:18,066
+morning so I just taken over the
+
+482
+00:32:18,066 --> 00:32:21,101
+for details screen from another engineer
+on our set a box team
+
+483
+00:32:22,001 --> 00:32:25,075
+love to give you a sneak peek at you I
+now okay
+
+484
+00:32:25,075 --> 00:32:32,075
+so the first thing I'm gonna do with
+them in Iran and then we will sign into
+
+485
+00:32:34,059 --> 00:32:34,151
+the game
+
+486
+00:32:35,051 --> 00:32:38,062
+on navigators in progress game
+
+487
+00:32:38,062 --> 00:32:42,090
+and I'm gonna click on this particular
+picture and then here we are at the
+
+488
+00:32:42,009 --> 00:32:43,041
+photo details
+
+489
+00:32:44,022 --> 00:32:47,034
+you I'm so what we're seeing in this
+case a
+
+490
+00:32:47,034 --> 00:32:51,116
+is a picture that paula talk we see a
+list of all the other players in the
+
+491
+00:32:52,016 --> 00:32:52,069
+game
+
+492
+00:32:52,069 --> 00:32:55,097
+along with comments they made on this
+particular photo
+
+493
+00:32:55,097 --> 00:33:01,105
+and whether they like it or not you know
+is I looked at this you I hear
+
+494
+00:33:02,077 --> 00:33:06,089
+I'm a little bit skeptical that all
+these players
+
+495
+00:33:06,089 --> 00:33:10,096
+are missing their picture so they're
+also in this kinda placeholder image and
+
+496
+00:33:10,096 --> 00:33:12,113
+that not something I'm expecting to see
+here
+
+497
+00:33:13,013 --> 00:33:16,097
+so let's go ahead and let's dig into
+that now
+
+498
+00:33:16,097 --> 00:33:19,162
+I'm relatively new to this Kobe but
+
+499
+00:33:20,062 --> 00:33:23,149
+I do know that our problem here it's
+going to be a want to place
+
+500
+00:33:24,049 --> 00:33:27,144
+so do you are going to be on the model
+side things either the that maybe the
+
+501
+00:33:28,044 --> 00:33:29,081
+image there just isn't there
+
+502
+00:33:29,081 --> 00:33:32,090
+or it's going to be around the you I
+thought it thanks we have the image data
+
+503
+00:33:33,071 --> 00:33:34,126
+but we're not pushing it to the screen
+
+504
+00:33:35,026 --> 00:33:38,065
+so we want we want to figure out exactly
+where a problem
+
+505
+00:33:38,065 --> 00:33:43,098
+so the the first they need to do here to
+figure out what you controller is
+
+506
+00:33:43,098 --> 00:33:44,142
+responsible for
+
+507
+00:33:45,042 --> 00:33:48,077
+this you here and I think
+
+508
+00:33:48,077 --> 00:33:51,083
+is this guy photo detailed new
+controller
+
+509
+00:33:51,083 --> 00:33:54,147
+so what I want to do is I want to set a
+breakpoint I in this
+
+510
+00:33:55,047 --> 00:33:59,088
+you did appear and then let's try to
+trigger that and see if
+
+511
+00:33:59,088 --> 00:34:02,120
+if we are in the right place when I get
+away
+
+512
+00:34:03,002 --> 00:34:06,028
+welcome back and
+
+513
+00:34:06,046 --> 00:34:09,114
+there we okay if the breakpoint good so
+probably in the right place
+
+514
+00:34:10,014 --> 00:34:14,023
+but I'd like to be really sure that were
+in the right place
+
+515
+00:34:14,023 --> 00:34:17,058
+and I'm gonna do that by using the brand
+new
+
+516
+00:34:17,058 --> 00:34:22,087
+quick look for you I D you an exco so
+now I can just mouse over this view here
+
+517
+00:34:22,087 --> 00:34:23,087
+to get the data tape
+
+518
+00:34:23,087 --> 00:34:26,138
+which is the view on by the view
+controller and I can click on our little
+
+519
+00:34:27,038 --> 00:34:27,119
+pocket button
+
+520
+00:34:28,019 --> 00:34:35,019
+and just like that I can see a rendering
+I can see a rendering a this viewer any
+
+521
+00:34:38,089 --> 00:34:39,135
+some placid you I view
+
+522
+00:34:40,035 --> 00:34:43,064
+rain your next call on stepping through
+my code and a course if you're
+
+523
+00:34:43,064 --> 00:34:44,343
+developing a Mac App
+
+524
+00:34:44,919 --> 00:34:48,360
+this works great for an issue 2 are
+
+525
+00:34:48,036 --> 00:34:51,081
+so now step one complete we know we're
+in the right place
+
+526
+00:34:51,081 --> 00:34:55,087
+good but we care about is the model
+
+527
+00:34:56,041 --> 00:35:00,053
+the model optics and I think our model
+objects
+
+528
+00:35:00,053 --> 00:35:05,085
+are these game comments looks like we
+have a game comment for every row of
+
+529
+00:35:05,085 --> 00:35:05,093
+data here
+
+530
+00:35:06,065 --> 00:35:10,080
+so these rows are backed by a game
+comment now
+
+531
+00:35:10,008 --> 00:35:14,065
+when I'm debugging I really love to use
+
+532
+00:35:15,037 --> 00:35:19,038
+quick look I'm a really big hole guy
+quick look is a really great way
+
+533
+00:35:19,047 --> 00:35:22,088
+to visualize my object when I'm stepping
+through my co
+
+534
+00:35:22,088 --> 00:35:25,120
+wouldn't it be great if we could have
+
+535
+00:35:26,002 --> 00:35:29,077
+custom quickly representations for our
+own classes
+
+536
+00:35:29,095 --> 00:35:32,102
+one fact now inside an expert you can do
+just that
+
+537
+00:35:33,065 --> 00:35:36,117
+we've gone through our project and done
+it all throughout our classes
+
+538
+00:35:37,017 --> 00:35:40,068
+let's see if we have one for this game
+comment there were investigating
+
+539
+00:35:40,068 --> 00:35:45,076
+and sure enough we do and what we'll see
+
+540
+00:35:45,076 --> 00:35:48,084
+is that somebody's implemented this new
+the ball
+
+541
+00:35:48,084 --> 00:35:51,163
+quick look object method so this is a
+method that you can implement in your
+
+542
+00:35:52,063 --> 00:35:56,147
+own classes and it's a matter that
+external call when you initiate a quick
+
+543
+00:35:57,047 --> 00:35:57,090
+look
+
+544
+00:35:57,009 --> 00:36:00,032
+from the water now
+
+545
+00:36:01,013 --> 00:36:04,088
+from this method you can return anything
+that has a built-in quick look inside
+
+546
+00:36:04,088 --> 00:36:04,167
+expert so
+
+547
+00:36:05,067 --> 00:36:10,073
+maybe a an image or a busy past or a
+string
+
+548
+00:36:11,027 --> 00:36:14,030
+for this case in attributed string
+
+549
+00:36:14,003 --> 00:36:17,056
+which is gonna let us have a little bit
+more complex visualization so we're
+
+550
+00:36:17,083 --> 00:36:17,162
+gonna be able to take
+
+551
+00:36:18,062 --> 00:36:21,069
+text and image and put those together in
+a nice
+
+552
+00:36:22,032 --> 00:36:26,114
+a nice visualization cover model of now
+I'm really curious how was he with the
+
+553
+00:36:27,014 --> 00:36:28,020
+section looks like
+
+554
+00:36:28,002 --> 00:36:31,014
+so let's go back to where we're paused
+
+555
+00:36:31,032 --> 00:36:34,034
+and I'm a mouse over our game comments
+array
+
+556
+00:36:34,034 --> 00:36:37,127
+I can see there's 3 upon which matches
+what I see on the screen that's good
+
+557
+00:36:38,027 --> 00:36:41,030
+and then a I'm just gonna press quick
+what button
+
+558
+00:36:41,003 --> 00:36:48,003
+bone just like that I'm seeing my model
+object exactly the way I wanna
+
+559
+00:36:51,001 --> 00:36:54,007
+intercourse with a narrow down through
+the and great
+
+560
+00:36:54,007 --> 00:36:57,016
+so now we know we've eliminated the
+model as being our
+
+561
+00:36:58,006 --> 00:37:01,032
+source in our problem here we can see
+the player images right here
+
+562
+00:37:01,086 --> 00:37:04,092
+so we know it's not a model side issue
+
+563
+00:37:04,092 --> 00:37:09,124
+so let's get ready this breakpoint in
+let's continue onward
+
+564
+00:37:10,024 --> 00:37:14,046
+okay so to the issue must be up here in
+the UI
+
+565
+00:37:14,046 --> 00:37:17,068
+and you know whatever review is
+responsible for
+
+566
+00:37:17,068 --> 00:37:22,071
+for drying this BTU I isn't doing its
+job
+
+567
+00:37:22,098 --> 00:37:27,122
+now like I said I'm i'm new to this code
+base I'm not really sure what views are
+
+568
+00:37:28,022 --> 00:37:29,048
+responsible
+
+569
+00:37:29,048 --> 00:37:32,136
+for pushing these particular pixels to
+the screen
+
+570
+00:37:33,036 --> 00:37:36,037
+how are we gonna deal with that how are
+we gonna
+
+571
+00:37:36,037 --> 00:37:39,049
+are willing to buck this issue
+
+572
+00:37:39,049 --> 00:37:43,055
+well Xcode 6 introduces a brand new way
+
+573
+00:37:43,055 --> 00:37:47,117
+to visualize your app when you're the
+bug so you can press this new to bug you
+
+574
+00:37:48,017 --> 00:37:50,026
+are given right here
+
+575
+00:37:50,026 --> 00:37:53,105
+in Xcode will poll in a representation
+you're tired you are
+
+576
+00:37:54,005 --> 00:37:57,014
+hierarchy right inside mexico where you
+can see things like
+
+577
+00:37:57,095 --> 00:38:00,166
+snapshots of all your views their frames
+
+578
+00:38:01,066 --> 00:38:03,075
+and all sorts of other interesting
+properties that when you combine them
+
+579
+00:38:04,056 --> 00:38:04,144
+together
+
+580
+00:38:05,044 --> 00:38:09,062
+they help to give you a really great
+understanding why your app
+
+581
+00:38:09,062 --> 00:38:12,126
+looks the way it does or maybe more
+importantly why it doesn't
+
+582
+00:38:13,026 --> 00:38:17,073
+quite match expectations so I can for
+example let's cook on this
+
+583
+00:38:17,073 --> 00:38:21,126
+this label here and open the inspector
+
+584
+00:38:22,026 --> 00:38:25,030
+and I can see that this is a UI label
+
+585
+00:38:25,066 --> 00:38:28,071
+I can see it's tax I can see is fought
+
+586
+00:38:28,071 --> 00:38:32,077
+I can see its fontcolor all the things
+that I'm used to seeing when I'm
+
+587
+00:38:33,031 --> 00:38:35,077
+designing my UI and I B
+
+588
+00:38:35,077 --> 00:38:38,138
+well I can see those right now wanna be
+bugging it as well
+
+589
+00:38:39,038 --> 00:38:43,134
+really really powerful so what we care
+about though is this
+
+590
+00:38:44,034 --> 00:38:48,068
+this'll picture right here so it's like
+that guy
+
+591
+00:38:48,068 --> 00:38:51,084
+and what I'm interested in seeing is
+what
+
+592
+00:38:51,084 --> 00:38:55,086
+cell owns a picture so what sells
+probably doing the wiring up a
+
+593
+00:38:55,086 --> 00:38:59,129
+the model data to the UI controls now I
+can use
+
+594
+00:39:00,029 --> 00:39:04,093
+Xcode jump or to see the entire view our
+key the selected
+
+595
+00:39:04,093 --> 00:39:07,175
+object and somebody go up here and Missy
+
+596
+00:39:08,075 --> 00:39:12,167
+that that view is in this game comment
+
+597
+00:39:13,067 --> 00:39:17,165
+table view cell so let's find out over
+here in the navigator
+
+598
+00:39:18,065 --> 00:39:21,099
+and it's this guy okay
+
+599
+00:39:21,099 --> 00:39:24,196
+looks like a very clean a very simple
+
+600
+00:39:25,096 --> 00:39:29,143
+class it has this use game comment
+
+601
+00:39:30,043 --> 00:39:35,075
+method which takes the model data and
+then it looks like it wires it up
+
+602
+00:39:35,075 --> 00:39:38,136
+to the UI controls so what I see here is
+a see that
+
+603
+00:39:39,036 --> 00:39:43,040
+the player's name is pushed into this
+player label
+
+604
+00:39:43,076 --> 00:39:47,091
+I see that the comment is pushed into
+the comment label
+
+605
+00:39:47,091 --> 00:39:51,115
+what I don't say as I don't see us
+taking that player image in pushing that
+
+606
+00:39:52,015 --> 00:39:55,077
+into anything so that's probably our
+problem here
+
+607
+00:39:55,077 --> 00:39:59,140
+and it was me it was really easy to find
+that using X cuz new Peter Parker
+
+608
+00:40:00,004 --> 00:40:03,092
+so I'll go ahead and fix that later and
+that is probably gonna take care on this
+
+609
+00:40:04,028 --> 00:40:08,112
+this missing image that we're seeing but
+you know
+
+610
+00:40:09,012 --> 00:40:13,099
+as I look at the UI here it doesn't
+quite match
+
+611
+00:40:13,099 --> 00:40:16,148
+doesn't quite match the design that I
+was looking at earlier with my designer
+
+612
+00:40:17,048 --> 00:40:20,143
+so this post actually be a little button
+right around here in the bottom left to
+
+613
+00:40:21,043 --> 00:40:22,122
+the picture
+
+614
+00:40:23,022 --> 00:40:26,093
+that lets me like this image from first
+to come to this you I'd say
+
+615
+00:40:26,093 --> 00:40:31,109
+I like polish picture right now i i
+can't do that
+
+616
+00:40:32,009 --> 00:40:36,036
+now the question then is where is there
+but
+
+617
+00:40:36,036 --> 00:40:40,094
+well mainland but was never added to the
+view hierarchy
+
+618
+00:40:40,094 --> 00:40:44,172
+may be trying out of screen somewhere
+maybe it's the wrong size
+
+619
+00:40:45,072 --> 00:40:49,072
+maybe it's album component is wrong
+maybe hiding behind another view
+
+620
+00:40:49,072 --> 00:40:52,094
+is also to really visual kinda problems
+
+621
+00:40:52,094 --> 00:40:55,102
+that we could have was control and
+they're all made really easy to track
+
+622
+00:40:56,074 --> 00:40:56,139
+down
+
+623
+00:40:57,039 --> 00:41:01,125
+with the new YouTube are so let's go
+back let's go back over your Xcode
+
+624
+00:41:02,025 --> 00:41:05,044
+and lets look at our view hierarchy
+answer what I want to do now there is
+
+625
+00:41:05,044 --> 00:41:07,133
+one explore this view our can look
+through and see
+
+626
+00:41:08,033 --> 00:41:11,039
+if if that money is in fact here
+
+627
+00:41:11,039 --> 00:41:15,056
+so the first thing i'll do is i'll just
+sorta twist this guy sideways
+
+628
+00:41:15,056 --> 00:41:18,068
+I wanna people hide summaries & reviews
+
+629
+00:41:18,068 --> 00:41:23,086
+sure
+
+630
+00:41:23,086 --> 00:41:27,104
+and then I wanna I wanna whole the use a
+par
+
+631
+00:41:28,004 --> 00:41:32,039
+so let's do that and hey
+
+632
+00:41:32,039 --> 00:41:35,110
+feel little something peeking out right
+back here
+
+633
+00:41:36,001 --> 00:41:39,002
+that could be a button but this still
+some stuff in the way
+
+634
+00:41:39,011 --> 00:41:42,090
+sewn to peel back some interviews in the
+front so I can just hide things from the
+
+635
+00:41:42,009 --> 00:41:44,041
+front backwards
+
+636
+00:41:45,022 --> 00:41:51,109
+yeah very nice
+
+637
+00:41:52,009 --> 00:41:55,051
+and sure enough are button is hanging
+out right here
+
+638
+00:41:55,051 --> 00:42:00,078
+so but select that and the next question
+I'm asking myself is and why is our
+
+639
+00:42:00,078 --> 00:42:00,151
+button
+
+640
+00:42:01,051 --> 00:42:05,076
+down here and i no reason auto layout in
+this project
+
+641
+00:42:05,076 --> 00:42:08,141
+so I wanna I'd like to look at the
+constraints that reason here so I can
+
+642
+00:42:09,041 --> 00:42:10,086
+show the constraints
+
+643
+00:42:10,086 --> 00:42:13,151
+for this particular view and just like
+that
+
+644
+00:42:14,051 --> 00:42:17,078
+Xcode hides all the other views that are
+relevant
+
+645
+00:42:17,078 --> 00:42:24,078
+inches me just the constraints with this
+particular control
+
+646
+00:42:28,001 --> 00:42:32,002
+and we can really easily see that the
+button is pinned to the bottom
+
+647
+00:42:32,002 --> 00:42:36,024
+left which is not where we want it we
+want a pin to the bottom
+
+648
+00:42:36,024 --> 00:42:40,092
+on the picture about so that's something
+that might be really hard to track down
+
+649
+00:42:40,092 --> 00:42:42,124
+before but is really easy
+
+650
+00:42:43,024 --> 00:42:46,069
+to track down now
+
+651
+00:42:46,069 --> 00:42:50,088
+okay so with Xcode 6
+
+652
+00:42:50,088 --> 00:42:53,173
+as we've seen the you have the ability
+to visualize your apt when you're
+
+653
+00:42:54,073 --> 00:42:55,088
+debugging
+
+654
+00:42:55,088 --> 00:42:59,093
+like never before you can create custom
+quick look representations
+
+655
+00:43:00,038 --> 00:43:03,050
+love your own classes that show your
+data
+
+656
+00:43:03,005 --> 00:43:06,005
+exactly the way you wanna see a
+
+657
+00:43:06,005 --> 00:43:11,020
+and you bugging well that adds an entire
+new dimension to the way you can explore
+
+658
+00:43:11,065 --> 00:43:14,154
+interact with your app runtime: really
+really powerful
+
+659
+00:43:15,054 --> 00:43:18,054
+and a unified really insightful as well
+
+660
+00:43:18,054 --> 00:43:21,083
+and with that like to turn it over to
+Kate's tone to talk a little bit more
+
+661
+00:43:21,083 --> 00:43:22,169
+about how we can enhance performance
+
+662
+00:43:23,069 --> 00:43:30,069
+cover-up kinda
+
+663
+00:43:30,072 --> 00:43:33,094
+thank you can it looks like we have a
+spectacular game coming together
+
+664
+00:43:33,094 --> 00:43:35,183
+we think our users are going to be
+really happy with a lot of these new
+
+665
+00:43:36,083 --> 00:43:36,090
+features
+
+666
+00:43:37,053 --> 00:43:41,084
+if we can just make sure that we should
+quality product of course that a lot of
+
+667
+00:43:41,084 --> 00:43:41,130
+pics
+
+668
+00:43:42,003 --> 00:43:45,018
+the development process is to make sure
+that what we're about to send out into
+
+669
+00:43:45,045 --> 00:43:45,051
+the world
+
+670
+00:43:46,005 --> 00:43:50,061
+is going to live up to expectations my
+team is done the right thing every step
+
+671
+00:43:50,061 --> 00:43:50,117
+of the way
+
+672
+00:43:51,017 --> 00:43:54,025
+we've tried to make sure that what we
+have is a product
+
+673
+00:43:54,025 --> 00:43:57,093
+that high quality because the course
+we've got a set a unit test
+
+674
+00:43:57,093 --> 00:44:00,114
+running so I got
+
+675
+00:44:01,014 --> 00:44:04,015
+the product up and running I can go to
+my test navigator
+
+676
+00:44:04,015 --> 00:44:07,076
+and the test navigator shows that I have
+several
+
+677
+00:44:07,076 --> 00:44:10,167
+32 the anatase here so I can go ahead
+and run knows one last time
+
+678
+00:44:11,067 --> 00:44:14,139
+make sure that when the game comes up we
+put it through its paces per green
+
+679
+00:44:15,039 --> 00:44:15,132
+across the board
+
+680
+00:44:16,032 --> 00:44:20,083
+looks good from a functional perspective
+the game is doing exactly what we expect
+
+681
+00:44:20,083 --> 00:44:23,092
+and that's great because I got one last
+change I want to make to the game
+
+682
+00:44:24,073 --> 00:44:27,077
+I was thinking about and tinkering with
+me filters to give
+
+683
+00:44:28,013 --> 00:44:32,015
+a little bit more life to our images
+specifically here are taking advantage
+
+684
+00:44:32,015 --> 00:44:35,051
+swept feature let me build an extension
+the UI
+
+685
+00:44:35,051 --> 00:44:38,060
+image quite so I can take an existing
++class
+
+686
+00:44:38,006 --> 00:44:42,017
+and add the ability to apply filters to
+it so I have a variety of filters here
+
+687
+00:44:42,071 --> 00:44:45,103
+the vignette filters when I was thinking
+about trying where
+
+688
+00:44:46,003 --> 00:44:49,068
+so maybe I should go ahead and build one
+more test but this time
+
+689
+00:44:49,068 --> 00:44:52,139
+a performance test to make sure it's
+going to live up to my expectations
+
+690
+00:44:53,039 --> 00:44:56,076
+34 heidi was going to ask for one
+
+691
+00:44:56,076 --> 00:45:03,076
+mean file pick a test case class you're
+probably already familiar with I'm going
+
+692
+00:45:04,005 --> 00:45:05,008
+to go ahead and use with
+
+693
+00:45:05,035 --> 00:45:08,077
+for that and you'll note that of course
+like all templates I have that choice
+
+694
+00:45:08,077 --> 00:45:09,108
+swifter objective-c
+
+695
+00:45:10,008 --> 00:45:13,056
+the tax code knows that I've been using
+Swiss throughout the conference so with
+
+696
+00:45:13,056 --> 00:45:13,120
+the default
+
+697
+00:45:14,002 --> 00:45:17,021
+for me want to call this for to
+
+698
+00:45:17,039 --> 00:45:20,087
+put in my existing group with my to
+
+699
+00:45:20,087 --> 00:45:23,142
+and a country that far from
+
+700
+00:45:24,042 --> 00:45:28,051
+so now I have what should be fairly
+familiar it's got the usual set up
+
+701
+00:45:28,051 --> 00:45:32,092
+and tear down method written into a it's
+got a functional tapped
+
+702
+00:45:32,092 --> 00:45:35,113
+we're not focused on me those today want
+to set those aside
+
+703
+00:45:36,013 --> 00:45:39,018
+and focus on the one new method that's
+been put in place
+
+704
+00:45:39,018 --> 00:45:43,052
+the ability to test for performing so
+I'm going to
+
+705
+00:45:43,052 --> 00:45:47,063
+test filter performance here and all I
+need to do
+
+706
+00:45:47,063 --> 00:45:52,065
+is fill in this measure block call now
+you saw the objective-c cent tax on a
+
+707
+00:45:52,065 --> 00:45:52,163
+slide earlier
+
+708
+00:45:53,063 --> 00:45:56,066
+the swift intact is really clean
+
+709
+00:45:56,066 --> 00:46:00,068
+it's just call to measure walk that
+passes one trillion closure
+
+710
+00:46:00,086 --> 00:46:03,088
+that does the actual work and so in this
+case
+
+711
+00:46:03,088 --> 00:46:06,112
+for my work I'm going to go ahead and
+fill in
+
+712
+00:46:07,012 --> 00:46:10,018
+a testament to pick up when the player
+images and then go ahead and apply
+
+713
+00:46:10,072 --> 00:46:11,105
+internet filter to
+
+714
+00:46:12,005 --> 00:46:15,017
+but the vineyard filters not part of my
+
+715
+00:46:15,017 --> 00:46:18,101
+test project so again we're getting a
+live issue here reminding me
+
+716
+00:46:19,001 --> 00:46:22,100
+but I don't have access to that class
+directly so all I need to do in
+
+717
+00:46:23,000 --> 00:46:27,006
+is important the shutterbug module
+
+718
+00:46:27,006 --> 00:46:30,034
+and I've everything I need excites the
+taft
+
+719
+00:46:30,034 --> 00:46:34,045
+indexing is found the taft I'm one click
+away from building my project
+
+720
+00:46:34,045 --> 00:46:38,089
+and running that tough and seeing just
+how long this takes it's going to run
+
+721
+00:46:38,089 --> 00:46:41,116
+number of times to get figure out how
+long it takes whether there's any
+
+722
+00:46:42,016 --> 00:46:42,091
+variation
+
+723
+00:46:42,091 --> 00:46:45,173
+and when it's done it will come exactly
+how long it took to run and what kind of
+
+724
+00:46:46,073 --> 00:46:47,112
+standard deviation I'm seeing
+
+725
+00:46:48,012 --> 00:46:51,080
+4 percent in this case some getting
+pretty consistent run to run
+
+726
+00:46:51,008 --> 00:46:54,076
+time summit sounds good but
+
+727
+00:46:55,048 --> 00:46:59,062
+taking a little longer than I wanted it
+to so what I'd really like to do
+
+728
+00:46:59,062 --> 00:47:02,103
+is twist this open and see that I
+haven't set a baseline haven't set a
+
+729
+00:47:03,003 --> 00:47:03,069
+target
+
+730
+00:47:03,069 --> 00:47:06,153
+from my timing and i really wanna the
+target I wanted something that was
+
+731
+00:47:07,053 --> 00:47:10,137
+snappy to live up to our users
+expectations so I can go to establish a
+
+732
+00:47:11,037 --> 00:47:11,044
+baseline
+
+733
+00:47:12,007 --> 00:47:15,035
+either based on what I have now for I
+can go in
+
+734
+00:47:15,035 --> 00:47:19,113
+at a patent say 0.25 seconds is more
+what I had in mind here
+
+735
+00:47:20,013 --> 00:47:23,079
+and now I'll get a reminder every time I
+run this tapped
+
+736
+00:47:23,079 --> 00:47:27,127
+but I'm not living up to expectations
+this test is going to fail
+
+737
+00:47:28,027 --> 00:47:33,072
+rad because it wasn't after we could
+take time to tinker with that but I
+
+738
+00:47:33,072 --> 00:47:33,160
+don't apply
+
+739
+00:47:34,006 --> 00:47:37,100
+a number of different filters as
+extensions to you I am in shares for me
+
+740
+00:47:38,054 --> 00:47:39,151
+just go back and choose another one of
+these
+
+741
+00:47:40,051 --> 00:47:45,059
+appointees for nor filter we bill
+
+742
+00:47:45,059 --> 00:47:48,088
+retest and make sure that that many
+expectations
+
+743
+00:47:48,088 --> 00:47:51,126
+looks good for all grain so across the
+board
+
+744
+00:47:52,026 --> 00:47:56,035
+were in great shape to ship this product
+what about had a problem that I wasn't
+
+745
+00:47:56,035 --> 00:47:57,090
+able to take care of here
+
+746
+00:47:57,009 --> 00:48:00,077
+what if I had a performance issue I
+needed to investigate well of course
+
+747
+00:48:01,058 --> 00:48:04,061
+instrument to be answered of such
+questions
+
+748
+00:48:04,061 --> 00:48:07,082
+instrument is a great way to get more
+detail about what's going on in your
+
+749
+00:48:07,082 --> 00:48:07,151
+project
+
+750
+00:48:08,051 --> 00:48:11,074
+cell I'm scooping up the context menu
+for this cast
+
+751
+00:48:11,074 --> 00:48:17,160
+and choose to profile that particular
+filter exercise behind the scenes were
+
+752
+00:48:18,006 --> 00:48:20,052
+gonna go ahead and built specifically
+for profiling
+
+753
+00:48:21,006 --> 00:48:26,060
+and launch instrument and now we get our
+first glimpse up in new instrument fewer
+
+754
+00:48:26,006 --> 00:48:29,020
+instrument has been overhauled
+dramatically this release both
+
+755
+00:48:29,074 --> 00:48:32,089
+to be consistent with the new OS 10
+yosemite
+
+756
+00:48:32,089 --> 00:48:35,093
+but also so that it's more familiar for
+people who are comfortable with Xcode
+
+757
+00:48:36,029 --> 00:48:37,064
+already
+
+758
+00:48:37,064 --> 00:48:41,100
+we start of with the temperature here I
+can see at a glance
+
+759
+00:48:42,000 --> 00:48:45,061
+want to buy from targeting 1 I'm
+planning on running
+
+760
+00:48:45,061 --> 00:48:48,138
+can find the right template to exercise
+what I'm looking for I'm just gonna look
+
+761
+00:48:49,038 --> 00:48:51,040
+at memory in this case
+
+762
+00:48:51,004 --> 00:48:56,026
+I can look at what I've been using
+recently for pick from the completely
+
+763
+00:48:56,062 --> 00:48:59,073
+watches that template I'm going to
+insurance proper
+
+764
+00:48:59,073 --> 00:49:02,074
+I mean sure its main window is also
+dramatically overhaul
+
+765
+00:49:02,083 --> 00:49:06,097
+the fee a few things at a glance one is
+that it's not immediately recording
+
+766
+00:49:06,097 --> 00:49:09,145
+how many times have you chosen a
+template founded it starts recording
+
+767
+00:49:10,045 --> 00:49:11,087
+immediately stop it
+
+768
+00:49:11,087 --> 00:49:14,106
+go back and tinker with the settings now
+we give you an option to go in and
+
+769
+00:49:15,006 --> 00:49:17,061
+change the settings before you record
+
+770
+00:49:17,061 --> 00:49:20,079
+or to go straight to record
+
+771
+00:49:20,079 --> 00:49:23,113
+so I'd like to do with be able to browse
+through make sure that got the settings
+
+772
+00:49:24,013 --> 00:49:24,089
+I want
+
+773
+00:49:24,089 --> 00:49:27,111
+any fear that the settings are now of
+centralized in the inspector
+
+774
+00:49:28,011 --> 00:49:32,052
+again for familiarity for Xcode users so
+I can make sure that my allocations to
+
+775
+00:49:32,052 --> 00:49:33,056
+intercept the way I want
+
+776
+00:49:33,092 --> 00:49:36,119
+my VM tracker set up the way I want and
+when it's all good
+
+777
+00:49:37,019 --> 00:49:40,072
+I go to New overhauled toolbar weaker
+
+778
+00:49:40,072 --> 00:49:45,073
+cleaner and taking a blessed screen real
+estate than ever to start recording
+
+779
+00:49:45,073 --> 00:49:48,116
+and we start recording and as always
+allocations is tracking
+
+780
+00:49:49,016 --> 00:49:53,032
+everything that's going on forgetting
+are a recording about Amalek regions
+
+781
+00:49:53,032 --> 00:49:57,101
+all the objective see objects everything
+we could possibly want
+
+782
+00:49:58,001 --> 00:50:01,006
+we can go and look at that a little bit
+more detail perhaps we'd like to filter
+
+783
+00:50:01,051 --> 00:50:02,051
+down to a subset
+
+784
+00:50:02,051 --> 00:50:06,060
+this while filtering is now just a
+simple quick contract no modifier keys
+
+785
+00:50:06,006 --> 00:50:12,031
+made
+
+786
+00:50:12,085 --> 00:50:15,109
+so I can see all kind to detail about
+all kinds of objects
+
+787
+00:50:16,009 --> 00:50:19,100
+by Camaro and on something like my first
+task of
+
+788
+00:50:20,000 --> 00:50:23,018
+I know that was allocated and of course
+swept object
+
+789
+00:50:23,018 --> 00:50:26,082
+are represented alongside everything
+else here we can see the module name
+
+790
+00:50:26,082 --> 00:50:31,097
+as well the classroom and get detail so
+I can say for this particular class
+
+791
+00:50:31,097 --> 00:50:35,135
+what inferences were allocated and when
+that inference was allocated
+
+792
+00:50:36,035 --> 00:50:40,102
+what stack trace Senate it came from so
+it on a detail right at your fingertips
+
+793
+00:50:41,002 --> 00:50:44,008
+and of course that carries over as well
+that if I want to look not just
+
+794
+00:50:44,062 --> 00:50:48,069
+individual object but overall statistics
+where objects coming from
+
+795
+00:50:49,032 --> 00:50:52,055
+I can see that on allocating about 15
+mags total
+
+796
+00:50:52,055 --> 00:50:55,063
+during the process for bringing the app
+up and running the task
+
+797
+00:50:55,063 --> 00:50:58,087
+so what part about is actually in my
+apply
+
+798
+00:50:58,087 --> 00:51:03,120
+nor filter well go ahead and filtered
+and we can see that it's just about 430
+
+799
+00:51:04,002 --> 00:51:04,048
+K
+
+800
+00:51:04,066 --> 00:51:07,074
+that we're taking that sounds reasonable
+and indeed
+
+801
+00:51:07,074 --> 00:51:10,145
+my factories here is showing me
+highlighted the black michaud
+
+802
+00:51:11,045 --> 00:51:14,117
+so I can see at a glance where it is
+rather than drilling down a step at a
+
+803
+00:51:15,017 --> 00:51:15,078
+time
+
+804
+00:51:15,078 --> 00:51:19,116
+I can just click on my code and see
+where in the stack trace
+
+805
+00:51:20,016 --> 00:51:23,081
+that occurring and look in detail what's
+going on
+
+806
+00:51:23,081 --> 00:51:27,083
+so instruments again the perfect way to
+take and understand more deeply
+
+807
+00:51:27,083 --> 00:51:31,169
+what's going on now come to a session
+later this afternoon to learn more about
+
+808
+00:51:32,069 --> 00:51:35,128
+not brings us back Xcode everything's
+working the way we want
+
+809
+00:51:36,028 --> 00:51:39,094
+of course my next step is to check and
+and when I check and
+
+810
+00:51:39,094 --> 00:51:42,096
+Xcode server is going to start doing its
+work
+
+811
+00:51:43,014 --> 00:51:46,017
+and we can feel we have a server setup
+my team has been using the perfect way
+
+812
+00:51:46,044 --> 00:51:46,091
+for
+
+813
+00:51:46,091 --> 00:51:49,145
+a small group of engineers to work
+together we've got
+
+814
+00:51:50,045 --> 00:51:54,050
+overviews here what's going on in my
+project so I can feel recent activity
+
+815
+00:51:54,095 --> 00:51:57,163
+my success tree which is looking good
+for being successful and my complete
+
+816
+00:51:58,063 --> 00:51:59,068
+history
+
+817
+00:51:59,068 --> 00:52:02,072
+up to a little bit of a rocky start
+initially with one failed bill
+
+818
+00:52:03,008 --> 00:52:07,085
+but but all in all looking good a unit
+test count is creeping up
+
+819
+00:52:07,085 --> 00:52:10,144
+I can see historically what failures
+occurred so I might be interested in
+
+820
+00:52:11,044 --> 00:52:12,072
+taking into someone that
+
+821
+00:52:12,072 --> 00:52:15,158
+I'm really most interested in my most
+recent integration
+
+822
+00:52:16,058 --> 00:52:19,094
+and so fine showdown about integration
+and look at all the tests that are
+
+823
+00:52:19,094 --> 00:52:19,101
+running
+
+824
+00:52:20,064 --> 00:52:24,112
+I can see that I'm not the only one has
+been doing performance to
+
+825
+00:52:25,012 --> 00:52:28,051
+because besides my green check marks
+here I'm also seeing
+
+826
+00:52:28,051 --> 00:52:32,054
+variance from baseline so at a glance
+ICANN fee for this last run
+
+827
+00:52:32,081 --> 00:52:35,089
+that we're doing well against the
+baseline in a couple attacked my
+
+828
+00:52:35,089 --> 00:52:38,092
+coworkers about adding
+
+829
+00:52:38,092 --> 00:52:42,104
+was great with twist one is open see in
+fact that we're tracking baseline
+
+830
+00:52:43,004 --> 00:52:46,102
+against individual devices so as be
+exercised in all the vices
+
+831
+00:52:47,002 --> 00:52:50,100
+we have individual targets props for
+different generations apart where
+
+832
+00:52:51,000 --> 00:52:54,088
+and I think these numbers are great I
+wanna make sure we don't slide from here
+
+833
+00:52:54,088 --> 00:52:54,159
+either
+
+834
+00:52:55,059 --> 00:52:58,116
+so I can go and and added that baseline
+right there
+
+835
+00:52:59,016 --> 00:53:03,049
+and accept the last run as a baseline
+target for all future
+
+836
+00:53:03,049 --> 00:53:07,070
+on missus spectacular because it means
+that from my machine
+
+837
+00:53:07,007 --> 00:53:10,092
+I can change the baseline push that back
+to the server and that baseline will be
+
+838
+00:53:11,055 --> 00:53:11,118
+updated
+
+839
+00:53:12,018 --> 00:53:15,095
+on all my coworkers machines so they're
+measuring the same target
+
+840
+00:53:15,095 --> 00:53:19,151
+but I am so I think we've got a
+spectacular round-trip process here for
+
+841
+00:53:20,051 --> 00:53:20,099
+you
+
+842
+00:53:20,099 --> 00:53:23,104
+you're going to love it and to wrap
+things up I'd like to turn it back over
+
+843
+00:53:24,004 --> 00:53:25,009
+to Mike
+
+844
+00:53:25,009 --> 00:53:28,041
+thank you cape okay
+
+845
+00:53:28,041 --> 00:53:32,119
+backtracked good sex the seat is out
+there available to all of you
+
+846
+00:53:33,019 --> 00:53:36,110
+so try it out then please let us know
+what you think
+
+847
+00:53:37,001 --> 00:53:41,033
+this is going to be a great week we have
+a condom sessions that were going
+
+848
+00:53:41,042 --> 00:53:44,104
+into even more detail about all this
+about have a great show
+

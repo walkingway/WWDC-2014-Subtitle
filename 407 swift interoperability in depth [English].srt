@@ -1,0 +1,4378 @@
+1
+00:00:18,021 --> 00:00:20,022
+so I'm to Gregor I'm an engineer
+
+2
+00:00:20,031 --> 00:00:23,037
+on this earth compiler team and we're
+here to talk about swift
+
+3
+00:00:23,091 --> 00:00:29,159
+interoperability we're going to talk
+about a couple different things here
+
+4
+00:00:30,059 --> 00:00:34,095
+so for swift is a new language for cocoa
+and Cocoa Touch
+
+5
+00:00:34,095 --> 00:00:39,123
+development now koko's not written in
+swift it's written in objective-c
+
+6
+00:00:40,023 --> 00:00:43,066
+a languid you've been using for years
+and that of your abs are written in
+
+7
+00:00:43,066 --> 00:00:47,115
+so interoperability between these two
+very different programming languages
+
+8
+00:00:48,015 --> 00:00:52,021
+is absolutely critical so we can talk
+about how that improperly works
+
+9
+00:00:52,075 --> 00:00:56,078
+at the language level we're gonna hit
+
+10
+00:00:57,005 --> 00:01:01,043
+a number of different topics today were
+in talk about working with Coco
+
+11
+00:01:01,043 --> 00:01:05,075
+seeing how the cocoa API's your
+objective c- APIs
+
+12
+00:01:05,075 --> 00:01:09,164
+look and feel in swift and how to work
+with them as well as working with some
+
+13
+00:01:10,064 --> 00:01:14,903
+more swift concepts like dealing with
+any object and during dynamic checks
+
+14
+00:01:15,479 --> 00:01:19,561
+with on your types then we're going to
+talk about bridging
+
+15
+00:01:20,299 --> 00:01:25,020
+the core Coco datatypes and disarray in
+its dictionary and a string
+
+16
+00:01:25,002 --> 00:01:30,011
+into their swift native equivalents then
+we'll move on to subclassing
+
+17
+00:01:30,092 --> 00:01:33,105
+the ratings with classes that some
+classroom check to see
+
+18
+00:01:34,005 --> 00:01:37,014
+and how they're mapped back into
+objective-c so you can use these two
+
+19
+00:01:37,095 --> 00:01:38,112
+languages together
+
+20
+00:01:39,012 --> 00:01:43,039
+and finally we're going to talk about
+Corp and Asian core graphics
+
+21
+00:01:43,039 --> 00:01:46,047
+and this general motion is CF
+interoperability within this with
+
+22
+00:01:47,019 --> 00:01:48,038
+programming language
+
+23
+00:01:48,038 --> 00:01:51,044
+let's get started
+
+24
+00:01:51,044 --> 00:01:57,060
+talking about working with Coco so swift
+provides the most access
+
+25
+00:01:57,006 --> 00:02:01,097
+to objective-c p API's through the
+objective-c module system we introduced
+
+26
+00:02:02,051 --> 00:02:06,103
+last year so you can pull your
+objectives the API's for the from cocoa
+
+27
+00:02:07,003 --> 00:02:13,029
+or your own into swift and use them and
+then swift map says objective-c API's
+
+28
+00:02:13,029 --> 00:02:16,125
+into the swift syntax this covers both
+the
+
+29
+00:02:17,025 --> 00:02:21,080
+objective parts objective-c classes
+protocols methods and so on
+
+30
+00:02:21,008 --> 00:02:25,056
+as well as the lower level see things
+like functions and numeration strikes
+
+31
+00:02:26,028 --> 00:02:29,104
+pointers see the access to all if your
+objective c- API's
+
+32
+00:02:30,004 --> 00:02:34,009
+now when you look at what are the
+subject to see a Kaizen swift
+
+33
+00:02:34,009 --> 00:02:38,558
+it's going to be different from
+detective see their inherent syntactic
+
+34
+00:02:38,639 --> 00:02:40,730
+differences between these two languages
+
+35
+00:02:40,073 --> 00:02:44,162
+of course swift also has some modern
+features
+
+36
+00:02:44,819 --> 00:02:47,898
+that we use when expressing those
+objective-c API's
+
+37
+00:02:48,609 --> 00:02:51,687
+in swept that'll make it look a little
+bit different as well as
+
+38
+00:02:52,389 --> 00:02:55,450
+the bridging a core Coco types that I
+mentioned earlier
+
+39
+00:02:55,045 --> 00:03:00,504
+now despite all these differences that
+you see when looking at the API's
+
+40
+00:03:00,909 --> 00:03:03,931
+it's still Coco it still Cocoa Touch
+
+41
+00:03:04,129 --> 00:03:07,510
+and the same conventions and idioms
+still apply
+
+42
+00:03:07,051 --> 00:03:10,810
+so what you know if koko works in swift
+it's just a different programming
+
+43
+00:03:11,269 --> 00:03:11,320
+language
+
+44
+00:03:11,779 --> 00:03:17,680
+for the same great platform same great
+frameworks so we're gonna walk through
+
+45
+00:03:17,068 --> 00:03:20,097
+part love something we know and love and
+that's
+
+46
+00:03:20,709 --> 00:03:24,771
+the UI document class here's a tiny
+slice a bit
+
+47
+00:03:25,329 --> 00:03:28,393
+in objective-c we're gonna walk through
+how and why
+
+48
+00:03:28,969 --> 00:03:31,994
+that maps into swept first thing
+
+49
+00:03:32,219 --> 00:03:36,277
+something simple property file
+modification date isn't an estate
+
+50
+00:03:36,799 --> 00:03:40,900
+this comes into swift as a property
+
+51
+00:03:40,009 --> 00:03:44,128
+is the bar keyword the NSA class of
+course just comes into
+
+52
+00:03:45,019 --> 00:03:49,074
+swift nothing interesting there except
+for this little exclamation point you
+
+53
+00:03:49,569 --> 00:03:49,662
+may have noticed
+
+54
+00:03:50,499 --> 00:03:53,507
+now that its mission Pointe is
+
+55
+00:03:53,579 --> 00:03:58,618
+implicitly unwrapped optional what does
+that mean
+
+56
+00:03:58,969 --> 00:04:02,033
+well let's look at swiftly objective-c
+their different languages
+
+57
+00:04:02,609 --> 00:04:05,625
+with some different ideas and so in
+swept
+
+58
+00:04:05,769 --> 00:04:08,848
+when you have a value of class type so I
+have and and it's a date
+
+59
+00:04:09,559 --> 00:04:13,606
+that can never be nil so very strong
+constraint
+
+60
+00:04:14,029 --> 00:04:17,690
+and it makes life a bit simpler when you
+know that thing is not nil
+
+61
+00:04:17,069 --> 00:04:20,085
+now when you want to deal with nil
+
+62
+00:04:20,085 --> 00:04:23,404
+you have an estate that could be nil you
+use
+
+63
+00:04:24,169 --> 00:04:28,080
+an optional type an optional types are
+covered extensively in the intermediate
+
+64
+00:04:28,008 --> 00:04:28,847
+swift
+
+65
+00:04:28,919 --> 00:04:32,990
+talk we're going to cover them a little
+bit more now
+
+66
+00:04:32,099 --> 00:04:35,153
+that's the swift side of things what
+about objective-c
+
+67
+00:04:36,053 --> 00:04:39,064
+well it does not have the notion love
+
+68
+00:04:39,064 --> 00:04:42,120
+he never knew a pointer like we have in
+swift
+
+69
+00:04:43,002 --> 00:04:46,084
+and so we have a little impedance
+mismatch here the objective-c API's
+
+70
+00:04:47,002 --> 00:04:48,094
+don't have the expression of this is
+
+71
+00:04:48,094 --> 00:04:51,101
+the notion that this is not nil we need
+to bring them into swift
+
+72
+00:04:52,064 --> 00:04:55,116
+and so we have the implicitly unwrapped
+optional
+
+73
+00:04:56,016 --> 00:05:00,069
+with the exclamation point here and this
+gives us a nice balance it means that
+
+74
+00:05:00,069 --> 00:05:04,113
+we can express the notion of nail and
+you can test it against Neil to do those
+
+75
+00:05:05,013 --> 00:05:06,042
+checks
+
+76
+00:05:06,042 --> 00:05:10,070
+however you can also just directly
+access properties or directly call a
+
+77
+00:05:10,007 --> 00:05:10,100
+method on it
+
+78
+00:05:11,063 --> 00:05:15,152
+reading converted downturn and Esmil and
+will unwrapped that optional object
+
+79
+00:05:16,052 --> 00:05:20,056
+automatically for you doing the checking
+so it's a fairly syntactically
+
+80
+00:05:20,056 --> 00:05:22,098
+lightweight way of dealing with nil
+
+81
+00:05:22,098 --> 00:05:25,134
+in a language where neil is a much more
+explicit
+
+82
+00:05:26,034 --> 00:05:29,041
+entity I can swept
+
+83
+00:05:29,041 --> 00:05:32,108
+let's look at another property
+
+84
+00:05:33,008 --> 00:05:36,014
+so here we have the file type property
+to tennis string
+
+85
+00:05:36,068 --> 00:05:40,086
+this is going to come into swift as
+
+86
+00:05:40,086 --> 00:05:45,157
+a native swift string now again we have
+the implicitly unwrapped optional here
+
+87
+00:05:46,057 --> 00:05:49,123
+so that Neil can be passed through since
+string doesn't have a notion of nearly
+
+88
+00:05:50,023 --> 00:05:52,025
+in sight at
+
+89
+00:05:52,043 --> 00:05:56,072
+and there's a number of objective-c
+types the kidnapped
+
+90
+00:05:56,072 --> 00:06:00,111
+slightly differently into swept so
+there's some very very fundamental type
+
+91
+00:06:01,011 --> 00:06:02,090
+League cool in and as integer that
+
+92
+00:06:02,009 --> 00:06:05,033
+map into the pool and and in two types:
+
+93
+00:06:06,014 --> 00:06:09,065
+within swift so working all the swift
+types
+
+94
+00:06:09,065 --> 00:06:12,146
+there's I E D and Class which are very
+familiar with
+
+95
+00:06:13,046 --> 00:06:17,073
+in objective-c these map over to any
+object in any class
+
+96
+00:06:17,073 --> 00:06:21,090
+something we can talk about a couple
+minutes and we also have the core Coco
+
+97
+00:06:21,009 --> 00:06:23,053
+types that are bridge like in a string
+an ass array
+
+98
+00:06:24,034 --> 00:06:27,077
+mapping to their swift native
+equivalents again we'll talk about that
+
+99
+00:06:27,077 --> 00:06:29,093
+later in this talk
+
+100
+00:06:29,093 --> 00:06:32,155
+let's take a look at methods here's the
+objective-c method
+
+101
+00:06:33,055 --> 00:06:36,144
+file name extension for type save
+operation
+
+102
+00:06:37,044 --> 00:06:40,087
+comes into swift here as again a method
+
+103
+00:06:40,087 --> 00:06:44,146
+now one important thing to know here
+that all the selector pieces from the
+
+104
+00:06:45,046 --> 00:06:46,075
+objective-c method
+
+105
+00:06:46,075 --> 00:06:49,083
+are here in the method signature in
+swift
+
+106
+00:06:50,055 --> 00:06:53,143
+the first selector peace has become the
+so-called base name of the method
+
+107
+00:06:54,043 --> 00:06:57,138
+the second sex lecter peace save
+operation has become
+
+108
+00:06:58,038 --> 00:07:01,044
+a label on the second argument
+
+109
+00:07:01,098 --> 00:07:04,131
+really important thing here is that
+these labels
+
+110
+00:07:05,031 --> 00:07:09,096
+and their order are enforced at the call
+site
+
+111
+00:07:09,096 --> 00:07:12,125
+so you must call it as file name
+extension for type
+
+112
+00:07:13,025 --> 00:07:16,106
+save operation just like you do in Cocoa
+with the exact same
+
+113
+00:07:17,006 --> 00:07:20,015
+ordering so to preserve that nice
+readability from cocoa that we all know
+
+114
+00:07:20,096 --> 00:07:22,147
+and love
+
+115
+00:07:23,047 --> 00:07:27,146
+now the other thing to note here is the
+consistency here on this website
+
+116
+00:07:28,046 --> 00:07:31,077
+all the names in the Collins in the
+parentheses in the Commons
+
+117
+00:07:31,077 --> 00:07:35,166
+aren't exactly the same places in the
+declaration of the method
+
+118
+00:07:36,066 --> 00:07:39,128
+in the middle and in the call site other
+method at the bottom
+
+119
+00:07:40,028 --> 00:07:44,092
+the kind of consistency we like a
+building in new language
+
+120
+00:07:44,092 --> 00:07:47,099
+let's look a little bit more complicated
+method here we have some blocks going on
+
+121
+00:07:48,062 --> 00:07:49,127
+some more interesting things
+
+122
+00:07:50,027 --> 00:07:55,068
+and map and a swift and here there are
+two different things on talk about
+
+123
+00:07:55,068 --> 00:07:58,104
+first thing i wanna talk about is the
+naming love
+
+124
+00:07:59,004 --> 00:08:02,065
+these argument labels and the internal
+primer names
+
+125
+00:08:02,065 --> 00:08:05,156
+so here in Objective C you always have a
+selector peace
+
+126
+00:08:06,056 --> 00:08:09,104
+goes before the call in and then you
+have the name of the the internal
+
+127
+00:08:10,004 --> 00:08:10,096
+parameter
+
+128
+00:08:10,096 --> 00:08:14,127
+that you use when you're defining the
+method in your .am file
+
+129
+00:08:15,027 --> 00:08:18,075
+Objective C you always have to write
+both that these of course and many times
+
+130
+00:08:18,075 --> 00:08:20,124
+in the same see have some redundancy
+
+131
+00:08:21,024 --> 00:08:25,123
+we do a little bit a syntax optimization
+here in swiftly just write the name once
+
+132
+00:08:26,023 --> 00:08:29,091
+it serves both as the label and the
+internal name
+
+133
+00:08:29,091 --> 00:08:32,170
+if you want those names to be different
+fine we can handle that too
+
+134
+00:08:33,007 --> 00:08:36,386
+you just write the two names next to
+each other the first one is the label
+
+135
+00:08:37,079 --> 00:08:40,810
+that's what's important for the caller
+to use and then the second one
+
+136
+00:08:40,081 --> 00:08:43,480
+is the internal name that you're going
+to use within the implementation
+
+137
+00:08:44,209 --> 00:08:48,990
+up your method the next thing I want to
+point out here
+
+138
+00:08:48,099 --> 00:08:51,125
+is the block so
+
+139
+00:08:52,025 --> 00:08:56,113
+here we have a method takes a block and
+blocks in objective-c
+
+140
+00:08:57,013 --> 00:09:00,055
+get mapped into closures in swift
+
+141
+00:09:00,055 --> 00:09:03,151
+you see again this is an implicitly
+unwrapped optional so that you can pass
+
+142
+00:09:04,051 --> 00:09:08,105
+a mill flocking here now the really
+great thing
+
+143
+00:09:09,005 --> 00:09:12,091
+about getting objective-c blocks mapped
+in the swift closures
+
+144
+00:09:12,091 --> 00:09:16,126
+is that we get all the great closure
+syntax this provided by Swift
+
+145
+00:09:17,026 --> 00:09:21,035
+including trailing closures when your
+block is the last parameter
+
+146
+00:09:21,035 --> 00:09:24,132
+so all a few blocks based API is that
+you've written all the ones from cocoa
+
+147
+00:09:25,032 --> 00:09:28,117
+when they're following the conventional
+putting the block last
+
+148
+00:09:29,017 --> 00:09:35,043
+get this nice trailing closure syntax
+and swift
+
+149
+00:09:35,043 --> 00:09:38,062
+let's talk a little bit about
+initializer
+
+150
+00:09:38,062 --> 00:09:41,971
+so in objective-c we have in methods
+
+151
+00:09:42,529 --> 00:09:47,050
+and in it methods have lot of
+conventions built around them
+
+152
+00:09:47,005 --> 00:09:51,054
+they start with the word in it they
+should be returning instance type
+
+153
+00:09:51,054 --> 00:09:55,121
+well that's a fairly new inventions are
+sometimes they're still returning ID
+
+154
+00:09:56,021 --> 00:09:59,032
+and when you're implementing these
+things you have a lot of requirements
+
+155
+00:09:59,032 --> 00:10:02,095
+you need to call super in it you need to
+reassign self you need to check self you
+
+156
+00:10:02,095 --> 00:10:04,194
+need to return self
+
+157
+00:10:05,094 --> 00:10:08,101
+so all the streams we needed something
+
+158
+00:10:09,001 --> 00:10:12,020
+formalized in the language and so swift
+has this notion
+
+159
+00:10:12,002 --> 00:10:15,033
+love initialize urs and we import
+objective-c
+
+160
+00:10:15,051 --> 00:10:18,119
+in it methods as swift initialize urs
+
+161
+00:10:19,019 --> 00:10:23,021
+how do we get from the top objective-c
+code to the swift code in the bottom
+
+162
+00:10:23,039 --> 00:10:27,121
+well we find the in its we match that
+the in it name in the camel case
+
+163
+00:10:28,021 --> 00:10:32,037
+string here I'm we actually look forward
+a little bit to see if it's really in it
+
+164
+00:10:32,037 --> 00:10:32,075
+with
+
+165
+00:10:32,075 --> 00:10:37,100
+because that's extremely common and then
+we take the rest of that selector
+
+166
+00:10:38,000 --> 00:10:42,279
+and lower case the first character in it
+and turn that into an argument label
+
+167
+00:10:42,279 --> 00:10:46,335
+for the swift initializer know why do we
+do this well let's look at how we
+
+168
+00:10:46,839 --> 00:10:51,510
+build objects in objective-c person
+swift
+
+169
+00:10:51,051 --> 00:10:55,064
+so dejected see you doing Alec
+underclass and then you immediately send
+
+170
+00:10:55,064 --> 00:10:55,111
+it
+
+171
+00:10:56,011 --> 00:10:59,085
+and in it message to initialize the
+object
+
+172
+00:10:59,085 --> 00:11:03,157
+these two steps are almost never
+separated
+
+173
+00:11:04,057 --> 00:11:07,082
+now in swift we have our initialize urs
+
+174
+00:11:07,082 --> 00:11:10,135
+and we use this unified object
+construction syntax
+
+175
+00:11:11,035 --> 00:11:15,063
+where we we write the name the class and
+then we pass arguments directly to the
+
+176
+00:11:15,063 --> 00:11:16,094
+initializer
+
+177
+00:11:16,094 --> 00:11:20,156
+and notice here were using the argument
+label file URL to say which initializer
+
+178
+00:11:21,056 --> 00:11:22,114
+were actually using
+
+179
+00:11:23,014 --> 00:11:26,112
+and then give it the argument and of
+course we folded the Alec in the in it
+
+180
+00:11:27,012 --> 00:11:28,921
+together in this 1i syntax
+
+181
+00:11:29,029 --> 00:11:32,035
+that also happens to work for all other
+types within swept for the be struck
+
+182
+00:11:32,089 --> 00:11:36,500
+certain times
+
+183
+00:11:36,005 --> 00:11:39,074
+so let's talk about factory methods
+because this is the other way
+
+184
+00:11:40,019 --> 00:11:44,032
+that we build objects in objective-c so
+here we have something from you I
+
+185
+00:11:44,032 --> 00:11:46,044
+colored stepped away from you I document
+
+186
+00:11:46,044 --> 00:11:51,046
+with color with red green blue alpha and
+of course we can go construct that by
+
+187
+00:11:51,046 --> 00:11:55,063
+calling you I color color with red green
+blue alpha
+
+188
+00:11:55,063 --> 00:11:58,162
+all of this can be directly imported in
+swift it would just be
+
+189
+00:11:59,062 --> 00:12:02,129
+a class method color with red and green
+blue alphas
+
+190
+00:12:03,029 --> 00:12:06,045
+as argument labels and we could just
+
+191
+00:12:06,045 --> 00:12:09,874
+call it on the class this will be fine
+however we don't
+
+192
+00:12:10,279 --> 00:12:15,250
+really love that they're two completely
+different kinds of initialization
+
+193
+00:12:15,025 --> 00:12:18,048
+so we recognize the Connor and
+
+194
+00:12:18,048 --> 00:12:21,124
+comment patterns and how factory methods
+are described in objective-c
+
+195
+00:12:22,024 --> 00:12:25,099
+and bring them in swift initialize urs
+
+196
+00:12:25,099 --> 00:12:28,188
+and the really great thing here as we
+get that comin initialization
+
+197
+00:12:29,088 --> 00:12:32,127
+syntax for all these objective-c API's
+
+198
+00:12:33,027 --> 00:12:36,086
+you don't have to think is there any
+method for the Spurs their
+
+199
+00:12:36,086 --> 00:12:42,167
+a class method for this it's there as an
+initializer
+
+200
+00:12:43,067 --> 00:12:48,151
+like
+
+201
+00:12:49,051 --> 00:12:53,100
+let's go a little bit down the stack and
+let's talk about the noms
+
+202
+00:12:54,000 --> 00:12:57,002
+so here's the UI document save operation
+you know
+
+203
+00:12:57,002 --> 00:13:00,095
+as defined in objective-c and if we look
+at this we see
+
+204
+00:13:01,013 --> 00:13:06,019
+a whole lotta redundancy this UI
+documents a prefix is used for the
+
+205
+00:13:06,019 --> 00:13:09,105
+in um and for both its enough values
+
+206
+00:13:10,005 --> 00:13:13,026
+why is this world this is seat
+
+207
+00:13:13,026 --> 00:13:16,119
+the in on values and see are in a global
+namespace
+
+208
+00:13:17,019 --> 00:13:21,418
+we can't call these the number I use
+just for creating for overwriting
+
+209
+00:13:21,589 --> 00:13:25,050
+because that's gonna stomp on some other
+completely different animation somewhere
+
+210
+00:13:25,005 --> 00:13:25,104
+else in the system
+
+211
+00:13:26,004 --> 00:13:29,048
+and cause havoc so
+
+212
+00:13:29,048 --> 00:13:32,054
+we do this common prefix by convention
+helps code completion find the right
+
+213
+00:13:33,008 --> 00:13:34,051
+thing
+
+214
+00:13:34,051 --> 00:13:37,086
+but we're talking about swift it's also
+a great cue for us
+
+215
+00:13:37,086 --> 00:13:41,092
+that we can do better and so we can
+import this and if he knew
+
+216
+00:13:42,046 --> 00:13:46,104
+as this week 15 um chopping off all
+those common prefixes
+
+217
+00:13:47,004 --> 00:13:50,087
+to give us a nice short names for the
+cases
+
+218
+00:13:50,087 --> 00:13:53,183
+now the reason we can't do this is
+because the Ingham cases and swift
+
+219
+00:13:54,083 --> 00:13:59,127
+are scoped within the EU num type itself
+
+220
+00:14:00,027 --> 00:14:03,104
+how does this play out an actual code
+well okay if we call file name extension
+
+221
+00:14:04,004 --> 00:14:05,803
+for type save operation
+
+222
+00:14:05,839 --> 00:14:09,320
+we can refer to say for creating
+
+223
+00:14:09,032 --> 00:14:12,361
+with it fully dotted name classname dot
+im
+
+224
+00:14:12,649 --> 00:14:17,705
+same doubted syntax we use for a member
+%uh anything in swift
+
+225
+00:14:18,209 --> 00:14:21,940
+but Swift has type inference we know
+that this method takes
+
+226
+00:14:21,094 --> 00:14:24,863
+you I document save operation so there's
+absolutely no reason to write that
+
+227
+00:14:25,709 --> 00:14:29,490
+you can just pass dot for creating and
+we win for %um type
+
+228
+00:14:29,049 --> 00:14:35,143
+from that
+
+229
+00:14:36,043 --> 00:14:39,077
+of like to talk about and this error so
+
+230
+00:14:39,077 --> 00:14:42,118
+this is our pattern in Cocoa for dealing
+with errors
+
+231
+00:14:43,018 --> 00:14:46,115
+and so there are many lessons throughout
+Coco and throughout your naps
+
+232
+00:14:47,015 --> 00:14:51,056
+that take an errand and Essar star star
+and that's a 3-pointer
+
+233
+00:14:51,056 --> 00:14:56,131
+to and an Essar object we bring this in
+with a special type in swift it's
+
+234
+00:14:57,031 --> 00:14:58,060
+actually typing alias for
+
+235
+00:14:58,006 --> 00:15:01,010
+a much longer typename called and Essar
+pointer
+
+236
+00:15:02,000 --> 00:15:06,021
+we're gonna see in a surefire twice in
+this talk
+
+237
+00:15:06,021 --> 00:15:10,098
+for now we're going to talk about how to
+use it when we're calling into this
+
+238
+00:15:10,098 --> 00:15:14,174
+API and on archie all that much
+different from objective-c
+
+239
+00:15:15,074 --> 00:15:18,085
+so we bring this up
+
+240
+00:15:18,085 --> 00:15:21,111
+we declare local variable it's called
+air
+
+241
+00:15:22,011 --> 00:15:26,740
+it's a type and mister optional and we
+pass it address in
+
+242
+00:15:26,839 --> 00:15:31,570
+when recalling contents for Thai pair
+and so in this code we check
+
+243
+00:15:31,057 --> 00:15:34,066
+whether we're getting back some contents
+from this then we can deal with those
+
+244
+00:15:35,047 --> 00:15:35,120
+contents
+
+245
+00:15:36,002 --> 00:15:40,019
+if we failed to find any content we
+probably have an air so we can go on rap
+
+246
+00:15:40,037 --> 00:15:40,082
+that
+
+247
+00:15:40,082 --> 00:15:43,086
+that optional air and percent the user
+
+248
+00:15:43,086 --> 00:15:46,117
+and if we fall through the else here now
+we're in trouble because something
+
+249
+00:15:47,017 --> 00:15:48,050
+failed and we have nothing
+
+250
+00:15:48,005 --> 00:15:52,066
+we can do about it we hope that doesn't
+happen but
+
+251
+00:15:53,011 --> 00:15:56,045
+this is the pattern you'll be using when
+dealing with and Essar
+
+252
+00:15:56,045 --> 00:15:59,129
+in swift if you truly don't care about
+the air you can also pass until
+
+253
+00:16:00,029 --> 00:16:03,031
+so we walked through a lot of
+
+254
+00:16:03,049 --> 00:16:06,145
+little pieces love the objective-c
+mapping
+
+255
+00:16:07,045 --> 00:16:11,114
+into swept and their lodger rules that
+we've talked about the you're certainly
+
+256
+00:16:12,014 --> 00:16:13,015
+not going to remember
+
+257
+00:16:13,015 --> 00:16:16,066
+that's perfectly fine exclude has your
+back here
+
+258
+00:16:16,066 --> 00:16:19,130
+use the tools to help you so if you're
+in Xcode
+
+259
+00:16:20,003 --> 00:16:23,046
+you're in some swift code you can come
+and click on a classname
+
+260
+00:16:23,073 --> 00:16:27,118
+and will show you the swift projection
+over the underlying objective c-class
+
+261
+00:16:28,018 --> 00:16:32,047
+so take your favorite Coco class and
+look at how it maps into
+
+262
+00:16:32,047 --> 00:16:36,068
+swept get a feel for the language into a
+feel for how these languages work
+
+263
+00:16:36,068 --> 00:16:36,075
+together
+
+264
+00:16:37,038 --> 00:16:40,044
+and you get into swift really fast
+
+265
+00:16:40,044 --> 00:16:43,107
+and the great thing is all these tools
+
+266
+00:16:44,007 --> 00:16:47,028
+all the rules that talked about apply
+equally to
+
+267
+00:16:47,028 --> 00:16:50,112
+any objectives capi when it comes into
+swift
+
+268
+00:16:51,012 --> 00:16:54,095
+doesn't matter if it's Coco it doesn't
+matter to your own API the same rules
+
+269
+00:16:54,095 --> 00:16:54,167
+apply
+
+270
+00:16:55,067 --> 00:16:58,140
+and you can view your own objective-c
+API's
+
+271
+00:16:59,004 --> 00:17:03,037
+in swift to get to know them better now
+this works best
+
+272
+00:17:03,073 --> 00:17:06,122
+when you're following modern objective-c
+practices
+
+273
+00:17:07,022 --> 00:17:10,081
+so the user using features like
+properties
+
+274
+00:17:10,081 --> 00:17:13,100
+instance type marking your numeration
+
+275
+00:17:14,000 --> 00:17:17,053
+with and it's the numer and options to
+described more semantic information
+
+276
+00:17:17,053 --> 00:17:19,149
+about what these hymns actually means
+see
+
+277
+00:17:20,049 --> 00:17:24,098
+we've also introduced and its designated
+initializer this year
+
+278
+00:17:24,098 --> 00:17:28,150
+to mark your designated initializer
+formalize it doesn't initializer pattern
+
+279
+00:17:29,005 --> 00:17:30,007
+both in objective-c
+
+280
+00:17:30,007 --> 00:17:33,073
+30 ish no warnings and as the
+initialization model
+
+281
+00:17:34,036 --> 00:17:39,099
+for swept so of course we want you to
+follow these modern objective-c
+
+282
+00:17:39,099 --> 00:17:39,108
+practices
+
+283
+00:17:40,089 --> 00:17:43,172
+but we don't want you have to go it
+alone and so
+
+284
+00:17:44,072 --> 00:17:47,138
+this year we introduce the objective-c
+modernize ur that helps
+
+285
+00:17:48,038 --> 00:17:52,066
+find these cases in your code where we
+could possibly modernize them
+
+286
+00:17:52,066 --> 00:17:55,138
+to work with all these modern
+objective-c features and give you a
+
+287
+00:17:56,038 --> 00:17:57,105
+better projection into swept
+
+288
+00:17:58,005 --> 00:18:01,064
+and that modernize are discussed in the
+what's new in LVM talk
+
+289
+00:18:01,064 --> 00:18:04,115
+earlier today highly recommend you catch
+it on video of you mister
+
+290
+00:18:05,015 --> 00:18:08,102
+with that
+
+291
+00:18:09,002 --> 00:18:12,020
+let's talk about ID
+
+292
+00:18:12,002 --> 00:18:15,009
+what is ID in objective-c
+
+293
+00:18:15,027 --> 00:18:19,066
+its kind of a placeholder in some sense
+
+294
+00:18:19,066 --> 00:18:22,142
+it means I have a value I know it's an
+object
+
+295
+00:18:23,042 --> 00:18:28,077
+but I don't know or I don't care what
+the static type of that object is
+
+296
+00:18:28,077 --> 00:18:32,114
+it's going to vary at runtime most
+likely and there's an old couple core
+
+297
+00:18:33,014 --> 00:18:34,098
+operations so you can perform
+
+298
+00:18:34,098 --> 00:18:38,547
+on it. you can do a casting on it so if
+I have
+
+299
+00:18:39,429 --> 00:18:43,310
+this variable objective type ID I can
+put in on
+
+300
+00:18:43,031 --> 00:18:46,100
+and Suro into it later I can go reassign
+it
+
+301
+00:18:47,000 --> 00:18:50,058
+and I can put you i've UN that's
+perfectly fine they can both be
+
+302
+00:18:50,058 --> 00:18:53,069
+cast essentially to ID they're both
+objects
+
+303
+00:18:53,069 --> 00:18:58,097
+I could you message sends to ID just buy
+directly doing a message send
+
+304
+00:18:58,097 --> 00:19:02,184
+I can subscription ID if I really feel
+like it
+
+305
+00:19:03,084 --> 00:19:06,673
+in swift any object is
+
+306
+00:19:07,429 --> 00:19:12,640
+the equivalent to ID and it provides the
+same core operations
+
+307
+00:19:12,064 --> 00:19:15,090
+up casting message sends sub scripting
+
+308
+00:19:15,009 --> 00:19:18,065
+that you can do on ID in objective-c
+
+309
+00:19:19,046 --> 00:19:22,053
+now one of the things we know from using
+idea objective-c
+
+310
+00:19:23,016 --> 00:19:26,089
+is that you sometimes have to be a
+little bit careful
+
+311
+00:19:26,089 --> 00:19:29,148
+because if you send a message to an
+object it doesn't have a corresponding
+
+312
+00:19:30,048 --> 00:19:30,144
+method
+
+313
+00:19:31,044 --> 00:19:35,091
+you're going to get a runtime failure
+that this isn't unrecognized selector
+
+314
+00:19:35,091 --> 00:19:38,102
+now in objective-c we have an answer for
+this using the
+
+315
+00:19:39,002 --> 00:19:43,057
+response to select a radium to NF check
+whether response the selector
+
+316
+00:19:43,057 --> 00:19:47,154
+then do it in swift we like to do a
+little bit better
+
+317
+00:19:48,054 --> 00:19:52,063
+so let's take the same call and was to
+remove from super view call on the
+
+318
+00:19:52,063 --> 00:19:53,151
+subject
+
+319
+00:19:54,051 --> 00:19:57,078
+and the thing to note here is that
+
+320
+00:19:57,078 --> 00:20:00,119
+removed from super view on
+
+321
+00:20:01,019 --> 00:20:06,023
+object given known type it may be there
+it may not be there
+
+322
+00:20:06,023 --> 00:20:09,096
+well how do we deal with this notion in
+swift we use an optional
+
+323
+00:20:09,096 --> 00:20:12,152
+says there may be a value their there
+may not be and so the reference to
+
+324
+00:20:13,052 --> 00:20:14,075
+remove from super view
+
+325
+00:20:14,075 --> 00:20:19,254
+on object is in effect optional that
+means we can use the optional chaining
+
+326
+00:20:19,929 --> 00:20:21,860
+operator here
+
+327
+00:20:21,086 --> 00:20:28,086
+to
+
+328
+00:20:29,059 --> 00:20:30,070
+what we're doing of course
+
+329
+00:20:30,007 --> 00:20:34,024
+is were folding the response to select
+your check in so we do the reference
+
+330
+00:20:34,087 --> 00:20:37,091
+go look for a move from super few if
+it's there
+
+331
+00:20:37,091 --> 00:20:41,850
+go on call it if it's not there stop
+evaluating this expression were done
+
+332
+00:20:42,669 --> 00:20:46,000
+now something that
+
+333
+00:20:46,000 --> 00:20:50,058
+I V does the any object does not do is
+implicitly downcast
+
+334
+00:20:50,058 --> 00:20:54,082
+so I have object which is a type any
+object and I'm trying to
+
+335
+00:20:54,082 --> 00:20:58,160
+signed it into a UI view this is going
+to produce a compiler error because this
+
+336
+00:20:59,006 --> 00:20:59,011
+is a
+
+337
+00:21:00,001 --> 00:21:05,013
+unsafe downcast how do we deal with this
+
+338
+00:21:05,022 --> 00:21:09,034
+well there's really few cases here they
+need to think about one case
+
+339
+00:21:09,034 --> 00:21:12,115
+is I know it to you live you but for
+some reason that
+
+340
+00:21:13,015 --> 00:21:16,654
+strong type information got lost when
+going through some API somewhere
+
+341
+00:21:16,789 --> 00:21:21,070
+if I know for sure to you I view I can
+use the cast operator
+
+342
+00:21:21,007 --> 00:21:25,106
+ass to say treat this object as a you a
+few
+
+343
+00:21:25,169 --> 00:21:28,208
+we're going to do these kind of class
+check
+
+344
+00:21:28,559 --> 00:21:32,270
+at runtime to make sure that absolutely
+true but
+
+345
+00:21:32,027 --> 00:21:37,306
+the type system or believe you at this
+point now if you don't
+
+346
+00:21:37,549 --> 00:21:41,560
+no whether this object is to you if you
+were not
+
+347
+00:21:41,659 --> 00:21:44,830
+you can use the as question mark
+operator that perform
+
+348
+00:21:44,083 --> 00:21:51,083
+a conditional downcast
+
+349
+00:21:53,013 --> 00:21:55,068
+thank you guys I figured it out but just
+to be sure
+
+350
+00:21:55,068 --> 00:21:59,139
+this is doing is kind of last check and
+trapping the result in an optional you
+
+351
+00:22:00,039 --> 00:22:00,105
+i've you
+
+352
+00:22:01,005 --> 00:22:05,024
+it's Neil if the check failed it has the
+UAV if the checks
+
+353
+00:22:05,024 --> 00:22:08,039
+if you have to check seceded we can do
+is let here
+
+354
+00:22:08,039 --> 00:22:12,070
+two completely different higher things
+safely and viewing here's a few
+
+355
+00:22:12,007 --> 00:22:16,068
+you i've you were looking for so let's
+take a little bit of a detour
+
+356
+00:22:17,031 --> 00:22:22,108
+and talk about tiny bit protocols here's
+an objective-c protocol for you a table
+
+357
+00:22:23,008 --> 00:22:24,011
+view data source
+
+358
+00:22:24,011 --> 00:22:31,011
+and its swift equivalent not a whole lot
+new here
+
+359
+00:22:31,065 --> 00:22:34,159
+but there are two things that I do want
+to point out first thing I want to point
+
+360
+00:22:35,059 --> 00:22:35,104
+out
+
+361
+00:22:36,004 --> 00:22:40,066
+is optional and required so in
+objective-c optional or required
+
+362
+00:22:40,066 --> 00:22:43,113
+are specially moods in the protocol you
+say an optional
+
+363
+00:22:44,013 --> 00:22:48,081
+and everything that follows is optional
+up into the point we had an app required
+
+364
+00:22:48,081 --> 00:22:49,119
+and then everything is required
+
+365
+00:22:50,019 --> 00:22:53,090
+and we're not totally thrilled with this
+decision
+
+366
+00:22:53,009 --> 00:22:56,095
+now and the basic reason is that you
+can't just look at one single
+
+367
+00:22:57,076 --> 00:23:00,101
+declaration in the protocol and know
+whether it's optional or required have
+
+368
+00:23:01,001 --> 00:23:02,079
+to go stand up your protocol
+
+369
+00:23:02,079 --> 00:23:05,118
+to find it and so we did something a
+little bit different swift
+
+370
+00:23:06,018 --> 00:23:10,025
+in that for rickles heard requirements
+of protocol are
+
+371
+00:23:10,025 --> 00:23:14,051
+required by default and swift if you
+want to make them optional
+
+372
+00:23:14,051 --> 00:23:18,116
+been tagged in with the optional
+attribute to make them optional the
+
+373
+00:23:19,016 --> 00:23:22,043
+other thing I want to point out here
+we're doing a little bit of a protocol
+
+374
+00:23:22,043 --> 00:23:22,132
+inheritance
+
+375
+00:23:23,032 --> 00:23:26,069
+and we're inheriting from and a subject
+protocol
+
+376
+00:23:26,069 --> 00:23:29,136
+so in objective-c we will have
+
+377
+00:23:30,036 --> 00:23:33,132
+and this object the class and and its
+object the protocol
+
+378
+00:23:34,032 --> 00:23:37,086
+and they have the same name so we have
+to add the
+
+379
+00:23:37,086 --> 00:23:41,086
+the class or is up for a call the end
+when we talk about it the language
+
+380
+00:23:41,086 --> 00:23:44,138
+keeps these insect accent actually
+distinct points
+
+381
+00:23:45,038 --> 00:23:48,056
+so the language in confused but
+
+382
+00:23:48,056 --> 00:23:51,091
+in swift we wanted to bring all these
+things into the same namespace
+
+383
+00:23:51,091 --> 00:23:54,190
+that's far more convenient for the
+general case and so we need to rename
+
+384
+00:23:55,009 --> 00:23:55,071
+something
+
+385
+00:23:56,052 --> 00:23:59,137
+and essentially when there's a conflict
+between a class name in a protocol name
+
+386
+00:24:00,037 --> 00:24:03,041
+will and protocol to the name of the
+protocol
+
+387
+00:24:03,041 --> 00:24:06,066
+why we do this well
+
+388
+00:24:06,066 --> 00:24:09,117
+let's take another at look at another
+use love ID
+
+389
+00:24:10,017 --> 00:24:14,034
+that we see in objective-c and thats
+protocol qualified eighty
+
+390
+00:24:14,034 --> 00:24:17,117
+so this data heat source here is an
+object
+
+391
+00:24:18,017 --> 00:24:22,113
+up some unknown type but we know that
+the type conforms to the UI tableview
+
+392
+00:24:23,013 --> 00:24:24,017
+datasource protocol
+
+393
+00:24:24,053 --> 00:24:28,095
+we describe that a lil bit more directly
+in the Swiss language by just saying the
+
+394
+00:24:28,095 --> 00:24:28,164
+datasource
+
+395
+00:24:29,064 --> 00:24:34,078
+is you a table you do source that now
+
+396
+00:24:34,078 --> 00:24:37,116
+so many have you noticed with photocall
+fight I D
+
+397
+00:24:38,016 --> 00:24:41,111
+you can have many different particles if
+you want we can use
+
+398
+00:24:42,011 --> 00:24:46,055
+the protocol keyword with angle brackets
+to describe more than one protocol
+
+399
+00:24:46,055 --> 00:24:51,055
+now want two things we do it for a cop
+informants as we have an object if I
+
+400
+00:24:51,055 --> 00:24:51,132
+known type
+
+401
+00:24:52,032 --> 00:24:55,045
+and we want to determine doesn't conform
+to the protocol
+
+402
+00:24:55,045 --> 00:24:58,079
+this is the conforms to protocol
+checking the objective-c runtime
+
+403
+00:24:58,079 --> 00:25:01,161
+in swift we do the same thing
+
+404
+00:25:02,061 --> 00:25:07,089
+with the conditional downcast operator
+so we can just ask is my object to you I
+
+405
+00:25:07,089 --> 00:25:08,121
+tableview datasource
+
+406
+00:25:09,021 --> 00:25:13,028
+conforms to particle check happens in
+the runtime captures the result an
+
+407
+00:25:13,028 --> 00:25:13,097
+optional
+
+408
+00:25:13,097 --> 00:25:17,166
+here we can go easily do that Cohen the
+methods and computer number of rows
+
+409
+00:25:18,066 --> 00:25:23,121
+in the first section up this table TD a
+source let's make our example a little
+
+410
+00:25:24,021 --> 00:25:25,028
+bit more interesting
+
+411
+00:25:25,028 --> 00:25:28,059
+let's give you the number of rows in the
+last section
+
+412
+00:25:28,059 --> 00:25:32,152
+so here we need to compute the number
+sections that exist in the table view
+
+413
+00:25:33,052 --> 00:25:38,066
+subtract one of it and then we can ask
+for the number of rows in that section
+
+414
+00:25:38,066 --> 00:25:43,151
+now there's a problem with this code and
+the problem is the number sections in
+
+415
+00:25:44,051 --> 00:25:44,059
+tableview
+
+416
+00:25:45,031 --> 00:25:48,038
+as you might remember is optional method
+
+417
+00:25:48,038 --> 00:25:53,135
+it might not be there runtime: so we're
+gonna compiler out this because we need
+
+418
+00:25:54,035 --> 00:25:55,073
+to deal with the optionality
+
+419
+00:25:55,073 --> 00:25:59,086
+up this protocol method and we deal with
+this the same way we deal with
+
+420
+00:25:59,086 --> 00:25:59,173
+optionality
+
+421
+00:26:00,073 --> 00:26:04,164
+everywhere else in a swift language
+using the mechanisms we have so here
+
+422
+00:26:05,064 --> 00:26:05,151
+we're going to use
+
+423
+00:26:06,051 --> 00:26:09,124
+the chaining question mark operator for
+checking
+
+424
+00:26:10,024 --> 00:26:13,108
+does my datasource have a number of
+sections in tableview method
+
+425
+00:26:14,008 --> 00:26:18,055
+if so call it given the table view and
+then we capture the result in um
+
+426
+00:26:18,055 --> 00:26:18,146
+sections
+
+427
+00:26:19,046 --> 00:26:22,142
+so we can compute the last section
+number and get the numbers
+
+428
+00:26:23,042 --> 00:26:28,100
+rose in the last section ever tableview
+
+429
+00:26:29,000 --> 00:26:32,071
+that's about all we're gonna talk about
+what protocols here if you're interested
+
+430
+00:26:32,071 --> 00:26:34,159
+in for a calls and so many amazing
+things they can do
+
+431
+00:26:35,059 --> 00:26:38,154
+there's no advance with talk tomorrow
+morning that goes into more depth on
+
+432
+00:26:39,054 --> 00:26:39,105
+those
+
+433
+00:26:40,005 --> 00:26:46,006
+and their interaction with the generic
+system
+
+434
+00:26:46,015 --> 00:26:49,061
+so wrapping up here
+
+435
+00:26:49,061 --> 00:26:53,153
+any object is Swiss equivalent to ID the
+functionality is similar to the ideas
+
+436
+00:26:54,053 --> 00:26:56,075
+are similar in the uses are similar
+
+437
+00:26:56,075 --> 00:26:59,075
+however it more safe by default
+
+438
+00:26:59,075 --> 00:27:02,093
+now we didn't talk about it but there's
+also any class
+
+439
+00:27:02,093 --> 00:27:08,146
+which is Swiss a look equivalent to
+class and has most to the same behaviors
+
+440
+00:27:09,046 --> 00:27:12,089
+now the other thing that we've seen is
+how options are used throughout the
+
+441
+00:27:12,089 --> 00:27:12,186
+language
+
+442
+00:27:13,086 --> 00:27:16,093
+to represent dynamic checks we've taken
+
+443
+00:27:16,093 --> 00:27:20,096
+is kind of class checks conforms to
+protocol checks
+
+444
+00:27:20,096 --> 00:27:23,195
+response to select your checks and
+folded them all into the notion of
+
+445
+00:27:24,095 --> 00:27:26,102
+optionals within the language
+
+446
+00:27:27,002 --> 00:27:30,029
+with their optimized syntax to make them
+easy to use
+
+447
+00:27:30,029 --> 00:27:34,126
+and easy to do with the right thing
+
+448
+00:27:35,026 --> 00:27:39,091
+with that with switch gears a little bit
+and talk about bridging of cocoa
+
+449
+00:27:39,091 --> 00:27:44,094
+datatypes now first let's talk a little
+bit about the native strings arrays and
+
+450
+00:27:44,094 --> 00:27:44,193
+dictionaries
+
+451
+00:27:45,093 --> 00:27:49,118
+within swift the goal swift is to have
+one set
+
+452
+00:27:50,018 --> 00:27:55,042
+general-purpose native value types that
+you use for nearly everything
+
+453
+00:27:55,042 --> 00:27:58,078
+these need to be safe by default this
+means bounds checking for a raise
+
+454
+00:27:58,078 --> 00:28:01,094
+automatic memory management and so on
+
+455
+00:28:01,094 --> 00:28:04,146
+they need to have predictable
+performance so that you can look at code
+
+456
+00:28:05,046 --> 00:28:08,049
+and have a sense of how it's going to be
+a haven no surprises
+
+457
+00:28:08,049 --> 00:28:13,050
+out to perform and of course we want to
+raise in dictionaries
+
+458
+00:28:13,059 --> 00:28:16,126
+to be collections and they need to be
+strongly typed collections that work
+
+459
+00:28:17,026 --> 00:28:18,032
+with any type week
+
+460
+00:28:18,032 --> 00:28:21,086
+we can't let them just objects because
+sometimes you need an array of strings
+
+461
+00:28:21,086 --> 00:28:22,158
+or ends
+
+462
+00:28:23,058 --> 00:28:26,151
+and we don't have a city to fall back to
+you for the cases where the other tools
+
+463
+00:28:27,051 --> 00:28:27,143
+don't work
+
+464
+00:28:28,043 --> 00:28:31,049
+this is it
+
+465
+00:28:31,049 --> 00:28:36,078
+now to support having this one notion up
+17 general-purpose nato value types
+
+466
+00:28:36,078 --> 00:28:40,081
+we're going to bridge from Coco's in a
+string and SRA and its dictionary
+
+467
+00:28:40,081 --> 00:28:44,092
+into this with native equivalents
+
+468
+00:28:44,092 --> 00:28:47,100
+so let's first talk a little bit about
+the native
+
+469
+00:28:48,000 --> 00:28:51,045
+string type itself so string is
+
+470
+00:28:51,045 --> 00:28:55,046
+efficient unit code compliant string
+type
+
+471
+00:28:55,055 --> 00:28:58,059
+core string type a swift has unit code
+
+472
+00:28:58,059 --> 00:29:01,060
+built-in through and through makes it
+easy to work with
+
+473
+00:29:01,006 --> 00:29:04,052
+you provide flexible and efficient
+high-level API's
+
+474
+00:29:05,006 --> 00:29:08,008
+to work with strings you can easily view
+concatenation
+
+475
+00:29:08,008 --> 00:29:11,052
+searches prefix matches substrings
+
+476
+00:29:11,052 --> 00:29:15,140
+and the strings provide value semantics
+nixon easier to work with
+
+477
+00:29:16,004 --> 00:29:19,052
+and nice semantics is generally it's a
+fairly simple
+
+478
+00:29:19,088 --> 00:29:23,110
+notion love if I have two variables a
+string type
+
+479
+00:29:24,001 --> 00:29:28,002
+modifying one of them doesn't affect the
+other one
+
+480
+00:29:28,002 --> 00:29:32,054
+very nice for a fundamental data type
+
+481
+00:29:32,072 --> 00:29:35,074
+now of course you can also think of
+strings as a unit but even they give
+
+482
+00:29:35,092 --> 00:29:37,093
+them as being composed of characters
+
+483
+00:29:38,002 --> 00:29:41,095
+which in fact they are and so we can go
+
+484
+00:29:41,095 --> 00:29:44,126
+walk over strings using the for loop and
+
+485
+00:29:45,026 --> 00:29:48,122
+get all the characters out a string and
+you get the answer that you would expect
+
+486
+00:29:49,022 --> 00:29:51,035
+there are five characters here
+
+487
+00:29:51,035 --> 00:29:55,046
+even though there's an emoji at the end
+
+488
+00:29:55,046 --> 00:29:58,084
+so want to talk a little bit about
+
+489
+00:29:58,084 --> 00:30:01,113
+characters and code points
+
+490
+00:30:02,013 --> 00:30:05,059
+because the character that you're
+getting out of here is a full Unicode
+
+491
+00:30:05,059 --> 00:30:05,156
+characters not
+
+492
+00:30:06,056 --> 00:30:09,138
+UTSA code point retailer sixteenth we're
+going to have to deal with
+
+493
+00:30:10,038 --> 00:30:15,051
+it is a unit code character and now what
+are the challenges with unit Unicode
+
+494
+00:30:15,051 --> 00:30:16,052
+characters
+
+495
+00:30:16,052 --> 00:30:19,125
+is you really can't encode them
+efficiently
+
+496
+00:30:20,025 --> 00:30:23,030
+in a way they treat a string as just an
+array
+
+497
+00:30:23,003 --> 00:30:26,076
+a characters to be too large
+
+498
+00:30:27,003 --> 00:30:30,020
+and so what you generally see is that a
+string
+
+499
+00:30:30,002 --> 00:30:34,016
+is encoded as a utf8 or UPS 16
+
+500
+00:30:34,034 --> 00:30:37,038
+but working with those utf8 are you fit
+16 code points
+
+501
+00:30:37,074 --> 00:30:41,119
+that requires you to her expertise to
+get right all the time
+
+502
+00:30:42,019 --> 00:30:45,030
+and so we made a really interesting
+decision here
+
+503
+00:30:45,003 --> 00:30:49,098
+we decided not to provide the super low
+level operations like LinkedIn character
+
+504
+00:30:50,025 --> 00:30:51,040
+index
+
+505
+00:30:51,004 --> 00:30:55,055
+the cheap ok directly at UTSA 16 it if
+it a code points or whatever stored in a
+
+506
+00:30:55,091 --> 00:30:56,360
+string
+
+507
+00:30:57,179 --> 00:31:01,810
+because doing so causes big problems
+instead
+
+508
+00:31:01,081 --> 00:31:05,112
+we want to use the high-level EP eyes
+and let the library do the hard work
+
+509
+00:31:06,012 --> 00:31:10,571
+if dealing with all the intricacies
+United
+
+510
+00:31:10,679 --> 00:31:14,850
+course they're still comin operations
+you want to use I you may want to
+
+511
+00:31:14,085 --> 00:31:18,112
+count the number of characters in a
+string so this account don't
+
+512
+00:31:19,012 --> 00:31:22,024
+elements however that works on any
+sequence
+
+513
+00:31:22,024 --> 00:31:25,039
+and allows you to well just count the
+number of characters in a string
+
+514
+00:31:25,039 --> 00:31:28,328
+and this produces the right answer which
+is there are five characters
+
+515
+00:31:28,679 --> 00:31:31,780
+in this string so if you want to work
+with
+
+516
+00:31:31,078 --> 00:31:34,112
+code points you may be your code experts
+
+517
+00:31:35,012 --> 00:31:38,037
+and that's wonderful you can get access
+to the code points
+
+518
+00:31:38,037 --> 00:31:41,038
+there's a property Utes 16 did give you
+
+519
+00:31:41,047 --> 00:31:45,070
+a leisurely computed view on the string
+producing and the Utes
+
+520
+00:31:45,007 --> 00:31:48,065
+16 code points in that string
+
+521
+00:31:49,028 --> 00:31:53,055
+and we can go walk over these the 16-bit
+unsigned integer
+
+522
+00:31:53,055 --> 00:31:57,113
+code points weekend print out the number
+of code points here
+
+523
+00:31:58,013 --> 00:32:01,029
+of course you'll get the answer 6
+
+524
+00:32:01,029 --> 00:32:05,107
+because there are 60 TSX texting code
+points industry
+
+525
+00:32:06,007 --> 00:32:09,011
+last thing I want to talk about with
+strings is the relationship between
+
+526
+00:32:09,047 --> 00:32:10,070
+string
+
+527
+00:32:10,007 --> 00:32:13,032
+and and a string so in a string has
+
+528
+00:32:13,095 --> 00:32:16,194
+a well %uh really great text processing
+API's
+
+529
+00:32:17,094 --> 00:32:21,136
+you've probably been using for years so
+we've made all this foundation
+
+530
+00:32:22,036 --> 00:32:27,053
+API's directly available on the string
+type sleepy eyes you know and love are
+
+531
+00:32:27,053 --> 00:32:28,076
+there
+
+532
+00:32:28,076 --> 00:32:31,140
+you can use them now in doing so we've
+made them
+
+533
+00:32:32,004 --> 00:32:35,063
+a little bit more swiftly typed up
+tightened up the tape signatures so if
+
+534
+00:32:35,099 --> 00:32:35,104
+you're gonna
+
+535
+00:32:36,049 --> 00:32:40,052
+split a string into its components will
+you can get back in a rave
+
+536
+00:32:40,052 --> 00:32:45,059
+strings rather than just an array of
+some things
+
+537
+00:32:45,059 --> 00:32:48,157
+now you may have developed your own
+categories on a string
+
+538
+00:32:49,057 --> 00:32:53,086
+with additional functionality that you
+use within your own applications
+
+539
+00:32:53,086 --> 00:32:56,094
+you can get to those with a simple cast
+so you can
+
+540
+00:32:56,094 --> 00:33:01,083
+take us with string turn into an end a
+string this is just a conversion
+
+541
+00:33:01,929 --> 00:33:05,960
+am and then call your ass string method
+
+542
+00:33:05,096 --> 00:33:08,124
+if you find yourself doing this a lot
+Friel
+
+543
+00:33:09,024 --> 00:33:12,098
+32 just go ahead and extend the
+underlying string type
+
+544
+00:33:12,098 --> 00:33:15,145
+add your string method make it a little
+more Swiffer stronger type signatures
+
+545
+00:33:16,045 --> 00:33:18,073
+closures if you'd like
+
+546
+00:33:18,073 --> 00:33:21,129
+but this should help you feel at home in
+swift fairly quickly
+
+547
+00:33:22,029 --> 00:33:26,058
+and use the string type
+
+548
+00:33:26,058 --> 00:33:29,059
+now let's move from string to container
+
+549
+00:33:29,059 --> 00:33:32,060
+let's talk about arrays
+
+550
+00:33:32,069 --> 00:33:38,097
+so here we have toolbar items that is an
+ass a wreck
+
+551
+00:33:38,097 --> 00:33:41,131
+that's gonna come into swept as in a
+radio
+
+552
+00:33:42,031 --> 00:33:45,057
+any object now these two types
+
+553
+00:33:45,057 --> 00:33:48,102
+are fairly similar you can iterate over
+them
+
+554
+00:33:49,002 --> 00:33:52,051
+and what you can get out a bit are
+values a type any object
+
+555
+00:33:52,051 --> 00:33:55,120
+their objects but you don't know what
+kind of object is you can some script in
+
+556
+00:33:56,002 --> 00:33:56,033
+the
+
+557
+00:33:56,051 --> 00:33:59,123
+into them and of course you will get in
+any object
+
+558
+00:34:00,023 --> 00:34:05,040
+now in swift you tend to deal in type to
+raise more often
+
+559
+00:34:05,004 --> 00:34:08,013
+and so there are some other operations
+that
+
+560
+00:34:08,409 --> 00:34:12,060
+the core language needs to provide for
+you to make this clean
+
+561
+00:34:12,006 --> 00:34:15,099
+so maybe I'm composing my toolbar items
+into
+
+562
+00:34:15,099 --> 00:34:18,101
+a swift array and that's with the Rays
+gonna contain
+
+563
+00:34:19,001 --> 00:34:23,019
+you I bar button items that's what
+actually goes into the UI
+
+564
+00:34:23,019 --> 00:34:27,438
+into the toolbar items property I can
+work with that Swift array
+
+565
+00:34:27,609 --> 00:34:32,230
+and then I can a sign it into the any
+object array so this is essentially
+
+566
+00:34:32,023 --> 00:34:32,114
+doing a safe
+
+567
+00:34:33,014 --> 00:34:36,079
+up cast love an array of to our items to
+an array
+
+568
+00:34:36,079 --> 00:34:39,458
+any I'm checks it also happens to be
+calling into
+
+569
+00:34:40,169 --> 00:34:44,080
+objective-c which we'll get to in a
+minute
+
+570
+00:34:44,008 --> 00:34:47,104
+now we also see the flip side of this
+where we want to say
+
+571
+00:34:48,004 --> 00:34:52,045
+iterate over all the two are items and
+
+572
+00:34:52,045 --> 00:34:55,050
+this particular new controller and
+
+573
+00:34:55,005 --> 00:34:58,098
+here we're going to get any object
+values and we talked about cast earlier
+
+574
+00:34:59,043 --> 00:35:00,057
+so we can downcast
+
+575
+00:35:00,057 --> 00:35:04,069
+each of them this is fine but it's a
+little bit and achieve your side
+
+576
+00:35:04,069 --> 00:35:07,084
+and so we have specialized syntax here
+to
+
+577
+00:35:07,084 --> 00:35:10,166
+downcast an entire array at a time
+
+578
+00:35:11,066 --> 00:35:15,100
+doing the is kind of class checks
+necessary to make this safe
+
+579
+00:35:16,000 --> 00:35:23,000
+lisa Lee behind-the-scenes and then you
+can walk over Europe
+
+580
+00:35:26,609 --> 00:35:30,190
+now we've seen and it's the reason the
+objective seaside
+
+581
+00:35:30,019 --> 00:35:34,073
+swift arrays on the swift side let's
+take a little bit of a peek under the
+
+582
+00:35:34,073 --> 00:35:34,130
+hood
+
+583
+00:35:35,003 --> 00:35:38,089
+at how this actually works because
+you're gonna be writing
+
+584
+00:35:39,016 --> 00:35:42,094
+a lot of Swiss colluded in Iraq's with a
+lot of objective-c code and we want this
+
+585
+00:35:42,094 --> 00:35:44,141
+perform well
+
+586
+00:35:45,041 --> 00:35:48,099
+so is a swift direct
+
+587
+00:35:48,099 --> 00:35:52,183
+and a swift array actually has to
+internal representations
+
+588
+00:35:53,083 --> 00:35:56,092
+its first representation is probably
+what you'd expect that a swift
+
+589
+00:35:57,073 --> 00:36:00,169
+it's a native representation it has a
+link which is the number of elements in
+
+590
+00:36:01,069 --> 00:36:01,125
+the array
+
+591
+00:36:02,025 --> 00:36:06,033
+it has a capacity thats you so we can
+algorithmically efficiently
+
+592
+00:36:06,033 --> 00:36:10,062
+add things to the array and then it has
+
+593
+00:36:10,359 --> 00:36:14,400
+the buffer elements that there in the
+Iraq
+
+594
+00:36:14,004 --> 00:36:18,026
+and of course does buffer elements
+whatever kinda rate is
+
+595
+00:36:18,062 --> 00:36:21,100
+that's what stories they take if we have
+an array of 32-bit integers
+
+596
+00:36:22,000 --> 00:36:26,067
+each element takes 32-bit storage
+there's no extra boxing going on here
+
+597
+00:36:26,067 --> 00:36:30,116
+next performance loss it's just and
+native buffer
+
+598
+00:36:31,016 --> 00:36:34,048
+now we also have the second
+representation
+
+599
+00:36:34,048 --> 00:36:37,927
+and we do a couple pointer tricks so
+that we can fit it into
+
+600
+00:36:38,359 --> 00:36:43,210
+to tiny amount of memory and that the
+Coco representation
+
+601
+00:36:43,021 --> 00:36:48,052
+so any swift array can actually be in an
+SRA
+
+602
+00:36:48,052 --> 00:36:51,071
+underneath as representation and
+
+603
+00:36:51,071 --> 00:36:55,150
+all the operations on an array handle
+both these representations
+
+604
+00:36:56,005 --> 00:37:00,048
+so if I subscript meyer et and it
+happens to be in an SRA
+
+605
+00:37:00,093 --> 00:37:05,099
+will use object index behind-the-scenes
+to get that result you want
+
+606
+00:37:05,099 --> 00:37:08,165
+we do an appendicitis an array we can
+put the representation quickly
+
+607
+00:37:09,065 --> 00:37:13,065
+and give you that efficient and
+operation
+
+608
+00:37:13,065 --> 00:37:16,117
+so given we have these two
+representations we can talk about the
+
+609
+00:37:17,017 --> 00:37:17,065
+notion
+
+610
+00:37:17,065 --> 00:37:20,066
+a bridging converting
+
+611
+00:37:20,066 --> 00:37:24,077
+between and an SRA as objective-c would
+sing
+
+612
+00:37:24,077 --> 00:37:27,082
+and swifter a that use within swift
+
+613
+00:37:28,027 --> 00:37:31,029
+there's two directions here going to get
+to see
+
+614
+00:37:31,029 --> 00:37:35,096
+coming back so first let's talk about
+
+615
+00:37:35,096 --> 00:37:38,121
+coming back so we have an objective-c
+method
+
+616
+00:37:39,021 --> 00:37:44,040
+in this case it's together for to a bar
+items in objective-c that returns an SRA
+
+617
+00:37:44,004 --> 00:37:47,088
+in swift that's going to come back as an
+array any object
+
+618
+00:37:48,024 --> 00:37:51,103
+how do we do this well given our two
+representations
+
+619
+00:37:52,003 --> 00:37:55,021
+extremely efficient to do it because we
+have a representation
+
+620
+00:37:55,021 --> 00:37:58,046
+they can just take that an SRA directly
+
+621
+00:37:58,046 --> 00:38:02,063
+all we need to do is one copy operation
+to make sure the contents don't change
+
+622
+00:38:02,063 --> 00:38:03,079
+underneath us to fit in
+
+623
+00:38:03,079 --> 00:38:06,104
+mutable array but the common case here
+
+624
+00:38:07,004 --> 00:38:10,029
+isn't not amenable rate it's an
+immutable an SRA
+
+625
+00:38:10,029 --> 00:38:14,040
+and so this copy operation is trivial
+it's a message sent to retain
+
+626
+00:38:14,004 --> 00:38:19,012
+that's it this conversion is extremely
+fast
+
+627
+00:38:19,048 --> 00:38:23,114
+let's talk about the other direction
+going from a swift array2 anniversary
+
+628
+00:38:24,014 --> 00:38:28,091
+so this would happen when we take say
+our toolbar items at a swift array
+
+629
+00:38:28,091 --> 00:38:31,115
+and Nicole the objective-c Center which
+expects
+
+630
+00:38:32,015 --> 00:38:36,084
+and an SRA well now we have an
+interesting question
+
+631
+00:38:36,084 --> 00:38:38,171
+because there's two possible
+representations here there's the really
+
+632
+00:38:39,071 --> 00:38:40,104
+easy answer
+
+633
+00:38:41,004 --> 00:38:45,038
+it already in the Copa representation
+and we can just hand of the NSRI
+
+634
+00:38:45,038 --> 00:38:48,072
+no work at all but the native 1
+
+635
+00:38:48,072 --> 00:38:52,160
+that's a different question entirely we
+could copy the whole buffer but that
+
+636
+00:38:53,006 --> 00:38:54,085
+would be awful
+
+637
+00:38:55,039 --> 00:38:59,081
+I mean we could possibly go allocate a
+little shame object that's
+
+638
+00:38:59,081 --> 00:39:02,167
+also possible instead we decided to make
+
+639
+00:39:03,067 --> 00:39:10,067
+are needed for representation to a
+little bit even objective-c object
+
+640
+00:39:11,019 --> 00:39:16,040
+it's already in an SRA and we've
+optimize the allocation here
+
+641
+00:39:16,004 --> 00:39:19,008
+so we can build these objects superfast
+
+642
+00:39:19,044 --> 00:39:22,213
+and just pass offer native
+representation as if
+
+643
+00:39:22,609 --> 00:39:29,609
+it were an SRA it works beautifully on
+detective seaside
+
+644
+00:39:36,016 --> 00:39:37,195
+think that's enough abridging
+
+645
+00:39:37,339 --> 00:39:44,339
+talk about subclassing
+
+646
+00:39:46,095 --> 00:39:49,169
+so swift objects
+
+647
+00:39:50,069 --> 00:39:54,096
+are all objective-c objects now what
+this means is that
+
+648
+00:39:54,096 --> 00:39:57,925
+if you define a class in swift it has
+basic
+
+649
+00:39:58,789 --> 00:40:03,490
+get to see interoperability built-in we
+use the same layout as an objective-c
+
+650
+00:40:03,049 --> 00:40:03,138
+class
+
+651
+00:40:04,038 --> 00:40:08,017
+so there's an is a pointer in there the
+is a player points out to objective-c
+
+652
+00:40:08,359 --> 00:40:09,480
+meta-data
+
+653
+00:40:09,048 --> 00:40:12,587
+there's the same underlying
+infrastructure think make
+
+654
+00:40:13,019 --> 00:40:17,026
+are work for the basic frameworks work
+with 14 release
+
+655
+00:40:17,089 --> 00:40:20,187
+can spend expect the class that's our
+thing they're all available
+
+656
+00:40:21,069 --> 00:40:25,460
+now if you really want to make use if
+your classes
+
+657
+00:40:25,046 --> 00:40:29,139
+from within your objective-c code well
+then you should
+
+658
+00:40:30,039 --> 00:40:33,093
+inherit from Objective C Class where
+there's an ass object
+
+659
+00:40:33,093 --> 00:40:36,712
+or some other class and this is going to
+expose your class
+
+660
+00:40:37,549 --> 00:40:40,580
+to the objective-c world and make all
+the things you write in swift
+
+661
+00:40:40,859 --> 00:40:45,903
+available also tear objective-c code so
+we're gonna continue with their UI
+
+662
+00:40:46,299 --> 00:40:47,376
+document example from earlier
+
+663
+00:40:48,069 --> 00:40:51,650
+and we're gonna create a little my
+document class that inherits
+
+664
+00:40:51,065 --> 00:40:55,139
+from you I document and we're gonna talk
+about
+
+665
+00:40:56,039 --> 00:41:00,018
+a couple other things that some classes
+do they override methods
+
+666
+00:41:00,369 --> 00:41:04,440
+so here going to override the the handle
+air user interaction permitted
+
+667
+00:41:05,079 --> 00:41:10,390
+method and you do this exactly the same
+way as you do if you're over writing a
+
+668
+00:41:10,039 --> 00:41:10,125
+swift matin
+
+669
+00:41:11,025 --> 00:41:14,794
+it doesn't matter the syntax is the same
+the fact that the superclass was written
+
+670
+00:41:15,019 --> 00:41:15,970
+in objective-c
+
+671
+00:41:15,097 --> 00:41:18,191
+completely irrelevant to the syntax of
+the language and how you work with it
+
+672
+00:41:19,091 --> 00:41:22,093
+now one thing to note
+
+673
+00:41:22,093 --> 00:41:25,232
+in swift is that the override keyword is
+
+674
+00:41:26,069 --> 00:41:29,180
+mandatory why do we do that
+
+675
+00:41:29,018 --> 00:41:32,177
+there's a couple reasons for doing that
+one other reasons
+
+676
+00:41:32,339 --> 00:41:37,400
+is because when you look at a method you
+probably want to know if the intention
+
+677
+00:41:37,004 --> 00:41:37,703
+here
+
+678
+00:41:38,099 --> 00:41:41,200
+is to override your sub your super
+classes behavior
+
+679
+00:41:41,002 --> 00:41:44,007
+to get it really important part of your
+API
+
+680
+00:41:44,025 --> 00:41:48,044
+it's really important part understanding
+what this method is supposed to do
+
+681
+00:41:48,269 --> 00:41:52,294
+and the other thing it does is it helps
+
+682
+00:41:52,519 --> 00:41:56,170
+overriding accidents for example
+
+683
+00:41:56,017 --> 00:42:00,072
+I meant to override something for my
+super class but I type are the selector
+
+684
+00:42:00,072 --> 00:42:00,116
+on
+
+685
+00:42:01,016 --> 00:42:05,405
+and the method name no longer overrides
+my code isn't running
+
+686
+00:42:05,549 --> 00:42:08,605
+and I have no idea why with mandatory
+override
+
+687
+00:42:09,109 --> 00:42:12,490
+we catch that if you didn't override
+something you thought you did
+
+688
+00:42:12,049 --> 00:42:16,091
+compile complaint there's also the
+
+689
+00:42:16,091 --> 00:42:19,091
+real surprise which is when you
+
+690
+00:42:19,091 --> 00:42:23,092
+override something from the superclass
+that you didn't even know existed
+
+691
+00:42:23,092 --> 00:42:26,291
+and this is the case where
+
+692
+00:42:27,119 --> 00:42:32,240
+you just wrote a method and maybe in
+this release them as it happens to exist
+
+693
+00:42:32,024 --> 00:42:32,903
+or maybe doesn't
+
+694
+00:42:33,119 --> 00:42:36,211
+exist in this release but some joker
+added it to the next release and the
+
+695
+00:42:37,039 --> 00:42:38,063
+frameworks that you use
+
+696
+00:42:38,279 --> 00:42:41,283
+and now you're overriding something that
+you didn't exist at the time
+
+697
+00:42:41,319 --> 00:42:45,000
+we can catch that by requiring override
+throughout
+
+698
+00:42:45,000 --> 00:42:51,009
+the language can also talk a little bit
+about overriding
+
+699
+00:42:51,009 --> 00:42:54,015
+properties so
+
+700
+00:42:54,069 --> 00:42:57,074
+in swift you don't overwrite the Yetter
+
+701
+00:42:57,569 --> 00:43:01,750
+for the center separately instead you
+override the property itself
+
+702
+00:43:01,075 --> 00:43:04,684
+and then you provide together or center
+
+703
+00:43:05,359 --> 00:43:08,960
+as appropriate so here we doing
+something very simple were overriding
+
+704
+00:43:08,096 --> 00:43:08,455
+thats
+
+705
+00:43:09,319 --> 00:43:12,720
+just description property and providing
+in together for it
+
+706
+00:43:12,072 --> 00:43:15,147
+now what this means to the objective-c
+runtime
+
+707
+00:43:16,047 --> 00:43:20,122
+your objective-c code is that you've
+overridden together but the semantic
+
+708
+00:43:21,022 --> 00:43:22,111
+model in swift
+
+709
+00:43:22,309 --> 00:43:26,480
+is different it's based on overriding
+the actual thing that was declared in
+
+710
+00:43:26,048 --> 00:43:26,587
+this case
+
+711
+00:43:27,019 --> 00:43:31,430
+the property as I mentioned before
+
+712
+00:43:31,043 --> 00:43:34,622
+and if there's going to come back so we
+have contents for type
+
+713
+00:43:35,009 --> 00:43:38,630
+air we're going to override your
+subclass and remember that the
+
+714
+00:43:38,063 --> 00:43:39,452
+objective-c method took
+
+715
+00:43:40,019 --> 00:43:43,380
+answer star star AC pointer
+
+716
+00:43:43,038 --> 00:43:48,497
+to and an Essar which could be nil the
+way we work with these
+
+717
+00:43:48,839 --> 00:43:51,840
+in swift is at the end of their pointer
+class
+
+718
+00:43:51,849 --> 00:43:55,500
+provides a couple of operations that you
+would expect out of a pointer
+
+719
+00:43:55,005 --> 00:43:58,584
+you can test it for nil as we do in the
+if check HERE
+
+720
+00:43:59,079 --> 00:44:03,108
+to see whether we're actually given a
+valid pointer versus being given nil
+
+721
+00:44:03,369 --> 00:44:06,414
+our caller now if it's not until
+
+722
+00:44:06,819 --> 00:44:10,220
+we can point at the memory location
+associated with that pointer
+
+723
+00:44:10,022 --> 00:44:13,171
+amor by referring it to as to it as air
+dot
+
+724
+00:44:13,369 --> 00:44:17,388
+memory and we can read from that memory
+all right to that memory by just reading
+
+725
+00:44:17,559 --> 00:44:19,560
+or signing to it
+
+726
+00:44:19,569 --> 00:44:22,668
+now in this era pointers going to take
+care the nitty-gritty details if making
+
+727
+00:44:23,559 --> 00:44:23,890
+this
+
+728
+00:44:23,089 --> 00:44:26,458
+are releasing to fit in with the code
+conventions
+
+729
+00:44:27,259 --> 00:44:30,770
+love cocoa and its air handling was
+actually fairly
+
+730
+00:44:30,077 --> 00:44:34,606
+easy to deal with this see pointer from
+within the swift world
+
+731
+00:44:35,299 --> 00:44:40,330
+else take a look at this with class that
+we've been building here
+
+732
+00:44:40,609 --> 00:44:43,684
+we have my document inherits from you I
+document
+
+733
+00:44:44,359 --> 00:44:48,000
+it has a property and has some method
+overrides
+
+734
+00:44:48,000 --> 00:44:51,027
+it's just a swift last through and
+through
+
+735
+00:44:51,027 --> 00:44:54,116
+but all of this is accessible directly
+
+736
+00:44:54,359 --> 00:44:57,360
+in your objective-c code
+
+737
+00:44:57,369 --> 00:45:01,020
+so if your project this into objective-c
+it would look like some
+
+738
+00:45:01,002 --> 00:45:06,069
+like this all the same ailment so there
+we have properties we have methods
+
+739
+00:45:06,069 --> 00:45:09,148
+now there's some interesting things to
+point out well for one
+
+740
+00:45:10,048 --> 00:45:14,052
+we have this items property that is an
+ass a reggae
+
+741
+00:45:14,088 --> 00:45:18,094
+remember we talked about bridging here
+the original swift code
+
+742
+00:45:19,048 --> 00:45:22,048
+had an array of strings
+
+743
+00:45:22,048 --> 00:45:25,063
+we bridge that seamlessly over to an an
+SRA
+
+744
+00:45:25,063 --> 00:45:29,552
+the contains and a string objects for
+your objective-c code to use
+
+745
+00:45:30,119 --> 00:45:34,460
+so you can use strong typing in the
+swift world
+
+746
+00:45:34,046 --> 00:45:39,385
+and it maps over to the natural thing
+within the object to SeaWorld
+
+747
+00:45:39,799 --> 00:45:44,854
+other thing I want to point out is this
+really ugly name up top you've noticed
+
+748
+00:45:45,349 --> 00:45:48,373
+so this is the mangled name usually iraq
+
+749
+00:45:48,589 --> 00:45:51,631
+you're gonna see this as my apt at my
+document
+
+750
+00:45:52,009 --> 00:45:55,040
+unless you're poking at the internal
+somewhere
+
+751
+00:45:55,319 --> 00:45:59,160
+and the purpose of this mangled name is
+
+752
+00:45:59,016 --> 00:46:03,195
+to put everything in a namespace have
+some sort see don't have to prefix
+
+753
+00:46:03,339 --> 00:46:07,362
+all if your class names instead with
+swift eyes
+
+754
+00:46:07,569 --> 00:46:10,700
+is it puts the module name which is your
+target
+
+755
+00:46:10,007 --> 00:46:13,366
+your framework or your app that name
+
+756
+00:46:14,059 --> 00:46:17,190
+into the name to the classic creates so
+you can use
+
+757
+00:46:17,019 --> 00:46:20,077
+the simple names that you want to use
+throughout your application
+
+758
+00:46:20,077 --> 00:46:23,146
+and not worry about a conflict with
+something else in the system
+
+759
+00:46:23,839 --> 00:46:30,839
+somewhere
+
+760
+00:46:32,789 --> 00:46:36,811
+when you're in your sis classes you do
+need to be a little bit cognizant
+
+761
+00:46:37,009 --> 00:46:42,230
+I'll the limits objective-c so it has
+allowed a cool features you might want
+
+762
+00:46:42,023 --> 00:46:42,602
+to use them
+
+763
+00:46:42,809 --> 00:46:45,885
+two pools generics and so on and
+
+764
+00:46:46,569 --> 00:46:49,640
+if you go crazy in your classes and you
+use these features
+
+765
+00:46:50,279 --> 00:46:54,357
+you might be a little surprise that this
+generic method that returns a tubal
+
+766
+00:46:55,059 --> 00:46:58,660
+doesn't show up in your objective-c code
+because to check if he has no way to
+
+767
+00:46:58,066 --> 00:46:59,138
+express that signature
+
+768
+00:47:00,038 --> 00:47:03,121
+there's nothing we can do it we don't
+have to put in objective-c
+
+769
+00:47:04,021 --> 00:47:07,118
+so if this happens to you and you're
+surprised by it
+
+770
+00:47:08,018 --> 00:47:12,397
+there's nashville you can adhere method
+the obscenely attributes
+
+771
+00:47:12,559 --> 00:47:16,614
+and what this does is it actually
+compiler to check
+
+772
+00:47:17,109 --> 00:47:20,152
+and make sure that this method
+
+773
+00:47:20,539 --> 00:47:23,541
+or property or initializer or whatever
+
+774
+00:47:23,739 --> 00:47:28,400
+is expressible in objective-c so can be
+used from your objective-c code
+
+775
+00:47:28,004 --> 00:47:31,053
+and if it's not express more objective
+c- for some reason
+
+776
+00:47:31,089 --> 00:47:35,308
+the compiler will give you a hard error
+to tell you this is not something you
+
+777
+00:47:36,109 --> 00:47:38,118
+can use from check to see
+
+778
+00:47:39,009 --> 00:47:42,220
+now the ancien tribute actually has a
+second
+
+779
+00:47:42,022 --> 00:47:46,095
+purpose and that's controlling the names
+that you see in the objective-c side of
+
+780
+00:47:46,095 --> 00:47:47,100
+things
+
+781
+00:47:48,045 --> 00:47:53,084
+so here's a property enabled has a gator
+it has a center
+
+782
+00:47:53,489 --> 00:47:57,493
+in objective-c this is going to come
+through as a property named enabled
+
+783
+00:47:57,529 --> 00:48:00,605
+a getter named enabled and a center
+named said enable
+
+784
+00:48:01,289 --> 00:48:04,321
+corn that's not coca convention
+
+785
+00:48:04,609 --> 00:48:08,710
+really rather the call getter is enabled
+
+786
+00:48:08,071 --> 00:48:11,094
+and so to do that we just use the OBS
+the attributes use
+
+787
+00:48:11,094 --> 00:48:14,119
+providing with the selector is enabled
+so we can
+
+788
+00:48:15,019 --> 00:48:19,050
+control the mapping ourselves between
+these two languages
+
+789
+00:48:19,005 --> 00:48:24,070
+don't expect you to do this often but
+it's there if you need it
+
+790
+00:48:25,015 --> 00:48:29,724
+you can also do this for the name a
+class
+
+791
+00:48:29,859 --> 00:48:32,930
+and what we have here in the in the
+parentheses in the autopsy at review
+
+792
+00:48:33,569 --> 00:48:37,400
+is the non name spaced name for class
+
+793
+00:48:37,004 --> 00:48:40,059
+so why would you do this well perhaps
+here
+
+794
+00:48:40,095 --> 00:48:43,192
+porting part of your application from
+get to see the swift for some reason
+
+795
+00:48:44,092 --> 00:48:48,119
+and so you had ABC my document now you
+just one caught my documents your
+
+796
+00:48:49,019 --> 00:48:54,168
+secret taping ABC however you have some
+archives that you still want to have
+
+797
+00:48:54,339 --> 00:48:57,437
+work because this is gonna be a drop
+incompatible implementation
+
+798
+00:48:58,319 --> 00:49:02,170
+in swift for your objective c-class you
+can use the I'm see action you
+
+799
+00:49:02,017 --> 00:49:05,064
+give this class the run-time name:
+
+800
+00:49:05,064 --> 00:49:09,115
+ABC my document and keep all of your
+archives working
+
+801
+00:49:10,015 --> 00:49:15,016
+one last thing a promise to talk about
+and that CF interoperability
+
+802
+00:49:15,025 --> 00:49:19,134
+so by CF referring to all of the the
+seed like
+
+803
+00:49:19,359 --> 00:49:22,950
+API is that that work with the see
+objects
+
+804
+00:49:22,095 --> 00:49:25,934
+so this is core foundations this core
+graphics
+
+805
+00:49:26,789 --> 00:49:29,794
+and other frameworks maybe some of your
+own frameworks
+
+806
+00:49:29,839 --> 00:49:33,230
+and let's take a little look at using CF
+
+807
+00:49:33,023 --> 00:49:36,077
+particularly core graphics in
+objective-c
+
+808
+00:49:36,077 --> 00:49:39,416
+I'm gonna do something really simple
+here I'm gonna draw
+
+809
+00:49:40,109 --> 00:49:45,185
+agree in in a rectangle using or
+graphics
+
+810
+00:49:45,869 --> 00:49:48,980
+here's my start I need to go build up
+the color space
+
+811
+00:49:48,098 --> 00:49:52,477
+and build up the gradient now there's a
+couple things here that I find
+
+812
+00:49:53,359 --> 00:49:57,910
+non-optimal so the one thing is bridge
+cast
+
+813
+00:49:57,091 --> 00:50:02,470
+so we're an arc partly great handling
+are in disarray for us reason that nice
+
+814
+00:50:03,289 --> 00:50:04,346
+or a liberal syntax
+
+815
+00:50:04,859 --> 00:50:08,400
+but now we need to do bridge gaps
+between CT Colorado
+
+816
+00:50:08,004 --> 00:50:12,473
+and ID so we can put things into the SRA
+
+817
+00:50:12,869 --> 00:50:16,883
+and we have the CF array cast sorting
+toll-free bridging their
+
+818
+00:50:17,009 --> 00:50:21,680
+between Vienna suray and the CF array
+
+819
+00:50:21,068 --> 00:50:24,217
+and there's also this semi amusing thing
+that we're using
+
+820
+00:50:24,829 --> 00:50:30,902
+three different kinds of arrays in four
+lines a code
+
+821
+00:50:31,559 --> 00:50:34,880
+and you can write that I you can try to
+rate this better I couldn't actually
+
+822
+00:50:34,088 --> 00:50:35,197
+find a way
+
+823
+00:50:35,989 --> 00:50:38,993
+to make it cleaner than this and its
+
+824
+00:50:39,029 --> 00:50:42,034
+it's really unfortunate because the NSR
+a
+
+825
+00:50:42,079 --> 00:50:45,130
+gives us some useful behavior arc is
+managing its lifetime for us
+
+826
+00:50:45,013 --> 00:50:50,122
+that's great we need to fear a because
+we need to put CD floats in it
+
+827
+00:50:50,239 --> 00:50:53,277
+and we can do that with an ass a reggae
+
+828
+00:50:53,619 --> 00:50:58,643
+and finally we needed do the toll-free
+bridging over to see if a rare after
+
+829
+00:50:58,859 --> 00:51:02,450
+because that we use with for graphics
+
+830
+00:51:02,045 --> 00:51:08,048
+API's now moving along we can create
+some points with CG point make
+
+831
+00:51:08,075 --> 00:51:12,644
+and of course even though you're under
+our where memory management is automatic
+
+832
+00:51:13,319 --> 00:51:17,322
+it's not automated for CF thing so we
+have to remember to release the color
+
+833
+00:51:17,349 --> 00:51:17,900
+space
+
+834
+00:51:17,009 --> 00:51:22,148
+and release the gradient we feel like we
+can do a little bit better in the world
+
+835
+00:51:23,039 --> 00:51:27,046
+so let's start again this time in swift
+
+836
+00:51:27,109 --> 00:51:30,200
+and first let's build a color space
+
+837
+00:51:30,002 --> 00:51:34,057
+so here we're just calling CQ color
+space created by Sir Jimmy
+
+838
+00:51:34,075 --> 00:51:38,624
+nothing different about that however the
+type that we infer
+
+839
+00:51:39,299 --> 00:51:44,020
+for this color space variable is CG
+color space
+
+840
+00:51:44,002 --> 00:51:47,094
+note the lack of a rat at the end of
+this this isn't some
+
+841
+00:51:47,094 --> 00:51:50,973
+opaque pointer this is the CG color
+space
+
+842
+00:51:51,819 --> 00:51:55,821
+class we've created
+
+843
+00:51:55,839 --> 00:51:59,130
+what's the nice thing about being a
+class well that means we're in the arc
+
+844
+00:51:59,013 --> 00:51:59,752
+model
+
+845
+00:51:59,869 --> 00:52:06,869
+we're going to automatically manage the
+memory for you
+
+846
+00:52:12,069 --> 00:52:15,880
+school little further and create a
+gradient talked about
+
+847
+00:52:15,088 --> 00:52:19,027
+so here we member we need to pass couple
+a race through
+
+848
+00:52:19,819 --> 00:52:23,900
+we can use this nice swift array literal
+syntax
+
+849
+00:52:23,009 --> 00:52:26,046
+to form an array containing star color
+and color
+
+850
+00:52:27,027 --> 00:52:30,040
+we're doing all the bridging
+automatically here for you
+
+851
+00:52:30,004 --> 00:52:33,633
+so we created the anniversary we need
+we've told free bridge did
+
+852
+00:52:34,029 --> 00:52:38,390
+to the CSRA behind-the-scenes so you
+don't have to deal with the fact that
+
+853
+00:52:38,039 --> 00:52:41,198
+there are so many array types running
+around
+
+854
+00:52:41,549 --> 00:52:45,200
+did the exact same thing for the sea
+parts
+
+855
+00:52:45,002 --> 00:52:49,141
+so here we just have an array a
+floating-point values
+
+856
+00:52:49,339 --> 00:52:53,390
+says treated as a native swift array of
+CT floats
+
+857
+00:52:53,849 --> 00:52:56,943
+that we bridge seamlessly to the
+underlying Sea Ray
+
+858
+00:52:57,789 --> 00:53:01,390
+that this C function expects
+
+859
+00:53:01,039 --> 00:53:04,127
+let's keep going with our example here
+
+860
+00:53:05,027 --> 00:53:09,027
+CD points you can use CD point make if
+you want
+
+861
+00:53:09,027 --> 00:53:13,996
+perfectly fine works exactly the same
+way as it does in objective-c
+
+862
+00:53:14,239 --> 00:53:18,252
+however whenever we import a struct like
+CG point is a struct
+
+863
+00:53:18,369 --> 00:53:22,435
+we provide it with initialize urs that
+have labeled arguments
+
+864
+00:53:23,029 --> 00:53:26,073
+and so a better way to build CT point in
+swift is
+
+865
+00:53:26,469 --> 00:53:30,548
+to just construct a CD point value:
+using that seem constructions and
+
+866
+00:53:31,259 --> 00:53:34,305
+actually been talking about throughout
+this talk
+
+867
+00:53:34,719 --> 00:53:37,719
+and then use the argument labels X and Y
+
+868
+00:53:37,719 --> 00:53:40,805
+to make it absolutely clear what you're
+doing and this brings
+
+869
+00:53:41,579 --> 00:53:45,150
+aluminum a flavor up that nice Coco
+readability
+
+870
+00:53:45,015 --> 00:53:50,070
+using argument labels into the
+underlying CF API's
+
+871
+00:53:50,007 --> 00:53:53,012
+and that's it for example in swift its
+smaller
+
+872
+00:53:53,075 --> 00:53:57,164
+its easier this far fewer concepts that
+you have to deal with
+
+873
+00:53:57,839 --> 00:54:04,839
+because we've automatic taking over the
+match he
+
+874
+00:54:06,849 --> 00:54:11,700
+now you may have some of your own API's
+we refer to as explicitly bridge
+
+875
+00:54:11,007 --> 00:54:16,106
+so these are CF like API's where we're
+not quite sure whether you're following
+
+876
+00:54:16,799 --> 00:54:18,210
+all the CF memory
+
+877
+00:54:18,021 --> 00:54:21,092
+conventions because unlike the world
+cocoa
+
+878
+00:54:21,092 --> 00:54:24,188
+which is fairly tame in we've been
+following conventions fairly well for
+
+879
+00:54:25,088 --> 00:54:26,096
+many years
+
+880
+00:54:26,096 --> 00:54:29,855
+we haven't been following them so well
+and see as a community
+
+881
+00:54:30,719 --> 00:54:34,690
+and so we may have this function get
+random color
+
+882
+00:54:34,069 --> 00:54:38,070
+produces some random color when people
+listen
+
+883
+00:54:38,007 --> 00:54:41,009
+the Swiss compiler doesn't know whether
+we can really trust
+
+884
+00:54:41,009 --> 00:54:44,067
+its returns plus 0 or not has getting a
+name but
+
+885
+00:54:45,048 --> 00:54:49,069
+we're not sure and so we do the safe
+thing and we imported as
+
+886
+00:54:49,069 --> 00:54:52,142
+and unmanaged CG color 32 can't
+
+887
+00:54:53,042 --> 00:54:58,231
+directly manage the memory here because
+we don't know what the conventions are
+
+888
+00:54:58,609 --> 00:55:04,635
+so what is unmanaged thing so unmanaged
+is actually a generic struct
+
+889
+00:55:04,869 --> 00:55:09,890
+over an arbitrary T now the details
+engineer trucks we don't need to go into
+
+890
+00:55:09,089 --> 00:55:09,538
+now
+
+891
+00:55:10,339 --> 00:55:13,354
+they're covered in the advanced of which
+I highly recommend
+
+892
+00:55:13,489 --> 00:55:16,494
+wanna look at right now it's just the
+simple API
+
+893
+00:55:16,539 --> 00:55:20,180
+at this unmanaged tight we have two core
+operations
+
+894
+00:55:20,018 --> 00:55:23,025
+take unmanaged value which use for
+placing your returns
+
+895
+00:55:23,088 --> 00:55:28,114
+and take retain value few surplus one
+returns
+
+896
+00:55:29,014 --> 00:55:32,069
+now when the colour CT color get random
+color
+
+897
+00:55:32,069 --> 00:55:35,598
+we want to immediately use one of these
+two functions so
+
+898
+00:55:36,219 --> 00:55:39,440
+we know to get random color returns a
+plus 0
+
+899
+00:55:39,044 --> 00:55:42,673
+so we're going to a taken retain value
+of it now the reason to do this
+
+900
+00:55:43,069 --> 00:55:46,072
+immediately after the call is this gets
+us
+
+901
+00:55:46,369 --> 00:55:52,230
+a CG color which hit us right back into
+automatically managing memory for you
+
+902
+00:55:52,023 --> 00:55:55,069
+so the window in which you have to do
+something with
+
+903
+00:55:55,069 --> 00:55:58,146
+manual memory management is tiny it's
+just this one little line of code
+
+904
+00:55:59,046 --> 00:56:02,069
+where you establish what the convention
+is for CG
+
+905
+00:56:02,069 --> 00:56:06,168
+color get random color
+
+906
+00:56:06,789 --> 00:56:10,400
+now if you
+
+907
+00:56:10,004 --> 00:56:13,133
+own CG color get random color
+
+908
+00:56:13,529 --> 00:56:17,563
+you can audit your API's to make sure
+they follow the core foundation
+
+909
+00:56:17,869 --> 00:56:21,180
+naming conventions for memory management
+
+910
+00:56:21,018 --> 00:56:25,021
+and when they do you can use these
+annotations here in CoreFoundation
+
+911
+00:56:25,021 --> 00:56:30,180
+see if it was a bridging enabled and
+disabled put this over a whole header
+
+912
+00:56:30,369 --> 00:56:33,640
+10 audited all the methods and that
+header
+
+913
+00:56:33,064 --> 00:56:36,070
+and when you do that well now
+
+914
+00:56:36,007 --> 00:56:40,876
+your function when use from swift get
+you right back into the manage world
+
+915
+00:56:41,569 --> 00:56:45,648
+directly so you have the great automatic
+memory management
+
+916
+00:56:46,359 --> 00:56:50,140
+the swift and a ride for SIA
+
+917
+00:56:50,014 --> 00:56:54,363
+let's wrap up here we've talked about a
+lot have different topics
+
+918
+00:56:54,489 --> 00:56:57,501
+we've talked about interoperability
+between swiftly objective-c
+
+919
+00:56:57,609 --> 00:57:00,678
+we've talked about a whole other rules
+about how that works but let the tools
+
+920
+00:57:01,299 --> 00:57:02,299
+and documentation
+
+921
+00:57:02,299 --> 00:57:05,393
+help you they can show you Swift in
+objective-c side by side
+
+922
+00:57:06,239 --> 00:57:09,246
+you can get a feel for how your
+objective c- API's
+
+923
+00:57:09,309 --> 00:57:13,480
+work in swift we've talked about some of
+the details of bridging
+
+924
+00:57:13,048 --> 00:57:17,897
+core Coco datatypes and using Swiss
+native types
+
+925
+00:57:18,329 --> 00:57:23,770
+and we talked about automates the F
+memory management available in swift
+
+926
+00:57:23,077 --> 00:57:27,546
+for more information check out the Swiss
+programming language book
+
+927
+00:57:28,239 --> 00:57:31,296
+and also the using swift with cocoa and
+objective-c guide
+
+928
+00:57:31,809 --> 00:57:34,900
+that goes into more details on the
+interplay between
+
+929
+00:57:34,009 --> 00:57:38,090
+these two programming languages
+
+930
+00:57:39,071 --> 00:57:39,350
+thank you
+

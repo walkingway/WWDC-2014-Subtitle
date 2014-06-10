@@ -1,0 +1,3466 @@
+1
+00:00:12,599 --> 00:00:18,830
+good morning
+
+2
+00:00:18,083 --> 00:00:20,138
+alright happy to sing that's good a
+
+3
+00:00:21,038 --> 00:00:24,056
+earnings will Turner and with my
+colleague Brooke
+
+4
+00:00:24,056 --> 00:00:28,025
+cal and we'll be talking to you about
+testing in Xcode 6
+
+5
+00:00:28,529 --> 00:00:34,230
+and let's get started so we're gonna
+cover several topics today
+
+6
+00:00:34,023 --> 00:00:39,024
+start of just kinda motivate this think
+about the benefits attesting white why
+
+7
+00:00:39,033 --> 00:00:40,037
+should we bother in the first place
+
+8
+00:00:40,073 --> 00:00:43,100
+then we'll get into what it takes to
+
+9
+00:00:44,000 --> 00:00:47,519
+had test to a project may be a more
+projects that don't have test
+
+10
+00:00:47,519 --> 00:00:51,470
+and they will talk about some new
+features
+
+11
+00:00:51,047 --> 00:00:54,126
+annex good sex which allow you to test a
+synchronous systems
+
+12
+00:00:55,026 --> 00:00:58,090
+and that also testing features that
+allow you to catch performance
+
+13
+00:00:58,009 --> 00:01:02,198
+regressions so
+
+14
+00:01:03,089 --> 00:01:06,117
+why should
+
+15
+00:01:06,369 --> 00:01:11,030
+we test obviously every high moment we
+spend developing as an investment over
+
+16
+00:01:11,003 --> 00:01:11,592
+resource
+
+17
+00:01:11,619 --> 00:01:15,170
+our resources time and our colleagues
+for maintaining
+
+18
+00:01:15,017 --> 00:01:18,096
+maintaining the code base that we
+created so the obvious thing about
+
+19
+00:01:18,096 --> 00:01:18,102
+testing
+
+20
+00:01:19,056 --> 00:01:23,505
+is it helps you find bugs in as many
+classes about its that you find the
+
+21
+00:01:24,009 --> 00:01:24,066
+testing
+
+22
+00:01:24,579 --> 00:01:28,590
+they are regressions so cases where you
+ship your product
+
+23
+00:01:28,059 --> 00:01:31,135
+you make a code change data feature and
+in the process
+
+24
+00:01:32,035 --> 00:01:35,444
+something breaks and now you're 1.1 or
+1.2
+
+25
+00:01:35,759 --> 00:01:39,590
+has a bug where customers are unhappy we
+hate regressions
+
+26
+00:01:39,059 --> 00:01:43,508
+pasar fantastic way to ensure your code
+ships without regressions
+
+27
+00:01:44,039 --> 00:01:49,058
+also bugs where performance changes you
+make a change in your code and now
+
+28
+00:01:49,229 --> 00:01:49,324
+suddenly something
+
+29
+00:01:50,179 --> 00:01:54,183
+taking a lot more time to execute and
+maybe that only on some devices not
+
+30
+00:01:54,219 --> 00:01:54,990
+others
+
+31
+00:01:54,099 --> 00:01:57,498
+so pass again can be a great way to
+catch
+
+32
+00:01:58,389 --> 00:02:01,443
+performance regressions the other sorta
+less
+
+33
+00:02:01,929 --> 00:02:06,929
+talked about unless obvious benefit if
+testing is it codifies the requirements
+
+34
+00:02:06,929 --> 00:02:11,943
+a your project so especially if you're
+sharing code with engineers you create
+
+35
+00:02:12,069 --> 00:02:13,890
+classes classes have
+
+36
+00:02:13,089 --> 00:02:17,112
+API's and a lot of times because
+objective-c in script are great
+
+37
+00:02:18,012 --> 00:02:19,078
+languages for expressing
+
+38
+00:02:19,078 --> 00:02:23,106
+the API semantics in the API
+
+39
+00:02:24,006 --> 00:02:27,079
+the theirself document we think okay our
+job is done
+
+40
+00:02:27,079 --> 00:02:31,153
+but in truth they don't really account
+for all the possible permutations have
+
+41
+00:02:32,053 --> 00:02:35,054
+inputs to those functions so if you
+write
+
+42
+00:02:35,054 --> 00:02:39,123
+test those tests help beautify the
+requirements as API's another engineer
+
+43
+00:02:40,023 --> 00:02:40,922
+come along
+
+44
+00:02:41,129 --> 00:02:45,129
+they can make code changes that area and
+it has helped them understand what the
+
+45
+00:02:45,129 --> 00:02:46,730
+expected behavior is
+
+46
+00:02:46,073 --> 00:02:49,122
+so to get started with us
+
+47
+00:02:50,022 --> 00:02:53,089
+you may have a project that doesn't have
+tests already
+
+48
+00:02:53,089 --> 00:02:56,147
+so you want to add to this that project
+and then the obvious thing to do is
+
+49
+00:02:57,047 --> 00:03:01,906
+make sure that those test pass
+alternatively you may start with the new
+
+50
+00:03:02,329 --> 00:03:03,110
+project
+
+51
+00:03:03,011 --> 00:03:06,500
+and that case you have the option to a
+different workflow where
+
+52
+00:03:06,599 --> 00:03:11,540
+you create test first and then you write
+code that passes
+
+53
+00:03:11,054 --> 00:03:15,083
+us and that sometimes referred to as
+test driven development
+
+54
+00:03:15,569 --> 00:03:20,614
+so now you're set up you got your test
+their passing
+
+55
+00:03:21,019 --> 00:03:24,030
+you can go into work load we talk about
+we consider
+
+56
+00:03:24,003 --> 00:03:27,079
+a continuous integration workflow and
+you start of a green state where
+
+57
+00:03:27,079 --> 00:03:28,086
+everything is working
+
+58
+00:03:28,086 --> 00:03:32,142
+and you're making code changes you're at
+it features fixing bugs
+
+59
+00:03:33,042 --> 00:03:36,061
+at some point 110 these code changes
+
+60
+00:03:36,439 --> 00:03:39,522
+introduces a bug and so now your
+continuous integration because you've
+
+61
+00:03:40,269 --> 00:03:40,277
+written test
+
+62
+00:03:41,069 --> 00:03:45,810
+identifies a bug and you know right away
+right after that first code change
+
+63
+00:03:45,081 --> 00:03:48,098
+you know that the bug has been
+introduced so then you can take the
+
+64
+00:03:48,098 --> 00:03:49,107
+necessary steps
+
+65
+00:03:49,989 --> 00:03:55,025
+fix a bug and return to Green State with
+you i think is a green state represents
+
+66
+00:03:55,349 --> 00:03:55,416
+no
+
+67
+00:03:56,019 --> 00:04:00,113
+quality and having tests and have a
+continuous integration ensures that your
+
+68
+00:04:00,959 --> 00:04:04,430
+projects remained unknown state of
+quality
+
+69
+00:04:04,043 --> 00:04:10,412
+all the time so to get started let's
+talk about how testing works
+
+70
+00:04:10,799 --> 00:04:13,855
+and Xcode Xcode ships with the framework
+called
+
+71
+00:04:14,359 --> 00:04:19,540
+XE test and this is framework for
+testing provide the Senate API's
+
+72
+00:04:19,054 --> 00:04:22,096
+let you create tests run the test
+express
+
+73
+00:04:22,096 --> 00:04:25,164
+expectations passes and failures as the
+
+74
+00:04:26,064 --> 00:04:29,085
+it all starts with the base class exceed
+test case
+
+75
+00:04:29,085 --> 00:04:32,096
+and to create test you subclass exceed
+
+76
+00:04:32,096 --> 00:04:37,165
+space and then you add test methods and
+test methods follow a naming convention
+
+77
+00:04:38,065 --> 00:04:41,644
+they return void their pre-fixed
+
+78
+00:04:42,229 --> 00:04:46,282
+with the word test in lower case and
+they take no parameters
+
+79
+00:04:46,759 --> 00:04:51,360
+the remainder the method name is at your
+discretion it should be
+
+80
+00:04:51,036 --> 00:04:56,078
+sure to what a name that conveys the
+purpose the test
+
+81
+00:04:56,078 --> 00:05:00,087
+inside the test methods you can use
+assertion API's we provide
+
+82
+00:05:00,789 --> 00:05:04,270
+to report failures for example Xeta
+
+83
+00:05:04,027 --> 00:05:07,426
+assert equal compares to scare about
+scaler values
+
+84
+00:05:07,669 --> 00:05:12,240
+and if they don't match it outputs a
+string and reports a failure to test
+
+85
+00:05:12,024 --> 00:05:15,031
+harness
+
+86
+00:05:15,094 --> 00:05:19,102
+so in Xcode we manage a lot of different
+parts of our projects their targets and
+
+87
+00:05:20,074 --> 00:05:22,168
+we have test targets for managing tests
+
+88
+00:05:23,068 --> 00:05:26,557
+test targets build bundles and these
+bundles
+
+89
+00:05:27,169 --> 00:05:32,200
+contain compiled test code and also
+resources you want to use in the test
+
+90
+00:05:32,479 --> 00:05:32,930
+may be a
+
+91
+00:05:32,093 --> 00:05:37,111
+data files driver test these go in your
+test but you don't really wanna shippers
+
+92
+00:05:38,011 --> 00:05:39,220
+with your application
+
+93
+00:05:39,319 --> 00:05:42,490
+you gonna ship them with day on a ship
+them at all you want them to be with
+
+94
+00:05:42,049 --> 00:05:43,096
+your test bundle
+
+95
+00:05:43,096 --> 00:05:47,955
+so these are pest targets are
+automatically included in new projects
+
+96
+00:05:48,819 --> 00:05:51,860
+if I go today and I create new
+application
+
+97
+00:05:51,086 --> 00:05:54,087
+you'll see there's a test target test
+
+98
+00:05:54,096 --> 00:05:59,137
+class already there to start me off get
+me writing tests from the beginning
+
+99
+00:06:00,037 --> 00:06:03,896
+you can also and test targets to
+existing projects
+
+100
+00:06:04,229 --> 00:06:08,550
+and this may be something you wanted to
+to project that has not asked for it may
+
+101
+00:06:08,055 --> 00:06:09,149
+also be a step you take to help
+
+102
+00:06:10,049 --> 00:06:15,097
+organizer test because you can have as
+many test targets as you want
+
+103
+00:06:15,097 --> 00:06:19,476
+and this useful sometimes he'll run just
+this test target that test target
+
+104
+00:06:20,349 --> 00:06:25,160
+or you can run them all together
+
+105
+00:06:25,016 --> 00:06:28,205
+so let's think about moment about how
+pass
+
+106
+00:06:28,349 --> 00:06:31,354
+run because their bundles these are not
+execute oppose it can be launched
+
+107
+00:06:31,849 --> 00:06:32,874
+themselves
+
+108
+00:06:33,099 --> 00:06:38,168
+so instead we need to host them and
+execute a whole process
+
+109
+00:06:38,789 --> 00:06:43,190
+generally we inject the singer apso your
+test can be written
+
+110
+00:06:43,019 --> 00:06:46,102
+against her application can access all
+the code in your application
+
+111
+00:06:47,002 --> 00:06:50,025
+which means when we run the test we run
+it in the context
+
+112
+00:06:50,025 --> 00:06:53,724
+your application alternatively
+
+113
+00:06:53,949 --> 00:06:59,660
+you can run a minute hosting process
+that's provided by exco
+
+114
+00:06:59,066 --> 00:07:02,545
+resources for tests as I mentioned
+before are not
+
+115
+00:07:03,139 --> 00:07:06,370
+in the main but no there in your test
+bundle cell
+
+116
+00:07:06,037 --> 00:07:09,128
+when you go to load them don't use and
+aspen domain but on this is something
+
+117
+00:07:10,028 --> 00:07:10,055
+that
+
+118
+00:07:10,055 --> 00:07:14,104
+trips people up I think a lot of us just
+kinda have and its Mandal main bundle on
+
+119
+00:07:14,599 --> 00:07:20,810
+autocomplete in our heads but instead we
+want to use as bundle bundle for class
+
+120
+00:07:20,081 --> 00:07:24,190
+and passed your test class that ensures
+that you're going into the test bundle
+
+121
+00:07:24,919 --> 00:07:29,750
+to locate that resource
+
+122
+00:07:29,075 --> 00:07:33,078
+some running tests Xcode lets you run
+tests number of ways
+
+123
+00:07:33,078 --> 00:07:36,159
+the simplest way is command you and this
+takes your active skiing
+
+124
+00:07:37,059 --> 00:07:40,158
+and runs the tests that are associated
+with that skiing
+
+125
+00:07:41,058 --> 00:07:44,927
+you also have but and the Sorcerer's got
+her
+
+126
+00:07:45,449 --> 00:07:48,590
+next to the test method that let you run
+just that passed
+
+127
+00:07:48,059 --> 00:07:51,858
+or the class and all the tests in that
+class
+
+128
+00:07:52,389 --> 00:07:57,150
+see in the summer set up buttons in the
+test navigator
+
+129
+00:07:57,015 --> 00:08:00,068
+you can also run tests using Xcode built
+so if you have a setup scripts
+
+130
+00:08:00,068 --> 00:08:03,125
+you've used to create your own kinda
+automation setup
+
+131
+00:08:04,025 --> 00:08:09,028
+you can use Xcode build and you passed
+the test action
+
+132
+00:08:09,028 --> 00:08:12,071
+paths your project tell it which scheme
+
+133
+00:08:12,071 --> 00:08:15,122
+this is essential because your project
+may have many schemes
+
+134
+00:08:16,022 --> 00:08:20,078
+and the destination and you can have
+multiple destination so if you are a
+
+135
+00:08:20,078 --> 00:08:21,647
+multiple devices
+
+136
+00:08:22,349 --> 00:08:26,580
+you can pass is all with distinct that's
+just a nation flags
+
+137
+00:08:26,058 --> 00:08:29,087
+XO bill will run
+
+138
+00:08:29,087 --> 00:08:32,134
+when your tests are done where do you
+see the results again there's a number
+
+139
+00:08:33,034 --> 00:08:35,107
+of places where we display the results
+with us
+
+140
+00:08:36,007 --> 00:08:40,038
+the first is a test navigator we'll see
+green checkmark
+
+141
+00:08:40,038 --> 00:08:43,086
+or red icon indicating failure
+
+142
+00:08:43,086 --> 00:08:46,154
+also and the issue navigator as if you
+had a test failure
+
+143
+00:08:47,054 --> 00:08:51,163
+you'll see not only the failure but the
+reason the failed and so if you use our
+
+144
+00:08:51,649 --> 00:08:54,050
+search in macros this is where you'll
+see that air
+
+145
+00:08:54,005 --> 00:08:58,079
+string that says you fifty with an equal
+to 0 or or whatever the
+
+146
+00:08:58,079 --> 00:09:01,141
+the assertion you were testing
+
+147
+00:09:02,041 --> 00:09:05,106
+they also shown the source editors got
+her and then finally
+
+148
+00:09:06,006 --> 00:09:10,405
+most useful is the test reports where we
+saw all the tests that are Brian
+
+149
+00:09:10,459 --> 00:09:13,541
+and the logs associated with them and
+some additional data
+
+150
+00:09:14,279 --> 00:09:17,372
+that will get to you later in the
+presentation
+
+151
+00:09:18,209 --> 00:09:21,490
+so let's get started see what it looks
+like to add test
+
+152
+00:09:21,049 --> 00:09:26,050
+to an existing project
+
+153
+00:09:26,005 --> 00:09:29,034
+let's take a look at how this is put
+together um
+
+154
+00:09:29,529 --> 00:09:33,250
+to simplify this for the demo II tweaked
+a little bit from the sample code its
+
+155
+00:09:33,025 --> 00:09:33,087
+online
+
+156
+00:09:33,087 --> 00:09:36,150
+but I basically the the got service
+
+157
+00:09:37,005 --> 00:09:40,087
+ap is this NS operation subclass that
+parses
+
+158
+00:09:41,032 --> 00:09:45,129
+the XML data and this operation as you
+know is is
+
+159
+00:09:46,029 --> 00:09:50,093
+designed to provide concurrency and be
+run in the background
+
+160
+00:09:50,093 --> 00:09:53,124
+this class has a delegate the calls back
+
+161
+00:09:54,024 --> 00:09:58,032
+with certain events when parsing is done
+when its parts certain number of objects
+
+162
+00:09:58,032 --> 00:10:00,094
+orbiting counters any kind of hair
+
+163
+00:10:00,094 --> 00:10:04,100
+I so we have this property here
+
+164
+00:10:05,000 --> 00:10:09,068
+parsed earthquakes and that's something
+you can access safely at any time to see
+
+165
+00:10:09,068 --> 00:10:12,097
+the array a parched earthquake objects
+
+166
+00:10:12,709 --> 00:10:16,160
+so I like to write a test that validates
+
+167
+00:10:16,016 --> 00:10:19,050
+the sparse operation behaves correctly
+
+168
+00:10:19,005 --> 00:10:23,096
+so let's
+
+169
+00:10:24,041 --> 00:10:31,041
+let's start clean we have
+
+170
+00:10:33,094 --> 00:10:38,116
+not a clean slate here we're gonna
+
+171
+00:10:39,016 --> 00:10:42,815
+reset this little bit so you can see
+
+172
+00:10:42,959 --> 00:10:46,997
+what it looks like to had test to an
+existing project
+
+173
+00:10:47,339 --> 00:10:51,358
+cell we have a project
+
+174
+00:10:51,529 --> 00:10:54,532
+and at this point there's no test target
+so
+
+175
+00:10:54,829 --> 00:10:59,830
+to add a test I'm going to go to File
+menu and was like new target
+
+176
+00:10:59,839 --> 00:11:02,845
+and you must select under
+
+177
+00:11:02,899 --> 00:11:08,160
+other Coco test testing and your name
+this target
+
+178
+00:11:08,016 --> 00:11:13,111
+Miller caught two just a be safe and
+
+179
+00:11:14,011 --> 00:11:17,850
+now we've noticed a few things we see in
+a group here
+
+180
+00:11:17,949 --> 00:11:21,031
+inside that we see a template test file
+
+181
+00:11:21,769 --> 00:11:27,130
+and if we look if we look at the scheme
+will also notice
+
+182
+00:11:27,013 --> 00:11:33,018
+that under the test action we have this
+one that I removed but more importantly
+
+183
+00:11:33,018 --> 00:11:35,347
+we have this new one that just got added
+
+184
+00:11:35,509 --> 00:11:42,509
+so this theme template methods and ham
+just gonna remove these so we can start
+
+185
+00:11:43,041 --> 00:11:46,045
+clean build our test out so the first
+thing
+
+186
+00:11:46,081 --> 00:11:50,360
+to recap what I want to do is write a
+test for this operation subclass
+
+187
+00:11:51,089 --> 00:11:55,870
+so I'm gonna import the header so that I
+can access
+
+188
+00:11:55,087 --> 00:12:00,090
+the API's the next thing to do is a at a
+test method
+
+189
+00:12:01,017 --> 00:12:05,018
+and just to reiterate from earlier this
+method returns void
+
+190
+00:12:05,018 --> 00:12:10,277
+this prefix with test and there are no
+other parameters
+
+191
+00:12:10,439 --> 00:12:13,502
+the rest the name is just a name that
+I've come up with
+
+192
+00:12:14,069 --> 00:12:17,620
+that to me represents what this test as
+for
+
+193
+00:12:17,062 --> 00:12:21,148
+now I like to sometimes go through an
+outlined
+
+194
+00:12:22,048 --> 00:12:25,717
+the steps I'm gonna take his comments
+before I write the code help me organize
+
+195
+00:12:26,149 --> 00:12:26,248
+my thoughts.
+
+196
+00:12:27,139 --> 00:12:30,208
+so just here's a summary what the test
+is gonna do
+
+197
+00:12:30,829 --> 00:12:34,100
+we're going to get the URL to a resource
+
+198
+00:12:34,001 --> 00:12:37,097
+and that's going to be a resource in XML
+data that's in the bundle
+
+199
+00:12:38,006 --> 00:12:42,088
+willow that into memory we're going to
+create the parse operation
+
+200
+00:12:42,088 --> 00:12:46,136
+then will run the operation directly and
+finally
+
+201
+00:12:47,036 --> 00:12:50,815
+will check the number earthquakes and
+see if that's correct so
+
+202
+00:12:51,139 --> 00:12:55,510
+I'm gonna get a resource to that to the
+bundle I need to add the file
+
+203
+00:12:55,051 --> 00:12:58,230
+well I've had this file here that
+
+204
+00:12:58,689 --> 00:13:04,689
+is its
+
+205
+00:13:04,689 --> 00:13:08,930
+the when it
+
+206
+00:13:08,093 --> 00:13:12,372
+copy this file into my project as a
+resource
+
+207
+00:13:13,209 --> 00:13:18,247
+or copy it in and this is just
+
+208
+00:13:18,589 --> 00:13:22,611
+some data that I downloaded in advance
+because I wanna take the network
+
+209
+00:13:22,809 --> 00:13:26,180
+out of the equation when I write my test
+there's nothing wrong with testing the
+
+210
+00:13:26,018 --> 00:13:28,787
+network but in general if you keep your
+test some poor
+
+211
+00:13:28,949 --> 00:13:32,050
+when they fail it'll be easier to figure
+out why they failed
+
+212
+00:13:32,005 --> 00:13:35,050
+so in this test I'm not interested in
+validated the network works
+
+213
+00:13:35,005 --> 00:13:38,654
+about dating the parsing works so by
+having this
+
+214
+00:13:39,149 --> 00:13:42,480
+in my bundle I eliminate that as a
+concern
+
+215
+00:13:42,048 --> 00:13:47,113
+so to get the URL ok I'm going to go
+into the bond ok
+
+216
+00:13:48,013 --> 00:13:51,152
+and galleries resource URL
+
+217
+00:13:51,269 --> 00:13:54,287
+ok and then the next thing we do is just
+know that
+
+218
+00:13:54,449 --> 00:13:58,790
+as in in this data the next step
+
+219
+00:13:58,079 --> 00:14:01,113
+is to create the parts operation so
+that's that's up
+
+220
+00:14:02,013 --> 00:14:05,192
+that is the class that we are trying to
+test here and I'm gonna
+
+221
+00:14:05,309 --> 00:14:08,368
+create it with this data and I'm not
+going to set a delegate because in this
+
+222
+00:14:08,899 --> 00:14:10,130
+test I don't need to
+
+223
+00:14:10,013 --> 00:14:13,662
+the next thing is to run the operation
+directly
+
+224
+00:14:13,779 --> 00:14:16,858
+now we know that in this operation is
+designed to be run in the background
+
+225
+00:14:17,569 --> 00:14:20,668
+but operations allow you to invoke them
+directly and synchronously
+
+226
+00:14:21,559 --> 00:14:24,604
+by just calling start that means when we
+call start
+
+227
+00:14:25,009 --> 00:14:28,660
+it was gonna run and your return its
+finish running
+
+228
+00:14:28,066 --> 00:14:31,435
+so at that point I can check the results
+
+229
+00:14:32,029 --> 00:14:35,380
+and see if they are what I expected
+
+230
+00:14:35,038 --> 00:14:38,061
+now I had zero here
+
+231
+00:14:38,061 --> 00:14:42,480
+actually know that there's more than
+zero but I'd like to run this and let
+
+232
+00:14:43,029 --> 00:14:44,740
+you see what a failure looks like
+
+233
+00:14:44,074 --> 00:14:49,086
+before we go any further so I'm heading
+command you to run the test
+
+234
+00:14:49,086 --> 00:14:53,315
+ran quickly and you can see here's this
+message
+
+235
+00:14:54,089 --> 00:14:58,370
+parts operation 0
+
+236
+00:14:58,037 --> 00:15:03,446
+failed visit 55 is not equal to 0 okay
+so there are 55 earthquakes
+
+237
+00:15:03,779 --> 00:15:10,779
+in there so let's run this again
+
+238
+00:15:10,799 --> 00:15:14,760
+and now with passed our test again you
+see that same
+
+239
+00:15:14,076 --> 00:15:17,091
+pass indicator there and the test every
+Gator
+
+240
+00:15:17,091 --> 00:15:21,122
+and we see id here in the test log
+
+241
+00:15:22,022 --> 00:15:26,051
+that we parsed and succeeded so that's
+what it takes to add
+
+242
+00:15:26,051 --> 00:15:30,070
+has to project would create a new test
+target and we go and then we added the
+
+243
+00:15:30,529 --> 00:15:32,532
+test code would create test methods
+
+244
+00:15:32,829 --> 00:15:36,835
+we use this sir since to validate the
+state that we expect
+
+245
+00:15:36,889 --> 00:15:40,480
+so will switch back to slide up
+
+246
+00:15:40,048 --> 00:15:43,467
+okay so what's going on to what's new
+and Xcode 6
+
+247
+00:15:43,899 --> 00:15:49,902
+we have new API's and improvements to
+our tools
+
+248
+00:15:49,929 --> 00:15:53,130
+surfers aorta mention is we've added
+some
+
+249
+00:15:53,013 --> 00:15:56,822
+improvements that help with the
+compatibility story
+
+250
+00:15:56,939 --> 00:16:01,160
+and I'll get into more detail but this
+basically means which versions have
+
+251
+00:16:01,016 --> 00:16:04,815
+Roos as you can target easy actually
+test
+
+252
+00:16:04,959 --> 00:16:08,470
+we've also added instruments integration
+for tests and
+
+253
+00:16:08,047 --> 00:16:11,766
+book will talk to you more about that
+later ok
+
+254
+00:16:12,189 --> 00:16:15,720
+finally we've got new API's as I
+mentioned earlier
+
+255
+00:16:15,072 --> 00:16:19,901
+these are both for a synchronous testing
+and for performance testing
+
+256
+00:16:20,549 --> 00:16:24,870
+so first XE test on older OS versions
+
+257
+00:16:24,087 --> 00:16:28,246
+originally exit has shipped and it was
+part of the IRS release itself
+
+258
+00:16:29,029 --> 00:16:32,047
+so I meant when we ship to you could
+only wanted
+
+259
+00:16:32,209 --> 00:16:37,000
+on Virgin's ViaWest that hat we've
+changed now that worse now worship EXE
+
+260
+00:16:37,000 --> 00:16:39,189
+test with Xcode itself
+
+261
+00:16:39,189 --> 00:16:42,970
+so this means that as we add new
+features taxi test you don't have to
+
+262
+00:16:42,097 --> 00:16:43,266
+worry about
+
+263
+00:16:44,139 --> 00:16:46,217
+whether or not they're going to be
+available where you're running your test
+
+264
+00:16:46,919 --> 00:16:49,790
+because you're always going to be
+testing with the current version it's an
+
+265
+00:16:49,079 --> 00:16:50,218
+Xcode
+
+266
+00:16:50,929 --> 00:16:53,954
+and this also means that we can
+
+267
+00:16:54,179 --> 00:16:59,182
+targeted older versions a while so
+anywhere that Xcode supports
+
+268
+00:16:59,209 --> 00:17:02,278
+exit has to also support and this means
+I was six
+
+269
+00:17:02,899 --> 00:17:09,240
+and later
+
+270
+00:17:09,024 --> 00:17:13,035
+so that's probably good time to just
+mention as a unit which is the the tag
+
+271
+00:17:13,035 --> 00:17:17,078
+the legacy technology that exit house
+was derived from
+
+272
+00:17:17,078 --> 00:17:20,347
+in a Xcode 5.1 we deprecated a CNN
+
+273
+00:17:21,049 --> 00:17:24,630
+we're not adding new features to it and
+
+274
+00:17:24,063 --> 00:17:28,137
+we really think the time is now to move
+taxing test because we've added new
+
+275
+00:17:29,037 --> 00:17:30,476
+features to it
+
+276
+00:17:30,809 --> 00:17:33,940
+integration is better and
+
+277
+00:17:33,094 --> 00:17:38,183
+as he is no longer where we're focusing
+our energies
+
+278
+00:17:39,083 --> 00:17:43,104
+if you have existing targets that you
+want to switch alexi test
+
+279
+00:17:44,004 --> 00:17:47,643
+we recommend using my greater in Xcode
+to do so
+
+280
+00:17:47,679 --> 00:17:51,753
+the reason for this 022 to do this he
+just go to the Edit menu and select we
+
+281
+00:17:52,419 --> 00:17:53,360
+factor
+
+282
+00:17:53,036 --> 00:17:56,825
+convert taxi test and it will update the
+project settings
+
+283
+00:17:57,149 --> 00:18:02,260
+and also all here test classes will get
+updated
+
+284
+00:18:02,026 --> 00:18:05,565
+the reason for this is some other build
+settings that are so stay with us
+
+285
+00:18:05,799 --> 00:18:09,860
+are not accessible and the Xcode you I
+so
+
+286
+00:18:09,086 --> 00:18:12,145
+some people in past have tried to do the
+migration manually
+
+287
+00:18:12,919 --> 00:18:17,942
+and the you end up you not able to do it
+100 percent by hand
+
+288
+00:18:18,149 --> 00:18:21,240
+if you are if you really do wanna do it
+yourself
+
+289
+00:18:22,059 --> 00:18:25,240
+there's a different way which is just to
+create a new test target which is
+
+290
+00:18:25,024 --> 00:18:26,037
+guaranteed to have
+
+291
+00:18:26,037 --> 00:18:32,084
+exactly the right settings and just move
+your existing test into it manually
+
+292
+00:18:32,084 --> 00:18:36,135
+so now let's talk about a synchronous
+testing whenever new API's
+
+293
+00:18:37,035 --> 00:18:41,494
+Xcode 6 some or more API's on our
+platform
+
+294
+00:18:41,809 --> 00:18:46,860
+themselves are a synchronous they have
+blocking locations when they're done
+
+295
+00:18:46,086 --> 00:18:50,169
+that make it run different cues they a
+delegate call back that may be deferred
+
+296
+00:18:51,069 --> 00:18:52,098
+by the run the
+
+297
+00:18:52,098 --> 00:18:56,007
+they may make network requests which we
+absolutely no should be handle a
+
+298
+00:18:56,889 --> 00:18:58,350
+synchronously
+
+299
+00:18:58,035 --> 00:19:02,102
+or they're doing background processing
+like Rs operation here
+
+300
+00:19:03,002 --> 00:19:07,004
+so this creates a challenge because test
+themselves
+
+301
+00:19:07,022 --> 00:19:11,033
+run synchronously and sell to help you
+with that
+
+302
+00:19:11,033 --> 00:19:14,120
+we've added API's the allow you to
+create a synchronous
+
+303
+00:19:15,002 --> 00:19:19,079
+control flow that manages a synchronous
+activities
+
+304
+00:19:19,097 --> 00:19:24,102
+and we do this through what we call
+expectation objects and these describe
+
+305
+00:19:25,002 --> 00:19:29,020
+events in your test that you expect to
+happen at some point
+
+306
+00:19:29,002 --> 00:19:32,066
+in the future hopefully not too distant
+
+307
+00:19:32,084 --> 00:19:37,177
+on with these objects exit s has a %uh a
+few I don't wait for them to be
+
+308
+00:19:38,077 --> 00:19:40,077
+fulfilled
+
+309
+00:19:40,077 --> 00:19:43,084
+and that takes a timeout and the
+completion handler that's called either
+
+310
+00:19:44,047 --> 00:19:44,135
+when the time out
+
+311
+00:19:45,035 --> 00:19:48,094
+its or when all the events are fulfilled
+
+312
+00:19:48,409 --> 00:19:53,720
+and you can be waiting on multiple a
+synchronous event at the same time
+
+313
+00:19:53,072 --> 00:19:57,261
+so let's look at the code example your
+document as you may know
+
+314
+00:19:57,909 --> 00:20:02,935
+has a open with completion handler there
+is in a synchronous opening and that's
+
+315
+00:20:03,169 --> 00:20:06,267
+that's great because it a large document
+might take a little bit time to open and
+
+316
+00:20:07,149 --> 00:20:08,040
+honest all
+
+317
+00:20:08,004 --> 00:20:12,046
+users interactive experience while
+you're waiting for that
+
+318
+00:20:12,046 --> 00:20:16,075
+so let's write a test for that the first
+thing I do is I created an expectation
+
+319
+00:20:16,075 --> 00:20:20,077
+and these expectations will creation
+weapons take string which is simply a
+
+320
+00:20:20,077 --> 00:20:21,153
+description for your benefit
+
+321
+00:20:22,053 --> 00:20:25,057
+it tells you if we had a timeout
+
+322
+00:20:25,057 --> 00:20:28,129
+it tells you what we were waiting for
+and so the more descriptive you make
+
+323
+00:20:29,029 --> 00:20:29,085
+that
+
+324
+00:20:29,085 --> 00:20:33,110
+the easier your life
+
+325
+00:20:34,001 --> 00:20:37,090
+then we create a document which I not
+showing here we call the open with
+
+326
+00:20:37,099 --> 00:20:39,176
+completion handler and you notice I
+haven't filled out the completion
+
+327
+00:20:40,076 --> 00:20:41,102
+handler it's just an empty
+
+328
+00:20:42,002 --> 00:20:45,069
+block at this point on will get back to
+that moment
+
+329
+00:20:45,069 --> 00:20:49,558
+and then finally I call way for
+expectations with a five second time
+
+330
+00:20:50,179 --> 00:20:53,181
+probably a little on the long side but
+
+331
+00:20:53,379 --> 00:20:56,780
+just to be safe here so what we have now
+is a synchronised
+
+332
+00:20:56,078 --> 00:21:00,125
+what we have create expectation set up
+the document
+
+333
+00:21:01,025 --> 00:21:06,144
+open it and then wait and this is a
+synchronous flow within the test
+
+334
+00:21:06,369 --> 00:21:09,438
+a synchronously later that walk will be
+called back
+
+335
+00:21:10,059 --> 00:21:14,059
+inside the handler I'm gonna do two
+things and I use one of our certs
+
+336
+00:21:14,059 --> 00:21:17,530
+to validate that opening was successful
+
+337
+00:21:17,053 --> 00:21:20,086
+on top of that I'm gonna call
+expectation for Phil
+
+338
+00:21:20,086 --> 00:21:23,158
+which will cause the wait for
+expectations to return because now all
+
+339
+00:21:24,058 --> 00:21:25,155
+the expectations that created
+
+340
+00:21:26,055 --> 00:21:29,111
+have been fulfilled so
+
+341
+00:21:30,011 --> 00:21:34,080
+let's see what that looks like if we add
+that to our
+
+342
+00:21:34,179 --> 00:21:41,179
+seismic smell test
+
+343
+00:21:43,073 --> 00:21:48,075
+okay so we'll go back to protest injury
+here
+
+344
+00:21:48,075 --> 00:21:51,094
+and for syria do
+
+345
+00:21:51,094 --> 00:21:54,188
+is going to just rename this
+
+346
+00:21:55,088 --> 00:21:58,117
+to let's say parsing
+
+347
+00:21:59,017 --> 00:22:02,406
+and the background
+
+348
+00:22:02,559 --> 00:22:07,110
+because that's closer to our actual
+real-world usage anywhere
+
+349
+00:22:07,011 --> 00:22:11,018
+so the first for the test is the same
+we're still going to use that same
+
+350
+00:22:11,018 --> 00:22:12,019
+resource file
+
+351
+00:22:12,028 --> 00:22:16,029
+loaded into memory now before we create
+our
+
+352
+00:22:16,029 --> 00:22:19,116
+parts operation will need to were in
+this is where things are going to change
+
+353
+00:22:20,016 --> 00:22:20,104
+a little bit
+
+354
+00:22:21,004 --> 00:22:26,065
+so if you think about it we have here
+
+355
+00:22:26,065 --> 00:22:29,128
+were running the parts operation
+directly instead of that
+
+356
+00:22:30,028 --> 00:22:33,102
+let's run it in an operational cue
+
+357
+00:22:34,002 --> 00:22:37,046
+so that looks like create an operation
+cue
+
+358
+00:22:37,046 --> 00:22:40,073
+and add the operation to it that means
+
+359
+00:22:40,073 --> 00:22:43,902
+the operations going to start running
+immediately but it's going to do so in
+
+360
+00:22:44,559 --> 00:22:45,410
+the background
+
+361
+00:22:45,041 --> 00:22:50,053
+now if I leave the test as is because
+that running this happen in the
+
+362
+00:22:50,053 --> 00:22:50,146
+background
+
+363
+00:22:51,046 --> 00:22:54,095
+there are passages continuing on its not
+stopping
+
+364
+00:22:54,095 --> 00:22:57,180
+waiting thats it's it's ready to go if
+we run this test now
+
+365
+00:22:58,008 --> 00:23:01,014
+what we're gonna see is that we fail
+because at the point where we're
+
+366
+00:23:02,004 --> 00:23:03,042
+evaluating this
+
+367
+00:23:03,078 --> 00:23:06,166
+person isn't done its it's often the
+background somewhere and we don't
+
+368
+00:23:07,066 --> 00:23:10,123
+we don't know whether it's been a shit
+so what we want to do
+
+369
+00:23:11,023 --> 00:23:16,023
+is way for to be finished before we
+check
+
+370
+00:23:16,023 --> 00:23:20,054
+then just use it to second time out here
+his timeouts are largely
+
+371
+00:23:20,054 --> 00:23:23,130
+at your discretion on if you make them
+really really small
+
+372
+00:23:24,003 --> 00:23:28,006
+then you may have cases where something
+takes a little longer to run and you get
+
+373
+00:23:28,006 --> 00:23:29,006
+a failure that's
+
+374
+00:23:29,006 --> 00:23:34,465
+not really failure so those are just
+kinda at your discretion
+
+375
+00:23:35,059 --> 00:23:40,270
+um so now we can wait but before we wait
+we also need
+
+376
+00:23:40,027 --> 00:23:43,038
+expectation that describes what we're
+waiting for
+
+377
+00:23:43,038 --> 00:23:48,071
+so think about the operation how do we
+know it's done well it has a stellar get
+
+378
+00:23:48,071 --> 00:23:48,136
+API
+
+379
+00:23:49,036 --> 00:23:52,039
+with call backs let's look at what those
+were like again so
+
+380
+00:23:52,066 --> 00:23:55,103
+parts operation the dog call backs we
+had
+
+381
+00:23:56,003 --> 00:24:00,006
+tit Parus did finish that fail with
+their
+
+382
+00:24:00,006 --> 00:24:03,042
+well did finish looks like exactly what
+I want so
+
+383
+00:24:03,042 --> 00:24:06,801
+going back into my test if I'm gonna be
+the delegate
+
+384
+00:24:07,179 --> 00:24:10,970
+I need my test itself to conform to the
+dog protocol
+
+385
+00:24:10,097 --> 00:24:15,113
+and then need to implement the did
+finish method
+
+386
+00:24:16,013 --> 00:24:22,029
+now inside that I'm going to operate on
+some kind of expectation and report that
+
+387
+00:24:22,029 --> 00:24:23,124
+its fulfilled but since we're here
+
+388
+00:24:24,024 --> 00:24:27,056
+and we're not in the same context here
+will need to track
+
+389
+00:24:27,056 --> 00:24:30,111
+that operation as a property so with
+this ad
+
+390
+00:24:31,011 --> 00:24:36,099
+an expectation property to our test will
+set it up
+
+391
+00:24:36,099 --> 00:24:39,106
+before we create the parse operation so
+
+392
+00:24:40,006 --> 00:24:44,011
+we've created a expectation pursing
+finished as what we're calling it here
+
+393
+00:24:44,011 --> 00:24:47,099
+and then inside our operation
+
+394
+00:24:47,099 --> 00:24:50,182
+we will for Philip so let's just run
+this
+
+395
+00:24:51,082 --> 00:24:54,090
+now secret this is actually gonna fail
+because I left something out
+
+396
+00:24:55,062 --> 00:24:55,146
+intentionally
+
+397
+00:24:56,046 --> 00:24:59,122
+but i wanna what you see what failure
+looks like when we had the time
+
+398
+00:25:00,022 --> 00:25:04,035
+and a synchronous wat
+
+399
+00:25:04,035 --> 00:25:08,072
+failed exceeded timeout after two
+seconds with unfulfilled expectations
+
+400
+00:25:08,072 --> 00:25:12,080
+parsing finished cell we never fulfill
+our expectation
+
+401
+00:25:12,008 --> 00:25:16,091
+well the reason is pretty simple I
+forgot actually say that this object is
+
+402
+00:25:17,063 --> 00:25:20,086
+the delicate so once we hook that up
+
+403
+00:25:20,086 --> 00:25:23,088
+we run again this time
+
+404
+00:25:23,088 --> 00:25:27,136
+everything passes because we get the
+call back we fulfill the expectations
+
+405
+00:25:28,036 --> 00:25:33,355
+we unwind from the wait and then we
+evaluate the number parsed earthquakes
+
+406
+00:25:33,679 --> 00:25:36,753
+its 55 so just walking through this
+again
+
+407
+00:25:37,419 --> 00:25:42,160
+we use an expectation to describe future
+event
+
+408
+00:25:42,016 --> 00:25:45,094
+we wait for the expectation
+
+409
+00:25:45,094 --> 00:25:48,116
+here and then when that event occurs
+
+410
+00:25:49,016 --> 00:25:52,059
+which in this case is in a dog called
+back but could be inside a block and
+
+411
+00:25:52,059 --> 00:25:53,123
+there are some other contacts
+
+412
+00:25:54,023 --> 00:25:57,036
+we fulfill it that causes wait to return
+
+413
+00:25:57,036 --> 00:26:00,115
+so this allows us to handle a
+synchronous activity
+
+414
+00:26:01,015 --> 00:26:04,534
+in a synchronous fashion it's fine for
+testing
+
+415
+00:26:04,669 --> 00:26:08,410
+I wouldn't recommend you do this on the
+main thread if your application code
+
+416
+00:26:08,041 --> 00:26:15,041
+okay so let's switch back so
+
+417
+00:26:15,086 --> 00:26:18,175
+that's what looks like to write and I
+think earnest test
+
+418
+00:26:19,075 --> 00:26:22,089
+with the new API's annex at six
+
+419
+00:26:22,089 --> 00:26:29,089
+now but to talk to you about performance
+testing
+
+420
+00:26:29,091 --> 00:26:32,134
+o'clock now
+
+421
+00:26:33,034 --> 00:26:36,873
+me easy to introduce performance
+russians and you go
+
+422
+00:26:37,179 --> 00:26:41,340
+and historically finding these issues
+can be time-consuming expensive because
+
+423
+00:26:41,034 --> 00:26:44,089
+you need to manually user applications
+fine
+
+424
+00:26:44,089 --> 00:26:48,128
+Apple has some great tools for
+investigating performance issues
+
+425
+00:26:48,929 --> 00:26:55,929
+and perform assessing is just awaited
+tell you want to do an investigation
+
+426
+00:26:57,019 --> 00:27:00,065
+so we'll look at some new API delete my
+dad to hope you
+
+427
+00:27:00,065 --> 00:27:04,082
+measure performance in detecting
+russians and also see how
+
+428
+00:27:04,082 --> 00:27:09,085
+those met measurements these APIs make
+are surface next with you I
+
+429
+00:27:10,012 --> 00:27:14,057
+including others test failures to do
+progressions
+
+430
+00:27:14,057 --> 00:27:18,062
+and nothin ex-cons gonna be reporting
+performance issues
+
+431
+00:27:18,062 --> 00:27:22,351
+as failures got to give you an easy way
+to do that investigation so you can now
+
+432
+00:27:22,909 --> 00:27:26,740
+profile you test with instruments
+
+433
+00:27:26,074 --> 00:27:29,079
+the easiest way to do this is to use the
+new measure BOC India
+
+434
+00:27:30,024 --> 00:27:33,039
+mistakes a blocker code and runs a ten
+times
+
+435
+00:27:33,039 --> 00:27:37,045
+measuring the duration each time
+
+436
+00:27:37,099 --> 00:27:43,528
+and showing the result an ex-con
+
+437
+00:27:44,419 --> 00:27:48,070
+so for example gonna test here that I
+
+438
+00:27:48,007 --> 00:27:52,036
+I'm writing that I want to measure the
+forms and using about handle
+
+439
+00:27:52,036 --> 00:27:56,037
+saw call cell measure block and the code
+I want to measure
+
+440
+00:27:56,037 --> 00:28:03,037
+it's creating a file handle using it and
+enclosing I'll
+
+441
+00:28:04,003 --> 00:28:07,006
+now that I've got this test I wanna
+profileid
+
+442
+00:28:07,033 --> 00:28:10,074
+in the case that expert tell me
+something went wrong and you can do this
+
+443
+00:28:10,074 --> 00:28:10,147
+from
+
+444
+00:28:11,047 --> 00:28:16,072
+tax cuts or senator protest navigators
+and from the context menus
+
+445
+00:28:16,072 --> 00:28:23,072
+and is also a command for this and other
+pokémon
+
+446
+00:28:24,033 --> 00:28:27,105
+it's important to keep in mind that when
+you profile your test
+
+447
+00:28:28,005 --> 00:28:32,020
+misuses settings from skin profile
+action
+
+448
+00:28:32,002 --> 00:28:35,007
+the was obvious difference here is that
+
+449
+00:28:35,025 --> 00:28:38,124
+when you're just running a test that use
+the debug configuration my fault
+
+450
+00:28:39,024 --> 00:28:42,107
+but profoundly sorry release
+configuration and maybe some difference
+
+451
+00:28:43,007 --> 00:28:46,046
+in behavior
+
+452
+00:28:46,046 --> 00:28:50,087
+let's take a look at them so here I have
+a Mac version the project that will show
+
+453
+00:28:50,087 --> 00:28:51,160
+you earlier
+
+454
+00:28:52,006 --> 00:28:55,035
+and according a couple test that use the
+measure lucky PI
+
+455
+00:28:55,089 --> 00:29:02,089
+I'm scar on my chest now
+
+456
+00:29:04,076 --> 00:29:08,124
+on if you can see this but experts on me
+this test is doing
+
+457
+00:29:09,024 --> 00:29:12,096
+four thousand percent worse than before
+so
+
+458
+00:29:12,096 --> 00:29:16,101
+at that's not so great on
+
+459
+00:29:17,001 --> 00:29:20,013
+so how am I gonna figure out what's what
+what's gone wrong here I can look at the
+
+460
+00:29:20,013 --> 00:29:21,078
+test itself the sea
+
+461
+00:29:21,078 --> 00:29:24,129
+now is there anything obvious that ass
+is doing wrong outside Press billowing
+
+462
+00:29:25,029 --> 00:29:25,082
+this
+
+463
+00:29:25,082 --> 00:29:28,113
+far from the spinal parsing its
+
+464
+00:29:29,013 --> 00:29:32,019
+and then validating that the earthquakes
+alright
+
+465
+00:29:32,073 --> 00:29:35,252
+I can look in see other any local
+changes in on
+
+466
+00:29:35,909 --> 00:29:39,130
+my project know there are I can look
+
+467
+00:29:39,013 --> 00:29:43,015
+and see how this test compared to all
+the other tests in my project
+
+468
+00:29:43,015 --> 00:29:46,033
+ands actually this wonderful that
+
+469
+00:29:46,033 --> 00:29:49,862
+a this one's going bad it was a lot
+better
+
+470
+00:29:50,159 --> 00:29:53,720
+so looks like I'm just got to profile on
+I can do that
+
+471
+00:29:53,072 --> 00:29:57,109
+by right-clicking on the spot in the
+store Center and sucking profile
+
+472
+00:29:58,009 --> 00:30:01,095
+or can also do that from the I
+
+473
+00:30:01,095 --> 00:30:05,097
+test navigator by right clicking on my
+test and talking
+
+474
+00:30:05,097 --> 00:30:09,173
+profile
+
+475
+00:30:10,073 --> 00:30:13,084
+house like time profile for instance
+
+476
+00:30:13,084 --> 00:30:18,125
+al click Record
+
+477
+00:30:19,025 --> 00:30:23,050
+now and services want my application and
+its run my test as done
+
+478
+00:30:23,005 --> 00:30:27,057
+so all zoom in and it's even see this
+
+479
+00:30:28,002 --> 00:30:31,030
+I'm just gonna in Britain the call tree
+
+480
+00:30:31,003 --> 00:30:35,082
+and expand this and from here
+
+481
+00:30:36,009 --> 00:30:40,051
+I can see my my test is being called
+
+482
+00:30:40,051 --> 00:30:43,138
+excesses eventually on the block but
+I've given it and congress dali
+
+483
+00:30:44,038 --> 00:30:46,071
+properties which is causing some really
+expensive function
+
+484
+00:30:46,071 --> 00:30:49,099
+well that's that's find out what I want
+so
+
+485
+00:30:49,099 --> 00:30:52,175
+on let's look into that I'm right click
+on down the properties
+
+486
+00:30:53,075 --> 00:30:57,076
+and use reveal an Xcode
+
+487
+00:30:57,085 --> 00:31:00,414
+you now yeah it is expensive
+
+488
+00:31:01,179 --> 00:31:04,620
+okay let's let's just get rid of this
+
+489
+00:31:04,062 --> 00:31:11,062
+was gonna to lead that and run my test
+again
+
+490
+00:31:12,003 --> 00:31:15,004
+at a packed great
+
+491
+00:31:15,013 --> 00:31:18,056
+so we just seen as you can using a
+measure walk if the IQ
+
+492
+00:31:18,056 --> 00:31:21,165
+measure performance and detector
+aggressions
+
+493
+00:31:21,669 --> 00:31:25,080
+you can use results and sore center and
+its report
+
+494
+00:31:25,008 --> 00:31:29,047
+and you can also profile your test with
+instruments
+
+495
+00:31:29,047 --> 00:31:32,138
+so you just gonna taste how performance
+testing works with Xcode
+
+496
+00:31:33,038 --> 00:31:36,077
+let's go into details for small sending
+baselines
+
+497
+00:31:36,419 --> 00:31:40,100
+for exit asked to report a test as
+failing due to a regression
+
+498
+00:31:40,001 --> 00:31:46,290
+needs a fix points compared its and the
+bass anglers do that
+
+499
+00:31:46,389 --> 00:31:51,440
+miss an aviation exhibition only
+important performance regression when
+
+500
+00:31:51,044 --> 00:31:53,085
+something's actually gotten worse
+
+501
+00:31:53,085 --> 00:31:57,101
+access use a standing ovation to
+determine the spread in the measurements
+
+502
+00:31:58,001 --> 00:32:01,009
+to tell how reliable they are
+
+503
+00:32:01,081 --> 00:32:04,132
+and by measuring precisely we have some
+additional API's
+
+504
+00:32:05,032 --> 00:32:10,035
+will you be even more precise about what
+you want to measure
+
+505
+00:32:10,035 --> 00:32:13,084
+so it's a good baselines the baseline is
+the average from previous one
+
+506
+00:32:13,084 --> 00:32:17,086
+you specifically selected for comparison
+
+507
+00:32:17,086 --> 00:32:20,086
+once you set a baseline exits will use
+this
+
+508
+00:32:20,086 --> 00:32:24,128
+to detect would russians it will fail a
+test
+
+509
+00:32:25,028 --> 00:32:30,075
+if he new average has increase from
+baseline average by 10 percent or more
+
+510
+00:32:30,075 --> 00:32:33,106
+and it will ignore regressions less than
+a tenth of a second
+
+511
+00:32:34,006 --> 00:32:38,059
+missus to eliminate a source a false
+positives
+
+512
+00:32:38,059 --> 00:32:42,148
+the baselines are stored in source where
+you commitment to your positive for E
+
+513
+00:32:42,679 --> 00:32:45,725
+and show them a good team members
+
+514
+00:32:46,139 --> 00:32:50,192
+and the store per device configuration
+so when I run tests on my iPhone 5s
+
+515
+00:32:50,669 --> 00:32:53,780
+they're gonna be using the same
+baselines that one will run the same
+
+516
+00:32:53,078 --> 00:32:53,123
+test
+
+517
+00:32:54,023 --> 00:32:58,061
+on his iPhone I guess I'm are you
+
+518
+00:32:58,061 --> 00:33:01,160
+but at the same time if I were to run
+these tests I in the simulation
+
+519
+00:33:02,006 --> 00:33:04,085
+assimilated iPhone 5s
+
+520
+00:33:04,679 --> 00:33:06,980
+I would not use those based on because
+that would be a different device
+
+521
+00:33:06,098 --> 00:33:10,145
+configuration
+
+522
+00:33:11,045 --> 00:33:14,112
+so it's talk about how you said
+baselines affects
+
+523
+00:33:15,012 --> 00:33:18,099
+the first time around test I'm gonna see
+an aunt is like this
+
+524
+00:33:18,099 --> 00:33:21,103
+with us grey diamond but the white dot
+net
+
+525
+00:33:22,003 --> 00:33:26,021
+telling me there's no baseline to test
+now let me know that it didn't do any
+
+526
+00:33:26,021 --> 00:33:27,049
+comparison
+
+527
+00:33:27,049 --> 00:33:30,112
+all and it's showing me the average but
+that
+
+528
+00:33:31,012 --> 00:33:34,059
+time and the test took
+
+529
+00:33:34,059 --> 00:33:37,065
+I click on the application or get the
+performance with a pop or
+
+530
+00:33:38,019 --> 00:33:41,051
+I get this from the store center or from
+that new test report
+
+531
+00:33:41,051 --> 00:33:44,097
+from here I can see the current average
+from test I can also see how the
+
+532
+00:33:44,097 --> 00:33:45,132
+individual measurements
+
+533
+00:33:46,032 --> 00:33:49,109
+that were taken differ from that urge so
+here I can see that
+
+534
+00:33:50,009 --> 00:33:55,838
+i'd measurement number eight was the
+longest one
+
+535
+00:33:55,919 --> 00:33:58,970
+now when I'm running to and clicks at
+baseline an external
+
+536
+00:33:59,429 --> 00:34:06,429
+used I will copy the current average to
+the baseline
+
+537
+00:34:06,899 --> 00:34:13,899
+I need to set this again I can click at
+
+538
+00:34:14,048 --> 00:34:17,074
+and either accept the new current
+average
+
+539
+00:34:17,074 --> 00:34:20,243
+or taken whatever I want as as the
+baseline
+
+540
+00:34:20,909 --> 00:34:24,954
+I can also edit the max from Sandy Asian
+from here
+
+541
+00:34:25,359 --> 00:34:28,441
+now nurse at the baseline the next
+summer on my test
+
+542
+00:34:29,179 --> 00:34:32,270
+all see a different allocation with this
+great time with the check mark
+
+543
+00:34:33,089 --> 00:34:36,143
+at telling me that this test is doing
+four percent worse
+
+544
+00:34:36,629 --> 00:34:41,000
+in the baseline that's compared against
+
+545
+00:34:41,000 --> 00:34:44,023
+if the tests were to do a lot worse
+
+546
+00:34:44,023 --> 00:34:47,121
+the test would fail I'm getting out is
+like this telling me that
+
+547
+00:34:48,021 --> 00:34:52,037
+now it's sixty percent worse in this
+case
+
+548
+00:34:52,037 --> 00:34:56,051
+I can also see the results from that new
+test report
+
+549
+00:34:56,051 --> 00:34:59,096
+on also from the test report again get
+the
+
+550
+00:34:59,096 --> 00:35:05,169
+performs look hop over by clicking under
+the time call on those measurements
+
+551
+00:35:06,069 --> 00:35:09,077
+if you want to get at the brawl values
+that I i
+
+552
+00:35:09,077 --> 00:35:15,115
+exco gets from Exodus those are
+available on the Logs tab on this report
+
+553
+00:35:16,015 --> 00:35:20,080
+so what to talk about how exit s uses
+the base on average
+
+554
+00:35:20,008 --> 00:35:24,009
+here's here have a dataset from one run
+a test
+
+555
+00:35:24,081 --> 00:35:28,126
+there are 10 measurements for the 10
+indications walk
+
+556
+00:35:29,026 --> 00:35:35,099
+and the whole culture on that one sec
+mark with a one-second average
+
+557
+00:35:35,099 --> 00:35:38,928
+all set the baseline for my test which
+fixes that in place
+
+558
+00:35:39,819 --> 00:35:43,870
+and the next time I ran my tests already
+got to do said like this
+
+559
+00:35:43,087 --> 00:35:46,089
+the average be one second I wanna have
+seconds
+
+560
+00:35:46,089 --> 00:35:49,121
+and the test would fail because that 1/2
+seconds is
+
+561
+00:35:50,021 --> 00:35:54,025
+well outside the bounds the allowed
+tempers Russian
+
+562
+00:35:54,025 --> 00:35:57,041
+so acted as an appellate s if the
+
+563
+00:35:57,041 --> 00:36:00,042
+new average has increased from the
+baseline by more than 10 percent
+
+564
+00:36:00,051 --> 00:36:04,108
+but it's getting or regression what and
+attend a second
+
+565
+00:36:05,008 --> 00:36:09,008
+but is is damage in a
+
+566
+00:36:09,008 --> 00:36:13,016
+let's look at that same decide again on
+values Kontron one second
+
+567
+00:36:13,016 --> 00:36:16,029
+one second average
+
+568
+00:36:16,029 --> 00:36:20,050
+it harder on this test again and get
+their stuff like this
+
+569
+00:36:20,005 --> 00:36:23,043
+hasn't really regrets the average is
+still one sec but there some values
+
+570
+00:36:23,088 --> 00:36:26,165
+over wanna have seconds and some under
+half a second
+
+571
+00:36:27,065 --> 00:36:31,092
+so it isn't a true regression in terms
+of the average but something's gotten
+
+572
+00:36:31,092 --> 00:36:31,138
+worse
+
+573
+00:36:32,038 --> 00:36:39,038
+something that are you gonna do
+something like this I want investigate
+
+574
+00:36:39,046 --> 00:36:43,175
+so the other just doesn't tell the whole
+story and exit acid used an aviation
+
+575
+00:36:43,589 --> 00:36:49,430
+to indicate the spread the measurements
+
+576
+00:36:49,043 --> 00:36:53,056
+if we look at that first dataset more
+time we see that it's any Asian said
+
+577
+00:36:53,056 --> 00:36:56,152
+for these numbers helicopter on one
+second six-percent
+
+578
+00:36:57,052 --> 00:37:01,056
+while sanitation for the much more
+spread out dubstep
+
+579
+00:37:01,056 --> 00:37:04,098
+is 40 percent
+
+580
+00:37:04,098 --> 00:37:07,165
+and awaited decision is this is
+
+581
+00:37:08,065 --> 00:37:11,068
+if the sanitation for the new dataset
+
+582
+00:37:11,095 --> 00:37:14,174
+is more than 10 percent in the current
+average which you can adjust from that
+
+583
+00:37:15,074 --> 00:37:16,193
+job
+
+584
+00:37:16,859 --> 00:37:21,650
+poor will fail but again just like the
+average
+
+585
+00:37:21,065 --> 00:37:24,754
+warden or sanitation less than a tenth
+of a second again to
+
+586
+00:37:25,339 --> 00:37:29,140
+avoid potholes
+
+587
+00:37:29,014 --> 00:37:33,047
+so what causes excess a standing ovation
+
+588
+00:37:33,047 --> 00:37:37,686
+wall one thing is if the market you're
+measuring is doing network I our file
+
+589
+00:37:38,109 --> 00:37:38,620
+I'll
+
+590
+00:37:38,062 --> 00:37:41,126
+that at Penn said barrier pretty wildly
+
+591
+00:37:42,026 --> 00:37:45,105
+and I think they can cause hi San
+deviation
+
+592
+00:37:46,005 --> 00:37:49,064
+is if me
+
+593
+00:37:49,109 --> 00:37:52,760
+open what this isn't trying to do the
+same work each time so for example
+
+594
+00:37:52,076 --> 00:37:55,127
+if on the block is being measured does
+some expand
+
+595
+00:37:56,027 --> 00:38:01,033
+submit expensive global state the first
+time through and then never again
+
+596
+00:38:01,033 --> 00:38:06,038
+one block might just be affected by an
+initial very
+
+597
+00:38:06,038 --> 00:38:10,055
+and lastly and I think calls can cause
+high syndication
+
+598
+00:38:10,055 --> 00:38:13,138
+is if the system is just busy with other
+processes and short running tests are
+
+599
+00:38:14,038 --> 00:38:17,042
+specially sent into this
+
+600
+00:38:17,078 --> 00:38:21,127
+so how does exit s detect issues
+
+601
+00:38:22,027 --> 00:38:25,066
+for saw if there's no baseline average
+it's done talking trying
+
+602
+00:38:25,066 --> 00:38:28,139
+and do anything else s on the
+measurements if they're is
+
+603
+00:38:29,039 --> 00:38:32,073
+a base on average personal check to see
+if that Sandy Asian
+
+604
+00:38:32,073 --> 00:38:35,074
+is more than 10 for the second and more
+than 10 percent
+
+605
+00:38:35,083 --> 00:38:38,146
+the current average it is will fail for
+that
+
+606
+00:38:39,046 --> 00:38:43,051
+otherwise don't check to see if the
+average has in increase by
+
+607
+00:38:43,051 --> 00:38:48,054
+more than 10 tend to the second and more
+than 10 percent of the baseline
+
+608
+00:38:48,081 --> 00:38:53,090
+and if it is a bill for that and
+otherwise it'll pass
+
+609
+00:38:54,071 --> 00:38:57,143
+so how can we minimized and additional
+one way is
+
+610
+00:38:58,043 --> 00:39:01,202
+and only measure the code it's important
+to you
+
+611
+00:39:01,589 --> 00:39:06,240
+so let's look at how we can do that
+without previous example
+
+612
+00:39:06,024 --> 00:39:09,103
+here this test is doing the work of
+setting up
+
+613
+00:39:09,319 --> 00:39:12,323
+filehandle using it and closing I'll
+handle
+
+614
+00:39:12,359 --> 00:39:15,780
+each time we want to block but if I only
+10
+
+615
+00:39:15,078 --> 00:39:20,079
+measure the time using handle I might do
+is just
+
+616
+00:39:20,088 --> 00:39:23,122
+move the set-up and tear-down work
+outside on the block
+
+617
+00:39:24,022 --> 00:39:28,041
+but what I can do that sometimes the
+work that you want to measure
+
+618
+00:39:28,041 --> 00:39:32,046
+require some setup work needs to be done
+each time before the measurement
+
+619
+00:39:32,046 --> 00:39:35,051
+and for that we have some additional API
+measure metrics
+
+620
+00:39:35,096 --> 00:39:38,725
+on a map to start measuring with block
+you can use this matter just
+
+621
+00:39:39,589 --> 00:39:44,990
+are the block that that incall
+
+622
+00:39:44,099 --> 00:39:47,172
+the city I expect an array of metrics to
+measure
+
+623
+00:39:48,072 --> 00:39:52,149
+I'm currently only time is supported
+
+624
+00:39:53,049 --> 00:39:56,091
+will also need to mourn can I start
+measuring and stop measuring
+
+625
+00:39:56,091 --> 00:39:59,185
+uses isolate what apart what you want to
+measure
+
+626
+00:40:00,085 --> 00:40:03,124
+you call these once per block indication
+
+627
+00:40:04,024 --> 00:40:07,051
+and you're gonna call start measuring
+you need to pass a No for automatically
+
+628
+00:40:07,051 --> 00:40:07,115
+start
+
+629
+00:40:08,015 --> 00:40:11,028
+measure
+
+630
+00:40:11,028 --> 00:40:15,077
+salty how that would work with our peace
+example
+
+631
+00:40:15,077 --> 00:40:18,122
+first I G we change the method to calm
+
+632
+00:40:19,022 --> 00:40:23,121
+measure metrics passing time as the
+Metric and no problem at the start
+
+633
+00:40:23,319 --> 00:40:25,420
+measuring
+
+634
+00:40:25,042 --> 00:40:28,090
+call start measuring right before you
+file handle and stop making immediately
+
+635
+00:40:28,009 --> 00:40:29,067
+afterwards
+
+636
+00:40:30,048 --> 00:40:33,101
+so now this block is doing the work
+outstanding up the filehandle
+
+637
+00:40:34,001 --> 00:40:37,026
+and Tara down each time but it's only
+actually
+
+638
+00:40:37,026 --> 00:40:42,047
+manning the duration spending useful and
+
+639
+00:40:42,047 --> 00:40:46,063
+let's look at this impacts so this paper
+name in this project actually thinking
+
+640
+00:40:46,063 --> 00:40:46,106
+about
+
+641
+00:40:47,006 --> 00:40:50,073
+adding AI Jason partner to a I've got
+
+642
+00:40:50,073 --> 00:40:53,116
+a test them right here that's a
+
+643
+00:40:54,016 --> 00:40:57,031
+loading his file from on the web
+
+644
+00:40:57,031 --> 00:41:00,520
+and partner with industry consultation
+
+645
+00:41:00,799 --> 00:41:04,870
+I think and actually like to turn this
+into a performance test
+
+646
+00:41:04,087 --> 00:41:07,094
+just my own sake and do that now
+
+647
+00:41:07,094 --> 00:41:12,103
+con by calling measure block
+
+648
+00:41:13,003 --> 00:41:16,060
+and pasting & Co and I'll click
+
+649
+00:41:16,006 --> 00:41:22,033
+to my test
+
+650
+00:41:22,087 --> 00:41:24,181
+so here we can see that it took I says
+on average
+
+651
+00:41:25,081 --> 00:41:28,170
+1.91 seconds with a hundred fourteen
+percent sanitation
+
+652
+00:41:29,007 --> 00:41:35,020
+as long as no based on average for this
+test all that's
+
+653
+00:41:35,083 --> 00:41:38,086
+that's not bad but I know that its
+senses doing is expensive work going
+
+654
+00:41:38,086 --> 00:41:38,181
+this far from your
+
+655
+00:41:39,081 --> 00:41:42,098
+from the the way each time actually
+don't wanna measure that I just wanna
+
+656
+00:41:42,098 --> 00:41:43,190
+the time spent in Astrakhan shows Asian
+
+657
+00:41:44,009 --> 00:41:47,097
+so all do is all delete this call
+measure time
+
+658
+00:41:48,078 --> 00:41:52,171
+measure metrics which is passing time
+
+659
+00:41:53,071 --> 00:41:58,095
+as biometric and no from a quick start
+measuring then on to do is call
+
+660
+00:41:58,095 --> 00:42:01,133
+start measuring right before
+
+661
+00:42:02,033 --> 00:42:09,033
+industry consultation I can on my test
+
+662
+00:42:09,092 --> 00:42:12,691
+great so previously it was taking 1.91
+seconds
+
+663
+00:42:13,519 --> 00:42:18,617
+and now it appears to be taking no time
+at all so it's pretty good
+
+664
+00:42:19,499 --> 00:42:22,180
+I
+
+665
+00:42:22,018 --> 00:42:23,115
+which I might get a quick arm
+
+666
+00:42:24,015 --> 00:42:30,080
+but actually wanting this to measure
+something
+
+667
+00:42:30,008 --> 00:42:34,085
+you know something that Xcover report
+something significant so
+
+668
+00:42:35,057 --> 00:42:39,139
+wanna do with a change this to use a
+larger file so we actually get that some
+
+669
+00:42:40,039 --> 00:42:47,039
+values here and sent a couple little
+longer cuz
+
+670
+00:42:49,007 --> 00:42:52,025
+was actually doing is it's gonna Kong's
+block
+
+671
+00:42:52,088 --> 00:42:56,088
+ten times loading file from
+
+672
+00:42:56,088 --> 00:43:03,088
+the web each time and parsing so now the
+test is taking it looks like
+
+673
+00:43:04,028 --> 00:43:09,120
+1.21 seconds and its gonna very low
+standard deviation which is pretty good
+
+674
+00:43:10,002 --> 00:43:13,096
+sometime click to set this as my new
+baseline
+
+675
+00:43:14,014 --> 00:43:18,045
+and since that seem to take a while I
+was gonna
+
+676
+00:43:18,045 --> 00:43:21,056
+move this out the block since the
+
+677
+00:43:21,056 --> 00:43:24,074
+the data that's loading is actually
+immutable I don't need to do this every
+
+678
+00:43:24,074 --> 00:43:24,132
+time
+
+679
+00:43:25,032 --> 00:43:28,068
+sums can do that once on a test
+initially starts
+
+680
+00:43:28,068 --> 00:43:35,068
+click through my test again and still
+got a
+
+681
+00:43:36,082 --> 00:43:38,139
+a result around the same ballpark and
+still got a pretty reasonable San
+
+682
+00:43:39,039 --> 00:43:39,101
+deviation
+
+683
+00:43:40,001 --> 00:43:44,033
+on other not actually doing any work
+before start measuring on need all this
+
+684
+00:43:44,033 --> 00:43:47,102
+summers and delete that and
+
+685
+00:43:48,002 --> 00:43:51,006
+changes back to call mister block run it
+again
+
+686
+00:43:51,042 --> 00:43:56,125
+Michigan similar results
+
+687
+00:43:57,025 --> 00:44:01,063
+and at what I can do so the last thing I
+like to do with this
+
+688
+00:44:01,063 --> 00:44:05,067
+is like will show its earlier we become
+our test to be self-contained we don't
+
+689
+00:44:06,003 --> 00:44:06,068
+want to
+
+690
+00:44:06,068 --> 00:44:09,129
+be link all some network so
+
+691
+00:44:10,029 --> 00:44:15,045
+I miss can change this said actually are
+you going to copy this file my project
+
+692
+00:44:15,045 --> 00:44:18,064
+news asthma model for classed to love
+this
+
+693
+00:44:18,064 --> 00:44:21,093
+on one file from my test target
+
+694
+00:44:21,093 --> 00:44:28,093
+run it again and every go
+
+695
+00:44:29,008 --> 00:44:32,013
+so now I've got a new performance tests
+measuring
+
+696
+00:44:32,013 --> 00:44:36,091
+the time that takes to run this and if
+something were to change
+
+697
+00:44:36,091 --> 00:44:39,113
+I find out the last thing I want to do
+
+698
+00:44:40,013 --> 00:44:45,055
+gonna commit my changes so here we can
+see
+
+699
+00:44:45,055 --> 00:44:48,086
+the changes I made so far cover that
+really expensive function
+
+700
+00:44:48,086 --> 00:44:52,097
+change my test two be a performance test
+
+701
+00:44:52,097 --> 00:44:55,142
+and we can also see the baseline here
+
+702
+00:44:56,042 --> 00:44:59,109
+so I can tell from this but this is
+actually a file that store inside the
+
+703
+00:45:00,009 --> 00:45:07,009
+pocket on lots of
+
+704
+00:45:08,029 --> 00:45:12,030
+talk about that and out same their
+
+705
+00:45:12,003 --> 00:45:15,024
+for next time next time
+
+706
+00:45:15,051 --> 00:45:22,051
+so what you just saying is that you can
+use new measure
+
+707
+00:45:25,076 --> 00:45:28,108
+walk API's to measure performance an
+attacker russians
+
+708
+00:45:29,008 --> 00:45:34,287
+you can telex code what the baseline is
+to specify what constitutes or russians
+
+709
+00:45:34,359 --> 00:45:35,220
+for your test
+
+710
+00:45:35,022 --> 00:45:39,029
+I'm and it won't exc actually test will
+use a standing ovation
+
+711
+00:45:39,092 --> 00:45:42,291
+to inform you spend the measurements
+
+712
+00:45:43,119 --> 00:45:46,850
+and finally won something does go wrong
+
+713
+00:45:46,085 --> 00:45:50,127
+you can always use instruments provide I
+like to invite will back up
+
+714
+00:45:51,027 --> 00:45:56,059
+okay great so
+
+715
+00:45:56,059 --> 00:45:59,122
+22 ago back to everything we talked
+about today
+
+716
+00:46:00,022 --> 00:46:04,024
+a we start off with thinking about help
+why should we test in the first place
+
+717
+00:46:04,042 --> 00:46:05,044
+what are the benefits
+
+718
+00:46:05,044 --> 00:46:08,085
+you know it helps us identify bugs
+before we ship
+
+719
+00:46:08,085 --> 00:46:11,131
+it also helps as described and really
+think about the
+
+720
+00:46:12,031 --> 00:46:15,044
+impacting the API's representing project
+
+721
+00:46:15,044 --> 00:46:19,131
+and then we talked about how do you add
+tests and and also had an organized
+
+722
+00:46:20,031 --> 00:46:21,063
+person to targets
+
+723
+00:46:21,063 --> 00:46:25,160
+in your project test methods loading
+resources from the test bundle
+
+724
+00:46:26,006 --> 00:46:29,024
+and using the assertions insider test
+
+725
+00:46:29,078 --> 00:46:32,146
+and then we talked about the new a
+synchronised SAPI
+
+726
+00:46:33,046 --> 00:46:36,955
+which allows you to get synchronous
+control flow
+
+727
+00:46:37,369 --> 00:46:42,270
+around a synchronous past and then broke
+talk you through
+
+728
+00:46:42,027 --> 00:46:45,075
+performance testing and also the
+
+729
+00:46:45,075 --> 00:46:49,092
+instruments integration that lets you
+profile your test and that's a really
+
+730
+00:46:49,092 --> 00:46:50,103
+powerful feature
+
+731
+00:46:51,003 --> 00:46:55,077
+because your test code is going to be
+executing critical paths in your project
+
+732
+00:46:55,077 --> 00:46:59,084
+and then to easily be able to hoppin
+instruments and analyze
+
+733
+00:46:59,084 --> 00:47:02,117
+time profiles object dollar profiles
+
+734
+00:47:03,017 --> 00:47:07,079
+I is really great to appear to have and
+
+735
+00:47:07,079 --> 00:47:12,118
+if you have questions we encourage you
+to contact data logger
+
+736
+00:47:13,018 --> 00:47:18,034
+tools evangelist and there's a few
+related sessions you know early on I
+
+737
+00:47:18,034 --> 00:47:20,097
+talked about this continuous integration
+workflow
+
+738
+00:47:20,097 --> 00:47:23,113
+and exit ask combined with Xcode server
+
+739
+00:47:24,013 --> 00:47:27,059
+make that possible where you can set up
+server that will
+
+740
+00:47:27,059 --> 00:47:30,328
+on commit our schedules check out your
+code
+
+741
+00:47:30,859 --> 00:47:34,420
+run all your tasks and report the
+results so there's a
+
+742
+00:47:34,042 --> 00:47:38,066
+session on that later this afternoon
+right here in this room a better
+
+743
+00:47:38,066 --> 00:47:38,119
+thanks a lot folks
+

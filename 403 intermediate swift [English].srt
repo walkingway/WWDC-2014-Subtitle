@@ -1,0 +1,4099 @@
+1
+00:00:14,062 --> 00:00:15,086
+good afternoon and welcome
+
+2
+00:00:15,086 --> 00:00:18,165
+welcome the intermediate swept
+
+3
+00:00:19,065 --> 00:00:22,066
+my name is Brian lanier I'm an engineer
+and developer publications
+
+4
+00:00:22,066 --> 00:00:25,067
+later i'll be joined on stage by my
+colleague Joe crop
+
+5
+00:00:25,076 --> 00:00:29,105
+is an engineer on this with compiler
+team for both really excited to be here
+
+6
+00:00:30,005 --> 00:00:30,059
+today
+
+7
+00:00:30,059 --> 00:00:33,141
+to talk with you more in depth about
+this web programming language
+
+8
+00:00:34,041 --> 00:00:37,090
+have been allowed to last couple days
+and I've been very impressed
+
+9
+00:00:37,009 --> 00:00:41,012
+are ready with what you've been able to
+deal with sweat and I think
+
+10
+00:00:41,093 --> 00:00:44,972
+that go into some more detail on really
+key features a swept
+
+11
+00:00:45,809 --> 00:00:49,720
+you'll be able to take advantage of
+those features even more so in your code
+
+12
+00:00:49,072 --> 00:00:52,651
+so
+
+13
+00:00:53,299 --> 00:00:57,306
+in particular we're gonna look at some
+features into more detail
+
+14
+00:00:57,369 --> 00:01:02,330
+including optional and how you can use
+them to make your code safer
+
+15
+00:01:02,033 --> 00:01:05,042
+we're gonna talk to you about memory
+management swept
+
+16
+00:01:05,339 --> 00:01:09,424
+how it's largely automatic we're also
+going to talk about initialization
+
+17
+00:01:10,189 --> 00:01:13,490
+and how you can take advantage have the
+power closures
+
+18
+00:01:13,049 --> 00:01:17,070
+and pattern matching in your code so
+
+19
+00:01:17,007 --> 00:01:21,015
+I want to begin by looking at once with
+most powerful features
+
+20
+00:01:21,078 --> 00:01:26,110
+optionals but first I want to take a
+look at why we might need optional
+
+21
+00:01:27,001 --> 00:01:31,006
+in the first place so you need to work
+with input data
+
+22
+00:01:31,006 --> 00:01:34,065
+from a user here asking for the users
+age
+
+23
+00:01:34,659 --> 00:01:39,665
+the response comes in is a string but
+say we need to convert that string to an
+
+24
+00:01:39,719 --> 00:01:40,450
+integer
+
+25
+00:01:40,045 --> 00:01:44,064
+using this to it method here now
+
+26
+00:01:44,469 --> 00:01:48,020
+when the user enters a string that
+represents about
+
+27
+00:01:48,002 --> 00:01:51,601
+manager the 28 method returns the
+correct result
+
+28
+00:01:51,619 --> 00:01:56,210
+but however because you're not be in
+control other users response
+
+29
+00:01:56,021 --> 00:01:59,920
+you have to deal with cases are
+situations where
+
+30
+00:02:00,109 --> 00:02:04,191
+there's not an obvious value to reach
+her the user has full control over what
+
+31
+00:02:04,929 --> 00:02:05,012
+their entry in
+
+32
+00:02:05,759 --> 00:02:08,826
+so if they try to get here or
+
+33
+00:02:09,429 --> 00:02:13,120
+snippy a we don't really have a
+
+34
+00:02:13,012 --> 00:02:16,027
+krier value to return in this case so
+
+35
+00:02:16,027 --> 00:02:20,074
+what do we do what value do return well
+
+36
+00:02:20,074 --> 00:02:23,153
+we have lotsa options right
+
+37
+00:02:23,819 --> 00:02:26,960
+well I should probably aware
+
+38
+00:02:26,096 --> 00:02:30,160
+various sentinels have been used in
+various different languages
+
+39
+00:02:31,006 --> 00:02:35,044
+to model these kind of problems but
+having so many sentinels around
+
+40
+00:02:35,098 --> 00:02:39,183
+isn't very good it's not very say it to
+Commons for some bugs and problems in
+
+41
+00:02:40,083 --> 00:02:40,145
+your code
+
+42
+00:02:41,045 --> 00:02:44,046
+for one you have to know which of these
+possible sentinels
+
+43
+00:02:44,055 --> 00:02:48,057
+was chosen by the author the API and
+then have to room you have to remember
+
+44
+00:02:48,057 --> 00:02:48,143
+which one
+
+45
+00:02:49,043 --> 00:02:53,095
+to check against it so this is a very
+good pattern
+
+46
+00:02:53,095 --> 00:02:56,159
+to really how should we model this well
+
+47
+00:02:57,059 --> 00:03:01,125
+in swift remodel problems like these
+using the optional type
+
+48
+00:03:02,025 --> 00:03:05,063
+the optional type represent
+
+49
+00:03:05,063 --> 00:03:09,064
+possibly missing values I've any type
+whatsoever
+
+50
+00:03:09,064 --> 00:03:13,071
+and the optional but I'd has two
+discrete state
+
+51
+00:03:13,071 --> 00:03:16,166
+a default mill State
+
+52
+00:03:17,066 --> 00:03:20,074
+which represents literally the
+
+53
+00:03:20,074 --> 00:03:24,151
+absent a any value whatsoever and
+officials are defaulted to know
+
+54
+00:03:25,051 --> 00:03:27,140
+you've probably seen a couple examples
+and options if you've seen the
+
+55
+00:03:28,004 --> 00:03:29,033
+introduction this web talk
+
+56
+00:03:29,069 --> 00:03:33,113
+you write them by running the bases hi
+followed by a question mark indicator
+
+57
+00:03:34,013 --> 00:03:34,100
+optionality
+
+58
+00:03:35,000 --> 00:03:38,006
+now in swift
+
+59
+00:03:38,006 --> 00:03:42,009
+mill is not like sweat in objective-c
+foreign object to cease with is an
+
+60
+00:03:42,009 --> 00:03:43,054
+object pointer to nothing
+
+61
+00:03:44,035 --> 00:03:47,040
+they only work for the reference types
+in swift
+
+62
+00:03:47,085 --> 00:03:51,114
+mill is a true Sentinel value it works
+with any type whatsoever
+
+63
+00:03:52,014 --> 00:03:57,016
+it literally just means there's no value
+president though the other state
+
+64
+00:03:57,034 --> 00:04:00,071
+a fan of you indicate the presence of a
+value that's been wrapped up in the
+
+65
+00:04:00,071 --> 00:04:02,077
+optional think about hope that this
+rapper
+
+66
+00:04:02,077 --> 00:04:06,116
+container their wraps up values when
+they're about his presence so he
+
+67
+00:04:07,016 --> 00:04:09,077
+retained a valuable option number two 6
+
+68
+00:04:09,077 --> 00:04:13,115
+and the value is wrapped up in the
+optional their wifi had unwrapped this
+
+69
+00:04:14,015 --> 00:04:15,047
+value and access it
+
+70
+00:04:15,047 --> 00:04:18,093
+in just a little while so
+
+71
+00:04:18,093 --> 00:04:22,168
+now that we have single fentanyl value
+
+72
+00:04:23,068 --> 00:04:26,090
+that works with any type at all even
+integers
+
+73
+00:04:26,009 --> 00:04:29,077
+it's clear what this method should
+return it clear that
+
+74
+00:04:30,058 --> 00:04:33,141
+whenever we have a value that's not
+valid we should just returned an
+
+75
+00:04:34,041 --> 00:04:35,053
+optional and in fact
+
+76
+00:04:35,053 --> 00:04:38,502
+the two it matters defined in the
+standard library on the string tied
+
+77
+00:04:38,979 --> 00:04:44,048
+and does just that returns now know
+because we have optionals
+
+78
+00:04:44,669 --> 00:04:49,310
+we also have non optional types as well
+Twitter non-official pipes
+
+79
+00:04:49,031 --> 00:04:52,660
+well they're just ordinary types you
+think they are integers
+
+80
+00:04:52,939 --> 00:04:56,034
+streams even your custom object
+
+81
+00:04:56,889 --> 00:05:00,710
+in the great thing about non-official
+pipes is it big
+
+82
+00:05:00,071 --> 00:05:05,084
+hand to be now we think this is pretty
+cool because it makes your code safe
+
+83
+00:05:05,084 --> 00:05:10,087
+and predictable we declare a valuable
+non-official type
+
+84
+00:05:10,087 --> 00:05:13,636
+can't be email you can be sure that it's
+there when you needed
+
+85
+00:05:14,419 --> 00:05:17,770
+and you can't be surprised the
+unexpected no values propagate
+
+86
+00:05:17,077 --> 00:05:20,506
+throughout your code
+
+87
+00:05:21,199 --> 00:05:24,286
+so now that we know of some type are but
+they represent the see how we can use in
+
+88
+00:05:25,069 --> 00:05:25,990
+our code
+
+89
+00:05:25,099 --> 00:05:28,558
+for example to write a function the
+returns
+
+90
+00:05:29,449 --> 00:05:33,457
+an optional tied so here we're gonna
+write a function that looks for a string
+
+91
+00:05:34,249 --> 00:05:37,291
+in an array of strings and if the string
+is found the array it simply return the
+
+92
+00:05:37,669 --> 00:05:39,180
+index
+
+93
+00:05:39,018 --> 00:05:42,287
+but as you might guess this is a case in
+which
+
+94
+00:05:42,449 --> 00:05:46,340
+if the string is it found that we need
+some value to indicate that failure
+
+95
+00:05:46,034 --> 00:05:49,058
+because we have mill and also that our
+disposal
+
+96
+00:05:49,058 --> 00:05:52,121
+let's go ahead and change a return type
+here 20 of shock by an act
+
+97
+00:05:53,021 --> 00:05:57,470
+the question mark at the end so with
+implement the fuckin the first thing you
+
+98
+00:05:57,659 --> 00:05:59,110
+do is a numerate the array
+
+99
+00:05:59,011 --> 00:06:02,077
+here using enumerate method the finest
+in our library which actually in
+
+100
+00:06:02,077 --> 00:06:04,096
+numerous to an array and returned as a
+
+101
+00:06:04,096 --> 00:06:08,455
+to Paul the index and the value a each
+value in the air
+
+102
+00:06:09,319 --> 00:06:13,240
+in the Iraq and we can use that in the
+foreign statement here
+
+103
+00:06:13,024 --> 00:06:16,037
+and check to see if the string it were
+looking for matches the value
+
+104
+00:06:16,037 --> 00:06:19,706
+and if so simply return the integer they
+were returning
+
+105
+00:06:20,039 --> 00:06:23,620
+an integer here but then it gets wrapped
+up as we sat in the optional
+
+106
+00:06:23,062 --> 00:06:26,084
+the turnpike because we have no or
+disposal
+
+107
+00:06:26,084 --> 00:06:29,193
+we know exactly what to do when we don't
+have
+
+108
+00:06:29,949 --> 00:06:33,995
+a ballot result we'd simply return 0
+
+109
+00:06:34,409 --> 00:06:37,497
+nor the 72 unwrap optionals so
+
+110
+00:06:38,289 --> 00:06:41,317
+with use this function here to look to
+an array
+
+111
+00:06:41,569 --> 00:06:45,654
+and try to find a name in the Serai here
+you can clearly see that
+
+112
+00:06:46,419 --> 00:06:50,496
+the string that were looking for is me a
+ride so we have a valid result to return
+
+113
+00:06:51,189 --> 00:06:54,233
+and we can check now we always wanna
+check to make sure that the value
+
+114
+00:06:54,629 --> 00:06:58,670
+is present so we can simply ask if the
+index value visenteno here
+
+115
+00:06:59,039 --> 00:07:02,063
+and notice that I don't I'm not checking
+explicitly against No
+
+116
+00:07:02,279 --> 00:07:05,315
+enough because of course can be used in
+Ballwin contact
+
+117
+00:07:05,639 --> 00:07:09,660
+that mean to you can check them directly
+very naturally like I've done here
+
+118
+00:07:09,849 --> 00:07:12,923
+so if the value is present which it is
+we can simply try to
+
+119
+00:07:13,589 --> 00:07:16,589
+use that value in the subscript to the
+Iraq
+
+120
+00:07:16,589 --> 00:07:19,636
+but if we don't like this we have a
+problem
+
+121
+00:07:20,059 --> 00:07:23,490
+because we're the arrays expecting a non
+optional
+
+122
+00:07:23,049 --> 00:07:27,368
+integer we've said that the function
+returns optional integer
+
+123
+00:07:27,809 --> 00:07:30,814
+so the types don't match here in the
+compiler will let us know the first
+
+124
+00:07:31,309 --> 00:07:35,310
+before we use it we need to unwrap the
+optional but when we working on rap
+
+125
+00:07:35,319 --> 00:07:35,406
+optionals
+
+126
+00:07:36,189 --> 00:07:39,243
+is using the force unwrapping operator
+was simply consists of an exclamation
+
+127
+00:07:39,729 --> 00:07:41,110
+mark
+
+128
+00:07:41,011 --> 00:07:46,018
+you write the exclamation mark after the
+optional by giving you wish to unwrap
+
+129
+00:07:46,018 --> 00:07:49,687
+in here because are surgery returned a
+valid
+
+130
+00:07:49,849 --> 00:07:53,110
+respond we can simply print out the
+result
+
+131
+00:07:53,011 --> 00:07:56,250
+but you have to be careful as I said we
+should check to make sure the values
+
+132
+00:07:56,349 --> 00:07:58,210
+know first before we can wrap
+
+133
+00:07:58,021 --> 00:08:02,600
+so we tried to use the force on rockin
+operator here without checking
+
+134
+00:08:02,789 --> 00:08:05,792
+we would actually get a runtime
+assertion a runtime error
+
+135
+00:08:06,089 --> 00:08:09,115
+because we need to make sure the buyer
+was there and we're trying to force it
+
+136
+00:08:09,349 --> 00:08:11,770
+when it's not
+
+137
+00:08:11,077 --> 00:08:14,716
+so instead it's what we have a better
+way of doing this we can actually
+
+138
+00:08:15,409 --> 00:08:18,770
+test and unwrap at the same time
+
+139
+00:08:18,077 --> 00:08:21,143
+using it what we call optional binding
+of combining uses this
+
+140
+00:08:22,043 --> 00:08:27,082
+if let's unpack you may have seen
+earlier introductions with top
+
+141
+00:08:27,469 --> 00:08:30,482
+to the flood state how does it work well
+
+142
+00:08:30,599 --> 00:08:33,642
+first as I said it test so a test to see
+
+143
+00:08:34,029 --> 00:08:38,270
+the optional type here to see if it
+actually present or if its value is now
+
+144
+00:08:38,027 --> 00:08:43,094
+and if it's not male it find on rapster
+and find the non optional tight
+
+145
+00:08:43,094 --> 00:08:46,433
+to the index value here this temporary
+content
+
+146
+00:08:47,279 --> 00:08:50,420
+you can use a temporary content because
+it's unwrapped
+
+147
+00:08:50,042 --> 00:08:54,021
+as the index as the subscript to
+disarray
+
+148
+00:08:54,399 --> 00:08:57,498
+and everything should work just fine but
+we can actually combined together
+
+149
+00:08:58,389 --> 00:09:00,380
+there's no need to actually include
+
+150
+00:09:00,038 --> 00:09:03,124
+a temporary variable we can simply
+evaluate the result
+
+151
+00:09:04,024 --> 00:09:09,032
+the function directly in line and then
+to find out after some rock to the index
+
+152
+00:09:09,032 --> 00:09:09,069
+here
+
+153
+00:09:09,069 --> 00:09:16,069
+which now index is up type not optional
+and just regular old
+
+154
+00:09:16,959 --> 00:09:19,058
+but that we're off from Iowa taken a
+very simple case let's look at how it
+
+155
+00:09:19,949 --> 00:09:20,974
+might look if we
+
+156
+00:09:21,199 --> 00:09:25,160
+did something a little bit more complex
+so to do that
+
+157
+00:09:25,016 --> 00:09:28,055
+let's set up a couple passes say we have
+a person class which has a
+
+158
+00:09:28,199 --> 00:09:33,070
+optional residents and a residence which
+has optional address
+
+159
+00:09:33,007 --> 00:09:36,068
+and finally have an address fat ass
+three optional properties
+
+160
+00:09:36,068 --> 00:09:40,135
+building number street name an apartment
+and all of which are optional
+
+161
+00:09:41,035 --> 00:09:44,144
+and let's do a little bit more
+bookkeeping let's go ahead and create
+
+162
+00:09:44,459 --> 00:09:47,740
+a person instant Paul here and
+
+163
+00:09:47,074 --> 00:09:50,913
+let's keep our resident and let's also
+
+164
+00:09:51,579 --> 00:09:55,870
+give Polish President an address so we
+can receive his mail
+
+165
+00:09:55,087 --> 00:09:57,179
+now because Paul doesn't live in an
+apartment were not going to stop the
+
+166
+00:09:58,079 --> 00:09:58,161
+apartment number
+
+167
+00:09:59,061 --> 00:10:02,590
+but we're going to the building number
+two the string 240 three and the
+
+168
+00:10:03,139 --> 00:10:07,146
+street name to main street now let's say
+that we wanted to
+
+169
+00:10:07,839 --> 00:10:10,881
+get out the address number as us integer
+
+170
+00:10:11,259 --> 00:10:15,335
+not as a string we could use if not
+binding to drill down
+
+171
+00:10:16,019 --> 00:10:19,230
+through all these properties in some
+properties are the classes we've defined
+
+172
+00:10:19,023 --> 00:10:22,023
+so first we can start to see a pause a
+resident up so
+
+173
+00:10:22,023 --> 00:10:26,122
+unwrap it a sign at the home we can do
+the same with the address
+
+174
+00:10:26,329 --> 00:10:30,810
+and finally we can drill down and
+finally used to it mattered to convert
+
+175
+00:10:30,081 --> 00:10:30,172
+that string
+
+176
+00:10:31,072 --> 00:10:35,074
+into a number and assign it to you the
+address
+
+177
+00:10:35,092 --> 00:10:39,111
+variable but this is really cumbersome
+as you can tell
+
+178
+00:10:40,011 --> 00:10:44,240
+the stuff is not lead a pretty code arm
+and it's kinda hard to follow all over
+
+179
+00:10:44,339 --> 00:10:46,170
+the net to deflect unpack
+
+180
+00:10:46,017 --> 00:10:49,043
+and statement here so in swift we can
+actually use
+
+181
+00:10:49,043 --> 00:10:53,312
+optional chaining as a way of
+accomplishing that same thing
+
+182
+00:10:53,699 --> 00:10:57,713
+actual chain what you work with optional
+to conditionally perform operation
+
+183
+00:10:57,839 --> 00:11:01,863
+like messaging mill in objective-c but
+in such a way that it works with any
+
+184
+00:11:02,079 --> 00:11:04,630
+type whatsoever
+
+185
+00:11:04,063 --> 00:11:08,085
+after attending provide a clean and to
+think syntax for doing these kinds of
+
+186
+00:11:08,085 --> 00:11:09,074
+operations
+
+187
+00:11:09,839 --> 00:11:11,920
+so what we're doing here is we're just
+the value in it each point using the
+
+188
+00:11:12,649 --> 00:11:15,250
+question mark operator a chain operator
+
+189
+00:11:15,025 --> 00:11:19,104
+to see if the thing to its left would
+have an optional type if it no
+
+190
+00:11:19,329 --> 00:11:22,880
+of its present before we proceed to the
+next expression
+
+191
+00:11:22,088 --> 00:11:25,797
+so to see how this works in a little bit
+more detail let's look at this example
+
+192
+00:11:26,589 --> 00:11:27,750
+and see how it evaluates
+
+193
+00:11:27,075 --> 00:11:31,354
+you think the evaluation optional chain
+expression
+
+194
+00:11:32,029 --> 00:11:37,052
+like two parallel railroad track in two
+different destinations are two stations
+
+195
+00:11:37,259 --> 00:11:41,300
+for station being the optional value
+that's wrapped up
+
+196
+00:11:41,003 --> 00:11:44,092
+here so in this case and and the trapped
+in an optional
+
+197
+00:11:44,389 --> 00:11:48,110
+or simply know when there's no value
+present so let's see what this looks
+
+198
+00:11:48,011 --> 00:11:50,040
+like as we go through the expression
+
+199
+00:11:50,139 --> 00:11:54,120
+for paula is not optional so that
+obvious we said I'm is about instance
+
+200
+00:11:54,012 --> 00:11:57,101
+we can go to the first option on here in
+the chain expression
+
+201
+00:11:57,209 --> 00:12:01,360
+residents well we know that we set it as
+a residence but if it were no
+
+202
+00:12:01,036 --> 00:12:05,038
+who actually just take the No track and
+the entire expression would return
+
+203
+00:12:05,056 --> 00:12:08,775
+know it's all been awful pipe but it
+simply returns now and the rest to the
+
+204
+00:12:09,279 --> 00:12:12,304
+expression is ignored
+
+205
+00:12:12,529 --> 00:12:15,690
+but of course we did set a residence and
+we can do the same here
+
+206
+00:12:15,069 --> 00:12:18,098
+along the path and we can check every
+single
+
+207
+00:12:18,098 --> 00:12:21,149
+optional in a chain expression to see
+whether or not it's valid
+
+208
+00:12:22,049 --> 00:12:27,081
+and this case we've set an address we
+set a building number
+
+209
+00:12:27,081 --> 00:12:30,173
+and finally come to the last and method
+call
+
+210
+00:12:31,073 --> 00:12:34,482
+after we've checked all the rest the
+options now the two emitted as you
+
+211
+00:12:35,139 --> 00:12:37,490
+recall returns of some type itself
+
+212
+00:12:37,049 --> 00:12:40,110
+through actually one more path we need
+to consider it could in fact return know
+
+213
+00:12:41,001 --> 00:12:43,082
+if it can convert the value
+
+214
+00:12:43,091 --> 00:12:47,098
+but we said of course to a valid string
+representation
+
+215
+00:12:47,098 --> 00:12:51,197
+energizer and so to admit that has a
+result return 243
+
+216
+00:12:52,079 --> 00:12:55,440
+and the entire expression is completely
+evaluate
+
+217
+00:12:55,044 --> 00:12:59,423
+it to rapid back up in a optional so
+that the address numbers now
+
+218
+00:12:59,819 --> 00:13:03,720
+and optional with the underlying value
+243
+
+219
+00:13:03,072 --> 00:13:06,123
+but because it's an optional value if I
+need to use it
+
+220
+00:13:07,023 --> 00:13:10,055
+as a real integer I need to unwrap it
+still
+
+221
+00:13:10,055 --> 00:13:14,074
+well actually we can combine these
+operations together optional chain
+
+222
+00:13:14,074 --> 00:13:18,783
+and if let's unpack corruption by name
+to test on it to test and unwrap at the
+
+223
+00:13:19,449 --> 00:13:20,550
+same time again
+
+224
+00:13:20,055 --> 00:13:24,594
+so here we can take the entire of
+protein expression evaluated
+
+225
+00:13:25,089 --> 00:13:28,097
+see if it is it now on rapid in a sign
+in to the undescribable
+
+226
+00:13:28,889 --> 00:13:32,350
+we can use like an ordinary non-official
+tight for example the added to a
+
+227
+00:13:32,035 --> 00:13:33,122
+database
+
+228
+00:13:34,022 --> 00:13:39,099
+so that option was work
+
+229
+00:13:39,099 --> 00:13:44,106
+34 that two of those work so awful
+training workshops combining work
+
+230
+00:13:45,006 --> 00:13:49,068
+they want to take a step back show you
+options look like under the hood
+
+231
+00:13:49,068 --> 00:13:52,106
+don't spend a lot of time here but I do
+wanna show you how powerful and
+
+232
+00:13:53,006 --> 00:13:55,145
+expressive this web programming
+languages
+
+233
+00:13:55,199 --> 00:14:00,110
+that we can actually model something so
+fundamental Collingwood like optionals
+
+234
+00:14:00,011 --> 00:14:03,054
+in the language itself officials are
+really just
+
+235
+00:14:03,054 --> 00:14:06,403
+simple enumeration a generic enumeration
+at that
+
+236
+00:14:06,889 --> 00:14:10,934
+at any time you can see the some type
+here represent the case in which
+
+237
+00:14:11,339 --> 00:14:14,383
+I said that there is a value present the
+two wrapped up you can see that wrapping
+
+238
+00:14:14,779 --> 00:14:15,780
+here going on
+
+239
+00:14:15,879 --> 00:14:19,600
+and the non case just simply as the
+default value which we've said that you
+
+240
+00:14:19,006 --> 00:14:21,058
+can indicate using now
+
+241
+00:14:22,012 --> 00:14:25,481
+we haven't talked much about generics
+and we're not going to go into generics
+
+242
+00:14:25,589 --> 00:14:28,600
+much detail here but I anchored you to
+watch the advance with talk
+
+243
+00:14:28,006 --> 00:14:32,035
+we can see the four-party American
+action
+
+244
+00:14:32,629 --> 00:14:37,656
+so that optionals use optionals to work
+safely in your code with possibly
+
+245
+00:14:37,899 --> 00:14:38,980
+missing values
+
+246
+00:14:39,709 --> 00:14:43,764
+missing values are nil and present
+values are wrapped up in the optional
+
+247
+00:14:44,259 --> 00:14:47,321
+you could then on route the optional in
+two ways either with the force on rockin
+
+248
+00:14:47,879 --> 00:14:48,720
+operator
+
+249
+00:14:48,072 --> 00:14:51,116
+but only do that if you're sure there's
+a value there and it's not now
+
+250
+00:14:52,016 --> 00:14:56,042
+and you can also use if let contactor
+optional buying two unwrap attached to
+
+251
+00:14:56,042 --> 00:14:56,951
+the same time
+
+252
+00:14:57,329 --> 00:15:01,374
+in a very safe way and finally you can
+use optional cheney
+
+253
+00:15:01,779 --> 00:15:05,930
+to work in a very succinct and eloquent
+way with multiple optional expressions
+
+254
+00:15:05,093 --> 00:15:06,142
+chained together
+
+255
+00:15:07,042 --> 00:15:10,117
+and that's optionals highlighted by Joe
+back on the stage to talk to you about
+
+256
+00:15:11,017 --> 00:15:16,806
+memory management and sweat
+
+257
+00:15:16,959 --> 00:15:20,057
+my name's Joe groff I work in this with
+compiler and I'm really excited because
+
+258
+00:15:20,939 --> 00:15:24,100
+managing memory is my favorite thing to
+do
+
+259
+00:15:24,001 --> 00:15:28,180
+when I program no it's not
+
+260
+00:15:28,279 --> 00:15:32,297
+thankfully foot is built on automatic
+reference counting the same
+
+261
+00:15:32,459 --> 00:15:36,230
+mile we use an objective-c or art
+
+262
+00:15:36,023 --> 00:15:40,112
+we don't make you use the point if
+intact we are making spell Alexa
+
+263
+00:15:41,012 --> 00:15:45,020
+but still way to clear a class like this
+any construct the class
+
+264
+00:15:45,092 --> 00:15:48,179
+you get a memory allocation implicitly
+and a reference to that is what gets
+
+265
+00:15:49,079 --> 00:15:50,168
+stored
+
+266
+00:15:50,879 --> 00:15:55,931
+in a local variable at these references
+back keep that memory alive
+
+267
+00:15:56,399 --> 00:15:59,417
+now we can juggle a couple be there
+bowling pins here
+
+268
+00:15:59,579 --> 00:16:04,580
+when the last reference to a class goes
+away to not that goes away
+
+269
+00:16:04,589 --> 00:16:09,110
+about it automatically get the allocated
+arc is a horrible juggler but great at
+
+270
+00:16:09,011 --> 00:16:09,670
+reclaiming
+
+271
+00:16:09,769 --> 00:16:13,310
+unused memory
+
+272
+00:16:13,031 --> 00:16:16,120
+when a reference go down in Scopus
+automatically released
+
+273
+00:16:16,399 --> 00:16:20,410
+but want to get some reference to the
+object is kept alive
+
+274
+00:16:20,509 --> 00:16:24,553
+in only when the final reference is
+released is the object the allocated
+
+275
+00:16:24,949 --> 00:16:29,048
+it's a it's predictable it just worked
+
+276
+00:16:29,939 --> 00:16:32,939
+it that for the cycle
+
+277
+00:16:32,939 --> 00:16:38,050
+sometimes it doesn't make sense foreign
+object to be own
+
+278
+00:16:38,005 --> 00:16:41,294
+for instance apartment literally are
+owned by their
+
+279
+00:16:41,339 --> 00:16:44,362
+tenants but they also you know we'll
+have like multiple people living in them
+
+280
+00:16:44,569 --> 00:16:44,631
+over the
+
+281
+00:16:45,189 --> 00:16:49,800
+my time in the building and on the other
+hand a person will move from apartment
+
+282
+00:16:49,008 --> 00:16:51,082
+to apartment over their life
+
+283
+00:16:52,054 --> 00:16:57,353
+even if you move a person into an
+apartment
+
+284
+00:16:57,839 --> 00:17:01,887
+missus relationship isn't really in
+owning relationship
+
+285
+00:17:02,319 --> 00:17:06,394
+as a problem if we try to model it as
+such
+
+286
+00:17:07,069 --> 00:17:10,790
+but set up a a dictionary the are
+renters in our power apartments they
+
+287
+00:17:10,079 --> 00:17:11,086
+were landlord
+
+288
+00:17:12,049 --> 00:17:15,141
+and let's move one of our tenants
+elsewhere into our apartment
+
+289
+00:17:16,041 --> 00:17:20,056
+now is a problem if you tried to move
+out
+
+290
+00:17:20,056 --> 00:17:23,114
+she's trapped the reference to the
+apartment
+
+291
+00:17:24,014 --> 00:17:28,413
+heater object alive and even worse if we
+try to stop the property
+
+292
+00:17:28,539 --> 00:17:33,210
+we're stuck with the deed both objects
+keep each other alive
+
+293
+00:17:33,021 --> 00:17:36,070
+in our reference cycle
+
+294
+00:17:36,007 --> 00:17:39,236
+like objective-c we have weak references
+
+295
+00:17:39,929 --> 00:17:43,960
+and the stealth wept that this object is
+the responsible for keeping the object
+
+296
+00:17:43,096 --> 00:17:45,189
+on the other end alive
+
+297
+00:17:46,089 --> 00:17:49,132
+now when we work to the example again
+
+298
+00:17:50,032 --> 00:17:55,034
+with a weak reference between the few
+objects in
+
+299
+00:17:55,034 --> 00:17:58,363
+affecting me about her apartment
+
+300
+00:17:58,669 --> 00:18:02,110
+and make a clean break with her landlord
+
+301
+00:18:02,011 --> 00:18:05,180
+and the reference automatically gets
+reset the nail
+
+302
+00:18:05,279 --> 00:18:09,640
+there's no dangling reference to the the
+allocated objects
+
+303
+00:18:09,064 --> 00:18:12,473
+course when we thought the property both
+objects and that the allocated and
+
+304
+00:18:13,049 --> 00:18:13,440
+there's no
+
+305
+00:18:13,044 --> 00:18:16,100
+be in
+
+306
+00:18:17,000 --> 00:18:20,098
+and weak references in sweater model
+that optional values you can use all the
+
+307
+00:18:20,098 --> 00:18:22,547
+optional operations that Brian just
+showed you
+
+308
+00:18:23,429 --> 00:18:27,490
+to work with them and when you take an
+optional week value
+
+309
+00:18:27,049 --> 00:18:30,738
+and you bind the not optional part out
+today
+
+310
+00:18:31,179 --> 00:18:34,620
+you get a strong not optional value
+
+311
+00:18:34,062 --> 00:18:38,083
+any can safely work with that just like
+any other reference
+
+312
+00:18:38,083 --> 00:18:40,139
+if you're applying a single method are
+looking up a single property
+
+313
+00:18:41,039 --> 00:18:42,068
+conditionally
+
+314
+00:18:42,419 --> 00:18:45,480
+on a week reference object you can also
+use the chaining operator
+
+315
+00:18:45,048 --> 00:18:48,072
+as I shorthand in
+
+316
+00:18:48,072 --> 00:18:53,151
+something to be aware are that the path
+in Iraq pattern does not work very well
+
+317
+00:18:53,799 --> 00:18:55,390
+with week
+
+318
+00:18:55,039 --> 00:18:58,082
+you could go to cash advance rent check
+find out that abound
+
+319
+00:18:58,082 --> 00:19:01,125
+and evict them before you have a chance
+even greet them and end up with the
+
+320
+00:19:02,025 --> 00:19:06,070
+runtime a reading expected
+
+321
+00:19:06,007 --> 00:19:10,012
+chaining of it doesn't preserve a strong
+reference if you use it to try to apply
+
+322
+00:19:10,075 --> 00:19:12,079
+multiple methods to the same object
+
+323
+00:19:13,015 --> 00:19:16,083
+here cash rent check code again 'cause
+the
+
+324
+00:19:16,083 --> 00:19:20,912
+tended to get relief and then we'd end
+up greeting and no object
+
+325
+00:19:21,659 --> 00:19:26,510
+and then in fact not calling free at all
+
+326
+00:19:26,051 --> 00:19:30,082
+in weak references are great for
+breaking cycles
+
+327
+00:19:30,082 --> 00:19:34,111
+but they are always ideal
+
+328
+00:19:35,011 --> 00:19:38,058
+but they were a modern landlord and we
+accept credit card payments from i 10
+
+329
+00:19:38,058 --> 00:19:42,125
+a dream I know but now bear with me
+
+330
+00:19:43,025 --> 00:19:47,184
+now a credit card should only ever be
+owned by one person right
+
+331
+00:19:47,409 --> 00:19:51,410
+so you really want this to be an
+immutable binding an immutable property
+
+332
+00:19:51,419 --> 00:19:55,480
+up the credit card we offered only
+really want to
+
+333
+00:19:56,029 --> 00:19:59,100
+track a credit card if it isn't owned by
+a person
+
+334
+00:19:59,001 --> 00:20:02,820
+it shouldn't be an optional property
+
+335
+00:20:02,919 --> 00:20:06,070
+now there's obviously a cycle here we
+could break that cycle with weak
+
+336
+00:20:06,007 --> 00:20:07,023
+references
+
+337
+00:20:07,023 --> 00:20:10,048
+but that bored there's nothing to it
+some unfortunate loosening up the model
+
+338
+00:20:10,048 --> 00:20:11,357
+here
+
+339
+00:20:11,789 --> 00:20:14,878
+for them all week references have to be
+optional because they have to be
+
+340
+00:20:15,679 --> 00:20:17,490
+resettable the nail
+
+341
+00:20:17,049 --> 00:20:20,086
+thinking about all they have to be
+mutable
+
+342
+00:20:20,086 --> 00:20:25,095
+because he's they could be reset the No
+at any time
+
+343
+00:20:26,076 --> 00:20:29,345
+and we are really want this we could end
+up accidentally
+
+344
+00:20:30,029 --> 00:20:35,220
+reassigning a credit card or ending up
+with an orphan credit card
+
+345
+00:20:35,022 --> 00:20:40,341
+just to deal with memory leaks that
+would suck
+
+346
+00:20:40,539 --> 00:20:45,000
+sense that we have another kinda weak
+reference the %uh known reference
+
+347
+00:20:45,000 --> 00:20:48,073
+and what this stealth with that although
+I don't have been owning stake in the
+
+348
+00:20:48,073 --> 00:20:48,762
+object
+
+349
+00:20:49,419 --> 00:20:53,110
+my life depends on it I cannot live
+
+350
+00:20:53,011 --> 00:20:59,110
+without my AI my owner my card holder
+
+351
+00:21:00,001 --> 00:21:03,050
+so we can go back to our renters cable
+we can save our
+
+352
+00:21:03,149 --> 00:21:06,330
+attendance credit card information you
+can see here
+
+353
+00:21:06,033 --> 00:21:11,051
+but the credit card is uniquely own by
+the person record
+
+354
+00:21:11,051 --> 00:21:14,070
+so that when her record as the allocated
+
+355
+00:21:14,007 --> 00:21:17,070
+the entire object graph get the
+allocated there's no need
+
+356
+00:21:18,033 --> 00:21:21,102
+to observed the be credit card
+
+357
+00:21:21,399 --> 00:21:24,476
+independent other person
+
+358
+00:21:25,169 --> 00:21:29,217
+because there's this assumption that the
+program is not correct without the
+
+359
+00:21:29,649 --> 00:21:32,200
+object on the other side you can use on
+on references
+
+360
+00:21:32,002 --> 00:21:35,591
+just like strong references you gonna
+find them into a local variable
+
+361
+00:21:35,789 --> 00:21:41,120
+organ call methods on them directly it's
+a bit like unsafe and retain in fee
+
+362
+00:21:41,012 --> 00:21:45,024
+our objective c- but it still fate we
+still assert that the object is still
+
+363
+00:21:45,024 --> 00:21:45,109
+allocated
+
+364
+00:21:46,009 --> 00:21:50,097
+every time you access it going on and
+reference
+
+365
+00:21:50,097 --> 00:21:53,139
+so that we kinda references in sweat
+
+366
+00:21:54,039 --> 00:21:57,071
+strong references are to default and
+that's because their way should use my
+
+367
+00:21:57,071 --> 00:21:57,158
+for the time
+
+368
+00:21:58,058 --> 00:22:04,157
+but the time you have an ownership stake
+and an object you want to use
+
+369
+00:22:04,679 --> 00:22:07,777
+however if you have independent object
+object with independent lifetimes
+
+370
+00:22:08,659 --> 00:22:12,500
+Mysore to be a casual relationship going
+on where you couldn't move on if they
+
+371
+00:22:12,005 --> 00:22:13,434
+went away
+
+372
+00:22:13,929 --> 00:22:16,990
+weak references are great for modeling
+that sort of thing
+
+373
+00:22:16,099 --> 00:22:20,101
+if part part of your program and that
+the allocated to maybe a low memory
+
+374
+00:22:21,001 --> 00:22:24,800
+the rest your program marches on and
+options are a great way appealing
+
+375
+00:22:24,809 --> 00:22:28,940
+with week referenced objects going away
+
+376
+00:22:28,094 --> 00:22:32,126
+and i dont references are great for back
+references from dependent objects back
+
+377
+00:22:33,026 --> 00:22:35,305
+up to their owners
+
+378
+00:22:35,539 --> 00:22:39,090
+a party at a Cracker the way the entire
+autograph goes away
+
+379
+00:22:39,009 --> 00:22:42,198
+and there's no need the deal with now
+
+380
+00:22:42,279 --> 00:22:45,490
+that memory management was swept its
+automatic
+
+381
+00:22:45,049 --> 00:22:48,468
+its automatic reference counting it's a
+
+382
+00:22:48,909 --> 00:22:51,924
+every what do you think about the
+relationships between objects
+
+383
+00:22:52,059 --> 00:22:55,070
+rather than the Rama katha memory
+management
+
+384
+00:22:55,169 --> 00:22:58,380
+a strong we can on references
+
+385
+00:22:58,038 --> 00:23:03,060
+to model those relationships and provide
+the knife a firm foundation for swept
+
+386
+00:23:03,006 --> 00:23:06,045
+talk a little bit more about that
+foundation and I'm bringing back to
+
+387
+00:23:06,099 --> 00:23:06,177
+Brian
+
+388
+00:23:07,077 --> 00:23:12,346
+the talk about initialization thank you
+
+389
+00:23:13,039 --> 00:23:17,970
+thank you yeah so we're talking about
+initialization sweat
+
+390
+00:23:17,097 --> 00:23:20,526
+initialization and swept up old one very
+
+391
+00:23:21,399 --> 00:23:28,080
+simple rule another said every value
+must be initialized be forty years
+
+392
+00:23:28,008 --> 00:23:31,032
+this one simple rule is enforced by the
+compiler
+
+393
+00:23:31,032 --> 00:23:35,261
+ensures memory safety in your code
+
+394
+00:23:35,549 --> 00:23:39,080
+ensure that you never read from
+uninitialized memory
+
+395
+00:23:39,008 --> 00:23:42,071
+and therefore helps eliminate an entire
+class about
+
+396
+00:23:42,071 --> 00:23:47,108
+let's look at how this rule applies
+throughout the language
+
+397
+00:23:48,008 --> 00:23:51,107
+slow start with a simple variables swift
+doesn't default initialize
+
+398
+00:23:52,007 --> 00:23:55,866
+variables constant for properties
+
+399
+00:23:55,929 --> 00:24:00,490
+because are often isn't and natural and
+correct value for everything
+
+400
+00:24:00,049 --> 00:24:03,238
+the only touching this is optional where
+we start earlier that
+
+401
+00:24:03,679 --> 00:24:07,200
+actual have a very natural defaultValue
+now
+
+402
+00:24:07,002 --> 00:24:11,057
+this means that you need to set these
+values explicitly in your code
+
+403
+00:24:11,075 --> 00:24:14,150
+but it doesn't mean that you need to
+declare these values at the point that
+
+404
+00:24:15,005 --> 00:24:15,099
+you declare
+
+405
+00:24:16,044 --> 00:24:19,125
+your variables constants are properties
+it just means that you must do so before
+
+406
+00:24:20,025 --> 00:24:21,032
+you try to read from them or
+
+407
+00:24:21,095 --> 00:24:25,824
+access for example say we want to set
+
+408
+00:24:26,679 --> 00:24:30,620
+message here to an appropriate value
+depending on
+
+409
+00:24:30,062 --> 00:24:34,114
+whether or not a condition was true and
+then print that message out
+
+410
+00:24:35,014 --> 00:24:37,107
+even though the condition is true in
+this case I mean we're in the middle the
+
+411
+00:24:38,007 --> 00:24:39,064
+session after all
+
+412
+00:24:39,064 --> 00:24:43,193
+we get a compiler air
+
+413
+00:24:43,769 --> 00:24:47,798
+because we haven't considered every
+possible branch in our code
+
+414
+00:24:48,059 --> 00:24:53,108
+we haven't said what the value %uh
+messages when the condition is false
+
+415
+00:24:53,549 --> 00:24:57,561
+so what's on our clause to do just that
+
+416
+00:24:57,669 --> 00:25:00,640
+now and weary from message to print it
+out we can be sure that it has an
+
+417
+00:25:00,064 --> 00:25:01,223
+explicit value
+
+418
+00:25:01,799 --> 00:25:05,070
+for every single condition: in our code
+
+419
+00:25:05,007 --> 00:25:09,046
+but now as I'm sure you're all aware
+it's quite easy to forget to check
+
+420
+00:25:09,046 --> 00:25:12,255
+all the conditions in your code to
+rather than
+
+421
+00:25:12,669 --> 00:25:17,190
+surprising you by unexpected and hard to
+track down behavior
+
+422
+00:25:17,019 --> 00:25:21,022
+this with compiler catches these kinda
+mistakes for you
+
+423
+00:25:21,049 --> 00:25:24,708
+and ensure that your explicit about the
+values you want to set for every branch
+
+424
+00:25:25,149 --> 00:25:31,070
+and under every condition in your code
+and has great for memory safety
+
+425
+00:25:31,007 --> 00:25:34,058
+now that we've seen how this rule
+applies two simple variables let's see
+
+426
+00:25:34,058 --> 00:25:35,017
+how it applies
+
+427
+00:25:35,539 --> 00:25:38,613
+when you're define your own classes like
+caught like dat
+
+428
+00:25:39,279 --> 00:25:42,343
+our classes are structured your own
+types
+
+429
+00:25:42,919 --> 00:25:46,008
+so in five a structure a class
+declaration initializer
+
+430
+00:25:46,809 --> 00:25:50,370
+handle this responsibility the hill the
+responsibility of Solace find the rule
+
+431
+00:25:50,037 --> 00:25:50,122
+that everything's a
+
+432
+00:25:51,022 --> 00:25:55,023
+is set me forty years
+
+433
+00:25:55,023 --> 00:25:59,061
+now you've seen some initialize urs and
+some Joe's example the memory management
+
+434
+00:25:59,061 --> 00:26:00,070
+just a while ago
+
+435
+00:26:00,007 --> 00:26:03,856
+their declared using the keyword in it
+
+436
+00:26:04,549 --> 00:26:08,830
+and their invoked and object creation
+for instance creation here using this
+
+437
+00:26:08,083 --> 00:26:11,522
+initializer syntax
+
+438
+00:26:12,269 --> 00:26:15,294
+now they can have initializer can have
+any number I've labeled arguments for
+
+439
+00:26:15,519 --> 00:26:16,840
+parameters
+
+440
+00:26:16,084 --> 00:26:19,098
+and when they do you need to call the
+
+441
+00:26:19,098 --> 00:26:24,797
+you need you calling using these labeled
+primers are required at the call site
+
+442
+00:26:25,679 --> 00:26:29,840
+before we look at initialization classes
+let's take a look at initialization
+
+443
+00:26:29,084 --> 00:26:33,122
+and how it works in structures was to
+find a suitable color structure
+
+444
+00:26:34,022 --> 00:26:38,091
+that's three properties red green and
+blue to represent the car
+
+445
+00:26:38,289 --> 00:26:41,470
+aren't and it won't deal with alpha
+later
+
+446
+00:26:41,047 --> 00:26:45,074
+noted that we want to create colors and
+different shades of grey
+
+447
+00:26:45,074 --> 00:26:48,076
+well to do so we can define a single
+initializer here
+
+448
+00:26:48,076 --> 00:26:54,083
+very simple one that simply has takes a
+single grayscale double value
+
+449
+00:26:55,046 --> 00:26:59,049
+and set all the sport properties other
+structures that same value
+
+450
+00:26:59,076 --> 00:27:02,625
+now free for gotten the that the red
+property for example
+
+451
+00:27:03,309 --> 00:27:06,980
+we get a compiler air because we haven't
+thought of by the rule
+
+452
+00:27:06,098 --> 00:27:09,159
+every value must be initialized before
+Cheers
+
+453
+00:27:10,059 --> 00:27:14,488
+in the same is true for calling a method
+in your initializer before you said I
+
+454
+00:27:15,019 --> 00:27:17,260
+love your properties
+
+455
+00:27:17,026 --> 00:27:20,925
+for example say we want a ballad a we
+won a method that validate the color
+
+456
+00:27:21,159 --> 00:27:24,223
+components to make sure they're within a
+valid range in value say
+
+457
+00:27:24,799 --> 00:27:27,836
+021 da 0
+
+458
+00:27:28,169 --> 00:27:31,830
+if we didn't call this method here
+inside the initializer
+
+459
+00:27:31,083 --> 00:27:35,312
+before we said all of our properties
+weed again get a compiler
+
+460
+00:27:36,059 --> 00:27:39,960
+because we're trying to call a method on
+sup on the instep
+
+461
+00:27:39,096 --> 00:27:43,163
+but before South has been fully
+initialized so if you need to act for
+
+462
+00:27:44,063 --> 00:27:44,159
+fell
+
+463
+00:27:45,059 --> 00:27:49,608
+this customize any property values order
+calling methods in your initializer
+
+464
+00:27:50,139 --> 00:27:56,140
+always do so after you've said all your
+sport properties to appropriate values
+
+465
+00:27:56,149 --> 00:28:00,730
+now in structures if you don't define if
+you're own initializer
+
+466
+00:28:00,073 --> 00:28:03,075
+will provide you with the member wise
+initializer
+
+467
+00:28:03,075 --> 00:28:06,172
+automatically the member was initializer
+
+468
+00:28:07,072 --> 00:28:11,072
+has argue with the corresponding to each
+that emphasis for
+
+469
+00:28:11,072 --> 00:28:14,081
+each adult classes are suckers for
+property you can also provide
+
+470
+00:28:15,062 --> 00:28:18,971
+defaultValue airline directly for your
+sport properties
+
+471
+00:28:19,529 --> 00:28:22,870
+and when you set all yours for
+properties and you have a defined in
+
+472
+00:28:22,087 --> 00:28:24,146
+your own custom initializer
+
+473
+00:28:25,046 --> 00:28:28,235
+sweet provided default initializer for
+you two years
+
+474
+00:28:28,649 --> 00:28:32,686
+back takes no parameters increasing
+instance with the property to set
+
+475
+00:28:33,019 --> 00:28:38,090
+as default values when you declare your
+structure
+
+476
+00:28:38,009 --> 00:28:41,014
+so that only solicitation work in
+structures
+
+477
+00:28:41,059 --> 00:28:44,064
+don't take a look at how it works in
+classes
+
+478
+00:28:45,009 --> 00:28:50,071
+really it's no different so let's start
+with a simple car class here
+
+479
+00:28:50,071 --> 00:28:54,134
+has a single property a paint color in a
+single initializer that just sucks that
+
+480
+00:28:55,034 --> 00:28:55,120
+pink color
+
+481
+00:28:56,002 --> 00:28:59,056
+to an appropriate value now in practice
+
+482
+00:28:59,074 --> 00:29:03,119
+classes often subclass inherit from
+other classes so we need to deal with
+
+483
+00:29:04,019 --> 00:29:07,858
+how initialization work for subclasses
+as well
+
+484
+00:29:08,029 --> 00:29:12,320
+so as to find a subclass called race car
+have one extra property
+
+485
+00:29:12,032 --> 00:29:17,110
+and own initializer when race cars
+initializer is called it first started
+
+486
+00:29:18,001 --> 00:29:25,001
+own properties and then a call the
+superclass initializer
+
+487
+00:29:25,789 --> 00:29:28,876
+in the superficial other forces its own
+properties to an appropriate value as
+
+488
+00:29:29,659 --> 00:29:30,682
+well
+
+489
+00:29:30,889 --> 00:29:33,915
+and only after the super class and all
+super classes
+
+490
+00:29:34,149 --> 00:29:38,250
+in the class hierarchy have had a chance
+to set their own values
+
+491
+00:29:38,025 --> 00:29:42,046
+is a classic fully initialized and ready
+two years
+
+492
+00:29:42,046 --> 00:29:45,865
+now if you're coming from objective-c
+background you probably noticed that
+
+493
+00:29:46,279 --> 00:29:46,330
+this is
+
+494
+00:29:46,789 --> 00:29:50,838
+officers are different in what you've
+noticed the what you do in objective-c
+
+495
+00:29:51,279 --> 00:29:58,279
+where you always call your super class
+first and then you to Iran properties
+
+496
+00:29:59,082 --> 00:30:02,145
+so in swift if we were to do that if you
+were to call a superclass initializer
+
+497
+00:30:03,045 --> 00:30:03,050
+for
+
+498
+00:30:03,095 --> 00:30:07,704
+inventor and properties we would
+actually get a compiler error because
+
+499
+00:30:08,559 --> 00:30:09,617
+not only thing to do though
+
+500
+00:30:10,139 --> 00:30:14,340
+do so in this order and the reason swift
+initialization
+
+501
+00:30:14,034 --> 00:30:18,035
+poses order is that insurers memory
+safety
+
+502
+00:30:18,044 --> 00:30:21,283
+so that you don't try to access memory
+before being completely initialized
+
+503
+00:30:21,679 --> 00:30:25,120
+may not be obvious where you might run
+into problems
+
+504
+00:30:25,012 --> 00:30:28,411
+by doing things in this order so let's
+take a look at example were calling
+
+505
+00:30:28,519 --> 00:30:32,519
+your super class initializer for is
+unsafe
+
+506
+00:30:32,519 --> 00:30:35,980
+say for example that we wanted to find a
+function here our method
+
+507
+00:30:35,098 --> 00:30:39,107
+on our car class that build up the gas
+tank we wanna call that function inside
+
+508
+00:30:40,007 --> 00:30:42,496
+initializer for every time we get a new
+car
+
+509
+00:30:42,559 --> 00:30:46,583
+to come to the forecasting because race
+car to use a different kind of gas a
+
+510
+00:30:46,799 --> 00:30:47,808
+regular car
+
+511
+00:30:47,889 --> 00:30:50,941
+we've overridden this message nr
+subclass
+
+512
+00:30:51,409 --> 00:30:54,424
+so when we create a new race car
+
+513
+00:30:54,559 --> 00:30:59,710
+and its initial either is called it
+first called the superclass initializer
+
+514
+00:30:59,071 --> 00:31:02,660
+which in fact its paint color properties
+and finally called it
+
+515
+00:31:03,299 --> 00:31:07,510
+stochastic method but because we've
+overridden are subclasses
+
+516
+00:31:07,051 --> 00:31:11,072
+a good thing then we think this back to
+the fun part version
+
+517
+00:31:11,072 --> 00:31:15,138
+that's a method and that's where we have
+a problem
+
+518
+00:31:16,038 --> 00:31:19,217
+in our problem is that we haven't got a
+chance in our own initializer
+
+519
+00:31:19,559 --> 00:31:23,960
+the set our own properties and so we're
+trying to call a method on fell
+
+520
+00:31:23,096 --> 00:31:26,163
+are trying to access this objectors
+instance it hasn't been fully
+
+521
+00:31:27,063 --> 00:31:27,952
+initialized
+
+522
+00:31:28,519 --> 00:31:32,130
+and that's not fair so in swept
+
+523
+00:31:32,013 --> 00:31:36,019
+we always make sure we have our own
+properties before we call our super
+
+524
+00:31:36,019 --> 00:31:37,083
+classes initializer
+
+525
+00:31:37,083 --> 00:31:40,084
+to have a chance to do the same
+
+526
+00:31:40,084 --> 00:31:44,149
+to so far we've just seen example a a
+single initializer in a class
+
+527
+00:31:45,049 --> 00:31:47,868
+but you can have multiple initializes in
+your class just like you can in
+
+528
+00:31:48,309 --> 00:31:49,354
+objective-c
+
+529
+00:31:49,759 --> 00:31:53,812
+it back you can have designated
+initializer what we've seen so far
+
+530
+00:31:54,289 --> 00:31:57,377
+designated initializer which you may be
+familiar with coming from objective-c
+
+531
+00:31:58,169 --> 00:32:01,245
+have the sole responsibility of Corey
+did not object inside in all its
+
+532
+00:32:01,929 --> 00:32:02,929
+properties
+
+533
+00:32:02,929 --> 00:32:06,080
+and it has a job hauling it super pas an
+initializer
+
+534
+00:32:06,008 --> 00:32:10,107
+and delegating up you can think of them
+as fun appointed funneled initialization
+
+535
+00:32:10,179 --> 00:32:10,980
+process
+
+536
+00:32:10,098 --> 00:32:13,100
+all the way to the class to the base
+paths in the hierarchy
+
+537
+00:32:14,000 --> 00:32:18,669
+we can offer have convenient initializer
+convenience initializer czar sorta
+
+538
+00:32:18,669 --> 00:32:23,100
+secondary initializer provide and
+alternative
+
+539
+00:32:23,001 --> 00:32:26,029
+implementation in Darfur initialization
+interface
+
+540
+00:32:26,038 --> 00:32:29,437
+it allows you to say pastor in default
+values
+
+541
+00:32:29,779 --> 00:32:33,120
+make it easier for your clients to use
+they can only call
+
+542
+00:32:33,012 --> 00:32:36,086
+across I can only delegate side to side
+
+543
+00:32:36,086 --> 00:32:39,515
+in a particular pot they can never call
+up so they can call designated
+
+544
+00:32:40,289 --> 00:32:40,940
+initializer
+
+545
+00:32:40,094 --> 00:32:43,163
+anything past or other convene its
+initial litres
+
+546
+00:32:44,009 --> 00:32:47,034
+open windows giving its initial others
+need to call a designated
+
+547
+00:32:47,259 --> 00:32:50,314
+actually do the heavy lifting obtain the
+properties
+
+548
+00:32:50,809 --> 00:32:53,858
+so let's see how you might try to
+convince initializer your own code
+
+549
+00:32:54,299 --> 00:32:58,360
+say we have race car again we want to
+reconvene its initializer
+
+550
+00:32:58,036 --> 00:33:03,058
+that lets just passin color and it sets
+the triple property to true
+
+551
+00:33:03,058 --> 00:33:07,083
+and it does so by delegate in the past
+to the designated initializer in the
+
+552
+00:33:07,083 --> 00:33:08,922
+same class
+
+553
+00:33:09,669 --> 00:33:12,745
+now when we do this kind of thing in
+swept wing define a community fish
+
+554
+00:33:13,429 --> 00:33:13,477
+finder
+
+555
+00:33:13,909 --> 00:33:17,120
+we pull ups with compiler no banquet in
+the convenience
+
+556
+00:33:17,012 --> 00:33:21,311
+keyword in front of the Declaration
+looking even provide
+
+557
+00:33:21,419 --> 00:33:25,100
+more than 12 minutes initializer so we
+can even
+
+558
+00:33:25,001 --> 00:33:28,052
+provide a convenient initializer the
+letters poured a race car providing no
+
+559
+00:33:28,061 --> 00:33:29,088
+parameters at all
+
+560
+00:33:29,088 --> 00:33:32,122
+and delegate his past here providing a
+
+561
+00:33:33,022 --> 00:33:37,069
+a default great value and it called the
+other conveniences like your we've just
+
+562
+00:33:37,069 --> 00:33:37,132
+acquired
+
+563
+00:33:38,032 --> 00:33:41,088
+and that in turn of course have to call
+the designated initializer
+
+564
+00:33:41,088 --> 00:33:45,088
+actually fit the values and because we
+have a super fast to deal with here
+
+565
+00:33:45,088 --> 00:33:48,097
+that initializer need to call it super
+
+566
+00:33:48,889 --> 00:33:51,918
+and how our initializer is inherited in
+sweat
+
+567
+00:33:52,179 --> 00:33:55,188
+well they're not inherited by default
+
+568
+00:33:55,269 --> 00:33:58,320
+because doing so is an always say
+
+569
+00:33:58,032 --> 00:34:01,221
+however we're craft provides no
+initializer
+
+570
+00:34:01,509 --> 00:34:05,564
+at all n you set default values for all
+the store properties as we've done here
+
+571
+00:34:06,059 --> 00:34:07,066
+with the Formula One race car
+
+572
+00:34:07,759 --> 00:34:11,490
+proof that a single for property to a
+minimum regulation wait
+
+573
+00:34:11,049 --> 00:34:14,488
+and that we know that way consider
+directly we do that
+
+574
+00:34:14,929 --> 00:34:19,070
+we actually inherent automatically all
+the initial either the super PAC that
+
+575
+00:34:19,007 --> 00:34:19,074
+include
+
+576
+00:34:19,074 --> 00:34:23,223
+designated initializer in a convenient
+initial is that we've declared
+
+577
+00:34:23,889 --> 00:34:26,911
+nope we did this in this particular case
+we have a problem
+
+578
+00:34:27,109 --> 00:34:30,110
+because wanted convene its initial
+others we've inherited
+
+579
+00:34:30,119 --> 00:34:33,171
+that the wrong value for sure about
+Formula One race car going allowed to
+
+580
+00:34:33,639 --> 00:34:34,683
+have a turbo
+
+581
+00:34:35,079 --> 00:34:38,530
+by regulation and so this would be
+appropriate in this case
+
+582
+00:34:38,053 --> 00:34:41,932
+so instead all the finer own initializer
+here now to designate
+
+583
+00:34:42,409 --> 00:34:45,411
+initializer because they call Super and
+pass through that trouble value
+
+584
+00:34:45,429 --> 00:34:49,720
+fall because we've done that we provide
+our own initializer
+
+585
+00:34:49,072 --> 00:34:52,501
+we actually don't inherit as other
+convenient in the sliders
+
+586
+00:34:53,149 --> 00:34:56,970
+for the other designated initializer so
+that's how
+
+587
+00:34:56,097 --> 00:34:59,986
+you would use initializer to set
+properties and how you can
+
+588
+00:35:00,859 --> 00:35:04,980
+Sep property in line directly but I
+haven't told you about a parent may be
+
+589
+00:35:04,098 --> 00:35:05,102
+familiar with the objective see
+
+590
+00:35:06,038 --> 00:35:09,115
+sometimes called lazy instantiation lazy
+initialization
+
+591
+00:35:10,015 --> 00:35:13,016
+for you wanted the way the evaluation
+
+592
+00:35:13,025 --> 00:35:16,042
+a property in studying it because
+
+593
+00:35:16,042 --> 00:35:20,045
+for example may be doing so is
+computationally expensive
+
+594
+00:35:20,072 --> 00:35:26,221
+so we have the same concept in sweat
+using lazy properties
+
+595
+00:35:26,869 --> 00:35:29,780
+and let's take a look at an example for
+you might use one where it might be
+
+596
+00:35:29,078 --> 00:35:31,096
+appropriate to say we have a game class
+
+597
+00:35:31,096 --> 00:35:35,975
+in the game for it to be a single player
+game or multi-player game
+
+598
+00:35:36,839 --> 00:35:39,940
+now the multi player manager let's just
+suppose
+
+599
+00:35:39,094 --> 00:35:42,152
+that it does a bunch of expensive
+computation it so we don't want to
+
+600
+00:35:43,052 --> 00:35:44,097
+create it
+
+601
+00:35:44,097 --> 00:35:48,131
+if there's only ever single player we
+only want to create winners multiple
+
+602
+00:35:49,031 --> 00:35:50,048
+players
+
+603
+00:35:50,048 --> 00:35:53,074
+and so we want to lay that
+initialization and told to appropriate
+
+604
+00:35:53,074 --> 00:35:57,125
+so we can do this in swift by including
+the
+
+605
+00:35:58,025 --> 00:36:02,039
+at levi afternoon in front of the
+Declaration here
+
+606
+00:36:02,039 --> 00:36:05,039
+and when we do this it'll only be
+evaluated
+
+607
+00:36:05,039 --> 00:36:09,095
+the time access and only when a doctor
+only that one time
+
+608
+00:36:09,095 --> 00:36:16,095
+just as we have initialization it's with
+you also have
+
+609
+00:36:18,022 --> 00:36:20,121
+just as we have initialization it's what
+we have the initialization the
+
+610
+00:36:21,021 --> 00:36:21,099
+initialization
+
+611
+00:36:21,099 --> 00:36:25,115
+responsible for tearing down the object
+knows Joe is already told you
+
+612
+00:36:26,015 --> 00:36:29,704
+memory management with is automatic so
+most the time you don't even need to
+
+613
+00:36:29,839 --> 00:36:31,390
+think about the initialization
+
+614
+00:36:31,039 --> 00:36:34,046
+it just works it just happens for you
+
+615
+00:36:34,046 --> 00:36:39,047
+but for cases where you do need it for
+example 200 just yourself as an observer
+
+616
+00:36:39,047 --> 00:36:42,090
+for for example to pose a filing may
+have opened
+
+617
+00:36:42,009 --> 00:36:47,013
+we want to have a chance to close at
+file Incredibles non memory resources
+
+618
+00:36:48,003 --> 00:36:51,042
+so for that we use Adi initializer
+
+619
+00:36:51,069 --> 00:36:54,075
+the initializer are just occurred using
+the DNA
+
+620
+00:36:54,075 --> 00:36:57,944
+keyword so for example here we have a
+class that we we open up a file
+
+621
+00:36:58,619 --> 00:37:02,740
+it this craft 50 allocated before we
+have a chance to close the file
+
+622
+00:37:02,074 --> 00:37:05,101
+that's not good so think this is the
+last resort
+
+623
+00:37:06,001 --> 00:37:10,006
+last chance you have to clean up non
+memory resources before your object
+
+624
+00:37:10,006 --> 00:37:14,067
+is d allocated again most the time you
+probably won't need 'em
+
+625
+00:37:14,067 --> 00:37:17,149
+so that initialization swept it say you
+initialize
+
+626
+00:37:18,049 --> 00:37:22,053
+all your values before you use them set
+your sport property values
+
+627
+00:37:22,089 --> 00:37:26,094
+first and then call your super pass
+initializer always not order
+
+628
+00:37:27,039 --> 00:37:30,048
+designated initializer only delegate up
+
+629
+00:37:30,048 --> 00:37:33,387
+and community initializer only delegate
+across
+
+630
+00:37:33,819 --> 00:37:37,310
+and finally we have the initializer if
+you need them
+
+631
+00:37:37,031 --> 00:37:41,056
+but most the time you want left
+initialization highlighted by Joe back
+
+632
+00:37:41,056 --> 00:37:44,150
+on the stage to talk to you about
+closures and sweat
+
+633
+00:37:45,005 --> 00:37:51,824
+thank you
+
+634
+00:37:52,319 --> 00:37:55,490
+now there a lot away the store in RA
+
+635
+00:37:55,049 --> 00:37:59,077
+and we keep our center library writers
+busy buying a million different format
+
+636
+00:37:59,077 --> 00:38:00,145
+that Vonore
+
+637
+00:38:01,045 --> 00:38:04,194
+but we'd rather not son so we have a
+single for method
+
+638
+00:38:04,599 --> 00:38:07,810
+that take the closure you've probably
+seen a better this in the entire talk or
+
+639
+00:38:07,081 --> 00:38:08,178
+even in the keynotes
+
+640
+00:38:09,078 --> 00:38:12,117
+a closure in sweat its belt inside
+
+641
+00:38:13,017 --> 00:38:17,416
+curly braces you follow it with a
+signature in the case the sort
+
+642
+00:38:17,569 --> 00:38:21,910
+it takes to argument for the element
+type theory in this case string
+
+643
+00:38:21,091 --> 00:38:25,800
+and has a billion telling us whether the
+elements are sorted in the right order
+
+644
+00:38:26,619 --> 00:38:30,760
+but with the in keyword your you're
+buying this argument inside the body and
+
+645
+00:38:30,076 --> 00:38:31,093
+the closure
+
+646
+00:38:31,093 --> 00:38:37,096
+and then follow it with the with the
+body at the function
+
+647
+00:38:37,096 --> 00:38:40,189
+and now we have a single format that
+back in for an array and a number of
+
+648
+00:38:41,089 --> 00:38:42,558
+different ways
+
+649
+00:38:43,359 --> 00:38:47,730
+we can store aided the offending using
+the left an operator
+
+650
+00:38:47,073 --> 00:38:51,155
+we can sort descending using the greater
+than operator
+
+651
+00:38:52,055 --> 00:38:55,143
+became into something like sort from
+shortest the longest by counting the
+
+652
+00:38:56,043 --> 00:39:00,044
+number of characters in each string
+
+653
+00:39:00,044 --> 00:39:04,101
+now for the great interfaith but there's
+also a lot of typing
+
+654
+00:39:05,001 --> 00:39:10,043
+and closures in this form are our little
+awkward to work with
+
+655
+00:39:10,043 --> 00:39:15,070
+and the actual interesting part gets
+lost in a lot and syntactic noise
+
+656
+00:39:15,007 --> 00:39:18,091
+thankfully we have type inference the
+help us here within the definition of
+
+657
+00:39:19,054 --> 00:39:20,120
+swords
+
+658
+00:39:21,002 --> 00:39:24,079
+for of course already knows what kinda
+closure it takes
+
+659
+00:39:24,097 --> 00:39:27,116
+in this case working with an array of
+strings so it takes two strings
+
+660
+00:39:28,016 --> 00:39:31,038
+returns a ball
+
+661
+00:39:31,038 --> 00:39:34,070
+but forget the their call fight again
+
+662
+00:39:34,007 --> 00:39:37,101
+that's really it's really offensive
+that's really burning my eyes here
+
+663
+00:39:38,064 --> 00:39:43,075
+why do something about that
+
+664
+00:39:43,075 --> 00:39:47,127
+much better we can infer that the
+argument and return type
+
+665
+00:39:48,027 --> 00:39:52,096
+from the signature %uh the function
+
+666
+00:39:52,339 --> 00:39:56,220
+that's a great improvement but we don't
+start stop there about closure consider
+
+667
+00:39:56,022 --> 00:39:58,068
+the thing overturned statement like this
+
+668
+00:39:58,068 --> 00:40:03,094
+we all need to specify return a single
+expression closure and put early returns
+
+669
+00:40:03,094 --> 00:40:08,103
+its results
+
+670
+00:40:09,003 --> 00:40:12,072
+thank you
+
+671
+00:40:12,099 --> 00:40:15,480
+at this point even the argument left to
+sign a look a little heavy
+
+672
+00:40:15,048 --> 00:40:21,092
+let's get her that too their implicit
+argument names dollar zero dollar one
+
+673
+00:40:21,092 --> 00:40:24,148
+dollar-million they may need a little
+pace in some cases but there there there
+
+674
+00:40:25,048 --> 00:40:29,141
+if you need them and they may closures
+really think think that an easy to use
+
+675
+00:40:30,041 --> 00:40:33,940
+me about the thing that we are trailing
+closure syntax when you have a single
+
+676
+00:40:34,309 --> 00:40:37,335
+argument like this you can move outside
+
+677
+00:40:37,569 --> 00:40:41,570
+and was the only argument you can drop
+the parents altogether
+
+678
+00:40:41,579 --> 00:40:44,678
+as make functional programming in sweat
+really express it and fun to do
+
+679
+00:40:45,569 --> 00:40:48,960
+and we sort and we've that without a
+method to the array
+
+680
+00:40:48,096 --> 00:40:52,098
+class to the race track to make this
+possible
+
+681
+00:40:53,016 --> 00:40:56,051
+affair with a list about the words in
+the English language that we got from
+
+682
+00:40:56,051 --> 00:40:58,124
+the dictionary service
+
+683
+00:40:59,024 --> 00:41:03,403
+now we can pick out words that share
+some common
+
+684
+00:41:03,619 --> 00:41:07,010
+trade for the one hand in GR why and
+turns out there's only two
+
+685
+00:41:07,001 --> 00:41:10,090
+we can use the F filter method which
+flights out
+
+686
+00:41:10,009 --> 00:41:13,107
+with which apply the closure each
+element of the array at and
+
+687
+00:41:14,088 --> 00:41:20,166
+for the ones that returns true returns a
+new array containing those
+
+688
+00:41:21,066 --> 00:41:25,275
+we can then transform the with the map
+method which apply the closure each
+
+689
+00:41:25,869 --> 00:41:30,440
+element and collect the result into
+another array
+
+690
+00:41:30,044 --> 00:41:33,443
+and i'm looking to reduce method the 4
+B's into
+
+691
+00:41:33,839 --> 00:41:38,450
+a single strain
+
+692
+00:41:38,045 --> 00:41:41,127
+now each of these is chaining another
+method call on to the result the
+
+693
+00:41:42,027 --> 00:41:43,092
+previous expression
+
+694
+00:41:43,092 --> 00:41:46,031
+even if we're using trailing closures in
+tax we can just a chain method
+
+695
+00:41:46,859 --> 00:41:50,180
+invocations you think dot like this
+
+696
+00:41:50,018 --> 00:41:53,019
+and because the thing or expression
+
+697
+00:41:53,028 --> 00:41:56,073
+we can even include and I get larger
+expression
+
+698
+00:41:56,073 --> 00:42:01,100
+and include a lot of complex logic into
+a very small amount of code
+
+699
+00:42:02,000 --> 00:42:06,074
+it's an extremely expressive way to
+build up your logic
+
+700
+00:42:06,074 --> 00:42:11,138
+in a paper for code that doesn't involve
+hall
+
+701
+00:42:12,038 --> 00:42:17,044
+thank you
+
+702
+00:42:17,044 --> 00:42:22,103
+closures can also capture local state we
+could sum up all the elements in array
+
+703
+00:42:23,003 --> 00:42:27,027
+using a for loop or reduce but we can
+actually abuse map to do it
+
+704
+00:42:27,027 --> 00:42:32,029
+inside a closure we can refer to local
+variables that we can even mutate and
+
+705
+00:42:32,029 --> 00:42:34,073
+there's never any to mark them under
+under block
+
+706
+00:42:34,073 --> 00:42:39,130
+or in any other in any way it just where
+and then we can return that results
+
+707
+00:42:40,003 --> 00:42:44,022
+just
+
+708
+00:42:44,049 --> 00:42:47,085
+closures are really just a literal
+functions and swept
+
+709
+00:42:47,085 --> 00:42:51,103
+just like him path a literal in a chair
+or named intercom stand as an integer
+
+710
+00:42:52,003 --> 00:42:52,096
+parameter
+
+711
+00:42:52,096 --> 00:42:55,187
+you can pass a closure or indeed a name
+function
+
+712
+00:42:56,087 --> 00:42:59,106
+at the closure value we don't have to
+wrap up print line
+
+713
+00:43:00,006 --> 00:43:04,052
+in a pusher like this we can just pass
+print line there's only one kind of
+
+714
+00:43:04,052 --> 00:43:05,085
+function type in sweat
+
+715
+00:43:05,085 --> 00:43:08,090
+we can even do this with bound method
+
+716
+00:43:09,035 --> 00:43:12,050
+is that a packing an index at like this
+
+717
+00:43:12,005 --> 00:43:16,052
+wrapping a call to the method enclosure
+we can just pass the bound method
+
+718
+00:43:16,097 --> 00:43:17,171
+directly at the function value
+
+719
+00:43:18,071 --> 00:43:24,169
+closures and swept are just art objects
+they follow the same memory management
+
+720
+00:43:25,069 --> 00:43:26,098
+rules as classes
+
+721
+00:43:26,098 --> 00:43:30,100
+so if we want to have a global variable
+that
+
+722
+00:43:31,000 --> 00:43:35,053
+we can install call back on and write a
+function
+
+723
+00:43:35,053 --> 00:43:39,140
+that installs a call back using local
+state and that function
+
+724
+00:43:40,004 --> 00:43:43,093
+that reference will keep
+
+725
+00:43:44,029 --> 00:43:47,084
+back closure and all but local stayed
+alive there's never any dates but we
+
+726
+00:43:47,084 --> 00:43:50,171
+copy a closure order worry about
+dangling references to its environment
+
+727
+00:43:51,071 --> 00:43:54,107
+and just like closures are functions
+
+728
+00:43:55,007 --> 00:43:59,009
+punter also closures we can %uh
+functions in flight other functions
+
+729
+00:43:59,009 --> 00:44:02,097
+and refer to the local state at the
+outer function and we look at these in
+
+730
+00:44:02,097 --> 00:44:03,136
+the debugger an instrument
+
+731
+00:44:04,036 --> 00:44:10,074
+they show up with their names so when we
+start reference to this
+
+732
+00:44:10,074 --> 00:44:14,080
+in a global variable even when the local
+function goes out of scope
+
+733
+00:44:14,008 --> 00:44:17,060
+that reference keep the local function
+alive just like a cloture
+
+734
+00:44:18,032 --> 00:44:22,050
+now because closures are
+
+735
+00:44:22,005 --> 00:44:26,009
+arc objects that they have the same
+ownership in reference cycle problems as
+
+736
+00:44:26,009 --> 00:44:27,010
+classes can have
+
+737
+00:44:27,091 --> 00:44:30,099
+if he did something as seemingly
+innocent as taking this
+
+738
+00:44:31,071 --> 00:44:34,079
+call back and putting it into the
+property
+
+739
+00:44:34,079 --> 00:44:37,117
+upper-class will have a problem
+
+740
+00:44:38,017 --> 00:44:43,079
+when we go to that these objects a
+fourth what we're really doing is we're
+
+741
+00:44:43,079 --> 00:44:45,150
+capturing felt they were capping as a
+strong reference
+
+742
+00:44:46,005 --> 00:44:49,030
+and then we store reference to the
+closure inside
+
+743
+00:44:49,075 --> 00:44:53,076
+the class we end up with the reference
+cycle
+
+744
+00:44:53,076 --> 00:44:57,173
+and a memory leak the compiler actually
+won't let you implicitly reference to
+
+745
+00:44:58,073 --> 00:44:58,135
+sell
+
+746
+00:44:59,035 --> 00:45:05,092
+reference South inside a closure because
+of this problem yeah it's pretty nice
+
+747
+00:45:05,092 --> 00:45:08,188
+now in a past life you may have thought
+this he is being a %uh known reference
+
+748
+00:45:09,088 --> 00:45:12,116
+using a local variable with weak
+ownership
+
+749
+00:45:13,016 --> 00:45:16,095
+in sweat we can use a on ownership
+instead
+
+750
+00:45:16,095 --> 00:45:20,108
+but this is problematic even if we did
+this
+
+751
+00:45:21,008 --> 00:45:24,030
+if someone cut and paste that code into
+this closure it would still be capturing
+
+752
+00:45:24,003 --> 00:45:25,024
+self strongly
+
+753
+00:45:25,051 --> 00:45:29,086
+so have a better way to do in and swept
+you can suffer by directly in fight the
+
+754
+00:45:29,086 --> 00:45:31,089
+closure how to capture its local state
+
+755
+00:45:32,016 --> 00:45:39,016
+and now we set up the other crap is no
+longer cycle
+
+756
+00:45:41,004 --> 00:45:47,039
+and there's no we love closures in swept
+they have an incredibly expressive
+
+757
+00:45:47,075 --> 00:45:51,162
+syntax and much simplified memory mile
+from a check to see
+
+758
+00:45:52,062 --> 00:45:55,071
+and they make functional programming and
+sweat really off and and powerful
+
+759
+00:45:56,052 --> 00:46:00,090
+now like to talk about other powerful
+feature a swept
+
+760
+00:46:00,009 --> 00:46:05,027
+pattern matching you may have seen
+
+761
+00:46:06,008 --> 00:46:09,102
+in the into a top thats which not only
+works with integers
+
+762
+00:46:10,002 --> 00:46:13,009
+it also works with strains are indeed
+values have any type
+
+763
+00:46:13,072 --> 00:46:16,091
+and also what's up ranges the values
+
+764
+00:46:16,091 --> 00:46:20,166
+but that's just the tip of the iceberg
+you may have to remember that
+
+765
+00:46:21,066 --> 00:46:25,122
+enumeration sweat can carry associated
+data we can tell not only that the train
+
+766
+00:46:26,022 --> 00:46:27,119
+is delayed we can say by how much
+
+767
+00:46:28,019 --> 00:46:32,108
+with an integer value that only make
+then when the train is delayed
+
+768
+00:46:33,008 --> 00:46:37,014
+because there's a 38 data is tied to
+that
+
+769
+00:46:37,014 --> 00:46:41,072
+case at the enough we access it through
+a case statement
+
+770
+00:46:41,072 --> 00:46:44,155
+we can bind it to a variable and then
+use that variable
+
+771
+00:46:45,055 --> 00:46:48,117
+in fight back a statement it's what we
+could go to that
+
+772
+00:46:49,017 --> 00:46:53,078
+to like 8th cases are like the girl
+scouts by the pollen swept
+
+773
+00:46:53,078 --> 00:46:57,078
+we can access it anywhere else is much
+safer and easier than using in on what
+
+774
+00:46:57,078 --> 00:46:57,160
+the union or
+
+775
+00:46:58,006 --> 00:47:02,024
+struck like you may have been see
+
+776
+00:47:02,078 --> 00:47:05,107
+move with the bookcase a pattern without
+her
+
+777
+00:47:06,007 --> 00:47:09,098
+construct delayed only matches values
+
+778
+00:47:09,098 --> 00:47:12,196
+up the delayed state inside the NAM
+
+779
+00:47:13,096 --> 00:47:16,182
+and if it isn't that the late day it on
+rats the associate data and passes it
+
+780
+00:47:17,082 --> 00:47:18,153
+down to a sub pattern
+
+781
+00:47:19,053 --> 00:47:23,096
+in this case the lead pattern by the to
+a variable
+
+782
+00:47:23,096 --> 00:47:26,103
+but the actually a completely
+independent and fully powerful pattern
+
+783
+00:47:27,066 --> 00:47:28,077
+anything we do
+
+784
+00:47:28,077 --> 00:47:33,079
+at the top level up to switch with an
+aunt weekend due to its associated value
+
+785
+00:47:33,079 --> 00:47:37,088
+so we can match against a specific
+values they were delayed by one minute
+
+786
+00:47:37,088 --> 00:47:39,179
+good match against the Rangers values
+they were delayed from two to ten
+
+787
+00:47:40,079 --> 00:47:41,115
+minutes
+
+788
+00:47:42,015 --> 00:47:45,069
+enough ignore the value altogether match
+any delay
+
+789
+00:47:45,069 --> 00:47:51,131
+using the underscore which is wild card
+pattern
+
+790
+00:47:52,031 --> 00:47:55,119
+thank you
+
+791
+00:47:56,019 --> 00:47:59,035
+you can also use in and have a 30-day to
+other unions
+
+792
+00:47:59,035 --> 00:48:02,037
+we can track not only
+
+793
+00:48:02,055 --> 00:48:05,123
+both the out at the bar train however
+well we're traveling we can track the
+
+794
+00:48:06,023 --> 00:48:08,065
+entire save our vacation and when we do
+so
+
+795
+00:48:08,065 --> 00:48:11,074
+can tell our friends on social media
+based on that state
+
+796
+00:48:11,074 --> 00:48:14,138
+the match at simple case that you know
+I'm we can match
+
+797
+00:48:15,038 --> 00:48:18,040
+a nested associated value to level speed
+
+798
+00:48:18,004 --> 00:48:22,057
+for 15 minutes then we might be a little
+50 minutes away my bill snarky but still
+
+799
+00:48:22,093 --> 00:48:26,134
+the compose if we're delayed a more than
+that we might get a little upset
+
+800
+00:48:27,034 --> 00:48:34,034
+pattern matching doesn't just work with
+the numeration the last word for that
+
+801
+00:48:34,082 --> 00:48:39,085
+the dynamic types of classes but they
+were going to have a car and an
+
+802
+00:48:40,012 --> 00:48:41,031
+arbitrary car
+
+803
+00:48:41,031 --> 00:48:44,085
+if if someone bring the Formula One car
+into our
+
+804
+00:48:44,085 --> 00:48:48,092
+into our on mechanic a to our mechanic
+he's trying to be a little confusing my
+
+805
+00:48:49,055 --> 00:48:50,096
+might take you to a specialist
+
+806
+00:48:50,096 --> 00:48:54,149
+we can do this using the ads pattern
+this above to check that
+
+807
+00:48:55,049 --> 00:49:00,090
+a value if a type and if so calf it and
+path into the side pattern which you can
+
+808
+00:49:00,009 --> 00:49:01,073
+then use the binder variable
+
+809
+00:49:02,054 --> 00:49:05,061
+and then we can pass it on to a pic crew
+who will then
+
+810
+00:49:05,061 --> 00:49:09,089
+to not that formula 1 car for more
+mundane car
+
+811
+00:49:09,089 --> 00:49:13,166
+weekend pattern match it and then if
+they have the turbo tune up the turbo
+
+812
+00:49:14,066 --> 00:49:18,121
+before falling through using the profits
+name and into the deep okay with
+
+813
+00:49:19,021 --> 00:49:25,024
+that that the normal turnout for a car
+we can also pattern match multiple
+
+814
+00:49:25,051 --> 00:49:27,117
+values simultaneously using two bowls
+
+815
+00:49:28,017 --> 00:49:31,100
+people are a great way above returning
+multiple values from a function
+
+816
+00:49:32,000 --> 00:49:36,003
+or for combining related values like be
+component so this
+
+817
+00:49:36,003 --> 00:49:42,090
+have a color and we do so ito madness
+people pattern is an independent pattern
+
+818
+00:49:42,009 --> 00:49:45,076
+we can match red against a single value
+
+819
+00:49:46,057 --> 00:49:50,108
+the match green against the Rangers
+values fine blue to a variable
+
+820
+00:49:51,008 --> 00:49:58,008
+and ignore the output component all in a
+single pattern
+
+821
+00:50:01,023 --> 00:50:04,102
+we can also match out multiple values
+and test additional conditions with
+
+822
+00:50:05,002 --> 00:50:06,080
+those values using a WHERE clause
+
+823
+00:50:06,008 --> 00:50:09,100
+here we're testing after all people to
+see if it's a gray scale value
+
+824
+00:50:10,072 --> 00:50:16,110
+soldiers in the parlor trick let's try
+something a little more real
+
+825
+00:50:17,001 --> 00:50:20,016
+what validate a property list a
+dictionary
+
+826
+00:50:20,025 --> 00:50:26,031
+the arbitrary values i unknown type and
+given a valid one we were returned a
+
+827
+00:50:26,031 --> 00:50:26,127
+well tied
+
+828
+00:50:27,027 --> 00:50:32,626
+struck given
+
+829
+00:50:32,869 --> 00:50:36,330
+a property list with the name key that
+the string
+
+830
+00:50:36,033 --> 00:50:39,102
+a population at the number and a
+two-letter personal abbreviation
+
+831
+00:50:40,002 --> 00:50:43,095
+we want to get a record like this
+however
+
+832
+00:50:43,095 --> 00:50:49,014
+it while the fear that the wrong type or
+if the personal abbreviations too long
+
+833
+00:50:49,869 --> 00:50:54,020
+we will return L but they are we can do
+the same pattern matching
+
+834
+00:50:54,002 --> 00:50:57,065
+will start with a single
+
+835
+00:50:57,065 --> 00:51:04,065
+Kia the be property list you may
+remember
+
+836
+00:51:04,075 --> 00:51:07,167
+optional just an enumeration so we can
+use an enumeration pattern to both
+
+837
+00:51:08,067 --> 00:51:11,108
+reject property list that don't have the
+key and on rap
+
+838
+00:51:12,008 --> 00:51:16,102
+the value for ones that do inside that
+pattern
+
+839
+00:51:17,002 --> 00:51:20,098
+we can use the thai pattern to both
+reject property list I don't have a
+
+840
+00:51:20,098 --> 00:51:21,107
+string name
+
+841
+00:51:22,007 --> 00:51:26,080
+and get the string value out for those
+that do and then working as a lead
+
+842
+00:51:26,008 --> 00:51:28,022
+pattern to buy into that string value
+
+843
+00:51:28,094 --> 00:51:32,126
+and store to a variable no with the
+single default clause
+
+844
+00:51:33,026 --> 00:51:36,060
+handle all invalid names now
+
+845
+00:51:36,006 --> 00:51:40,080
+we can repeat this for each element that
+we care about inside the dictionary
+
+846
+00:51:41,034 --> 00:51:45,053
+but there's a better way member we can
+use tubal patterns to match the
+
+847
+00:51:45,359 --> 00:51:46,670
+simultaneously
+
+848
+00:51:46,067 --> 00:51:49,143
+and repeat this pattern for each
+
+849
+00:51:50,043 --> 00:51:53,045
+ki aahat property list that were
+interested in
+
+850
+00:51:53,063 --> 00:51:57,081
+we can see that the the name as a string
+the population is a number and the
+
+851
+00:51:57,081 --> 00:51:58,105
+abbreviation for straying
+
+852
+00:51:59,005 --> 00:52:03,314
+all family tenuously and with the WHERE
+clause even checked the abbreviations on
+
+853
+00:52:03,359 --> 00:52:04,360
+the appropriate link
+
+854
+00:52:04,369 --> 00:52:10,210
+and we're done with the thing on the
+ball 'cause we handle all invalid
+
+855
+00:52:10,021 --> 00:52:11,046
+property with
+
+856
+00:52:11,046 --> 00:52:18,046
+al fits nicely on a single slide that
+the power had a net
+
+857
+00:52:20,075 --> 00:52:22,143
+it's an incredible way to test the
+structure and values
+
+858
+00:52:23,043 --> 00:52:26,109
+and really improve the readability and
+safety of your code
+
+859
+00:52:27,009 --> 00:52:30,018
+so we still
+
+860
+00:52:30,018 --> 00:52:35,034
+just scratched the surface of what's
+with can do we look at how a
+
+861
+00:52:35,034 --> 00:52:38,042
+optionals allow you to write state code
+we look at the
+
+862
+00:52:39,014 --> 00:52:44,037
+foundations are swept in memory
+management and visualization
+
+863
+00:52:44,037 --> 00:52:47,080
+we look at how powerful closures and
+pattern matching are
+
+864
+00:52:47,008 --> 00:52:50,026
+the 10 more information online
+
+865
+00:52:50,098 --> 00:52:53,105
+there's that the but they prolly already
+downloaded read by now
+
+866
+00:52:54,005 --> 00:52:57,086
+there's also some additional material on
+the developer site about interop with
+
+867
+00:52:57,086 --> 00:52:57,153
+Coco
+
+868
+00:52:58,053 --> 00:53:01,055
+if you're a final on from home a
+
+869
+00:53:01,055 --> 00:53:07,059
+talk to date he's great and as our
+forums you might also just what's ABC he
+
+870
+00:53:07,095 --> 00:53:10,106
+read a lot about the greats with
+sessions right here in Presidio
+
+871
+00:53:11,006 --> 00:53:11,087
+thank you
+

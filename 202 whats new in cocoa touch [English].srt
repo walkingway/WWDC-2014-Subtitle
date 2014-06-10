@@ -1,0 +1,3636 @@
+1
+00:00:19,075 --> 00:00:21,156
+thanks so much for coming to what's new
+in Cocoa Touch
+
+2
+00:00:22,056 --> 00:00:25,079
+it's really great to see a packed house
+here today
+
+3
+00:00:25,079 --> 00:00:29,086
+I know that we have a lot of new
+attendees in the house this week
+
+4
+00:00:30,049 --> 00:00:34,055
+and so for those of you who have never
+been to a dub dub DC
+
+5
+00:00:34,055 --> 00:00:37,060
+have never been to a what's new in Cocoa
+Touch talk
+
+6
+00:00:37,006 --> 00:00:41,037
+this is really a great opportunity for
+you to get a taste for
+
+7
+00:00:41,091 --> 00:00:44,189
+all the new things that we're releasing
+in the FTK this year
+
+8
+00:00:45,089 --> 00:00:48,127
+and as you know this is actually the
+biggest
+
+9
+00:00:49,027 --> 00:00:55,035
+STK Relief simply FTK self for this BBC
+is going to be absolutely huge
+
+10
+00:00:56,007 --> 00:00:59,025
+and recession is your opportunity to
+gonna take
+
+11
+00:00:59,025 --> 00:01:02,080
+both technologies and I'll be pointing
+throughout the session
+
+12
+00:01:02,008 --> 00:01:05,073
+and again at the end of the session to
+all the other related
+
+13
+00:01:06,045 --> 00:01:09,141
+sessions to the technology so i'm
+talking about. you can get an idea
+
+14
+00:01:10,041 --> 00:01:13,049
+have one other talk but you wanna see
+this week not allowed
+
+15
+00:01:14,021 --> 00:01:18,080
+you're gonna wanna go to and that for a
+fact so
+
+16
+00:01:18,008 --> 00:01:21,017
+to begin i wanna talk about this core
+idea
+
+17
+00:01:22,007 --> 00:01:25,048
+what we've set up love what I West
+
+18
+00:01:26,011 --> 00:01:30,014
+aid is really all about from the after K
+perspective and that this idea
+
+19
+00:01:30,041 --> 00:01:35,089
+at activity activity is going to pervade
+everything that we do in Cocoa Touch
+
+20
+00:01:35,089 --> 00:01:38,167
+and Iowa State and adaptivity mean
+several
+
+21
+00:01:39,067 --> 00:01:44,111
+think on one hand activity is a design
+philosophy
+
+22
+00:01:45,011 --> 00:01:48,077
+it's a wave architecting your ass and
+we're going to
+
+23
+00:01:48,077 --> 00:01:51,080
+give you an idea of how we want perhaps
+
+24
+00:01:51,008 --> 00:01:56,417
+to be built from now on using are a
+design philosophy that encourages code
+
+25
+00:01:57,209 --> 00:01:57,800
+reuse
+
+26
+00:01:57,008 --> 00:02:00,086
+generic code that adapts from contact
+
+27
+00:02:01,058 --> 00:02:07,100
+to contact and is I able to go from
+devices like iPhone and iPad
+
+28
+00:02:08,000 --> 00:02:11,039
+FEMA way additionally
+
+29
+00:02:11,039 --> 00:02:14,260
+activity income through the whole that
+have
+
+30
+00:02:14,026 --> 00:02:17,030
+things that we are providing directly
+from you like it
+
+31
+00:02:17,066 --> 00:02:20,115
+to you things like adaptive
+
+32
+00:02:20,709 --> 00:02:24,480
+view controllers adaptive you
+controllers are something that
+
+33
+00:02:24,048 --> 00:02:28,048
+we have written with the design
+philosophy of activity
+
+34
+00:02:28,048 --> 00:02:32,050
+that when you use in your app can allow
+you to do things like
+
+35
+00:02:32,005 --> 00:02:36,014
+take a simple primary/secondary view
+controller pattern
+
+36
+00:02:37,004 --> 00:02:41,077
+have it on iphone have the same code
+that puts out on iphone
+
+37
+00:02:42,013 --> 00:02:45,028
+put an interface that you text back to
+on iPad
+
+38
+00:02:45,028 --> 00:02:48,047
+and do that without any device check
+
+39
+00:02:48,047 --> 00:02:52,088
+now all be the same code running on both
+devices will show you how to do that
+
+40
+00:02:52,088 --> 00:02:56,156
+them only we've taken the philosophy
+ever activity to view controller
+
+41
+00:02:57,056 --> 00:02:58,057
+presentation
+
+42
+00:02:58,057 --> 00:03:02,101
+and we'll show you how to build code
+that prevent something like a full
+
+43
+00:03:03,001 --> 00:03:05,028
+screen mode a view controller on iphone
+
+44
+00:03:05,028 --> 00:03:08,091
+and something more appropriate like a
+popover
+
+45
+00:03:08,091 --> 00:03:12,157
+on iPad again without any device
+specific tax because we're focusing on
+
+46
+00:03:13,057 --> 00:03:14,066
+reusable
+
+47
+00:03:14,066 --> 00:03:17,068
+adoptive code bad as the theme
+
+48
+00:03:17,086 --> 00:03:22,154
+a are Cocoa Touch on Iowa a additionally
+we're gonna be pressuring
+
+49
+00:03:23,054 --> 00:03:26,141
+a new user interface icon fact that we
+won all
+
+50
+00:03:27,041 --> 00:03:30,092
+application to adopt and that dynamic
+erred
+
+51
+00:03:30,092 --> 00:03:33,149
+dynamic packed and adapting to dynamic
+tax
+
+52
+00:03:34,049 --> 00:03:37,111
+this was actually a feature is
+introduced in Iraq 7
+
+53
+00:03:38,011 --> 00:03:41,013
+users can change their preferred text
+size
+
+54
+00:03:41,013 --> 00:03:44,046
+and I with 8 we've extended the idea
+such that
+
+55
+00:03:44,046 --> 00:03:50,050
+all haps built in the Iraq respond to
+dynamic type and are adapted to that
+
+56
+00:03:50,005 --> 00:03:53,074
+and we want to show you how you can do
+that we recognize
+
+57
+00:03:54,019 --> 00:03:58,116
+that won the common places that uses
+iraq attacks is actually
+
+58
+00:03:59,016 --> 00:04:02,033
+I inlet in a former table views so we
+
+59
+00:04:02,033 --> 00:04:06,070
+art took it upon ourselves to make it
+you here to take a simple table like
+
+60
+00:04:06,007 --> 00:04:07,036
+what you with the impending
+
+61
+00:04:07,099 --> 00:04:10,125
+respond to the user's dynamic texturing
+
+62
+00:04:11,025 --> 00:04:14,067
+make the tax bigger and make the Rose
+bigger as well
+
+63
+00:04:14,067 --> 00:04:17,084
+finally an activity
+
+64
+00:04:17,084 --> 00:04:22,813
+refers to the ability to this
+opportunity actually to extend to the
+
+65
+00:04:23,569 --> 00:04:26,575
+system to adapt the system to your users
+need
+
+66
+00:04:27,169 --> 00:04:30,220
+and desires by bringing your
+functionality
+
+67
+00:04:30,022 --> 00:04:33,871
+in 250 maps as well other third-party
+app suit on the keynote that we can do
+
+68
+00:04:34,069 --> 00:04:34,610
+things
+
+69
+00:04:34,061 --> 00:04:37,700
+like add a photo filter right within the
+Photos app
+
+70
+00:04:38,249 --> 00:04:42,262
+without ever having to go to your
+application so these are the kind of
+
+71
+00:04:42,379 --> 00:04:42,870
+things
+
+72
+00:04:42,087 --> 00:04:45,131
+that we're going to be talking about
+throughout the talk the first part
+
+73
+00:04:46,031 --> 00:04:49,260
+is particularly about the design
+philosophy
+
+74
+00:04:49,539 --> 00:04:54,330
+and then we'll move into lifting of a
+lot of the things that are
+
+75
+00:04:54,033 --> 00:04:59,122
+especially knew about the API to me
+again we'll talk about this design
+
+76
+00:04:59,419 --> 00:05:00,770
+philosophy
+
+77
+00:05:00,077 --> 00:05:04,102
+adaptive playout so
+
+78
+00:05:05,002 --> 00:05:09,421
+I said it before but of eight again make
+the Kiev what we mean by adaptive layout
+
+79
+00:05:09,439 --> 00:05:10,620
+is
+
+80
+00:05:10,062 --> 00:05:13,071
+something that is reusable believe code
+that is generic
+
+81
+00:05:14,052 --> 00:05:17,171
+that transcend device foundry and
+
+82
+00:05:17,639 --> 00:05:20,656
+orientation boundaries for the first
+thing we want to talk about
+
+83
+00:05:20,809 --> 00:05:24,825
+is a simple idea a interface orientation
+
+84
+00:05:24,969 --> 00:05:27,978
+this has been a a stalwart concept
+
+85
+00:05:28,059 --> 00:05:31,066
+through the API since the s2k was
+introduced
+
+86
+00:05:31,129 --> 00:05:34,610
+I'm actually want to move now to a place
+where
+
+87
+00:05:34,061 --> 00:05:37,137
+when we're writing our apt our layout
+code doesn't have to care what the
+
+88
+00:05:38,037 --> 00:05:38,616
+interface
+
+89
+00:05:38,949 --> 00:05:42,840
+orientation and that can be the FEMA
+we're talking about now
+
+90
+00:05:42,084 --> 00:05:47,053
+so we can imagine that I designer gave
+us a design for a photos out
+
+91
+00:05:47,809 --> 00:05:50,817
+and they say okay this Photos app
+
+92
+00:05:50,889 --> 00:05:53,960
+on portrait in an iPad looks like a grid
+
+93
+00:05:54,599 --> 00:05:59,840
+rectangular thumbnail photos and there's
+five column from Agra
+
+94
+00:05:59,084 --> 00:06:03,973
+them only they give it back and say if
+the iPad and landscape
+
+95
+00:06:04,729 --> 00:06:08,735
+show if the motor similar thumbnail but
+seven columns up
+
+96
+00:06:08,789 --> 00:06:11,930
+now the nine-year way to approach this
+would be
+
+97
+00:06:11,093 --> 00:06:14,892
+okay but hard code in five columns have
+things
+
+98
+00:06:15,729 --> 00:06:20,737
+I for a portrait and seven columns and
+things for landscape
+
+99
+00:06:21,529 --> 00:06:24,546
+but to become adaptive
+
+100
+00:06:24,699 --> 00:06:29,150
+we want to take a deeper understanding
+I've why we have five columns in
+
+101
+00:06:29,015 --> 00:06:31,654
+portrait and why we have seven call and
+
+102
+00:06:31,789 --> 00:06:35,490
+and landscape it's pretty easy to
+understand with the
+
+103
+00:06:35,049 --> 00:06:38,448
+this example but the reason is the
+portrait view
+
+104
+00:06:38,889 --> 00:06:41,894
+if 768 points wide
+
+105
+00:06:41,939 --> 00:06:45,034
+and based on the thumbnail size that we
+want to achieve it just so happens that
+
+106
+00:06:45,889 --> 00:06:50,990
+we can fit 5 across so we have five
+columns
+
+107
+00:06:50,099 --> 00:06:54,155
+some only when we go to landscape we now
+have 1024 point
+
+108
+00:06:55,055 --> 00:06:58,094
+in the west to mention and based on the
+
+109
+00:06:58,589 --> 00:07:01,770
+thumbnail 5 size that we wanted to
+achieve we can outfit
+
+110
+00:07:01,077 --> 00:07:06,006
+seven columns the difference here is
+that when we take that logic
+
+111
+00:07:06,699 --> 00:07:10,735
+that we say okay we can bit this many
+columns in this space
+
+112
+00:07:11,059 --> 00:07:15,100
+as opposed to there are seven columns
+and landscape
+
+113
+00:07:15,469 --> 00:07:18,470
+man the actual interface for annotation
+
+114
+00:07:18,569 --> 00:07:23,596
+is not irrelevant being in determining
+what your layout look like anymore
+
+115
+00:07:23,839 --> 00:07:27,933
+all that matters is what the canvas 5
+looks like
+
+116
+00:07:28,779 --> 00:07:31,865
+so there's also another decision being
+made under the hood here if we decide to
+
+117
+00:07:32,639 --> 00:07:33,694
+focus in on this view
+
+118
+00:07:34,189 --> 00:07:39,210
+and that we've made these rectangular
+
+119
+00:07:39,021 --> 00:07:43,190
+not spread out from now but the Photos
+app on the iPhone has actually much more
+
+120
+00:07:43,379 --> 00:07:44,960
+compacted
+
+121
+00:07:44,096 --> 00:07:48,485
+thumbnail other square in shape and the
+reason about way on the iPhone
+
+122
+00:07:49,349 --> 00:07:54,349
+it's very similar vein reason it's
+because the five the iPhone is different
+
+123
+00:07:54,349 --> 00:07:58,402
+and so we come packed the layout when we
+are in a compacted
+
+124
+00:07:58,879 --> 00:08:05,879
+5 and so we can actually think about bad
+decision that the the compacted iPhone
+
+125
+00:08:06,009 --> 00:08:08,093
+style layout which is what you see up
+here the more spread out
+
+126
+00:08:08,849 --> 00:08:12,864
+rectangular from their way out as also
+being determined by the five
+
+127
+00:08:12,999 --> 00:08:17,014
+and not actually based on a device
+iPhone person iPad
+
+128
+00:08:17,149 --> 00:08:21,149
+tour now going to begin to think this
+interface is determined by
+
+129
+00:08:21,149 --> 00:08:24,203
+the idea that it has regular size
+
+130
+00:08:24,689 --> 00:08:28,765
+to mention the height is regular the
+whip his regular
+
+131
+00:08:29,449 --> 00:08:33,890
+and we're thinking about this
+semantic-based fighting idea
+
+132
+00:08:33,089 --> 00:08:36,187
+as a new thing that we call five class
+
+133
+00:08:37,087 --> 00:08:41,133
+side coffins are a very simple a
+numeration
+
+134
+00:08:42,033 --> 00:08:45,042
+that gets us thinking about canvas size
+when we do layout
+
+135
+00:08:46,023 --> 00:08:49,025
+rather than interface orientation
+
+136
+00:08:49,043 --> 00:08:54,111
+I we have independent horizontal and
+vertical 5 Proctor's and either wannabes
+
+137
+00:08:55,011 --> 00:08:55,093
+acted
+
+138
+00:08:55,093 --> 00:08:58,098
+can be either compaq or regular
+
+139
+00:08:59,043 --> 00:09:02,105
+am NOT simple choice can allow us to
+choose between what we may now think
+
+140
+00:09:03,005 --> 00:09:04,104
+about an iPhone style interface
+
+141
+00:09:05,004 --> 00:09:08,075
+and iPad style interface really isn't
+about the device
+
+142
+00:09:08,075 --> 00:09:13,121
+it's about the canvas 5 that we have and
+will continue to talk about this idea
+
+143
+00:09:14,021 --> 00:09:17,027
+not throughout the fashion but part of
+what makes back key
+
+144
+00:09:17,081 --> 00:09:20,130
+is that you may end up in a situation
+where
+
+145
+00:09:21,003 --> 00:09:24,082
+you are showing something displaying
+your view on them
+
+146
+00:09:25,009 --> 00:09:28,107
+iPad where the five the back canvas
+
+147
+00:09:29,007 --> 00:09:32,082
+actually compatible about just being on
+an iPhone
+
+148
+00:09:32,082 --> 00:09:35,086
+and if you've written adaptive code that
+
+149
+00:09:36,022 --> 00:09:39,095
+simply uses the size rather than the
+device to do it layout
+
+150
+00:09:39,095 --> 00:09:43,141
+you get and iPhone style layout when
+appropriate in smaller spaces
+
+151
+00:09:44,041 --> 00:09:48,068
+on an iPad so the situation but we
+cannot ban
+
+152
+00:09:48,068 --> 00:09:51,113
+are on the iPad having regular five and
+regular with this is true in either
+
+153
+00:09:52,013 --> 00:09:53,080
+orientation
+
+154
+00:09:53,008 --> 00:09:56,031
+on the iPhone which becomes compacted
+
+155
+00:09:57,003 --> 00:10:00,034
+and Matt you think that bit of
+information the photos that can choose
+
+156
+00:10:00,034 --> 00:10:03,061
+to shrink to it more compacted square
+
+157
+00:10:03,061 --> 00:10:06,134
+thumbnail based layout them only when
+the iPhone
+
+158
+00:10:07,034 --> 00:10:10,132
+goes to landscape it still has a compact
+with but often takes on
+
+159
+00:10:11,032 --> 00:10:15,035
+a compact hype you can use both those
+people information
+
+160
+00:10:15,035 --> 00:10:19,108
+25 what happened in your layout in your
+app
+
+161
+00:10:20,008 --> 00:10:23,084
+so we've wrapped up this concept side
+pockets
+
+162
+00:10:23,084 --> 00:10:26,176
+and are exposing it to you via nuclei in
+your eye care
+
+163
+00:10:27,076 --> 00:10:30,115
+call you a tree collection you write
+recollection
+
+164
+00:10:31,015 --> 00:10:34,096
+is a handy bringing together a few
+pieces of information including the
+
+165
+00:10:34,096 --> 00:10:35,167
+horizontal 55
+
+166
+00:10:36,067 --> 00:10:39,073
+the vertical 5 choir the display scale
+
+167
+00:10:40,027 --> 00:10:43,048
+and user interface ATM now what makes
+
+168
+00:10:43,048 --> 00:10:46,079
+track collections convenient is there
+Hong right
+
+169
+00:10:46,079 --> 00:10:49,162
+as a property on you a view controller
+you can access them from your view
+
+170
+00:10:50,062 --> 00:10:53,118
+controller you can also get them from
+the current screen
+
+171
+00:10:54,018 --> 00:10:57,079
+and then using that information you have
+your side class
+
+172
+00:10:57,079 --> 00:11:01,088
+you can make that determination what is
+the right thing to do for you
+
+173
+00:11:01,088 --> 00:11:04,132
+so the simple example we can think of
+what we did with photos
+
+174
+00:11:05,032 --> 00:11:08,050
+and and implement i5 quad
+
+175
+00:11:08,005 --> 00:11:11,037
+did change map it and for photos
+
+176
+00:11:11,082 --> 00:11:16,159
+I it just means to consider what the new
+psychoactive
+
+177
+00:11:17,059 --> 00:11:20,074
+an based on whether the horizontal five
+clock
+
+178
+00:11:20,074 --> 00:11:23,078
+is compact or not the
+
+179
+00:11:23,078 --> 00:11:26,129
+the photos way out choose to use either
+at compaq
+
+180
+00:11:27,029 --> 00:11:31,102
+squares based layout if it is a comeback
+of course all five prop
+
+181
+00:11:32,002 --> 00:11:37,049
+or otherwise it uses it rectangle
+rectangular from now more spread out
+
+182
+00:11:37,049 --> 00:11:42,049
+layout and then this is this particular
+snippet model to be on a collection view
+
+183
+00:11:42,049 --> 00:11:43,065
+controller
+
+184
+00:11:43,065 --> 00:11:46,124
+so it just takes that layout object and
+apply that to it
+
+185
+00:11:47,024 --> 00:11:50,030
+collection view as a new way out object
+
+186
+00:11:50,084 --> 00:11:54,120
+now thelma view maybe I'm not a thing
+with I'm unfamiliar scribe to you on the
+
+187
+00:11:55,002 --> 00:11:55,080
+screen
+
+188
+00:11:55,098 --> 00:11:59,099
+I if this is your first time seeing
+swept congratulations I
+
+189
+00:11:59,099 --> 00:12:04,193
+here is here your intro and you can feed
+just how easy it is to understand
+
+190
+00:12:05,093 --> 00:12:08,110
+and this will give you 90 an idea of how
+easy it is
+
+191
+00:12:09,001 --> 00:12:12,069
+to start adopting swept immediately with
+all cocoa and Cocoa Touch
+
+192
+00:12:12,078 --> 00:12:15,105
+API's to it that I
+
+193
+00:12:16,005 --> 00:12:19,020
+all talk about quickly another new API
+that we've
+
+194
+00:12:19,002 --> 00:12:22,011
+added to support your layout and I with
+a
+
+195
+00:12:22,029 --> 00:12:26,047
+which is I margins so margin
+
+196
+00:12:26,047 --> 00:12:30,096
+coincide with an API release in Iraq
+seven witches male pride
+
+197
+00:12:30,096 --> 00:12:34,141
+layout guide help you know about hard
+lines on the screen in this case
+
+198
+00:12:35,041 --> 00:12:38,087
+the top and the bottom of the screen
+where the top is a noting that the
+
+199
+00:12:38,087 --> 00:12:39,149
+navigation bar there
+
+200
+00:12:40,049 --> 00:12:44,058
+the layout guide tells you about that
+navigation bar in case you like to avoid
+
+201
+00:12:44,058 --> 00:12:44,147
+a
+
+202
+00:12:45,047 --> 00:12:48,058
+if they were to a bar at the bottom the
+screen your layout I would often turn
+
+203
+00:12:48,058 --> 00:12:48,117
+out
+
+204
+00:12:49,017 --> 00:12:52,020
+the top about to a bar in this case it
+just a note the hard-line
+
+205
+00:12:52,047 --> 00:12:55,053
+that is the bottom of the screen but
+there's another concept
+
+206
+00:12:56,007 --> 00:12:59,081
+in this year I that isn't covered by the
+Arcade
+
+207
+00:12:59,081 --> 00:13:03,119
+that is the white space that is I in
+cutting the content from the edge in the
+
+208
+00:13:04,019 --> 00:13:04,101
+screen
+
+209
+00:13:05,001 --> 00:13:08,094
+so and I with eight we're introducing an
+API and Uribe you
+
+210
+00:13:08,094 --> 00:13:11,106
+which is male guide which tells you
+about
+
+211
+00:13:12,006 --> 00:13:15,029
+that white space and allows you to that
+whatever white space
+
+212
+00:13:15,029 --> 00:13:18,065
+you want for your lap that the property
+annual review
+
+213
+00:13:18,065 --> 00:13:22,082
+also come native with native support for
+auto layout
+
+214
+00:13:22,082 --> 00:13:25,101
+the map in the former knew an FBI
+attributes including
+
+215
+00:13:26,001 --> 00:13:29,067
+lap right leading trailing
+
+216
+00:13:29,067 --> 00:13:32,103
+et cetera there's a bunch to the if
+you've been using are allowed in your
+
+217
+00:13:33,003 --> 00:13:34,031
+code you'll find this
+
+218
+00:13:34,031 --> 00:13:37,040
+natural and familiar
+
+219
+00:13:37,004 --> 00:13:41,021
+so to learn more tricks about building I
+adoptive where after there's going to be
+
+220
+00:13:41,057 --> 00:13:42,115
+a great talk tomorrow
+
+221
+00:13:43,015 --> 00:13:48,049
+on the mission call about building
+adaptive ap with you I kept
+
+222
+00:13:48,049 --> 00:13:51,050
+summary moving onto talking about some
+other
+
+223
+00:13:51,005 --> 00:13:54,052
+ways that we have adopted the philosophy
+
+224
+00:13:54,097 --> 00:13:57,175
+have adaptive five clock based design
+
+225
+00:13:58,075 --> 00:14:01,082
+to build things that you can use out of
+the box
+
+226
+00:14:01,082 --> 00:14:04,158
+that are adaptive without you having to
+do any work
+
+227
+00:14:05,058 --> 00:14:08,136
+and so we'll start by talking about
+adaptive you control it is a great new
+
+228
+00:14:09,036 --> 00:14:10,128
+feature
+
+229
+00:14:11,028 --> 00:14:14,033
+and could begin to dive into the I'm
+actually gonna go back and talk a little
+
+230
+00:14:14,078 --> 00:14:14,167
+bit more
+
+231
+00:14:15,067 --> 00:14:18,083
+about this idea fornication which
+
+232
+00:14:18,083 --> 00:14:21,085
+our rotation which we touched on with
+
+233
+00:14:22,003 --> 00:14:25,054
+the orientation segment of the talk so
+
+234
+00:14:25,054 --> 00:14:28,120
+now I'm gonna have a have after some
+this question
+
+235
+00:14:29,002 --> 00:14:33,011
+what is rotation really because asking
+ourselves that question
+
+236
+00:14:34,001 --> 00:14:37,007
+yield a result but helpless right
+adaptive code
+
+237
+00:14:37,007 --> 00:14:40,008
+and that result is
+
+238
+00:14:40,071 --> 00:14:43,080
+it's just and animated change in for
+five
+
+239
+00:14:43,008 --> 00:14:47,034
+view so if we consider a view
+
+240
+00:14:48,006 --> 00:14:52,062
+that on screen we might have been
+thinking out
+
+241
+00:14:52,062 --> 00:14:55,079
+when the device rotate that view
+
+242
+00:14:55,079 --> 00:15:00,145
+rotates with it and this is a rotating
+bill
+
+243
+00:15:01,045 --> 00:15:04,046
+that perspective actually complicate
+
+244
+00:15:04,046 --> 00:15:07,080
+the idea of what we have to do in our
+way out
+
+245
+00:15:07,008 --> 00:15:10,081
+and so beginning I would say we're
+encouraging you to take
+
+246
+00:15:11,053 --> 00:15:14,115
+a different perspective towards how
+rotation works
+
+247
+00:15:15,015 --> 00:15:19,041
+which is just think a bit as a view that
+happens to have
+
+248
+00:15:19,041 --> 00:15:22,113
+on this case a regular height in a
+compact where
+
+249
+00:15:23,013 --> 00:15:27,029
+and when the device rotates something
+happens to that view
+
+250
+00:15:27,029 --> 00:15:30,111
+and the thing that happens that view is
+it undergoes an animated
+
+251
+00:15:31,011 --> 00:15:35,049
+5 change and perhaps it goes to a
+compact high
+
+252
+00:15:35,049 --> 00:15:39,049
+and a regular wept I don't want to
+confuse you
+
+253
+00:15:39,049 --> 00:15:42,052
+in that standard on an iPhone I
+
+254
+00:15:42,079 --> 00:15:45,144
+in landscape the weapons actually
+compact but this is an illustrative
+
+255
+00:15:46,044 --> 00:15:46,127
+example
+
+256
+00:15:47,027 --> 00:15:51,027
+what might happen to reviewers review I
+changes 5
+
+257
+00:15:51,027 --> 00:15:54,082
+Xing go to any new siphoning side cross
+and that's really all that
+
+258
+00:15:54,082 --> 00:15:57,150
+happening when you're undergoing a
+rotation
+
+259
+00:15:58,005 --> 00:16:02,012
+and part of the advantage over thinking
+about rotations this way is merely a
+
+260
+00:16:02,057 --> 00:16:06,065
+5 change is that once you handle
+
+261
+00:16:06,065 --> 00:16:11,100
+rotations as size changes any other
+situation that you might end up in
+
+262
+00:16:12,000 --> 00:16:15,099
+where your size change in you will have
+handled
+
+263
+00:16:15,099 --> 00:16:18,888
+because you will have written your code
+in a way that it can handle
+
+264
+00:16:19,779 --> 00:16:23,290
+size and especially the their animated
+
+265
+00:16:23,029 --> 00:16:27,066
+so in order to move in this new
+direction we're taking a lot of API
+
+266
+00:16:27,066 --> 00:16:31,072
+that used to exist and iraq 710 still
+exist and I was a
+
+267
+00:16:32,026 --> 00:16:35,087
+but we're deprecating this is just a
+subset
+
+268
+00:16:35,087 --> 00:16:42,087
+the rotation API that is deprecated in
+Iowa effect
+
+269
+00:16:46,004 --> 00:16:47,047
+and when I really like
+
+270
+00:16:47,047 --> 00:16:51,776
+is what we're replacing that's where
+thinking about things as size changes
+
+271
+00:16:52,199 --> 00:16:56,880
+you can just implement one method will
+transition 25
+
+272
+00:16:56,088 --> 00:16:59,407
+inference that pic to transition
+coordinator
+
+273
+00:17:00,199 --> 00:17:03,850
+if this interesting things you want to
+do if you wanna animate along with that
+
+274
+00:17:03,085 --> 00:17:07,074
+size change whether it be rotation or
+anything else that changes the five
+
+275
+00:17:07,839 --> 00:17:10,863
+have your view controller you can use
+that
+
+276
+00:17:11,079 --> 00:17:15,490
+transition coordinator to do an
+animation and you defend in a block
+
+277
+00:17:15,049 --> 00:17:18,488
+with that transition coordinator and
+those changes
+
+278
+00:17:18,929 --> 00:17:21,933
+will be animated along with besides
+change which may be
+
+279
+00:17:22,329 --> 00:17:26,362
+a rotation have you can't or so in this
+case I've used the side chains
+
+280
+00:17:26,659 --> 00:17:29,980
+to simply change the number of columns
+in my photo layout
+
+281
+00:17:29,098 --> 00:17:33,417
+based on the new size so
+
+282
+00:17:34,299 --> 00:17:37,375
+beyond just view controllers themselves
+I
+
+283
+00:17:38,059 --> 00:17:41,760
+with rotation we've built from view
+controllers that
+
+284
+00:17:41,076 --> 00:17:45,158
+allow you to adapt the hierarchy from
+device to device
+
+285
+00:17:46,058 --> 00:17:49,063
+in a way that makes it so that you write
+Lasko
+
+286
+00:17:49,063 --> 00:17:53,602
+and for many viewers probably written
+something like you see on the screen
+
+287
+00:17:54,169 --> 00:17:58,150
+area primary/secondary view controller
+patterning you do that
+
+288
+00:17:58,015 --> 00:18:03,023
+using a split view controller and then
+you in bed and navigation controller
+
+289
+00:18:03,023 --> 00:18:06,077
+as the master view controller that about
+
+290
+00:18:06,077 --> 00:18:10,078
+but you controller and then when you
+would go and take the same design
+
+291
+00:18:10,078 --> 00:18:12,149
+pattern a primary/secondary view
+controller
+
+292
+00:18:13,049 --> 00:18:16,137
+you end up on the iPhone with a
+navigation controller
+
+293
+00:18:17,037 --> 00:18:20,041
+as you review controller and that meant
+you would have
+
+294
+00:18:20,077 --> 00:18:23,169
+a device any Amtrak seeing am i on an
+iPad
+
+295
+00:18:24,069 --> 00:18:27,076
+if so build this new controller
+hierarchy if not
+
+296
+00:18:28,039 --> 00:18:31,046
+filled with other you can view
+controller hierarchy with a navigation
+
+297
+00:18:31,046 --> 00:18:32,125
+controller
+
+298
+00:18:32,539 --> 00:18:35,780
+at the ritz I found while iPad
+
+299
+00:18:35,078 --> 00:18:38,147
+just as we want to make it for you no
+longer need to care
+
+300
+00:18:39,047 --> 00:18:43,126
+what year interface orientation is we
+also want to make it for you no longer
+
+301
+00:18:44,026 --> 00:18:45,032
+need to care what your interface
+
+302
+00:18:45,086 --> 00:18:50,124
+intimate anna & to do that we're making
+so you can book this interface on iphone
+
+303
+00:18:51,024 --> 00:18:54,069
+with the split view controller as the
+root view controller
+
+304
+00:18:54,069 --> 00:18:57,124
+and it will still contain a navigation
+controller
+
+305
+00:18:58,024 --> 00:19:01,033
+as its master view controller then
+
+306
+00:19:01,033 --> 00:19:04,872
+when you want to you know push another
+view onto the stack
+
+307
+00:19:05,169 --> 00:19:08,590
+you can just call show you can't rely on
+this it will do exactly what you would
+
+308
+00:19:08,059 --> 00:19:09,125
+expect from a navigation
+
+309
+00:19:10,025 --> 00:19:13,063
+experience pushing everyone to the back
+and
+
+310
+00:19:13,063 --> 00:19:16,085
+when you would I execute something that
+would be there
+
+311
+00:19:16,085 --> 00:19:20,150
+requirement to showing a detail on iPad
+you can just call show detail view
+
+312
+00:19:21,005 --> 00:19:21,094
+controller
+
+313
+00:19:22,039 --> 00:19:26,095
+and on the phone it will do exactly what
+you expect a phone interface to do
+
+314
+00:19:26,095 --> 00:19:30,095
+which is pressure onto the navigation
+controller because
+
+315
+00:19:30,095 --> 00:19:33,100
+that are not available on the phone but
+that
+
+316
+00:19:34,000 --> 00:19:37,002
+same that have a PI that same call
+sequence
+
+317
+00:19:37,002 --> 00:19:40,101
+calling show view controller or and show
+detail view controller
+
+318
+00:19:41,001 --> 00:19:45,034
+iPad were will yield what the user would
+expect
+
+319
+00:19:45,034 --> 00:19:48,053
+on iPad which is a detail view
+controller
+
+320
+00:19:48,053 --> 00:19:51,442
+over on the right its but you so
+
+321
+00:19:51,919 --> 00:19:56,350
+US but you can sure is really a
+workhorse to be used an IRS
+
+322
+00:19:56,035 --> 00:20:00,104
+8 the the key to is that it now
+available on all devices
+
+323
+00:20:00,419 --> 00:20:04,820
+allowing you to build view controller
+hierarchies that don't depend on what
+
+324
+00:20:04,082 --> 00:20:06,086
+device you're on it's the same hierarchy
+and
+
+325
+00:20:07,022 --> 00:20:11,026
+iPad and iPhone and view controller will
+adapt
+
+326
+00:20:11,062 --> 00:20:15,087
+for you so without it handles the
+primary secondary controller
+
+327
+00:20:15,087 --> 00:20:18,093
+Palin transparently for you an offer to
+go along with this
+
+328
+00:20:19,047 --> 00:20:22,052
+but you controller has a whole host
+
+329
+00:20:22,052 --> 00:20:26,078
+have new updates to it API and its
+relief I can't even begin to talk about
+
+330
+00:20:26,078 --> 00:20:29,176
+what they are if you'd like to learn
+more about them be a great talk
+
+331
+00:20:30,076 --> 00:20:33,103
+out tomorrow morning view controller
+Hampton and I with 8
+
+332
+00:20:34,003 --> 00:20:37,020
+so moving on
+
+333
+00:20:37,002 --> 00:20:42,016
+to adaptive presentation this is another
+way that the view controller system
+
+334
+00:20:42,034 --> 00:20:46,093
+is helping you have code that is simple
+
+335
+00:20:46,399 --> 00:20:50,850
+and device eggnog Dec but that does the
+right thing
+
+336
+00:20:50,085 --> 00:20:54,137
+on each device we want to help you build
+something like a full screen mode of
+
+337
+00:20:55,037 --> 00:20:56,053
+presentation
+
+338
+00:20:56,053 --> 00:20:59,060
+on iPhone and get something more
+appropriate
+
+339
+00:20:59,006 --> 00:21:02,073
+like a form she on iPad or even a
+popover
+
+340
+00:21:03,027 --> 00:21:09,029
+and do the with out Kodak shacks with
+device Iran only the same code on every
+
+341
+00:21:09,029 --> 00:21:09,073
+device
+
+342
+00:21:09,073 --> 00:21:14,098
+so in particular for one thing that is
+that is really
+
+343
+00:21:14,098 --> 00:21:17,137
+not changing the paradigm is poppers
+
+344
+00:21:18,037 --> 00:21:22,089
+Part II with a popovers were only
+available on iPad
+
+345
+00:21:22,089 --> 00:21:26,258
+and we would use them in the form a view
+i pop over controller
+
+346
+00:21:27,059 --> 00:21:30,118
+well that paradigm is changing
+significantly because we're now no
+
+347
+00:21:30,649 --> 00:21:35,330
+longer requiring the use if you are pop
+over control to present a popover
+
+348
+00:21:35,033 --> 00:21:38,372
+instead popovers are presented via API
+
+349
+00:21:38,669 --> 00:21:42,110
+as a presentation style
+
+350
+00:21:42,011 --> 00:21:48,710
+for view controller
+
+351
+00:21:48,809 --> 00:21:52,120
+so that means if you present a pop over
+with her a view controller with the
+
+352
+00:21:52,012 --> 00:21:53,941
+popover presentation style
+
+353
+00:21:54,049 --> 00:21:57,770
+and the presenting view controller 5
+we're gonna fuck off
+
+354
+00:21:57,077 --> 00:22:00,144
+is regular it appears you expect a
+popover
+
+355
+00:22:01,044 --> 00:22:05,100
+to appear with that same code using a
+popover presentation style
+
+356
+00:22:06,000 --> 00:22:10,025
+if the presenting view controllers
+compaq in the horizontal mention my QPR
+
+357
+00:22:10,025 --> 00:22:10,119
+iPhone
+
+358
+00:22:11,019 --> 00:22:14,060
+it would just appear as as in over
+
+359
+00:22:14,006 --> 00:22:17,099
+as an overshoot so that you get what you
+would expect
+
+360
+00:22:18,053 --> 00:22:21,112
+on iPhone for taking their
+
+361
+00:22:22,012 --> 00:22:25,074
+these concepts and we're bringing an
+activity to some another view controller
+
+362
+00:22:25,074 --> 00:22:26,102
+that we've and
+
+363
+00:22:27,002 --> 00:22:31,049
+like search results which may be
+thinking of how to view controller while
+
+364
+00:22:31,049 --> 00:22:34,071
+perfecting that because US church
+control display controller
+
+365
+00:22:34,071 --> 00:22:37,085
+is replaced by US troops controller
+
+366
+00:22:37,085 --> 00:22:41,154
+and US church controller is crucially
+view controller some cry
+
+367
+00:22:41,919 --> 00:22:45,990
+and that means that it can take
+advantage all of the power adapter
+
+368
+00:22:45,099 --> 00:22:45,186
+hierarchies
+
+369
+00:22:46,086 --> 00:22:50,103
+and presentations we've just talked
+about that all at your fingertips with
+
+370
+00:22:51,003 --> 00:22:51,086
+the new
+
+371
+00:22:51,086 --> 00:22:55,160
+you I search controller as new USB
+controllers also
+
+372
+00:22:56,006 --> 00:22:59,065
+able to be fully customized in the way
+
+373
+00:22:59,659 --> 00:23:02,980
+that it's you I appears and how it's
+presented so that
+
+374
+00:23:02,098 --> 00:23:06,120
+you can adapt research controller into
+your application here if you're a fully
+
+375
+00:23:07,002 --> 00:23:08,461
+customized you I
+
+376
+00:23:08,659 --> 00:23:12,760
+like that and FaceTime it will look the
+way that you want to look
+
+377
+00:23:12,076 --> 00:23:15,119
+we doing something similar with alert
+and I was a
+
+378
+00:23:16,019 --> 00:23:19,020
+now we're taking you I learnt view new
+action sheet
+
+379
+00:23:19,002 --> 00:23:26,002
+and replacing them with you i alert
+controller
+
+380
+00:23:27,057 --> 00:23:30,070
+kinda thought you guys might like that
+one I
+
+381
+00:23:30,007 --> 00:23:33,726
+you and your controllers also will do I
+view controller subclass
+
+382
+00:23:34,419 --> 00:23:38,518
+but we can internally use all of the
+power adapter presentation
+
+383
+00:23:39,409 --> 00:23:43,200
+to our advantage and to your advantage
+things look great
+
+384
+00:23:43,002 --> 00:23:46,005
+of course you I alert controller adapted
+styling
+
+385
+00:23:46,005 --> 00:23:50,031
+to the contact so that when you
+presented on an iPhone
+
+386
+00:23:50,076 --> 00:23:53,157
+are in anything that has a compact
+horizontal 55
+
+387
+00:23:54,057 --> 00:23:58,062
+you get an action she appearance you can
+learn parents often the action suit
+
+388
+00:23:59,007 --> 00:23:59,078
+style
+
+389
+00:23:59,078 --> 00:24:02,171
+you get something that looks like what
+you expect an action sheet look like
+
+390
+00:24:03,071 --> 00:24:07,074
+and the same code the present that
+action she on an iPhone
+
+391
+00:24:08,001 --> 00:24:12,013
+in a regular horizontal 5 profligate
+I've had will appear in a popover
+
+392
+00:24:12,013 --> 00:24:16,046
+without you having to write any device
+checking code
+
+393
+00:24:16,046 --> 00:24:20,097
+to you can learn more about how all this
+adapter presentation missionary work
+
+394
+00:24:20,097 --> 00:24:23,556
+by checking out a look inside view
+controllers Thursday morning in the
+
+395
+00:24:24,429 --> 00:24:25,100
+mission
+
+396
+00:24:25,001 --> 00:24:29,040
+I've been a stalker couple time it's
+really great if you want to understand
+
+397
+00:24:29,049 --> 00:24:32,055
+the nitty-gritty behind how all these
+presentation controllers work
+
+398
+00:24:33,009 --> 00:24:36,598
+and especially if you're thinking hey
+this built-in you like it stock the
+
+399
+00:24:36,679 --> 00:24:37,730
+fantastic
+
+400
+00:24:37,073 --> 00:24:40,082
+I want to build my own presentation
+controllers
+
+401
+00:24:40,082 --> 00:24:44,134
+that are also adaptive this talk will
+teach you how to do that
+
+402
+00:24:45,034 --> 00:24:50,075
+so what we've been talking about for a
+while as tools that were giving you
+
+403
+00:24:50,075 --> 00:24:53,103
+via the API to write adaptive code
+
+404
+00:24:54,003 --> 00:24:57,086
+but there's another steps to writing
+great code
+
+405
+00:24:57,086 --> 00:25:01,115
+and that testing so we're giving you
+another great to all that we're excited
+
+406
+00:25:01,889 --> 00:25:02,630
+about
+
+407
+00:25:02,063 --> 00:25:05,154
+in the Iowa simulator and that if the
+ability to
+
+408
+00:25:06,054 --> 00:25:09,313
+re 5 the physical simulated
+
+409
+00:25:09,799 --> 00:25:15,470
+hardware and so I don't know if you can
+feel on the screen at a little small
+
+410
+00:25:15,047 --> 00:25:18,095
+but you'll find in your FBK p.m. found
+it yet
+
+411
+00:25:18,095 --> 00:25:21,179
+Numancia the Iowa simulator their two
+new devices
+
+412
+00:25:22,079 --> 00:25:25,218
+but you can flack wanted a resizable
+iPad
+
+413
+00:25:25,929 --> 00:25:29,700
+and wanted the resizable iPhone you can
+use the
+
+414
+00:25:29,007 --> 00:25:33,366
+to actually punchan custom values for
+the hardware side
+
+415
+00:25:34,059 --> 00:25:38,270
+I've the iPad or the iPhone and pack the
+ad activity
+
+416
+00:25:38,027 --> 00:25:45,027
+I've your code on the fly
+
+417
+00:25:47,022 --> 00:25:50,231
+really excited for how this kinda thing
+can
+
+418
+00:25:50,429 --> 00:25:54,880
+make you can change the way we architect
+perhaps because we can architect things
+
+419
+00:25:54,088 --> 00:25:57,170
+the way that we intend and then tapping
+our intentions are doing
+
+420
+00:25:58,007 --> 00:26:02,052
+what we thought they were going to do so
+I actually stole the top you see on
+
+421
+00:26:03,015 --> 00:26:03,077
+screen
+
+422
+00:26:03,077 --> 00:26:07,486
+from the a look inside presentation
+controllers talk but I just mentioned
+
+423
+00:26:08,179 --> 00:26:11,280
+and it have a custom presentation
+controller
+
+424
+00:26:11,028 --> 00:26:15,062
+which is the view that find out from the
+right and designed to take up to 30 the
+
+425
+00:26:15,062 --> 00:26:15,123
+screen
+
+426
+00:26:16,023 --> 00:26:19,036
+I went after that in the resizable iPad
+
+427
+00:26:19,036 --> 00:26:22,124
+to make sure that if it was in a compact
+wet we do the right thing
+
+428
+00:26:23,024 --> 00:26:26,079
+and sure enough the guys who wrote this
+are really great and it doesn't do the
+
+429
+00:26:26,079 --> 00:26:26,147
+right thing
+
+430
+00:26:27,047 --> 00:26:33,048
+presenter than over full screen
+presentation in the compact with so
+
+431
+00:26:33,048 --> 00:26:36,049
+let's talk about some other new things
+and I Iowa
+
+432
+00:26:36,058 --> 00:26:40,063
+aid for you I kept for customizing user
+interface revenue clock
+
+433
+00:26:40,063 --> 00:26:43,602
+called you i'd visual look back view the
+right view
+
+434
+00:26:44,169 --> 00:26:47,530
+some clock an interview that takes you I
+visual effect
+
+435
+00:26:47,053 --> 00:26:51,056
+i'm Jack that parameterized custom
+rendering mode for the view itself in
+
+436
+00:26:51,083 --> 00:26:55,552
+the contact and find it sewer shipping a
+couple a different back
+
+437
+00:26:56,299 --> 00:27:00,160
+that you can use with the visual effect
+view to get
+
+438
+00:27:00,016 --> 00:27:07,016
+the fact that you want and first one is
+the UI blur a fact
+
+439
+00:27:12,058 --> 00:27:14,129
+believe me i've been waiting for you
+guys to get view this
+
+440
+00:27:15,029 --> 00:27:20,072
+to for you I were facts will give you a
+live blur over the content
+
+441
+00:27:20,072 --> 00:27:23,101
+where you use it the second the fact
+that we're shipping
+
+442
+00:27:24,001 --> 00:27:28,077
+a review I fiber in fear back now
+vibrancy a fact if you are
+
+443
+00:27:28,077 --> 00:27:31,153
+if you don't know what that is that
+refers to the separators in
+
+444
+00:27:32,053 --> 00:27:36,067
+notification fenner a maybe a little bit
+hard to see on the screen but you can
+
+445
+00:27:36,067 --> 00:27:38,090
+pull out your phone called on occasion
+Turner
+
+446
+00:27:38,009 --> 00:27:41,054
+take a look at those beautiful color
+changing color dodging separators
+
+447
+00:27:42,035 --> 00:27:45,046
+and that biven thing nothing
+
+448
+00:27:45,046 --> 00:27:50,050
+I heard a pop over there thanks and I
+think that we're introducing
+
+449
+00:27:50,086 --> 00:27:54,179
+is image after image after to something
+that encapsulate the one actor to act
+
+450
+00:27:55,079 --> 00:27:58,087
+the iPhone the iPad representation
+
+451
+00:27:58,087 --> 00:28:02,098
+view image in the home a trip there are
+many comes with some API that makes it
+
+452
+00:28:02,098 --> 00:28:02,927
+really easy
+
+453
+00:28:03,809 --> 00:28:08,380
+to get the right images out of the image
+catalog because we can you something
+
+454
+00:28:08,038 --> 00:28:09,087
+like image named
+
+455
+00:28:09,429 --> 00:28:14,454
+and add a parameter to it that take the
+trick collection and sensed
+
+456
+00:28:14,679 --> 00:28:17,270
+recollections are hung right on your
+view controllers
+
+457
+00:28:17,027 --> 00:28:20,092
+you can take that recollection from
+South been viewed it appears something
+
+458
+00:28:20,092 --> 00:28:24,129
+and apply it directly to an ImageView in
+your view controller and you have the
+
+459
+00:28:25,029 --> 00:28:25,298
+right
+
+460
+00:28:25,559 --> 00:28:28,559
+image the if statement that implied
+
+461
+00:28:28,559 --> 00:28:31,800
+in figuring out one-act to act iPhone
+iPad Federer
+
+462
+00:28:31,008 --> 00:28:34,015
+is all encoded within the track
+collection which you don't have to do
+
+463
+00:28:34,087 --> 00:28:35,144
+any work for comes directly
+
+464
+00:28:36,044 --> 00:28:39,061
+with your view controller another
+
+465
+00:28:39,061 --> 00:28:44,066
+thank you another
+
+466
+00:28:44,066 --> 00:28:48,215
+you I feature as condensing bars you may
+be familiar with the
+
+467
+00:28:48,809 --> 00:28:52,300
+if you've used Safari on Iowa 7
+
+468
+00:28:52,003 --> 00:28:55,084
+have similar concept when you scroll for
+30 bargain this rink
+
+469
+00:28:56,011 --> 00:28:59,095
+well we've extended back contact
+throughout the
+
+470
+00:28:59,095 --> 00:29:04,324
+IRS a fukn given you access to that sort
+of behavior in your app
+
+471
+00:29:05,179 --> 00:29:08,184
+so if you have a navigation bar you can
+make it that when the user scrolls
+
+472
+00:29:08,679 --> 00:29:12,020
+the navigation bar get a little bit
+smaller or
+
+473
+00:29:12,002 --> 00:29:15,071
+if you have a view that has a navigation
+bar and a toolbar
+
+474
+00:29:15,071 --> 00:29:18,107
+you can make up for it when you to
+schools navigation by shrinking to buy
+
+475
+00:29:19,007 --> 00:29:19,079
+disappears
+
+476
+00:29:19,079 --> 00:29:26,079
+altogether third to learn all about some
+great things you can do
+
+477
+00:29:29,014 --> 00:29:32,112
+with innovative customization I we have
+a talk that is tomorrow
+
+478
+00:29:33,012 --> 00:29:37,201
+called creating custom Iowa user
+interface so
+
+479
+00:29:37,309 --> 00:29:41,620
+I alluded to earlier to a feature that
+is that we're pushing an Iowa
+
+480
+00:29:41,062 --> 00:29:44,064
+8 which is dynamic type everywhere all
+about Paul
+
+481
+00:29:44,082 --> 00:29:47,097
+ap have adapted or have adopted ben-ami
+
+482
+00:29:47,097 --> 00:29:51,112
+type in our adapting to the changes that
+are required for that
+
+483
+00:29:52,012 --> 00:29:55,094
+when I think that we realize is that
+table views
+
+484
+00:29:55,094 --> 00:29:58,161
+are a very common place where cactus
+displayed in something that we would
+
+485
+00:29:59,061 --> 00:30:00,064
+want to respond
+
+486
+00:30:00,091 --> 00:30:03,147
+to user tax I'd changes and so
+
+487
+00:30:04,047 --> 00:30:07,055
+we have maybe you here in Iowa 8
+
+488
+00:30:07,055 --> 00:30:11,434
+for you to respond to these types of
+changes by allowing you to have dynamic
+
+489
+00:30:11,929 --> 00:30:12,750
+type rose
+
+490
+00:30:12,075 --> 00:30:19,075
+without actually implementing a delegate
+method Table View High for our index
+
+491
+00:30:23,229 --> 00:30:26,290
+I know that a lot of you have been
+asking for this over the years and so on
+
+492
+00:30:26,839 --> 00:30:27,873
+our solution about it
+
+493
+00:30:28,179 --> 00:30:35,179
+self coming caps like their sizing logic
+inside themselves
+
+494
+00:30:37,005 --> 00:30:39,044
+they'd get better actually
+
+495
+00:30:39,089 --> 00:30:42,142
+because this fellow natively support
+
+496
+00:30:43,042 --> 00:30:47,075
+are only now so yeah have got to get
+better
+
+497
+00:30:47,075 --> 00:30:50,173
+prep and serve you have constraints in
+yourselves
+
+498
+00:30:51,073 --> 00:30:55,091
+you like it can derive the appropriate
+height for those cells from the content
+
+499
+00:30:55,091 --> 00:30:56,990
+and I'm in a constrained to be placed on
+
+500
+00:30:57,809 --> 00:31:02,420
+you can do something like this where I'm
+not implementing the delegate method
+
+501
+00:31:02,042 --> 00:31:05,047
+high protein extract and dad and myself
+initializer
+
+502
+00:31:05,092 --> 00:31:08,165
+I felt from constraining and this
+particular so I have attacked you know I
+
+503
+00:31:09,065 --> 00:31:13,069
+hope some content I said a vertical
+constraint that this ad from padding
+
+504
+00:31:13,069 --> 00:31:17,095
+around that text you using the visual
+format language I do the same thing
+
+505
+00:31:17,095 --> 00:31:20,324
+on the horizontal axis adding padding on
+the right and left
+
+506
+00:31:21,179 --> 00:31:26,460
+about TextView and then when it I was
+created to be populated with an attack
+
+507
+00:31:26,046 --> 00:31:30,114
+the table you will know how wide it is
+will be able to take the content that in
+
+508
+00:31:31,014 --> 00:31:32,017
+that text view
+
+509
+00:31:32,017 --> 00:31:35,656
+and the margins that I've setup without
+a way out and determine what the
+
+510
+00:31:35,809 --> 00:31:39,110
+appropriate height for that fell should
+be based on that contact and the weapon
+
+511
+00:31:39,011 --> 00:31:41,038
+the table if you
+
+512
+00:31:41,038 --> 00:31:44,126
+really I would like to learn more about
+that or if you just like to hear me talk
+
+513
+00:31:45,026 --> 00:31:49,101
+come back to the same room two days from
+now where I'll be presenting on with my
+
+514
+00:31:50,001 --> 00:31:53,042
+very him calling the beloved doctor
+Libya good nest
+
+515
+00:31:53,042 --> 00:31:56,124
+and we'll be talking about what's new in
+table and collection views
+
+516
+00:31:57,024 --> 00:32:02,038
+to moving onto my favorite feature
+
+517
+00:32:02,038 --> 00:32:06,467
+a bio s FBK was actually kinda hard to
+wait till this part of the presentation
+
+518
+00:32:06,809 --> 00:32:10,420
+but ap extension after extension
+
+519
+00:32:10,042 --> 00:32:14,071
+are just spent after goofiness in Aquino
+
+520
+00:32:14,071 --> 00:32:18,112
+after extension are just gonna change
+the way that we write I'm
+
+521
+00:32:19,012 --> 00:32:23,033
+in the way that users enjoy we produce
+for them
+
+522
+00:32:23,033 --> 00:32:27,038
+we can do things like in photos taking
+
+523
+00:32:27,038 --> 00:32:30,136
+taking a photo bringing up a sheet that
+shows the extensions that we have
+
+524
+00:32:31,036 --> 00:32:32,047
+selecting York
+
+525
+00:32:32,047 --> 00:32:36,094
+pension right there in photos applying
+something like a filter to that photo
+
+526
+00:32:36,094 --> 00:32:39,121
+and ending up in photos where we always
+were
+
+527
+00:32:40,021 --> 00:32:45,059
+we never had to leave the apt and your
+content is right there
+
+528
+00:32:45,059 --> 00:32:49,140
+for the user at their fingertips you we
+can also have sharing extensions which
+
+529
+00:32:50,004 --> 00:32:50,067
+allow
+
+530
+00:32:51,003 --> 00:32:54,052
+users to share to your sharing service
+
+531
+00:32:54,052 --> 00:32:57,341
+right from what ever after and they can
+share photos videos
+
+532
+00:32:57,809 --> 00:33:01,850
+tax and other content without having to
+do it or if you go over to your apt
+
+533
+00:33:01,085 --> 00:33:05,097
+has to be a better experience for the
+user and it means more people
+
+534
+00:33:05,097 --> 00:33:09,152
+can share to your apt because it will be
+left work for them to do so
+
+535
+00:33:10,052 --> 00:33:14,071
+we're we also have notification center
+widget
+
+536
+00:33:14,071 --> 00:33:18,126
+you can write a fantastic notification
+center widget I recommend up on my phone
+
+537
+00:33:19,026 --> 00:33:20,035
+and I can fear
+
+538
+00:33:20,035 --> 00:33:23,057
+every day I can be extremely grateful
+for you
+
+539
+00:33:23,057 --> 00:33:26,085
+to you for doing that so I extension
+
+540
+00:33:26,085 --> 00:33:30,180
+opened a lot of doors some %uh the big
+things and I are 8 that you can use
+
+541
+00:33:31,008 --> 00:33:32,011
+after sentence for
+
+542
+00:33:32,083 --> 00:33:36,088
+course photos sharing notification
+fenner
+
+543
+00:33:37,033 --> 00:33:41,080
+it's also possible to build extension
+for don't actually have you know
+
+544
+00:33:41,008 --> 00:33:44,011
+user interface and a great example of
+this is the being translated
+
+545
+00:33:45,001 --> 00:33:50,032
+action without you I that we saw on the
+key now additionally
+
+546
+00:33:50,041 --> 00:33:54,088
+you can build custom file providers this
+is something that will allow the user
+
+547
+00:33:54,088 --> 00:33:57,877
+to use documents from your cloud storage
+solution
+
+548
+00:33:58,669 --> 00:34:02,080
+EFI mostly as if those documents were
+and I Cloud Drive
+
+549
+00:34:02,008 --> 00:34:06,023
+just by your extension providing them to
+absent in the system
+
+550
+00:34:06,023 --> 00:34:10,152
+additionally I what they make that
+possible to write custom keyboard
+
+551
+00:34:10,359 --> 00:34:14,580
+be shared throughout the fifth time
+front row like
+
+552
+00:34:14,058 --> 00:34:17,099
+back yeah a to learn more about building
+after Fenton
+
+553
+00:34:17,099 --> 00:34:20,133
+we have two great talk today and
+tomorrow the when you everything you
+
+554
+00:34:21,033 --> 00:34:21,040
+need to know
+
+555
+00:34:22,003 --> 00:34:26,342
+about building upon this just absolutely
+tremendous technology that it's just
+
+556
+00:34:26,369 --> 00:34:26,940
+gonna
+
+557
+00:34:26,094 --> 00:34:31,813
+I i think is the fine posted different
+from here on out some updates to
+
+558
+00:34:32,659 --> 00:34:33,540
+notification
+
+559
+00:34:33,054 --> 00:34:38,393
+notification changed a bit in particular
+in the way that we model
+
+560
+00:34:38,879 --> 00:34:41,934
+I how users approve notification that
+appear on screen
+
+561
+00:34:42,429 --> 00:34:45,528
+has always been true that users have to
+
+562
+00:34:46,419 --> 00:34:50,210
+approve push notification and
+
+563
+00:34:50,021 --> 00:34:54,034
+it one untrue previously that users
+would have to approve
+
+564
+00:34:54,034 --> 00:34:57,041
+local notification to control local
+notification I without the user
+
+565
+00:34:58,004 --> 00:35:01,010
+giving approval to not so when I was aid
+
+566
+00:35:01,001 --> 00:35:04,015
+any notification that shows your eye on
+the screen is
+
+567
+00:35:04,024 --> 00:35:07,035
+going to require one time approval from
+the user
+
+568
+00:35:07,035 --> 00:35:11,082
+the flip side to that as you can send
+push notifications that
+
+569
+00:35:11,082 --> 00:35:14,175
+don't show you I to the user that simply
+shuttle David here ap
+
+570
+00:35:15,075 --> 00:35:18,084
+and those will not by default require
+
+571
+00:35:18,084 --> 00:35:22,097
+user approval to you can just send
+notifications the route from you don't
+
+572
+00:35:22,097 --> 00:35:22,185
+have to
+
+573
+00:35:23,085 --> 00:35:26,146
+the referee about
+
+574
+00:35:27,046 --> 00:35:30,093
+notifications can now also have actions
+associated with them
+
+575
+00:35:30,093 --> 00:35:34,149
+that is if you want to display something
+I have the reply button or other actions
+
+576
+00:35:35,049 --> 00:35:38,101
+those can be tacked onto your
+notifications and whatever action the
+
+577
+00:35:39,001 --> 00:35:40,600
+user solak
+
+578
+00:35:40,609 --> 00:35:44,230
+that will be shuffled over to your apt
+for your custom logic to be invoked
+
+579
+00:35:44,023 --> 00:35:48,045
+based on action notifications can also
+be location-based
+
+580
+00:35:48,045 --> 00:35:51,099
+in Iowa State so you can pop up a
+notification when a user
+
+581
+00:35:51,099 --> 00:35:54,108
+enters or exits a significant area that
+you wanna
+
+582
+00:35:55,008 --> 00:36:02,008
+show them in addition about
+
+583
+00:36:02,109 --> 00:36:05,690
+finally we've increased increased the
+payload per side
+
+584
+00:36:05,069 --> 00:36:10,118
+from 250 hey 5 one
+
+585
+00:36:11,018 --> 00:36:15,063
+four-time from my love for everyone I
+
+586
+00:36:15,063 --> 00:36:17,139
+if you wanna learn more about this
+there's a great talk with new highway
+
+587
+00:36:18,039 --> 00:36:19,045
+notification
+
+588
+00:36:19,045 --> 00:36:23,046
+tomorrow afternoon in help so we're
+introducing a doc picker
+
+589
+00:36:23,046 --> 00:36:26,080
+and I would say and it looks beautiful
+
+590
+00:36:26,008 --> 00:36:30,102
+looks like that I as questionable on
+iPad and iPhone
+
+591
+00:36:31,074 --> 00:36:34,083
+and what's great about this is we now
+have 50 me why
+
+592
+00:36:34,083 --> 00:36:37,179
+for selecting document you no longer
+have to write come
+
+593
+00:36:38,079 --> 00:36:42,093
+completely custom code starting from
+scratch to give the user a document
+
+594
+00:36:42,093 --> 00:36:43,114
+picking experience
+
+595
+00:36:44,014 --> 00:36:47,063
+if you want to be able to interact with
+document in your application
+
+596
+00:36:47,063 --> 00:36:50,117
+you can use the UI document pick your
+view controller as being exposed in a
+
+597
+00:36:51,017 --> 00:36:52,081
+course in to view controller
+
+598
+00:36:52,081 --> 00:36:55,119
+a good to take advantage of all the
+adaptive presentation hierarchy
+
+599
+00:36:56,019 --> 00:36:56,107
+machinery
+
+600
+00:36:57,007 --> 00:37:01,016
+that we talked about earlier this
+document picture has access to documents
+
+601
+00:37:01,097 --> 00:37:02,236
+in the local scope
+
+602
+00:37:03,109 --> 00:37:07,060
+and FEMA we also in the i five drives go
+and finally
+
+603
+00:37:07,006 --> 00:37:10,805
+anybody who is supplying a document
+right extension to the system
+
+604
+00:37:10,859 --> 00:37:13,940
+those documents were also appear in the
+document picker
+
+605
+00:37:13,094 --> 00:37:16,146
+at all family completely seaman finney
+
+606
+00:37:17,046 --> 00:37:20,107
+for the user and your application just
+get to you are all back
+
+607
+00:37:21,007 --> 00:37:24,089
+for the document any means to open to
+learn more about
+
+608
+00:37:24,089 --> 00:37:27,058
+document picker support we've got a
+great cock and building a doctrine based
+
+609
+00:37:27,859 --> 00:37:30,400
+app in the marina on Thursday
+
+610
+00:37:30,004 --> 00:37:33,046
+a quick word about STK modernization
+
+611
+00:37:33,082 --> 00:37:37,106
+we made a few changes throughout the
+headers I in the cocoa and Cocoa Touch
+
+612
+00:37:38,006 --> 00:37:43,008
+if you i've as want to give you a a
+quick rundown of what that's all about
+
+613
+00:37:43,008 --> 00:37:46,104
+we've annotated all the designated
+initializer have class with an A
+
+614
+00:37:47,004 --> 00:37:50,573
+designated initializer annotation C you
+know which ones are the designated
+
+615
+00:37:50,609 --> 00:37:52,000
+initializer
+
+616
+00:37:52,000 --> 00:37:54,093
+which of course you need to know if
+you're going to be a good for crop
+
+617
+00:37:54,093 --> 00:37:55,152
+improvement
+
+618
+00:37:56,052 --> 00:38:01,371
+additionally I love the return types
+furnish litres have changed from ID to
+
+619
+00:38:01,839 --> 00:38:06,040
+instance tight
+
+620
+00:38:06,004 --> 00:38:09,008
+kinda makes over auto complete better I
+
+621
+00:38:09,044 --> 00:38:12,693
+and we've introduced additional
+properties I in place a classic ok a
+
+622
+00:38:13,089 --> 00:38:14,190
+method
+
+623
+00:38:14,019 --> 00:38:17,107
+in particular like the NFL object
+protocol where hash used to be a method
+
+624
+00:38:18,007 --> 00:38:21,306
+ash is now a property for Anna object
+
+625
+00:38:21,369 --> 00:38:26,420
+and these changes enhance the experience
+for use with the cocoa and Cocoa Touch
+
+626
+00:38:26,042 --> 00:38:28,135
+API token object if the and in
+particularly
+
+627
+00:38:29,035 --> 00:38:33,051
+with swept so hand-off
+
+628
+00:38:33,051 --> 00:38:36,125
+is an opportunity for your out to
+
+629
+00:38:37,025 --> 00:38:40,108
+participate in a feature that we talked
+about in the Keno
+
+630
+00:38:41,008 --> 00:38:44,037
+which is continuity
+
+631
+00:38:44,109 --> 00:38:47,830
+continuity is the thing that allows
+
+632
+00:38:47,083 --> 00:38:52,122
+users to do something like start a email
+on their phone
+
+633
+00:38:53,022 --> 00:38:56,041
+go to their computer finish that email
+
+634
+00:38:56,041 --> 00:38:59,055
+and it all seems experience well
+
+635
+00:38:59,055 --> 00:39:02,056
+with hand of we're giving you the
+opportunity to
+
+636
+00:39:02,065 --> 00:39:05,104
+have user active you have your own so
+that they can do that
+
+637
+00:39:06,004 --> 00:39:09,004
+not just with male or with other
+built-in
+
+638
+00:39:09,004 --> 00:39:13,008
+activity but with your activities as
+well
+
+639
+00:39:13,008 --> 00:39:16,075
+so hand-off has built-in support for
+activities
+
+640
+00:39:16,075 --> 00:39:21,106
+in apk it and do I care both natively
+support activities in their document
+
+641
+00:39:22,006 --> 00:39:24,035
+factors
+
+642
+00:39:24,089 --> 00:39:27,510
+and I you'll be able to use that
+
+643
+00:39:27,051 --> 00:39:30,900
+out of the box to learn more about
+hand-off a check out the adopting
+
+644
+00:39:31,359 --> 00:39:32,470
+handoff and Iowa
+
+645
+00:39:32,047 --> 00:39:35,112
+talk tomorrow in the mission so
+
+646
+00:39:36,012 --> 00:39:39,066
+there's a whole lot of stuff has changed
+here
+
+647
+00:39:39,066 --> 00:39:42,130
+I lots of new things we also have
+
+648
+00:39:43,003 --> 00:39:46,040
+several brand new frameworks an Iowa
+
+649
+00:39:46,067 --> 00:39:51,090
+8 and I don't really have time to talk
+in any kinda depth about these things
+
+650
+00:39:51,009 --> 00:39:54,085
+but I want to give you an idea hey
+avoided out there
+
+651
+00:39:55,066 --> 00:39:58,131
+so you can see what other sessions that
+you'd like to attend because
+
+652
+00:39:59,031 --> 00:40:02,580
+this framework allow you to build after
+you simply could not build
+
+653
+00:40:02,859 --> 00:40:05,870
+before iraq 8 and that's fantastic
+
+654
+00:40:05,087 --> 00:40:08,179
+of course first one we've already
+touched on Notification Center
+
+655
+00:40:09,079 --> 00:40:13,115
+will support you building extension to
+add widgets to
+
+656
+00:40:14,015 --> 00:40:17,099
+the notifications on iraq's that
+notification ended up from work
+
+657
+00:40:17,099 --> 00:40:20,218
+and you can learn about that by I
+checking out
+
+658
+00:40:21,109 --> 00:40:24,600
+the building up its pensions talk
+
+659
+00:40:24,006 --> 00:40:27,077
+of a brand-new photos framework this
+will give you
+
+660
+00:40:28,031 --> 00:40:32,075
+complete read/write access to the photos
+library
+
+661
+00:40:32,075 --> 00:40:35,132
+this means you can do whenever your
+application needs to do
+
+662
+00:40:36,032 --> 00:40:40,069
+to provide the best user experience
+possible taken to leave for
+
+663
+00:40:40,069 --> 00:40:43,142
+I can do non-destructive at do whatever
+it needs to do
+
+664
+00:40:44,042 --> 00:40:47,043
+so that the user gets what they need
+
+665
+00:40:47,043 --> 00:40:50,952
+while mister actually in the photos talk
+
+666
+00:40:51,339 --> 00:40:55,170
+her in in the photos framework I do want
+to take this opportunity to play now
+
+667
+00:40:55,017 --> 00:40:58,052
+II with a also brings custom core image
+filters
+
+668
+00:40:58,052 --> 00:41:02,064
+and so you'll be able to use these on
+your photos as well as videos and Iowa
+
+669
+00:41:02,064 --> 00:41:08,133
+State
+
+670
+00:41:09,033 --> 00:41:12,041
+for brand new framework called cloud
+kept and this framework
+
+671
+00:41:13,013 --> 00:41:17,019
+is absolutely spectacular I really can't
+say enough good things about it
+
+672
+00:41:17,019 --> 00:41:21,062
+I'm it gives you more control than you
+ever had over the data that you put
+
+673
+00:41:21,062 --> 00:41:25,081
+in the cloud and more really makes this
+
+674
+00:41:25,081 --> 00:41:28,106
+spectacular is you can use cloud care to
+build
+
+675
+00:41:29,006 --> 00:41:32,765
+a client-server application with a
+building a server side
+
+676
+00:41:32,819 --> 00:41:36,970
+you can to find that on the client side
+and what Apple take care
+
+677
+00:41:36,097 --> 00:41:40,966
+for you so I and II can even wait to see
+what startups come
+
+678
+00:41:41,839 --> 00:41:45,370
+out a bit will be fantastic and we love
+cloud kit
+
+679
+00:41:45,037 --> 00:41:49,120
+so much that we build I hard drive and
+photos in the cloud on top of it
+
+680
+00:41:50,002 --> 00:41:54,081
+it's a fantastic technology and you love
+building your up some top
+
+681
+00:41:54,099 --> 00:41:57,141
+not a new framework if health care
+health kit
+
+682
+00:41:58,041 --> 00:42:02,108
+brings all of the biometric information
+from the various devices the user has
+
+683
+00:42:03,008 --> 00:42:06,090
+all into one place this information is
+shared across
+
+684
+00:42:06,009 --> 00:42:09,050
+aP's rather than filo dough into one app
+has
+
+685
+00:42:10,031 --> 00:42:14,062
+one biometric device information another
+Apple has another biometric devices
+
+686
+00:42:14,062 --> 00:42:14,156
+information
+
+687
+00:42:15,056 --> 00:42:19,079
+at 4shared so you can I use that to
+create
+
+688
+00:42:19,079 --> 00:42:24,087
+a perfect experience for user based on
+all in the biometric data available
+
+689
+00:42:24,087 --> 00:42:27,148
+from all of their customers family
+
+690
+00:42:28,048 --> 00:42:32,066
+we are introducing a home-care which
+does the same thing for connected home
+
+691
+00:42:32,066 --> 00:42:32,148
+devices
+
+692
+00:42:33,048 --> 00:42:36,072
+put all about information in one play
+
+693
+00:42:36,072 --> 00:42:39,154
+to rate you can build an app for that
+everything the user needs
+
+694
+00:42:40,054 --> 00:42:43,127
+for their connected home accessing all
+of those things
+
+695
+00:42:44,027 --> 00:42:47,114
+in one place of have a new local
+authentication
+
+696
+00:42:48,014 --> 00:42:51,083
+framework this allows you to leverage
+the power
+
+697
+00:42:51,083 --> 00:42:54,117
+biometric authentication in your own apt
+
+698
+00:42:55,017 --> 00:42:58,186
+and as you probably know from having
+watched the keynote this means that you
+
+699
+00:42:58,339 --> 00:43:00,040
+get to use patch id:
+
+700
+00:43:00,004 --> 00:43:03,009
+right inside your application that's
+great and we have a talk that you can go
+
+701
+00:43:03,054 --> 00:43:03,063
+check out
+
+702
+00:43:04,044 --> 00:43:07,122
+I to learn more about how to do that
+Russia bringing
+
+703
+00:43:08,022 --> 00:43:11,098
+been kept to iraq 8 think editor
+
+704
+00:43:11,098 --> 00:43:15,152
+great framework for building 3d
+rendering and we've had it on the Mac
+
+705
+00:43:16,052 --> 00:43:16,135
+for a year
+
+706
+00:43:17,035 --> 00:43:21,042
+when i bringing it to Iraq now we have a
+great cross-platform solution
+
+707
+00:43:21,042 --> 00:43:24,113
+for doing 3d rendering view have our do
+you think a
+
+708
+00:43:25,013 --> 00:43:29,097
+you're gonna love this so there you have
+it your offer gonna love it
+
+709
+00:43:29,097 --> 00:43:33,102
+everybody's gonna love it threat that
+all the brand new frameworks that not
+
+710
+00:43:34,047 --> 00:43:35,078
+all the changes though
+
+711
+00:43:35,078 --> 00:43:38,086
+a point out one other framework that is
+made some significant changes which is
+
+712
+00:43:39,058 --> 00:43:40,094
+core location
+
+713
+00:43:40,094 --> 00:43:43,128
+crew location now make that possible to
+get
+
+714
+00:43:44,028 --> 00:43:47,114
+the user's location details indoors and
+by that I mean
+
+715
+00:43:48,014 --> 00:43:51,055
+you can get what Florida users on not
+just
+
+716
+00:43:51,055 --> 00:43:57,119
+where they are
+
+717
+00:43:58,019 --> 00:44:01,044
+regrettable after you have never never
+built before
+
+718
+00:44:01,044 --> 00:44:06,049
+I'm for I we also have new EP I think
+rotation that will make it
+
+719
+00:44:06,049 --> 00:44:10,898
+easier to save power when getting
+significant location updates how to be a
+
+720
+00:44:11,339 --> 00:44:14,790
+better for everyone I'm a big power
+magnet myself
+
+721
+00:44:14,079 --> 00:44:18,115
+for using me is on hand everyone's
+experience that were also changing
+
+722
+00:44:19,015 --> 00:44:22,037
+the user approval model around
+provocation
+
+723
+00:44:22,037 --> 00:44:25,043
+so that users can now are choose to
+prove your app
+
+724
+00:44:25,097 --> 00:44:28,153
+either all the time for a location near
+or only give a
+
+725
+00:44:29,053 --> 00:44:32,069
+you can you can this request to be
+approved only when you're in you
+
+726
+00:44:32,069 --> 00:44:35,156
+so the user can rest assured that your
+app is not using
+
+727
+00:44:36,056 --> 00:44:39,130
+location not draining the battery not
+feeling any secret
+
+728
+00:44:40,003 --> 00:44:45,066
+when your apt if not in use for to
+change provocation
+
+729
+00:44:45,093 --> 00:44:49,152
+so to finish up here want to reiterate
+
+730
+00:44:50,052 --> 00:44:54,121
+some ideas about the design philosophy
+because really I O FA
+
+731
+00:44:54,589 --> 00:44:58,550
+is a is a mark in the fan for how we
+think about
+
+732
+00:44:58,055 --> 00:45:02,114
+building apt in addition to all a bit
+new API
+
+733
+00:45:03,014 --> 00:45:07,463
+so we're going to be centered around
+building reusable code that device
+
+734
+00:45:07,589 --> 00:45:08,750
+taking off stick
+
+735
+00:45:08,075 --> 00:45:11,100
+that is air face orientation agnostic
+that is
+
+736
+00:45:12,000 --> 00:45:16,074
+adaptive so we can use the tools that
+are presented in you like it and I with
+
+737
+00:45:16,074 --> 00:45:16,119
+a
+
+738
+00:45:17,019 --> 00:45:21,050
+to them for fire layout by using things
+like five profits or not
+
+739
+00:45:21,005 --> 00:45:24,020
+worrying about what the specific 5
+things are
+
+740
+00:45:24,065 --> 00:45:27,160
+we use the five clock to make a
+determination whether it's compact
+
+741
+00:45:28,006 --> 00:45:33,042
+a regular and we can't ask for things
+out using the resizable familiar
+
+742
+00:45:33,096 --> 00:45:38,192
+we can use I the iPhone and iPad code in
+a unified way
+
+743
+00:45:39,092 --> 00:45:42,099
+but we only have one bit of code that
+does the right thing
+
+744
+00:45:42,099 --> 00:45:46,103
+on all devices and we're bringing a
+doctor view controller technology to you
+
+745
+00:45:47,039 --> 00:45:51,071
+that will allow you to do that you can
+integrate into the system now using
+
+746
+00:45:51,071 --> 00:45:52,098
+after extension
+
+747
+00:45:52,098 --> 00:45:56,102
+so that the user can do more things in
+more places than ever before
+
+748
+00:45:57,038 --> 00:46:00,122
+and your ass can be more useful for and
+that ever done
+
+749
+00:46:01,022 --> 00:46:04,117
+am finally have we just covered since
+we've introduced
+
+750
+00:46:05,017 --> 00:46:08,050
+several brand new framework for things
+that you just could never do before that
+
+751
+00:46:08,005 --> 00:46:09,027
+now you can do
+
+752
+00:46:09,072 --> 00:46:12,116
+you can expand your tool set using all
+of these
+
+753
+00:46:13,016 --> 00:46:17,097
+brand new thing so if you want more
+information about anything in this
+
+754
+00:46:17,097 --> 00:46:20,446
+talk you can always talk to are
+innumerable
+
+755
+00:46:21,319 --> 00:46:26,040
+frameworks evangelist Jack Barron check
+out our documentation on developer Apple
+
+756
+00:46:26,004 --> 00:46:30,025
+com or head up the dough forms for
+people like me can answer your questions
+
+757
+00:46:30,025 --> 00:46:35,048
+I have a whole bunch related fashion you
+can check out or get out of the way
+
+758
+00:46:35,048 --> 00:46:38,637
+I don't wanna right any block anyone
+from running the down is actually
+
+759
+00:46:39,069 --> 00:46:40,074
+another screen
+
+760
+00:46:40,569 --> 00:46:43,623
+after this for anyone who wants a check
+out more
+
+761
+00:46:44,109 --> 00:46:48,120
+related fashion something too many
+people using pencil
+
+762
+00:46:48,012 --> 00:46:51,040
+is that a national related fashion
+
+763
+00:46:51,004 --> 00:46:56,058
+and we also have a water lab course time
+that the city is packed with my
+
+764
+00:46:56,094 --> 00:46:59,128
+all week I more than I could ever
+
+765
+00:47:00,028 --> 00:47:05,029
+even bother to call out but Cocoa Touch
+labs are the next three days you'll be
+
+766
+00:47:05,038 --> 00:47:08,087
+able to find me and a couple dozen have
+my colleague to answer all your
+
+767
+00:47:08,087 --> 00:47:08,181
+questions
+
+768
+00:47:09,081 --> 00:47:12,099
+related to building you like it
+application
+
+769
+00:47:12,099 --> 00:47:15,156
+and I really hope you're able to get an
+idea
+
+770
+00:47:16,056 --> 00:47:19,065
+all that we have to offer in the BBC and
+I hope you have a fantastic week thanks
+
+771
+00:47:20,046 --> 00:47:20,081
+for coming
+
