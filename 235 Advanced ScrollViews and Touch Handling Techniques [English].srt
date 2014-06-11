@@ -1,0 +1,4918 @@
+1
+00:00:18,008 --> 00:00:20,106
+thanks for coming out this morning and
+welcome to another
+
+2
+00:00:21,006 --> 00:00:26,018
+installment a the US Proview session
+here today we talked a few times in
+
+3
+00:00:26,018 --> 00:00:29,069
+previous years about things related to
+event handling in UIScrollView
+
+4
+00:00:29,069 --> 00:00:33,758
+but we wanna take a little bit more time
+to go deeper into
+
+5
+00:00:34,379 --> 00:00:38,870
+some other details about handling on i
+OS how it interacts with you I
+
+6
+00:00:38,087 --> 00:00:38,169
+ScrollView
+
+7
+00:00:39,069 --> 00:00:43,101
+how US will you use it and how you can
+do interesting things want to know more
+
+8
+00:00:44,001 --> 00:00:44,064
+about it
+
+9
+00:00:44,064 --> 00:00:48,098
+in your own aP's so before we get too
+much into that
+
+10
+00:00:48,098 --> 00:00:51,129
+want to take a brief walk down the
+history of touch handling in
+
+11
+00:00:52,029 --> 00:00:52,111
+UIScrollView
+
+12
+00:00:53,011 --> 00:00:56,104
+so will start out by going all the way
+back to the beginning of time
+
+13
+00:00:57,004 --> 00:01:00,031
+in 2008 with the introduction
+
+14
+00:01:00,031 --> 00:01:04,035
+up iPhone OS 2.0 and the first public
+STK
+
+15
+00:01:04,071 --> 00:01:09,510
+where US groovy was built entirely on
+top of the UI touch API
+
+16
+00:01:10,149 --> 00:01:14,440
+with touches began moved and didn't
+cancelled about
+
+17
+00:01:14,044 --> 00:01:17,113
+and it was bill in the same way that you
+would have written any other bit of code
+
+18
+00:01:17,509 --> 00:01:18,100
+using
+
+19
+00:01:18,001 --> 00:01:22,770
+those you i touch API's and had a few
+limitations that
+
+20
+00:01:22,869 --> 00:01:25,947
+all the books were trying to work around
+by subclassing UIScrollView an
+
+21
+00:01:26,649 --> 00:01:27,727
+overriding those such methods
+
+22
+00:01:28,429 --> 00:01:31,432
+and with difficult to do some of these
+things because you didn't necessarily
+
+23
+00:01:31,729 --> 00:01:32,777
+know how the internals
+
+24
+00:01:33,209 --> 00:01:36,940
+up the US will be worth of work and
+further attempts to add things like
+
+25
+00:01:36,094 --> 00:01:37,170
+nested soap scrub the support
+
+26
+00:01:38,007 --> 00:01:41,056
+putting one scroll view inside another
+and this was much harder than it
+
+27
+00:01:42,019 --> 00:01:43,028
+probably should have been
+
+28
+00:01:43,028 --> 00:01:46,055
+so a year later in 2009
+
+29
+00:01:46,055 --> 00:01:49,116
+we had a big update to you I ScrollView
+that changed
+
+30
+00:01:50,016 --> 00:01:54,099
+pretty much everything about how it I
+look that touches and and use those
+
+31
+00:01:54,099 --> 00:01:54,170
+touches
+
+32
+00:01:55,007 --> 00:01:58,014
+and right out of the box it added
+support for nesting one scroll view
+
+33
+00:01:58,077 --> 00:01:59,077
+inside another
+
+34
+00:01:59,077 --> 00:02:02,516
+so you didn't have to do any of that
+work or subclassing I understand the
+
+35
+00:02:03,209 --> 00:02:07,110
+internals in order to make that happen
+and then later that year
+
+36
+00:02:07,011 --> 00:02:10,030
+we introduce the UN gesture recognizer
+API which
+
+37
+00:02:10,003 --> 00:02:13,192
+really expose the internals of how you I
+ScrollView had started doing these
+
+38
+00:02:13,489 --> 00:02:14,050
+things
+
+39
+00:02:14,005 --> 00:02:17,037
+and let you add that kind of support and
+two other views in your own maps
+
+40
+00:02:17,037 --> 00:02:20,066
+than in 2010 with
+
+41
+00:02:20,066 --> 00:02:24,139
+I was 4.0 there's another fairly big up
+day with the release of the iPhone 4 and
+
+42
+00:02:25,039 --> 00:02:26,061
+retina displays
+
+43
+00:02:26,061 --> 00:02:29,140
+now the interesting thing that happened
+here is that because
+
+44
+00:02:30,004 --> 00:02:33,102
+each dimension up the screen doubled and
+pixel density
+
+45
+00:02:34,038 --> 00:02:36,123
+it meant that there was more per session
+that you could get one positioning
+
+46
+00:02:37,023 --> 00:02:37,095
+elements
+
+47
+00:02:37,095 --> 00:02:40,102
+now for most things you still position
+things on point boundaries
+
+48
+00:02:41,065 --> 00:02:45,077
+so that you could run across different I
+was devices that were either 1x or 2x
+
+49
+00:02:45,077 --> 00:02:48,172
+but US Grove you added support for
+strolling at half-point boundaries
+
+50
+00:02:49,072 --> 00:02:52,143
+so they could scroll to individual pixel
+granularity which give a much much
+
+51
+00:02:53,043 --> 00:02:54,119
+smoother scrolling experience
+
+52
+00:02:55,019 --> 00:02:59,021
+year later with IRS 5 we added support
+for
+
+53
+00:02:59,039 --> 00:03:03,046
+exposing those gesture recognizers that
+we had previously updated and used
+
+54
+00:03:03,046 --> 00:03:06,145
+to add these more advanced growing
+techniques and a UIScrollView
+
+55
+00:03:07,045 --> 00:03:11,077
+and what these gestures were exposed it
+made it a lot easier to interact with a
+
+56
+00:03:11,077 --> 00:03:11,149
+ScrollView
+
+57
+00:03:12,049 --> 00:03:15,114
+in your own aP's so you could do things
+like get the pan gesture recognizer and
+
+58
+00:03:16,014 --> 00:03:17,112
+set up their requirements against it
+
+59
+00:03:18,012 --> 00:03:21,035
+or do all kinds of things like that and
+if you go back to previous year sessions
+
+60
+00:03:21,035 --> 00:03:23,124
+you can see a number of places where we
+talk about how you can do that sort of
+
+61
+00:03:24,024 --> 00:03:24,028
+thing
+
+62
+00:03:24,064 --> 00:03:27,159
+so a lot of interesting things became
+possible what you had access to the
+
+63
+00:03:28,059 --> 00:03:29,126
+gesture recognizers themselves
+
+64
+00:03:30,026 --> 00:03:33,109
+but in 2012 but I was six
+
+65
+00:03:34,009 --> 00:03:38,052
+there was another fairly large a control
+update to you I ScrollView
+
+66
+00:03:38,052 --> 00:03:41,851
+the added support for resting touches
+and so what I mean by this
+
+67
+00:03:42,319 --> 00:03:45,560
+is that in previous years prior to I O S
+six
+
+68
+00:03:45,056 --> 00:03:48,128
+if you put a finger down on the yuan a
+UIScrollView that was the finger this
+
+69
+00:03:49,028 --> 00:03:50,817
+role he was going to track for scrolling
+
+70
+00:03:51,069 --> 00:03:54,780
+so he did something like grab an iPad
+around the edge in your farm happened to
+
+71
+00:03:54,078 --> 00:03:55,092
+land on a ScrollView
+
+72
+00:03:55,092 --> 00:03:57,160
+you would try and throw with another
+finger and nothing would happen because
+
+73
+00:03:58,006 --> 00:03:59,077
+it was tracking that first finger
+
+74
+00:04:00,031 --> 00:04:04,068
+now with OSX we started looking at all
+at the touch is that we're anywhere in
+
+75
+00:04:04,068 --> 00:04:04,152
+the scroll view
+
+76
+00:04:05,052 --> 00:04:07,141
+and only paying attention to the ones
+that were actually moving at any given
+
+77
+00:04:08,041 --> 00:04:08,590
+time
+
+78
+00:04:08,959 --> 00:04:12,240
+so even if you had a touch sitting there
+resting and not going anywhere
+
+79
+00:04:12,024 --> 00:04:15,068
+it didn't prevent you from scrolling and
+you could still I interact with other
+
+80
+00:04:15,068 --> 00:04:15,134
+fingers
+
+81
+00:04:16,034 --> 00:04:19,333
+so that was a really big and interesting
+update and we'll see some way that we
+
+82
+00:04:19,639 --> 00:04:21,658
+are gonna take advantage about later
+today
+
+83
+00:04:21,829 --> 00:04:25,850
+and finally last year with Iowa seven we
+added support for dismissing the
+
+84
+00:04:25,085 --> 00:04:26,136
+keyboard using UIScrollView
+
+85
+00:04:27,036 --> 00:04:29,131
+and there's a new property that you may
+have noticed was added last year that
+
+86
+00:04:30,031 --> 00:04:30,072
+lets you
+
+87
+00:04:30,072 --> 00:04:32,981
+decide whether or not scrolling a
+ScrollView and having a finger
+
+88
+00:04:33,629 --> 00:04:35,400
+intersects the keyboard
+
+89
+00:04:35,004 --> 00:04:40,019
+will push it down off the screen so over
+the years the US ScrollView API has
+
+90
+00:04:40,055 --> 00:04:41,121
+remained fairly stable
+
+91
+00:04:42,021 --> 00:04:45,910
+there haven't been a lot of changes in
+the API but under the covers
+
+92
+00:04:46,099 --> 00:04:49,136
+there been a lot of internal touch
+handling changes they have added all
+
+93
+00:04:49,469 --> 00:04:52,180
+sorts of new things that you can do
+
+94
+00:04:52,018 --> 00:04:55,437
+what you know about how some of these
+internals a ScrollView in touch and leon
+
+95
+00:04:55,599 --> 00:04:56,668
+i less work
+
+96
+00:04:57,289 --> 00:05:01,830
+so we're gonna take a look at three
+areas a touch channeling today
+
+97
+00:05:01,083 --> 00:05:04,382
+and they're gonna talk about three
+things that you can do once you know
+
+98
+00:05:05,129 --> 00:05:06,136
+about these bits have
+
+99
+00:05:06,199 --> 00:05:09,251
+touch channeling information so three
+techniques
+
+100
+00:05:09,719 --> 00:05:12,720
+based on three areas a touch handling
+knows
+
+101
+00:05:12,819 --> 00:05:15,838
+takes a touch handling things will talk
+about well first off we're going to
+
+102
+00:05:16,009 --> 00:05:16,097
+start with hit testing
+
+103
+00:05:16,889 --> 00:05:19,981
+has hit testing is the most fundamental
+part handling touches on iowa's
+
+104
+00:05:20,809 --> 00:05:23,832
+when a finger comes down on the screen
+what got hit and what element are you
+
+105
+00:05:24,039 --> 00:05:25,085
+trying to interact with
+
+106
+00:05:25,499 --> 00:05:28,610
+to look a little bit more deeply at how
+it works and ways that you can
+
+107
+00:05:28,061 --> 00:05:32,670
+adjust things during head testing to get
+interesting behaviors
+
+108
+00:05:33,219 --> 00:05:36,460
+that will spend some time talking about
+you I gesture recognizer lead to
+
+109
+00:05:36,046 --> 00:05:39,905
+something we talked about many times in
+the past in various different sessions
+
+110
+00:05:40,319 --> 00:05:43,300
+but we have some new interesting ways
+that you can use gesture recognizers
+
+111
+00:05:43,003 --> 00:05:44,482
+along with your scroll views
+
+112
+00:05:44,779 --> 00:05:47,830
+I will give you some ideas about things
+you can do in your app's so we get to
+
+113
+00:05:47,083 --> 00:05:48,155
+that later today
+
+114
+00:05:49,055 --> 00:05:52,754
+and then we're going to talk about touch
+delivery so the way that touches flow
+
+115
+00:05:53,249 --> 00:05:56,334
+through the system get delivered to
+views interact with gesture recognizers
+
+116
+00:05:57,099 --> 00:06:00,133
+and how you can take advantage of that
+information and other interesting ways
+
+117
+00:06:00,439 --> 00:06:05,330
+once we get to our three techniques so
+how about those three techniques
+
+118
+00:06:05,033 --> 00:06:08,109
+we're gonna talk about transparent
+overlays putting content on top of your
+
+119
+00:06:09,009 --> 00:06:10,058
+other content
+
+120
+00:06:10,139 --> 00:06:13,120
+making sure you can still interact with
+everything and things don't end up
+
+121
+00:06:13,012 --> 00:06:15,036
+behaving strangely
+
+122
+00:06:15,036 --> 00:06:18,125
+we'll talk about dragging while
+scrolling with a something that I
+
+123
+00:06:18,449 --> 00:06:21,458
+actually find pretty exciting and and
+because the really cool thing you can do
+
+124
+00:06:21,539 --> 00:06:22,580
+with really is
+
+125
+00:06:22,058 --> 00:06:25,111
+so you can have content in your school
+view that you interact with
+
+126
+00:06:26,011 --> 00:06:29,400
+say something that you wanna pick up in
+drag around but
+
+127
+00:06:29,499 --> 00:06:32,506
+often you might wanna vent be able to
+continue scrolling with another finger
+
+128
+00:06:33,199 --> 00:06:36,205
+and I mentioned before that we had this
+resting touch support and ideas about
+
+129
+00:06:36,259 --> 00:06:38,900
+how you can interact with multiple
+fingers on a ScrollView so we'll look at
+
+130
+00:06:38,009 --> 00:06:39,018
+how you can use that information
+
+131
+00:06:40,008 --> 00:06:45,087
+to add support for dragging content
+while also scrolling this role you
+
+132
+00:06:45,879 --> 00:06:49,879
+and then finally will and by talking
+about highlighting objects which
+
+133
+00:06:49,879 --> 00:06:53,490
+may not seem at first like a really key
+part but it
+
+134
+00:06:53,049 --> 00:06:56,338
+part of the reason it doesn't seem so
+key an interesting is because it just
+
+135
+00:06:56,779 --> 00:07:00,800
+often does the right thing and you don't
+think about it and so in places where a
+
+136
+00:07:00,008 --> 00:07:00,013
+dozen
+
+137
+00:07:01,003 --> 00:07:04,482
+you end up seeing some jarring effects
+and we'll talk about how that happens
+
+138
+00:07:04,779 --> 00:07:05,864
+and how we can go about fixing it
+
+139
+00:07:06,629 --> 00:07:09,680
+and look at some internal implementation
+ideas that house call the US taken
+
+140
+00:07:10,139 --> 00:07:11,182
+gesture recognizers
+
+141
+00:07:11,569 --> 00:07:14,578
+to do interesting things with highlights
+
+142
+00:07:14,659 --> 00:07:19,662
+so three areas a touch and Ling and
+three techniques
+
+143
+00:07:19,689 --> 00:07:22,755
+book it started with transparent
+overlays of course if we're gonna put
+
+144
+00:07:23,349 --> 00:07:25,421
+things on top of things that's probably
+going to involve some sort of
+
+145
+00:07:26,069 --> 00:07:27,125
+information about the testing
+
+146
+00:07:27,629 --> 00:07:31,654
+so we'll get into that but before we do
+i just want to give you a quick idea of
+
+147
+00:07:31,879 --> 00:07:34,922
+the kind of thing that I'm talking about
+and where we use this sort of technique
+
+148
+00:07:35,309 --> 00:07:38,367
+and I was ourselves so let's take a look
+at the home screen
+
+149
+00:07:38,889 --> 00:07:42,330
+where we added spotlight and I i seven
+up at the top of the screen
+
+150
+00:07:42,033 --> 00:07:45,077
+you can drag your finger down and pull
+spotlight down in from the top of the
+
+151
+00:07:45,077 --> 00:07:46,846
+screen
+
+152
+00:07:47,539 --> 00:07:50,586
+believe it or not this is actually done
+using a UIScrollView down
+
+153
+00:07:51,009 --> 00:07:54,100
+its really more of a transparent overlay
+ScrollView it doesn't really draw
+
+154
+00:07:54,919 --> 00:07:56,610
+anything itself
+
+155
+00:07:56,061 --> 00:07:58,155
+but it's an interesting technique and
+we'll take a look at how we can use this
+
+156
+00:07:59,055 --> 00:08:00,384
+in our own aP's
+
+157
+00:08:00,879 --> 00:08:02,964
+so before I get too much into the
+details of how it works are taking three
+
+158
+00:08:03,729 --> 00:08:05,770
+slides or anything which could have
+elisa come up
+
+159
+00:08:05,077 --> 00:08:12,077
+and do a demo to show you what we're
+gonna build
+
+160
+00:08:16,029 --> 00:08:18,058
+hi iight
+
+161
+00:08:18,058 --> 00:08:21,987
+got a little at here that I've started
+building and doesn't do very much yet
+
+162
+00:08:22,509 --> 00:08:25,512
+drive a bunch of dot in a canvas and
+
+163
+00:08:25,539 --> 00:08:29,680
+and soon we're gonna add support for
+dragging them around but for now
+
+164
+00:08:29,068 --> 00:08:32,081
+the dots highlight I hope you can see
+that
+
+165
+00:08:32,081 --> 00:08:35,158
+in that touches began and the on
+highlight in touch is ended and touch is
+
+166
+00:08:36,058 --> 00:08:36,064
+cancelled
+
+167
+00:08:37,018 --> 00:08:40,095
+so the first thing that I wanna do here
+
+168
+00:08:40,095 --> 00:08:45,108
+is added a drawer that you can pull down
+over the top by penning anywhere in the
+
+169
+00:08:46,008 --> 00:08:46,066
+canvas
+
+170
+00:08:46,066 --> 00:08:49,070
+and and so in order to do that we're
+going to need to
+
+171
+00:08:50,006 --> 00:08:53,060
+add a ScrollView that covers the entire
+add
+
+172
+00:08:53,006 --> 00:08:56,009
+canvas so I'm gonna switch over to the
+code
+
+173
+00:08:56,009 --> 00:08:59,023
+and you can see this is pretty much it
+
+174
+00:09:00,004 --> 00:09:03,089
+I got a little dot you class that I that
+
+175
+00:09:03,089 --> 00:09:06,157
+I'm can make a random dot you that the
+random color
+
+176
+00:09:07,057 --> 00:09:11,135
+and I gotta candace you that has 25 got
+added to it and there
+
+177
+00:09:12,035 --> 00:09:15,127
+arranged randomly interview so the first
+thing that i'm gonna do
+
+178
+00:09:16,027 --> 00:09:20,056
+is added a ScrollView and I'm also gonna
+how to draw review and what we're gonna
+
+179
+00:09:20,056 --> 00:09:21,064
+do is take advantage of the new
+
+180
+00:09:22,036 --> 00:09:26,062
+I API that without an Iowa 8 I you I
+visual effects view which allows you to
+
+181
+00:09:26,062 --> 00:09:27,114
+create blurry content
+
+182
+00:09:28,014 --> 00:09:31,108
+in your applications and doesn't this
+droid gonna cover part of the screen
+
+183
+00:09:32,008 --> 00:09:35,100
+will get offensive that by making it
+blurry so
+
+184
+00:09:36,000 --> 00:09:39,004
+go ahead and make these guys
+
+185
+00:09:39,004 --> 00:09:43,036
+so are ScrollView get added to the view
+
+186
+00:09:43,036 --> 00:09:47,205
+the drawer view is going to be a you a
+visual effect view
+
+187
+00:09:47,529 --> 00:09:52,240
+initialized within a fact and the effect
+I want is a dark blur
+
+188
+00:09:52,024 --> 00:09:56,030
+so I'm going to ask for you I blur
+effect affect with style
+
+189
+00:09:56,003 --> 00:10:01,091
+blur effect I'll dark I need to choose a
+frame for my drive you
+
+190
+00:10:02,018 --> 00:10:05,066
+I'm gonna make it the the with the
+screen and 650 points
+
+191
+00:10:05,066 --> 00:10:08,082
+tall because that looked good when I
+tried it out and
+
+192
+00:10:08,082 --> 00:10:11,130
+I'm gonna add it to this review is the
+subjective okay
+
+193
+00:10:12,003 --> 00:10:16,412
+one more thing we need to do is tell
+this groove you how big
+
+194
+00:10:16,709 --> 00:10:19,709
+its content is so I'm gonna make
+
+195
+00:10:19,709 --> 00:10:23,400
+a content size which is the the whip the
+I
+
+196
+00:10:23,004 --> 00:10:26,100
+screen but the high I have my bounds
+plus the drug use freemen that will get
+
+197
+00:10:27,036 --> 00:10:30,087
+giveth enough room to scroll that drove
+you entirely off the screen
+
+198
+00:10:30,087 --> 00:10:33,136
+at the top and finally I'm gonna
+
+199
+00:10:34,036 --> 00:10:37,040
+that starting content of that to make
+that up launch
+
+200
+00:10:37,004 --> 00:10:40,080
+with the drug is called off the screen
+so go ahead and run it
+
+201
+00:10:41,016 --> 00:10:44,020
+rights we've got our dot
+
+202
+00:10:44,002 --> 00:10:47,007
+and that now if I scroll I get a blurry
+
+203
+00:10:47,007 --> 00:10:51,586
+drawer cool unfortunately I've broken
+touch handling
+
+204
+00:10:52,279 --> 00:10:55,450
+I'm so if I now scroll that drove away
+and I try to tap
+
+205
+00:10:55,045 --> 00:10:58,090
+on these got and i'm having nothing
+happening
+
+206
+00:10:58,009 --> 00:11:01,084
+so the reason for that might be a parent
+if you think about it
+
+207
+00:11:02,065 --> 00:11:05,132
+I've taken at big screen size US really
+wanna come to town on top
+
+208
+00:11:06,032 --> 00:11:09,100
+so of course it's blocking touch
+delivery to the content underneath
+
+209
+00:11:10,000 --> 00:11:13,779
+I'm touches are going to this role you
+not with allowing me to pan
+
+210
+00:11:13,779 --> 00:11:17,480
+right to fix it what can we do
+
+211
+00:11:17,048 --> 00:11:20,065
+one thing you might consider doing is
+
+212
+00:11:20,065 --> 00:11:23,066
+turning of user interaction on this
+cruelty that's generally
+
+213
+00:11:23,066 --> 00:11:27,070
+a pretty good way of getting touches to
+pass through a user interface element
+
+214
+00:11:27,007 --> 00:11:27,082
+that you got in
+
+215
+00:11:28,045 --> 00:11:31,124
+I'm so let's try that and
+
+216
+00:11:32,024 --> 00:11:35,117
+ScrollView that you turn action enabled
+no run it again
+
+217
+00:11:36,017 --> 00:11:40,052
+and now excellent touches are now going
+to
+
+218
+00:11:40,052 --> 00:11:43,741
+I dot as they were before but if I try
+to scroll
+
+219
+00:11:44,209 --> 00:11:47,850
+a course nothing happened at so why not
+well obviously I'm
+
+220
+00:11:47,085 --> 00:11:50,117
+disable user interaction on this will be
+so it can't scroll
+
+221
+00:11:51,017 --> 00:11:55,030
+I'm right so that's no good so
+
+222
+00:11:55,003 --> 00:11:59,100
+the way we can actually fix this at
+least the way we're gonna start to pick
+
+223
+00:12:00,027 --> 00:12:00,069
+that
+
+224
+00:12:00,069 --> 00:12:03,150
+is to use a technique that Josh tonight
+introduced in a session
+
+225
+00:12:04,005 --> 00:12:07,090
+two years ago I'm on Open GL content and
+it works here as well
+
+226
+00:12:08,035 --> 00:12:12,107
+you can take the scroll use hand gesture
+which is exposed as a property that you
+
+227
+00:12:13,007 --> 00:12:13,079
+can access
+
+228
+00:12:13,079 --> 00:12:17,126
+and you can move it onto another view
+I'm in order to restore panning in a
+
+229
+00:12:18,026 --> 00:12:19,117
+situation where the screw view isn't
+
+230
+00:12:20,017 --> 00:12:23,056
+suitable to be being the view that
+getting the patches
+
+231
+00:12:23,209 --> 00:12:26,760
+so we're gonna use that technique here
+and we're gonna actually move
+
+232
+00:12:26,076 --> 00:12:29,077
+the just the pet the scroll use pen just
+recognizer
+
+233
+00:12:29,086 --> 00:12:32,555
+onto the my view controller's view
+
+234
+00:12:33,329 --> 00:12:36,550
+so on to the school you super view I'm
+this way
+
+235
+00:12:36,055 --> 00:12:39,110
+the scroll you can can continue to have
+its user interaction disabled
+
+236
+00:12:40,001 --> 00:12:45,079
+but the panning will be restored
+
+237
+00:12:45,088 --> 00:12:48,092
+so it got touches going to the dot
+
+238
+00:12:48,092 --> 00:12:51,131
+and now I also have pending working so
+
+239
+00:12:51,959 --> 00:12:55,310
+now kinda starting to look like we've
+got this overlay behavior the way we
+
+240
+00:12:55,031 --> 00:12:55,110
+want it
+
+241
+00:12:56,001 --> 00:12:59,093
+and let me go ahead and add some
+additional dots in a drawer
+
+242
+00:13:00,002 --> 00:13:03,087
+and cuz need something in the drawer
+
+243
+00:13:03,087 --> 00:13:06,091
+so I'm gonna say add twenty dots to the
+drawer view
+
+244
+00:13:06,091 --> 00:13:09,880
+noticed that when I do this I ask for
+the drive use content view
+
+245
+00:13:10,699 --> 00:13:14,900
+and this is because drew the drawer view
+is a US visual effects you and you a
+
+246
+00:13:14,009 --> 00:13:15,318
+visual effects view
+
+247
+00:13:16,209 --> 00:13:19,620
+at views how are doing a lot of work in
+order to make up blur happen
+
+248
+00:13:19,062 --> 00:13:22,093
+and in order to avoid it interfering
+with it you add any
+
+249
+00:13:22,093 --> 00:13:27,166
+additional content into this content
+view that they expose
+
+250
+00:13:28,066 --> 00:13:31,128
+and then in order to differentiate the
+drawer from the
+
+251
+00:13:32,028 --> 00:13:36,102
+candidates I'm gonna arrange the dots
+neatly I in the drive you
+
+252
+00:13:37,002 --> 00:13:41,004
+right so can run it for the drawdown
+
+253
+00:13:41,004 --> 00:13:44,533
+got my neatly arranged ot I can interact
+with
+
+254
+00:13:44,569 --> 00:13:47,656
+the dots in the canvas but i cant
+interact
+
+255
+00:13:48,439 --> 00:13:51,515
+with the dot in the drawer and in fact
+moreover if you look
+
+256
+00:13:52,199 --> 00:13:55,910
+through the drawer at this like orange
+and blue guy here you can see that I can
+
+257
+00:13:55,091 --> 00:13:58,097
+interact with the dots that are behind
+the dryer still
+
+258
+00:13:58,097 --> 00:14:01,114
+right to know why is that happening
+
+259
+00:14:02,014 --> 00:14:06,018
+well I disable user user interaction on
+this review and the drawer view it and
+
+260
+00:14:06,054 --> 00:14:06,136
+thoughts are
+
+261
+00:14:07,036 --> 00:14:10,104
+in the scroll you so touches are passing
+rate through
+
+262
+00:14:11,004 --> 00:14:14,056
+this role you the drive you the dot to
+the content behind it which is not what
+
+263
+00:14:14,056 --> 00:14:14,115
+we want
+
+264
+00:14:15,015 --> 00:14:18,016
+so in this case disabling
+
+265
+00:14:18,025 --> 00:14:22,106
+user interaction was kinda too big a
+hammer it got most of the behavior that
+
+266
+00:14:23,006 --> 00:14:26,007
+we wanted but now it now as soon as we
+want to interact with something
+
+267
+00:14:26,016 --> 00:14:30,024
+in that you hierarchy we can't summit
+turn it back over to Josh
+
+268
+00:14:30,024 --> 00:14:33,055
+to explain a finer grain technique that
+we can use
+
+269
+00:14:33,055 --> 00:14:40,055
+to get the behavior that we want here
+
+270
+00:14:42,109 --> 00:14:44,203
+alright so we're getting closer but
+
+271
+00:14:45,049 --> 00:14:48,103
+as ELISA was mentioning we've just gone
+a little bit too far with this disabling
+
+272
+00:14:48,589 --> 00:14:48,650
+a music
+
+273
+00:14:49,199 --> 00:14:52,238
+user interaction on ScrollView pick up
+part of what we wanted but it went
+
+274
+00:14:52,589 --> 00:14:53,685
+beyond and a little bit too much
+
+275
+00:14:54,549 --> 00:14:57,636
+so to start figuring out how we can be a
+little bit more precise and what we're
+
+276
+00:14:58,419 --> 00:14:58,491
+trying to do
+
+277
+00:14:59,139 --> 00:15:03,040
+we have to take a look at how he testing
+works and that is going to be using the
+
+278
+00:15:03,004 --> 00:15:04,323
+method hit test with a bat
+
+279
+00:15:04,359 --> 00:15:08,406
+hit us with event is the method that you
+used when a new touch comes down on
+
+280
+00:15:08,829 --> 00:15:10,600
+screen to figure out what
+
+281
+00:15:10,006 --> 00:15:13,062
+we should deliver the touch to and what
+gesture recognizers should end up being
+
+282
+00:15:14,016 --> 00:15:15,905
+involved in looking at that touch
+
+283
+00:15:16,049 --> 00:15:19,084
+so before we look at how we're going to
+use it
+
+284
+00:15:19,399 --> 00:15:22,473
+let's talk a little bit more
+specifically about what exactly it does
+
+285
+00:15:23,139 --> 00:15:26,213
+I wanna do that by going through and
+writing a little bit of pseudo code to
+
+286
+00:15:26,879 --> 00:15:27,892
+just show you the
+
+287
+00:15:28,009 --> 00:15:32,091
+order things it does and how it goes
+about doing it so here I've got a swift
+
+288
+00:15:32,829 --> 00:15:32,904
+version I have
+
+289
+00:15:33,579 --> 00:15:36,613
+hit us with event down this is our
+
+290
+00:15:36,919 --> 00:15:42,920
+of course function syntax right there so
+the first thing a test with event does
+
+291
+00:15:42,929 --> 00:15:45,955
+is it checks to see whether or not the
+point being passed in that you're trying
+
+292
+00:15:46,189 --> 00:15:46,276
+to hit test
+
+293
+00:15:47,059 --> 00:15:50,850
+is actually within the viewer not and it
+does that by checking to see
+
+294
+00:15:50,085 --> 00:15:53,604
+is this point within my views bounce so
+
+295
+00:15:54,369 --> 00:15:57,402
+if it is that we're going to do some
+other stuff if it's not we just returned
+
+296
+00:15:57,699 --> 00:15:57,705
+mail
+
+297
+00:15:58,299 --> 00:16:01,375
+so if the view finds that the point is
+being asked about is it and it bounced
+
+298
+00:16:02,059 --> 00:16:05,084
+every turns nail to indicate that it's
+not interested in this view
+
+299
+00:16:05,309 --> 00:16:11,366
+that story in this touch that point so
+then the next thing it has to do
+
+300
+00:16:11,879 --> 00:16:16,906
+is return itself if it actually was in
+the bounce
+
+301
+00:16:17,149 --> 00:16:20,155
+so by default if it within the bounds we
+at least had the view itself
+
+302
+00:16:20,749 --> 00:16:23,794
+and that's where we're running into
+trouble with that transparent part
+
+303
+00:16:24,199 --> 00:16:27,225
+right at the beginning even though we
+weren't getting any sub is a ScrollView
+
+304
+00:16:27,459 --> 00:16:28,502
+in there was no content there
+
+305
+00:16:28,889 --> 00:16:32,110
+as long as the touch was within this
+role these bounds the scroll view was we
+
+306
+00:16:32,011 --> 00:16:34,400
+got going to return itself as the thing
+I got hit
+
+307
+00:16:34,499 --> 00:16:38,543
+now of course you can also hit test into
+some views above you
+
+308
+00:16:38,939 --> 00:16:41,978
+so once we decided that it's actually
+within our bounds we're gonna
+
+309
+00:16:42,329 --> 00:16:45,350
+iterate through all of our sub views and
+see if it's in any of them
+
+310
+00:16:45,035 --> 00:16:48,066
+so we're gonna go through and had an
+inner loop where we walk over all a
+
+311
+00:16:48,066 --> 00:16:48,955
+farce abuse
+
+312
+00:16:49,549 --> 00:16:53,557
+importantly here we're going to do this
+from back to front because if you think
+
+313
+00:16:53,629 --> 00:16:54,667
+about how rendering works
+
+314
+00:16:55,009 --> 00:16:58,092
+we render the first sub you in on the
+next one and the next one
+
+315
+00:16:58,839 --> 00:17:01,841
+all the way through to the end of the
+list of sub use and so whenever one
+
+316
+00:17:02,039 --> 00:17:03,127
+rendered last is visually on top
+
+317
+00:17:03,919 --> 00:17:06,920
+so we want to perform the hit test in
+reverse order so that we owe it would
+
+318
+00:17:06,929 --> 00:17:07,965
+help the one on top first
+
+319
+00:17:08,289 --> 00:17:13,377
+sorry enter it backwards through the sub
+US and ask each of our sub use
+
+320
+00:17:14,169 --> 00:17:17,261
+whether or not it got hit. so we call
+hit us with the bat recur simply
+
+321
+00:17:18,089 --> 00:17:22,145
+on the sub use now one of them does
+return something other than Dale
+
+322
+00:17:22,649 --> 00:17:25,728
+we're just gonna return whatever it
+returns and then that'll break the
+
+323
+00:17:26,439 --> 00:17:26,446
+recursion
+
+324
+00:17:27,139 --> 00:17:30,227
+so the first sub you that were to hit
+something it would
+
+325
+00:17:31,019 --> 00:17:34,990
+end up being returned as the thing that
+got hit that's pretty much all there is
+
+326
+00:17:34,099 --> 00:17:35,148
+to it it's pretty straightforward
+
+327
+00:17:36,048 --> 00:17:39,053
+I've also got a version here in
+
+328
+00:17:39,098 --> 00:17:43,120
+objective-c case at that big difference
+was too big a difference
+
+329
+00:17:44,002 --> 00:17:51,002
+but in so now let's take a look at our
+sample app
+
+330
+00:17:51,389 --> 00:17:54,510
+and figure out exactly how we can use
+this information
+
+331
+00:17:54,051 --> 00:17:57,053
+to get the behavior that were looking
+for the first love we're gonna go in re
+
+332
+00:17:57,071 --> 00:17:57,144
+enable
+
+333
+00:17:58,044 --> 00:18:01,253
+on user interaction on this role you
+because we decided that that was just
+
+334
+00:18:01,649 --> 00:18:01,653
+not
+
+335
+00:18:02,049 --> 00:18:05,061
+a the right approach it was too big a
+hammer so everything we're gonna talk
+
+336
+00:18:05,169 --> 00:18:08,070
+about right now we're going to assume
+that we've turned user interaction back
+
+337
+00:18:08,007 --> 00:18:08,496
+on
+
+338
+00:18:08,559 --> 00:18:12,970
+and go back to Mac so let's start by
+looking at our view hierarchy
+
+339
+00:18:12,097 --> 00:18:15,536
+we've got that you a view controller's
+view it's the reviewer hierarchy
+
+340
+00:18:16,409 --> 00:18:20,414
+an end to that elisa added a dot view a
+container view that has all the dots
+
+341
+00:18:20,909 --> 00:18:24,230
+in it so we've got a direct sub you have
+the view controller that has all the
+
+342
+00:18:24,023 --> 00:18:24,572
+dots
+
+343
+00:18:24,779 --> 00:18:28,814
+that view has a sibling another sub you
+are bad view controller
+
+344
+00:18:29,129 --> 00:18:34,470
+and that the UIScrollView so those are
+siblings but the US role he was the
+
+345
+00:18:34,047 --> 00:18:35,082
+second in a sub the order
+
+346
+00:18:35,082 --> 00:18:37,911
+so as we just talked about a hit test
+that's the one that I get had tested
+
+347
+00:18:38,649 --> 00:18:39,210
+first
+
+348
+00:18:39,021 --> 00:18:42,108
+and then we have a sub you with a
+ScrollView which is a drawer view that
+
+349
+00:18:43,008 --> 00:18:44,097
+inside the scroll view
+
+350
+00:18:44,169 --> 00:18:48,200
+so now let's take a look at how touches
+flow-through during that had tested
+
+351
+00:18:48,002 --> 00:18:49,090
+between all these different views
+
+352
+00:18:50,008 --> 00:18:52,977
+and to do so it'll be a little easier if
+we can see them all at once so I'm just
+
+353
+00:18:53,049 --> 00:18:56,058
+gonna split it out so we can take a look
+at it as a touch comes down and see what
+
+354
+00:18:56,139 --> 00:18:56,690
+happens
+
+355
+00:18:56,069 --> 00:18:59,768
+now first falling into remove that dot
+view
+
+356
+00:19:00,389 --> 00:19:04,080
+because we already mentioned as were hit
+testing we're going from back to front
+
+357
+00:19:04,008 --> 00:19:07,857
+and whichever one gets hit first then
+return something will end up
+
+358
+00:19:07,929 --> 00:19:10,952
+I ending the rigors and we won't iterate
+through the other sub you so
+
+359
+00:19:11,159 --> 00:19:15,490
+as it starts we're never gonna even get
+touches going to that dot you at all
+
+360
+00:19:15,049 --> 00:19:18,061
+so I forgot about that first
+
+361
+00:19:18,061 --> 00:19:21,130
+now it's a touch comes down in the
+drawer area
+
+362
+00:19:21,679 --> 00:19:25,490
+see what happens so it all comes down to
+their we start out at the root view the
+
+363
+00:19:25,049 --> 00:19:26,101
+view controller's view
+
+364
+00:19:27,001 --> 00:19:29,890
+and then we work our way through its
+abuse and we find that the scroll view
+
+365
+00:19:29,899 --> 00:19:31,988
+was gonna hit something and it works
+through its abuse
+
+366
+00:19:32,789 --> 00:19:35,740
+and we find that the drawer view is
+gonna hit something and then there's
+
+367
+00:19:35,074 --> 00:19:38,075
+probably a dot in there are maybe not to
+but we're at least going to end up
+
+368
+00:19:38,075 --> 00:19:39,374
+returning the drawer view
+
+369
+00:19:40,049 --> 00:19:43,060
+maybe the .be so that part already
+worked that was easy
+
+370
+00:19:43,159 --> 00:19:46,330
+there is no problem there so now the
+issue came up when we were in that
+
+371
+00:19:46,033 --> 00:19:49,052
+transparent area the scroll view that
+was farther down
+
+372
+00:19:49,052 --> 00:19:52,191
+so Touch comes down down there
+
+373
+00:19:52,659 --> 00:19:56,682
+we start with the view controller looks
+through its abuse finds the scroll view
+
+374
+00:19:56,889 --> 00:19:58,980
+and even though there's no content
+visually there it's in the bounce so it
+
+375
+00:19:59,799 --> 00:20:01,806
+returns itself
+
+376
+00:20:01,869 --> 00:20:04,963
+and so that the place where we have to
+do something to fix this and
+
+377
+00:20:05,809 --> 00:20:09,210
+perfect actually is pretty similar to
+what I just said there every turns
+
+378
+00:20:09,021 --> 00:20:10,200
+itself
+
+379
+00:20:10,389 --> 00:20:13,570
+that's the only place where this role he
+was gonna return itself from hit us with
+
+380
+00:20:13,057 --> 00:20:13,766
+that
+
+381
+00:20:14,279 --> 00:20:16,840
+in the other case where things were
+working it was returning one of its
+
+382
+00:20:16,084 --> 00:20:17,393
+abuse
+
+383
+00:20:18,149 --> 00:20:21,214
+so we can do something we're taking
+advantage of only the case
+
+384
+00:20:21,799 --> 00:20:25,110
+wheres Ravi is returning itself and
+instead of returning itself we want a
+
+385
+00:20:25,011 --> 00:20:26,019
+return nil
+
+386
+00:20:26,019 --> 00:20:29,048
+which will cause that's super you they
+view controller's view to move on and
+
+387
+00:20:29,048 --> 00:20:30,073
+look through the other views
+
+388
+00:20:30,073 --> 00:20:33,094
+that are some things I've itself and
+that would allow us to instead of
+
+389
+00:20:33,094 --> 00:20:34,273
+heading a ScrollView
+
+390
+00:20:35,119 --> 00:20:38,470
+hit either the dot view or 12 the dots
+later in the dot view
+
+391
+00:20:38,047 --> 00:20:42,101
+instead so what we can do is we can
+subclass UIScrollView
+
+392
+00:20:43,001 --> 00:20:46,110
+and over I'd hit us with the back
+
+393
+00:20:46,119 --> 00:20:49,210
+course what we've overridden it we just
+actually most at the time want the
+
+394
+00:20:49,021 --> 00:20:50,047
+default behavior
+
+395
+00:20:50,047 --> 00:20:55,069
+so we'll call super and hang onto the
+result that we get there
+
+396
+00:20:55,069 --> 00:20:58,075
+if the thing that the superclass
+implementation returned was
+
+397
+00:20:58,075 --> 00:21:01,080
+a ScrollView itself that means that
+we're in a transparent area
+
+398
+00:21:02,025 --> 00:21:04,814
+so in that case will return nil which
+will cause that you are you controlling
+
+399
+00:21:05,039 --> 00:21:05,710
+the outer
+
+400
+00:21:05,071 --> 00:21:08,540
+view to continue through this abuse and
+find the dots and hit something and
+
+401
+00:21:09,179 --> 00:21:10,330
+they're
+
+402
+00:21:10,033 --> 00:21:13,108
+so pretty straightforward fax lies is
+gonna come up now and make a chain strap
+
+403
+00:21:14,008 --> 00:21:21,008
+and see how you're doing
+
+404
+00:21:24,047 --> 00:21:27,074
+right so I've started to add this class
+here
+
+405
+00:21:27,074 --> 00:21:30,993
+new subclass if US role you have called
+it relay throw you
+
+406
+00:21:31,659 --> 00:21:34,733
+let's go ahead and add that to the
+project
+
+407
+00:21:35,399 --> 00:21:38,940
+I'm first thing I'm gonna do is just get
+rid of the implementation that was
+
+408
+00:21:38,094 --> 00:21:38,963
+provided
+
+409
+00:21:39,809 --> 00:21:42,940
+so we want to do here is
+
+410
+00:21:42,094 --> 00:21:46,133
+a as judge said override hit test with
+it then this is really the only point of
+
+411
+00:21:47,033 --> 00:21:47,096
+this
+
+412
+00:21:47,096 --> 00:21:50,295
+a UIScrollView sunglasses to not return
+it fell
+
+413
+00:21:51,159 --> 00:21:54,208
+from a testing so we're going to
+
+414
+00:21:54,649 --> 00:21:58,350
+call super hit us with a 10 and for in
+the most
+
+415
+00:21:58,035 --> 00:22:01,086
+most of the cases will return the view
+that was that was returned from the
+
+416
+00:22:01,086 --> 00:22:02,285
+super implementation
+
+417
+00:22:03,059 --> 00:22:06,146
+but if the super implementation returned
+the scroll you
+
+418
+00:22:06,929 --> 00:22:10,340
+that means that we were that the cuts
+came down in an area this really that
+
+419
+00:22:10,034 --> 00:22:11,583
+didn't have any other contact
+
+420
+00:22:11,889 --> 00:22:15,270
+and in that case we want to allow the
+touch to pass through this role you
+
+421
+00:22:15,027 --> 00:22:18,076
+and go on to the other siblings have
+this girl use this review
+
+422
+00:22:18,076 --> 00:22:21,077
+so will return nil in that case and
+that's pretty much
+
+423
+00:22:21,086 --> 00:22:24,123
+it so we need to go back to the view
+controller
+
+424
+00:22:25,023 --> 00:22:29,182
+and import that file
+
+425
+00:22:29,389 --> 00:22:32,467
+and then here where I'm creating my
+scroll view instead of creating a
+
+426
+00:22:33,169 --> 00:22:34,194
+UIScrollView
+
+427
+00:22:34,419 --> 00:22:37,830
+I'm gonna just create an release review
+and and
+
+428
+00:22:37,083 --> 00:22:41,932
+I need to remember to stock disabling
+user interaction because
+
+429
+00:22:42,679 --> 00:22:47,700
+we no longer need to to big hammer to
+get the fact that we want
+
+430
+00:22:47,007 --> 00:22:50,436
+so I can run is and
+
+431
+00:22:51,129 --> 00:22:54,470
+even though user interaction is disabled
+is now re enable rather
+
+432
+00:22:54,047 --> 00:22:57,109
+I can still touch these dots to that the
+effective
+
+433
+00:22:58,009 --> 00:23:02,015
+returning nil from hit us with an I'm
+and I can still pull down the drawer
+
+434
+00:23:02,069 --> 00:23:06,038
+and now I can actually touch the dots
+that are in the drawer
+
+435
+00:23:06,659 --> 00:23:10,683
+and I can no longer touch through the
+drawer to the dots behind so
+
+436
+00:23:10,899 --> 00:23:14,922
+right that we finally pretty much have
+this working the way that we want
+
+437
+00:23:15,129 --> 00:23:18,690
+one thing to note
+
+438
+00:23:18,069 --> 00:23:21,508
+I'm still adding the school use pen
+gesture recognizer
+
+439
+00:23:22,129 --> 00:23:25,260
+to the Super view I need to do that
+
+440
+00:23:25,026 --> 00:23:28,135
+even though every enabled user
+interaction because
+
+441
+00:23:28,369 --> 00:23:32,710
+I'm the transparent part of the scroll
+view is no longer hit testing
+
+442
+00:23:32,071 --> 00:23:35,149
+and this will use pan will not get any
+touches
+
+443
+00:23:36,049 --> 00:23:39,054
+that don't hit test to the view that
+it's on so
+
+444
+00:23:39,099 --> 00:23:42,978
+in order to allow scrolling in the
+transparent region i still actually need
+
+445
+00:23:43,869 --> 00:23:44,869
+to use this technique
+
+446
+00:23:44,869 --> 00:23:48,892
+moving the pen gesture onto the Super
+you otherwise you'd be able to scroll in
+
+447
+00:23:49,099 --> 00:23:50,101
+the drawer
+
+448
+00:23:50,119 --> 00:23:53,125
+I'm which is getting hit test but you
+wouldn't be able to scroll the other
+
+449
+00:23:53,179 --> 00:23:55,217
+parts of the scroll you
+
+450
+00:23:55,559 --> 00:23:59,608
+right to with that all done I mean it
+change gears and let add
+
+451
+00:24:00,049 --> 00:24:03,055
+dragging to this to this application so
+we're gonna make it so that these dot
+
+452
+00:24:03,649 --> 00:24:09,010
+can be picked up using a long pressed
+just recognize her and dragged around
+
+453
+00:24:09,001 --> 00:24:13,340
+so here where I add the dots to the view
+for every dot that I had
+
+454
+00:24:13,349 --> 00:24:16,400
+I'm I'm gonna make are you a long press
+gesture recognizer
+
+455
+00:24:16,859 --> 00:24:19,954
+I'm going to initialize it with myself
+as the target and the collector had a
+
+456
+00:24:20,809 --> 00:24:23,832
+long press with allen went in just a
+moment
+
+457
+00:24:24,039 --> 00:24:27,490
+L add that just recognizer to the dots
+I'm gonna end up with a lot long press
+
+458
+00:24:27,049 --> 00:24:30,051
+test recognizers 1 per dot
+
+459
+00:24:30,069 --> 00:24:33,072
+and here's my hand along Press method
+
+460
+00:24:33,072 --> 00:24:37,073
+so before you can view anything in
+response to these long presses I wanna
+
+461
+00:24:37,073 --> 00:24:39,642
+show you a bug but I just introduced
+
+462
+00:24:40,299 --> 00:24:43,348
+by adding the long press at all
+
+463
+00:24:43,789 --> 00:24:46,865
+so if I run this and I touchdown on a
+dot
+
+464
+00:24:47,549 --> 00:24:52,573
+and leave my finger down the dot on
+highlight after a brief moment
+
+465
+00:24:52,789 --> 00:24:55,820
+even though I didn't actually lift my
+finger in this case so
+
+466
+00:24:55,082 --> 00:24:58,083
+the reason that that is happening is
+that by default
+
+467
+00:24:58,083 --> 00:25:01,402
+you a gesture recognizers cancel touches
+
+468
+00:25:02,149 --> 00:25:05,245
+in their view once they've recognized at
+the default behavior evaluate just
+
+469
+00:25:06,109 --> 00:25:07,141
+recognize her and it often
+
+470
+00:25:07,429 --> 00:25:11,478
+what you want I'm in this case it's not
+what we want because we actually want
+
+471
+00:25:11,919 --> 00:25:17,070
+the dots to stay highlighted while
+they're being dragged around so I can
+
+472
+00:25:17,007 --> 00:25:20,044
+fix that here by telling
+
+473
+00:25:20,044 --> 00:25:24,078
+each one press custard that it does not
+cancel touches an atty
+
+474
+00:25:24,078 --> 00:25:27,152
+right now let's go ahead and implement
+this handle on press method
+
+475
+00:25:28,052 --> 00:25:32,901
+we're gonna get the dot that was pressed
+by asking the gesture for its view
+
+476
+00:25:33,369 --> 00:25:36,387
+now we're gonna do what may be a
+familiar switch statement that you tend
+
+477
+00:25:36,549 --> 00:25:37,230
+to do in
+
+478
+00:25:37,023 --> 00:25:40,046
+you I just recognizer delegate our
+target map
+
+479
+00:25:40,046 --> 00:25:44,445
+methods I'm we're gonna switch all the
+different possible state
+
+480
+00:25:44,859 --> 00:25:48,730
+that this gesture can be n and we're
+gonna do we're gonna grab the dot if the
+
+481
+00:25:48,073 --> 00:25:48,702
+gestured
+
+482
+00:25:49,359 --> 00:25:52,413
+just began if the Jester change we're
+gonna move the dot
+
+483
+00:25:52,899 --> 00:25:55,948
+and if it ended or was cancelled we're
+gonna drop the dot so
+
+484
+00:25:56,389 --> 00:26:03,070
+I'll go ahead and implement I love those
+methods now
+
+485
+00:26:03,007 --> 00:26:06,306
+right so and
+
+486
+00:26:06,369 --> 00:26:09,480
+from a year is as a springboard engineer
+
+487
+00:26:09,048 --> 00:26:12,083
+I know that when you wanna make
+something look grabbed
+
+488
+00:26:12,083 --> 00:26:15,132
+you that scale transform on it to make
+it look a little bit bigger
+
+489
+00:26:15,879 --> 00:26:18,927
+and you lower Salford to make it look a
+little bit transparent
+
+490
+00:26:19,359 --> 00:26:24,365
+I'm that way it actually appears to have
+changed when it starts getting grabbed
+
+491
+00:26:24,419 --> 00:26:28,508
+and when you wanna make it stop looking
+grabbed you do the same thing in reverse
+
+492
+00:26:29,309 --> 00:26:32,366
+transform back to identity of a back to
+one I'm
+
+493
+00:26:32,879 --> 00:26:35,901
+so the other thing that you wanna do
+when
+
+494
+00:26:36,099 --> 00:26:40,340
+grabbing an element is put to the front
+everything
+
+495
+00:26:40,034 --> 00:26:44,047
+so that as the user drags it around it
+passes over all the rest of the content
+
+496
+00:26:44,047 --> 00:26:46,936
+so these dots may have been got out of
+the drawer or they may have been got off
+
+497
+00:26:47,359 --> 00:26:47,435
+the canvas
+
+498
+00:26:48,119 --> 00:26:51,440
+we're gonna do is re parent the one that
+was grabbed I'm
+
+499
+00:26:51,044 --> 00:26:54,071
+and moving into the view controller's
+view I
+
+500
+00:26:54,071 --> 00:26:57,920
+at the end of the summer US so that it
+passes over all the other content
+
+501
+00:26:58,559 --> 00:27:01,570
+so I'm going to actually do that before
+grabbing it
+
+502
+00:27:01,669 --> 00:27:05,440
+I mean added as a subview a my view
+
+503
+00:27:05,044 --> 00:27:08,223
+now anytime that you repair interview
+
+504
+00:27:08,619 --> 00:27:12,340
+you need to watch out for the
+possibility that the origin have the new
+
+505
+00:27:12,034 --> 00:27:15,823
+view is not the same as the origin of
+the old view and so its position
+
+506
+00:27:16,129 --> 00:27:19,490
+it the center that it had in the old
+view may not
+
+507
+00:27:19,049 --> 00:27:22,098
+result in the same position on the
+screen as the center in the new view
+
+508
+00:27:22,098 --> 00:27:25,257
+so we need to do a little bit of point
+conversion here to make sure that the
+
+509
+00:27:26,139 --> 00:27:29,191
+dot doesn't appear to change locations
+when it was repainted
+
+510
+00:27:29,659 --> 00:27:33,740
+by setting it center to the result of
+converting
+
+511
+00:27:33,074 --> 00:27:39,433
+its all Center from it's super views
+were gonna convert that point to
+
+512
+00:27:40,099 --> 00:27:43,260
+might to the view and then we're going
+at it as a sub view
+
+513
+00:27:43,026 --> 00:27:48,034
+above you alright and then when the dot
+moos
+
+514
+00:27:48,034 --> 00:27:51,038
+also there it's actually pretty simple
+what we want to do is keep the dot under
+
+515
+00:27:51,074 --> 00:27:51,172
+the user's finger
+
+516
+00:27:52,072 --> 00:27:56,781
+we know that the dot is in my view that
+super view so we can simply
+
+517
+00:27:57,429 --> 00:28:02,590
+that its center to be the jesters
+location and that he
+
+518
+00:28:02,059 --> 00:28:05,147
+right now there's one little caveat here
+
+519
+00:28:06,047 --> 00:28:09,052
+if you star from one of our sessions
+from a couple years ago
+
+520
+00:28:09,052 --> 00:28:12,058
+your your maybe remember that we we've
+done
+
+521
+00:28:12,058 --> 00:28:14,120
+a technique like this where you pick
+something up in drag it around and it
+
+522
+00:28:15,002 --> 00:28:16,701
+has the potential bug
+
+523
+00:28:16,899 --> 00:28:19,990
+that I when you start moving the
+
+524
+00:28:19,099 --> 00:28:22,196
+element that was grabbed jumped a little
+bit and that's because
+
+525
+00:28:23,096 --> 00:28:26,185
+if you see what I'm doing here I'm
+adding the
+
+526
+00:28:27,049 --> 00:28:30,320
+I'm moving the dot so that it center is
+under the touch
+
+527
+00:28:30,032 --> 00:28:33,091
+every day every frame as the user moves
+the finger and putting the center the
+
+528
+00:28:33,379 --> 00:28:33,760
+dot
+
+529
+00:28:33,076 --> 00:28:37,865
+under their finger however the user may
+have picked that up from the edge
+
+530
+00:28:38,549 --> 00:28:41,574
+they may not have picked it up from the
+center so the first time that they move
+
+531
+00:28:41,799 --> 00:28:41,807
+their finger
+
+532
+00:28:42,599 --> 00:28:46,655
+it will jump under their finger I'm so
+in order to prevent that kind of jarring
+
+533
+00:28:47,159 --> 00:28:49,255
+John what I'm gonna do in this case
+which is a little different for how we
+
+534
+00:28:50,119 --> 00:28:51,163
+solve this in the past
+
+535
+00:28:51,559 --> 00:28:54,658
+I'm I'm just gonna actually call moved
+out with jester
+
+536
+00:28:55,549 --> 00:28:59,600
+in that grab animation so that the first
+time that the user grabs
+
+537
+00:29:00,059 --> 00:29:03,095
+and the dot gets picked up it also just
+animates
+
+538
+00:29:03,419 --> 00:29:06,482
+so that its center is under their finger
+and that way we won't have a jarring a
+
+539
+00:29:07,049 --> 00:29:10,055
+fact when they start to move their
+finger
+
+540
+00:29:10,649 --> 00:29:14,020
+finally when the dot gets dropped
+
+541
+00:29:14,002 --> 00:29:17,045
+we need to figure out are we gonna put
+it down in the drawer we gonna put it
+
+542
+00:29:17,045 --> 00:29:18,072
+down on the canvas
+
+543
+00:29:18,072 --> 00:29:25,072
+so I'm going to find out from the Jester
+what is the location in the drawer view
+
+544
+00:29:26,179 --> 00:29:29,278
+and and if the drug use bounds contains
+that location that means that
+
+545
+00:29:30,169 --> 00:29:33,183
+the dot has been dragged to the over the
+drawer
+
+546
+00:29:33,309 --> 00:29:38,366
+and I will at that point add the dot to
+the drug use content view
+
+547
+00:29:38,879 --> 00:29:42,884
+otherwise I'll add it at the Puma
+Candice
+
+548
+00:29:42,929 --> 00:29:46,000
+and I need to do that same point
+conversion in reverse
+
+549
+00:29:46,639 --> 00:29:50,330
+movies the dot centered so that it's the
+result of converting
+
+550
+00:29:50,033 --> 00:29:53,077
+from and my view that within 24
+
+551
+00:29:53,077 --> 00:29:57,656
+to its new super view so it will appear
+to stay in the same location
+
+552
+00:29:58,349 --> 00:30:01,442
+and and now we should be good to go so
+
+553
+00:30:02,279 --> 00:30:06,286
+I can pick one up these guys up at your
+side animated nicely under
+
+554
+00:30:06,349 --> 00:30:10,520
+underwear my my mouse was pointing I get
+around
+
+555
+00:30:10,052 --> 00:30:13,107
+I'm I can do the same in the drawer
+
+556
+00:30:14,007 --> 00:30:17,100
+pick it up right around put it down pick
+one up here
+
+557
+00:30:18,000 --> 00:30:21,149
+so I can movie that all around it seems
+to be working
+
+558
+00:30:21,149 --> 00:30:24,750
+I'm the drawers getting a little messy
+this offends me
+
+559
+00:30:24,075 --> 00:30:28,434
+lately so I'm gonna fix it by and just
+asking the dots to arrange themselves
+
+560
+00:30:29,109 --> 00:30:30,990
+neatly with nifty animation
+
+561
+00:30:30,099 --> 00:30:33,121
+in the drawer at the moment that they
+get picked up and I'm an idiot
+
+562
+00:30:34,021 --> 00:30:38,100
+same thing when we put them down and
+
+563
+00:30:38,289 --> 00:30:41,990
+so now when I pick one up they do that
+
+564
+00:30:41,099 --> 00:30:48,098
+who and good
+
+565
+00:30:48,989 --> 00:30:52,005
+cases it's pretty much working as we
+want and but it would be cool if you
+
+566
+00:30:52,149 --> 00:30:52,201
+could pick
+
+567
+00:30:52,669 --> 00:30:55,706
+I dot up with one finger and then scroll
+the drawer
+
+568
+00:30:56,039 --> 00:30:59,071
+to either bring it down or put it back
+up again with another finger I'm gonna
+
+569
+00:30:59,359 --> 00:31:00,375
+switch over to an actual
+
+570
+00:31:00,519 --> 00:31:03,531
+iPad here where got this running
+
+571
+00:31:03,639 --> 00:31:06,703
+so that we can do a multi-touch thing
+
+572
+00:31:07,279 --> 00:31:11,279
+to hear that anything out and running on
+an iPad the one difference is that I've
+
+573
+00:31:11,279 --> 00:31:14,324
+modified it so that you can see where
+the users touch come down to that little
+
+574
+00:31:14,729 --> 00:31:14,737
+white dot
+
+575
+00:31:15,529 --> 00:31:18,543
+that moving around is where my fingers
+and so
+
+576
+00:31:18,669 --> 00:31:22,692
+you can see that I can pick up a dot I'm
+and I can actually even pick up more
+
+577
+00:31:22,899 --> 00:31:22,906
+than one dot
+
+578
+00:31:23,599 --> 00:31:26,600
+the you get for free just because we've
+got a bunch of
+
+579
+00:31:26,609 --> 00:31:28,691
+long press just recognize that I can
+move the ball around at the same time
+
+580
+00:31:29,429 --> 00:31:30,487
+but if I put down another
+
+581
+00:31:31,009 --> 00:31:35,031
+finger an attempt to scroll the scroll
+view nothing happens
+
+582
+00:31:35,229 --> 00:31:39,271
+I'm so let's try to fix that we want to
+be able to
+
+583
+00:31:39,649 --> 00:31:42,658
+simultaneously be dragging one of these
+dots around and growing a ScrollView
+
+584
+00:31:43,549 --> 00:31:47,568
+with another finger right so why isn't
+that working
+
+585
+00:31:47,739 --> 00:31:51,210
+so I could have
+
+586
+00:31:51,021 --> 00:31:54,420
+fingers on the different ones are the
+dots and interact with those at the same
+
+587
+00:31:54,609 --> 00:31:55,220
+time
+
+588
+00:31:55,022 --> 00:31:58,120
+because those views are siblings and so
+they're just recognizers don't interact
+
+589
+00:31:59,002 --> 00:31:59,841
+with one another
+
+590
+00:32:00,039 --> 00:32:05,470
+however the dots are some view of the
+view that has the pen just recognizer so
+
+591
+00:32:05,047 --> 00:32:09,496
+the long press testers and the pen just
+recognize our do interact
+
+592
+00:32:09,919 --> 00:32:13,925
+and by default the behaviour gesture
+recognizers that interact
+
+593
+00:32:14,519 --> 00:32:17,607
+is to be mutually exclusive so 15
+already picked up a dot
+
+594
+00:32:18,399 --> 00:32:22,830
+I can no longer make that hand gesture
+recognizer but we can easily
+
+595
+00:32:22,083 --> 00:32:26,562
+tell these gestures that they can
+recognize simultaneously in the way we
+
+596
+00:32:27,309 --> 00:32:27,371
+do that
+
+597
+00:32:27,929 --> 00:32:31,001
+is by becoming the long pressed gesture
+recognizers
+
+598
+00:32:31,649 --> 00:32:34,697
+delegate so will I'll
+
+599
+00:32:35,129 --> 00:32:39,130
+say that we conform to you I just
+recognizer delegate and when we
+
+600
+00:32:39,229 --> 00:32:43,690
+added the long presses will make
+ourselves the delegate to follow them
+
+601
+00:32:43,069 --> 00:32:46,073
+and then will implement a single
+
+602
+00:32:47,009 --> 00:32:51,938
+delegate method gesture recognizers
+should recognize
+
+603
+00:32:52,019 --> 00:32:56,057
+simultaneously with a gesture recognizer
+and and in this case just as a shortcut
+
+604
+00:32:56,399 --> 00:32:57,399
+I'm gonna return yes
+
+605
+00:32:57,399 --> 00:33:00,423
+I can do that safely here because this
+is a pretty small app and I know that
+
+606
+00:33:00,639 --> 00:33:02,737
+the only just her that I'm gonna be
+asked this question about is the school
+
+607
+00:33:03,619 --> 00:33:03,716
+you can just ur
+
+608
+00:33:04,589 --> 00:33:07,614
+in your own applications you should be
+much more specific here because
+
+609
+00:33:07,839 --> 00:33:11,950
+it would be a and easy for some bugs to
+this return yes willy nilly to any
+
+610
+00:33:11,095 --> 00:33:14,454
+gesture recognizer that that you're
+after bout on
+
+611
+00:33:15,309 --> 00:33:19,343
+so once we're done that I can I'm not
+gonna build it because I've actually got
+
+612
+00:33:19,649 --> 00:33:20,735
+an already built copy over here
+
+613
+00:33:21,509 --> 00:33:24,510
+I'm so this is the result
+
+614
+00:33:24,519 --> 00:33:27,552
+a having made exactly those changes and
+let me
+
+615
+00:33:27,849 --> 00:33:30,874
+its were right
+
+616
+00:33:31,099 --> 00:33:34,177
+so now and
+
+617
+00:33:34,879 --> 00:33:38,440
+I can scroll well
+
+618
+00:33:38,044 --> 00:33:41,693
+one of these guys is I grabbed but it
+but you can see there's actually a
+
+619
+00:33:42,089 --> 00:33:43,115
+pretty bad but here
+
+620
+00:33:43,349 --> 00:33:46,428
+if I try to and scroll this down I can
+
+621
+00:33:47,139 --> 00:33:52,940
+but I can also screw it using the very
+same touch that's dragging one of the
+
+622
+00:33:52,094 --> 00:33:55,003
+dots which is clearly not here that I
+want at all
+
+623
+00:33:55,849 --> 00:33:59,907
+right to know why is it happening well I
+would act
+
+624
+00:34:00,429 --> 00:34:03,700
+can depend Esther recognized
+simultaneously with the long press
+
+625
+00:34:03,007 --> 00:34:04,166
+tester and I said yes
+
+626
+00:34:04,859 --> 00:34:08,940
+so they're recognizing simultaneously
+I'm the very thing touch
+
+627
+00:34:08,094 --> 00:34:12,083
+is having the effect have recognizing
+with both gestures
+
+628
+00:34:12,929 --> 00:34:16,953
+so a that we do not want to do and I'm
+gonna bring
+
+629
+00:34:17,169 --> 00:34:21,188
+Josh back on stage to talk about how we
+can fix that last little problem here
+
+630
+00:34:21,359 --> 00:34:26,230
+alright well we're getting pretty close
+
+631
+00:34:26,023 --> 00:34:29,862
+a we can almost do what I really want to
+be able to drag these dots around while
+
+632
+00:34:30,069 --> 00:34:33,130
+also scrolling mister on and off on
+
+633
+00:34:33,679 --> 00:34:36,704
+so let's figure out that last little bit
+how we can make sure that these gestures
+
+634
+00:34:36,929 --> 00:34:39,023
+recognize using the touch is that we
+actually expect them to
+
+635
+00:34:39,869 --> 00:34:43,886
+down what first began at the view
+hierarchy and where all the stuff is set
+
+636
+00:34:44,039 --> 00:34:46,125
+up just to make sure that we're all on
+the same page about Alice's
+
+637
+00:34:46,899 --> 00:34:51,490
+currently interacting so we've got that
+matter view and we've got our ScrollView
+
+638
+00:34:51,049 --> 00:34:55,608
+gonna drive you here now of course the
+the long press is that are on the dots
+
+639
+00:34:56,049 --> 00:34:59,930
+look at the ones first that are up on
+the drawer view there on sub to use up
+
+640
+00:34:59,093 --> 00:35:02,032
+the drive you actually there each
+attached to the individual dots
+
+641
+00:35:02,869 --> 00:35:05,938
+and then we've got the pan gesture
+recognizer from the scroll view
+
+642
+00:35:06,559 --> 00:35:09,630
+had we not done anything else that would
+have been on the scroll you
+
+643
+00:35:09,063 --> 00:35:12,104
+we took a and we moved it up and put it
+on that outer
+
+644
+00:35:13,004 --> 00:35:17,073
+containing you like you can't relieve
+you so without their
+
+645
+00:35:17,109 --> 00:35:20,960
+said I wanna touch comes down inside
+that drawer it's gonna be seen by both
+
+646
+00:35:20,096 --> 00:35:23,150
+it'll be seen by any other long press
+gestures that its interacting with soft
+
+647
+00:35:24,005 --> 00:35:27,030
+on a dot will be seen by the long press
+on that dot
+
+648
+00:35:27,075 --> 00:35:30,404
+and it will also be seen by the outer
+you right hand gesture recognizer
+
+649
+00:35:31,079 --> 00:35:34,750
+from the US robie now that's where we're
+getting this budget analyzer was talking
+
+650
+00:35:34,075 --> 00:35:35,434
+about
+
+651
+00:35:36,109 --> 00:35:40,135
+so how do we fix this we need them both
+to be able to recognize at the same time
+
+652
+00:35:40,369 --> 00:35:44,190
+because we want one touch in a dot to be
+able to move it while another touch
+
+653
+00:35:44,019 --> 00:35:45,148
+outside other
+
+654
+00:35:45,319 --> 00:35:47,720
+and we already know that those gestures
+are going to interact with one another
+
+655
+00:35:47,072 --> 00:35:51,120
+so we definitely need to allow them to
+recognize simultaneously
+
+656
+00:35:52,002 --> 00:35:56,131
+so we can change that we wanted do
+something when
+
+657
+00:35:56,329 --> 00:36:00,020
+the pan won the long press starts to
+prevent the pan
+
+658
+00:36:00,002 --> 00:36:03,074
+for recognizing with that touch we want
+to allow the the long press the Continue
+
+659
+00:36:03,074 --> 00:36:04,893
+so we can drag the dot
+
+660
+00:36:05,559 --> 00:36:09,200
+we just wanna stop the pain
+
+661
+00:36:09,002 --> 00:36:12,076
+we don't to stop it from pending at all
+just for pending with that touch
+
+662
+00:36:12,094 --> 00:36:15,243
+so we can actually take advantage a the
+fact
+
+663
+00:36:16,089 --> 00:36:20,700
+that is that special side behavior up
+disabling a gesture recognizer
+
+664
+00:36:20,007 --> 00:36:23,033
+which cause it to stop looking at any
+touch is that it was currently looking
+
+665
+00:36:23,096 --> 00:36:24,195
+at
+
+666
+00:36:25,059 --> 00:36:28,270
+so wanna pay and when the long press
+recognizes we can just get the pan
+
+667
+00:36:28,027 --> 00:36:28,102
+gesture
+
+668
+00:36:29,002 --> 00:36:33,024
+and sat at the table state the false by
+setting up the false it's going to tell
+
+669
+00:36:33,024 --> 00:36:36,133
+it to stop looking at any touches it was
+currently considering
+
+670
+00:36:36,349 --> 00:36:40,510
+and reset itself basically so it will no
+longer consider that touch
+
+671
+00:36:40,051 --> 00:36:43,075
+the long press will still be able to
+continue considering it because we
+
+672
+00:36:43,075 --> 00:36:44,102
+didn't disable the long press
+
+673
+00:36:45,002 --> 00:36:49,019
+just the plan but of course we did that
+then you wouldn't be able to pan with
+
+674
+00:36:49,019 --> 00:36:50,026
+another touch
+
+675
+00:36:50,026 --> 00:36:53,071
+because we disable the pan we can
+actually just go right
+
+676
+00:36:53,071 --> 00:36:56,114
+around and turn it right back on and it
+will still have stopped looking at the
+
+677
+00:36:57,014 --> 00:36:59,113
+touch that it was looking at but it will
+now be able to look at new touches that
+
+678
+00:37:00,013 --> 00:37:01,065
+come down
+
+679
+00:37:01,065 --> 00:37:04,764
+actually turns out this is going to be
+really really easy to fix analyzes gonna
+
+680
+00:37:05,349 --> 00:37:12,349
+come back and do it quickly and see
+where that leaves us
+
+681
+00:37:16,001 --> 00:37:20,070
+right so this is gonna be the fastest
+demo and history all I need to do
+
+682
+00:37:20,079 --> 00:37:23,730
+is at the moment when I'm grabbing the
+dot and
+
+683
+00:37:23,073 --> 00:37:27,119
+I just need to disable and re-enable
+
+684
+00:37:28,019 --> 00:37:32,398
+the scroll use pen duster so disabling
+it will cause it to just stop talking
+
+685
+00:37:32,569 --> 00:37:34,643
+all the touches it was tracking
+including the long press
+
+686
+00:37:35,309 --> 00:37:38,334
+and re enabling it will allow it to be
+ready to
+
+687
+00:37:38,559 --> 00:37:41,880
+attract new touches that might start so
+
+688
+00:37:41,088 --> 00:37:46,057
+I will switch back over here and
+
+689
+00:37:46,849 --> 00:37:49,945
+launched the third version of this I'm
+so
+
+690
+00:37:50,809 --> 00:37:53,890
+the third version year we can now pick
+up a dot
+
+691
+00:37:53,089 --> 00:37:56,093
+we can simultaneously scroll the scroll
+view I
+
+692
+00:37:56,093 --> 00:37:59,129
+but the dot itself
+
+693
+00:38:00,029 --> 00:38:03,029
+no longer scrolls the scroll used to now
+I can do all the things I wanted to do I
+
+694
+00:38:03,029 --> 00:38:03,093
+can
+
+695
+00:38:03,093 --> 00:38:07,222
+grab several docked at once put them in
+this role you grab several them
+
+696
+00:38:08,059 --> 00:38:11,061
+outta there pull them over here so
+
+697
+00:38:11,259 --> 00:38:14,920
+this is pretty much working exactly as
+we wanted now there's a will there's a
+
+698
+00:38:14,092 --> 00:38:15,097
+few elements have
+
+699
+00:38:15,097 --> 00:38:19,124
+polish that have to do with the way that
+these dots highlight
+
+700
+00:38:20,024 --> 00:38:23,143
+themselves and i wanna try to draw your
+attention to
+
+701
+00:38:23,359 --> 00:38:27,740
+a little problem at that may not be
+immediately apparent
+
+702
+00:38:27,074 --> 00:38:30,147
+so I'm going to put my finger down to
+start
+
+703
+00:38:31,047 --> 00:38:34,866
+a pan in that blue dot near the top
+
+704
+00:38:35,289 --> 00:38:38,640
+did you see that it momentarily
+highlighted an answer have blinked back
+
+705
+00:38:38,064 --> 00:38:39,065
+off again
+
+706
+00:38:39,065 --> 00:38:42,113
+do it on another one the orange one year
+just to I'm
+
+707
+00:38:43,013 --> 00:38:48,192
+so pans that starred in the dot cause it
+to momentarily receive touches began
+
+708
+00:38:48,309 --> 00:38:50,180
+which causes it to be highlighted
+
+709
+00:38:50,018 --> 00:38:53,097
+other than as the pan recognizes it
+cancel touches in in its view
+
+710
+00:38:53,097 --> 00:38:56,956
+and so had to cancel gets delivered to
+the dot and so you see this momentary
+
+711
+00:38:57,829 --> 00:38:57,907
+flash
+
+712
+00:38:58,609 --> 00:39:01,685
+have highlighted as you start screwing
+but I noticed that the same thing does
+
+713
+00:39:02,369 --> 00:39:03,369
+not happen
+
+714
+00:39:03,369 --> 00:39:06,710
+with the dots they're in the drawer so
+when I start panting
+
+715
+00:39:06,071 --> 00:39:09,077
+I'm here I don't get that flash
+
+716
+00:39:09,077 --> 00:39:12,092
+have I'm actually woman
+
+717
+00:39:12,092 --> 00:39:15,190
+I get them doing it too slowly vacay let
+me a the media little bit faster to
+
+718
+00:39:16,009 --> 00:39:20,158
+to the affected very subtle but for the
+most part pans don't
+
+719
+00:39:21,049 --> 00:39:24,400
+result don't cause that flash
+highlighting in the drawer you
+
+720
+00:39:24,004 --> 00:39:27,039
+and if you're really delivered about it
+I guess you can get them to do it
+
+721
+00:39:27,075 --> 00:39:30,334
+I'm so the reason for the difference
+
+722
+00:39:31,009 --> 00:39:35,018
+is that the I is that these dots here in
+the drawer
+
+723
+00:39:35,099 --> 00:39:38,380
+are in a ScrollView and by the and by
+default
+
+724
+00:39:38,038 --> 00:39:42,054
+school you actually had behavior that
+delays the delivery approaches
+
+725
+00:39:42,054 --> 00:39:47,623
+to its abuse I'm while it's checking
+whether a pen is starting
+
+726
+00:39:48,109 --> 00:39:51,157
+and the you can really see the effective
+this if you use you a table views
+
+727
+00:39:51,589 --> 00:39:54,667
+in Iowa you'll see that if you basically
+starts rolling pretty quickly in a you a
+
+728
+00:39:55,369 --> 00:39:55,440
+table view
+
+729
+00:39:56,079 --> 00:39:59,084
+you don't see a flash highlight on the
+cell that you happen to touch
+
+730
+00:39:59,579 --> 00:40:02,676
+and and so you avoid this kind have
+experience have
+
+731
+00:40:03,549 --> 00:40:06,910
+flashing happening as he starts rolling
+so
+
+732
+00:40:06,091 --> 00:40:09,150
+I'm gonna bring Josh back on stage to
+explain how that
+
+733
+00:40:10,005 --> 00:40:13,604
+accomplished in UIScrollView and how we
+can get the very same effect
+
+734
+00:40:14,099 --> 00:40:21,099
+a for these dots that are not in this
+role you
+
+735
+00:40:23,349 --> 00:40:25,740
+alright I promise that the beginning
+that we were going to talk about some
+
+736
+00:40:25,074 --> 00:40:25,142
+polish
+
+737
+00:40:26,042 --> 00:40:28,138
+and look at them internal implementation
+ideas of how you a ScrollView
+
+738
+00:40:29,038 --> 00:40:30,113
+accomplishes the sort of behavior
+
+739
+00:40:31,013 --> 00:40:34,064
+so let's go do that but before we do I
+just wanna
+
+740
+00:40:34,064 --> 00:40:37,453
+get a quick video fertilizer mention
+their when you're scrolling in the UI
+
+741
+00:40:38,029 --> 00:40:38,103
+cable view
+
+742
+00:40:38,769 --> 00:40:42,798
+so I don't scroll this a this view here
+you're gonna find that
+
+743
+00:40:43,059 --> 00:40:46,730
+we don't end up seeing flashes as she
+said we wouldn't a
+
+744
+00:40:46,073 --> 00:40:49,952
+its rolls smoothly there's no flash in
+any South highlighting no matter where I
+
+745
+00:40:50,609 --> 00:40:50,704
+put my finger down
+
+746
+00:40:51,559 --> 00:40:54,635
+as long as I starts rolling pretty
+quickly now if I
+
+747
+00:40:55,319 --> 00:40:58,170
+put my finger down and leave it there
+for a little while then we're gonna go
+
+748
+00:40:58,017 --> 00:40:59,156
+and highly whatever cell
+
+749
+00:40:59,309 --> 00:41:02,200
+you put your finger so that's exactly
+the same kind of thing that we're
+
+750
+00:41:02,002 --> 00:41:03,056
+talking about here in these dots
+
+751
+00:41:03,074 --> 00:41:07,123
+but applied really everywhere that you
+see you I table be so
+
+752
+00:41:08,023 --> 00:41:11,902
+this behavior as ELISA mentioned is
+accomplished using a property on
+
+753
+00:41:12,109 --> 00:41:12,203
+UIScrollView
+
+754
+00:41:13,049 --> 00:41:16,440
+so if you're in a scroll you're getting
+this automatically a property is called
+
+755
+00:41:16,044 --> 00:41:17,463
+delays content touches
+
+756
+00:41:17,859 --> 00:41:21,910
+you can turn this off if you wanted it
+for some reason in your ScrollView you
+
+757
+00:41:21,091 --> 00:41:21,149
+wanna make
+
+758
+00:41:22,049 --> 00:41:25,678
+touches go through immediately with no
+delay but by default you get a short
+
+759
+00:41:26,119 --> 00:41:28,166
+delay before they're delivered to any
+view in this girl he
+
+760
+00:41:28,589 --> 00:41:32,630
+now in the case that we're looking at
+here at these dots
+
+761
+00:41:32,063 --> 00:41:35,492
+we don't actually have all the dots in a
+ScrollView so we're not getting their
+
+762
+00:41:36,059 --> 00:41:37,230
+behavior on the ones that are
+
+763
+00:41:37,023 --> 00:41:41,064
+to understand how the school he is
+getting this helps the look
+
+764
+00:41:41,064 --> 00:41:44,091
+at although the gesture recognizers that
+are attached to this girl D
+
+765
+00:41:44,091 --> 00:41:47,510
+so the school he has a pen gesture
+recognizer we know that
+
+766
+00:41:48,329 --> 00:41:51,405
+we already took it and you that this
+that the session in order to move it out
+
+767
+00:41:52,089 --> 00:41:53,150
+onto the interview
+
+768
+00:41:53,015 --> 00:41:56,114
+of course it also has a pinch gesture
+recognizer so if you're using zooming in
+
+769
+00:41:57,014 --> 00:41:58,017
+your UI ScrollView
+
+770
+00:41:58,017 --> 00:42:01,044
+there will be a UI pics gesture
+recognizer on this review as well
+
+771
+00:42:01,044 --> 00:42:04,843
+but there's actually a third one the you
+may not know about it's actually bear if
+
+772
+00:42:05,239 --> 00:42:06,460
+you look at the
+
+773
+00:42:06,046 --> 00:42:09,067
+the gesture recognizer rayon a
+ScrollView but it's not particularly
+
+774
+00:42:09,067 --> 00:42:10,072
+useful
+
+775
+00:42:10,072 --> 00:42:14,141
+to at know about in most cases other
+than to understand how these things work
+
+776
+00:42:14,789 --> 00:42:17,790
+and the third one is a touch delay
+gesture recognizer
+
+777
+00:42:17,799 --> 00:42:21,130
+so this gesture recognizer sole purpose
+in life
+
+778
+00:42:21,013 --> 00:42:25,952
+is to sit around and fail a so
+
+779
+00:42:26,069 --> 00:42:29,950
+I feel so bad for it but it's there on
+it never recognizes
+
+780
+00:42:29,095 --> 00:42:33,144
+it they're just too as a way to delay
+touch delivery to the views in this role
+
+781
+00:42:34,044 --> 00:42:34,343
+you
+
+782
+00:42:34,739 --> 00:42:38,960
+and when it does that is by taking
+advantage a property that exist on you I
+
+783
+00:42:38,096 --> 00:42:39,175
+gesture recognizer
+
+784
+00:42:40,039 --> 00:42:44,091
+called the lace touches began and this
+is no by default because when he said it
+
+785
+00:42:44,559 --> 00:42:47,586
+yes they can introduce big delays in
+touch delivery writer aP
+
+786
+00:42:47,829 --> 00:42:50,900
+so most gesture recognizers do not want
+this property set to yes
+
+787
+00:42:51,539 --> 00:42:55,180
+because what it does is delays delivery
+are touches began
+
+788
+00:42:55,018 --> 00:42:58,167
+the entire cup sequence actually the
+began and all subsequent
+
+789
+00:42:58,329 --> 00:43:03,480
+events a until that gesture recognizer
+either recognizes or fails
+
+790
+00:43:03,048 --> 00:43:07,357
+so we can use it to delay delivery of
+the entire touch sequence
+
+791
+00:43:07,789 --> 00:43:10,796
+to some view that attach to whatever
+
+792
+00:43:10,859 --> 00:43:13,890
+view the gesture recognizers attached so
+if you look at
+
+793
+00:43:13,089 --> 00:43:16,143
+a time line up how this works that we
+can see why this make sense and how does
+
+794
+00:43:17,043 --> 00:43:17,116
+what it does
+
+795
+00:43:18,016 --> 00:43:21,415
+so wanna touch comes down the touch gets
+
+796
+00:43:21,559 --> 00:43:25,670
+it's gonna be again comes down don't
+forget what happens to the pan gesture
+
+797
+00:43:25,067 --> 00:43:28,396
+the touch still a gesture and the view
+that it's that the touch with
+
+798
+00:43:28,999 --> 00:43:34,052
+had tested to so at this point the touch
+delay jesters gonna start a timer
+
+799
+00:43:34,529 --> 00:43:38,150
+its pretty short timer because we don't
+I had big delays the delivery at the
+
+800
+00:43:38,015 --> 00:43:38,069
+touch
+
+801
+00:43:38,069 --> 00:43:42,218
+I would say 15 seconds just as a number
+that I would like to get out
+
+802
+00:43:42,839 --> 00:43:46,885
+on now if you leave your finger down for
+some period of time
+
+803
+00:43:47,299 --> 00:43:50,351
+until that timer fires then
+
+804
+00:43:50,819 --> 00:43:53,821
+the delay gesture is going to fail it'll
+said its data failed
+
+805
+00:43:53,839 --> 00:43:56,866
+and what it does because it was the only
+thing delaying that touch
+
+806
+00:43:57,109 --> 00:44:00,440
+the UI you at that point that it was hit
+us to do we'll see touch it began with
+
+807
+00:44:00,044 --> 00:44:01,413
+the band and it had to be delivered
+
+808
+00:44:01,809 --> 00:44:05,878
+now things at progress in the user
+decides to move their finger a little
+
+809
+00:44:06,499 --> 00:44:06,555
+bit
+
+810
+00:44:07,059 --> 00:44:10,180
+maybe the pan Chester starts to
+recognize and at that point
+
+811
+00:44:10,018 --> 00:44:13,677
+the view is gonna get touches capital
+for the back so that's where the highly
+
+812
+00:44:13,839 --> 00:44:14,650
+will get removed
+
+813
+00:44:14,065 --> 00:44:18,146
+the delay jester has already failed so
+nothing new is happening there
+
+814
+00:44:19,046 --> 00:44:22,585
+so that's the case where you leave your
+finger down long enough
+
+815
+00:44:22,999 --> 00:44:26,007
+but the interesting cases when you
+scroll really quickly so let's look at
+
+816
+00:44:26,079 --> 00:44:27,096
+what happened in that case
+
+817
+00:44:27,249 --> 00:44:31,330
+again we put the these are put their
+finger down the delay jester starts a
+
+818
+00:44:32,059 --> 00:44:32,930
+short timer
+
+819
+00:44:32,093 --> 00:44:35,145
+and if you still haven't seen anything
+because that the late yesterday
+
+820
+00:44:36,045 --> 00:44:40,068
+cysts and has the latest such as beget
+now these are at this point start
+
+821
+00:44:40,068 --> 00:44:40,747
+scrolling
+
+822
+00:44:41,359 --> 00:44:45,404
+and the pen just a recognizes then the
+pen just her would have cancelled that
+
+823
+00:44:45,809 --> 00:44:47,220
+touch
+
+824
+00:44:47,022 --> 00:44:50,045
+but because we never delivered it yet it
+was still being delayed by that delay
+
+825
+00:44:50,045 --> 00:44:50,864
+gesture
+
+826
+00:44:51,269 --> 00:44:54,291
+we don't ever actually delivered to the
+view at all as far as the view is
+
+827
+00:44:54,489 --> 00:44:56,410
+concerned the touch never happened
+
+828
+00:44:56,041 --> 00:44:59,250
+the pen just a recognizes the touch
+would've been cancelled but we never
+
+829
+00:44:59,619 --> 00:45:02,970
+delivered began so he kinda silly to
+deliver began cancelled
+
+830
+00:45:02,097 --> 00:45:06,122
+on so we just don't deliver it and that
+causes that the never highlight
+
+831
+00:45:07,022 --> 00:45:09,118
+and never flash a highlight and get
+exactly the behavior that were looking
+
+832
+00:45:10,018 --> 00:45:11,100
+for
+
+833
+00:45:12,000 --> 00:45:16,069
+now there's nothing particularly magical
+about this touch delay just a recognizer
+
+834
+00:45:16,069 --> 00:45:17,163
+and we can write when ourselves that
+does
+
+835
+00:45:18,009 --> 00:45:21,180
+pretty much the exact same thing that
+the one on US Grove you does so that we
+
+836
+00:45:21,018 --> 00:45:24,064
+can use that in situations where we're
+not using a UIScrollView
+
+837
+00:45:24,064 --> 00:45:27,089
+course there are no situations where you
+should not use the US role you but
+
+838
+00:45:27,089 --> 00:45:30,095
+lets the match in that there might be on
+
+839
+00:45:30,095 --> 00:45:33,244
+so we can do that by subclassing you I
+gesture recognizer
+
+840
+00:45:34,099 --> 00:45:37,176
+and over I think over reading at
+designated initializer it with target
+
+841
+00:45:37,869 --> 00:45:38,720
+action
+
+842
+00:45:38,072 --> 00:45:41,169
+and of course what we do in there is set
+delays touches began to yes because I
+
+843
+00:45:42,069 --> 00:45:43,144
+mention that no by default
+
+844
+00:45:44,044 --> 00:45:47,090
+so that most gesture recognizers aren't
+doing that
+
+845
+00:45:47,009 --> 00:45:49,065
+then as with all you like just a
+recognizer sunglasses were going to
+
+846
+00:45:50,046 --> 00:45:51,123
+override to the touch methods
+
+847
+00:45:52,023 --> 00:45:55,041
+so we'll do touch it began and didn't
+cancel in this case
+
+848
+00:45:55,041 --> 00:45:58,045
+because for this gesture recognizer we
+don't actually care if that ever moved
+
+849
+00:45:58,045 --> 00:45:58,120
+anywhere
+
+850
+00:45:59,002 --> 00:46:02,005
+we're not trying to deal with that we
+just care when it comes down when it
+
+851
+00:46:02,005 --> 00:46:03,052
+comes up
+
+852
+00:46:03,097 --> 00:46:06,113
+so well over itouch began and start a
+timer
+
+853
+00:46:07,013 --> 00:46:10,232
+we mention there's gonna be that short
+timer Soulstar that their and then in
+
+854
+00:46:10,349 --> 00:46:12,400
+touch is ended and touch is cancelled
+
+855
+00:46:12,004 --> 00:46:16,029
+we wanna centers they to fail now the
+reason we want to do that is because if
+
+856
+00:46:16,065 --> 00:46:17,113
+the user taps quickly
+
+857
+00:46:18,013 --> 00:46:21,015
+we want that touch to get delivered
+immediately when the Touch comes up
+
+858
+00:46:21,015 --> 00:46:23,114
+we don't want to wait until this time
+has expired in order to deliver the
+
+859
+00:46:24,014 --> 00:46:26,863
+toucher you introduce extra delay that
+you don't mean to when it's not
+
+860
+00:46:26,989 --> 00:46:28,001
+necessary
+
+861
+00:46:28,109 --> 00:46:31,180
+so if the at the touch ends or get
+cancelled we're gonna set the state the
+
+862
+00:46:31,819 --> 00:46:31,890
+failed
+
+863
+00:46:32,529 --> 00:46:36,920
+and that'll allow that touch to go
+through and get delivered to the view
+
+864
+00:46:36,092 --> 00:46:38,911
+now of course we said we're setting a
+timer so we have to implement some time
+
+865
+00:46:39,739 --> 00:46:39,747
+a method
+
+866
+00:46:40,539 --> 00:46:43,880
+but say that we've got some function
+like it's called what we're gonna do in
+
+867
+00:46:43,088 --> 00:46:43,497
+there
+
+868
+00:46:44,289 --> 00:46:47,317
+is also centers that failed if the timer
+passes
+
+869
+00:46:47,569 --> 00:46:50,970
+this gesture fails that allow the touch
+to get delivered
+
+870
+00:46:50,097 --> 00:46:53,186
+and then finally the last thing that
+gesture recognizers should do is
+
+871
+00:46:54,059 --> 00:46:54,750
+override
+
+872
+00:46:54,075 --> 00:46:57,384
+the reset method which is where you go
+about putting herself back in shape to
+
+873
+00:46:58,059 --> 00:46:58,410
+be
+
+874
+00:46:58,041 --> 00:47:01,113
+ready for another instanceof trying to
+recognize and so in there were just
+
+875
+00:47:02,013 --> 00:47:05,162
+gonna clear the timer reset it and get
+everything back into a good state to
+
+876
+00:47:05,279 --> 00:47:06,313
+start over again
+
+877
+00:47:06,619 --> 00:47:09,716
+so pretty small gesture recognizer it
+never gonna try and recognize which is
+
+878
+00:47:10,589 --> 00:47:11,440
+kind of unique
+
+879
+00:47:11,044 --> 00:47:14,893
+there's not a lot of gesture recognizers
+that never try to recognize anything
+
+880
+00:47:15,289 --> 00:47:18,291
+but I get this an interesting effect
+analyzes gonna come back up and build it
+
+881
+00:47:18,309 --> 00:47:25,309
+for us
+
+882
+00:47:27,289 --> 00:47:30,382
+right to I'm adding another class here
+touch delay just recognize there which
+
+883
+00:47:31,219 --> 00:47:32,480
+is going to be a subclass
+
+884
+00:47:32,048 --> 00:47:35,100
+have you I gesture recognizer and
+
+885
+00:47:36,000 --> 00:47:40,089
+so we're going to it could have a really
+simple implementation like just
+
+886
+00:47:40,089 --> 00:47:40,988
+described
+
+887
+00:47:41,789 --> 00:47:44,844
+and the first thing we need to do apps
+is import
+
+888
+00:47:45,339 --> 00:47:48,361
+the the glass but we show that night
+police
+
+889
+00:47:48,559 --> 00:47:53,250
+and and then we're going to overriding
+it with target action
+
+890
+00:47:53,025 --> 00:47:56,029
+I'm call super and then do one thing it
+
+891
+00:47:56,065 --> 00:47:59,117
+which is to use that touches but delays
+
+892
+00:48:00,017 --> 00:48:04,038
+touches began to yes as Josh mentioned
+the only purpose for this thing is to
+
+893
+00:48:04,038 --> 00:48:06,027
+delay touches to its view
+
+894
+00:48:06,369 --> 00:48:10,437
+us so we need the delays patches began
+flag on
+
+895
+00:48:11,049 --> 00:48:16,141
+and then it I'm back Terry
+
+896
+00:48:16,969 --> 00:48:20,056
+went to bed myself we need a timer in
+the
+
+897
+00:48:20,839 --> 00:48:23,917
+and as anti-virus this guy and then
+
+898
+00:48:24,619 --> 00:48:28,950
+we're going to set that timer in touch
+it again
+
+899
+00:48:28,095 --> 00:48:32,704
+so will schedule it given interval love
+point 15 seconds
+
+900
+00:48:33,559 --> 00:48:38,638
+and when the tire fires were gonna just
+called us fail method that I'm about to
+
+901
+00:48:39,349 --> 00:48:42,416
+right and in the fail method I'm
+
+902
+00:48:43,019 --> 00:48:50,019
+we will simply set our state to you I
+just recognize our state failed
+
+903
+00:48:50,969 --> 00:48:55,053
+in touch ended and touch is cancelled
+were also just gonna fail
+
+904
+00:48:55,809 --> 00:48:58,836
+and finally when we're told to reset
+
+905
+00:48:59,079 --> 00:49:02,152
+we're going to just get rid of that time
+are cleared out and be ready to go again
+
+906
+00:49:02,809 --> 00:49:04,812
+the next time a text comes down
+
+907
+00:49:05,109 --> 00:49:09,880
+so I'm going to go back over to the view
+controller no
+
+908
+00:49:09,088 --> 00:49:15,327
+and we're going to import this file
+
+909
+00:49:16,119 --> 00:49:19,880
+and then I'm I'm just gonna make one of
+these guys
+
+910
+00:49:19,088 --> 00:49:22,092
+and I'm gonna add it to the canvas
+
+911
+00:49:22,092 --> 00:49:26,701
+view now notice that I'm passing it a
+nil target and no action
+
+912
+00:49:27,529 --> 00:49:30,530
+with an unusual thing to see you when
+you make a gesture recognizer
+
+913
+00:49:30,539 --> 00:49:32,638
+but this thing never recognizes so
+there's no point in giving it a target
+
+914
+00:49:33,529 --> 00:49:35,588
+or an action if I did then they would
+never be invoked
+
+915
+00:49:36,119 --> 00:49:39,880
+so it's really just the existence of
+this thing and the fact that it's
+
+916
+00:49:39,088 --> 00:49:40,116
+attached to a view
+
+917
+00:49:41,016 --> 00:49:44,705
+that's gonna have the effect that we
+want so I'm gonna add it to my cam is he
+
+918
+00:49:44,849 --> 00:49:45,872
+said that the dot
+
+919
+00:49:46,079 --> 00:49:49,210
+in the canvas get the theme behavior as
+the dots
+
+920
+00:49:49,021 --> 00:49:52,800
+in this role you I'm so go ahead and run
+this
+
+921
+00:49:52,989 --> 00:49:56,410
+and now if I start a pen
+
+922
+00:49:56,041 --> 00:50:00,240
+in what have you got to do it slowly
+enough then you'll then you can see
+
+923
+00:50:00,609 --> 00:50:02,704
+a highlight technique that one up but if
+you do it fast enough you see that
+
+924
+00:50:03,559 --> 00:50:04,586
+there's no longer
+
+925
+00:50:04,829 --> 00:50:08,170
+a flash as I starts growing
+
+926
+00:50:08,017 --> 00:50:12,936
+who I'm and to getting back into the
+behavior that we have in this role you
+
+927
+00:50:13,089 --> 00:50:16,930
+so I'm we're gonna show you one more
+thing
+
+928
+00:50:16,093 --> 00:50:19,096
+a another sort of small element of
+Polish
+
+929
+00:50:19,096 --> 00:50:23,225
+that we can add to this application and
+I want to show you the problem first
+
+930
+00:50:24,089 --> 00:50:27,102
+news that somebody's got here are
+extremely small
+
+931
+00:50:27,219 --> 00:50:31,250
+I'm in fact I've I think I've I'm
+generating their radius is randomly but
+
+932
+00:50:31,529 --> 00:50:31,581
+they're
+
+933
+00:50:32,049 --> 00:50:36,440
+as small as a a ready if the 10 which
+makes the whole thing on the 20 points
+
+934
+00:50:36,044 --> 00:50:36,143
+wide
+
+935
+00:50:37,043 --> 00:50:40,962
+in general it's pretty difficult to hit
+a view with your finger if it's less
+
+936
+00:50:41,349 --> 00:50:42,690
+than forty four points
+
+937
+00:50:42,069 --> 00:50:46,888
+wide or tall and so although its put
+very easy for me to pick the things up
+
+938
+00:50:47,509 --> 00:50:49,140
+in the simulator using my mouth
+
+939
+00:50:49,014 --> 00:50:52,823
+it would be quite difficult to hit them
+if I were using my finger
+
+940
+00:50:52,949 --> 00:50:56,008
+and we want to show you a technique that
+we can use
+
+941
+00:50:56,539 --> 00:51:00,750
+to make very small user interface
+elements
+
+942
+00:51:00,075 --> 00:51:03,080
+hittable and for me to bring Josh back
+up on stage to explain how we can
+
+943
+00:51:04,025 --> 00:51:10,894
+accomplish that
+
+944
+00:51:11,119 --> 00:51:14,151
+alright so we promised three sections
+and three techniques but we've got a
+
+945
+00:51:14,439 --> 00:51:16,442
+little bonus extra bit here at the end
+so
+
+946
+00:51:16,469 --> 00:51:19,660
+a work we're going to talk about his
+testing though
+
+947
+00:51:19,066 --> 00:51:22,765
+so still within the three areas a touch
+handling I promise we haven't
+
+948
+00:51:23,359 --> 00:51:26,434
+straight that far from my original
+statement on
+
+949
+00:51:27,109 --> 00:51:30,151
+as ELISA mention what we're trying to do
+here is in force a minimum hit target
+
+950
+00:51:30,529 --> 00:51:31,130
+size
+
+951
+00:51:31,013 --> 00:51:34,089
+that you mention 44 in through that
+number out the reason that
+
+952
+00:51:34,089 --> 00:51:36,788
+she mentioned that is because it the
+common number they are fine throughout
+
+953
+00:51:37,589 --> 00:51:38,410
+you like it
+
+954
+00:51:38,041 --> 00:51:41,068
+if you look at the default bar Heights
+for things like
+
+955
+00:51:41,068 --> 00:51:44,097
+tow bars or the default row heights for
+table B cells
+
+956
+00:51:44,709 --> 00:51:48,880
+44 is a common number they're gonna find
+come up it's a good rule about not
+
+957
+00:51:48,088 --> 00:51:48,897
+something that
+
+958
+00:51:49,689 --> 00:51:53,726
+if you start getting smaller than this
+it's hard to hit this thing so
+
+959
+00:51:54,059 --> 00:51:57,111
+to figure out how we're going to go in
+and resolve this situation we're gonna
+
+960
+00:51:57,579 --> 00:51:59,410
+go back and look at his test for the
+banned again
+
+961
+00:51:59,041 --> 00:52:02,330
+now there's a couple ways you can do it
+you could make your view bigger
+
+962
+00:52:02,699 --> 00:52:05,786
+that would obviously make it hannibal
+but in the case a what allies is looking
+
+963
+00:52:06,569 --> 00:52:07,170
+at
+
+964
+00:52:07,017 --> 00:52:10,176
+in our sample app right now if we made
+the view bigger that would actually make
+
+965
+00:52:10,329 --> 00:52:14,670
+the circle draw bigger because she's
+drying it based on the size above you
+
+966
+00:52:14,067 --> 00:52:18,126
+so if we were gonna fix the hit testing
+problem by changing the view side then
+
+967
+00:52:18,729 --> 00:52:21,880
+we have to go refactor about other stuff
+and change the way we draw the view to
+
+968
+00:52:21,088 --> 00:52:21,917
+account for that
+
+969
+00:52:22,709 --> 00:52:24,787
+and I could end up making things more
+complex and a bigger change that we
+
+970
+00:52:25,489 --> 00:52:25,550
+really mean
+
+971
+00:52:26,099 --> 00:52:29,390
+let's go back and look at our hit us
+with event method again
+
+972
+00:52:29,039 --> 00:52:33,208
+and see if there's anything in here that
+might help us but we focus in on this
+
+973
+00:52:33,559 --> 00:52:34,564
+part I mentioned at the beginning
+
+974
+00:52:35,059 --> 00:52:39,400
+we've got one check right off the bat
+that says is the point insider bounce
+
+975
+00:52:39,004 --> 00:52:42,006
+now I wrote this in some pseudo code
+here so it's
+
+976
+00:52:42,042 --> 00:52:45,911
+that not exactly clear what that means
+so what expanded out to what it really
+
+977
+00:52:46,289 --> 00:52:46,890
+does
+
+978
+00:52:46,089 --> 00:52:49,558
+to go and call a method called coincide
+with the van
+
+979
+00:52:50,359 --> 00:52:53,421
+on the view that being asked to help
+test itself and the reason that that's
+
+980
+00:52:53,979 --> 00:52:57,001
+interesting to know is because it means
+there's another override point where you
+
+981
+00:52:57,199 --> 00:52:58,203
+can change the behavior
+
+982
+00:52:58,239 --> 00:53:03,264
+a test with the band without changing
+hit test itself so we can actually go in
+
+983
+00:53:03,489 --> 00:53:05,542
+override that method independently a
+test for the banned
+
+984
+00:53:06,019 --> 00:53:09,052
+and change what it means for a point to
+be with insider view
+
+985
+00:53:09,349 --> 00:53:13,396
+so by the fall as I mention what it's
+going to do is just check its own bounds
+
+986
+00:53:13,819 --> 00:53:15,860
+and see if the point is within sight it
+so we'll call
+
+987
+00:53:16,229 --> 00:53:19,324
+see direct contains point bounds and the
+point that we were checking on
+
+988
+00:53:20,179 --> 00:53:24,160
+but we can make this do whatever we want
+so if we want to view to behave as if
+
+989
+00:53:24,016 --> 00:53:26,113
+it's bigger without actually changing
+its bounds and making it bigger
+
+990
+00:53:27,013 --> 00:53:30,422
+we can subclass an override coincide
+with the van and change the check to do
+
+991
+00:53:30,539 --> 00:53:31,608
+anything we think is right for our
+
+992
+00:53:32,229 --> 00:53:35,318
+you that were interested in so another
+short section but allies is gonna come
+
+993
+00:53:36,119 --> 00:53:38,191
+right back up and go ahead and fix that
+last but for us
+
+994
+00:53:38,839 --> 00:53:45,839
+right
+
+995
+00:53:46,029 --> 00:53:49,034
+so Here I am in my dot view subclass
+
+996
+00:53:49,079 --> 00:53:52,142
+so it I mention that I'd written this
+class pretty much all I do here is
+
+997
+00:53:52,709 --> 00:53:55,724
+make he's got give them a bunch of
+random properties that their corner
+
+998
+00:53:55,859 --> 00:53:56,882
+radius so that they look like
+
+999
+00:53:57,089 --> 00:54:02,110
+circles I'm and what I'm gonna do now
+below this code that deals with patches
+
+1000
+00:54:02,299 --> 00:54:05,345
+beginning ending in being canceled and
+is I'm gonna
+
+1001
+00:54:05,759 --> 00:54:08,787
+override point inside with event and I'm
+gonna have to
+
+1002
+00:54:09,039 --> 00:54:13,160
+I'm gonna figure out whether this dot is
+a dot that should get an expanded
+
+1003
+00:54:13,016 --> 00:54:16,845
+touch region so the first thing to do is
+
+1004
+00:54:16,989 --> 00:54:21,920
+and is the minicomputer what I want to
+consider my bounds to be for the Sikh
+
+1005
+00:54:21,092 --> 00:54:25,115
+have touch and lick so the touchdowns by
+default will to start out with our real
+
+1006
+00:54:26,015 --> 00:54:26,584
+bounds
+
+1007
+00:54:26,719 --> 00:54:29,890
+but if this dot is one whose radius
+
+1008
+00:54:29,089 --> 00:54:32,113
+is small enough and I'm gonna Nicolas
+this
+
+1009
+00:54:33,013 --> 00:54:36,962
+44 points wide I'm idea
+
+1010
+00:54:37,079 --> 00:54:40,115
+so if the radius is less than 22 then
+
+1011
+00:54:40,439 --> 00:54:43,890
+I'm I'm going to calculate an expansion
+
+1012
+00:54:43,089 --> 00:54:46,418
+a amount by which I mean expand my
+bounds for the sake
+
+1013
+00:54:47,219 --> 00:54:50,283
+apec handling at the different to get it
+for that every dot
+
+1014
+00:54:50,859 --> 00:54:53,860
+get act as if it's at least 44 points
+wide
+
+1015
+00:54:53,959 --> 00:54:57,020
+when touched and then I'm going to use
+this handy
+
+1016
+00:54:57,569 --> 00:55:00,638
+CG wrecked in fact method to expand
+
+1017
+00:55:01,259 --> 00:55:05,150
+the touch bounds I'm notice that I'm
+passing negative the expansion
+
+1018
+00:55:05,015 --> 00:55:08,092
+that because see direct inset take the
+rectangle and move the edges
+
+1019
+00:55:08,092 --> 00:55:11,281
+in in this case we want to move the
+edges out so I'm gonna
+
+1020
+00:55:12,109 --> 00:55:15,135
+do it by negative that the amount that
+we that we computed
+
+1021
+00:55:15,369 --> 00:55:18,640
+and then finally I'll a
+
+1022
+00:55:18,064 --> 00:55:21,723
+just return whether my newly computed
+touchdowns contains
+
+1023
+00:55:22,299 --> 00:55:26,365
+that point so this will have no effect
+on large dots but it will expand the
+
+1024
+00:55:26,959 --> 00:55:28,440
+country denmark for small ones
+
+1025
+00:55:28,044 --> 00:55:32,643
+so gonna go ahead and run this again and
+now
+
+1026
+00:55:33,039 --> 00:55:37,039
+and right to got my mouth here and I'm
+gonna touch outside have this big dot
+
+1027
+00:55:37,039 --> 00:55:39,046
+and you can see nothing happens
+
+1028
+00:55:39,109 --> 00:55:42,145
+they got highlights only when you
+actually catch in its bounds
+
+1029
+00:55:42,469 --> 00:55:45,492
+but for this tiny dot over here a.m.
+
+1030
+00:55:45,699 --> 00:55:48,780
+but the above it appear for this tiny
+dot I can touch outside a bit sounds
+
+1031
+00:55:49,509 --> 00:55:52,561
+and highlights so this looks a little
+strange on the simulator because you
+
+1032
+00:55:53,029 --> 00:55:53,071
+have a
+
+1033
+00:55:53,449 --> 00:55:56,660
+a high precision pointing device but on
+a device
+
+1034
+00:55:56,066 --> 00:56:00,185
+you actually really don't notice I'm
+that anything is weird it just feels
+
+1035
+00:56:00,779 --> 00:56:01,130
+like
+
+1036
+00:56:01,013 --> 00:56:04,342
+you can pick these guys up so and
+
+1037
+00:56:04,459 --> 00:56:07,536
+that point inside overriding the bounds
+
+1038
+00:56:08,229 --> 00:56:12,231
+that comfortable and select pretty much
+else turn it back over to Josh's
+
+1039
+00:56:12,249 --> 00:56:19,249
+to conclude
+
+1040
+00:56:23,011 --> 00:56:26,017
+alright well thanks for coming out again
+as you know jack barons over there in
+
+1041
+00:56:26,017 --> 00:56:26,055
+the front
+
+1042
+00:56:26,055 --> 00:56:29,151
+and then I've had today he's a ready to
+answer all of your questions if you have
+
+1043
+00:56:30,051 --> 00:56:31,117
+anything else you wanna know after this
+
+1044
+00:56:32,017 --> 00:56:35,072
+there is one other related session left
+today that I
+
+1045
+00:56:35,072 --> 00:56:38,100
+obviously encourage you to come to you
+cuz I'll be right back here in about 15
+
+1046
+00:56:39,000 --> 00:56:39,058
+minutes
+
+1047
+00:56:39,058 --> 00:56:42,066
+for building interruptible and
+responsive interactions with any
+
+1048
+00:56:42,066 --> 00:56:42,138
+Matuszak
+
+1049
+00:56:43,038 --> 00:56:46,073
+so I stick around and we've got a great
+session for you coming right up
+
+1050
+00:56:46,073 --> 00:56:49,091
+thanks again enjoy their remaining hours
+at the show
+

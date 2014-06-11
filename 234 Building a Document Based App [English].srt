@@ -1,0 +1,3811 @@
+1
+00:00:13,002 --> 00:00:16,028
+thank you
+
+2
+00:00:16,046 --> 00:00:20,047
+I my cats I'm a software engineer on the
+I was absent frameworks team
+
+3
+00:00:20,056 --> 00:00:23,139
+I'm here with you have a sport min to
+talk to you about building great cloud
+
+4
+00:00:24,039 --> 00:00:25,758
+documents based applications
+
+5
+00:00:26,109 --> 00:00:30,570
+so area made from Port important changed
+I club
+
+6
+00:00:30,057 --> 00:00:34,896
+first the I clarke david has been
+completely rewritten on top quark it
+
+7
+00:00:35,409 --> 00:00:40,424
+work all year I Cloud Drive if you're
+interested in
+
+8
+00:00:40,559 --> 00:00:44,570
+warning more about clark et I encourage
+you to attend their sessions in labs
+
+9
+00:00:44,057 --> 00:00:51,057
+second we've added Windows support I
+cloud now users with Windows devices
+
+10
+00:00:52,059 --> 00:00:56,368
+can access and modify it their documents
+on their windows devices
+
+11
+00:00:56,899 --> 00:01:01,920
+third we've got and I cloud folder in
+the Finder
+
+12
+00:01:01,092 --> 00:01:06,117
+now users can add whatever documents
+they want into their iPod folder in
+
+13
+00:01:07,017 --> 00:01:07,080
+Finder
+
+14
+00:01:07,008 --> 00:01:12,187
+and organize them however they see fit
+for
+
+15
+00:01:12,979 --> 00:01:15,997
+we've added access to the I card folder
+
+16
+00:01:16,159 --> 00:01:19,960
+from within your I Lesseps will get into
+this one or more later
+
+17
+00:01:19,096 --> 00:01:24,845
+were really cover here today we're gonna
+start by talking about some the best
+
+18
+00:01:25,709 --> 00:01:25,778
+practices
+
+19
+00:01:26,399 --> 00:01:30,160
+%uh access your documents mccloud then
+
+20
+00:01:30,016 --> 00:01:34,027
+we're gonna move on to talking about how
+to discover enlist your documents
+
+21
+00:01:34,027 --> 00:01:34,736
+mccloud
+
+22
+00:01:34,979 --> 00:01:40,360
+next year to talk about displaying
+thumbnails near you I when your listing
+
+23
+00:01:40,036 --> 00:01:41,155
+your documents in the cloud
+
+24
+00:01:41,479 --> 00:01:46,552
+every talk about accessing documents
+from outside if you're out container
+
+25
+00:01:47,209 --> 00:01:49,330
+such as the shared iPod folder
+
+26
+00:01:49,033 --> 00:01:53,772
+and finally we're gonna talk about
+providing document storage to other
+
+27
+00:01:54,069 --> 00:01:56,097
+applications from within your app
+
+28
+00:01:56,349 --> 00:02:02,450
+so what is a document anyways word and
+find a document here
+
+29
+00:02:02,045 --> 00:02:06,127
+as a single stand-alone entity and its
+understood by the user as a single
+
+30
+00:02:07,027 --> 00:02:08,046
+stand-alone entity
+
+31
+00:02:08,289 --> 00:02:14,120
+are you might want to modify it or give
+a name that's meaningful to them
+
+32
+00:02:14,012 --> 00:02:17,711
+or send it via email 21 their friends or
+colleagues
+
+33
+00:02:17,819 --> 00:02:22,170
+there some documents which we all sorta
+under standard documents
+
+34
+00:02:22,017 --> 00:02:26,099
+Aquino document or numbers document or
+Pages document
+
+35
+00:02:26,099 --> 00:02:30,138
+are clearly documents but we're also
+going to consider something like
+
+36
+00:02:31,038 --> 00:02:34,039
+a chess game to be a document for this
+presentation
+
+37
+00:02:34,048 --> 00:02:38,055
+a user might want to save the current
+state of their chess game
+
+38
+00:02:39,018 --> 00:02:42,077
+and e-mail alert when their friends they
+can pick up where they left off
+
+39
+00:02:42,077 --> 00:02:48,169
+again some hard AI level so we consider
+a chess game to be a document now talk
+
+40
+00:02:49,069 --> 00:02:50,164
+about dealing with your document from
+the cloud
+
+41
+00:02:51,064 --> 00:02:56,083
+so it's important when you're dealing
+with your doctor to the cloud to use
+
+42
+00:02:56,083 --> 00:02:57,115
+file coordination
+
+43
+00:02:58,015 --> 00:03:01,053
+there are several reasons for this but
+when the main ones
+
+44
+00:03:01,053 --> 00:03:06,137
+is to avoid data loss you may have the
+simplest single-threaded applications in
+
+45
+00:03:07,037 --> 00:03:07,098
+the world
+
+46
+00:03:07,098 --> 00:03:10,101
+but and you may think that you're the
+only one reading from
+
+47
+00:03:11,001 --> 00:03:14,810
+or writing to your documents but once
+you add the icon David into the mix
+
+48
+00:03:14,819 --> 00:03:17,970
+that's no longer the case so use file
+coordination
+
+49
+00:03:17,097 --> 00:03:21,101
+let's take a quick example this say
+you're a
+
+50
+00:03:22,037 --> 00:03:26,039
+is doing proper file coordination you're
+right you're changes to this
+
+51
+00:03:26,039 --> 00:03:29,050
+the I Cloud Drive Damon will pick up
+those changes
+
+52
+00:03:29,005 --> 00:03:32,073
+and push them up to the cloud and out to
+all the other users devices
+
+53
+00:03:33,018 --> 00:03:36,083
+everything's working properly here
+that's what you want to have happen
+
+54
+00:03:36,083 --> 00:03:39,712
+now it's a you're not using proper file
+coordination
+
+55
+00:03:40,459 --> 00:03:44,150
+you may be right in your changes to desk
+
+56
+00:03:44,015 --> 00:03:47,113
+but I Cloud Drive may also be riding
+changes at the same time
+
+57
+00:03:48,013 --> 00:03:51,106
+for that same document this could result
+in a corrupt document
+
+58
+00:03:52,006 --> 00:03:56,045
+which the I car drive David will again
+push up to the cloud
+
+59
+00:03:56,099 --> 00:03:59,540
+and down to the other users devices
+which results and data loss
+
+60
+00:03:59,054 --> 00:04:03,148
+everywhere so use file coordination is
+very important there's good news though
+
+61
+00:04:04,048 --> 00:04:09,052
+you I document makes things simple you I
+document
+
+62
+00:04:09,052 --> 00:04:12,851
+and and this document on OS 10 does all
+the heavy lifting for you
+
+63
+00:04:13,319 --> 00:04:18,660
+it takes care of I'll coordination it
+also uses background cues to prevent the
+
+64
+00:04:18,066 --> 00:04:19,069
+power cord nation
+
+65
+00:04:19,069 --> 00:04:24,106
+from blocking your app's you are and UI
+docket provide you with several
+
+66
+00:04:25,006 --> 00:04:26,235
+high-level API
+
+67
+00:04:26,289 --> 00:04:30,383
+for whatever use case you might have
+let's take a quick example
+
+68
+00:04:31,229 --> 00:04:38,229
+like really a document from this with
+you I document
+
+69
+00:04:41,099 --> 00:04:45,104
+so the highest level you I document does
+all about coordination for you
+
+70
+00:04:46,049 --> 00:04:51,348
+and in addition Rieger document from
+this if you document is a file
+
+71
+00:04:51,789 --> 00:04:54,877
+you can and its data object which is the
+contents of your file on disk
+
+72
+00:04:55,669 --> 00:04:59,750
+at the document the package you can and
+its file wrapper object which represents
+
+73
+00:05:00,479 --> 00:05:01,650
+your package on disk
+
+74
+00:05:01,065 --> 00:05:04,132
+you just have to override the load from
+cart into tight method
+
+75
+00:05:05,032 --> 00:05:08,036
+and then display the content to the
+document to your users
+
+76
+00:05:08,072 --> 00:05:11,149
+at a slightly lower level
+
+77
+00:05:12,049 --> 00:05:15,077
+you I documents on this all about
+coordination for you
+
+78
+00:05:15,077 --> 00:05:19,091
+but this time you wouldn't NS URL back
+which is the location of your document
+
+79
+00:05:19,091 --> 00:05:19,880
+on desk
+
+80
+00:05:20,699 --> 00:05:25,110
+you then just have to you read the
+document and displayed to users
+
+81
+00:05:25,011 --> 00:05:30,012
+at the lowest level we've been option
+that's really provided only for hooking
+
+82
+00:05:30,021 --> 00:05:33,790
+if you override the open with completion
+handler method
+
+83
+00:05:33,979 --> 00:05:38,010
+you should really invoke super and admit
+when the other two methods
+
+84
+00:05:38,001 --> 00:05:42,062
+you can override this method though if
+you want some custom application
+
+85
+00:05:42,062 --> 00:05:43,143
+behavior when you I document
+
+86
+00:05:44,043 --> 00:05:47,043
+would be doing the park ordination to
+read the document from this
+
+87
+00:05:47,043 --> 00:05:50,134
+new and I would say
+
+88
+00:05:51,034 --> 00:05:54,034
+we have some a synchronous file
+coordination API's
+
+89
+00:05:54,034 --> 00:05:58,038
+so the existing power cord nation API's
+
+90
+00:05:58,038 --> 00:06:02,084
+were completely synchronous that means
+you have to do your own background
+
+91
+00:06:02,084 --> 00:06:03,125
+queuing to
+
+92
+00:06:04,025 --> 00:06:07,057
+prevent you Powercore nation from
+blocking your a
+
+93
+00:06:07,057 --> 00:06:11,156
+I can be a little bit tricky to do so we
+have some new Pop Warner
+
+94
+00:06:11,669 --> 00:06:14,693
+coordinator API for a synchronous file
+coordination
+
+95
+00:06:14,909 --> 00:06:18,050
+which is the court may access with
+intense method
+
+96
+00:06:18,005 --> 00:06:21,046
+we also have a new course pond in class
+
+97
+00:06:21,046 --> 00:06:24,051
+which is the s file access in 10 test
+file
+
+98
+00:06:24,096 --> 00:06:27,113
+accident and class which essentially
+just contains
+
+99
+00:06:28,013 --> 00:06:31,076
+a URL and some options for your intent
+coordination
+
+100
+00:06:31,076 --> 00:06:34,475
+you pass these in an array to the corny
+axis
+
+101
+00:06:35,159 --> 00:06:39,234
+with intense method to do your part
+formation operations
+
+102
+00:06:39,909 --> 00:06:45,110
+let's take a quick look at that and some
+simple code so this code
+
+103
+00:06:45,011 --> 00:06:48,065
+might be if I want to copy a document
+from one location to another
+
+104
+00:06:48,065 --> 00:06:51,082
+as you can see I allocate
+
+105
+00:06:51,082 --> 00:06:54,146
+a source in 10 to read the document
+where it currently
+
+106
+00:06:55,046 --> 00:06:58,144
+exist on desk and then allocate a
+destination in 10
+
+107
+00:06:59,044 --> 00:07:02,453
+for the location that I want to copy the
+document to
+
+108
+00:07:02,849 --> 00:07:05,870
+I pass these to the
+
+109
+00:07:05,087 --> 00:07:08,093
+popcorn and a method of corny access
+with intense
+
+110
+00:07:08,093 --> 00:07:11,184
+and at some point in the future my
+access for block
+
+111
+00:07:12,084 --> 00:07:17,088
+will be called on the Q I provide I then
+just have to do my operation in my
+
+112
+00:07:17,088 --> 00:07:18,237
+access to block
+
+113
+00:07:19,029 --> 00:07:24,090
+now it's important when you do your
+operation in your access for block
+
+114
+00:07:24,009 --> 00:07:27,074
+to use the URL Center attached to the
+end its file
+
+115
+00:07:27,074 --> 00:07:30,113
+access intense because they may have
+changed
+
+116
+00:07:30,779 --> 00:07:36,760
+while you're waiting for your
+coordination now let's move on to
+
+117
+00:07:36,076 --> 00:07:38,132
+discovering enlisting your documents
+mccloud
+
+118
+00:07:39,032 --> 00:07:46,032
+the way to discover unless your
+documents in the cloud
+
+119
+00:07:46,043 --> 00:07:49,392
+is there the existing and its many data
+query API's
+
+120
+00:07:49,779 --> 00:07:54,570
+now in previous version of the OS
+
+121
+00:07:54,057 --> 00:07:57,080
+and its meta data query has been slow to
+pick up
+
+122
+00:07:57,008 --> 00:08:00,010
+your local changes like creates deletes
+
+123
+00:08:00,082 --> 00:08:05,118
+and remains think a quick look at this
+let's say you have your app
+
+124
+00:08:06,018 --> 00:08:10,074
+you pick up a document in your apt
+container you also have a couple and its
+
+125
+00:08:10,074 --> 00:08:11,243
+minute items
+
+126
+00:08:11,909 --> 00:08:15,915
+from your and its mandate a query which
+correspond to those documents on desk
+
+127
+00:08:15,969 --> 00:08:19,063
+now let's say you're up create a new
+document on disk
+
+128
+00:08:19,909 --> 00:08:22,990
+there might be a longer way before
+
+129
+00:08:22,099 --> 00:08:26,248
+and its mandate inquiry updates and
+gives you a new and its mandate item
+
+130
+00:08:27,139 --> 00:08:33,160
+corresponding to that newly created
+local document new and I would say
+
+131
+00:08:33,349 --> 00:08:37,550
+s meta data query is easier to use
+directly with stitching
+
+132
+00:08:37,055 --> 00:08:41,077
+let's take a look at that now it's a
+
+133
+00:08:41,077 --> 00:08:44,151
+your app creates this new document on
+disk and is using proper file
+
+134
+00:08:45,051 --> 00:08:46,740
+coordination this only works
+
+135
+00:08:47,199 --> 00:08:51,550
+if you create a document using proper
+power cord nation we actually have a
+
+136
+00:08:51,055 --> 00:08:51,131
+hook
+
+137
+00:08:52,031 --> 00:08:55,054
+in your file coordination access which
+will
+
+138
+00:08:55,054 --> 00:08:58,128
+update the end it's men today the query
+quickly and automatically
+
+139
+00:08:59,028 --> 00:09:03,105
+to create and new and expanded item to
+update your app
+
+140
+00:09:04,005 --> 00:09:07,023
+that means that you no longer need to
+data sources
+
+141
+00:09:07,023 --> 00:09:11,062
+to show your app's you I want from local
+changes in 14
+
+142
+00:09:11,062 --> 00:09:15,160
+for cloud changes you just need and this
+man did a degree
+
+143
+00:09:16,006 --> 00:09:21,087
+like
+
+144
+00:09:22,041 --> 00:09:25,041
+also and its mandate a query Canwest
+
+145
+00:09:25,041 --> 00:09:30,047
+non-local documents you may want to
+display some file system attributes
+
+146
+00:09:30,047 --> 00:09:32,089
+about those documents though
+
+147
+00:09:32,089 --> 00:09:36,028
+to display in your UI when your listing
+your documents
+
+148
+00:09:36,829 --> 00:09:39,910
+we have a new an issue early P API for
+you
+
+149
+00:09:39,091 --> 00:09:42,640
+which will let you get file system
+attributes about those documents which
+
+150
+00:09:43,459 --> 00:09:46,930
+may or may not have their content
+available locally
+
+151
+00:09:46,093 --> 00:09:50,352
+the way to do this as with the MSU are
+all method get promised item resource
+
+152
+00:09:51,189 --> 00:09:53,030
+value for key
+
+153
+00:09:53,003 --> 00:09:56,076
+if you want more than one but also to
+match be we also have a book method
+
+154
+00:09:56,076 --> 00:09:56,165
+which is the problem
+
+155
+00:09:57,065 --> 00:10:01,624
+item resource values for key for Keith
+
+156
+00:10:02,209 --> 00:10:05,245
+you don't need to be under File
+coordination
+
+157
+00:10:05,569 --> 00:10:11,170
+when using these methods for listing
+your documents
+
+158
+00:10:11,017 --> 00:10:14,676
+I'll also week if you are under par
+coordination
+
+159
+00:10:14,829 --> 00:10:21,610
+we had some new popcorn maker flag for
+dealing with me today to
+
+160
+00:10:21,061 --> 00:10:24,116
+the key difference with these methods is
+that the content with these
+
+161
+00:10:25,016 --> 00:10:29,090
+plaques the past your popcorn enter is
+that the content of the documents does
+
+162
+00:10:29,009 --> 00:10:31,070
+not need to be available locally
+
+163
+00:10:32,051 --> 00:10:36,120
+when you're doing file coordination
+using these plaques
+
+164
+00:10:36,579 --> 00:10:39,890
+now let's move on to document thumbnail
+
+165
+00:10:39,089 --> 00:10:43,111
+so we think the best user experience
+when your listing your documents in your
+
+166
+00:10:44,011 --> 00:10:44,052
+app
+
+167
+00:10:44,052 --> 00:10:49,861
+is to show document previews this can
+sure user more context
+
+168
+00:10:50,329 --> 00:10:53,428
+so that they can quickly identify which
+document is meaningful to them
+
+169
+00:10:54,319 --> 00:10:58,240
+at that point in time as you can see
+
+170
+00:10:58,024 --> 00:11:01,103
+in this page is ap we have document
+previews
+
+171
+00:11:01,319 --> 00:11:07,100
+which let your user quickly identify
+which documents which
+
+172
+00:11:07,001 --> 00:11:10,080
+now is possible to show doctor previous
+previously
+
+173
+00:11:10,089 --> 00:11:13,778
+but it required a custom implementation
+
+174
+00:11:14,579 --> 00:11:18,020
+new and I would say we have some new
+file system attributes
+
+175
+00:11:18,002 --> 00:11:21,099
+keys for you to display thumbnails and
+you're a
+
+176
+00:11:21,099 --> 00:11:25,175
+the main way to do this is with the MSU
+RL thumbnail dictionary key
+
+177
+00:11:26,075 --> 00:11:30,093
+if you call this are on your document
+using the Get promised I'd resource
+
+178
+00:11:30,093 --> 00:11:31,147
+value for key method
+
+179
+00:11:32,047 --> 00:11:35,072
+you'll get a dictionary which contains
+your thumbnails
+
+180
+00:11:35,072 --> 00:11:39,089
+which you can display in Europe you I
+the only key in this dictionary right
+
+181
+00:11:39,089 --> 00:11:39,142
+now
+
+182
+00:11:40,042 --> 00:11:44,331
+is the NS thumbnail 1024 by 1024 size
+key
+
+183
+00:11:44,709 --> 00:11:47,772
+which corresponds to the UI and edge or
+NS image
+
+184
+00:11:48,339 --> 00:11:52,480
+which you can then just displaying your
+UI
+
+185
+00:11:52,048 --> 00:11:57,050
+now on to saving document that males so
+the easiest way to save time else
+
+186
+00:11:57,068 --> 00:12:02,837
+is for you I document if you override
+the file attributes the right URL per se
+
+187
+00:12:03,449 --> 00:12:05,520
+but operation method
+
+188
+00:12:05,052 --> 00:12:08,056
+and have it generate a you I am age
+
+189
+00:12:08,056 --> 00:12:11,148
+which is your time now and return it you
+I document will automatically
+
+190
+00:12:12,048 --> 00:12:16,091
+right the thumbnail to disk for you then
+the I car drive Damon will go ahead and
+
+191
+00:12:16,091 --> 00:12:17,114
+pick up those changes
+
+192
+00:12:18,014 --> 00:12:21,105
+and push them up to the cloud
+alternatively
+
+193
+00:12:22,005 --> 00:12:25,027
+if you're not using you I document you
+can save your thumbnails manually
+
+194
+00:12:25,027 --> 00:12:29,326
+using the existing and its you're all
+set resource value for key method
+
+195
+00:12:29,569 --> 00:12:34,370
+but you should really be under File
+coordination when you invoke this method
+
+196
+00:12:34,037 --> 00:12:38,124
+on OS 10 thumbnail for actually
+generated for you automatically
+
+197
+00:12:39,024 --> 00:12:42,024
+however if you have a custom document
+format
+
+198
+00:12:42,024 --> 00:12:45,103
+you'll need to let quick work know how
+to
+
+199
+00:12:45,319 --> 00:12:48,520
+display thumbnails for you document
+still need a quick look plugin
+
+200
+00:12:48,052 --> 00:12:51,151
+to generate your time else
+
+201
+00:12:52,051 --> 00:12:58,870
+now let's move on to discovering
+documents outside your app's container
+
+202
+00:12:59,329 --> 00:13:02,990
+now in previous person US it's been
+
+203
+00:13:02,099 --> 00:13:05,298
+difficult for users to access documents
+
+204
+00:13:06,189 --> 00:13:09,800
+outside if your app's container from
+within your app
+
+205
+00:13:09,008 --> 00:13:12,053
+take a look at how they might do this
+previously
+
+206
+00:13:13,025 --> 00:13:16,123
+let's say if your app you have direct
+access to all the documents you're out
+
+207
+00:13:17,023 --> 00:13:17,492
+scant
+
+208
+00:13:17,699 --> 00:13:21,120
+container there's no problem there but
+let's say
+
+209
+00:13:21,012 --> 00:13:24,721
+your user wants to open say document 3
+
+210
+00:13:24,829 --> 00:13:28,770
+from within your app how might they go
+about doing this
+
+211
+00:13:28,077 --> 00:13:31,486
+or one where they might do this as they
+would have to watch
+
+212
+00:13:32,179 --> 00:13:36,290
+the other app then using the UI document
+interaction controller
+
+213
+00:13:36,029 --> 00:13:39,052
+make a copy of the document from the
+other apps container
+
+214
+00:13:39,052 --> 00:13:42,731
+into your app's local container only
+then
+
+215
+00:13:43,199 --> 00:13:47,224
+could they read the document from within
+your app
+
+216
+00:13:47,449 --> 00:13:50,910
+we think a better user experience is if
+you're out can just
+
+217
+00:13:50,091 --> 00:13:54,135
+access those documents from the other
+apps container directly
+
+218
+00:13:55,035 --> 00:13:59,103
+so prob rap again if you just open those
+documents directly
+
+219
+00:14:00,003 --> 00:14:05,035
+the users happy so we think that's a
+better user experience
+
+220
+00:14:05,035 --> 00:14:09,039
+knew it I was a there's a way to do this
+with the UI document picker view
+
+221
+00:14:09,039 --> 00:14:10,116
+controller
+
+222
+00:14:11,016 --> 00:14:15,114
+this allows your users to discover
+documents outside your apt sandbox
+
+223
+00:14:16,014 --> 00:14:20,089
+and let your users grants your app
+permission to access and modify
+
+224
+00:14:20,089 --> 00:14:23,172
+the documents that they have chosen
+
+225
+00:14:24,072 --> 00:14:27,116
+now to have your to have your app's
+container show up
+
+226
+00:14:28,016 --> 00:14:32,935
+in the document picker you have to often
+by marking your container with a and its
+
+227
+00:14:33,079 --> 00:14:36,970
+ubiquitous container is documents go
+public
+
+228
+00:14:36,097 --> 00:14:40,188
+to be yes in your info pls
+
+229
+00:14:41,088 --> 00:14:44,116
+I have a great New York I with great new
+UI here
+
+230
+00:14:45,016 --> 00:14:48,915
+which you can display in your apt 3
+users to choose documents
+
+231
+00:14:49,059 --> 00:14:52,137
+and like to show you that now with a
+quick demo aka
+
+232
+00:14:52,839 --> 00:14:58,620
+go ahead and launch Maya them yeah at
+Harvard it's a simple text editing at
+
+233
+00:14:58,062 --> 00:15:01,089
+so as you can see I'm using an ass man
+idk wat u less
+
+234
+00:15:01,089 --> 00:15:04,165
+only one document my container right now
+but I'm you see as many
+
+235
+00:15:05,065 --> 00:15:08,162
+inquiry without power cord nation to
+list my documents and display a
+
+236
+00:15:09,062 --> 00:15:13,131
+quick simple preview of the documents
+now let's go ahead and launch up the
+
+237
+00:15:13,689 --> 00:15:15,650
+docking picker
+
+238
+00:15:15,065 --> 00:15:18,254
+so this is our new doctrine picker you I
+
+239
+00:15:18,839 --> 00:15:22,260
+as you see there several containers
+listed here and also have
+
+240
+00:15:22,026 --> 00:15:25,075
+a document which lives in the shared
+icon folder
+
+241
+00:15:25,075 --> 00:15:28,078
+which is listed alongside my containers
+
+242
+00:15:28,078 --> 00:15:31,617
+now i cant switch to list view here
+there's much stuff I can do
+
+243
+00:15:32,319 --> 00:15:36,240
+sort by name tags state X enter a
+
+244
+00:15:36,024 --> 00:15:40,102
+and what now let's go ahead and might
+roll down this text edit container
+
+245
+00:15:41,002 --> 00:15:44,049
+and select a document ecstatic container
+
+246
+00:15:44,049 --> 00:15:47,638
+I had so now I am open the document
+which actually lives
+
+247
+00:15:48,079 --> 00:15:51,990
+in the text in a container I have not
+made a copy of this document
+
+248
+00:15:51,099 --> 00:15:54,548
+stock it still exists in the Tech Center
+container but now that
+
+249
+00:15:55,439 --> 00:15:58,880
+I it's the user granted my app access to
+it I can
+
+250
+00:15:58,088 --> 00:16:02,166
+and a and access it in the Tech Center
+container
+
+251
+00:16:03,066 --> 00:16:06,245
+let's go ahead and X out in this as you
+can see
+
+252
+00:16:06,839 --> 00:16:09,924
+now that I'm granted my app access to
+this document
+
+253
+00:16:10,689 --> 00:16:14,480
+it is now as now updated in the end its
+mandate a query
+
+254
+00:16:14,048 --> 00:16:17,060
+and I have I can list it alongside the
+other documents
+
+255
+00:16:17,006 --> 00:16:21,975
+in my app I've also annotated a if you
+can see with a text editor name just to
+
+256
+00:16:22,569 --> 00:16:24,020
+tell my user that lives
+
+257
+00:16:24,002 --> 00:16:27,088
+in the text edit container let's take a
+quick look at this
+
+258
+00:16:27,088 --> 00:16:32,176
+encode
+
+259
+00:16:33,076 --> 00:16:36,090
+so this is basically all the code I had
+to write to
+
+260
+00:16:36,009 --> 00:16:39,042
+display the doc can pick your all app to
+do
+
+261
+00:16:40,023 --> 00:16:43,742
+is allocate the document menu view
+controller
+
+262
+00:16:43,949 --> 00:16:48,034
+and pass it an array of the document
+types than interested in
+
+263
+00:16:48,799 --> 00:16:53,360
+I'm a simple text editing app so I only
+pass the plaintext UTI
+
+264
+00:16:53,036 --> 00:16:56,265
+as the documents at my apt can access
+
+265
+00:16:56,589 --> 00:17:00,613
+I then just present the view controller
+and then implement these two simple
+
+266
+00:17:00,829 --> 00:17:02,610
+delegate methods
+
+267
+00:17:02,061 --> 00:17:06,061
+and finally when the document when the
+user pics a document given URL
+
+268
+00:17:06,061 --> 00:17:10,064
+I just loaded and displayed to users
+it's super simple
+
+269
+00:17:10,091 --> 00:17:14,100
+now if you noticed my app did not
+actually show up
+
+270
+00:17:15,000 --> 00:17:18,809
+in the document picker that's because I
+haven't set
+
+271
+00:17:18,809 --> 00:17:22,887
+my my eye container to be a public
+container yet
+
+272
+00:17:23,589 --> 00:17:27,280
+a second just a quick look at how to do
+that
+
+273
+00:17:27,028 --> 00:17:32,057
+so if I open up my in populist here
+
+274
+00:17:32,057 --> 00:17:35,786
+job and into this as you can see applied
+
+275
+00:17:36,299 --> 00:17:39,480
+document scope is set to be not public
+
+276
+00:17:39,048 --> 00:17:45,076
+all I have to do is set this TS
+
+277
+00:17:45,076 --> 00:17:49,107
+and then bomb the bundled version so
+that
+
+278
+00:17:50,007 --> 00:17:54,058
+so that the doctor picker knows that I
+have made a change to my info key west
+
+279
+00:17:54,058 --> 00:17:57,149
+and then my app will be will be
+displayed in the document picker
+
+280
+00:17:58,049 --> 00:18:02,608
+so that other Afghan get access to my
+documents
+
+281
+00:18:03,049 --> 00:18:06,240
+arts quick summary wish I knew how
+
+282
+00:18:06,024 --> 00:18:09,057
+easy it is to display that document
+picker
+
+283
+00:18:09,057 --> 00:18:12,122
+inside your apt and how easy it is for
+users to
+
+284
+00:18:13,022 --> 00:18:16,861
+Greg chura access to documents and other
+APs containers
+
+285
+00:18:17,059 --> 00:18:20,240
+such as the shared I cardholder
+
+286
+00:18:20,024 --> 00:18:23,101
+we also show you how it is to make your
+container show up in the UI docking
+
+287
+00:18:24,001 --> 00:18:24,007
+picker
+
+288
+00:18:24,061 --> 00:18:31,061
+just by sending your flag to be yes and
+then bumping your bundle version
+
+289
+00:18:31,669 --> 00:18:34,731
+with that I would like to welcome you
+had a sport men to the stage
+
+290
+00:18:35,289 --> 00:18:38,360
+was going to talk to you about from the
+key principles
+
+291
+00:18:38,036 --> 00:18:45,036
+behind the document picker please
+welcome you and it's the stage
+
+292
+00:18:47,059 --> 00:18:50,120
+thank you Mike hymie honors from the you
+like a team
+
+293
+00:18:50,669 --> 00:18:54,160
+and I would like to talk to you about
+I'm some of the
+
+294
+00:18:54,016 --> 00:18:57,051
+main I differences I have between at
+
+295
+00:18:57,051 --> 00:19:00,133
+external documents and documents that
+may live in your container
+
+296
+00:19:01,033 --> 00:19:04,512
+as you know replication right now
+
+297
+00:19:04,809 --> 00:19:10,400
+has I access to its own container only
+
+298
+00:19:10,004 --> 00:19:13,071
+so your you're able to read and write
+
+299
+00:19:14,007 --> 00:19:17,236
+the documents inside your own container
+
+300
+00:19:17,299 --> 00:19:20,640
+and as you have seen in Mike's
+demonstration I'm not for other
+
+301
+00:19:20,064 --> 00:19:20,157
+documents
+
+302
+00:19:21,057 --> 00:19:25,406
+what we do is at once the user has
+chosen this document
+
+303
+00:19:25,919 --> 00:19:29,970
+I we save a so-called document reference
+
+304
+00:19:29,097 --> 00:19:32,666
+into your container stock and reference
+
+305
+00:19:33,539 --> 00:19:37,070
+well then go and point to your I'm
+
+306
+00:19:37,007 --> 00:19:40,099
+external document to ease this
+
+307
+00:19:40,099 --> 00:19:43,190
+this new concept in to your application
+we provide
+
+308
+00:19:44,009 --> 00:19:49,077
+few new features and attributes on the N
+is made it a query
+
+309
+00:19:50,058 --> 00:19:53,120
+you are using probably using the
+animated aquarium with the ubiquitous
+
+310
+00:19:54,002 --> 00:19:55,079
+documents cope right now
+
+311
+00:19:55,097 --> 00:19:59,166
+to list the documents that are inside
+your container locally
+
+312
+00:20:00,039 --> 00:20:05,620
+and even if the user has granted your
+application access to a document
+
+313
+00:20:05,062 --> 00:20:09,068
+at outside of your container even if if
+he has granted to your application
+
+314
+00:20:10,022 --> 00:20:11,038
+access to
+
+315
+00:20:11,038 --> 00:20:14,957
+document outside of of your container
+will still continue to
+
+316
+00:20:15,299 --> 00:20:20,020
+million this documents that our local to
+your container as long as you don't pass
+
+317
+00:20:20,002 --> 00:20:21,048
+a new skull
+
+318
+00:20:21,048 --> 00:20:25,061
+which is the ubiquitous external
+documents go
+
+319
+00:20:25,061 --> 00:20:29,086
+the ubiquitous external documents cobe
+ensures that you get an animated item
+
+320
+00:20:29,086 --> 00:20:32,164
+that corresponds to the hi references
+that that
+
+321
+00:20:33,064 --> 00:20:38,093
+his res extended to at your application
+container
+
+322
+00:20:38,669 --> 00:20:41,718
+now these new and admitted items are
+
+323
+00:20:42,159 --> 00:20:47,234
+effectively just like the old ones they
+also have an animated items URL key
+
+324
+00:20:47,909 --> 00:20:51,030
+and this and admitted items you're out
+he well
+
+325
+00:20:51,003 --> 00:20:54,006
+point to om
+
+326
+00:20:54,033 --> 00:20:57,049
+this animated items you are a key
+wellpoint to
+
+327
+00:20:57,049 --> 00:21:00,146
+the and you're out that your document is
+actually located at
+
+328
+00:21:01,046 --> 00:21:05,049
+that means that if your app is using the
+animated item iraqi right now
+
+329
+00:21:05,049 --> 00:21:08,120
+to access a file directly that will
+still work even with the document
+
+330
+00:21:09,002 --> 00:21:10,091
+reference
+
+331
+00:21:10,289 --> 00:21:14,510
+the you can pack past the return value
+of getting this key
+
+332
+00:21:14,051 --> 00:21:17,074
+directly to for example a UI document
+and
+
+333
+00:21:17,074 --> 00:21:20,163
+huge that as your I'll to directly
+access to
+
+334
+00:21:21,063 --> 00:21:24,362
+at external document now of course
+
+335
+00:21:24,929 --> 00:21:27,960
+sometimes that is not actually what you
+want to do sometimes that you're
+
+336
+00:21:27,096 --> 00:21:28,435
+interested in is not the
+
+337
+00:21:29,299 --> 00:21:32,400
+actual document backing this this a
+reference
+
+338
+00:21:32,004 --> 00:21:35,004
+but rather the reference itself
+
+339
+00:21:35,004 --> 00:21:38,097
+for example you may want to display the
+reference inside a folder in your
+
+340
+00:21:39,033 --> 00:21:43,089
+applications container and your UI
+aren't you might even want to allow the
+
+341
+00:21:43,089 --> 00:21:47,127
+user to move these references around
+inside their folder
+
+342
+00:21:48,027 --> 00:21:51,080
+on for that we provide Nucci and this
+one is
+
+343
+00:21:51,008 --> 00:21:57,047
+actually knew nice at a on the
+ubiquitous item your own local container
+
+344
+00:21:58,019 --> 00:22:02,035
+this key points the actual reference
+inside your applications contain
+
+345
+00:22:02,035 --> 00:22:06,053
+such you can use this the file that is
+at this location
+
+346
+00:22:06,053 --> 00:22:09,075
+to move it around now
+
+347
+00:22:09,075 --> 00:22:13,092
+there are few other keys it may be
+useful for you to know whether a file
+
+348
+00:22:13,092 --> 00:22:16,179
+at that has been returned by Ginn
+admitted a query is actually external to
+
+349
+00:22:17,079 --> 00:22:18,158
+replication or not
+
+350
+00:22:19,058 --> 00:22:22,091
+at sorry to your applications contain a
+and for that
+
+351
+00:22:22,091 --> 00:22:27,102
+you provide is external document key
+which will return ol for local documents
+
+352
+00:22:28,002 --> 00:22:28,038
+and
+
+353
+00:22:28,038 --> 00:22:32,065
+yes for external documents and if you've
+seen at Mikes demo
+
+354
+00:22:32,065 --> 00:22:35,091
+he showed a little bad shore that text
+
+355
+00:22:35,091 --> 00:22:39,187
+label 2i in from the user that the
+document that he's shown that
+
+356
+00:22:40,087 --> 00:22:43,175
+popped in there was actually from not
+from the local content over other front
+
+357
+00:22:44,075 --> 00:22:45,104
+exit
+
+358
+00:22:46,004 --> 00:22:50,013
+and to enable you to do that we have to
+contain a display name she
+
+359
+00:22:50,013 --> 00:22:53,076
+attend container display name he's a
+localized key that
+
+360
+00:22:53,076 --> 00:22:56,143
+I'm is fit for display das and
+
+361
+00:22:57,043 --> 00:23:00,082
+up for example would in if you if you
+extended
+
+362
+00:23:00,082 --> 00:23:05,158
+a document front exit it would show
+takes its name
+
+363
+00:23:06,058 --> 00:23:09,065
+alright so we've got these document
+references spot
+
+364
+00:23:09,065 --> 00:23:12,068
+why did he even ET's so
+
+365
+00:23:12,068 --> 00:23:15,106
+the main reason is for security
+
+366
+00:23:16,006 --> 00:23:19,064
+om we do not generally allow any app
+
+367
+00:23:19,064 --> 00:23:22,082
+to access any other APs container
+
+368
+00:23:22,082 --> 00:23:25,104
+on the document pickers they can do that
+
+369
+00:23:26,004 --> 00:23:29,021
+the document pickers running out of
+process so this
+
+370
+00:23:29,021 --> 00:23:33,047
+its it's not on I it is able
+
+371
+00:23:33,047 --> 00:23:36,138
+that has the sufficient title man's to
+be able to list all of the
+
+372
+00:23:37,038 --> 00:23:41,043
+document containers and the only way to
+get a
+
+373
+00:23:41,043 --> 00:23:44,075
+document inside of your application St
+Houston
+
+374
+00:23:44,075 --> 00:23:47,102
+document picture had to that
+
+375
+00:23:48,002 --> 00:23:51,074
+for that purpose we return a so-called
+security school Purell
+
+376
+00:23:51,074 --> 00:23:54,121
+and he fused sandboxing mechanism on
+August 10
+
+377
+00:23:55,021 --> 00:23:58,057
+you may already know this concept of a
+security Scott URL
+
+378
+00:23:58,057 --> 00:24:03,123
+on you get you an issue row which has a
+tiny bit of information attached to it
+
+379
+00:24:04,023 --> 00:24:07,117
+that informs the kernel and of course
+the the owning ap
+
+380
+00:24:08,017 --> 00:24:11,050
+that arm in fact the owning ap is
+
+381
+00:24:11,005 --> 00:24:14,016
+allowed to access this document and is
+allowed to
+
+382
+00:24:14,061 --> 00:24:17,061
+for example my hiatus while on
+
+383
+00:24:17,061 --> 00:24:20,102
+now importantly arm if you
+
+384
+00:24:21,002 --> 00:24:24,020
+naively which if it were to save this
+URL
+
+385
+00:24:24,002 --> 00:24:28,007
+for example you would see realize it
+into a string and thence DC realize it
+
+386
+00:24:28,025 --> 00:24:31,027
+into out of the strain you would lose
+dis
+
+387
+00:24:31,045 --> 00:24:34,138
+security skull and that is not something
+you wanted happen
+
+388
+00:24:35,038 --> 00:24:39,094
+because of course security Scopus what
+you use to access this URL
+
+389
+00:24:39,094 --> 00:24:42,119
+of course you need a way to get back to
+this cock your row
+
+390
+00:24:43,019 --> 00:24:46,060
+and arm that document references feature
+
+391
+00:24:46,006 --> 00:24:50,020
+is providing one of the ways to get back
+to the issue or else
+
+392
+00:24:50,074 --> 00:24:54,089
+if you get your Ennis & Ennis URL from
+but he document reference
+
+393
+00:24:54,089 --> 00:24:57,108
+this and if you're already has the
+security scope attached
+
+394
+00:24:58,008 --> 00:25:01,024
+you can't use it with you i document or
+with
+
+395
+00:25:01,024 --> 00:25:04,843
+started testing and stop accessing
+secure disk ok resource
+
+396
+00:25:05,059 --> 00:25:08,840
+methods on an issue row but I strongly
+suggest that you use your document
+
+397
+00:25:08,084 --> 00:25:09,110
+because that does it every
+
+398
+00:25:10,001 --> 00:25:13,035
+that does all of this for you I'm to
+
+399
+00:25:13,044 --> 00:25:16,096
+for example of the contents of
+
+400
+00:25:16,096 --> 00:25:19,147
+file backed by this year
+
+401
+00:25:20,047 --> 00:25:24,058
+now sometimes enumerating your document
+is not actually what you want to get
+
+402
+00:25:24,058 --> 00:25:25,114
+back to the documents
+
+403
+00:25:26,014 --> 00:25:30,016
+for example at one thing you might be
+using estate restoration
+
+404
+00:25:30,034 --> 00:25:34,057
+and its state restoration of course what
+you want to do is pop the user back
+
+405
+00:25:34,057 --> 00:25:37,099
+into the UI that they saw before so
+
+406
+00:25:37,099 --> 00:25:41,120
+you instead of enumerating files that
+the year at she access previously
+
+407
+00:25:42,002 --> 00:25:46,051
+what you want to do is access have very
+specific file
+
+408
+00:25:46,069 --> 00:25:49,123
+arm we offer a mechanism to do that for
+you
+
+409
+00:25:50,023 --> 00:25:54,068
+I'm which is a bookmark the bookmarks
+also possibly known to you if you've
+
+410
+00:25:54,068 --> 00:25:54,697
+used it
+
+411
+00:25:55,309 --> 00:25:59,090
+on with the sandbox a nice tan I'm
+
+412
+00:25:59,009 --> 00:26:02,102
+and the bookmark encodes the security
+scope alongside the URL
+
+413
+00:26:03,002 --> 00:26:07,029
+so he can use the bookmark to get back
+to the Securities cultural
+
+414
+00:26:07,029 --> 00:26:10,033
+I am we offer
+
+415
+00:26:10,069 --> 00:26:13,091
+API which already exists I'm
+
+416
+00:26:13,091 --> 00:26:16,127
+add to bookmark data with options
+
+417
+00:26:17,027 --> 00:26:22,112
+API is used for by huge on an issue or
+Allen stands to create it bookmark that
+
+418
+00:26:23,012 --> 00:26:24,017
+you can then see
+
+419
+00:26:24,017 --> 00:26:28,084
+it's an basically an opaque in a state a
+blob I'm that you can then save into a
+
+420
+00:26:28,084 --> 00:26:30,155
+state restoration archive for example
+
+421
+00:26:31,055 --> 00:26:34,082
+and of course the comp its counterpart
+is a class method on
+
+422
+00:26:34,082 --> 00:26:38,071
+an issue RL that you're all by resolving
+bookmarked it out which we
+
+423
+00:26:38,809 --> 00:26:43,140
+week and then Hughes to resolve this
+bookmark into an issue I'll that has the
+
+424
+00:26:43,014 --> 00:26:45,093
+scope attached
+
+425
+00:26:45,093 --> 00:26:48,099
+all right om now
+
+426
+00:26:49,053 --> 00:26:52,126
+Mike showed you the enjoy da can pick
+your view controller in
+
+427
+00:26:53,026 --> 00:26:56,058
+the so-called open now and I'm
+
+428
+00:26:56,058 --> 00:26:59,287
+at an open mold what we will do is
+indeed
+
+429
+00:26:59,809 --> 00:27:04,790
+trade a bookmark and a corresponding
+security Scott URL
+
+430
+00:27:04,079 --> 00:27:07,098
+hand you back the Securities Co Purell
+
+431
+00:27:07,098 --> 00:27:11,106
+and of course place the bookmark ref are
+the reference document inside Europe's
+
+432
+00:27:12,078 --> 00:27:14,103
+container
+
+433
+00:27:15,003 --> 00:27:18,101
+now sometimes that is not what you want
+to do you actually on for example you
+
+434
+00:27:19,001 --> 00:27:21,005
+may have an application that does not
+
+435
+00:27:21,005 --> 00:27:24,007
+instead of opening specific documents
+may also
+
+436
+00:27:24,025 --> 00:27:27,097
+I'm aggregate documents keynote for
+example would be one of these
+
+437
+00:27:27,097 --> 00:27:28,120
+applications
+
+438
+00:27:29,002 --> 00:27:34,051
+I in which hugh for example might want
+to open in image from an application to
+
+439
+00:27:34,069 --> 00:27:37,122
+inserted into your presentation you
+don't want to maintain a persistent
+
+440
+00:27:38,022 --> 00:27:40,073
+references that image but instead you
+want to copy this
+
+441
+00:27:40,073 --> 00:27:43,073
+image into your presentation as
+
+442
+00:27:43,073 --> 00:27:47,102
+as one piece and we also support a mod
+for that it's the so-called
+
+443
+00:27:48,002 --> 00:27:51,033
+important note: import mode will not
+create a bookmark
+
+444
+00:27:51,033 --> 00:27:54,049
+but instead I'm will copy the file
+
+445
+00:27:54,049 --> 00:27:58,076
+to a temporary location you of course
+still be granted access to this
+
+446
+00:27:58,076 --> 00:27:59,134
+temporary location
+
+447
+00:28:00,034 --> 00:28:04,128
+but on the file is not persistently
+reference by replication
+
+448
+00:28:05,028 --> 00:28:08,064
+after the application terminates for any
+reason I'm
+
+449
+00:28:08,064 --> 00:28:12,100
+we will clean out the temporary location
+and you will no longer have access
+
+450
+00:28:13,000 --> 00:28:16,048
+soul you have to make a copy soon after
+a decade and I get called back to
+
+451
+00:28:16,048 --> 00:28:19,095
+actually hang on to the document
+
+452
+00:28:19,095 --> 00:28:22,117
+alright this is reading documents and
+that is
+
+453
+00:28:23,017 --> 00:28:27,084
+of course a very important part but
+equally as important as a possible
+
+454
+00:28:27,084 --> 00:28:30,089
+writing documents in treating you
+documents
+
+455
+00:28:30,089 --> 00:28:34,148
+now as i've mentioned you will not have
+general access to containers
+
+456
+00:28:35,048 --> 00:28:39,085
+outside of at your app's own container
+
+457
+00:28:39,085 --> 00:28:42,414
+I but of course you can ride into that
+container so
+
+458
+00:28:43,179 --> 00:28:47,254
+or possibly in Tampa into a temporary
+location so to create in your document
+
+459
+00:28:47,929 --> 00:28:51,860
+that is exactly and sorry and you
+document a
+
+460
+00:28:51,086 --> 00:28:55,088
+on disk at that is exactly what you want
+to do
+
+461
+00:28:55,088 --> 00:28:58,097
+I'm you can then shoes a special
+document picture mode
+
+462
+00:28:59,078 --> 00:29:02,155
+to move that document outside of
+Europe's container but again the user
+
+463
+00:29:03,055 --> 00:29:06,094
+chooses where to move the document
+
+464
+00:29:06,094 --> 00:29:09,122
+I let's have a quick look at how that
+works he would
+
+465
+00:29:10,022 --> 00:29:14,065
+at of course you already have a document
+top three in this case
+
+466
+00:29:14,065 --> 00:29:17,122
+and use the unit with you are all method
+on your document picker
+
+467
+00:29:18,022 --> 00:29:22,051
+with your the URL of your existing
+document
+
+468
+00:29:22,051 --> 00:29:26,090
+to allow the user to choose I'll new
+location
+
+469
+00:29:26,009 --> 00:29:30,015
+these are now choosing the location and
+remove the file
+
+470
+00:29:30,096 --> 00:29:33,180
+into the new location we really try n
+
+471
+00:29:34,008 --> 00:29:37,074
+document reference to you so you still
+maintain
+
+472
+00:29:38,046 --> 00:29:41,110
+access to the document and this URL
+
+473
+00:29:42,001 --> 00:29:45,074
+is effectively exactly like one that has
+been returned to you by
+
+474
+00:29:45,083 --> 00:29:48,090
+the opening mechanism so I'm you can
+
+475
+00:29:48,009 --> 00:29:51,104
+I enumerate this new document reference
+in your animated
+
+476
+00:29:52,085 --> 00:29:55,102
+query now of course sometimes
+
+477
+00:29:56,002 --> 00:29:59,026
+that is exactly not what you want you
+don't want the reference
+
+478
+00:29:59,026 --> 00:30:04,195
+I'm so we also have a an export mode
+which allows you to forgo the entire
+
+479
+00:30:04,429 --> 00:30:05,700
+reference thing
+
+480
+00:30:05,007 --> 00:30:08,086
+and that case you will make a copy of
+your document I'm
+
+481
+00:30:09,049 --> 00:30:12,488
+into another apt container and
+
+482
+00:30:12,929 --> 00:30:16,260
+that is basically it k to me
+
+483
+00:30:16,026 --> 00:30:20,045
+give a quick summary of how to use
+document management here
+
+484
+00:30:20,045 --> 00:30:23,047
+I'm the scene that you can choose Add
+
+485
+00:30:23,047 --> 00:30:26,050
+the document reference mechanism to
+enumerate documents
+
+486
+00:30:26,005 --> 00:30:29,013
+that have been previously I used by our
+
+487
+00:30:30,003 --> 00:30:34,057
+are granted access by the user we've
+also seen that you can use bookmarks a
+
+488
+00:30:34,084 --> 00:30:35,142
+state restoration
+
+489
+00:30:36,042 --> 00:30:39,100
+and we've also yeah I shown you I
+
+490
+00:30:40,000 --> 00:30:45,033
+quickly how to use the import open an ex
+parte and move mouse
+
+491
+00:30:45,033 --> 00:30:48,098
+and all of these of course I'm play
+together
+
+492
+00:30:48,098 --> 00:30:52,154
+to enable your user success all of their
+I thought documents not merely does that
+
+493
+00:30:53,054 --> 00:30:55,115
+are inside your folder
+
+494
+00:30:56,015 --> 00:30:59,101
+but you notice I said all of your iPod
+documents here
+
+495
+00:31:00,001 --> 00:31:03,039
+and of course I jazz users
+
+496
+00:31:03,039 --> 00:31:07,092
+may have at different locations for
+storing their documents
+
+497
+00:31:07,092 --> 00:31:10,167
+for example you may be are part of an
+enterprise that has their own storage
+
+498
+00:31:11,067 --> 00:31:12,152
+management system
+
+499
+00:31:13,052 --> 00:31:16,085
+and of course it would be grand if you
+
+500
+00:31:16,085 --> 00:31:19,089
+could tag ranchers users access to
+
+501
+00:31:19,089 --> 00:31:22,172
+those documents as well and for that we
+are introducing a new feature
+
+502
+00:31:23,072 --> 00:31:26,148
+the so-called document provider
+extensions
+
+503
+00:31:27,048 --> 00:31:30,050
+now what is a document provider
+extension
+
+504
+00:31:30,005 --> 00:31:33,052
+document provider extension is an
+alternate way for
+
+505
+00:31:33,097 --> 00:31:37,132
+you are a third party to provide
+document storage
+
+506
+00:31:38,032 --> 00:31:41,040
+from the host applications perspective
+
+507
+00:31:41,004 --> 00:31:44,059
+this works exactly the same way as the
+pre-existing I
+
+508
+00:31:44,095 --> 00:31:48,119
+health storage location and here is able
+to
+
+509
+00:31:49,019 --> 00:31:52,888
+I select one of the searched locations
+from the document picker
+
+510
+00:31:53,059 --> 00:31:56,580
+and they could use these storage
+locations
+
+511
+00:31:56,058 --> 00:31:59,407
+in the Dec same old story they can open
+documents
+
+512
+00:31:59,929 --> 00:32:04,941
+and I'm move out documents to the
+storage locations
+
+513
+00:32:05,049 --> 00:32:09,090
+on we implement these using to I
+different
+
+514
+00:32:09,009 --> 00:32:12,034
+separate extensions first of which
+
+515
+00:32:12,034 --> 00:32:15,061
+is the so-called I'm document picker
+
+516
+00:32:15,061 --> 00:32:19,107
+extension which provides the you a few
+controls have class
+
+517
+00:32:20,007 --> 00:32:23,073
+that is effectively free-form that the
+user can at
+
+518
+00:32:23,073 --> 00:32:27,112
+to use to choose a document from your
+storage location
+
+519
+00:32:28,012 --> 00:32:31,071
+are from of course from someone at the
+search locations this year document
+
+520
+00:32:31,071 --> 00:32:32,071
+picker subclass
+
+521
+00:32:32,071 --> 00:32:35,136
+is displayed as part of the docking
+picker view controller
+
+522
+00:32:36,036 --> 00:32:40,036
+so it effectively contained inside one
+of the few controllers just like
+
+523
+00:32:40,036 --> 00:32:44,975
+at the I cloud baker s there's also a
+separate second extension
+
+524
+00:32:45,299 --> 00:32:49,540
+which is the so-called high provider
+extension the 500's tension
+
+525
+00:32:49,054 --> 00:32:52,063
+is in on you I extension which deals
+with
+
+526
+00:32:52,549 --> 00:32:56,150
+actually providing the files that would
+be a
+
+527
+00:32:56,015 --> 00:32:59,049
+the usually use cases where you want to
+provide files
+
+528
+00:32:59,049 --> 00:33:04,488
+is I'm would be arm for example ensuring
+that a pile on disk is
+
+529
+00:33:04,929 --> 00:33:10,942
+I current uploading a file that has been
+changed by the user
+
+530
+00:33:11,059 --> 00:33:15,730
+or arm enabling us to identify a file
+
+531
+00:33:15,073 --> 00:33:18,165
+so the user can savor are the use this
+app can take a bookmark prostate
+
+532
+00:33:19,065 --> 00:33:21,142
+restoration
+
+533
+00:33:22,042 --> 00:33:26,127
+I'm the hi provider extension is access
+to the proper hair extensions modulated
+
+534
+00:33:27,027 --> 00:33:28,032
+through falcone nation
+
+535
+00:33:28,077 --> 00:33:31,142
+which means that all access this that go
+through FY coronation will automatically
+
+536
+00:33:32,042 --> 00:33:33,181
+do the right thing
+
+537
+00:33:33,559 --> 00:33:37,150
+with regards to providing access to the
+file this another
+
+538
+00:33:37,015 --> 00:33:42,016
+important case where you absolutely must
+use eye coordination are everything else
+
+539
+00:33:42,016 --> 00:33:45,107
+everything will just not work
+
+540
+00:33:46,007 --> 00:33:50,028
+alright let's have a quick look at how
+at the dataflow works with
+
+541
+00:33:50,028 --> 00:33:53,061
+a five-car I dare extension specifically
+
+542
+00:33:53,061 --> 00:33:57,066
+when reading a file from desk but say
+you have a whole stack
+
+543
+00:33:57,066 --> 00:34:02,070
+and its host at is used by the user who
+is trying to to actually open a document
+
+544
+00:34:02,007 --> 00:34:03,066
+in this case
+
+545
+00:34:04,029 --> 00:34:07,057
+so the whole stabbed through some July
+action is
+
+546
+00:34:07,057 --> 00:34:10,166
+are calling the interest document types
+and not method
+
+547
+00:34:10,679 --> 00:34:14,290
+on the UI document picker you control or
+
+548
+00:34:14,029 --> 00:34:18,918
+and now that document picker om what the
+user inside the document picker
+
+549
+00:34:19,179 --> 00:34:22,220
+select a third party
+
+550
+00:34:22,589 --> 00:34:25,686
+document picker extension yours
+
+551
+00:34:26,559 --> 00:34:29,642
+I we instantiate you're you're talking
+picture extension
+
+552
+00:34:30,389 --> 00:34:33,990
+and send it to prepare for presentation
+and mold call
+
+553
+00:34:33,099 --> 00:34:37,104
+now this method is called with the mold
+that the euro is actually selected
+
+554
+00:34:38,049 --> 00:34:41,148
+and at this point %eh you want to probe
+the
+
+555
+00:34:41,589 --> 00:34:45,598
+display a view controller that
+corresponds to the mod that the user has
+
+556
+00:34:45,679 --> 00:34:47,718
+chosen for example for the open mode
+
+557
+00:34:48,069 --> 00:34:51,152
+you would want to display a view
+controller and allows the user to
+
+558
+00:34:51,899 --> 00:34:54,991
+at pick a specific document and of
+course for the
+
+559
+00:34:55,819 --> 00:34:59,844
+move out mode you want to display a view
+controller that allows them to select a
+
+560
+00:35:00,069 --> 00:35:01,130
+location instead of
+
+561
+00:35:01,013 --> 00:35:04,099
+document all right
+
+562
+00:35:04,099 --> 00:35:07,167
+I'm the year now goes ahead and Jesus
+your UI
+
+563
+00:35:08,067 --> 00:35:11,070
+to select a document at which point
+
+564
+00:35:11,007 --> 00:35:15,386
+after these s confront their intentions
+and you have to would determine
+
+565
+00:35:16,079 --> 00:35:19,730
+which for the their location in at the
+fight system
+
+566
+00:35:19,073 --> 00:35:22,116
+you want you saw this document in I'm
+
+567
+00:35:23,016 --> 00:35:27,099
+can then call the dismissed grant axis
+at the granting access to your route map
+
+568
+00:35:27,099 --> 00:35:28,178
+it on self
+
+569
+00:35:29,069 --> 00:35:32,670
+what that is jury that document picker
+
+570
+00:35:32,067 --> 00:35:35,067
+you control a top-class and
+
+571
+00:35:35,067 --> 00:35:39,456
+I'm I thereby II
+
+572
+00:35:40,059 --> 00:35:43,880
+in from of about your intention to
+actually allow the user to access this
+
+573
+00:35:43,088 --> 00:35:44,170
+URL
+
+574
+00:35:45,007 --> 00:35:49,416
+at the document picco will then call the
+document picture depict document at URL
+
+575
+00:35:50,109 --> 00:35:55,158
+method on its delegate to in from the
+his rap that their use rest just picked
+
+576
+00:35:55,599 --> 00:35:57,640
+this document
+
+577
+00:35:57,064 --> 00:36:00,129
+now with the his rep is probably wanting
+to do is to read the document at this
+
+578
+00:36:01,029 --> 00:36:02,328
+location
+
+579
+00:36:02,589 --> 00:36:06,010
+it will use the and its high coordinator
+methods for example
+
+580
+00:36:06,001 --> 00:36:09,014
+I'm corn and reading I to mature out and
+
+581
+00:36:09,014 --> 00:36:12,223
+and from and if I could answer that it
+should ensure that the document is
+
+582
+00:36:12,349 --> 00:36:13,980
+actually present
+
+583
+00:36:13,098 --> 00:36:16,164
+and s5 accordion her will call out to
+your fav provider extension that's your
+
+584
+00:36:17,064 --> 00:36:17,483
+tiny
+
+585
+00:36:18,059 --> 00:36:23,400
+on you I extension I with the start
+providing I can assure our method
+
+586
+00:36:23,004 --> 00:36:26,058
+this method takes completion call back
+which you can call once
+
+587
+00:36:26,094 --> 00:36:29,140
+your sure that their item at
+
+588
+00:36:30,004 --> 00:36:33,055
+this specific location is actually
+current
+
+589
+00:36:33,091 --> 00:36:36,500
+so once you call the completion a call
+back on
+
+590
+00:36:37,319 --> 00:36:41,394
+I II at sorry I want to call the
+completion call back
+
+591
+00:36:42,069 --> 00:36:46,720
+the half I crater 10 that it is now able
+to unlock the file
+
+592
+00:36:46,072 --> 00:36:49,120
+and idk itself can call it successor
+rock
+
+593
+00:36:50,002 --> 00:36:53,049
+and now insider access for block the
+user application can use this your
+
+594
+00:36:53,067 --> 00:36:54,706
+document like it sees fit
+
+595
+00:36:55,309 --> 00:36:58,450
+for example using data with contents of
+your L to
+
+596
+00:36:58,045 --> 00:37:02,174
+be able to I read the file
+
+597
+00:37:02,579 --> 00:37:05,658
+let's take a quick look at how as
+security and
+
+598
+00:37:06,369 --> 00:37:09,415
+at persistent had access works for I'm
+
+599
+00:37:09,829 --> 00:37:12,877
+document providers I'm unlike
+
+600
+00:37:13,309 --> 00:37:17,540
+the eyecup document provider which saves
+the special document reference
+
+601
+00:37:17,054 --> 00:37:21,092
+inside and I call container the document
+provides extensions don't take part in
+
+602
+00:37:21,092 --> 00:37:23,129
+the document reference mechanism
+
+603
+00:37:24,029 --> 00:37:27,031
+this is because of course in this
+
+604
+00:37:27,049 --> 00:37:30,428
+let's say we're in an enterprise setting
+our enterprise administration has
+
+605
+00:37:30,869 --> 00:37:31,790
+decided that
+
+606
+00:37:31,079 --> 00:37:34,164
+they do not want to use I clout but of
+course we still want this
+
+607
+00:37:35,064 --> 00:37:39,097
+adduction provider extension mechanism
+to still work because our enterprise has
+
+608
+00:37:39,097 --> 00:37:39,148
+grant
+
+609
+00:37:40,048 --> 00:37:43,053
+has given us an application that I
+
+610
+00:37:43,053 --> 00:37:48,127
+can be used to access the files on the
+enterprises fighter
+
+611
+00:37:49,027 --> 00:37:52,046
+so it's no good to use I clout in this
+case
+
+612
+00:37:52,046 --> 00:37:55,070
+of course to get back to you document
+references
+
+613
+00:37:55,007 --> 00:37:59,136
+but of course at the bookmark mechanism
+will still work
+
+614
+00:37:59,829 --> 00:38:03,833
+on to that end the fat provider I is
+able
+
+615
+00:38:03,869 --> 00:38:06,890
+or has to be able to resolve are I'm
+
+616
+00:38:06,089 --> 00:38:09,126
+at resolve and identify our into a file
+
+617
+00:38:10,026 --> 00:38:13,335
+URL and the other way around
+
+618
+00:38:13,569 --> 00:38:17,400
+now for security purposes I'm we have
+and
+
+619
+00:38:17,004 --> 00:38:20,030
+isolation layer that saves the state
+information about
+
+620
+00:38:20,066 --> 00:38:23,455
+which application has been granted
+access to which
+
+621
+00:38:24,049 --> 00:38:27,700
+identify robot inside which I provider
+
+622
+00:38:27,007 --> 00:38:31,906
+and this is also something that out we
+use these identifiers for
+
+623
+00:38:32,599 --> 00:38:37,010
+that some quick look how a bookmark is
+created and resolved by
+
+624
+00:38:37,001 --> 00:38:41,069
+a document provider extension but say we
+have at our host ap
+
+625
+00:38:41,069 --> 00:38:44,154
+and host app is for some reason I'm I
+
+626
+00:38:45,054 --> 00:38:49,563
+going into the background and us wants
+to save its state
+
+627
+00:38:50,049 --> 00:38:54,101
+it will call the bookmark data options
+method on surr
+
+628
+00:38:54,569 --> 00:38:59,596
+an issue I L will call the process that
+and I did firefighter mature our method
+
+629
+00:38:59,839 --> 00:39:02,883
+on Jeff I provide extension which can
+then return
+
+630
+00:39:03,279 --> 00:39:06,333
+a process that and fire this might be a
+database key
+
+631
+00:39:06,819 --> 00:39:11,220
+or it might be something much simpler:
+it depends on the actual
+
+632
+00:39:11,022 --> 00:39:14,831
+I way that your at
+
+633
+00:39:15,029 --> 00:39:18,140
+type providers actually accessing files
+
+634
+00:39:18,014 --> 00:39:22,353
+now at some point it will return the
+person that if I would just just just a
+
+635
+00:39:22,479 --> 00:39:23,710
+free phone and a string
+
+636
+00:39:23,071 --> 00:39:27,090
+to the NS you're all and an issue I'll
+will package that op
+
+637
+00:39:27,009 --> 00:39:32,188
+and I return it as a the opaque data
+blocked that is the book market
+
+638
+00:39:33,079 --> 00:39:36,101
+this point are his rap can go and saved
+its says save
+
+639
+00:39:36,299 --> 00:39:42,368
+state and for example get terminated in
+some way for example the user i reboot
+
+640
+00:39:42,989 --> 00:39:44,470
+steady fights
+
+641
+00:39:44,047 --> 00:39:48,116
+now at some point later we the user is
+open the opening their app
+
+642
+00:39:49,016 --> 00:39:53,095
+you doing at his rapid city state
+restoration and
+
+643
+00:39:53,239 --> 00:39:57,266
+in the process of doing this is calling
+the URL by resolving bookmark data
+
+644
+00:39:57,509 --> 00:40:02,564
+on an issue or out we hand yet into fire
+back to your fav provider
+
+645
+00:40:03,059 --> 00:40:07,103
+which can that in in the jar of our item
+with process that entire method
+
+646
+00:40:07,499 --> 00:40:12,508
+and it can then I at resolve this
+identifiers into an ass you're out on
+
+647
+00:40:12,589 --> 00:40:14,611
+this
+
+648
+00:40:14,809 --> 00:40:19,830
+now soon after we call the provide place
+holder at your out method
+
+649
+00:40:20,019 --> 00:40:23,660
+which you can use to provide a small
+place holder
+
+650
+00:40:23,066 --> 00:40:26,885
+that can be used and I I
+
+651
+00:40:27,479 --> 00:40:30,910
+correspondence with the at previously
+discussed
+
+652
+00:40:30,091 --> 00:40:33,720
+baguette promised item resource value by
+the user app
+
+653
+00:40:34,539 --> 00:40:37,630
+to really get mad at it out on this file
+
+654
+00:40:37,063 --> 00:40:42,502
+but what can also do is at this point
+legally download the file
+
+655
+00:40:43,069 --> 00:40:46,120
+I'm we will at least ensure that you
+were
+
+656
+00:40:46,579 --> 00:40:49,960
+are providing a placeholder now
+
+657
+00:40:49,096 --> 00:40:54,505
+you pass the an issue of the file I that
+on this comeback
+
+658
+00:40:55,369 --> 00:40:58,374
+the an issue of methods can now return
+this an issue row
+
+659
+00:40:58,869 --> 00:41:01,906
+and the host apk and used to get
+promised item resource value
+
+660
+00:41:02,239 --> 00:41:06,420
+to merely meta-data or use five
+coordinator API on their
+
+661
+00:41:06,042 --> 00:41:09,068
+an issue or I'll to access the file
+
+662
+00:41:09,068 --> 00:41:13,257
+if you're I well no matter what you have
+chosen that we will at least call you
+
+663
+00:41:13,869 --> 00:41:18,150
+to ensure if if the user uses high
+coronation this case a lot that the
+
+664
+00:41:18,015 --> 00:41:19,884
+actual data from this document
+
+665
+00:41:20,019 --> 00:41:23,093
+to ensure that the file on disk is
+current
+
+666
+00:41:23,759 --> 00:41:28,220
+alright we see how everything works and
+how getting back to documents works
+
+667
+00:41:28,022 --> 00:41:32,661
+let's have a quick look at how writing
+files works
+
+668
+00:41:32,859 --> 00:41:36,680
+in this case at his religious using are
+the whole steps using
+
+669
+00:41:36,068 --> 00:41:40,377
+at pack a nation API to actually read at
+right sorry right
+
+670
+00:41:40,989 --> 00:41:44,025
+I'm data to disk so
+
+671
+00:41:44,349 --> 00:41:47,392
+I'm it what to iraq coordinated right
+
+672
+00:41:47,779 --> 00:41:51,812
+to the file inside your story japs
+folder the file is now changed inside
+
+673
+00:41:52,109 --> 00:41:54,183
+just arent chaps folder
+
+674
+00:41:54,849 --> 00:41:57,918
+at some point very soon after but
+importantly to note
+
+675
+00:41:58,539 --> 00:42:03,930
+not and blocking way so the fact our
+nation will have succeeded by this point
+
+676
+00:42:03,093 --> 00:42:08,232
+we will call the I can change that URL
+on your fav provider
+
+677
+00:42:09,069 --> 00:42:12,121
+at this point your heart provider can go
+on for example initiate an opt-out of
+
+678
+00:42:12,589 --> 00:42:13,589
+this file
+
+679
+00:42:13,589 --> 00:42:17,593
+or at the very least market as being
+dirty and meeting at a lot so you don't
+
+680
+00:42:17,989 --> 00:42:23,048
+accidentally overwrite it at a later
+point
+
+681
+00:42:23,579 --> 00:42:29,583
+alright arm let's have a quick look at
+how that works
+
+682
+00:42:29,979 --> 00:42:34,140
+what I've done is I've filter very small
+sample project
+
+683
+00:42:34,014 --> 00:42:37,213
+using the template that comes with Xcode
+
+684
+00:42:37,339 --> 00:42:40,364
+very nice because it provides you with
+on
+
+685
+00:42:40,589 --> 00:42:43,590
+almost everything you need start
+
+686
+00:42:43,599 --> 00:42:47,620
+used to you target here and you stay
+application to extension
+
+687
+00:42:47,809 --> 00:42:50,815
+template for the document picker and
+
+688
+00:42:50,869 --> 00:42:55,913
+basically choose a name here and it'll
+setup that too with different extensions
+
+689
+00:42:56,309 --> 00:42:59,920
+inside my project I that's half the two
+different extensions
+
+690
+00:42:59,092 --> 00:43:02,097
+one folder here for the the actual
+picker
+
+691
+00:43:03,042 --> 00:43:06,068
+I'm doing a text snippet picker to go
+with at
+
+692
+00:43:06,068 --> 00:43:10,887
+text display at that Mike showed and
+inside this I have a whole bunch of
+
+693
+00:43:11,499 --> 00:43:12,160
+files
+
+694
+00:43:12,016 --> 00:43:16,044
+which are basically I law classes to to
+display
+
+695
+00:43:16,044 --> 00:43:19,403
+some sort of picking you lie but the
+important part is
+
+696
+00:43:19,799 --> 00:43:24,170
+my subclass of your document pic
+extensions you control here
+
+697
+00:43:24,017 --> 00:43:27,586
+and insight this subclass important
+parts are
+
+698
+00:43:27,739 --> 00:43:30,767
+the I'm prepare for presentation mode
+method
+
+699
+00:43:31,019 --> 00:43:35,660
+I me make this big so you can see this
+and in this presentation mode method
+
+700
+00:43:35,066 --> 00:43:38,120
+what I want to do is basically display a
+
+701
+00:43:39,002 --> 00:43:43,111
+arm specific I in this case I'm 90
+
+702
+00:43:43,309 --> 00:43:46,312
+I'm using a collection to control it to
+display a list of documents
+
+703
+00:43:46,609 --> 00:43:49,880
+and I'm displaying this and
+
+704
+00:43:49,088 --> 00:43:52,727
+I ins all of my picking actually is not
+handled by my
+
+705
+00:43:53,519 --> 00:43:56,553
+abduction pick up the controller by a
+top-class
+
+706
+00:43:56,859 --> 00:43:59,868
+scorsese's delegates a pattern to to get
+back
+
+707
+00:44:00,759 --> 00:44:04,790
+to my at main class once the his rest
+picked up command
+
+708
+00:44:05,069 --> 00:44:08,140
+the call this this method here
+
+709
+00:44:08,014 --> 00:44:11,863
+and inside this method all I have to do
+is call their dismiss granting access to
+
+710
+00:44:11,989 --> 00:44:12,890
+your I'll
+
+711
+00:44:12,089 --> 00:44:16,498
+with the file you're all that I've I
+previously written out
+
+712
+00:44:17,299 --> 00:44:21,375
+now the that document by provider here
+
+713
+00:44:22,059 --> 00:44:25,065
+is very simple in this case
+
+714
+00:44:25,119 --> 00:44:28,940
+the interesting method here for for this
+demo is the struck providing I can
+
+715
+00:44:28,094 --> 00:44:29,133
+assure our method
+
+716
+00:44:29,979 --> 00:44:33,057
+which I implemented to ensure that the
+snippet at this URL
+
+717
+00:44:33,759 --> 00:44:37,140
+its current and call completion handler
+
+718
+00:44:37,014 --> 00:44:40,643
+let's have a quick look at how that
+looks on sheen
+
+719
+00:44:40,769 --> 00:44:44,772
+alright I've got my my my at Des Moines
+appeal which is
+
+720
+00:44:44,799 --> 00:44:47,855
+basically you since I started from the
+template just an empty apt
+
+721
+00:44:48,359 --> 00:44:51,420
+and said I'm going to pop up the
+document picker
+
+722
+00:44:51,042 --> 00:44:54,681
+and you notice I don't even have any
+documents maxluger.com
+
+723
+00:44:55,059 --> 00:44:58,690
+on pot when I pop up this
+
+724
+00:44:58,069 --> 00:45:01,398
+document picker menu here I see List
+including
+
+725
+00:45:02,019 --> 00:45:05,064
+at the I called up from picker and my
+separate picker
+
+726
+00:45:05,469 --> 00:45:09,547
+and if I pop up the snippet picker what
+if displayed is my snap a pic of U
+
+727
+00:45:10,249 --> 00:45:11,250
+controller
+
+728
+00:45:11,259 --> 00:45:15,900
+and I can use that to pic any of these
+documents are snippets in here
+
+729
+00:45:15,009 --> 00:45:20,458
+so when I bikinis with the exact same
+sample app that Mike showed you
+
+730
+00:45:21,349 --> 00:45:24,353
+I'm able to I access these snippets from
+
+731
+00:45:24,749 --> 00:45:27,757
+my my little touch and perhaps now
+
+732
+00:45:28,549 --> 00:45:31,568
+when you I shoes the seed one to
+
+733
+00:45:31,739 --> 00:45:34,817
+I try this out not that this snippet
+
+734
+00:45:35,519 --> 00:45:39,210
+that the document the key will create
+will not show up by default
+
+735
+00:45:39,021 --> 00:45:42,095
+so you can use though new locations
+button and
+
+736
+00:45:42,095 --> 00:45:46,144
+I'm navigation bar of the iPod docking
+picker
+
+737
+00:45:47,044 --> 00:45:52,433
+has a lot more pop out we can enable the
+set the picture
+
+738
+00:45:52,829 --> 00:45:59,829
+all right switch back to slides
+
+739
+00:46:00,569 --> 00:46:05,160
+cool summarize the demo we've got an
+exco template to get you started at the
+
+740
+00:46:05,016 --> 00:46:05,024
+document picker
+
+741
+00:46:05,096 --> 00:46:09,121
+mechanism I'm deduction picker
+
+742
+00:46:10,021 --> 00:46:13,180
+RR a document provider will
+
+743
+00:46:13,369 --> 00:46:16,950
+show up right next to the actual picture
+if the user installs them
+
+744
+00:46:16,095 --> 00:46:20,167
+and I we have
+
+745
+00:46:21,067 --> 00:46:24,079
+also I have sample code available on
+
+746
+00:46:24,079 --> 00:46:27,116
+the I session home page at that
+
+747
+00:46:28,016 --> 00:46:31,185
+will enables you to quickly test this
+out
+
+748
+00:46:31,329 --> 00:46:35,380
+the sample code is basically a a little
+test app that two-year-old
+
+749
+00:46:35,839 --> 00:46:38,890
+to be able to display each of the
+docking picture modes
+
+750
+00:46:39,349 --> 00:46:43,740
+cool so that's
+
+751
+00:46:43,074 --> 00:46:46,115
+document providers and I
+
+752
+00:46:47,015 --> 00:46:50,099
+that almost complete cessation but I
+have a little
+
+753
+00:46:50,099 --> 00:46:53,104
+bit of information for you to I that
+
+754
+00:46:54,049 --> 00:46:57,418
+from you how I since we have this new
+
+755
+00:46:57,859 --> 00:47:02,790
+clout drive mechanism I how that
+migration story is how that
+
+756
+00:47:02,079 --> 00:47:06,093
+I'm on I was 8 users can
+
+757
+00:47:06,093 --> 00:47:09,262
+either choose to once its once it comes
+out
+
+758
+00:47:10,099 --> 00:47:13,500
+choose to a use the old I thought
+auctions mechanism
+
+759
+00:47:13,005 --> 00:47:17,104
+or to migrate to I thought drive on ice
+10 yosemite
+
+760
+00:47:18,049 --> 00:47:21,124
+we do not provide backwards
+compatibility
+
+761
+00:47:22,024 --> 00:47:27,067
+for be all i cud documents mechanism so
+the user has to either choose to migrate
+
+762
+00:47:27,067 --> 00:47:27,152
+to cloud drive
+
+763
+00:47:28,052 --> 00:47:32,144
+or date will never at will no longer
+receive the updates
+
+764
+00:47:33,044 --> 00:47:37,095
+across the devices because they can
+choose to migrate at a later point at
+
+765
+00:47:37,095 --> 00:47:38,484
+which point guard upgrades
+
+766
+00:47:39,339 --> 00:47:43,900
+him after after an account is migrated
+to like our drive
+
+767
+00:47:43,009 --> 00:47:46,070
+on the the devices that are actually
+using I call try
+
+768
+00:47:47,051 --> 00:47:52,360
+will propagate changes between each
+other for us. developers
+
+769
+00:47:52,819 --> 00:47:56,847
+I this iz I important to know because I
+
+770
+00:47:57,099 --> 00:48:00,250
+even though the I current
+
+771
+00:48:00,025 --> 00:48:03,073
+she built that you have in your hands
+right now arm
+
+772
+00:48:03,073 --> 00:48:07,077
+is automatically using I car drive I'm
+
+773
+00:48:07,077 --> 00:48:10,081
+the actual new features and us that you
+can
+
+774
+00:48:11,017 --> 00:48:14,102
+easily te sol says out the new features
+that we presented in this
+
+775
+00:48:15,002 --> 00:48:19,076
+today's presentation way only be
+available if user is using my cock dry
+
+776
+00:48:19,076 --> 00:48:23,415
+so you have to be aware of this
+possibility
+
+777
+00:48:24,099 --> 00:48:27,560
+in case they have not actually chosen to
+migrate
+
+778
+00:48:27,056 --> 00:48:30,595
+alright arm
+
+779
+00:48:31,099 --> 00:48:34,520
+to summarize arm if you're
+
+780
+00:48:34,052 --> 00:48:37,064
+just taking one thing away from today
+session
+
+781
+00:48:37,064 --> 00:48:40,131
+it would be that he should use 500
+nation for document access
+
+782
+00:48:41,031 --> 00:48:45,078
+a without using faculty nation that none
+of these mechanisms can work
+
+783
+00:48:45,078 --> 00:48:48,151
+and you will probably the
+
+784
+00:48:49,051 --> 00:48:52,120
+be at some point experiencing
+experiencing data loss
+
+785
+00:48:53,002 --> 00:48:56,087
+on the machine to view user's which of
+course is extremely bad
+
+786
+00:48:57,005 --> 00:49:02,304
+we've seen how to discover and display
+files not only in your own container but
+
+787
+00:49:02,349 --> 00:49:04,480
+also using the UN document picker
+
+788
+00:49:04,048 --> 00:49:07,090
+which allows you to access files outside
+of your
+
+789
+00:49:07,009 --> 00:49:10,017
+applications containers and was given a
+quick overview
+
+790
+00:49:10,098 --> 00:49:13,457
+how to use doctrine provide extensions
+to
+
+791
+00:49:14,339 --> 00:49:17,560
+I'm be able to integrate your
+
+792
+00:49:17,056 --> 00:49:20,148
+on companies storage system into
+
+793
+00:49:21,048 --> 00:49:24,897
+the whole document access mechanism for
+more information
+
+794
+00:49:25,329 --> 00:49:29,380
+arm I would I liked a guy cue to Dave
+too long our
+
+795
+00:49:29,839 --> 00:49:33,980
+app framework evangelist and also check
+barons who is the
+
+796
+00:49:33,098 --> 00:49:36,122
+like it specific F rembert evangelist
+
+797
+00:49:37,022 --> 00:49:40,073
+we have some need documentation out
+
+798
+00:49:40,073 --> 00:49:43,102
+there's a at brand new icon for
+developers guide
+
+799
+00:49:44,002 --> 00:49:47,054
+and we also have guides for the document
+picker
+
+800
+00:49:47,054 --> 00:49:50,092
+and of course also guides for the
+extensions
+
+801
+00:49:50,092 --> 00:49:53,751
+mechanisms wealth at the Apple Developer
+farms where
+
+802
+00:49:54,579 --> 00:49:58,581
+I our developers hang out and will
+answer questions
+
+803
+00:49:58,599 --> 00:50:01,750
+I related sessions
+
+804
+00:50:01,075 --> 00:50:04,127
+that there was a very nice session on
+introducing Cloud kit
+
+805
+00:50:05,027 --> 00:50:08,596
+if you're interested in the technology
+behind
+
+806
+00:50:08,839 --> 00:50:12,750
+and you like hard drive mechanism the
+powers of this
+
+807
+00:50:12,075 --> 00:50:16,154
+the session is of course not and how the
+necessary if you really want to story
+
+808
+00:50:16,829 --> 00:50:16,907
+documents
+
+809
+00:50:17,609 --> 00:50:21,200
+because the car kit mechanism is
+entirely transparent
+
+810
+00:50:21,002 --> 00:50:24,005
+from that document storage perspective
+
+811
+00:50:24,023 --> 00:50:27,027
+we also have s had sessions on creating
+
+812
+00:50:27,063 --> 00:50:30,091
+extensions for iris a nice 10
+
+813
+00:50:30,091 --> 00:50:33,510
+and with that com thank you for your
+time
+
+814
+00:50:34,329 --> 00:50:37,780
+and I wish you address of the week and a
+nice bash
+

@@ -1,0 +1,3860 @@
+1
+00:00:14,005 --> 00:00:16,094
+good morning
+
+2
+00:00:17,039 --> 00:00:20,073
+names Jim Turner and i'm peter hey just
+and where engineers
+
+3
+00:00:20,073 --> 00:00:23,131
+on the UI kit team and welcome to the
+
+4
+00:00:24,031 --> 00:00:27,125
+presentation on a open look inside
+presentation controllers
+
+5
+00:00:28,025 --> 00:00:34,654
+so you a view controller presentations
+
+6
+00:00:34,879 --> 00:00:38,870
+have been around since I OS-two but only
+recently
+
+7
+00:00:38,087 --> 00:00:43,140
+have you had the chance to customize
+them in your apt in Iowa 7
+
+8
+00:00:44,004 --> 00:00:47,042
+we introduce the concept have an
+animator object
+
+9
+00:00:47,078 --> 00:00:51,100
+this is an object who's responsible
+
+10
+00:00:52,000 --> 00:00:55,199
+for in a meeting your new controllers
+content on-screen
+
+11
+00:00:55,199 --> 00:00:58,230
+however if you wanted to build a
+
+12
+00:00:58,023 --> 00:01:02,064
+totally custom you control your
+presentation it involved burdening that
+
+13
+00:01:02,064 --> 00:01:03,066
+in a meter object
+
+14
+00:01:03,066 --> 00:01:07,945
+with far too much responsibility so
+that's why I was a
+
+15
+00:01:08,539 --> 00:01:13,490
+we're introducing you I presentation
+controller this class is designed to
+
+16
+00:01:13,049 --> 00:01:15,055
+work in concert with an inner objects
+
+17
+00:01:15,055 --> 00:01:18,063
+to make the job of presenting view
+controller content easy
+
+18
+00:01:19,035 --> 00:01:25,234
+and simple to manage and execute so
+today wanna talk about just a couple of
+
+19
+00:01:25,549 --> 00:01:26,180
+topics
+
+20
+00:01:26,018 --> 00:01:29,020
+the first being some presentation basics
+
+21
+00:01:29,002 --> 00:01:33,241
+what do we mean by presenting view
+controller content what's the difference
+
+22
+00:01:33,439 --> 00:01:34,610
+between chrome
+
+23
+00:01:34,061 --> 00:01:39,085
+and could content itself and what do we
+expect you a presentation controller to
+
+24
+00:01:39,085 --> 00:01:40,424
+be responsible for
+
+25
+00:01:41,189 --> 00:01:45,286
+next we'll go over how you like it you
+to you I presentation controller
+
+26
+00:01:46,159 --> 00:01:51,165
+to expand our own EPI and finally wind
+up with the demo
+
+27
+00:01:51,219 --> 00:01:54,263
+the brings all these concepts together
+so you guys can see how you can use you
+
+28
+00:01:54,659 --> 00:01:55,890
+a presentation controller
+
+29
+00:01:55,089 --> 00:01:59,186
+in your abs first let's start with some
+presentation basics
+
+30
+00:02:00,086 --> 00:02:03,181
+Here I am on the Settings app on iPad
+and I'm gonna tap that
+
+31
+00:02:04,081 --> 00:02:08,670
+create new Apple ID table cell the new
+account sheet slides up
+
+32
+00:02:09,399 --> 00:02:12,910
+and we're ready to go in %um view
+controller terminology
+
+33
+00:02:12,091 --> 00:02:15,162
+we would call that new account she the
+presented view controller
+
+34
+00:02:16,062 --> 00:02:19,064
+and the setting split view behind it the
+presenting
+
+35
+00:02:19,082 --> 00:02:22,151
+you controller when we talk about the
+responsibilities
+
+36
+00:02:23,051 --> 00:02:26,054
+have you I presentation controller we
+would say that that new
+
+37
+00:02:26,054 --> 00:02:29,363
+a new account she is the content the
+presentation
+
+38
+00:02:29,849 --> 00:02:32,860
+it's the foreground stuff for your users
+mint interact with
+
+39
+00:02:32,959 --> 00:02:35,964
+we would then say that the background
+content that stemmed
+
+40
+00:02:36,459 --> 00:02:39,540
+is the chrome its dim to help accentuate
+the content
+
+41
+00:02:40,269 --> 00:02:43,480
+your presentation to help manage
+
+42
+00:02:43,048 --> 00:02:46,119
+the content in chrome in your view
+controller presentation we're going to
+
+43
+00:02:47,019 --> 00:02:47,064
+use
+
+44
+00:02:47,064 --> 00:02:50,111
+you I presentation controller at its
+heart
+
+45
+00:02:51,011 --> 00:02:54,500
+you a presentation controller is the
+presentation management ap
+
+46
+00:02:54,599 --> 00:02:57,696
+a class that you'll use in your
+application all
+
+47
+00:02:58,569 --> 00:03:02,140
+you a view controller presentations in
+IOSA are backed
+
+48
+00:03:02,014 --> 00:03:06,098
+by you I presentation controller because
+you I presentation controller
+
+49
+00:03:06,098 --> 00:03:09,197
+can provide chrome it can also provided
+own animations
+
+50
+00:03:10,097 --> 00:03:13,696
+for that chrome or and this is really
+cool
+
+51
+00:03:14,569 --> 00:03:17,625
+you I presentation controller can
+animate its chrome
+
+52
+00:03:18,129 --> 00:03:21,230
+alongside your existing in a meter
+object
+
+53
+00:03:21,023 --> 00:03:24,067
+custom animations and we'll take a depth
+look at demos that
+
+54
+00:03:24,067 --> 00:03:27,151
+additionally throughout the conference
+you heard about
+
+55
+00:03:28,051 --> 00:03:32,069
+are pushed to make your applications
+more adaptive and UI presentation
+
+56
+00:03:32,069 --> 00:03:32,136
+controller
+
+57
+00:03:33,036 --> 00:03:36,125
+is built from the get-go to handle
+treatment size class changes
+
+58
+00:03:37,025 --> 00:03:40,044
+additionally you a presentation
+controller
+
+59
+00:03:40,269 --> 00:03:44,286
+respond to these changes even while your
+view controllers presentation
+
+60
+00:03:44,439 --> 00:03:48,510
+is on screen so you can adapt seamlessly
+between a changing environment
+
+61
+00:03:48,051 --> 00:03:52,090
+and finally because you a presentation
+controller
+
+62
+00:03:52,549 --> 00:03:55,790
+is a great Cocoa Touch citizen its
+reusable
+
+63
+00:03:55,079 --> 00:03:58,478
+you I presentation controller object are
+not coupled
+
+64
+00:03:59,189 --> 00:04:02,280
+to animator objects or transitioning
+delegates you can use the same
+
+65
+00:04:03,099 --> 00:04:04,146
+presentation controller
+
+66
+00:04:04,569 --> 00:04:08,750
+with different view controllers or
+switch out the presentation controller
+
+67
+00:04:08,075 --> 00:04:11,079
+for the same view controller to create a
+truly custom look
+
+68
+00:04:11,079 --> 00:04:14,161
+prior to iowa
+
+69
+00:04:15,061 --> 00:04:18,300
+aid the enemy object has petered mention
+was
+
+70
+00:04:18,849 --> 00:04:21,887
+kinda overburdened with some past when
+presenting a few controllers
+
+71
+00:04:22,229 --> 00:04:26,010
+content on screen its primary task with
+
+72
+00:04:26,001 --> 00:04:29,410
+obviously I mean my controllers content
+men includes any kind of sub you
+
+73
+00:04:29,419 --> 00:04:32,518
+animations things like on 10 of sensor
+in sets as well
+
+74
+00:04:33,409 --> 00:04:37,010
+but he also needed to figure out its own
+positioning on screen
+
+75
+00:04:37,001 --> 00:04:40,086
+if you're doing any kind custom
+presentation we would give you
+
+76
+00:04:40,086 --> 00:04:43,174
+reasonably good information for where to
+start more to end
+
+77
+00:04:44,074 --> 00:04:47,118
+but it's probably not what you want for
+your custom presentation
+
+78
+00:04:48,018 --> 00:04:51,057
+and so the enemy object had no more
+about the presentation
+
+79
+00:04:51,219 --> 00:04:55,370
+than it probably should have and that
+goes along with the chrome as well
+
+80
+00:04:55,037 --> 00:04:58,056
+that prison the animator object also
+needed to know
+
+81
+00:04:58,056 --> 00:05:01,056
+the entire layout with the presentation
+was going to in
+
+82
+00:05:01,056 --> 00:05:05,835
+incumbent compass but now a presentation
+controller this responsibility for
+
+83
+00:05:06,339 --> 00:05:07,250
+positioning match
+
+84
+00:05:07,025 --> 00:05:10,044
+you controller and for handling the
+chrome and other views that go along
+
+85
+00:05:10,044 --> 00:05:11,393
+with the presentation
+
+86
+00:05:11,789 --> 00:05:16,330
+are handled in a much more logical
+object the presentation controller
+
+87
+00:05:16,033 --> 00:05:19,852
+since its long-lived knows more about
+the presentation is it has a better
+
+88
+00:05:20,149 --> 00:05:24,360
+vantage point for what actually going to
+occur on screen
+
+89
+00:05:24,036 --> 00:05:27,113
+and we've mentioned before presentation
+controller
+
+90
+00:05:28,013 --> 00:05:31,088
+is what drives adaptation in your
+application
+
+91
+00:05:31,088 --> 00:05:34,807
+this object is going to be responsible
+for helping you switch out
+
+92
+00:05:35,599 --> 00:05:38,830
+view controllers in wholesale switching
+on a presentation controllers which we
+
+93
+00:05:38,083 --> 00:05:38,139
+will look at
+
+94
+00:05:39,039 --> 00:05:42,040
+in just a moment
+
+95
+00:05:42,049 --> 00:05:45,077
+so now that we know about a little bit
+what a presentation controller actually
+
+96
+00:05:45,077 --> 00:05:45,161
+is
+
+97
+00:05:46,061 --> 00:05:50,076
+let's to show you how we can you like it
+use it to improve pop overs
+
+98
+00:05:50,076 --> 00:05:55,102
+alerts action sheets and search and Mark
+Peters taking off with poppers
+
+99
+00:05:56,002 --> 00:05:59,271
+sure thing as you saw on our talk
+yesterday
+
+100
+00:05:59,289 --> 00:06:02,560
+we're introducing a new you I
+presentation controller class
+
+101
+00:06:02,056 --> 00:06:05,275
+to help manage popover presentations in
+your app
+
+102
+00:06:05,779 --> 00:06:09,140
+it's called you i pop over presentation
+controller
+
+103
+00:06:09,014 --> 00:06:13,015
+its intended to replace you I pop over
+controller in your application
+
+104
+00:06:13,024 --> 00:06:16,513
+but it is functionally equivalent in the
+customization
+
+105
+00:06:16,729 --> 00:06:20,815
+that it provides for the presentation
+but it has some additional features
+
+106
+00:06:21,589 --> 00:06:25,130
+it has built-in additivity help
+facilitate your
+
+107
+00:06:25,013 --> 00:06:29,112
+you controller adapting to a changing
+environment you i pop over presentation
+
+108
+00:06:29,229 --> 00:06:29,830
+controller
+
+109
+00:06:29,083 --> 00:06:32,149
+wealthy mostly handled transitions
+between regular and contact with
+
+110
+00:06:33,049 --> 00:06:34,094
+environments
+
+111
+00:06:34,094 --> 00:06:39,102
+let's look at how you used to show up
+popover prior to I was 8
+
+112
+00:06:40,002 --> 00:06:43,701
+with the old API you create your content
+view controller
+
+113
+00:06:43,719 --> 00:06:48,000
+said on your pop over controller and
+present that pop over
+
+114
+00:06:48,000 --> 00:06:51,032
+but this isn't really the whole story
+
+115
+00:06:51,032 --> 00:06:54,056
+if you had a universal application and
+many have you do
+
+116
+00:06:54,056 --> 00:06:58,114
+you actually had to have to code paths
+we check in for an iPad
+
+117
+00:06:59,014 --> 00:07:02,603
+and make a popover controller otherwise
+we do
+
+118
+00:07:02,729 --> 00:07:05,796
+a present view controller traditionally
+and you had a litter this bifurcation
+
+119
+00:07:06,399 --> 00:07:09,487
+throughout your app with you i pop over
+presentation controller
+
+120
+00:07:10,279 --> 00:07:13,367
+you'll just have one could pass here's
+how to use it
+
+121
+00:07:14,159 --> 00:07:17,800
+first you'll set the view controllers
+more presentation style
+
+122
+00:07:17,008 --> 00:07:20,085
+to pop over this is a new value in Iowa
+State
+
+123
+00:07:21,057 --> 00:07:24,131
+you like it will look to your view
+controllers motor presentation style
+
+124
+00:07:25,031 --> 00:07:28,031
+to determine how to show your view
+controller
+
+125
+00:07:28,031 --> 00:07:31,380
+then you'll get it popover presentation
+controller
+
+126
+00:07:31,659 --> 00:07:35,810
+when presenting a view controller you do
+not create a presentation controller
+
+127
+00:07:35,081 --> 00:07:39,230
+instead you ask for one then you set up
+any source information
+
+128
+00:07:39,959 --> 00:07:43,053
+like bar button items or permitted air
+directions and because it's a view
+
+129
+00:07:43,899 --> 00:07:44,926
+controller presentation
+
+130
+00:07:45,169 --> 00:07:48,440
+you just call present view controller
+now
+
+131
+00:07:48,044 --> 00:07:51,131
+notice how there's no idiom checkout
+screen that's because my running an
+
+132
+00:07:52,031 --> 00:07:54,120
+environment that does not support
+popovers
+
+133
+00:07:54,399 --> 00:07:57,462
+like on the iPhone you a popover
+presentation controller
+
+134
+00:07:58,029 --> 00:08:01,360
+provides the opportunity for your
+presentation to adapt
+
+135
+00:08:01,036 --> 00:08:05,081
+Jim can we take a look at it after
+popovers sure
+
+136
+00:08:05,081 --> 00:08:08,132
+track so ever fairly simple and basic
+application here
+
+137
+00:08:09,032 --> 00:08:13,631
+it is a just a view controller that
+shows important people
+
+138
+00:08:13,919 --> 00:08:17,000
+and the super poor people when you click
+on this little button here you get a
+
+139
+00:08:17,000 --> 00:08:18,006
+popover
+
+140
+00:08:18,006 --> 00:08:21,043
+and it's a popover super important
+people
+
+141
+00:08:21,043 --> 00:08:24,120
+and so what we want to do is show that
+this pop over when it goes on
+
+142
+00:08:25,002 --> 00:08:28,013
+a in a compact with environment like an
+iPhone
+
+143
+00:08:28,031 --> 00:08:31,100
+even though you present as a popover
+you'll get an adaptation to an over full
+
+144
+00:08:32,000 --> 00:08:34,026
+screen presentation
+
+145
+00:08:34,026 --> 00:08:38,665
+will change the width 320 and will
+change the size class the compact
+
+146
+00:08:38,899 --> 00:08:43,570
+and we'll play it and now you see that
+we actually have
+
+147
+00:08:43,057 --> 00:08:46,063
+the same table view has been re present
+in but now it's in a view controller
+
+148
+00:08:47,017 --> 00:08:50,030
+that is a full screen presentation
+
+149
+00:08:50,003 --> 00:08:54,045
+and we can actually even dismiss this
+and we can re presented again
+
+150
+00:08:54,072 --> 00:08:57,134
+and even though worry presenting as an
+over full screen presentation
+
+151
+00:08:58,034 --> 00:09:03,097
+we are the Coens never change we still
+actually presenting a pop over here
+
+152
+00:09:03,097 --> 00:09:06,110
+and a show that's actually still working
+
+153
+00:09:07,001 --> 00:09:10,013
+will go back
+
+154
+00:09:10,022 --> 00:09:15,087
+to our regular with and in the popular
+shows back up again
+
+155
+00:09:15,087 --> 00:09:19,101
+so to do an activity with pop overs
+
+156
+00:09:20,001 --> 00:09:23,082
+it's fairly simple
+
+157
+00:09:23,082 --> 00:09:26,144
+going back to Peters code that we left
+off with
+
+158
+00:09:27,044 --> 00:09:30,117
+is that this code is an actual change
+all through that with this was the code
+
+159
+00:09:31,017 --> 00:09:32,079
+they presented the popover
+
+160
+00:09:32,079 --> 00:09:35,166
+but to influence other pop over actually
+works we need is a delegate
+
+161
+00:09:36,066 --> 00:09:41,123
+on the popover presentation controller
+and we need implement just two methods
+
+162
+00:09:42,023 --> 00:09:46,048
+the first is adaptive presentation style
+for presentation controller
+
+163
+00:09:46,048 --> 00:09:49,115
+in from this method you can return one
+of three different methods fullscreen
+
+164
+00:09:50,015 --> 00:09:54,041
+over full screen or none bill the latter
+meaning that you don't want any kind
+
+165
+00:09:54,041 --> 00:09:55,092
+about activity but for here
+
+166
+00:09:55,092 --> 00:09:58,136
+we want to do a full screen adaptation
+
+167
+00:09:59,036 --> 00:10:02,044
+the second method that we won't
+implement his presentation controller
+
+168
+00:10:03,016 --> 00:10:06,100
+view controller for adaptive
+presentation style
+
+169
+00:10:07,000 --> 00:10:10,065
+you don't have to implement this method
+if we hadn't implemented this method
+
+170
+00:10:10,065 --> 00:10:13,107
+the table view controller would've been
+Reapers and it has a full screen
+
+171
+00:10:14,007 --> 00:10:15,039
+presentation
+
+172
+00:10:15,039 --> 00:10:18,078
+but the table view by itself doesn't
+allow you to dismiss anything or show
+
+173
+00:10:18,078 --> 00:10:20,084
+with the the name that we were selecting
+
+174
+00:10:21,038 --> 00:10:24,089
+so what we want to do is wrap that you
+controller and something that
+
+175
+00:10:24,089 --> 00:10:27,101
+allows our presentation actually
+continue to look like how we
+
+176
+00:10:28,001 --> 00:10:31,077
+we wanted to look and so we're after in
+a navigation controller
+
+177
+00:10:31,077 --> 00:10:34,106
+and we just said is this review
+controller the presented you controller
+
+178
+00:10:35,006 --> 00:10:38,099
+which was our people controller and
+that's it and that is how you get from a
+
+179
+00:10:38,099 --> 00:10:39,135
+popover
+
+180
+00:10:40,035 --> 00:10:43,086
+in regular with to a over fullscreen
+fullscreen presentation
+
+181
+00:10:43,086 --> 00:10:46,135
+when you're in a compact with
+environment so
+
+182
+00:10:47,035 --> 00:10:50,109
+now that we've looked at you how you
+like it used presentation controllers
+
+183
+00:10:51,009 --> 00:10:54,096
+to improve the API surrounding popovers
+let's talk about something
+
+184
+00:10:54,096 --> 00:10:57,165
+near and dear to my heart alerts in
+action sheets
+
+185
+00:10:58,065 --> 00:11:01,141
+prior to Iowa State alerts in action
+sheets works post
+
+186
+00:11:02,041 --> 00:11:05,123
+to your application for plane you I view
+subclasses
+
+187
+00:11:06,023 --> 00:11:09,036
+you I lurve you and you action she
+
+188
+00:11:09,036 --> 00:11:12,095
+but because they were you a view
+subclasses they had to really implement
+
+189
+00:11:12,095 --> 00:11:13,193
+some of the logic that we already had
+
+190
+00:11:14,093 --> 00:11:18,096
+a new controller for example to appear
+in your application
+
+191
+00:11:19,023 --> 00:11:22,028
+they created a new window strategically
+appear a
+
+192
+00:11:22,028 --> 00:11:25,054
+strategically positioned about your
+applications count 'em
+
+193
+00:11:25,054 --> 00:11:28,070
+that they'd show up above everything
+additionally
+
+194
+00:11:28,007 --> 00:11:32,048
+they predate modern language features so
+they had to rely on Delhi DPI
+
+195
+00:11:33,011 --> 00:11:37,077
+for button call backs let's look at how
+an action she presentation worked
+
+196
+00:11:37,077 --> 00:11:40,116
+prior to Iowa State so I mean I R seven
+ap
+
+197
+00:11:41,016 --> 00:11:44,062
+in landscape and I go to show an action
+she
+
+198
+00:11:44,062 --> 00:11:47,125
+behind-the-scenes the primer creates a
+window on Europe's behalf
+
+199
+00:11:48,025 --> 00:11:51,087
+but this predates I would say when the
+rotation behaviors this window is
+
+200
+00:11:51,087 --> 00:11:51,178
+technically
+
+201
+00:11:52,078 --> 00:11:56,129
+still in portrait we then at the action
+she to that window
+
+202
+00:11:57,029 --> 00:12:00,085
+and mimic the transform hierarchy the
+present in view to get into the right
+
+203
+00:12:00,085 --> 00:12:01,158
+orientation
+
+204
+00:12:02,058 --> 00:12:05,130
+when looking at the requirements
+applications would have to meet
+
+205
+00:12:06,003 --> 00:12:09,090
+when implementing add up to 30 and
+customization power
+
+206
+00:12:10,017 --> 00:12:14,055
+offer to us are you a presentation
+controller it was a natural choice
+
+207
+00:12:14,055 --> 00:12:17,057
+to rebase modern alert API
+
+208
+00:12:17,057 --> 00:12:21,098
+in iowa say we're introducing a new you
+controller subclass to replace alert
+
+209
+00:12:21,098 --> 00:12:22,109
+view an action she
+
+210
+00:12:23,009 --> 00:12:26,012
+you eyler controller it's used for both
+
+211
+00:12:26,039 --> 00:12:30,057
+alert in action she's and you can switch
+via preferred style
+
+212
+00:12:30,057 --> 00:12:33,141
+additionally because it's got a modern
+runtime: its block-based
+
+213
+00:12:34,041 --> 00:12:39,063
+so it works perfect
+
+214
+00:12:39,063 --> 00:12:43,069
+it works perfect with blocks in
+objective-c enclosures and swift
+
+215
+00:12:44,023 --> 00:12:47,068
+additionally because it's a view
+controller it presents
+
+216
+00:12:47,068 --> 00:12:50,417
+in your window which means that there's
+no more ambiguity
+
+217
+00:12:51,029 --> 00:12:54,050
+about what framework provided
+presentations are going on in your
+
+218
+00:12:54,005 --> 00:12:55,099
+application
+
+219
+00:12:55,099 --> 00:12:58,184
+and using did adaptive API the gym
+showed you earlier
+
+220
+00:12:59,084 --> 00:13:03,102
+action sheets will seamlessly adapt to
+pop overs using paper presentation
+
+221
+00:13:04,002 --> 00:13:05,021
+controller
+
+222
+00:13:05,021 --> 00:13:08,105
+let's go through how you can create and
+show an alert controller
+
+223
+00:13:09,005 --> 00:13:12,056
+in your application
+
+224
+00:13:12,056 --> 00:13:15,775
+first you'll ask for one via the class
+method
+
+225
+00:13:16,279 --> 00:13:21,470
+then you what actions to it with a black
+and learn to handle on that actions tap
+
+226
+00:13:21,047 --> 00:13:25,051
+and then because it's a view controller
+presentation you're just call
+
+227
+00:13:25,051 --> 00:13:29,052
+present view controller now that we've
+seen how you like it
+
+228
+00:13:29,061 --> 00:13:33,105
+use presentation controller to improve
+alerts an action sheets
+
+229
+00:13:34,005 --> 00:13:38,086
+let's see how we did the same thing for
+search
+
+230
+00:13:38,086 --> 00:13:41,095
+search and I was a consist primarily of
+two parts: you a search bar
+
+231
+00:13:42,076 --> 00:13:45,133
+in you I search display controller both
+have been around
+
+232
+00:13:46,033 --> 00:13:50,045
+in the St Cape sons some from the
+earliest days
+
+233
+00:13:50,045 --> 00:13:54,076
+and their creation was formed a time
+that was far more simple
+
+234
+00:13:54,076 --> 00:13:58,094
+view controllers were Mormon suggestion
+the requirement that they are now
+
+235
+00:13:58,094 --> 00:14:01,151
+there was far less translucency things
+that inflow underneath other things in
+
+236
+00:14:02,051 --> 00:14:03,113
+there was it certainly wasn't things
+like blur
+
+237
+00:14:04,013 --> 00:14:07,013
+to deal with and so when you presented
+search
+
+238
+00:14:07,013 --> 00:14:10,089
+it was very easy for the framework to
+reason about how search was going to be
+
+239
+00:14:10,089 --> 00:14:10,168
+displayed
+
+240
+00:14:11,068 --> 00:14:15,105
+in your application but we're looking at
+search display controller and how it
+
+241
+00:14:16,005 --> 00:14:18,030
+would react to an adaptive environment
+
+242
+00:14:18,003 --> 00:14:21,048
+we realize it had some deficiencies that
+we just we're gonna be very difficult to
+
+243
+00:14:21,075 --> 00:14:23,077
+overcome
+
+244
+00:14:23,077 --> 00:14:26,336
+the first as it provides very limited
+configurability
+
+245
+00:14:27,029 --> 00:14:32,060
+for you guys it's great that you can
+show your search results in a table view
+
+246
+00:14:32,006 --> 00:14:35,060
+but a lot of other things have happened
+since I was three that you couldn't
+
+247
+00:14:35,006 --> 00:14:38,031
+show search results and things like
+election views and map news
+
+248
+00:14:38,085 --> 00:14:42,094
+and search display controller just
+simply can't handle this
+
+249
+00:14:42,094 --> 00:14:45,173
+second search display controllers not a
+view controller although it tries to act
+
+250
+00:14:46,073 --> 00:14:46,130
+like one
+
+251
+00:14:47,003 --> 00:14:51,025
+really hard and as the view controller
+system became more intelligent and more
+
+252
+00:14:51,052 --> 00:14:51,114
+robust
+
+253
+00:14:52,014 --> 00:14:56,014
+as the STK matured research simply
+display controller had a harder time
+
+254
+00:14:56,014 --> 00:14:58,021
+trying to understand your intense
+
+255
+00:14:58,021 --> 00:15:01,036
+when displaying and this lasted to have
+to actually
+
+256
+00:15:01,036 --> 00:15:05,039
+guess in some situations and it didn't
+always get it right
+
+257
+00:15:05,039 --> 00:15:08,054
+and finally because it again it's not a
+view controller its presentation was
+
+258
+00:15:08,054 --> 00:15:10,066
+done via add some view
+
+259
+00:15:10,066 --> 00:15:14,081
+and show you how horrible was actually
+was if in your application this was your
+
+260
+00:15:14,081 --> 00:15:16,163
+search bar with your content being
+honored on the balloon you tap that
+
+261
+00:15:17,063 --> 00:15:18,129
+search bar
+
+262
+00:15:19,029 --> 00:15:21,098
+search display controller
+behind-the-scenes goes in creeds a
+
+263
+00:15:21,098 --> 00:15:21,192
+content
+
+264
+00:15:22,092 --> 00:15:26,136
+view as a dimming view to it at the
+table view to that
+
+265
+00:15:27,036 --> 00:15:30,062
+and then add some view to the search
+display controllers
+
+266
+00:15:30,062 --> 00:15:34,088
+container our content view contact
+controller's view
+
+267
+00:15:34,088 --> 00:15:37,135
+at this point in time your application
+has a view that it didn't expect in a
+
+268
+00:15:38,035 --> 00:15:39,036
+tie Rakhi
+
+269
+00:15:39,036 --> 00:15:42,037
+and the framework is trying to manage
+the fact that that view
+
+270
+00:15:42,037 --> 00:15:45,056
+was probably a ScrollView and things can
+move around when we
+
+271
+00:15:45,056 --> 00:15:48,645
+we don't want him so it's clear that in
+and
+
+272
+00:15:49,149 --> 00:15:52,360
+relativity this wasn't going to really
+function all that well
+
+273
+00:15:52,036 --> 00:15:55,105
+but was looking at this search display
+controllers really just doing a
+
+274
+00:15:56,005 --> 00:15:56,097
+presentation
+
+275
+00:15:56,097 --> 00:16:00,101
+I mean it already had its own container
+so it kinda made sense to rebase this on
+
+276
+00:16:01,037 --> 00:16:01,092
+top of
+
+277
+00:16:01,092 --> 00:16:04,451
+you I presentation controller and that's
+what we've done
+
+278
+00:16:05,279 --> 00:16:08,330
+so when I was 8 we're introducing you I
+search controller which is
+
+279
+00:16:08,033 --> 00:16:11,106
+a view controller based replacement for
+the now deprecated you I search display
+
+280
+00:16:12,006 --> 00:16:13,033
+controller
+
+281
+00:16:13,033 --> 00:16:16,034
+and it has a number of features
+
+282
+00:16:16,043 --> 00:16:19,082
+the first which is that it can present
+on any view controller in your hierarchy
+
+283
+00:16:19,082 --> 00:16:22,088
+not just ones that are full screen
+
+284
+00:16:23,042 --> 00:16:26,123
+second is that the search controller no
+longer tries to get in between
+
+285
+00:16:27,023 --> 00:16:30,442
+presenting the the thing that's showing
+the results and the thing that's driving
+
+286
+00:16:30,649 --> 00:16:32,970
+the filtering and the results
+
+287
+00:16:32,097 --> 00:16:35,120
+this means that any object in your
+application that's capable of filtering
+
+288
+00:16:36,002 --> 00:16:38,391
+search results can directly drive
+
+289
+00:16:38,589 --> 00:16:43,440
+the UI that's actually showing up on
+screen
+
+290
+00:16:43,044 --> 00:16:46,069
+you can influence the search for
+animation through to a custom and Amir
+
+291
+00:16:46,069 --> 00:16:47,076
+object
+
+292
+00:16:48,039 --> 00:16:51,058
+and because of course it's built on
+presentation controller search control
+
+293
+00:16:51,058 --> 00:16:53,132
+has the capacity to become adaptive
+
+294
+00:16:54,032 --> 00:16:58,035
+and what this means to you guys in the
+end is that's far more control and house
+
+295
+00:16:58,035 --> 00:17:00,214
+searches displayed in your applications
+
+296
+00:17:00,529 --> 00:17:04,554
+in far fewer assumptions made by the
+framework when you're doing some
+
+297
+00:17:04,779 --> 00:17:07,805
+so taking a look at used to do this in
+before I was a
+
+298
+00:17:08,039 --> 00:17:11,081
+we would create a search bar and we give
+that search bar search display
+
+299
+00:17:11,459 --> 00:17:12,980
+controller
+
+300
+00:17:12,098 --> 00:17:14,161
+but then we have to tell search
+controller who the data source in the
+
+301
+00:17:15,061 --> 00:17:15,152
+delegate were
+
+302
+00:17:16,052 --> 00:17:19,841
+for the table view that was gonna show
+the results and then finally we would
+
+303
+00:17:20,309 --> 00:17:20,730
+make
+
+304
+00:17:20,073 --> 00:17:24,282
+the search bar the table header view
+other table view that was already on
+
+305
+00:17:24,939 --> 00:17:27,130
+screen
+
+306
+00:17:27,013 --> 00:17:30,107
+now under I was eight with search
+controller the first thing you want to
+
+307
+00:17:31,007 --> 00:17:31,089
+do is create
+
+308
+00:17:31,089 --> 00:17:34,158
+results controller and as I mentioned
+this could be absolutely anything
+
+309
+00:17:35,058 --> 00:17:40,657
+a collection view or maybe a view that
+custom to just your application
+
+310
+00:17:41,179 --> 00:17:44,780
+you give this results controller to the
+search results controller
+
+311
+00:17:44,078 --> 00:17:47,084
+and then you tell the search controller
+who's going to be responsible for
+
+312
+00:17:47,084 --> 00:17:48,093
+updating the results
+
+313
+00:17:49,074 --> 00:17:52,110
+in a lotta cases this will actually just
+be the results controller but
+
+314
+00:17:53,001 --> 00:17:57,030
+it could be literally any object in your
+application
+
+315
+00:17:57,039 --> 00:18:00,105
+next this is the one common cold line
+between the old world is that we take
+
+316
+00:18:01,005 --> 00:18:02,104
+the search controller search bar
+
+317
+00:18:03,004 --> 00:18:06,050
+and we added to the table or sit at the
+table header view have an existing table
+
+318
+00:18:06,005 --> 00:18:08,066
+view it on screen
+
+319
+00:18:09,011 --> 00:18:12,073
+now if you notice we don't actually
+present this new controller at any point
+
+320
+00:18:12,073 --> 00:18:13,099
+in time
+
+321
+00:18:13,099 --> 00:18:16,190
+and that's because search is usually
+event-driven the user's happening on the
+
+322
+00:18:17,009 --> 00:18:17,085
+search bar
+
+323
+00:18:18,066 --> 00:18:21,147
+other tapping on a search within your in
+your user interface
+
+324
+00:18:22,047 --> 00:18:25,129
+and so in those cases search controller
+is going to perform an automatic
+
+325
+00:18:26,029 --> 00:18:27,298
+presentation for you
+
+326
+00:18:27,559 --> 00:18:32,200
+based off of where the search bar is
+located at in on the screen
+
+327
+00:18:32,002 --> 00:18:34,066
+of course there's a delegate method
+allows you to drive us if you'd like but
+
+328
+00:18:34,084 --> 00:18:35,101
+for the most part
+
+329
+00:18:36,001 --> 00:18:39,032
+the the default animations are usually
+pretty close to what you guys really
+
+330
+00:18:39,032 --> 00:18:41,089
+expect
+
+331
+00:18:41,089 --> 00:18:44,151
+finally is one piece %uh VP on its been
+on you a view controller for some time
+
+332
+00:18:45,051 --> 00:18:47,133
+and it's the fines presentation context
+
+333
+00:18:48,033 --> 00:18:51,100
+when using you my search controller your
+probably gonna need to define this
+
+334
+00:18:52,000 --> 00:18:56,067
+on the view controller in which he won
+search to be presented
+
+335
+00:18:56,067 --> 00:19:00,069
+because search controllers trying really
+hard to play with nicely with your
+
+336
+00:19:00,069 --> 00:19:03,152
+layout it needs to know exactly where it
+is going to be displayed
+
+337
+00:19:04,052 --> 00:19:09,052
+and defines presentation context allows
+it to know where you want to go
+
+338
+00:19:09,052 --> 00:19:13,096
+I'll show you a real quick example what
+I mean here
+
+339
+00:19:13,096 --> 00:19:16,142
+take for take this example is a fairly
+common case application
+
+340
+00:19:17,042 --> 00:19:21,125
+as the applications root view controller
+is a tam bar controller
+
+341
+00:19:22,025 --> 00:19:25,064
+and as that have bars controllers
+selected the tab is displaying a
+
+342
+00:19:25,064 --> 00:19:27,066
+navigation controller
+
+343
+00:19:27,084 --> 00:19:31,088
+and the navigation controllers route you
+controller is our table view controller
+
+344
+00:19:31,088 --> 00:19:34,111
+and as we've seen before the previous
+examples the search bar is that people
+
+345
+00:19:35,011 --> 00:19:35,094
+view controllers
+
+346
+00:19:35,094 --> 00:19:39,125
+table views table header view
+
+347
+00:19:40,025 --> 00:19:43,084
+and so you probably want to have the
+same behavior that you've seen before I
+
+348
+00:19:43,309 --> 00:19:45,750
+would say does that when you tap on the
+search bar
+
+349
+00:19:45,075 --> 00:19:48,092
+the navigation bar disappears in the
+search bar takes its place
+
+350
+00:19:48,092 --> 00:19:51,165
+and the search result take the place at
+the table view
+
+351
+00:19:52,065 --> 00:19:54,157
+in this example the table you control or
+news the defined the presentation
+
+352
+00:19:55,057 --> 00:19:57,101
+context for the search controller
+
+353
+00:19:58,001 --> 00:20:01,079
+if you were to admit this you control
+your presentation behavior
+
+354
+00:20:01,079 --> 00:20:04,095
+says that we will walk up the chains we
+find somebody else who defines a
+
+355
+00:20:04,095 --> 00:20:05,116
+presentation contact
+
+356
+00:20:06,016 --> 00:20:09,067
+overuse the root view controller in this
+case that would be the tab bar
+
+357
+00:20:09,067 --> 00:20:10,113
+controller
+
+358
+00:20:11,013 --> 00:20:14,029
+and so this may actually what you want
+but it's something that you needed you
+
+359
+00:20:14,029 --> 00:20:14,110
+be aware I love
+
+360
+00:20:15,001 --> 00:20:18,042
+when using the new search controller is
+that you need to tell us where you want
+
+361
+00:20:18,051 --> 00:20:19,139
+it at harvard is gonna go presenting on
+
+362
+00:20:20,039 --> 00:20:24,578
+the group you controlling so now that
+we've shown you how you like it has
+
+363
+00:20:24,929 --> 00:20:25,490
+leveraged
+
+364
+00:20:25,049 --> 00:20:28,123
+you a presentation controller what are
+the benefits to you guys for us having
+
+365
+00:20:29,023 --> 00:20:31,119
+done this work
+
+366
+00:20:32,019 --> 00:20:35,090
+well first off its controllers now all
+over the place everything the controller
+
+367
+00:20:35,009 --> 00:20:36,011
+no matter where you look
+
+368
+00:20:36,092 --> 00:20:39,174
+and this is good for you guys we are no
+longer trying to shove their views into
+
+369
+00:20:40,074 --> 00:20:40,893
+your hierarchy
+
+370
+00:20:41,559 --> 00:20:44,580
+or no longer trying to transform Windows
+about everything
+
+371
+00:20:44,058 --> 00:20:47,089
+its controllers it's a view controller
+system and allows you very
+
+372
+00:20:47,089 --> 00:20:50,184
+unprecedented control and how these
+control how these new controllers are
+
+373
+00:20:51,084 --> 00:20:53,111
+displayed in your application
+
+374
+00:20:54,011 --> 00:20:57,460
+additionally because you a presentation
+controller provides an
+
+375
+00:20:57,559 --> 00:21:01,400
+excellent abstraction between the
+content have your presentation
+
+376
+00:21:01,004 --> 00:21:04,100
+and the chrome around it you a
+presentation controller
+
+377
+00:21:05,036 --> 00:21:08,042
+provide a natural home for these things
+to live no longer
+
+378
+00:21:08,096 --> 00:21:11,098
+to system provided you controllers
+contain their chrome in the view
+
+379
+00:21:11,098 --> 00:21:15,179
+controller
+
+380
+00:21:16,079 --> 00:21:20,092
+and finally additivity we keep things
+over and over again but we needed to
+
+381
+00:21:20,092 --> 00:21:21,095
+make our own controllers
+
+382
+00:21:22,022 --> 00:21:25,731
+at adaptive ahead for your guys period
+is applications
+
+383
+00:21:25,929 --> 00:21:28,970
+so now alerts and search can add abt
+
+384
+00:21:28,097 --> 00:21:31,806
+with your applications I'm all the other
+adaptations that you want to do
+
+385
+00:21:32,679 --> 00:21:36,490
+the major applications work in this new
+size class world that we're going into
+
+386
+00:21:36,049 --> 00:21:37,738
+him
+
+387
+00:21:38,179 --> 00:21:41,217
+so now that we've gone through how you
+like it as use these thing I use
+
+388
+00:21:41,559 --> 00:21:42,590
+presentation controller
+
+389
+00:21:42,059 --> 00:21:45,103
+that showed them all that can oppose all
+these come to a concept together
+
+390
+00:21:46,003 --> 00:21:49,095
+use a custom presentation controller and
+a custom animator to make a really cool
+
+391
+00:21:49,095 --> 00:21:52,191
+interface Peter let's do it
+
+392
+00:21:53,091 --> 00:21:58,140
+I've been working on this awesome new
+photo management and editing application
+
+393
+00:21:59,004 --> 00:22:02,072
+here we have a collection view and when
+I tap a photo
+
+394
+00:22:03,008 --> 00:22:06,059
+we're going to do a view controller
+presentation but it looks different than
+
+395
+00:22:06,059 --> 00:22:08,115
+a default view controller presentation
+
+396
+00:22:09,015 --> 00:22:12,087
+you notice that the presented view
+controller slides in from the right
+
+397
+00:22:12,087 --> 00:22:16,396
+while medium the rest to the screen and
+we kept him in view
+
+398
+00:22:17,179 --> 00:22:22,620
+were hit the Save button will dismiss
+good at this photograph
+
+399
+00:22:22,062 --> 00:22:25,108
+looks great so I'll hit safe
+
+400
+00:22:26,008 --> 00:22:30,013
+and we dismiss that you controller we
+should go through
+
+401
+00:22:30,013 --> 00:22:33,111
+how this presentation uses a custom
+presentation controller
+
+402
+00:22:34,011 --> 00:22:37,085
+an animator object to control placement
+animations
+
+403
+00:22:37,085 --> 00:22:40,177
+let's go through you can build a custom
+presentation like this
+
+404
+00:22:41,077 --> 00:22:44,091
+in your application we're going to start
+
+405
+00:22:44,091 --> 00:22:51,091
+in the root view controller a wrap
+
+406
+00:22:53,021 --> 00:22:56,034
+you'll notice this p in the corner
+
+407
+00:22:56,034 --> 00:23:00,059
+with added colors and tax at the legend
+so that you know what controller
+
+408
+00:23:00,059 --> 00:23:04,062
+or object we're talking about in the
+root view controller
+
+409
+00:23:04,062 --> 00:23:07,135
+we're going to create a new overlay you
+controller
+
+410
+00:23:08,035 --> 00:23:11,038
+this is what you saw presented as a
+sidebar in the demo
+
+411
+00:23:11,038 --> 00:23:15,087
+we just stop then because it's a view
+controller
+
+412
+00:23:15,087 --> 00:23:19,136
+will just call present view controller
+now
+
+413
+00:23:20,036 --> 00:23:23,091
+if we had stopped here and not
+implemented anything custom
+
+414
+00:23:23,091 --> 00:23:26,160
+what we get well
+
+415
+00:23:27,006 --> 00:23:31,071
+we have a review controller and we go to
+present me get the you like it the fault
+
+416
+00:23:32,025 --> 00:23:35,094
+a slight up from the bottom foreskin
+presentation
+
+417
+00:23:35,094 --> 00:23:39,107
+that looks cool but what you really want
+is a custom presentation
+
+418
+00:23:40,007 --> 00:23:43,053
+so when we present the sidebar it slides
+in from the right
+
+419
+00:23:43,053 --> 00:23:46,121
+while we'd im the presenting view
+controllers content
+
+420
+00:23:47,021 --> 00:23:50,024
+let's talk about the objects that are
+going to be responsible for this custom
+
+421
+00:23:50,051 --> 00:23:51,970
+presentation
+
+422
+00:23:52,429 --> 00:23:56,840
+we are ready now that we have a root
+view controller and are presented
+
+423
+00:23:56,084 --> 00:23:59,102
+overlay view controller in Iowa 7
+
+424
+00:24:00,002 --> 00:24:04,023
+we introduce the concept have a
+transition in Gallia in this
+
+425
+00:24:04,023 --> 00:24:05,032
+presentation
+
+426
+00:24:05,032 --> 00:24:08,511
+this transition delegate will be
+responsible for providing the animator
+
+427
+00:24:08,799 --> 00:24:08,887
+object
+
+428
+00:24:09,679 --> 00:24:12,910
+which animates a controller contents on
+screen
+
+429
+00:24:12,091 --> 00:24:16,100
+this is the same API that we introduced
+and I are seven
+
+430
+00:24:17,000 --> 00:24:20,079
+but new in Iowa State this transition
+delegate will also provide
+
+431
+00:24:20,079 --> 00:24:24,120
+the presentation controller this is the
+object that will drive the management
+
+432
+00:24:25,002 --> 00:24:28,031
+the content and chrome in this
+presentation
+
+433
+00:24:28,049 --> 00:24:32,052
+let's start with getting that dimming
+view on an off-screen
+
+434
+00:24:32,079 --> 00:24:35,086
+first back in our review controller
+
+435
+00:24:35,086 --> 00:24:39,112
+will create a new transitioning delegate
+to use for this presentation
+
+436
+00:24:40,012 --> 00:24:43,071
+this is the object that provides the
+animator object
+
+437
+00:24:43,179 --> 00:24:46,740
+and presentation controller and we'll
+set that transitioning delegate
+
+438
+00:24:46,074 --> 00:24:49,133
+unrepresented overlay view controller
+
+439
+00:24:50,033 --> 00:24:54,752
+now in our overly view controller will
+center motor presentation style
+
+440
+00:24:55,049 --> 00:24:58,087
+to custom this indicates to you like it
+
+441
+00:24:58,429 --> 00:25:02,510
+that we should consult your transition
+julliard for custom presentation
+
+442
+00:25:02,051 --> 00:25:02,125
+controller
+
+443
+00:25:03,025 --> 00:25:06,069
+to use for the presentation insider
+
+444
+00:25:06,069 --> 00:25:09,126
+our transition delegate will need to
+provide their presentation controller
+
+445
+00:25:10,026 --> 00:25:14,445
+by implementing presentation controller
+for presented view controller
+
+446
+00:25:14,679 --> 00:25:17,850
+presenting view controller source the
+controller
+
+447
+00:25:17,085 --> 00:25:20,103
+here will return the presentation
+controller
+
+448
+00:25:21,003 --> 00:25:25,034
+that we're responsible for the lifetime
+this view controllers transition
+
+449
+00:25:25,034 --> 00:25:28,040
+let's implement some methods in the
+presentation controller
+
+450
+00:25:28,004 --> 00:25:31,523
+to manage the steaming view we're gonna
+implement two methods
+
+451
+00:25:31,919 --> 00:25:35,210
+to coordinate the timing to you the
+first
+
+452
+00:25:35,021 --> 00:25:38,060
+his presentation transition will begin
+
+453
+00:25:38,006 --> 00:25:42,060
+this is called when we're about to do
+the presentation transition here we've
+
+454
+00:25:43,014 --> 00:25:44,032
+already set up a dimming view
+
+455
+00:25:44,032 --> 00:25:48,033
+in it and we'll just said that during
+these frame to the container views
+
+456
+00:25:48,033 --> 00:25:49,046
+bounds
+
+457
+00:25:49,046 --> 00:25:53,015
+this way the pro the victim and he was
+always full screen
+
+458
+00:25:53,429 --> 00:25:56,880
+will also set the offer the dimming view
+20 so it appears
+
+459
+00:25:56,088 --> 00:25:59,171
+fully transparent at the beginning of
+the animation
+
+460
+00:26:00,071 --> 00:26:03,134
+will make sure we insert the demand you
+above all the other content in the
+
+461
+00:26:04,034 --> 00:26:05,051
+presentation
+
+462
+00:26:05,051 --> 00:26:08,590
+and then this is really cool
+
+463
+00:26:09,049 --> 00:26:12,740
+you a presentation controller can
+provide its only animations
+
+464
+00:26:12,074 --> 00:26:15,115
+for its chrome in this case the dimming
+view or
+
+465
+00:26:16,015 --> 00:26:19,164
+it can enemy alongside the existing
+animations
+
+466
+00:26:19,299 --> 00:26:23,080
+in the animated object and that's
+exactly what we want
+
+467
+00:26:23,008 --> 00:26:26,086
+we call the presented view controllers
+transition coordinator
+
+468
+00:26:26,086 --> 00:26:29,087
+to animate alongside the current
+transition
+
+469
+00:26:29,087 --> 00:26:32,154
+inside this block was that the dimming
+these offer
+
+470
+00:26:33,054 --> 00:26:36,063
+21 this way the animations
+
+471
+00:26:36,063 --> 00:26:39,242
+both begin at the same time in finish at
+the same time
+
+472
+00:26:39,809 --> 00:26:42,809
+and it looks great now let's implement
+
+473
+00:26:42,809 --> 00:26:46,871
+the second method in our presentation
+controller for managing the demand you
+
+474
+00:26:47,429 --> 00:26:50,540
+dismissal transition will begin here
+
+475
+00:26:50,054 --> 00:26:54,098
+we're going to undo we did in
+presentation transition will begin
+
+476
+00:26:54,098 --> 00:26:57,172
+in this case we use the same transition
+coordinator API
+
+477
+00:26:58,072 --> 00:27:01,109
+to animate fading the dimming view 20
+alpha
+
+478
+00:27:02,009 --> 00:27:05,037
+but the others looks we go to present
+
+479
+00:27:05,037 --> 00:27:08,044
+the movie fades in and it fades away
+
+480
+00:27:08,044 --> 00:27:13,091
+looks great but we should probably get
+are presented you control on-screen next
+
+481
+00:27:13,091 --> 00:27:17,350
+first will need to go back to our
+transition delegate and return a custom
+
+482
+00:27:18,169 --> 00:27:22,840
+in a meter object will do this by
+implementing animation controller
+
+483
+00:27:22,084 --> 00:27:26,088
+for presented controller presenting
+controller source controller
+
+484
+00:27:27,024 --> 00:27:30,037
+this is the API that you used I was
+seven
+
+485
+00:27:30,037 --> 00:27:33,050
+careful return our custom view a custom
+class
+
+486
+00:27:33,005 --> 00:27:36,087
+which is in charge of this animation
+will also implement
+
+487
+00:27:37,032 --> 00:27:40,891
+the inverse if this method dismissal
+
+488
+00:27:41,179 --> 00:27:44,710
+are I'm sorry animation controller for
+dismiss controller
+
+489
+00:27:44,071 --> 00:27:47,086
+you like it gives you the power and
+flexibility
+
+490
+00:27:47,086 --> 00:27:50,138
+I'm using a different in a meter object
+for the presentation
+
+491
+00:27:51,038 --> 00:27:55,089
+and dismissal but here will just use the
+same one
+
+492
+00:27:55,089 --> 00:27:58,163
+now as you saw in the demo that overly
+sidebar
+
+493
+00:27:59,063 --> 00:28:03,232
+was a third the size of the display to
+size it appropriately
+
+494
+00:28:03,799 --> 00:28:07,750
+willing to implement several methods in
+our presentation controller
+
+495
+00:28:07,075 --> 00:28:10,110
+the first is size for child can tin
+container
+
+496
+00:28:11,001 --> 00:28:15,190
+with parent container size and this
+methods really simple
+
+497
+00:28:15,289 --> 00:28:20,250
+will just return a third of our parents
+with and therefore parent tight
+
+498
+00:28:20,025 --> 00:28:23,047
+that were always a third of the display
+
+499
+00:28:23,047 --> 00:28:26,063
+next will implement frame-up presented
+view
+
+500
+00:28:26,063 --> 00:28:29,095
+in containers you this is where we
+return
+
+501
+00:28:29,095 --> 00:28:33,107
+to the view controller transition system
+what frame we'd like to present view
+
+502
+00:28:34,007 --> 00:28:37,084
+to have will use the same size that we
+return
+
+503
+00:28:37,084 --> 00:28:41,120
+from sites for child content container
+with parent container size
+
+504
+00:28:42,002 --> 00:28:45,351
+and fit the origin the prevent presented
+use frame
+
+505
+00:28:45,549 --> 00:28:51,880
+to be right aligned in the container
+
+506
+00:28:51,088 --> 00:28:54,116
+let's see how that works
+
+507
+00:28:55,016 --> 00:28:58,107
+perfect the overlay is a third the
+display and right aligned
+
+508
+00:28:59,007 --> 00:29:02,063
+bought we also want is when we rotate
+into landscape
+
+509
+00:29:02,063 --> 00:29:06,076
+that sidebar should always appear as a
+third the display
+
+510
+00:29:06,076 --> 00:29:09,485
+no problem implementing rotation in
+presentation controller
+
+511
+00:29:10,169 --> 00:29:13,330
+is really simple was just need to
+implement
+
+512
+00:29:13,033 --> 00:29:17,086
+one method container view will layouts
+abuse
+
+513
+00:29:17,086 --> 00:29:20,094
+first will set the dimming these frame
+said always the full size in the
+
+514
+00:29:21,066 --> 00:29:21,134
+container
+
+515
+00:29:22,034 --> 00:29:25,091
+even when the containers changing
+balance
+
+516
+00:29:25,091 --> 00:29:29,098
+then will set the frame at the present
+in view to the same value we return
+
+517
+00:29:29,098 --> 00:29:32,102
+from for frame presented view and
+containers you
+
+518
+00:29:33,038 --> 00:29:36,076
+and we're done weekend rotation
+
+519
+00:29:36,076 --> 00:29:40,365
+now that we've seen how view controller
+sizing works in presentation controllers
+
+520
+00:29:41,049 --> 00:29:44,130
+it's important to understand the
+messaging that happens
+
+521
+00:29:44,013 --> 00:29:50,019
+between presentation controllers in
+their manage new controllers
+
+522
+00:29:50,019 --> 00:29:53,070
+new and I would say there's a new
+protocol you add content container
+
+523
+00:29:53,007 --> 00:29:56,346
+and it's implemented by both you a view
+controller and UI presentation
+
+524
+00:29:57,039 --> 00:29:58,150
+controller
+
+525
+00:29:58,015 --> 00:30:01,090
+and it's a collection of methods the
+describe how the view controller and
+
+526
+00:30:01,009 --> 00:30:02,045
+presentation controllers
+
+527
+00:30:03,026 --> 00:30:06,028
+communicate changes in the environment
+to one another
+
+528
+00:30:06,046 --> 00:30:09,049
+and it's important that we talk about
+these methods in regards to how they
+
+529
+00:30:09,049 --> 00:30:10,073
+flow between
+
+530
+00:30:10,073 --> 00:30:13,094
+that the objects between the controllers
+because I
+
+531
+00:30:13,094 --> 00:30:16,177
+the forwarding is done automatically for
+you and less you interfere with it
+
+532
+00:30:17,077 --> 00:30:20,144
+and I'll show you why you'd want to do
+that was a couple different
+
+533
+00:30:21,044 --> 00:30:25,913
+I ideas here so we'll start off with
+transitioning to a specific size
+
+534
+00:30:26,309 --> 00:30:29,710
+there's two methods specifically here
+you will transition the size
+
+535
+00:30:29,071 --> 00:30:33,140
+with transition coordinator and as peers
+to show you size for child content
+
+536
+00:30:34,004 --> 00:30:37,039
+container with parent container size
+
+537
+00:30:37,075 --> 00:30:40,111
+these indicate to the view controller
+the pair that the presentation
+
+538
+00:30:41,011 --> 00:30:42,033
+controller
+
+539
+00:30:42,033 --> 00:30:46,039
+but the physical size the view has
+actually changed
+
+540
+00:30:46,039 --> 00:30:50,060
+and this is best kinda shown throughout
+a diagram that shows how the messaging
+
+541
+00:30:50,006 --> 00:30:50,079
+flows through
+
+542
+00:30:51,033 --> 00:30:54,372
+so this give ourselves a review
+controller with a couple child you
+
+543
+00:30:54,669 --> 00:30:55,900
+controllers
+
+544
+00:30:55,009 --> 00:30:57,093
+and let's have it present if you can't
+or doesn't really matter what it
+
+545
+00:30:58,074 --> 00:30:59,151
+actually is
+
+546
+00:31:00,051 --> 00:31:03,090
+and is peter is mentioned previously all
+presentations view controllers are
+
+547
+00:31:03,009 --> 00:31:03,091
+managed by
+
+548
+00:31:04,072 --> 00:31:08,110
+a presentation controller so we gotta
+have one of those guys too
+
+549
+00:31:09,001 --> 00:31:11,079
+so now that we have this set up this
+give ourselves a few will transition to
+
+550
+00:31:11,088 --> 00:31:12,090
+size call
+
+551
+00:31:13,008 --> 00:31:16,010
+maybe the device rotated and that we're
+getting a different size
+
+552
+00:31:16,028 --> 00:31:19,050
+are different bounds for that view
+
+553
+00:31:19,005 --> 00:31:22,063
+these messages always start with the
+root view controller
+
+554
+00:31:23,008 --> 00:31:26,083
+and from there that controller will
+message any child view controllers that
+
+555
+00:31:26,083 --> 00:31:27,161
+it may have
+
+556
+00:31:28,061 --> 00:31:31,063
+but the size that we pass it to the
+rupee controllers probably not the same
+
+557
+00:31:31,063 --> 00:31:33,112
+size that you wanna pass into the child
+it might
+
+558
+00:31:33,679 --> 00:31:37,850
+is probably a smaller size so this is
+worse I was for child content container
+
+559
+00:31:37,085 --> 00:31:39,101
+with parent container size comes in
+
+560
+00:31:40,001 --> 00:31:43,300
+we'll ask the Ru controller to size
+child one enroute
+
+561
+00:31:43,309 --> 00:31:46,440
+that method returns a size that we will
+pass on the child someone
+
+562
+00:31:46,044 --> 00:31:50,075
+tell one's you will transition to size
+we continue on if there are any other
+
+563
+00:31:50,075 --> 00:31:52,734
+child you controllers have this
+controller
+
+564
+00:31:53,409 --> 00:31:56,423
+and then any controllers that are
+presenting view controllers that means
+
+565
+00:31:56,549 --> 00:31:59,360
+that they have another view controller
+presented on top of them
+
+566
+00:31:59,036 --> 00:32:02,071
+will have their presentation controller
+called next
+
+567
+00:32:02,071 --> 00:32:05,420
+in this case the Ruby control the child
+you can't or excuse me don't aren't
+
+568
+00:32:06,059 --> 00:32:07,120
+presenting anybody
+
+569
+00:32:07,012 --> 00:32:10,571
+but the root view controller actually is
+
+570
+00:32:10,679 --> 00:32:14,110
+the review controller is not a container
+for the presentation controller
+
+571
+00:32:14,011 --> 00:32:17,064
+so the size it gets passed to it is the
+same size that we gave to the root
+
+572
+00:32:17,064 --> 00:32:18,096
+controller
+
+573
+00:32:18,096 --> 00:32:22,144
+but the presentation controller is the
+container for the presented controller
+
+574
+00:32:23,044 --> 00:32:26,393
+so we need to ask the presentation
+controller a size for child Konkan
+
+575
+00:32:26,789 --> 00:32:31,320
+container passing on presented view
+controller
+
+576
+00:32:31,032 --> 00:32:34,083
+the messaging flows basically as a
+depth-first search you start with the
+
+577
+00:32:34,083 --> 00:32:35,089
+root view controller
+
+578
+00:32:35,089 --> 00:32:38,136
+any child controllers they are present
+will get called
+
+579
+00:32:39,036 --> 00:32:43,095
+but any control over that is presenting
+UConn presenting another controller will
+
+580
+00:32:43,419 --> 00:32:45,620
+have its presentation controller Cup
+messaged
+
+581
+00:32:45,062 --> 00:32:48,087
+and then it's presented controllers
+messaged and then
+
+582
+00:32:48,087 --> 00:32:51,165
+the process repeats again if for any
+reason that you
+
+583
+00:32:52,065 --> 00:32:55,073
+implement one of these methods and you
+call super this messaging
+
+584
+00:32:55,073 --> 00:32:59,078
+still is performed for you but if you
+implement these methods and don't call
+
+585
+00:32:59,078 --> 00:32:59,170
+super
+
+586
+00:33:00,007 --> 00:33:03,016
+the object or the class that does not to
+pass the message on any of its child
+
+587
+00:33:04,006 --> 00:33:07,022
+controllers or any of its presented
+presentation controllers will no longer
+
+588
+00:33:07,076 --> 00:33:08,097
+get that message
+
+589
+00:33:08,097 --> 00:33:11,101
+it's something to be aware of
+
+590
+00:33:12,001 --> 00:33:15,670
+group there is a more next up is
+preferred content size and their two
+
+591
+00:33:15,679 --> 00:33:17,470
+items here
+
+592
+00:33:17,047 --> 00:33:20,496
+preferred content size and I
+
+593
+00:33:20,919 --> 00:33:24,944
+preferred content size did change for
+child content container
+
+594
+00:33:25,169 --> 00:33:29,500
+and this is arm methodologies for
+allowing a presented view controller a
+
+595
+00:33:29,005 --> 00:33:30,058
+child you controller to say
+
+596
+00:33:31,003 --> 00:33:34,020
+ID more or less size to its container
+controller
+
+597
+00:33:34,002 --> 00:33:37,054
+I really good example this is the
+Notification Center widgets
+
+598
+00:33:37,072 --> 00:33:40,148
+will do this your notification your
+widget will actually say its own
+
+599
+00:33:41,048 --> 00:33:42,084
+preferred content size
+
+600
+00:33:42,084 --> 00:33:46,102
+which will message its container to
+allow the size to change
+
+601
+00:33:47,002 --> 00:33:50,031
+sure this looks like in our example
+
+602
+00:33:50,049 --> 00:33:53,087
+see the present a controller ones that
+grow by 100 points
+
+603
+00:33:53,429 --> 00:33:56,960
+so what sets its preferred contents eyes
+to what it would like
+
+604
+00:33:56,096 --> 00:33:59,445
+and because the presentation controller
+is the container controller
+
+605
+00:34:00,309 --> 00:34:03,380
+love the presented controller it gets
+the message
+
+606
+00:34:03,038 --> 00:34:07,074
+preferred content size to change for
+child content container
+
+607
+00:34:07,074 --> 00:34:10,503
+now for the child wonder child to you
+controllers had
+
+608
+00:34:11,169 --> 00:34:13,244
+requested more side when the route you
+controller would have gotten this
+
+609
+00:34:13,919 --> 00:34:14,015
+message so
+
+610
+00:34:14,879 --> 00:34:17,954
+it's just been messaging up to the
+container controller
+
+611
+00:34:18,629 --> 00:34:21,681
+at this point I'm the container has a
+decision to make does it one on or the
+
+612
+00:34:22,149 --> 00:34:22,246
+size request
+
+613
+00:34:23,119 --> 00:34:26,211
+in and if so how much of it doesn't one
+on you can simply ignore it there's not
+
+614
+00:34:27,039 --> 00:34:28,450
+any space to give
+
+615
+00:34:28,045 --> 00:34:32,404
+oregon say well you asked for a hundred
+points I can give you 50
+
+616
+00:34:32,809 --> 00:34:35,884
+if you were going till resize the view
+it's important you call back if you will
+
+617
+00:34:36,559 --> 00:34:38,950
+transition the size we transition
+cornerback
+
+618
+00:34:38,095 --> 00:34:42,884
+on the view that made the request this
+coming a receipt for that you control to
+
+619
+00:34:43,739 --> 00:34:45,741
+let it know that the requested size
+
+620
+00:34:45,759 --> 00:34:49,780
+it's gotten the size or whatever much
+size you the container gave it
+
+621
+00:34:49,969 --> 00:34:52,971
+and it's allowed them to for that
+message on to any child containers it
+
+622
+00:34:53,169 --> 00:34:54,235
+may have
+
+623
+00:34:54,829 --> 00:34:58,832
+and key rate in the key point here is
+that after you sent this message
+
+624
+00:34:58,859 --> 00:35:01,871
+the container needs to resize the child
+contain
+
+625
+00:35:01,979 --> 00:35:06,960
+your child you controller sending the
+message you will transition to size
+
+626
+00:35:06,096 --> 00:35:09,142
+does not actually perform the resize
+itself at something that the container
+
+627
+00:35:10,042 --> 00:35:13,371
+needs to do
+
+628
+00:35:13,749 --> 00:35:17,660
+finally our tree collections and is one
+method here and that is will transition
+
+629
+00:35:17,066 --> 00:35:18,070
+to tree collection
+
+630
+00:35:18,007 --> 00:35:22,916
+with transition coordinator and this has
+the same kind of messaging semantics
+
+631
+00:35:23,609 --> 00:35:26,627
+as the fuel transition the size at a
+flows in the same
+
+632
+00:35:26,789 --> 00:35:29,811
+order and if you don't call through
+super the the message chain
+
+633
+00:35:30,009 --> 00:35:33,106
+ends there if you hadn't seen the the
+talked yesterday
+
+634
+00:35:33,979 --> 00:35:37,005
+bond building adaptive applications with
+you like it
+
+635
+00:35:37,239 --> 00:35:40,690
+are I highly recommend checking that out
+because it goes in the tree collections
+
+636
+00:35:40,069 --> 00:35:42,138
+and depth and how they interact with the
+rest the system
+
+637
+00:35:43,038 --> 00:35:46,177
+but is a really quick overview what they
+are case you haven't read the
+
+638
+00:35:46,519 --> 00:35:47,594
+documentation
+
+639
+00:35:48,269 --> 00:35:52,950
+trick elections are simply a collection
+okie value pairs the described
+
+640
+00:35:52,095 --> 00:35:53,167
+environment to a view controller
+
+641
+00:35:54,067 --> 00:35:58,426
+or have you already our screen and there
+are four properties
+
+642
+00:35:59,029 --> 00:36:02,125
+horizontal size class which describes
+with vertel's like this give me a
+
+643
+00:36:02,989 --> 00:36:05,044
+vertical size classes describes hide
+
+644
+00:36:05,539 --> 00:36:08,940
+the user interface idiom that describes
+the type device that your own
+
+645
+00:36:08,094 --> 00:36:11,133
+and in the scale that the signs then
+scaled advice
+
+646
+00:36:11,979 --> 00:36:15,190
+so for an iPhone in Papillion
+
+647
+00:36:15,019 --> 00:36:18,116
+nor in portrait the where's all size
+classes compact
+
+648
+00:36:19,016 --> 00:36:23,063
+its vertical size classes regular if the
+phone so its users is a founding has k
+
+649
+00:36:23,063 --> 00:36:25,402
+love to you
+
+650
+00:36:25,969 --> 00:36:29,025
+know all these methods are trying to
+allow you to
+
+651
+00:36:29,529 --> 00:36:32,551
+have your application respond to changes
+but
+
+652
+00:36:32,749 --> 00:36:35,810
+some you may be petted the ones that are
+be paying attention most probably
+
+653
+00:36:36,359 --> 00:36:39,880
+notice that we have two methods that
+actually send moved somewhat the same
+
+654
+00:36:39,088 --> 00:36:40,170
+information
+
+655
+00:36:41,007 --> 00:36:44,306
+you will transition to treat collection
+has the notion of science classes
+
+656
+00:36:44,999 --> 00:36:48,390
+but we also have this method view will
+transition the size that's sending on
+
+657
+00:36:48,039 --> 00:36:49,045
+the size
+
+658
+00:36:49,045 --> 00:36:52,864
+so why do we have both these methods
+
+659
+00:36:53,269 --> 00:36:56,278
+that's a great question before actually
+tell you why
+
+660
+00:36:56,359 --> 00:37:00,425
+I did and two more methods to this you a
+presentation controllers container view
+
+661
+00:37:01,019 --> 00:37:02,024
+will lay out some views
+
+662
+00:37:02,519 --> 00:37:07,170
+and you a view controller's view layouts
+abuse
+
+663
+00:37:07,017 --> 00:37:11,114
+starting with will transition a tree
+collection
+
+664
+00:37:12,014 --> 00:37:15,373
+this is intended to be a very core
+screen control over
+
+665
+00:37:15,499 --> 00:37:19,450
+the layout of your application when you
+re see you trade collection changes
+
+666
+00:37:19,045 --> 00:37:22,714
+it's an indication that the structure
+the overall structure replication is
+
+667
+00:37:23,119 --> 00:37:26,119
+probably going to change your needs to
+be updated
+
+668
+00:37:26,119 --> 00:37:29,380
+a great example love this is of course
+additivity
+
+669
+00:37:29,038 --> 00:37:33,017
+in every the example them like TV before
+with the popover went to full screen
+
+670
+00:37:33,359 --> 00:37:35,451
+that's not just a view being swapped out
+that its view controllers and
+
+671
+00:37:36,279 --> 00:37:38,357
+presentation controllers being exchanged
+wholesale
+
+672
+00:37:39,059 --> 00:37:42,061
+a dramatic significant amount to change
+your applications you
+
+673
+00:37:42,079 --> 00:37:46,147
+interface but it's not just all about
+science classes
+
+674
+00:37:46,759 --> 00:37:50,450
+screens can have different scales you
+can't really can be on
+
+675
+00:37:50,045 --> 00:37:53,094
+a did the main device can which has a
+skillet you back to two
+
+676
+00:37:53,499 --> 00:37:56,920
+to axe but then an external monitor
+clever one XScale
+
+677
+00:37:56,092 --> 00:38:00,231
+and moving that view controller from the
+primary screen to that secondary screen
+
+678
+00:38:01,059 --> 00:38:05,390
+could completely change how you I need
+to be laid out
+
+679
+00:38:05,039 --> 00:38:10,168
+and the not it's not always about entire
+UI changing a fax
+
+680
+00:38:10,519 --> 00:38:13,880
+an example of this would be now and I
+was eight
+
+681
+00:38:13,088 --> 00:38:17,092
+when we go from IA enough iphone-like
+device when we go from a compact with
+
+682
+00:38:17,092 --> 00:38:18,161
+regular hive
+
+683
+00:38:18,989 --> 00:38:22,072
+in WI roti into a compact with compact
+height environment
+
+684
+00:38:22,819 --> 00:38:25,834
+we're going on to hide the status bar
+for you
+
+685
+00:38:25,969 --> 00:38:29,890
+and we do that not because there's less
+space lab does not less physical space
+
+686
+00:38:29,089 --> 00:38:30,308
+that you can't roller
+
+687
+00:38:31,109 --> 00:38:34,410
+it's that it makes more sense in that
+situation
+
+688
+00:38:34,041 --> 00:38:37,210
+to remove a status bar so that your
+content has more
+
+689
+00:38:37,579 --> 00:38:41,579
+more area display itself
+
+690
+00:38:41,579 --> 00:38:45,668
+next up is view will transition the size
+and this is the medium green control
+
+691
+00:38:46,469 --> 00:38:50,950
+approach for and responding to changes
+
+692
+00:38:50,095 --> 00:38:53,384
+and as I mentioned before this is an
+indication that your view actually has
+
+693
+00:38:54,239 --> 00:38:56,400
+more or less I is the deal with
+
+694
+00:38:56,004 --> 00:38:59,973
+and it should actually add more content
+remove content depending officer how the
+
+695
+00:39:00,369 --> 00:39:02,930
+size changed
+
+696
+00:39:02,093 --> 00:39:05,532
+a great example this is the child cunt
+the child controller requesting more
+
+697
+00:39:06,369 --> 00:39:07,382
+size
+
+698
+00:39:07,499 --> 00:39:10,690
+in this case it's not an indication for
+that view controller tell actually lay
+
+699
+00:39:10,069 --> 00:39:10,168
+itself out
+
+700
+00:39:11,068 --> 00:39:15,407
+it's an indication that it needs to
+actually add more content
+
+701
+00:39:16,019 --> 00:39:20,043
+you also get this gone rotation with
+rotation and her I was eight
+
+702
+00:39:20,259 --> 00:39:23,630
+it's simply a bounce change so when will
+you when the device rotates
+
+703
+00:39:23,063 --> 00:39:26,012
+your view controller Walter told that
+its eyes will change in your problem see
+
+704
+00:39:26,579 --> 00:39:27,200
+that the with
+
+705
+00:39:27,002 --> 00:39:30,095
+in the hype that's want and finally you
+also see these guys
+
+706
+00:39:31,013 --> 00:39:35,962
+these a messages called when the recital
+similar changes that size
+
+707
+00:39:36,079 --> 00:39:39,900
+so many buying out the same here you'll
+see that as well
+
+708
+00:39:39,009 --> 00:39:43,148
+finally is continually out some views
+and you lay out some views
+
+709
+00:39:44,039 --> 00:39:47,710
+and these are the fine green controls on
+you I presentation controller
+
+710
+00:39:47,071 --> 00:39:51,114
+and you a view controller respectively
+it works just like you I views layouts
+
+711
+00:39:52,014 --> 00:39:52,092
+abuse
+
+712
+00:39:52,092 --> 00:39:55,118
+and is meant to do fine adjustments to
+
+713
+00:39:56,018 --> 00:39:59,065
+disabuse love your hierarchy and that
+includes
+
+714
+00:39:59,065 --> 00:40:02,774
+include includes child content use as
+well so when your presentation
+
+715
+00:40:03,359 --> 00:40:04,420
+controller got that message
+
+716
+00:40:04,969 --> 00:40:08,031
+that the presented you controller needs
+to have a different size
+
+717
+00:40:08,589 --> 00:40:11,635
+you would change that present view
+controller size in container view will
+
+718
+00:40:12,049 --> 00:40:14,210
+lay out some views
+
+719
+00:40:14,021 --> 00:40:16,028
+so now that we understand how the
+messaging flows through the controller
+
+720
+00:40:16,091 --> 00:40:16,990
+high-ranking
+
+721
+00:40:17,809 --> 00:40:21,826
+let's take a look at the time demo that
+shows how we do at the data added a
+
+722
+00:40:21,979 --> 00:40:25,940
+additivity to our demo app and then also
+shows how to use multiple presentation
+
+723
+00:40:25,094 --> 00:40:26,863
+controllers to show
+
+724
+00:40:27,709 --> 00:40:32,640
+I did this by the same you can filter
+content
+
+725
+00:40:32,064 --> 00:40:35,793
+so we're going to go back to the same
+demo application we're looking at
+
+726
+00:40:36,369 --> 00:40:38,383
+earlier
+
+727
+00:40:38,509 --> 00:40:42,582
+my photo management application
+
+728
+00:40:43,239 --> 00:40:46,241
+using the same API the gym talked about
+
+729
+00:40:46,259 --> 00:40:49,288
+for you i pop over presentation
+controller adapting
+
+730
+00:40:49,549 --> 00:40:53,650
+we can adapt our custom view controller
+too
+
+731
+00:40:53,065 --> 00:40:56,120
+as you remember we have the sidebar but
+we transition
+
+732
+00:40:57,002 --> 00:41:00,661
+to a compact with environment what we'd
+really like to have
+
+733
+00:41:00,859 --> 00:41:07,859
+is just a full screen presentation
+
+734
+00:41:08,004 --> 00:41:11,057
+here will change the way it 3 23 here in
+20
+
+735
+00:41:11,093 --> 00:41:14,522
+and the size class to compact
+
+736
+00:41:15,359 --> 00:41:19,384
+and check it out we get a full screen
+presentation
+
+737
+00:41:19,609 --> 00:41:23,190
+this is using that same adaptive
+presentation style
+
+738
+00:41:23,019 --> 00:41:26,858
+adaptivity API and presentation
+controller that we show you
+
+739
+00:41:27,029 --> 00:41:30,112
+in Papa presentation controller but
+what's really cool
+
+740
+00:41:30,859 --> 00:41:33,927
+is that we can still use our custom in a
+meter object
+
+741
+00:41:34,539 --> 00:41:38,150
+see you notice the one we dismiss the
+view controller by tapping the Save
+
+742
+00:41:38,015 --> 00:41:39,384
+button
+
+743
+00:41:39,519 --> 00:41:43,140
+we slide off from the right and we
+present again
+
+744
+00:41:43,014 --> 00:41:46,723
+we slide in from the right this is
+exactly what we want
+
+745
+00:41:46,849 --> 00:41:50,892
+and to show that it goes the other way
+or change the size class
+
+746
+00:41:51,279 --> 00:41:55,322
+back to regular with the with have 768
+points
+
+747
+00:41:55,709 --> 00:41:58,746
+and boom the transition transitions
+perfectly
+
+748
+00:41:59,079 --> 00:42:02,680
+and gets placed correctly next
+
+749
+00:42:02,068 --> 00:42:05,897
+I'd like to show you something really
+cool
+
+750
+00:42:06,509 --> 00:42:09,910
+because presentation controllers are not
+coupled
+
+751
+00:42:09,091 --> 00:42:14,230
+to their presented you controllers we
+can switch out a presentation controller
+
+752
+00:42:15,049 --> 00:42:18,440
+that's used for a view controller with
+zero changes
+
+753
+00:42:18,044 --> 00:42:22,046
+to the present a new controller I'm
+gonna tap this little switch in the
+
+754
+00:42:22,064 --> 00:42:23,067
+corner
+
+755
+00:42:23,067 --> 00:42:26,116
+which turns on cool mod this flips
+
+756
+00:42:27,016 --> 00:42:29,114
+some internal state in my view
+controller to use it different
+
+757
+00:42:30,014 --> 00:42:31,363
+transition delegate
+
+758
+00:42:31,489 --> 00:42:34,502
+which will provide a totally custom
+animator
+
+759
+00:42:34,619 --> 00:42:38,687
+and totally custom chrome to its
+presentation controller
+
+760
+00:42:39,299 --> 00:42:43,398
+so when I tap a photo incentive that
+overlay sidebar presentation
+
+761
+00:42:44,289 --> 00:42:48,292
+the view controller slide in from the
+Middle beautiful leopard print appears
+
+762
+00:42:48,319 --> 00:42:48,408
+from the side
+
+763
+00:42:49,209 --> 00:42:53,234
+and we get some totally custom chrome
+you'll notice some things about this
+
+764
+00:42:53,459 --> 00:42:55,495
+custom presentation
+
+765
+00:42:55,819 --> 00:42:58,838
+when we do the presentation while the
+unicorn
+
+766
+00:42:59,009 --> 00:43:02,200
+and flower appear alongside the view
+controller
+
+767
+00:43:02,002 --> 00:43:05,111
+in a meeting in the leopard print
+inmates
+
+768
+00:43:05,309 --> 00:43:09,327
+by itself this is because you a
+presentation controller
+
+769
+00:43:09,489 --> 00:43:12,544
+can enemy tits chrome in a different
+animation block
+
+770
+00:43:13,039 --> 00:43:17,070
+than that which is used for the view
+controller presentation
+
+771
+00:43:17,349 --> 00:43:21,373
+so we can make that chrome respond just
+how you want
+
+772
+00:43:21,589 --> 00:43:24,590
+by the way this simple code including
+call node
+
+773
+00:43:24,599 --> 00:43:27,693
+is available on the world wide developer
+conference website
+
+774
+00:43:28,539 --> 00:43:31,920
+just look for look inside let's see
+
+775
+00:43:31,092 --> 00:43:34,771
+how we implemented this totally custom
+presentation controller
+
+776
+00:43:35,599 --> 00:43:38,624
+and switch the presentation controller
+we used
+
+777
+00:43:38,849 --> 00:43:42,440
+for overlay view controller
+
+778
+00:43:42,044 --> 00:43:46,883
+back in our review controller I show you
+setting up our transition delegate
+
+779
+00:43:47,279 --> 00:43:50,660
+like this we're gonna need to augment
+this logic
+
+780
+00:43:50,066 --> 00:43:54,485
+a little bit to provide our other
+presentation controller
+
+781
+00:43:55,079 --> 00:43:58,153
+first will check a new internal method
+that we've called
+
+782
+00:43:58,819 --> 00:44:01,893
+presentation should be awesome and if
+this is true
+
+783
+00:44:02,559 --> 00:44:05,612
+will use a totally new transition tell
+you
+
+784
+00:44:06,089 --> 00:44:10,102
+this transition delegate will provide
+custom animator object
+
+785
+00:44:10,219 --> 00:44:14,246
+to manage that skill in animation and a
+custom presentation controller
+
+786
+00:44:14,489 --> 00:44:18,420
+to manage the crown the use our earlier
+otherwise
+
+787
+00:44:18,042 --> 00:44:21,441
+if that value is not set to yes will
+just use
+
+788
+00:44:21,819 --> 00:44:25,180
+the other transition go get that you saw
+earlier
+
+789
+00:44:25,018 --> 00:44:28,627
+and then setting this on the view
+controller will cause all that machinery
+
+790
+00:44:28,789 --> 00:44:29,813
+to be put in place
+
+791
+00:44:30,029 --> 00:44:33,074
+when we go to present
+
+792
+00:44:33,479 --> 00:44:36,480
+so to summarize what we talk about her
+today and there's only two points that
+
+793
+00:44:36,489 --> 00:44:38,500
+you really need to take home with you
+
+794
+00:44:38,599 --> 00:44:41,635
+first of three you I presentation
+controller you like it
+
+795
+00:44:41,959 --> 00:44:44,968
+ourselves are eating our own on food and
+really improve our own API
+
+796
+00:44:45,859 --> 00:44:49,390
+for alerts in for pop overs and per
+search
+
+797
+00:44:49,039 --> 00:44:52,898
+no longer do you need to put their views
+into your hierarchy if they
+
+798
+00:44:53,249 --> 00:44:56,255
+could be best served by a presentation
+
+799
+00:44:56,849 --> 00:44:59,894
+additionally with presentation
+controller representing
+
+800
+00:45:00,299 --> 00:45:04,301
+the last piece in the puzzle for totally
+custom presentations
+
+801
+00:45:04,319 --> 00:45:07,680
+you can now build things that you never
+could before
+
+802
+00:45:07,068 --> 00:45:10,167
+with custom chrome and custom animations
+and we encourage you
+
+803
+00:45:11,067 --> 00:45:14,156
+to go make your own cool mod we can't
+wait to see
+
+804
+00:45:14,759 --> 00:45:17,812
+what types have totally custom
+presentations you're going to add
+
+805
+00:45:18,289 --> 00:45:21,313
+to your application
+
+806
+00:45:21,529 --> 00:45:24,552
+have you had any more information or
+questions Jake barron's the game played
+
+807
+00:45:24,759 --> 00:45:25,762
+down here is our happened that
+
+808
+00:45:26,059 --> 00:45:29,910
+frameworks evangelist loves hearing from
+you guys because there's documentations
+
+809
+00:45:29,091 --> 00:45:31,290
+on the Apple Developer forms
+
+810
+00:45:32,109 --> 00:45:35,151
+more important over the related sessions
+this is the last talk on you a view
+
+811
+00:45:35,529 --> 00:45:35,598
+controller
+
+812
+00:45:36,219 --> 00:45:38,880
+up with new and you can't rollers and I
+was eight so all the sessions were
+
+813
+00:45:38,088 --> 00:45:39,092
+earlier in the week
+
+814
+00:45:39,092 --> 00:45:42,541
+highly recommended to take them on the
+videos and that's it enjoy the rest a
+
+815
+00:45:43,369 --> 00:45:44,391
+comment and have a great vacay
+

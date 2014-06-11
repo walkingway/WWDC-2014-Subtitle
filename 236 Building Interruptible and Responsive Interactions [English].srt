@@ -1,0 +1,4700 @@
+1
+00:00:11,072 --> 00:00:16,085
+RA good good morning still right um
+
+2
+00:00:16,085 --> 00:00:19,161
+here a little while ago what time it is
+around welcome to building
+
+3
+00:00:20,061 --> 00:00:23,065
+interruptible and responsive
+interactions so
+
+4
+00:00:24,001 --> 00:00:27,098
+handy and I wanna spend some time
+talking about
+
+5
+00:00:27,098 --> 00:00:31,099
+how you can build the interactions and
+he raps that are really fluid
+
+6
+00:00:31,099 --> 00:00:34,190
+and make the user interaction with the
+content in your app really smooth and
+
+7
+00:00:35,009 --> 00:00:35,080
+natural
+
+8
+00:00:36,061 --> 00:00:39,083
+and avoid any sorta jarring changes
+
+9
+00:00:39,083 --> 00:00:42,139
+as you transition between things and
+
+10
+00:00:43,039 --> 00:00:45,888
+if you were just here for this review
+session on a start out with something
+
+11
+00:00:46,239 --> 00:00:49,070
+that probably won't be too surprising
+and show you a ScrollView
+
+12
+00:00:49,007 --> 00:00:52,050
+I just to give you an idea the kind of
+things that we're talking about here
+
+13
+00:00:52,005 --> 00:00:56,023
+they have got a nice bird that's a in a
+UIScrollView
+
+14
+00:00:56,068 --> 00:00:59,146
+and I've zooming and scrolling and stuff
+the
+
+15
+00:01:00,046 --> 00:01:03,137
+thing I want to draw your attention to
+is the transitions between the user
+
+16
+00:01:04,037 --> 00:01:08,146
+dragging around in a ScrollView and let
+it go and how animation start
+
+17
+00:01:08,479 --> 00:01:11,486
+and then grabbing again as the
+animations are in progress so
+
+18
+00:01:11,549 --> 00:01:16,070
+I can zoom in on this burden I can drag
+it down and about to get the edge
+
+19
+00:01:16,007 --> 00:01:19,074
+but if I keep grabbing it there's never
+a time where I can't start scrolling
+
+20
+00:01:19,074 --> 00:01:22,085
+it always works I can scroll around and
+
+21
+00:01:22,085 --> 00:01:26,494
+it's all a very smooth transition
+anatoly wanna talk about this morning
+
+22
+00:01:27,259 --> 00:01:31,270
+is transitions so what kinds of
+transitions
+
+23
+00:01:31,369 --> 00:01:35,454
+well three transitions in particular
+number one transitioning from jesters
+
+24
+00:01:36,219 --> 00:01:39,670
+into animations and how to do that
+really really smoothly
+
+25
+00:01:39,067 --> 00:01:42,075
+number two transitioning from animation
+
+26
+00:01:42,075 --> 00:01:45,864
+to other animations and I'm sure you
+were to guess what number three is
+
+27
+00:01:46,539 --> 00:01:50,240
+transitioning from animations back into
+gesture control
+
+28
+00:01:50,024 --> 00:01:55,060
+so the key to making all these
+interactions really smooth is just
+
+29
+00:01:55,006 --> 00:01:57,095
+making sure that the transitions between
+these different states
+
+30
+00:01:58,049 --> 00:02:02,055
+are a seamless as possible I thought
+start out by talking about transitioning
+
+31
+00:02:03,009 --> 00:02:04,035
+from your jesters
+
+32
+00:02:04,035 --> 00:02:07,116
+into your animations so it's often the
+case that you're doing something like
+
+33
+00:02:08,016 --> 00:02:11,018
+dragging content around using a pan
+gesture recognizer
+
+34
+00:02:11,018 --> 00:02:14,021
+and you may be having a track your
+finger directly because that
+
+35
+00:02:14,021 --> 00:02:17,095
+a really great way on a multi touch
+device to optimize
+
+36
+00:02:17,095 --> 00:02:21,114
+jester interactions but that when you
+left you might want to start some
+
+37
+00:02:22,014 --> 00:02:22,075
+animation
+
+38
+00:02:22,075 --> 00:02:25,091
+something like what a ScrollView does to
+do a deceleration or or something of
+
+39
+00:02:25,091 --> 00:02:25,166
+that nature
+
+40
+00:02:26,066 --> 00:02:29,138
+and you want that transition point to be
+a smooth as you can for take a look at
+
+41
+00:02:30,038 --> 00:02:32,039
+two different possible ways to do this
+
+42
+00:02:32,039 --> 00:02:36,117
+got this on loop some to believe it up
+here for like 15 minutes and we can just
+
+43
+00:02:37,017 --> 00:02:38,068
+stare at it for the rest of the day
+
+44
+00:02:38,068 --> 00:02:43,089
+around the bottom one is looking a lot
+smoother than that %ah point
+
+45
+00:02:43,089 --> 00:02:47,182
+we've got two fingers that are dragging
+these boxes the one comes off with the
+
+46
+00:02:48,082 --> 00:02:51,175
+wanna finger left with the same velocity
+and it comes to rest nice it smoothly
+
+47
+00:02:52,075 --> 00:02:56,134
+the top one as soon as I left my finger
+it snaps with what a stop and then
+
+48
+00:02:57,034 --> 00:02:58,133
+slowly start up and then comes to rest
+
+49
+00:02:59,033 --> 00:03:04,033
+so we want to figure out a way that we
+can make oliver transitions from jesters
+
+50
+00:03:04,033 --> 00:03:06,071
+the animations behave like that bottom
+box
+
+51
+00:03:06,071 --> 00:03:09,127
+and the first part to making this happen
+
+52
+00:03:10,027 --> 00:03:14,056
+is to figure out what velocity we want
+to start our animation act so
+
+53
+00:03:14,056 --> 00:03:18,058
+number one concern compute blah city now
+if you're using
+
+54
+00:03:18,076 --> 00:03:20,175
+some other standard UI gesture
+recognizers this is really easy to do
+
+55
+00:03:21,075 --> 00:03:22,136
+because it's actually already done for
+you
+
+56
+00:03:23,036 --> 00:03:27,042
+so for using a UI hand gesture
+recognizer you got this velocity and new
+
+57
+00:03:27,042 --> 00:03:27,106
+method
+
+58
+00:03:28,006 --> 00:03:31,040
+and you can just pass interviewing you
+get back to velocity the panning was
+
+59
+00:03:31,004 --> 00:03:31,075
+happening at
+
+60
+00:03:32,011 --> 00:03:36,070
+and whatever coordinate space you need
+at to start your animation so that's
+
+61
+00:03:36,007 --> 00:03:36,068
+really easy
+
+62
+00:03:37,031 --> 00:03:40,093
+if you're using a pinch or a rotation
+gesture recognizer
+
+63
+00:03:40,093 --> 00:03:43,151
+you get the exact same kind of thing I'm
+just bored whatever it is that your
+
+64
+00:03:44,051 --> 00:03:47,052
+computing in the case a pen Chester
+recognize are you getting supplies to
+
+65
+00:03:47,052 --> 00:03:47,141
+give the scale
+
+66
+00:03:48,041 --> 00:03:51,139
+and for the retention you're getting
+angular velocity for that rotation
+
+67
+00:03:52,039 --> 00:03:56,042
+computing is really easy if you're using
+one of the standard gesture recognizers
+
+68
+00:03:56,042 --> 00:03:59,056
+if you're not competing velocity is
+still a pretty straightforward thing to
+
+69
+00:03:59,056 --> 00:03:59,098
+do
+
+70
+00:03:59,098 --> 00:04:02,170
+velocities just distance over time so if
+you just keep accumulating adjusting
+
+71
+00:04:03,007 --> 00:04:05,082
+your times that keeping track at that
+you can compete the velocity they should
+
+72
+00:04:06,045 --> 00:04:06,049
+start
+
+73
+00:04:06,085 --> 00:04:09,087
+yourself for whatever action you're
+interested in so that was pretty
+
+74
+00:04:10,005 --> 00:04:10,084
+straightforward
+
+75
+00:04:10,084 --> 00:04:13,160
+the interesting part is how do we start
+our animation at that blah City
+
+76
+00:04:14,006 --> 00:04:18,006
+so take a look at the standard you like
+animation
+
+77
+00:04:18,006 --> 00:04:21,695
+we've got animate with the racin delay
+options
+
+78
+00:04:22,289 --> 00:04:26,770
+animations completion so there's no
+velocity and their
+
+79
+00:04:26,077 --> 00:04:30,256
+on so that's not going to be obviously a
+an easy way to go about doing this
+
+80
+00:04:30,949 --> 00:04:34,850
+but happily last year when I was 7 we
+introduce the new more expressive
+
+81
+00:04:34,085 --> 00:04:35,121
+version of this method
+
+82
+00:04:36,021 --> 00:04:40,058
+that had to new brand parameters and it
+we got using spring with damping
+
+83
+00:04:40,058 --> 00:04:44,114
+an initial spring velocity so that is
+looking a little more promising
+
+84
+00:04:45,014 --> 00:04:48,076
+let's focus on the initial spring
+velocity this is the thing that is gonna
+
+85
+00:04:48,076 --> 00:04:51,152
+let us pass a velocity at a bar gesture
+recognizer wherever we computed it
+
+86
+00:04:52,052 --> 00:04:54,126
+and start an animation that feels like
+it's coming off a finger really really
+
+87
+00:04:55,026 --> 00:04:56,074
+smoothly
+
+88
+00:04:56,074 --> 00:04:58,157
+so how do we compute this initial spring
+colossally we just take that velocity
+
+89
+00:04:59,057 --> 00:05:01,095
+that we had and pass it in
+
+90
+00:05:01,095 --> 00:05:03,100
+obviously if the answer was yes I
+wouldn't really be talking about this so
+
+91
+00:05:04,045 --> 00:05:06,068
+we're probably gonna have to do
+something else
+
+92
+00:05:06,068 --> 00:05:09,123
+let's take a look at an example assuming
+that we were pending some objects and we
+
+93
+00:05:10,023 --> 00:05:11,100
+want to start having at the celery
+
+94
+00:05:12,000 --> 00:05:15,098
+just along the x-axis for simplicity
+sake and see what we do
+
+95
+00:05:15,098 --> 00:05:18,103
+so we've got a box we are pending at
+around at that point fifty right now
+
+96
+00:05:19,003 --> 00:05:22,030
+export it fifty and we're going to have
+an animate over to the right side there
+
+97
+00:05:22,003 --> 00:05:25,099
+to export it 150
+
+98
+00:05:26,026 --> 00:05:29,069
+now let's assume that we calculated that
+are horizontal velocity was about 50
+
+99
+00:05:29,069 --> 00:05:32,154
+points per second so that's what we want
+to start this animation
+
+100
+00:05:33,054 --> 00:05:36,102
+to figure out what velocity wanna pass
+into the initial spring colossally we
+
+101
+00:05:37,002 --> 00:05:38,005
+actually have to compute
+
+102
+00:05:38,032 --> 00:05:42,075
+a normalized velocity the cord its base
+that this method is expecting to get the
+
+103
+00:05:42,075 --> 00:05:43,077
+velocity is in
+
+104
+00:05:43,095 --> 00:05:47,127
+is a normalized coordinate space and we
+want to normalize it based on the total
+
+105
+00:05:48,027 --> 00:05:48,098
+distance
+
+106
+00:05:48,098 --> 00:05:51,125
+that this object is going to travel
+during the animation
+
+107
+00:05:52,025 --> 00:05:56,029
+so first rate to calculate that distance
+we've got our destination value that's
+
+108
+00:05:56,029 --> 00:05:59,063
+150 we went to subtract from that the
+
+109
+00:05:59,063 --> 00:06:02,157
+a starting point so we subtract of fifty
+and we get a total distance traveled a
+
+110
+00:06:03,057 --> 00:06:04,118
+hundred points
+
+111
+00:06:05,018 --> 00:06:08,025
+so that it to figure out the velocity to
+pass then we just normalize the velocity
+
+112
+00:06:08,088 --> 00:06:10,137
+we want by dividing by that total
+distance
+
+113
+00:06:11,037 --> 00:06:14,093
+so we take our 50 points per second
+divided by the total distance traveled a
+
+114
+00:06:14,093 --> 00:06:14,170
+hundred
+
+115
+00:06:15,007 --> 00:06:18,024
+and we get an initial velocity a .5
+
+116
+00:06:18,087 --> 00:06:20,161
+that point five we just pass in the end
+to the method that we just take a look
+
+117
+00:06:21,061 --> 00:06:21,122
+at
+
+118
+00:06:22,022 --> 00:06:26,023
+as our initial spring la city so you
+argue enemy with duration
+
+119
+00:06:26,023 --> 00:06:29,115
+we can give it a time at how long it's
+gonna take delays all those other things
+
+120
+00:06:30,015 --> 00:06:31,041
+you normally do
+
+121
+00:06:31,041 --> 00:06:33,103
+and just passin that additional velocity
+parameter and will get a really nice
+
+122
+00:06:34,003 --> 00:06:35,004
+affect
+
+123
+00:06:35,013 --> 00:06:37,090
+so that if we take a look at what that's
+going to end up doing we can see that if
+
+124
+00:06:37,009 --> 00:06:38,067
+we drag this box around
+
+125
+00:06:39,048 --> 00:06:42,122
+we get it coming up our finger really
+smoothly and additionally
+
+126
+00:06:43,022 --> 00:06:46,022
+we got a nice little bounce there at the
+end as it comes to rest
+
+127
+00:06:46,022 --> 00:06:49,034
+that bounce was the other parameter we
+saw a and you can
+
+128
+00:06:49,034 --> 00:06:52,106
+tweet that to get a different kinda feel
+whatever feels good in your app's
+
+129
+00:06:53,006 --> 00:06:56,059
+you get nice springy animation that they
+come to rest
+
+130
+00:06:56,059 --> 00:06:59,088
+with its with velocity coming off your
+finger so
+
+131
+00:06:59,088 --> 00:07:02,132
+that we can do with a standard you I do
+animations
+
+132
+00:07:03,032 --> 00:07:05,125
+but there's other options as well so
+what they may be wanted to do something
+
+133
+00:07:06,025 --> 00:07:07,030
+a little more advanced
+
+134
+00:07:07,003 --> 00:07:11,054
+and have more types of interactions with
+other views on screen
+
+135
+00:07:11,081 --> 00:07:14,089
+or more complicated the celebrations
+than just the spring
+
+136
+00:07:15,061 --> 00:07:19,062
+so also in I'll I seven we introduce the
+class called you a dynamic animator
+
+137
+00:07:19,071 --> 00:07:21,080
+and this is another great way to go
+about getting animations that feel like
+
+138
+00:07:22,061 --> 00:07:25,620
+I come up your finger at the exact
+velocity that you were interacting with
+
+139
+00:07:26,169 --> 00:07:29,400
+flick but forget how would set that up
+into you I Q controller
+
+140
+00:07:29,004 --> 00:07:32,007
+in order to get some animations going
+with a dynamic animator
+
+141
+00:07:32,043 --> 00:07:35,532
+so first off we would create you a
+dynamic animator I'm doing this in sweat
+
+142
+00:07:35,919 --> 00:07:38,820
+so is a couple interesting things we can
+talk about what we go through this
+
+143
+00:07:38,082 --> 00:07:41,138
+here I'm assuming this is a property on
+our view controller a
+
+144
+00:07:42,038 --> 00:07:45,050
+and I typed it as a UI dynamic animator
+
+145
+00:07:45,005 --> 00:07:49,053
+question mark and I actually just made
+that an equal sign it should be a corn
+
+146
+00:07:49,098 --> 00:07:51,171
+I literally change this on the stage
+before I got occurs I thought it was
+
+147
+00:07:52,071 --> 00:07:56,072
+wrong and I just realized line up here
+I'd change to the wrong thing
+
+148
+00:07:56,081 --> 00:07:59,168
+so don't write code in Keynote it's a
+bad idea a
+
+149
+00:08:00,068 --> 00:08:03,147
+I'm trying to declare a dynamic animator
+uptight
+
+150
+00:08:04,047 --> 00:08:07,276
+you again and again later optional and
+optional then again later because we're
+
+151
+00:08:07,699 --> 00:08:09,380
+going to go in initialize with later
+
+152
+00:08:09,038 --> 00:08:12,104
+the reason that this one needs to be
+optional here is because you edit you I
+
+153
+00:08:13,004 --> 00:08:14,101
+dynamic animator when you create one
+
+154
+00:08:15,001 --> 00:08:18,065
+take for you I view at creation time and
+
+155
+00:08:18,065 --> 00:08:21,143
+you don't have a UI view a creation time
+love you like you can't really because
+
+156
+00:08:22,043 --> 00:08:24,080
+you want to control is to love their
+views lisa Lee
+
+157
+00:08:24,008 --> 00:08:27,060
+so we want to start out with this being
+mill and then initialize it later
+
+158
+00:08:28,032 --> 00:08:32,181
+so a week we've declared a property for
+it will go in set up a lil bit later
+
+159
+00:08:32,469 --> 00:08:35,760
+now we've got art dynamic item behavior
+
+160
+00:08:35,076 --> 00:08:38,525
+which is a class that participate in
+this %um accept them
+
+161
+00:08:39,209 --> 00:08:42,258
+and this is where we're going to attach
+views that one we want to have dynamics
+
+162
+00:08:42,699 --> 00:08:45,712
+associated with so create a UN and I
+kinda behavior and
+
+163
+00:08:45,829 --> 00:08:48,930
+we can initialize this here as a
+constant because
+
+164
+00:08:48,093 --> 00:08:51,192
+we don't need to provide any views at
+the time we created it let us add or
+
+165
+00:08:52,029 --> 00:08:53,058
+remove use over time
+
+166
+00:08:53,319 --> 00:08:56,388
+so created at a time great are you a
+dynamic and behavior
+
+167
+00:08:57,009 --> 00:08:59,097
+and now over i'd give you did load
+method because when a view controller
+
+168
+00:08:59,889 --> 00:09:00,926
+goes the low to view
+
+169
+00:09:01,259 --> 00:09:04,302
+gonna load up all the view bets and then
+there's a good place to go and
+
+170
+00:09:04,689 --> 00:09:07,980
+add additional initialization after the
+views loaded in
+
+171
+00:09:07,098 --> 00:09:10,647
+a you did load so-called super just make
+sure that I get the chance to do any
+
+172
+00:09:11,529 --> 00:09:12,565
+work it was gonna do
+
+173
+00:09:12,889 --> 00:09:16,430
+and then we can go and set up the rest
+about it dynamic system so we have that
+
+174
+00:09:16,043 --> 00:09:19,067
+optional you a dynamic animator this is
+a great place to initialize that is now
+
+175
+00:09:19,067 --> 00:09:20,092
+we know we have a view
+
+176
+00:09:20,092 --> 00:09:23,143
+so we can create are you a dynamic
+animator we have our view now so we can
+
+177
+00:09:24,043 --> 00:09:26,060
+pass it
+
+178
+00:09:26,006 --> 00:09:29,008
+we also want to set a couple properties
+on that on the dynamic animator just so
+
+179
+00:09:29,008 --> 00:09:32,487
+that as we said blah cities and get some
+deceleration animations things will come
+
+180
+00:09:33,279 --> 00:09:34,297
+to rest smoothly
+
+181
+00:09:34,459 --> 00:09:37,910
+so we're gonna set our resistance and
+angular resistance
+
+182
+00:09:37,091 --> 00:09:40,510
+to evaluate just picked randomly of
+three you can pick different values and
+
+183
+00:09:41,329 --> 00:09:42,337
+get different fields
+
+184
+00:09:43,129 --> 00:09:46,138
+and then finally we're going to add that
+behavior we created a dynamic
+
+185
+00:09:47,029 --> 00:09:49,910
+item behavior earlier we're going to
+associate it now with the dynamic
+
+186
+00:09:49,091 --> 00:09:51,174
+animator now that we have it
+
+187
+00:09:52,074 --> 00:09:54,167
+and so that's pretty much all urs for
+setting up the system so that we have to
+
+188
+00:09:55,067 --> 00:09:58,266
+figure out how to transfer velocity into
+this dynamic system
+
+189
+00:09:58,869 --> 00:10:01,888
+from our testers cuz that's really what
+this is all about so take a look at how
+
+190
+00:10:02,059 --> 00:10:03,490
+we do that
+
+191
+00:10:03,049 --> 00:10:06,588
+a the first thing we want to do is find
+out what view we're going to be
+
+192
+00:10:07,029 --> 00:10:08,670
+associating
+
+193
+00:10:08,067 --> 00:10:12,426
+I this velocity Inc in so we we've got
+up and just a recognizable to assume
+
+194
+00:10:13,029 --> 00:10:15,095
+that it's attached to some view that
+were dragging around
+
+195
+00:10:15,689 --> 00:10:18,726
+will get the target view now this is
+what
+
+196
+00:10:19,059 --> 00:10:23,061
+you would often do you and I you I just
+a recognizer target action method so I'm
+
+197
+00:10:23,079 --> 00:10:24,540
+assuming I we're doing out here
+
+198
+00:10:24,054 --> 00:10:26,773
+so what do the normal switch statement
+that you would see within a target
+
+199
+00:10:27,259 --> 00:10:29,230
+action method for a gesture recognizer
+
+200
+00:10:29,023 --> 00:10:32,192
+so it depends us to recognize our state
+and switch on that there right now we're
+
+201
+00:10:32,399 --> 00:10:33,448
+just talking about transitioning
+
+202
+00:10:33,889 --> 00:10:37,170
+from the Jester to an animation so we
+don't worry about any state other than
+
+203
+00:10:37,017 --> 00:10:39,074
+ended because that's when you perform
+this transition
+
+204
+00:10:39,074 --> 00:10:42,673
+so it's going deal with the ended case
+
+205
+00:10:43,339 --> 00:10:46,348
+that we have to get the velocity that we
+were moving today into the dynamic
+
+206
+00:10:46,429 --> 00:10:46,475
+system
+
+207
+00:10:46,889 --> 00:10:50,893
+so alaska hand gesture recognizer for
+the velocity and the view usually that
+
+208
+00:10:50,929 --> 00:10:53,944
+you'll be doing here if we're dragging
+around the view is attached to you
+
+209
+00:10:54,079 --> 00:10:57,135
+we want to get the velocity and that you
+super view because that's the coordinate
+
+210
+00:10:57,639 --> 00:10:58,675
+space that the views
+
+211
+00:10:58,999 --> 00:11:02,063
+I geometry is gonna be in so we'll get
+the velocity and that
+
+212
+00:11:02,639 --> 00:11:06,678
+target is super views coordinate space
+and I would just ask the dynamic item
+
+213
+00:11:07,029 --> 00:11:07,037
+behavior
+
+214
+00:11:07,829 --> 00:11:11,170
+to add some linear velocity adding
+linear velocity will just
+
+215
+00:11:11,017 --> 00:11:14,246
+increase the velocity in the dynamic
+system up the object by whatever the
+
+216
+00:11:14,399 --> 00:11:15,860
+current a
+
+217
+00:11:15,086 --> 00:11:18,165
+velocity was that we were dragging it
+around by so we can add that
+
+218
+00:11:18,939 --> 00:11:22,014
+into the system and then it'll smoothly
+decelerate from
+
+219
+00:11:22,689 --> 00:11:25,757
+whatever the Jester is doing so again
+now take a look at some boxes and US
+
+220
+00:11:26,369 --> 00:11:29,378
+we can see that as we drag the things
+around eight decelerate smoothly
+
+221
+00:11:29,459 --> 00:11:32,463
+but because the dynamics they can also
+interact with one another
+
+222
+00:11:32,499 --> 00:11:35,540
+so I think allied they're gonna start
+doing other interesting things so this
+
+223
+00:11:35,054 --> 00:11:37,055
+is a great way to get more advanced
+
+224
+00:11:37,055 --> 00:11:41,594
+a behaviors while still preserving these
+really smooth transitions
+
+225
+00:11:42,089 --> 00:11:45,550
+so we talk about two ways to go about
+doing this we've got
+
+226
+00:11:45,055 --> 00:11:48,142
+enemy duration: now there's def a
+reasonable you might choose one or the
+
+227
+00:11:49,042 --> 00:11:49,091
+other
+
+228
+00:11:49,091 --> 00:11:53,050
+there's no one right answer for all
+situations enemy with the rationing one
+
+229
+00:11:53,869 --> 00:11:53,927
+of the nice
+
+230
+00:11:54,449 --> 00:11:58,860
+properties are doing this is that it
+creates server-side animations
+
+231
+00:11:58,086 --> 00:12:00,745
+now what that means is that the
+animations that are created using the
+
+232
+00:12:01,519 --> 00:12:03,595
+spring velocities that we talked about
+at the beginning
+
+233
+00:12:04,279 --> 00:12:07,285
+those are actually going to execute
+another process added the context of
+
+234
+00:12:07,879 --> 00:12:08,903
+your application
+
+235
+00:12:09,119 --> 00:12:12,138
+so even if you end up doing some working
+application that may be blocked your
+
+236
+00:12:12,309 --> 00:12:13,850
+main thread for a little while
+
+237
+00:12:13,085 --> 00:12:15,172
+the other render servers running at a
+higher priority so it's going to be
+
+238
+00:12:16,072 --> 00:12:20,171
+optimized to make sure that we trying
+not to drop frames on that animation
+
+239
+00:12:20,819 --> 00:12:23,850
+even if your app has a lot of heavy work
+going on in the main thread
+
+240
+00:12:23,085 --> 00:12:26,254
+so it becomes easier to maintain smooth
+animations a few
+
+241
+00:12:27,019 --> 00:12:31,051
+just off loaded onto the render server
+by using IMAP duration: method
+
+242
+00:12:31,339 --> 00:12:34,344
+now of course the other option we talked
+about is you like a dynamic so you a
+
+243
+00:12:34,389 --> 00:12:35,395
+dynamic animator
+
+244
+00:12:35,989 --> 00:12:39,550
+now that one of the big benefit to this
+is that you get even more advanced
+
+245
+00:12:39,055 --> 00:12:39,142
+interactions
+
+246
+00:12:40,042 --> 00:12:43,181
+and it will see a little bit later when
+we talk about more transitions
+
+247
+00:12:43,559 --> 00:12:46,631
+some other transitions can be easier
+when you're using a UN dynamic animator
+
+248
+00:12:47,279 --> 00:12:50,313
+then when you're using the server-side
+animations because with you I dynamic
+
+249
+00:12:50,619 --> 00:12:54,610
+animator everything is happening in your
+process in your address space
+
+250
+00:12:54,061 --> 00:12:57,150
+now the downside to that is that it
+means that going to rely on your main
+
+251
+00:12:57,699 --> 00:13:00,722
+thread turning often enough that the
+dynamic an American update the dynamic
+
+252
+00:13:00,929 --> 00:13:01,000
+system
+
+253
+00:13:01,639 --> 00:13:04,910
+and get everything committed to for the
+next frame so if your app
+
+254
+00:13:04,091 --> 00:13:06,179
+happens to do a bunch of work or you
+know is taking more time to get
+
+255
+00:13:07,079 --> 00:13:07,848
+something done it
+
+256
+00:13:08,559 --> 00:13:12,110
+easier to drop frames if you're not
+being careful so your dynamic animator
+
+257
+00:13:12,011 --> 00:13:13,066
+is a very powerful way to do it
+
+258
+00:13:13,066 --> 00:13:15,665
+you have to be a little bit more careful
+to make sure that your optimizing your
+
+259
+00:13:16,259 --> 00:13:19,420
+apt to avoid dropping any frames
+
+260
+00:13:19,042 --> 00:13:22,611
+and there are Arthur options that are a
+little bit more advanced
+
+261
+00:13:22,989 --> 00:13:27,074
+and in fact the thing that your dynamic
+animators built on is CA DisplayLink
+
+262
+00:13:27,839 --> 00:13:30,932
+now see a display like as a class the
+call you back once every frame
+
+263
+00:13:31,769 --> 00:13:34,794
+so frame is gonna get rendered you get
+called back to go update your
+
+264
+00:13:35,019 --> 00:13:39,050
+happened whatever we want now that'll
+give you 60 Hertz call backs
+
+265
+00:13:39,005 --> 00:13:42,704
+and so you can try and update your
+animations at 60 Hertz at exactly how
+
+266
+00:13:42,749 --> 00:13:43,792
+dynamic animator does it
+
+267
+00:13:44,179 --> 00:13:46,275
+so if you have some really custom thing
+that you can't accomplish with one of
+
+268
+00:13:47,139 --> 00:13:50,181
+these other technologies you could build
+your own animations
+
+269
+00:13:50,559 --> 00:13:53,585
+to do things yourself now of course this
+is a even more advanced thing we're not
+
+270
+00:13:53,819 --> 00:13:54,908
+gonna go and exactly how you go about
+
+271
+00:13:55,709 --> 00:13:58,807
+writing arbitrary animations if you have
+an idea of something you might wanna do
+
+272
+00:13:59,689 --> 00:14:02,783
+you probably I can go build it yourself
+but so be that are out there
+
+273
+00:14:03,629 --> 00:14:06,696
+may be thinking well waiting on is
+another option why are we talking about
+
+274
+00:14:07,299 --> 00:14:12,320
+and this timer a this was a common thing
+before see a display existed just
+
+275
+00:14:12,509 --> 00:14:15,610
+created and ice timer set it to call
+back at 60 Hertz
+
+276
+00:14:15,061 --> 00:14:18,580
+and drive animations of that well
+understand why we're not going to talk
+
+277
+00:14:19,129 --> 00:14:22,172
+about that is a really viable option
+lets take a look at a time line
+
+278
+00:14:22,559 --> 00:14:25,610
+showing what happens over time for an
+astronomer CA DisplayLink
+
+279
+00:14:26,069 --> 00:14:29,143
+and all of the display frames that are
+coming on screen so have gotten vertical
+
+280
+00:14:29,809 --> 00:14:33,290
+bars is one of those represents a
+display frame
+
+281
+00:14:33,029 --> 00:14:36,768
+now let's take a look at what NS CA
+DisplayLink does
+
+282
+00:14:37,029 --> 00:14:41,101
+a within each of those gaps so because
+we're running at 60 Hertz on I'll ass
+
+283
+00:14:41,749 --> 00:14:44,752
+its gap there represents about 60
+milliseconds up a little bit more than
+
+284
+00:14:44,779 --> 00:14:46,790
+that but that's roughly right
+
+285
+00:14:46,079 --> 00:14:49,248
+so that's how much time you have in
+between any two frames
+
+286
+00:14:49,959 --> 00:14:53,230
+now see a display like I said is gonna
+call you back once per frame
+
+287
+00:14:53,023 --> 00:14:56,042
+and a place where cause you back is
+gonna try and beat as tight as possible
+
+288
+00:14:56,042 --> 00:14:57,871
+to where the frames are happening
+
+289
+00:14:58,249 --> 00:15:01,261
+so you're gonna get these green dot says
+call back times letter
+
+290
+00:15:01,369 --> 00:15:04,431
+associated roughly with where the the
+frames happen
+
+291
+00:15:04,989 --> 00:15:08,060
+so what happens when a timer while it
+depends
+
+292
+00:15:08,699 --> 00:15:13,220
+and it's time for you might get in there
+maybe I'll get them at the beginning
+
+293
+00:15:13,022 --> 00:15:17,581
+maybe I'll get them closer to the and
+but what's really getting in the middle
+
+294
+00:15:17,779 --> 00:15:19,844
+you actually are really sure where
+you're going to get them because when
+
+295
+00:15:20,429 --> 00:15:22,456
+you get them depends on when you happen
+to set up the NS
+
+296
+00:15:22,699 --> 00:15:25,761
+timer and a timer is in synchronized
+with this plan anyway so when you get
+
+297
+00:15:26,319 --> 00:15:29,420
+the call backs will depend exactly on
+when you set up the timer
+
+298
+00:15:29,042 --> 00:15:33,271
+obese if you set it up for 60 Hertz able
+to be sixty 60 milliseconds
+
+299
+00:15:33,649 --> 00:15:36,693
+from whatever you set it up depending on
+where in the brain that what's
+
+300
+00:15:37,089 --> 00:15:40,168
+could be anywhere it's hard to know now
+why that a problem
+
+301
+00:15:40,879 --> 00:15:43,940
+well looking at how much time we have
+now we had 16 milliseconds
+
+302
+00:15:44,489 --> 00:15:47,560
+for this whole frame with Dennis timer
+that we've got about 80 seconds from the
+
+303
+00:15:48,199 --> 00:15:48,253
+time that
+
+304
+00:15:48,739 --> 00:15:51,970
+it got called into the neck sprain
+assuming that happen to be set up right
+
+305
+00:15:51,097 --> 00:15:52,576
+in the middle
+
+306
+00:15:53,449 --> 00:15:56,456
+even then you may not see why exactly
+that's a problem I mean
+
+307
+00:15:57,149 --> 00:16:00,186
+so it's a millisecond you can really get
+done in less than eight or if you can't
+
+308
+00:16:00,519 --> 00:16:02,523
+then all right here within the next
+spring
+
+309
+00:16:02,559 --> 00:16:05,790
+well the trouble comes into places where
+maybe your art always either in the
+
+310
+00:16:05,079 --> 00:16:07,038
+current frame for the next spring
+
+311
+00:16:07,749 --> 00:16:10,751
+so what say that it actually takes you
+about 8 milliseconds to set up your
+
+312
+00:16:10,949 --> 00:16:12,978
+frame and get it committed to the render
+service
+
+313
+00:16:13,239 --> 00:16:16,270
+so if we look at our second frame here
+at a piece that I have listed
+
+314
+00:16:16,549 --> 00:16:19,850
+let's say that the first time we get it
+done in a millisecond but that happens
+
+315
+00:16:19,085 --> 00:16:20,104
+to miss
+
+316
+00:16:21,004 --> 00:16:24,653
+being rendered to the screen for this
+frame so it goes over an adult
+
+317
+00:16:24,689 --> 00:16:28,748
+come in you know another 16 millisecond
+later so we missed that brain
+
+318
+00:16:29,279 --> 00:16:32,279
+and the trouble is that maybe the next
+time we happen to get things done a
+
+319
+00:16:32,279 --> 00:16:34,334
+little bit faster and do make that print
+
+320
+00:16:34,829 --> 00:16:36,897
+what that effectively gonna end up
+meaning is that the frame where we
+
+321
+00:16:37,509 --> 00:16:38,410
+missed
+
+322
+00:16:38,041 --> 00:16:41,135
+will really just never displayed to the
+user it'll be as if it just disappeared
+
+323
+00:16:42,035 --> 00:16:45,704
+and not gonna end up looking like a drop
+frame so we're entering a
+
+324
+00:16:46,019 --> 00:16:49,063
+within eight milliseconds only taking as
+a and we have sixteen to get things done
+
+325
+00:16:49,459 --> 00:16:51,600
+so it seems like we should never drop a
+frame
+
+326
+00:16:51,006 --> 00:16:54,063
+as worried well under the tall frame
+time we just dropped a frame because
+
+327
+00:16:55,017 --> 00:16:57,023
+you're right on the border
+
+328
+00:16:57,023 --> 00:17:00,097
+with CA DisplayLink it was taking as a
+millisecond cuz we started close the
+
+329
+00:17:00,097 --> 00:17:00,104
+beginning
+
+330
+00:17:01,067 --> 00:17:04,456
+we still have that actually no second
+buffer time every time so there's no way
+
+331
+00:17:05,059 --> 00:17:07,530
+we're gonna miss that frame
+
+332
+00:17:07,053 --> 00:17:11,612
+now if you do take 60 milliseconds you
+might get back into that same situation
+
+333
+00:17:12,089 --> 00:17:15,270
+but it's taking 16 milliseconds to
+prepare frame you're basically never
+
+334
+00:17:15,027 --> 00:17:16,706
+gonna hit 60 Hertz anyway
+
+335
+00:17:16,949 --> 00:17:20,230
+so at that point back to you have to
+optimize your app but if you're finding
+
+336
+00:17:20,023 --> 00:17:22,842
+they are optimizing things they are
+using an ass timer and you got it as
+
+337
+00:17:23,049 --> 00:17:25,350
+fast as you can and you're still
+dropping frames
+
+338
+00:17:25,035 --> 00:17:29,094
+it's probably because you're using a
+timer and is heading this variability
+
+339
+00:17:29,409 --> 00:17:32,590
+and you should switch to using SEO
+DisplayLink so honest I was never really
+
+340
+00:17:32,059 --> 00:17:35,268
+the right solution for doing client-side
+animations
+
+341
+00:17:35,799 --> 00:17:39,730
+so that's the story free transitioning
+from adjuster to animation
+
+342
+00:17:39,073 --> 00:17:41,162
+to give you an idea I've now had a
+transition from animations other
+
+343
+00:17:42,062 --> 00:17:42,961
+animations
+
+344
+00:17:43,519 --> 00:17:50,519
+and he's gonna come up on stage in talk
+a little bit about that
+
+345
+00:17:51,074 --> 00:17:54,138
+thanks Josh seek God animation going
+
+346
+00:17:55,038 --> 00:17:58,061
+you wanna change directions
+
+347
+00:17:58,061 --> 00:18:01,065
+and if you've probably seen this issue
+before you know this purple certainly
+
+348
+00:18:02,001 --> 00:18:04,019
+say go to the other side
+
+349
+00:18:04,019 --> 00:18:08,076
+and in the middle %uh its animation it's
+a weight now go back the other way
+
+350
+00:18:08,076 --> 00:18:12,119
+because maybe the user press the button
+and then what happens
+
+351
+00:18:13,019 --> 00:18:16,248
+is the circle jumps all the way to the
+right side
+
+352
+00:18:16,419 --> 00:18:20,190
+animates from there the web is a pretty
+common bug
+
+353
+00:18:20,019 --> 00:18:23,718
+that we see in applications and is one
+the reasons why people will for instance
+
+354
+00:18:23,889 --> 00:18:25,905
+disable user interaction
+
+355
+00:18:26,049 --> 00:18:29,097
+on their animations to get around issues
+like this
+
+356
+00:18:29,529 --> 00:18:32,567
+now there's always been you I view
+animation
+
+357
+00:18:32,909 --> 00:18:35,922
+option they can help deal with these
+scenarios
+
+358
+00:18:36,039 --> 00:18:40,040
+called you I view animation option begin
+from current state
+
+359
+00:18:40,049 --> 00:18:46,080
+and this is what it looks like by
+contrast there's no jumping position
+
+360
+00:18:46,008 --> 00:18:50,087
+and that's great but
+
+361
+00:18:50,159 --> 00:18:53,950
+there's a job in velocity
+
+362
+00:18:53,095 --> 00:18:58,108
+if you look at this animation it can
+only get hit a brick wall
+
+363
+00:18:59,008 --> 00:19:03,017
+and it starts going back the other
+direction there's a more fluid option
+
+364
+00:19:03,098 --> 00:19:06,417
+but I'm going to talk about now I'm
+gonna introduce you to its called
+
+365
+00:19:07,299 --> 00:19:08,360
+additive animations
+
+366
+00:19:08,909 --> 00:19:11,970
+take a look at how this looks the circle
+on the bottom movies
+
+367
+00:19:12,519 --> 00:19:16,070
+and it preserves both position and
+velocity
+
+368
+00:19:16,007 --> 00:19:19,099
+when it changes direction both love
+those are smooth but see that one more
+
+369
+00:19:19,099 --> 00:19:21,112
+time
+
+370
+00:19:22,012 --> 00:19:25,291
+can see begin from current state kinda
+like it hit the wall
+
+371
+00:19:25,399 --> 00:19:28,498
+additive animations the velocity
+component this MOU
+
+372
+00:19:29,389 --> 00:19:32,402
+so absolute animations have been the
+default
+
+373
+00:19:32,519 --> 00:19:35,594
+on Iowa us I'm so far but but
+
+374
+00:19:36,269 --> 00:19:39,870
+starting now with I was 8 additive
+animations are actually going
+
+375
+00:19:39,087 --> 00:19:43,856
+to be the default behavior for all you
+like a free minute
+
+376
+00:19:44,639 --> 00:19:49,320
+most likely create animation we'll talk
+a little bit more later about
+
+377
+00:19:49,032 --> 00:19:52,048
+exactly when this is going to work and
+when it's not
+
+378
+00:19:52,048 --> 00:19:55,094
+botch going to write about is that
+
+379
+00:19:55,094 --> 00:19:58,095
+if you have this code typical animation
+thing
+
+380
+00:19:58,095 --> 00:20:02,101
+you are going to get that desired
+behavior
+
+381
+00:20:03,001 --> 00:20:06,098
+so I do want you to actually understand
+what's going on behind the scenes here
+
+382
+00:20:06,098 --> 00:20:09,126
+I think that's really important taking
+advantage of this new feature let's walk
+
+383
+00:20:10,026 --> 00:20:10,445
+through
+
+384
+00:20:10,679 --> 00:20:13,570
+how could such actually manages
+animations in the system what's
+
+385
+00:20:13,057 --> 00:20:15,112
+happening behind the scenes to make this
+happen
+
+386
+00:20:16,012 --> 00:20:19,018
+to get the circle you tell it go to the
+other side say
+
+387
+00:20:19,072 --> 00:20:22,147
+animate that exposition to 500
+
+388
+00:20:23,047 --> 00:20:26,051
+so if you were to up the circle
+
+389
+00:20:26,087 --> 00:20:29,095
+for its under Zacks value immediately
+after making that call it would return
+
+390
+00:20:29,095 --> 00:20:30,187
+500
+
+391
+00:20:31,087 --> 00:20:34,088
+same thing to go not means the circle
+should draw all the way on the right
+
+392
+00:20:34,088 --> 00:20:35,132
+side
+
+393
+00:20:36,032 --> 00:20:39,035
+but it doesn't the first frame that the
+circle is rendered its
+
+394
+00:20:39,062 --> 00:20:43,084
+still gonna be at the road because it's
+going to animate from 0 to 500
+
+395
+00:20:43,084 --> 00:20:47,263
+and the reason that that happens is the
+distinction between
+
+396
+00:20:48,019 --> 00:20:52,035
+presentation layers and presentation
+layers values
+
+397
+00:20:52,179 --> 00:20:56,213
+and model wears values so if you're
+unfamiliar with that distinction I think
+
+398
+00:20:56,519 --> 00:20:56,582
+just watching
+
+399
+00:20:57,149 --> 00:21:00,198
+the talk in just 19 2011 called
+understanding you like it rendering
+
+400
+00:21:00,639 --> 00:21:03,642
+I'm mostly going to assume that you
+understand the distinction already
+
+401
+00:21:03,669 --> 00:21:06,750
+the point is that where the layers value
+is
+
+402
+00:21:06,075 --> 00:21:09,173
+sorry the layers current value was not
+necessarily where it's going to drop
+
+403
+00:21:10,073 --> 00:21:13,382
+was a presentation value that's used for
+rendering so right now the presentation
+
+404
+00:21:14,039 --> 00:21:15,830
+earlier this layer 0
+
+405
+00:21:15,083 --> 00:21:18,912
+the reason that 0 is that there is this
+CA animation object
+
+406
+00:21:19,659 --> 00:21:22,720
+which you like it has created and
+attached to the lair
+
+407
+00:21:22,072 --> 00:21:25,531
+incomplete a few pieces of information
+you look at it has
+
+408
+00:21:26,179 --> 00:21:29,970
+if from value set now from value was
+read
+
+409
+00:21:29,097 --> 00:21:33,138
+out at the model value of the where
+model though you're the layer 100 so the
+
+410
+00:21:34,038 --> 00:21:36,109
+from tell you this animation 00
+
+411
+00:21:37,009 --> 00:21:40,085
+you know that there is no to tell you
+and that's because the way this works
+
+412
+00:21:40,085 --> 00:21:43,173
+is that every frame but to tell you
+
+413
+00:21:44,073 --> 00:21:48,124
+is going to be the current model value
+the lair so if we were to read this
+
+414
+00:21:49,024 --> 00:21:49,963
+animation
+
+415
+00:21:50,179 --> 00:21:54,500
+in in natural tax we would say okay this
+is an animation it's going to animate
+
+416
+00:21:54,005 --> 00:21:54,064
+from
+
+417
+00:21:55,009 --> 00:21:58,015
+00 to the current model value of the
+where
+
+418
+00:21:58,069 --> 00:22:02,083
+which happens currently to be 500 over
+one second starting from a thousand by
+
+419
+00:22:02,083 --> 00:22:03,134
+one
+
+420
+00:22:04,034 --> 00:22:08,603
+so this animation omits a value of $0 $0
+four-time a thousand .1
+
+421
+00:22:08,909 --> 00:22:11,990
+and that's why the presentation value is
+00
+
+422
+00:22:11,099 --> 00:22:14,172
+an extremely render emits a slightly
+greater time
+
+423
+00:22:15,072 --> 00:22:18,661
+that is the value that we use for the
+presentation layer not how we move
+
+424
+00:22:19,309 --> 00:22:19,393
+across cream
+
+425
+00:22:20,149 --> 00:22:23,173
+now if we were to start reversing
+direction part way through this
+
+426
+00:22:23,389 --> 00:22:24,200
+animation
+
+427
+00:22:24,002 --> 00:22:27,471
+say we set the center the circle back to
+zero
+
+428
+00:22:27,669 --> 00:22:32,681
+and just as before the model wears value
+jumped immediately back to zero
+
+429
+00:22:32,789 --> 00:22:36,120
+but it's not good draw and zero
+immediately
+
+430
+00:22:36,012 --> 00:22:41,018
+sometimes we fear animations the the
+next thing that happens
+
+431
+00:22:41,072 --> 00:22:44,094
+is just going to be that we destroy
+
+432
+00:22:44,094 --> 00:22:47,187
+the currency animation
+
+433
+00:22:48,087 --> 00:22:51,736
+and that's gonna be why you see that
+John we create a new theory animation
+
+434
+00:22:52,519 --> 00:22:53,690
+replace it
+
+435
+00:22:53,069 --> 00:22:57,018
+and just like before we get that new CA
+animations from value
+
+436
+00:22:57,639 --> 00:23:00,880
+from the current layers what about you
+which was five hundred
+
+437
+00:23:00,088 --> 00:23:03,174
+in this case now we didn't make it all
+the way to the 500 but the model though
+
+438
+00:23:04,074 --> 00:23:05,223
+he was five hundred
+
+439
+00:23:05,889 --> 00:23:08,940
+so that's an emissions from value is
+five hundred and that means if we were
+
+440
+00:23:08,094 --> 00:23:09,553
+to read this unnatural text that
+
+441
+00:23:10,399 --> 00:23:13,437
+we're gonna be interpolating from 500 to
+zero over a second
+
+442
+00:23:13,779 --> 00:23:18,370
+and Dean the next spring we render the
+animation at a value $500 on the go
+
+443
+00:23:18,037 --> 00:23:19,436
+ahead and use that
+
+444
+00:23:19,769 --> 00:23:22,833
+to render the circles position and
+that's why we have that job
+
+445
+00:23:23,409 --> 00:23:27,090
+so why I meet from five hundred back to
+zero across the screen
+
+446
+00:23:27,009 --> 00:23:30,036
+and so we finally get his era
+
+447
+00:23:30,036 --> 00:23:34,037
+begin from current status a little
+difference like you understand how that
+
+448
+00:23:34,037 --> 00:23:34,134
+works as well
+
+449
+00:23:35,034 --> 00:23:38,036
+so say that we're at this point we're
+part way through the animation and then
+
+450
+00:23:38,036 --> 00:23:40,855
+we met the code to reverse direction
+
+451
+00:23:41,179 --> 00:23:46,184
+so we say and meet again this time begin
+from current state
+
+452
+00:23:46,679 --> 00:23:49,970
+well again we're gonna destroy
+
+453
+00:23:49,097 --> 00:23:52,121
+the animation that was pre-existing and
+create a new animation
+
+454
+00:23:53,021 --> 00:23:57,069
+but the this time we're going to create
+a new animation with the from value
+
+455
+00:23:57,069 --> 00:24:00,438
+derived from the presentation layers
+value
+
+456
+00:24:01,059 --> 00:24:05,065
+rather than from the model wears value
+now the time is animation was created
+
+457
+00:24:05,659 --> 00:24:09,570
+the presentation I was 150 and so we
+make an animation
+
+458
+00:24:09,057 --> 00:24:12,095
+which is going to animate from 150 20
+
+459
+00:24:12,095 --> 00:24:15,174
+instead of from 500 20
+
+460
+00:24:16,029 --> 00:24:19,860
+and therefore the next frame with
+rendered the animation with a value
+
+461
+00:24:19,086 --> 00:24:22,245
+150 and so we don't have that positional
+jump
+
+462
+00:24:23,019 --> 00:24:27,580
+so things like everything's good for
+animating back towards the origin
+
+463
+00:24:27,058 --> 00:24:31,074
+but we still have the kind a brick wall
+feeling
+
+464
+00:24:31,074 --> 00:24:34,713
+as we look at these three circles
+earlier like you understand why that is
+
+465
+00:24:35,379 --> 00:24:39,350
+now as well say they were gonna be
+animating the circle from lesser the
+
+466
+00:24:39,035 --> 00:24:40,086
+screen to the right side of the screen
+
+467
+00:24:40,086 --> 00:24:43,120
+just taking snapshots at a regular
+interval as it goes
+
+468
+00:24:44,002 --> 00:24:47,081
+snapshot might look something like this:
+
+469
+00:24:47,279 --> 00:24:50,294
+now if part way through that animation
+we were to stop and
+
+470
+00:24:50,429 --> 00:24:53,980
+try reversing direction at the circle
+again and then
+
+471
+00:24:53,098 --> 00:24:57,427
+if we were to take snapshots at the same
+interval we we get snapshot that looked
+
+472
+00:24:58,309 --> 00:24:59,355
+a little bit like this
+
+473
+00:24:59,769 --> 00:25:02,830
+so the first thing we notice is
+
+474
+00:25:02,083 --> 00:25:05,422
+that we are animating a smaller distance
+over the same out I'm
+
+475
+00:25:06,169 --> 00:25:09,320
+and that's going to create a problem
+because we can see that the slopes at
+
+476
+00:25:09,032 --> 00:25:11,034
+these two lines are not the same
+
+477
+00:25:11,034 --> 00:25:14,743
+that's not gonna be smeared but maps
+
+478
+00:25:15,049 --> 00:25:18,450
+not the whole problem you might think
+okay we could just that are Asian
+
+479
+00:25:18,045 --> 00:25:22,744
+we can get around this I think about
+using
+
+480
+00:25:23,149 --> 00:25:27,173
+if you were doing either any doubt this
+might be with us not just look like
+
+481
+00:25:27,389 --> 00:25:30,450
+and then if we were to stop part way
+through reverse direction that problem
+
+482
+00:25:30,045 --> 00:25:32,154
+will be exacerbated
+
+483
+00:25:32,559 --> 00:25:37,654
+looking at a plot this is the situation
+we have
+
+484
+00:25:38,509 --> 00:25:41,820
+really the issue we have is that the
+velocity components move
+
+485
+00:25:41,082 --> 00:25:44,158
+was that kink in the middle of the graph
+and i cant is exactly what I did
+
+486
+00:25:45,058 --> 00:25:48,117
+animations are gonna help us all
+
+487
+00:25:48,639 --> 00:25:51,655
+so I'd like you to understand how added
+animation actually work
+
+488
+00:25:51,799 --> 00:25:55,730
+under the hood returning this example
+here
+
+489
+00:25:55,073 --> 00:25:58,632
+what they we try to animate across the
+screen
+
+490
+00:25:59,289 --> 00:26:02,340
+as before we're gonna creating you see
+animation and we're gonna have this
+
+491
+00:26:02,034 --> 00:26:04,843
+added to flag that yes this is the
+property that already existed on the
+
+492
+00:26:05,149 --> 00:26:05,820
+animation
+
+493
+00:26:05,082 --> 00:26:07,931
+you can use that in previous versions of
+IRS it's just that you like it is
+
+494
+00:26:08,669 --> 00:26:12,706
+configuring the spore you now by default
+
+495
+00:26:13,039 --> 00:26:16,460
+the from value is a little different the
+two values now presents let's talk about
+
+496
+00:26:16,046 --> 00:26:17,105
+this
+
+497
+00:26:17,519 --> 00:26:20,519
+the familiar with the to tell you are
+interpreted relatively
+
+498
+00:26:20,519 --> 00:26:23,840
+to the model value every frame with an
+additive
+
+499
+00:26:23,084 --> 00:26:26,253
+animation that's basically the purpose
+about animations
+
+500
+00:26:27,009 --> 00:26:30,026
+so we create from value by subtracting
+be
+
+501
+00:26:30,179 --> 00:26:33,216
+the previous value from the destination
+die basically two months from
+
+502
+00:26:33,549 --> 00:26:36,720
+and we create the true value by just
+
+503
+00:26:36,072 --> 00:26:40,001
+signing 20 so that's gonna do with that
+every frame
+
+504
+00:26:40,649 --> 00:26:45,210
+not animation is going to amid a
+contribution
+
+505
+00:26:45,021 --> 00:26:50,220
+here -0500 which when added to the mall
+value
+
+506
+00:26:50,409 --> 00:26:54,440
+currently 500 real form the presentation
+value
+
+507
+00:26:54,044 --> 00:26:57,045
+0 so 500 plus -0500
+
+508
+00:26:57,045 --> 00:27:01,014
+is zero and that's why the first frame
+is that circle all the way on the left
+
+509
+00:27:01,419 --> 00:27:05,110
+as it starts moving towards the right
+the animations contribution decreases
+
+510
+00:27:05,011 --> 00:27:07,190
+its always getting closer to zero
+
+511
+00:27:07,289 --> 00:27:10,323
+so -0500 -4 50 -0400
+
+512
+00:27:10,629 --> 00:27:13,960
+and the Sun is getting closer to zero
+now part way through if we
+
+513
+00:27:13,096 --> 00:27:16,105
+reverse direction again the model value
+jumps
+
+514
+00:27:17,086 --> 00:27:20,855
+over the left side but this time we're
+not gonna destroy that animation
+
+515
+00:27:21,629 --> 00:27:26,100
+we're gonna make a second animation
+added on top
+
+516
+00:27:26,001 --> 00:27:31,049
+so now we're gonna use both on those
+animations values
+
+517
+00:27:31,058 --> 00:27:34,507
+0 plus native 300 plus 500
+
+518
+00:27:35,029 --> 00:27:39,940
+is 200 and you'll see even though we've
+got in this animation reverse direction
+
+519
+00:27:39,094 --> 00:27:43,147
+we overshot a little bit we didn't
+reverse direction instantly and that's
+
+520
+00:27:44,047 --> 00:27:45,706
+because we can't do that
+
+521
+00:27:46,129 --> 00:27:50,480
+without making a jump in the loss to the
+component so here we overshot a little
+
+522
+00:27:50,048 --> 00:27:50,967
+bit
+
+523
+00:27:51,399 --> 00:27:56,080
+but now the second animations can
+overtake the first animation
+
+524
+00:27:56,008 --> 00:28:03,008
+all the way until we get back to the
+origin so the stack
+
+525
+00:28:04,549 --> 00:28:06,636
+Raja like so we get back to the origin
+
+526
+00:28:07,419 --> 00:28:10,425
+they both have a zero value everything's
+happy
+
+527
+00:28:11,019 --> 00:28:14,057
+we have this crap and now we have this
+crap
+
+528
+00:28:14,399 --> 00:28:20,460
+cac-40 so I promise that I would tell
+you
+
+529
+00:28:20,046 --> 00:28:23,050
+I a little more detail about when this
+is going to work and when it's not going
+
+530
+00:28:23,005 --> 00:28:23,053
+to work
+
+531
+00:28:23,098 --> 00:28:27,101
+so there are a set of keys on which this
+behavior supported
+
+532
+00:28:28,001 --> 00:28:33,012
+basically they're your geometric keys so
+this kinda stuff is
+
+533
+00:28:33,012 --> 00:28:36,012
+is all they work fine for moving objects
+on the screen scaling them returning
+
+534
+00:28:36,012 --> 00:28:36,047
+them
+
+535
+00:28:36,047 --> 00:28:39,866
+it's all going to be fine there are
+certain behind the rotation flow which
+
+536
+00:28:40,289 --> 00:28:41,363
+work in other ones which don't so
+
+537
+00:28:42,029 --> 00:28:45,990
+this really briefly if you were to
+actually try to animate the layers
+
+538
+00:28:45,099 --> 00:28:46,133
+transform property
+
+539
+00:28:47,033 --> 00:28:50,046
+I you're only going to get this additive
+behavior for
+
+540
+00:28:50,046 --> 00:28:54,015
+a fine transformations the definition of
+an alpine transformation
+
+541
+00:28:54,429 --> 00:29:00,476
+is that it keeps parallel lines smooth
+after the transformations applied so the
+
+542
+00:29:00,899 --> 00:29:01,690
+bird on the left
+
+543
+00:29:01,069 --> 00:29:04,074
+we've rooted in about the axis mister
+lines
+
+544
+00:29:04,074 --> 00:29:07,743
+I'm sorry power lines are not smoothest
+a parallel caroline's
+
+545
+00:29:08,409 --> 00:29:12,190
+pre transformation remain parallel after
+the transformation
+
+546
+00:29:12,019 --> 00:29:16,022
+that is now fine transform September
+left Caroline still parallel
+
+547
+00:29:16,022 --> 00:29:19,094
+burn the right pro lines no longer
+parallel so a
+
+548
+00:29:19,094 --> 00:29:22,923
+rotation animation that is like the
+bottom left
+
+549
+00:29:23,769 --> 00:29:27,620
+will use additive animations rotation
+animation fly to burn the right one
+
+550
+00:29:27,062 --> 00:29:31,063
+month is a few the compatibility
+requirements as well
+
+551
+00:29:31,063 --> 00:29:35,852
+this feature will not work with keeper
+many nations at the time being
+
+552
+00:29:36,419 --> 00:29:39,980
+and it also will not work if there are
+pre-existing repeating animations
+
+553
+00:29:39,098 --> 00:29:42,907
+because we that can get you to a place
+for you have an unlimited number of
+
+554
+00:29:43,789 --> 00:29:45,250
+animation stacking forever
+
+555
+00:29:45,025 --> 00:29:48,544
+it's not good for the system finally
+will also not work
+
+556
+00:29:48,769 --> 00:29:51,810
+if you've gone behind you like its
+backing created pre-existing absolute
+
+557
+00:29:52,179 --> 00:29:53,180
+animations on that later
+
+558
+00:29:53,279 --> 00:29:56,480
+but these are these are perhaps not
+common
+
+559
+00:29:56,048 --> 00:29:59,377
+situations now I said that
+
+560
+00:29:59,809 --> 00:30:02,896
+not all keys are supported for instance
+alpha is not supported and you really
+
+561
+00:30:03,679 --> 00:30:06,940
+know what setting the circles to color
+is going to do you know that that's an
+
+562
+00:30:06,094 --> 00:30:07,113
+enemy to property but
+
+563
+00:30:08,013 --> 00:30:11,034
+you really know what that means um
+
+564
+00:30:11,034 --> 00:30:15,034
+and so you can it be defensive about
+
+565
+00:30:15,034 --> 00:30:18,343
+whether property support additive
+animations or not
+
+566
+00:30:18,649 --> 00:30:21,674
+by continuing to use begin from current
+state so
+
+567
+00:30:21,899 --> 00:30:24,961
+for centered on tax for that animation
+
+568
+00:30:25,519 --> 00:30:28,544
+we're not going to use the old begin
+from current state behavior behind the
+
+569
+00:30:28,769 --> 00:30:30,960
+scenes we are still gonna make that how
+to defend a mission
+
+570
+00:30:30,096 --> 00:30:33,685
+but for the other two properties for
+alpine for the text color
+
+571
+00:30:34,549 --> 00:30:37,562
+that at least to get position preserving
+transitions
+
+572
+00:30:37,679 --> 00:30:41,110
+so you can go ahead and eat use begin
+from current state
+
+573
+00:30:41,011 --> 00:30:44,080
+centered on tax will be additive the
+others
+
+574
+00:30:44,179 --> 00:30:48,580
+will use the presentation value in the
+reverse directions the other thing
+
+575
+00:30:48,058 --> 00:30:51,084
+that's interesting about this transition
+it's worth a side effect
+
+576
+00:30:51,084 --> 00:30:54,112
+you know you like it doesn't actually
+have a way for you to cancel inflate
+
+577
+00:30:55,012 --> 00:30:56,791
+animations right now there's no way to
+do that
+
+578
+00:30:56,899 --> 00:31:01,580
+so some people do it like this make a
+new animation
+
+579
+00:31:01,058 --> 00:31:05,157
+with their duration and you just set the
+value something else
+
+580
+00:31:05,679 --> 00:31:09,688
+now that will sort of stopping played
+animations just because the behavior if
+
+581
+00:31:09,769 --> 00:31:11,590
+you like it and emissions has always
+been that
+
+582
+00:31:11,059 --> 00:31:14,136
+when you make a new animation we throw
+out the old one replace it with a new
+
+583
+00:31:15,036 --> 00:31:16,085
+one in this new ones gonna be
+
+584
+00:31:16,085 --> 00:31:19,091
+0 2nd block but as we just saw
+
+585
+00:31:20,045 --> 00:31:25,062
+we don't throw out those animations
+anymore so this is not going to stop any
+
+586
+00:31:25,062 --> 00:31:27,135
+implied animations instead you just have
+to drop down
+
+587
+00:31:28,035 --> 00:31:31,334
+the sea animation API directly do your
+work
+
+588
+00:31:31,649 --> 00:31:35,940
+when we think keep in mind is behaviour
+completion and others
+
+589
+00:31:35,094 --> 00:31:38,147
+intermission stack so before
+
+590
+00:31:39,047 --> 00:31:42,986
+if you on a mission completion handler
+you started reversing direction
+
+591
+00:31:43,409 --> 00:31:46,730
+as I thought we were going to remove
+that animation
+
+592
+00:31:46,073 --> 00:31:50,232
+so when we remove an animation we call
+your completion handler the argument is
+
+593
+00:31:50,889 --> 00:31:54,210
+finished and so when we call your
+completion and where we call it with a
+
+594
+00:31:54,021 --> 00:31:54,025
+value
+
+595
+00:31:54,061 --> 00:31:57,510
+balls because the animation didn't
+finish and
+
+596
+00:31:58,059 --> 00:32:01,940
+then we'll create the new emission and
+that when complete will call that
+
+597
+00:32:01,094 --> 00:32:02,107
+completion and over well
+
+598
+00:32:03,007 --> 00:32:07,216
+in the additive animations world if you
+have a
+
+599
+00:32:07,279 --> 00:32:10,080
+I would have been a mission with
+completion handler and then you reverse
+
+600
+00:32:10,008 --> 00:32:10,097
+directions
+
+601
+00:32:10,097 --> 00:32:14,806
+then remember we don't throw out that
+animation we make
+
+602
+00:32:15,679 --> 00:32:18,860
+a new animation and so
+
+603
+00:32:18,086 --> 00:32:18,182
+we
+
+604
+00:32:19,082 --> 00:32:22,109
+don't have a completion analytical right
+now variations to go
+
+605
+00:32:23,009 --> 00:32:26,788
+it's only when we actually get to the
+end the animation
+
+606
+00:32:26,869 --> 00:32:29,933
+we call the completion handler and we
+come we call the completion handler
+
+607
+00:32:30,509 --> 00:32:33,534
+with the finished argument if true
+because the first animation
+
+608
+00:32:33,759 --> 00:32:37,090
+didn't finish it's just another
+animation was added on top
+
+609
+00:32:37,009 --> 00:32:40,318
+so this could be surprising potentially
+
+610
+00:32:40,399 --> 00:32:46,090
+and what I'm telling you is do not be
+surprised I
+
+611
+00:32:46,009 --> 00:32:49,898
+sup informer transition will be smooth
+about a fault
+
+612
+00:32:49,979 --> 00:32:53,043
+this is a great thing however
+
+613
+00:32:53,619 --> 00:32:56,680
+their arse some kind renovations that I
+have supported the system and so
+
+614
+00:32:57,229 --> 00:33:00,235
+you should do is begin from current
+state if you're not sure about whether
+
+615
+00:33:00,289 --> 00:33:01,460
+you're animating
+
+616
+00:33:01,046 --> 00:33:04,121
+supported she supported scenario or not
+that's fine will do
+
+617
+00:33:05,021 --> 00:33:08,350
+the best thing we can do and finally
+
+618
+00:33:08,539 --> 00:33:11,603
+do keep in mind that those completion
+handlers may stack because that does
+
+619
+00:33:12,179 --> 00:33:13,192
+actually represent
+
+620
+00:33:13,309 --> 00:33:17,580
+a-changin' when we are calling me back
+so we've talked about
+
+621
+00:33:17,058 --> 00:33:20,847
+a transition from animation to animation
+
+622
+00:33:21,369 --> 00:33:25,450
+now that you've got these animations and
+flight you do still want to be able to
+
+623
+00:33:26,179 --> 00:33:26,940
+interact
+
+624
+00:33:26,094 --> 00:33:30,095
+with your application for josh is gonna
+come back up talk about transitioning
+
+625
+00:33:30,095 --> 00:33:30,120
+from
+
+626
+00:33:31,002 --> 00:33:38,002
+animations to jesters alright thanks
+Andy
+
+627
+00:33:39,789 --> 00:33:42,816
+we're getting close we've got one
+transition point last
+
+628
+00:33:43,059 --> 00:33:46,067
+that we're still finding we've got some
+issues with and by default probably are
+
+629
+00:33:46,859 --> 00:33:49,830
+noticing that in this transition point
+going from your animation back to your
+
+630
+00:33:49,083 --> 00:33:49,146
+gesture
+
+631
+00:33:50,046 --> 00:33:53,485
+you're actually by the fall actually
+able to even start and interaction
+
+632
+00:33:53,899 --> 00:33:57,470
+so before we can even talk about making
+its move that we have to talk about
+
+633
+00:33:57,047 --> 00:34:01,206
+how to allowed gestures and touch events
+and interactions to begin
+
+634
+00:34:01,629 --> 00:34:05,631
+while you're in the middle %uh wannabes
+animations so it's going to take a look
+
+635
+00:34:05,649 --> 00:34:07,660
+at why this is the case and what we can
+do about it
+
+636
+00:34:07,759 --> 00:34:11,848
+so here we got some big view and I put a
+sub you in that eye color:blue just to
+
+637
+00:34:12,649 --> 00:34:12,694
+make it
+
+638
+00:34:13,099 --> 00:34:17,000
+standout a and we're gonna say that
+we're taking that deliver animating it
+
+639
+00:34:17,000 --> 00:34:17,077
+over to the right
+
+640
+00:34:17,077 --> 00:34:20,726
+into this position on the right side of
+the screen a
+
+641
+00:34:21,419 --> 00:34:24,458
+with some standard you like an animation
+using the you live you enemy with
+
+642
+00:34:24,809 --> 00:34:24,868
+duration
+
+643
+00:34:25,399 --> 00:34:29,437
+API and let's say it happily through and
+a half way through
+
+644
+00:34:29,779 --> 00:34:34,788
+we want to start interacting with it so
+let's say that
+
+645
+00:34:34,869 --> 00:34:38,895
+touch comes down on the screen and it
+comes down on top where that is
+
+646
+00:34:39,129 --> 00:34:43,154
+visually in the presentation layer and
+the default thing that you get if you
+
+647
+00:34:43,379 --> 00:34:45,460
+just do you live you animate with the
+racin
+
+648
+00:34:45,046 --> 00:34:49,235
+is that animation better in progress as
+a result of that do not allow user
+
+649
+00:34:49,649 --> 00:34:50,470
+interaction
+
+650
+00:34:50,047 --> 00:34:54,094
+during the animation so that he was
+gonna get hit tested
+
+651
+00:34:54,094 --> 00:34:57,463
+and the touch will be attached to that
+view
+
+652
+00:34:58,309 --> 00:35:01,500
+but because the interaction is disabled
+by default
+
+653
+00:35:01,005 --> 00:35:03,068
+what you'll find is that the touch
+actually doesn't get delivered anywhere
+
+654
+00:35:04,013 --> 00:35:05,046
+and just get swallowed
+
+655
+00:35:05,046 --> 00:35:11,895
+it just disappears it's as if it didn't
+even happen so
+
+656
+00:35:12,309 --> 00:35:15,337
+obviously we want to fix that and the
+way we can go about doing it
+
+657
+00:35:15,589 --> 00:35:20,020
+is by using an animation option called
+you I view animation option allows user
+
+658
+00:35:20,002 --> 00:35:20,076
+interaction
+
+659
+00:35:20,076 --> 00:35:24,121
+not too surprising the name and you can
+pass this into the UI do animation
+
+660
+00:35:25,021 --> 00:35:29,118
+and iteration API's and this will enable
+interaction during these animations
+
+661
+00:35:30,018 --> 00:35:33,076
+now what you've opted into allowing user
+interaction
+
+662
+00:35:33,076 --> 00:35:36,152
+you're basically saying I got this I i'm
+in advance
+
+663
+00:35:37,052 --> 00:35:40,071
+developer here and I know what I'm doing
+and I'm gonna take care making sure that
+
+664
+00:35:40,071 --> 00:35:40,170
+the right thing happens
+
+665
+00:35:41,007 --> 00:35:44,086
+so I you know but upon you like it is
+making it safe
+
+666
+00:35:45,049 --> 00:35:48,338
+so that you don't have weird things
+going on but what you up two and you're
+
+667
+00:35:48,779 --> 00:35:51,210
+saying that you're going to deal with it
+and you know how to do the right thing
+
+668
+00:35:51,021 --> 00:35:55,900
+so we'll talk about what the right thing
+is so again let's look at what happens
+
+669
+00:35:56,089 --> 00:35:57,510
+if a touch comes down in that view
+
+670
+00:35:57,051 --> 00:36:00,620
+now this part is probably going to be a
+little surprising at first if you've
+
+671
+00:36:01,079 --> 00:36:01,670
+tried it
+
+672
+00:36:01,067 --> 00:36:04,122
+what actually happens is that you'll
+find that the touch gets his that had
+
+673
+00:36:05,022 --> 00:36:05,076
+tested
+
+674
+00:36:05,076 --> 00:36:08,172
+to that big you in the back which
+probably wasn't what we meant because we
+
+675
+00:36:09,072 --> 00:36:10,681
+touch with visually on what was there
+
+676
+00:36:11,329 --> 00:36:15,270
+in fact if you go and put a touchdown
+
+677
+00:36:15,027 --> 00:36:18,336
+where we're moving the at the view to
+where it's going to animate to
+
+678
+00:36:18,579 --> 00:36:21,604
+you find that the thing that we had
+tested the thing that's currently
+
+679
+00:36:21,829 --> 00:36:22,855
+animating over today
+
+680
+00:36:23,089 --> 00:36:27,480
+on understanding what happens goes back
+to what any was saying about the
+
+681
+00:36:27,048 --> 00:36:29,063
+difference between model and
+presentation values
+
+682
+00:36:29,063 --> 00:36:32,068
+was even able user interaction you're
+saying that you're going to take control
+
+683
+00:36:32,068 --> 00:36:35,071
+this whole system then you're gonna
+decide the right place to go do it
+
+684
+00:36:35,071 --> 00:36:38,169
+and do a test because we don't actually
+know if the thing you're animating is
+
+685
+00:36:39,069 --> 00:36:40,123
+something that you intend to interact
+with
+
+686
+00:36:41,023 --> 00:36:44,100
+or just something that is interactive
+animating in a system but you're
+
+687
+00:36:45,000 --> 00:36:48,019
+actually trying to interact with that
+thing behind it
+
+688
+00:36:48,019 --> 00:36:51,648
+so really were hit testing the model
+values that all these layers
+
+689
+00:36:51,819 --> 00:36:53,870
+but if you want to interact with the
+thing at animating you really wanna be
+
+690
+00:36:54,329 --> 00:36:58,331
+had testing a presentation values
+
+691
+00:36:58,529 --> 00:37:01,556
+so if you go talk about how we can make
+a presentation layer hit test instead of
+
+692
+00:37:01,799 --> 00:37:02,960
+a default model value
+
+693
+00:37:02,096 --> 00:37:05,096
+test and you do to do that
+
+694
+00:37:05,096 --> 00:37:08,177
+we can override the head test with that
+method on our you eye view that
+
+695
+00:37:09,077 --> 00:37:10,092
+animating
+
+696
+00:37:10,092 --> 00:37:13,221
+to make it so that it's gonna hit test
+its presentation value estimate model
+
+697
+00:37:14,049 --> 00:37:16,900
+value
+
+698
+00:37:16,009 --> 00:37:19,178
+now by default the method is going to
+take a point
+
+699
+00:37:20,069 --> 00:37:23,073
+it's the point in the view that is being
+hit tested
+
+700
+00:37:23,109 --> 00:37:27,140
+and that's the view are the point that
+you like it thinks that you've touched
+
+701
+00:37:27,014 --> 00:37:30,043
+but as I mentioned it done that in model
+space so we have to convert it back
+
+702
+00:37:30,043 --> 00:37:33,212
+to presentation layer space to see if
+it's currently inside where we are as
+
+703
+00:37:33,599 --> 00:37:34,940
+were animated
+
+704
+00:37:34,094 --> 00:37:37,713
+so we can take that point that passed in
+a converted back into our super view
+
+705
+00:37:38,559 --> 00:37:41,585
+so a convert point to view are super
+view
+
+706
+00:37:41,819 --> 00:37:43,892
+what they've got in the Super views
+coordinate space then we can convert it
+
+707
+00:37:44,549 --> 00:37:46,960
+back into our presentation layer space
+
+708
+00:37:46,096 --> 00:37:50,129
+so we convert out using model space and
+then back in using presentation space
+
+709
+00:37:51,029 --> 00:37:54,043
+so we can see where it is inside of
+where we are currently given
+
+710
+00:37:54,043 --> 00:37:57,088
+that we have an animation in progress so
+we can do that by getting our
+
+711
+00:37:57,088 --> 00:37:58,169
+presentation layer
+
+712
+00:37:59,069 --> 00:38:02,688
+and using that to do the conversion back
+into our court in space
+
+713
+00:38:03,309 --> 00:38:05,990
+once we got that converted into the
+right space then we can just call super
+
+714
+00:38:05,099 --> 00:38:08,121
+and what it do what i was gonna do so
+return super it ask
+
+715
+00:38:09,021 --> 00:38:12,120
+passing in the converted point now
+increasing patient space and everything
+
+716
+00:38:12,309 --> 00:38:15,311
+else can just move on as it had before
+
+717
+00:38:15,329 --> 00:38:17,407
+so what we've done that we can talk go
+pick take a look at what's going on
+
+718
+00:38:18,109 --> 00:38:18,900
+again
+
+719
+00:38:18,009 --> 00:38:21,062
+now we've been able to user interaction
+we touch down and other right view is
+
+720
+00:38:22,043 --> 00:38:22,139
+gonna get hit
+
+721
+00:38:23,039 --> 00:38:26,048
+given what we're trying to accomplish
+
+722
+00:38:27,029 --> 00:38:30,066
+now keep in mind that other API's
+
+723
+00:38:30,066 --> 00:38:34,715
+like touch location and view are also
+assuming model space convergence
+
+724
+00:38:35,309 --> 00:38:38,340
+all the UI kit behaviors by default are
+converting using model space
+
+725
+00:38:38,619 --> 00:38:42,000
+so if you now enable hit testing into
+something at animating and here
+
+726
+00:38:42,000 --> 00:38:45,092
+in the progress up doing the animation
+and you want to start handling touches
+
+727
+00:38:45,092 --> 00:38:45,176
+in the view
+
+728
+00:38:46,076 --> 00:38:48,675
+if you ask for that touch location and
+view it's going to be back in model
+
+729
+00:38:49,359 --> 00:38:50,240
+space
+
+730
+00:38:50,024 --> 00:38:52,088
+so you would have to be careful to go
+and make sure that you know which space
+
+731
+00:38:52,088 --> 00:38:52,176
+here at your
+
+732
+00:38:53,076 --> 00:38:57,152
+interacting in so really the reason that
+the default is to disable is because
+
+733
+00:38:58,052 --> 00:39:00,140
+once you enable interactions you have to
+start knowing more about what's going on
+
+734
+00:39:01,004 --> 00:39:04,693
+and being careful to be using the
+correct word its basis
+
+735
+00:39:05,089 --> 00:39:08,500
+but most of the time this is actually
+probably not gonna be a problem
+
+736
+00:39:08,005 --> 00:39:10,093
+because usually appear enabling user
+interaction on something that animating
+
+737
+00:39:11,038 --> 00:39:14,091
+you're probably trying to grab the thing
+and stop animation
+
+738
+00:39:14,091 --> 00:39:17,139
+so really what we're gonna talk about
+now is how we stop the animation that
+
+739
+00:39:18,039 --> 00:39:21,072
+the key part that were interested in
+right now we got hit testing working
+
+740
+00:39:21,072 --> 00:39:24,143
+once were touching down how do we stop
+animation I then he mentioned
+
+741
+00:39:25,043 --> 00:39:28,115
+there is no direct API on you like it to
+stop in animation
+
+742
+00:39:29,015 --> 00:39:31,101
+they were going to use the Seattle area
+guide to do that but there's another
+
+743
+00:39:32,001 --> 00:39:34,610
+interesting component that we have to
+keep in mind
+
+744
+00:39:34,619 --> 00:39:38,470
+because editors Randy through the whole
+story of how things go when they're
+
+745
+00:39:38,047 --> 00:39:39,926
+animations on a layer
+
+746
+00:39:40,349 --> 00:39:46,150
+and part of that is that the model by
+was already at its final location
+
+747
+00:39:46,015 --> 00:39:49,114
+so if we just remove the %uh the the
+animation from the layer
+
+748
+00:39:50,014 --> 00:39:52,047
+that was the thing that was keeping it
+in the center of the screen visually
+
+749
+00:39:52,047 --> 00:39:54,146
+right now so would snap to the end
+
+750
+00:39:54,569 --> 00:39:57,620
+so we would touchdown on the object or a
+movie animation it would snap out from
+
+751
+00:39:58,079 --> 00:39:59,910
+under a finger in mind however it was
+going
+
+752
+00:39:59,091 --> 00:40:02,790
+so we don't want that we have to go get
+the presentation values up where it
+
+753
+00:40:03,609 --> 00:40:04,633
+currently is on screen
+
+754
+00:40:04,849 --> 00:40:08,700
+and sent those to be the new model
+values so that there's no jump
+
+755
+00:40:08,007 --> 00:40:10,078
+now let's assume that they were doing
+was animating just its position its
+
+756
+00:40:11,041 --> 00:40:12,074
+location on screen
+
+757
+00:40:12,074 --> 00:40:14,170
+on I'll give you an example how that
+would look in that case of course if
+
+758
+00:40:15,007 --> 00:40:17,106
+you're animating something else like its
+bounds or some other property you have
+
+759
+00:40:18,069 --> 00:40:21,075
+to do the same thing for whatever
+property you're animating
+
+760
+00:40:21,075 --> 00:40:24,089
+so in this case we're just doing the
+center so let's get them view get its
+
+761
+00:40:24,089 --> 00:40:24,188
+liar
+
+762
+00:40:25,088 --> 00:40:28,007
+get the layers presentation layer which
+is going to be where it is on screen
+
+763
+00:40:28,799 --> 00:40:29,799
+right now
+
+764
+00:40:29,799 --> 00:40:32,680
+and in this case I'm asking for its
+position because that's where it's its
+
+765
+00:40:32,068 --> 00:40:35,102
+location on screen so we'll throw that
+away here
+
+766
+00:40:36,002 --> 00:40:38,761
+and we just want to send that to be a
+new model values that once we remove the
+
+767
+00:40:38,779 --> 00:40:41,440
+animation it doesn't jump it's going to
+end up right here
+
+768
+00:40:41,044 --> 00:40:44,473
+now presentation I i sorry at
+
+769
+00:40:44,869 --> 00:40:48,869
+you i'd use property for this is called
+senator CA layers is called
+
+770
+00:40:48,869 --> 00:40:51,690
+position they're actually the same thing
+so you can just assign one to the other
+
+771
+00:40:51,069 --> 00:40:53,093
+and not really worry about it they are
+the same property that is have a
+
+772
+00:40:53,093 --> 00:40:54,119
+different name and you like it
+
+773
+00:40:55,019 --> 00:40:59,048
+and coronation I so want to set that now
+the model value is putting it where we
+
+774
+00:40:59,048 --> 00:41:01,113
+thought it should be visually cuz that
+the presentation value so we can just
+
+775
+00:41:02,013 --> 00:41:03,045
+going to a movie animation
+
+776
+00:41:03,045 --> 00:41:06,120
+now in this case I'm taking the shortcut
+and just removing all animations
+
+777
+00:41:07,002 --> 00:41:09,611
+now you prolly wanna be a little more
+careful than that when you're doing it
+
+778
+00:41:09,809 --> 00:41:11,885
+yourself to make sure your removing only
+the animations really mean to be
+
+779
+00:41:12,569 --> 00:41:12,642
+removing you
+
+780
+00:41:13,299 --> 00:41:16,660
+have to be cognizant of whether or not
+there are others there but that the key
+
+781
+00:41:16,066 --> 00:41:19,142
+to it is just removing the right
+animations
+
+782
+00:41:20,042 --> 00:41:23,421
+so I mention the things we're gonna be a
+little easier
+
+783
+00:41:23,799 --> 00:41:27,020
+when we were talking about you a dynamic
+animator earlier in the talk
+
+784
+00:41:27,002 --> 00:41:29,023
+now this is the place where things get
+easier when you're using a dynamic
+
+785
+00:41:29,023 --> 00:41:30,092
+animator
+
+786
+00:41:30,299 --> 00:41:34,410
+because dynamic animator doesn't have
+presentation and model space
+
+787
+00:41:34,041 --> 00:41:36,138
+we don't have the same complication of
+having to figure out where it is on
+
+788
+00:41:37,038 --> 00:41:39,100
+screen compared to where the model is or
+anything like that
+
+789
+00:41:40,000 --> 00:41:43,004
+then again it's all just wherever it is
+and it's happening in your process
+
+790
+00:41:43,004 --> 00:41:47,037
+and the model value is the correct
+position on screen right now
+
+791
+00:41:47,073 --> 00:41:50,172
+so stopping this for a dynamic animators
+a lot simpler
+
+792
+00:41:51,072 --> 00:41:53,701
+we'll take a look at the code that we
+wrote earlier and are just to recognize
+
+793
+00:41:54,349 --> 00:41:56,960
+our method where we are handling the end
+it case
+
+794
+00:41:56,096 --> 00:41:58,179
+now of course we're trying to do with
+new touch is coming down so we want to
+
+795
+00:41:59,079 --> 00:42:01,138
+handle the began case on our gesture
+recognizer
+
+796
+00:42:01,849 --> 00:42:05,922
+so next space for that and my suggestion
+for what you would do here
+
+797
+00:42:06,579 --> 00:42:08,584
+there's a couple things you could do but
+the the 1 I'm going to suggest as a good
+
+798
+00:42:09,079 --> 00:42:09,700
+option
+
+799
+00:42:09,007 --> 00:42:12,036
+it actually just remove the thing that
+was animating from the dynamic item
+
+800
+00:42:12,099 --> 00:42:12,188
+behavior
+
+801
+00:42:13,088 --> 00:42:15,144
+because what he removed it no longer
+going to interact with any of the other
+
+802
+00:42:16,044 --> 00:42:17,051
+views its gonna lose any
+
+803
+00:42:18,014 --> 00:42:21,052
+a the law said it may have had because
+he just took it out a bit
+
+804
+00:42:21,052 --> 00:42:23,147
+dynamic system and now you'll be able to
+manipulate it and move it around
+
+805
+00:42:24,047 --> 00:42:25,049
+yourself
+
+806
+00:42:25,049 --> 00:42:27,118
+so we can take a dynamic and behavior
+and remove the thing that we're trying
+
+807
+00:42:28,018 --> 00:42:30,021
+to interact with our target view
+
+808
+00:42:30,048 --> 00:42:33,097
+now of course once we removed it it's no
+longer gonna have any new velocity when
+
+809
+00:42:33,529 --> 00:42:37,190
+we try and add velocity later so we have
+to put it back in when the jesters done
+
+810
+00:42:37,019 --> 00:42:40,378
+so I'll take that dynamical behavior and
+added back at the end
+
+811
+00:42:40,549 --> 00:42:43,040
+and there's other things you could do
+instead if you really wanted to leave it
+
+812
+00:42:43,004 --> 00:42:46,016
+in the dynamic system you could subtract
+of the current velocity so it would just
+
+813
+00:42:46,016 --> 00:42:47,039
+come to a rest
+
+814
+00:42:47,039 --> 00:42:50,092
+but personal the easiest thing to do is
+to remove it and it's also probably what
+
+815
+00:42:50,092 --> 00:42:51,451
+you mean a lot of cases
+
+816
+00:42:52,279 --> 00:42:55,460
+because it'll stop it from smacking
+against other abusing here
+
+817
+00:42:55,046 --> 00:42:58,925
+system as you drag it around
+
+818
+00:42:59,339 --> 00:43:03,020
+so now we've really dealt with most of
+the
+
+819
+00:43:03,002 --> 00:43:06,041
+the transitions I want to talk about we
+got our just heard animation going
+
+820
+00:43:06,041 --> 00:43:10,460
+we got animation animation going we r
+animation back to gestures working
+
+821
+00:43:10,829 --> 00:43:14,710
+so it seems like everything's good like
+we all visually everything looks great
+
+822
+00:43:14,071 --> 00:43:17,100
+so we should be done but we got fifteen
+minutes left so
+
+823
+00:43:18,000 --> 00:43:21,024
+what's what's going on well
+
+824
+00:43:21,024 --> 00:43:25,633
+there's some complications that really
+start to come into things want to do
+
+825
+00:43:25,849 --> 00:43:26,922
+this in a real application
+
+826
+00:43:27,579 --> 00:43:29,651
+so far everything we've been talking
+about is pretty theoretical its if
+
+827
+00:43:30,299 --> 00:43:32,306
+you're just doing animations are pretty
+easy
+
+828
+00:43:32,369 --> 00:43:35,660
+but if you in any real application you
+have other state
+
+829
+00:43:35,066 --> 00:43:39,098
+transient animation state that exists
+only during transitions are animations
+
+830
+00:43:39,098 --> 00:43:42,427
+maybe when you start some transition you
+create a bunch mixed reviews to use
+
+831
+00:43:43,309 --> 00:43:46,312
+during that animation and when the
+animation is done you destroy them
+
+832
+00:43:46,609 --> 00:43:49,628
+you have to know what the right times
+are to create and destroy these things
+
+833
+00:43:49,799 --> 00:43:53,520
+and if you're stacking animations with
+additive animations and we're figuring
+
+834
+00:43:53,052 --> 00:43:55,591
+out that we're starting at removing
+things in the middle by
+
+835
+00:43:56,059 --> 00:43:59,650
+allowing interaction adjusters it's no
+longer immediately obvious where the
+
+836
+00:43:59,065 --> 00:44:00,224
+right places are
+
+837
+00:44:00,809 --> 00:44:04,250
+to make some of these changes the view
+hierarchy to set up and tear down your
+
+838
+00:44:04,025 --> 00:44:06,124
+transition animation state
+
+839
+00:44:06,349 --> 00:44:09,367
+so we're gonna go through too much
+insight about this actually
+
+840
+00:44:09,529 --> 00:44:11,606
+what we're going to do is just do a demo
+shown you how you can make this happen
+
+841
+00:44:12,299 --> 00:44:13,690
+in a real app
+
+842
+00:44:13,069 --> 00:44:17,077
+so it is gonna come back up and write an
+app for you that does all that
+
+843
+00:44:17,077 --> 00:44:21,091
+thank you very much I am extremely
+excited about this for the talk
+
+844
+00:44:21,091 --> 00:44:23,550
+I don't think we've ever talked about
+this topic publicly and we've been
+
+845
+00:44:24,369 --> 00:44:26,442
+confronting a great deal ourselves as we
+think about
+
+846
+00:44:27,099 --> 00:44:30,380
+how to effectively deal with these kinds
+of problems
+
+847
+00:44:30,038 --> 00:44:33,102
+we want everything to be fluid as much
+as possible in our system
+
+848
+00:44:34,002 --> 00:44:38,101
+and that means wrestling with these
+problems there's a superstructure
+
+849
+00:44:38,119 --> 00:44:39,230
+upstate
+
+850
+00:44:39,023 --> 00:44:43,079
+around your animations which you need to
+deal with but you can't forget
+
+851
+00:44:43,079 --> 00:44:46,084
+so I have a very important application
+here it's been a it's been a key thing
+
+852
+00:44:47,029 --> 00:44:48,558
+for us
+
+853
+00:44:48,819 --> 00:44:53,000
+bruising is a a test ground for for this
+experimentation
+
+854
+00:44:53,000 --> 00:44:56,049
+it's called hubbell bird sometimes
+
+855
+00:44:56,049 --> 00:45:00,131
+you to Burke so
+
+856
+00:45:00,869 --> 00:45:03,917
+great features press the button Gilbert
+
+857
+00:45:04,349 --> 00:45:07,890
+sometimes you don't a bird you press the
+button broke a sweat may not have bernie
+
+858
+00:45:07,089 --> 00:45:07,127
+more
+
+859
+00:45:08,027 --> 00:45:11,075
+that's great but
+
+860
+00:45:11,075 --> 00:45:15,116
+someone here in a site that if they okay
+well into this burden don't know I don't
+
+861
+00:45:16,016 --> 00:45:17,155
+actually want the bird
+
+862
+00:45:17,299 --> 00:45:21,354
+I i was i was overeager with the bird
+put the burned away Galway bird
+
+863
+00:45:21,849 --> 00:45:24,925
+but you can't because the buttons
+disabled
+
+864
+00:45:25,609 --> 00:45:28,613
+and that's frustrating you know really
+want the feeling
+
+865
+00:45:29,009 --> 00:45:32,520
+where and animations in progress and so
+the world must stop
+
+866
+00:45:32,052 --> 00:45:37,073
+until the animation is done so we can
+look at our code we can say okay well I
+
+867
+00:45:37,073 --> 00:45:38,142
+I see a couple up
+
+868
+00:45:39,042 --> 00:45:43,451
+pretty big red flags here looks like
+we're disabling re enabling the bird
+
+869
+00:45:43,829 --> 00:45:45,040
+toggle button
+
+870
+00:45:45,004 --> 00:45:49,333
+when i when this animations and flight
+so all those going coming up echoed that
+
+871
+00:45:49,369 --> 00:45:50,388
+everything will be cool
+
+872
+00:45:50,559 --> 00:45:53,561
+you know that but it's not the same
+anymore looks good
+
+873
+00:45:53,579 --> 00:45:56,624
+fourth once walked through this but what
+is method together
+
+874
+00:45:57,029 --> 00:46:00,750
+because I I think it actually all strata
+lot a common problems that people have
+
+875
+00:46:00,075 --> 00:46:03,127
+when trying to make this kind of thing
+work
+
+876
+00:46:04,027 --> 00:46:07,090
+so this is just the center for the bird
+expanded property which you'll see if
+
+877
+00:46:07,009 --> 00:46:08,888
+that's just a property
+
+878
+00:46:09,779 --> 00:46:12,833
+I'm and the property which is an
+immutable
+
+879
+00:46:13,319 --> 00:46:16,130
+which means I'm designed it so that it
+is that this property inside an
+
+880
+00:46:16,013 --> 00:46:18,502
+animation walk then they will be
+animated
+
+881
+00:46:18,619 --> 00:46:22,150
+I think that's a nice top we do that by
+inheriting
+
+882
+00:46:22,015 --> 00:46:26,424
+the parents animation context by making
+a you I D animation block
+
+883
+00:46:26,559 --> 00:46:29,970
+as a zero length rations he'll see here
+there's a title bird method
+
+884
+00:46:29,097 --> 00:46:32,446
+that sets the bird expanded property
+
+885
+00:46:33,319 --> 00:46:36,393
+inside on a mission like that so that
+part works let's let's walk to the rest
+
+886
+00:46:37,059 --> 00:46:38,102
+a bit together
+
+887
+00:46:38,489 --> 00:46:42,525
+is a better state we keep track of is
+the bird expanded
+
+888
+00:46:42,849 --> 00:46:46,690
+and if that the bird is supposed to be
+expanded
+
+889
+00:46:46,069 --> 00:46:49,728
+a new we make a merger or view set it up
+
+890
+00:46:50,349 --> 00:46:53,417
+we want to animate from you know being
+all with but 0 height
+
+891
+00:46:54,029 --> 00:46:58,058
+so we do a little late out initially so
+this is kinda like a preamble
+
+892
+00:46:58,319 --> 00:47:01,670
+you know we're making some stuff that we
+need unit set up
+
+893
+00:47:01,067 --> 00:47:04,165
+and then we actually do the animation
+this is the part that is now active
+
+894
+00:47:05,065 --> 00:47:08,924
+that's great you know where we're just
+changing as constraints constant
+
+895
+00:47:09,509 --> 00:47:12,710
+tell you fill out this item in animation
+block that will soon decide the correct
+
+896
+00:47:12,071 --> 00:47:16,680
+abounds in position animations actually
+get things moving
+
+897
+00:47:17,319 --> 00:47:21,324
+and I only have something a post stamp
+when animations completed
+
+898
+00:47:21,369 --> 00:47:24,410
+if the bird is no longer supposed to be
+expanded
+
+899
+00:47:24,041 --> 00:47:27,090
+we clean this up because the bird is
+being drawn
+
+900
+00:47:27,009 --> 00:47:30,368
+with some very novel an expensive
+rendering technologies
+
+901
+00:47:31,259 --> 00:47:34,890
+and we don't wanna waste system
+resources on that you know
+
+902
+00:47:34,089 --> 00:47:39,118
+gotta be good samaritans so this is the
+entire you what's going on here
+
+903
+00:47:40,018 --> 00:47:43,187
+and the problem arises
+
+904
+00:47:43,349 --> 00:47:47,230
+when we remove these enabled centers
+
+905
+00:47:47,023 --> 00:47:51,075
+because we can run through this method
+multiple times while the animation thing
+
+906
+00:47:51,075 --> 00:47:52,172
+flight
+
+907
+00:47:53,072 --> 00:47:56,143
+this completion block as I said earlier
+is going to run
+
+908
+00:47:57,043 --> 00:48:01,472
+even if there are new animations related
+to the bird also running
+
+909
+00:48:01,859 --> 00:48:04,955
+so we really have a more complex state
+machine
+
+910
+00:48:05,819 --> 00:48:09,660
+going on then it seems at first
+
+911
+00:48:09,066 --> 00:48:12,185
+so I'm just gonna jump right to the
+solution here
+
+912
+00:48:12,779 --> 00:48:15,834
+only a few lines change first let me
+
+913
+00:48:16,329 --> 00:48:19,460
+prove that I have solved are burned
+toggling problems
+
+914
+00:48:19,046 --> 00:48:23,925
+was very nice we can be indecisive about
+the bird safely
+
+915
+00:48:24,339 --> 00:48:27,341
+and hearing the code I've only changed a
+few lines
+
+916
+00:48:27,359 --> 00:48:30,380
+I got a new I've are now I'm always
+gonna be tracking
+
+917
+00:48:30,569 --> 00:48:33,700
+how me active transitions we have
+
+918
+00:48:33,007 --> 00:48:36,102
+so at the bottom every time the bird
+expand property changes we increment
+
+919
+00:48:37,065 --> 00:48:37,144
+that
+
+920
+00:48:38,044 --> 00:48:41,653
+and every time a bird expansion or
+contraction animation completes
+
+921
+00:48:42,049 --> 00:48:45,460
+we documented so we're just keeping
+track in the number up inflate state
+
+922
+00:48:45,046 --> 00:48:47,195
+transitions currently
+
+923
+00:48:47,609 --> 00:48:50,701
+and then we change our preamble and post
+ample to consider that counter
+
+924
+00:48:51,529 --> 00:48:55,533
+we say okay well only do this preamble
+if
+
+925
+00:48:55,569 --> 00:48:59,180
+we're transitioning from not having any
+animations to
+
+926
+00:48:59,018 --> 00:49:02,617
+having some animations similarly
+
+927
+00:49:02,779 --> 00:49:06,270
+only to our post ample if we're
+transitioning from
+
+928
+00:49:06,027 --> 00:49:10,102
+having animations to no longer having
+any animations at all
+
+929
+00:49:11,002 --> 00:49:14,038
+and that alone solves this problem
+
+930
+00:49:14,038 --> 00:49:18,043
+I do wanna show you what this would look
+like
+
+931
+00:49:18,088 --> 00:49:21,267
+with I was seven style ambitions
+
+932
+00:49:22,059 --> 00:49:25,062
+note that the bird jumps to the finished
+value
+
+933
+00:49:25,359 --> 00:49:28,980
+when I try to make it reversed direction
+
+934
+00:49:28,098 --> 00:49:34,207
+so even if I were to use the beginning
+from current state option
+
+935
+00:49:35,089 --> 00:49:39,127
+to try to use presentation values you
+see that when I reverse direction
+
+936
+00:49:39,469 --> 00:49:42,548
+it's kinda like the bird hit a brick
+wall
+
+937
+00:49:43,259 --> 00:49:47,316
+now we much prefer
+
+938
+00:49:47,829 --> 00:49:53,880
+the additive animation solution much
+smoother
+
+939
+00:49:54,339 --> 00:49:58,362
+so that's great I wanna she quickly
+
+940
+00:49:58,569 --> 00:50:02,210
+I was gonna comment this a little more
+in order to make clear how general the
+
+941
+00:50:02,021 --> 00:50:04,075
+structure of creative
+
+942
+00:50:04,075 --> 00:50:06,156
+almost everything I've written here
+doesn't have to do with birds or
+
+943
+00:50:07,056 --> 00:50:07,735
+toggling
+
+944
+00:50:08,239 --> 00:50:11,327
+that is the key point because you might
+be riding up front idler
+
+945
+00:50:12,119 --> 00:50:15,900
+you know I'm no I don't want to be
+creative
+
+946
+00:50:15,009 --> 00:50:19,218
+sup with a few seconds into the preamble
+section in the preamble section
+
+947
+00:50:20,109 --> 00:50:24,520
+you can deal with all the possible
+states we only have a preamble for the
+
+948
+00:50:24,052 --> 00:50:25,056
+bird becoming expanded
+
+949
+00:50:25,092 --> 00:50:28,123
+you could have a preamble the other way
+similarly discounter
+
+950
+00:50:29,023 --> 00:50:31,902
+that's not about birds are talking
+that's just about transitioning between
+
+951
+00:50:32,109 --> 00:50:34,040
+states
+
+952
+00:50:34,004 --> 00:50:38,010
+and the post ample we don't oppose table
+for the bird being expanded
+
+953
+00:50:38,064 --> 00:50:42,183
+we could we proposed a bill for the
+burden contracted or point out that
+
+954
+00:50:42,759 --> 00:50:44,410
+we're checking the state at the time
+
+955
+00:50:44,041 --> 00:50:47,090
+the completion handler being called
+rather than the argument being passed
+
+956
+00:50:47,009 --> 00:50:47,908
+into this method
+
+957
+00:50:48,799 --> 00:50:51,877
+because again is complete members can
+stack and the state might no longer be
+
+958
+00:50:52,579 --> 00:50:53,593
+what you thought I what's
+
+959
+00:50:53,719 --> 00:50:57,130
+the one last thing I want to point out
+
+960
+00:50:57,013 --> 00:51:00,066
+is that this is the solution for two
+states
+
+961
+00:51:00,066 --> 00:51:03,102
+but if you had three states that you can
+move between you can handle that this
+
+962
+00:51:04,002 --> 00:51:04,071
+way to
+
+963
+00:51:04,071 --> 00:51:07,090
+you just need a counter for each up the
+state's
+
+964
+00:51:07,009 --> 00:51:10,928
+not cover with track how many
+transitions to or from that state or in
+
+965
+00:51:11,819 --> 00:51:13,834
+flight
+
+966
+00:51:13,969 --> 00:51:17,984
+right now we only have one counter
+because the number of transitions to or
+
+967
+00:51:18,119 --> 00:51:18,630
+from
+
+968
+00:51:18,063 --> 00:51:22,052
+each other states in our by stable
+system is always the same
+
+969
+00:51:22,619 --> 00:51:25,619
+so this is a solution which generalizes
+
+970
+00:51:25,619 --> 00:51:29,910
+and which doesn't have anything to do
+with birds are talking
+
+971
+00:51:29,091 --> 00:51:33,400
+alright with a doctor slides to wrap up
+
+972
+00:51:34,219 --> 00:51:39,281
+thank you
+
+973
+00:51:39,839 --> 00:51:42,885
+as I said earlier we don't stop the
+world will animations are in flight they
+
+974
+00:51:43,299 --> 00:51:46,316
+might be beautiful but your users trying
+to do things
+
+975
+00:51:46,469 --> 00:51:49,546
+we also want to keep things fluid so
+
+976
+00:51:50,239 --> 00:51:53,690
+use that just a velocity translated
+
+977
+00:51:53,069 --> 00:51:56,141
+in the animated actions which result
+make the interface which feels more
+
+978
+00:51:57,041 --> 00:51:58,140
+responsive
+
+979
+00:51:59,004 --> 00:52:03,183
+once you've got an emissions in flight
+make sure that a smoothly transition
+
+980
+00:52:03,579 --> 00:52:08,605
+any new animations which might replace
+those first at the den emissions
+
+981
+00:52:08,839 --> 00:52:11,841
+finally as I was saying a moment ago
+don't stop the world
+
+982
+00:52:11,859 --> 00:52:15,290
+try to make animations interruptible as
+much as possible it is more work
+
+983
+00:52:15,029 --> 00:52:18,748
+but we've talked through some techniques
+for dealing with it
+
+984
+00:52:19,009 --> 00:52:22,730
+and finally keep in mind that there may
+be additional Associated State
+
+985
+00:52:22,073 --> 00:52:25,098
+on top of these animations
+
+986
+00:52:25,098 --> 00:52:29,116
+that is often what makes it more
+difficult to enable user interaction
+
+987
+00:52:30,016 --> 00:52:33,089
+while animations are in flight but we've
+just talked through one technique which
+
+988
+00:52:33,089 --> 00:52:34,278
+i think is quite general
+
+989
+00:52:35,079 --> 00:52:38,143
+for dealing with that finally
+
+990
+00:52:38,719 --> 00:52:42,727
+if you have more questions I encourage
+you to ask Jake we have a coronation
+
+991
+00:52:42,799 --> 00:52:43,750
+programming guide which
+
+992
+00:52:43,075 --> 00:52:46,092
+actually does talk about many of these
+topics and is it will perform where you
+
+993
+00:52:46,092 --> 00:52:46,139
+can
+
+994
+00:52:47,039 --> 00:52:50,658
+ask your peers questions I hope you've
+had a fantastic conference
+
+995
+00:52:51,009 --> 00:52:52,150
+I can't wait to see what you make
+

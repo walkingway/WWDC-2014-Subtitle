@@ -1,0 +1,4364 @@
+1
+00:00:13,065 --> 00:00:16,102
+morning
+
+2
+00:00:17,002 --> 00:00:22,048
+session 406 integrating swept for the
+objective-c
+
+3
+00:00:22,048 --> 00:00:26,060
+now many of us with demos here at the
+conference start by creating either a
+
+4
+00:00:26,006 --> 00:00:28,595
+brand new project from want to expose
+project templates
+
+5
+00:00:29,189 --> 00:00:33,980
+or a playground and that's great
+playgrounds are a great way to explore
+
+6
+00:00:33,098 --> 00:00:34,105
+this with language
+
+7
+00:00:35,005 --> 00:00:38,078
+but many have you already have Mac or
+Iowa saps
+
+8
+00:00:38,078 --> 00:00:41,317
+and some areas but years writing
+objective-c code
+
+9
+00:00:42,019 --> 00:00:45,030
+here written a carefully you're the bug
+bit
+
+10
+00:00:45,003 --> 00:00:48,042
+polished it optimize it is just perfect
+
+11
+00:00:48,042 --> 00:00:52,061
+from and we certainly don't want you to
+have to
+
+12
+00:00:52,061 --> 00:00:55,118
+through any better way or rewrite
+anything that you don't want to
+
+13
+00:00:56,018 --> 00:01:01,037
+also someone you had really a lot of
+objective-c code that shouldn't may be
+
+14
+00:01:01,037 --> 00:01:02,092
+spent a decade writing and maybe it's
+
+15
+00:01:02,092 --> 00:01:05,431
+not so perfect it's not not as clean and
+shiny
+
+16
+00:01:06,259 --> 00:01:10,287
+so on you we're gonna be using
+objective-c code for
+
+17
+00:01:10,539 --> 00:01:13,710
+a while you might want to rewrite its
+but it's not gonna happen this time
+
+18
+00:01:13,071 --> 00:01:14,730
+around because you're gonna have to ship
+
+19
+00:01:15,369 --> 00:01:19,405
+et cetera so objective-c is not going
+away
+
+20
+00:01:19,729 --> 00:01:23,110
+boats with an objective-c our first
+class citizens
+
+21
+00:01:23,011 --> 00:01:27,047
+for doing cocoa and Cocoa Touch
+development and in fact
+
+22
+00:01:27,047 --> 00:01:30,726
+we don't want to to spend any time that
+you don't have to win when you stop
+
+23
+00:01:31,149 --> 00:01:34,227
+refining objective-c code we want you to
+be able to integrate swift
+
+24
+00:01:34,929 --> 00:01:39,640
+as you want to and we do think that as
+you implement new features
+
+25
+00:01:39,064 --> 00:01:42,293
+as you finally get around to replacing
+crafty
+
+26
+00:01:42,869 --> 00:01:46,892
+subsystems that you want to use with for
+that because if it's better
+
+27
+00:01:47,099 --> 00:01:51,121
+a type safety its expressiveness
+
+28
+00:01:51,319 --> 00:01:54,338
+its performance now
+
+29
+00:01:54,509 --> 00:01:58,531
+many viewers also gained a lot of
+knowledge and experience
+
+30
+00:01:58,729 --> 00:02:03,330
+thing cocoa and Cocoa Touch two years
+objective-c development and
+
+31
+00:02:03,033 --> 00:02:06,094
+that applies a swift as well you use the
+same frameworks
+
+32
+00:02:06,094 --> 00:02:10,139
+the same classes the same API's with
+some syntactic differences
+
+33
+00:02:11,039 --> 00:02:14,042
+in fact the same design patterns such as
+delegation
+
+34
+00:02:14,069 --> 00:02:18,086
+all that knowledge applies and so we
+expect that a lot of view
+
+35
+00:02:18,086 --> 00:02:21,141
+are going to end up with projects that
+contain both
+
+36
+00:02:22,041 --> 00:02:26,730
+swift and objective-c and we worked hard
+to make sure that Xcode lets you freely
+
+37
+00:02:27,099 --> 00:02:28,610
+mix with an objective-c
+
+38
+00:02:28,061 --> 00:02:32,114
+so this session over the next hour we're
+gonna be talking to a bit more
+
+39
+00:02:33,014 --> 00:02:37,037
+detail than what you've probably seen so
+far about exactly how that works in
+
+40
+00:02:37,037 --> 00:02:37,103
+practice
+
+41
+00:02:38,003 --> 00:02:41,021
+we're gonna start simple by just
+introducing some sweat code into an
+
+42
+00:02:41,021 --> 00:02:41,064
+exact
+
+43
+00:02:41,064 --> 00:02:46,135
+existing objective-c ap they will get a
+little more interesting we're gonna
+
+44
+00:02:47,035 --> 00:02:50,056
+start to add some swift code to a model
+level framework
+
+45
+00:02:50,056 --> 00:02:53,137
+which had is then embedded in
+objective-c ap thank all that project to
+
+46
+00:02:54,037 --> 00:02:54,083
+see
+
+47
+00:02:54,083 --> 00:02:58,091
+will talk about how to start accessing a
+pure swift framework
+
+48
+00:02:59,063 --> 00:03:03,074
+which there'll probably be start showing
+up up from an objective-c ap
+
+49
+00:03:03,074 --> 00:03:07,152
+and then we'll talk as we go along about
+how to adopt some other commonwealths
+
+50
+00:03:08,052 --> 00:03:09,055
+tablished coca patterns
+
+51
+00:03:09,082 --> 00:03:13,117
+been swept and again Swift is designed
+from the ground up to be a great cocoa
+
+52
+00:03:14,017 --> 00:03:14,115
+Cocoa Touch
+
+53
+00:03:15,015 --> 00:03:18,082
+development language and so it has
+language support
+
+54
+00:03:18,082 --> 00:03:23,090
+for some other Coco idioms that we got
+used to it so I could go on here for
+
+55
+00:03:23,009 --> 00:03:26,013
+you know two dozen slides and talk in
+detail about how this works but
+
+56
+00:03:26,094 --> 00:03:29,149
+a rather just get a demo because that's
+a usually been more clear
+
+57
+00:03:30,049 --> 00:03:34,050
+alright
+
+58
+00:03:34,005 --> 00:03:37,040
+so got a project here
+
+59
+00:03:37,085 --> 00:03:40,304
+that some Sep I was ap
+
+60
+00:03:41,069 --> 00:03:44,960
+and it has a better framework so it's
+decently design here it's gotta
+
+61
+00:03:44,096 --> 00:03:47,130
+the top layer which is the actual app
+with the view and controller layer
+
+62
+00:03:48,003 --> 00:03:51,065
+and our NBC design there is area
+
+63
+00:03:51,092 --> 00:03:54,170
+framework all mister kit down here which
+contains our model objects and all this
+
+64
+00:03:55,007 --> 00:03:56,073
+is currently written in objective-c
+
+65
+00:03:57,036 --> 00:04:00,087
+just get a sense of what this is
+
+66
+00:04:00,087 --> 00:04:04,104
+let's go to run in the simulator and
+gonna go ahead here and bring up the
+
+67
+00:04:05,004 --> 00:04:05,067
+simulator
+
+68
+00:04:05,067 --> 00:04:08,148
+we see that yet so typical is taking
+application that can go and
+
+69
+00:04:09,048 --> 00:04:12,113
+have color list here I can check off
+items at cetera
+
+70
+00:04:13,013 --> 00:04:16,332
+edit them when I can't do right now is
+to add
+
+71
+00:04:16,449 --> 00:04:20,930
+a new list this happens to be and I
+cloud app so I could do that in my Mac
+
+72
+00:04:20,093 --> 00:04:24,105
+happen it would show up here but for
+this example we're going to use with to
+
+73
+00:04:25,005 --> 00:04:26,097
+add the ability to add a new list
+
+74
+00:04:26,097 --> 00:04:30,226
+in pilots facts I'm gonna back here
+
+75
+00:04:31,099 --> 00:04:34,134
+and %uh the first thing I'm gonna do is
+looked out here to the group you
+
+76
+00:04:34,449 --> 00:04:34,521
+controllers
+
+77
+00:04:35,169 --> 00:04:38,760
+and here we have some %uh view
+controllers already written
+
+78
+00:04:38,076 --> 00:04:42,083
+and objective-c kind Jake objective-c I
+go to File
+
+79
+00:04:43,046 --> 00:04:47,005
+credit file and in this case I was gonna
+create an mp3 file cuz I wanna show you
+
+80
+00:04:47,419 --> 00:04:48,650
+how to get started from scratch
+
+81
+00:04:48,065 --> 00:04:51,070
+Xcode has great file templates and can
+fill an order code for you
+
+82
+00:04:52,015 --> 00:04:55,101
+we wanna do it on a basic way here show
+how it's going to work
+
+83
+00:04:56,001 --> 00:04:59,023
+I'm gonna call it new list controller
+
+84
+00:04:59,023 --> 00:05:03,100
+and I'm gonna make sure that it is I
+gonna coen go into the application
+
+85
+00:05:04,000 --> 00:05:04,088
+target here
+
+86
+00:05:04,088 --> 00:05:07,159
+we also see that I have mister kit which
+is my framework and what are the new
+
+87
+00:05:08,059 --> 00:05:10,153
+extensions here for showing India
+
+88
+00:05:11,053 --> 00:05:14,097
+a the status of your so news controller
+
+89
+00:05:14,097 --> 00:05:18,109
+now as I create this my first with file
+
+90
+00:05:19,009 --> 00:05:22,103
+in a cure objective-c project expo will
+offer to create for me was called the
+
+91
+00:05:23,003 --> 00:05:24,051
+bridging header
+
+92
+00:05:24,051 --> 00:05:27,052
+so abridging header we'll talk about
+that more detail later
+
+93
+00:05:27,061 --> 00:05:30,078
+but basically what it is is a way for
+you to expose some with your objective
+
+94
+00:05:30,078 --> 00:05:30,144
+c-
+
+95
+00:05:31,044 --> 00:05:34,052
+API's to swept
+
+96
+00:05:35,024 --> 00:05:40,024
+gonna go ahead and create that so I get
+that by default
+
+97
+00:05:40,024 --> 00:05:44,038
+now import foundation actually I'm gonna
+be needing some you like it
+
+98
+00:05:44,038 --> 00:05:47,055
+if you're here so I go ahead and change
+that you like it
+
+99
+00:05:47,055 --> 00:05:51,127
+and I know that I will need to import my
+own model framework because we wanna
+
+100
+00:05:52,027 --> 00:05:54,080
+obviously crater model objects from
+within
+
+101
+00:05:54,008 --> 00:05:58,082
+that you control and I'm just gonna go
+ahead here and say
+
+102
+00:05:59,054 --> 00:06:02,119
+new list controller
+
+103
+00:06:03,019 --> 00:06:08,031
+and now when I complete we see that
+because I said import
+
+104
+00:06:08,031 --> 00:06:12,170
+you like it there swift balls in the
+objective-c framework you like it
+
+105
+00:06:12,449 --> 00:06:16,210
+and gives me a swift you all those
+symbols
+
+106
+00:06:16,021 --> 00:06:19,060
+something a subclass from your
+controller and just leave it like that
+
+107
+00:06:19,006 --> 00:06:21,039
+for now
+
+108
+00:06:21,093 --> 00:06:25,101
+so we are just a basic empty class this
+with class subclassing in Objective C
+
+109
+00:06:26,001 --> 00:06:26,065
+Class
+
+110
+00:06:26,065 --> 00:06:29,072
+that we get from you I from Cocoa Touch
+
+111
+00:06:30,035 --> 00:06:33,087
+now we could sit here and I got
+rectangles and create an API
+
+112
+00:06:33,087 --> 00:06:36,151
+credit you I for this but fortunately it
+happened already have one
+
+113
+00:06:37,051 --> 00:06:42,083
+I how lucky it isn't wired up though so
+we're gonna do that right now
+
+114
+00:06:42,083 --> 00:06:46,392
+the first thing gonna do here is just
+like with objective-c
+
+115
+00:06:47,139 --> 00:06:50,770
+I need to set what the class above your
+controllers
+
+116
+00:06:50,077 --> 00:06:54,078
+sign up here and now we see that the new
+list controller that I just created
+
+117
+00:06:54,087 --> 00:06:57,116
+is shown here among all the ones
+implement an objective-c so when you
+
+118
+00:06:58,016 --> 00:07:00,032
+access your classes from sweat from
+
+119
+00:07:00,032 --> 00:07:03,097
+Interface Builder the swift Objective C
+Class A show up next to each other you
+
+120
+00:07:03,097 --> 00:07:04,098
+can work with them
+
+121
+00:07:05,007 --> 00:07:10,099
+as equals alright so now the next thing
+I want to do after setting that
+
+122
+00:07:10,099 --> 00:07:13,160
+I'm gonna go ahead and create a bar
+button item here
+
+123
+00:07:14,006 --> 00:07:17,084
+gonna drag that up into the toolbar up
+here
+
+124
+00:07:18,038 --> 00:07:21,066
+and I'm gonna change said in a fire to
+be
+
+125
+00:07:21,066 --> 00:07:24,074
+added that also changes the visual
+appearance to give it a standard Cocoa
+
+126
+00:07:25,046 --> 00:07:25,090
+Touch
+
+127
+00:07:25,009 --> 00:07:29,022
+Add button block all credits segue
+
+128
+00:07:30,003 --> 00:07:34,142
+it's gonna be a mobile segue this is
+after all storyboard
+
+129
+00:07:34,169 --> 00:07:38,930
+and or change the name that segue to be
+new list
+
+130
+00:07:38,093 --> 00:07:41,127
+now that's gonna the important a bit
+later on so that we can access it from
+
+131
+00:07:42,027 --> 00:07:44,068
+within our cut
+
+132
+00:07:44,068 --> 00:07:49,156
+okay so now you may have seen and what
+are the other demos how we can drag from
+
+133
+00:07:50,056 --> 00:07:51,140
+swift code and connector objects
+
+134
+00:07:52,004 --> 00:07:56,022
+inside as I P we can do the same thing
+the other direction as well
+
+135
+00:07:56,058 --> 00:08:00,129
+if I option click here on my swift class
+
+136
+00:08:01,029 --> 00:08:06,043
+my view controller class implement in
+swift now I can drag the other direction
+
+137
+00:08:06,043 --> 00:08:10,116
+for sale gonna do is I'm gonna go ahead
+and dragged from outlets
+
+138
+00:08:11,016 --> 00:08:15,585
+and and certainly outlet here and I'm
+going to call this
+
+139
+00:08:15,729 --> 00:08:19,310
+name feel and we see that the UN text
+field
+
+140
+00:08:19,031 --> 00:08:23,056
+and a storage is weak because we have a
+controller class
+
+141
+00:08:23,056 --> 00:08:27,060
+two superb you are the view our key owns
+the button and the name in the fields
+
+142
+00:08:27,006 --> 00:08:27,825
+and the buttons
+
+143
+00:08:28,419 --> 00:08:31,450
+in here and so we just won a weak
+reference to it
+
+144
+00:08:31,729 --> 00:08:34,760
+and in fact for me insert this
+
+145
+00:08:35,039 --> 00:08:39,061
+Interface Builder knows it is what file
+so uses the swift syntax
+
+146
+00:08:39,259 --> 00:08:42,275
+just as it would have for objective-c
+
+147
+00:08:42,419 --> 00:08:47,180
+and uses the ID outlet property
+
+148
+00:08:47,018 --> 00:08:50,063
+for the stored property a sorry the idea
+of what attribute for the stored
+
+149
+00:08:50,063 --> 00:08:51,202
+property here
+
+150
+00:08:51,769 --> 00:08:54,806
+and this is implicitly week and also
+optional
+
+151
+00:08:55,139 --> 00:09:00,230
+because not all the outlets may be
+connected
+
+152
+00:09:00,023 --> 00:09:03,111
+get myself some space there gonna go
+ahead and do the same thing
+
+153
+00:09:04,011 --> 00:09:07,780
+here for the buttons I'm just gonna
+
+154
+00:09:07,879 --> 00:09:11,290
+control drag these and just gonna
+
+155
+00:09:11,029 --> 00:09:15,030
+Phillies and the same way now this is a
+sample app
+
+156
+00:09:15,003 --> 00:09:18,462
+Megan just the space heater this is a
+sample app
+
+157
+00:09:18,759 --> 00:09:22,660
+and so it's not risk able to just have
+sex partners and six outlets but
+
+158
+00:09:22,066 --> 00:09:26,295
+I know that your design better a make
+more maintainable code and this
+
+159
+00:09:26,889 --> 00:09:31,600
+this is for illustrative purposes only I
+you might want something I where you can
+
+160
+00:09:31,006 --> 00:09:32,615
+load colors from a table you
+
+161
+00:09:33,209 --> 00:09:37,300
+from a popular Stern Show the minute
+able to you or something like that
+
+162
+00:09:38,119 --> 00:09:41,157
+I'm gonna go ahead and finish connecting
+these
+
+163
+00:09:41,499 --> 00:09:45,543
+alright so now we have our outlets to
+the UI components
+
+164
+00:09:45,939 --> 00:09:50,490
+can also create actions in this way if I
+choose the cancel button down here and I
+
+165
+00:09:50,049 --> 00:09:51,078
+drag n
+
+166
+00:09:51,519 --> 00:09:55,536
+that I can create an action up at the
+top here just for as for objective-c
+
+167
+00:09:55,689 --> 00:09:58,778
+a change the connection type 2 action
+I'll take a council
+
+168
+00:09:59,579 --> 00:10:02,586
+and we can just leave the typeof the
+center as any object here we don't
+
+169
+00:10:02,649 --> 00:10:03,300
+actually
+
+170
+00:10:03,003 --> 00:10:07,003
+care because we're not going to be
+messaging app
+
+171
+00:10:07,003 --> 00:10:12,072
+what we will do however is to invoke
+some Cocoa Touch API
+
+172
+00:10:12,099 --> 00:10:16,998
+give myself some more room and i cant
+say so
+
+173
+00:10:17,889 --> 00:10:20,897
+dismiss and then code completion gives
+me access to
+
+174
+00:10:21,689 --> 00:10:25,694
+the Cocoa Touch API that we already know
+I can complete here
+
+175
+00:10:26,189 --> 00:10:29,195
+I'm not gonna need hey I wanted to be
+animated site but true
+
+176
+00:10:29,249 --> 00:10:32,920
+I don't need a completion blocks I get
+it now now
+
+177
+00:10:32,092 --> 00:10:36,681
+in objective-c we always have to message
+cell if we want to talk to self
+
+178
+00:10:37,509 --> 00:10:40,522
+Swift knows from context when you are
+messaging yourself
+
+179
+00:10:40,639 --> 00:10:47,639
+so we can actually leave this out make
+this a bit more readable
+
+180
+00:10:48,959 --> 00:10:55,959
+excellence alright so now we will
+connect the buttons here as well
+
+181
+00:10:56,011 --> 00:10:59,054
+and I'm going to be calling this pic
+color
+
+182
+00:10:59,054 --> 00:11:02,073
+now in this case i jus you I button
+
+183
+00:11:02,559 --> 00:11:06,480
+I'm sorry I may need to make an outlook
+an action
+
+184
+00:11:06,048 --> 00:11:09,637
+archer's you I button down here because
+in this case we will actually want to
+
+185
+00:11:10,069 --> 00:11:12,113
+talk to the button or compare the button
+
+186
+00:11:12,509 --> 00:11:16,584
+a so we want to have that type and as
+you can see
+
+187
+00:11:17,259 --> 00:11:22,670
+Interface Builder generate the code and
+makes the center be a white button
+
+188
+00:11:22,067 --> 00:11:25,456
+before forget I'm also going to wire up
+the other
+
+189
+00:11:26,059 --> 00:11:30,102
+actions here as well you see here
+
+190
+00:11:30,489 --> 00:11:34,505
+to connect to this one
+
+191
+00:11:34,649 --> 00:11:41,649
+for myself will be dispersed there
+
+192
+00:11:42,019 --> 00:11:45,670
+and now they're all wired up to the same
+action for all wired up to the same
+
+193
+00:11:45,067 --> 00:11:47,160
+action the center will be different
+depending on which button we touch
+
+194
+00:11:48,006 --> 00:11:54,006
+now I wanna show the summer the power of
+the swift SELECT statement here
+
+195
+00:11:54,006 --> 00:12:00,050
+had a switch statement unlike
+objective-c rather see based languages
+
+196
+00:12:01,004 --> 00:12:05,063
+I can actually switch on I a wide
+variety of different kinds of patterns
+
+197
+00:12:05,063 --> 00:12:07,097
+in this case I'm just switching out what
+the sundress
+
+198
+00:12:07,097 --> 00:12:10,466
+but this is a very rich constructs
+
+199
+00:12:11,339 --> 00:12:15,970
+and this win this with language and I
+encourage you to catch one of the later
+
+200
+00:12:15,097 --> 00:12:18,193
+talks about advance weft to the really
+get into the depths of
+
+201
+00:12:19,093 --> 00:12:22,118
+what you can use this for for right now
+
+202
+00:12:23,018 --> 00:12:27,063
+to keep it simple I'm just going to use
+it to match on a button and what I will
+
+203
+00:12:27,063 --> 00:12:28,072
+say is
+
+204
+00:12:28,072 --> 00:12:32,001
+okay now I need to assign something here
+so I'm gonna need to have a store
+
+205
+00:12:32,649 --> 00:12:33,320
+property
+
+206
+00:12:33,032 --> 00:12:37,491
+credits toward property called selected
+label
+
+207
+00:12:37,779 --> 00:12:41,980
+because we're actually choosing labels
+here represented as colors on the screen
+
+208
+00:12:41,098 --> 00:12:46,327
+and then what I can do here as I can say
+this is an AAPL
+
+209
+00:12:47,209 --> 00:12:51,410
+list label so this again is an
+objective-c
+
+210
+00:12:51,041 --> 00:12:54,056
+type that has been imported
+
+211
+00:12:54,056 --> 00:12:59,117
+through my import a blister kept up
+there I'm gonna start out by saying that
+
+212
+00:13:00,017 --> 00:13:01,101
+that is an AP list label
+
+213
+00:13:02,001 --> 00:13:06,080
+stack great that's the default value
+other
+
+214
+00:13:06,089 --> 00:13:09,570
+because I don't put a question mark I
+don't make it optional that means that
+
+215
+00:13:09,057 --> 00:13:10,092
+it has to have a value
+
+216
+00:13:10,092 --> 00:13:13,751
+remember the ID outlets are implicitly
+optional now
+
+217
+00:13:14,579 --> 00:13:17,970
+it's kinda early to have to repeat the
+same thing here and in fact Swift has
+
+218
+00:13:17,097 --> 00:13:18,103
+great support for type inference
+
+219
+00:13:19,057 --> 00:13:22,125
+and what it knows exactly what type you
+mean then you can go ahead and leave out
+
+220
+00:13:23,025 --> 00:13:24,033
+the type so from this
+
+221
+00:13:25,005 --> 00:13:28,074
+swift can tell exactly that okay this
+has to be a catalyst label
+
+222
+00:13:28,074 --> 00:13:34,353
+because that I'm initializing it so I
+can just play about the type now I can
+
+223
+00:13:35,019 --> 00:13:35,094
+complete my
+
+224
+00:13:35,769 --> 00:13:41,250
+statement he recounts a selected label
+it was dark grey and in fact
+
+225
+00:13:41,025 --> 00:13:46,073
+I can address them here as well very
+fast typer
+
+226
+00:13:46,073 --> 00:13:49,094
+now we see here that objective-c
+
+227
+00:13:49,094 --> 00:13:52,131
+I mean sorry Xcode swept has a message
+for us here
+
+228
+00:13:53,031 --> 00:13:56,048
+so in swift a 10 things to notices
+
+229
+00:13:56,048 --> 00:13:59,048
+each other cases is impossibly ended
+
+230
+00:13:59,048 --> 00:14:02,139
+at the beginning the next case see don't
+have the cases see where you can
+
+231
+00:14:03,039 --> 00:14:05,087
+possibly fall through and that's a
+source of a lot of parts
+
+232
+00:14:05,087 --> 00:14:09,116
+in fact switch with the clothes
+explicitly designed to avoid many of the
+
+233
+00:14:10,016 --> 00:14:10,114
+common pitfalls
+
+234
+00:14:11,014 --> 00:14:15,069
+that are common in sea bass languages
+now in this case
+
+235
+00:14:15,069 --> 00:14:18,072
+another thing about the switch statement
+is that it has to be exhaustive you have
+
+236
+00:14:18,099 --> 00:14:19,186
+to say that you cover all the cases
+
+237
+00:14:20,086 --> 00:14:23,120
+in this particular case I'm just gonna
+add the fault
+
+238
+00:14:24,002 --> 00:14:29,581
+and what I'm gonna do in this case right
+here is to use a swift standard library
+
+239
+00:14:29,779 --> 00:14:30,860
+function to just wrapping to the
+debugger
+
+240
+00:14:31,589 --> 00:14:34,660
+because I wanna make sure that if I add
+new buttons and help them up that I
+
+241
+00:14:34,066 --> 00:14:35,124
+actually have the code for that as well
+
+242
+00:14:36,024 --> 00:14:39,048
+so the record is happy
+
+243
+00:14:39,048 --> 00:14:42,147
+that excellent we just set a property
+that's all we've done so far
+
+244
+00:14:43,047 --> 00:14:46,143
+but now we can use some more love the
+Cocoa Touch
+
+245
+00:14:47,043 --> 00:14:50,110
+API to actually make the button schorr
+elected state
+
+246
+00:14:51,001 --> 00:14:55,017
+show its absolute that state I should
+say so
+
+247
+00:14:55,026 --> 00:14:58,057
+we say I this case we can say sender
+
+248
+00:14:58,057 --> 00:15:02,061
+dot and then we can use our code
+completion to access the layer
+
+249
+00:15:02,061 --> 00:15:05,144
+and then it will set its border with to
+be
+
+250
+00:15:06,044 --> 00:15:10,097
+fart and of course we have to initialize
+that to be a border color
+
+251
+00:15:10,097 --> 00:15:13,192
+as well now in this case because we're
+accessing the layer
+
+252
+00:15:14,092 --> 00:15:17,511
+that's a core graphics API we get the CG
+color from
+
+253
+00:15:18,339 --> 00:15:23,395
+the UI layer you eye color and all these
+are standard Cocoa Touch
+
+254
+00:15:23,899 --> 00:15:27,800
+API so you see that when we access our
+own objective-c API's
+
+255
+00:15:27,008 --> 00:15:31,357
+for the couple touch API's it looks all
+the same we still use the same nice
+
+256
+00:15:32,149 --> 00:15:37,186
+sweat syntax I don't think we can do
+here is just say that the views
+
+257
+00:15:37,519 --> 00:15:41,601
+a tent color is going to be the color
+that corresponds to the label
+
+258
+00:15:42,339 --> 00:15:45,364
+have for this we can call another one of
+our
+
+259
+00:15:45,589 --> 00:15:50,670
+functions that we brought in from
+objective-c
+
+260
+00:15:50,067 --> 00:15:53,072
+and we pass it the
+
+261
+00:15:53,072 --> 00:15:58,138
+selected label benefactor for command
+click on this
+
+262
+00:15:59,038 --> 00:16:02,089
+we see here that we can get to a Swiffer
+presentation
+
+263
+00:16:02,089 --> 00:16:07,098
+above our own Objective C API and
+navigate we could actually go back to
+
+264
+00:16:07,098 --> 00:16:07,107
+the header itself
+
+265
+00:16:08,088 --> 00:16:13,143
+that we declared from alright so now
+
+266
+00:16:14,043 --> 00:16:17,692
+those are you are following closely here
+made simple but a problem we set the
+
+267
+00:16:18,079 --> 00:16:19,260
+border with 25
+
+268
+00:16:19,026 --> 00:16:24,087
+whenever actually diesel like two
+previous but so we can do is to keep
+
+269
+00:16:24,087 --> 00:16:24,161
+track
+
+270
+00:16:25,061 --> 00:16:28,074
+the currently selected button and in
+this case
+
+271
+00:16:28,074 --> 00:16:31,139
+I'm going to explicitly say that it's a
+week store property
+
+272
+00:16:32,039 --> 00:16:36,116
+so this is not gonna cause I the extend
+the lifetime of that button
+
+273
+00:16:37,016 --> 00:16:41,097
+which is after all owned by the view
+hierarchy and
+
+274
+00:16:41,097 --> 00:16:44,966
+I'm going to declare that this is a UI
+button but its optional
+
+275
+00:16:45,839 --> 00:16:49,720
+because when we first start out it has
+no value
+
+276
+00:16:49,072 --> 00:16:53,088
+and so we're gonna be able to check
+weather has a value or not
+
+277
+00:16:53,088 --> 00:16:56,157
+we had some code
+
+278
+00:16:56,949 --> 00:17:00,190
+to set the selected but to the sander
+
+279
+00:17:00,019 --> 00:17:06,038
+at the end up having assigned it and
+then here we can say
+
+280
+00:17:06,209 --> 00:17:10,240
+if Select button then
+
+281
+00:17:10,024 --> 00:17:15,048
+we're gonna go ahead and clear out the
+border on that one now
+
+282
+00:17:15,048 --> 00:17:19,407
+this happens to be a object reference I
+could do the same in objective-c with no
+
+283
+00:17:19,839 --> 00:17:19,845
+value
+
+284
+00:17:20,439 --> 00:17:23,600
+the one on the nice things about
+optional since worked is that they apply
+
+285
+00:17:23,006 --> 00:17:24,325
+to any tax value
+
+286
+00:17:24,919 --> 00:17:29,220
+even a boolean or a scaler so in this
+particular case
+
+287
+00:17:29,022 --> 00:17:32,033
+I'm just gonna go ahead and set the
+selected buttons layer
+
+288
+00:17:32,033 --> 00:17:36,112
+border with 20 now you'll notice the the
+
+289
+00:17:37,012 --> 00:17:40,038
+exclamation mark there this is the
+
+290
+00:17:40,038 --> 00:17:43,110
+unwrapping operator and that says that
+if I have an optional value
+
+291
+00:17:44,001 --> 00:17:47,049
+then when I determine it has a value I
+get at the actual value
+
+292
+00:17:47,058 --> 00:17:50,140
+and if I forgot to check whether has a
+value that will cause a trap if it
+
+293
+00:17:51,004 --> 00:17:51,058
+doesn't
+
+294
+00:17:51,094 --> 00:17:54,095
+so this is one other ways a swift makes
+it safer
+
+295
+00:17:54,095 --> 00:17:57,184
+to to write raps because you can catch
+these areas earlier
+
+296
+00:17:58,084 --> 00:18:02,159
+without having to add a lot of
+assertions your cut so I think we're
+
+297
+00:18:03,059 --> 00:18:04,073
+probably good to go here
+
+298
+00:18:04,073 --> 00:18:07,082
+I'll was going to take a look and
+
+299
+00:18:07,082 --> 00:18:10,140
+sure forgot something sour Selected
+button
+
+300
+00:18:11,004 --> 00:18:15,008
+and that's because I mistyped so that
+shows that this is live right I'm not
+
+301
+00:18:15,008 --> 00:18:17,104
+play in Quicktime reappear
+
+302
+00:18:18,076 --> 00:18:22,089
+okay it's an hour here we have our ad
+button
+
+303
+00:18:22,089 --> 00:18:26,103
+to bring up a model she as we select
+
+304
+00:18:27,003 --> 00:18:31,011
+the various buttons we can see that we
+have the border and then we do that
+
+305
+00:18:31,011 --> 00:18:34,015
+tense attempt the buttons down here and
+of course
+
+306
+00:18:34,051 --> 00:18:39,066
+the Save button doesn't yet work now I
+just do you like I so I just by just
+
+307
+00:18:39,066 --> 00:18:42,072
+make it look pretty but actually do the
+model level work we're gonna ask I want
+
+308
+00:18:43,026 --> 00:18:46,049
+my colleagues to come up at the moment
+first let's take a look at what we did
+
+309
+00:18:46,049 --> 00:18:46,102
+and
+
+310
+00:18:47,002 --> 00:18:51,040
+this part okay
+
+311
+00:18:51,004 --> 00:18:57,050
+so
+
+312
+00:18:57,086 --> 00:19:00,144
+when we just do so first of all we added
+some swift code
+
+313
+00:19:01,044 --> 00:19:05,118
+to an objective-c ap and Xcode offer to
+create as a bridging header
+
+314
+00:19:06,018 --> 00:19:10,057
+which tracks actually going to some more
+detail about with some plastic ok a
+
+315
+00:19:10,057 --> 00:19:10,123
+class
+
+316
+00:19:11,023 --> 00:19:14,110
+Kolkata class and swept in this case it
+happened to be a quick touch class
+
+317
+00:19:15,001 --> 00:19:16,067
+that's part of the standard libraries
+
+318
+00:19:16,076 --> 00:19:20,125
+this up Kat touch itself but it could
+also be one of your objective see crisis
+
+319
+00:19:21,025 --> 00:19:21,118
+that you've declared
+
+320
+00:19:22,018 --> 00:19:26,063
+we use with class in Interface Builder
+and as I hope you saw
+
+321
+00:19:26,063 --> 00:19:29,155
+it's exactly like working with Objective
+C Class that's actually if a mother here
+
+322
+00:19:30,055 --> 00:19:32,079
+that we wanted to feel like yeah
+
+323
+00:19:32,079 --> 00:19:37,098
+exactly the same thing it's
+interchangeable and so now
+
+324
+00:19:37,098 --> 00:19:40,153
+to I make this a bit more real in terms
+of the model
+
+325
+00:19:41,053 --> 00:19:44,129
+I'm gonna ask my colleague dave to come
+up and complete the project airport
+
+326
+00:19:45,029 --> 00:19:52,029
+work on a further
+
+327
+00:19:52,077 --> 00:19:55,095
+art think Sounders a what we saw
+
+328
+00:19:55,095 --> 00:19:58,123
+I is that you have access to everything
+
+329
+00:19:59,023 --> 00:20:03,060
+in Cocoa Touch and the power that you've
+got an Xcode
+
+330
+00:20:03,006 --> 00:20:07,043
+from swift without really doing anything
+but I'm sure what you thinking now is
+
+331
+00:20:07,097 --> 00:20:10,182
+what about my code what about the
+objective-c code that I have in my
+
+332
+00:20:11,082 --> 00:20:11,147
+target
+
+333
+00:20:12,047 --> 00:20:16,071
+in my app and that's what I want to show
+you as ender said
+
+334
+00:20:16,071 --> 00:20:20,087
+we could spend a lot of time and slides
+and everything else in I'm actually
+
+335
+00:20:20,087 --> 00:20:21,516
+kinda love shorter than he did
+
+336
+00:20:22,299 --> 00:20:28,970
+and just go straight into a demo and so
+
+337
+00:20:28,097 --> 00:20:33,104
+we come back right where we were before
+and for our purposes the person you want
+
+338
+00:20:34,004 --> 00:20:36,048
+to do here is a little bit of tidy up
+
+339
+00:20:36,048 --> 00:20:40,060
+and that is to make are you i text field
+behave the way that we want
+
+340
+00:20:40,006 --> 00:20:43,083
+for our User I it offers a great deal
+with configurability
+
+341
+00:20:44,037 --> 00:20:48,098
+I using the delicate pattern and to do
+that
+
+342
+00:20:48,098 --> 00:20:51,177
+are we're going to make new s controller
+
+343
+00:20:52,059 --> 00:20:55,130
+conform to you i text field
+
+344
+00:20:55,013 --> 00:20:58,025
+delegate which is easy
+
+345
+00:20:58,025 --> 00:21:05,025
+as if I could type
+
+346
+00:21:07,098 --> 00:21:10,111
+fine being are you i text feel man
+
+347
+00:21:11,011 --> 00:21:17,190
+I'm having some time here
+
+348
+00:21:17,289 --> 00:21:24,289
+it's a comedy show I promise
+
+349
+00:21:25,289 --> 00:21:28,870
+there you go alright something call out
+there
+
+350
+00:21:28,087 --> 00:21:33,102
+is success
+
+351
+00:21:34,002 --> 00:21:37,057
+met the hardest thing I'm going to do
+
+352
+00:21:37,057 --> 00:21:39,105
+the whole time I'm up here
+
+353
+00:21:40,005 --> 00:21:43,052
+not so you i text field delegate all we
+did here was
+
+354
+00:21:43,052 --> 00:21:47,098
+at add the protocol conformance to the
+end of a comma-separated list
+
+355
+00:21:47,098 --> 00:21:51,185
+after our class hi in our case it's
+important because we're actually
+
+356
+00:21:52,085 --> 00:21:55,091
+not we actually have a superclass that
+the superclass is the first thing
+
+357
+00:21:55,091 --> 00:22:00,188
+in that last and then our protocols
+follow now that I house I
+
+358
+00:22:01,088 --> 00:22:06,089
+managed to declare takes a delegate I'm
+actually gonna take it easy for the next
+
+359
+00:22:06,089 --> 00:22:06,097
+part
+
+360
+00:22:07,069 --> 00:22:11,150
+and just bring in the implementation
+text field should return
+
+361
+00:22:12,005 --> 00:22:15,012
+the only thing we're doing here is
+resigning first responder
+
+362
+00:22:16,002 --> 00:22:20,014
+on a text field and returning to make
+sure the keyboard dismisses when the
+
+363
+00:22:20,032 --> 00:22:20,129
+user hits return
+
+364
+00:22:21,029 --> 00:22:26,042
+I'll not particularly interesting
+
+365
+00:22:26,042 --> 00:22:30,073
+fun it was just as easy as it would be
+an objective-c
+
+366
+00:22:30,073 --> 00:22:33,136
+to go ahead and implement this protocol
+next
+
+367
+00:22:34,036 --> 00:22:37,089
+as under strongest we are going to look
+a little bit more
+
+368
+00:22:37,089 --> 00:22:40,120
+at the interaction with the model side
+of things
+
+369
+00:22:41,002 --> 00:22:46,031
+and actually implement save first thing
+I'm going to do in
+
+370
+00:22:46,049 --> 00:22:50,090
+got the air here somebody knows what I
+forgot to do
+
+371
+00:22:50,009 --> 00:22:56,086
+and that is managed to the clear to the
+UI text field I get but we never
+
+372
+00:22:57,067 --> 00:22:57,143
+actually
+
+373
+00:22:58,043 --> 00:23:05,043
+connected Matt would have made for an
+interesting and now we've got
+
+374
+00:23:05,048 --> 00:23:09,131
+that set up I will control drag over
+
+375
+00:23:10,031 --> 00:23:16,045
+manage hit the button set it up as an
+action
+
+376
+00:23:16,045 --> 00:23:21,046
+college say now
+
+377
+00:23:21,055 --> 00:23:25,087
+insight here I actually want to interact
+with
+
+378
+00:23:25,087 --> 00:23:28,172
+a the representation
+
+379
+00:23:29,072 --> 00:23:32,133
+are documents that we see in the
+document list
+
+380
+00:23:33,033 --> 00:23:36,037
+on the main screen and that's a part of
+our ap target
+
+381
+00:23:36,037 --> 00:23:39,100
+not a party with your kids and because
+of that we have to take a different
+
+382
+00:23:40,000 --> 00:23:41,057
+approach we can just simply
+
+383
+00:23:41,057 --> 00:23:45,148
+import our framework and and this is
+where we make use of the object to see
+
+384
+00:23:46,048 --> 00:23:47,059
+bridging Hatter
+
+385
+00:23:47,059 --> 00:23:50,128
+that Xcode offered to create for us when
+we created the first with file
+
+386
+00:23:51,028 --> 00:23:55,064
+in this project so will navigate over to
+that
+
+387
+00:23:55,064 --> 00:24:00,100
+and it gets created in the same
+directory
+
+388
+00:24:01,000 --> 00:24:04,022
+are in the same group I should say as
+
+389
+00:24:04,022 --> 00:24:07,029
+this will probably created its
+
+390
+00:24:07,092 --> 00:24:10,159
+not overly interesting at first it
+simply has a comment that's
+
+391
+00:24:11,059 --> 00:24:14,063
+very instructive this is where we put me
+imports
+
+392
+00:24:14,099 --> 00:24:17,171
+for the classes in our target that we
+want to expose to swept
+
+393
+00:24:18,071 --> 00:24:22,148
+in our case it's a single class and that
+is are
+
+394
+00:24:23,048 --> 00:24:27,117
+list info class this is the
+representation that backs
+
+395
+00:24:28,017 --> 00:24:32,024
+view to the table view that you see when
+the app initially comes up
+
+396
+00:24:32,024 --> 00:24:35,029
+save my and
+
+397
+00:24:35,074 --> 00:24:41,126
+head back to really don't need the
+storyboard anymore
+
+398
+00:24:42,026 --> 00:24:45,069
+so I'm gonna go ahead and collapsed
+things down
+
+399
+00:24:45,069 --> 00:24:49,086
+and let us actually focus on the coaches
+the wrapping really kinda
+
+400
+00:24:49,086 --> 00:24:52,119
+gets on my nerves when things I like
+about slip Swift is it a little more
+
+401
+00:24:53,019 --> 00:24:53,088
+succinct
+
+402
+00:24:53,088 --> 00:24:57,133
+so just heading back down to our Save
+
+403
+00:24:58,033 --> 00:25:01,091
+now that we've pulled in the bridging
+Hatter her
+
+404
+00:25:01,091 --> 00:25:03,150
+now that we've added our class the
+bridging header we can actually create
+
+405
+00:25:04,005 --> 00:25:04,052
+one
+
+406
+00:25:04,097 --> 00:25:08,098
+I'm gonna create it as let because it's
+going to be counseling in a sign at once
+
+407
+00:25:08,098 --> 00:25:11,156
+and so my list info
+
+408
+00:25:12,056 --> 00:25:15,078
+is equal wished
+
+409
+00:25:15,078 --> 00:25:22,078
+info
+
+410
+00:25:23,019 --> 00:25:26,095
+and of course keeps saying list info
+
+411
+00:25:26,095 --> 00:25:30,174
+like reinstruct you guys to do when
+reading object Seco we actually use a
+
+412
+00:25:31,074 --> 00:25:31,081
+prefix
+
+413
+00:25:32,044 --> 00:25:35,089
+and I've been writing about us with good
+lately so it's not on the forefront of
+
+414
+00:25:35,089 --> 00:25:36,188
+my mind so
+
+415
+00:25:37,088 --> 00:25:41,089
+our list info and it offers us two
+constructors
+
+416
+00:25:41,089 --> 00:25:44,166
+one of them takes URL the other takes in
+in this meta data item for that I cloud
+
+417
+00:25:45,066 --> 00:25:46,089
+support we're talking about
+
+418
+00:25:46,089 --> 00:25:50,113
+Realty you are on I could construct the
+URL right here
+
+419
+00:25:51,013 --> 00:25:54,812
+little bit aforethought thinking forward
+I know that I'm actually going to want
+
+420
+00:25:54,929 --> 00:25:55,470
+to
+
+421
+00:25:55,047 --> 00:25:59,082
+revise this a little bit later and
+iterate on it so I'm gonna set up
+
+422
+00:25:59,082 --> 00:26:02,181
+a computed property as a convenience
+
+423
+00:26:02,919 --> 00:26:06,933
+after the car computer property
+
+424
+00:26:07,059 --> 00:26:10,096
+is pretty similar to the way we do
+define
+
+425
+00:26:10,429 --> 00:26:14,220
+a stored property and
+
+426
+00:26:14,022 --> 00:26:19,231
+movie with a far I'm gonna call file URL
+now with the computer property we do
+
+427
+00:26:19,429 --> 00:26:20,330
+have to be
+
+428
+00:26:20,033 --> 00:26:24,632
+explicit about our type I'm going to
+make it optional
+
+429
+00:26:24,929 --> 00:26:29,941
+and that's because if the user actions
+and providers a value in that actually a
+
+430
+00:26:30,049 --> 00:26:33,110
+I can't control I can actually construct
+a valid URL
+
+431
+00:26:33,011 --> 00:26:37,580
+I've got an implementation ready that
+just happens to
+
+432
+00:26:37,679 --> 00:26:41,200
+make use of the list coordinator from
+down in which to get
+
+433
+00:26:41,002 --> 00:26:45,067
+and after defining the computed property
+
+434
+00:26:45,085 --> 00:26:48,139
+I can come down and make you submit
+
+435
+00:26:49,039 --> 00:26:53,040
+right away and unnoticed as Anders and
+mention earlier
+
+436
+00:26:53,004 --> 00:26:57,036
+we don't actually have to explicitly
+refer to self when accessing our
+
+437
+00:26:57,072 --> 00:26:57,127
+property
+
+438
+00:26:58,027 --> 00:27:03,084
+set up a few pieces of information that
+we've captured for the user
+
+439
+00:27:03,084 --> 00:27:06,673
+so you get the name from our name
+
+440
+00:27:07,429 --> 00:27:11,080
+feel its text
+
+441
+00:27:11,008 --> 00:27:15,026
+and the label
+
+442
+00:27:15,026 --> 00:27:19,065
+is going to be equal to you are selected
+label
+
+443
+00:27:19,065 --> 00:27:22,066
+and that looks good
+
+444
+00:27:22,075 --> 00:27:26,109
+so now we set it up we actually want to
+save this out
+
+445
+00:27:27,009 --> 00:27:34,009
+and list info provides us a convenience
+for that and we will
+
+446
+00:27:34,086 --> 00:27:38,785
+Creek a and say with completion handler
+
+447
+00:27:39,559 --> 00:27:43,330
+this completion and was actually I
+called is gonna come back to us
+
+448
+00:27:43,033 --> 00:27:49,037
+with a ball letting us know whether or
+not the same was successful
+
+449
+00:27:49,037 --> 00:27:53,115
+and I could use what code completion
+suggesting here
+
+450
+00:27:54,015 --> 00:27:58,079
+and fill out Maya completion handler
+closure
+
+451
+00:27:58,079 --> 00:28:01,146
+inside the parentheses but because it's
+the last
+
+452
+00:28:02,046 --> 00:28:05,049
+I argument at
+
+453
+00:28:05,049 --> 00:28:10,130
+in the call and because its closure in
+skimpy little long
+
+454
+00:28:11,003 --> 00:28:14,055
+I'm actually make use up Swiss trailing
+closure cent tax
+
+455
+00:28:14,082 --> 00:28:18,140
+and in this case I don't even have to
+put the forensic after the method call
+
+456
+00:28:19,004 --> 00:28:22,098
+because are up create and say with
+completion and we're actually doesn't
+
+457
+00:28:23,034 --> 00:28:23,042
+take any other
+
+458
+00:28:24,014 --> 00:28:27,183
+arguments so inside here
+
+459
+00:28:27,309 --> 00:28:33,410
+I will note the variable names being
+passed inches success
+
+460
+00:28:33,041 --> 00:28:38,042
+have more typing problem so that you
+guys can get a good laugh
+
+461
+00:28:38,051 --> 00:28:42,110
+and I just checked the value and for now
+I'm going to
+
+462
+00:28:43,001 --> 00:28:46,090
+print a little debug message to let me
+know that it was saved
+
+463
+00:28:46,099 --> 00:28:50,161
+and
+
+464
+00:28:51,061 --> 00:28:56,128
+just like cancel we want to get out of
+the user's way now so we'll go ahead and
+
+465
+00:28:57,028 --> 00:28:57,111
+dismiss
+
+466
+00:28:58,011 --> 00:29:01,074
+so
+
+467
+00:29:01,074 --> 00:29:06,096
+let's be building Ron see that
+everything is doing what we want to do
+
+468
+00:29:06,096 --> 00:29:07,145
+make sure everything is on a
+
+469
+00:29:08,045 --> 00:29:12,127
+good to go bring it up
+
+470
+00:29:13,027 --> 00:29:18,045
+up RC I need to go to the hardware store
+a little later
+
+471
+00:29:18,045 --> 00:29:22,053
+I and shown the more with hardware hit
+return
+
+472
+00:29:23,025 --> 00:29:26,072
+keyboard goes away that's good time up
+
+473
+00:29:26,072 --> 00:29:30,031
+hardware store I frequent actually uses
+orange in the logo rather have a week so
+
+474
+00:29:30,679 --> 00:29:32,700
+that's going to help me remember what's
+going on there
+
+475
+00:29:32,007 --> 00:29:36,075
+an overhead hit Save button knots
+
+476
+00:29:37,038 --> 00:29:42,087
+not really what we've wanted I really
+wanna see my hardware will show up here
+
+477
+00:29:42,429 --> 00:29:46,690
+did actually save go over check the
+debug console
+
+478
+00:29:46,069 --> 00:29:50,122
+indeed it did save
+
+479
+00:29:51,022 --> 00:29:54,111
+and just for fun actually stop
+
+480
+00:29:54,309 --> 00:29:58,310
+and run the app again and you'll see
+that it actually did saving it created
+
+481
+00:29:58,409 --> 00:30:02,240
+but we never passed anything back to our
+document list
+
+482
+00:30:02,024 --> 00:30:05,095
+to you let know that we created anything
+new and
+
+483
+00:30:05,095 --> 00:30:09,098
+what kinda wanted this to not be sitting
+there in polling the filesystem
+
+484
+00:30:09,098 --> 00:30:13,153
+over and over and over again just
+looking for new files that might show up
+
+485
+00:30:14,053 --> 00:30:17,145
+so for our purposes we're going to take
+a page outta you i text fields book
+
+486
+00:30:18,045 --> 00:30:22,050
+and erection use delegation to pass
+information back to the view controller
+
+487
+00:30:22,095 --> 00:30:24,314
+the presented us
+
+488
+00:30:25,169 --> 00:30:28,240
+the first step there is usually to
+define
+
+489
+00:30:28,024 --> 00:30:32,025
+a protocol that we expect our delegate
+to conform to
+
+490
+00:30:32,034 --> 00:30:35,053
+and in swift we can do that
+
+491
+00:30:35,053 --> 00:30:38,149
+just as easily as declaring the class or
+struct or anything else
+
+492
+00:30:39,049 --> 00:30:42,112
+will just start with the protocol
+keyword
+
+493
+00:30:43,012 --> 00:30:46,024
+that I actually spoke color correctly
+
+494
+00:30:46,024 --> 00:30:52,108
+and new this controller delegate
+
+495
+00:30:53,008 --> 00:30:56,059
+and Rd have a method
+
+496
+00:30:56,059 --> 00:30:59,061
+that I want my delegate to conform to
+that I've prepared that just
+
+497
+00:30:59,061 --> 00:31:03,087
+takes a new s controller analyst info
+wedding at No
+
+498
+00:31:03,087 --> 00:31:08,376
+what's been created done over here now
+at this point this protocol is visible
+
+499
+00:31:09,159 --> 00:31:15,208
+too much with co but i wanna make sure
+that my object seeker can see it as well
+
+500
+00:31:15,649 --> 00:31:18,690
+to do that it's a simple
+
+501
+00:31:18,069 --> 00:31:21,151
+as adding attributes
+
+502
+00:31:22,051 --> 00:31:26,080
+at obj see and this is gonna go ahead
+and say even though this is all swift
+
+503
+00:31:26,008 --> 00:31:26,064
+here
+
+504
+00:31:27,036 --> 00:31:31,075
+we do want to make this available to
+objective-c
+
+505
+00:31:31,399 --> 00:31:35,940
+a little bit later on to know that I
+have a delegate protocol
+
+506
+00:31:35,094 --> 00:31:39,130
+actually define a delegate
+
+507
+00:31:40,003 --> 00:31:43,047
+and will make it we care because
+
+508
+00:31:43,074 --> 00:31:48,079
+we don't really want to own it we don't
+extend its life time
+
+509
+00:31:48,079 --> 00:31:51,938
+and I can declare it as
+
+510
+00:31:52,649 --> 00:31:55,830
+being just above the newest control a
+delegate type
+
+511
+00:31:55,083 --> 00:31:58,099
+I don't have to do something like I D E
+
+512
+00:31:58,099 --> 00:32:01,145
+an angle brackets around my protocol to
+indicate what's going on here
+
+513
+00:32:02,045 --> 00:32:07,099
+I can simply have a property that is %uh
+this delegate type
+
+514
+00:32:07,099 --> 00:32:12,135
+it's gonna be optional because I may not
+have Adelia
+
+515
+00:32:13,035 --> 00:32:16,094
+snow we've defined a delegate property
+
+516
+00:32:16,409 --> 00:32:19,860
+thing maybe we ought to do something a
+little more useful than printing a debug
+
+517
+00:32:19,086 --> 00:32:21,104
+statement down here
+
+518
+00:32:22,004 --> 00:32:26,009
+after that we're going to reach out to
+our delegate
+
+519
+00:32:26,009 --> 00:32:29,478
+and I make use I'll
+
+520
+00:32:29,559 --> 00:32:33,600
+another swift feature which is optional
+chaining
+
+521
+00:32:33,006 --> 00:32:38,080
+so the delegate is an option of it may
+or may not have a value
+
+522
+00:32:39,034 --> 00:32:42,128
+by adding a question mark here before
+actually calling out to you
+
+523
+00:32:43,028 --> 00:32:46,101
+the method that we want to invoke I'm
+going to be able to say
+
+524
+00:32:47,001 --> 00:32:50,038
+if I have a delegate if there is a value
+their
+
+525
+00:32:50,038 --> 00:32:53,057
+make this call if there's not
+
+526
+00:32:53,399 --> 00:33:00,399
+don't do anything
+
+527
+00:33:02,005 --> 00:33:06,014
+and now I'm trying to remember what the
+name of that was out there we are
+
+528
+00:33:06,059 --> 00:33:09,065
+past myself and
+
+529
+00:33:10,019 --> 00:33:15,025
+the list info that we just created
+
+530
+00:33:15,079 --> 00:33:19,136
+really not much but I pissed in case you
+can't tell
+
+531
+00:33:20,036 --> 00:33:24,050
+and at this point we wrapped up the
+swift implementation
+
+532
+00:33:24,005 --> 00:33:29,005
+have this but we've defined as delegate
+now we actually need our objective Seco
+
+533
+00:33:29,005 --> 00:33:32,058
+to be able to see the swift code we've
+just put together
+
+534
+00:33:33,003 --> 00:33:39,057
+and interact with it to do that I'm
+going to head back over to the document
+
+535
+00:33:39,057 --> 00:33:42,796
+the the controller for the document list
+
+536
+00:33:43,309 --> 00:33:46,760
+and inside here
+
+537
+00:33:46,076 --> 00:33:49,715
+we're brunt to give me what comes to
+your mind
+
+538
+00:33:50,399 --> 00:33:54,400
+is the fact that the way I make one
+object an object see
+
+539
+00:33:54,409 --> 00:33:58,434
+available invisible to another object is
+by importing its header
+
+540
+00:33:58,659 --> 00:34:02,110
+wall was swift we don't have headers
+
+541
+00:34:02,011 --> 00:34:05,110
+I we think that's a good thing within
+swift we've gotta find a way to
+
+542
+00:34:06,001 --> 00:34:10,220
+your bridge the gap back to you
+objective-c
+
+543
+00:34:10,319 --> 00:34:13,346
+and so in that case Xcode got her back
+and
+
+544
+00:34:13,589 --> 00:34:18,600
+is going to provide us with 8 generated
+header
+
+545
+00:34:18,006 --> 00:34:23,094
+that contains the entirety of our swift
+interface
+
+546
+00:34:24,048 --> 00:34:28,079
+being generated obviously it has to have
+a well constructed a
+
+547
+00:34:28,079 --> 00:34:32,083
+naming scheme and that's going to be our
+product name
+
+548
+00:34:33,019 --> 00:34:36,045
+which in this case is Worcester dash
+
+549
+00:34:36,045 --> 00:34:39,099
+swift dot H
+
+550
+00:34:39,099 --> 00:34:42,180
+and so this is the generated header some
+gonna go ahead and take time to build to
+
+551
+00:34:43,008 --> 00:34:45,837
+make sure we get the most up-to-date
+
+552
+00:34:46,629 --> 00:34:50,870
+items in it I and after importing
+
+553
+00:34:50,087 --> 00:34:53,346
+that we will
+
+554
+00:34:54,129 --> 00:34:56,225
+come over here and we're gonna go
+through basically the same process that
+
+555
+00:34:57,089 --> 00:34:58,230
+you would
+
+556
+00:34:58,023 --> 00:35:02,025
+ordinarily to implement any of the coke
+or Cocoa Touch delegates
+
+557
+00:35:02,043 --> 00:35:08,952
+on your own clash out our protocol
+conformance
+
+558
+00:35:09,339 --> 00:35:13,890
+and we can pull in our newest control a
+delegate
+
+559
+00:35:13,089 --> 00:35:16,147
+I'm going to choose to
+
+560
+00:35:17,047 --> 00:35:21,056
+use the jump are to head down to an
+appropriate place I feel too I go ahead
+
+561
+00:35:21,056 --> 00:35:24,585
+and implement this
+
+562
+00:35:25,089 --> 00:35:30,870
+and as I could complete here
+
+563
+00:35:30,087 --> 00:35:34,036
+with the newest controller did create
+list info you'll notice that
+
+564
+00:35:34,819 --> 00:35:37,823
+even though we declare this completely
+in with within swift
+
+565
+00:35:37,859 --> 00:35:41,150
+we get is a syntax
+
+566
+00:35:41,015 --> 00:35:44,081
+that matches what I'd expect from
+objective-c so that everything still
+
+567
+00:35:44,081 --> 00:35:46,176
+feels natural everything feels like a
+first-class citizen
+
+568
+00:35:47,076 --> 00:35:50,128
+in its place
+
+569
+00:35:51,028 --> 00:35:56,037
+happen to have the implementation
+
+570
+00:35:56,037 --> 00:35:59,069
+where a or the implementation the last
+thing
+
+571
+00:35:59,069 --> 00:36:03,146
+ready hi in this case what we're really
+doing is just updating our data sources
+
+572
+00:36:04,046 --> 00:36:06,142
+and then refreshing the table view with
+a little bit a new information
+
+573
+00:36:07,042 --> 00:36:11,141
+and the very last thing here
+
+574
+00:36:12,041 --> 00:36:15,124
+the final stop is that we actually need
+this view controller to
+
+575
+00:36:16,024 --> 00:36:19,030
+make itself the delegate for a new US
+Comptroller
+
+576
+00:36:19,084 --> 00:36:22,092
+we're using a modal segue
+
+577
+00:36:22,092 --> 00:36:26,171
+so why not do it and prepare for Segway
+down here will just check
+
+578
+00:36:27,071 --> 00:36:31,099
+to make sure that it's the right segue
+will grab the newest controller
+
+579
+00:36:31,099 --> 00:36:35,104
+and we'll set ourselves in this case are
+with documents you controller
+
+580
+00:36:36,049 --> 00:36:41,135
+as the delegate this point I fully
+expect things
+
+581
+00:36:42,035 --> 00:36:45,097
+to do
+
+582
+00:36:45,097 --> 00:36:50,161
+what I want
+
+583
+00:36:51,061 --> 00:36:54,074
+and coming up with another list
+
+584
+00:36:54,074 --> 00:36:57,107
+to be every CE
+
+585
+00:36:58,007 --> 00:37:01,046
+morass have apps
+
+586
+00:37:01,046 --> 00:37:05,122
+not really sure what those are yet but
+I'm pretty sure I'm gonna pick something
+
+587
+00:37:06,022 --> 00:37:06,057
+up
+
+588
+00:37:06,057 --> 00:37:09,089
+and this time
+
+589
+00:37:09,089 --> 00:37:12,141
+it actually comes through shows up in
+our document view controller
+
+590
+00:37:13,041 --> 00:37:17,097
+just for you know groups say I come into
+it I can change it around
+
+591
+00:37:17,097 --> 00:37:19,186
+I really like the salmon color that
+they're using for the Apple badges this
+
+592
+00:37:20,086 --> 00:37:21,153
+year so I'm gonna actually picked that
+
+593
+00:37:22,053 --> 00:37:26,057
+and that sa
+
+594
+00:37:26,093 --> 00:37:33,093
+integrating our code
+
+595
+00:37:37,001 --> 00:37:39,053
+and just to head back to the slides for
+a second
+
+596
+00:37:39,062 --> 00:37:42,104
+what we've just seen here
+
+597
+00:37:43,004 --> 00:37:46,069
+is that it's very easy to expose our
+objective c- code
+
+598
+00:37:46,069 --> 00:37:50,127
+to swept simply import whatever headers
+you want into the bridging Hatter
+
+599
+00:37:51,027 --> 00:37:56,085
+and will be made available to the swift
+in your target we define a protocol in
+
+600
+00:37:56,085 --> 00:37:56,091
+swift
+
+601
+00:37:57,045 --> 00:38:00,049
+which was as easy as defining a protocol
+in objective-c
+
+602
+00:38:00,085 --> 00:38:03,089
+finally we've
+
+603
+00:38:03,089 --> 00:38:06,096
+exposed that protocol and the class that
+we just created
+
+604
+00:38:07,059 --> 00:38:10,157
+in swift back to the objective-c code in
+our target and
+
+605
+00:38:11,057 --> 00:38:14,072
+we actually have to do anything there
+Xcode did
+
+606
+00:38:14,072 --> 00:38:17,075
+the generation of the header the
+provided that interface
+
+607
+00:38:18,002 --> 00:38:21,016
+just to reiterate
+
+608
+00:38:21,016 --> 00:38:25,070
+little bit more win we wanna go from
+
+609
+00:38:25,007 --> 00:38:28,044
+our objective c- hatter's and make our
+objective c-
+
+610
+00:38:29,007 --> 00:38:32,012
+objects available swift we're going
+through the bridging Hatter
+
+611
+00:38:32,057 --> 00:38:36,091
+this is going to be creative actual
+offer to create this for you
+
+612
+00:38:36,091 --> 00:38:36,173
+automatically
+
+613
+00:38:37,073 --> 00:38:40,102
+when you at it's with file to an
+existing objective-c target
+
+614
+00:38:41,002 --> 00:38:44,031
+for an objective-c file to an existing
+swift target
+
+615
+00:38:44,031 --> 00:38:47,126
+when we want to
+
+616
+00:38:48,026 --> 00:38:51,098
+get our swift interface
+
+617
+00:38:51,098 --> 00:38:55,170
+exposed to our object see implementation
+there we're looking at the generated
+
+618
+00:38:56,007 --> 00:38:57,069
+header the tax code provides
+
+619
+00:38:58,032 --> 00:39:02,038
+and this is going to be named after our
+product and it's going to be
+
+620
+00:39:02,092 --> 00:39:08,133
+our product name bash swift dot H one
+last thing to remember about these
+
+621
+00:39:09,033 --> 00:39:12,096
+is
+
+622
+00:39:12,096 --> 00:39:15,118
+that the bridging Hatter
+
+623
+00:39:16,018 --> 00:39:19,026
+is created for you by Xcode but you own
+it
+
+624
+00:39:19,026 --> 00:39:22,043
+from that point forward so it should be
+something you check in your source
+
+625
+00:39:22,043 --> 00:39:23,051
+control system
+
+626
+00:39:23,051 --> 00:39:26,073
+it should be something that
+
+627
+00:39:26,073 --> 00:39:31,166
+you maintain you manage and it's there
+so that you only exposed to Swift what
+
+628
+00:39:32,066 --> 00:39:33,133
+you want to expose to swept
+
+629
+00:39:34,033 --> 00:39:38,054
+in the case to the generated header it's
+just packets generated as part of the
+
+630
+00:39:38,054 --> 00:39:38,150
+build process
+
+631
+00:39:39,005 --> 00:39:42,061
+it's going to contain your compy the
+complete interface
+
+632
+00:39:43,006 --> 00:39:46,043
+for thus with files within your target
+
+633
+00:39:46,043 --> 00:39:49,110
+and those you can be readily available
+to check to see simply by importing Mad
+
+634
+00:39:50,001 --> 00:39:50,039
+Hatter
+
+635
+00:39:50,048 --> 00:39:54,114
+so this point to talk with you a little
+bit more
+
+636
+00:39:55,014 --> 00:39:58,056
+about what you can do with frameworks
+
+637
+00:39:58,056 --> 00:40:01,144
+in your product in your project I like
+him but my colleague Jordan up
+
+638
+00:40:02,044 --> 00:40:09,044
+think they've alright
+
+639
+00:40:09,007 --> 00:40:13,024
+so we see no UV it is to deal with
+integrating your swift code
+
+640
+00:40:13,087 --> 00:40:17,115
+into an existing object if the app and
+it could pretty much take care of all
+
+641
+00:40:18,015 --> 00:40:20,104
+the details for you to tell one
+Interface Builder it going to show up in
+
+642
+00:40:21,004 --> 00:40:21,090
+the simulator
+
+643
+00:40:21,009 --> 00:40:24,101
+everything works just fine but I can
+move a step down in the hierarchy
+
+644
+00:40:25,082 --> 00:40:30,169
+and like the framework
+
+645
+00:40:31,069 --> 00:40:34,097
+so at this point we've been working
+pretty much the entire time up in this
+
+646
+00:40:34,097 --> 00:40:35,192
+twister part of the application
+
+647
+00:40:36,092 --> 00:40:39,155
+which the actual application target now
+we're gonna move down to
+
+648
+00:40:40,055 --> 00:40:43,126
+lift ticket which handles the model and
+the object graph for this target
+
+649
+00:40:44,026 --> 00:40:48,039
+and specifically we're going to add new
+functionality the ability to add
+
+650
+00:40:48,039 --> 00:40:51,042
+attachment to every but i dont something
+like
+
+651
+00:40:51,042 --> 00:40:54,078
+a a photo or a voice recording
+
+652
+00:40:54,078 --> 00:40:58,159
+to do this in Objective C you would
+create a new class added to your object
+
+653
+00:40:59,059 --> 00:41:00,136
+graph by adding new property
+
+654
+00:41:01,036 --> 00:41:04,070
+and in setting up an interface to manage
+it we're going to do the exact same
+
+655
+00:41:04,007 --> 00:41:04,072
+thing
+
+656
+00:41:05,035 --> 00:41:08,120
+but using swept property are by going to
+file
+
+657
+00:41:09,002 --> 00:41:13,033
+new file and this time a tease the Cocoa
+Touch clap template
+
+658
+00:41:13,051 --> 00:41:16,053
+I can name that APL with Diane
+
+659
+00:41:16,053 --> 00:41:20,056
+attachment pump at the Venice object and
+the language support
+
+660
+00:41:20,056 --> 00:41:24,065
+is swept and make sure that in the lift
+ticket target
+
+661
+00:41:24,065 --> 00:41:28,137
+and click Create you noted here that
+Xcode did not
+
+662
+00:41:29,037 --> 00:41:33,059
+offer to create a breeding better for us
+this is because we're working with a
+
+663
+00:41:33,059 --> 00:41:37,141
+framework target in a framework you
+already have a header that backed by the
+
+664
+00:41:38,041 --> 00:41:39,102
+entire content on the framework
+
+665
+00:41:40,002 --> 00:41:43,081
+that's your umbrella hat er so when
+you're working with a free market are
+
+666
+00:41:43,081 --> 00:41:43,127
+getting
+
+667
+00:41:44,027 --> 00:41:47,082
+swept everything that's available in
+your umbrella hat er
+
+668
+00:41:47,082 --> 00:41:50,088
+what automatically be visible to the
+swift code no work required
+
+669
+00:41:51,042 --> 00:41:56,078
+311 a taxonomic superset
+
+670
+00:41:56,078 --> 00:41:59,080
+to the very first thing I'm going to do
+it at a compartment to
+
+671
+00:41:59,008 --> 00:42:04,037
+a standard Cocoa Touch protocol and its
+coding attachments are made up of two
+
+672
+00:42:05,009 --> 00:42:06,057
+things their data
+
+673
+00:42:06,057 --> 00:42:09,063
+which I will represent anything in its
+data and their type
+
+674
+00:42:09,063 --> 00:42:12,078
+for tight update at Cocoa Touch like to
+you
+
+675
+00:42:12,078 --> 00:42:16,135
+uniform type identifiers which are very
+general way to represent filing data
+
+676
+00:42:17,035 --> 00:42:18,041
+type and these are just
+
+677
+00:42:18,095 --> 00:42:23,161
+start at strength the next thing to do
+here to declare and initialize there
+
+678
+00:42:24,061 --> 00:42:27,083
+and that just take the data anti prom
+outside
+
+679
+00:42:27,083 --> 00:42:31,091
+and will I find them into our own field
+but we do need to be careful
+
+680
+00:42:31,091 --> 00:42:35,132
+because the data that we are given might
+be in and it's mutable data
+
+681
+00:42:36,032 --> 00:42:39,037
+and somebody might try to change it
+after they've created our attachment
+
+682
+00:42:39,082 --> 00:42:42,169
+so in order to work around it we need to
+call the copy method
+
+683
+00:42:43,069 --> 00:42:48,110
+however copy returned ID and objected
+the
+
+684
+00:42:49,001 --> 00:42:52,048
+and swept that's going to come through
+as be any object type
+
+685
+00:42:52,057 --> 00:42:56,106
+we can't go directly from any object and
+at the day that
+
+686
+00:42:57,006 --> 00:43:01,011
+in swept because that's not guaranteed
+to be day so instead we have to
+
+687
+00:43:01,011 --> 00:43:02,087
+explicitly tell the compiler
+
+688
+00:43:02,087 --> 00:43:05,091
+to do a cat here and this is important
+
+689
+00:43:05,091 --> 00:43:08,113
+because anybody ever implement the copy
+method incorrectly
+
+690
+00:43:09,013 --> 00:43:13,015
+and doesn't return and if they're we
+would much rather find out about it
+
+691
+00:43:13,033 --> 00:43:16,037
+right here in the initial either then
+crashed somewhere down the line we try
+
+692
+00:43:16,073 --> 00:43:16,135
+to you that
+
+693
+00:43:17,035 --> 00:43:21,071
+on the other hand we can just to find
+the type directly
+
+694
+00:43:21,071 --> 00:43:24,079
+and this is because touring in swept
+r-value
+
+695
+00:43:25,051 --> 00:43:29,136
+unlike in a string every fourth string
+has an independent existence
+
+696
+00:43:30,036 --> 00:43:34,038
+and when you find across the vehicle
+operator you get independent string
+
+697
+00:43:34,056 --> 00:43:38,112
+so whenever somebody dead over here to
+there string want to pack your string
+
+698
+00:43:39,012 --> 00:43:46,012
+over here the next inning to implement
+the end up cutting protocol
+
+699
+00:43:47,038 --> 00:43:50,130
+because this for a bit more room and
+here we can code
+
+700
+00:43:51,003 --> 00:43:54,004
+that complete here Naoko completion
+
+701
+00:43:54,004 --> 00:43:56,623
+of them
+
+702
+00:43:57,019 --> 00:44:00,630
+so I here I'm in it I'm implementing the
+end it's colder than it
+
+703
+00:44:00,063 --> 00:44:03,091
+initializer and another something a
+little funny here
+
+704
+00:44:03,091 --> 00:44:06,300
+Anna in objective-c we have the method
+
+705
+00:44:07,119 --> 00:44:10,190
+named in it with coder but in swift we
+have an initializer
+
+706
+00:44:10,829 --> 00:44:15,400
+that's it in it coder so in order for
+more consistency in the
+
+707
+00:44:15,004 --> 00:44:19,143
+Westworld where object recent contact
+with a little different
+
+708
+00:44:19,539 --> 00:44:23,614
+and in it method from objective-c that
+starts with in knitwear
+
+709
+00:44:24,289 --> 00:44:27,364
+will come into swept with the with
+dropped
+
+710
+00:44:28,039 --> 00:44:35,039
+this ensures a consistent world with
+objective-c security implementation that
+
+711
+00:44:35,014 --> 00:44:37,017
+it's pretty much the same as what you'd
+expect
+
+712
+00:44:37,017 --> 00:44:41,022
+just called the code object for key and
+again explicitly down capping to the
+
+713
+00:44:41,067 --> 00:44:42,006
+type we want
+
+714
+00:44:42,609 --> 00:44:46,200
+if somebody hands off the bat archive
+will find out about it now
+
+715
+00:44:46,002 --> 00:44:51,671
+rather than crashing later on finally
+polite thing to do here
+
+716
+00:44:51,869 --> 00:44:54,893
+is implement the in code with cutter
+method and
+
+717
+00:44:55,109 --> 00:44:58,182
+this one does not get any name changes
+because that is limited
+
+718
+00:44:58,839 --> 00:45:03,880
+specifically to initialize urs and
+implementation this again is very simple
+
+719
+00:45:03,088 --> 00:45:06,307
+we call in code object 40 with both the
+data
+
+720
+00:45:07,099 --> 00:45:11,126
+and the type and that's it this is an
+entire
+
+721
+00:45:11,369 --> 00:45:16,420
+with model object and get on one flied I
+didn't do anything crazy are confusing
+
+722
+00:45:16,042 --> 00:45:16,651
+here
+
+723
+00:45:17,029 --> 00:45:20,950
+be on them and I think you need to do to
+be a good Cocoa Touch they defend
+
+724
+00:45:20,095 --> 00:45:27,095
+way the next step up quite the
+
+725
+00:45:28,094 --> 00:45:31,140
+added into our object graph I go back to
+our objective the header
+
+726
+00:45:32,004 --> 00:45:36,673
+now ever been a problem because last
+time that we want to act sex swift code
+
+727
+00:45:37,069 --> 00:45:37,140
+from objected
+
+728
+00:45:37,779 --> 00:45:41,833
+see what we did import generated header
+into the Pride into the
+
+729
+00:45:42,319 --> 00:45:46,400
+objected to the file we can't do that
+here because the generated header
+
+730
+00:45:46,004 --> 00:45:49,123
+depends on the swept and the swept read
+
+731
+00:45:49,519 --> 00:45:52,930
+the entire public content of our
+framework by the umbrella header
+
+732
+00:45:52,093 --> 00:45:55,175
+and that includes this header right here
+so instead
+
+733
+00:45:56,075 --> 00:46:00,104
+I you think that with a mechanism that I
+have an objective feet this is what we
+
+734
+00:46:00,779 --> 00:46:01,782
+used to break cycle
+
+735
+00:46:01,809 --> 00:46:05,861
+if they forward declaration using
+Acrobat and I can forward acquire the
+
+736
+00:46:06,329 --> 00:46:10,500
+first class just like I would any
+objective c-class and now
+
+737
+00:46:10,005 --> 00:46:14,294
+I am perfectly able to create a property
+here using the attachment
+
+738
+00:46:14,789 --> 00:46:17,890
+the last thing to do
+
+739
+00:46:17,089 --> 00:46:20,173
+apart is to update the implementation on
+the list item to actually
+
+740
+00:46:21,073 --> 00:46:24,140
+handle the attachment and for that I'm
+going to import generated header
+
+741
+00:46:25,004 --> 00:46:29,006
+now that wouldn't in a dot on file and
+because this is a framework
+
+742
+00:46:29,042 --> 00:46:33,241
+and the generated header is part of our
+public interface we are going to use
+
+743
+00:46:33,619 --> 00:46:35,170
+framework syntax to imported
+
+744
+00:46:35,017 --> 00:46:39,956
+all that what to do here now is to
+update the implementation in this class
+
+745
+00:46:40,109 --> 00:46:42,710
+so that we actually handle this new
+property
+
+746
+00:46:42,071 --> 00:46:45,420
+so that means having an x-ray he for
+encoding here
+
+747
+00:46:46,059 --> 00:46:49,115
+setting the attachment
+
+748
+00:46:49,619 --> 00:46:55,717
+X explicitly to now making sure that we
+can encode and decode it
+
+749
+00:46:56,599 --> 00:47:00,650
+and while I'm doing that i'd like you
+all to know that this is exactly what
+
+750
+00:47:00,065 --> 00:47:00,984
+you'd be doing
+
+751
+00:47:01,569 --> 00:47:04,574
+if we implemented the attachment quite
+in objective-c there's nothing
+
+752
+00:47:05,069 --> 00:47:08,116
+surprising going on here it's exactly
+what you would have done before
+
+753
+00:47:08,539 --> 00:47:11,980
+finally
+
+754
+00:47:11,098 --> 00:47:14,147
+we do need to make sure that we have the
+copy method for that with me copia with
+
+755
+00:47:15,047 --> 00:47:15,586
+item
+
+756
+00:47:16,009 --> 00:47:21,200
+that we actually do you get a copy of
+the attachment as well square bracket
+
+757
+00:47:21,002 --> 00:47:25,004
+and since women are attachment immutable
+
+758
+00:47:25,022 --> 00:47:29,151
+using that like keyword to define the
+properties we can just the sign of the
+
+759
+00:47:29,349 --> 00:47:30,400
+Cross directly
+
+760
+00:47:30,004 --> 00:47:33,006
+we don't need to do anything for copying
+to ensure that they are
+
+761
+00:47:33,042 --> 00:47:36,138
+independent and not going to change on a
+so that that
+
+762
+00:47:37,038 --> 00:47:40,167
+at the entire model and now you're
+probably thinking
+
+763
+00:47:40,509 --> 00:47:44,490
+so great here we go again back today
+Interface Builder to define a new layout
+
+764
+00:47:44,049 --> 00:47:45,628
+new control our and
+
+765
+00:47:46,069 --> 00:47:49,480
+at a buncha out with an accent and hook
+everything up all again where he thought
+
+766
+00:47:49,048 --> 00:47:49,677
+that
+
+767
+00:47:50,109 --> 00:47:54,201
+any be rape except that were actually
+really lucky here
+
+768
+00:47:55,029 --> 00:47:59,030
+the 30 but work in a department with
+what about a gay people and another team
+
+769
+00:47:59,039 --> 00:47:59,980
+is working on a very
+
+770
+00:47:59,098 --> 00:48:02,947
+similar app that means to deal with
+these kind of attachment and because
+
+771
+00:48:03,829 --> 00:48:05,852
+they rapin new they've written entirely
+in
+
+772
+00:48:06,059 --> 00:48:09,140
+swept but they've also factored out
+there
+
+773
+00:48:09,014 --> 00:48:12,091
+attachment view controller into eight
+separate framework
+
+774
+00:48:12,091 --> 00:48:15,190
+which is a new feature in my life 8 so
+we're going is their framework written
+
+775
+00:48:16,009 --> 00:48:17,044
+entirely in sweat
+
+776
+00:48:18,025 --> 00:48:23,118
+to implement the interface that deals
+with this model object I'm
+
+777
+00:48:24,018 --> 00:48:27,367
+to start up here I'm going to go to the
+bottom here and check the plot
+
+778
+00:48:27,529 --> 00:48:33,470
+yet another way to add me about to our
+target to you had filed here
+
+779
+00:48:33,047 --> 00:48:36,356
+I'm going to the media your folder to
+select their project me give you our
+
+780
+00:48:36,779 --> 00:48:37,630
+director prime
+
+781
+00:48:37,063 --> 00:48:40,097
+want to have the in my project
+
+782
+00:48:40,097 --> 00:48:45,196
+then I can just add this to our target
+by going to our own project
+
+783
+00:48:46,069 --> 00:48:49,095
+selecting the Leicester target and in
+the embedded by an ear infection
+
+784
+00:48:49,329 --> 00:48:51,220
+quitting the plot
+
+785
+00:48:51,022 --> 00:48:54,045
+this what the at the framerate directly
+
+786
+00:48:54,045 --> 00:48:58,071
+notice what we just did their is a new
+feature IOSA
+
+787
+00:48:58,071 --> 00:49:01,170
+to allow embedded framework course if
+your Mac programmer
+
+788
+00:49:01,809 --> 00:49:05,816
+you're probably used to this by now even
+better framework need to be made
+
+789
+00:49:06,509 --> 00:49:08,160
+available to Interface Builder
+
+790
+00:49:08,016 --> 00:49:12,965
+two other classes in your project link
+into your binary for you can actually
+
+791
+00:49:13,109 --> 00:49:14,200
+run it
+
+792
+00:49:14,002 --> 00:49:17,005
+and copied into the app so that when
+other people down that they don't need
+
+793
+00:49:17,023 --> 00:49:19,312
+to download the framework separately
+
+794
+00:49:19,519 --> 00:49:23,522
+an extra texted all that for without
+asking if the framework was written in
+
+795
+00:49:23,549 --> 00:49:24,650
+objective-c
+
+796
+00:49:24,065 --> 00:49:31,065
+or swept or mixture about
+
+797
+00:49:33,068 --> 00:49:37,417
+coroner storyboard now convene out and
+bring up the
+
+798
+00:49:38,029 --> 00:49:41,055
+library here to bring out in you view
+controller
+
+799
+00:49:41,289 --> 00:49:44,345
+and in this case I'm going to set the
+classes that you control or
+
+800
+00:49:44,849 --> 00:49:47,970
+to be the media view controller from the
+other framework you'll see the model
+
+801
+00:49:47,097 --> 00:49:48,172
+feel care populate as well
+
+802
+00:49:49,072 --> 00:49:52,095
+that be trips with to keep different
+frame eyeglasses
+
+803
+00:49:52,095 --> 00:49:56,144
+from stepping on each other at runtime
+even without a prefect
+
+804
+00:49:57,044 --> 00:49:59,863
+we don't need the view that Interface
+Builder provides for us because it
+
+805
+00:50:00,259 --> 00:50:01,200
+already has one
+
+806
+00:50:01,002 --> 00:50:04,080
+in its own framework fighting just to be
+back and now to make sure that we can
+
+807
+00:50:04,098 --> 00:50:05,207
+actually get to that
+
+808
+00:50:06,089 --> 00:50:10,184
+of what the tables out here and dragged
+over control drag to create a new
+
+809
+00:50:11,039 --> 00:50:17,071
+segue make that push that way and we'll
+give that a name
+
+810
+00:50:17,359 --> 00:50:19,570
+attachment
+
+811
+00:50:19,057 --> 00:50:23,065
+now if that up Interface Builder we set
+up the Interfaith and model object
+
+812
+00:50:23,065 --> 00:50:26,069
+it's time to put them together and once
+again we're going to the delegate for
+
+813
+00:50:27,005 --> 00:50:27,044
+that
+
+814
+00:50:27,044 --> 00:50:31,047
+but coach R objective-c code this is the
+code that displays
+
+815
+00:50:31,074 --> 00:50:35,120
+the with we at the top here we have been
+notification center
+
+816
+00:50:36,002 --> 00:50:39,064
+which is the system framework and the
+import prolific at
+
+817
+00:50:39,082 --> 00:50:43,111
+which is our own model framework within
+this project I can add a third import
+
+818
+00:50:44,011 --> 00:50:47,014
+for media your which is the free market
+any other project
+
+819
+00:50:47,014 --> 00:50:51,030
+men hit build again to make sure that
+everything is compiled an up-to-date
+
+820
+00:50:51,003 --> 00:50:55,004
+and now I get code completion for the
+media your delegate protocol
+
+821
+00:50:55,031 --> 00:50:58,082
+just like before
+
+822
+00:50:58,082 --> 00:51:01,631
+gonna jump down to a nice communion
+plate me application to implement this
+
+823
+00:51:02,369 --> 00:51:05,750
+and the first thing I'm going to do
+implant a little helper method here
+
+824
+00:51:05,075 --> 00:51:08,110
+they just returned the selected item
+again
+
+825
+00:51:09,001 --> 00:51:12,080
+even though this is sordid details like
+how the application currently work
+
+826
+00:51:12,089 --> 00:51:15,151
+I want you to remember that everything
+we're doing here is exactly what you do
+
+827
+00:51:16,051 --> 00:51:17,052
+in objective-c
+
+828
+00:51:17,061 --> 00:51:20,080
+from the perspective that this code you
+can't really tell
+
+829
+00:51:20,008 --> 00:51:24,096
+that the entire framework was written in
+wept meaning a code completion for the
+
+830
+00:51:25,068 --> 00:51:26,077
+delegate method here
+
+831
+00:51:26,077 --> 00:51:30,926
+the view controller didn't use new media
+type and now that we have all that set
+
+832
+00:51:31,619 --> 00:51:31,940
+up
+
+833
+00:51:31,094 --> 00:51:34,142
+it's really easy to add an attachment to
+the currently selected item
+
+834
+00:51:35,042 --> 00:51:38,128
+so here we say that its attachment
+
+835
+00:51:39,028 --> 00:51:42,120
+is going to be a new attachment that we
+create now by calling
+
+836
+00:51:43,002 --> 00:51:46,006
+I like in it with their wait a second
+
+837
+00:51:46,006 --> 00:51:49,085
+we define as attachment baton swept and
+it had an initializer name
+
+838
+00:51:50,039 --> 00:51:53,106
+in it datatype when injected see it's
+showing up as
+
+839
+00:51:54,006 --> 00:51:59,050
+in it with data type the see that this
+name translation work but wait for you
+
+840
+00:51:59,005 --> 00:52:00,028
+have a consistent world
+
+841
+00:52:00,073 --> 00:52:07,073
+in sweat and in objective-c do better
+housekeeping here to make sure that we
+
+842
+00:52:11,000 --> 00:52:12,045
+update our back and start
+
+843
+00:52:12,045 --> 00:52:15,054
+and now we have of everything set up
+here all idk what to do
+
+844
+00:52:16,035 --> 00:52:19,046
+just like dave did if that works out at
+the delegate
+
+845
+00:52:19,046 --> 00:52:22,125
+for the media view controller so the
+start of the same week that the
+
+846
+00:52:23,025 --> 00:52:23,099
+attachment
+
+847
+00:52:23,099 --> 00:52:27,180
+and we set ourselves with the delegate
+and then we can also set the title of
+
+848
+00:52:28,008 --> 00:52:29,020
+the new controller
+
+849
+00:52:29,092 --> 00:52:32,104
+and make sure that it's showing
+attachment that actually
+
+850
+00:52:33,004 --> 00:52:37,323
+on the selected item for if that's what
+time does not have an attachment
+
+851
+00:52:37,359 --> 00:52:41,700
+make sure that the controller isn't
+showing anything so with that everything
+
+852
+00:52:41,007 --> 00:52:41,081
+should be working
+
+853
+00:52:42,044 --> 00:52:48,283
+but building run I'm
+
+854
+00:52:48,679 --> 00:52:51,746
+going to the tech toy section here
+anything now we have these disclosure
+
+855
+00:52:52,349 --> 00:52:53,394
+indicators on each other
+
+856
+00:52:53,799 --> 00:52:58,823
+be item going to find about this way
+then I can see it says no attachment
+
+857
+00:52:59,039 --> 00:53:03,092
+banquet with edit button using the view
+controller from the media views premark
+
+858
+00:53:03,569 --> 00:53:06,621
+that bring that standard I was control
+making sure that our privacy is
+
+859
+00:53:07,089 --> 00:53:07,153
+protected
+
+860
+00:53:07,729 --> 00:53:10,784
+and this kid looks like he'd really
+enjoy
+
+861
+00:53:11,279 --> 00:53:17,280
+under will play K I we can go back to
+another want to be here
+
+862
+00:53:17,289 --> 00:53:20,296
+managed to get myself back anything
+there we go
+
+863
+00:53:20,989 --> 00:53:24,072
+and you can see that the image actually
+does persist in the Thunderbolt Display
+
+864
+00:53:24,819 --> 00:53:31,819
+Jackson so it looks like everything's
+working I'm
+
+865
+00:53:33,006 --> 00:53:37,065
+the thought he was not just deal with a
+new model object are trying not to the
+
+866
+00:53:37,065 --> 00:53:38,150
+new object in your application target
+
+867
+00:53:39,005 --> 00:53:42,057
+but also in new model object in your
+framework
+
+868
+00:53:43,002 --> 00:53:47,053
+additionally this is not related to put
+it all
+
+869
+00:53:47,053 --> 00:53:51,086
+when I with a we now have embedded
+premark an ex-convict will handle
+
+870
+00:53:51,086 --> 00:53:57,179
+all the detail that for you death trap
+
+871
+00:53:58,079 --> 00:54:02,114
+finally once again we updated our
+interface and added a delegate adopted a
+
+872
+00:54:03,014 --> 00:54:04,030
+delegate protocol
+
+873
+00:54:04,003 --> 00:54:09,027
+and once again I wanna impress on you
+that is exactly what we would have done
+
+874
+00:54:09,054 --> 00:54:13,100
+had be delegate protocol and then view
+controller been implemented in objective
+
+875
+00:54:14,000 --> 00:54:14,051
+feet
+
+876
+00:54:14,051 --> 00:54:18,130
+we didn't have to do anything unusual or
+different because it was implemented in
+
+877
+00:54:18,589 --> 00:54:22,790
+swept for you feel you did it with that
+could take
+
+878
+00:54:22,079 --> 00:54:25,408
+to you view their framework and in
+general we want you to be tree node the
+
+879
+00:54:26,119 --> 00:54:27,900
+theme that we do system framework
+
+880
+00:54:27,009 --> 00:54:30,023
+Flemington where you'll be using import
+
+881
+00:54:31,004 --> 00:54:34,013
+my free market an objective-c
+
+882
+00:54:34,013 --> 00:54:38,016
+I'm using at import my premark semicon
+
+883
+00:54:38,043 --> 00:54:44,202
+in general we do want you to be using at
+important that it has to import
+
+884
+00:54:44,589 --> 00:54:48,591
+for swift for free with containing swift
+code this is absolutely required
+
+885
+00:54:48,609 --> 00:54:51,610
+but even for other framework that
+they've been bill would act could
+
+886
+00:54:51,619 --> 00:54:54,770
+Dec and have a defined model bill
+pending turned on
+
+887
+00:54:54,077 --> 00:54:57,656
+which he is on by default then you have
+
+888
+00:54:58,349 --> 00:55:02,060
+then you have a framework ready for you
+in objected the or swept
+
+889
+00:55:02,006 --> 00:55:05,805
+the only reason now you have to import
+are if you are working with an older
+
+890
+00:55:05,859 --> 00:55:06,450
+framework
+
+891
+00:55:06,045 --> 00:55:09,103
+that have not yet been rebuilt with
+Ecotec and defined model setting
+
+892
+00:55:10,003 --> 00:55:14,025
+for you're working with the post what
+which does not yet support model feature
+
+893
+00:55:14,025 --> 00:55:15,047
+introduced last year
+
+894
+00:55:15,047 --> 00:55:19,081
+so with that everything seems to be
+working in our walk is complete and i
+
+895
+00:55:19,081 --> 00:55:19,090
+cant a backhander
+
+896
+00:55:20,071 --> 00:55:27,071
+thank you Jordan
+
+897
+00:55:29,045 --> 00:55:32,139
+so over the past hour
+
+898
+00:55:33,039 --> 00:55:36,044
+we've seen several different ways and
+mixing swift
+
+899
+00:55:36,044 --> 00:55:39,089
+and objective-c Swift is a better
+
+900
+00:55:39,089 --> 00:55:42,818
+safer way to do coke or development it
+was designed to support
+
+901
+00:55:43,619 --> 00:55:46,760
+the cocoa frameworks the Cocoa Touch
+
+902
+00:55:46,076 --> 00:55:49,142
+idioms and the common patterns that we
+are ready now
+
+903
+00:55:50,042 --> 00:55:53,096
+it's still Coco and Cocoa Touch
+
+904
+00:55:53,096 --> 00:55:56,167
+fun I last so that means that the
+knowledge and experience that you've
+
+905
+00:55:57,067 --> 00:55:58,093
+gained over the years
+
+906
+00:55:58,093 --> 00:56:02,119
+tenneco you have apply to swift as well
+and as we've seen
+
+907
+00:56:03,019 --> 00:56:07,044
+some other patterns such as actually
+calling a delegate method
+
+908
+00:56:07,044 --> 00:56:11,117
+are much easier and swept and much more
+suspect and in other cases you've seen
+
+909
+00:56:12,017 --> 00:56:12,102
+how swift
+
+910
+00:56:13,002 --> 00:56:16,321
+makes us to find our intentions much
+more clearly
+
+911
+00:56:16,339 --> 00:56:20,367
+which can help save us later on so we
+don't just accidentally message naylor
+
+912
+00:56:20,619 --> 00:56:25,240
+message in object to the wrong type and
+
+913
+00:56:25,024 --> 00:56:28,048
+another thing that I hope you've seen
+here's we put a lot of effort into
+
+914
+00:56:28,048 --> 00:56:30,073
+making sure that Xcode take care the
+details
+
+915
+00:56:30,073 --> 00:56:33,164
+so that when you're using objective-c
+your swift code
+
+916
+00:56:34,064 --> 00:56:38,113
+looks like objective-c and when you
+using SwiftKey objective-c code looks
+
+917
+00:56:39,013 --> 00:56:39,078
+like swept
+
+918
+00:56:39,078 --> 00:56:42,169
+and you saw some examples of some class
+in Cocoa Touch
+
+919
+00:56:43,069 --> 00:56:46,120
+classes but that equally placed your own
+classes as well
+
+920
+00:56:47,002 --> 00:56:50,411
+so for more information about this
+
+921
+00:56:50,609 --> 00:56:53,670
+a there is of course the Swifts book I
+
+922
+00:56:53,067 --> 00:56:57,068
+the iBooks bookstore but also especially
+like to call attention to the using
+
+923
+00:56:57,077 --> 00:57:01,091
+swift with cocaine objective-c document
+that we have a developer Apple com
+
+924
+00:57:01,091 --> 00:57:04,154
+Savile was a PDF file you can download
+and read on your
+
+925
+00:57:05,054 --> 00:57:08,383
+there I was device and it really goes
+into
+
+926
+00:57:08,869 --> 00:57:13,060
+a lot more details about this the summer
+related sessions
+
+927
+00:57:13,006 --> 00:57:16,030
+one of them in has already been but it's
+on video
+
+928
+00:57:16,003 --> 00:57:19,100
+the introduction to Swift a course later
+on today there's going to be a session
+
+929
+00:57:20,027 --> 00:57:20,065
+on
+
+930
+00:57:20,065 --> 00:57:24,120
+in swift interoperability and DAP and
+that goes into more the language detail
+
+931
+00:57:25,002 --> 00:57:25,401
+so
+
+932
+00:57:25,599 --> 00:57:30,621
+out to mix objective-c was swept there's
+a great great session on creating modern
+
+933
+00:57:30,819 --> 00:57:32,170
+collapse coming up
+
+934
+00:57:32,017 --> 00:57:35,074
+and another one a building modern
+framework so that you can make sure that
+
+935
+00:57:35,074 --> 00:57:36,146
+you make a framework some better ball
+
+936
+00:57:37,046 --> 00:57:42,124
+on iowa's and usable from swept thanks
+unknown
+
+937
+00:57:43,024 --> 00:57:43,893
+enjoy the rest of the week
+
