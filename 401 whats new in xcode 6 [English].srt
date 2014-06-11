@@ -18,7 +18,7 @@ into a few specific areas
 
 5
 00:00:28,419 --> 00:00:32,860
-have Xcode sex before we do though
+have Xcode6 before we do though
 
 6
 00:00:32,086 --> 00:00:35,137
