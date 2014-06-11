@@ -1,0 +1,4258 @@
+1
+00:00:14,009 --> 00:00:15,104
+hi welcome to the advanced class
+
+2
+00:00:16,085 --> 00:00:20,116
+shin
+
+3
+00:00:21,016 --> 00:00:21,113
+thank you arm
+
+4
+00:00:22,013 --> 00:00:25,064
+my name's Jacob Vargas I'm a software
+engineer at Apple and one of the
+
+5
+00:00:25,064 --> 00:00:26,121
+designers at the Clark API
+
+6
+00:00:27,021 --> 00:00:30,107
+and my colleagues and I put a lot of
+hard work into the club kid API
+
+7
+00:00:31,007 --> 00:00:34,045
+and I'm really excited talk to guys
+about it today so let's jump right into
+
+8
+00:00:34,045 --> 00:00:34,071
+it
+
+9
+00:00:34,071 --> 00:00:37,107
+so Clark it is
+
+10
+00:00:38,007 --> 00:00:41,044
+this thing that we've built on top over
+I cloud servers
+
+11
+00:00:41,044 --> 00:00:45,109
+we build a lot of my cloud services and
+what we're doing with Clark it is
+
+12
+00:00:46,009 --> 00:00:47,097
+exposing those database servers
+
+13
+00:00:47,097 --> 00:00:50,129
+that we use at Apple to all love you
+developers
+
+14
+00:00:51,029 --> 00:00:56,008
+I so we're actually using this this is
+something that we use in the new i cud
+
+15
+00:00:56,269 --> 00:00:59,040
+photos and i cud right feature that
+we're introducing
+
+16
+00:00:59,004 --> 00:01:04,015
+and we're building all that on topic
+like it if all this is
+
+17
+00:01:04,015 --> 00:01:07,076
+unfamiliar to you might want to go back
+and check out the introducing crockett
+
+18
+00:01:07,076 --> 00:01:07,135
+session
+
+19
+00:01:08,035 --> 00:01:11,063
+I was given on Tuesday and there should
+be videos online
+
+20
+00:01:11,063 --> 00:01:14,412
+so we're gonna jump right into this I
+
+21
+00:01:14,979 --> 00:01:18,140
+what we're gonna learn today we're gonna
+go over the clark et private database
+
+22
+00:01:18,014 --> 00:01:20,068
+which is a way for you to store private
+user information
+
+23
+00:01:20,068 --> 00:01:23,153
+in my class we're gonna talk about
+modeling your data in cloud kit
+
+24
+00:01:24,053 --> 00:01:28,096
+I we're gonna talk about Advance record
+manipulation in different ways of saving
+
+25
+00:01:28,096 --> 00:01:29,124
+records to the server
+
+26
+00:01:30,024 --> 00:01:34,028
+we're gonna go over how to handle
+notifications reliably
+
+27
+00:01:34,028 --> 00:01:39,028
+I a few miss a push what to do and
+finally we're gonna go over the Eichler
+
+28
+00:01:39,028 --> 00:01:42,126
+dashboard which is a web-based interface
+for managing a club kid application
+
+29
+00:01:43,026 --> 00:01:48,111
+so let's start off by looking at the
+clock API really quick
+
+30
+00:01:49,011 --> 00:01:53,065
+we designed the clerk API to be highly a
+synchronous
+
+31
+00:01:53,065 --> 00:01:56,150
+everything has a call back on nothing is
+synchronous
+
+32
+00:01:57,005 --> 00:02:00,062
+and we did this because all these
+requests are going out over the network
+
+33
+00:02:01,007 --> 00:02:04,596
+I when you get the network involved
+anything can happen you know the server
+
+34
+00:02:04,659 --> 00:02:08,190
+might not be responding quickly there
+might be a bad network connection
+
+35
+00:02:08,019 --> 00:02:11,083
+I we don't want to block the UI and
+cause a better user experience
+
+36
+00:02:11,083 --> 00:02:16,072
+and to help do this we've used and its
+operation almost everywhere in our API
+
+37
+00:02:16,819 --> 00:02:22,080
+I I say almost everywhere because if you
+went to the introductory session you
+
+38
+00:02:22,008 --> 00:02:24,637
+remember seen what I we called the
+convenience API
+
+39
+00:02:24,709 --> 00:02:28,530
+and the convenience API is our way of
+helping you get
+
+40
+00:02:28,053 --> 00:02:32,147
+started with Clark it really quickly and
+simply are all these APIs are
+
+41
+00:02:33,047 --> 00:02:37,094
+you know single calls at work on are one
+record at the time so in this case were
+
+42
+00:02:37,094 --> 00:02:38,129
+fetching one record
+
+43
+00:02:39,029 --> 00:02:43,042
+and its a synchronous we get that one
+record back in our completion handler
+
+44
+00:02:43,042 --> 00:02:46,109
+but as he's clock it more you might find
+that you need some additional
+
+45
+00:02:47,009 --> 00:02:48,018
+functionality
+
+46
+00:02:48,018 --> 00:02:51,050
+and that's where the NS operation based
+API comes in
+
+47
+00:02:51,005 --> 00:02:55,016
+so what we've got here is the CK fetch
+records operation
+
+48
+00:02:55,061 --> 00:02:59,078
+and this is an NS operation that does
+the equipment at their convenience API
+
+49
+00:02:59,078 --> 00:02:59,154
+we just saw
+
+50
+00:03:00,054 --> 00:03:03,069
+we give you a lot more functionality
+when you use the
+
+51
+00:03:03,069 --> 00:03:06,090
+Ennis operation base API so you can see
+here that
+
+52
+00:03:06,009 --> 00:03:09,053
+are initializer takes a array record
+ID's
+
+53
+00:03:10,034 --> 00:03:15,065
+you can fetch a whole batch records all
+at once we also give your feedback on
+
+54
+00:03:15,065 --> 00:03:19,014
+what's happening we've got a completion
+block for each record and we also give
+
+55
+00:03:19,599 --> 00:03:22,300
+you progress as we download those
+records from the server
+
+56
+00:03:22,003 --> 00:03:26,049
+and finally these operations give you
+more
+
+57
+00:03:26,076 --> 00:03:30,085
+knobs and levers to tweak what what is
+returned in what the operation does
+
+58
+00:03:31,066 --> 00:03:35,645
+on this case we've got a desired keys
+property the lets you specify what he
+
+59
+00:03:36,239 --> 00:03:38,120
+should come back on the records if you
+catch
+
+60
+00:03:38,012 --> 00:03:44,027
+so since all this is built on and its
+operation let's do a quick overview of
+
+61
+00:03:44,027 --> 00:03:44,034
+what the
+
+62
+00:03:44,097 --> 00:03:48,696
+and its operation class looks like are
+what we got in and its operation is a
+
+63
+00:03:49,569 --> 00:03:50,970
+completion block Anne
+
+64
+00:03:50,097 --> 00:03:53,196
+cancel call so that you can manage the
+life cycle your operation
+
+65
+00:03:54,069 --> 00:03:58,760
+we've got a couple variables that tell
+you some state about the operation
+
+66
+00:03:58,076 --> 00:04:01,098
+and and its operations have dependencies
+
+67
+00:04:01,098 --> 00:04:07,127
+seek and linked to Anna separations
+together what you have in its operation
+
+68
+00:04:08,027 --> 00:04:10,108
+you're going to want to start that
+operation and you do that by
+
+69
+00:04:11,008 --> 00:04:16,697
+adding it to A&S operation cue when you
+have an ass operation cue you can also
+
+70
+00:04:16,769 --> 00:04:16,827
+manage
+
+71
+00:04:17,349 --> 00:04:20,435
+the life cycle that operation cue you
+can suspended and resume it
+
+72
+00:04:21,209 --> 00:04:27,660
+and you can cancel the operations and so
+if you go to look at her and its
+
+73
+00:04:27,066 --> 00:04:30,124
+operation base API you might just see
+this big list I have a bunch a different
+
+74
+00:04:31,024 --> 00:04:34,133
+operations it's kinda overwhelming and
+confusing
+
+75
+00:04:34,349 --> 00:04:37,355
+are the best way to think about this API
+is to think about the
+
+76
+00:04:37,409 --> 00:04:41,770
+objects that you want to deal with I
+remember from the introductory talk
+
+77
+00:04:41,077 --> 00:04:45,616
+I clarke its base objects are records
+and zones and subscriptions
+
+78
+00:04:46,309 --> 00:04:50,334
+and you'll see that up here we have a
+factional modify operation for all those
+
+79
+00:04:50,559 --> 00:04:54,632
+items
+
+80
+00:04:55,289 --> 00:04:58,338
+one other really cool things about and
+its operation is that has dependencies
+
+81
+00:04:58,779 --> 00:05:01,830
+I so you can set a dependency between
+two operations
+
+82
+00:05:02,289 --> 00:05:06,800
+and the second operation won't fire
+until the first operation is completed
+
+83
+00:05:06,008 --> 00:05:10,187
+%uh this is really handy with cloud kid
+if you want to do something like fetch a
+
+84
+00:05:10,979 --> 00:05:12,020
+record
+
+85
+00:05:12,002 --> 00:05:15,511
+at a property to it and say that record
+back to the server
+
+86
+00:05:15,529 --> 00:05:18,627
+you can make the fetch records operation
+make the Modify operation at the same
+
+87
+00:05:19,509 --> 00:05:19,606
+time
+
+88
+00:05:20,479 --> 00:05:24,210
+set up a dependency and when the feds
+completes you can put that date in the
+
+89
+00:05:24,021 --> 00:05:28,065
+Modify operation and it'll start
+automatically
+
+90
+00:05:28,065 --> 00:05:32,484
+these dependencies also work between
+cues so even though Clark it has its own
+
+91
+00:05:33,069 --> 00:05:34,650
+internal operation cue
+
+92
+00:05:34,065 --> 00:05:37,984
+that you can use run operations your
+welcome to to create your own and its
+
+93
+00:05:38,569 --> 00:05:39,594
+operation cue
+
+94
+00:05:39,819 --> 00:05:42,891
+and you can then manage its life cycle
+you can stop operations are spending
+
+95
+00:05:43,539 --> 00:05:47,577
+more cancel them
+
+96
+00:05:47,919 --> 00:05:51,930
+I want one tip with using them and its
+operation though is that the
+
+97
+00:05:51,093 --> 00:05:54,942
+and its operation base class has a
+completion block on it
+
+98
+00:05:55,779 --> 00:05:58,861
+this completion block ends a fire in a
+synchronously with dependencies
+
+99
+00:05:59,599 --> 00:06:03,631
+30 setup dependencies n you using the
+and its operations completion block
+
+100
+00:06:03,919 --> 00:06:07,006
+they might happen at the same time and
+that data you're trying to funnel into
+
+101
+00:06:07,789 --> 00:06:10,360
+the next operation won't get there in
+time
+
+102
+00:06:10,036 --> 00:06:13,115
+you know that operation is already
+started so what we've done with the
+
+103
+00:06:13,439 --> 00:06:14,430
+crowd get a PI
+
+104
+00:06:14,043 --> 00:06:17,043
+is we have clout get specific completion
+box
+
+105
+00:06:17,043 --> 00:06:20,068
+and if we look at are what we had for
+that fetch records
+
+106
+00:06:20,068 --> 00:06:23,707
+operation we have a fat records
+completion block
+
+107
+00:06:24,319 --> 00:06:27,368
+are you'll see this pattern on all over
+and its operations and these completion
+
+108
+00:06:27,809 --> 00:06:28,842
+blocks hand back
+
+109
+00:06:29,139 --> 00:06:32,800
+all the information you need to know
+about the operation it just ran
+
+110
+00:06:32,008 --> 00:06:36,052
+in this case we've got the heirs for
+that operation and we've also got the
+
+111
+00:06:37,024 --> 00:06:40,253
+records that were fetched
+
+112
+00:06:40,469 --> 00:06:44,020
+and finally and its operations can have
+their own priorities so you can set
+
+113
+00:06:44,002 --> 00:06:46,011
+background operations and have a
+runnable
+
+114
+00:06:46,011 --> 00:06:50,650
+really low priority and keep your UI
+responsive
+
+115
+00:06:50,749 --> 00:06:53,710
+so when we were designing cloud kid
+wanna things we noticed is that there's
+
+116
+00:06:53,071 --> 00:06:55,810
+two general classes applications
+
+117
+00:06:56,449 --> 00:07:00,490
+there's one class application that
+stores a whole buncha data up on the
+
+118
+00:07:00,049 --> 00:07:01,028
+server
+
+119
+00:07:01,469 --> 00:07:04,492
+and when you use the application it's
+just presenting a viewer that data it
+
+120
+00:07:04,699 --> 00:07:06,460
+downloaded on demand
+
+121
+00:07:06,046 --> 00:07:10,055
+displayed to the user and then you know
+tosses it out because it's the real
+
+122
+00:07:10,469 --> 00:07:12,240
+copies on the server
+
+123
+00:07:12,024 --> 00:07:15,086
+but there's another class application
+that has just a little bit data
+
+124
+00:07:15,086 --> 00:07:18,171
+but you want that same data on all the
+clients
+
+125
+00:07:19,071 --> 00:07:22,240
+so if you remember from the introductory
+talk we talked about that what we call
+
+126
+00:07:22,879 --> 00:07:23,923
+Big Data little fun
+
+127
+00:07:24,319 --> 00:07:27,382
+that's the case where we have a lot to
+date on the server it's not all gonna
+
+128
+00:07:27,949 --> 00:07:28,991
+fit on one phone
+
+129
+00:07:29,369 --> 00:07:32,395
+and you downloaded and viewed on demand
+so you can see these
+
+130
+00:07:32,629 --> 00:07:35,740
+clients are downloading records feeling
+I'm and
+
+131
+00:07:35,074 --> 00:07:38,105
+the truth lives up on the server
+
+132
+00:07:39,005 --> 00:07:42,494
+however there's another class
+application where
+
+133
+00:07:42,539 --> 00:07:45,614
+it's a small amount of data it lives on
+one client but you wanted on all your
+
+134
+00:07:46,289 --> 00:07:46,352
+clients
+
+135
+00:07:46,919 --> 00:07:49,961
+i an example this is an application that
+manages the receipts
+
+136
+00:07:50,339 --> 00:07:54,425
+so I every time you buy something you
+take pictures 3 seed
+
+137
+00:07:55,199 --> 00:07:59,252
+and you want that information on your
+phone in your iPad and your Mac
+
+138
+00:07:59,729 --> 00:08:04,827
+and you want them all to be up to date
+with the same receipts
+
+139
+00:08:05,709 --> 00:08:09,727
+so what we've done to help you solve
+that is we've got something in car kit
+
+140
+00:08:09,889 --> 00:08:09,945
+that does a
+
+141
+00:08:10,449 --> 00:08:14,480
+a if you remember we have every
+application its container
+
+142
+00:08:14,759 --> 00:08:17,786
+in every container is a public and
+private database
+
+143
+00:08:18,029 --> 00:08:21,054
+and just a as a refresher that private
+databases
+
+144
+00:08:21,279 --> 00:08:25,366
+actually one private database for every
+user
+
+145
+00:08:26,149 --> 00:08:29,177
+insiders the bases we then subdivided
+down into zones
+
+146
+00:08:29,429 --> 00:08:33,527
+so both the public and the private
+database have a default on them
+
+147
+00:08:34,409 --> 00:08:38,990
+but we've also given you what we call
+customs and these custom zones allow us
+
+148
+00:08:38,099 --> 00:08:40,768
+to give me some extra features that we
+can't provide
+
+149
+00:08:41,659 --> 00:08:46,700
+in the default I'll you can create these
+custom zones and
+
+150
+00:08:46,007 --> 00:08:50,008
+use the new features I let's go over
+couple
+
+151
+00:08:50,008 --> 00:08:53,081
+%uh the first feature is atomic commits
+
+152
+00:08:54,053 --> 00:08:58,104
+so Clark it has relationships between
+records and if you start using cloud kid
+
+153
+00:08:59,004 --> 00:09:01,078
+and using these relationships are gonna
+build up an object
+
+154
+00:09:01,078 --> 00:09:04,127
+object graph and you're gonna realize
+you want consistency
+
+155
+00:09:05,027 --> 00:09:09,048
+in your data I if you know you might
+have an object graph that you want to
+
+156
+00:09:09,048 --> 00:09:10,062
+commit all at once
+
+157
+00:09:10,062 --> 00:09:13,140
+and if some other things don't get
+committed the date on the server doesn't
+
+158
+00:09:14,004 --> 00:09:15,096
+make sense
+
+159
+00:09:16,032 --> 00:09:19,126
+on the public database we can guarantee
+that because there might be thousands or
+
+160
+00:09:20,026 --> 00:09:22,030
+millions of users hidden same database
+
+161
+00:09:22,003 --> 00:09:26,010
+so there's no way to lock the database
+while we you know commit your very
+
+162
+00:09:26,037 --> 00:09:27,090
+special records
+
+163
+00:09:27,009 --> 00:09:30,092
+but in the private database you only
+have one user its
+
+164
+00:09:31,073 --> 00:09:35,092
+the current user's account and in that
+case we can provide you things like
+
+165
+00:09:35,092 --> 00:09:39,159
+atomic commits
+
+166
+00:09:40,059 --> 00:09:44,084
+so with atomic commits these batch
+operations in the end its operation API
+
+167
+00:09:44,084 --> 00:09:47,085
+will succeed or fail as a whole so if
+
+168
+00:09:47,085 --> 00:09:50,086
+any record had a problem you will get
+back
+
+169
+00:09:50,095 --> 00:09:53,156
+a CK air partial failure
+
+170
+00:09:54,056 --> 00:09:57,121
+inside that partial failure air you're
+gonna see a user the user info
+
+171
+00:09:58,021 --> 00:09:59,105
+dictionary is gonna have this
+
+172
+00:10:00,005 --> 00:10:03,040
+seek a partial errors by item id:
+
+173
+00:10:03,004 --> 00:10:06,042
+and that's going to be a dictionary
+record ID's to
+
+174
+00:10:06,078 --> 00:10:10,099
+errors for each of those records and
+some of those areas are going to be
+
+175
+00:10:10,099 --> 00:10:13,100
+the real failures that you care about
+these are the reasons that the atomic
+
+176
+00:10:14,000 --> 00:10:15,036
+commit failed
+
+177
+00:10:15,036 --> 00:10:18,075
+but you know the rest of the records
+fail because it was atomic commit
+
+178
+00:10:18,075 --> 00:10:22,078
+and we need to let you know that they
+failed see also gonna CCK air bats
+
+179
+00:10:22,078 --> 00:10:23,131
+request failed
+
+180
+00:10:24,031 --> 00:10:27,060
+that's just the way of saying that
+something else in this batch failed and
+
+181
+00:10:27,006 --> 00:10:28,055
+you know this wasn't the real problem
+
+182
+00:10:29,009 --> 00:10:32,095
+it was that other record in here
+
+183
+00:10:32,095 --> 00:10:36,194
+another great feature that we give you
+with custom zones our Delta downloads
+
+184
+00:10:37,094 --> 00:10:41,095
+so Delta downloads our way for that
+second class application
+
+185
+00:10:41,095 --> 00:10:44,109
+to be possible in Crockett I you can
+download
+
+186
+00:10:45,009 --> 00:10:50,066
+only the changes that were made in that
+zone and you can catch them all locally
+
+187
+00:10:50,066 --> 00:10:53,132
+so what does that look like well we've
+got our Mac here
+
+188
+00:10:54,032 --> 00:10:57,094
+we've got a iphone and we've got a
+customs up
+
+189
+00:10:57,094 --> 00:11:00,136
+so let's step through a delta download
+really quick we got
+
+190
+00:11:01,036 --> 00:11:04,083
+in orange record in a green record over
+on the Mac here and we want them on the
+
+191
+00:11:04,083 --> 00:11:05,086
+phone as well
+
+192
+00:11:05,086 --> 00:11:09,181
+so we're gonna first upload those both
+in the car kit in our customs own
+
+193
+00:11:10,081 --> 00:11:16,177
+and then are iPhone is gonna perform a
+delta download to get up-to-date
+
+194
+00:11:17,077 --> 00:11:20,089
+cities doctor downloads are based on
+what we call change tokens
+
+195
+00:11:20,089 --> 00:11:23,147
+and a change took it as a way of
+tracking the state the server the last
+
+196
+00:11:24,047 --> 00:11:25,119
+time you talked to it
+
+197
+00:11:26,019 --> 00:11:29,028
+so this phone has never talk to the
+server and
+
+198
+00:11:29,028 --> 00:11:31,106
+what it's going to do is send up a new
+change token and that's the way of
+
+199
+00:11:32,006 --> 00:11:36,010
+saying I'm never talk to you to send me
+all the records in the cell
+
+200
+00:11:36,001 --> 00:11:40,037
+so the service going to take that no
+change token send down and/or the orange
+
+201
+00:11:40,046 --> 00:11:41,089
+record in green record
+
+202
+00:11:41,089 --> 00:11:44,143
+the phone is gonna save them into its
+local database and then the servers
+
+203
+00:11:45,043 --> 00:11:46,134
+gonna send out a new change token
+
+204
+00:11:47,034 --> 00:11:50,063
+on this case it's changed okay and that
+means that
+
+205
+00:11:50,063 --> 00:11:53,151
+you know the records you have are all
+from state a
+
+206
+00:11:54,051 --> 00:11:57,080
+if the phone came back again with change
+taking a the server will go well I don't
+
+207
+00:11:57,008 --> 00:11:58,031
+have anything for you
+
+208
+00:11:59,003 --> 00:12:03,056
+is good enough there's nothing to
+download
+
+209
+00:12:03,056 --> 00:12:06,059
+but let's say the Mac comes along and it
+creates that purple record
+
+210
+00:12:06,086 --> 00:12:10,169
+and it deletes the green record and it
+upload those changes to the server
+
+211
+00:12:11,069 --> 00:12:14,101
+the servers go to track the changes so
+it'll note that that green record was
+
+212
+00:12:15,001 --> 00:12:15,067
+deleted
+
+213
+00:12:15,067 --> 00:12:18,120
+it'll note that there's a new purple
+record and now when the iPhone comes
+
+214
+00:12:19,002 --> 00:12:20,091
+back with change take a
+
+215
+00:12:21,009 --> 00:12:24,010
+the server goes alright well we're it be
+now
+
+216
+00:12:24,019 --> 00:12:28,037
+that's farther than a here's a deleted
+the green record and here's a new purple
+
+217
+00:12:28,037 --> 00:12:29,091
+record that happened while
+
+218
+00:12:29,091 --> 00:12:34,102
+you know since the last time we talk
+then it sends back then you change token
+
+219
+00:12:35,002 --> 00:12:38,068
+and everyone is up to date
+
+220
+00:12:38,068 --> 00:12:41,147
+seeking use this Dell to download to
+implement an offline caching your
+
+221
+00:12:42,047 --> 00:12:44,071
+application
+
+222
+00:12:44,071 --> 00:12:47,118
+if you want to do that there's a couple
+steps you up should take this is kinda
+
+223
+00:12:48,018 --> 00:12:51,081
+outlined above basic state machine for
+every time you talk to the server and
+
+224
+00:12:51,081 --> 00:12:53,156
+you want to do it all to download
+
+225
+00:12:54,056 --> 00:12:57,087
+the first thing you're going to want to
+do in your apt is to track the local
+
+226
+00:12:57,087 --> 00:12:58,091
+changes
+
+227
+00:12:58,091 --> 00:13:02,126
+you're gonna wanna make a change table
+and every time the user makes an edit in
+
+228
+00:13:03,026 --> 00:13:05,028
+your application you want to write that
+down
+
+229
+00:13:05,046 --> 00:13:08,052
+I you're gonna wanna do this because you
+might be offline when the user makes
+
+230
+00:13:08,052 --> 00:13:11,137
+changes and you're gonna need a replay
+all those changes back to the server
+
+231
+00:13:12,037 --> 00:13:16,041
+when you can talk to
+
+232
+00:13:16,041 --> 00:13:19,045
+then you're gonna need to send all those
+changes up to the server you want to do
+
+233
+00:13:19,045 --> 00:13:21,112
+that before you fetch the changes
+because
+
+234
+00:13:22,012 --> 00:13:24,109
+someone else might have changed the
+record in the meantime and you need to
+
+235
+00:13:25,009 --> 00:13:27,061
+resolve these conflicts
+
+236
+00:13:27,061 --> 00:13:30,092
+so we'll go over conflict handling in
+just a little bit but just keep in mind
+
+237
+00:13:30,092 --> 00:13:33,168
+that that's an important step in this
+process here
+
+238
+00:13:34,068 --> 00:13:38,072
+finally ready to do the Delta download
+this is the point we're gonna call seek
+
+239
+00:13:38,072 --> 00:13:40,167
+a pet record changes operation
+
+240
+00:13:41,067 --> 00:13:45,159
+the server is going to send you back I
+updates and deletes and modifies and
+
+241
+00:13:46,059 --> 00:13:47,065
+adds up records
+
+242
+00:13:48,019 --> 00:13:51,098
+and you're gonna say those in your local
+database
+
+243
+00:13:51,098 --> 00:13:54,131
+finally the service can send you back in
+New change took in and that's the change
+
+244
+00:13:55,031 --> 00:13:58,076
+took in you want to save so that the
+next time you talk to the server
+
+245
+00:13:58,076 --> 00:14:04,080
+you can get only the records that have
+changed and not everything
+
+246
+00:14:04,008 --> 00:14:06,091
+so what are the other features we give
+you with custom zones and Delta
+
+247
+00:14:07,063 --> 00:14:09,116
+downloads our zone subscriptions
+
+248
+00:14:10,016 --> 00:14:13,020
+i in the case of that state machine I
+just talked about I
+
+249
+00:14:13,002 --> 00:14:16,083
+you could poll every you know ten
+minutes or five minutes or whatever and
+
+250
+00:14:17,001 --> 00:14:19,010
+hope that their changes up there
+
+251
+00:14:19,001 --> 00:14:22,049
+but wouldn't it be great if the server
+just told you have got changes it's time
+
+252
+00:14:22,058 --> 00:14:23,094
+for Delta download
+
+253
+00:14:23,094 --> 00:14:26,145
+well we give you that we give you what
+we call zone subscriptions
+
+254
+00:14:27,045 --> 00:14:31,072
+these look like weary subscriptions but
+they're a little bit different
+
+255
+00:14:31,072 --> 00:14:35,101
+what they do is every time something
+changes in a custom zone
+
+256
+00:14:36,001 --> 00:14:40,009
+you get a push notification when you see
+that push notification you know you
+
+257
+00:14:40,009 --> 00:14:42,041
+should go do a delta download with
+server
+
+258
+00:14:42,041 --> 00:14:47,117
+and you'll get new records
+
+259
+00:14:48,017 --> 00:14:52,025
+so a couple notes on designing custom
+zones and when you should use them
+
+260
+00:14:52,097 --> 00:14:55,175
+these custom zones are meant to
+compartmentalize your data
+
+261
+00:14:56,075 --> 00:14:59,138
+are because it that there's a couple
+restrictions on the the first is that
+
+262
+00:15:00,038 --> 00:15:02,117
+you can't move records between zones
+
+263
+00:15:03,017 --> 00:15:06,110
+you can pick these records up in copy
+and make a new copy in a new zone
+
+264
+00:15:07,001 --> 00:15:12,013
+but you can't move 'em are you also
+can't make any cross the zone
+
+265
+00:15:12,022 --> 00:15:16,046
+delete self relationships so you have to
+think in these zones as
+
+266
+00:15:16,046 --> 00:15:19,049
+as self-contained if you have records
+that need to go across town he might
+
+267
+00:15:19,076 --> 00:15:22,169
+want to rethink your model
+
+268
+00:15:23,069 --> 00:15:26,070
+and finally the zones determine the
+level of updates
+
+269
+00:15:26,079 --> 00:15:29,110
+to using his own subscription you're
+going to get a push every single time
+
+270
+00:15:30,001 --> 00:15:32,010
+something has changed in that cell
+
+271
+00:15:32,019 --> 00:15:36,054
+I if you have a lot of data on the
+server and you only care about getting
+
+272
+00:15:36,054 --> 00:15:38,109
+updates for one party that day to you
+might wanna make
+
+273
+00:15:39,009 --> 00:15:43,055
+that as own so that you can ignore the
+you know really busy stuff going on over
+
+274
+00:15:43,055 --> 00:15:44,090
+here and just download
+
+275
+00:15:44,009 --> 00:15:51,009
+things you care about
+
+276
+00:15:52,025 --> 00:15:55,108
+so let's talk about some advance record
+operations
+
+277
+00:15:56,008 --> 00:16:00,033
+when you're using seek a record any
+changes you make to seek a record object
+
+278
+00:16:00,033 --> 00:16:01,047
+locally
+
+279
+00:16:01,047 --> 00:16:04,049
+get tracked and then when we talk to the
+server
+
+280
+00:16:04,067 --> 00:16:07,163
+we're only gonna send the changes that
+you may do that seek a record
+
+281
+00:16:08,063 --> 00:16:11,112
+this is the default behavior and it
+works great most the time but
+
+282
+00:16:12,012 --> 00:16:16,068
+you might want some additional control
+over what we're sending to the server
+
+283
+00:16:16,068 --> 00:16:19,085
+and we give you that with save policies
+
+284
+00:16:19,085 --> 00:16:23,156
+so the same policies we have three in on
+their seek a record say the server
+
+285
+00:16:24,056 --> 00:16:25,123
+unchanged
+
+286
+00:16:26,023 --> 00:16:29,081
+we have CK record save change keys
+
+287
+00:16:29,081 --> 00:16:33,158
+and we have CK record save all keys
+
+288
+00:16:34,058 --> 00:16:38,058
+so let's look at the differences between
+this
+
+289
+00:16:38,058 --> 00:16:41,100
+are the biggest difference is what they
+did determined for
+
+290
+00:16:42,000 --> 00:16:46,093
+a what I'm gonna call a locked save and
+a lock save as a way of making sure that
+
+291
+00:16:46,093 --> 00:16:49,160
+you don't overwrite data on the server
+that someone else has re-written
+
+292
+00:16:50,006 --> 00:16:53,041
+when you perform a locked save it says
+that I
+
+293
+00:16:53,095 --> 00:16:57,111
+if the record has changed since the on
+the server since the tiny fetched it
+
+294
+00:16:58,011 --> 00:17:01,029
+the server I'll give you an error saying
+your record is out-of-date
+
+295
+00:17:01,029 --> 00:17:04,061
+you need to resolve this conflict and
+try again
+
+296
+00:17:04,061 --> 00:17:07,760
+so the only thing that performs a locked
+safe here is see Carey
+
+297
+00:17:08,309 --> 00:17:12,760
+CK record save policy save its server
+unchanged
+
+298
+00:17:12,076 --> 00:17:16,090
+the other two actually force these
+changes to the servers so save change
+
+299
+00:17:16,009 --> 00:17:17,067
+keys and save all keys
+
+300
+00:17:18,048 --> 00:17:22,327
+always over at the values on the server
+
+301
+00:17:22,759 --> 00:17:26,767
+these policies also determine how much
+data were sent into the server
+
+302
+00:17:27,559 --> 00:17:31,690
+in the case have save its server
+unchanged and save change keys
+
+303
+00:17:31,069 --> 00:17:34,538
+we're only gonna chill send up the wreck
+third we're only gonna send up the
+
+304
+00:17:35,159 --> 00:17:36,206
+values on the record
+
+305
+00:17:36,629 --> 00:17:39,707
+that have changed in the case have save
+all keys were gonna send the entire
+
+306
+00:17:40,409 --> 00:17:45,210
+record all the values whether you change
+them or not
+
+307
+00:17:45,021 --> 00:17:48,096
+so back to locked updates we've got this
+
+308
+00:17:48,096 --> 00:17:51,435
+a thing called locking and if you don't
+use it
+
+309
+00:17:52,299 --> 00:17:55,720
+here's what could go wrong with an
+unlocked update I'll right now we've got
+
+310
+00:17:55,072 --> 00:17:56,109
+this Contact Card
+
+311
+00:17:57,009 --> 00:18:00,428
+we've got same name first name last name
+picture
+
+312
+00:18:00,509 --> 00:18:04,510
+on to clients and the nine class
+everything's good right now
+
+313
+00:18:04,519 --> 00:18:08,340
+but let's say the iPhone changes that
+contact completely certain modifies the
+
+314
+00:18:08,034 --> 00:18:09,048
+picture it modifies
+
+315
+00:18:09,048 --> 00:18:13,111
+first name and it modifies the last name
+well it's gonna perform a save change
+
+316
+00:18:14,011 --> 00:18:15,060
+keys to the server
+
+317
+00:18:15,006 --> 00:18:18,044
+which is gonna send up the things that
+that have changed and that's gonna
+
+318
+00:18:18,098 --> 00:18:21,145
+over right whatever is on the server
+
+319
+00:18:22,045 --> 00:18:25,964
+next before the Mac it's a chance to
+download that record the user edited the
+
+320
+00:18:26,369 --> 00:18:26,435
+first name
+
+321
+00:18:27,029 --> 00:18:30,320
+that record and just changed it and that
+Mac
+
+322
+00:18:30,032 --> 00:18:33,041
+then sends does a safe change keys with
+the server
+
+323
+00:18:34,022 --> 00:18:38,061
+and it sent up just the property that
+was modified and now we've got a problem
+
+324
+00:18:38,061 --> 00:18:38,480
+here
+
+325
+00:18:39,029 --> 00:18:42,057
+apps we've got a problem this contact
+record
+
+326
+00:18:42,309 --> 00:18:47,470
+isn't what either the client's meant to
+have so to work around this
+
+327
+00:18:47,047 --> 00:18:51,246
+we have locked updates and locked
+updates are we r
+
+328
+00:18:51,669 --> 00:18:54,767
+making sure that the server knows that
+you're updating the same values that are
+
+329
+00:18:55,649 --> 00:18:56,723
+already on the server
+
+330
+00:18:57,389 --> 00:19:01,398
+and we do this with the chainstay so the
+change takes the property on the record
+
+331
+00:19:02,289 --> 00:19:06,980
+that necessarily changes anytime a value
+in the record changes
+
+332
+00:19:06,098 --> 00:19:09,159
+in this case we got changed a gay both
+on the server and locally
+
+333
+00:19:10,059 --> 00:19:14,082
+and so we know that they both have the
+same values
+
+334
+00:19:14,082 --> 00:19:17,541
+if we go in we add a new property on the
+local record
+
+335
+00:19:18,279 --> 00:19:21,280
+when we say that to the server using the
+default say policy
+
+336
+00:19:21,379 --> 00:19:26,860
+it's gonna send up both the change take
+and the property the changed
+
+337
+00:19:26,086 --> 00:19:30,087
+the servers then before does anything
+it's gonna check the to change takes
+
+338
+00:19:30,096 --> 00:19:35,111
+and 30 quill will apply the change that
+you made
+
+339
+00:19:36,011 --> 00:19:39,300
+if on the other hand we have another
+client dead
+
+340
+00:19:39,399 --> 00:19:43,423
+up for and then the server is going to
+send back a new change take because we
+
+341
+00:19:43,639 --> 00:19:45,639
+did change a property
+
+342
+00:19:45,639 --> 00:19:49,490
+we return this new record to you with
+the updated change take
+
+343
+00:19:49,049 --> 00:19:52,054
+in the completion book so if you take
+the record that we give you at the end
+
+344
+00:19:52,099 --> 00:19:53,388
+of a save
+
+345
+00:19:54,279 --> 00:19:57,282
+and you do all your subsequent put
+modifications on that
+
+346
+00:19:57,309 --> 00:20:00,450
+you'll be using the updated change token
+and you shouldn't have an
+
+347
+00:20:00,045 --> 00:20:03,073
+any conflicts with the server
+
+348
+00:20:03,073 --> 00:20:06,132
+now let's say we have another client
+that you know hadn't seen that change in
+
+349
+00:20:06,789 --> 00:20:07,824
+he was still a virgin a
+
+350
+00:20:08,139 --> 00:20:11,730
+and he decides to add a different
+property record
+
+351
+00:20:11,073 --> 00:20:14,122
+well he's gonna save it to the server
+he's gonna send up the change tag
+
+352
+00:20:15,022 --> 00:20:19,022
+and modify property and the server is
+going to realize that
+
+353
+00:20:19,022 --> 00:20:22,110
+hey those two values at the same and the
+client's gonna get back
+
+354
+00:20:23,001 --> 00:20:26,390
+an air sane you know you have a conflict
+
+355
+00:20:26,489 --> 00:20:29,830
+so how do we handle these conflicts
+
+356
+00:20:29,083 --> 00:20:32,111
+well if you run into this case a bar
+locks a failing
+
+357
+00:20:33,011 --> 00:20:37,022
+you gonna get an error that CK your
+server record changed
+
+358
+00:20:37,022 --> 00:20:40,044
+and because you guys all went to the
+introductory talk and you learned about
+
+359
+00:20:40,044 --> 00:20:42,053
+how great air handling is and how
+important it is
+
+360
+00:20:43,034 --> 00:20:47,093
+are you got some fantastic air handling
+here and its gonna check for C Care
+
+361
+00:20:47,399 --> 00:20:49,461
+Survey record changed
+
+362
+00:20:50,019 --> 00:20:53,020
+when you see that you know they your
+out-of-date you're gonna need to get the
+
+363
+00:20:53,119 --> 00:20:54,156
+new record from the server
+
+364
+00:20:54,489 --> 00:20:57,502
+you're gonna need to take your local
+changes apply them to that record and
+
+365
+00:20:57,619 --> 00:20:59,590
+try the same again
+
+366
+00:20:59,059 --> 00:21:02,648
+and we've already anticipated that so
+what we're gonna do is help you out a
+
+367
+00:21:03,179 --> 00:21:04,179
+little bit
+
+368
+00:21:04,179 --> 00:21:07,730
+and we're going to return those records
+to you already because we know
+
+369
+00:21:07,073 --> 00:21:11,352
+that's the next logical thing to do so
+inside the user in for a dictionary of
+
+370
+00:21:12,009 --> 00:21:12,017
+despair
+
+371
+00:21:12,809 --> 00:21:15,830
+you're gonna find three copies of the
+record
+
+372
+00:21:15,083 --> 00:21:18,292
+you can find the record that you
+attempted to save to the server
+
+373
+00:21:19,039 --> 00:21:22,110
+the one that encountered the air
+
+374
+00:21:22,011 --> 00:21:25,060
+you can find the original copy at the
+local record which is
+
+375
+00:21:25,006 --> 00:21:29,030
+the copy we downloaded from the server
+it before you made any changes
+
+376
+00:21:29,084 --> 00:21:32,110
+and finally we're gonna give you the
+server record back this is the copy the
+
+377
+00:21:33,001 --> 00:21:36,002
+record with the most up-to-date change
+take
+
+378
+00:21:36,002 --> 00:21:39,471
+you're gonna want to figure out what
+makes sense
+
+379
+00:21:39,669 --> 00:21:43,741
+out of all those copies values and keys
+you can apply them all to the server
+
+380
+00:21:44,389 --> 00:21:45,950
+version for the record
+
+381
+00:21:45,095 --> 00:21:49,654
+and then you're going to retry that safe
+
+382
+00:21:50,509 --> 00:21:53,850
+see might be wondering at this point you
+know what type I love save
+
+383
+00:21:53,085 --> 00:21:57,098
+policy should use and the simple answer
+to that is that you should just
+
+384
+00:21:57,098 --> 00:22:00,147
+always you seek a record save unchanged
+
+385
+00:22:01,047 --> 00:22:04,626
+and it's the default it's a default for
+a reason and that's because it's the
+
+386
+00:22:05,049 --> 00:22:05,830
+safest
+
+387
+00:22:05,083 --> 00:22:08,107
+I if you remember that example have an
+unlocked uptake on bad
+
+388
+00:22:09,007 --> 00:22:12,696
+you could end up with really mixed up
+corrupt data on the server if you're not
+
+389
+00:22:12,759 --> 00:22:14,832
+using block
+
+390
+00:22:15,489 --> 00:22:19,830
+however there is always a time and place
+for using unlocked updates
+
+391
+00:22:19,083 --> 00:22:23,002
+and the biggest case for this are highly
+contentious updates
+
+392
+00:22:23,749 --> 00:22:26,754
+if you're doing anything in the public
+database you might have hundreds or
+
+393
+00:22:26,799 --> 00:22:29,897
+thousands or millions of clients
+accessing at the same time
+
+394
+00:22:30,779 --> 00:22:33,780
+and if every one of those clients is
+trying to save
+
+395
+00:22:33,789 --> 00:22:37,610
+say the same record and you're locking
+on that
+
+396
+00:22:37,061 --> 00:22:40,480
+most those clients are gonna be hitting
+locking there's a gonna hit complex
+
+397
+00:22:41,029 --> 00:22:45,042
+and they're gonna be retrained really
+frequently City know this is going to be
+
+398
+00:22:45,159 --> 00:22:46,860
+a really contentious update
+
+399
+00:22:46,086 --> 00:22:49,635
+you can structure your client to do
+unlocked updates as long as you know
+
+400
+00:22:50,409 --> 00:22:52,455
+you're always ready inconsistent
+properties
+
+401
+00:22:52,869 --> 00:22:56,460
+on the cases that unlocked update the
+failed you know you could make sure you
+
+402
+00:22:56,046 --> 00:22:58,084
+always read both the first and last name
+
+403
+00:22:58,084 --> 00:23:01,158
+and you know it'll be consistent
+
+404
+00:23:02,058 --> 00:23:05,607
+the other reason to use a unlocked
+update in the case they've saved
+
+405
+00:23:06,129 --> 00:23:09,132
+save all keys would be if you wanna for
+something to the server
+
+406
+00:23:09,159 --> 00:23:12,183
+the client might say you know the copy
+on the server is bad but I know I have a
+
+407
+00:23:12,399 --> 00:23:13,483
+good copy the record here
+
+408
+00:23:14,239 --> 00:23:20,230
+I wanna just forced at all on top of the
+servers copy
+
+409
+00:23:20,023 --> 00:23:23,422
+there are some catches to use in favour
+keys
+
+410
+00:23:23,629 --> 00:23:27,707
+and one of the problems is that any
+property on the server
+
+411
+00:23:28,409 --> 00:23:31,820
+that doesn't exist in the local record
+that you're trying to save
+
+412
+00:23:31,082 --> 00:23:36,021
+isn't gonna get removed in less you
+explicitly remove that record their
+
+413
+00:23:36,759 --> 00:23:37,832
+property on the record
+
+414
+00:23:38,489 --> 00:23:41,508
+on all those words are really confusing
+
+415
+00:23:41,679 --> 00:23:44,450
+and it's really hard to explain so
+instead I'm gonna try and explain that
+
+416
+00:23:44,045 --> 00:23:45,136
+with the picture here
+
+417
+00:23:46,036 --> 00:23:49,135
+so we've got our our contact record
+again what we're gonna do is add a
+
+418
+00:23:50,035 --> 00:23:51,464
+couple properties were gonna change
+
+419
+00:23:51,779 --> 00:23:54,803
+first name we're going to add a new
+property and we're gonna delete the
+
+420
+00:23:55,019 --> 00:23:56,094
+hobby
+
+421
+00:23:56,769 --> 00:24:00,821
+we're now going to do a save all keys to
+the server
+
+422
+00:24:01,289 --> 00:24:04,310
+what that's going to do is send-up all
+these properties
+
+423
+00:24:04,499 --> 00:24:07,517
+even the ones we didn't change locally
+
+424
+00:24:07,679 --> 00:24:11,687
+and they're gonna update the values on
+the server but what you'll notice here
+
+425
+00:24:11,759 --> 00:24:14,807
+is that the server had an additional
+property that we didn't have an original
+
+426
+00:24:15,239 --> 00:24:17,240
+copy the record
+
+427
+00:24:17,249 --> 00:24:20,287
+this home town property wasn't removed
+
+428
+00:24:20,629 --> 00:24:23,718
+we do this to help you with version if
+your app are you might
+
+429
+00:24:24,519 --> 00:24:28,582
+releases aversion to have your apt that
+ads hometowns but version one didn't
+
+430
+00:24:29,149 --> 00:24:30,227
+ever know about the hometown
+
+431
+00:24:30,929 --> 00:24:34,940
+and if version one was using save all
+keys its gonna over right these
+
+432
+00:24:34,094 --> 00:24:36,293
+properties on the server that it never
+knew about
+
+433
+00:24:37,139 --> 00:24:41,340
+and and that's kind of a bad thing you
+can't have a backwards compatible code
+
+434
+00:24:41,034 --> 00:24:43,083
+easily that way
+
+435
+00:24:43,389 --> 00:24:46,970
+so what we do instead is we still allow
+you to remove that but you need to
+
+436
+00:24:46,097 --> 00:24:50,121
+explicitly tell us that you want that
+property to lead on the server
+
+437
+00:24:51,021 --> 00:24:54,048
+so even though there's no hometown
+property on this record
+
+438
+00:24:54,048 --> 00:24:57,082
+we can still call seek a record set
+value for keno
+
+439
+00:24:57,082 --> 00:25:00,381
+or we can call remove object for key
+
+440
+00:25:01,119 --> 00:25:04,160
+we're going to remove the hometown and
+now when we save it up to the server
+
+441
+00:25:04,529 --> 00:25:08,591
+that delete will also go up with the
+save
+
+442
+00:25:09,149 --> 00:25:12,237
+finally one other really neat things
+about a seek a record is that we allow
+
+443
+00:25:13,029 --> 00:25:15,030
+you to have personal records
+
+444
+00:25:15,129 --> 00:25:18,222
+so you might have a really big record on
+the server and you only care about one
+
+445
+00:25:19,059 --> 00:25:20,710
+or two properties that
+
+446
+00:25:20,071 --> 00:25:23,084
+well with the desired keys property we
+allow you to fetch
+
+447
+00:25:23,084 --> 00:25:27,803
+just a certain subset the properties
+that are on the server
+
+448
+00:25:28,559 --> 00:25:31,583
+and we expose this desire keys property
+on any
+
+449
+00:25:31,799 --> 00:25:36,090
+operation that fetches a record so you
+can see it on CK fetch records operation
+
+450
+00:25:36,009 --> 00:25:42,068
+I seek a query operation and seek a
+fence record changes operation
+
+451
+00:25:42,149 --> 00:25:45,233
+and there really anything about this is
+you can then take these partial records
+
+452
+00:25:45,989 --> 00:25:47,720
+and save them back up to the server
+
+453
+00:25:47,072 --> 00:25:50,083
+you don't need to work with entirely
+full records
+
+454
+00:25:50,083 --> 00:25:53,122
+you can you know if you want to update
+just one value on a record
+
+455
+00:25:53,869 --> 00:25:57,450
+such that one value from the record
+update it and do is save a
+
+456
+00:25:57,045 --> 00:26:00,654
+just that record that has that one value
+I you doing this with
+
+457
+00:26:01,059 --> 00:26:04,190
+locking enabled you know it's safe
+because if
+
+458
+00:26:04,019 --> 00:26:11,019
+the record is change some server since
+then you're gonna get a conflict
+
+459
+00:26:13,419 --> 00:26:16,488
+so now let's talk a little bit about
+modeling your data for cloud
+
+460
+00:26:17,109 --> 00:26:20,188
+if we go back to that example the
+receipts ap
+
+461
+00:26:20,899 --> 00:26:24,470
+let's say we have a shoe box that holds
+over receipts
+
+462
+00:26:24,047 --> 00:26:27,106
+and that's going to be one object in in
+the cloud
+
+463
+00:26:27,529 --> 00:26:30,581
+and we're gonna have an object for each
+one of our receipts
+
+464
+00:26:31,049 --> 00:26:35,073
+and the initial way you might design
+this is you create a receipt array
+
+465
+00:26:35,289 --> 00:26:36,377
+inside a shoe box
+
+466
+00:26:37,169 --> 00:26:40,820
+and every time you add in the receipt
+you're going and add new entry to that
+
+467
+00:26:40,082 --> 00:26:40,170
+array
+
+468
+00:26:41,007 --> 00:26:44,696
+and that entry is going to be a
+reference to the record is created
+
+469
+00:26:45,389 --> 00:26:48,850
+I we call these forward references these
+are references from a parent
+
+470
+00:26:48,085 --> 00:26:52,121
+to its child and the prom with these is
+that you end up getting bottlenecked on
+
+471
+00:26:53,021 --> 00:26:54,310
+that receipt sorry
+
+472
+00:26:54,499 --> 00:26:58,710
+of this was a public database you might
+have hundreds of clients trying to say
+
+473
+00:26:58,071 --> 00:26:59,490
+this record at White's
+
+474
+00:27:00,129 --> 00:27:03,204
+and every time a a client tries to add a
+new record
+
+475
+00:27:03,879 --> 00:27:07,882
+they need to update that array on the
+shoebox and even though the clients
+
+476
+00:27:07,909 --> 00:27:09,720
+might be adding different records
+
+477
+00:27:09,072 --> 00:27:12,461
+are different receipts they're all gonna
+run into are
+
+478
+00:27:13,109 --> 00:27:17,113
+conflicts on the shoe box at on the
+shoebox record
+
+479
+00:27:17,149 --> 00:27:20,149
+so we recommend that you try and avoid
+forward references
+
+480
+00:27:20,149 --> 00:27:25,070
+in your design and instead I use what we
+call back references
+
+481
+00:27:25,007 --> 00:27:28,056
+so instead of having the shoebox point
+at the receipt that senate
+
+482
+00:27:28,119 --> 00:27:32,460
+have the receipt point at the shoe box
+it's in
+
+483
+00:27:32,046 --> 00:27:35,135
+the great thing about this is its very
+scaleable
+
+484
+00:27:35,549 --> 00:27:38,637
+you can have millions of clients adding
+receipts all at once
+
+485
+00:27:39,429 --> 00:27:42,450
+and there's no bottleneck they can
+create their receipt pointed who owns
+
+486
+00:27:42,639 --> 00:27:43,600
+them
+
+487
+00:27:43,006 --> 00:27:46,655
+and none of them are going to run into
+conflicts
+
+488
+00:27:47,249 --> 00:27:49,312
+when you need to go get everything
+that's in a shoe box rather than
+
+489
+00:27:49,879 --> 00:27:51,902
+fetching that shoe box getting the array
+
+490
+00:27:52,109 --> 00:27:56,820
+records in it and fetching all those
+records you can instead just use a query
+
+491
+00:27:56,082 --> 00:27:59,781
+not clear is gonna select all the
+records that have that shoe box as an
+
+492
+00:28:00,519 --> 00:28:03,592
+owner
+
+493
+00:28:04,249 --> 00:28:08,325
+one other neat feature we give you with
+relationships are cascading deletes
+
+494
+00:28:09,009 --> 00:28:13,190
+so cascading deletes our way for you to
+make your object graph
+
+495
+00:28:13,019 --> 00:28:16,248
+get cleaned up automatically and you do
+this by
+
+496
+00:28:16,419 --> 00:28:19,690
+marking your references with they seek a
+wreck Prince action
+
+497
+00:28:19,069 --> 00:28:22,278
+delete self and that means that when the
+
+498
+00:28:22,899 --> 00:28:26,830
+for record the references deleted you
+will also be deleted
+
+499
+00:28:26,083 --> 00:28:29,160
+in this case the green record has that
+reference action poignant in orange
+
+500
+00:28:30,006 --> 00:28:30,525
+record
+
+501
+00:28:31,119 --> 00:28:34,218
+when the orange record gets deleted the
+green records gonna get automatically
+
+502
+00:28:35,109 --> 00:28:38,350
+deleted by the server
+
+503
+00:28:38,035 --> 00:28:42,924
+these elites also cascade so if we had a
+whole trio objects hung up for that one
+
+504
+00:28:43,239 --> 00:28:47,070
+orange record those two liter get a
+cascade all the way down
+
+505
+00:28:47,007 --> 00:28:54,007
+and clean up artkraft for us
+
+506
+00:28:54,799 --> 00:28:57,820
+but one thing to keep in mind with these
+delete self references
+
+507
+00:28:57,082 --> 00:29:01,441
+is that they're not reference counted
+that means that if you have
+
+508
+00:29:02,179 --> 00:29:06,190
+multiple references coming out one
+record the first one of those records
+
+509
+00:29:06,289 --> 00:29:11,378
+it's deleted will cause you to get
+deleted
+
+510
+00:29:12,179 --> 00:29:15,254
+and finally these delete self references
+
+511
+00:29:15,929 --> 00:29:19,026
+give you one additional feature if you
+doing a batch save and you've got a
+
+512
+00:29:19,899 --> 00:29:23,963
+jumble records in this graph and they
+have to lead self references between and
+
+513
+00:29:24,539 --> 00:29:28,551
+clock it is gonna do an automatic top a
+logical sort for you
+
+514
+00:29:28,659 --> 00:29:31,830
+we're gonna upload the records in order
+so that all the records that are
+
+515
+00:29:31,083 --> 00:29:35,002
+referenced will be up there by the time
+the record reference in them is upload
+
+516
+00:29:35,749 --> 00:29:39,580
+I this is really great and the public
+database where you don't have
+
+517
+00:29:39,058 --> 00:29:42,647
+atomic commits but you still want to be
+able to upload data that looks
+
+518
+00:29:43,169 --> 00:29:43,940
+consistent
+
+519
+00:29:43,094 --> 00:29:47,103
+at any point when a client downloads
+
+520
+00:29:48,084 --> 00:29:52,353
+so while developing Clark it internally
+we've had a couple of our clients ask us
+
+521
+00:29:53,109 --> 00:29:55,117
+you know why do I need to use these
+reference object rafted
+
+522
+00:29:55,909 --> 00:29:59,830
+no Alec and met and it's so much work
+arm you know I
+
+523
+00:29:59,083 --> 00:30:02,762
+to get a record id: why can't I just put
+in a string input at my record
+
+524
+00:30:03,509 --> 00:30:05,601
+are you can't say you know you come up
+with this clever little record id: the
+
+525
+00:30:06,429 --> 00:30:07,434
+string
+
+526
+00:30:07,479 --> 00:30:10,496
+but then you look at the record I D
+class and you realize it's actually
+
+527
+00:30:10,649 --> 00:30:14,655
+two properties and you can't just store
+the description on the record on server
+
+528
+00:30:15,249 --> 00:30:18,970
+I see get a little smarter in the story
+the record id:
+
+529
+00:30:18,097 --> 00:30:23,386
+and the their name in the zone ID I'm
+but then you look its own ID and that's
+
+530
+00:30:24,259 --> 00:30:27,331
+also composite a we need to know what
+
+531
+00:30:27,979 --> 00:30:31,005
+where zone is and and whose account is
+
+532
+00:30:31,239 --> 00:30:35,350
+so you get a little more clever and you
+make this record I did a string in zone
+
+533
+00:30:35,035 --> 00:30:36,064
+I did a string
+
+534
+00:30:36,379 --> 00:30:39,590
+I am in now you call that everywhere
+
+535
+00:30:39,059 --> 00:30:42,578
+the problem is now you're not for its
+compatible if anything ever gets added
+
+536
+00:30:43,109 --> 00:30:44,164
+to references
+
+537
+00:30:44,659 --> 00:30:47,665
+all the records on the server are going
+to have this hard coded format
+
+538
+00:30:48,259 --> 00:30:52,340
+and you can have to go through a lot of
+work when you query records
+
+539
+00:30:52,034 --> 00:30:55,119
+instead just use references its gonna
+make you could really clean
+
+540
+00:30:56,019 --> 00:30:59,058
+I mean that she box could be a record
+id: that shoe box could be a record
+
+541
+00:30:59,058 --> 00:30:59,637
+itself
+
+542
+00:31:00,159 --> 00:31:03,223
+it could be a reference all those are
+just work as long as you use to seek a
+
+543
+00:31:03,799 --> 00:31:06,898
+reference
+
+544
+00:31:07,789 --> 00:31:11,798
+a couple last notes on modeling data Inc
+like it
+
+545
+00:31:11,879 --> 00:31:14,892
+I wanna vom is that clock it as a
+transport mechanism
+
+546
+00:31:15,009 --> 00:31:18,012
+I what we've tried to do here is give
+you an easy way to
+
+547
+00:31:18,309 --> 00:31:22,960
+access the clock its servers but we're
+not meant to be a local persistence
+
+548
+00:31:22,096 --> 00:31:22,132
+layer
+
+549
+00:31:23,032 --> 00:31:26,991
+we want that to be up to you and you
+need to figure out the best way to store
+
+550
+00:31:27,279 --> 00:31:28,327
+your objects
+
+551
+00:31:28,759 --> 00:31:32,834
+and to that extent we recommend that you
+don't some class CK items
+
+552
+00:31:33,509 --> 00:31:36,581
+you should take those items when you
+receive them from the server
+
+553
+00:31:37,229 --> 00:31:40,230
+and translate them in here on model
+objects
+
+554
+00:31:40,239 --> 00:31:43,246
+and you can do that on the way out as
+well when you need to save on your model
+
+555
+00:31:43,309 --> 00:31:43,970
+objects
+
+556
+00:31:43,097 --> 00:31:50,097
+translated into a CK record and upload
+all that to the server
+
+557
+00:31:55,229 --> 00:31:58,231
+so if you remember from the introductory
+talk we have these things that we call
+
+558
+00:31:58,429 --> 00:31:59,470
+subscriptions
+
+559
+00:31:59,047 --> 00:32:02,076
+their processing queries that run on the
+server
+
+560
+00:32:02,499 --> 00:32:06,090
+and every time something changes that
+matches that query
+
+561
+00:32:06,009 --> 00:32:09,788
+you're going to get a push notification
+and these push notifications are sent
+
+562
+00:32:09,869 --> 00:32:11,912
+via the Apple Push Notification Service
+
+563
+00:32:12,299 --> 00:32:16,343
+just the same way that it would work if
+you build your own server
+
+564
+00:32:16,739 --> 00:32:19,805
+but there are some drawbacks with Apple
+Push Notification Service
+
+565
+00:32:20,399 --> 00:32:23,447
+are one of them is that they can't make
+any guarantees on delivery of these
+
+566
+00:32:23,879 --> 00:32:23,946
+pushers
+
+567
+00:32:24,549 --> 00:32:28,570
+other kinda meant to be these at them a
+little you know here's a push use a push
+
+568
+00:32:28,057 --> 00:32:31,096
+if one of them gets dropped because I'm
+a bad network or
+
+569
+00:32:31,096 --> 00:32:34,755
+anything else going on I there's no
+guarantee
+
+570
+00:32:35,619 --> 00:32:38,625
+so in practice there really good about
+delivering these pushes
+
+571
+00:32:38,679 --> 00:32:42,680
+I and one other reasons is because the
+server will store pushes for you
+
+572
+00:32:42,779 --> 00:32:46,970
+if you're offline so if you put your
+phone in airplane mode and you get push
+
+573
+00:32:46,097 --> 00:32:49,646
+as soon as you come back out of airplane
+mode the server will have that saved and
+
+574
+00:32:50,519 --> 00:32:52,558
+still deliver the pusher
+
+575
+00:32:52,909 --> 00:32:57,720
+but the problem with this is the server
+only stores1 push per client
+
+576
+00:32:57,072 --> 00:33:00,511
+so if you received a buncha pushes while
+you're offline you're only gonna get the
+
+577
+00:33:01,159 --> 00:33:03,205
+most recent one
+
+578
+00:33:03,619 --> 00:33:07,636
+what does that look like well we've got
+our Clark its server we've got the
+
+579
+00:33:07,789 --> 00:33:10,875
+APS server and we've got the iPhone
+appear and we send a push
+
+580
+00:33:11,649 --> 00:33:15,744
+and we're online everything goes through
+we get our badge everyone's happy
+
+581
+00:33:16,599 --> 00:33:19,666
+but then we get on an airplane I our
+phones in airplane mode we have no
+
+582
+00:33:20,269 --> 00:33:21,354
+network connection
+
+583
+00:33:22,119 --> 00:33:26,320
+and when they push get sent the APS
+server helpfully stores it for us
+
+584
+00:33:26,032 --> 00:33:29,211
+if we were going to come back online
+right now we would get her subscription
+
+585
+00:33:29,499 --> 00:33:29,940
+push
+
+586
+00:33:29,094 --> 00:33:32,132
+and we'd be happy by this is a long
+plane flight
+
+587
+00:33:33,032 --> 00:33:36,761
+and while we're on the plane that we got
+his own update push that new eyes on
+
+588
+00:33:37,049 --> 00:33:39,054
+subscription that I was talking about
+
+589
+00:33:39,549 --> 00:33:43,593
+when that gets to the APS server its
+gonna drop their previous subscription
+
+590
+00:33:43,989 --> 00:33:44,083
+push
+
+591
+00:33:44,929 --> 00:33:48,934
+and now when your phone comes back
+online all you're gonna receive this is
+
+592
+00:33:48,979 --> 00:33:51,090
+an update
+
+593
+00:33:51,009 --> 00:33:54,082
+the problem with this is that you never
+heard about that subscription fire
+
+594
+00:33:54,082 --> 00:33:58,751
+so how do we solve this well ok we've
+created a notification collection in
+
+595
+00:33:59,489 --> 00:34:00,580
+Clark it
+
+596
+00:34:01,399 --> 00:34:04,425
+every time the server sends a push to
+the APS server
+
+597
+00:34:04,659 --> 00:34:08,683
+it also makes a copy of that push in the
+notification collection
+
+598
+00:34:08,899 --> 00:34:11,974
+see can see we have that same problem
+where we're in airplane mode we drop a
+
+599
+00:34:12,649 --> 00:34:13,673
+subscription push
+
+600
+00:34:13,889 --> 00:34:17,891
+are from comes online tickets the push
+and
+
+601
+00:34:17,909 --> 00:34:21,550
+because this is a well behaved client it
+knows every time they receive the push
+
+602
+00:34:21,055 --> 00:34:23,154
+it should go check notification
+collection to find out about anything it
+
+603
+00:34:24,054 --> 00:34:26,125
+might have missed
+
+604
+00:34:27,025 --> 00:34:30,704
+so how does that work well this
+notification collection is a lot like
+
+605
+00:34:30,929 --> 00:34:33,290
+the Delta downloads I talked about
+earlier
+
+606
+00:34:33,029 --> 00:34:36,036
+it's all change token based you had to
+change talking to the server
+
+607
+00:34:36,099 --> 00:34:38,185
+and the server Hans Backe all the
+notifications that have changed since
+
+608
+00:34:39,085 --> 00:34:39,093
+then
+
+609
+00:34:40,065 --> 00:34:43,344
+along with an update to change token
+
+610
+00:34:43,929 --> 00:34:47,330
+so since is our first time talking the
+notification collection we're gonna send
+
+611
+00:34:47,033 --> 00:34:49,059
+up a new change token
+
+612
+00:34:49,059 --> 00:34:53,138
+we're gonna get back both for those
+pushes are one of them which we missed
+
+613
+00:34:54,038 --> 00:34:56,047
+and then we're also gonna get and
+updated change token for the current
+
+614
+00:34:57,028 --> 00:34:59,121
+state
+
+615
+00:35:00,021 --> 00:35:03,022
+one thing with serbs subscriptions is
+the
+
+616
+00:35:03,022 --> 00:35:06,111
+you might want to use those to change
+some UI in your application
+
+617
+00:35:07,011 --> 00:35:11,050
+for example in our receipts ap we might
+wanna subscription for
+
+618
+00:35:11,005 --> 00:35:15,012
+any receipt that was over a hundred
+dollars if that happens
+
+619
+00:35:15,057 --> 00:35:18,144
+we want to arm marked every seat in a
+different color
+
+620
+00:35:19,044 --> 00:35:22,066
+so were gonna get this push for a
+subscription
+
+621
+00:35:22,066 --> 00:35:26,139
+and now the receipts blue because it was
+a big expensive receipt
+
+622
+00:35:27,039 --> 00:35:30,111
+but you know this is gonna happen on all
+your clients so you can have your iPad
+
+623
+00:35:31,011 --> 00:35:34,103
+showing that receipt in blue you can
+have your Mac show in every seat in blue
+
+624
+00:35:35,003 --> 00:35:39,026
+and once the user acknowledges it you
+want that you I state to go away on all
+
+625
+00:35:39,026 --> 00:35:41,063
+your clients
+
+626
+00:35:41,063 --> 00:35:44,065
+well the way we do that is we let you
+mark a subscription
+
+627
+00:35:44,065 --> 00:35:47,068
+certainly let you mark a notification as
+bread
+
+628
+00:35:47,068 --> 00:35:50,073
+and when you do that you're going to get
+a push for the updated
+
+629
+00:35:50,073 --> 00:35:53,148
+subscription updated notification on
+every client
+
+630
+00:35:54,048 --> 00:35:58,083
+so in this case we mark a receipt we're
+gonna go mark that subscription is right
+
+631
+00:35:58,083 --> 00:35:58,179
+on the server
+
+632
+00:35:59,079 --> 00:36:03,134
+and now there's a new entry and if we
+switch over to our Mac which is still
+
+633
+00:36:04,034 --> 00:36:04,130
+showing it in blue
+
+634
+00:36:05,003 --> 00:36:08,011
+it's going to get a push its gonna check
+the notification collection
+
+635
+00:36:09,001 --> 00:36:12,029
+it's going to get that subscription
+subscription notification and it can
+
+636
+00:36:12,038 --> 00:36:13,093
+tear down its UI
+
+637
+00:36:13,093 --> 00:36:18,098
+and now all your clients are in the same
+state
+
+638
+00:36:19,043 --> 00:36:22,100
+so with the notification collection keep
+in mind every time you get a push
+
+639
+00:36:23,000 --> 00:36:26,002
+you should check notification collection
+are you never know what you might have
+
+640
+00:36:26,002 --> 00:36:28,008
+missed
+
+641
+00:36:28,026 --> 00:36:31,047
+and this isn't just for airplane motor
+bad networks
+
+642
+00:36:31,047 --> 00:36:34,073
+this can happen if you get multiple
+pushes in a row
+
+643
+00:36:34,073 --> 00:36:38,077
+I there's a lot of changes that happen
+all at once the cloud kitserver Michael
+
+644
+00:36:38,077 --> 00:36:38,133
+SM
+
+645
+00:36:39,033 --> 00:36:43,058
+or the push server my coalesce this
+pushes
+
+646
+00:36:43,058 --> 00:36:47,091
+and of course because a lot of these are
+mobile devices their iPhones
+
+647
+00:36:47,091 --> 00:36:50,114
+they're going to be moving in and out of
+network states they might be on my fire
+
+648
+00:36:51,014 --> 00:36:52,043
+they might be on a
+
+649
+00:36:52,043 --> 00:36:55,129
+a bad cell network you never know what
+your network is like
+
+650
+00:36:56,029 --> 00:37:03,029
+just assume that there might have been
+more pushes that you didn't hear about
+
+651
+00:37:04,005 --> 00:37:08,019
+so now we're gonna go over the i cud
+dashboard and the Eichler dashboard is
+
+652
+00:37:08,064 --> 00:37:09,107
+our web-based interface
+
+653
+00:37:10,007 --> 00:37:14,086
+for managing your application in
+Crockett
+
+654
+00:37:14,086 --> 00:37:17,109
+the I car dashboard lets you view your
+data
+
+655
+00:37:18,009 --> 00:37:21,068
+i lets you manage the schema that were
+trading for you
+
+656
+00:37:21,068 --> 00:37:24,071
+it lets you control what's indexed and
+it
+
+657
+00:37:24,098 --> 00:37:27,174
+help to moving from development to
+production I can explain dollars in
+
+658
+00:37:28,074 --> 00:37:29,077
+detail in a bit
+
+659
+00:37:29,077 --> 00:37:32,159
+I let's start with viewing data
+
+660
+00:37:33,059 --> 00:37:36,067
+so if you remember the a
+
+661
+00:37:36,067 --> 00:37:39,129
+view of our containers appear we've got
+a public database and a private data
+
+662
+00:37:40,029 --> 00:37:41,057
+rates
+
+663
+00:37:41,057 --> 00:37:44,142
+and when you're viewing your data in the
+I car dashboard
+
+664
+00:37:45,042 --> 00:37:48,047
+all that data in the public databases
+have course public
+
+665
+00:37:48,092 --> 00:37:54,101
+so in the dashboard you'll be able to
+see every record in your public database
+
+666
+00:37:55,001 --> 00:37:58,034
+but if you remember the private
+databases again one database
+
+667
+00:37:58,034 --> 00:38:02,133
+for each individual user and in this
+case were only logged in as one user
+
+668
+00:38:03,033 --> 00:38:07,108
+reluctance our developer account so all
+we're gonna see on the icon dashboard
+
+669
+00:38:08,008 --> 00:38:12,082
+is the data in the private database for
+our developer account
+
+670
+00:38:12,082 --> 00:38:14,157
+%uh this is really important you know
+you might use a different account for
+
+671
+00:38:15,057 --> 00:38:18,118
+testing in a different account for
+viewing data in the Ikelite dashboard
+
+672
+00:38:19,018 --> 00:38:24,026
+if you do that you won't be able to view
+your private data in the dashboard
+
+673
+00:38:24,098 --> 00:38:27,111
+so what is the Dutch word look like well
+we log in
+
+674
+00:38:28,011 --> 00:38:32,036
+and the first thing we're gonna see here
+are different record types
+
+675
+00:38:32,036 --> 00:38:36,041
+so you can see we've we were using the
+party app we've got parties
+
+676
+00:38:36,041 --> 00:38:39,122
+and over here we see the different
+schema for those
+
+677
+00:38:40,022 --> 00:38:43,033
+values that's being created
+
+678
+00:38:43,033 --> 00:38:46,071
+when you're developing the clock
+application you're talking to the
+
+679
+00:38:46,071 --> 00:38:47,138
+development environment
+
+680
+00:38:48,038 --> 00:38:51,079
+and the server in the development
+environment creates a just in time
+
+681
+00:38:51,079 --> 00:38:52,124
+schema for you
+
+682
+00:38:53,024 --> 00:38:56,067
+so we did this because we wanted you to
+be able to develop as rapidly as
+
+683
+00:38:56,067 --> 00:38:58,119
+possible we didn't want you have to go
+to a
+
+684
+00:38:59,019 --> 00:39:03,097
+this dashboard and planned out what your
+gonna do in your application and
+
+685
+00:39:03,097 --> 00:39:06,101
+choose all the data types that's not as
+much fun as just
+
+686
+00:39:07,001 --> 00:39:10,006
+writing some code so we let you dive
+right in
+
+687
+00:39:10,006 --> 00:39:15,007
+you write some code and the things that
+you upload to cloak it as you upload em
+
+688
+00:39:15,007 --> 00:39:18,054
+those values get locked down into a
+scheme
+
+689
+00:39:18,054 --> 00:39:21,092
+so you can see here that we've got a a
+couple different values and we've got
+
+690
+00:39:21,092 --> 00:39:21,171
+there
+
+691
+00:39:22,071 --> 00:39:25,072
+couple different keys in their values I
+but we notice that we made a mistake
+
+692
+00:39:25,072 --> 00:39:26,165
+when we're developing this app
+
+693
+00:39:27,065 --> 00:39:30,107
+we uploaded a date value heard a key
+
+694
+00:39:31,007 --> 00:39:34,088
+but we use the string value and what we
+really want there is a deep valley
+
+695
+00:39:34,088 --> 00:39:38,099
+the I car dashboard is gonna let us fix
+that up so we can go to this
+
+696
+00:39:38,099 --> 00:39:42,133
+and we can deleted we can remove it from
+my schema
+
+697
+00:39:43,033 --> 00:39:46,076
+and now we can recompile a wrap use a
+date value
+
+698
+00:39:46,076 --> 00:39:49,127
+upload that record again and when the
+Service is at record
+
+699
+00:39:50,027 --> 00:39:53,098
+it'll create a new scheme entry for the
+date value
+
+700
+00:39:53,098 --> 00:39:59,104
+using a actual date inservice training
+
+701
+00:40:00,004 --> 00:40:03,012
+so next up you can view all the records
+in your
+
+702
+00:40:03,012 --> 00:40:07,013
+public database using the I could ask
+for see can see here we are you have a
+
+703
+00:40:07,013 --> 00:40:10,067
+couple different parties in the public
+database
+
+704
+00:40:10,067 --> 00:40:13,136
+what you can also do is create records
+in the public database
+
+705
+00:40:14,036 --> 00:40:18,128
+so you can tap on this plus button and
+fill out a new entry
+
+706
+00:40:19,028 --> 00:40:23,029
+we're gonna make a new party for coffee
+on Friday
+
+707
+00:40:23,029 --> 00:40:27,065
+and we can say that and you'll see that
+that actually got saved into the public
+
+708
+00:40:27,065 --> 00:40:27,134
+database
+
+709
+00:40:28,034 --> 00:40:31,077
+I any clients that are fetching records
+are gonna see that
+
+710
+00:40:31,077 --> 00:40:34,175
+that change in the public database
+
+711
+00:40:35,075 --> 00:40:39,121
+we can also search for records are this
+is just like CK queries so we can
+
+712
+00:40:40,021 --> 00:40:45,050
+click on that magnifying glass and we
+can type in string
+
+713
+00:40:45,005 --> 00:40:50,014
+and we can filter down to any party that
+mentions WWDC
+
+714
+00:40:50,059 --> 00:40:53,128
+additionally this gives us all the
+functionality that we have in CK query
+
+715
+00:40:54,028 --> 00:40:57,028
+we can build compound queries right on
+the dashboard
+
+716
+00:40:57,028 --> 00:41:01,062
+so if you click on the plus button I
+let's choose location
+
+717
+00:41:01,062 --> 00:41:04,131
+and much filter down to everything
+that's within 5 kilometers
+
+718
+00:41:05,031 --> 00:41:08,059
+Mosconi Center I happen to have those
+memorized
+
+719
+00:41:08,059 --> 00:41:15,059
+so that filtered everything down just to
+the two parties that are in this area
+
+720
+00:41:16,088 --> 00:41:19,099
+are finally in the public database by
+default
+
+721
+00:41:19,099 --> 00:41:22,136
+every record can be read by every user
+
+722
+00:41:23,036 --> 00:41:26,134
+and it can be created by any user I want
+to create a record
+
+723
+00:41:27,034 --> 00:41:31,101
+that record can only be updated or
+deleted by the user that created
+
+724
+00:41:32,001 --> 00:41:35,003
+but we understand that that doesn't
+provide all the functionality that you
+
+725
+00:41:35,021 --> 00:41:38,036
+might need to make an application in the
+public database
+
+726
+00:41:38,036 --> 00:41:42,122
+so what we've given you are what we call
+roles these roles let you choose
+
+727
+00:41:43,022 --> 00:41:46,028
+sets abusers that have different
+permissions for record types in the
+
+728
+00:41:46,082 --> 00:41:47,158
+public database
+
+729
+00:41:48,058 --> 00:41:51,058
+so one example that might be there I
+want to
+
+730
+00:41:51,058 --> 00:41:55,072
+restricted so that only I can create
+parties in the public database
+
+731
+00:41:55,072 --> 00:41:58,170
+so what I'm gonna do in order to do that
+is create a new role
+
+732
+00:41:59,007 --> 00:42:02,011
+I'm gonna call this you know party admin
+
+733
+00:42:03,001 --> 00:42:06,024
+and in that I need to choose a record
+type: and give it
+
+734
+00:42:06,033 --> 00:42:09,081
+special permissions so I'm gonna choose
+parties
+
+735
+00:42:09,081 --> 00:42:15,147
+and I'm gonna give it create read and
+write permissions for those parties
+
+736
+00:42:16,047 --> 00:42:19,125
+now what I need to do is go to the
+record type in restricted so that no one
+
+737
+00:42:20,025 --> 00:42:21,078
+else can create a party
+
+738
+00:42:21,078 --> 00:42:25,111
+so I'm gonna find my party I by party
+record type:
+
+739
+00:42:26,011 --> 00:42:29,106
+and you can see up there that parties
+can be created by anyone who is
+
+740
+00:42:30,006 --> 00:42:31,019
+authenticated
+
+741
+00:42:31,019 --> 00:42:34,096
+we don't want that we want only party
+admins to create this record so we're
+
+742
+00:42:34,096 --> 00:42:34,121
+gonna
+
+743
+00:42:35,017 --> 00:42:38,038
+unchecked that value
+
+744
+00:42:38,038 --> 00:42:41,116
+now we need to assign people to that
+role so that there's actually users out
+
+745
+00:42:42,016 --> 00:42:43,079
+there that can do this
+
+746
+00:42:43,079 --> 00:42:47,164
+if we go to the user records we can see
+everyone who's use this app so far
+
+747
+00:42:48,064 --> 00:42:51,108
+if they have marked themselves is
+discoverable you're gonna be able to see
+
+748
+00:42:52,008 --> 00:42:53,076
+their first and last name
+
+749
+00:42:53,076 --> 00:42:57,104
+if they having you're just gonna see
+that record id: up there
+
+750
+00:42:58,004 --> 00:43:01,085
+so I'm gonna click on my user and then
+I'm going to
+
+751
+00:43:01,085 --> 00:43:05,091
+at myself as a party at nine
+
+752
+00:43:05,091 --> 00:43:12,091
+and now I'm the only user in the public
+database that can create a party
+
+753
+00:43:18,098 --> 00:43:22,132
+so are one of the last things the icon
+dashboard helps you do is move from
+
+754
+00:43:23,032 --> 00:43:25,033
+print development into production
+
+755
+00:43:25,033 --> 00:43:29,062
+so as I talked about earlier we wanted
+the development environment to be as
+
+756
+00:43:29,062 --> 00:43:31,115
+quick and easy to use as possible
+
+757
+00:43:32,015 --> 00:43:35,082
+we wanted you to hit the ground running
+we wanted you to just open up Xcode
+
+758
+00:43:35,082 --> 00:43:39,157
+start typing some code say view record
+to the server and see immediate results
+
+759
+00:43:40,057 --> 00:43:44,099
+and that all works great because the
+server does just in time schemers
+
+760
+00:43:44,099 --> 00:43:47,147
+but that's not very efficient if we're
+working in a public database that might
+
+761
+00:43:48,047 --> 00:43:49,101
+have millions of users
+
+762
+00:43:50,001 --> 00:43:54,023
+we need to prepare some things before we
+go into the environment that all over
+
+763
+00:43:54,023 --> 00:43:56,066
+customers are gonna hit
+
+764
+00:43:56,066 --> 00:43:59,073
+so the way this works is we've got our
+records we're developing our app right
+
+765
+00:44:00,036 --> 00:44:01,061
+now
+
+766
+00:44:01,061 --> 00:44:04,093
+and we just created a record for the
+very first time and we uploaded it in
+
+767
+00:44:04,093 --> 00:44:06,108
+the development environment
+
+768
+00:44:07,008 --> 00:44:10,083
+the servers can see that and since is
+the first time it's in a party it's
+
+769
+00:44:10,083 --> 00:44:10,110
+gonna
+
+770
+00:44:11,001 --> 00:44:14,062
+automatically create a new party record
+type:
+
+771
+00:44:14,071 --> 00:44:17,135
+and then for each of these keys and
+values it's going to create an entry in
+
+772
+00:44:18,035 --> 00:44:19,050
+the schema
+
+773
+00:44:19,005 --> 00:44:22,088
+and its gonna creating index on every
+one of those values
+
+774
+00:44:23,033 --> 00:44:26,109
+this index is what lets you query for
+any value in a record
+
+775
+00:44:27,009 --> 00:44:30,046
+so while you're in development you can
+just run a query and search on
+
+776
+00:44:30,046 --> 00:44:33,095
+any value for any he in a record
+
+777
+00:44:33,095 --> 00:44:35,187
+and let's say we're gonna head were
+developing this app and we decide we
+
+778
+00:44:36,087 --> 00:44:36,159
+want to add
+
+779
+00:44:37,059 --> 00:44:41,136
+an additional properties so we decide we
+want to I have a background property for
+
+780
+00:44:42,036 --> 00:44:43,091
+the color of the party
+
+781
+00:44:43,091 --> 00:44:47,104
+so this party's backgrounds blue all we
+have to do is upload that record
+
+782
+00:44:48,004 --> 00:44:51,017
+its gonna send all those other
+properties to the index
+
+783
+00:44:51,017 --> 00:44:54,061
+and the server is gonna notice our
+there's a new property in here
+
+784
+00:44:54,061 --> 00:44:59,153
+going to create a new scheme entry build
+a new index an index of property
+
+785
+00:45:00,053 --> 00:45:03,088
+when you're ready to release your app
+you can wanna make sure you've run
+
+786
+00:45:03,088 --> 00:45:07,171
+everything in development first so that
+you've built up This Just In Time scheme
+
+787
+00:45:08,071 --> 00:45:12,075
+here then getting UCI car dashboard to
+move that schema from development
+
+788
+00:45:13,011 --> 00:45:16,038
+into production and you're gonna wanna
+check all these fields make sure that
+
+789
+00:45:16,038 --> 00:45:17,081
+they're the right values
+
+790
+00:45:17,081 --> 00:45:21,167
+make sure that every key that your Apple
+ever use exists in that scheme
+
+791
+00:45:22,067 --> 00:45:25,118
+and when you do that you're gonna move
+it into production and lock that schema
+
+792
+00:45:26,018 --> 00:45:27,106
+in
+
+793
+00:45:28,006 --> 00:45:32,023
+additionally all these indexes take up a
+decent amount of space because the
+
+794
+00:45:32,023 --> 00:45:32,092
+tested
+
+795
+00:45:32,092 --> 00:45:35,185
+make it so that you can query those
+records I if you know you're never gonna
+
+796
+00:45:36,085 --> 00:45:36,152
+creep
+
+797
+00:45:37,052 --> 00:45:40,090
+a value like we know we're never gonna
+query for records with just a blue
+
+798
+00:45:40,009 --> 00:45:41,010
+background
+
+799
+00:45:41,091 --> 00:45:44,137
+you can drop it index and this'll help
+free up some space
+
+800
+00:45:45,037 --> 00:45:51,106
+in your aP's database or in your users
+database
+
+801
+00:45:52,006 --> 00:45:56,008
+us to finally a couple kid tips and
+tricks
+
+802
+00:45:56,026 --> 00:45:59,084
+so we already went over this in the
+entry talk but air handling
+
+803
+00:45:59,084 --> 00:46:02,155
+on please handle your heirs Inc like it
+this is really important
+
+804
+00:46:03,055 --> 00:46:07,059
+I am i kno air handling is hard and it's
+not fun to do
+
+805
+00:46:07,095 --> 00:46:11,150
+but cloud kid is all based on network
+communication
+
+806
+00:46:12,005 --> 00:46:15,104
+and when you're talking over the network
+any thinking a rock I'm
+
+807
+00:46:16,049 --> 00:46:19,117
+you know that the network and it dropped
+because we have other people talking to
+
+808
+00:46:20,017 --> 00:46:22,114
+the server we can get conflicts we can
+get errors
+
+809
+00:46:23,014 --> 00:46:27,059
+all kinds of things can happen and as as
+possible the first talk this is the
+
+810
+00:46:27,059 --> 00:46:28,120
+difference between a
+
+811
+00:46:29,002 --> 00:46:32,063
+working ap and then not working now it's
+not the difference between a
+
+812
+00:46:32,081 --> 00:46:35,116
+good app in a great I if you don't
+handle areas here
+
+813
+00:46:36,016 --> 00:46:39,067
+your ap just isn't going to work right
+arm
+
+814
+00:46:39,067 --> 00:46:42,092
+in Clark it also we've tried to avoid
+any sort of magic
+
+815
+00:46:42,092 --> 00:46:45,181
+we we don't want to try and handle these
+errors for you and figure out what might
+
+816
+00:46:46,081 --> 00:46:47,097
+be best
+
+817
+00:46:47,097 --> 00:46:50,179
+we want to just tell you what happened
+we want you to be able to
+
+818
+00:46:51,079 --> 00:46:53,156
+figure out what you need to do next and
+we want to give you all the information
+
+819
+00:46:54,056 --> 00:46:56,113
+to do that
+
+820
+00:46:57,013 --> 00:47:00,048
+so keep in mind when you're handling
+your heirs hear that your operations can
+
+821
+00:47:00,048 --> 00:47:01,112
+have partial airs
+
+822
+00:47:02,012 --> 00:47:05,088
+these personal errors when you're using
+the and its operation API
+
+823
+00:47:05,088 --> 00:47:09,099
+you might be sending up abacha records
+and if you're saving in the public
+
+824
+00:47:09,099 --> 00:47:09,175
+database
+
+825
+00:47:10,075 --> 00:47:13,157
+it could be the case that just one of
+those records had a conflict but the
+
+826
+00:47:14,057 --> 00:47:15,154
+rest saved just fine
+
+827
+00:47:16,054 --> 00:47:19,086
+if that happens you're going to get a
+partial tear an insider that you're
+
+828
+00:47:19,086 --> 00:47:21,184
+gonna find one air for the record that
+failed
+
+829
+00:47:22,084 --> 00:47:25,107
+I this was in a custom zone you might
+see that as a
+
+830
+00:47:26,007 --> 00:47:30,048
+atomic update airs so you might see that
+one of those records failed and the rest
+
+831
+00:47:30,048 --> 00:47:31,048
+got the batch
+
+832
+00:47:31,048 --> 00:47:35,052
+air I error in there
+
+833
+00:47:35,052 --> 00:47:39,126
+and finally we want you to make sure
+that you retry any server busy years
+
+834
+00:47:40,026 --> 00:47:43,122
+I it could be the case that the you know
+I'm buncha people are going to service
+
+835
+00:47:44,022 --> 00:47:47,097
+at the same time in service can't handle
+it and I need clients to back off
+
+836
+00:47:47,097 --> 00:47:50,155
+I could also be that your client is
+misbehaving and and hitting the server
+
+837
+00:47:51,055 --> 00:47:54,081
+too frequently in the service and/or its
+slow down buddy
+
+838
+00:47:54,081 --> 00:47:58,120
+are this is our way of saying you know
+we need a little more time this request
+
+839
+00:47:59,002 --> 00:48:01,004
+was okay but please try to get
+
+840
+00:48:01,004 --> 00:48:05,009
+and anytime we give your server busy air
+we're gonna hang back AC care
+
+841
+00:48:05,045 --> 00:48:09,053
+retry after key this is the number of
+seconds that we'd like you to wait
+
+842
+00:48:09,053 --> 00:48:13,111
+and retry request
+
+843
+00:48:14,011 --> 00:48:18,055
+so are limits in the keynote it was
+mentioned that cloud kate is free with
+
+844
+00:48:18,055 --> 00:48:19,058
+limits
+
+845
+00:48:19,058 --> 00:48:23,150
+I how those limits worked well anything
+stored in the public database
+
+846
+00:48:24,005 --> 00:48:27,009
+is counted against your app score we
+give every app
+
+847
+00:48:27,054 --> 00:48:31,073
+a quota and that's just for the public
+database
+
+848
+00:48:31,073 --> 00:48:34,108
+anything you put in the private
+databases count against the user's
+
+849
+00:48:35,008 --> 00:48:35,067
+account
+
+850
+00:48:35,067 --> 00:48:39,113
+so every I caught a cab gets 5 gigabytes
+of free storage
+
+851
+00:48:40,013 --> 00:48:44,015
+by users might have bought more or they
+might have filled up all that space with
+
+852
+00:48:44,033 --> 00:48:46,090
+the emails are backups or photos
+
+853
+00:48:46,009 --> 00:48:49,034
+I so every users can have a different
+man storage in there
+
+854
+00:48:50,015 --> 00:48:53,068
+and because this is kinda the user space
+and it's shared space we want you to
+
+855
+00:48:53,068 --> 00:48:53,136
+know
+
+856
+00:48:54,036 --> 00:48:58,099
+remember to be nice to your users it's
+technically free space for you because
+
+857
+00:48:58,099 --> 00:49:04,174
+it's theirs I but you know don't fill it
+up with unnecessary stuff
+
+858
+00:49:05,074 --> 00:49:08,116
+are so again with the limits on how much
+do you get free app container
+
+859
+00:49:09,016 --> 00:49:14,018
+well what we're concerned with here is
+customers having a great experience
+
+860
+00:49:14,018 --> 00:49:18,106
+and these limits that we've specified
+here are really to try and prevent abuse
+
+861
+00:49:19,006 --> 00:49:23,009
+we don't want to prevent legitimate use
+we just don't want anyone abusing
+
+862
+00:49:23,009 --> 00:49:27,052
+market and the numbers that we give you
+here also scale with the number users
+
+863
+00:49:27,052 --> 00:49:27,114
+who have
+
+864
+00:49:28,014 --> 00:49:31,088
+IP going developer not able to calm you
+can get the full breakdown I love the
+
+865
+00:49:31,088 --> 00:49:32,149
+different values but
+
+866
+00:49:33,049 --> 00:49:36,091
+as an example I if you had 10 million
+users have your hap
+
+867
+00:49:36,091 --> 00:49:39,160
+we're gonna give you a petabyte in I've
+asset storage 10 terabytes a database
+
+868
+00:49:40,006 --> 00:49:40,085
+storage
+
+869
+00:49:41,039 --> 00:49:45,115
+has some pretty high transfer limits and
+this is all for your public database
+
+870
+00:49:46,015 --> 00:49:49,056
+in your application
+
+871
+00:49:49,056 --> 00:49:52,083
+so finally a note on efficiency arm
+
+872
+00:49:52,083 --> 00:49:55,162
+one thing about cloud kid is again it's
+a transport mechanism
+
+873
+00:49:56,062 --> 00:50:00,065
+we are only there to talk to the I cloud
+servers for you
+
+874
+00:50:00,065 --> 00:50:03,133
+where not store in any records were not
+cashing records
+
+875
+00:50:04,033 --> 00:50:07,122
+anytime we give you back a record it's
+something that we got from the server
+
+876
+00:50:08,022 --> 00:50:11,115
+we're trying to be as transparent about
+that as possible and not do any
+
+877
+00:50:12,015 --> 00:50:18,052
+I cashing shenanigans here we're always
+just giving you what the server gave us
+
+878
+00:50:18,052 --> 00:50:21,126
+I in terms of efficiency though you
+might remember from the same policies
+
+879
+00:50:22,026 --> 00:50:25,042
+that were only gonna save the values
+that have changed on record
+
+880
+00:50:25,042 --> 00:50:28,113
+so we try and be smart about what we
+send over the wire
+
+881
+00:50:29,013 --> 00:50:33,021
+I when word sending up assets those can
+be potentially really big blow up the
+
+882
+00:50:33,021 --> 00:50:33,119
+data
+
+883
+00:50:34,019 --> 00:50:38,042
+and that data is transferred efficiently
+so if the server already has a copy of a
+
+884
+00:50:38,042 --> 00:50:38,127
+file
+
+885
+00:50:39,027 --> 00:50:42,075
+we don't reupload it if we are to have
+their file locally we don't need to
+
+886
+00:50:42,075 --> 00:50:45,136
+redownload
+
+887
+00:50:46,036 --> 00:50:49,119
+are so in summary I we're really excited
+about Clark it here
+
+888
+00:50:50,019 --> 00:50:54,086
+I we built a lot really great features
+and it's something that we actually use
+
+889
+00:50:54,086 --> 00:50:55,111
+that Apple we've built
+
+890
+00:50:56,011 --> 00:50:59,034
+I Cloud Drive rebuild I clarke photos on
+top at this
+
+891
+00:50:59,034 --> 00:51:02,118
+and we want you guys to start using the
+same technology that we're using
+
+892
+00:51:03,018 --> 00:51:06,026
+at Apple I'm really excited to see
+what's going to happen
+
+893
+00:51:06,098 --> 00:51:09,124
+I can't wait to see some maps in his
+pocket and
+
+894
+00:51:10,024 --> 00:51:17,024
+good luck with you think like it
+
+895
+00:51:21,063 --> 00:51:25,065
+so I'm if you need any if you need to
+contact anyone Dave the long as our
+
+896
+00:51:25,065 --> 00:51:27,087
+evangelista is the guy with the boat I'm
+
+897
+00:51:27,087 --> 00:51:30,171
+I few documentation its on developing a
+double dot com
+
+898
+00:51:31,071 --> 00:51:34,124
+are we had a introducing Cloud kit
+session earlier in the week
+
+899
+00:51:35,024 --> 00:51:38,093
+there's a couple more related sessions
+
+900
+00:51:38,093 --> 00:51:38,118
+thank you
+

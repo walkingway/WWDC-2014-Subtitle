@@ -1,0 +1,3905 @@
+1
+00:00:11,024 --> 00:00:17,093
+okay good morning everybody welcome to
+the WWDC 2014 pretty fashion I'm Howard
+
+2
+00:00:17,093 --> 00:00:17,179
+Miller on the
+
+3
+00:00:18,079 --> 00:00:21,148
+engineering manager for everything
+printing Apple I
+
+4
+00:00:22,048 --> 00:00:25,055
+today we are pretty straightforward
+agenda review a little bit over an
+
+5
+00:00:26,018 --> 00:00:27,074
+update on AirPrint
+
+6
+00:00:27,074 --> 00:00:30,150
+were spent the majority of our session
+on I O S printing
+
+7
+00:00:31,005 --> 00:00:35,060
+we're gonna show you the new IRS
+printing technology that in iowa saying
+
+8
+00:00:36,005 --> 00:00:37,034
+we're going to give you a demo that
+
+9
+00:00:37,034 --> 00:00:40,071
+so I know everybody probably went to the
+parties last night so we gotta wake
+
+10
+00:00:40,071 --> 00:00:40,810
+everybody up
+
+11
+00:00:41,449 --> 00:00:44,453
+how many people here have applications
+that already print
+
+12
+00:00:44,489 --> 00:00:47,495
+all right we've got a good good number
+how many here
+
+13
+00:00:48,089 --> 00:00:51,093
+have applications that you want to have
+print are right
+
+14
+00:00:51,489 --> 00:00:55,540
+by the time you guys leave today your
+applications will be able to print
+
+15
+00:00:55,054 --> 00:00:58,055
+I know you can write the code while
+sitting right there cuz it's going to be
+
+16
+00:00:58,064 --> 00:00:58,973
+that easy
+
+17
+00:00:59,549 --> 00:01:03,100
+but if you don't get it done we have
+allowed that follows a string come down
+
+18
+00:01:03,001 --> 00:01:06,098
+and we will get your code printing today
+so they give you an update about
+
+19
+00:01:07,007 --> 00:01:07,014
+AirPrint
+
+20
+00:01:07,077 --> 00:01:12,150
+what is AirPrint you know this
+technology was released with IRS 4.2
+
+21
+00:01:13,005 --> 00:01:14,038
+several years ago
+
+22
+00:01:14,083 --> 00:01:17,552
+in our primary goal was to provide a
+great
+
+23
+00:01:18,299 --> 00:01:22,310
+outstanding user experience pretty was a
+pain
+
+24
+00:01:22,031 --> 00:01:27,010
+really was painful and we worked on the
+back to make it simpler but it still
+
+25
+00:01:27,289 --> 00:01:29,343
+wasn't super simple we gotta I US
+
+26
+00:01:29,829 --> 00:01:34,850
+we had to have no drivers no software to
+install no configuration
+
+27
+00:01:34,085 --> 00:01:38,094
+user just wants to put their printer
+connected to the network and then when
+
+28
+00:01:38,859 --> 00:01:41,070
+they go to print there's the printer
+
+29
+00:01:41,007 --> 00:01:45,045
+they print you don't need fifty million
+options the printer should be smarter
+
+30
+00:01:45,045 --> 00:01:48,024
+the printing system should be smarter
+and that's what we did
+
+31
+00:01:48,429 --> 00:01:53,920
+but we didn't sacrifice output quality
+with AirPrint you get the fall
+
+32
+00:01:53,092 --> 00:01:56,721
+print quality that Apple's come become
+known
+
+33
+00:01:57,549 --> 00:02:01,710
+to deliver for for the last couple
+decades it is as good or in some cases
+
+34
+00:02:01,071 --> 00:02:03,095
+better than what you can get from the
+desktop
+
+35
+00:02:03,095 --> 00:02:08,108
+no compromises were made your printer
+manufacturer Prince a protocol
+
+36
+00:02:09,008 --> 00:02:12,076
+standards-based plus a little apple
+secret sauce on the side
+
+37
+00:02:12,076 --> 00:02:16,077
+and if you're if you're a technology
+provider a server vendor
+
+38
+00:02:16,086 --> 00:02:19,161
+I we will license you all this
+technology zero cost
+
+39
+00:02:20,061 --> 00:02:23,093
+I am printers
+
+40
+00:02:23,093 --> 00:02:27,097
+you know we introduced with with the
+dozen or so players from HPI I'm proud
+
+41
+00:02:27,097 --> 00:02:29,195
+to report that we have a hundred times
+as many printers now
+
+42
+00:02:30,095 --> 00:02:36,117
+I if you go in any staples or fries or
+or pick your favorite electronic store
+
+43
+00:02:37,017 --> 00:02:40,026
+virtually every network printer they
+sell now has AirPrint
+
+44
+00:02:40,026 --> 00:02:44,114
+in it I'm by my read about how for the
+world's install base for printers have
+
+45
+00:02:45,014 --> 00:02:49,056
+AirPrint n/a a yeah almost cannot
+
+46
+00:02:49,056 --> 00:02:52,145
+find a printer that your mom would want
+
+47
+00:02:53,045 --> 00:02:56,754
+doesn't have AirPrint last year all the
+enterprise vendors came on
+
+48
+00:02:57,159 --> 00:03:00,167
+Kia Sarah sharp Toshiba all have
+
+49
+00:03:00,959 --> 00:03:04,020
+AirPrint throughout their product line
+as I mentioned AirPrint
+
+50
+00:03:04,569 --> 00:03:08,810
+is available as a printing system and i
+OS 4.2 in later
+
+51
+00:03:08,081 --> 00:03:12,086
+for those who've done the math that
+means they're more than $700 million
+
+52
+00:03:13,031 --> 00:03:17,093
+users that have the same printing system
+on it that's more than any other
+
+53
+00:03:17,093 --> 00:03:20,147
+printing system in the history the
+computing industry so AirPrint spring
+
+54
+00:03:21,047 --> 00:03:21,626
+system
+
+55
+00:03:22,049 --> 00:03:26,049
+is the most prevalent printing platform
+out there then of course the most
+
+56
+00:03:26,049 --> 00:03:30,950
+important thing is you're out and you
+just gotta believe this I the Microsoft
+
+57
+00:03:30,095 --> 00:03:31,944
+guys released a beautiful product
+
+58
+00:03:32,799 --> 00:03:38,400
+they left once more feature how and they
+heard about it right away on day one
+
+59
+00:03:38,004 --> 00:03:42,203
+and by the end of that week I was on the
+phone with their engineers
+
+60
+00:03:42,599 --> 00:03:45,890
+telling him to check out the last WWDC
+presentation
+
+61
+00:03:45,089 --> 00:03:48,154
+within a couple days their app was then
+printing course it to come by
+
+62
+00:03:49,054 --> 00:03:53,068
+the better part of a month to release it
+we're gonna get outta there
+
+63
+00:03:53,068 --> 00:03:57,457
+what you need to know about airplane is
+it super super easy
+
+64
+00:03:58,069 --> 00:04:02,134
+the user interface is easy the user
+action is easy
+
+65
+00:04:02,719 --> 00:04:05,730
+but equally important and probably more
+important for you
+
+66
+00:04:05,829 --> 00:04:10,340
+is that that the API said that we have
+is not some random walk through a
+
+67
+00:04:10,034 --> 00:04:10,126
+hundred different things
+
+68
+00:04:11,026 --> 00:04:15,089
+we have a very very focused survey PI's
+that are very efficient to get you right
+
+69
+00:04:15,089 --> 00:04:17,438
+down to what you need to know
+
+70
+00:04:18,239 --> 00:04:21,390
+in with a little work and a little help
+from your application
+
+71
+00:04:21,039 --> 00:04:24,047
+bring system smart enough to know what
+to do with your output
+
+72
+00:04:24,047 --> 00:04:27,088
+we can get super high quality output
+without having to have a bunch for user
+
+73
+00:04:27,088 --> 00:04:28,175
+interaction
+
+74
+00:04:29,075 --> 00:04:33,087
+so let's talk about about what's gone on
+with AirPrint
+
+75
+00:04:33,087 --> 00:04:37,138
+we started with consumer inkjet we got
+consumer laser we got enterprise
+
+76
+00:04:38,038 --> 00:04:42,093
+lasers we've got some servers I'll after
+we talked about brothers
+
+77
+00:04:42,093 --> 00:04:47,171
+first role for printer and as things go
+there are always new classes for
+
+78
+00:04:48,071 --> 00:04:49,108
+printers coming
+
+79
+00:04:50,008 --> 00:04:53,067
+and we're getting into some other
+specialty printers are in store with one
+
+80
+00:04:53,067 --> 00:04:54,112
+of my new favorites
+
+81
+00:04:55,012 --> 00:04:59,023
+this is probably not what your mom can I
+get home this is the Astra mad tuff
+
+82
+00:04:59,023 --> 00:05:01,096
+rider 5 the reason I like this
+
+83
+00:05:01,096 --> 00:05:04,129
+is because it's native spot
+
+84
+00:05:05,029 --> 00:05:08,100
+is on the cockpit of an airplane there
+it is set in its native
+
+85
+00:05:09,000 --> 00:05:14,006
+747 environment I but this will end up
+on C-seventeens with the military lined
+
+86
+00:05:14,006 --> 00:05:14,014
+up and and
+
+87
+00:05:15,004 --> 00:05:20,061
+commercial but what's interesting is
+iPad and iPhones are everyplace
+
+88
+00:05:20,097 --> 00:05:24,124
+applications need to print in the
+printer manufacturers ok all types are
+
+89
+00:05:25,024 --> 00:05:26,026
+responding
+
+90
+00:05:26,026 --> 00:05:30,062
+I am this is a curiosity and then there
+probably won't be millions are these
+
+91
+00:05:30,062 --> 00:05:31,068
+printer sold
+
+92
+00:05:31,068 --> 00:05:34,164
+but it shows that airport is pretty much
+every corner of the world now
+
+93
+00:05:35,064 --> 00:05:39,079
+another printer that I'm really happy to
+talk about is the brother Roger
+
+94
+00:05:39,079 --> 00:05:42,135
+forty 40 this is a very small
+battery-powered
+
+95
+00:05:43,035 --> 00:05:47,078
+receded label printer I it will support
+AirPrint soon
+
+96
+00:05:47,078 --> 00:05:50,143
+and I will have a demo that later today
+
+97
+00:05:51,043 --> 00:05:55,124
+so let's talk about what we've added we
+have added some new API's and higher
+
+98
+00:05:56,024 --> 00:05:56,066
+with
+
+99
+00:05:56,066 --> 00:05:59,084
+a these are to support
+
+100
+00:05:59,084 --> 00:06:02,151
+specialty printers in applications
+
+101
+00:06:03,051 --> 00:06:06,073
+if you look at what we did in AirPrint
+so far
+
+102
+00:06:06,073 --> 00:06:10,089
+every time you print the user has to see
+our print dialog which means they get to
+
+103
+00:06:10,089 --> 00:06:11,136
+pick a printer
+
+104
+00:06:12,036 --> 00:06:16,095
+if you're doing an application I am
+
+105
+00:06:16,095 --> 00:06:20,130
+for the lucky store checkout counter we
+certainly don't want the clerk
+
+106
+00:06:21,003 --> 00:06:24,042
+every day picking their printer every
+time they print every receipt for the
+
+107
+00:06:24,069 --> 00:06:25,110
+customer
+
+108
+00:06:26,001 --> 00:06:29,025
+here at Luckys least my lucky
+
+109
+00:06:29,034 --> 00:06:34,040
+they have to printers their one printer
+prints the receipt yet on Prince those
+
+110
+00:06:34,004 --> 00:06:37,005
+coupons and they tear them off and they
+give you both
+
+111
+00:06:37,005 --> 00:06:40,041
+the survey guys will allow you to have
+multiple sets up earners
+
+112
+00:06:40,086 --> 00:06:44,099
+pre-configured by an administrator I
+
+113
+00:06:44,099 --> 00:06:50,111
+that at runtime: the user the
+application can select which printer
+
+114
+00:06:51,011 --> 00:06:56,046
+without the user having to get involved
+so
+
+115
+00:06:56,046 --> 00:06:59,137
+will have a bunch to take talk about
+that in a minute I select the talk about
+
+116
+00:07:00,037 --> 00:07:01,066
+some hence
+
+117
+00:07:01,066 --> 00:07:04,117
+first of everybody's designing their
+applications for the screen we've got
+
+118
+00:07:05,017 --> 00:07:07,085
+some beautiful iPad with Retina displays
+
+119
+00:07:07,085 --> 00:07:10,093
+but for those worse in the print world
+that's pretty low resolution output
+
+120
+00:07:11,065 --> 00:07:14,083
+also output that is backlit
+
+121
+00:07:14,083 --> 00:07:17,162
+when we start talking about paper you
+have a lil much larger
+
+122
+00:07:18,062 --> 00:07:22,089
+campus a much larger space to utilize
+
+123
+00:07:22,089 --> 00:07:25,097
+and that means the you wanna lay out
+your stuff too
+
+124
+00:07:25,097 --> 00:07:29,105
+to make effective use to the space you
+want to provide
+
+125
+00:07:30,005 --> 00:07:33,012
+higher quality graphics you really need
+higher resolution graphics than what
+
+126
+00:07:33,075 --> 00:07:34,158
+you're showing on screen if you want the
+
+127
+00:07:35,058 --> 00:07:40,064
+the output to be truly spectacular that
+I want you to think about readability
+
+128
+00:07:41,018 --> 00:07:44,021
+you know they don't print book
+
+129
+00:07:44,021 --> 00:07:47,034
+that people are gonna sit on the couch
+and read
+
+130
+00:07:47,034 --> 00:07:51,079
+with no margins there's always a big
+margin so your big fat
+
+131
+00:07:51,079 --> 00:07:54,088
+some can be there and you can still read
+the words
+
+132
+00:07:55,069 --> 00:07:58,154
+consider what paper is it's gonna be
+reflective
+
+133
+00:07:59,054 --> 00:08:03,067
+lights gonna come off a bit gray looks
+awesome on screen gray looks
+
+134
+00:08:03,067 --> 00:08:07,070
+awful when it comes to print it hard to
+reconsider the contrast
+
+135
+00:08:07,007 --> 00:08:10,072
+consider the margin consider the fund's
+consider the spacing
+
+136
+00:08:11,035 --> 00:08:14,098
+papers a little different than screen
+and little just a little bit
+
+137
+00:08:14,098 --> 00:08:17,189
+aforethought you can get spectacular
+printed output
+
+138
+00:08:18,089 --> 00:08:21,097
+I with respect to the Print System it's
+a smart printing system we do a huge
+
+139
+00:08:22,069 --> 00:08:23,091
+amount of stuff
+
+140
+00:08:23,091 --> 00:08:27,098
+to help your app if you tell us that
+it's a photo for example
+
+141
+00:08:27,098 --> 00:08:30,175
+we will automatically pick the photo
+trying
+
+142
+00:08:31,075 --> 00:08:34,106
+pic photo print mode picked the highest
+quality print mode
+
+143
+00:08:35,006 --> 00:08:39,044
+skill the item to fit on the page
+centered in print
+
+144
+00:08:39,044 --> 00:08:42,111
+you're gonna tell us what you're trying
+to print were gonna work all the magic
+
+145
+00:08:43,011 --> 00:08:47,087
+behind the scenes in the Print System to
+make sure the user gets the best output
+
+146
+00:08:47,087 --> 00:08:50,186
+okay there are few data objects that
+we're gonna hand you your hand us back
+
+147
+00:08:51,086 --> 00:08:52,105
+and I just it's
+
+148
+00:08:52,879 --> 00:08:58,420
+you know the caviar don't roll around in
+those in train tweak stuff don't respect
+
+149
+00:08:58,042 --> 00:09:01,501
+these opaque objects we may change
+something in fact we probably will and I
+
+150
+00:09:01,879 --> 00:09:03,905
+don't wanna breaker up in the future
+
+151
+00:09:04,139 --> 00:09:07,550
+and then the last hit if there's anybody
+here who test the Raptors anybody to
+
+152
+00:09:07,055 --> 00:09:08,067
+stir up
+
+153
+00:09:08,067 --> 00:09:11,105
+okay least a few if you do you don't
+have to go by
+
+154
+00:09:12,005 --> 00:09:16,023
+all 1200 AirPrint printer models that
+are available in the world
+
+155
+00:09:16,023 --> 00:09:21,482
+go back to the the 2012 WWDC session we
+spent about 15 minutes on something
+
+156
+00:09:21,689 --> 00:09:22,727
+called the printer simulator
+
+157
+00:09:23,069 --> 00:09:26,250
+which is part of your Xcode release
+
+158
+00:09:26,025 --> 00:09:30,028
+it allows you to simulate every comment
+I printer including changing some other
+
+159
+00:09:30,055 --> 00:09:30,894
+printers
+
+160
+00:09:31,389 --> 00:09:35,370
+parameters so inkjet printers laser
+printers row for printers
+
+161
+00:09:35,037 --> 00:09:38,306
+you don't have to buy more by one and
+use the
+
+162
+00:09:38,639 --> 00:09:41,678
+printer simulator to do your work okay
+
+163
+00:09:42,029 --> 00:09:45,480
+let's get to the focus of today's
+meeting again our goal is by the time
+
+164
+00:09:45,048 --> 00:09:48,217
+you leave here today you can create an
+app that Prince
+
+165
+00:09:48,649 --> 00:09:52,720
+and for the media this presentation I'm
+gonna bring upon my engineers
+
+166
+00:09:52,072 --> 00:09:56,751
+tara Lynn and he is going to
+
+167
+00:09:57,399 --> 00:10:04,399
+take you through everything you need to
+know to make your print
+
+168
+00:10:05,689 --> 00:10:07,784
+thanks Howard I'm tied it when I
+
+169
+00:10:08,639 --> 00:10:12,641
+apron engineer and the lead on me I was
+planning system so we're gonna talk
+
+170
+00:10:12,659 --> 00:10:12,664
+about
+
+171
+00:10:13,159 --> 00:10:16,233
+am I was burning here a personal talk
+about picking what to print
+
+172
+00:10:16,899 --> 00:10:19,980
+next we'll go over the API's had had
+actually get
+
+173
+00:10:20,709 --> 00:10:24,713
+output will talk about to the different
+pinning you I options
+
+174
+00:10:24,749 --> 00:10:27,800
+so first this is our motto I think
+
+175
+00:10:28,259 --> 00:10:31,356
+we made this clear but I was praying as
+easy but powerful
+
+176
+00:10:32,229 --> 00:10:35,293
+we designed the AirPrint protocol to
+scale from
+
+177
+00:10:35,869 --> 00:10:39,873
+you know a small consumer printers all
+the way up to big
+
+178
+00:10:40,269 --> 00:10:44,313
+enterprise-class printers and everything
+in between and with every IRS really is
+
+179
+00:10:44,709 --> 00:10:47,794
+we've been adding an expanding the types
+of things you can do for my last
+
+180
+00:10:48,559 --> 00:10:51,636
+but we kept it really easy so we want
+the user
+
+181
+00:10:52,329 --> 00:10:55,357
+interaction to be really really simple
+and basic we haven't
+
+182
+00:10:55,609 --> 00:10:58,613
+added Diane added an added include
+really try to keep
+
+183
+00:10:58,649 --> 00:11:03,745
+feature creep down so providing good
+content for printing this is really the
+
+184
+00:11:04,609 --> 00:11:05,632
+most important part
+
+185
+00:11:05,839 --> 00:11:09,844
+I'm what we're looking for is bring it
+up but thats useful
+
+186
+00:11:09,889 --> 00:11:13,720
+attractive and high-quality I would like
+to thank you this is like
+
+187
+00:11:13,072 --> 00:11:16,121
+high and graphic design I'll it's best
+that
+
+188
+00:11:16,769 --> 00:11:20,821
+design your output I'm like a graphic
+designer word and then use our classes
+
+189
+00:11:21,289 --> 00:11:21,316
+to
+
+190
+00:11:21,559 --> 00:11:24,612
+make that happen that have approaching
+it the other way around we're just
+
+191
+00:11:25,089 --> 00:11:26,163
+looking at all the classes and trade
+
+192
+00:11:26,829 --> 00:11:29,910
+tweaking what you'd what you wanna do
+first design and then use our classes
+
+193
+00:11:30,639 --> 00:11:34,643
+as howard said what looks good on screen
+than I look good
+
+194
+00:11:34,679 --> 00:11:39,750
+on paper we also want you to make you so
+the dynamic braking system so
+
+195
+00:11:40,389 --> 00:11:44,403
+I'm paper size can be anything and we
+actually talk to the air print printer
+
+196
+00:11:44,529 --> 00:11:47,590
+I'm we figure out what side burner
+papers are available
+
+197
+00:11:48,139 --> 00:11:52,177
+some printers actually have paper size
+sensors that can tell what
+
+198
+00:11:52,519 --> 00:11:55,615
+papers in an or the user can turn on the
+front panel what papers loaded
+
+199
+00:11:56,479 --> 00:11:59,486
+and so the print system is designed to
+be dynamic to have
+
+200
+00:11:59,549 --> 00:12:03,573
+it sense at all the way up to your app
+if your app is dynamic about its content
+
+201
+00:12:03,789 --> 00:12:03,861
+laying it out
+
+202
+00:12:04,509 --> 00:12:08,576
+then you get the full benefit that
+printer hardware margins also very quite
+
+203
+00:12:09,179 --> 00:12:09,217
+a bit
+
+204
+00:12:09,559 --> 00:12:12,618
+sometimes bottom margin might be large
+them margins on
+
+205
+00:12:13,149 --> 00:12:18,167
+other side might be really really small
+so for all these reasons it's really
+
+206
+00:12:18,329 --> 00:12:21,377
+best not to produce a fixed size PDF and
+send it to the printing system
+
+207
+00:12:21,809 --> 00:12:26,811
+also another thing to keep in mind is
+there's really two major document sizes
+
+208
+00:12:27,009 --> 00:12:30,065
+for paper in the world US letter which
+is very is in the US
+
+209
+00:12:30,569 --> 00:12:33,573
+and then there's a for which is used a
+lot of other
+
+210
+00:12:33,609 --> 00:12:36,708
+regions around the world so if you
+design your output based only on the the
+
+211
+00:12:37,599 --> 00:12:40,602
+paper size that your region uses you
+might be missing out on a whole other
+
+212
+00:12:40,899 --> 00:12:43,900
+markets so it's good to think about all
+these different paper sizes
+
+213
+00:12:43,999 --> 00:12:47,056
+and like we set the printer simulator
+you can use to simulate these different
+
+214
+00:12:47,569 --> 00:12:47,635
+conditions
+
+215
+00:12:48,229 --> 00:12:51,243
+so good example have pretty
+
+216
+00:12:51,369 --> 00:12:54,431
+is this map dictionary for kids this is
+an app that
+
+217
+00:12:54,989 --> 00:12:58,067
+let's you eat look at different
+definitions of math terms
+
+218
+00:12:58,769 --> 00:13:01,865
+in this case for a look at the Las
+arithmetic and if you're a teacher and
+
+219
+00:13:02,729 --> 00:13:03,787
+you want to make like a hand out at this
+
+220
+00:13:04,309 --> 00:13:07,323
+you can print it out and without you get
+
+221
+00:13:07,449 --> 00:13:11,454
+looks really nice that would be suitable
+to hand out to all the students in a
+
+222
+00:13:11,499 --> 00:13:11,576
+classroom
+
+223
+00:13:12,269 --> 00:13:16,297
+have the night header and footer there's
+the page number at the bottom
+
+224
+00:13:16,549 --> 00:13:20,549
+the examples our next call out boxes
+that are different color
+
+225
+00:13:20,549 --> 00:13:23,578
+an Italian poet actually even looked
+really good on a black and white printer
+
+226
+00:13:23,839 --> 00:13:26,840
+and if the the
+
+227
+00:13:26,939 --> 00:13:30,970
+quivers printing had US legal out in
+their printer and the the printer
+
+228
+00:13:30,097 --> 00:13:34,836
+I'll reported that back to the brink
+system this app is dynamic
+
+229
+00:13:35,709 --> 00:13:39,712
+an at fits all the content on one page
+it stretches out it looks good
+
+230
+00:13:40,009 --> 00:13:43,012
+so this is a good example a being
+dynamic about to
+
+231
+00:13:43,039 --> 00:13:46,098
+about content okay so let's
+
+232
+00:13:46,629 --> 00:13:50,695
+step right into the FBI's here the basic
+steps to printing with
+
+233
+00:13:51,289 --> 00:13:54,322
+you I this is a standard printing I
+first your Apple get the print
+
+234
+00:13:54,619 --> 00:13:54,681
+controller
+
+235
+00:13:55,239 --> 00:13:59,247
+or the activity controller sure she'd
+your setup attributes for the job like
+
+236
+00:14:00,039 --> 00:14:01,093
+job name in the type of job
+
+237
+00:14:01,579 --> 00:14:04,673
+then you provide the content for praying
+and we'll go over that
+
+238
+00:14:05,519 --> 00:14:12,519
+later me a present the UI at this point
+I was takes over it communicates with
+
+239
+00:14:12,929 --> 00:14:13,016
+the AirPrint printer
+
+240
+00:14:13,799 --> 00:14:16,885
+figures out all the relevant information
+and the Damon takes over managing the
+
+241
+00:14:17,659 --> 00:14:17,708
+job
+
+242
+00:14:18,149 --> 00:14:22,155
+if there's I'm if the job needs a
+username a password that brings
+
+243
+00:14:22,749 --> 00:14:23,788
+authentic scare that if
+
+244
+00:14:24,139 --> 00:14:27,238
+paper around our incomes irony in that
+kinda stuff that are managed by the day
+
+245
+00:14:28,129 --> 00:14:32,165
+Damon's hereafter need to deal with any
+of that stuff
+
+246
+00:14:32,489 --> 00:14:35,534
+so here's the classes were gonna be
+focusing on
+
+247
+00:14:35,939 --> 00:14:38,953
+first you I print and file the just the
+general
+
+248
+00:14:39,079 --> 00:14:43,150
+I'm sorta meta data about the print job
+the job name in a type a job
+
+249
+00:14:43,789 --> 00:14:48,867
+you I put paper which this represents
+sheet of paper at the printer
+
+250
+00:14:49,569 --> 00:14:54,618
+a pretty for matter which knows how to
+format content for she
+
+251
+00:14:55,059 --> 00:15:00,134
+you a pre-paid render which lets you
+take full control over drying
+
+252
+00:15:00,809 --> 00:15:03,835
+than for showing you I am here and I
+managing the job we have you I printer
+
+253
+00:15:04,069 --> 00:15:05,153
+actually controller
+
+254
+00:15:05,909 --> 00:15:10,927
+or you I activity view controller which
+is the share she
+
+255
+00:15:11,089 --> 00:15:14,098
+the first let's go for you I print and
+file every print job should have
+
+256
+00:15:14,989 --> 00:15:20,026
+are you I put in for a set up for it
+first thing I do is that the jobname
+
+257
+00:15:20,359 --> 00:15:24,396
+now this job name appears on the front
+panel when the user printer printer
+
+258
+00:15:24,729 --> 00:15:27,751
+are when he's a prince a job but also
+appears I
+
+259
+00:15:27,949 --> 00:15:30,997
+in Perth Center if these are on to
+cancel their job
+
+260
+00:15:31,429 --> 00:15:34,438
+if they're planning to a server are like
+a press release server
+
+261
+00:15:35,329 --> 00:15:38,377
+this is how you use is going to be
+identifying their job
+
+262
+00:15:38,809 --> 00:15:42,820
+that needs to be really specific if it's
+something generic like just print job
+
+263
+00:15:42,919 --> 00:15:45,982
+that doesn't really help users identify
+which jobs there's such are important to
+
+264
+00:15:46,549 --> 00:15:47,555
+make sure this is
+
+265
+00:15:47,609 --> 00:15:51,706
+specific as possible next we have output
+type:
+
+266
+00:15:52,579 --> 00:15:55,671
+this just tell the principal about the
+type of content that you're pretty
+
+267
+00:15:56,499 --> 00:16:00,572
+that lowers the the panic that them to
+make appropriate choices for paper size
+
+268
+00:16:01,229 --> 00:16:05,294
+pic quality mode I we also make you I
+decisions about what to show for the UI
+
+269
+00:16:05,879 --> 00:16:08,897
+based on apartheid we have four these
+
+270
+00:16:09,059 --> 00:16:12,106
+first one just the general up you I prim
+and proper
+
+271
+00:16:12,529 --> 00:16:15,616
+general this is like you know mix text
+and graphics
+
+272
+00:16:16,399 --> 00:16:19,455
+like a web page are showing here
+
+273
+00:16:19,959 --> 00:16:23,003
+will tell the printer to print it normal
+quality isn't that gonna do high quality
+
+274
+00:16:23,399 --> 00:16:24,452
+and take a really long time
+
+275
+00:16:24,929 --> 00:16:27,947
+I'll by departures the document paper
+size like
+
+276
+00:16:28,109 --> 00:16:31,124
+a four-letter the UI lowers
+
+277
+00:16:31,259 --> 00:16:34,278
+duplex to be shown on page arranged to
+
+278
+00:16:34,449 --> 00:16:38,475
+next one we have the document grayscale
+this is very similar to the previous one
+
+279
+00:16:38,709 --> 00:16:39,718
+but this is optimized for
+
+280
+00:16:40,609 --> 00:16:43,671
+monochrome like text and and monochrome
+graphics
+
+281
+00:16:44,229 --> 00:16:47,233
+this case you get improved print speed
+cuz we can tell the printer
+
+282
+00:16:47,629 --> 00:16:52,695
+this is just black and white the data
+over the network can be last
+
+283
+00:16:53,289 --> 00:16:56,342
+and all silent many cases reduce their
+money Inc but it's used because the
+
+284
+00:16:56,819 --> 00:16:58,824
+printer will go into a black only mode
+
+285
+00:16:59,319 --> 00:17:02,343
+and like the previous example die I am
+
+286
+00:17:02,559 --> 00:17:07,500
+duplex allowed and paid range controls
+will be allowed in and UI
+
+287
+00:17:07,005 --> 00:17:11,144
+next one is photo like Howard Mintz you
+can tell us your printing a photo
+
+288
+00:17:11,639 --> 00:17:14,677
+will choose high quality will tell the
+printer this is a photo printer
+
+289
+00:17:15,019 --> 00:17:20,490
+highest quality which is a photo paper
+size based on the region
+
+290
+00:17:20,049 --> 00:17:24,075
+if the printer allows borderless
+printing will choose borderless printing
+
+291
+00:17:24,075 --> 00:17:27,864
+and because duplex unpaid range I make
+sense for a photo we don't show those in
+
+292
+00:17:28,539 --> 00:17:31,545
+the IC get a really really simple you
+
+293
+00:17:32,139 --> 00:17:35,181
+and then similarly we have high quality
+grayscale
+
+294
+00:17:35,559 --> 00:17:38,655
+which is in all in most cases arm in
+most ways at the same as the previous
+
+295
+00:17:39,519 --> 00:17:40,980
+one
+
+296
+00:17:40,098 --> 00:17:43,467
+but some printers have a high quality
+great game modes some have
+
+297
+00:17:44,349 --> 00:17:49,375
+from graying Lincoln turned on pic a
+photo in grayscale really really nicely
+
+298
+00:17:49,609 --> 00:17:52,990
+so we'll tell the printer to do that so
+choose this if you what your
+
+299
+00:17:52,099 --> 00:17:57,124
+photo to come out and I really high and
+grayscale way
+
+300
+00:17:58,024 --> 00:18:02,833
+okay so that you I print and file X will
+talk about you I print paper
+
+301
+00:18:03,049 --> 00:18:07,580
+the really simple class just basically
+have the paper act that represents
+
+302
+00:18:07,058 --> 00:18:11,027
+the fact that the full sheet of paper
+have at 00:00 on
+
+303
+00:18:11,549 --> 00:18:15,250
+just directing oversized sheet an
+insider that we have the printable
+
+304
+00:18:15,025 --> 00:18:16,184
+racked
+
+305
+00:18:16,409 --> 00:18:19,448
+this is the image malaria on its
+
+306
+00:18:19,799 --> 00:18:23,590
+the where the printer can actually image
+content so it's basically the
+
+307
+00:18:23,059 --> 00:18:29,318
+the full page minus the hardware margins
+
+308
+00:18:29,849 --> 00:18:32,881
+okay next we'll talk about providing
+content so this is really that the meter
+
+309
+00:18:33,169 --> 00:18:35,180
+that the presentation here
+
+310
+00:18:35,279 --> 00:18:38,313
+and there's three levels here we have
+are
+
+311
+00:18:38,619 --> 00:18:42,510
+the easiest way then there's a little
+bit more it still simple but a little
+
+312
+00:18:42,051 --> 00:18:43,180
+bit more involved and then
+
+313
+00:18:43,639 --> 00:18:46,704
+fully custom ROM pages the first the
+easy
+
+314
+00:18:47,289 --> 00:18:50,440
+is PDF files image files things that are
+ready
+
+315
+00:18:50,044 --> 00:18:53,213
+are basically ready to print
+
+316
+00:18:53,609 --> 00:18:57,683
+protease it could be a single item or
+you can be a real items like dad a bunch
+
+317
+00:18:58,349 --> 00:19:01,500
+of photos you want to print you could
+primary
+
+318
+00:19:01,005 --> 00:19:06,007
+I'm it could be like I said PDF J pegs
+any image type that I was understands
+
+319
+00:19:06,007 --> 00:19:09,061
+it can be in the form have an ass URL to
+like a file on
+
+320
+00:19:10,024 --> 00:19:13,120
+desk or they can be in memory in the
+form of an enhanced data
+
+321
+00:19:14,002 --> 00:19:18,391
+you I am CIA image it can even be
+something in the photo library like an
+
+322
+00:19:18,589 --> 00:19:18,960
+ass
+
+323
+00:19:18,096 --> 00:19:22,795
+a laugh at cornell URL I'm interpreting
+system knows how to
+
+324
+00:19:23,659 --> 00:19:26,990
+go into the former librarian grab that
+
+325
+00:19:26,099 --> 00:19:29,101
+if you provide an array of items each
+one of those items will be a separate
+
+326
+00:19:30,001 --> 00:19:35,400
+job
+
+327
+00:19:35,409 --> 00:19:39,480
+so here's all the car that it would take
+to print a PDF file it's pretty simple
+
+328
+00:19:39,048 --> 00:19:43,427
+this method just take then you're out to
+a PDF file on desk
+
+329
+00:19:43,859 --> 00:19:47,000
+first we asked the UI interaction
+controller
+
+330
+00:19:47,000 --> 00:19:51,029
+if it can print this URL and some
+examples of when it would be able to
+
+331
+00:19:51,029 --> 00:19:51,690
+print it I'll
+
+332
+00:19:51,069 --> 00:19:56,144
+if the PDF hat was password-protected
+offers now formed in some way
+
+333
+00:19:57,044 --> 00:20:00,653
+next week grab the you I pretty
+interaction controllers
+
+334
+00:20:01,049 --> 00:20:05,097
+it's a shared objects we just grabbed a
+share print controller
+
+335
+00:20:05,529 --> 00:20:09,585
+with that the printing item property to
+be this URL to our PDF
+
+336
+00:20:10,089 --> 00:20:13,116
+if there was an array of items its
+there's a different property company
+
+337
+00:20:13,359 --> 00:20:13,441
+items
+
+338
+00:20:14,179 --> 00:20:17,215
+the it set to be arraigned
+
+339
+00:20:17,539 --> 00:20:23,570
+men we set up are you a pic info like I
+said we'll do this for every job
+
+340
+00:20:23,057 --> 00:20:26,656
+was at the upper type to be you I
+pretend for a pic general because PDF
+
+341
+00:20:27,169 --> 00:20:28,208
+typically have
+
+342
+00:20:28,559 --> 00:20:31,564
+mix text and graphics the job name will
+be
+
+343
+00:20:31,609 --> 00:20:35,970
+just the file name other the PDF north
+at the prison for property
+
+344
+00:20:35,097 --> 00:20:37,786
+up the UI printer actually controller to
+be the print and for that we just
+
+345
+00:20:38,659 --> 00:20:41,711
+created
+
+346
+00:20:42,179 --> 00:20:45,320
+next that the show is paid range
+property to be yes
+
+347
+00:20:45,032 --> 00:20:49,051
+by default but it's now but for PDF
+usually users are going to want to be
+
+348
+00:20:49,339 --> 00:20:53,393
+able to specify paid range within the
+PDF to print
+
+349
+00:20:53,879 --> 00:20:56,879
+and i was just call present animated
+
+350
+00:20:56,879 --> 00:21:00,710
+yes completion handler with no
+completion handler
+
+351
+00:21:00,071 --> 00:21:03,122
+at this point IRS takes takeover you
+don't have to do anything else on your
+
+352
+00:21:04,022 --> 00:21:04,361
+app
+
+353
+00:21:04,559 --> 00:21:09,480
+like I said if there's issues you know I
+kinda paper any accounts that are
+
+354
+00:21:09,048 --> 00:21:11,107
+managed by the system you don't have to
+handle any
+
+355
+00:21:11,539 --> 00:21:14,740
+scares me
+
+356
+00:21:14,074 --> 00:21:17,233
+okay so that's a easy level
+
+357
+00:21:17,899 --> 00:21:21,260
+next is basic principal content
+
+358
+00:21:21,026 --> 00:21:26,625
+we have just text or if you I'm written
+your whole proudly outraged and now
+
+359
+00:21:26,859 --> 00:21:30,933
+those issues when it is provided
+formatter classes
+
+360
+00:21:31,599 --> 00:21:34,643
+so for matters but will be using
+
+361
+00:21:35,039 --> 00:21:38,044
+now what is a formatter it's pretty
+basic it just
+
+362
+00:21:38,089 --> 00:21:42,122
+basically takes and in the abstract and
+to take from data in your app
+
+363
+00:21:42,419 --> 00:21:45,424
+and some rectangle honest and I'll put a
+sheet of paper
+
+364
+00:21:45,919 --> 00:21:50,931
+and it knows how to format sounds pretty
+pretty basic
+
+365
+00:21:51,039 --> 00:21:54,960
+so in this case I guess being attacked
+say we have the Gettysburg Address
+
+366
+00:21:54,096 --> 00:21:58,985
+in an ass string we can use a you a
+simple text formatter
+
+367
+00:21:59,849 --> 00:22:02,857
+it knows how to take that string and to
+lay it out onto a page
+
+368
+00:22:02,929 --> 00:22:06,760
+into this rectangle now the whole string
+doesn't fit on this one paid so far
+
+369
+00:22:06,076 --> 00:22:06,965
+matter
+
+370
+00:22:07,649 --> 00:22:11,480
+know it's just keep going and tell all
+the content
+
+371
+00:22:11,048 --> 00:22:16,687
+and all the data did used up
+
+372
+00:22:17,119 --> 00:22:20,198
+so you can use for matters directly with
+you I printer actually controller or the
+
+373
+00:22:20,909 --> 00:22:25,730
+you activity controller the share she to
+format for a whole page
+
+374
+00:22:25,073 --> 00:22:28,192
+you can also use for matters as a helper
+and a full render
+
+375
+00:22:28,849 --> 00:22:32,460
+we'll talk about that later for plain
+text
+
+376
+00:22:32,046 --> 00:22:36,615
+use this you a simple text formatter
+that allows you to specify fontcolor
+
+377
+00:22:37,029 --> 00:22:41,210
+linemen you know can't control the text
+how you want to look on the page
+
+378
+00:22:41,021 --> 00:22:45,024
+for HTML markup you use the UI mark-up
+text formatter
+
+379
+00:22:45,024 --> 00:22:52,024
+and it knows had format you know based
+on its generals using WebKit
+
+380
+00:22:52,299 --> 00:22:56,333
+so the layout by default I'm here's our
+paper like we share before
+
+381
+00:22:56,639 --> 00:23:00,660
+I to file that uses the printable racked
+which is the original area
+
+382
+00:23:00,849 --> 00:23:03,851
+but that might be really really close
+the add to the page some printers
+
+383
+00:23:03,869 --> 00:23:07,980
+you know only have like oh attend two
+minutes on edge the campaign
+
+384
+00:23:07,098 --> 00:23:10,797
+like howard mentioned that's not a good
+thing you don't want are content to be
+
+385
+00:23:11,679 --> 00:23:15,746
+that closed added page so that's we've
+provided I
+
+386
+00:23:16,349 --> 00:23:19,430
+a property on the format and you can use
+and new this year we have
+
+387
+00:23:20,159 --> 00:23:23,980
+per page content inset the lets you
+specify
+
+388
+00:23:23,098 --> 00:23:27,277
+left top right bottom on every page
+
+389
+00:23:28,159 --> 00:23:31,182
+so will you little
+
+390
+00:23:31,389 --> 00:23:35,240
+keep going until other content used up
+and an honor those margins everything a
+
+391
+00:23:35,024 --> 00:23:35,963
+page
+
+392
+00:23:36,179 --> 00:23:39,244
+previously we had a continent that which
+is all behaved a little bit differently
+
+393
+00:23:39,829 --> 00:23:40,834
+and we think this is a little better
+
+394
+00:23:41,329 --> 00:23:44,332
+I'm that'll allow you to get nice top
+and bottom margins
+
+395
+00:23:44,629 --> 00:23:49,632
+and that are consistent every single
+page
+
+396
+00:23:49,929 --> 00:23:53,220
+so here's a a quick code sample love
+using a formatter
+
+397
+00:23:53,022 --> 00:23:56,131
+and this is all the code you would need
+if you had your print layout
+
+398
+00:23:56,329 --> 00:23:59,330
+design HTML this is really all you need
+to do
+
+399
+00:23:59,429 --> 00:24:03,473
+as this this method here into the matter
+text HTML text
+
+400
+00:24:03,869 --> 00:24:08,490
+as a parameter we create are you a
+mark-up text formatter
+
+401
+00:24:08,049 --> 00:24:11,948
+initialize it with the text that was
+past 10
+
+402
+00:24:12,389 --> 00:24:15,454
+next week setup are per page content at
+
+403
+00:24:16,039 --> 00:24:20,740
+which is a UI agent that so I'll call
+you added make
+
+404
+00:24:20,074 --> 00:24:26,081
+ok but three quarters-inch top I top
+left bottom right
+
+405
+00:24:27,044 --> 00:24:29,052
+and then we'll just set the printer
+formatter property on the controller to
+
+406
+00:24:30,024 --> 00:24:32,863
+be the formatter we just created
+
+407
+00:24:33,079 --> 00:24:36,148
+they will set up are you I pretend to
+like we always do
+
+408
+00:24:36,769 --> 00:24:40,804
+just that up a general bud job name will
+be there web pages
+
+409
+00:24:41,119 --> 00:24:44,500
+URL field
+
+410
+00:24:44,005 --> 00:24:48,053
+and you put that so that's all you need
+to do
+
+411
+00:24:48,098 --> 00:24:52,132
+now view for matters I'm every view an
+eye on has applied for matter that
+
+412
+00:24:53,032 --> 00:24:56,095
+knows how to get that cunt an interview
+on the page
+
+413
+00:24:56,095 --> 00:24:59,774
+I'm I was whether really designed for to
+be view based
+
+414
+00:25:00,629 --> 00:25:04,200
+printing go by some viewers are really
+useful for this
+
+415
+00:25:04,002 --> 00:25:07,026
+so this example a map if you want to get
+that content that a
+
+416
+00:25:07,044 --> 00:25:10,132
+the map but in a MapView are you need to
+do is call
+
+417
+00:25:11,032 --> 00:25:15,091
+the view print formatter on your map you
+and you can have this right to your pad
+
+418
+00:25:15,379 --> 00:25:15,458
+controller in
+
+419
+00:25:16,169 --> 00:25:19,740
+and prep another view that's really
+useful
+
+420
+00:25:19,074 --> 00:25:22,503
+out to to use the view prepared for
+matter is a WebView
+
+421
+00:25:23,169 --> 00:25:26,220
+if you have a baby you in your apt and
+you want to get that content print
+
+422
+00:25:26,679 --> 00:25:28,765
+I need to call it that you print
+formatter so you don't need initialize
+
+423
+00:25:29,539 --> 00:25:33,540
+it on your own you just grab it from the
+view
+
+424
+00:25:33,639 --> 00:25:37,500
+okay so that's our print for matters
+
+425
+00:25:37,005 --> 00:25:40,584
+so that the intermediate level I'm
+
+426
+00:25:41,079 --> 00:25:44,111
+the basic level next is you know little
+bit more advanced
+
+427
+00:25:44,399 --> 00:25:47,475
+fully custom ROM pages this is the view
+this is for if you want to really take
+
+428
+00:25:48,159 --> 00:25:53,220
+total control over the drying and will
+be rendering the pages with content
+
+429
+00:25:53,022 --> 00:25:57,701
+using render is mostly but you can also
+use them for matters like we just
+
+430
+00:25:57,899 --> 00:26:02,972
+went over in render
+
+431
+00:26:03,629 --> 00:26:06,633
+surrenders I'm what is a render well
+here's our
+
+432
+00:26:07,029 --> 00:26:11,036
+i render object and its really
+responsible for at least two things
+
+433
+00:26:11,099 --> 00:26:14,170
+first in which is responding to number
+pages saw it happen now
+
+434
+00:26:14,809 --> 00:26:17,840
+how many pages that total reprinting
+netscape
+
+435
+00:26:18,119 --> 00:26:21,158
+to a response to next thing I have to be
+
+436
+00:26:21,509 --> 00:26:25,547
+have to do is when it's called drug
+content for page at index
+
+437
+00:26:25,889 --> 00:26:29,960
+interact so the pretty let them tell
+that draw the first page
+
+438
+00:26:30,599 --> 00:26:33,710
+and it gets to use any drying methods
+better at it
+
+439
+00:26:33,071 --> 00:26:37,170
+disposal so I any screen drying methods
+car graphics core tax
+
+440
+00:26:37,809 --> 00:26:40,811
+on you like it drying methods
+
+441
+00:26:41,009 --> 00:26:44,450
+net told rather second page because
+we've had two pages and so it just gets
+
+442
+00:26:44,045 --> 00:26:44,704
+to do
+
+443
+00:26:45,109 --> 00:26:48,820
+however wants to drop so this is what
+you do for
+
+444
+00:26:48,082 --> 00:26:53,421
+you know elaborate on put it up
+
+445
+00:26:54,159 --> 00:26:58,730
+so your subclass you I paid render like
+I said at the minimum you override
+
+446
+00:26:58,073 --> 00:26:59,096
+number of pages
+
+447
+00:26:59,096 --> 00:27:03,475
+and drug content for page index it also
+has
+
+448
+00:27:04,339 --> 00:27:07,470
+the other method you can override like
+dry header dropped footer things like
+
+449
+00:27:07,047 --> 00:27:07,846
+that
+
+450
+00:27:08,269 --> 00:27:13,300
+I'm another documented you'll set the UI
+premier actual controllers pet page
+
+451
+00:27:13,579 --> 00:27:14,586
+render a property
+
+452
+00:27:14,649 --> 00:27:17,654
+to be this at your instantiated object
+to your custom
+
+453
+00:27:18,149 --> 00:27:23,168
+you a pager underclass or you can add
+that object to the Rev actively items
+
+454
+00:27:23,339 --> 00:27:28,361
+if you're using this year she you can
+also add for matters by calling at print
+
+455
+00:27:28,559 --> 00:27:29,220
+formatter
+
+456
+00:27:29,022 --> 00:27:32,181
+starting at page index because they
+approach formatter can start and end
+
+457
+00:27:32,379 --> 00:27:33,980
+page
+
+458
+00:27:33,098 --> 00:27:37,195
+how would you use a formatter with a
+render kinda maybe a little bit
+
+459
+00:27:38,095 --> 00:27:42,095
+complicated to think about but it really
+pretty basic on so here's i render and
+
+460
+00:27:42,095 --> 00:27:44,074
+when it's told to drop page
+
+461
+00:27:44,929 --> 00:27:47,970
+all it's doing is just its gonna drop
+from flourishes on the top and the
+
+462
+00:27:47,097 --> 00:27:48,416
+bottom
+
+463
+00:27:49,289 --> 00:27:53,352
+in the middle we want to drop tact so
+the render have the UI simple text
+
+464
+00:27:53,919 --> 00:27:54,984
+formatter
+
+465
+00:27:55,569 --> 00:27:58,666
+here's a rectangle that we've set up or
+what that text ago
+
+466
+00:27:59,539 --> 00:28:02,592
+and our gettysburg address again you a
+simple text formatter just formats in
+
+467
+00:28:03,069 --> 00:28:03,121
+the middle
+
+468
+00:28:03,589 --> 00:28:06,611
+some the one year's for matter to for
+
+469
+00:28:06,809 --> 00:28:10,470
+T you know to HTML in a party your page
+but then you want full over full control
+
+470
+00:28:10,047 --> 00:28:15,048
+over drying up restive it you can do
+that
+
+471
+00:28:15,048 --> 00:28:19,074
+okay so showing you I and there's a
+couple different options
+
+472
+00:28:19,074 --> 00:28:23,096
+pretty from the share sheet as probably
+where most people expect burning up if
+
+473
+00:28:23,096 --> 00:28:23,815
+it's sharing
+
+474
+00:28:24,679 --> 00:28:27,760
+some general content and pretty is one
+of the options
+
+475
+00:28:27,076 --> 00:28:30,875
+this is where burning appears in most to
+the built-in app smile ass
+
+476
+00:28:31,559 --> 00:28:34,770
+like here in Safari
+
+477
+00:28:34,077 --> 00:28:37,956
+to do that it's really basic am will
+just when we set up our
+
+478
+00:28:38,649 --> 00:28:41,747
+activity items wildest at a print and
+file
+
+479
+00:28:42,629 --> 00:28:46,646
+which has job name job type and all that
+you can add down to render like
+
+480
+00:28:46,799 --> 00:28:50,852
+this case and for the for this example
+were like sharing a web page
+
+481
+00:28:51,329 --> 00:28:55,200
+and most the time when you're sure web
+page you're sharing the actual URL
+
+482
+00:28:55,002 --> 00:28:58,030
+but in the case for printing you want
+actually render out the whole web page
+
+483
+00:28:58,048 --> 00:28:58,617
+that's
+
+484
+00:28:59,049 --> 00:29:02,050
+example showing now I'll just
+
+485
+00:29:02,149 --> 00:29:06,460
+initialize are you activity view
+controller with activity items that we
+
+486
+00:29:06,046 --> 00:29:07,685
+just created
+
+487
+00:29:08,099 --> 00:29:12,106
+and no application activities some
+pretty good always and activity item at
+
+488
+00:29:12,169 --> 00:29:14,261
+an application activity
+
+489
+00:29:15,089 --> 00:29:20,116
+an analyst for that using a standard
+view controller methods
+
+490
+00:29:20,359 --> 00:29:23,378
+Sony other case spring with like a a
+print button and
+
+491
+00:29:23,549 --> 00:29:26,584
+you create and set up the UI print
+interaction controller like we did in
+
+492
+00:29:26,899 --> 00:29:30,230
+are examples for standard presentation
+
+493
+00:29:30,023 --> 00:29:33,112
+your car present animated completion
+handler
+
+494
+00:29:33,319 --> 00:29:36,480
+and for a popover presentation present
+from racked
+
+495
+00:29:36,048 --> 00:29:39,447
+in view or present from by about 9 a.m.
+animated
+
+496
+00:29:39,879 --> 00:29:43,882
+completion
+
+497
+00:29:44,179 --> 00:29:47,960
+so happening at the menu item if you
+wanna embed the pretty you I in your own
+
+498
+00:29:47,096 --> 00:29:47,535
+UI
+
+499
+00:29:48,399 --> 00:29:52,210
+like in this case pages for you select
+the print button
+
+500
+00:29:52,021 --> 00:29:56,120
+at flights over get pushed into it like
+a nap controller
+
+501
+00:29:56,309 --> 00:29:59,360
+%um you'll set your class as a delegate
+for the shared my printer action
+
+502
+00:29:59,819 --> 00:30:00,490
+controller
+
+503
+00:30:00,049 --> 00:30:04,458
+you implement interaction controller
+parent view controller
+
+504
+00:30:04,899 --> 00:30:09,710
+so you'll tell printer action controller
+which you should be apparent
+
+505
+00:30:09,071 --> 00:30:13,670
+then when the user taps painting your UI
+you'll just call present animated
+
+506
+00:30:14,309 --> 00:30:14,395
+completion handler
+
+507
+00:30:15,169 --> 00:30:18,171
+on the UI contractual controller and
+then
+
+508
+00:30:18,369 --> 00:30:21,446
+if you're class that you've told that is
+the parent is a UN irrigation controller
+
+509
+00:30:22,139 --> 00:30:24,000
+will get a push
+
+510
+00:30:24,000 --> 00:30:28,002
+and if it some other UI view controller
+I'll just give him oral presentation
+
+511
+00:30:28,002 --> 00:30:33,005
+but really they navigation controllers
+with this is not useful
+
+512
+00:30:33,005 --> 00:30:37,099
+now controlling paper size I'm if you if
+your app is designed with specific paper
+
+513
+00:30:38,044 --> 00:30:38,123
+size as mine
+
+514
+00:30:39,023 --> 00:30:42,582
+like a document center cap white pages
+where the user's actually
+
+515
+00:30:42,789 --> 00:30:46,797
+laying out their content I'm your Apple
+have to provide its on paper selection
+
+516
+00:30:47,589 --> 00:30:47,647
+you I
+
+517
+00:30:48,169 --> 00:30:51,280
+this is a example for pages here where
+you get to choose a couple different
+
+518
+00:30:51,028 --> 00:30:52,096
+paper sizes
+
+519
+00:30:52,096 --> 00:30:56,965
+when you use the delegate method print
+interaction controller choose paper
+
+520
+00:30:57,829 --> 00:31:00,881
+as call after the user selects a printer
+we've communicated with the printer with
+
+521
+00:31:01,349 --> 00:31:04,400
+the we figured out the papers that are
+available
+
+522
+00:31:04,859 --> 00:31:07,908
+and you then we'll ask for a paper size
+that's a good match to the one at the
+
+523
+00:31:08,349 --> 00:31:10,970
+user-selected
+
+524
+00:31:10,097 --> 00:31:13,726
+if the paper had if the printer has
+paper sensors or if the user inputted
+
+525
+00:31:14,599 --> 00:31:17,606
+exactly what paper they're loading the
+array that get return will only be the
+
+526
+00:31:18,299 --> 00:31:19,308
+ones that are detected
+
+527
+00:31:19,389 --> 00:31:22,457
+those are the only options available
+
+528
+00:31:23,069 --> 00:31:26,520
+so here's a quick example have our
+delegate method for
+
+529
+00:31:26,052 --> 00:31:29,078
+on choose paper
+
+530
+00:31:29,078 --> 00:31:32,083
+this case were looking for it in half by
+eleven sheet of paper so I'll just
+
+531
+00:31:33,028 --> 00:31:34,587
+created CG size
+
+532
+00:31:34,839 --> 00:31:37,842
+page size
+
+533
+00:31:38,139 --> 00:31:42,260
+and then we'll use you I print papers
+best paper for page size
+
+534
+00:31:42,026 --> 00:31:45,125
+with papers from her a method so we've
+provided this method for you on your
+
+535
+00:31:46,025 --> 00:31:47,194
+iPad paper because
+
+536
+00:31:47,419 --> 00:31:51,431
+texted pretty complicated to match am
+for a destination
+
+537
+00:31:51,539 --> 00:31:55,240
+for a target paper size from the left
+the papers I'm
+
+538
+00:31:55,024 --> 00:31:58,943
+kinda complicated and we've mediafir
+easy we just recommended
+
+539
+00:31:59,159 --> 00:32:03,173
+call this next up is roll paper
+
+540
+00:32:03,299 --> 00:32:08,460
+on this was new and I'll 7 on its
+similar to choose paper
+
+541
+00:32:08,046 --> 00:32:13,255
+and that you can have a delegate method
+called cut like for paper
+
+542
+00:32:13,669 --> 00:32:16,707
+this is this method only be called after
+the user selects a printer that actually
+
+543
+00:32:17,049 --> 00:32:20,520
+have a role loaded and
+
+544
+00:32:20,052 --> 00:32:23,077
+it'll have a you a pic paper passed into
+it with the with
+
+545
+00:32:23,077 --> 00:32:26,120
+up the role and the high to the paper
+will be the maximum height
+
+546
+00:32:27,002 --> 00:32:32,080
+that that the printer allows by default
+if you don't have this
+
+547
+00:32:32,098 --> 00:32:35,103
+the delegate method which must act want
+and the and
+
+548
+00:32:36,003 --> 00:32:40,102
+if the user chooses a printer that has a
+role loaded the coupling will just be
+
+549
+00:32:40,129 --> 00:32:47,129
+proportional to their whatever default
+paper would be used for that job
+
+550
+00:32:48,021 --> 00:32:51,045
+okay next up the a new thing and I was a
+parade
+
+551
+00:32:51,045 --> 00:32:55,414
+happy to announce I'm as pretty without
+showing you I'm
+
+552
+00:32:55,819 --> 00:32:59,020
+now the opens up the opportunity for
+
+553
+00:32:59,002 --> 00:33:02,361
+new types of running applications or
+really excited about that
+
+554
+00:33:02,379 --> 00:33:06,480
+on wEDC this year's all about enabling
+developers to do
+
+555
+00:33:06,048 --> 00:33:09,096
+new I'm interesting thing for you
+weren't able to do before so we're
+
+556
+00:33:09,096 --> 00:33:10,065
+excited to have this
+
+557
+00:33:10,929 --> 00:33:14,990
+on but what does not for as for aP's
+provide their own custom paint panel
+
+558
+00:33:15,539 --> 00:33:18,544
+I wasn't designed for that and in some
+ways you're not going to be able to do
+
+559
+00:33:19,039 --> 00:33:21,076
+that
+
+560
+00:33:21,409 --> 00:33:25,485
+so here's our standard for and why I was
+just break it down into some steps
+
+561
+00:33:26,169 --> 00:33:30,970
+first what the user uses issue I to do
+is to select their printer
+
+562
+00:33:30,097 --> 00:33:33,496
+then the fat from options like copies or
+duplex
+
+563
+00:33:34,369 --> 00:33:39,190
+things like that and then they can't
+print money actually wanna prep
+
+564
+00:33:39,019 --> 00:33:42,094
+so what we really done a separated
+decided to things
+
+565
+00:33:42,094 --> 00:33:45,121
+is still the these are still going to
+select the printer
+
+566
+00:33:46,021 --> 00:33:50,680
+but that's done up front and so for that
+we have a printer picker
+
+567
+00:33:50,869 --> 00:33:53,938
+and then to replace the settings that
+they would be using we have ap
+
+568
+00:33:54,559 --> 00:33:55,460
+controlled setting
+
+569
+00:33:55,046 --> 00:33:58,645
+an API and then we have a new
+
+570
+00:33:59,059 --> 00:34:02,710
+print method on you I print interaction
+controller that you'll be calling
+
+571
+00:34:02,071 --> 00:34:05,470
+so it's kinda separated into things the
+initial setup
+
+572
+00:34:06,109 --> 00:34:10,204
+and then when you actually print so the
+basic steps for printing without you I
+
+573
+00:34:11,059 --> 00:34:14,120
+first your Apple include a setting for
+setting the printer the prison
+
+574
+00:34:14,669 --> 00:34:18,270
+the app setting somewhere Settings
+button somewhere
+
+575
+00:34:18,027 --> 00:34:21,121
+so to do that you first get the printer
+selector this new class
+
+576
+00:34:22,021 --> 00:34:25,940
+your present that you I then you'll save
+the printer
+
+577
+00:34:26,129 --> 00:34:29,240
+chosen by the users these are all be
+choosing a prayer your caps
+
+578
+00:34:29,024 --> 00:34:31,203
+responsibilities save that
+
+579
+00:34:31,419 --> 00:34:35,450
+then whenever appropriate when your app
+decides to print
+
+580
+00:34:35,045 --> 00:34:39,144
+the Apple then get the print controller
+the UI panache a controller
+
+581
+00:34:39,549 --> 00:34:42,770
+of that up the attributes for the job
+and provide content just like we did
+
+582
+00:34:42,077 --> 00:34:43,082
+before
+
+583
+00:34:44,027 --> 00:34:47,074
+but I'll send the job with this new
+print controller method just sentence
+
+584
+00:34:47,074 --> 00:34:49,173
+without showing you like
+
+585
+00:34:49,839 --> 00:34:53,700
+this point like before I left indicates
+that the printer in the Damon takes over
+
+586
+00:34:53,007 --> 00:34:56,105
+Europe doesn't have to deal with any
+that
+
+587
+00:34:57,068 --> 00:35:01,099
+so here's the classes will be using for
+I'm back company
+
+588
+00:35:01,099 --> 00:35:05,101
+first the new class you a prayer picker
+controller that you'll be presenting
+
+589
+00:35:06,019 --> 00:35:09,048
+NAUI printer object that your Apple be
+saving
+
+590
+00:35:09,048 --> 00:35:14,687
+instantiating between runs and providing
+apt to the UI printer action controller
+
+591
+00:35:15,119 --> 00:35:18,410
+so everything that we've talked about
+with
+
+592
+00:35:18,041 --> 00:35:21,930
+you have been a interactions are still
+though applies
+
+593
+00:35:22,299 --> 00:35:25,398
+that your your Apple is required to use
+this year I prefer picker controller to
+
+594
+00:35:26,289 --> 00:35:26,366
+pick the printer
+
+595
+00:35:27,059 --> 00:35:31,970
+I'm it its complicated to show all the
+different corners and sometimes
+
+596
+00:35:31,097 --> 00:35:35,496
+uni using it on lock bernard has are
+using a password all that kind of stuff
+
+597
+00:35:36,369 --> 00:35:37,760
+is handled by the system so
+
+598
+00:35:37,076 --> 00:35:41,105
+will use your printer picker controller
+has the same presentation options
+
+599
+00:35:41,789 --> 00:35:45,210
+as the printer actually controller so
+you can present it as a popover
+
+600
+00:35:45,021 --> 00:35:48,910
+or she eat or you can embed nap
+controller
+
+601
+00:35:49,099 --> 00:35:52,196
+then like I said your Apple be
+responsible for saving Apr between runs
+
+602
+00:35:53,069 --> 00:35:54,210
+you'll save the URL
+
+603
+00:35:54,021 --> 00:35:57,130
+and the nuanced and she ate a new you I
+printer with justice
+
+604
+00:35:57,319 --> 00:36:01,327
+URL the unsaved also this guy printer
+picker controller allows you to filter
+
+605
+00:36:02,119 --> 00:36:02,930
+out printers
+
+606
+00:36:02,093 --> 00:36:05,139
+if your app is designed for just a
+specific type of printer
+
+607
+00:36:06,039 --> 00:36:09,978
+and we'll talk about that later
+
+608
+00:36:10,329 --> 00:36:13,910
+like it that you created set up the
+opener picker controller I'm you can
+
+609
+00:36:13,091 --> 00:36:13,177
+present
+
+610
+00:36:14,077 --> 00:36:17,171
+with standard presentation present
+animated or pop over presentation
+
+611
+00:36:18,071 --> 00:36:21,430
+with present from Tractor present from
+by about 9 a.m.
+
+612
+00:36:22,069 --> 00:36:25,390
+I'm the completion handler though for
+these methods
+
+613
+00:36:25,039 --> 00:36:28,938
+will I tell you whether the user
+actually did like to printer
+
+614
+00:36:29,289 --> 00:36:32,670
+if the if they didn't you know that they
+could just cancel that so that all say
+
+615
+00:36:32,067 --> 00:36:33,118
+that they didn't like the printer
+
+616
+00:36:34,018 --> 00:36:39,095
+but then your app is responsible for
+saving that pratt was elected
+
+617
+00:36:39,095 --> 00:36:42,924
+so when you happens ready to print them
+at the appropriate moment you'll use the
+
+618
+00:36:43,779 --> 00:36:45,806
+USB connector controller and your call
+
+619
+00:36:46,049 --> 00:36:49,930
+the new method print to printer with
+this year I project
+
+620
+00:36:49,093 --> 00:36:52,122
+completion handler be away from her past
+10
+
+621
+00:36:53,022 --> 00:36:56,391
+like I said can be obtained from the
+opener picker control it directly
+
+622
+00:36:56,589 --> 00:37:01,610
+or you could instantiated it with the
+savior of
+
+623
+00:37:01,799 --> 00:37:04,990
+okay so that's my printer picker
+controller on
+
+624
+00:37:04,099 --> 00:37:07,163
+your printer new class in Iowa State
+
+625
+00:37:08,063 --> 00:37:13,065
+first it has a contact her method so
+this is used if your stance eating it
+
+626
+00:37:13,065 --> 00:37:16,964
+you wanna make sure that this printer is
+there and to fill out the rest of the
+
+627
+00:37:17,549 --> 00:37:18,940
+property is for the printer
+
+628
+00:37:18,094 --> 00:37:22,147
+you have to contact you'll pass in a
+block but the result black that'll tell
+
+629
+00:37:23,047 --> 00:37:24,696
+you whether the printer is available or
+not
+
+630
+00:37:25,119 --> 00:37:31,500
+might not be on anymore so it'll no
+return no in that case
+
+631
+00:37:31,005 --> 00:37:34,043
+next is the URL which is a read-only
+property this is what you be
+
+632
+00:37:34,088 --> 00:37:39,143
+saving out went once you get your
+initial you April be saving us
+
+633
+00:37:40,043 --> 00:37:43,099
+actually have display name which this is
+our standard pretty you I
+
+634
+00:37:43,099 --> 00:37:46,146
+the display name is you know they're the
+name of the printer appropriate for you
+
+635
+00:37:47,046 --> 00:37:49,049
+to show in your UI
+
+636
+00:37:49,076 --> 00:37:52,077
+display location which is the smaller
+tax attorney
+
+637
+00:37:52,077 --> 00:37:56,676
+name you can use this for display in
+your eyes while
+
+638
+00:37:57,369 --> 00:38:00,376
+and then from various things about
+though the printer like support a job
+
+639
+00:38:01,069 --> 00:38:02,146
+types such as a bit field
+
+640
+00:38:02,839 --> 00:38:06,660
+and that of a like whether it supports
+photo printing receive training were
+
+641
+00:38:06,066 --> 00:38:07,215
+ample a brain
+
+642
+00:38:07,809 --> 00:38:11,170
+different types a job that supports and
+make and model and
+
+643
+00:38:11,017 --> 00:38:15,466
+and some other capabilities
+
+644
+00:38:15,619 --> 00:38:19,390
+so here's a quick accorded ample using
+you I printer to show like the printer
+
+645
+00:38:19,039 --> 00:38:23,050
+name in a location near you I
+
+646
+00:38:23,005 --> 00:38:26,043
+so first let's grab the saved for know
+you're all from a previous
+
+647
+00:38:26,088 --> 00:38:32,093
+run the application here just getting it
+from the user defaults
+
+648
+00:38:33,038 --> 00:38:37,039
+if we got one back from user defaults
+will initialize
+
+649
+00:38:37,039 --> 00:38:42,068
+with your partner printer with URL with
+the same for neuro
+
+650
+00:38:42,068 --> 00:38:45,096
+and then likely contact the printer
+
+651
+00:38:45,096 --> 00:38:49,124
+black that we will pass in we'll see if
+it's available
+
+652
+00:38:50,024 --> 00:38:55,073
+then we'll set our printer name label to
+be the display name the printer
+
+653
+00:38:55,289 --> 00:38:58,470
+and the panel location able to be the
+display location:
+
+654
+00:38:58,047 --> 00:39:01,136
+so these the printer name and location
+unavailable until it actually been
+
+655
+00:39:01,559 --> 00:39:01,633
+contacted
+
+656
+00:39:02,299 --> 00:39:06,304
+that's why we do that in our in this
+block
+
+657
+00:39:06,349 --> 00:39:11,373
+the pair is not available will have some
+connection gone indicator ap
+
+658
+00:39:11,589 --> 00:39:14,611
+if you want to have that this is what
+you this is how you do itself
+
+659
+00:39:14,809 --> 00:39:18,380
+like a little red indicator to let tell
+users that their printers not available
+
+660
+00:39:18,038 --> 00:39:22,947
+as a side
+
+661
+00:39:23,289 --> 00:39:28,190
+okay so like I said you can use you can
+filter out printers in the pair picker
+
+662
+00:39:28,019 --> 00:39:32,138
+I'm for that this is you know offered
+app design with specific parent in mind
+
+663
+00:39:32,309 --> 00:39:35,500
+if you really only want your apt to be
+used with receipt printers are with
+
+664
+00:39:35,005 --> 00:39:38,064
+you know specific type of fat burner
+
+665
+00:39:38,559 --> 00:39:42,740
+this is what you do I'm any one of those
+properties
+
+666
+00:39:42,074 --> 00:39:45,092
+on you I printer you can use to filter
+
+667
+00:39:45,092 --> 00:39:48,541
+I when you present the UI printer pick a
+controller you're just use the delegate
+
+668
+00:39:49,369 --> 00:39:51,437
+method should show printer
+
+669
+00:39:52,049 --> 00:39:55,101
+your return yes or no whether it should
+be shown so this is called for every
+
+670
+00:39:55,569 --> 00:39:55,960
+printer
+
+671
+00:39:55,096 --> 00:40:00,167
+as it gets discovered and you can choose
+whether a good show online
+
+672
+00:40:01,067 --> 00:40:04,069
+so we're really excited about that on we
+really do think this will enable a new
+
+673
+00:40:04,069 --> 00:40:06,928
+class a pretty applications that were
+possible
+
+674
+00:40:07,549 --> 00:40:11,520
+on and to talk about some other new
+types aP's I'd like to bring up
+
+675
+00:40:11,052 --> 00:40:18,052
+I Cody Roberts opening system engineer
+
+676
+00:40:21,042 --> 00:40:24,068
+hello everyone my name is Claudia
+Robertson this is my colleague Charles
+
+677
+00:40:24,068 --> 00:40:25,977
+dick
+
+678
+00:40:26,589 --> 00:40:29,596
+exciting thing about you I was printing
+is that it opens up the door to a wide
+
+679
+00:40:30,289 --> 00:40:31,364
+range of printing application
+
+680
+00:40:32,039 --> 00:40:36,094
+whatever most requested features right
+with a with two laps the ability to
+
+681
+00:40:36,589 --> 00:40:38,730
+print receipts about showing the print
+dialog
+
+682
+00:40:38,073 --> 00:40:42,096
+in a few minutes child to demonstrate
+how to do just that using a cash
+
+683
+00:40:42,096 --> 00:40:44,005
+register
+
+684
+00:40:44,869 --> 00:40:48,440
+we encourage you think more broadly
+thing cover photo booth app that
+
+685
+00:40:48,044 --> 00:40:50,063
+automatically print out your personal
+photos
+
+686
+00:40:50,063 --> 00:40:54,522
+or a label printing out to be you that
+conference sign in table
+
+687
+00:40:55,089 --> 00:40:57,740
+the fact that we're letting you say
+printers means that you can help
+
+688
+00:40:57,074 --> 00:40:57,081
+reconfigure
+
+689
+00:40:58,044 --> 00:41:02,051
+up to print a more than one printer this
+is a great feature that can be used in
+
+690
+00:41:02,051 --> 00:41:03,089
+setting up multiple printers
+
+691
+00:41:03,089 --> 00:41:07,126
+for each make very different function
+think airline kiosk ap
+
+692
+00:41:08,026 --> 00:41:12,072
+the person traveling check then enters
+the number bad they're traveling life
+
+693
+00:41:12,072 --> 00:41:15,170
+and after finalizing their information
+one designated printer prints out the
+
+694
+00:41:16,007 --> 00:41:17,116
+badge labels
+
+695
+00:41:17,809 --> 00:41:22,000
+and another print out their boarding
+pass all about ever having to traverse
+
+696
+00:41:22,000 --> 00:41:23,039
+or even see
+
+697
+00:41:23,039 --> 00:41:26,092
+the print you I today
+
+698
+00:41:26,569 --> 00:41:29,647
+to illustrate the power to new feature
+and demonstrate just how easy it is
+
+699
+00:41:30,349 --> 00:41:33,650
+to add you I whispered into your app we
+have created
+
+700
+00:41:33,065 --> 00:41:36,149
+a hypothetical cash register
+
+701
+00:41:37,049 --> 00:41:40,668
+it catches ur Abbas something you'd find
+animals any retail store
+
+702
+00:41:41,109 --> 00:41:45,480
+and using the print the prin- paradigm
+in Iowa 7 pretty northeast me know
+
+703
+00:41:45,048 --> 00:41:48,907
+lot unnecessary interaction at the print
+you I and there is really no way of
+
+704
+00:41:49,339 --> 00:41:51,364
+getting around it
+
+705
+00:41:51,589 --> 00:41:55,170
+after finalizing a fail in this demo app
+it takes one
+
+706
+00:41:55,017 --> 00:41:58,456
+to you three steps
+
+707
+00:41:58,609 --> 00:42:02,657
+to print out a receipt each time the
+clerk at the finish sale
+
+708
+00:42:03,089 --> 00:42:07,640
+attic your side effect people and have
+used for in less than ideal situation
+
+709
+00:42:07,064 --> 00:42:10,463
+so what we know to be chair for the vote
+for the most part in a given day at the
+
+710
+00:42:11,039 --> 00:42:11,092
+shop
+
+711
+00:42:11,569 --> 00:42:14,594
+the creek or almost always print to the
+same receipt printer
+
+712
+00:42:14,819 --> 00:42:19,690
+dust we started our behavior the ability
+to simply tap on the finish sale by an
+
+713
+00:42:19,069 --> 00:42:22,408
+and have our dedicated receipt printer
+print out the receipt so the customer
+
+714
+00:42:23,029 --> 00:42:24,190
+can quickly be
+
+715
+00:42:24,019 --> 00:42:27,928
+on his or her way I'll now handed over
+to Charles
+
+716
+00:42:28,099 --> 00:42:31,176
+who will demonstrate how to update this
+cash register up with the necessary code
+
+717
+00:42:31,869 --> 00:42:33,941
+changes to achieve the desired behavior
+
+718
+00:42:34,589 --> 00:42:37,680
+makes Claudia so what I have here
+
+719
+00:42:37,068 --> 00:42:41,101
+is the code for the cash register app
+that call you to show you
+
+720
+00:42:42,001 --> 00:42:46,070
+and I want to update this to use these
+new API's
+
+721
+00:42:46,079 --> 00:42:50,380
+so i cud said there's really to basic
+steps
+
+722
+00:42:50,038 --> 00:42:54,197
+to printing without the OI the first to
+selecting and saving a printer
+
+723
+00:42:54,539 --> 00:42:58,700
+and the second is telling I'll ask which
+printer we'd like to save two
+
+724
+00:42:58,007 --> 00:43:01,606
+so in order to do this I'm first going
+to want to create a place
+
+725
+00:43:02,299 --> 00:43:06,348
+to save the you I printer object then
+I'm going to get
+
+726
+00:43:06,789 --> 00:43:10,864
+when at a property here to my receive U
+controller using the new UI printer
+
+727
+00:43:11,539 --> 00:43:12,900
+class
+
+728
+00:43:12,009 --> 00:43:15,009
+this is what I was his to represent the
+printer
+
+729
+00:43:15,009 --> 00:43:18,888
+arm throughout the printing system
+
+730
+00:43:19,779 --> 00:43:22,838
+next I'm going to add a place for an
+administrator can go
+
+731
+00:43:23,369 --> 00:43:26,380
+and set up the cash register in order to
+
+732
+00:43:26,038 --> 00:43:30,039
+let the let the app now this is the plan
+on going to be predicted
+
+733
+00:43:30,039 --> 00:43:33,072
+so will do that in the Settings button
+so I'm going to go to my
+
+734
+00:43:33,072 --> 00:43:36,099
+Settings button pressed method which is
+a
+
+735
+00:43:36,099 --> 00:43:39,478
+arm try which is the target action
+
+736
+00:43:40,369 --> 00:43:43,435
+%uh a telling but in the app and I'm
+going to go ahead
+
+737
+00:43:44,029 --> 00:43:51,029
+and create he you I printer you a
+printer pick a controller
+
+738
+00:43:51,017 --> 00:43:54,966
+used willie create you a printer picker
+control using printer picker controller
+
+739
+00:43:55,119 --> 00:43:58,124
+with initially selected printer to
+scroll the controller to
+
+740
+00:43:58,619 --> 00:44:01,950
+maybe a printer that we've already set
+up
+
+741
+00:44:01,095 --> 00:44:05,934
+next I'm going to use the you I printer
+picker control method present from
+
+742
+00:44:06,789 --> 00:44:07,230
+wrecked
+
+743
+00:44:07,023 --> 00:44:11,342
+in view animated incompletion himmler
+and when the pews and goes and select
+
+744
+00:44:11,549 --> 00:44:11,605
+the printer
+
+745
+00:44:12,109 --> 00:44:15,520
+will go ahead and check to see that they
+did selected
+
+746
+00:44:15,052 --> 00:44:19,052
+and if they didn't cancel the operation
+save the printer that they selected
+
+747
+00:44:19,052 --> 00:44:22,138
+in the property that we just created
+
+748
+00:44:23,038 --> 00:44:26,053
+now I'm going to go ahead and update my
+apt to use these
+
+749
+00:44:26,053 --> 00:44:29,602
+new API
+
+750
+00:44:30,079 --> 00:44:33,520
+so you can see our print method as exist
+
+751
+00:44:33,052 --> 00:44:36,064
+in Iowa 7 we
+
+752
+00:44:36,064 --> 00:44:39,096
+do all the standard printing things we
+create a print page render
+
+753
+00:44:39,096 --> 00:44:42,171
+we create a UI print info sets and Rob
+options
+
+754
+00:44:43,071 --> 00:44:47,114
+and get the shared print controller set
+the options on the job
+
+755
+00:44:48,014 --> 00:44:52,020
+and then presenting using the present
+API's actual notice look
+
+756
+00:44:52,002 --> 00:44:56,096
+almost exactly the same as the methods
+on you I printer picker control
+
+757
+00:44:57,014 --> 00:45:01,019
+so what we can actually do now this is
+what kinda lied about this API
+
+758
+00:45:01,019 --> 00:45:04,044
+is delete sum up this code because we
+don't need it will no longer presenting
+
+759
+00:45:04,044 --> 00:45:07,047
+anything we're just gonna print to
+printer
+
+760
+00:45:07,047 --> 00:45:12,166
+we go then we can go ahead and delete
+that little bit of
+
+761
+00:45:12,589 --> 00:45:16,440
+auto-generated Co and it's really just
+that easy
+
+762
+00:45:16,044 --> 00:45:19,122
+also on the completion handlers the same
+and we're now going to be a blueprint
+
+763
+00:45:20,022 --> 00:45:23,391
+with that you are so I'm going to go
+ahead
+
+764
+00:45:23,589 --> 00:45:28,250
+and fire after the simulator here so we
+can show the steel
+
+765
+00:45:28,025 --> 00:45:31,041
+and something that I
+
+766
+00:45:31,041 --> 00:45:34,082
+didn't get a chance to talk about here
+but it could be a logical extension
+
+767
+00:45:34,082 --> 00:45:37,118
+is maybe filtering based on
+
+768
+00:45:38,018 --> 00:45:41,026
+the typeof fenner that we're going to
+use we we want to use
+
+769
+00:45:41,098 --> 00:45:44,100
+only receipt printers at this out but
+you know maybe a shop also as a photo
+
+770
+00:45:45,018 --> 00:45:45,080
+printer
+
+771
+00:45:45,008 --> 00:45:50,008
+arm and you wouldn't want to you
+wouldn't want to
+
+772
+00:45:50,008 --> 00:45:52,082
+print to that or you wouldn't want to
+show that to the administrator when they
+
+773
+00:45:53,054 --> 00:45:54,055
+were setting up the printer
+
+774
+00:45:54,064 --> 00:45:58,533
+alright now we have our app and let's go
+ahead let so maybe maybe we're in a
+
+775
+00:45:59,109 --> 00:46:00,220
+coffee shop so
+
+776
+00:46:00,022 --> 00:46:03,093
+let's get you know San Francisco coffee
+
+777
+00:46:03,093 --> 00:46:06,182
+and the you know maybe a bagel
+
+778
+00:46:07,082 --> 00:46:10,181
+heaps yeah okay wanna home
+
+779
+00:46:11,081 --> 00:46:14,630
+I it's let's get you know it weird were
+splurging on today also
+
+780
+00:46:15,359 --> 00:46:19,950
+maybe we'll get cream cheese arm let's
+go ahead and say for sale
+
+781
+00:46:19,095 --> 00:46:23,004
+hoops I don't select the printer let's
+go ahead
+
+782
+00:46:23,859 --> 00:46:27,070
+and look for this notice we're gonna
+pick this brother printer that we have
+
+783
+00:46:27,007 --> 00:46:27,048
+here
+
+784
+00:46:27,048 --> 00:46:30,075
+so wifi-enabled battery-powered receipt
+printer
+
+785
+00:46:30,075 --> 00:46:35,126
+now will go ahead and click Finish sale
+and now I was will take over the job
+
+786
+00:46:36,026 --> 00:46:41,028
+communicating with the printer on you
+know getting all the options at cetera
+
+787
+00:46:41,028 --> 00:46:47,107
+and in a moment should be seeing the
+paper come out at the front
+
+788
+00:46:47,359 --> 00:46:50,670
+and with that I'll headed back to Howard
+who will
+
+789
+00:46:50,067 --> 00:46:54,098
+pick it up I'm today what I hope you've
+learned that is
+
+790
+00:46:54,098 --> 00:46:58,167
+adding printing to your application
+regardless asylum application is
+
+791
+00:46:59,067 --> 00:47:02,082
+really easy for a lot of the content
+
+792
+00:47:02,082 --> 00:47:07,145
+10 lines of code if you have pictures
+HTML web to use maps
+
+793
+00:47:08,045 --> 00:47:11,434
+you're set 10 lines to cope with really
+nine if you count and I look at the
+
+794
+00:47:11,839 --> 00:47:11,914
+route
+
+795
+00:47:12,589 --> 00:47:16,020
+I super super easy I am
+
+796
+00:47:16,002 --> 00:47:20,006
+if you need more control a lotta stuff
+you can now do with for matters now that
+
+797
+00:47:20,042 --> 00:47:21,045
+we have the per page
+
+798
+00:47:21,045 --> 00:47:25,080
+inserts we think our web viewing app sir
+or a lot about $3 each
+
+799
+00:47:25,008 --> 00:47:28,092
+email based will only need those tens
+lines code to print and print
+
+800
+00:47:29,064 --> 00:47:33,125
+well but if you do need the full power
+for control what you're doing
+
+801
+00:47:34,025 --> 00:47:38,032
+you can always use a renderer which can
+use any of the common to the printing
+
+802
+00:47:38,032 --> 00:47:38,131
+API's
+
+803
+00:47:39,031 --> 00:47:42,068
+are per graphics API to do print
+
+804
+00:47:42,068 --> 00:47:46,126
+I and then you can combine for matters
+with runners to make it super easy
+
+805
+00:47:47,026 --> 00:47:51,077
+and the new and IOSA we as we
+demonstrated you can now do
+
+806
+00:47:51,077 --> 00:47:56,089
+separate the picking up the printer from
+the actual active printing
+
+807
+00:47:56,089 --> 00:48:01,144
+so more information are technology
+evangelist as polled ambled
+
+808
+00:48:02,044 --> 00:48:05,129
+for those who don't know the name poll
+has been in printing for longer than I
+
+809
+00:48:06,029 --> 00:48:08,328
+have which makes it twenty three years
+
+810
+00:48:08,589 --> 00:48:12,450
+I and he is readily available and can
+answer many questions
+
+811
+00:48:12,045 --> 00:48:16,082
+I we put up a new website this week
+developer Apple dot com slash
+
+812
+00:48:16,082 --> 00:48:19,120
+AirPrint this is your source for all
+
+813
+00:48:20,002 --> 00:48:24,025
+I was printing related stuff there are a
+handful sample aP's there
+
+814
+00:48:24,043 --> 00:48:27,140
+all the documentation all the reference
+document stuff that you're going to need
+
+815
+00:48:28,004 --> 00:48:32,062
+is also a link to the list every I
+AirPrint printer in the world
+
+816
+00:48:32,098 --> 00:48:35,120
+every model order for printer in the
+world I'm as well as
+
+817
+00:48:36,002 --> 00:48:40,005
+information on licensing up the air
+print technology so developer Apple com
+
+818
+00:48:40,005 --> 00:48:40,070
+slash
+
+819
+00:48:41,015 --> 00:48:44,704
+airport will get you everything then of
+course if you've got some ongoing
+
+820
+00:48:44,839 --> 00:48:46,914
+questions you're always welcome to use a
+
+821
+00:48:47,589 --> 00:48:52,280
+Apple's developer forms and then there's
+a another point for AirPrint basics
+
+822
+00:48:52,028 --> 00:48:54,092
+which lists all the printers
+
+823
+00:48:54,092 --> 00:48:57,165
+know you guys are all probably pretty
+experienced a
+
+824
+00:48:58,065 --> 00:49:01,141
+application writers already but if you
+if you still got a few details I do
+
+825
+00:49:02,041 --> 00:49:05,074
+strongly encourage you to go back and
+watch the video for the
+
+826
+00:49:05,074 --> 00:49:08,155
+what's new and Cocoa Touch
+
+827
+00:49:09,055 --> 00:49:10,127
+so that's it thank you very much
+

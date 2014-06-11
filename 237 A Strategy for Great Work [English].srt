@@ -1,0 +1,4289 @@
+1
+00:00:11,026 --> 00:00:17,111
+hello
+
+2
+00:00:18,011 --> 00:00:21,011
+thank you very much for coming today and
+if you're watching later on video thanks
+
+3
+00:00:21,011 --> 00:00:22,084
+so much for watching i'm can cash and a
+
+4
+00:00:22,084 --> 00:00:25,086
+and their session is called strategy
+
+5
+00:00:26,004 --> 00:00:32,066
+for a great work so think we all try to
+do great work I certainly
+
+6
+00:00:32,066 --> 00:00:36,100
+always try to do great work regardless
+if the result in the outcome
+
+7
+00:00:37,000 --> 00:00:40,052
+certainly the effort is directed towards
+doing something great
+
+8
+00:00:40,052 --> 00:00:42,121
+I think that probably the same for all
+love you that's why you're here at the
+
+9
+00:00:43,021 --> 00:00:43,112
+conference today
+
+10
+00:00:44,012 --> 00:00:48,051
+that may be why you're watching later on
+video houses subject thats
+
+11
+00:00:48,051 --> 00:00:53,060
+very important to me I I like talking
+about like thinking about it and I was
+
+12
+00:00:53,006 --> 00:00:55,285
+left on stage in 2012 with a
+
+13
+00:00:55,879 --> 00:00:59,820
+I talk all bleak basics plus habits I
+talked with him
+
+14
+00:00:59,082 --> 00:01:03,501
+some tactical concern some real soon not
+in both think about how to setup project
+
+15
+00:01:04,239 --> 00:01:08,990
+and then had run projects once you have
+them going in this is very
+
+16
+00:01:08,099 --> 00:01:12,108
+tactical served any details things like
+code review
+
+17
+00:01:13,008 --> 00:01:17,075
+when you know working with fewer other
+people that you might have on a team
+
+18
+00:01:17,075 --> 00:01:21,014
+so today you know it different I i would
+like to
+
+19
+00:01:21,689 --> 00:01:25,711
+in this session talk about from higher
+level ideas kinda move it up to
+
+20
+00:01:25,909 --> 00:01:28,940
+the level of strategy rather than
+tactics
+
+21
+00:01:29,219 --> 00:01:32,820
+and so I went out and got a helpful
+quotation
+
+22
+00:01:32,082 --> 00:01:37,100
+from Wikipedia to a started thinking
+about what the difference between
+
+23
+00:01:38,000 --> 00:01:39,045
+strategy and tactics
+
+24
+00:01:39,045 --> 00:01:44,103
+is into tactics to the actual means used
+to gain an objective
+
+25
+00:01:45,003 --> 00:01:49,081
+what strategy the overall campaign plan.
+which may involve complex operational
+
+26
+00:01:49,081 --> 00:01:50,090
+patterns activity in decision-making
+
+27
+00:01:51,071 --> 00:01:54,790
+that lead to tactical execution
+certainly the a complex operational
+
+28
+00:01:55,429 --> 00:01:58,472
+pattern sounds like programming to me
+right I
+
+29
+00:01:58,859 --> 00:02:02,310
+definitely so you know I think that
+really
+
+30
+00:02:02,031 --> 00:02:06,580
+30 strategy yes you have been a big idea
+what you might want to do
+
+31
+00:02:06,859 --> 00:02:10,670
+and that really should hopefully be
+driving what you actually do to
+
+32
+00:02:10,067 --> 00:02:11,074
+accomplish the goal
+
+33
+00:02:11,074 --> 00:02:16,076
+right so today I'd like to talk about
+some of these ideas and high-level ideas
+
+34
+00:02:16,076 --> 00:02:17,153
+that inspire and inform
+
+35
+00:02:18,053 --> 00:02:21,131
+my every day work but really
+
+36
+00:02:22,031 --> 00:02:26,054
+this session is not you know sir how to
+make a great project in 21 days
+
+37
+00:02:26,054 --> 00:02:29,128
+try two minutes it's not going to be
+it's never that simple right every time
+
+38
+00:02:30,028 --> 00:02:32,113
+you see something like that axe
+experience as a 21-day
+
+39
+00:02:33,013 --> 00:02:37,026
+its never ever ever that simple so
+
+40
+00:02:37,026 --> 00:02:40,059
+for simple kinda media need a plan for
+kinda
+
+41
+00:02:40,059 --> 00:02:43,140
+attacking the problem here and so today
+
+42
+00:02:44,004 --> 00:02:47,004
+how many do that is I tell you some of
+my stories
+
+43
+00:02:47,004 --> 00:02:50,061
+project that I've been involved in um
+
+44
+00:02:50,097 --> 00:02:53,175
+but you know there's kinda like a note
+of caution when you hear stories
+
+45
+00:02:54,075 --> 00:02:58,076
+and maybe try to apply it to your own
+life and I have an example here like
+
+46
+00:02:58,085 --> 00:02:59,119
+failure in Las Vegas
+
+47
+00:03:00,019 --> 00:03:04,066
+and you see somebody go by was carrying
+a big pile of chips already get them
+
+48
+00:03:04,066 --> 00:03:04,143
+cashed in
+
+49
+00:03:05,043 --> 00:03:09,119
+you stop the person said we what did you
+do to get that big pile of chips
+
+50
+00:03:10,019 --> 00:03:13,025
+and their to come I put it all on 14
+
+51
+00:03:13,079 --> 00:03:16,104
+K so
+
+52
+00:03:17,004 --> 00:03:21,041
+its true but not so useful to you
+
+53
+00:03:21,041 --> 00:03:25,055
+right you go over and put it on 14 you
+may or may not get the same result most
+
+54
+00:03:25,055 --> 00:03:25,138
+likely not
+
+55
+00:03:26,038 --> 00:03:29,134
+so hopefully the stories will be
+interesting to you
+
+56
+00:03:30,034 --> 00:03:34,059
+but the real goal before during and
+after the story
+
+57
+00:03:34,059 --> 00:03:37,153
+rates particularly after is to extract
+out the lessons from the stories
+
+58
+00:03:38,053 --> 00:03:43,054
+because I think the lessons if you take
+them in the aggregate starts stringing
+
+59
+00:03:43,063 --> 00:03:44,101
+together some russians
+
+60
+00:03:45,001 --> 00:03:49,002
+serve points toward the strategy it
+certainly does for me
+
+61
+00:03:49,002 --> 00:03:52,021
+today eight stories
+
+62
+00:03:52,021 --> 00:03:56,054
+eleven lessons take all those lessons
+put them together and
+
+63
+00:03:56,054 --> 00:03:59,079
+really that that is what informs my work
+
+64
+00:03:59,079 --> 00:04:02,094
+and again of course I'm always trying to
+do great work so hopefully this will
+
+65
+00:04:02,094 --> 00:04:04,139
+this will all come together a nice pics
+ok with the end
+
+66
+00:04:05,039 --> 00:04:08,111
+soap to begin with stories
+
+67
+00:04:09,011 --> 00:04:14,067
+number one stories like a crystal ball
+in the election
+
+68
+00:04:14,067 --> 00:04:19,916
+is no a good idea when you see it so
+
+69
+00:04:20,519 --> 00:04:24,280
+I joined Apple in June of 2001 and if
+you
+
+70
+00:04:24,028 --> 00:04:27,034
+you think back to that time on Mac OS
+
+71
+00:04:27,034 --> 00:04:30,703
+10 version 10 dotto was released
+
+72
+00:04:31,009 --> 00:04:34,240
+about three months before now
+
+73
+00:04:34,024 --> 00:04:38,091
+it's come a long time ago we think about
+it the browser on the platform
+
+74
+00:04:38,091 --> 00:04:42,183
+was Microsoft Internet Explorer it
+that's the browser that shipped
+
+75
+00:04:43,083 --> 00:04:46,098
+with the operating system from Apple
+
+76
+00:04:46,098 --> 00:04:49,149
+now we've had there was no framework
+
+77
+00:04:50,049 --> 00:04:54,101
+to load and render web content
+
+78
+00:04:55,001 --> 00:04:58,045
+right so we've just had a nap but no
+framework so my job
+
+79
+00:04:58,045 --> 00:05:02,122
+long with someone else going Don we
+joined same day our job became
+
+80
+00:05:03,022 --> 00:05:06,058
+make apple a web browser and in
+objective-c framework
+
+81
+00:05:06,058 --> 00:05:11,071
+to again loading render rate web content
+and make that available for the PI to
+
+82
+00:05:11,071 --> 00:05:13,099
+you all to bed developers
+
+83
+00:05:13,099 --> 00:05:16,106
+so
+
+84
+00:05:17,006 --> 00:05:20,054
+we start looking at my options were what
+were the options available to time in
+
+85
+00:05:20,054 --> 00:05:21,080
+you see
+
+86
+00:05:21,008 --> 00:05:24,046
+through the leading candidates there
+some of these where
+
+87
+00:05:25,018 --> 00:05:28,062
+our commercial products Apapa high
+option
+
+88
+00:05:28,062 --> 00:05:32,123
+some of them were open source project
+out there in the world going on
+
+89
+00:05:33,023 --> 00:05:36,116
+arm we could you know go and meet
+perhaps adopt that source code for
+
+90
+00:05:37,016 --> 00:05:40,033
+procter we can also start from scratch
+we considered it
+
+91
+00:05:40,033 --> 00:05:43,036
+um absolutely so my job
+
+92
+00:05:43,036 --> 00:05:46,058
+you know to begin to do some technical
+investigation up in a particularly the
+
+93
+00:05:46,058 --> 00:05:47,103
+open-source
+
+94
+00:05:48,003 --> 00:05:51,004
+I options I am
+
+95
+00:05:51,004 --> 00:05:55,353
+and can i download Mozilla their toes 11
+story II took
+
+96
+00:05:55,389 --> 00:06:00,180
+per week I remember to try to just get
+Mozilla to build on the Mac
+
+97
+00:06:00,018 --> 00:06:05,059
+and I remember at one point I am I
+wanted the steps in this long recipe if
+
+98
+00:06:05,059 --> 00:06:07,128
+steps that need to get done to get
+muscle to build
+
+99
+00:06:08,028 --> 00:06:12,085
+I need to rebuild the the Metro works
+the library
+
+100
+00:06:12,085 --> 00:06:15,163
+was one of the steps so this was not a
+straightforward thing but he eventually
+
+101
+00:06:16,063 --> 00:06:17,099
+got a building in you know
+
+102
+00:06:17,099 --> 00:06:21,118
+okay um but this disc process went on
+for weeks
+
+103
+00:06:22,018 --> 00:06:25,022
+you know when I i went you know and and
+got these you know the server these
+
+104
+00:06:25,058 --> 00:06:28,095
+programs the commercial prop products
+you know that what he did for that was
+
+105
+00:06:28,095 --> 00:06:29,099
+you know got them running in
+
+106
+00:06:30,035 --> 00:06:34,120
+30 doing some performance analysis and
+say you know unico compatibility in
+
+107
+00:06:35,002 --> 00:06:38,056
+and so to between the commercial
+products though those test results in
+
+108
+00:06:38,074 --> 00:06:39,129
+the open source project
+
+109
+00:06:40,029 --> 00:06:43,113
+some sort if I reckoning okay how much
+source code was their
+
+110
+00:06:44,013 --> 00:06:47,018
+how easy it would be to adapted and so
+forth her
+
+111
+00:06:47,018 --> 00:06:50,079
+you know to test results showing I
+printed out on paper
+
+112
+00:06:50,079 --> 00:06:53,126
+but I couldn't have a demo
+
+113
+00:06:54,026 --> 00:06:57,038
+no damn just test results
+
+114
+00:06:57,038 --> 00:07:01,072
+to write about that time getting new
+engineer at our team the winning Richard
+
+115
+00:07:01,072 --> 00:07:05,075
+and so I showed him you know described
+to him basically a to describe to you
+
+116
+00:07:05,075 --> 00:07:06,150
+you know what I've been doing
+
+117
+00:07:07,005 --> 00:07:11,087
+I showed him the test result in he said
+really what have you been to a
+
+118
+00:07:12,032 --> 00:07:15,032
+six weeks in this is all you have so
+
+119
+00:07:15,032 --> 00:07:18,094
+you know if I quote yeah I just gonna
+shrugged and said that I have
+
+120
+00:07:18,094 --> 00:07:21,158
+for he just didn't think very much of
+that and so he went away and two days
+
+121
+00:07:22,058 --> 00:07:22,133
+later
+
+122
+00:07:23,033 --> 00:07:28,092
+he had a demo he took one of those
+options KHTML
+
+123
+00:07:28,389 --> 00:07:33,090
+which is the the the web rendering
+engine what that was parted the key D E
+
+124
+00:07:33,009 --> 00:07:36,046
+desktop environment for Linux heat
+ground
+
+125
+00:07:36,046 --> 00:07:39,123
+that source code got it running on a Mac
+
+126
+00:07:40,023 --> 00:07:44,098
+just did whatever kind of hack said he
+needed to do to get it running
+
+127
+00:07:44,098 --> 00:07:47,197
+and had Conqueror Akii browser
+
+128
+00:07:48,097 --> 00:07:52,121
+running on a Mac in the next window
+
+129
+00:07:53,021 --> 00:07:57,029
+this was amazing
+
+130
+00:07:57,029 --> 00:08:00,100
+absolutely amazing just standing there
+in like looking
+
+131
+00:08:01,000 --> 00:08:05,056
+at a browser running on the matter fi
+can we say to what it was like
+
+132
+00:08:05,056 --> 00:08:10,062
+a crystal ball whose absolutely amazing
+
+133
+00:08:10,062 --> 00:08:13,071
+and we saw all the people who are
+involved in you know not only are on the
+
+134
+00:08:13,071 --> 00:08:15,104
+project but the decision makers at the
+company
+
+135
+00:08:16,004 --> 00:08:19,036
+saw that KHTML was our future this
+
+136
+00:08:19,036 --> 00:08:22,037
+this was just like you opened up this
+tunnel to
+
+137
+00:08:22,046 --> 00:08:25,115
+like the future it was absolutely
+amazing
+
+138
+00:08:26,015 --> 00:08:29,094
+and so the lesson from this experience
+
+139
+00:08:29,094 --> 00:08:32,543
+know a good idea when you see it really
+
+140
+00:08:33,389 --> 00:08:37,370
+for me I kinda felt like an bumbling
+idiot
+
+141
+00:08:37,037 --> 00:08:40,996
+there I was for six weeks you know
+trying to do you figure out what to do
+
+142
+00:08:41,329 --> 00:08:45,366
+and really had nothing and someone new
+came in and in two days
+
+143
+00:08:45,699 --> 00:08:48,732
+he had the future right there
+
+144
+00:08:49,029 --> 00:08:53,034
+that we could use now sooted
+
+145
+00:08:53,079 --> 00:08:56,040
+lesson for this again is really what
+does this mean you no good he when you
+
+146
+00:08:56,004 --> 00:08:57,293
+see it is even if some
+
+147
+00:08:57,329 --> 00:08:59,980
+something to like this happens to you
+when you're made to look like an idiot
+
+148
+00:08:59,098 --> 00:08:59,827
+don't
+
+149
+00:09:00,709 --> 00:09:03,788
+doesn't matter I didn't care it
+shouldn't matter to you either
+
+150
+00:09:04,499 --> 00:09:07,594
+because there's actually some a couple
+of good things about this experience
+
+151
+00:09:08,449 --> 00:09:11,498
+number one I had a great new team member
+who I was gonna be
+
+152
+00:09:11,939 --> 00:09:15,230
+now involved it's going to be helping me
+to come to make this
+
+153
+00:09:15,023 --> 00:09:20,572
+project happen an he's really proved in
+two days here's a really good
+
+154
+00:09:20,779 --> 00:09:24,821
+I am and so is just like what it was in
+Houston next day well we
+
+155
+00:09:25,199 --> 00:09:29,216
+kinda know what to do right we're gonna
+start you make in the future real
+
+156
+00:09:29,369 --> 00:09:32,371
+and so
+
+157
+00:09:32,569 --> 00:09:35,590
+that's kinda the story it like a crystal
+ball but you know there's a bonus
+
+158
+00:09:35,779 --> 00:09:39,480
+lesson here too not only know a good
+idea when you see it
+
+159
+00:09:39,048 --> 00:09:42,377
+but Canada extra leptin up make
+
+160
+00:09:42,809 --> 00:09:47,730
+demos and prototypes if you're starting
+a new idea
+
+161
+00:09:47,073 --> 00:09:50,099
+don't him test results her at all well
+and good
+
+162
+00:09:50,099 --> 00:09:54,448
+but you should also at the same time
+make something
+
+163
+00:09:55,339 --> 00:09:58,680
+that you can actually begin to use
+
+164
+00:09:58,068 --> 00:10:01,577
+like you want to use the real thing that
+you're gonna be making ultimately in the
+
+165
+00:10:02,189 --> 00:10:03,220
+future
+
+166
+00:10:03,022 --> 00:10:06,055
+get that open up your own travel to the
+future
+
+167
+00:10:06,055 --> 00:10:09,404
+right get something in front view and
+working
+
+168
+00:10:09,899 --> 00:10:12,986
+as soon as you can that's like a crystal
+ball
+
+169
+00:10:13,769 --> 00:10:20,050
+no good idea when you see it and make
+demos and prototypes
+
+170
+00:10:20,005 --> 00:10:23,324
+so the next
+
+171
+00:10:23,369 --> 00:10:26,371
+story number two is the black
+
+172
+00:10:26,389 --> 00:10:30,040
+abolished and the lesson is don't try to
+solve every problem might want
+
+173
+00:10:30,004 --> 00:10:33,583
+so continuing right on from the end of
+that last arc HTML
+
+174
+00:10:33,619 --> 00:10:37,632
+fantastic we group good looking the more
+we look at the code
+
+175
+00:10:37,749 --> 00:10:41,240
+the more we are confident that this was
+really the
+
+176
+00:10:41,024 --> 00:10:44,080
+the way for us to go but really what do
+we do now
+
+177
+00:10:44,008 --> 00:10:48,075
+rate me when we to right and so you
+imagine open source we
+
+178
+00:10:49,047 --> 00:10:52,326
+going you know party the Katy desktop so
+we went
+
+179
+00:10:52,749 --> 00:10:57,806
+and we downloaded all Katie but the
+thing is we only want idk HTML only
+
+180
+00:10:58,319 --> 00:11:01,410
+each email a rendering engine
+
+181
+00:11:01,041 --> 00:11:04,390
+and we also want to KJs the JavaScript
+engine so
+
+182
+00:11:04,759 --> 00:11:08,765
+the job became to serb draw a line
+around
+
+183
+00:11:08,819 --> 00:11:13,844
+just third key HTML part have this whole
+desktop environment
+
+184
+00:11:14,069 --> 00:11:18,105
+so that we could just extract that use
+it has turned out to be about a hundred
+
+185
+00:11:18,429 --> 00:11:21,492
+source files seems tractable
+
+186
+00:11:22,059 --> 00:11:25,410
+so the next step was to bring those
+files or the Mac
+
+187
+00:11:25,041 --> 00:11:30,074
+after compiling them one at a time right
+
+188
+00:11:30,074 --> 00:11:33,783
+critic didn't compile because we just
+took the source code expected this whole
+
+189
+00:11:34,449 --> 00:11:37,490
+other desktop environment around it
+
+190
+00:11:37,049 --> 00:11:40,648
+and now we just heard for the whole rug
+out from under it
+
+191
+00:11:41,089 --> 00:11:45,124
+so you know it didn't compile we had a
+whole bunch of missing things and so we
+
+192
+00:11:45,439 --> 00:11:46,483
+just began
+
+193
+00:11:46,879 --> 00:11:49,980
+stabbing them in stopping in missing
+functions one at a time
+
+194
+00:11:49,098 --> 00:11:54,197
+and these were very very light that
+these were only stops in header files
+
+195
+00:11:55,097 --> 00:11:59,180
+right to it only wanted to it surged
+define the problem in terms of all the
+
+196
+00:12:00,008 --> 00:12:01,033
+missing things
+
+197
+00:12:02,005 --> 00:12:06,022
+that we needed to ed this was very very
+slow work
+
+198
+00:12:06,022 --> 00:12:09,171
+it took about another six weeks six
+weeks is kinda magical number
+
+199
+00:12:09,369 --> 00:12:12,376
+for this this project this took about
+six weeks it just
+
+200
+00:12:12,439 --> 00:12:15,444
+compiling II it would be like
+
+201
+00:12:15,939 --> 00:12:19,470
+channel 11 hours of compiling a every
+single day
+
+202
+00:12:19,047 --> 00:12:22,079
+I am so it was pretty I'm
+
+203
+00:12:22,079 --> 00:12:26,158
+pretty painstaking and then even at this
+that nothing link because it makes these
+
+204
+00:12:26,869 --> 00:12:27,944
+are only header files
+
+205
+00:12:28,619 --> 00:12:31,970
+through her only running we were tight I
+made a custom make faster don't even try
+
+206
+00:12:31,097 --> 00:12:33,816
+to run the linker just just like you try
+to
+
+207
+00:12:34,689 --> 00:12:38,730
+show us what we were missing I'm
+
+208
+00:12:38,073 --> 00:12:41,992
+so after we were done with that right we
+had another six weeks
+
+209
+00:12:42,649 --> 00:12:45,680
+weeks to get everything to link actually
+going in and
+
+210
+00:12:45,959 --> 00:12:49,006
+finishing out so did the header file
+actually putting in
+
+211
+00:12:49,429 --> 00:12:52,510
+you know some stub implementation for
+everything and the even
+
+212
+00:12:53,239 --> 00:12:57,470
+then we had lots of crashes because in a
+lot of functions that return strings we
+
+213
+00:12:57,047 --> 00:13:00,776
+returned empty strings and you know it
+obviously there to lower not really what
+
+214
+00:13:01,199 --> 00:13:03,100
+a lot of the code was expecting so
+
+215
+00:13:03,001 --> 00:13:07,640
+we also added a whole lotta blog
+statements to our implementation saying
+
+216
+00:13:07,739 --> 00:13:11,746
+yeah this is not implemented at all i
+mean it returns a value but edgy you
+
+217
+00:13:11,809 --> 00:13:11,847
+know
+
+218
+00:13:12,189 --> 00:13:15,192
+should not implement it all partially
+implemented yea we think we're pretty
+
+219
+00:13:15,489 --> 00:13:15,566
+close n
+
+220
+00:13:16,259 --> 00:13:19,341
+implement that we had a whole bunch a
+blog statements that
+
+221
+00:13:20,079 --> 00:13:23,097
+we which fee will a whole bunch lawyer
+
+222
+00:13:23,259 --> 00:13:26,297
+message is getting written to the log in
+to track to try to use the program
+
+223
+00:13:26,639 --> 00:13:29,641
+and after this whole process many many
+weeks
+
+224
+00:13:29,839 --> 00:13:32,842
+we eventually wound up with the Mac
+program to used
+
+225
+00:13:32,869 --> 00:13:35,947
+cage email and then one day
+
+226
+00:13:36,649 --> 00:13:39,654
+the lights came on so my coworker
+richard was actually off on vacation he
+
+227
+00:13:40,149 --> 00:13:42,241
+was really kinda doing this you know
+certain leading up the effort to
+
+228
+00:13:43,069 --> 00:13:46,550
+get things to link in that crash so much
+and then I came in and took over the
+
+229
+00:13:46,055 --> 00:13:46,129
+process
+
+230
+00:13:47,029 --> 00:13:50,268
+and actually got the first
+
+231
+00:13:50,529 --> 00:13:53,626
+being to draw on the screen I looted
+
+232
+00:13:54,499 --> 00:13:59,920
+a URL in this case WWW dot yahoo dot com
+
+233
+00:13:59,092 --> 00:14:02,166
+and euros reams and reams and reams and
+log messages go by
+
+234
+00:14:03,066 --> 00:14:06,155
+in the program didn't crash then there
+was a short pause
+
+235
+00:14:06,749 --> 00:14:09,823
+and it drew
+
+236
+00:14:10,489 --> 00:14:14,572
+a black obelisk
+
+237
+00:14:15,319 --> 00:14:18,321
+so this is the first if the first thing
+that WebKit you know
+
+238
+00:14:18,339 --> 00:14:22,170
+a Safari ever ever you know what became
+Safari ever rendered
+
+239
+00:14:22,017 --> 00:14:26,026
+now to see it little bit of a secret is
+actually turned out if
+
+240
+00:14:26,179 --> 00:14:29,217
+that this was reversed so that the
+publisher been on the others are decided
+
+241
+00:14:29,559 --> 00:14:30,980
+to scream but you know that
+
+242
+00:14:30,098 --> 00:14:33,557
+we we fix that took a little geometry
+problem very soon after
+
+243
+00:14:34,439 --> 00:14:37,447
+but you can imagine did you know that
+once I got this going at Sky Go Go
+
+244
+00:14:37,519 --> 00:14:40,536
+infection everybody who was disclosed in
+the project were all sitting around for
+
+245
+00:14:40,689 --> 00:14:42,230
+like 2001
+
+246
+00:14:42,023 --> 00:14:47,122
+face Odyssey with this black obelisk
+going who
+
+247
+00:14:47,329 --> 00:14:52,415
+so that was a a very happy happy moment
+now the lesson from this experience
+
+248
+00:14:53,189 --> 00:14:56,210
+is don't try to solve every problem it
+won't
+
+249
+00:14:56,399 --> 00:15:00,410
+at this point we had almost no knowledge
+
+250
+00:15:00,509 --> 00:15:03,552
+of how the innards have Keech Gmail
+worked
+
+251
+00:15:03,939 --> 00:15:06,947
+this was simply a mechanical process
+
+252
+00:15:07,019 --> 00:15:11,072
+of making the compiler happy making the
+linker happy
+
+253
+00:15:11,549 --> 00:15:15,551
+making it so the program didn't crash in
+we try to do something with it
+
+254
+00:15:15,569 --> 00:15:18,664
+it was all very very mechanical the
+compiler says
+
+255
+00:15:19,519 --> 00:15:22,593
+there's something missing go where that
+thing so that it no longer missing
+
+256
+00:15:23,259 --> 00:15:27,302
+right now it turns out of course a a web
+rendering engine is a very very
+
+257
+00:15:27,689 --> 00:15:28,766
+complicated piece of software
+
+258
+00:15:29,459 --> 00:15:32,528
+an but we just could we didn't have the
+band with
+
+259
+00:15:33,149 --> 00:15:36,165
+to think about it at this point as we
+were trying to just get those lights to
+
+260
+00:15:36,309 --> 00:15:37,330
+come on
+
+261
+00:15:37,519 --> 00:15:43,350
+that began to happen as soon as we had a
+program that would no longer crash right
+
+262
+00:15:43,035 --> 00:15:47,544
+don't care if you guys trying to attack
+in New big problem you've got this big
+
+263
+00:15:47,859 --> 00:15:48,922
+problem space particularly
+
+264
+00:15:49,489 --> 00:15:52,910
+if that problem space is new to you to
+try to figure out what the most
+
+265
+00:15:52,091 --> 00:15:53,710
+important thing is to do first
+
+266
+00:15:54,529 --> 00:15:58,290
+and do that don't think about the whole
+prom or try to
+
+267
+00:15:58,029 --> 00:16:01,198
+operate on the whole solving the whole
+problem
+
+268
+00:16:01,459 --> 00:16:04,462
+at one time right don't
+
+269
+00:16:04,759 --> 00:16:10,852
+try to solve every problem at once and
+that's the plank
+
+270
+00:16:11,689 --> 00:16:14,689
+so the next story number three is
+
+271
+00:16:14,689 --> 00:16:17,697
+the hardest problem and the lesson is
+find
+
+272
+00:16:18,489 --> 00:16:21,504
+smart friends and listen to them so
+
+273
+00:16:21,639 --> 00:16:24,721
+fast-forward to the fall of 2003 in my
+job became too ed
+
+274
+00:16:25,459 --> 00:16:30,527
+editing to WebKit so we wanted to use
+WebKit edit HDMI male
+
+275
+00:16:31,139 --> 00:16:35,156
+in mailed out a app on back with 10 we
+want to make
+
+276
+00:16:35,309 --> 00:16:38,383
+editing in WebKit lookin work like text
+editor
+
+277
+00:16:39,049 --> 00:16:42,100
+K to the problem it is kinda been unit
+printed
+
+278
+00:16:42,559 --> 00:16:45,593
+problem that we try to solve is somewhat
+obvious right a lot of
+
+279
+00:16:45,899 --> 00:16:48,978
+other platforms in particular I window
+sends
+
+280
+00:16:49,689 --> 00:16:52,723
+you know HTML mail from Outlook and we
+wanted to
+
+281
+00:16:53,029 --> 00:16:57,053
+not only render it which we could now
+that we had WebKit but we also wanted to
+
+282
+00:16:57,269 --> 00:17:01,280
+edited because if you think about it
+before it WebKit had editing
+
+283
+00:17:01,379 --> 00:17:05,384
+the web content which open your mail
+message as an attachment in RTF talking
+
+284
+00:17:05,429 --> 00:17:05,505
+with big
+
+285
+00:17:06,189 --> 00:17:09,140
+breaking insertion point after you
+discovered delete the whole thing with
+
+286
+00:17:09,014 --> 00:17:09,020
+one
+
+287
+00:17:09,074 --> 00:17:12,111
+to eat an entire web page with one one
+backspace
+
+288
+00:17:13,011 --> 00:17:16,049
+so that's not what we wanted we want to
+be able to get in to the details of the
+
+289
+00:17:16,049 --> 00:17:17,768
+web content to get it right
+
+290
+00:17:18,209 --> 00:17:21,266
+so now the hardest problem
+
+291
+00:17:21,779 --> 00:17:24,796
+I have ever ever worked on in my well
+many
+
+292
+00:17:24,949 --> 00:17:28,370
+many years of programming is arrow
+navigation
+
+293
+00:17:28,037 --> 00:17:31,084
+through web content now what do I mean
+by that so
+
+294
+00:17:31,084 --> 00:17:35,086
+picture a a a wet tiny little web
+document like this
+
+295
+00:17:35,086 --> 00:17:38,169
+and what you do then is you hit the
+arrow key the right number of times
+
+296
+00:17:39,069 --> 00:17:42,101
+and the insertion point wind up at the
+end that's it
+
+297
+00:17:43,001 --> 00:17:46,059
+disco character by character have the
+insertion point chopin the right place
+
+298
+00:17:46,059 --> 00:17:50,008
+each time you press the arrow key and
+then similarly
+
+299
+00:17:50,539 --> 00:17:53,490
+press the R key to go back the other way
+in San the insertion point back to the
+
+300
+00:17:53,049 --> 00:17:53,698
+start
+
+301
+00:17:54,139 --> 00:17:58,350
+that was it this was turned out to be
+very very difficult know why is this
+
+302
+00:17:58,035 --> 00:17:58,098
+because
+
+303
+00:17:58,098 --> 00:18:01,122
+you know on white thing RTF document
+which is just too
+
+304
+00:18:02,022 --> 00:18:08,044
+series of characters in indexes into
+basically nureyev characters
+
+305
+00:18:08,044 --> 00:18:11,075
+what content is a is a tree structure so
+
+306
+00:18:11,075 --> 00:18:14,083
+if you see on the top where the
+insertion point is
+
+307
+00:18:14,083 --> 00:18:17,432
+at the n and then if you look at the the
+model
+
+308
+00:18:18,179 --> 00:18:22,070
+the web document the insertion point
+would we get the in
+
+309
+00:18:22,007 --> 00:18:26,010
+if in the web document insertion point
+was
+
+310
+00:18:26,037 --> 00:18:29,069
+their or their or their
+
+311
+00:18:29,069 --> 00:18:34,125
+or their right so what I had he was a
+complex model the relationship with the
+
+312
+00:18:35,025 --> 00:18:36,070
+model changed
+
+313
+00:18:36,007 --> 00:18:39,073
+but the view didn't change me
+
+314
+00:18:40,036 --> 00:18:44,325
+senator begin thinking about this I used
+the DOM the the web don the Document
+
+315
+00:18:44,649 --> 00:18:47,677
+Object Model that the API for dressing
+web content
+
+316
+00:18:47,929 --> 00:18:50,976
+and to use positions in the web
+
+317
+00:18:51,399 --> 00:18:54,476
+content to try to understand where to
+make the insertion point blank
+
+318
+00:18:55,169 --> 00:18:58,231
+and so i think is illustrated I came up
+with this notion have an equivalent
+
+319
+00:18:58,789 --> 00:19:02,200
+Dom positions compositions
+
+320
+00:19:02,002 --> 00:19:05,331
+that would make different compositions
+but that would make the insertion point
+
+321
+00:19:05,529 --> 00:19:07,760
+blank in the same spot
+
+322
+00:19:07,076 --> 00:19:11,119
+K so I started writing some code for
+simple right al
+
+323
+00:19:12,019 --> 00:19:15,024
+arrow algorithm here get the insertion
+point position
+
+324
+00:19:15,069 --> 00:19:18,161
+in a DOM position then fine dysfunction
+in use this function
+
+325
+00:19:19,061 --> 00:19:23,074
+equivalent downstream position to find
+the DOM position
+
+326
+00:19:23,074 --> 00:19:26,100
+that which still make the insertion
+point blank in the same spot but was
+
+327
+00:19:27,000 --> 00:19:30,008
+closer to the end of the document
+
+328
+00:19:30,008 --> 00:19:33,217
+and then go to the next position and
+then set the insertion point there now
+
+329
+00:19:33,289 --> 00:19:36,340
+that seems reasonable but kinda focus in
+on these two
+
+330
+00:19:36,799 --> 00:19:41,120
+important functions here right will
+naturally it's a program right image if
+
+331
+00:19:41,012 --> 00:19:41,671
+you wanted to
+
+332
+00:19:41,779 --> 00:19:45,803
+perfect results the functions need to
+work perfectly in the problem with that
+
+333
+00:19:46,019 --> 00:19:49,096
+was the equivalent downstream position
+was implemented in terms of get next
+
+334
+00:19:49,789 --> 00:19:50,570
+composition
+
+335
+00:19:50,057 --> 00:19:53,062
+sometimes are have this feedback
+
+336
+00:19:53,062 --> 00:19:58,097
+process going were bizarre things happen
+because above wouldn't feed into itself
+
+337
+00:19:58,097 --> 00:20:01,123
+right and cost something that was very
+very difficult to understand and
+
+338
+00:20:02,023 --> 00:20:02,094
+diagnose
+
+339
+00:20:02,094 --> 00:20:06,097
+simply by looking at the result in the
+view
+
+340
+00:20:06,097 --> 00:20:09,416
+does complicated right to get right and
+then
+
+341
+00:20:10,289 --> 00:20:13,470
+other issues come up as well what if
+you're already at the
+
+342
+00:20:13,047 --> 00:20:16,135
+ended the document visual and if the
+document as you know if you've ever
+
+343
+00:20:17,035 --> 00:20:20,244
+probably viewed source in an HTML
+document there's
+
+344
+00:20:20,559 --> 00:20:25,250
+of in many many things at the very least
+the cassava closing /body tag closing
+
+345
+00:20:25,025 --> 00:20:28,694
+each email tech water times their script
+content there might be
+
+346
+00:20:28,919 --> 00:20:32,570
+you know time I P style content after
+there could be any sorts
+
+347
+00:20:32,057 --> 00:20:36,796
+sort of information that not visible
+after the visible and if the document
+
+348
+00:20:37,309 --> 00:20:41,210
+and by Tom position it would it would
+you know if you just kind of fended off
+
+349
+00:20:41,021 --> 00:20:43,032
+to position it o'Mara we go there
+
+350
+00:20:43,032 --> 00:20:45,074
+and there won't be a place for the
+insertion point to point to this is a
+
+351
+00:20:45,074 --> 00:20:46,083
+problem as well
+
+352
+00:20:46,083 --> 00:20:50,087
+and then what if you wanna move by word
+because the ultimate goal was to make a
+
+353
+00:20:51,023 --> 00:20:51,095
+text editor
+
+354
+00:20:51,095 --> 00:20:54,424
+right to hold down the option key an
+arrow in the new move word by word not
+
+355
+00:20:55,279 --> 00:20:57,070
+character by character
+
+356
+00:20:57,007 --> 00:21:01,020
+and so I was in know where I was stock
+working on this
+
+357
+00:21:01,002 --> 00:21:04,591
+for it sir was just three thank you very
+good say six weekly
+
+358
+00:21:04,789 --> 00:21:07,790
+magical number
+
+359
+00:21:07,799 --> 00:21:12,870
+but for many weeks without really
+feeling like I was making progress
+
+360
+00:21:12,087 --> 00:21:15,144
+so I asked for help and fortunately I
+had some very smart people on my team
+
+361
+00:21:16,044 --> 00:21:17,023
+which course the
+
+362
+00:21:17,419 --> 00:21:21,190
+two other stories have already
+illustrated explain the problem
+
+363
+00:21:21,019 --> 00:21:25,348
+to them much as I adjusted to you and
+their solution came back
+
+364
+00:21:25,519 --> 00:21:29,580
+very very clear the DOM positions were
+too low level
+
+365
+00:21:29,058 --> 00:21:32,497
+house trying to build a very a complex
+edifice but I was using
+
+366
+00:21:33,019 --> 00:21:36,450
+to you fundamental an abstraction
+
+367
+00:21:36,045 --> 00:21:39,654
+to get the job done when you do more
+powerful attraction so they came up with
+
+368
+00:21:40,059 --> 00:21:43,083
+when they gave me what they call it
+visible position
+
+369
+00:21:43,299 --> 00:21:46,347
+and all this was this is super sport
+coat is a Supersport class
+
+370
+00:21:46,779 --> 00:21:51,630
+that represented our place in a document
+where the insertion point and blink
+
+371
+00:21:51,063 --> 00:21:56,108
+30 and then secondarily at library
+called visible units
+
+372
+00:21:57,008 --> 00:22:01,021
+they could take a visible position and
+moved by words lines and documents
+
+373
+00:22:01,021 --> 00:22:04,980
+okay so they gave me this design now the
+point is
+
+374
+00:22:05,169 --> 00:22:09,460
+that I still had the hard work of
+figuring everything out
+
+375
+00:22:09,046 --> 00:22:13,105
+but now I had a complete
+
+376
+00:22:13,519 --> 00:22:17,960
+outline all the code that I needed
+
+377
+00:22:17,096 --> 00:22:20,685
+everyplace word by word well I knew now
+there was actually a place in the
+
+378
+00:22:21,549 --> 00:22:23,370
+document is a stub function
+
+379
+00:22:23,037 --> 00:22:26,058
+that was weird the move word by word
+
+380
+00:22:26,058 --> 00:22:29,071
+code should go where that should live
+
+381
+00:22:29,071 --> 00:22:34,122
+and so this dist really the set have
+abstractions really helped me to just
+
+382
+00:22:35,022 --> 00:22:38,571
+organize the work and figure out where
+the solution should live
+
+383
+00:22:38,769 --> 00:22:43,100
+it also made a easier to think about the
+prom so that I went up with fewer
+
+384
+00:22:43,001 --> 00:22:46,580
+these kind of functions that fed back on
+each other producing
+
+385
+00:22:46,679 --> 00:22:50,090
+bizarre results so
+
+386
+00:22:50,009 --> 00:22:53,558
+when you're blocked don't be blocked
+
+387
+00:22:53,639 --> 00:22:57,620
+find smart friends and listen to them in
+this case they said visible position
+
+388
+00:22:57,062 --> 00:23:01,113
+visible units I said okay
+
+389
+00:23:02,013 --> 00:23:05,792
+I will do that and it worked
+
+390
+00:23:05,909 --> 00:23:09,440
+absolutely work I certainly went back
+and got some more they're helping
+
+391
+00:23:09,044 --> 00:23:11,048
+details but this was the big big help
+
+392
+00:23:11,084 --> 00:23:14,100
+find smart friends and listen to them
+particularly when you're stuck
+
+393
+00:23:15,000 --> 00:23:18,097
+to not stay blocked and this is how I
+got through
+
+394
+00:23:18,097 --> 00:23:25,097
+my hardest programming problem
+
+395
+00:23:26,649 --> 00:23:29,750
+and so the next story number four is
+
+396
+00:23:29,075 --> 00:23:32,094
+quality and the left in his work
+
+397
+00:23:32,094 --> 00:23:35,097
+should explain itself
+
+398
+00:23:35,097 --> 00:23:38,182
+so fast-forward to 2005 now
+
+399
+00:23:39,082 --> 00:23:42,671
+and I joined the iPhone development
+project pretty
+
+400
+00:23:43,409 --> 00:23:47,100
+early on and initially I join to work on
+WebKit
+
+401
+00:23:47,001 --> 00:23:50,700
+because it seems like a a good match for
+my skills and experience
+
+402
+00:23:50,799 --> 00:23:56,833
+at Apple but I soon transition to work
+on keyboards
+
+403
+00:23:57,139 --> 00:24:01,201
+so now if you think about it right this
+is kind of what we had when we started
+
+404
+00:24:01,759 --> 00:24:02,580
+with the iPhone
+
+405
+00:24:02,058 --> 00:24:05,487
+I we had a screen and we had this
+
+406
+00:24:06,009 --> 00:24:10,014
+notion at the keyboard will be on the
+bottom the app content would be on the
+
+407
+00:24:10,059 --> 00:24:10,118
+top
+
+408
+00:24:10,649 --> 00:24:13,658
+annie cruz the big question was well
+what should the keyboard
+
+409
+00:24:14,549 --> 00:24:17,612
+do how should it work watched it look
+like
+
+410
+00:24:18,179 --> 00:24:21,990
+and if you have seen you know even from
+the very beginning that the
+
+411
+00:24:21,099 --> 00:24:23,758
+you know that the Steve Jobs
+announcement have the iPhone your you
+
+412
+00:24:24,649 --> 00:24:26,850
+know the original announcement in 2007
+
+413
+00:24:26,085 --> 00:24:30,107
+he pointed at very very clearly this
+virtue of the iPhone that
+
+414
+00:24:31,007 --> 00:24:34,016
+it didn't have those placed the keys on
+the bottom we could draw the keyboard
+
+415
+00:24:34,097 --> 00:24:37,162
+and make it look like whatever we want
+it
+
+416
+00:24:38,062 --> 00:24:42,075
+some doubt jumping back to the giving up
+that story because
+
+417
+00:24:42,075 --> 00:24:45,162
+even stages the end of that story right
+
+418
+00:24:46,062 --> 00:24:50,110
+we didn't have placed the key so we need
+to experiment what we're gonna do
+
+419
+00:24:51,001 --> 00:24:54,680
+right how we gonna replace those plastic
+keys with software
+
+420
+00:24:54,779 --> 00:24:57,816
+and we came up with many many ideas
+
+421
+00:24:58,149 --> 00:25:01,158
+for how we would do this now there are a
+lot of challenges
+
+422
+00:25:02,049 --> 00:25:05,080
+a particularly at the beginning when we
+were only with dealing with
+
+423
+00:25:05,008 --> 00:25:08,019
+touchscreen keypad particularly a i
+touch screens
+
+424
+00:25:08,019 --> 00:25:11,075
+a in general and touchscreen keyboard
+specifically
+
+425
+00:25:11,075 --> 00:25:14,097
+to the one in the challenges that this
+small target too hard to tap its
+
+426
+00:25:14,097 --> 00:25:17,148
+pretty logical I'm sure you you even
+experience that now the small the tower
+
+427
+00:25:18,048 --> 00:25:20,099
+at Target get the more difficult they
+are to tap
+
+428
+00:25:20,099 --> 00:25:25,538
+and not only not only that but as you as
+you go for a target as you get close to
+
+429
+00:25:26,429 --> 00:25:27,450
+it your finger
+
+430
+00:25:27,639 --> 00:25:30,830
+covers up the thing that you're looking
+for so the smaller than it is
+
+431
+00:25:30,083 --> 00:25:34,922
+the more difficult it is to you know do
+sumfin green a judgment as you get close
+
+432
+00:25:35,669 --> 00:25:39,870
+for these were we we as in our
+experiments we we were ex- seeing their
+
+433
+00:25:39,087 --> 00:25:42,496
+result this was very challenging to make
+a keyboard that worked at all
+
+434
+00:25:43,279 --> 00:25:47,070
+and so in the beginning we we were
+pretty clear we will do this we thought
+
+435
+00:25:47,007 --> 00:25:47,816
+we were clear
+
+436
+00:25:47,879 --> 00:25:52,880
+the bigger keys would be the solution
+this would solve both problems
+
+437
+00:25:52,889 --> 00:25:57,570
+so I have an example something in the
+spirit
+
+438
+00:25:57,057 --> 00:26:00,086
+apps wanna the experiments we tried not
+an exact
+
+439
+00:26:00,086 --> 00:26:03,092
+example but something very very much in
+the spirit of what we try to call it the
+
+440
+00:26:04,046 --> 00:26:05,265
+keyboard keyboard
+
+441
+00:26:05,679 --> 00:26:09,240
+but if you think about you know about
+other things in the world are you know
+
+442
+00:26:09,024 --> 00:26:14,037
+accept a lot of touch input right was a
+piano keyboard right
+
+443
+00:26:14,037 --> 00:26:19,846
+so could maybe conceive a keyboard that
+looks like this
+
+444
+00:26:20,179 --> 00:26:23,610
+so how does this work well I'm gonna try
+to protect the Tiki and so
+
+445
+00:26:23,061 --> 00:26:26,480
+how do you get a key well you look on
+all the keys
+
+446
+00:26:27,029 --> 00:26:30,330
+and you do make a chord multi multi
+touch motion
+
+447
+00:26:30,033 --> 00:26:37,033
+to find all the keys are heavy on it
+
+448
+00:26:38,086 --> 00:26:42,132
+okay so there you go he H age is
+actually got to the same keys
+
+449
+00:26:43,032 --> 00:26:47,059
+he by age is only on all those two keys
+and and and Daiichi
+
+450
+00:26:47,059 --> 00:26:53,278
+she can see how this would work ray
+according keyboard
+
+451
+00:26:53,809 --> 00:26:57,120
+this is good got the keys are back
+
+452
+00:26:57,012 --> 00:26:59,671
+you can even really think I'd like you
+know it's just like home keys are you
+
+453
+00:26:59,779 --> 00:27:02,793
+just gonna keep your five fingers right
+on top of the key is in you
+
+454
+00:27:02,919 --> 00:27:06,955
+you know you can use the keyboard like
+that at it easy to press the correct key
+
+455
+00:27:07,279 --> 00:27:10,353
+for that good but it's bad because
+there's a learning curve right
+
+456
+00:27:11,019 --> 00:27:14,830
+the first time experience is a mystery
+
+457
+00:27:14,083 --> 00:27:17,096
+you see this alphabet soup on this thing
+that you click piano keyboard how do I
+
+458
+00:27:17,096 --> 00:27:17,775
+use this
+
+459
+00:27:18,639 --> 00:27:23,639
+right and so we were thinking that well
+the solution would be we have a tutorial
+
+460
+00:27:23,639 --> 00:27:27,678
+to teach the people how to use the
+keyboard not actually in a different you
+
+461
+00:27:28,029 --> 00:27:28,082
+know not
+
+462
+00:27:28,559 --> 00:27:31,564
+this is an ideal actually how some
+history
+
+463
+00:27:32,059 --> 00:27:35,106
+may not happen because the original Mac
+ship to the tutorial
+
+464
+00:27:35,529 --> 00:27:38,614
+to teach people how to use the mouse
+since that was new
+
+465
+00:27:39,379 --> 00:27:43,620
+me so we figure we come up with a
+tutorial in the interim you think about
+
+466
+00:27:43,062 --> 00:27:43,731
+it
+
+467
+00:27:44,289 --> 00:27:47,820
+is that even if we you know we didn't
+have that
+
+468
+00:27:47,082 --> 00:27:50,097
+keyboard keyboard are you mad enough
+that we did we could maybe even come up
+
+469
+00:27:50,097 --> 00:27:53,656
+with a keyboard that use music to try to
+keep people that you could baby play
+
+470
+00:27:54,529 --> 00:27:55,570
+tonight
+
+471
+00:27:55,057 --> 00:27:59,026
+so it wasn't the craziest idea in the
+world but after each of these
+
+472
+00:27:59,539 --> 00:28:00,588
+experiments
+
+473
+00:28:01,029 --> 00:28:04,320
+and each the times we thought through
+how to make a tutorial
+
+474
+00:28:04,032 --> 00:28:08,211
+um we always came back to quality
+
+475
+00:28:08,499 --> 00:28:11,870
+because your already know how to use it
+
+476
+00:28:11,087 --> 00:28:15,174
+there's no need for tutorial right you
+see the thing
+
+477
+00:28:16,074 --> 00:28:19,333
+and instead of cash what is this
+
+478
+00:28:19,999 --> 00:28:23,075
+how do I use it right instead of that
+you have
+
+479
+00:28:23,759 --> 00:28:27,776
+this for you look at it and okay it's
+different because it's a touch screen
+
+480
+00:28:27,929 --> 00:28:28,470
+its
+
+481
+00:28:28,047 --> 00:28:33,116
+small but where weird sir hauling on and
+invoking
+
+482
+00:28:33,539 --> 00:28:37,480
+write a lot have these kind of these
+familiar notions that your already
+
+483
+00:28:37,048 --> 00:28:41,747
+very very comfortable with so that's why
+we wound up with this
+
+484
+00:28:42,179 --> 00:28:45,228
+and ultimately right we have this today
+
+485
+00:28:45,669 --> 00:28:48,716
+because we thought was more important
+
+486
+00:28:49,139 --> 00:28:52,350
+that the work should explain itself
+right
+
+487
+00:28:52,035 --> 00:28:55,069
+you already know how to use quality we
+don't need a tutorial
+
+488
+00:28:55,069 --> 00:28:58,147
+and so this was really the key to that
+decision
+
+489
+00:28:59,047 --> 00:29:03,076
+key a schizophrenic funny word but it's
+the here are the key keyboard
+
+490
+00:29:03,499 --> 00:29:07,501
+but the I'm it's the real reason why we
+chose to go with QWERTY
+
+491
+00:29:07,519 --> 00:29:13,545
+because again we thought that work
+explain itself
+
+492
+00:29:13,779 --> 00:29:17,340
+so the next story number five every word
+
+493
+00:29:17,034 --> 00:29:21,093
+on every keystroke and to the left is
+choose the simplest
+
+494
+00:29:21,399 --> 00:29:24,405
+thing which might work
+
+495
+00:29:24,999 --> 00:29:29,090
+to continuing on the development of the
+iPhone keyboard
+
+496
+00:29:29,009 --> 00:29:32,045
+became my job to do the work iniquity
+possible
+
+497
+00:29:32,045 --> 00:29:35,049
+right we had this challenge have
+smokey's
+
+498
+00:29:35,085 --> 00:29:38,264
+difficult to type now into course you
+all
+
+499
+00:29:39,029 --> 00:29:43,200
+care about my problems you just wanna
+type quickly
+
+500
+00:29:43,002 --> 00:29:46,481
+right so the software was gonna need to
+help
+
+501
+00:29:46,679 --> 00:29:50,360
+and so the eventual solution for that
+was so auto correction
+
+502
+00:29:50,036 --> 00:29:54,475
+which Chris what you meant and not what
+you did
+
+503
+00:29:54,799 --> 00:29:58,845
+taking what you didn't figure that what
+you meant from it
+
+504
+00:29:59,259 --> 00:30:02,580
+and of course there's I you know quite a
+bit have I
+
+505
+00:30:02,058 --> 00:30:05,257
+your smart people have thought about the
+I
+
+506
+00:30:05,779 --> 00:30:08,820
+you know text processing and in a text
+
+507
+00:30:08,082 --> 00:30:11,401
+you note extradition prediction sure
+your summer the
+
+508
+00:30:12,139 --> 00:30:16,142
+to terms that are you know in the state
+of the art you know then as now
+
+509
+00:30:16,169 --> 00:30:19,960
+basin statistics and stochastic
+programming conditional random field
+
+510
+00:30:19,096 --> 00:30:23,935
+know a lot of these involve large
+statistical models
+
+511
+00:30:24,799 --> 00:30:27,862
+to make them work that they rely on
+language models
+
+512
+00:30:28,429 --> 00:30:31,690
+and these were not going to be possible
+given to
+
+513
+00:30:31,069 --> 00:30:34,072
+you note the hardware and software
+environment to the original iPhone
+
+514
+00:30:34,099 --> 00:30:39,187
+not only that I less studied math in the
+11th grade
+
+515
+00:30:40,087 --> 00:30:43,136
+which was in the eighties and it was in
+the early eighties
+
+516
+00:30:43,919 --> 00:30:48,016
+so I'm him so I screws can I was looking
+at you know so generous to Catholic
+
+517
+00:30:48,889 --> 00:30:50,914
+programming okay well you know so
+
+518
+00:30:51,139 --> 00:30:54,151
+really worried if I was I needed
+something simple because
+
+519
+00:30:54,259 --> 00:31:01,259
+math is hard right
+
+520
+00:31:01,035 --> 00:31:05,036
+and sell here
+
+521
+00:31:05,036 --> 00:31:08,123
+it's a little bit have an idea little
+little better how how the or a
+
+522
+00:31:09,023 --> 00:31:09,099
+correction
+
+523
+00:31:09,099 --> 00:31:12,258
+works right certainly in the you know
+
+524
+00:31:13,149 --> 00:31:16,950
+who you know way back then in the first
+time that I try to get this
+
+525
+00:31:16,095 --> 00:31:19,146
+get this idea together so you typing a
+letter RI well
+
+526
+00:31:20,046 --> 00:31:24,365
+since the keys are small maybe you meant
+those keys
+
+527
+00:31:24,779 --> 00:31:27,788
+as well so I was highlighted but maybe
+you missed
+
+528
+00:31:28,679 --> 00:31:32,330
+in maybe you meant one of the keys
+around RI okay
+
+529
+00:31:32,033 --> 00:31:36,072
+and then you type the key and walked
+similarly maybe you meant one of those
+
+530
+00:31:36,072 --> 00:31:39,083
+letters around it so even just with two
+characters
+
+531
+00:31:39,083 --> 00:31:43,107
+you can see that there are a number of
+possibilities
+
+532
+00:31:44,007 --> 00:31:48,009
+right and so in it one column are words
+that are real words inner
+
+533
+00:31:48,009 --> 00:31:52,013
+going to be in English Dictionary arm
+and the other column there are just
+
+534
+00:31:52,049 --> 00:31:52,146
+those
+
+535
+00:31:53,046 --> 00:31:57,245
+words that are in there there letter
+combinations but they're not words
+
+536
+00:31:57,659 --> 00:32:01,100
+you know we have words that I'm at the
+one column has
+
+537
+00:32:01,001 --> 00:32:04,001
+words data in the dictionary and the
+
+538
+00:32:04,001 --> 00:32:09,076
+other column has just letter
+combinations that aren't words
+
+539
+00:32:09,085 --> 00:32:12,170
+as we do with this is now raw material
+right and so
+
+540
+00:32:13,007 --> 00:32:19,426
+or a correction really ultimately view
+too big part of it is just speculation
+
+541
+00:32:20,119 --> 00:32:22,162
+did you mean this one did you mean that
+when did you mean the other one did you
+
+542
+00:32:22,549 --> 00:32:23,830
+mean this one did you mean this one
+
+543
+00:32:23,083 --> 00:32:26,085
+and this involved in many many many
+dictionary lookups
+
+544
+00:32:26,085 --> 00:32:30,164
+to just check are these water
+combinations are these words in the
+
+545
+00:32:30,929 --> 00:32:31,026
+dictionary that
+
+546
+00:32:31,899 --> 00:32:35,903
+is in a selected by the by the user so I
+needed something that work really really
+
+547
+00:32:36,299 --> 00:32:36,980
+fast
+
+548
+00:32:36,098 --> 00:32:39,136
+and a you know so that the idea was was
+
+549
+00:32:40,036 --> 00:32:44,055
+offer to me that well you know you could
+maybe in as user is typing just kinda
+
+550
+00:32:44,379 --> 00:32:47,190
+send that dictionary lookup stuff on a
+background thread
+
+551
+00:32:47,019 --> 00:32:50,608
+an you know sorry post the results back
+when it's done in Crosby been back then
+
+552
+00:32:50,779 --> 00:32:51,805
+we didn't have GPD
+
+553
+00:32:52,039 --> 00:32:55,470
+and so it you know DP threats would have
+been the solution and it's like I'm
+
+554
+00:32:55,047 --> 00:32:57,366
+scared a multi-threaded coat it's hard
+
+555
+00:32:57,789 --> 00:33:01,090
+it's hard to get right at a secret to
+say she's like
+
+556
+00:33:01,009 --> 00:33:04,057
+there's actually I did have one little
+bit of multi-threaded code
+
+557
+00:33:04,057 --> 00:33:07,134
+in the keyboard in the beginning to do
+some initialization and that was as
+
+558
+00:33:08,034 --> 00:33:11,099
+largest source a bug's a tiny little
+piece of code
+
+559
+00:33:11,099 --> 00:33:14,144
+and that was his largest source a bug
+dealing with app startup in
+
+560
+00:33:15,044 --> 00:33:20,136
+this is launching happenin suspended
+Williams said huge source a box
+
+561
+00:33:21,036 --> 00:33:24,335
+even if just a little bit of code and I
+want to keep multi-threading
+
+562
+00:33:24,659 --> 00:33:27,950
+out %uh or a correction which was much
+more complex right
+
+563
+00:33:27,095 --> 00:33:33,284
+because I wanted to keep thing simple
+because I can understand simple
+
+564
+00:33:34,139 --> 00:33:38,139
+multi-threading is hard I can even like
+making a good breakfast in the morning
+
+565
+00:33:38,139 --> 00:33:39,154
+right to make the egg
+
+566
+00:33:39,289 --> 00:33:43,387
+make coffee then make the a keeper
+single-threaded rate
+
+567
+00:33:44,269 --> 00:33:49,274
+otherwise it went up with the message
+kitchen okay to keep it simple
+
+568
+00:33:49,769 --> 00:33:52,818
+so here actually a little algorithm for
+searching a dictionary
+
+569
+00:33:53,259 --> 00:33:56,301
+word list on one side
+
+570
+00:33:56,679 --> 00:34:00,680
+and a little algorithm on the other side
+
+571
+00:34:00,779 --> 00:34:05,240
+and this is actually thought up by the
+same fellow who did the caged emailed Mr
+
+572
+00:34:05,024 --> 00:34:09,030
+and so he came up with a good idea and
+as part of some of our other experiments
+
+573
+00:34:09,084 --> 00:34:09,150
+and i'd
+
+574
+00:34:10,005 --> 00:34:14,053
+why I I saw that good idea and I used it
+to what you do you have a
+
+575
+00:34:14,098 --> 00:34:17,104
+Lister words in the dictionary a memory
+map it eatery
+
+576
+00:34:18,004 --> 00:34:22,343
+the list wants to find the line endings
+you store those addresses in a pointer
+
+577
+00:34:22,379 --> 00:34:22,384
+array
+
+578
+00:34:22,879 --> 00:34:25,887
+you can then binary search in you can
+find whether word is in the dictionary
+
+579
+00:34:26,679 --> 00:34:30,400
+really really fast really really fast
+
+580
+00:34:30,004 --> 00:34:33,052
+and so next after that I wrote a custom
+c plus plus train crash that
+
+581
+00:34:33,088 --> 00:34:37,140
+could wrap any string in that memory
+mapped area
+
+582
+00:34:38,004 --> 00:34:40,078
+are each of those strings are not
+terminated in the end so you could just
+
+583
+00:34:41,014 --> 00:34:42,036
+kinda going to wrap
+
+584
+00:34:42,036 --> 00:34:45,095
+and an address and you have a string as
+long as realign start
+
+585
+00:34:45,095 --> 00:34:48,190
+I and so this turned out to be really
+really fast like a check dictionary
+
+586
+00:34:49,009 --> 00:34:51,031
+membership in microseconds
+
+587
+00:34:52,012 --> 00:34:55,020
+even on the original iPhone hardware
+
+588
+00:34:55,002 --> 00:34:58,016
+so this was when I really really fast
+and to what this
+
+589
+00:34:58,034 --> 00:35:01,063
+did was it made speculation really
+really
+
+590
+00:35:01,063 --> 00:35:04,101
+cheap and that in turn made auto
+correction
+
+591
+00:35:05,001 --> 00:35:08,074
+possible to go from
+
+592
+00:35:08,074 --> 00:35:12,135
+this and take all love those
+permutations even for as long word as
+
+593
+00:35:13,035 --> 00:35:14,094
+you might find
+
+594
+00:35:14,094 --> 00:35:18,150
+in a language and actually go and figure
+out
+
+595
+00:35:19,005 --> 00:35:22,006
+whether that word is going to be in the
+dictionary or not
+
+596
+00:35:22,051 --> 00:35:26,104
+and whether similar options would be as
+well mister to be so fast
+
+597
+00:35:27,004 --> 00:35:32,010
+I stored no state for the current word I
+didn't store previous results all I did
+
+598
+00:35:32,001 --> 00:35:32,029
+was
+
+599
+00:35:32,038 --> 00:35:35,129
+at restore the string for the users
+piping if we think think think back here
+
+600
+00:35:36,029 --> 00:35:39,061
+all I've had stories I T what if you
+typed
+
+601
+00:35:39,061 --> 00:35:43,125
+the actual characters that were lit up
+right not the neighboring ones
+
+602
+00:35:44,025 --> 00:35:47,071
+only thing stored was the characters
+that were lit up
+
+603
+00:35:47,071 --> 00:35:50,098
+K only such store that string so it
+actually
+
+604
+00:35:50,098 --> 00:35:53,132
+career in the entire algorithm on every
+keystroke
+
+605
+00:35:54,032 --> 00:35:58,109
+from scratch which means of course that
+search the whole dictionary seventy
+
+606
+00:35:59,009 --> 00:36:00,012
+thousand plus words
+
+607
+00:36:00,039 --> 00:36:04,072
+on every keystroke because to me
+
+608
+00:36:04,072 --> 00:36:07,077
+this was the simplest thing as I was
+thinking about it was the simplest thing
+
+609
+00:36:08,022 --> 00:36:09,120
+which might work
+
+610
+00:36:10,002 --> 00:36:14,002
+and by coming up with sufficiently fast
+implementations
+
+611
+00:36:14,002 --> 00:36:17,005
+up this it turned out that with the
+simplest thing
+
+612
+00:36:17,005 --> 00:36:20,011
+didn't work simple is
+
+613
+00:36:21,001 --> 00:36:24,044
+often speedy and
+
+614
+00:36:24,053 --> 00:36:27,075
+Voice simple something I could
+understand and when they're about record
+
+615
+00:36:27,075 --> 00:36:33,092
+understand where those bugs might have
+been
+
+616
+00:36:33,092 --> 00:36:37,124
+and everywhere and every keystroke
+choose the simplest thing which might
+
+617
+00:36:38,024 --> 00:36:42,053
+work and again if you're kinda looking
+from the beginning a project trying to
+
+618
+00:36:42,053 --> 00:36:42,122
+think
+
+619
+00:36:43,022 --> 00:36:46,098
+to the endeavor project and you know
+what you might have when you're all done
+
+620
+00:36:46,098 --> 00:36:49,109
+at White term this way choose the
+simplest thing which might work
+
+621
+00:36:50,009 --> 00:36:52,097
+if you did actually have a crystal ball
+you could tell whether maybe your idea
+
+622
+00:36:52,097 --> 00:36:52,193
+would work
+
+623
+00:36:53,093 --> 00:36:56,122
+I think the even from the beginning cunt
+finger
+
+624
+00:36:57,022 --> 00:37:00,115
+the simplest thing which could possibly
+just give you what you need
+
+625
+00:37:01,015 --> 00:37:07,106
+go with that first not a good idea
+
+626
+00:37:08,006 --> 00:37:12,072
+and so the next story number six
+
+627
+00:37:12,072 --> 00:37:15,087
+is we only need one of these right and
+the lesson is only
+
+628
+00:37:15,087 --> 00:37:19,091
+show your best work
+
+629
+00:37:20,027 --> 00:37:23,103
+and so fast for it if 2009 I joined
+
+630
+00:37:24,003 --> 00:37:28,021
+efforts to develop the iPad and at the
+iPad Mini Keyboard
+
+631
+00:37:28,021 --> 00:37:32,023
+and authors by this point I had to sign
+quote pasted onto my back want to kick
+
+632
+00:37:32,041 --> 00:37:32,103
+me
+
+633
+00:37:33,003 --> 00:37:37,006
+and the other one said because keyboards
+so I it was to
+
+634
+00:37:37,006 --> 00:37:40,041
+a here sir if something that seemed to
+be
+
+635
+00:37:40,041 --> 00:37:45,050
+in my my area and so I noticed that in
+landscape returned an iPad 2 landscape
+
+636
+00:37:46,031 --> 00:37:46,117
+that
+
+637
+00:37:47,017 --> 00:37:50,116
+the a number of key said you could fit
+across the top was close to the size of
+
+638
+00:37:51,016 --> 00:37:52,102
+a full-size desktop keyboard
+
+639
+00:37:53,002 --> 00:37:58,043
+and so here it is a representation have
+a full-size desktop keyboard
+
+640
+00:37:58,043 --> 00:38:01,079
+and their is the size of the keys that
+we could fit
+
+641
+00:38:01,079 --> 00:38:06,084
+on an iPad ABC for overlay one on top in
+the other
+
+642
+00:38:06,084 --> 00:38:10,153
+it's pretty close not exact the iPad is
+smaller
+
+643
+00:38:11,053 --> 00:38:14,120
+but it's close and so I'm thinking that
+it's okay but you know it's not the
+
+644
+00:38:15,002 --> 00:38:16,015
+exactly the same size but
+
+645
+00:38:16,033 --> 00:38:19,081
+auto correction could maybe help you to
+type comfortably
+
+646
+00:38:19,081 --> 00:38:23,177
+right from here big keys across the park
+that seem
+
+647
+00:38:24,077 --> 00:38:27,103
+like a good idea but then we also had to
+quit
+
+648
+00:38:28,003 --> 00:38:31,078
+you know the the question in our minds
+what if you wanted more keys we now have
+
+649
+00:38:31,078 --> 00:38:32,116
+space for them
+
+650
+00:38:33,016 --> 00:38:36,092
+allocating the space in the original
+iPhone keyboard was the place tortuous
+
+651
+00:38:36,092 --> 00:38:36,187
+because
+
+652
+00:38:37,087 --> 00:38:40,169
+you know we couldn't even fit you know
+that period character in the first
+
+653
+00:38:41,069 --> 00:38:44,117
+you know in the first you know keyboard
+that that you saw we had to put that on
+
+654
+00:38:45,017 --> 00:38:46,074
+to a secondary key point
+
+655
+00:38:46,074 --> 00:38:49,165
+and so we didn't have that problem that
+we could have more keys we had the room
+
+656
+00:38:50,065 --> 00:38:50,071
+for them
+
+657
+00:38:51,025 --> 00:38:54,064
+and so you can imagine that we can get a
+start getting some more key issue in
+
+658
+00:38:54,064 --> 00:38:56,133
+this case I put in shifting caps lock in
+10 happen
+
+659
+00:38:57,033 --> 00:39:00,091
+couple character characters of the site
+and then taking a direct your attention
+
+660
+00:39:00,091 --> 00:39:03,094
+to this year so we would have a switch
+
+661
+00:39:03,094 --> 00:39:06,160
+that would allow you to go very very
+quickly between
+
+662
+00:39:07,006 --> 00:39:10,045
+come
+
+663
+00:39:10,099 --> 00:39:13,168
+the one with the keys and in the one
+
+664
+00:39:14,068 --> 00:39:18,166
+with the more keys and tourists are
+similar to what we have where you change
+
+665
+00:39:19,066 --> 00:39:19,120
+to
+
+666
+00:39:20,002 --> 00:39:24,014
+numbers and punctuation but this was
+really keeping the letters the same
+
+667
+00:39:24,032 --> 00:39:27,086
+and he's bringing in more keys and so
+
+668
+00:39:27,086 --> 00:39:30,089
+you know a bunch of us who are working
+on this we thought this was
+
+669
+00:39:30,089 --> 00:39:34,112
+the best of both worlds score
+
+670
+00:39:35,012 --> 00:39:40,095
+so hi demo this first the
+
+671
+00:39:40,095 --> 00:39:43,164
+which is as a gulp and so I am
+
+672
+00:39:44,064 --> 00:39:47,122
+so bringing the iPad you know you can
+have the demo reel 'em
+
+673
+00:39:48,022 --> 00:39:51,104
+and go in there and then there to keep
+him there and then you could OKC
+
+674
+00:39:52,004 --> 00:39:56,072
+put the iPad in front of him and I and
+fortunately the work
+
+675
+00:39:56,072 --> 00:39:59,079
+explained itself to the description was
+a short at
+
+676
+00:40:00,042 --> 00:40:03,135
+we're looking at iPad keyboard options
+today here two options press the switch
+
+677
+00:40:04,035 --> 00:40:04,131
+key
+
+678
+00:40:05,031 --> 00:40:08,043
+done so he did
+
+679
+00:40:08,043 --> 00:40:12,126
+he looked at the first keyboard
+depressed switch key
+
+680
+00:40:13,026 --> 00:40:16,084
+the animation he looked at the second
+keyboard
+
+681
+00:40:16,084 --> 00:40:20,133
+the press to switch Keegan he saw the
+first one come back
+
+682
+00:40:21,033 --> 00:40:26,066
+a third time presses switch key fees the
+second one come in
+
+683
+00:40:26,066 --> 00:40:30,074
+and he looks at this for a moment and he
+looks up at me and that's really what
+
+684
+00:40:30,074 --> 00:40:34,133
+are these right
+
+685
+00:40:35,033 --> 00:40:41,084
+and he's looking at me I
+
+686
+00:40:41,084 --> 00:40:44,172
+and so I got through a couple times and
+so I and he says well which one do you
+
+687
+00:40:45,072 --> 00:40:46,076
+think
+
+688
+00:40:47,012 --> 00:40:50,086
+we should use and I said well
+
+689
+00:40:50,086 --> 00:40:53,170
+you know I think we should use the one
+with the bigger keys
+
+690
+00:40:54,007 --> 00:40:57,060
+because it's just easier to type it
+close to the size full-size keyboard
+
+691
+00:40:58,023 --> 00:41:05,023
+he said okay we'll go with that one
+
+692
+00:41:10,028 --> 00:41:13,105
+and that was it really a record and
+really really was it was it was quick is
+
+693
+00:41:14,005 --> 00:41:15,017
+that it so that's why we
+
+694
+00:41:15,017 --> 00:41:18,050
+went up with this and then ultimately
+today this
+
+695
+00:41:18,005 --> 00:41:22,012
+and course the you know the lesson is
+only sure your best work
+
+696
+00:41:22,057 --> 00:41:26,059
+perhaps more than anyone else Steve
+understood this
+
+697
+00:41:26,077 --> 00:41:29,119
+go out and think I've all the ideas that
+you can
+
+698
+00:41:30,019 --> 00:41:34,115
+and get now we just pick up the ideas
+but get them and make them and use them
+
+699
+00:41:35,015 --> 00:41:36,044
+in live with them
+
+700
+00:41:36,044 --> 00:41:42,055
+and think about them and then try to
+figure out which is the best one
+
+701
+00:41:42,055 --> 00:41:45,132
+so it was interesting to me about that
+story is that even though I was under a
+
+702
+00:41:46,032 --> 00:41:47,107
+lot of pressure
+
+703
+00:41:48,007 --> 00:41:52,041
+when he asked me which 1i thought was
+better I knew
+
+704
+00:41:52,041 --> 00:41:55,134
+but they didn't have the courage to just
+go in there and show him
+
+705
+00:41:56,034 --> 00:41:59,095
+the one that I thought was really the
+best the first time
+
+706
+00:41:59,095 --> 00:42:02,157
+it needed his extra product that little
+bit have
+
+707
+00:42:03,057 --> 00:42:06,074
+extra investigation libitum extra poking
+per se
+
+708
+00:42:06,074 --> 00:42:09,130
+we women it right which is the best one
+
+709
+00:42:10,003 --> 00:42:14,003
+which is the second best one with not
+show the second best one
+
+710
+00:42:14,003 --> 00:42:17,011
+right only show your best work
+
+711
+00:42:17,038 --> 00:42:20,117
+you have to go through all the effort
+
+712
+00:42:21,017 --> 00:42:28,017
+Chenery lot of ideas to come up with one
+that really worth it
+
+713
+00:42:28,071 --> 00:42:31,085
+and that we only need one of these right
+homie show
+
+714
+00:42:31,085 --> 00:42:36,110
+your best work
+
+715
+00:42:37,001 --> 00:42:41,065
+okay story number seven is let's tried 2
+percent darker
+
+716
+00:42:41,074 --> 00:42:44,150
+and the lesson is iterating quickly lead
+to better work
+
+717
+00:42:45,005 --> 00:42:48,009
+and so 2012 I
+
+718
+00:42:48,054 --> 00:42:52,070
+jointed effort to develop Iowa 7 and
+course as you know
+
+719
+00:42:52,007 --> 00:42:55,034
+that one of the big goals for Iowa 7 I
+
+720
+00:42:55,097 --> 00:42:59,176
+was a whole new look and you have to
+question how do you make
+
+721
+00:43:00,076 --> 00:43:03,090
+all of these choices you know in a lot
+of times you know coming up with these
+
+722
+00:43:03,009 --> 00:43:04,041
+new design ideas
+
+723
+00:43:05,022 --> 00:43:08,111
+it felt like a game of whack-a-mole
+because every decision
+
+724
+00:43:09,011 --> 00:43:13,042
+affect every other decision that you
+make you change one thing
+
+725
+00:43:13,042 --> 00:43:16,067
+and you had the things over there the
+kinda family well with the thing the way
+
+726
+00:43:16,067 --> 00:43:19,122
+it was before and now it doesn't seem
+like that now it seems that the thing
+
+727
+00:43:20,022 --> 00:43:25,110
+that you just changed dozen really work
+well with everything else
+
+728
+00:43:26,001 --> 00:43:29,096
+and so this required a tremendous amana
+tuning
+
+729
+00:43:30,005 --> 00:43:34,048
+iterating iterating iterating you know
+version after version
+
+730
+00:43:34,048 --> 00:43:38,070
+effort after effort try to get things so
+that they all look
+
+731
+00:43:38,007 --> 00:43:43,040
+like they belong together and so if you
+can't cut a break that down here from
+
+732
+00:43:44,003 --> 00:43:48,071
+you know the process of actually trying
+to do that work one design iteration
+
+733
+00:43:48,071 --> 00:43:52,089
+most the time looks like this K
+
+734
+00:43:52,089 --> 00:43:55,147
+guy like me will bring a demo to the
+designer
+
+735
+00:43:56,047 --> 00:44:00,053
+the designer will have feedback a Pik
+notes
+
+736
+00:44:00,053 --> 00:44:03,130
+how then go away to make those changes
+
+737
+00:44:04,003 --> 00:44:09,090
+that the designers requested and we
+schedule the next demo
+
+738
+00:44:10,017 --> 00:44:14,035
+we have that next time we go back to
+beginning
+
+739
+00:44:14,035 --> 00:44:17,132
+fell this process can take hours are
+baby
+
+740
+00:44:18,032 --> 00:44:22,074
+because people are busy right and
+sometimes you know it's just it's just
+
+741
+00:44:22,074 --> 00:44:24,096
+hard to get together
+
+742
+00:44:24,096 --> 00:44:27,138
+and so we wanted a way to go faster
+
+743
+00:44:28,038 --> 00:44:33,052
+can we go faster and so Am I very very
+smart friend to get smart friends
+
+744
+00:44:33,052 --> 00:44:36,100
+the real key when I might very smartest
+friend came up with this idea
+
+745
+00:44:37,000 --> 00:44:42,016
+upsetting and water settings while
+settings are tunable values
+
+746
+00:44:42,016 --> 00:44:45,085
+are you take all the settings that you
+might want to tune
+
+747
+00:44:45,085 --> 00:44:49,159
+and put them interested object to choose
+to submit a backup properties
+
+748
+00:44:50,059 --> 00:44:54,059
+news Kb 0 so that when you change when
+those properties
+
+749
+00:44:54,059 --> 00:44:57,130
+the the part to the system they're
+interested in those values changing
+
+750
+00:44:58,003 --> 00:45:03,088
+can know about it she also came up this
+way save and restore these options
+
+751
+00:45:04,015 --> 00:45:07,061
+have and then there was also a way that
+you have settings which own
+
+752
+00:45:07,061 --> 00:45:10,096
+settings which on setting so you could
+have a tree have settings
+
+753
+00:45:10,096 --> 00:45:13,124
+and also came up with an editing you I
+and if the editing you I wanna show you
+
+754
+00:45:14,024 --> 00:45:17,052
+so here's just a very simple example
+very simple ap
+
+755
+00:45:17,052 --> 00:45:21,120
+that I let you manipulate you metric
+shapes so I've got not one blue circle
+
+756
+00:45:22,002 --> 00:45:25,028
+and you can go and with the settings you
+are I
+
+757
+00:45:25,046 --> 00:45:28,144
+you can bring up to hide right in the
+app
+
+758
+00:45:29,044 --> 00:45:33,143
+to look up or sliders in change from one
+blue triangle 23
+
+759
+00:45:34,043 --> 00:45:38,140
+red triangles great and then similarly
+we can know this other one that actually
+
+760
+00:45:39,004 --> 00:45:40,009
+support those nested
+
+761
+00:45:40,009 --> 00:45:44,014
+settings that would use to iPhone style
+site to site navigation to show you the
+
+762
+00:45:45,004 --> 00:45:45,083
+different levels
+
+763
+00:45:46,019 --> 00:45:49,028
+settings and so if I take the red
+triangles and move it back to the
+
+764
+00:45:49,028 --> 00:45:50,031
+settings for the
+
+765
+00:45:50,031 --> 00:45:53,054
+the to circle you have this and so what
+did this to you
+
+766
+00:45:53,054 --> 00:45:57,060
+did something very important this
+reduced iteration time because once you
+
+767
+00:45:57,006 --> 00:45:58,105
+had the right settings surfaced
+
+768
+00:45:59,059 --> 00:46:02,085
+in the apt he gets it with the designer
+
+769
+00:46:02,085 --> 00:46:05,094
+engineer could sit with the tire in
+trying many many
+
+770
+00:46:05,094 --> 00:46:08,158
+many options and so we got to the point
+where
+
+771
+00:46:09,058 --> 00:46:11,141
+you know you kinda trying to figure out
+what control center could look like in
+
+772
+00:46:12,041 --> 00:46:12,133
+the design a good thing
+
+773
+00:46:13,033 --> 00:46:16,066
+well what if we meet two percent darker
+
+774
+00:46:16,066 --> 00:46:19,131
+even know if you can see that up on the
+big screen it's the point a bit
+
+775
+00:46:20,031 --> 00:46:23,126
+is that we were trying to get tuning to
+this level
+
+776
+00:46:24,026 --> 00:46:28,057
+2 percent darker 2 percent darker on
+your left
+
+777
+00:46:28,057 --> 00:46:31,120
+then on your right wanna
+
+778
+00:46:32,002 --> 00:46:36,050
+that level of polish inattention to
+every single value
+
+779
+00:46:36,068 --> 00:46:40,082
+in the US so when we had a tuning
+session like this it was great because
+
+780
+00:46:40,082 --> 00:46:43,084
+I could do is go back but back to my
+desk now copy that
+
+781
+00:46:44,002 --> 00:46:47,079
+you know that the default that got saved
+from the tuning session
+
+782
+00:46:47,079 --> 00:46:51,086
+copy those to the new for them commit
+scrape
+
+783
+00:46:51,086 --> 00:46:54,137
+and this made cheap and easy to tune we
+could just do
+
+784
+00:46:55,037 --> 00:46:58,083
+over and over and over and over again
+
+785
+00:46:58,083 --> 00:47:02,159
+this was the way that we went with just
+a handful blur styles for Iowa 7 that
+
+786
+00:47:03,059 --> 00:47:05,117
+are used consistently everywhere
+
+787
+00:47:06,017 --> 00:47:09,071
+very very difficult to come up with
+those with that settler styles
+
+788
+00:47:09,071 --> 00:47:12,100
+and this is how we did it by just
+hearing iterating in making
+
+789
+00:47:13,000 --> 00:47:16,072
+into reading easy and cheap the lesson
+really
+
+790
+00:47:16,072 --> 00:47:19,157
+rightish iterating quickly leads to
+better work I think
+
+791
+00:47:20,057 --> 00:47:24,065
+my experience from I was seven was there
+was a direct correlation
+
+792
+00:47:25,037 --> 00:47:29,048
+between how easy we made it try out new
+things
+
+793
+00:47:29,048 --> 00:47:36,048
+and what the quality the final work
+product wise
+
+794
+00:47:37,006 --> 00:47:41,011
+that's what strike two percent darker
+lesson is iterating quickly
+
+795
+00:47:42,001 --> 00:47:48,038
+reach the better work
+
+796
+00:47:48,047 --> 00:47:51,140
+okay three-member 8
+
+797
+00:47:52,004 --> 00:47:57,072
+three lessons from making this session
+
+798
+00:47:58,008 --> 00:48:02,029
+and so this is not the original session
+I wrote an entirely different set of
+
+799
+00:48:02,029 --> 00:48:04,095
+lights
+
+800
+00:48:04,095 --> 00:48:07,120
+and not only that I did three full
+rehearsals with them I like to hurt a
+
+801
+00:48:08,002 --> 00:48:10,028
+lot before I mean it's important that
+
+802
+00:48:10,046 --> 00:48:13,049
+that this session goes well for you are
+y'all came here and if I'm gonna make
+
+803
+00:48:13,076 --> 00:48:15,078
+sure they give you a good product image
+so
+
+804
+00:48:15,096 --> 00:48:18,160
+put a tremendous man effort into
+preparing the fighting rehearsing
+
+805
+00:48:19,006 --> 00:48:23,083
+arm and so with another set of slides I
+used up a big portion of my time
+
+806
+00:48:24,037 --> 00:48:27,103
+rehearsing that certified I feud good
+thing was
+
+807
+00:48:28,003 --> 00:48:31,046
+done way ahead of time
+
+808
+00:48:31,046 --> 00:48:34,089
+it was great it felt good to just be
+like when preparing for WBC can be
+
+809
+00:48:34,089 --> 00:48:36,186
+really points just always seems like
+everything is down to the wire
+
+810
+00:48:37,086 --> 00:48:40,128
+down to the wire in this year plan I was
+really ahead of time but had one more
+
+811
+00:48:41,028 --> 00:48:44,111
+review for the content I had in my
+flights just go over the material the
+
+812
+00:48:45,011 --> 00:48:46,103
+content particular because i'm talking
+about.
+
+813
+00:48:47,003 --> 00:48:51,081
+some past Apple work and it turns out
+you know that version just got shot n
+
+814
+00:48:51,081 --> 00:48:54,147
+you can you can show that they're just
+issues that could be resolved the
+
+815
+00:48:55,047 --> 00:48:56,136
+details aren't important
+
+816
+00:48:57,036 --> 00:49:03,079
+but there's kinda the one big detail
+which is I don't have affection anymore
+
+817
+00:49:03,079 --> 00:49:06,158
+three weeks ago I had something that was
+rehearsed and two weeks ago
+
+818
+00:49:07,058 --> 00:49:11,083
+I didn't know if I was going to be here
+today I am
+
+819
+00:49:11,083 --> 00:49:14,087
+I need to rewrite
+
+820
+00:49:14,087 --> 00:49:17,129
+I'm and their or three important lessons
+they took away
+
+821
+00:49:18,029 --> 00:49:22,042
+from that and the first was
+
+822
+00:49:22,042 --> 00:49:25,101
+during this review session where the
+person
+
+823
+00:49:26,001 --> 00:49:29,013
+who I was submitting my flight for
+review
+
+824
+00:49:29,013 --> 00:49:32,098
+to said you can show that
+
+825
+00:49:32,098 --> 00:49:36,197
+he didn't raise his voice thank you can
+show that
+
+826
+00:49:37,097 --> 00:49:42,101
+here's why many reasons it's very calm
+
+827
+00:49:43,001 --> 00:49:47,093
+and even after I mean it was clear it
+was bad news to me
+
+828
+00:49:47,093 --> 00:49:50,099
+and even he found me later initially
+made sure that I was okay
+
+829
+00:49:51,053 --> 00:49:55,090
+with this decision that was a very hard
+one to cheer with me
+
+830
+00:49:55,009 --> 00:49:58,092
+and to the Russian from mississippi kind
+to people
+
+831
+00:49:59,073 --> 00:50:02,164
+but be honest about the work
+
+832
+00:50:03,064 --> 00:50:06,091
+right there's no reason to like be
+shouting
+
+833
+00:50:06,091 --> 00:50:09,157
+into reading people who work try hard
+and doing their best
+
+834
+00:50:10,057 --> 00:50:13,079
+if you have ever found me in a lab or
+you know maybe even to
+
+835
+00:50:13,079 --> 00:50:16,136
+with what little time we have left in
+the conference before 10 if you find me
+
+836
+00:50:17,036 --> 00:50:18,075
+in a lab today
+
+837
+00:50:18,075 --> 00:50:22,124
+I am I hope I'll do my utmost to be kind
+to you
+
+838
+00:50:23,024 --> 00:50:26,057
+personally because I'm so glad that
+you're here it's a pledge contributing
+
+839
+00:50:26,057 --> 00:50:27,129
+to our platform
+
+840
+00:50:28,029 --> 00:50:32,051
+and i wanna see you do great work too
+but if you show me peace work to be
+
+841
+00:50:32,051 --> 00:50:34,087
+honest when I think about it
+
+842
+00:50:34,087 --> 00:50:37,149
+and those things just need to be kept
+separate the personal kindness
+
+843
+00:50:38,049 --> 00:50:42,088
+and honesty about the work
+
+844
+00:50:42,088 --> 00:50:45,131
+and secondly it's kind of like a you
+know through the def did you know
+
+845
+00:50:46,031 --> 00:50:52,117
+difference I did the same conifer I
+didn't peak is feedback personally
+
+846
+00:50:53,017 --> 00:50:57,088
+in russian history separate yourself
+from your work
+
+847
+00:50:57,088 --> 00:51:01,111
+now in I always invest a tremendous
+amount
+
+848
+00:51:02,011 --> 00:51:05,063
+have care and emotion into my work its
+
+849
+00:51:05,063 --> 00:51:08,086
+my nature I can help
+
+850
+00:51:08,086 --> 00:51:11,117
+after I'm done making something
+
+851
+00:51:12,017 --> 00:51:15,094
+and bring it to the stage the 3d demo
+
+852
+00:51:15,094 --> 00:51:18,098
+if they just turn it into force myself
+from
+
+853
+00:51:18,098 --> 00:51:21,124
+that thing that I just
+
+854
+00:51:22,024 --> 00:51:25,077
+sweated over making because
+
+855
+00:51:25,077 --> 00:51:28,082
+I that's not me that thing that I just
+made
+
+856
+00:51:29,027 --> 00:51:33,092
+right I am ready to accept whatever
+feedback anybody had
+
+857
+00:51:33,092 --> 00:51:36,155
+and ready to go into the next thing
+
+858
+00:51:37,055 --> 00:51:40,062
+actually need to kind of divorce
+yourself when you get feedback
+
+859
+00:51:41,025 --> 00:51:45,050
+people hopefully are not giving you the
+feedback to giving the you the feedback
+
+860
+00:51:45,005 --> 00:51:47,011
+about the work
+
+861
+00:51:47,056 --> 00:51:50,144
+separate yourself from the work
+regardless of how much time and effort
+
+862
+00:51:51,044 --> 00:51:56,099
+how much investment you have in it
+
+863
+00:51:56,099 --> 00:51:59,163
+the third lesson is well obviously I
+need to get back to work if I wanted to
+
+864
+00:52:00,063 --> 00:52:00,129
+have
+
+865
+00:52:01,029 --> 00:52:05,121
+show right at all I needed to
+
+866
+00:52:06,021 --> 00:52:09,104
+figure out how to make a set of flights
+that would work
+
+867
+00:52:10,004 --> 00:52:14,052
+and the lesson here is that you never
+done for seems like a
+
+868
+00:52:14,052 --> 00:52:17,067
+you know some you know some sort if you
+know nightmare you know if you think
+
+869
+00:52:17,067 --> 00:52:18,068
+about it one way
+
+870
+00:52:18,068 --> 00:52:22,083
+you know that you're never done really
+but you think about it no one ever done
+
+871
+00:52:22,083 --> 00:52:25,154
+we all loved the first version
+
+872
+00:52:26,054 --> 00:52:30,075
+have the iPhone when we shipped it and
+then we went right back in we made
+
+873
+00:52:30,075 --> 00:52:34,092
+version to an earlier this week we
+showed I always stayed in Yosemite and a
+
+874
+00:52:34,092 --> 00:52:36,096
+whole bunch of other great things
+
+875
+00:52:36,096 --> 00:52:39,112
+you are never done if you're committed
+to
+
+876
+00:52:40,012 --> 00:52:43,016
+you working in this industry working in
+high-tech
+
+877
+00:52:43,016 --> 00:52:46,069
+are you are never done the world keeps
+moving you gotta try to keep moving
+
+878
+00:52:46,069 --> 00:52:46,136
+weather
+
+879
+00:52:47,036 --> 00:52:50,099
+to do the best that you can do at any
+one time basically you're we should
+
+880
+00:52:50,099 --> 00:52:52,166
+bring your latest demo if you think
+about it that way
+
+881
+00:52:53,066 --> 00:52:55,165
+that these demos get to be very very
+polished polish to the point where
+
+882
+00:52:56,065 --> 00:52:57,065
+you're gonna actually
+
+883
+00:52:57,065 --> 00:53:01,098
+actually share it with the rest of the
+world me
+
+884
+00:53:01,098 --> 00:53:05,112
+so still on this this idea this is a
+quotation that
+
+885
+00:53:06,012 --> 00:53:09,104
+actually up on the wall arm
+
+886
+00:53:10,004 --> 00:53:13,079
+very very large in Cupertino a quote
+from Steve jobs
+
+887
+00:53:13,079 --> 00:53:16,128
+and he said if you do something it
+turned out pretty good
+
+888
+00:53:17,028 --> 00:53:20,040
+then you should go do something else
+wonderful not dwell on it too long
+
+889
+00:53:20,004 --> 00:53:23,012
+just figure out watch next
+
+890
+00:53:23,048 --> 00:53:27,132
+I think this is true only when you do
+something that turns out well
+
+891
+00:53:28,032 --> 00:53:31,125
+but it even has been case for me for the
+session I did for me it didn't turn out
+
+892
+00:53:32,025 --> 00:53:32,116
+so well
+
+893
+00:53:33,016 --> 00:53:36,016
+I needed to figure out what was next
+
+894
+00:53:36,016 --> 00:53:39,043
+give up I could try again and I tried
+again
+
+895
+00:53:39,043 --> 00:53:42,045
+I'm very glad that I did a very happy to
+be here today and so
+
+896
+00:53:42,063 --> 00:53:45,146
+the year kind of the Big Sur have joined
+up
+
+897
+00:53:46,046 --> 00:53:50,144
+lesson from the section is that I
+stories and lessons never and I thought
+
+898
+00:53:51,044 --> 00:53:54,142
+this was going to be a central just
+about stories in washington had no idea
+
+899
+00:53:55,042 --> 00:53:58,128
+that I'd started a process that would
+teach me more lessons
+
+900
+00:53:59,028 --> 00:54:02,064
+and so those are my
+
+901
+00:54:02,064 --> 00:54:06,143
+stories and there they are
+
+902
+00:54:07,043 --> 00:54:10,076
+again and I think
+
+903
+00:54:10,076 --> 00:54:15,149
+you know I hope at least that you found
+them entertaining
+
+904
+00:54:16,049 --> 00:54:19,116
+but really I think the important part is
+
+905
+00:54:20,016 --> 00:54:23,043
+the the lessons you can take out from
+them
+
+906
+00:54:23,043 --> 00:54:27,070
+because you never gonna find yourself in
+exactly the same situations that I did
+
+907
+00:54:27,007 --> 00:54:32,038
+I but I think that you find yourself in
+situations where
+
+908
+00:54:33,001 --> 00:54:36,062
+you can apply some of these ideas useful
+E
+
+909
+00:54:36,062 --> 00:54:40,133
+and productively work and those are my
+story
+
+910
+00:54:41,033 --> 00:54:44,045
+and so now I ask you heard you
+
+911
+00:54:44,045 --> 00:54:48,049
+to go out in you make your own stories
+tell your own story
+
+912
+00:54:48,049 --> 00:54:52,111
+extract wasn't out from them right and
+then figure out how are you going to use
+
+913
+00:54:53,011 --> 00:54:53,075
+that
+
+914
+00:54:53,075 --> 00:54:57,116
+experience to go and do some more great
+work up your own
+
+915
+00:54:58,016 --> 00:54:58,022
+thank you very much
+
