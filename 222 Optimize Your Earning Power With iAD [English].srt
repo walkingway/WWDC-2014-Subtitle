@@ -1,0 +1,4281 @@
+1
+00:00:13,017 --> 00:00:17,049
+okay eyler body my name's that they've
+also my money i at team
+
+2
+00:00:17,049 --> 00:00:20,101
+I'm here talking about optimizing your
+earning power with
+
+3
+00:00:21,001 --> 00:00:24,100
+I add for this view don't know
+
+4
+00:00:25,000 --> 00:00:31,006
+somehow I as apples to do it advertising
+platform this is what you use to you
+
+5
+00:00:31,006 --> 00:00:31,085
+have seen it in
+
+6
+00:00:31,085 --> 00:00:35,434
+other app soviet-style s accusations
+radio and all the ads you see it in 3d
+
+7
+00:00:36,199 --> 00:00:37,550
+return my iPad
+
+8
+00:00:37,055 --> 00:00:42,073
+so that's what hired his other two parts
+this presentation
+
+9
+00:00:42,073 --> 00:00:45,154
+really talking first about modernization
+how you can
+
+10
+00:00:46,054 --> 00:00:49,066
+use I had inside your apt to drive
+revenue for your app's
+
+11
+00:00:49,066 --> 00:00:52,104
+a and the second part is promotion are
+you can use I had
+
+12
+00:00:53,004 --> 00:00:56,363
+to get more downloads erupting users
+your app take
+
+13
+00:00:56,399 --> 00:01:02,130
+get your app how in everyone else's
+hands Sault star of monetization
+
+14
+00:01:02,013 --> 00:01:05,099
+sort of fewer pieces talk about here
+
+15
+00:01:05,099 --> 00:01:08,174
+part but some developer benefits what I
+acting do for you
+
+16
+00:01:09,074 --> 00:01:13,122
+part watson core concepts certain
+advertising 101
+
+17
+00:01:14,022 --> 00:01:17,093
+we'll talk about improving performance
+how you can best
+
+18
+00:01:17,093 --> 00:01:20,126
+use I added get the most out of it we'll
+talk some
+
+19
+00:01:21,026 --> 00:01:24,245
+details about the actual code you have
+to write in a great I had inside your
+
+20
+00:01:24,479 --> 00:01:24,547
+app which is
+
+21
+00:01:25,159 --> 00:01:29,510
+for sleep pretty simple what little
+about testing I had making sure your
+
+22
+00:01:29,051 --> 00:01:30,086
+gracious actually working
+
+23
+00:01:30,086 --> 00:01:34,120
+for you now on the App Store and then
+just get pucks so it start off with
+
+24
+00:01:35,002 --> 00:01:39,010
+developer benefits you
+
+25
+00:01:39,028 --> 00:01:42,867
+up for small I had provides rich
+
+26
+00:01:43,119 --> 00:01:46,162
+engaging this is a
+
+27
+00:01:46,549 --> 00:01:50,606
+platform that value great ads to go into
+the great aP's
+
+28
+00:01:51,119 --> 00:01:55,165
+you create their high production values
+
+29
+00:01:55,579 --> 00:02:00,390
+rich media absent rich media ads
+involved here these are things that
+
+30
+00:02:00,039 --> 00:02:00,658
+involve
+
+31
+00:02:01,009 --> 00:02:06,380
+video they involve animations their
+immersive
+
+32
+00:02:06,038 --> 00:02:09,067
+these are sometimes entire games
+presented inside
+
+33
+00:02:09,067 --> 00:02:13,163
+ads other isn't allowed recently that
+was literally a game once ap
+
+34
+00:02:14,063 --> 00:02:17,142
+on it this is you things that your users
+are actually interested in engaging on
+
+35
+00:02:18,042 --> 00:02:21,291
+interested in tapping which is great for
+you as
+
+36
+00:02:21,669 --> 00:02:26,870
+a drivers publisher is our award-winning
+at
+
+37
+00:02:26,087 --> 00:02:30,181
+you're not just fly by night you know
+one of taps her ads with
+
+38
+00:02:31,081 --> 00:02:34,790
+link tags and then they're going to
+annoy the heck users is a carefully
+
+39
+00:02:35,519 --> 00:02:36,570
+crafted at
+
+40
+00:02:36,057 --> 00:02:41,686
+that actually look good as part of your
+in addition
+
+41
+00:02:42,199 --> 00:02:45,234
+Apple is providing this SDK I
+
+42
+00:02:45,549 --> 00:02:48,870
+as a result the same care that Apple
+takes
+
+43
+00:02:48,087 --> 00:02:52,296
+with respect to privacy and power
+efficiency on the rest
+
+44
+00:02:53,079 --> 00:02:56,560
+Apple system Apple invest in hired as
+well
+
+45
+00:02:56,056 --> 00:02:59,078
+that means that we take care all love
+the
+
+46
+00:02:59,078 --> 00:03:03,173
+power and privacy considerations for you
+so you don't have to worry about them
+
+47
+00:03:04,073 --> 00:03:07,097
+no need to worry about a ban would add
+tracking switch
+
+48
+00:03:07,097 --> 00:03:10,166
+you know by Eva your don't worry about
+location permissions
+
+49
+00:03:11,066 --> 00:03:14,985
+or making sure that your users privacy
+
+50
+00:03:15,579 --> 00:03:22,579
+and personal data is protected properly
+in addition
+
+51
+00:03:22,579 --> 00:03:26,060
+because this is an apple right STK its
+party the IRS 2k
+
+52
+00:03:26,006 --> 00:03:30,044
+integration is simple there's nothing
+else to installer no
+
+53
+00:03:30,044 --> 00:03:33,063
+static libraries to include there's no
+third-party headers to
+
+54
+00:03:33,459 --> 00:03:36,780
+drop in your project clear things up
+it's all there to begin with
+
+55
+00:03:36,078 --> 00:03:39,627
+be up and running with minimal code see
+later
+
+56
+00:03:40,329 --> 00:03:45,900
+it's about two lines of code to get
+banners in your in addition
+
+57
+00:03:45,009 --> 00:03:48,045
+along with the rest of the coded other
+
+58
+00:03:49,026 --> 00:03:52,875
+her with the rest to the SDK that apple
+provides great documentation great
+
+59
+00:03:53,109 --> 00:03:54,590
+sample code available to you
+
+60
+00:03:54,059 --> 00:03:58,988
+on the web sites I did global reach
+
+61
+00:03:59,519 --> 00:04:02,660
+for fourteen countries now a costly
+expanding
+
+62
+00:04:02,066 --> 00:04:05,087
+larger list two countries than we showed
+up here last year a
+
+63
+00:04:05,087 --> 00:04:08,796
+that means that you're going to get ads
+in all those countries
+
+64
+00:04:09,579 --> 00:04:12,648
+inside your app so soon as you get your
+ap in all those countries
+
+65
+00:04:13,269 --> 00:04:19,290
+you're going to get revenues countries
+as well just like
+
+66
+00:04:19,479 --> 00:04:22,830
+the actual app purchase and then in app
+purchases as well
+
+67
+00:04:22,083 --> 00:04:26,111
+journey get seventy percent of the
+advertising revenue from I at insider
+
+68
+00:04:27,011 --> 00:04:31,000
+Apple takes a 30 percent share and
+everything else goes to you
+
+69
+00:04:31,099 --> 00:04:35,050
+from whatever we taken from the
+advertisers producing these add
+
+70
+00:04:35,005 --> 00:04:40,054
+to run insider its
+
+71
+00:04:40,099 --> 00:04:43,177
+very easy for you to get into the IET
+ecosystem
+
+72
+00:04:43,879 --> 00:04:47,933
+I a contract on the iTunes Connect Apple
+com site you have to sign
+
+73
+00:04:48,419 --> 00:04:52,150
+that's pretty easy here at the I a
+framework that's what the rest the stock
+
+74
+00:04:52,015 --> 00:04:53,344
+is going to be about
+
+75
+00:04:53,479 --> 00:04:59,538
+and they submit your app review and
+that's really all you have to do
+
+76
+00:05:00,069 --> 00:05:04,128
+okay so that's sort of what I can do for
+you talk about some core concept teaser
+
+77
+00:05:04,659 --> 00:05:07,734
+some fundamental basics advertising and
+some terminology
+
+78
+00:05:08,409 --> 00:05:12,860
+you're going to see especially on the
+iTunes Connect website 12 integrated I
+
+79
+00:05:12,086 --> 00:05:12,955
+at
+
+80
+00:05:13,729 --> 00:05:20,729
+and are trying to track the progress you
+getting revenue from my it inside your
+
+81
+00:05:20,789 --> 00:05:23,827
+first well there's an add request you
+see this come up
+
+82
+00:05:24,169 --> 00:05:27,218
+again later you'll see this and metrics
+where that request
+
+83
+00:05:27,659 --> 00:05:31,460
+at the network arrest acres from the
+device through the IET framework
+
+84
+00:05:31,046 --> 00:05:34,345
+its gonna go out to the I ad servers up
+the crowd
+
+85
+00:05:34,759 --> 00:05:39,765
+and hopefully ads will come back down to
+you a similar ads available for your
+
+86
+00:05:39,819 --> 00:05:43,830
+a particular app in the current
+situation up
+
+87
+00:05:43,083 --> 00:05:46,125
+you know again if the user is in a
+country where not in
+
+88
+00:05:47,025 --> 00:05:51,194
+your community at their Fort
+
+89
+00:05:51,419 --> 00:05:54,990
+once you start getting ads from be
+difficult request
+
+90
+00:05:54,099 --> 00:05:57,128
+you want to look at your story this is
+the ratio
+
+91
+00:05:58,028 --> 00:06:02,053
+ads delivered by the ad server to the
+number request that you actually make to
+
+92
+00:06:02,053 --> 00:06:02,992
+the server
+
+93
+00:06:03,469 --> 00:06:06,510
+this is again in beats per min by where
+users are located
+
+94
+00:06:06,879 --> 00:06:11,910
+what type ap you have how well your app
+is done with I had in the past
+
+95
+00:06:12,189 --> 00:06:15,870
+we'll get to that little bit a little
+later as to how that can be
+
+96
+00:06:15,087 --> 00:06:18,906
+really important driving your story
+
+97
+00:06:19,689 --> 00:06:23,752
+once you got Nats a your got near 48
+shown as the user
+
+98
+00:06:24,319 --> 00:06:27,560
+there's Picasa call the tapori this is
+the number
+
+99
+00:06:27,056 --> 00:06:30,375
+the ads that your user has actually
+tapped on and thats
+
+100
+00:06:30,879 --> 00:06:33,920
+does not count %uh accidental caps at
+the top if
+
+101
+00:06:34,289 --> 00:06:37,300
+taps on it includes a cousin really mean
+it that doesn't count
+
+102
+00:06:37,003 --> 00:06:41,932
+number tops that the user actually meant
+to have happen
+
+103
+00:06:42,229 --> 00:06:45,276
+relative the number as you displayed
+user this is something you attempt to
+
+104
+00:06:45,699 --> 00:06:47,370
+maximize inside
+
+105
+00:06:47,037 --> 00:06:51,416
+your again though accidental caps don't
+count so
+
+106
+00:06:51,749 --> 00:06:54,847
+trying to play games not a good idea
+
+107
+00:06:55,729 --> 00:06:58,840
+at engagement
+
+108
+00:06:58,084 --> 00:07:01,112
+obviously you need to display the app
+
+109
+00:07:02,012 --> 00:07:04,111
+erupts when the add to the user doesn't
+matter how many have the request from
+
+110
+00:07:05,011 --> 00:07:06,090
+the server
+
+111
+00:07:06,189 --> 00:07:12,195
+you're not going to get paid for them I
+and at you might as well not bother
+
+112
+00:07:12,249 --> 00:07:15,274
+want to do that make sure actually fully
+visible
+
+113
+00:07:15,499 --> 00:07:20,090
+as well %uh the fact that it's on screen
+and only one pixel over showing because
+
+114
+00:07:20,009 --> 00:07:21,698
+you've got it covered up with something
+else
+
+115
+00:07:21,779 --> 00:07:25,330
+that doesn't really count either I'll
+you wanna make sure that the ad is
+
+116
+00:07:25,033 --> 00:07:27,872
+visible for as long as possible
+
+117
+00:07:28,169 --> 00:07:31,230
+leave it on screen again if it shows up
+
+118
+00:07:31,779 --> 00:07:34,801
+and flashes for two seconds known Norris
+I
+
+119
+00:07:34,999 --> 00:07:38,063
+doesn't matter you wanna make sure to
+add her on screen this is
+
+120
+00:07:38,639 --> 00:07:42,150
+has to benefits 1 it's not distracting
+to your user
+
+121
+00:07:42,015 --> 00:07:45,043
+unknowing people by flashing things on
+and off screen all the time that people
+
+122
+00:07:45,043 --> 00:07:46,862
+really don't see
+
+123
+00:07:47,249 --> 00:07:51,240
+in addition the user has time to
+interact with their time see it
+
+124
+00:07:51,024 --> 00:07:54,603
+its icy its message their time you say
+hey you know that actually like to tap
+
+125
+00:07:54,819 --> 00:07:55,210
+on this
+
+126
+00:07:55,021 --> 00:07:59,036
+engaged with and see what's going on
+
+127
+00:07:59,036 --> 00:08:03,935
+I that reason to allow interaction
+really easy to put something on screen
+
+128
+00:08:04,259 --> 00:08:07,311
+accidentally cover up especially
+actually covering up for something the
+
+129
+00:08:07,779 --> 00:08:08,855
+block user interaction
+
+130
+00:08:09,539 --> 00:08:13,550
+he put a banner on screen you cover up
+with something that is a
+
+131
+00:08:13,055 --> 00:08:16,254
+transparent you that does not allow user
+traction
+
+132
+00:08:16,749 --> 00:08:20,812
+can't happen again turn good that I get
+situation for the ad users can be trying
+
+133
+00:08:21,379 --> 00:08:22,380
+to tap on it
+
+134
+00:08:22,389 --> 00:08:25,447
+nothing's going to happen hi it's very
+bad experience
+
+135
+00:08:25,969 --> 00:08:29,969
+in addition again your act together
+revenue you're hoping for in a certain
+
+136
+00:08:29,969 --> 00:08:30,032
+situation
+
+137
+00:08:30,599 --> 00:08:35,130
+because the I wasn't really on screen
+
+138
+00:08:35,013 --> 00:08:38,038
+gets us some socks for core concepts
+talk a little about
+
+139
+00:08:38,038 --> 00:08:41,065
+what you can do to improve the
+performance I at once you
+
+140
+00:08:41,065 --> 00:08:44,934
+actually integrated insider first row
+
+141
+00:08:45,519 --> 00:08:50,180
+revenue starts with your ap I if you
+have a great app
+
+142
+00:08:50,018 --> 00:08:53,357
+it doesn't matter how many energy show
+doesn't matter how many show
+
+143
+00:08:53,519 --> 00:08:56,551
+know when using your app and you're not
+going to make any money so the number
+
+144
+00:08:56,839 --> 00:08:58,360
+one thing you can do you
+
+145
+00:08:58,036 --> 00:09:03,048
+to drive revenue ads in your app start
+off with great
+
+146
+00:09:03,048 --> 00:09:06,587
+that's what the rest up to this is about
+but a couple
+
+147
+00:09:07,019 --> 00:09:10,110
+so small things we can mention here
+first or
+
+148
+00:09:10,011 --> 00:09:13,018
+ap engagement I'm if you're if it
+happens
+
+149
+00:09:13,081 --> 00:09:16,550
+you're trying to drive revenue by
+
+150
+00:09:17,279 --> 00:09:21,050
+showing an you need to make sure that
+you have sufficient engagement time for
+
+151
+00:09:21,005 --> 00:09:22,023
+users to actually
+
+152
+00:09:22,023 --> 00:09:26,057
+do this if it's a utility app that the
+user is going to pull up
+
+153
+00:09:26,057 --> 00:09:28,131
+it's gonna be on screen for about three
+seconds and then they're going to
+
+154
+00:09:29,031 --> 00:09:30,860
+closure app again
+
+155
+00:09:31,139 --> 00:09:34,850
+that's not enough time to actually show
+at Caesars allow interaction
+
+156
+00:09:34,085 --> 00:09:37,324
+and get interaction from those users so
+you needn't out
+
+157
+00:09:38,089 --> 00:09:41,094
+actually is going to be on-screen and
+
+158
+00:09:41,139 --> 00:09:44,480
+that you actually want to engage again
+
+159
+00:09:44,048 --> 00:09:47,347
+%uh once you've done that you wanna make
+sure that the ad is placed carefully
+
+160
+00:09:47,779 --> 00:09:49,440
+with in that
+
+161
+00:09:49,044 --> 00:09:52,107
+think about what the users doing on the
+various screens your app make sure the
+
+162
+00:09:53,007 --> 00:09:53,886
+ad is placed
+
+163
+00:09:53,949 --> 00:09:57,957
+appropriately within the app if you
+could gain for instance
+
+164
+00:09:58,029 --> 00:10:02,470
+a and the user's tapping and swiping
+placing constantly
+
+165
+00:10:02,047 --> 00:10:04,091
+maybe that's not a great place for
+banner where they're going to be
+
+166
+00:10:04,091 --> 00:10:05,187
+actually tapping
+
+167
+00:10:06,087 --> 00:10:09,088
+the ad will pop up over the top of
+everything you're going to be knowing
+
+168
+00:10:09,088 --> 00:10:09,917
+your users
+
+169
+00:10:10,709 --> 00:10:13,721
+and you're going to be harming your app
+morning here
+
+170
+00:10:13,829 --> 00:10:17,866
+helping it with
+
+171
+00:10:18,199 --> 00:10:21,280
+up phone back into wrapping it in time
+user loyalty
+
+172
+00:10:22,009 --> 00:10:25,016
+you need to come unique users to come
+back to the apt
+
+173
+00:10:25,079 --> 00:10:28,174
+the app repeatedly that's how you get
+more screen time that's
+
+174
+00:10:29,029 --> 00:10:34,034
+more time for this particular for
+showing ads to users
+
+175
+00:10:34,079 --> 00:10:37,117
+in addition your loyalty is what drives
+I had
+
+176
+00:10:37,459 --> 00:10:40,508
+ap engagement with tribes app downloads
+serve
+
+177
+00:10:40,949 --> 00:10:44,043
+network effects never before more people
+re: using your apt more
+
+178
+00:10:44,889 --> 00:10:48,040
+they want to use it morning to tell
+their friends about using an
+
+179
+00:10:48,004 --> 00:10:51,079
+more down you're going to get therefore
+the more i bothering it looking at
+
+180
+00:10:51,079 --> 00:10:54,068
+within your
+
+181
+00:10:54,779 --> 00:10:57,820
+I'll I mentioned that I as in 14
+countries
+
+182
+00:10:57,082 --> 00:11:00,113
+that means that your ap should be in 14
+countries if you want
+
+183
+00:11:01,013 --> 00:11:06,088
+get as most the most revenue from as you
+can
+
+184
+00:11:06,088 --> 00:11:09,091
+market your apt to the country's were I
+it actually is
+
+185
+00:11:09,091 --> 00:11:12,099
+your if spent the time in a great I it
+into your app
+
+186
+00:11:12,099 --> 00:11:15,888
+you wanna make sure the rap is in all
+the places that I it is see you have
+
+187
+00:11:16,779 --> 00:11:19,802
+the largest reach possible to
+potentially get the most users
+
+188
+00:11:20,009 --> 00:11:23,130
+possible for your a big part of that is
+
+189
+00:11:23,013 --> 00:11:27,652
+localizing your the only thing you've
+done is right here happen English
+
+190
+00:11:27,769 --> 00:11:30,870
+you're trying to get in all 14 these
+countries are gonna have a hard time in
+
+191
+00:11:30,087 --> 00:11:30,676
+countries
+
+192
+00:11:31,459 --> 00:11:34,810
+where English is a small presence but
+you take the time to look closer
+
+193
+00:11:34,081 --> 00:11:35,110
+appropriately
+
+194
+00:11:36,001 --> 00:11:41,070
+drive users in those country
+
+195
+00:11:41,079 --> 00:11:44,086
+back into ad placement a little bit
+because this is a
+
+196
+00:11:44,086 --> 00:11:47,365
+the sonic you coming back to you ad
+placement is
+
+197
+00:11:48,139 --> 00:11:51,146
+extraordinarily important thing
+
+198
+00:11:51,209 --> 00:11:54,253
+you'll recognize hi use areas inside
+your am
+
+199
+00:11:54,649 --> 00:11:58,240
+you wanna make sure you put banners
+inside those areas there's the places
+
+200
+00:11:58,024 --> 00:11:59,075
+where users are going to be a
+
+201
+00:11:59,075 --> 00:12:02,474
+looking at screen for a long period of
+time to have the opportunity to see the
+
+202
+00:12:03,149 --> 00:12:03,204
+app
+
+203
+00:12:03,699 --> 00:12:07,706
+the at their apt to engage with yet
+
+204
+00:12:07,769 --> 00:12:11,420
+at the same time as I mentioned avoid
+actor perhaps
+
+205
+00:12:11,042 --> 00:12:15,055
+axle caps are bad for user and they're
+bad for you
+
+206
+00:12:15,055 --> 00:12:19,100
+%uh they're gonna know your user and ir
+doesn't like actual taps either's
+
+207
+00:12:20,000 --> 00:12:23,829
+you wanna make sure you are using the
+framework in a way that does not
+
+208
+00:12:23,829 --> 00:12:24,860
+encourage them
+
+209
+00:12:25,139 --> 00:12:29,215
+is your Apple ultimately end up being
+penalized for this
+
+210
+00:12:29,899 --> 00:12:32,936
+your contacts is really important unit
+
+211
+00:12:33,269 --> 00:12:38,274
+taken into different types of ads based
+on what the users doing a given time
+
+212
+00:12:38,769 --> 00:12:41,851
+say the user is on the menu screen your
+game maybe that's a great post
+
+213
+00:12:42,589 --> 00:12:46,606
+banner at the bottom screen looking at
+the menu maybe they noticed the app
+
+214
+00:12:46,759 --> 00:12:49,810
+at the at the bottom maybe happening
+gate with
+
+215
+00:12:49,081 --> 00:12:52,129
+the same time if they tap to go to the
+first love your game
+
+216
+00:12:53,029 --> 00:12:56,998
+and you immediately Papa full-fledged
+add an interrupt their experience what
+
+217
+00:12:57,259 --> 00:12:57,560
+they've
+
+218
+00:12:57,056 --> 00:13:00,585
+once they've done their first actions
+game that's just going to annoy them
+
+219
+00:13:01,089 --> 00:13:03,180
+you're gonna drive users away
+
+220
+00:13:03,018 --> 00:13:06,907
+want to engage with the ad that's what
+you want to try to avoid
+
+221
+00:13:07,069 --> 00:13:13,108
+be very careful about where you're
+putting ads within your
+
+222
+00:13:13,459 --> 00:13:17,496
+once you've integrated I add new can
+start looking on the website
+
+223
+00:13:17,829 --> 00:13:21,866
+you'll start getting reports about your
+revenue when things are gonna notice
+
+224
+00:13:22,199 --> 00:13:26,620
+everyone always nurses and brings I'm is
+that revenue will fluctuate
+
+225
+00:13:26,062 --> 00:13:30,771
+this is perfectly natural consumer
+spending is seasonal
+
+226
+00:13:31,329 --> 00:13:35,336
+advertiser spending is also seasonal
+because consumer spending is
+
+227
+00:13:36,029 --> 00:13:39,077
+you need to be aware of this and watch
+for it you can also take advantage of
+
+228
+00:13:39,509 --> 00:13:41,000
+this
+
+229
+00:13:41,000 --> 00:13:45,009
+market your app accordingly started
+summer
+
+230
+00:13:45,009 --> 00:13:48,370
+back to school holiday season these are
+the times when
+
+231
+00:13:48,037 --> 00:13:51,043
+users are going to out to get new
+devices going
+
+232
+00:13:51,043 --> 00:13:54,382
+how to get new maps and advertisers a
+going out to get
+
+233
+00:13:54,769 --> 00:13:57,857
+eyeballs insiders maps so that's when
+you want rain get
+
+234
+00:13:58,649 --> 00:14:05,410
+dude try and put all your money and
+pushing your app
+
+235
+00:14:05,041 --> 00:14:08,150
+okay we talked about ads talk about
+impressions
+
+236
+00:14:08,519 --> 00:14:12,180
+talk about captors we talked about rate
+
+237
+00:14:12,018 --> 00:14:16,487
+this is a virtuous cycle gonna get as to
+begin with
+
+238
+00:14:16,649 --> 00:14:19,673
+they really don't pressions impressions
+are lead to tap throughs
+
+239
+00:14:19,889 --> 00:14:23,230
+more tapped as you get more agile and
+get from the ad server
+
+240
+00:14:23,023 --> 00:14:26,111
+corporations are gonna get
+
+241
+00:14:27,011 --> 00:14:30,980
+okay so that performance now we've done
+that knowing going it's an actual
+
+242
+00:14:31,079 --> 00:14:32,560
+details about how you
+
+243
+00:14:32,056 --> 00:14:37,099
+actually about a great deal stuff
+certain me to stock
+
+244
+00:14:37,099 --> 00:14:41,174
+as for a performance banner as
+interstitial ernie direct
+
+245
+00:14:42,074 --> 00:14:45,283
+and there's a pre-roll video ad we'll
+talk about it these foreign
+
+246
+00:14:45,949 --> 00:14:50,480
+turn I as I mentioned earlier you can
+watch you the correct
+
+247
+00:14:50,048 --> 00:14:53,074
+add for your app in the various contexts
+within your app
+
+248
+00:14:53,074 --> 00:14:56,603
+so all four these types of ads are
+important
+
+249
+00:14:57,269 --> 00:15:01,330
+from many many perhaps
+
+250
+00:15:01,879 --> 00:15:04,940
+start of a banner
+
+251
+00:15:04,094 --> 00:15:09,118
+so what is a banner slim device with you
+
+252
+00:15:10,018 --> 00:15:13,547
+both bought a mature content
+
+253
+00:15:13,709 --> 00:15:16,733
+continuously load ads United other
+
+254
+00:15:16,949 --> 00:15:20,370
+I S Decatur at a stick is where you got
+makes
+
+255
+00:15:20,037 --> 00:15:23,926
+West this isn't that you create a view
+shop the bottom the page
+
+256
+00:15:24,259 --> 00:15:28,292
+and continuously load ads over time as
+new as a delegate from the answer
+
+257
+00:15:28,589 --> 00:15:31,940
+something you have to do to manage that
+
+258
+00:15:31,094 --> 00:15:37,094
+one sees a taps on it going going some
+sort of four screen at experience
+
+259
+00:15:37,094 --> 00:15:42,186
+at supportable iPhone iPad has been
+since the beginning I
+
+260
+00:15:43,086 --> 00:15:48,093
+integrating banners in your app is about
+the simplest thing that you could do
+
+261
+00:15:48,093 --> 00:15:51,992
+there's three steps this you can link
+the IET framework
+
+262
+00:15:52,829 --> 00:15:55,850
+you're going to you import the IOD
+
+263
+00:15:55,085 --> 00:15:58,874
+import the I editor which is the first
+line up there and reconfigure your view
+
+264
+00:15:59,639 --> 00:16:00,688
+controller which involves setting
+
+265
+00:16:01,129 --> 00:16:05,430
+can display banner ads property yes on
+your controller
+
+266
+00:16:05,043 --> 00:16:10,822
+that's it if you've done that you've got
+a banner inside your apt
+
+267
+00:16:11,209 --> 00:16:14,500
+so does that look like okay loading at
+
+268
+00:16:14,005 --> 00:16:18,005
+you got your review the moment you set
+the can display banner ads property on
+
+269
+00:16:18,005 --> 00:16:18,324
+it
+
+270
+00:16:18,819 --> 00:16:21,832
+we're gonna do something under the hood
+to your view controller
+
+271
+00:16:21,949 --> 00:16:25,110
+your view is going to turn into original
+content
+
+272
+00:16:25,011 --> 00:16:28,040
+we're gonna move your view over to
+original content you and we're gonna
+
+273
+00:16:28,139 --> 00:16:30,180
+take a review in your view controller
+
+274
+00:16:30,018 --> 00:16:34,277
+very important for you to remember subs
+subsequently attempted to access your
+
+275
+00:16:34,439 --> 00:16:37,790
+view on that you can't roller
+
+276
+00:16:37,079 --> 00:16:40,124
+willing to make a request that the ad
+server to come back and hopefully a
+
+277
+00:16:41,024 --> 00:16:41,029
+better
+
+278
+00:16:41,074 --> 00:16:44,783
+load at that time we're going to you
+
+279
+00:16:45,449 --> 00:16:49,120
+move the banner on-screen resize your
+account
+
+280
+00:16:49,012 --> 00:16:52,111
+you appropriately with the for free
+animation to move the thing on screens
+
+281
+00:16:53,011 --> 00:16:57,920
+user can actually look at it
+
+282
+00:16:58,019 --> 00:17:01,660
+want to spend on screen for a while over
+the years gonna go ahead tap on it
+
+283
+00:17:01,066 --> 00:17:05,148
+at that point before screen at
+experience gonna pop up
+
+284
+00:17:06,048 --> 00:17:09,110
+when that happens a couple things you
+need to do for switches to pause
+
+285
+00:17:10,001 --> 00:17:15,003
+activity if you will disappear your app
+is probably doing things the background
+
+286
+00:17:15,012 --> 00:17:19,054
+banners on screen when the user wants to
+engage with the ad you want to get
+
+287
+00:17:19,054 --> 00:17:23,133
+out of the way if you're playing music
+if you're running a game simulation you
+
+288
+00:17:24,033 --> 00:17:25,045
+doing anything else
+
+289
+00:17:25,045 --> 00:17:28,143
+tensely intensive or distracting
+menopause activity and you will
+
+290
+00:17:29,043 --> 00:17:30,046
+disappear
+
+291
+00:17:30,046 --> 00:17:33,055
+so that it out of the way at
+
+292
+00:17:34,036 --> 00:17:37,063
+eventually the user will be done
+interacting with the ample dismiss it
+
+293
+00:17:37,063 --> 00:17:40,121
+you know yet if you did appear resume
+all that activity
+
+294
+00:17:41,021 --> 00:17:44,048
+has gone you wanna start the music up
+again you wanna start games
+
+295
+00:17:44,048 --> 00:17:47,137
+nations her
+
+296
+00:17:48,037 --> 00:17:51,100
+eventually said user goes out of network
+connectivity or something
+
+297
+00:17:52,000 --> 00:17:56,047
+you may not have an Advil anymore when
+that happens
+
+298
+00:17:56,047 --> 00:17:59,144
+the better going to be moved off-screen
+your original content you will be
+
+299
+00:18:00,044 --> 00:18:01,143
+resized
+
+300
+00:18:02,043 --> 00:18:06,121
+and and you can to wait hopefully
+reloads again
+
+301
+00:18:07,021 --> 00:18:11,048
+in addition to waiting for the network
+connectivity just movie bareback
+
+302
+00:18:11,048 --> 00:18:14,094
+screen you can control the better
+visibility whenever you would like
+
+303
+00:18:14,094 --> 00:18:17,143
+if something happens within your app
+that you would like to move to bear on
+
+304
+00:18:18,043 --> 00:18:18,142
+screen Temperley
+
+305
+00:18:19,042 --> 00:18:22,088
+go ahead and do so just go ahead and set
+can display banner ads
+
+306
+00:18:22,088 --> 00:18:25,143
+no just don't forget said backed yes
+
+307
+00:18:26,043 --> 00:18:29,068
+when you wanna re enable it actually put
+that back on screen
+
+308
+00:18:29,068 --> 00:18:32,133
+whenever you actually need
+
+309
+00:18:33,033 --> 00:18:36,117
+okay that betters what's likely
+interstitials next
+
+310
+00:18:37,017 --> 00:18:40,040
+second major type banner her to batter
+
+311
+00:18:40,004 --> 00:18:44,009
+very different and better rather than
+something being permanently on screen
+
+312
+00:18:44,009 --> 00:18:48,016
+their immediate for screen display
+immediately take over the entire screen
+
+313
+00:18:48,097 --> 00:18:49,156
+when you want present them
+
+314
+00:18:50,056 --> 00:18:53,061
+is very is immediately able to interact
+with them
+
+315
+00:18:54,006 --> 00:18:58,028
+they were iPad since I was 4.3 and their
+interest
+
+316
+00:18:58,028 --> 00:19:02,090
+on phone in Iowa 7 last year
+
+317
+00:19:02,009 --> 00:19:05,009
+there's two major ways to handle
+interstitial presentation
+
+318
+00:19:05,009 --> 00:19:08,012
+first automatic presentation just like
+banners
+
+319
+00:19:08,093 --> 00:19:11,177
+it's pretty simple to configure here
+residents I think and display banner ads
+
+320
+00:19:12,077 --> 00:19:15,082
+you're gonna set interstitial
+presentation policy
+
+321
+00:19:15,082 --> 00:19:18,085
+eighty interstitial presentation policy
+automatic
+
+322
+00:19:18,085 --> 00:19:22,122
+what that does is tell the I framework
+hey this is a great view controller
+
+323
+00:19:23,022 --> 00:19:27,041
+show ads all and whenever you as the eye
+from work thinkers
+
+324
+00:19:27,041 --> 00:19:30,135
+great time ads go ahead and do so
+
+325
+00:19:31,035 --> 00:19:34,043
+at moment that means that we're gonna
+show ads when this me
+
+326
+00:19:34,043 --> 00:19:37,055
+it when issue controller for on-screen
+it appears
+
+327
+00:19:37,055 --> 00:19:41,129
+take that as an opportunity to show airs
+if one is available
+
+328
+00:19:42,029 --> 00:19:45,083
+so to do that just take your view
+controller put it on screen make
+
+329
+00:19:45,083 --> 00:19:50,090
+in your allegations back or however you
+want on-screen that moves in
+
+330
+00:19:50,009 --> 00:19:53,065
+and we're gonna pop and add up over top
+of it when the user's done interacting
+
+331
+00:19:54,046 --> 00:19:54,117
+with them
+
+332
+00:19:55,017 --> 00:19:58,048
+he'll come back all mission to
+
+333
+00:19:58,048 --> 00:20:01,050
+automatic presentation there's men your
+presentation
+
+334
+00:20:01,068 --> 00:20:04,077
+just a presentation policy to initial
+presentation policy manual
+
+335
+00:20:05,058 --> 00:20:08,060
+and instead of of automatically
+presenting it whenever the moves on
+
+336
+00:20:08,078 --> 00:20:08,086
+screen
+
+337
+00:20:09,058 --> 00:20:12,147
+you can call request interstitial at
+presentation to attempt to display it
+
+338
+00:20:13,047 --> 00:20:15,061
+whatever you think it's an appropriate
+time for at
+
+339
+00:20:15,061 --> 00:20:22,061
+pop over top your content
+
+340
+00:20:23,008 --> 00:20:26,011
+next preparing for inter for for
+presentation I
+
+341
+00:20:26,011 --> 00:20:29,048
+because interstitial don't have
+something on-screen something
+
+342
+00:20:29,048 --> 00:20:32,052
+sitting there requesting and attending
+this playthings all times
+
+343
+00:20:32,088 --> 00:20:36,127
+you want to notify the iron framework
+that you would like to present printer
+
+344
+00:20:37,027 --> 00:20:40,079
+future so we can go ahead and make an
+add request have an air strikes
+
+345
+00:20:40,079 --> 00:20:43,094
+interstitial waiting for you when that
+time comes
+
+346
+00:20:43,094 --> 00:20:47,097
+do that you're going to want to you call
+
+347
+00:20:47,097 --> 00:20:50,195
+you a view controller prepare
+interstitial ads inside
+
+348
+00:20:51,095 --> 00:20:54,191
+something early in Europe's life cycle
+application did finish watching
+
+349
+00:20:55,091 --> 00:20:58,092
+options good opportunity here you doing
+a lot of other work
+
+350
+00:20:59,001 --> 00:21:03,040
+that point maybe for a little bit but
+you wanna call this prior to your
+
+351
+00:21:03,049 --> 00:21:03,770
+attempted
+
+352
+00:21:03,077 --> 00:21:06,169
+present show for the first time back is
+the II framework
+
+353
+00:21:07,069 --> 00:21:10,098
+enough time got network a question had
+
+354
+00:21:10,098 --> 00:21:14,099
+have everything ready to present by the
+time you walk 12 percent
+
+355
+00:21:14,099 --> 00:21:17,103
+present prevent you from missing at
+opportunities
+
+356
+00:21:18,003 --> 00:21:21,028
+it's that banners in your specials
+
+357
+00:21:21,028 --> 00:21:24,060
+where we go from here into a quick demo
+a just have
+
+358
+00:21:24,006 --> 00:21:28,055
+the API's I just went over switch over
+to you
+
+359
+00:21:29,009 --> 00:21:33,098
+my demo machine
+
+360
+00:21:33,179 --> 00:21:37,410
+I'll or start off with a router from my
+lap
+
+361
+00:21:37,041 --> 00:21:40,190
+is a very simple Master Detail
+
+362
+00:21:40,559 --> 00:21:44,070
+happier shares news articles i cant
+click
+
+363
+00:21:44,007 --> 00:21:47,996
+here news articles and bring it up and
+we would like to take this app
+
+364
+00:21:48,059 --> 00:21:51,210
+and as a matter monetize I had
+
+365
+00:21:51,021 --> 00:21:54,025
+cell quits again here
+
+366
+00:21:54,025 --> 00:21:57,109
+what do you want to do here first first
+thing your gonna do
+
+367
+00:21:58,009 --> 00:22:02,032
+is at a banner the bottom the master
+view control at the bar
+
+368
+00:22:02,032 --> 00:22:05,046
+article list so insider matter view
+controller here
+
+369
+00:22:05,046 --> 00:22:08,113
+we're going to you import the eye at her
+
+370
+00:22:09,013 --> 00:22:12,016
+like this an inside
+
+371
+00:22:12,016 --> 00:22:15,028
+a week from New already has cost set can
+
+372
+00:22:15,028 --> 00:22:20,054
+self Kansas display banner ads yes and
+that's really all we have to do
+
+373
+00:22:20,054 --> 00:22:23,150
+up one more thing we need to go in here
+
+374
+00:22:24,005 --> 00:22:27,044
+faces and ensure that we link
+
+375
+00:22:27,089 --> 00:22:33,096
+NCIS framework make sure the
+
+376
+00:22:33,096 --> 00:22:37,122
+API's are actually available to us back
+to you master view controller
+
+377
+00:22:38,022 --> 00:22:45,022
+run and
+
+378
+00:22:45,082 --> 00:22:48,107
+will see that with two lines code and
+one link
+
+379
+00:22:49,007 --> 00:22:52,012
+we have enters the bottom or screen and
+are automatically
+
+380
+00:22:52,057 --> 00:22:55,061
+in line with our view controller now
+
+381
+00:22:55,097 --> 00:22:58,105
+we only set that on the master you can
+that means
+
+382
+00:22:59,005 --> 00:23:02,010
+we go into an article there's no and
+there a little bit unfortunate
+
+383
+00:23:02,055 --> 00:23:05,079
+so the next thing we want to do is take
+advantage have
+
+384
+00:23:05,079 --> 00:23:09,080
+the other time add we talk about
+interstitials to present an add
+
+385
+00:23:09,008 --> 00:23:12,089
+to the user prior to them actually being
+able to read the articles
+
+386
+00:23:13,061 --> 00:23:16,065
+tap on the article title
+
+387
+00:23:16,065 --> 00:23:20,082
+one at the pop-up up the screen before
+they can actually see the article
+
+388
+00:23:20,082 --> 00:23:23,133
+so what's good with this again
+
+389
+00:23:24,033 --> 00:23:27,034
+miss time we're going to you
+
+390
+00:23:27,034 --> 00:23:31,863
+down here inside our prepare for Segway
+
+391
+00:23:32,169 --> 00:23:35,330
+want set up the detail view controller
+that
+
+392
+00:23:35,033 --> 00:23:38,262
+shows the actual article we're going to
+you
+
+393
+00:23:38,559 --> 00:23:42,840
+grab this destination interstitial
+presentation policy
+
+394
+00:23:42,084 --> 00:23:45,178
+eighty interstitial presentation policy
+automatic so we can say that
+
+395
+00:23:46,078 --> 00:23:49,149
+on this detail you can to learn things
+showing the article we want me i a
+
+396
+00:23:50,049 --> 00:23:51,111
+framework to manage
+
+397
+00:23:52,011 --> 00:23:55,044
+presentation interstitial ads over top
+this
+
+398
+00:23:55,044 --> 00:23:58,058
+view controller once we've done that
+
+399
+00:23:58,058 --> 00:24:01,123
+that's gonna get interstitial showed you
+control however
+
+400
+00:24:02,023 --> 00:24:05,037
+we want to make sure that hired from
+work knows to go out and look for
+
+401
+00:24:05,037 --> 00:24:05,109
+interstitials
+
+402
+00:24:06,009 --> 00:24:10,838
+before the user taps an article for the
+first time is to do that when you go
+
+403
+00:24:10,919 --> 00:24:11,945
+over here bring it to our
+
+404
+00:24:12,179 --> 00:24:16,640
+app delegate here I was gonna grab you I
+view controller
+
+405
+00:24:16,064 --> 00:24:21,129
+prepare interstitial an ounce make sure
+we for the headers well
+
+406
+00:24:22,029 --> 00:24:26,037
+that so tired hey governor social at so
+they're ready for
+
+407
+00:24:26,037 --> 00:24:29,125
+are you there and save this run our
+
+408
+00:24:30,025 --> 00:24:34,057
+demo again once again
+
+409
+00:24:34,057 --> 00:24:37,132
+at the article view here we've got a
+pair looked at the bottom that happened
+
+410
+00:24:38,032 --> 00:24:41,881
+now on taps nurse the
+
+411
+00:24:42,169 --> 00:24:45,260
+interstitial as going to pop up over top
+the article
+
+412
+00:24:45,026 --> 00:24:48,945
+once the hurry time's expired user done
+interacting with this
+
+413
+00:24:49,179 --> 00:24:53,090
+thinking going close that and the
+article behind and they can go in Surrey
+
+414
+00:24:53,009 --> 00:24:56,077
+article so that's basically how easy it
+is
+
+415
+00:24:56,077 --> 00:24:59,146
+to you integrate banners and
+interstitials
+
+416
+00:25:00,046 --> 00:25:07,046
+to your am so go back to sleep
+
+417
+00:25:07,057 --> 00:25:10,061
+it so it's better than your specials for
+the first two major types
+
+418
+00:25:10,061 --> 00:25:13,159
+%uh ads for I add they're also the first
+two types
+
+419
+00:25:14,059 --> 00:25:18,120
+as I those are the ones are available
+from the beginning I
+
+420
+00:25:19,002 --> 00:25:22,711
+a couple newer types that we've got
+first you type
+
+421
+00:25:22,909 --> 00:25:27,933
+some prepares sorry
+
+422
+00:25:28,149 --> 00:25:32,130
+for small use can't believe in rats
+
+423
+00:25:32,013 --> 00:25:35,021
+and initial presentation policy under
+controllers
+
+424
+00:25:35,021 --> 00:25:38,052
+as much as possible we talked about had
+
+425
+00:25:38,052 --> 00:25:42,134
+engagement we talked about the user
+having the opportunity to see the ads
+
+426
+00:25:43,034 --> 00:25:46,103
+leaving them on screen is having the
+option to engage with yet
+
+427
+00:25:47,003 --> 00:25:51,097
+setting these properties is a big part
+
+428
+00:25:51,097 --> 00:25:55,184
+in addition rumor user to content when
+you actually use can display banner
+
+429
+00:25:56,084 --> 00:25:59,893
+it's very important that 12 seconds bear
+as you realize that
+
+430
+00:26:00,649 --> 00:26:04,370
+you've given over control you too the
+right framework
+
+431
+00:26:04,037 --> 00:26:11,037
+and original content view is yours to
+continue using
+
+432
+00:26:12,399 --> 00:26:16,090
+victory transitions for interstitials
+think about what your user is
+
+433
+00:26:16,009 --> 00:26:19,013
+doing at any given time when they're
+transitioning from view controller you
+
+434
+00:26:19,013 --> 00:26:19,100
+controller
+
+435
+00:26:20,000 --> 00:26:23,008
+and make sure that interstitial
+presentation policy automatic
+
+436
+00:26:23,008 --> 00:26:26,069
+set on the appropriate view controllers
+for at the show up
+
+437
+00:26:26,069 --> 00:26:29,308
+when they first pop-up for instance in
+the
+
+438
+00:26:29,929 --> 00:26:34,210
+news-democrat showed you having that
+show up on
+
+439
+00:26:34,021 --> 00:26:37,114
+the main article: list probably not
+appropriate I would just be distracting
+
+440
+00:26:38,014 --> 00:26:38,553
+and annoying
+
+441
+00:26:38,679 --> 00:26:41,790
+use having on the article view
+controller
+
+442
+00:26:41,079 --> 00:26:45,122
+on the other hand just gives a gating
+function to allowing the user to
+
+443
+00:26:46,022 --> 00:26:53,022
+actually future content the appropriate
+for the interstitial
+
+444
+00:26:53,029 --> 00:26:56,032
+be consistent writer navigation stacking
+yes
+
+445
+00:26:56,059 --> 00:26:59,121
+up this is particularly important for
+navigation controllers
+
+446
+00:27:00,021 --> 00:27:03,059
+record deep navigation controllers I'll
+
+447
+00:27:03,059 --> 00:27:07,070
+what I mean by this is in particular
+with can display banner
+
+448
+00:27:07,007 --> 00:27:10,056
+if you have a deep navigation RK you
+want to attempt a sec and its way better
+
+449
+00:27:11,019 --> 00:27:12,032
+at times many
+
+450
+00:27:12,032 --> 00:27:15,111
+love the view controllers going to
+prison pushing in a hierarchy is
+
+451
+00:27:15,399 --> 00:27:16,470
+possible
+
+452
+00:27:16,047 --> 00:27:20,072
+to ensure that the ad remains on screen
+as the user navigates throughout that
+
+453
+00:27:20,072 --> 00:27:21,127
+hierarchy
+
+454
+00:27:22,027 --> 00:27:25,123
+otherwise you have the possibility the
+at popping up on screen for second
+
+455
+00:27:26,023 --> 00:27:29,058
+taps on something akers back away it up
+
+456
+00:27:29,058 --> 00:27:32,101
+have to something else yet comes back
+that's distracting
+
+457
+00:27:33,001 --> 00:27:37,037
+your user at the same time it doesn't
+allow the ad stay on screen
+
+458
+00:27:37,037 --> 00:27:43,078
+long enough for the user to actually
+engage with that
+
+459
+00:27:43,078 --> 00:27:46,107
+okay now our with their specials
+
+460
+00:27:46,809 --> 00:27:49,870
+let's talk about media wrecked which is
+the next major type
+
+461
+00:27:49,087 --> 00:27:52,092
+had that I it provides
+
+462
+00:27:53,037 --> 00:27:57,099
+what is a medium racked is n
+International Advertising Bureau medium
+
+463
+00:27:57,099 --> 00:27:57,198
+rectangle
+
+464
+00:27:58,098 --> 00:28:02,195
+standard at time positioned in line with
+your content
+
+465
+00:28:03,095 --> 00:28:06,130
+standard I saw as the same size as you
+may have seen
+
+466
+00:28:07,003 --> 00:28:10,060
+browsing the web square rectangular as
+
+467
+00:28:10,087 --> 00:28:13,173
+in line with wet contact the same type
+and got
+
+468
+00:28:14,073 --> 00:28:18,085
+just like banners they automatically
+cycle overtime
+
+469
+00:28:18,085 --> 00:28:21,086
+so you put them on screen new ads will
+be loaded
+
+470
+00:28:21,086 --> 00:28:24,138
+II framework feel appropriate will
+automatically manage making requests and
+
+471
+00:28:25,038 --> 00:28:25,120
+putting
+
+472
+00:28:26,002 --> 00:28:30,011
+for you and just like banners
+
+473
+00:28:30,029 --> 00:28:35,098
+there's a force creat experience once
+the taps on engages with this banner
+
+474
+00:28:35,098 --> 00:28:38,176
+their introduced Iowa 6 on iPad
+
+475
+00:28:39,076 --> 00:28:46,076
+and happy to announce that and I was 8
+we're adding this to phone as well
+
+476
+00:28:47,399 --> 00:28:50,450
+yet so it's a medium light rectangle
+life cycle look like
+
+477
+00:28:50,909 --> 00:28:55,820
+%uh because these banners are not
+managed by the I add
+
+478
+00:28:55,082 --> 00:28:58,108
+framework a you have to do a little bit
+more work
+
+479
+00:28:59,008 --> 00:29:02,057
+to put these on screen
+
+480
+00:29:02,129 --> 00:29:05,181
+and create the banner explicitly rather
+than just selling property you
+
+481
+00:29:05,649 --> 00:29:07,540
+controller
+
+482
+00:29:07,054 --> 00:29:10,059
+you configure delegate school hours tell
+you when certain things happen we're
+
+483
+00:29:11,004 --> 00:29:11,081
+getting thicker
+
+484
+00:29:11,081 --> 00:29:14,132
+this backslide implement the delicate
+protocol
+
+485
+00:29:15,032 --> 00:29:19,059
+so you can actually take their citizens
+thing on and off screen as the
+
+486
+00:29:19,059 --> 00:29:22,104
+better load on loans
+
+487
+00:29:23,004 --> 00:29:26,011
+show the banner when you receive the
+better view did load and property
+
+488
+00:29:26,074 --> 00:29:29,151
+are dog collar you're gonna pause
+activity
+
+489
+00:29:30,051 --> 00:29:34,058
+in better view action should begin will
+leave application this is analogous
+
+490
+00:29:34,058 --> 00:29:37,060
+to getting you will disappear message
+from
+
+491
+00:29:37,006 --> 00:29:40,006
+interstitials or banners and
+
+492
+00:29:40,006 --> 00:29:43,049
+you want to resume activity and
+interview action finish analogous to you
+
+493
+00:29:44,003 --> 00:29:44,034
+will
+
+494
+00:29:44,034 --> 00:29:47,323
+here your high the banner
+
+495
+00:29:47,629 --> 00:29:51,770
+interview did fail to see that there
+important this indicates that year
+
+496
+00:29:51,077 --> 00:29:56,146
+better no longer has loaded should no
+longer be taking up space on screen
+
+497
+00:29:57,046 --> 00:30:01,047
+so does look like first or creating
+better
+
+498
+00:30:01,047 --> 00:30:04,055
+import the I had her Top Gear
+
+499
+00:30:04,055 --> 00:30:07,144
+implement a deep interview delegate on
+whatever object you would like to
+
+500
+00:30:08,044 --> 00:30:11,109
+actually be managing this particular
+banner
+
+501
+00:30:12,009 --> 00:30:15,062
+there to create the better view do that
+with in it with at type
+
+502
+00:30:15,062 --> 00:30:19,111
+Adia type medium rectangle and there to
+set the delegate
+
+503
+00:30:19,669 --> 00:30:22,695
+to the object implementing tell your
+protocol
+
+504
+00:30:22,929 --> 00:30:25,950
+sort that out a protocol like home first
+
+505
+00:30:25,095 --> 00:30:28,111
+I was a me im recollection costar
+
+506
+00:30:29,011 --> 00:30:32,050
+unloaded we first create there's nothing
+in there women request
+
+507
+00:30:32,149 --> 00:30:35,750
+something to put on screen so don't put
+it on screen when you first created
+
+508
+00:30:35,075 --> 00:30:39,162
+it's just going to be a blank slide and
+we're gonna send you an air
+
+509
+00:30:40,062 --> 00:30:43,084
+once you get a better view did your dad
+that's your cue that
+
+510
+00:30:43,084 --> 00:30:48,086
+there's an ad available inside your
+redirect you should move it on-screen
+
+511
+00:30:48,086 --> 00:30:51,158
+early the better on screen as long as it
+has an remember to
+
+512
+00:30:52,058 --> 00:30:55,100
+that this was something its first
+repositioned in line with your content
+
+513
+00:30:56,000 --> 00:30:59,139
+when you move it on screen when you
+leavin screen make sure that it
+
+514
+00:30:59,139 --> 00:31:03,230
+within the rest if your company if you
+have an article and you put me in right
+
+515
+00:31:03,023 --> 00:31:04,109
+on screen with the article texan flow
+
+516
+00:31:05,009 --> 00:31:08,010
+rounded inside ScrollView scroll with
+the
+
+517
+00:31:08,019 --> 00:31:11,988
+rest your content that's what this type
+at is intended
+
+518
+00:31:12,159 --> 00:31:15,320
+for
+
+519
+00:31:15,032 --> 00:31:18,053
+remove the bareback off-screen better
+viewed it failed to receive
+
+520
+00:31:18,053 --> 00:31:21,922
+with their again once you move it off
+screen is your responsibility to reflow
+
+521
+00:31:22,399 --> 00:31:23,570
+your content
+
+522
+00:31:23,057 --> 00:31:28,071
+to fill the hole left by the
+
+523
+00:31:28,071 --> 00:31:33,270
+at that time 10 screen your ebook
+
+524
+00:31:33,909 --> 00:31:36,560
+this is what better loading or unloading
+to look like you're in there is too
+
+525
+00:31:36,056 --> 00:31:37,675
+important tell your call backs here
+
+526
+00:31:38,179 --> 00:31:42,820
+interview did load and I in which case
+is gonna put the banner on screen
+
+527
+00:31:42,082 --> 00:31:45,151
+randall layer a better view detailed
+receive an
+
+528
+00:31:45,889 --> 00:31:49,480
+air he removed from the review you need
+to converse
+
+529
+00:31:49,048 --> 00:31:52,056
+again layout free for your content
+around the whole
+
+530
+00:31:52,056 --> 00:31:55,124
+left by the bear
+
+531
+00:31:56,024 --> 00:32:00,109
+the best practices from erecting again
+this a great for reform content
+
+532
+00:32:01,009 --> 00:32:04,062
+the sort of thing put inside ScrollView
+within
+
+533
+00:32:04,062 --> 00:32:07,101
+the rest your content that may scroll up
+and down
+
+534
+00:32:07,659 --> 00:32:10,760
+along the device thing on and off-screen
+its
+
+535
+00:32:10,076 --> 00:32:14,085
+sort static with the rest your content
+flows around
+
+536
+00:32:14,085 --> 00:32:19,384
+fill the hole with inside the space on
+screen
+
+537
+00:32:20,149 --> 00:32:23,152
+it's got a full screen out on top.
+remember that
+
+538
+00:32:23,179 --> 00:32:27,250
+a tension that they are they'll get call
+backs for will begin action
+
+539
+00:32:27,025 --> 00:32:31,121
+did finish actions you can pause and
+resume activity
+
+540
+00:32:32,021 --> 00:32:35,076
+positive interview action should begin
+
+541
+00:32:35,076 --> 00:32:38,152
+and resume activity in the interview
+action finish
+
+542
+00:32:39,052 --> 00:32:42,171
+thats medium rectangle little bit more
+complicated than the banner
+
+543
+00:32:42,639 --> 00:32:45,750
+because you have to manage position
+yourself but still fairly simple to
+
+544
+00:32:45,075 --> 00:32:47,149
+implement
+
+545
+00:32:48,049 --> 00:32:51,698
+okay fourth typeof ad that we're talking
+about here
+
+546
+00:32:52,139 --> 00:32:55,540
+is the pre-roll
+
+547
+00:32:55,054 --> 00:32:59,135
+was a pre-roll video pre-roll it's a
+short video that place between
+
+548
+00:33:00,035 --> 00:33:04,096
+before your own media content
+
+549
+00:33:04,096 --> 00:33:08,099
+for screen at on tap just like the other
+better times
+
+550
+00:33:08,099 --> 00:33:11,181
+added Iowa 7 and
+
+551
+00:33:12,081 --> 00:33:15,103
+and I 07 we had on MP movie player
+controller
+
+552
+00:33:16,003 --> 00:33:19,892
+and knew it I was it we're also adding
+it on AV player view controller
+
+553
+00:33:19,919 --> 00:33:24,850
+you a ticket visitor introduced to DC
+
+554
+00:33:24,085 --> 00:33:27,874
+this is available on both iPhone and
+iPad it has been since
+
+555
+00:33:28,639 --> 00:33:32,330
+action I wanna circle back to the very
+first
+
+556
+00:33:32,033 --> 00:33:35,101
+bullet here short video please refer
+content this is really important
+
+557
+00:33:36,001 --> 00:33:40,006
+this is not an interstitial style this
+is something we played before your
+
+558
+00:33:40,051 --> 00:33:42,170
+contacts so you need to make sure that
+you actually
+
+559
+00:33:42,629 --> 00:33:46,730
+a video to play after we don't want
+
+560
+00:33:46,073 --> 00:33:49,170
+not support for you to attempt to use
+this just you land random at Interbrand
+
+561
+00:33:50,007 --> 00:33:53,061
+I'm sure that you have content followed
+so the
+
+562
+00:33:54,024 --> 00:33:57,076
+API sign for
+
+563
+00:33:57,076 --> 00:34:01,108
+so setting up in playback also fairly
+straightforward here sort of by linking
+
+564
+00:34:02,008 --> 00:34:02,017
+the media player I
+
+565
+00:34:02,098 --> 00:34:05,130
+frameworks important media I at heathers
+
+566
+00:34:06,003 --> 00:34:09,035
+a great player help pre-roll video
+
+567
+00:34:09,062 --> 00:34:12,083
+an airplane cockpit video very
+straightforward it
+
+568
+00:34:12,083 --> 00:34:15,144
+almost all those except the IOD thats
+and they play pre-roll
+
+569
+00:34:16,044 --> 00:34:19,503
+you already have to do if you got your
+own assist few
+
+570
+00:34:19,899 --> 00:34:22,948
+pay additional lines so is that look
+like
+
+571
+00:34:23,389 --> 00:34:28,010
+first important nuclear import I had
+
+572
+00:34:28,001 --> 00:34:32,049
+Creek and in the player controller in it
+was cut in Euros you already would
+
+573
+00:34:32,049 --> 00:34:35,081
+add that movie player into your you
+iraqis
+
+574
+00:34:35,081 --> 00:34:38,127
+on-screen called your layout for once
+
+575
+00:34:39,027 --> 00:34:44,035
+there as well and their call play
+pre-roll ad with completion
+
+576
+00:34:44,035 --> 00:34:47,039
+input call this unserved immediately
+calling plan this still
+
+577
+00:34:47,075 --> 00:34:51,128
+I add hey try to put a pre-roll video in
+there if you've got one
+
+578
+00:34:52,028 --> 00:34:55,647
+play that first this takes a completion
+handler
+
+579
+00:34:55,899 --> 00:34:59,980
+return air possibly if something went
+wrong inside the completion handler is
+
+580
+00:34:59,098 --> 00:34:59,197
+your cue to start
+
+581
+00:35:00,097 --> 00:35:04,110
+your content you wanna make sure you
+don't automatically for your country you
+
+582
+00:35:05,001 --> 00:35:07,084
+wanna Paul your company until this
+actually begins
+
+583
+00:35:07,093 --> 00:35:10,174
+playing or two the people finishes plane
+you want to begin your
+
+584
+00:35:11,074 --> 00:35:14,115
+content for a ticket
+
+585
+00:35:15,015 --> 00:35:18,044
+almost identical occurred if the player
+view controller insider
+
+586
+00:35:18,044 --> 00:35:21,078
+import the ATK headers a and your call
+
+587
+00:35:21,078 --> 00:35:24,082
+again played hero I with completion
+handler as identical semantics
+
+588
+00:35:25,018 --> 00:35:28,907
+and media player controller ones inside
+the completion handler
+
+589
+00:35:29,069 --> 00:35:32,480
+your call player play to start your own
+video-content
+
+590
+00:35:32,048 --> 00:35:37,070
+afterward this is new I see
+
+591
+00:35:37,007 --> 00:35:40,626
+just like interstitials because this is
+something that is going to happen at
+
+592
+00:35:41,319 --> 00:35:42,120
+some point
+
+593
+00:35:42,012 --> 00:35:45,981
+and you won't have I it prepare for need
+tell the IAC from work hey
+
+594
+00:35:46,089 --> 00:35:49,190
+I'm gonna what play freerolls in the
+future
+
+595
+00:35:49,019 --> 00:35:53,168
+that allows us to the opportunity to go
+out the ad server grab ads
+
+596
+00:35:53,339 --> 00:35:56,387
+and be ready for your request freerolls
+that we can actually play one when the
+
+597
+00:35:56,819 --> 00:35:59,810
+user does something that requires it
+
+598
+00:35:59,081 --> 00:36:02,156
+to do that just interstitial don't miss
+these early impressions
+
+599
+00:36:03,056 --> 00:36:07,089
+to get a lost art add request early by
+calling MP movie player controller
+
+600
+00:36:07,089 --> 00:36:10,093
+prepare pre-roll ads again probably
+application did
+
+601
+00:36:11,029 --> 00:36:14,067
+launching options or some other early
+
+602
+00:36:14,067 --> 00:36:17,096
+wraps life cycle period so we haven't
+had an opportunity to get
+
+603
+00:36:17,096 --> 00:36:20,114
+hats for you before you call guys
+
+604
+00:36:21,014 --> 00:36:24,983
+if using AB kit almost ethical I every
+player controller prepare
+
+605
+00:36:25,109 --> 00:36:28,185
+croats instead
+
+606
+00:36:28,869 --> 00:36:32,480
+go best practices for video then
+
+607
+00:36:32,048 --> 00:36:35,091
+don't play content until the I completes
+
+608
+00:36:35,091 --> 00:36:38,135
+if you called a pre-roll ad and
+
+609
+00:36:39,035 --> 00:36:42,066
+ap second later you call play before
+with culture
+
+610
+00:36:42,066 --> 00:36:45,072
+which inhaler we're going to interrupted
+
+611
+00:36:46,026 --> 00:36:50,135
+you know killing is a very common case
+for this
+
+612
+00:36:50,369 --> 00:36:55,010
+this can interrupt playing a free ride
+me it's kept going to go to your content
+
+613
+00:36:55,001 --> 00:36:58,045
+like the ad never played except that
+it's poor user experience for users
+
+614
+00:36:58,045 --> 00:37:01,051
+you'd like to try to avoid this one
+possible so make sure that you
+
+615
+00:37:02,005 --> 00:37:05,030
+wat into our completion call to call
+play
+
+616
+00:37:05,003 --> 00:37:08,052
+for verifications is frequently means
+recording the fact your content is
+
+617
+00:37:08,079 --> 00:37:11,158
+ready if you're already calling plane is
+
+618
+00:37:11,869 --> 00:37:15,710
+notifications arm and search cause
+calling play
+
+619
+00:37:15,071 --> 00:37:18,090
+record that fact inside the completion
+handler check for that fact and then
+
+620
+00:37:18,009 --> 00:37:20,035
+call play
+
+621
+00:37:21,016 --> 00:37:24,175
+so early the for UI customization
+
+622
+00:37:24,319 --> 00:37:27,960
+many in aging UI customization topple
+the media player controller present
+
+623
+00:37:27,096 --> 00:37:29,187
+custom controls are present custom UI
+rounded
+
+624
+00:37:30,087 --> 00:37:33,148
+week you that until after we called
+handler
+
+625
+00:37:34,048 --> 00:37:38,104
+the Pierre already has custom UI you
+don't interfere with our custom UI
+
+626
+00:37:39,004 --> 00:37:42,021
+with your own customization that again
+going to perform
+
+627
+00:37:42,021 --> 00:37:45,028
+provider poor experience for users
+
+628
+00:37:45,091 --> 00:37:49,250
+okay so now we've got that would go back
+to our demolition here in a quick demo
+
+629
+00:37:50,069 --> 00:37:50,117
+setting
+
+630
+00:37:50,549 --> 00:37:54,160
+that up as well
+
+631
+00:37:54,016 --> 00:37:57,038
+its cool those him
+
+632
+00:37:57,038 --> 00:38:01,052
+that hola
+
+633
+00:38:01,052 --> 00:38:04,143
+quick little demo this as well
+
+634
+00:38:05,043 --> 00:38:10,100
+run this this is a very simple little
+app just provides a few
+
+635
+00:38:11,000 --> 00:38:16,021
+quick little video clips here can click
+on a visa and
+
+636
+00:38:16,021 --> 00:38:19,038
+got a quick video now what I'd like to
+do is now that I've got this
+
+637
+00:38:19,038 --> 00:38:19,123
+video-content
+
+638
+00:38:20,023 --> 00:38:24,048
+my user id like to engage with I can
+monetize this by playing a pre-roll ad
+
+639
+00:38:24,048 --> 00:38:28,052
+prior to the user actually being able to
+view my clips
+
+640
+00:38:28,052 --> 00:38:32,065
+skirt and quickness and see what we have
+to do to get that done
+
+641
+00:38:32,065 --> 00:38:35,093
+we can star of your the very first thing
+to do
+
+642
+00:38:35,093 --> 00:38:38,192
+is as for dinner specials wanna make
+sure that we tell
+
+643
+00:38:39,029 --> 00:38:42,940
+I had hey I'm gonna be playing career I
+it's go fetch them early
+
+644
+00:38:42,094 --> 00:38:46,513
+start off in our app delegate here
+
+645
+00:38:47,359 --> 00:38:50,990
+and we will import
+
+646
+00:38:50,099 --> 00:38:55,116
+I Adam wimpy import the media player so
+we have the perfect classes for APRs
+
+647
+00:38:56,016 --> 00:39:00,070
+and well go ahead and call repair
+pre-roll ads on MTV Movie Player
+
+648
+00:39:00,007 --> 00:39:03,045
+controller once we've done that we need
+to actually
+
+649
+00:39:04,008 --> 00:39:07,026
+incall prepare paper Lance so we're
+going to our
+
+650
+00:39:07,026 --> 00:39:10,030
+view controller here which is doing
+actual display
+
+651
+00:39:10,066 --> 00:39:13,455
+and we're going to scroll down to at the
+bottom here
+
+652
+00:39:14,049 --> 00:39:17,520
+collection you did select adamant index
+per this is
+
+653
+00:39:17,052 --> 00:39:20,110
+what happens when you're actually caps
+on it at the moment all we're doing is
+
+654
+00:39:21,001 --> 00:39:21,086
+creating
+
+655
+00:39:21,095 --> 00:39:24,424
+MP movie player view controller saying
+the content URL
+
+656
+00:39:25,279 --> 00:39:28,370
+and then calling present the player to
+have to start playing automatically
+
+657
+00:39:28,037 --> 00:39:32,075
+we wanna sorta interrupt that briefly
+and instead we're gonna go ahead and
+
+658
+00:39:32,075 --> 00:39:32,151
+call
+
+659
+00:39:33,051 --> 00:39:37,051
+play pre-roll at which completion
+handler
+
+660
+00:39:37,051 --> 00:39:40,100
+and again inside the completion handler
+to that that's run a call
+
+661
+00:39:41,000 --> 00:39:44,019
+and PE the controller the player play
+
+662
+00:39:44,019 --> 00:39:47,100
+backups top here and ensure that we are
+
+663
+00:39:48,000 --> 00:39:53,012
+importing I as well so we get the I add
+API's available
+
+664
+00:39:53,012 --> 00:40:00,012
+good save that we can run again
+
+665
+00:40:01,077 --> 00:40:04,081
+this is where I know it's going to you
+want to help you to go in here
+
+666
+00:40:05,017 --> 00:40:12,017
+make sure that the eye at framework is
+linked
+
+667
+00:40:14,000 --> 00:40:17,054
+out there can we gotta add up
+
+668
+00:40:17,054 --> 00:40:20,060
+where a ap up here again same
+
+669
+00:40:21,014 --> 00:40:25,058
+quickly videos we can go ahead and click
+on one of these now
+
+670
+00:40:25,058 --> 00:40:29,101
+and before the video-content actually
+play as you see that we've got an iPad
+
+671
+00:40:30,001 --> 00:40:33,046
+workbench ap at the comes up instead
+user can
+
+672
+00:40:33,046 --> 00:40:37,091
+you this a add content once they're done
+with it they can cite
+
+673
+00:40:37,091 --> 00:40:40,093
+skip had a bit and we owe me it back to
+you
+
+674
+00:40:40,093 --> 00:40:43,154
+the video content for the app itself
+
+675
+00:40:44,054 --> 00:40:47,583
+and that's pretty much all its involved
+in
+
+676
+00:40:48,069 --> 00:40:51,148
+implementing freerolls what you've
+already got a media player content for
+
+677
+00:40:51,859 --> 00:40:54,420
+their pre role to play in front of
+
+678
+00:40:54,042 --> 00:40:57,124
+okay so those or the four different
+types
+
+679
+00:40:58,024 --> 00:41:01,123
+I'll ads we have for integration with I
+had inside your apt
+
+680
+00:41:02,023 --> 00:41:07,106
+up what you're using now let's talk a
+little about testing
+
+681
+00:41:08,006 --> 00:41:12,033
+for small their couple things we add
+we've added to the developer settings on
+
+682
+00:41:12,033 --> 00:41:12,131
+the phone
+
+683
+00:41:13,031 --> 00:41:17,040
+to help you test the integration I it
+within your
+
+684
+00:41:18,021 --> 00:41:21,106
+first you can adjust the story this is
+
+685
+00:41:22,006 --> 00:41:26,018
+inside the the app's the you have when
+you're testing them on the device
+
+686
+00:41:26,018 --> 00:41:29,077
+you can just how frequently you're going
+to get ads as well as you test air
+
+687
+00:41:29,077 --> 00:41:29,086
+conditions
+
+688
+00:41:30,067 --> 00:41:33,096
+large test always working additions and
+make sure that your app handles those
+
+689
+00:41:33,096 --> 00:41:33,174
+conditions
+
+690
+00:41:34,074 --> 00:41:38,141
+appropriately in addition you can adjust
+the refresh rate
+
+691
+00:41:39,041 --> 00:41:42,104
+for things like banners and medium racks
+this is going to just frequency with
+
+692
+00:41:43,004 --> 00:41:43,323
+which
+
+693
+00:41:43,359 --> 00:41:48,230
+new ads come in in addition in
+combination with the store rain
+
+694
+00:41:48,023 --> 00:41:51,104
+this allows you to rapidly test error
+and non air-conditioned
+
+695
+00:41:52,004 --> 00:41:57,076
+moving thing on an off-screen
+
+696
+00:41:57,076 --> 00:42:00,085
+most importantly there's a switch call
+hi likely banners
+
+697
+00:42:01,066 --> 00:42:04,079
+if you're using the can display banner
+ads this
+
+698
+00:42:04,079 --> 00:42:07,398
+isn't going to affect enters very much
+but this is very important from medium
+
+699
+00:42:08,109 --> 00:42:08,620
+racked
+
+700
+00:42:08,062 --> 00:42:12,119
+it's very easy to accidentally occlude
+part of the medium wracked with some
+
+701
+00:42:13,019 --> 00:42:14,358
+other UI element
+
+702
+00:42:14,529 --> 00:42:18,583
+if you do that that's part of the medium
+wrecked that may not be seen by User
+
+703
+00:42:19,069 --> 00:42:22,850
+its part in the medium wrecked you that
+user may not be able to tap on interact
+
+704
+00:42:22,085 --> 00:42:23,089
+with
+
+705
+00:42:24,025 --> 00:42:27,052
+this will the text back you turn on the
+highlight clip banners
+
+706
+00:42:27,052 --> 00:42:31,331
+button we're gonna provide a greener red
+overlay over your meeting wrapped
+
+707
+00:42:31,799 --> 00:42:35,180
+or bears are insists that matter that
+will show
+
+708
+00:42:35,018 --> 00:42:38,064
+when the user can actually tap on all
+parts this better
+
+709
+00:42:38,064 --> 00:42:42,203
+when it is officially on-screen
+invisible you wanna make sure that any
+
+710
+00:42:42,779 --> 00:42:47,808
+banners show inside your apt are always
+green
+
+711
+00:42:48,069 --> 00:42:52,560
+remember this only affects your aP's
+your developer mode adds
+
+712
+00:42:52,056 --> 00:42:55,104
+to you run from xrecord and deployed
+onto your device
+
+713
+00:42:56,004 --> 00:42:59,053
+so now you can just store it 0 for all
+the other I at
+
+714
+00:42:59,089 --> 00:43:04,670
+using ap psych advice only affects
+developer aP's
+
+715
+00:43:04,067 --> 00:43:07,162
+okay so that's mine is Asian assert the
+first major portion
+
+716
+00:43:08,062 --> 00:43:12,081
+talk talk next a little bit about
+promotion so the other half for the eye
+
+717
+00:43:12,081 --> 00:43:13,880
+at ecosystem
+
+718
+00:43:14,609 --> 00:43:17,970
+this is how you can use I add to try
+downloads
+
+719
+00:43:17,097 --> 00:43:21,195
+a your own
+
+720
+00:43:22,095 --> 00:43:24,149
+so there's three major parts they were
+knocked out here for something you
+
+721
+00:43:25,049 --> 00:43:25,121
+really quick
+
+722
+00:43:26,021 --> 00:43:29,054
+intro to I at work bench there's another
+session on that market
+
+723
+00:43:29,054 --> 00:43:32,081
+more in detail so it's just a quick
+overview and then there are two
+
+724
+00:43:32,081 --> 00:43:36,085
+new API's they were interesting IOSA one
+for ap attribution
+
+725
+00:43:37,021 --> 00:43:42,066
+and one for app audience sry targeting
+talk a little about those new APIs
+
+726
+00:43:42,066 --> 00:43:46,071
+what sort of the I had workbench was I
+had workbench
+
+727
+00:43:46,071 --> 00:43:49,135
+and workbenches I itself servicing
+advertising platform
+
+728
+00:43:50,035 --> 00:43:55,038
+I especially when app on the Apple dot
+com I had work bench that Apple dot com
+
+729
+00:43:55,038 --> 00:43:58,063
+this is how you can manage being an
+advertiser
+
+730
+00:43:58,063 --> 00:44:01,146
+on at and in create mobile ads
+
+731
+00:44:02,046 --> 00:44:06,119
+it up later and banners you can use open
+templates ignacio I producer
+
+732
+00:44:07,019 --> 00:44:11,188
+to create your own I had assets
+
+733
+00:44:11,359 --> 00:44:15,080
+what you've done that you can use this
+chip reach the users who are most likely
+
+734
+00:44:15,008 --> 00:44:15,072
+to
+
+735
+00:44:15,072 --> 00:44:19,094
+actually download your app I had isn't
+iowa's advertising platform you're going
+
+736
+00:44:19,094 --> 00:44:19,175
+to reach a whole bunch
+
+737
+00:44:20,075 --> 00:44:24,112
+users who are on i OS who are already
+using our app so I less
+
+738
+00:44:25,012 --> 00:44:28,038
+nor therefore highly likely to engage
+with the ad
+
+739
+00:44:28,038 --> 00:44:31,041
+but advertising Europe and download ap
+
+740
+00:44:31,041 --> 00:44:34,102
+you can also manage your campaign
+performance here this is where you can
+
+741
+00:44:35,002 --> 00:44:35,049
+see
+
+742
+00:44:35,049 --> 00:44:38,081
+how you what senior I had how the
+campaign is doing
+
+743
+00:44:38,081 --> 00:44:42,086
+capture rates Center for your particular
+advertising campaign
+
+744
+00:44:43,031 --> 00:44:47,123
+such workbench again there's any other
+session tomorrow kind more detail
+
+745
+00:44:48,023 --> 00:44:51,031
+next important part talk about SM new AP
+as we've got for ap
+
+746
+00:44:51,031 --> 00:44:54,113
+actual bution K what is that actuation
+
+747
+00:44:55,013 --> 00:44:59,065
+apparition allows you to track app
+downloads up your apt that originated
+
+748
+00:44:59,065 --> 00:44:59,129
+from
+
+749
+00:45:00,029 --> 00:45:04,058
+I at its gonna let you measure the
+effectiveness
+
+750
+00:45:04,319 --> 00:45:07,740
+love your campaigns you created
+workbench that you're running actually
+
+751
+00:45:07,074 --> 00:45:13,673
+promote your the API's are available at
+Iowa 7
+
+752
+00:45:14,339 --> 00:45:18,620
+are Sarah 7.1 or other and we've
+enhanced a little bit and I was
+
+753
+00:45:18,062 --> 00:45:21,096
+8 as well so that's a new one I'm States
+
+754
+00:45:21,096 --> 00:45:24,190
+so are the FBI actually look like very
+simple genyen include I had
+
+755
+00:45:25,009 --> 00:45:28,016
+I at that age has everything starts with
+for I had
+
+756
+00:45:29,006 --> 00:45:33,038
+and the recall eighty client shared
+client on that in a call lookup
+
+757
+00:45:33,092 --> 00:45:36,167
+add conversion details
+
+758
+00:45:37,067 --> 00:45:40,986
+inside that you can use the two eights
+that are provided completion handler
+
+759
+00:45:41,589 --> 00:45:44,960
+to determine whether or not this
+particular installation
+
+760
+00:45:44,096 --> 00:45:47,101
+up the app was due to I had
+
+761
+00:45:48,001 --> 00:45:51,018
+these dates are gonna give you two
+things the first is the ap
+
+762
+00:45:51,018 --> 00:45:54,087
+purchased any the date at which the user
+actually made the purchase of this and
+
+763
+00:45:54,087 --> 00:45:55,101
+and
+
+764
+00:45:56,001 --> 00:46:00,039
+then the date the impression the date
+that the user sawing interacted with the
+
+765
+00:46:00,039 --> 00:46:00,083
+ad
+
+766
+00:46:00,083 --> 00:46:04,572
+prior to them purchasing the amp K
+
+767
+00:46:05,319 --> 00:46:09,200
+if all these dates are there and true
+that can indicate you that as far as I
+
+768
+00:46:09,002 --> 00:46:09,099
+was concerned
+
+769
+00:46:10,017 --> 00:46:13,936
+this was a installation if your app
+directly attributable to the user
+
+770
+00:46:14,089 --> 00:46:15,000
+interacting with
+
+771
+00:46:15,000 --> 00:46:22,000
+seeing eye at promoting your ap
+
+772
+00:46:22,063 --> 00:46:25,094
+it's very important remember that these
+dates are going to be nil
+
+773
+00:46:25,094 --> 00:46:28,117
+if they're not actually a diode they'll
+
+774
+00:46:29,017 --> 00:46:32,166
+also be nil if the user has limit ad
+tracking so
+
+775
+00:46:32,319 --> 00:46:36,210
+regardless of whether or not this is an
+eye at driven insulation
+
+776
+00:46:36,021 --> 00:46:39,076
+user has the mad at tracking enabled
+they don't want their address and data
+
+777
+00:46:39,076 --> 00:46:42,117
+tract or shown to perhaps
+
+778
+00:46:43,017 --> 00:46:45,106
+is going to be no we're not gonna give
+you this information cases should be
+
+779
+00:46:46,006 --> 00:46:47,094
+aware that if you're trying to use this
+phrase
+
+780
+00:46:47,094 --> 00:46:50,139
+analytics in addition
+
+781
+00:46:51,039 --> 00:46:55,045
+you want to avoid look up so the stain
+on every launch I'll try very tempting
+
+782
+00:46:55,045 --> 00:46:57,064
+to add this to your apt at Finch
+launching
+
+783
+00:46:57,064 --> 00:47:00,106
+look at conversion detail set some state
+flag and do something on every single
+
+784
+00:47:01,006 --> 00:47:01,011
+launch
+
+785
+00:47:01,056 --> 00:47:04,104
+ap try to avoid doing there is some
+costs you
+
+786
+00:47:05,004 --> 00:47:08,010
+actually doing this' look up you wanna
+for doing this look up to you actually
+
+787
+00:47:08,064 --> 00:47:08,137
+need to you
+
+788
+00:47:09,037 --> 00:47:12,119
+and in cash today afterwards
+
+789
+00:47:13,019 --> 00:47:16,148
+sets after bution the next thing we talk
+about
+
+790
+00:47:16,319 --> 00:47:20,371
+is the app audience re targeting APIs is
+a new API's IOSA
+
+791
+00:47:20,839 --> 00:47:25,210
+so what a nap audience regarding again
+
+792
+00:47:25,021 --> 00:47:28,070
+what is returning allows you to group
+the user's a viewer app
+
+793
+00:47:28,007 --> 00:47:31,396
+that particular audience into various
+categories
+
+794
+00:47:32,089 --> 00:47:36,137
+depending on their activity with in your
+app or things you know about them
+
+795
+00:47:36,569 --> 00:47:39,740
+from their use viewer app
+
+796
+00:47:39,074 --> 00:47:42,127
+this might be frequent in app purchases
+it might be
+
+797
+00:47:43,027 --> 00:47:46,104
+a very high usage rate relative to other
+user here
+
+798
+00:47:47,004 --> 00:47:50,092
+in my pee Dorman users users who use
+drop a while ago but you haven't seen in
+
+799
+00:47:50,092 --> 00:47:52,681
+a while
+
+800
+00:47:53,509 --> 00:47:56,536
+you can then use this information to
+target new ads
+
+801
+00:47:56,779 --> 00:47:59,870
+you know I workbench directly its
+specific subgroups
+
+802
+00:47:59,087 --> 00:48:02,144
+up your users to reach specific
+audiences
+
+803
+00:48:03,044 --> 00:48:06,047
+within the user's here
+
+804
+00:48:06,074 --> 00:48:09,113
+each group defines what we call a
+segment
+
+805
+00:48:09,779 --> 00:48:12,940
+thats terminology to talk to the next
+couple slides that's important
+
+806
+00:48:12,094 --> 00:48:15,263
+no a specific group with your users is
+that it
+
+807
+00:48:16,109 --> 00:48:21,660
+with a specific name is a segment
+
+808
+00:48:21,066 --> 00:48:25,089
+so why would you want to use let's say
+your game app developer
+
+809
+00:48:25,089 --> 00:48:29,498
+you want to promote the new I had
+version of your apt to all your iPhone
+
+810
+00:48:30,299 --> 00:48:31,060
+users
+
+811
+00:48:31,006 --> 00:48:34,705
+your we go back in reach those specific
+user into hey
+
+812
+00:48:34,759 --> 00:48:38,690
+I've got a great new a iPad version come
+try it again
+
+813
+00:48:38,069 --> 00:48:42,097
+comeback this app if you read out loud
+
+814
+00:48:42,097 --> 00:48:45,166
+it there's new features that affect
+specific subset severe abd you can use
+
+815
+00:48:46,066 --> 00:48:48,112
+this to reach those specific users
+
+816
+00:48:49,012 --> 00:48:52,069
+at going to ensure that the as you
+create gonna reach precisely the
+
+817
+00:48:52,069 --> 00:48:52,133
+audience your
+
+818
+00:48:53,033 --> 00:48:57,070
+tempting target with that
+
+819
+00:48:57,007 --> 00:49:00,028
+%uh visit similarly you can really good
+doormen users to get
+
+820
+00:49:00,091 --> 00:49:03,095
+users that you haven't seen while you
+can craft a message
+
+821
+00:49:04,031 --> 00:49:07,052
+specifically designed to try to pull
+those people back in your apt to
+
+822
+00:49:07,052 --> 00:49:08,061
+reengage those users may not
+
+823
+00:49:09,042 --> 00:49:12,074
+strapping sometime
+
+824
+00:49:12,074 --> 00:49:16,383
+if your retail app instead for similar
+reasons to use this
+
+825
+00:49:17,049 --> 00:49:20,100
+you can remind users may have abandoned
+a shopping cart your app
+
+826
+00:49:20,001 --> 00:49:24,010
+segment as in something send them a
+message hey you can your shopping cart
+
+827
+00:49:24,019 --> 00:49:25,058
+maybe should come back and
+
+828
+00:49:25,058 --> 00:49:29,093
+being ate with this app a few store
+purchase those things
+
+829
+00:49:29,093 --> 00:49:32,096
+if you got loyal customers maybe you
+wanna sell a special offer may be onto
+
+830
+00:49:32,096 --> 00:49:34,096
+something a gift for being a loyal
+customer
+
+831
+00:49:34,096 --> 00:49:37,099
+you can't do that with an attitude well
+you can reach target specific
+
+832
+00:49:37,099 --> 00:49:40,198
+ads to specific segments users
+
+833
+00:49:41,098 --> 00:49:45,137
+if they've you grouped customers into
+specific categories based on their
+
+834
+00:49:46,037 --> 00:49:49,088
+previous purchases you can promote sales
+based on their previous purchases
+
+835
+00:49:49,088 --> 00:49:52,169
+all these are done by segmenting those
+users and specific groups
+
+836
+00:49:53,069 --> 00:49:56,116
+and recording that city you can we
+engage with those users
+
+837
+00:49:57,016 --> 00:50:01,041
+specific acts so I was actually work
+
+838
+00:50:01,041 --> 00:50:04,072
+first thing it using on I work engineer
+going to create
+
+839
+00:50:04,072 --> 00:50:08,083
+segments a rest tell I workbench hey I'm
+gonna groupie people and
+
+840
+00:50:08,083 --> 00:50:12,090
+ten different segments please give me
+some segment fires to use for that
+
+841
+00:50:12,009 --> 00:50:15,065
+support to notice that you cannot create
+segment specific segment identifiers
+
+842
+00:50:16,046 --> 00:50:19,905
+I workbench doesn't stead and this is
+partially for privacy reasons
+
+843
+00:50:20,319 --> 00:50:23,430
+we manage the specific segment
+identifiers
+
+844
+00:50:23,043 --> 00:50:27,642
+once you've done that you doin up to
+your app and take avenge the new APIs
+
+845
+00:50:28,029 --> 00:50:32,020
+you can actually associate specific
+segments with specific users
+
+846
+00:50:32,002 --> 00:50:36,014
+makers at the server so we can actually
+record that information
+
+847
+00:50:36,014 --> 00:50:39,066
+what's that done you go back to at work
+bench and you create your
+
+848
+00:50:39,066 --> 00:50:43,142
+new workbench campaign re target those
+customers with some specific
+
+849
+00:50:44,042 --> 00:50:47,043
+at message okay so
+
+850
+00:50:47,043 --> 00:50:51,062
+how do you actually do this actually
+very simple on the client side
+
+851
+00:50:51,062 --> 00:50:55,143
+you're going to you include I had you
+want to create an array of segments
+
+852
+00:50:56,043 --> 00:50:59,138
+and these are segments the second
+identifiers in which you already gotten
+
+853
+00:51:00,038 --> 00:51:01,046
+from work bench
+
+854
+00:51:01,046 --> 00:51:05,405
+you attempt to send random segment evers
+attired we're just going to ignore them
+
+855
+00:51:05,819 --> 00:51:08,913
+make sure you're using the ones already
+created and set up inside workbench
+
+856
+00:51:09,759 --> 00:51:15,410
+so maybe you decided segment a is loyal
+users segment be as frequent purchases
+
+857
+00:51:15,041 --> 00:51:18,042
+and you wanna so she ate the current
+user with those two segments
+
+858
+00:51:18,042 --> 00:51:21,083
+increase segment array with segments in
+it
+
+859
+00:51:21,083 --> 00:51:24,158
+and your call 80 clients your client ad
+plant two segments
+
+860
+00:51:25,058 --> 00:51:28,061
+replace existing I this
+
+861
+00:51:28,088 --> 00:51:31,142
+is by default would replace existing no
+going to add
+
+862
+00:51:32,042 --> 00:51:36,066
+these segments to the current user if
+instead you like to say hey these are
+
+863
+00:51:36,066 --> 00:51:38,455
+all the segments I'd like to associate
+the user
+
+864
+00:51:39,049 --> 00:51:42,430
+which might also like to remove all
+segments user
+
+865
+00:51:42,043 --> 00:51:46,052
+you can just update that replace
+existing yes just completely replace the
+
+866
+00:51:46,052 --> 00:51:46,113
+old set
+
+867
+00:51:47,013 --> 00:51:50,081
+with news
+
+868
+00:51:50,081 --> 00:51:53,081
+okay so thats basically I at
+
+869
+00:51:53,081 --> 00:51:56,089
+for promotion the new AP as a bat an
+eyelid say
+
+870
+00:51:56,089 --> 00:51:59,170
+so what we learn
+
+871
+00:52:00,007 --> 00:52:03,626
+for solar some best practices for using
+I had reporter notes banners
+
+872
+00:52:04,319 --> 00:52:08,730
+we've doctor for not sad to talk about
+as a banner there's interstitial
+
+873
+00:52:08,073 --> 00:52:13,099
+as a medium racked and as a pre-roll
+they all have their place
+
+874
+00:52:13,099 --> 00:52:16,150
+take revenge the different ad formats
+that we've given to you
+
+875
+00:52:17,005 --> 00:52:20,023
+think about where they belong in your
+out and
+
+876
+00:52:20,068 --> 00:52:24,092
+make sure you use the appropriate at for
+the appropriate contacts
+
+877
+00:52:24,092 --> 00:52:27,147
+as part of that consider the user when
+you're placing thats yes
+
+878
+00:52:28,047 --> 00:52:32,876
+ads are very valuable for generating
+revenue from your apt I had can help a
+
+879
+00:52:33,299 --> 00:52:34,310
+lot pitting
+
+880
+00:52:34,031 --> 00:52:37,106
+but great revenue in great app star
+
+881
+00:52:38,006 --> 00:52:41,068
+with great users well your own alienate
+all users
+
+882
+00:52:41,068 --> 00:52:44,187
+by horror ad placement but poor adchoice
+
+883
+00:52:44,799 --> 00:52:47,920
+you're not actually going to happen that
+way you want
+
+884
+00:52:47,092 --> 00:52:50,165
+really make sure you hear center focus
+to where you're picking
+
+885
+00:52:51,065 --> 00:52:54,504
+to put ads whichever actor choosing to
+put their
+
+886
+00:52:55,089 --> 00:52:59,220
+in addition
+
+887
+00:52:59,022 --> 00:53:03,029
+there's a cycle here between
+monetization and promotion
+
+888
+00:53:03,029 --> 00:53:06,087
+K optimize your ads performance to begin
+your
+
+889
+00:53:06,087 --> 00:53:10,098
+ap sad performance to begin with that's
+going to generate revenue from it
+
+890
+00:53:10,098 --> 00:53:13,172
+but don't forget to take a measured by
+workbench and really promote your app
+
+891
+00:53:14,072 --> 00:53:17,160
+it's important to continue to get new
+users for your app if you wanna continue
+
+892
+00:53:18,006 --> 00:53:19,015
+get revenues
+
+893
+00:53:19,609 --> 00:53:23,390
+from here but to feed into each other
+you want to generate revenue
+
+894
+00:53:23,039 --> 00:53:26,040
+you want Spencer your event re
+advertiser Apple acquired
+
+895
+00:53:26,004 --> 00:53:29,032
+users them
+
+896
+00:53:29,068 --> 00:53:34,077
+this is our best practices for a for
+more information me on this
+
+897
+00:53:34,077 --> 00:53:37,133
+we've got mark loser I had technologies
+evangelist you can reach him
+
+898
+00:53:38,033 --> 00:53:41,110
+the email address Paul I had programming
+guide online /a
+
+899
+00:53:42,001 --> 00:53:45,003
+it with along with the rest to the IRS
+SDK developer
+
+900
+00:53:45,012 --> 00:53:48,110
+information there's some Apple Developer
+forms we monitor
+
+901
+00:53:49,001 --> 00:53:53,006
+you've got questions UN other developers
+and us will be modernised answer
+
+902
+00:53:53,015 --> 00:53:53,077
+questions
+
+903
+00:53:53,077 --> 00:53:57,085
+hopefully help you out a couple related
+sessions here
+
+904
+00:53:57,085 --> 00:54:00,140
+ODBC unfortunately remiss the new iTunes
+Connect which sucked a little bit about
+
+905
+00:54:01,004 --> 00:54:01,713
+I add
+
+906
+00:54:02,109 --> 00:54:06,330
+that was yesterday are you can watch the
+video tomorrow morning at nine in Nob
+
+907
+00:54:06,033 --> 00:54:09,049
+Hill is what's new in I had work bench
+was going going to a little bit more
+
+908
+00:54:09,049 --> 00:54:09,147
+detail about the
+
+909
+00:54:10,047 --> 00:54:13,083
+actor bution in the audience segment
+retarding that I talked about
+
+910
+00:54:13,083 --> 00:54:16,112
+at the end of this presentation that's
+it
+
+911
+00:54:16,859 --> 00:54:17,430
+thank you very much
+

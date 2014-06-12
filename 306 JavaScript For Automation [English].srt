@@ -1,0 +1,4012 @@
+1
+00:00:12,082 --> 00:00:14,401
+well come welcome the Friday
+
+2
+00:00:15,139 --> 00:00:16,900
+thanks for being here
+
+3
+00:00:16,009 --> 00:00:19,038
+my name is south to go in I am the
+product manager for automation
+
+4
+00:00:20,019 --> 00:00:22,081
+technologies that Apple incorporated
+
+5
+00:00:22,081 --> 00:00:26,116
+and the secession 306 this is a big day
+
+6
+00:00:27,016 --> 00:00:32,072
+we get to welcome JavaScript to the
+family of scripting languages on OS 10
+
+7
+00:00:32,072 --> 00:00:39,072
+we've been waiting a long time for this
+and I know our customers have to and
+
+8
+00:00:41,008 --> 00:00:42,012
+we're really thrilled about it
+
+9
+00:00:42,048 --> 00:00:46,767
+and before I get into the details have
+the language and how it works
+
+10
+00:00:47,199 --> 00:00:50,294
+I like to take a moment to reflect on
+the state of automation
+
+11
+00:00:51,149 --> 00:00:54,190
+beginning with Mavericks
+
+12
+00:00:54,019 --> 00:00:57,091
+now in maverick's reintroduced
+
+13
+00:00:57,091 --> 00:01:00,168
+a host of new features some very
+powerful things beginning with
+
+14
+00:01:01,068 --> 00:01:02,075
+notification support
+
+15
+00:01:03,038 --> 00:01:07,060
+in both the scripting language in in
+Automator as well so it became very
+
+16
+00:01:07,006 --> 00:01:11,099
+easy to use notifications and set a
+posting dialogues in your automation
+
+17
+00:01:12,053 --> 00:01:13,059
+routines
+
+18
+00:01:13,059 --> 00:01:18,075
+we also introduced code signing ability
+in our editor applications both in
+
+19
+00:01:18,075 --> 00:01:19,161
+Automator in the script editor
+
+20
+00:01:20,061 --> 00:01:23,160
+which is great because then you could
+sign and deliver
+
+21
+00:01:24,006 --> 00:01:28,009
+automation solutions to your customers
+friends and coworkers
+
+22
+00:01:28,063 --> 00:01:33,552
+we also introduced a new construct in
+AppleScript called the use statement
+
+23
+00:01:34,119 --> 00:01:38,140
+the racks I can importer to import
+functionality from
+
+24
+00:01:38,014 --> 00:01:42,097
+applications and frameworks and %uh
+scripting additions
+
+25
+00:01:42,097 --> 00:01:45,125
+and allow them to be used in your
+scripts
+
+26
+00:01:46,025 --> 00:01:50,106
+and by doing this we also made it
+possible to have script
+
+27
+00:01:51,006 --> 00:01:55,014
+library that we introduced and script
+library for scripts that you create
+
+28
+00:01:55,086 --> 00:01:55,185
+yourself
+
+29
+00:01:56,085 --> 00:02:00,088
+that contain your favorite some routines
+are handlers
+
+30
+00:02:00,088 --> 00:02:04,717
+and you can call in lo these libraries
+from scripts anywhere in the operating
+
+31
+00:02:05,509 --> 00:02:06,210
+system
+
+32
+00:02:06,021 --> 00:02:09,114
+they can also take advantage of
+AppleScript objective-c
+
+33
+00:02:10,014 --> 00:02:13,040
+and any the cocoa calls that you want to
+use
+
+34
+00:02:13,004 --> 00:02:17,005
+so they're very powerful very useful
+they be introduced
+
+35
+00:02:17,005 --> 00:02:20,334
+and then finally we had a new feature
+
+36
+00:02:20,829 --> 00:02:24,885
+that worked on english-only systems but
+we thought it was so interesting that we
+
+37
+00:02:25,389 --> 00:02:28,820
+introduced it it was called speaker
+bulwark locks
+
+38
+00:02:28,082 --> 00:02:31,561
+and allowed you to take your Automator
+workflow
+
+39
+00:02:32,299 --> 00:02:35,650
+and save it as a speaker bull item
+
+40
+00:02:35,065 --> 00:02:39,066
+in the dictation architecture so you
+could say a command in would run your
+
+41
+00:02:39,075 --> 00:02:39,744
+workflow
+
+42
+00:02:40,419 --> 00:02:44,590
+and so maverick's is a very productive
+release force we're very excited about
+
+43
+00:02:44,059 --> 00:02:44,488
+it
+
+44
+00:02:45,019 --> 00:02:50,047
+but we're also excited about what we've
+done in Yosemite and how it builds upon
+
+45
+00:02:50,299 --> 00:02:51,970
+the groundwork relayed
+
+46
+00:02:51,097 --> 00:02:54,103
+in Mavericks last part of this
+
+47
+00:02:55,003 --> 00:02:58,022
+evolutionary process we integrated
+
+48
+00:02:58,022 --> 00:03:02,109
+code signing with workflow files so not
+only app lets but now your workflow
+
+49
+00:03:03,009 --> 00:03:05,188
+files can be code side as well
+
+50
+00:03:05,269 --> 00:03:10,160
+and because have changes that we
+implemented in the app script language
+
+51
+00:03:10,016 --> 00:03:11,017
+for supporting
+
+52
+00:03:11,026 --> 00:03:14,185
+optional parameters and subroutines and
+handlers
+
+53
+00:03:14,419 --> 00:03:20,620
+wearin able to upgrade the scripting
+library support so that you can now have
+
+54
+00:03:20,062 --> 00:03:21,271
+your favorite calls
+
+55
+00:03:21,829 --> 00:03:26,680
+have optional premonition users as well
+very good improvement there
+
+56
+00:03:26,068 --> 00:03:30,079
+and listening to customer requests
+they're being
+
+57
+00:03:30,079 --> 00:03:34,868
+for years and years requesting some way
+to indicate a progress
+
+58
+00:03:35,579 --> 00:03:39,584
+method for their automation routines we
+now have
+
+59
+00:03:40,079 --> 00:03:43,220
+built in script progress indicators
+
+60
+00:03:43,022 --> 00:03:46,079
+so by calling simple properties
+
+61
+00:03:46,079 --> 00:03:50,088
+you can have your scripts display a
+progress
+
+62
+00:03:50,088 --> 00:03:53,197
+indicator as a circle or even as
+
+63
+00:03:53,989 --> 00:03:58,993
+a progress bar in a floating window and
+all this is done for you automatically
+
+64
+00:03:59,389 --> 00:04:02,880
+all you have to do is Sep properties
+within your scripts
+
+65
+00:04:02,088 --> 00:04:06,627
+so I think our customers are gonna
+really enjoy that particular feature
+
+66
+00:04:07,419 --> 00:04:12,450
+and we took the idea of spiegel were
+close and we've advanced it now
+
+67
+00:04:12,729 --> 00:04:17,060
+because %uh the new dictation
+architecture in Yosemite that works with
+
+68
+00:04:17,006 --> 00:04:17,495
+all
+
+69
+00:04:17,549 --> 00:04:21,060
+languages we now have a new template
+item
+
+70
+00:04:21,006 --> 00:04:24,115
+in Automator for creating a dictation
+
+71
+00:04:24,169 --> 00:04:29,630
+command so you create your workflow you
+save it it's a than to the dictation
+
+72
+00:04:29,063 --> 00:04:30,071
+architecture
+
+73
+00:04:30,071 --> 00:04:34,096
+and when you're in the process of
+dictating or just sitting at the machine
+
+74
+00:04:34,096 --> 00:04:37,177
+you can't say the name your command
+anymore execute
+
+75
+00:04:38,077 --> 00:04:42,078
+very interesting very powerful I know
+you can have a lot of fun exploring
+
+76
+00:04:42,078 --> 00:04:46,143
+that so that's just a quick overview up
+where we've been
+
+77
+00:04:47,043 --> 00:04:51,182
+but something that's been on our minds
+for a long time that we're happy
+
+78
+00:04:51,569 --> 00:04:57,050
+and very pleased to have here today is
+JavaScript for automation
+
+79
+00:04:57,005 --> 00:05:00,008
+now those have you there are
+
+80
+00:05:00,008 --> 00:05:04,317
+premiere with JavaScript from the
+web-based community
+
+81
+00:05:04,389 --> 00:05:07,650
+this is not the JavaScript for writing a
+DOM
+
+82
+00:05:07,065 --> 00:05:10,161
+that uses CSS and HTML 5 to create a web
+app
+
+83
+00:05:11,061 --> 00:05:15,270
+we're talking about extending the
+JavaScript cord language
+
+84
+00:05:15,819 --> 00:05:18,838
+to integrate with the open scripting
+architecture
+
+85
+00:05:19,009 --> 00:05:23,250
+and by doing this you now gain the
+ability to pull
+
+86
+00:05:23,025 --> 00:05:27,033
+all those levers inside the scriptable
+caps on your operating system
+
+87
+00:05:28,005 --> 00:05:32,524
+to perform the kinda repetitive for
+interesting or complex tasks
+
+88
+00:05:32,569 --> 00:05:37,330
+that you do every day and now this power
+it's available to you
+
+89
+00:05:37,033 --> 00:05:40,062
+through JavaScript now many of you that
+right
+
+90
+00:05:40,062 --> 00:05:43,981
+JavaScript professionally or as your
+focus
+
+91
+00:05:44,539 --> 00:05:47,870
+you use to using editors like God BB
+added
+
+92
+00:05:47,087 --> 00:05:50,108
+sublime tax were web storm
+
+93
+00:05:51,008 --> 00:05:54,127
+TextMate things like that up
+
+94
+00:05:54,199 --> 00:05:58,870
+initially as you adapt to JavaScript raw
+to Mason
+
+95
+00:05:58,087 --> 00:06:02,386
+you write your for scripts in the script
+editor application
+
+96
+00:06:03,169 --> 00:06:06,500
+and I'm gonna give you just a short
+overview up
+
+97
+00:06:06,005 --> 00:06:09,354
+this application it's interfacing
+preferences
+
+98
+00:06:09,849 --> 00:06:13,800
+so that you understand what's happening
+as David presents
+
+99
+00:06:13,008 --> 00:06:16,367
+JavaScript for you so let me take a look
+at
+
+100
+00:06:17,159 --> 00:06:21,060
+the script editor application so when
+you open
+
+101
+00:06:21,006 --> 00:06:26,071
+the script editor application get this
+very simple interface is a script window
+
+102
+00:06:26,071 --> 00:06:29,810
+and he has a simple but very powerful
+design to it
+
+103
+00:06:30,449 --> 00:06:34,477
+beginning with the little slider that
+separates the two main pains up the
+
+104
+00:06:34,729 --> 00:06:35,560
+window
+
+105
+00:06:35,056 --> 00:06:39,058
+the script pain where you enter the code
+for your script
+
+106
+00:06:39,058 --> 00:06:42,099
+and the bottom pane contains in a vet
+law
+
+107
+00:06:42,099 --> 00:06:46,588
+so ass the script is executing you'll
+see the events listed there with the
+
+108
+00:06:47,479 --> 00:06:49,520
+results coming in from the Abetz
+
+109
+00:06:49,889 --> 00:06:53,973
+and this is all I've logged happens as
+the script is executed
+
+110
+00:06:54,729 --> 00:06:59,530
+at the top there are some simple
+controls for basically compiling the
+
+111
+00:06:59,053 --> 00:07:02,022
+script to make sure your syntax is
+correct
+
+112
+00:07:02,499 --> 00:07:06,560
+and there's also control for running or
+stopping your script
+
+113
+00:07:06,056 --> 00:07:10,143
+now there at the bottom here is a
+language controls so make sure if you're
+
+114
+00:07:11,043 --> 00:07:12,552
+writing JavaScript
+
+115
+00:07:12,939 --> 00:07:18,941
+that this pop-up menu is set for the
+JavaScript language
+
+116
+00:07:19,139 --> 00:07:24,176
+and that's basically the interface in
+the way that it works is
+
+117
+00:07:24,509 --> 00:07:27,518
+you enter your script code
+
+118
+00:07:27,599 --> 00:07:33,662
+into the top area then you click the Run
+button
+
+119
+00:07:34,229 --> 00:07:38,251
+an acid execute you can see that there's
+a progress indicator here on the right
+
+120
+00:07:38,449 --> 00:07:43,464
+showing the progress at the script and
+you can watch the event log go by
+
+121
+00:07:43,599 --> 00:07:48,608
+now this simple script that exported
+open keno documents to movies
+
+122
+00:07:48,689 --> 00:07:52,620
+you can see the results of it and how
+was logged in everything indicated in
+
+123
+00:07:52,062 --> 00:07:54,541
+the final result that the script at the
+bottom
+
+124
+00:07:55,099 --> 00:07:59,134
+so this is the interface that you have
+when you're executing scripts in is
+
+125
+00:07:59,449 --> 00:08:00,080
+David
+
+126
+00:08:00,008 --> 00:08:04,157
+shows you the examples this is what
+you're going to see
+
+127
+00:08:04,229 --> 00:08:07,245
+there's some other important preferences
+you should be aware of and let me just
+
+128
+00:08:07,389 --> 00:08:09,860
+quickly show you those to you
+
+129
+00:08:09,086 --> 00:08:12,785
+so in the Preferences menu
+
+130
+00:08:13,559 --> 00:08:17,626
+from the application menu in the General
+Settings paying
+
+131
+00:08:18,229 --> 00:08:22,312
+there is a default language pop-up if
+you going to be using javascript is your
+
+132
+00:08:23,059 --> 00:08:25,085
+primary language for scripting
+
+133
+00:08:25,319 --> 00:08:28,331
+you wanna make sure that you change this
+value
+
+134
+00:08:28,439 --> 00:08:32,120
+to JavaScript now this is JavaScript 100
+
+135
+00:08:32,012 --> 00:08:35,871
+this is JavaScript for automation 10 it
+is not
+
+136
+00:08:35,979 --> 00:08:41,330
+JavaScript what now we use the current
+JavaScript court languages the bases
+
+137
+00:08:41,033 --> 00:08:44,037
+so don't be freaked out when you see 10
+their
+
+138
+00:08:44,073 --> 00:08:47,100
+also make sure that you check
+
+139
+00:08:48,000 --> 00:08:51,339
+the show's script menu and menu bar
+option
+
+140
+00:08:51,339 --> 00:08:55,540
+and what this will do is activate the
+system wide script menu at the top right
+
+141
+00:08:55,054 --> 00:08:56,403
+up your menu bar
+
+142
+00:08:56,889 --> 00:09:01,190
+and from this script menu you can host
+your favorite scripts
+
+143
+00:09:01,019 --> 00:09:05,023
+and you can make them available
+contextually within certain applications
+
+144
+00:09:05,023 --> 00:09:07,037
+so if you write scripts for the Finder
+
+145
+00:09:07,037 --> 00:09:10,105
+they can only appear the finders there
+are few write scripts four pages
+
+146
+00:09:11,005 --> 00:09:14,030
+the only pier 1 pages so there it's up
+to you
+
+147
+00:09:14,003 --> 00:09:17,072
+the script menu run shell scripts
+AppleScript applications workflows
+
+148
+00:09:17,099 --> 00:09:19,100
+JavaScript
+
+149
+00:09:20,000 --> 00:09:23,339
+any kind scripting language supported by
+the operating system
+
+150
+00:09:23,339 --> 00:09:27,310
+can run from the script min so you'll be
+taking advantage of that
+
+151
+00:09:27,031 --> 00:09:32,116
+in addition if you want to set certain
+coloring for you the code that you use
+
+152
+00:09:33,016 --> 00:09:37,021
+this formatting pain is where you'll do
+that you can choose fonts font size and
+
+153
+00:09:37,066 --> 00:09:37,795
+coloring
+
+154
+00:09:38,389 --> 00:09:43,300
+to apply to fit comfortably with what
+your use too
+
+155
+00:09:43,003 --> 00:09:46,592
+next I like to look at dictionaries
+
+156
+00:09:46,889 --> 00:09:49,952
+now in the operating system every
+scriptable
+
+157
+00:09:50,519 --> 00:09:53,582
+application carries internally within
+its bundle
+
+158
+00:09:54,149 --> 00:09:58,670
+a complete dictionary of all the term
+said it understands
+
+159
+00:09:58,067 --> 00:10:02,079
+it will list all the class sense at all
+the methods in the commands in the
+
+160
+00:10:02,079 --> 00:10:04,068
+properties and elements
+
+161
+00:10:04,779 --> 00:10:09,820
+that is for mayor with so this is where
+you will go to learn about how to
+
+162
+00:10:09,082 --> 00:10:11,163
+control a particular application
+
+163
+00:10:12,063 --> 00:10:15,122
+and what you do is you choose Open
+dictionary from the File menu
+
+164
+00:10:16,022 --> 00:10:19,381
+and in the forthcoming dialog choose an
+application
+
+165
+00:10:19,579 --> 00:10:23,623
+when you do that York see a script
+viewer window like this one for the
+
+166
+00:10:24,019 --> 00:10:24,800
+keynote
+
+167
+00:10:24,008 --> 00:10:27,014
+dictionary and this is
+
+168
+00:10:27,086 --> 00:10:31,150
+what you see when you I'll look at an
+application scripting dictionary and
+
+169
+00:10:32,005 --> 00:10:36,154
+this is what you will do to navigate
+that dictionary
+
+170
+00:10:36,649 --> 00:10:41,500
+at the top is a language button so this
+dictionary fewer functions
+
+171
+00:10:41,005 --> 00:10:44,016
+for all the scripting languages we
+support so
+
+172
+00:10:44,061 --> 00:10:47,790
+it supports JavaScript AppleScript or
+objective c-
+
+173
+00:10:48,339 --> 00:10:51,375
+and you can change the mode for viewing
+the content
+
+174
+00:10:51,699 --> 00:10:54,790
+right from this menu now
+
+175
+00:10:54,079 --> 00:10:59,048
+at the top part love this window the top
+pain in this window is the model viewer
+
+176
+00:10:59,759 --> 00:11:01,811
+in this is where you see how the objects
+
+177
+00:11:02,279 --> 00:11:06,730
+in the application scripting model are
+reflected
+
+178
+00:11:06,073 --> 00:11:10,135
+on the left hand side typically a
+scripting dictionary
+
+179
+00:11:11,035 --> 00:11:16,066
+is grouped into sweets and the suites
+are usually grouped by functionality you
+
+180
+00:11:16,066 --> 00:11:17,110
+buy what they do
+
+181
+00:11:18,001 --> 00:11:22,050
+in this particular example you'll see
+that there's multiple sweet
+
+182
+00:11:22,149 --> 00:11:26,157
+their suites for I work because keynote
+is part of the I work family affair
+
+183
+00:11:26,949 --> 00:11:28,550
+plications
+
+184
+00:11:28,055 --> 00:11:32,092
+the I work sweets upcoming objects in
+common commands
+
+185
+00:11:32,092 --> 00:11:35,881
+are included there and then keynote has
+its own sweet
+
+186
+00:11:36,709 --> 00:11:40,721
+are things that are particular for the
+keynote application
+
+187
+00:11:40,829 --> 00:11:45,380
+and then once a sweet is selected you'll
+see in the next column
+
+188
+00:11:45,038 --> 00:11:50,987
+the methods and the classes that belong
+to that particular sweet so here we have
+
+189
+00:11:51,329 --> 00:11:57,050
+commands like export we would export a
+project presentation EC classes like
+
+190
+00:11:57,005 --> 00:11:58,032
+document
+
+191
+00:11:58,032 --> 00:12:01,101
+and then when you select the class
+you'll see he
+
+192
+00:12:01,389 --> 00:12:04,670
+elements X that belong to that class
+
+193
+00:12:04,067 --> 00:12:07,149
+in the right hand column and also the
+properties
+
+194
+00:12:08,049 --> 00:12:11,085
+I love that particular class in here you
+see the properties
+
+195
+00:12:11,085 --> 00:12:14,086
+I love a keynote document
+
+196
+00:12:14,086 --> 00:12:17,565
+now for further information in detail
+about these
+
+197
+00:12:18,339 --> 00:12:21,420
+in the bottom half for the Windows the
+dictionary viewer
+
+198
+00:12:22,149 --> 00:12:26,500
+and the dictionary viewer contains the
+definitions for all those particular
+
+199
+00:12:26,005 --> 00:12:27,018
+elements
+
+200
+00:12:27,063 --> 00:12:30,069
+so when you want to know about why
+hideaway script the Finder hideaway
+
+201
+00:12:31,023 --> 00:12:32,492
+script numbers
+
+202
+00:12:32,699 --> 00:12:36,380
+how do I skip keynote how do I script
+aperture
+
+203
+00:12:36,038 --> 00:12:39,131
+you open a dictionary and this is where
+you learn and explore
+
+204
+00:12:40,031 --> 00:12:43,550
+to find out how to control those
+applications
+
+205
+00:12:43,829 --> 00:12:49,050
+so that's the scripting dictionary and
+that's the script editor application
+
+206
+00:12:49,005 --> 00:12:53,794
+so let me get out of the way and bring
+up David sign bird
+
+207
+00:12:53,839 --> 00:12:56,895
+whose the newest member of our team to
+show you
+
+208
+00:12:57,399 --> 00:13:02,240
+JavaScript rodham Asian enjoy this
+
+209
+00:13:02,024 --> 00:13:05,085
+thank you sell hello everyone thank you
+for being here
+
+210
+00:13:05,085 --> 00:13:09,087
+I it's a great honor I'm really excited
+to be showing this awesome new feature
+
+211
+00:13:09,087 --> 00:13:13,106
+OS 10 yosemite JavaScript for automation
+
+212
+00:13:14,006 --> 00:13:17,093
+so today's talk will cover what
+JavaScript for automation is
+
+213
+00:13:17,093 --> 00:13:20,188
+and how it works how you can use
+JavaScript rodham Asian
+
+214
+00:13:21,088 --> 00:13:25,047
+from basic to more advanced techniques
+and finally we'll talk about where you
+
+215
+00:13:25,839 --> 00:13:28,937
+can use JavaScript rodham Asian
+
+216
+00:13:29,819 --> 00:13:32,857
+to talk about what JavaScript
+proclamation is
+
+217
+00:13:33,199 --> 00:13:36,286
+let's take a look at the underlying
+pieces
+
+218
+00:13:37,069 --> 00:13:40,114
+automation allows you to accomplish
+tasks on your Mac
+
+219
+00:13:40,519 --> 00:13:45,526
+automatically from simple tasks such as
+changing the name to 100 files
+
+220
+00:13:45,589 --> 00:13:48,633
+all at once to more complex tasks
+
+221
+00:13:49,029 --> 00:13:54,600
+such as sending personalized directions
+to guests before party you're having
+
+222
+00:13:54,006 --> 00:13:58,101
+I'd like to demonstrate the power
+automation to you now
+
+223
+00:13:59,055 --> 00:14:02,704
+so I were cracking widgets were company
+that makes widgets
+
+224
+00:14:03,199 --> 00:14:06,930
+as you might expect we have three main
+clients Japan
+
+225
+00:14:06,093 --> 00:14:09,179
+USA and across Europe I'm here i've a
+chart detailing
+
+226
+00:14:10,079 --> 00:14:13,080
+summer widgets prices in the region's
+they go to
+
+227
+00:14:13,008 --> 00:14:16,917
+and in particular currency and so on and
+now I have
+
+228
+00:14:17,709 --> 00:14:21,000
+4 upcoming presentations first
+
+229
+00:14:21,000 --> 00:14:24,067
+I have to give a presentation to the
+president of the company about all the
+
+230
+00:14:24,067 --> 00:14:24,716
+regions
+
+231
+00:14:25,319 --> 00:14:29,100
+that we work with all other individual
+prices currencies and so on
+
+232
+00:14:29,001 --> 00:14:32,063
+and I have to give presentations to each
+those regions
+
+233
+00:14:32,072 --> 00:14:36,099
+only detailing the particular
+information that pertains to that region
+
+234
+00:14:36,099 --> 00:14:39,166
+so now I'm thinking okay for keynote I
+have to make
+
+235
+00:14:40,066 --> 00:14:43,104
+what start with the first I have all my
+data here
+
+236
+00:14:44,004 --> 00:14:48,353
+format as I wanted I have some images
+that I can use related to this data
+
+237
+00:14:48,389 --> 00:14:51,440
+I write a script that does this for me
+
+238
+00:14:51,899 --> 00:14:55,810
+well I've done just that so here I have
+a script
+
+239
+00:14:55,081 --> 00:14:58,084
+don't worry about understanding all a
+bit at the moment but the dumpster Prada
+
+240
+00:14:59,011 --> 00:15:00,072
+mation script that uses
+
+241
+00:15:00,072 --> 00:15:05,074
+this numbers document and produces a
+full slide deck for me in keno
+
+242
+00:15:05,074 --> 00:15:09,143
+so if I run this here we see our slides
+are being created for us
+
+243
+00:15:10,043 --> 00:15:14,192
+with the information that we got from
+that data
+
+244
+00:15:14,579 --> 00:15:17,654
+and now we have an entire slide deck
+ready for my president to see
+
+245
+00:15:18,329 --> 00:15:21,610
+detailing all OVR widgets their prices
+per region
+
+246
+00:15:21,061 --> 00:15:24,122
+currency and so on is perfect okay
+
+247
+00:15:25,022 --> 00:15:29,761
+some Cup list one completely
+automatically I've three more to do
+
+248
+00:15:29,959 --> 00:15:33,430
+and each of those are going to be pretty
+much the exact same
+
+249
+00:15:33,043 --> 00:15:36,074
+same number of slides same images same
+information
+
+250
+00:15:36,074 --> 00:15:39,118
+changed per region particular currency
+and so on
+
+251
+00:15:40,018 --> 00:15:44,050
+and in fact all the information is
+already in this presentation I have here
+
+252
+00:15:44,005 --> 00:15:48,013
+I just need to slim it down for each
+version sorrow myself helper script
+
+253
+00:15:49,003 --> 00:15:52,592
+a menu that multiple times so I put my
+script menu
+
+254
+00:15:52,889 --> 00:15:56,908
+and what this does is it let me say
+where my presenting today
+
+255
+00:15:57,079 --> 00:16:00,430
+well today many presenting in Japan so I
+guess
+
+256
+00:16:00,043 --> 00:16:03,104
+slimmed-down Mikey now the few slides
+that are important
+
+257
+00:16:04,004 --> 00:16:08,018
+but presentation mode and unable to go
+hello everyone thank you for being here
+
+258
+00:16:08,018 --> 00:16:11,277
+let's talk about prices it's been a real
+pleasure have a good day
+
+259
+00:16:11,439 --> 00:16:14,800
+now okay right now
+
+260
+00:16:14,008 --> 00:16:17,027
+I me begin the presentation the USA
+
+261
+00:16:17,819 --> 00:16:21,490
+okay I don't wanna make another slide
+tackle together I'm going to use my nice
+
+262
+00:16:21,049 --> 00:16:21,141
+little helper here
+
+263
+00:16:22,041 --> 00:16:25,135
+USA hello everybody thank you for being
+here let's talk some dollars it's been a
+
+264
+00:16:26,035 --> 00:16:28,084
+real pleasure have a nice day
+
+265
+00:16:28,399 --> 00:16:32,610
+beautiful bed and higher entire
+automated will process
+
+266
+00:16:32,061 --> 00:16:35,137
+was automated for me we just a couple
+little script that I wrote
+
+267
+00:16:36,037 --> 00:16:39,696
+that made my life easier got my work
+done faster
+
+268
+00:16:40,029 --> 00:16:47,029
+and that is the PowerVault nation
+
+269
+00:16:49,022 --> 00:16:52,081
+those demos were made possible by
+scripting applications
+
+270
+00:16:52,081 --> 00:16:55,137
+and applications that are built using
+cocoa automatically have a certain level
+
+271
+00:16:56,037 --> 00:16:57,306
+the script ability
+
+272
+00:16:57,639 --> 00:17:01,050
+such as being able to be told to open or
+to print
+
+273
+00:17:01,005 --> 00:17:05,005
+and a wide variety of applications have
+fully embraced script ability
+
+274
+00:17:05,005 --> 00:17:08,100
+detailing the object model at the
+application and offering rich sweet the
+
+275
+00:17:09,000 --> 00:17:14,000
+functionality beyond the basics
+
+276
+00:17:14,000 --> 00:17:18,086
+Apple events underlying communication
+mechanism behind application scripting
+
+277
+00:17:18,086 --> 00:17:22,133
+they provide access to the scriptable
+pieces and parts of an application
+
+278
+00:17:23,033 --> 00:17:26,124
+that are defined an application
+scripting dictionary cell showed
+
+279
+00:17:27,024 --> 00:17:30,056
+detailing what objects can be interacted
+with and how
+
+280
+00:17:30,056 --> 00:17:34,077
+so when the script an application and
+whatever language you may
+
+281
+00:17:34,077 --> 00:17:37,175
+it scripting dictionary is red an Apple
+event for use to communicate with the
+
+282
+00:17:38,075 --> 00:17:39,083
+application
+
+283
+00:17:40,055 --> 00:17:44,069
+let's take a look at an example of an
+object model
+
+284
+00:17:44,069 --> 00:17:47,132
+there we have mail but as an application
+object
+
+285
+00:17:48,032 --> 00:17:51,040
+with an inbox property with the messages
+
+286
+00:17:51,004 --> 00:17:55,012
+elementary with each element
+individually accessible
+
+287
+00:17:55,048 --> 00:17:58,085
+so for example we can pinpoint the
+second messenger the
+
+288
+00:17:58,085 --> 00:18:01,093
+in box on the application male as an
+object specifier
+
+289
+00:18:02,065 --> 00:18:08,078
+or a reference to that particular object
+in that particular application
+
+290
+00:18:08,078 --> 00:18:11,130
+this is great we look really closely at
+the things behind automation
+
+291
+00:18:12,003 --> 00:18:15,090
+an application scripting now let's talk
+about JavaScript
+
+292
+00:18:16,017 --> 00:18:19,076
+have a powerful automation was brought
+to it
+
+293
+00:18:19,076 --> 00:18:22,151
+JavaScript is a scripting language with
+C like syntax
+
+294
+00:18:23,051 --> 00:18:26,056
+and objects a prototype based
+inheritance its most well known in a
+
+295
+00:18:27,001 --> 00:18:27,079
+browser
+
+296
+00:18:27,079 --> 00:18:30,173
+being in the scripting language image
+team of five but it's also become quite
+
+297
+00:18:31,073 --> 00:18:33,076
+popular as a server-side scripting
+language
+
+298
+00:18:34,003 --> 00:18:37,051
+evidenced by node.js JavaScript
+
+299
+00:18:37,051 --> 00:18:41,062
+analyst 10 is powered by JavaScript core
+the engine used by WebKit
+
+300
+00:18:41,062 --> 00:18:45,079
+and so far JavaScript for automation
+
+301
+00:18:45,079 --> 00:18:50,094
+is built on JavaScript core using the
+modern JavaScript environment
+
+302
+00:18:50,094 --> 00:18:53,100
+and the kind of service ie JavaScript or
+as we like to call it
+
+303
+00:18:54,054 --> 00:18:58,128
+OS automation JavaScript and what the
+underlying engine is the same
+
+304
+00:18:59,028 --> 00:19:03,034
+just a proclamation is quite different
+from running scripts in your browser
+
+305
+00:19:03,034 --> 00:19:07,083
+when used as capron mention you can do
+everything that you as the Mac user can
+
+306
+00:19:07,083 --> 00:19:07,157
+do
+
+307
+00:19:08,057 --> 00:19:10,148
+this is very different from browser
+scripts that don't have access to your
+
+308
+00:19:11,048 --> 00:19:12,056
+personal data
+
+309
+00:19:12,056 --> 00:19:16,062
+the applications on your Mac and browser
+scripts you might expect the window
+
+310
+00:19:17,016 --> 00:19:18,095
+object or a document object
+
+311
+00:19:18,095 --> 00:19:21,098
+not gonna have those here you have a
+host a different objects you can
+
+312
+00:19:21,098 --> 00:19:21,180
+interact with
+
+313
+00:19:22,008 --> 00:19:26,023
+automate your Mac so how exactly was
+this brought
+
+314
+00:19:26,095 --> 00:19:30,178
+to JavaScript what a recap applications
+have scripting dictionaries
+
+315
+00:19:31,078 --> 00:19:35,086
+detail what can be interacted with and
+how an Apple event to use to communicate
+
+316
+00:19:35,086 --> 00:19:37,100
+with those applications
+
+317
+00:19:38,000 --> 00:19:42,052
+to bring us the JavaScript core we got
+the JavaScript Apple event bridge
+
+318
+00:19:42,052 --> 00:19:46,061
+that reads those scripting dictionaries
+and then use Apple events to communicate
+
+319
+00:19:46,061 --> 00:19:47,158
+with the applications
+
+320
+00:19:48,058 --> 00:19:51,065
+another we've seen what does get Prada
+mission is
+
+321
+00:19:51,065 --> 00:19:55,118
+and how it works let's look at how we
+can use JavaScript proclamation
+
+322
+00:19:56,018 --> 00:20:02,047
+beginning with scripting applications
+
+323
+00:20:02,047 --> 00:20:06,047
+we introduce a application object into a
+javascript context
+
+324
+00:20:06,047 --> 00:20:09,079
+which is the main entrance point all the
+scriptable pieces and parts of an
+
+325
+00:20:09,079 --> 00:20:10,128
+application
+
+326
+00:20:11,028 --> 00:20:14,057
+sup the most common way to access an
+application
+
+327
+00:20:14,057 --> 00:20:18,090
+is by name here accessing Safari
+application
+
+328
+00:20:18,009 --> 00:20:21,080
+and beyond name we can also access
+applications by bundle ID
+
+329
+00:20:22,061 --> 00:20:25,140
+bypass by process ID
+
+330
+00:20:26,004 --> 00:20:30,067
+and we can get the application that's
+running the script we're currently
+
+331
+00:20:31,003 --> 00:20:35,006
+n by getting the current application
+
+332
+00:20:35,006 --> 00:20:38,079
+so now we have this application object
+we're gonna want to interact with
+
+333
+00:20:38,079 --> 00:20:43,086
+let's look at some examples the syntax
+for doing just that
+
+334
+00:20:44,049 --> 00:20:48,050
+accessing properties is accomplished
+using dot notation
+
+335
+00:20:48,059 --> 00:20:51,144
+to access elements do you square
+brackets
+
+336
+00:20:52,044 --> 00:20:55,109
+to call commands you call them as
+functions
+
+337
+00:20:56,009 --> 00:20:59,014
+using print the Seas and you can create
+new objects
+
+338
+00:20:59,059 --> 00:21:04,143
+by calling class constructors as
+functions again using practices
+
+339
+00:21:05,043 --> 00:21:10,061
+Satsuki getting and setting properties
+but they were scripting Safari
+
+340
+00:21:10,061 --> 00:21:14,075
+we create a reference to the first
+documented Safari
+
+341
+00:21:14,075 --> 00:21:18,082
+and now we can do things like get the
+documents URL
+
+342
+00:21:19,045 --> 00:21:23,133
+see apprentices at the end we're calling
+this property as a function
+
+343
+00:21:24,033 --> 00:21:27,096
+because we want to actually send the get
+event to the application
+
+344
+00:21:27,096 --> 00:21:31,137
+and get the string value we don't simply
+won a reference to the URL in the
+
+345
+00:21:32,037 --> 00:21:32,119
+document
+
+346
+00:21:33,019 --> 00:21:36,086
+you wanna call it as a function and get
+that string value
+
+347
+00:21:36,086 --> 00:21:39,144
+we can also set the documents URL and
+this
+
+348
+00:21:40,044 --> 00:21:45,117
+sends the set event to the application
+actually sets the URL
+
+349
+00:21:46,017 --> 00:21:49,022
+let's say you want to get a particular
+window and Safari
+
+350
+00:21:49,022 --> 00:21:52,025
+well there are three ways to access
+elements
+
+351
+00:21:52,025 --> 00:21:57,047
+jobs for Prada mention by index
+
+352
+00:21:57,047 --> 00:22:00,144
+by name and by I D
+
+353
+00:22:01,044 --> 00:22:04,055
+it has benefits and risks associated
+with it and it's important to understand
+
+354
+00:22:04,055 --> 00:22:06,140
+the object model that the application
+that you're scripting
+
+355
+00:22:07,004 --> 00:22:11,008
+to know when it's best to use which
+
+356
+00:22:11,044 --> 00:22:15,133
+so already with just these basics
+beginning some pretty amazing things
+
+357
+00:22:16,033 --> 00:22:21,132
+let's put it to use first I'd like to
+just open up script editor
+
+358
+00:22:22,032 --> 00:22:25,060
+got a little JavaScript here just ray
+JavaScript
+
+359
+00:22:25,006 --> 00:22:28,007
+creating a string some text
+
+360
+00:22:28,007 --> 00:22:32,030
+and then I'm going to use Council lot
+lot to say I expect in JavaScript to
+
+361
+00:22:32,093 --> 00:22:33,187
+lock this text
+
+362
+00:22:34,087 --> 00:22:37,128
+and I log this it's going to show up in
+the event lock
+
+363
+00:22:38,028 --> 00:22:41,082
+and a lower panel summer open the event
+log
+
+364
+00:22:41,082 --> 00:22:45,114
+and if I run the script we see hello
+world was line just like we wanted
+
+365
+00:22:46,014 --> 00:22:50,051
+this is great this in the JavaScript I'm
+used to and doing exactly what we wanted
+
+366
+00:22:50,051 --> 00:22:53,090
+this is hugely useful for debugging we
+can log transcript to see what's going
+
+367
+00:22:53,009 --> 00:22:54,014
+on
+
+368
+00:22:55,004 --> 00:22:58,076
+but let's say I wanted to write some
+taxed and I want it to exist even
+
+369
+00:22:59,012 --> 00:23:02,089
+after I quit script editor or perhaps on
+a style that text
+
+370
+00:23:02,089 --> 00:23:05,122
+change its finder color and so on
+
+371
+00:23:06,022 --> 00:23:12,027
+now we can start interacting with
+applications to accomplish that
+
+372
+00:23:12,027 --> 00:23:15,116
+so here we have a text that the document
+name flock how many users across a
+
+373
+00:23:16,016 --> 00:23:16,113
+couple demos
+
+374
+00:23:17,013 --> 00:23:20,089
+to write some text first
+
+375
+00:23:20,089 --> 00:23:25,093
+this is a simple script we access the
+text that application
+
+376
+00:23:26,029 --> 00:23:29,042
+we get a reference to the log document
+
+377
+00:23:29,042 --> 00:23:32,075
+then we set the documents text and we
+style it's fine
+
+378
+00:23:32,075 --> 00:23:35,131
+size and color so before I run this
+
+379
+00:23:36,031 --> 00:23:39,059
+I'm gonna open the event log and will be
+able to see the events that are being
+
+380
+00:23:39,059 --> 00:23:40,114
+sent to this application
+
+381
+00:23:41,014 --> 00:23:44,077
+to accomplish this so when I run this
+script
+
+382
+00:23:44,077 --> 00:23:47,118
+we see I love JavaScript was like just
+like we wanted
+
+383
+00:23:48,018 --> 00:23:51,034
+style just like we wanted and the bottom
+here we see
+
+384
+00:23:51,034 --> 00:23:54,040
+all the events that were sent to
+accomplish this task
+
+385
+00:23:54,094 --> 00:23:57,167
+so this is great we have some persistent
+taxed it's been beautified just like we
+
+386
+00:23:58,067 --> 00:23:58,076
+wanted
+
+387
+00:23:59,057 --> 00:24:02,102
+but what we want to do this multiple
+times in the same script
+
+388
+00:24:03,002 --> 00:24:06,073
+well instead of repeating the
+functionality again and again
+
+389
+00:24:06,073 --> 00:24:09,145
+we're playing in javascript we can write
+a function
+
+390
+00:24:10,045 --> 00:24:13,112
+I've done just that here we have a
+function
+
+391
+00:24:14,012 --> 00:24:18,029
+the exception tax the log an optional
+formatting parameter
+
+392
+00:24:18,029 --> 00:24:21,104
+then just like before we access the text
+that
+
+393
+00:24:22,004 --> 00:24:26,052
+she's me the text that application we
+get reference to log document
+
+394
+00:24:26,052 --> 00:24:29,098
+but now instead of setting the documents
+entire text
+
+395
+00:24:29,098 --> 00:24:32,101
+we're going to appended to the last
+paragraph
+
+396
+00:24:33,001 --> 00:24:36,006
+the Madonna style based on formatting
+you pass n
+
+397
+00:24:36,006 --> 00:24:39,088
+was in default values now we have our
+lock
+
+398
+00:24:39,088 --> 00:24:42,165
+we call it three times at bottom here
+passing and parameters
+
+399
+00:24:43,065 --> 00:24:47,079
+for formatting twice the last time we
+use default values
+
+400
+00:24:47,079 --> 00:24:50,103
+so high running a script
+
+401
+00:24:51,003 --> 00:24:54,004
+we see that our text was logged just
+like we wanted
+
+402
+00:24:54,004 --> 00:24:58,059
+styled as we wanted this is great reblog
+as many times as we want
+
+403
+00:24:58,059 --> 00:25:01,127
+style any different way that we choose
+every single time
+
+404
+00:25:02,027 --> 00:25:05,099
+sauce this is powerful stuff simply by
+accessing
+
+405
+00:25:05,099 --> 00:25:08,132
+an application an element and a couple
+properties
+
+406
+00:25:09,032 --> 00:25:12,111
+right out of the box power at your
+fingertips and it's really easy to
+
+407
+00:25:13,011 --> 00:25:17,015
+approach
+
+408
+00:25:17,015 --> 00:25:21,091
+some other ways that we might when
+interactive applications
+
+409
+00:25:21,091 --> 00:25:25,103
+what they were skipping now everyone
+access some of the messages in our inbox
+
+410
+00:25:26,003 --> 00:25:29,011
+but we don't want the entire messages
+element Arabian box that's a whole lotta
+
+411
+00:25:29,083 --> 00:25:30,084
+messages
+
+412
+00:25:30,093 --> 00:25:33,124
+usually letting wanna get
+
+413
+00:25:34,024 --> 00:25:39,035
+only the messages whose subject is
+JavaScript using the special whose
+
+414
+00:25:39,035 --> 00:25:39,090
+method
+
+415
+00:25:39,009 --> 00:25:42,090
+a felony to raise we can do just that by
+passing a dictionary
+
+416
+00:25:43,071 --> 00:25:47,119
+of properties would like to match on
+those elements we now receive an array
+
+417
+00:25:48,019 --> 00:25:53,030
+only containing the elements that match
+
+418
+00:25:53,003 --> 00:25:56,034
+objects have certain commands that they
+can respond to
+
+419
+00:25:56,061 --> 00:25:59,158
+and you can call this command as methods
+locally that send the command events to
+
+420
+00:26:00,058 --> 00:26:02,071
+the application
+
+421
+00:26:02,071 --> 00:26:05,105
+so again but they were stripping now
+
+422
+00:26:06,005 --> 00:26:09,011
+we have a reference to the first message
+in our inbox
+
+423
+00:26:09,011 --> 00:26:12,012
+and we want to open it well
+
+424
+00:26:12,012 --> 00:26:16,080
+we could tell the message to open we can
+also tell mail to
+
+425
+00:26:16,008 --> 00:26:21,083
+opened the message and both these are
+entirely equivalent
+
+426
+00:26:22,055 --> 00:26:26,092
+some commands take named parameters and
+so you accomplish this by passing a
+
+427
+00:26:26,092 --> 00:26:28,092
+dictionary others named parameters
+
+428
+00:26:28,092 --> 00:26:31,146
+here for example we're creating a reply
+to our message
+
+429
+00:26:32,046 --> 00:26:36,111
+we're going to apply to everybody and
+we're not going to open a window
+
+430
+00:26:37,011 --> 00:26:41,099
+now remember you can always use the
+dictionary viewer in script editor
+
+431
+00:26:41,099 --> 00:26:45,131
+the scene which name parameters go with
+which commands which commands can be
+
+432
+00:26:46,031 --> 00:26:47,096
+called on which objects and so on
+
+433
+00:26:47,096 --> 00:26:50,101
+it's a phenomenal tall and really useful
+when you're building more complex
+
+434
+00:26:51,001 --> 00:26:54,049
+scripts
+
+435
+00:26:54,049 --> 00:26:58,056
+some commands take files as parameters
+such as opening a document
+
+436
+00:26:59,019 --> 00:27:02,063
+using texted to accomplish this
+
+437
+00:27:02,063 --> 00:27:05,071
+we've introduced a path object into the
+environment
+
+438
+00:27:05,071 --> 00:27:08,108
+you construct with a string that has a
+file path inside
+
+439
+00:27:09,008 --> 00:27:12,105
+and now you can use that path object
+anywhere that a file is expected as a
+
+440
+00:27:13,005 --> 00:27:14,066
+parameter
+
+441
+00:27:14,066 --> 00:27:17,094
+so we can open a document just like we
+want it
+
+442
+00:27:17,094 --> 00:27:20,125
+be aware but if you pass a string
+instead of a path
+
+443
+00:27:21,025 --> 00:27:25,109
+wherever files expected you will receive
+an error
+
+444
+00:27:26,009 --> 00:27:29,031
+so so we want to create a document
+instead of simply opening 1
+
+445
+00:27:29,031 --> 00:27:32,059
+in fact that well
+
+446
+00:27:32,059 --> 00:27:37,153
+scripting text that we can call the
+document class constructor as a function
+
+447
+00:27:38,053 --> 00:27:42,071
+but now actually create this object
+inside the application
+
+448
+00:27:42,071 --> 00:27:45,073
+bring it to life we're going to push the
+document
+
+449
+00:27:45,091 --> 00:27:48,188
+onto the documents element array and
+that actually create
+
+450
+00:27:49,088 --> 00:27:52,164
+inside the application then we can
+interact with it just like any other
+
+451
+00:27:53,064 --> 00:27:54,136
+objects inside the application
+
+452
+00:27:55,036 --> 00:27:58,067
+you get that text for example
+
+453
+00:27:58,067 --> 00:28:01,153
+and optionally when you create objects
+you can pass in a dictionary of
+
+454
+00:28:02,053 --> 00:28:02,128
+properties
+
+455
+00:28:03,028 --> 00:28:06,065
+you'd like to have set on that object
+when it's created here
+
+456
+00:28:06,065 --> 00:28:09,072
+we're creating a document passing and
+some text when instantiated
+
+457
+00:28:10,035 --> 00:28:14,040
+we push again under the appropriate
+array and it's created inside the
+
+458
+00:28:14,004 --> 00:28:14,091
+application
+
+459
+00:28:15,027 --> 00:28:20,051
+living and breathing ready for us to
+interact with so this is a wide range of
+
+460
+00:28:20,051 --> 00:28:20,140
+functionality
+
+461
+00:28:21,004 --> 00:28:25,009
+inherently available applications
+property access element access
+
+462
+00:28:25,045 --> 00:28:28,119
+con command creating objects but there
+are script
+
+463
+00:28:29,019 --> 00:28:33,068
+plugins funds for scripts and allow you
+to extend the functionality of an
+
+464
+00:28:33,068 --> 00:28:34,105
+application
+
+465
+00:28:35,005 --> 00:28:38,089
+and the OS has a set of standard
+scripting additions
+
+466
+00:28:38,089 --> 00:28:42,101
+ships these are available from every
+scripting environment
+
+467
+00:28:43,001 --> 00:28:47,009
+including JavaScript proclamation so
+let's say that we're scripting the
+
+468
+00:28:47,009 --> 00:28:48,056
+current application
+
+469
+00:28:48,056 --> 00:28:51,131
+I want to be able to use the standard
+additions to do so
+
+470
+00:28:52,031 --> 00:28:56,065
+we're going to set the include standard
+additions flag to true
+
+471
+00:28:56,065 --> 00:28:59,081
+and then we can do things I tell the
+application to beat
+
+472
+00:28:59,081 --> 00:29:04,096
+which is hugely useful for debugging
+tell the application to speak some text
+
+473
+00:29:04,096 --> 00:29:07,109
+which extend the functionality to a
+wider audience
+
+474
+00:29:08,009 --> 00:29:11,066
+we can also do things like display
+alerts and dialogues which is great
+
+475
+00:29:11,066 --> 00:29:12,105
+because now we have used in our
+
+476
+00:29:13,005 --> 00:29:18,087
+skinny user interaction incorporated
+with scripting applications
+
+477
+00:29:18,087 --> 00:29:21,125
+so we've covered a lot of different ways
+that we can actually script applications
+
+478
+00:29:22,025 --> 00:29:24,074
+their object models and so on
+
+479
+00:29:24,074 --> 00:29:29,108
+let's look at other uses have javascript
+running mission
+
+480
+00:29:30,008 --> 00:29:33,015
+remember earlier me wrapped the logging
+functionality and functions we can use
+
+481
+00:29:33,078 --> 00:29:35,145
+it multiple times from one script
+
+482
+00:29:36,045 --> 00:29:40,109
+what they want to log from multiple
+scripts not just one
+
+483
+00:29:41,009 --> 00:29:44,084
+this is the perfect use a library
+
+484
+00:29:44,084 --> 00:29:47,087
+I've taken that log function and I've
+saved in a script
+
+485
+00:29:48,014 --> 00:29:51,043
+named cool box in the script libraries
+folder
+
+486
+00:29:51,043 --> 00:29:54,062
+and now I can access this library and
+its functions from
+
+487
+00:29:54,062 --> 00:29:58,106
+any other script and i right to
+accomplish this
+
+488
+00:29:59,006 --> 00:30:02,037
+I instantiate a library object by name
+
+489
+00:30:02,037 --> 00:30:05,046
+and file extension is optional and then
+
+490
+00:30:05,046 --> 00:30:09,091
+I can call those functions as methods on
+that library object
+
+491
+00:30:09,091 --> 00:30:12,174
+so this code would log just like we did
+before and the beautiful thing about
+
+492
+00:30:13,074 --> 00:30:13,169
+libraries
+
+493
+00:30:14,069 --> 00:30:17,090
+as they can be written in JavaScript and
+AppleScript
+
+494
+00:30:17,009 --> 00:30:20,076
+and used from JavaScript for automation
+
+495
+00:30:21,057 --> 00:30:25,094
+so now let's take a look how to create
+app lets using javascript for automation
+
+496
+00:30:25,094 --> 00:30:29,112
+app lets our applications saved by
+script editor
+
+497
+00:30:30,012 --> 00:30:35,026
+when you run an outlet the script saved
+inside this run
+
+498
+00:30:35,026 --> 00:30:38,098
+adults have a certain number about
+events that you can create handlers for
+
+499
+00:30:38,098 --> 00:30:43,127
+such as when the apparatus run when the
+app lets told open documents or print
+
+500
+00:30:44,027 --> 00:30:45,051
+documents
+
+501
+00:30:45,051 --> 00:30:49,102
+there's a special idle handler that
+allows you to perform periodic tasks
+
+502
+00:30:50,002 --> 00:30:53,074
+and you can also create handlers for one
+ap lit is reopened
+
+503
+00:30:53,074 --> 00:30:56,119
+when an app that is quick and just like
+libraries
+
+504
+00:30:57,019 --> 00:31:01,097
+you can have any other functions inside
+your ap lit and those can be called
+
+505
+00:31:01,097 --> 00:31:05,122
+first take a look at an example a basic
+ap lit that uses
+
+506
+00:31:06,022 --> 00:31:09,091
+a script library
+
+507
+00:31:09,091 --> 00:31:12,097
+here we have a large document like
+before
+
+508
+00:31:12,097 --> 00:31:17,101
+and let's look at the script inside this
+applicator
+
+509
+00:31:18,037 --> 00:31:21,080
+at the top we instantiate our toolbox
+library
+
+510
+00:31:21,008 --> 00:31:24,019
+then in our run handler we log Ron
+
+511
+00:31:24,091 --> 00:31:28,092
+in green in our idle handler we lie idle
+in orange
+
+512
+00:31:28,092 --> 00:31:31,125
+and in our quit handler Wheelock quit in
+red
+
+513
+00:31:32,025 --> 00:31:35,071
+so if I double clicked this ap lit to
+run it
+
+514
+00:31:35,071 --> 00:31:38,154
+we see that running idle were logged
+just like we wanted
+
+515
+00:31:39,054 --> 00:31:43,152
+and if I go and quit the ap lit we see
+that quit was also locked
+
+516
+00:31:44,052 --> 00:31:47,059
+which is great this is exactly what we
+wanted
+
+517
+00:31:47,059 --> 00:31:50,135
+this is a very basic example using a
+couple handlers an app witnessing a
+
+518
+00:31:51,035 --> 00:31:51,112
+library
+
+519
+00:31:52,012 --> 00:31:56,075
+but imagine the possibilities here this
+is double clickable JavaScript sitting
+
+520
+00:31:56,075 --> 00:31:57,083
+on my desktop
+
+521
+00:31:57,083 --> 00:32:00,084
+ready to interact with all the
+scriptable applications
+
+522
+00:32:00,093 --> 00:32:03,104
+script libraries and more
+
+523
+00:32:04,004 --> 00:32:07,069
+speaking of more we've looked at
+scripting the object model of an
+
+524
+00:32:07,069 --> 00:32:08,117
+application extensively
+
+525
+00:32:09,017 --> 00:32:14,024
+what you wanna script the user interface
+an application
+
+526
+00:32:14,087 --> 00:32:17,102
+this is accomplished by using
+accessibility
+
+527
+00:32:18,002 --> 00:32:22,011
+which allows applications on your Mac to
+interact with your Mac
+
+528
+00:32:22,011 --> 00:32:27,088
+on your behalf system events uses the
+accessibility API's to expose the user
+
+529
+00:32:27,088 --> 00:32:28,160
+interface and application
+
+530
+00:32:29,006 --> 00:32:33,015
+and in JavaScript proclamation you use
+the system event application
+
+531
+00:32:33,069 --> 00:32:36,071
+to access the pieces and parts a user
+interface
+
+532
+00:32:36,071 --> 00:32:39,139
+first look at an example
+
+533
+00:32:40,039 --> 00:32:43,117
+first we're going to access the system
+event application
+
+534
+00:32:44,017 --> 00:32:47,070
+then we're going to access the notes
+process
+
+535
+00:32:47,007 --> 00:32:50,101
+above the system advanced processes
+element iraq I'm gonna send it to a
+
+536
+00:32:51,064 --> 00:32:51,071
+variable
+
+537
+00:32:52,034 --> 00:32:55,066
+notes you why now we can do things
+
+538
+00:32:55,066 --> 00:32:59,079
+like close the window by clicking the
+first but not the first window
+
+539
+00:32:59,079 --> 00:33:03,161
+notes user interface but i wanna send
+some key strokes in this application
+
+540
+00:33:04,061 --> 00:33:08,069
+what to do so run access then notes
+application itself
+
+541
+00:33:09,041 --> 00:33:12,105
+and activate it bringing it to the front
+and then
+
+542
+00:33:13,005 --> 00:33:16,098
+we can call the system events keystroke
+command
+
+543
+00:33:16,098 --> 00:33:19,191
+passing in am using command down the
+similar to minimize
+
+544
+00:33:20,091 --> 00:33:23,190
+event to use accessibility
+
+545
+00:33:24,009 --> 00:33:27,075
+must be enabled in the privacy
+preferences for applications like script
+
+546
+00:33:28,056 --> 00:33:29,128
+editor and so on the use it
+
+547
+00:33:30,028 --> 00:33:33,035
+and the first time you try to use
+accessibility you will be prompted to
+
+548
+00:33:33,035 --> 00:33:35,041
+enable it
+
+549
+00:33:35,041 --> 00:33:38,123
+okay so what it another way description
+application its user interface
+
+550
+00:33:39,023 --> 00:33:43,037
+we looked at scripting object models
+library is an app lets
+
+551
+00:33:43,037 --> 00:33:47,092
+now let's look at a more advanced use
+JavaScript rodham Asian
+
+552
+00:33:47,092 --> 00:33:50,149
+using system API's which provide access
+
+553
+00:33:51,049 --> 00:33:54,092
+to really powerful and important things
+like the filesystem
+
+554
+00:33:54,092 --> 00:33:59,156
+& Co collapse development in javascript
+
+555
+00:34:00,056 --> 00:34:03,128
+we introduce two objects into the
+environment that here means for
+
+556
+00:34:04,028 --> 00:34:04,117
+interacting
+
+557
+00:34:05,017 --> 00:34:08,766
+with system APIs obj see and dollar
+
+558
+00:34:08,919 --> 00:34:11,012
+and for those coming from a browser
+environment dollar may mean something
+
+559
+00:34:11,849 --> 00:34:13,300
+very special to you
+
+560
+00:34:13,003 --> 00:34:17,612
+but in our environment it's a very
+different dollar
+
+561
+00:34:17,909 --> 00:34:22,250
+I'm seeking be used to do things like
+bridging jobs good values
+
+562
+00:34:22,025 --> 00:34:28,098
+into objective-c bridging objective-c
+objects into JavaScript
+
+563
+00:34:28,098 --> 00:34:31,787
+and importing frameworks that you'd like
+to use
+
+564
+00:34:32,669 --> 00:34:36,673
+so once you imported a framework you can
+access it's classes and functions and so
+
+565
+00:34:37,069 --> 00:34:37,123
+on
+
+566
+00:34:37,609 --> 00:34:41,626
+using the dollar object and you can also
+call dollar
+
+567
+00:34:41,779 --> 00:34:45,785
+as a function as a shorthand for
+bridging JavaScript values
+
+568
+00:34:45,839 --> 00:34:49,220
+into objective-c
+
+569
+00:34:49,022 --> 00:34:52,421
+now let's talk about calling methods on
+objects well
+
+570
+00:34:52,619 --> 00:34:56,470
+begin let's look at some objective-c
+code
+
+571
+00:34:56,047 --> 00:35:00,196
+quite simple going to create an ashtray
+ng and everyone to write that string to
+
+572
+00:35:00,619 --> 00:35:02,730
+a file
+
+573
+00:35:02,073 --> 00:35:06,432
+this is the equivalent javascript::write
+a mission code to accomplish this
+
+574
+00:35:07,089 --> 00:35:10,710
+their couple key things to focus on here
+first
+
+575
+00:35:10,071 --> 00:35:14,660
+the Foundation framework is available to
+you out of the box when using javascript
+
+576
+00:35:15,299 --> 00:35:16,303
+for automation
+
+577
+00:35:16,339 --> 00:35:19,980
+so we don't need to import foundation
+
+578
+00:35:19,098 --> 00:35:23,195
+then we use the dollar object to access
+the an ashtray in class
+
+579
+00:35:24,095 --> 00:35:28,166
+we call Alec and because it takes no
+parameters we don't need parentheses
+
+580
+00:35:29,066 --> 00:35:32,675
+we do not use parentheses here then we
+call
+
+581
+00:35:33,269 --> 00:35:37,210
+in it with utf8 string and we're going
+to be passing a parameter
+
+582
+00:35:37,021 --> 00:35:40,620
+so we call it as a function and pass on
+our printer
+
+583
+00:35:40,809 --> 00:35:44,814
+now the method to write to a file is
+takes multiple parameters
+
+584
+00:35:45,309 --> 00:35:48,960
+so we're going to convert the selector
+to a Javascript method
+
+585
+00:35:48,096 --> 00:35:51,103
+name I can cat mating and camel case in
+the pieces together
+
+586
+00:35:52,066 --> 00:35:57,117
+and ima call it as a function passing a
+parameter is in the right order
+
+587
+00:35:58,017 --> 00:36:03,186
+another we've seen how to write to a
+file let's actually see it newt's
+
+588
+00:36:03,339 --> 00:36:07,386
+this is a little script at the top we
+create an ashtray
+
+589
+00:36:07,809 --> 00:36:11,840
+some tax would like to write to a file
+then we created an ashram with a file
+
+590
+00:36:12,119 --> 00:36:12,960
+path
+
+591
+00:36:12,096 --> 00:36:15,115
+and we call the string by expanding till
+then path
+
+592
+00:36:16,015 --> 00:36:19,041
+method on it to get the full path and
+then
+
+593
+00:36:19,041 --> 00:36:23,067
+we write this string to that file and
+when we write this
+
+594
+00:36:23,067 --> 00:36:26,156
+it's going to appear in this folder here
+
+595
+00:36:26,759 --> 00:36:31,400
+so if I run this script of I was created
+
+596
+00:36:31,004 --> 00:36:35,052
+our text was written just like we won
+was a phenomenal ok
+
+597
+00:36:35,088 --> 00:36:38,143
+and this is that simple example but you
+can imagine
+
+598
+00:36:39,043 --> 00:36:43,046
+the power utility that the system APIs
+bring to the JavaScript for automation
+
+599
+00:36:43,046 --> 00:36:45,595
+vir
+
+600
+00:36:46,009 --> 00:36:51,088
+let's look at other ways that we can
+interact with his API's
+
+601
+00:36:51,799 --> 00:36:54,822
+but so we create a new NS half object
+well
+
+602
+00:36:55,029 --> 00:36:58,500
+access its properties already is dot
+notation
+
+603
+00:36:58,005 --> 00:37:02,101
+so can access the running property get
+its boolean value and react accordingly
+
+604
+00:37:03,046 --> 00:37:06,165
+we can also set its launch pad property
+
+605
+00:37:06,579 --> 00:37:10,653
+like so missile actually set it on the
+object
+
+606
+00:37:11,319 --> 00:37:15,720
+an interesting thing but the java script
+writer mission bridge
+
+607
+00:37:15,072 --> 00:37:18,079
+is the bridge nail so nil injected see
+
+608
+00:37:19,042 --> 00:37:22,094
+is somewhat similar to the undefined in
+javascript
+
+609
+00:37:22,094 --> 00:37:25,933
+but they're not exactly the same
+different key ways
+
+610
+00:37:26,779 --> 00:37:29,858
+in objective-c it's absolutely valid
+call a method on and no object
+
+611
+00:37:30,569 --> 00:37:33,594
+and will receive another nail object but
+in javascript
+
+612
+00:37:33,819 --> 00:37:37,824
+if you call a method and undefined
+object you will receive an hour
+
+613
+00:37:38,319 --> 00:37:42,890
+therefore we do not bridge now ended
+undefined we keep it as abridged no
+
+614
+00:37:42,089 --> 00:37:42,173
+object
+
+615
+00:37:43,073 --> 00:37:46,121
+you can interact with
+
+616
+00:37:47,021 --> 00:37:50,115
+said create abridged no object we call
+the dollar function without
+
+617
+00:37:51,015 --> 00:37:56,023
+any parameters by Mike you want to
+create a bridge no object you asking
+
+618
+00:37:56,023 --> 00:38:00,114
+well this allows you to accomplish
+things like passed by reference
+
+619
+00:38:01,014 --> 00:38:04,393
+so here we're creating a new NS XML
+document
+
+620
+00:38:04,519 --> 00:38:08,420
+ever going to pass are bridged no object
+are error variable
+
+621
+00:38:08,042 --> 00:38:12,066
+as the third and final Preminger and
+will happen behind the scenes
+
+622
+00:38:12,066 --> 00:38:17,067
+is a banana error object is created the
+bridge no object will be replaced by
+
+623
+00:38:17,067 --> 00:38:21,100
+and now are error variable a point that
+and we can use that
+
+624
+00:38:22,000 --> 00:38:25,599
+so want to create a document we can
+check if its male
+
+625
+00:38:25,599 --> 00:38:28,720
+by calling the is no method on it and if
+it is nil
+
+626
+00:38:28,072 --> 00:38:31,221
+we could for example log the user info
+from the
+
+627
+00:38:31,869 --> 00:38:37,430
+now populated error object
+
+628
+00:38:37,043 --> 00:38:40,702
+another exciting thing that you can do
+using system the PI's subclassing
+
+629
+00:38:41,089 --> 00:38:42,136
+objects
+
+630
+00:38:42,559 --> 00:38:45,611
+so accomplished this you call the
+register subclass method
+
+631
+00:38:46,079 --> 00:38:49,103
+RC object you pass in a name
+
+632
+00:38:49,319 --> 00:38:53,345
+have your subclass its superclass
+although this is optional
+
+633
+00:38:53,579 --> 00:38:57,700
+and will default to and I subject
+
+634
+00:38:57,007 --> 00:39:00,646
+any protocols that your classmate here
+too
+
+635
+00:39:01,339 --> 00:39:04,920
+properties are defined as an object
+
+636
+00:39:04,092 --> 00:39:08,291
+where the keys are the names are the
+property and values on it typeof the
+
+637
+00:39:09,119 --> 00:39:11,168
+property
+
+638
+00:39:11,609 --> 00:39:15,970
+and Methods are again and object where
+the keys are the selector
+
+639
+00:39:15,097 --> 00:39:18,646
+and the value isn't object detailing the
+types of the method
+
+640
+00:39:19,519 --> 00:39:23,420
+and its implementation now if you're
+defining a function
+
+641
+00:39:23,042 --> 00:39:26,141
+our method excuse me has declared in a
+protocol
+
+642
+00:39:26,519 --> 00:39:30,553
+run a superclass the types are optional
+for demonstration purposes
+
+643
+00:39:30,859 --> 00:39:34,490
+we show them here to know what us to use
+
+644
+00:39:34,049 --> 00:39:40,064
+let's see using a subclass and creating
+something using system EPS
+
+645
+00:39:40,064 --> 00:39:43,963
+so here I have a nap and this is the
+script inside
+
+646
+00:39:44,539 --> 00:39:48,150
+and this produces a Cocoa application
+
+647
+00:39:48,015 --> 00:39:51,070
+a temperature converter nice little got
+for us to use
+
+648
+00:39:51,007 --> 00:39:54,012
+there to think I'd like to point out for
+a actually run s
+
+649
+00:39:54,075 --> 00:39:58,122
+you'll see at the top the week important
+Coco now this allows us to access things
+
+650
+00:39:59,022 --> 00:40:01,601
+like ass window and so on
+
+651
+00:40:01,799 --> 00:40:05,230
+we create our windows are inputs and
+then
+
+652
+00:40:05,023 --> 00:40:08,119
+we register a subclass name temperature
+converter
+
+653
+00:40:09,019 --> 00:40:12,047
+that is two methods to convert from
+Celsius to Fahrenheit and from
+
+654
+00:40:12,047 --> 00:40:13,946
+Fahrenheit to Celsius
+
+655
+00:40:14,369 --> 00:40:18,371
+and you can see that all the logic
+inside these methods all the math
+
+656
+00:40:18,569 --> 00:40:21,620
+is in javascript then
+
+657
+00:40:22,079 --> 00:40:26,430
+we create a new temperature converter
+object how corrupt or inputs
+
+658
+00:40:26,043 --> 00:40:30,152
+and bring the window to the front so
+let's run us
+
+659
+00:40:30,539 --> 00:40:35,630
+close this here and if I double click
+this Apple to run it
+
+660
+00:40:35,063 --> 00:40:38,115
+we have a nice little Coco application
+
+661
+00:40:39,015 --> 00:40:43,924
+written entirely in Java Script
+
+662
+00:40:44,059 --> 00:40:47,135
+course it does what we promise we can
+convert Fahrenheit to Celsius
+
+663
+00:40:47,819 --> 00:40:50,820
+assess Celsius to Fahrenheit and so on
+
+664
+00:40:50,829 --> 00:40:56,210
+as a little example look at this we can
+create a Cocoa application in javascript
+
+665
+00:40:56,021 --> 00:40:59,063
+imagine what you can do from here with
+all this at your fingertips
+
+666
+00:40:59,063 --> 00:41:03,091
+there is power ready to be used
+
+667
+00:41:03,091 --> 00:41:06,124
+and definitely make sure to check out
+the JavaScript for automation release
+
+668
+00:41:07,024 --> 00:41:07,863
+notes
+
+669
+00:41:08,079 --> 00:41:11,720
+we can see other great things you can do
+using system APIs
+
+670
+00:41:11,072 --> 00:41:14,681
+like binding C functions into the
+environment
+
+671
+00:41:15,329 --> 00:41:18,331
+another mechanism for passed by
+reference
+
+672
+00:41:18,529 --> 00:41:24,930
+and also passing functions for boxer
+expected
+
+673
+00:41:24,093 --> 00:41:28,174
+are we've done a beautiful whirlwind
+tour all the ways we can use JavaScript
+
+674
+00:41:29,074 --> 00:41:30,443
+proclamation
+
+675
+00:41:31,109 --> 00:41:34,206
+for application scripting libraries an
+app lets you I scripting
+
+676
+00:41:35,079 --> 00:41:38,125
+using system API's I'm sure each
+everyone he was just bitching to get
+
+677
+00:41:38,539 --> 00:41:39,980
+your hands on
+
+678
+00:41:39,098 --> 00:41:42,171
+completely understand before you do
+let's talk about where you can use
+
+679
+00:41:43,071 --> 00:41:47,150
+JavaScript Roc Nation
+
+680
+00:41:47,789 --> 00:41:50,836
+so as all the demos have shown you can
+use JavaScript rodham nation
+
+681
+00:41:51,259 --> 00:41:56,390
+in script editor you can save Appleton
+droplets from script editor
+
+682
+00:41:56,039 --> 00:41:59,648
+as we saw and run
+
+683
+00:41:59,999 --> 00:42:03,050
+a cell mentioned and you saw in the
+presentation tomorrow
+
+684
+00:42:03,509 --> 00:42:07,130
+you can say scripts in a system-wide
+script menu this phenomenal for scripts
+
+685
+00:42:07,013 --> 00:42:08,045
+that you're going to use repeatedly
+
+686
+00:42:08,045 --> 00:42:11,684
+again and again Automator
+
+687
+00:42:12,089 --> 00:42:15,137
+which allows you to produce workflows
+
+688
+00:42:15,569 --> 00:42:19,690
+on many applications and processes on
+your Mac's now has
+
+689
+00:42:19,069 --> 00:42:23,122
+are run JavaScript Automator Action that
+lets you incorporate JavaScript
+
+690
+00:42:24,022 --> 00:42:25,023
+proclamation
+
+691
+00:42:25,023 --> 00:42:28,044
+into your workflows what you've done so
+
+692
+00:42:28,044 --> 00:42:32,066
+you can save those actions excuse me
+those workflows as services
+
+693
+00:42:32,066 --> 00:42:37,475
+that can be used for many application
+and across your system
+
+694
+00:42:38,069 --> 00:42:41,098
+finally you can use JavaScript
+proclamation internal
+
+695
+00:42:41,359 --> 00:42:44,452
+using OS a script command line tool and
+this is great
+
+696
+00:42:45,289 --> 00:42:48,310
+you can incorporate JavaScript
+proclamation into a bash script
+
+697
+00:42:48,499 --> 00:42:52,170
+and for example display an alert when
+you're about to finish a long-running
+
+698
+00:42:52,017 --> 00:42:53,926
+background process
+
+699
+00:42:54,079 --> 00:42:56,156
+so we've seen some other places where
+you can use JavaScript for automation
+
+700
+00:42:56,849 --> 00:42:57,870
+already
+
+701
+00:42:58,059 --> 00:43:02,400
+now let's look at the rest
+
+702
+00:43:02,004 --> 00:43:06,703
+when I set the scene I work as a
+photographer and travel magazine
+
+703
+00:43:07,099 --> 00:43:10,150
+I think pictures for cover and every
+week
+
+704
+00:43:10,015 --> 00:43:13,144
+I've to send those cover photos to the
+same person
+
+705
+00:43:13,279 --> 00:43:16,890
+to be approved before I can submit them
+to print
+
+706
+00:43:16,089 --> 00:43:20,068
+every week I send the same in our
+message to the same person
+
+707
+00:43:20,869 --> 00:43:23,970
+and on changing are the pictures
+
+708
+00:43:23,097 --> 00:43:28,171
+so I whipped up a little droplet here
+
+709
+00:43:29,071 --> 00:43:33,140
+using the open document handler that
+accesses the mail application
+
+710
+00:43:34,004 --> 00:43:38,032
+creates a new mail message for us using
+some freak and content
+
+711
+00:43:38,068 --> 00:43:41,197
+it then uses that contact application
+
+712
+00:43:41,809 --> 00:43:44,884
+to get my recipient and the email
+message gets their name in the email
+
+713
+00:43:45,559 --> 00:43:46,635
+address
+
+714
+00:43:47,319 --> 00:43:50,345
+puts on a message and then for each
+other pictures that we've dropped in
+
+715
+00:43:50,579 --> 00:43:50,658
+this droplet
+
+716
+00:43:51,369 --> 00:43:55,407
+ran Adams attachments to the message
+activate mail and have it ready to send
+
+717
+00:43:55,749 --> 00:43:59,750
+whenever I'd like so
+
+718
+00:43:59,759 --> 00:44:02,795
+here are some other photos I talk I
+happen to know the last three are the
+
+719
+00:44:03,119 --> 00:44:04,460
+most beautiful
+
+720
+00:44:04,046 --> 00:44:08,053
+summit drop those right here under this
+droplet
+
+721
+00:44:09,016 --> 00:44:12,093
+our mail messages created a contents
+there are recipients they're
+
+722
+00:44:12,093 --> 00:44:15,096
+and all the pictures we wanted are ready
+for us to go
+
+723
+00:44:16,023 --> 00:44:19,882
+my workflow was cut from a hundred
+percent down to
+
+724
+00:44:20,089 --> 00:44:23,400
+5 Penn 0 percent
+
+725
+00:44:23,004 --> 00:44:26,693
+this made my life easier and while I
+have the script
+
+726
+00:44:27,089 --> 00:44:31,650
+open I'd like to mention another problem
+that I have
+
+727
+00:44:31,065 --> 00:44:34,147
+I read a lot of jobs for Prada mission
+as you might expect I regularly have
+
+728
+00:44:35,047 --> 00:44:36,096
+script editor windows open
+
+729
+00:44:36,096 --> 00:44:39,174
+multiples of what what's sometimes I'm
+writing a library then
+
+730
+00:44:40,074 --> 00:44:43,413
+I'm gonna use another script and I want
+to be able to see everything at the same
+
+731
+00:44:44,079 --> 00:44:46,079
+time
+
+732
+00:44:46,079 --> 00:44:49,176
+so before halftime the automation tryin
+I might have had to drag these windows
+
+733
+00:44:50,049 --> 00:44:51,078
+around the screen
+
+734
+00:44:51,339 --> 00:44:54,930
+resize them make sure corners are
+overlapping each other and so on and so
+
+735
+00:44:54,093 --> 00:44:55,682
+forth
+
+736
+00:44:56,519 --> 00:44:59,578
+but then I realized what I automated so
+
+737
+00:45:00,109 --> 00:45:05,160
+I whipped up this script here that
+accesses the script editor application
+
+738
+00:45:05,016 --> 00:45:09,135
+and get all the windows and then using
+the number of windows and the size of
+
+739
+00:45:09,279 --> 00:45:10,285
+the screen
+
+740
+00:45:10,339 --> 00:45:13,930
+it carefully meticulously
+programmatically
+
+741
+00:45:13,093 --> 00:45:17,522
+tiles the windows around the screen
+based on their size
+
+742
+00:45:18,359 --> 00:45:23,440
+so if I run this from the script menu
+cuz I use it so frequently
+
+743
+00:45:23,044 --> 00:45:26,423
+we see all of my windows were piled
+exactly as I wanted
+
+744
+00:45:26,819 --> 00:45:30,730
+I can see everything all the same time
+this is beautiful for developing
+
+745
+00:45:30,073 --> 00:45:35,097
+multiple scripts at the same time so I
+used JavaScript for automation
+
+746
+00:45:35,097 --> 00:45:38,188
+to make writing JavaScript for
+automation even easier
+
+747
+00:45:39,088 --> 00:45:46,088
+powerful its flexible and it's
+everywhere
+
+748
+00:45:50,019 --> 00:45:53,092
+now speaking of flexibility and power
+and everywhere
+
+749
+00:45:53,092 --> 00:45:57,181
+in fact we've proven to ourselves how
+easy it is
+
+750
+00:45:58,009 --> 00:46:02,230
+to extend popular text editors for
+JavaScript like sublime taxed and taxed
+
+751
+00:46:02,023 --> 00:46:02,119
+me
+
+752
+00:46:03,019 --> 00:46:06,578
+to extend them to execute JavaScript
+proclamation code
+
+753
+00:46:06,749 --> 00:46:11,777
+that were writing in those applications
+and to prove it to you how easy it is to
+
+754
+00:46:12,029 --> 00:46:15,054
+write down mister Prada mission anywhere
+in run
+
+755
+00:46:15,279 --> 00:46:19,330
+we flipped up this automated workflow
+
+756
+00:46:19,789 --> 00:46:23,980
+that uses the new run JavaScript action
+
+757
+00:46:23,098 --> 00:46:28,117
+what we do is we access the content up
+the front most document
+
+758
+00:46:29,017 --> 00:46:32,396
+we evaluate that is a script then
+
+759
+00:46:32,549 --> 00:46:36,950
+we display the result and we optionally
+copy it to the clipboard
+
+760
+00:46:36,095 --> 00:46:40,097
+if we'd like I've save this as a service
+
+761
+00:46:41,015 --> 00:46:44,484
+and I'm a patch that service to a hotkey
+some now
+
+762
+00:46:44,619 --> 00:46:47,662
+my hope work is very very slim
+
+763
+00:46:48,049 --> 00:46:52,930
+easy to do I am would like you to notice
+I mean text edit right now
+
+764
+00:46:52,093 --> 00:46:55,952
+I've just a proclamation code Britain in
+a document
+
+765
+00:46:56,789 --> 00:47:00,817
+so using that automated workflow is a
+service attacks this hockey
+
+766
+00:47:01,069 --> 00:47:05,190
+I can wrongness cold executing
+
+767
+00:47:05,019 --> 00:47:09,020
+from the text edit ID in you that I love
+so much that I've created using
+
+768
+00:47:09,002 --> 00:47:11,091
+javascript for automation
+
+769
+00:47:11,289 --> 00:47:14,311
+we get ours all with a copy to the
+clipboard
+
+770
+00:47:14,509 --> 00:47:17,558
+not right now thank you and soul that's
+
+771
+00:47:17,999 --> 00:47:21,007
+amazing I just run JavaScript formation
+from text edit
+
+772
+00:47:21,079 --> 00:47:24,470
+missus to show that you can use
+JavaScript proclamation
+
+773
+00:47:24,047 --> 00:47:27,576
+how you'd like where you'd like
+extraordinarily extensible and
+
+774
+00:47:27,999 --> 00:47:33,031
+extraordinarily flexible
+
+775
+00:47:33,319 --> 00:47:36,414
+and as we mentioned before you can use
+JavaScript proclamation
+
+776
+00:47:37,269 --> 00:47:41,130
+for terminal using the OS a script
+command line tool
+
+777
+00:47:41,013 --> 00:47:45,067
+so let's look at an example
+
+778
+00:47:45,067 --> 00:47:48,686
+we're going to con the OS a script
+command line tool with a couple flags
+
+779
+00:47:49,289 --> 00:47:54,200
+gonna be using the JavaScript language
+we want a result the print a source
+
+780
+00:47:54,002 --> 00:47:57,611
+and the past and some javascript to run
+this is the
+
+781
+00:47:57,809 --> 00:48:00,902
+this is what I talked about before we
+can display an alert so maginnis me part
+
+782
+00:48:01,739 --> 00:48:02,802
+in a batch process at the end
+
+783
+00:48:03,369 --> 00:48:06,456
+the torch show us an alert when our
+processes up to finish
+
+784
+00:48:07,239 --> 00:48:11,242
+so if I run this our letters displayed
+just like we won
+
+785
+00:48:11,269 --> 00:48:14,650
+which is great we get our result
+
+786
+00:48:14,065 --> 00:48:17,066
+we can react accordingly if we wanted
+and another
+
+787
+00:48:17,066 --> 00:48:20,089
+really exciting new feature a voice a
+script is it
+
+788
+00:48:20,089 --> 00:48:24,518
+interactive mode so a variety of
+programming languages like Ruby and
+
+789
+00:48:25,319 --> 00:48:25,880
+Python
+
+790
+00:48:25,088 --> 00:48:28,947
+have interactive nods that allow you to
+interactively program in those
+
+791
+00:48:29,739 --> 00:48:30,740
+environments
+
+792
+00:48:30,749 --> 00:48:36,220
+and now this is possible from OS a
+script sup
+
+793
+00:48:36,022 --> 00:48:40,411
+to do so minute call us a script I
+languages JavaScript
+
+794
+00:48:40,609 --> 00:48:44,708
+I'm gonna pass the dash I flag the same
+going in interactive mode
+
+795
+00:48:45,599 --> 00:48:50,230
+not a demo this interactive mode I'm
+gonna be interacting with Safari
+
+796
+00:48:50,023 --> 00:48:53,032
+so I'm going to create a variable
+
+797
+00:48:53,239 --> 00:48:59,130
+set it to the Safari application we see
+it Safari was activated for us
+
+798
+00:48:59,013 --> 00:49:02,014
+make it a little better to see
+
+799
+00:49:02,014 --> 00:49:05,663
+that we can do things like create a
+reference to this
+
+800
+00:49:05,789 --> 00:49:09,960
+first window letting want to get that
+Windows name
+
+801
+00:49:09,096 --> 00:49:12,935
+in simply called the Name property is a
+function favorites like we expect that's
+
+802
+00:49:13,799 --> 00:49:14,640
+great
+
+803
+00:49:14,064 --> 00:49:17,273
+was a lot of fun what's spice it up a
+bit
+
+804
+00:49:17,849 --> 00:49:20,895
+let's create a new pad add that to the
+window in real time
+
+805
+00:49:21,309 --> 00:49:25,388
+interactively first will create a new
+tab
+
+806
+00:49:26,099 --> 00:49:30,170
+and more have the URL be Apple acecomm
+
+807
+00:49:30,017 --> 00:49:33,166
+then to actually create this in the
+application
+
+808
+00:49:33,319 --> 00:49:38,180
+I'm going to push it onto the windows
+tabs element iraqi
+
+809
+00:49:38,018 --> 00:49:42,066
+and before I do know I know that I wanna
+bring the tab in the front when I do
+
+810
+00:49:42,066 --> 00:49:42,143
+this
+
+811
+00:49:43,043 --> 00:49:46,192
+and I i can't quite remember I think
+it's the front
+
+812
+00:49:46,579 --> 00:49:51,430
+tab or there's a property that I can 7 a
+window to bring to the front
+
+813
+00:49:51,043 --> 00:49:55,122
+so were acting with this live before I
+do this let's make sure they know what
+
+814
+00:49:55,509 --> 00:49:55,562
+I'm doing
+
+815
+00:49:56,039 --> 00:49:59,045
+to bring up script editor I'm gonna
+
+816
+00:49:59,099 --> 00:50:03,930
+access the library window and let's see
+
+817
+00:50:03,093 --> 00:50:06,472
+lhasa Safari scripting dictionary great
+
+818
+00:50:07,309 --> 00:50:10,365
+okay we'll look at the Safari sweet yes
+window thank you
+
+819
+00:50:10,869 --> 00:50:13,963
+%ah the current path not the front at
+excuse me
+
+820
+00:50:14,809 --> 00:50:19,190
+South have this property I know exactly
+how to create
+
+821
+00:50:19,019 --> 00:50:22,838
+how to set the tab to the current tab
+bring it to the front
+
+822
+00:50:23,009 --> 00:50:26,090
+so if I push on the array and bring the
+tab to the front
+
+823
+00:50:26,819 --> 00:50:29,915
+we've just now live interactively added
+the tab in this window
+
+824
+00:50:30,779 --> 00:50:36,812
+had a whole lotta fun in the process
+
+825
+00:50:37,109 --> 00:50:40,400
+and beyond being a cool way to interact
+with applications
+
+826
+00:50:40,004 --> 00:50:43,593
+this is phenomenal for exploring their
+script ability for learning JavaScript
+
+827
+00:50:43,989 --> 00:50:45,021
+for automation
+
+828
+00:50:45,309 --> 00:50:48,950
+it's great tool to have
+
+829
+00:50:48,095 --> 00:50:52,254
+part so we've covered what I was to
+produce nation s
+
+830
+00:50:53,109 --> 00:50:58,400
+how it works how you can use it where
+you can use it
+
+831
+00:50:58,004 --> 00:51:03,123
+to summarize task a proclamation is
+built on JavaScript core
+
+832
+00:51:03,519 --> 00:51:07,910
+modern JavaScript environment and it's
+built on the open scripting architecture
+
+833
+00:51:07,091 --> 00:51:12,142
+which has been part of the Mac OS since
+before OS 10
+
+834
+00:51:13,042 --> 00:51:17,151
+javascript::write nation has been
+integrated system wide all layers
+
+835
+00:51:17,529 --> 00:51:20,534
+from high-level application scripting to
+system services
+
+836
+00:51:21,029 --> 00:51:26,680
+to use in the terminal and accessing
+system API us
+
+837
+00:51:26,068 --> 00:51:29,437
+and as we saw Talisker proclamations
+flexible
+
+838
+00:51:30,049 --> 00:51:33,390
+it allows you to accomplish tasks and
+solve problems
+
+839
+00:51:33,039 --> 00:51:36,047
+the best way that you see fit
+
+840
+00:51:36,047 --> 00:51:39,926
+sup our call to action today is go out
+
+841
+00:51:40,349 --> 00:51:43,413
+and script the script herbal
+applications on your Mac
+
+842
+00:51:43,989 --> 00:51:47,071
+for app developers make your application
+scriptable so other people can script
+
+843
+00:51:47,809 --> 00:51:50,670
+and do amazing things
+
+844
+00:51:50,067 --> 00:51:53,089
+and make sure to tell others to make
+their application scriptable
+
+845
+00:51:53,089 --> 00:51:56,142
+the is an already we have a phenomenal
+ecosystem
+
+846
+00:51:57,042 --> 00:52:02,139
+we're really excited for more more
+applications to join it every day
+
+847
+00:52:03,039 --> 00:52:07,008
+the checkout documentation make sure to
+go developer Apple dot com
+
+848
+00:52:07,359 --> 00:52:11,359
+the JavaScript proclamation release
+notes as well as some sample code
+
+849
+00:52:11,359 --> 00:52:14,430
+we are having a phenomenal time with us
+great new feature
+
+850
+00:52:14,043 --> 00:52:17,046
+we cannot wait for you to get your hands
+on it thank you very much
+

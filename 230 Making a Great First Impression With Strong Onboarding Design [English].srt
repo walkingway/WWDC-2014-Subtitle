@@ -1,0 +1,4328 @@
+1
+00:00:11,057 --> 00:00:13,102
+good afternoon I'm John Kavanagh
+
+2
+00:00:14,002 --> 00:00:16,035
+and I manage the group that creates the
+
+3
+00:00:16,035 --> 00:00:19,070
+I'm impatient for all about polls
+consumer in pro products
+
+4
+00:00:19,007 --> 00:00:23,095
+here's some of what we do print pieces
+that come in the box
+
+5
+00:00:24,058 --> 00:00:31,058
+iBooks and PDF's I help topics that
+appear in the OS 10 help viewer
+
+6
+00:00:32,084 --> 00:00:36,090
+we have some highly contextual in app
+solutions
+
+7
+00:00:36,009 --> 00:00:40,096
+and deliverables on the web like these I
+O S user guides
+
+8
+00:00:41,077 --> 00:00:44,093
+or this what's new experience you may
+have seen
+
+9
+00:00:44,093 --> 00:00:47,172
+in OS 10 maverick's now
+
+10
+00:00:48,072 --> 00:00:51,077
+creating great customer documentation
+
+11
+00:00:52,022 --> 00:00:56,108
+isn't always seen as one of the most
+exciting parts of software development
+
+12
+00:00:57,008 --> 00:01:02,042
+I realize that as the documentation guy
+and it can often be treated as it
+
+13
+00:01:02,042 --> 00:01:06,090
+an afterthought by developers not the
+developers in this room of course the
+
+14
+00:01:06,009 --> 00:01:07,070
+let's just say some developers
+
+15
+00:01:08,051 --> 00:01:13,086
+and when that's the case it can often
+take the form
+
+16
+00:01:13,086 --> 00:01:16,205
+a van FAQ for help system
+
+17
+00:01:16,979 --> 00:01:20,080
+where basically you wait until a person
+gets stock
+
+18
+00:01:20,008 --> 00:01:23,081
+drop them into a comprehensive body of
+content
+
+19
+00:01:23,081 --> 00:01:26,128
+and then have them fend for themselves
+to try to get answers
+
+20
+00:01:27,028 --> 00:01:32,077
+and historically icons like this have
+been used to
+
+21
+00:01:32,077 --> 00:01:37,316
+represent the experience which really
+isn't the most flattering image to have
+
+22
+00:01:38,009 --> 00:01:39,250
+associated
+
+23
+00:01:39,025 --> 00:01:43,077
+with your ap our game unless of course
+
+24
+00:01:43,077 --> 00:01:46,486
+it's about rescuing people lost at sea I
+don't know
+
+25
+00:01:47,179 --> 00:01:50,240
+now this
+
+26
+00:01:50,789 --> 00:01:53,840
+get answers strategy it it does have its
+place
+
+27
+00:01:54,299 --> 00:02:00,310
+in help systems for deeper aP's but as i
+OS developers you probably don't even
+
+28
+00:02:00,031 --> 00:02:01,150
+have to go here
+
+29
+00:02:01,429 --> 00:02:04,780
+instead
+
+30
+00:02:04,078 --> 00:02:07,144
+rachel's gonna show you how to
+anticipate users needs
+
+31
+00:02:08,044 --> 00:02:11,136
+in a seamless on boarding experience so
+they won't even feel like they're
+
+32
+00:02:12,036 --> 00:02:12,045
+getting your help
+
+33
+00:02:13,026 --> 00:02:16,060
+they'll just feel as though they're
+experiencing your amazing
+
+34
+00:02:16,006 --> 00:02:21,072
+after game she's also gonna show you how
+to extend this strategy
+
+35
+00:02:22,026 --> 00:02:25,052
+into an area we like to call inform and
+inspire
+
+36
+00:02:25,052 --> 00:02:28,079
+and that gives you the opportunity
+
+37
+00:02:28,079 --> 00:02:31,171
+to delight users by showing them what's
+possible
+
+38
+00:02:32,071 --> 00:02:36,140
+now as I said there's great ways to do
+this
+
+39
+00:02:37,004 --> 00:02:40,091
+and not so great ways and that so
+rachel's gonna show you now
+
+40
+00:02:41,027 --> 00:02:48,027
+Rachel hi everyone
+
+41
+00:02:48,049 --> 00:02:51,071
+my name is Rachel Roth and I'm wanna
+Apple's
+
+42
+00:02:51,071 --> 00:02:54,077
+user experience for fans of so
+
+43
+00:02:54,077 --> 00:02:57,086
+today we're gonna talk about onboarding
+
+44
+00:02:57,086 --> 00:03:02,102
+and welcoming people now term onboarding
+you may have heard it called
+
+45
+00:03:03,002 --> 00:03:07,100
+the new user experience for that first
+youth experience or
+
+46
+00:03:08,000 --> 00:03:11,043
+I what happens in a tutorial for game
+
+47
+00:03:11,043 --> 00:03:15,046
+I'm really on morning for a term that
+traditionally associated with
+
+48
+00:03:15,073 --> 00:03:18,076
+what happens with employees when they
+first started a company
+
+49
+00:03:19,003 --> 00:03:22,036
+how people acquire the knowledge and the
+skill
+
+50
+00:03:22,036 --> 00:03:25,055
+behaviors to become successful their job
+
+51
+00:03:25,055 --> 00:03:28,082
+now when it comes to an hour our game
+
+52
+00:03:28,082 --> 00:03:31,100
+people are gonna go for a similar sort
+of experience
+
+53
+00:03:32,000 --> 00:03:35,009
+they need to figure out you know how the
+UI work
+
+54
+00:03:35,009 --> 00:03:39,033
+how the gameplay the staff really gonna
+be right for me
+
+55
+00:03:39,033 --> 00:03:42,036
+and that's prime you want to welcome
+them
+
+56
+00:03:42,063 --> 00:03:45,065
+it's so important that their first
+experience
+
+57
+00:03:45,083 --> 00:03:50,156
+is a good one because otherwise it's
+gonna be their last six grams you've got
+
+58
+00:03:51,056 --> 00:03:53,122
+a million other competitors in the App
+Store literally
+
+59
+00:03:54,022 --> 00:03:57,098
+for people are gonna stick around if if
+the first experience for them
+
+60
+00:03:57,098 --> 00:04:00,183
+really great now when you step into a
+
+61
+00:04:01,083 --> 00:04:04,178
+store there's like in at like a physical
+store in real life
+
+62
+00:04:05,078 --> 00:04:08,122
+earth there's a number things are gonna
+influence whether or not you stick
+
+63
+00:04:09,022 --> 00:04:09,028
+around
+
+64
+00:04:09,082 --> 00:04:12,155
+already turn around and walk out you
+know if the
+
+65
+00:04:13,055 --> 00:04:16,584
+layup by the store intimidating her or
+is inviting
+
+66
+00:04:17,079 --> 00:04:20,097
+here's the staff rude as the staff
+
+67
+00:04:20,259 --> 00:04:23,262
+really aggressively percy
+
+68
+00:04:23,289 --> 00:04:26,290
+those things could turn you off to make
+you walk away
+
+69
+00:04:26,389 --> 00:04:30,380
+but if the staff is inviting and the
+environment comfortable
+
+70
+00:04:30,038 --> 00:04:34,090
+well you might the crown explore the
+merchandise
+
+71
+00:04:34,009 --> 00:04:37,014
+so the best approach with after game
+
+72
+00:04:38,004 --> 00:04:42,095
+is that you want to get people and using
+them as quickly as possible
+
+73
+00:04:43,031 --> 00:04:47,114
+you just wanna jack but people jump
+right in and sometimes that's not always
+
+74
+00:04:48,014 --> 00:04:51,037
+possible now
+
+75
+00:04:51,037 --> 00:04:54,054
+her number recent for having onboarding
+and having
+
+76
+00:04:54,054 --> 00:04:57,058
+a confusing or poorly executed you I
+
+77
+00:04:57,058 --> 00:05:02,119
+is not one of them for you wanna make
+sure if your UI is an intuitive
+
+78
+00:05:03,019 --> 00:05:07,025
+an easy to use spend time are finding
+that why
+
+79
+00:05:07,025 --> 00:05:10,113
+not building an onboarding sequence okay
+
+80
+00:05:11,013 --> 00:05:15,084
+now if you have registration required to
+use your application
+
+81
+00:05:15,084 --> 00:05:18,089
+that's a different story
+
+82
+00:05:19,034 --> 00:05:22,117
+or where should game
+
+83
+00:05:23,017 --> 00:05:26,052
+you might need to explain the back story
+or the rule you know how
+
+84
+00:05:26,052 --> 00:05:29,083
+how games are played or if your UI
+
+85
+00:05:29,083 --> 00:05:33,092
+heavily reliant on gestures that might
+warrant a little bit of information in
+
+86
+00:05:33,092 --> 00:05:35,097
+order to get started
+
+87
+00:05:35,097 --> 00:05:40,101
+so let's stop beef briefly but if you're
+too require registration
+
+88
+00:05:41,037 --> 00:05:44,101
+sometimes that is absolutely necessary
+to see anything
+
+89
+00:05:45,001 --> 00:05:48,006
+banking application or source on that
+were
+
+90
+00:05:48,051 --> 00:05:52,104
+for bill pay anything that have personal
+information
+
+91
+00:05:53,004 --> 00:05:57,028
+then you're gonna need to to let people
+now what's going on
+
+92
+00:05:57,028 --> 00:06:00,032
+but before
+
+93
+00:06:00,032 --> 00:06:03,096
+if there's any way possible you wanted
+to lay that registration and took
+
+94
+00:06:03,096 --> 00:06:06,120
+absolutely necessary
+
+95
+00:06:07,002 --> 00:06:11,083
+now that I can store is a great example
+Beth you can browse and look at all the
+
+96
+00:06:12,001 --> 00:06:15,025
+books in the music and the movies that
+you want
+
+97
+00:06:15,025 --> 00:06:18,036
+and it's only when you go to buy
+something
+
+98
+00:06:18,036 --> 00:06:21,082
+you need to authenticate or register
+
+99
+00:06:21,082 --> 00:06:25,123
+this means there's nothing standing in
+the way of finding something you love
+
+100
+00:06:26,023 --> 00:06:29,025
+requiring people to register before they
+can see anything put forth
+
+101
+00:06:29,043 --> 00:06:32,054
+unnecessary obstacle in their way
+
+102
+00:06:32,054 --> 00:06:35,065
+they have to trust that it's going to be
+worth their while to go through that
+
+103
+00:06:35,065 --> 00:06:37,084
+obstacle
+
+104
+00:06:37,669 --> 00:06:42,600
+here is a better way this is Duque at
+the concert finding out
+
+105
+00:06:42,006 --> 00:06:45,575
+they've got a great design that will
+help you find concert fair
+
+106
+00:06:46,169 --> 00:06:50,870
+local to you tailored to your case they
+were even find someone to go to the
+
+107
+00:06:50,087 --> 00:06:51,166
+concert with you
+
+108
+00:06:52,066 --> 00:06:55,070
+now not only do they have a very short
+onboarding sequence
+
+109
+00:06:55,007 --> 00:06:58,099
+but you they will let you browse without
+registering
+
+110
+00:06:59,062 --> 00:07:02,581
+at all you just cap that skip this
+
+111
+00:07:03,139 --> 00:07:07,500
+for now text at the bottom and you can
+go right inside and explore what the app
+
+112
+00:07:07,005 --> 00:07:08,062
+is all about
+
+113
+00:07:09,007 --> 00:07:12,069
+you can look at the concert listings
+read about band
+
+114
+00:07:12,069 --> 00:07:15,123
+and it's only when you express interest
+in something are you want a parking
+
+115
+00:07:16,023 --> 00:07:16,118
+ticket
+
+116
+00:07:17,018 --> 00:07:20,087
+well that's when they have you ask you
+to find out
+
+117
+00:07:20,087 --> 00:07:25,096
+and that's great this approach lets you
+see what happens all about
+
+118
+00:07:25,096 --> 00:07:28,129
+you can explore everything all the
+concert in your area
+
+119
+00:07:29,029 --> 00:07:34,057
+and you only have to register when
+you're ready to take action on something
+
+120
+00:07:34,057 --> 00:07:37,152
+people are going to be much more
+motivated and quite frankly comfortable
+
+121
+00:07:38,052 --> 00:07:40,103
+going through that registration process
+
+122
+00:07:41,003 --> 00:07:44,061
+if they're confident and the quality and
+the utility
+
+123
+00:07:44,061 --> 00:07:47,150
+what your app is offering them
+
+124
+00:07:47,699 --> 00:07:51,930
+now wanna time to have people go through
+that registration
+
+125
+00:07:51,093 --> 00:07:56,582
+you wanna explain why you're asking them
+to register
+
+126
+00:07:57,419 --> 00:08:01,440
+so think about it this way let's say a
+stranger walked up to you in front of
+
+127
+00:08:01,044 --> 00:08:02,140
+Moscone and fed hay
+
+128
+00:08:03,004 --> 00:08:06,019
+can I have your email address and phone
+number you
+
+129
+00:08:06,055 --> 00:08:09,674
+%um give a damn right it's just creepy
+and you've no idea what's going to
+
+130
+00:08:10,169 --> 00:08:11,090
+happen
+
+131
+00:08:11,009 --> 00:08:14,105
+with that data now that's exactly
+
+132
+00:08:15,005 --> 00:08:19,006
+what you're doing if you ask people to
+register but you're not telling them why
+
+133
+00:08:19,006 --> 00:08:22,007
+and they don't know anything about you
+
+134
+00:08:22,007 --> 00:08:25,059
+it's especially important in cases where
+
+135
+00:08:25,059 --> 00:08:28,097
+you have to register in order to use an
+app
+
+136
+00:08:28,097 --> 00:08:32,516
+because your description in the App
+Store or word-of-mouth
+
+137
+00:08:33,389 --> 00:08:37,940
+or brand awareness isn't enough to make
+people feel comfortable giving you all
+
+138
+00:08:37,094 --> 00:08:39,573
+of their personal information
+
+139
+00:08:40,419 --> 00:08:44,970
+you need to make it really clear what
+you're gonna do with that
+
+140
+00:08:44,097 --> 00:08:48,172
+so this is jelly and they crowd fourth
+answer three questions from your social
+
+141
+00:08:49,072 --> 00:08:50,181
+network
+
+142
+00:08:50,829 --> 00:08:53,865
+so they have a real challenge take it
+there really is nothing they can show
+
+143
+00:08:54,189 --> 00:08:56,233
+you what are you registering and finding
+an
+
+144
+00:08:56,629 --> 00:08:59,643
+so that's why they've given you this
+brief explanation
+
+145
+00:08:59,769 --> 00:09:05,110
+what the service is about and explain
+why they need your information
+
+146
+00:09:05,011 --> 00:09:08,720
+and very importantly they let you know
+that they're not gonna post anything
+
+147
+00:09:08,819 --> 00:09:12,600
+automatic way and this is very important
+
+148
+00:09:12,006 --> 00:09:15,245
+because when you're dealing with people
+
+149
+00:09:15,839 --> 00:09:18,990
+personal information you want to make
+sure that they're comfortable
+
+150
+00:09:18,099 --> 00:09:23,160
+giving it to you they wanna know that
+you're gonna protect their privacy thing
+
+151
+00:09:24,006 --> 00:09:27,595
+and transparency around privacy is
+particularly important
+
+152
+00:09:28,189 --> 00:09:32,190
+if you're dealing with social network
+integration if I'm sure we've all had
+
+153
+00:09:32,199 --> 00:09:32,230
+that
+
+154
+00:09:32,509 --> 00:09:37,290
+friends that you've got some after going
+crazy on their time line you're thinking
+
+155
+00:09:37,029 --> 00:09:38,031
+of what a new
+
+156
+00:09:38,049 --> 00:09:41,808
+you know nobody checkers that aims they
+didn't know what they were doing
+
+157
+00:09:42,249 --> 00:09:46,302
+and nowhere is this more the case when
+you're dealing with dating application
+
+158
+00:09:46,779 --> 00:09:52,410
+because I would be a nightmare of an all
+your friends your family and from people
+
+159
+00:09:52,041 --> 00:09:54,041
+the Econo from worker
+
+160
+00:09:54,041 --> 00:09:57,043
+met some time at a bar kit fee very
+alike
+
+161
+00:09:57,043 --> 00:10:00,802
+and he didn't like nobody wants fat
+
+162
+00:10:01,189 --> 00:10:05,720
+so tender here very popular dating
+application and they're very
+
+163
+00:10:05,072 --> 00:10:09,041
+worth it they are never gonna post
+anything
+
+164
+00:10:09,689 --> 00:10:14,350
+to face back on your behalf and this is
+hugely important because the way that
+
+165
+00:10:14,035 --> 00:10:16,274
+tender works is there asking year
+
+166
+00:10:16,589 --> 00:10:19,594
+if you like people based on their
+picture
+
+167
+00:10:19,639 --> 00:10:23,660
+so if you have any doubts at all are you
+feeling a little have the 10
+
+168
+00:10:23,066 --> 00:10:27,068
+you can tap that I but and they spell it
+out in more detail
+
+169
+00:10:27,086 --> 00:10:31,655
+they take your primary privacy very
+seriously
+
+170
+00:10:32,429 --> 00:10:35,980
+they're never gonna post on Facebook for
+you they're not going to give away your
+
+171
+00:10:35,098 --> 00:10:36,637
+location
+
+172
+00:10:37,519 --> 00:10:41,110
+for people can feel reassured more
+comfortable
+
+173
+00:10:41,011 --> 00:10:45,790
+and nowhere is this privacy gonna be
+more important than with your social
+
+174
+00:10:45,889 --> 00:10:47,903
+integration
+
+175
+00:10:48,029 --> 00:10:51,740
+now I'm just giving you a whole lot of
+advice about things to tell people
+
+176
+00:10:51,074 --> 00:10:52,147
+before they register
+
+177
+00:10:53,047 --> 00:10:56,476
+but I want to encourage you that when
+you're telling them I love the thing
+
+178
+00:10:56,899 --> 00:11:00,947
+be for Frank be out for things as
+possible
+
+179
+00:11:01,379 --> 00:11:04,800
+we all know that people don't like to
+read long passes
+
+180
+00:11:04,008 --> 00:11:07,287
+passages attacks on a nap 8 tap tap
+tapping it going
+
+181
+00:11:08,079 --> 00:11:12,104
+now whoever does a great job with this
+if you haven't experienced
+
+182
+00:11:12,329 --> 00:11:15,420
+over yet in San Francisco it is a a
+
+183
+00:11:15,042 --> 00:11:19,451
+it's a car service for the %ah come pick
+you up I like a taxi
+
+184
+00:11:19,829 --> 00:11:22,600
+and you might think well why do I have
+to give them a email address and phone
+
+185
+00:11:22,006 --> 00:11:23,013
+number
+
+186
+00:11:23,067 --> 00:11:26,096
+just in order to get a ride from A to B
+
+187
+00:11:26,699 --> 00:11:30,724
+and at they explain here very briefly
+
+188
+00:11:30,949 --> 00:11:34,740
+they're gonna offend you notifications
+about when the car coming
+
+189
+00:11:34,074 --> 00:11:40,213
+an email about the confirmation for that
+makes you feel better
+
+190
+00:11:40,879 --> 00:11:45,600
+fell being for things will keep your
+registration process or
+
+191
+00:11:45,006 --> 00:11:49,035
+and it will help encourage people
+actually read the taxpayers so carefully
+
+192
+00:11:49,629 --> 00:11:49,724
+crafted
+
+193
+00:11:50,579 --> 00:11:55,410
+for that spring now another way that you
+can make the process shortest
+
+194
+00:11:55,041 --> 00:11:59,086
+only collect what you need right now
+
+195
+00:11:59,086 --> 00:12:02,091
+don't be tempted to ask for a lot of
+information could you have this great
+
+196
+00:12:03,036 --> 00:12:06,245
+featured you're probably gonna do it
+someday or
+
+197
+00:12:06,569 --> 00:12:09,860
+maybe you're thinking about doing that
+so let's get data birth and life after
+
+198
+00:12:09,086 --> 00:12:10,179
+gender and
+
+199
+00:12:11,079 --> 00:12:14,618
+you only wanna take what it is that
+you're going to use
+
+200
+00:12:15,329 --> 00:12:18,373
+and what you've told the users that
+you're gonna do with it so that people
+
+201
+00:12:18,769 --> 00:12:19,774
+feel comfortable
+
+202
+00:12:19,819 --> 00:12:23,160
+giving it to you other wire
+
+203
+00:12:23,016 --> 00:12:26,375
+people are going to be suspicious and
+that could prevent them from actually
+
+204
+00:12:26,519 --> 00:12:30,541
+going through the registration process
+
+205
+00:12:30,739 --> 00:12:35,300
+fell if you do you need people to
+register in order to use your ass
+
+206
+00:12:35,003 --> 00:12:38,102
+keep these things in mind follow these
+guidelines on everyone's gonna feel
+
+207
+00:12:39,029 --> 00:12:41,058
+really comfortable and motivated
+
+208
+00:12:41,319 --> 00:12:44,319
+to give you their information
+
+209
+00:12:44,319 --> 00:12:50,330
+alright for now let's get into the
+onboarding best practices
+
+210
+00:12:50,429 --> 00:12:53,670
+as I said earlier the bath
+
+211
+00:12:53,067 --> 00:12:56,926
+experience it's gonna be a just jump in
+and start using that app
+
+212
+00:12:57,529 --> 00:13:00,577
+right away for you one after South
+
+213
+00:13:01,009 --> 00:13:05,041
+what people need to know in order to get
+started with my app
+
+214
+00:13:05,329 --> 00:13:09,220
+and if the answer is nothing fantastic
+
+215
+00:13:09,022 --> 00:13:14,611
+dope any onboarding and your great just
+let a man and let them get going
+
+216
+00:13:14,809 --> 00:13:17,892
+now if there are something like the rule
+for game
+
+217
+00:13:18,639 --> 00:13:21,720
+or like a gesture that they might need
+to know
+
+218
+00:13:21,072 --> 00:13:25,079
+you want to tell them just enough to get
+started and then get out of the way
+
+219
+00:13:25,079 --> 00:13:27,080
+quickly
+
+220
+00:13:27,008 --> 00:13:30,039
+so think about if you went into a
+restaurant
+
+221
+00:13:31,011 --> 00:13:35,790
+and before you sat down at the table the
+host that okay welcomes the rough trot
+
+222
+00:13:35,889 --> 00:13:38,896
+I'm gonna tell you everything off and on
+the menu right now
+
+223
+00:13:39,589 --> 00:13:44,590
+in great detail and by the way here are
+the things that I think you should order
+
+224
+00:13:44,689 --> 00:13:47,715
+I would be ridiculous right so pretty
+
+225
+00:13:47,949 --> 00:13:51,910
+really just wanna come and get federal
+to your table peruse the menu at your
+
+226
+00:13:51,091 --> 00:13:52,430
+leisure
+
+227
+00:13:53,249 --> 00:13:57,313
+acting experience for your after right
+so that's where you need to recreate in
+
+228
+00:13:57,889 --> 00:13:58,720
+your app
+
+229
+00:13:58,072 --> 00:14:03,091
+for your game you wanna do that ok well
+and I've leading people into their table
+
+230
+00:14:03,091 --> 00:14:06,330
+tell maybe you're gonna tell them the
+specials in a restaurant
+
+231
+00:14:07,149 --> 00:14:10,410
+and then let them explore on their own
+
+232
+00:14:10,041 --> 00:14:13,270
+when people launch an app or game
+
+233
+00:14:13,639 --> 00:14:18,670
+they're expecting for part if the pay
+they're not expecting a long lecture
+
+234
+00:14:18,067 --> 00:14:22,786
+so a match then matching you launch
+calculator app and you saw something
+
+235
+00:14:23,389 --> 00:14:26,477
+like that
+
+236
+00:14:27,269 --> 00:14:30,361
+followed by this
+
+237
+00:14:31,189 --> 00:14:35,208
+followed by this oh my gosh now I'm not
+gonna make you guys sector of seven
+
+238
+00:14:35,379 --> 00:14:36,480
+apiece but
+
+239
+00:14:36,048 --> 00:14:40,807
+you can he how frustrating that would be
+if you're faced with a long list of
+
+240
+00:14:41,239 --> 00:14:43,253
+marketing messages about an hour
+
+241
+00:14:43,379 --> 00:14:47,380
+before you even got to you that I mean
+it's calculator right
+
+242
+00:14:47,389 --> 00:14:50,600
+they're really resist the temptation
+
+243
+00:14:50,006 --> 00:14:54,975
+to strings together a whole lot along
+with SIV features and marketing and hey
+
+244
+00:14:55,569 --> 00:14:57,720
+make sure you check this thing out
+
+245
+00:14:57,072 --> 00:15:02,151
+people want to get in and get going
+there is no need for instruction
+
+246
+00:15:02,799 --> 00:15:05,970
+if the user interface is intuitive two
+years
+
+247
+00:15:05,097 --> 00:15:09,196
+and the functionality is obvious and if
+it isn't
+
+248
+00:15:10,069 --> 00:15:14,074
+I should just that spend time reworking
+the divine
+
+249
+00:15:14,119 --> 00:15:19,126
+not thinking about tomorrow morning
+screens on their
+
+250
+00:15:19,819 --> 00:15:22,824
+if you need to give a few I fared you
+wanna do it quickly and get out of the
+
+251
+00:15:23,319 --> 00:15:24,324
+way but otherwise
+
+252
+00:15:24,369 --> 00:15:29,372
+avoid those long marketing methods is OK
+
+253
+00:15:29,399 --> 00:15:32,424
+now you always want to start with the
+basics
+
+254
+00:15:32,649 --> 00:15:35,728
+and this is especially important for
+games which are most often the place we
+
+255
+00:15:36,439 --> 00:15:39,454
+need a little information to get going
+
+256
+00:15:39,589 --> 00:15:43,606
+like with video games with our app for
+game you might want the backstory
+
+257
+00:15:43,759 --> 00:15:46,770
+so you know you know what's the
+objective of the game are the back story
+
+258
+00:15:46,869 --> 00:15:46,951
+makes for more fun
+
+259
+00:15:47,689 --> 00:15:52,410
+right but think about a card game that
+you sit down to play with friends
+
+260
+00:15:52,041 --> 00:15:57,260
+first usually go over okay what are the
+rule how to play progress how do you win
+
+261
+00:15:57,629 --> 00:16:00,631
+abt important one and then you might
+even try
+
+262
+00:16:00,649 --> 00:16:04,704
+a couple tips on strategy all before you
+start playing
+
+263
+00:16:05,199 --> 00:16:08,790
+so just like a card game you start with
+the basics
+
+264
+00:16:08,079 --> 00:16:11,188
+and then you build up the complexity
+from there
+
+265
+00:16:11,899 --> 00:16:14,966
+because you're not be prepared to learn
+about strategies for weighing if you
+
+266
+00:16:15,569 --> 00:16:18,667
+don't understand how the game is played
+in first place
+
+267
+00:16:19,549 --> 00:16:22,556
+but forget a great example of this is
+dot
+
+268
+00:16:22,619 --> 00:16:27,600
+doctor the puzzle game any just a little
+bit upon boarding to explain how the
+
+269
+00:16:27,006 --> 00:16:28,455
+game works
+
+270
+00:16:29,049 --> 00:16:32,057
+and they've also touched on the
+inspiration up for the game they've got
+
+271
+00:16:32,129 --> 00:16:33,161
+this quote here
+
+272
+00:16:33,449 --> 00:16:36,484
+smart man one fat everything offense
+like act mmm
+
+273
+00:16:36,799 --> 00:16:39,858
+okay for the first thank you got
+
+274
+00:16:40,389 --> 00:16:43,420
+connect them got it
+
+275
+00:16:43,042 --> 00:16:47,045
+now a couple more got
+
+276
+00:16:47,072 --> 00:16:50,811
+now different colors the top wall
+
+277
+00:16:51,459 --> 00:16:56,490
+wall wall you'll
+
+278
+00:16:56,769 --> 00:16:59,776
+pretty basic but they're building up the
+compact see if you go
+
+279
+00:16:59,839 --> 00:17:03,845
+and they're reinforcing everything was
+found in animation
+
+280
+00:17:03,899 --> 00:17:07,918
+positive reassurance that you're going
+through so it is completely interactive
+
+281
+00:17:08,089 --> 00:17:11,610
+for that that's a great way to get
+started
+
+282
+00:17:11,061 --> 00:17:14,073
+and now I know that the seems like a
+pretty simple
+
+283
+00:17:14,073 --> 00:17:19,077
+example but really almost anyhow game
+benefit from that builders role playing
+
+284
+00:17:19,077 --> 00:17:21,516
+games arcade games all that
+
+285
+00:17:22,209 --> 00:17:26,980
+but take a look at him and go now at him
+and go have eliminated on morning
+
+286
+00:17:26,098 --> 00:17:29,145
+altogether it doesn't put you in the
+game right away
+
+287
+00:17:30,045 --> 00:17:33,108
+a great experience but to fat people a
+person
+
+288
+00:17:34,008 --> 00:17:37,077
+six path the very basic level of
+
+289
+00:17:37,149 --> 00:17:41,186
+start the first level that you play
+start with very basic accent
+
+290
+00:17:41,519 --> 00:17:44,760
+so what's the first thing you need to
+know in order to play this game
+
+291
+00:17:44,076 --> 00:17:47,605
+what how to move and and how to win
+
+292
+00:17:48,289 --> 00:17:54,352
+right okay we got a straight line I only
+have one choice
+
+293
+00:17:54,919 --> 00:17:58,610
+are one more choice
+
+294
+00:17:58,061 --> 00:18:03,340
+her a fix have I mean it was very easy
+it's a no-lose situation
+
+295
+00:18:03,889 --> 00:18:06,952
+but that teaching you what's the
+objective I want to get that big dark
+
+296
+00:18:07,519 --> 00:18:08,598
+circle at the end of the screen right
+
+297
+00:18:09,309 --> 00:18:13,760
+how do I move along the path
+
+298
+00:18:13,076 --> 00:18:19,108
+next phase introduce you obstacle
+
+299
+00:18:20,008 --> 00:18:23,457
+again got one path and I'm a hit man
+
+300
+00:18:23,529 --> 00:18:27,100
+and this guys back up towards me thou
+
+301
+00:18:27,001 --> 00:18:32,090
+here is a pretty easy target I
+
+302
+00:18:32,099 --> 00:18:35,195
+again if I can't leave level but I'm
+playing the game and I'm learning as I
+
+303
+00:18:36,095 --> 00:18:36,150
+go
+
+304
+00:18:37,005 --> 00:18:41,934
+so it's fun it's not morning I'm playing
+a game here
+
+305
+00:18:42,429 --> 00:18:46,434
+now at the level for graph a get more
+difficult you get toys in your path and
+
+306
+00:18:46,929 --> 00:18:51,190
+now you're obstacle here facing years
+that's going to be a little trickier
+
+307
+00:18:51,019 --> 00:18:55,072
+and trust me get much much harder get
+different kinds of obstacles
+
+308
+00:18:55,072 --> 00:18:58,137
+more them trapped or things like that
+
+309
+00:18:59,037 --> 00:19:03,037
+when you first start playing all you
+have to do its complete the level
+
+310
+00:19:03,037 --> 00:19:06,109
+get to that dark circle of the an
+
+311
+00:19:07,009 --> 00:19:11,468
+but the more you play more challenges
+you have for now I'm not just
+
+312
+00:19:11,549 --> 00:19:14,550
+completing Level and you collect the
+brief K
+
+313
+00:19:14,649 --> 00:19:18,370
+I gonna do it 12 move for last last
+
+314
+00:19:18,037 --> 00:19:21,110
+getting more complex missus giving me
+more QE
+
+315
+00:19:22,001 --> 00:19:26,027
+more challenges and it's encouraging
+repeat gameplay flop
+
+316
+00:19:26,036 --> 00:19:31,036
+recovery view to start on this level Hui
+I think that would last all about
+
+317
+00:19:31,036 --> 00:19:35,060
+30 FAC and from the night be off to find
+another game
+
+318
+00:19:35,006 --> 00:19:39,315
+now starting them play and building up
+the complexity is called scaffolding
+
+319
+00:19:39,909 --> 00:19:44,920
+and that's how you can set up new
+players have an enjoyable experience
+
+320
+00:19:45,019 --> 00:19:50,220
+gonna keep them coming back to your game
+but this approach also worked her ass as
+
+321
+00:19:50,022 --> 00:19:51,023
+well
+
+322
+00:19:51,032 --> 00:19:54,119
+you want to teach the basic thing how to
+navigate and the general purpose
+
+323
+00:19:55,019 --> 00:19:55,085
+function
+
+324
+00:19:55,085 --> 00:19:58,154
+before even Confederate trying to teach
+people
+
+325
+00:19:58,919 --> 00:20:03,570
+about more advanced operations
+
+326
+00:20:03,057 --> 00:20:07,057
+now this is Yahoo News tight ass since
+one of this year's Apple Design Award
+
+327
+00:20:07,057 --> 00:20:08,060
+winner
+
+328
+00:20:08,087 --> 00:20:11,112
+now they've got a fantastic you I have
+might have gas
+
+329
+00:20:12,012 --> 00:20:15,034
+by their ward its intuitive two years so
+
+330
+00:20:15,034 --> 00:20:19,613
+not appear on boarding at covering you
+are
+
+331
+00:20:19,919 --> 00:20:22,943
+now the way that that's news works is
+that it's a daily digest
+
+332
+00:20:23,159 --> 00:20:27,500
+twice a day and this is an entirely new
+paradigm for Yahoo News
+
+333
+00:20:27,005 --> 00:20:31,934
+had quite an established audience that
+was really important for fat people
+
+334
+00:20:32,429 --> 00:20:36,720
+expectations about the content that they
+were going to be seen
+
+335
+00:20:36,072 --> 00:20:39,119
+otherwise people might be confused
+throughout the purpose of the app
+
+336
+00:20:40,019 --> 00:20:45,738
+so by putting together just three short
+screams with a supportive illustration
+
+337
+00:20:45,909 --> 00:20:50,200
+and then getting the right answer the
+news they're setting you up for success
+
+338
+00:20:50,002 --> 00:20:54,056
+in a different kind away and this
+approach is not appropriate for all
+
+339
+00:20:54,074 --> 00:20:56,113
+kinds of after games
+
+340
+00:20:56,779 --> 00:20:59,843
+it's really when you're breaking into a
+new market or the earth abducting from
+
+341
+00:21:00,419 --> 00:21:01,424
+sort a new paradigm
+
+342
+00:21:01,919 --> 00:21:06,980
+that you might need to communicate just
+a little bit about your pork on Feb
+
+343
+00:21:06,098 --> 00:21:09,124
+and that's going to help people
+understand the product and quite frankly
+
+344
+00:21:10,024 --> 00:21:11,123
+appreciate it right
+
+345
+00:21:12,023 --> 00:21:15,044
+for just three short screams and then
+getting at you enter the news cuz
+
+346
+00:21:15,044 --> 00:21:18,393
+they're gonna get out the way quickly
+
+347
+00:21:18,789 --> 00:21:21,864
+so think about the basic basic things
+that people would need for now
+
+348
+00:21:22,539 --> 00:21:26,570
+in order to start playing your game are
+using your app and think about
+
+349
+00:21:26,057 --> 00:21:31,046
+if any of them really need explaining
+because again if you don't
+
+350
+00:21:31,559 --> 00:21:35,460
+if they don't don't do any onboarding
+right but if you do
+
+351
+00:21:35,046 --> 00:21:38,046
+can consider the way that you can start
+based
+
+352
+00:21:38,046 --> 00:21:41,110
+with the basics and bill that the
+complexity with games it's going to be
+
+353
+00:21:42,001 --> 00:21:42,830
+had a mere
+
+354
+00:21:42,929 --> 00:21:47,740
+what the object at howdy when in fact
+that
+
+355
+00:21:47,074 --> 00:21:51,233
+and when you're teaching me thing make
+sure you're only teaching one
+
+356
+00:21:51,899 --> 00:21:56,710
+thing at a time it is so much harder to
+our never doubt whether
+
+357
+00:21:56,071 --> 00:21:59,250
+financial construction that Juan orbit a
+freshly
+
+358
+00:21:59,889 --> 00:22:03,580
+its related to something unfamiliar
+right okay I'm gonna give all the guy
+
+359
+00:22:03,058 --> 00:22:05,063
+from instruction
+
+360
+00:22:06,008 --> 00:22:09,008
+after their I want to leave Mosconi
+
+361
+00:22:09,008 --> 00:22:12,217
+make you left turn better write down the
+alleyway
+
+362
+00:22:12,289 --> 00:22:15,980
+go to the coffee shop on the corner
+order to lock a
+
+363
+00:22:15,098 --> 00:22:18,112
+1d cast one low-fat
+
+364
+00:22:19,012 --> 00:22:22,100
+but three sugars in the decathlon and
+one sugar in the low fat one and bring
+
+365
+00:22:23,000 --> 00:22:24,659
+them back to me here
+
+366
+00:22:24,659 --> 00:22:30,980
+got it and if anyone got that i'm
+looking for to my locker after that
+
+367
+00:22:30,098 --> 00:22:34,547
+but but you can see how difficult that
+is I'm sure you guys all turned out on
+
+368
+00:22:35,429 --> 00:22:37,070
+Feb 3
+
+369
+00:22:37,007 --> 00:22:41,045
+people are going to be much more able to
+follow those instructions if they're
+
+370
+00:22:41,045 --> 00:22:43,494
+parceled out one at a time
+
+371
+00:22:43,899 --> 00:22:47,938
+self I fed go item of going make to have
+turned and then
+
+372
+00:22:48,289 --> 00:22:52,120
+when you get to the corner of how you
+what to do and that of a go to the
+
+373
+00:22:52,012 --> 00:22:53,088
+coffee shop
+
+374
+00:22:53,088 --> 00:22:56,134
+and then when you get to the register i
+text you hey here's the coffee
+
+375
+00:22:57,034 --> 00:23:02,070
+but I want you to order you this would
+be so much easier
+
+376
+00:23:02,007 --> 00:23:05,976
+see you want to give instructions one at
+a time and give people a chance to apply
+
+377
+00:23:06,669 --> 00:23:10,850
+those instructions before you start
+teaching anything else
+
+378
+00:23:10,085 --> 00:23:13,161
+so this is Leo 4chan another one of our
+Apple Design Award winners
+
+379
+00:23:14,061 --> 00:23:18,160
+from the fear it up really fun platform
+adventure game
+
+380
+00:23:19,006 --> 00:23:22,057
+that in these really gorgeous
+environment and
+
+381
+00:23:23,011 --> 00:23:27,050
+their tutorial eva is fantastic they
+
+382
+00:23:27,149 --> 00:23:30,200
+first start explain the game with a
+little bit a backstory they introduce
+
+383
+00:23:30,659 --> 00:23:31,683
+you to Leopold
+
+384
+00:23:31,899 --> 00:23:37,090
+they let you know if losses 4chan and
+you're gonna help him reclaim it
+
+385
+00:23:37,009 --> 00:23:40,060
+so this translates into you get the gold
+coins
+
+386
+00:23:40,006 --> 00:23:44,435
+now you got your objective right next
+Sat if just
+
+387
+00:23:45,029 --> 00:23:50,031
+about how to hold your device they're
+getting used to this idea that the last
+
+388
+00:23:50,049 --> 00:23:51,070
+fire screen
+
+389
+00:23:51,007 --> 00:23:54,336
+and the right phone screen are gonna do
+something different
+
+390
+00:23:54,399 --> 00:23:58,250
+but they haven't told you what that is
+yet just put your thumbs and this
+
+391
+00:23:58,025 --> 00:24:00,574
+position and that gets you holding the
+device eg
+
+392
+00:24:00,799 --> 00:24:05,580
+in the bath way now once you press your
+company
+
+393
+00:24:05,058 --> 00:24:08,107
+or call then they're talking about
+movement what do you do with your life
+
+394
+00:24:09,007 --> 00:24:09,072
+span
+
+395
+00:24:09,072 --> 00:24:12,611
+well first we're just gonna go forwards
+and backwards
+
+396
+00:24:13,259 --> 00:24:17,351
+very basic fact and then you get a
+chance to play without a little bit you
+
+397
+00:24:18,179 --> 00:24:22,241
+gonna collect from car and go there some
+other cool environment
+
+398
+00:24:22,799 --> 00:24:25,812
+and then a flight obstacle now
+
+399
+00:24:25,929 --> 00:24:29,250
+there's a little chop trying to help you
+out or some words on the right that lets
+
+400
+00:24:29,025 --> 00:24:29,534
+you know
+
+401
+00:24:29,759 --> 00:24:33,700
+now it's time you can use your right
+time here we go
+
+402
+00:24:33,007 --> 00:24:36,015
+get up over that lives and then
+
+403
+00:24:37,005 --> 00:24:40,006
+a chance to play they give you things to
+jump over
+
+404
+00:24:40,006 --> 00:24:43,805
+thanks to jump on fair and next up
+
+405
+00:24:44,399 --> 00:24:48,404
+some more obstacles here it's about
+using that up gesture for something out
+
+406
+00:24:48,899 --> 00:24:54,200
+so they're building up the complexity
+while teaching one thing at a time
+
+407
+00:24:54,002 --> 00:24:57,191
+pushing up on that lever is going to
+release the drawbridge
+
+408
+00:24:57,389 --> 00:25:01,820
+and then you can continue on your way
+then you learn about pushing down and
+
+409
+00:25:01,082 --> 00:25:04,086
+what that that for you
+
+410
+00:25:05,022 --> 00:25:08,121
+earlier fourth-and-1 scale other time
+which is so mad small
+
+411
+00:25:09,021 --> 00:25:12,024
+and have fun because you're playing so
+
+412
+00:25:12,024 --> 00:25:15,963
+it's a great example of scaffolding
+along with him mango
+
+413
+00:25:16,179 --> 00:25:19,870
+and several other examples
+
+414
+00:25:19,087 --> 00:25:25,776
+so the first thing you do you if you are
+in the objective collectors gold coins
+
+415
+00:25:26,559 --> 00:25:29,645
+next thing you're gonna learn about if
+optimal ham possession right for their
+
+416
+00:25:30,419 --> 00:25:34,370
+building up the complexity with the
+scaffolding
+
+417
+00:25:34,037 --> 00:25:37,084
+and the next thing that you learn about
+as really basic movement
+
+418
+00:25:37,084 --> 00:25:41,173
+how to go forward what are you doing
+with your left hand
+
+419
+00:25:42,073 --> 00:25:46,122
+next up is obstacle which you conquer
+using your right hand in various
+
+420
+00:25:47,022 --> 00:25:48,024
+gestures
+
+421
+00:25:48,024 --> 00:25:52,085
+and then further in the game they start
+selling your advanced obstacles are part
+
+422
+00:25:52,085 --> 00:25:52,090
+of
+
+423
+00:25:53,035 --> 00:25:57,083
+you can see how the complexity built up
+that way
+
+424
+00:25:57,083 --> 00:26:00,802
+now like I said the same thing applies
+to ap stats not just games
+
+425
+00:26:01,549 --> 00:26:04,632
+you can teach people by doing you don't
+wanna show them a lot of screens that
+
+426
+00:26:05,379 --> 00:26:06,454
+front
+
+427
+00:26:07,129 --> 00:26:11,134
+now penned for a the first entrapped and
+they onboarding just for specific
+
+428
+00:26:11,629 --> 00:26:11,722
+feature
+
+429
+00:26:12,559 --> 00:26:15,590
+so they have a new Guided Search feature
+and
+
+430
+00:26:15,059 --> 00:26:19,083
+they needed to teach people near the
+Afghan also returning user
+
+431
+00:26:19,083 --> 00:26:23,422
+how do you how to go about using it may
+do a great job apart going out this
+
+432
+00:26:24,169 --> 00:26:26,243
+information one step at a time
+
+433
+00:26:26,909 --> 00:26:29,960
+for the first time you go to the search
+tab after the feature was introduced to
+
+434
+00:26:30,419 --> 00:26:32,440
+get a little bit of information
+
+435
+00:26:32,629 --> 00:26:35,721
+and a given you some sample of and the
+fam both are all things that I'm pretty
+
+436
+00:26:36,549 --> 00:26:37,549
+interested and
+
+437
+00:26:37,549 --> 00:26:41,730
+so they've done a great job in making
+this a really valuable exercise
+
+438
+00:26:41,073 --> 00:26:44,159
+for me now I happen to like nail art
+
+439
+00:26:45,059 --> 00:26:49,097
+and Sonax I tap they explain to me how
+to refine that starts
+
+440
+00:26:49,097 --> 00:26:53,123
+even further
+
+441
+00:26:54,023 --> 00:26:57,962
+and then 15 down for find that they talk
+about even more advanced for five at
+
+442
+00:26:58,169 --> 00:27:03,840
+free typing an because you're getting
+this information one step at a time
+
+443
+00:27:03,084 --> 00:27:07,303
+it's much easier to understand what to
+do and they're letting you execute on
+
+444
+00:27:08,059 --> 00:27:09,200
+these instructions
+
+445
+00:27:09,002 --> 00:27:12,005
+so you're really learning you're taking
+it all in
+
+446
+00:27:12,023 --> 00:27:15,462
+you're much more likely to remember this
+later next time you get a first for
+
+447
+00:27:15,669 --> 00:27:19,480
+something
+
+448
+00:27:19,048 --> 00:27:23,084
+with all of these examples it was an
+overwhelming right
+
+449
+00:27:23,084 --> 00:27:26,120
+and you're actually able to use what
+you've learned because you're playing
+
+450
+00:27:27,002 --> 00:27:31,361
+the game are using an app
+
+451
+00:27:31,559 --> 00:27:34,592
+because people learn better i doing
+
+452
+00:27:34,889 --> 00:27:41,070
+than they do by reading or listening
+when it comes to App Store games
+
+453
+00:27:41,007 --> 00:27:45,070
+dot hit man go leo's fortune they all
+reinforce what they're teaching you
+
+454
+00:27:45,007 --> 00:27:45,836
+replay
+
+455
+00:27:46,529 --> 00:27:49,618
+and Pinterest letting you actually first
+for things they want and i cant
+
+456
+00:27:50,419 --> 00:27:54,506
+experienced those were real thirst terms
+with real refinement
+
+457
+00:27:55,289 --> 00:28:00,090
+so even though this is there really
+super easy can't lease level
+
+458
+00:28:00,009 --> 00:28:07,009
+on him and go
+
+459
+00:28:10,509 --> 00:28:16,720
+it's a lot more fun then this would be
+right
+
+460
+00:28:16,072 --> 00:28:19,109
+now benjamin Franklin have a great quote
+about this
+
+461
+00:28:20,009 --> 00:28:23,023
+tell me and I forget teach me and I
+remember
+
+462
+00:28:23,023 --> 00:28:26,972
+involve me and i learn that's where you
+want to avoid
+
+463
+00:28:27,179 --> 00:28:32,080
+screenshot from low to display anything
+it's gonna take you out a contact to
+
+464
+00:28:32,008 --> 00:28:32,737
+prevent you from
+
+465
+00:28:32,809 --> 00:28:38,490
+actually using the app or game isn't
+going to be effective
+
+466
+00:28:38,049 --> 00:28:41,598
+again what if this was the experience
+with calculator
+
+467
+00:28:42,039 --> 00:28:46,098
+it would be terrible right first evolved
+you are so damn you can barely feel
+
+468
+00:28:46,629 --> 00:28:46,950
+about
+
+469
+00:28:46,095 --> 00:28:50,122
+at all secondly you don't need to faye
+
+470
+00:28:51,022 --> 00:28:54,048
+tap here tap here tap here all over a
+catch
+
+471
+00:28:54,048 --> 00:28:59,747
+interface its attach interface you tap
+my biggest pet peeve is when I see click
+
+472
+00:29:00,179 --> 00:29:00,740
+here
+
+473
+00:29:00,074 --> 00:29:05,263
+on it on touch devices for that really
+gets me
+
+474
+00:29:05,929 --> 00:29:10,620
+now again if your buttons don't look
+obviously interactive
+
+475
+00:29:10,062 --> 00:29:13,241
+redesign your butt don't pick from Notre
+
+476
+00:29:13,799 --> 00:29:18,807
+way letting you know that you can tap
+places
+
+477
+00:29:18,879 --> 00:29:22,905
+so if you do need onboarding make sure
+that your experience let people protest
+
+478
+00:29:23,139 --> 00:29:25,730
+Bay
+
+479
+00:29:25,073 --> 00:29:30,109
+and you can use animation to do a lot of
+teaching at it's a really powerful tool
+
+480
+00:29:31,009 --> 00:29:34,208
+there's a lot of great information about
+the craft of animation
+
+481
+00:29:34,289 --> 00:29:38,490
+and Q se designing intuitive interfaces
+sessions if you don't
+
+482
+00:29:38,049 --> 00:29:41,135
+fear fashion check out the video it's
+available
+
+483
+00:29:42,035 --> 00:29:46,344
+for today I would just like to talk
+specifically about something that I've
+
+484
+00:29:46,659 --> 00:29:47,670
+seen games
+
+485
+00:29:47,769 --> 00:29:50,823
+all the time its giant
+
+486
+00:29:51,309 --> 00:29:54,950
+bouncing a row
+
+487
+00:29:54,095 --> 00:29:58,424
+now I'm first this does seem like an
+effective way to get people through
+
+488
+00:29:59,279 --> 00:30:01,280
+tutorial level
+
+489
+00:30:01,379 --> 00:30:05,360
+great but then know what
+
+490
+00:30:05,036 --> 00:30:08,133
+starts to show people where to look
+eventually become
+
+491
+00:30:09,033 --> 00:30:12,862
+distracting when there's more
+information on the screen you're not
+
+492
+00:30:13,159 --> 00:30:14,233
+looking at the information
+
+493
+00:30:14,899 --> 00:30:17,975
+you're just looking at the Aero and word
+attack and thinking I want to play the
+
+494
+00:30:18,659 --> 00:30:20,480
+game I don't want to read the tutorial
+
+495
+00:30:20,048 --> 00:30:25,317
+fair looking at this button and federal
+looking at what the different characters
+
+496
+00:30:25,749 --> 00:30:26,787
+are gonna do for you
+
+497
+00:30:27,129 --> 00:30:30,142
+wire picking them the strategy the game
+
+498
+00:30:30,259 --> 00:30:33,286
+or how much it's going to cost you what
+the reward is gonna be
+
+499
+00:30:33,529 --> 00:30:37,190
+for pretty fair your game have gone from
+
+500
+00:30:37,019 --> 00:30:40,508
+you know happy ice cream fun time or
+whatever
+
+501
+00:30:40,679 --> 00:30:44,620
+to cap a row no one wants to play tap
+the arrow
+
+502
+00:30:44,062 --> 00:30:48,071
+up our fun game tafero gets old
+
+503
+00:30:48,071 --> 00:30:52,270
+so quickly another way kinda thing
+coveted I don't know how many view
+
+504
+00:30:52,909 --> 00:30:56,947
+had but if you've ever tried to point
+something out to a dog or cat
+
+505
+00:30:57,289 --> 00:31:04,289
+they often just want help looking at
+your finger right here
+
+506
+00:31:05,649 --> 00:31:10,820
+I so this is exactly what you're doing
+with tap the arrow
+
+507
+00:31:10,082 --> 00:31:13,120
+people are going to be looking at what
+you're pointing toward for gonna be
+
+508
+00:31:14,002 --> 00:31:15,211
+looking at the Aero
+
+509
+00:31:15,409 --> 00:31:18,474
+fell rather than pointing try
+
+510
+00:31:19,059 --> 00:31:22,133
+suggestive animation one that's gonna
+help you read people fight for the right
+
+511
+00:31:22,799 --> 00:31:23,810
+part of the screen
+
+512
+00:31:23,909 --> 00:31:28,850
+or let them know what they should dare
+really basic example but it's a good one
+
+513
+00:31:28,085 --> 00:31:31,504
+with hit mango you don't need in a row
+or
+
+514
+00:31:32,269 --> 00:31:35,367
+a graph a record some other kinda about
+the air afsane to let you know that this
+
+515
+00:31:36,249 --> 00:31:37,220
+is a button
+
+516
+00:31:37,022 --> 00:31:41,085
+in addition to being the name that whole
+thing animation draws me to you it makes
+
+517
+00:31:41,085 --> 00:31:43,136
+you wanna tap it right
+
+518
+00:31:44,036 --> 00:31:48,070
+may could have had an arrow pointing cap
+here to have here
+
+519
+00:31:48,007 --> 00:31:51,226
+but you don't need to do that
+
+520
+00:31:51,919 --> 00:31:54,977
+about putting me about using animation
+thoughtful way
+
+521
+00:31:55,499 --> 00:32:00,690
+I hope I look forward to seeing far
+fewer bouncing errors in the future
+
+522
+00:32:00,069 --> 00:32:03,188
+now if you do need your on boarding
+another thing
+
+523
+00:32:03,809 --> 00:32:07,865
+and to keep be wary at is there is no
+need to point out
+
+524
+00:32:08,369 --> 00:32:12,434
+any platform convention you only point
+out the unconventional
+
+525
+00:32:13,019 --> 00:32:18,095
+because everybody knows there's another
+screen app icons available on the folder
+
+526
+00:32:18,779 --> 00:32:22,813
+the paging got take care of that for you
+you don't you want me to put a narrower
+
+527
+00:32:23,119 --> 00:32:25,210
+syntax says slide to the side to see
+more icon
+
+528
+00:32:26,029 --> 00:32:29,350
+be ridiculous similar way
+
+529
+00:32:29,035 --> 00:32:32,084
+you don't have to tell people that tab
+bar and toolbar
+
+530
+00:32:32,084 --> 00:32:35,173
+our interactive they instinctively look
+that way
+
+531
+00:32:36,073 --> 00:32:40,242
+or that you can swipe for more content
+because the content waiting off the edge
+
+532
+00:32:40,899 --> 00:32:44,440
+doubt that job for you and that's really
+
+533
+00:32:44,044 --> 00:32:48,283
+one of the greatest advance says:
+everything platform convention
+
+534
+00:32:48,679 --> 00:32:52,190
+people just instinctively know how to
+interact with them
+
+535
+00:32:52,019 --> 00:32:55,045
+you won't need any onboarding for these
+type of thing
+
+536
+00:32:55,045 --> 00:32:58,046
+you only want to point out anything that
+def Teenz
+
+537
+00:32:58,046 --> 00:33:01,123
+and unique an unfamiliar to your
+audience
+
+538
+00:33:02,023 --> 00:33:05,212
+now another thing to be wary a is
+
+539
+00:33:05,419 --> 00:33:09,490
+forcing people to go down a secondary
+path that they may not wanna take
+
+540
+00:33:09,049 --> 00:33:12,948
+so think about a photo application
+
+541
+00:33:13,389 --> 00:33:16,980
+I don't want to be forced to crop it a
+match if I don't think it needs to be
+
+542
+00:33:16,098 --> 00:33:17,099
+crops
+
+543
+00:33:18,008 --> 00:33:21,070
+I don't want to apply a photo filter 24
+to a photo
+
+544
+00:33:21,007 --> 00:33:26,021
+I shouldn't have to you this is my happy
+I want to do what I want that
+
+545
+00:33:26,084 --> 00:33:30,123
+similarly with music application it's
+great to show people how to make a play
+
+546
+00:33:31,023 --> 00:33:31,552
+with
+
+547
+00:33:31,759 --> 00:33:36,940
+earth station but don't make the market
+a favorite if if not a favorite
+
+548
+00:33:36,094 --> 00:33:39,157
+it's just frustrating
+
+549
+00:33:40,057 --> 00:33:45,416
+know when it comes to tax like I said
+before sorter is always better
+
+550
+00:33:45,929 --> 00:33:49,340
+we know that people are not inclined to
+read really long passages
+
+551
+00:33:49,034 --> 00:33:54,243
+must have the book fell make sure your
+language is short
+
+552
+00:33:54,549 --> 00:33:57,574
+and career avoid jargon and
+
+553
+00:33:57,799 --> 00:34:01,820
+Akron am or in fighter language that may
+not make sense for someone who's near
+
+554
+00:34:02,009 --> 00:34:04,047
+your apt okay
+
+555
+00:34:04,389 --> 00:34:08,790
+this is my favorite example I've Duque
+and they're talking about their
+
+556
+00:34:08,079 --> 00:34:10,154
+notification
+
+557
+00:34:11,054 --> 00:34:16,099
+it so fun a mixtape from a stalker I'm
+excited
+
+558
+00:34:16,099 --> 00:34:19,145
+yeah I mean this this Texas clear
+
+559
+00:34:20,045 --> 00:34:26,063
+its friendly its entertaining as well as
+being educational
+
+560
+00:34:26,063 --> 00:34:29,121
+so here's some things you can think
+about when it comes to writing your tax
+
+561
+00:34:30,021 --> 00:34:34,046
+after southeast question could detect
+three shorter
+
+562
+00:34:34,046 --> 00:34:40,075
+could be clear will the tax make sense
+to someone who is new to the application
+
+563
+00:34:40,075 --> 00:34:43,254
+because you look at your apt all day and
+all night
+
+564
+00:34:43,929 --> 00:34:47,500
+every day for you really need fresh
+perspective and
+
+565
+00:34:47,005 --> 00:34:51,061
+and what what someone unfamiliar with
+your app thank
+
+566
+00:34:52,006 --> 00:34:56,054
+if the methods to complicate if it is
+
+567
+00:34:56,054 --> 00:35:01,140
+you can make it simpler or maybe you
+need to change your approach altogether
+
+568
+00:35:02,004 --> 00:35:05,053
+or would images were better than tax
+
+569
+00:35:05,089 --> 00:35:08,152
+there's our prayer a picture's worth
+1000 words
+
+570
+00:35:09,052 --> 00:35:13,061
+sometimes it's just easier to do it with
+a dry like with me a fortune
+
+571
+00:35:14,042 --> 00:35:17,109
+but little chart dry if my heart it's a
+quick read
+
+572
+00:35:18,009 --> 00:35:21,075
+you can't hop up and go on your way as
+opposed to paying
+
+573
+00:35:21,075 --> 00:35:25,159
+okay when you get here left your thumb
+up for that Leo will hop over the lads
+
+574
+00:35:26,059 --> 00:35:29,108
+would be ridiculous
+
+575
+00:35:30,008 --> 00:35:33,016
+and make sure that feels like an
+extension to your brand
+
+576
+00:35:33,016 --> 00:35:37,027
+because onboarding it's going to be the
+first experienced that somebody had to
+
+577
+00:35:37,027 --> 00:35:38,101
+be there after game
+
+578
+00:35:39,001 --> 00:35:42,024
+kinda like a wedding invitation our
+party invitation
+
+579
+00:35:42,024 --> 00:35:45,081
+affect the tone for the entire
+experience
+
+580
+00:35:45,081 --> 00:35:48,094
+so make sure feel exactly like your
+brand
+
+581
+00:35:48,094 --> 00:35:52,127
+like the personality where at
+
+582
+00:35:53,027 --> 00:35:56,091
+and birth is a very important one
+
+583
+00:35:56,091 --> 00:35:59,108
+always give people an option to get
+
+584
+00:36:00,008 --> 00:36:04,077
+alway the father lunchtime fashion
+yesterday Natalia talks about
+
+585
+00:36:04,077 --> 00:36:08,122
+the dark days of the interwebs with the
+big crazy flash intro
+
+586
+00:36:09,022 --> 00:36:12,065
+and all people wanted with skip intro
+skip intro
+
+587
+00:36:12,065 --> 00:36:16,152
+and that's exactly what we're talking
+about here you don't know if someone has
+
+588
+00:36:17,052 --> 00:36:20,076
+use your app on another day by if they
+watched
+
+589
+00:36:20,076 --> 00:36:23,170
+their friend use your app her friend
+paper just impatient and want to get
+
+590
+00:36:24,007 --> 00:36:25,013
+going
+
+591
+00:36:26,003 --> 00:36:29,087
+if people want to watch her on boarding
+no matter how of a midair
+
+592
+00:36:30,014 --> 00:36:33,019
+don't make them and finally
+
+593
+00:36:33,019 --> 00:36:36,058
+learning should be an enjoyable
+experience
+
+594
+00:36:36,058 --> 00:36:39,135
+it's going to be Plaza again it's your
+first impression
+
+595
+00:36:40,035 --> 00:36:44,057
+up I've after the game for you want to
+make sure that
+
+596
+00:36:44,057 --> 00:36:47,121
+it's a good one let's take a look at
+flights
+
+597
+00:36:48,021 --> 00:36:51,044
+which I think they have a really great
+on boarding experience
+
+598
+00:36:51,044 --> 00:36:54,061
+back close button up fares are optional
+gap
+
+599
+00:36:54,061 --> 00:36:57,156
+you I have faith going on gestures and
+so that's why they wanted to give them
+
+600
+00:36:58,056 --> 00:37:01,098
+just a very brief onboarding explanation
+
+601
+00:37:01,098 --> 00:37:05,104
+attacked invoke that joy travel
+
+602
+00:37:06,058 --> 00:37:13,058
+just a few short screen visual design
+matches every other aspect of the app
+
+603
+00:37:15,073 --> 00:37:18,078
+and when you're all done tap ready to
+fly
+
+604
+00:37:19,023 --> 00:37:22,026
+and you get a nice little animation fun
+right
+
+605
+00:37:22,026 --> 00:37:26,068
+enjoyable sure InPrivate
+
+606
+00:37:26,068 --> 00:37:29,099
+so make sure if you need to provide
+onboarding but you're doing in a way
+
+607
+00:37:29,099 --> 00:37:29,190
+that fun
+
+608
+00:37:30,009 --> 00:37:34,016
+nobody likes a long boring lecture
+
+609
+00:37:34,097 --> 00:37:38,106
+so these are the things they need to
+thrive for if you need onboarding
+
+610
+00:37:39,087 --> 00:37:42,091
+if you need on morning
+
+611
+00:37:42,091 --> 00:37:46,149
+now whether I have an app or game one
+thing that's always a challenge is
+
+612
+00:37:47,049 --> 00:37:51,118
+at how to teach people about gesture
+search I risk open handsome and
+
+613
+00:37:52,018 --> 00:37:55,066
+anything that doesn't have some sort of
+visual representation
+
+614
+00:37:55,066 --> 00:37:58,124
+in the UI so let me give you a few tips
+
+615
+00:37:59,024 --> 00:38:02,105
+about how to make the invisible visible
+
+616
+00:38:03,005 --> 00:38:06,042
+and the first one is using animation cue
+
+617
+00:38:06,042 --> 00:38:09,083
+now I know not if you're gonna make a
+big brown fear 0
+
+618
+00:38:09,083 --> 00:38:12,181
+but there's a lot of things that you can
+do to convey the interactivity
+
+619
+00:38:13,081 --> 00:38:16,105
+or the gesture in a very elegant way
+
+620
+00:38:17,005 --> 00:38:20,061
+your key people focus on the UI not on
+
+621
+00:38:20,061 --> 00:38:23,092
+on the kieres and visit jet fighter
+
+622
+00:38:23,092 --> 00:38:27,147
+it's an app that specializes in luxury
+hotels and resorts
+
+623
+00:38:28,047 --> 00:38:31,094
+they've got tons of amazing photography
+which is one thing
+
+624
+00:38:31,094 --> 00:38:34,193
+that's not part from their competitors
+
+625
+00:38:35,093 --> 00:38:38,119
+this gentle giraffe love the photo lets
+you know
+
+626
+00:38:39,019 --> 00:38:43,034
+at interactive but you can't touch it
+and explore different aspects
+
+627
+00:38:43,034 --> 00:38:48,048
+have stunning kitchen
+
+628
+00:38:48,048 --> 00:38:51,126
+invites you to touch it
+
+629
+00:38:52,026 --> 00:38:56,030
+now the wedding how Tracker app uses
+horizontal movement to show that the
+
+630
+00:38:56,003 --> 00:38:59,015
+screens are swipe the ball
+
+631
+00:38:59,042 --> 00:39:03,076
+so bad and if you don't quite fit it'll
+auto advance
+
+632
+00:39:03,076 --> 00:39:07,097
+got a nice rewind page what type of
+animation at the end for that you know
+
+633
+00:39:07,097 --> 00:39:08,101
+you've had the last I am
+
+634
+00:39:09,037 --> 00:39:14,090
+and then you can flip through for
+anything you might have missed
+
+635
+00:39:14,009 --> 00:39:17,103
+and those are just some other way for
+you can use animation to really help in
+
+636
+00:39:18,084 --> 00:39:19,097
+Courage people are
+
+637
+00:39:19,097 --> 00:39:22,113
+plane gestures are other of factor Buri
+
+638
+00:39:23,013 --> 00:39:26,101
+and again there were a lot of tips on
+the stand Tuesday fashion
+
+639
+00:39:27,001 --> 00:39:30,006
+so make sure to check it out if you
+didn't already seen it
+
+640
+00:39:30,006 --> 00:39:34,015
+see a now another factor teaching tool
+is
+
+641
+00:39:34,015 --> 00:39:38,074
+temporary him just really quick tips
+about jesters
+
+642
+00:39:38,074 --> 00:39:42,143
+the physiognomy is tight ass again as i
+showed earlier there on boarding is all
+
+643
+00:39:43,043 --> 00:39:45,066
+about the core concept
+
+644
+00:39:45,066 --> 00:39:49,124
+so instead once you get into the UI they
+don't need to tell you about that
+
+645
+00:39:50,024 --> 00:39:53,033
+but have time but they give you just a
+couple animation cue
+
+646
+00:39:54,014 --> 00:39:58,039
+and temporary can't for tapping on
+article headline
+
+647
+00:39:58,039 --> 00:40:01,123
+has a horizontal animation and then that
+short message about
+
+648
+00:40:02,023 --> 00:40:06,032
+swiping so if the horrifying animation
+
+649
+00:40:07,013 --> 00:40:11,016
+didn't do it for you this method which
+only appears for two seconds
+
+650
+00:40:11,016 --> 00:40:15,025
+makes it abundantly clear you can swipe
+from article article
+
+651
+00:40:15,025 --> 00:40:18,040
+and you'll note if they didn't force you
+to swipe
+
+652
+00:40:18,004 --> 00:40:21,040
+because I might be interested in reading
+this article I just wanna make sure you
+
+653
+00:40:21,076 --> 00:40:25,115
+know how to navigate
+
+654
+00:40:26,015 --> 00:40:30,112
+lightly has a different approach the
+photo editing application
+
+655
+00:40:31,012 --> 00:40:35,100
+and the first time you use it they give
+you hints about gestures with short tips
+
+656
+00:40:36,000 --> 00:40:40,084
+so here are just selected argyll filter
+and so what comes up as a message about
+
+657
+00:40:40,084 --> 00:40:40,171
+adjusting
+
+658
+00:40:41,071 --> 00:40:45,080
+the Attensity now I just want to point
+out they don't
+
+659
+00:40:45,008 --> 00:40:48,069
+actually force you to adjust the
+intensity
+
+660
+00:40:49,041 --> 00:40:52,087
+any other player anyplace the tap with
+the Smith at hand
+
+661
+00:40:52,087 --> 00:40:56,174
+whether it's adjusting the 10-city
+picking another filter from the bottom
+
+662
+00:40:57,074 --> 00:41:01,125
+or using any the other control
+
+663
+00:41:02,025 --> 00:41:05,026
+for an addition to the plane temporary
+head
+
+664
+00:41:05,035 --> 00:41:10,094
+you can also think about providing
+controls for people to turn them on
+
+665
+00:41:10,094 --> 00:41:13,123
+and this is what we do in garage fan on
+I laugh
+
+666
+00:41:14,023 --> 00:41:18,065
+now this is something that's more
+appropriate for deeper application
+
+667
+00:41:18,065 --> 00:41:23,097
+not every at warrants bath and you can
+come and just start playing the drums
+
+668
+00:41:23,097 --> 00:41:23,182
+and going not
+
+669
+00:41:24,082 --> 00:41:27,171
+without any assistance at all but if you
+want to know more
+
+670
+00:41:28,071 --> 00:41:32,108
+get a deeper knowledge about drumming
+because it's sort of a specialty
+
+671
+00:41:33,008 --> 00:41:36,021
+K-fifty want to become a better musician
+
+672
+00:41:36,021 --> 00:41:39,118
+and you think that question mark button
+up in the up in the corner
+
+673
+00:41:40,018 --> 00:41:44,033
+turned bomb even on modal kept
+
+674
+00:41:44,033 --> 00:41:47,035
+see you can keep playing the drums
+
+675
+00:41:47,053 --> 00:41:50,152
+while you're reading more about them and
+without those non-motor
+
+676
+00:41:51,052 --> 00:41:54,126
+without these tipsy might not realize
+that you can get different found out the
+
+677
+00:41:55,026 --> 00:41:56,040
+hi-hat
+
+678
+00:41:56,004 --> 00:41:59,005
+a fun word is that you're tapping at
+
+679
+00:41:59,005 --> 00:42:03,102
+or that a single tap will play the crash
+cymbal and the bass drum together
+
+680
+00:42:04,047 --> 00:42:09,085
+but a two finger tap is what results in
+just the crash cymbal
+
+681
+00:42:09,085 --> 00:42:11,173
+or you would know that the fear the
+drummer Pete is determined by the
+
+682
+00:42:12,073 --> 00:42:13,171
+distance between your two finger
+
+683
+00:42:14,071 --> 00:42:19,090
+all really useful so if you think you
+have an audience that wants a deeper
+
+684
+00:42:19,009 --> 00:42:19,085
+knowledge
+
+685
+00:42:20,066 --> 00:42:23,121
+or needs actor Guy 10:05 specialized
+subject
+
+686
+00:42:24,021 --> 00:42:27,055
+this could be a good method and
+
+687
+00:42:27,055 --> 00:42:31,061
+and it's really important but you can
+continue to use the app for that you can
+
+688
+00:42:31,061 --> 00:42:33,064
+learn by doing
+
+689
+00:42:33,091 --> 00:42:38,092
+you can put it into practice right on
+the spot
+
+690
+00:42:38,092 --> 00:42:42,144
+because all of these approaches work
+passive they're shown in contact
+
+691
+00:42:43,044 --> 00:42:46,098
+it's important that when you're
+demonstrating gestures you wanna do it
+
+692
+00:42:46,098 --> 00:42:49,105
+right now moment when people can
+experiment with them
+
+693
+00:42:50,005 --> 00:42:54,037
+so that they're learning by doing so now
+I would like to address
+
+694
+00:42:54,037 --> 00:42:58,041
+a dirty word an IRFU I define
+
+695
+00:42:58,077 --> 00:43:01,091
+help help
+
+696
+00:43:01,091 --> 00:43:05,138
+nobody nobody wants to think they need
+help or nobody wants to ask for help
+
+697
+00:43:06,038 --> 00:43:09,040
+and as a designer I certainly hope bad
+
+698
+00:43:09,058 --> 00:43:12,151
+every abstract have my you live
+intuitive to use
+
+699
+00:43:13,051 --> 00:43:19,053
+to every person in every scenario no
+matter what their names
+
+700
+00:43:19,071 --> 00:43:22,156
+sometimes mister hard to achieve
+
+701
+00:43:23,056 --> 00:43:27,075
+I mean people have different experiences
+different backgrounds
+
+702
+00:43:27,075 --> 00:43:31,075
+they come from different culture they
+may have a lot of experience with Apple
+
+703
+00:43:31,075 --> 00:43:32,100
+platform
+
+704
+00:43:33,000 --> 00:43:36,034
+but not without I'll ask for specialty
+nah lives
+
+705
+00:43:36,034 --> 00:43:40,075
+like I can navigate around just about
+any after on the Apple platform
+
+706
+00:43:40,075 --> 00:43:43,112
+but I'm not a good photographer so
+although filter
+
+707
+00:43:44,012 --> 00:43:47,020
+on Photofact I don't know what to do
+with them
+
+708
+00:43:47,002 --> 00:43:49,011
+I don't know what I should do you find
+how they're gonna make my pictures
+
+709
+00:43:50,001 --> 00:43:51,087
+better
+
+710
+00:43:51,096 --> 00:43:54,119
+and not for how can be very handy
+
+711
+00:43:55,019 --> 00:44:00,101
+but it's not for us to feel like a
+lecture from a mean teacher
+
+712
+00:44:01,001 --> 00:44:04,053
+or boring nobody wants for
+
+713
+00:44:04,053 --> 00:44:07,062
+we're moving away from that large
+reference manual right
+
+714
+00:44:08,043 --> 00:44:13,105
+at a few more like that just making
+things a little bit easier on people
+
+715
+00:44:14,005 --> 00:44:17,101
+or maybe like support from a friend or
+family member just giving you a couple
+
+716
+00:44:18,001 --> 00:44:19,045
+tips
+
+717
+00:44:19,045 --> 00:44:22,063
+because I'm definitely not suggesting
+that you had a huge reference
+
+718
+00:44:22,063 --> 00:44:27,087
+documents Tirath there are a lot of ways
+but you can provide help
+
+719
+00:44:27,087 --> 00:44:31,155
+without people even realizing that they
+got any
+
+720
+00:44:32,055 --> 00:44:36,056
+what are the easier things that you can
+do is to put instructions in your empty
+
+721
+00:44:36,056 --> 00:44:37,113
+containers
+
+722
+00:44:38,013 --> 00:44:41,105
+rather than just saying no results for
+third store
+
+723
+00:44:42,005 --> 00:44:46,080
+at an iffy here you wanna keep in Mt
+view from being at that
+
+724
+00:44:46,008 --> 00:44:51,014
+if at all possible let people know what
+to expect here or how to get out of this
+
+725
+00:44:51,086 --> 00:44:54,122
+dead-end situation
+
+726
+00:44:55,022 --> 00:44:58,039
+so an ivory for I left there's a theater
+view
+
+727
+00:44:58,039 --> 00:45:02,045
+were you complete a project go through
+you can view them
+
+728
+00:45:02,045 --> 00:45:05,113
+now before you create any project
+there's nothing to show here
+
+729
+00:45:06,013 --> 00:45:09,017
+so the message lets you know exactly
+what you're going to find here in the
+
+730
+00:45:09,053 --> 00:45:10,060
+future
+
+731
+00:45:11,023 --> 00:45:14,100
+and then they tell you how to get
+started making a product project
+
+732
+00:45:15,000 --> 00:45:18,042
+for that you can have a movie here
+really quick way and it's worth pointing
+
+733
+00:45:18,042 --> 00:45:19,125
+out that both the math fares
+
+734
+00:45:20,025 --> 00:45:23,062
+and the icon in the navigation our
+interactive
+
+735
+00:45:23,062 --> 00:45:27,145
+seeking get going quickly while you're
+learning the UI
+
+736
+00:45:28,045 --> 00:45:31,047
+and the same approach can work for empty
+input field
+
+737
+00:45:31,047 --> 00:45:35,095
+to you playful or text can be super
+informant at
+
+738
+00:45:35,095 --> 00:45:39,131
+the third up to you which is at counter
+app
+
+739
+00:45:40,031 --> 00:45:43,102
+you can of course manager on a point man
+for one of the things that's cool about
+
+740
+00:45:44,002 --> 00:45:48,018
+up to you is that you can also subscribe
+to other people counter
+
+741
+00:45:48,018 --> 00:45:52,117
+and the other people can be your friends
+or can be Barack Obama
+
+742
+00:45:53,017 --> 00:45:56,025
+may have time for counters available on
+here so you can browse to find the ones
+
+743
+00:45:56,097 --> 00:45:56,188
+you want
+
+744
+00:45:57,088 --> 00:46:00,117
+you can offer starts and that first text
+
+745
+00:46:01,017 --> 00:46:05,021
+is very suggested in terms of the types
+of things that you might want to put in
+
+746
+00:46:05,057 --> 00:46:06,062
+there
+
+747
+00:46:06,062 --> 00:46:09,109
+now I got the impression from the
+graphic that I could search for sports
+
+748
+00:46:10,009 --> 00:46:11,058
+teams but
+
+749
+00:46:11,058 --> 00:46:14,104
+I didn't realize I can just type in San
+Francisco I'm see
+
+750
+00:46:15,004 --> 00:46:18,019
+all the listings for San Francisco
+
+751
+00:46:18,019 --> 00:46:21,056
+it's very helpful
+
+752
+00:46:21,056 --> 00:46:25,098
+and it didn't feel like hell right I
+didn't even realize I needed any help
+
+753
+00:46:25,098 --> 00:46:29,114
+but yeah I've learned something now
+
+754
+00:46:30,014 --> 00:46:33,019
+you can also think about showing
+supporting information
+
+755
+00:46:33,019 --> 00:46:36,106
+right and mine and we do this with
+batting
+
+756
+00:46:37,006 --> 00:46:40,022
+now not of adding because they don't on
+the year
+
+757
+00:46:40,022 --> 00:46:45,024
+game time is a pretty universal comp
+that there's nothing else to say here
+
+758
+00:46:45,042 --> 00:46:50,089
+butt dial a fifth well some people might
+have some questions about what baghdad
+
+759
+00:46:50,089 --> 00:46:54,164
+so there's just a little bit more
+information right in that moment
+
+760
+00:46:55,064 --> 00:46:58,163
+again it didn't feel like hell
+
+761
+00:46:59,063 --> 00:47:04,065
+and with games we are fortune that chalk
+drawing is giving you that little hints
+
+762
+00:47:04,065 --> 00:47:09,071
+and they don't just do this and the
+tutorial level it's throughout the game
+
+763
+00:47:10,025 --> 00:47:14,030
+in fact showing information in mind
+often a great alternative to onboarding
+
+764
+00:47:14,075 --> 00:47:15,140
+altogether
+
+765
+00:47:16,004 --> 00:47:19,031
+you don't have to tell everything up
+front just put the axe from
+
+766
+00:47:19,067 --> 00:47:26,067
+information in line so it's fair right
+in that moment that people need it
+
+767
+00:47:27,017 --> 00:47:30,023
+now another great approaches to watch
+for indications that people are
+
+768
+00:47:30,077 --> 00:47:35,116
+stack now when it comes to games though
+you have to be wary about over helping
+
+769
+00:47:36,016 --> 00:47:36,080
+people
+
+770
+00:47:36,008 --> 00:47:40,013
+because it's a game nobody enjoys having
+the puzzle fault for them
+
+771
+00:47:41,003 --> 00:47:44,059
+that's not fun gonna give people a
+chance to play all
+
+772
+00:47:44,086 --> 00:47:48,099
+all on their own and then watch for
+clues they might be stack
+
+773
+00:47:48,099 --> 00:47:51,180
+and that's when you offer how
+
+774
+00:47:52,008 --> 00:47:56,047
+with Rio 4chan if you try and number of
+times to get over this very basic
+
+775
+00:47:57,019 --> 00:47:59,103
+obstacle on you don't make it
+
+776
+00:48:00,003 --> 00:48:03,024
+they give you the option on screen
+control
+
+777
+00:48:03,024 --> 00:48:09,045
+again they only do this if it looks like
+you're struggling with that first job
+
+778
+00:48:09,045 --> 00:48:13,083
+the room to offer have a great approach
+now if you haven't played it at the
+
+779
+00:48:13,083 --> 00:48:17,158
+mystery poverty have our game your
+second through many follow crew after
+
+780
+00:48:18,058 --> 00:48:20,130
+clear after crew to make your escape
+
+781
+00:48:21,003 --> 00:48:25,015
+now if you've been struggling for a long
+time we still have managed to accomplish
+
+782
+00:48:25,042 --> 00:48:27,044
+the next thing
+
+783
+00:48:27,044 --> 00:48:30,075
+a give you this question mark back
+
+784
+00:48:30,075 --> 00:48:33,123
+and this is great because it's giving
+you the option
+
+785
+00:48:34,023 --> 00:48:37,047
+upper hand because it's true I might be
+
+786
+00:48:37,047 --> 00:48:41,079
+stock or I may have been distracted
+
+787
+00:48:41,079 --> 00:48:44,120
+my dog might have started barking or
+someone needed something and walked into
+
+788
+00:48:45,002 --> 00:48:46,021
+the room
+
+789
+00:48:46,039 --> 00:48:51,083
+so that's really good cuz they're not
+they're not solving the puzzle forming
+
+790
+00:48:51,083 --> 00:48:55,169
+however if I am Relief Act and I'm at
+the point walking away it's an uptick
+
+791
+00:48:56,069 --> 00:48:59,075
+keeping gays to keep me moving for
+
+792
+00:49:00,029 --> 00:49:03,081
+and fed up giving way the answer biggie
+clears
+
+793
+00:49:03,081 --> 00:49:06,084
+CR to feel guilty doesn't have to be
+like cheating
+
+794
+00:49:07,011 --> 00:49:10,086
+you have to feel bad about it right and
+it doesn't devalue year
+
+795
+00:49:10,086 --> 00:49:15,088
+peachy man for people who can use the
+cliff we're all gonna get something and
+
+796
+00:49:15,088 --> 00:49:18,186
+some of us are gonna get there faster
+but this works out really well everyone
+
+797
+00:49:19,086 --> 00:49:20,107
+can feel really good
+
+798
+00:49:21,007 --> 00:49:25,055
+when they finished the game and the sky
+hands can be helpful
+
+799
+00:49:25,055 --> 00:49:28,079
+with ap to you the first guy guy
+
+800
+00:49:28,079 --> 00:49:31,162
+another 1i have this year's Apple Design
+Award winner
+
+801
+00:49:32,062 --> 00:49:35,131
+you can pan all around the sky and see
+the consolation
+
+802
+00:49:36,031 --> 00:49:39,090
+planet comment all sorts of star
+
+803
+00:49:39,009 --> 00:49:42,038
+and they were Honda information
+
+804
+00:49:43,019 --> 00:49:46,057
+about almost anything in the night sky
+
+805
+00:49:46,057 --> 00:49:49,066
+now you might think that tapping on a
+star the way to get that information
+
+806
+00:49:50,047 --> 00:49:54,059
+but I would make it a little too easy to
+navigate into the details here
+
+807
+00:49:54,059 --> 00:49:57,152
+you be going on accident you getting
+frustrated
+
+808
+00:49:58,052 --> 00:50:02,097
+so instead the right way to get to get
+to that information
+
+809
+00:50:02,097 --> 00:50:05,181
+is by flooding a star and then tapping
+that I button on the right side of the
+
+810
+00:50:06,081 --> 00:50:09,083
+screen
+
+811
+00:50:10,001 --> 00:50:13,048
+and if you tap its are gone to try and
+select it
+
+812
+00:50:13,048 --> 00:50:17,053
+or get more information you get a
+pulsing animation and that glow
+
+813
+00:50:17,098 --> 00:50:23,126
+called attention to itself they're using
+animation to attract your attention
+
+814
+00:50:24,026 --> 00:50:28,029
+and it's really elegant because if you
+double tap it start thinking
+
+815
+00:50:28,029 --> 00:50:31,087
+are maybe I can tap hard enough for
+maybe I need tapped wife
+
+816
+00:50:31,087 --> 00:50:36,142
+a powerful every time you tack to get
+your attention
+
+817
+00:50:37,042 --> 00:50:40,091
+so they're keeping an eye out for you
+that your stock and trying to pull you
+
+818
+00:50:40,091 --> 00:50:41,126
+in the right direction
+
+819
+00:50:42,026 --> 00:50:45,045
+get you back on track
+
+820
+00:50:45,045 --> 00:50:49,052
+and all the steps that I found you are
+really just about anticipating people's
+
+821
+00:50:49,052 --> 00:50:50,080
+needs
+
+822
+00:50:50,008 --> 00:50:54,095
+telling people what they need to know
+and the moment that they need to know it
+
+823
+00:50:55,067 --> 00:50:59,110
+think about but the restaurant again and
+I talked about earlier
+
+824
+00:51:00,001 --> 00:51:03,058
+you wanna see the dessert menu before
+you've been seeded or while you're
+
+825
+00:51:03,067 --> 00:51:04,112
+eating your appetizer
+
+826
+00:51:05,012 --> 00:51:08,073
+you want when you finished your mail
+
+827
+00:51:08,073 --> 00:51:11,124
+and when you have good service at a
+restaurant means the wait staff is there
+
+828
+00:51:12,024 --> 00:51:13,041
+when you need them
+
+829
+00:51:13,041 --> 00:51:17,073
+and they're not there when you doubt and
+that's exactly the pro
+
+830
+00:51:17,073 --> 00:51:21,138
+approach you wanna take if you got help
+and fire your application
+
+831
+00:51:22,038 --> 00:51:26,061
+and figure is really one of the best
+examples but I've seen out there
+
+832
+00:51:26,061 --> 00:51:30,070
+it's an anonymous social networking app
+so what this means is that you see poets
+
+833
+00:51:30,007 --> 00:51:34,020
+from your friends but you don't know who
+they are because everything's anonymous
+
+834
+00:51:34,083 --> 00:51:38,083
+at the rowing interesting way to
+interact with people
+
+835
+00:51:38,083 --> 00:51:42,125
+now the first time your feet won't their
+explaining in the moment exactly the
+
+836
+00:51:43,025 --> 00:51:44,044
+information they need
+
+837
+00:51:44,044 --> 00:51:48,048
+now so here I'm scrolling through my
+feed and
+
+838
+00:51:48,084 --> 00:51:51,112
+I don't know anyone in the UK now
+
+839
+00:51:52,012 --> 00:51:55,040
+traveled across creme seeking a friend
+
+840
+00:51:55,004 --> 00:51:58,013
+where are my friends now
+
+841
+00:51:58,049 --> 00:52:02,061
+I don't have my phone number yet shoot
+
+842
+00:52:02,061 --> 00:52:06,064
+and what for star me and I wonder %ah
+popular one
+
+843
+00:52:06,091 --> 00:52:09,109
+when you go to comment
+
+844
+00:52:10,009 --> 00:52:13,055
+they explain why they are all these
+icons here they're just letting you know
+
+845
+00:52:13,055 --> 00:52:14,097
+about commenting
+
+846
+00:52:14,097 --> 00:52:18,115
+because that's where you are in apt
+they're not telling you about navigation
+
+847
+00:52:19,015 --> 00:52:23,093
+or what is the star me and things like
+that their focus on commenting
+
+848
+00:52:23,093 --> 00:52:26,115
+it's worth noting that they're just
+giving one piece of information I retire
+
+849
+00:52:27,015 --> 00:52:29,076
+after all
+
+850
+00:52:29,076 --> 00:52:32,175
+and if you're the first to comment
+they've populated their empty
+
+851
+00:52:33,075 --> 00:52:37,126
+the Mt view with information you know
+the common for gonna be there
+
+852
+00:52:38,026 --> 00:52:41,061
+for general-purpose to be the first one
+
+853
+00:52:41,061 --> 00:52:45,139
+and I just love that the placeholder tax
+encourages you to say something
+
+854
+00:52:46,039 --> 00:52:49,088
+hines great
+
+855
+00:52:49,088 --> 00:52:53,115
+think about what people need to know
+based on where they are here after game
+
+856
+00:52:54,015 --> 00:52:57,078
+how long they've been using it and
+anticipating people for me
+
+857
+00:52:57,078 --> 00:53:00,107
+it's just another way that you're going
+to be able to provide help without it
+
+858
+00:53:01,007 --> 00:53:01,084
+feeling
+
+859
+00:53:01,084 --> 00:53:04,117
+like hell
+
+860
+00:53:05,017 --> 00:53:08,108
+and be sure to take the opportunity to
+inspire people
+
+861
+00:53:09,008 --> 00:53:13,074
+like secret that we face some think I
+
+862
+00:53:13,074 --> 00:53:17,153
+now a lot of people use very defect
+reminder Pentax search exports course
+
+863
+00:53:18,053 --> 00:53:19,059
+things like that
+
+864
+00:53:20,013 --> 00:53:24,092
+I remember when you found out that
+theory would answer questions like this
+
+865
+00:53:24,092 --> 00:53:27,175
+mean all the fun this convenience
+features the source of entertainment as
+
+866
+00:53:28,075 --> 00:53:29,136
+well
+
+867
+00:53:30,036 --> 00:53:35,036
+unexpected and fun and now theories more
+valuable to me
+
+868
+00:53:35,036 --> 00:53:38,075
+because she's not just the utility
+anymore she comedy
+
+869
+00:53:38,075 --> 00:53:41,159
+she's flattery it's great
+
+870
+00:53:42,059 --> 00:53:45,132
+people might come cheer up with a
+certain expectation
+
+871
+00:53:46,032 --> 00:53:50,051
+about getting one thing done but when
+they discover that your app can do more
+
+872
+00:53:50,051 --> 00:53:50,140
+for them
+
+873
+00:53:51,004 --> 00:53:54,076
+well then the app becomes even more
+valuable
+
+874
+00:53:55,012 --> 00:53:59,075
+it's gonna feel like a bonus prize
+
+875
+00:53:59,075 --> 00:54:02,123
+and that's why we fear we give you a lot
+of suggestions of things that you can
+
+876
+00:54:03,023 --> 00:54:03,102
+ask her
+
+877
+00:54:04,002 --> 00:54:07,094
+you just tap that question mark button
+you're gonna get along left
+
+878
+00:54:07,094 --> 00:54:12,094
+afsane recast phiri and you may have
+known that you can use very 10 ish a
+
+879
+00:54:12,094 --> 00:54:14,097
+call for
+
+880
+00:54:14,097 --> 00:54:17,148
+have her make an appointment on your
+calendar but did you know that she also
+
+881
+00:54:18,048 --> 00:54:20,077
+will book restaurant for you
+
+882
+00:54:20,077 --> 00:54:23,085
+or Italian movie times I mean if work
+goes on and on
+
+883
+00:54:24,057 --> 00:54:29,074
+on path does it with some other
+onboarding
+
+884
+00:54:29,074 --> 00:54:33,095
+and their private social network so they
+really need you to register because
+
+885
+00:54:33,095 --> 00:54:36,139
+everything is orange around your
+personal information
+
+886
+00:54:37,039 --> 00:54:40,081
+but before registering they're giving
+your theory screen
+
+887
+00:54:40,081 --> 00:54:44,147
+that covers both the features that the
+apt but also
+
+888
+00:54:45,047 --> 00:54:49,111
+how you might want to use them a lot of
+people go to pass thinking they're going
+
+889
+00:54:50,011 --> 00:54:53,013
+to use it for work but now they're gonna
+be thinking about
+
+890
+00:54:53,013 --> 00:54:57,078
+how they can use them in their personal
+life to you
+
+891
+00:54:57,078 --> 00:55:01,079
+or with Pinterest got Mr probz
+
+892
+00:55:01,079 --> 00:55:04,145
+I mean maybe you can depend for after
+they were interested in nail art or
+
+893
+00:55:05,045 --> 00:55:08,124
+wanting referee for dinner party but now
+you're off thinking about
+
+894
+00:55:09,024 --> 00:55:12,027
+gardening and many think about what else
+
+895
+00:55:12,054 --> 00:55:15,113
+interest can be used for
+
+896
+00:55:16,013 --> 00:55:19,056
+first step away from that traditional
+idea of how
+
+897
+00:55:19,056 --> 00:55:24,153
+reference manual and think about how you
+can anticipate people ask me
+
+898
+00:55:25,053 --> 00:55:30,068
+putting instructions an empty containers
+n sewing Supporting Information Line
+
+899
+00:55:30,068 --> 00:55:33,097
+it's about telling people what they need
+snow in that moment
+
+900
+00:55:33,097 --> 00:55:36,109
+but they need to know it like the
+perfect for
+
+901
+00:55:37,009 --> 00:55:40,087
+at a restaurant there when you need them
+an invisible
+
+902
+00:55:40,087 --> 00:55:45,119
+when you down when you're doing all that
+don't forget to take the opportunity to
+
+903
+00:55:46,019 --> 00:55:47,073
+inspire people
+
+904
+00:55:47,073 --> 00:55:50,121
+that increased now I've increase you
+tell me about your app
+
+905
+00:55:51,021 --> 00:55:54,064
+it's getting increased I am
+
+906
+00:55:54,064 --> 00:55:58,156
+fellow if you only take a few things
+away from the talk today
+
+907
+00:55:59,056 --> 00:56:02,110
+in summary ollie
+
+908
+00:56:03,001 --> 00:56:07,072
+require people to register when it's
+absolutely necessary
+
+909
+00:56:07,081 --> 00:56:10,118
+after South if you really need
+onboarding at all
+
+910
+00:56:11,018 --> 00:56:14,034
+if they don't need any information
+before getting started and Jeff but I'm
+
+911
+00:56:14,034 --> 00:56:14,120
+get started
+
+912
+00:56:15,002 --> 00:56:19,059
+otherwise tell them what they need to
+know and I get out of the way quickly
+
+913
+00:56:19,077 --> 00:56:24,112
+teach your accent because people are
+gonna learn better by doing
+
+914
+00:56:25,012 --> 00:56:31,018
+anticipate people's me and don't forget
+to take the opportunity to inspire
+
+915
+00:56:31,018 --> 00:56:34,096
+now I hope that you leave today with a
+new impression about how
+
+916
+00:56:34,096 --> 00:56:38,125
+and how can work in your app for game
+and at that I hope that I've inspired
+
+917
+00:56:39,025 --> 00:56:43,074
+you all with how to make a great first
+impression
+
+918
+00:56:43,074 --> 00:56:46,156
+so this is my email and I what it
+genuinely like to hear about changes
+
+919
+00:56:47,056 --> 00:56:48,123
+that you make your app
+
+920
+00:56:49,023 --> 00:56:52,077
+and how that change the overall
+experience we've got a lot more
+
+921
+00:56:52,077 --> 00:56:53,136
+information about this I'm
+
+922
+00:56:54,036 --> 00:56:57,075
+at the a bit developer doubt Apple dot
+com
+
+923
+00:56:57,075 --> 00:57:00,158
+and if you didn't see either BT fashions
+on Tuesday the video
+
+924
+00:57:01,058 --> 00:57:05,079
+are available got the ingredients for a
+great game versus about making
+
+925
+00:57:05,079 --> 00:57:09,092
+a great game and then designing
+intuitive user experiences with all
+
+926
+00:57:09,092 --> 00:57:10,179
+those animation test
+
+927
+00:57:11,079 --> 00:57:11,123
+thanks so much
+

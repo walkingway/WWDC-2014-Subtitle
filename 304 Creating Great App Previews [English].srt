@@ -1,0 +1,3627 @@
+1
+00:00:13,012 --> 00:00:18,045
+good afternoon everyone the are okay
+
+2
+00:00:18,045 --> 00:00:20,088
+alright a thousand funded IRA
+
+3
+00:00:20,088 --> 00:00:24,095
+thank you for coming this is the session
+such as creating app reviews for
+
+4
+00:00:24,095 --> 00:00:24,168
+creating
+
+5
+00:00:25,068 --> 00:00:28,120
+greats app reviews and I really believe
+that
+
+6
+00:00:29,002 --> 00:00:32,009
+Howden after the session I believe you
+gonna be able to create a great app
+
+7
+00:00:32,027 --> 00:00:32,032
+review
+
+8
+00:00:32,077 --> 00:00:35,112
+my name is Paul Turner and I'm from the
+iTunes engineering
+
+9
+00:00:36,012 --> 00:00:39,110
+division and what that fancy title up
+behind you says
+
+10
+00:00:40,001 --> 00:00:43,014
+eyes that I have a job that requires
+many talents
+
+11
+00:00:43,023 --> 00:00:46,032
+true are
+
+12
+00:00:46,239 --> 00:00:50,310
+another one to Iran several teams that
+keep content processing
+
+13
+00:00:50,949 --> 00:00:55,470
+such as wraps processing and flown to
+the store are but in my tenure topple
+
+14
+00:00:55,047 --> 00:00:59,072
+I've been lucky enough to be able to
+purchase been producing and engineering
+
+15
+00:00:59,072 --> 00:01:01,093
+and launching incredible projects
+
+16
+00:01:01,093 --> 00:01:05,192
+on won my first projects was a with from
+the coupon from here I was actually the
+
+17
+00:01:06,092 --> 00:01:10,154
+original app store launch and since then
+we've done iBookstore
+
+18
+00:01:11,054 --> 00:01:16,075
+and I HD films on iTunes action LP is an
+iTunes Match in
+
+19
+00:01:16,075 --> 00:01:19,080
+be roles it's been awesome %ah
+
+20
+00:01:20,025 --> 00:01:23,104
+this isn't about me better
+
+21
+00:01:23,329 --> 00:01:27,350
+was actually rolled into you guys though
+is that i won the things that Iran
+
+22
+00:01:27,035 --> 00:01:30,334
+is actually the logistics team for aP's
+made by Apple
+
+23
+00:01:30,649 --> 00:01:35,820
+not only do I help engineer and support
+iTunes Connect but I am a customer that
+
+24
+00:01:35,082 --> 00:01:35,991
+just like you guys
+
+25
+00:01:36,729 --> 00:01:39,822
+alright let's talk about you and your
+app's
+
+26
+00:01:40,659 --> 00:01:43,770
+and your app reviews first
+
+27
+00:01:43,077 --> 00:01:46,125
+or talk about how content
+
+28
+00:01:47,025 --> 00:01:51,038
+as preview customers on store currently
+
+29
+00:01:51,038 --> 00:01:56,667
+with our amazing and innovative and down
+lists music store
+
+30
+00:01:57,009 --> 00:02:00,750
+we have this great 92nd preview level I
+Sedin
+
+31
+00:02:00,075 --> 00:02:03,614
+click and buy all day long on and for my
+favorite store
+
+32
+00:02:04,289 --> 00:02:08,570
+phone store with this great theatrical
+trailers for the TV store we have
+
+33
+00:02:08,057 --> 00:02:09,070
+episode reviews
+
+34
+00:02:09,007 --> 00:02:13,018
+and for everyone's favorite the
+iBookstore
+
+35
+00:02:13,081 --> 00:02:17,123
+with those enticing downloadable samples
+so we have to the App Store
+
+36
+00:02:18,023 --> 00:02:22,085
+this week we're introducing app reviews
+
+37
+00:02:22,085 --> 00:02:25,111
+let's get to know on yeah we hope girl
+other clout
+
+38
+00:02:26,011 --> 00:02:29,092
+this is great this is God was amazing
+
+39
+00:02:29,092 --> 00:02:32,801
+all right let's get to know our previews
+this is this is fun was picking up we're
+
+40
+00:02:33,629 --> 00:02:37,220
+10 left us on monday with that app the
+showed Monument Valley
+
+41
+00:02:37,022 --> 00:02:41,101
+let's take a look at the way dates
+preview to customers on the store
+
+42
+00:02:42,001 --> 00:02:46,065
+right now means pretty
+
+43
+00:02:46,065 --> 00:02:50,324
+alright so on the store on the store
+front page you can have description tax
+
+44
+00:02:50,909 --> 00:02:52,995
+you have other information but you know
+a picture is worth a thousand words
+
+45
+00:02:53,769 --> 00:02:57,280
+let's look at the screen shot and
+they're beautiful are beautiful and
+
+46
+00:02:57,028 --> 00:02:57,115
+gorgeous
+
+47
+00:02:58,015 --> 00:03:03,664
+is an amazing app but I'm curious as a
+customer I don't fully understand it I
+
+48
+00:03:03,799 --> 00:03:05,040
+don't understand how the app
+
+49
+00:03:05,004 --> 00:03:11,059
+functions this is out previews so if a
+picture is worth a thousand words
+
+50
+00:03:11,059 --> 00:03:14,106
+what's a video or and this is a
+
+51
+00:03:15,006 --> 00:03:22,006
+the
+
+52
+00:03:26,039 --> 00:03:29,093
+the moment
+
+53
+00:03:29,093 --> 00:03:33,093
+aunt
+
+54
+00:03:33,093 --> 00:03:34,097
+on
+
+55
+00:03:34,097 --> 00:03:37,120
+in
+
+56
+00:03:38,002 --> 00:03:45,002
+the
+
+57
+00:03:45,081 --> 00:03:49,081
+right before our eyes Monument Valley
+becomes immersive
+
+58
+00:03:49,081 --> 00:03:52,135
+puzzle game and you make an immediate
+emotional connection
+
+59
+00:03:53,035 --> 00:03:56,100
+and that's app reviews solar start of
+
+60
+00:03:57,000 --> 00:04:00,096
+goes on the same page was just some
+basic information
+
+61
+00:04:00,096 --> 00:04:04,105
+up app reviews up to thirty seconds in
+length
+
+62
+00:04:05,005 --> 00:04:10,061
+app reviews are not really brand or
+campaign focused
+
+63
+00:04:10,061 --> 00:04:13,147
+they are the raffle with cutscenes
+they're definitely not the actual
+
+64
+00:04:14,047 --> 00:04:16,139
+trailers the just brief videos meant to
+demonstrate
+
+65
+00:04:17,039 --> 00:04:20,067
+the you are the features and
+functionality of your app
+
+66
+00:04:20,067 --> 00:04:25,098
+app reviews are made primarily have
+captured footage
+
+67
+00:04:25,098 --> 00:04:28,177
+we're gonna show you how to do that will
+live on stage today
+
+68
+00:04:29,077 --> 00:04:32,170
+and once you're finished producing your
+app review
+
+69
+00:04:33,007 --> 00:04:36,026
+your export out high-resolution source
+
+70
+00:04:36,089 --> 00:04:39,090
+you can upload right into iTunes Connect
+very easy
+
+71
+00:04:39,099 --> 00:04:43,148
+gonna be review launch a binary we're
+gonna re in coded for streaming out to
+
+72
+00:04:44,048 --> 00:04:48,100
+devices all around the world its
+incredible so with that
+
+73
+00:04:49,000 --> 00:04:52,084
+let's talk about the agenda today first
+of
+
+74
+00:04:52,084 --> 00:04:55,148
+recover a little bit more the details an
+app reviews the characteristics what
+
+75
+00:04:56,048 --> 00:04:58,093
+makes them different than anything
+really seen before
+
+76
+00:04:58,093 --> 00:05:01,150
+we're gonna help you take that first
+step and that's come the most important
+
+77
+00:05:02,005 --> 00:05:02,059
+step is
+
+78
+00:05:03,004 --> 00:05:06,010
+the planning step how to plan your video
+creatively
+
+79
+00:05:06,064 --> 00:05:09,086
+and technically we're gonna
+
+80
+00:05:09,086 --> 00:05:12,151
+show you that capture future and its
+amazing and I love it
+
+81
+00:05:13,051 --> 00:05:16,140
+we're also gonna do a little bit adding
+we're so you're editing options
+
+82
+00:05:17,004 --> 00:05:21,068
+with iMovie next we're gonna show used
+some composition tips
+
+83
+00:05:22,004 --> 00:05:26,022
+we're gonna demonstrate the uploading
+right into iTunes Connect
+
+84
+00:05:26,022 --> 00:05:29,075
+the roundout everything at the end some
+guidelines
+
+85
+00:05:29,075 --> 00:05:32,114
+the Sun good every death okay
+
+86
+00:05:33,014 --> 00:05:36,041
+okay to talk but
+
+87
+00:05:36,041 --> 00:05:39,046
+interactive alright let's talk about
+those details
+
+88
+00:05:39,091 --> 00:05:42,179
+all right %uh previews
+
+89
+00:05:43,079 --> 00:05:46,123
+app reviews are a feature of the Iowa
+app stores
+
+90
+00:05:47,023 --> 00:05:50,028
+as you saw on monument by the 10 shown
+we are you just showed here
+
+91
+00:05:50,073 --> 00:05:53,108
+app you use a gun show up and the first
+law
+
+92
+00:05:54,008 --> 00:05:57,064
+the new section for screenshots and
+videos
+
+93
+00:05:57,064 --> 00:06:00,116
+firstly I will be dedicated app reviews
+shop on the product page
+
+94
+00:06:01,016 --> 00:06:04,017
+app reviews
+
+95
+00:06:04,026 --> 00:06:09,032
+are device-specific mean that if you
+have a universal app
+
+96
+00:06:09,086 --> 00:06:12,160
+you upload a distinct iPhone and a
+distinct
+
+97
+00:06:13,006 --> 00:06:19,011
+iPad video for app reviews also we're
+making a very easy
+
+98
+00:06:19,065 --> 00:06:24,108
+you noble just that single so the videos
+to your caps primary localization
+
+99
+00:06:25,008 --> 00:06:28,050
+we're going to disperse them to the
+other store fronts
+
+100
+00:06:28,005 --> 00:06:31,674
+the app is for sale a couple more
+details
+
+101
+00:06:32,169 --> 00:06:36,490
+need those beautiful wide
+
+102
+00:06:36,049 --> 00:06:39,058
+screens to show off your app reviews so
+app reviews are gonna be
+
+103
+00:06:40,039 --> 00:06:43,041
+a future I was a and they're going to
+display on those
+
+104
+00:06:43,041 --> 00:06:47,100
+iPhone this widescreen iPhones iPod
+touch and iPhone 5 the iPod Touch is the
+
+105
+00:06:48,000 --> 00:06:48,068
+iPad
+
+106
+00:06:48,068 --> 00:06:52,105
+the desktop store one question a lot
+
+107
+00:06:53,005 --> 00:06:57,624
+the not required but they're strongly
+encouraged and i'm glad you guys are all
+
+108
+00:06:57,669 --> 00:06:59,100
+here today have taken the first step
+
+109
+00:06:59,001 --> 00:07:02,630
+on we didn't want to launch app reviews
+until we made
+
+110
+00:07:02,729 --> 00:07:06,240
+everything available and accessible to
+every developer and now that we're doing
+
+111
+00:07:06,024 --> 00:07:10,031
+that we're strongly encouraging everyone
+to get aboard really want you know more
+
+112
+00:07:10,031 --> 00:07:13,035
+we're here for the session we're gonna
+be in the lab we're here to help you get
+
+113
+00:07:13,035 --> 00:07:14,131
+on board app reviews which think they're
+amazing
+
+114
+00:07:15,031 --> 00:07:18,095
+this is my favorite my favorite of all
+
+115
+00:07:18,095 --> 00:07:22,161
+my favorite we have native aspect ratio
+support built-in
+
+116
+00:07:23,061 --> 00:07:28,240
+no longer well you have to stretch
+
+117
+00:07:28,789 --> 00:07:32,530
+or pinch or add a thats
+
+118
+00:07:32,053 --> 00:07:36,089
+to your videos to fit in a wide screen
+player I want that of the screens badges
+
+119
+00:07:36,089 --> 00:07:36,175
+burning eyes
+
+120
+00:07:37,075 --> 00:07:40,083
+we have native aspect ratio support
+right in built right into your you get
+
+121
+00:07:41,055 --> 00:07:41,151
+the fall
+
+122
+00:07:42,051 --> 00:07:46,074
+you I really owe in in the in playback
+it's it's fantastic
+
+123
+00:07:46,074 --> 00:07:50,097
+or talk about planning next
+
+124
+00:07:50,097 --> 00:07:53,606
+I'm sure you guys are sitting here
+
+125
+00:07:54,479 --> 00:07:58,050
+give me a little bit of information
+maybe the wheels are spinning everything
+
+126
+00:07:58,005 --> 00:07:58,082
+about your app
+
+127
+00:07:58,082 --> 00:08:01,134
+everyone what you gonna do let's talk
+about planning planning is the biggest
+
+128
+00:08:02,034 --> 00:08:04,923
+part about making your app review the
+restroom it really easy so
+
+129
+00:08:05,229 --> 00:08:08,460
+planning is where you have to start
+
+130
+00:08:08,046 --> 00:08:11,075
+first you have to figure out the goal
+
+131
+00:08:11,075 --> 00:08:14,304
+love your app review are you highlight
+
+132
+00:08:14,979 --> 00:08:18,990
+feature many features maybe
+
+133
+00:08:18,099 --> 00:08:22,150
+the utility of your app maybe you have a
+really innovative you are I
+
+134
+00:08:23,005 --> 00:08:27,914
+start thinking about what your goal
+under thirty second app reviews gonna be
+
+135
+00:08:28,409 --> 00:08:32,620
+and agree way to think about this is
+what makes my app
+
+136
+00:08:32,062 --> 00:08:35,541
+magical what makes bad magic and
+
+137
+00:08:36,099 --> 00:08:39,500
+an easy way to kind of put yourself in
+that that question is
+
+138
+00:08:39,005 --> 00:08:42,010
+if somebody walked up to you with your
+app you know
+
+139
+00:08:42,055 --> 00:08:45,084
+hey I've got this app you're out what
+would you want them to say to you about
+
+140
+00:08:45,084 --> 00:08:46,086
+the app
+
+141
+00:08:47,004 --> 00:08:50,012
+you know of got this app it does this
+
+142
+00:08:50,012 --> 00:08:55,031
+for basics or all acts really collapse
+revolutionize the way I
+
+143
+00:08:55,031 --> 00:08:59,031
+that or what you plan over there are two
+school game it does this in his
+
+144
+00:08:59,031 --> 00:09:00,047
+character does that
+
+145
+00:09:00,047 --> 00:09:04,080
+what nature at magical you know that's
+going to make your a magical app review
+
+146
+00:09:04,008 --> 00:09:07,030
+route preview magical that's going to
+get people
+
+147
+00:09:08,002 --> 00:09:11,099
+to purchaser out just like Monument
+Valley
+
+148
+00:09:11,099 --> 00:09:14,168
+you saw those beautiful screenshots and
+screenshots are very powerful tool
+
+149
+00:09:15,068 --> 00:09:18,116
+but I efforts story to tell when you
+have this be you have
+
+150
+00:09:19,016 --> 00:09:23,068
+app reviews to fill in that story see a
+look beyond your screenshots
+
+151
+00:09:23,068 --> 00:09:26,075
+how do you tell your story now with
+these
+
+152
+00:09:26,075 --> 00:09:29,604
+these videos fantastic
+
+153
+00:09:30,279 --> 00:09:34,130
+a couple more things are contemplating
+so now you're you're starting to
+
+154
+00:09:34,013 --> 00:09:37,044
+to figure what nature out magical arm
+
+155
+00:09:37,044 --> 00:09:40,051
+you started to understand what your goal
+is
+
+156
+00:09:41,014 --> 00:09:44,022
+now it's time to start listing out these
+elements may be left out the elements
+
+157
+00:09:44,022 --> 00:09:46,029
+that you want to put in your app review
+
+158
+00:09:46,092 --> 00:09:49,131
+a if your app it's already on store a
+great place to start five-year
+
+159
+00:09:50,031 --> 00:09:51,092
+description text
+
+160
+00:09:51,092 --> 00:09:54,701
+that's probably first list the event
+everyone who got to listen your
+
+161
+00:09:55,529 --> 00:09:58,190
+description text right now you just feel
+that
+
+162
+00:09:58,019 --> 00:10:01,037
+put that on your list number add to it
+serves for
+
+163
+00:10:01,037 --> 00:10:04,081
+playing with things start thinking about
+what your app is all about our
+
+164
+00:10:04,081 --> 00:10:07,088
+our marriage spent so much time on this
+great level i really wanna show this of
+
+165
+00:10:08,051 --> 00:10:11,087
+kids love this target so much feedback
+about this portion of my app that's a
+
+166
+00:10:11,087 --> 00:10:13,145
+great thing to put in my app review
+
+167
+00:10:14,045 --> 00:10:18,060
+and I having so that now I highly
+encourage you
+
+168
+00:10:18,006 --> 00:10:21,065
+to make some kinda outline a storyboard
+you see the storm or that we have upon
+
+169
+00:10:22,019 --> 00:10:23,042
+your on-screen
+
+170
+00:10:23,042 --> 00:10:26,095
+this is first order we're essentially a
+previous based on
+
+171
+00:10:26,095 --> 00:10:29,101
+a little bit but it's nothing fancy
+don't retreat charles is
+
+172
+00:10:30,055 --> 00:10:33,079
+fantastic drying arm they could be on a
+napkin
+
+173
+00:10:33,079 --> 00:10:36,131
+mutually napkin are you know I doesn't
+matter what you do when you're trying to
+
+174
+00:10:37,031 --> 00:10:40,102
+make a beat a series of a rose in boxes
+but for storyboarding it out
+
+175
+00:10:41,002 --> 00:10:45,036
+what do what do I wanna show in my video
+how am I gonna put the story together
+
+176
+00:10:45,036 --> 00:10:48,054
+right arm along those lines
+
+177
+00:10:48,054 --> 00:10:51,133
+you prolly wanna work with that list
+developments your storyboard
+
+178
+00:10:52,033 --> 00:10:55,057
+start working with the timing remember
+you're fine I'm outta time
+
+179
+00:10:55,057 --> 00:10:58,132
+same I like this oh man I really wanna
+show of this you are that takes about
+
+180
+00:10:59,032 --> 00:11:00,097
+five seconds to load
+
+181
+00:11:00,097 --> 00:11:04,156
+start work with the timing here this is
+the time in the planning stage knowing a
+
+182
+00:11:05,029 --> 00:11:06,850
+bar down the production stage
+
+183
+00:11:06,085 --> 00:11:08,824
+you know you working on the on on your
+app review and still not know what
+
+184
+00:11:09,589 --> 00:11:12,250
+you're trying to accomplish by
+
+185
+00:11:12,025 --> 00:11:16,051
+so for the planning stage miserable
+basic things went on time here but
+
+186
+00:11:16,051 --> 00:11:19,106
+I think it's good reminder 1 I'll get
+you you are the weeds if you if you're
+
+187
+00:11:20,006 --> 00:11:21,008
+if you're the production's
+
+188
+00:11:21,008 --> 00:11:24,020
+process one last thing are contemplating
+
+189
+00:11:24,002 --> 00:11:28,061
+just like screenshots yet to disclose
+all your in app purchase
+
+190
+00:11:28,079 --> 00:11:31,105
+so that's a good time in your planning
+stage to figure how you gonna do that
+
+191
+00:11:32,005 --> 00:11:35,092
+if your gonna show the you know the sort
+of thunder
+
+192
+00:11:35,092 --> 00:11:39,101
+and that cost 10,000 coins are you
+either have to figure out how to
+
+193
+00:11:40,001 --> 00:11:42,069
+disclose that with some kind of texture
+all meant
+
+194
+00:11:42,069 --> 00:11:45,132
+or maybe you want to show how the in app
+purchase
+
+195
+00:11:46,032 --> 00:11:49,129
+was purchased in your and your app
+review so memory of the
+
+196
+00:11:50,029 --> 00:11:54,328
+it disclose all your purchases plan for
+it
+
+197
+00:11:54,589 --> 00:11:59,470
+good tip alright couple technical things
+to go over
+
+198
+00:11:59,047 --> 00:12:02,124
+if your universal app you have a great
+story more
+
+199
+00:12:03,024 --> 00:12:06,120
+might have a great plan above your iPad
+app
+
+200
+00:12:07,002 --> 00:12:10,038
+and your iPad version A in your iPhone
+version may have different UI elements
+
+201
+00:12:10,056 --> 00:12:13,525
+that you want a highly or need to
+highlight or capturing a different way
+
+202
+00:12:14,029 --> 00:12:17,980
+to edit into your app review in the
+planning phase good to identify those so
+
+203
+00:12:17,098 --> 00:12:17,163
+you can
+
+204
+00:12:18,063 --> 00:12:21,112
+capture them when you need them to help
+them endure production process
+
+205
+00:12:22,012 --> 00:12:25,013
+on next one 0
+
+206
+00:12:25,013 --> 00:12:28,038
+this is a good one arm
+
+207
+00:12:28,038 --> 00:12:31,107
+you know your customers past and so
+therefore we're gonna allow you to pick
+
+208
+00:12:31,449 --> 00:12:31,487
+your
+
+209
+00:12:31,829 --> 00:12:35,886
+language for ya preview remember it goes
+on your app's primary localization but
+
+210
+00:12:36,399 --> 00:12:38,110
+you need to choose a language now
+
+211
+00:12:38,011 --> 00:12:41,025
+yet again you know your customers past
+if your app's
+
+212
+00:12:41,025 --> 00:12:46,073
+primary localizations Japanese as
+primarily sold in Japan
+
+213
+00:12:46,073 --> 00:12:50,081
+but yet you know that your customers
+expecting English video:
+
+214
+00:12:50,081 --> 00:12:53,142
+as long as a passive guidelines were
+gonna allow it so the planning phases
+
+215
+00:12:54,042 --> 00:12:54,141
+good figure out
+
+216
+00:12:55,041 --> 00:12:59,770
+language in use this is probably the
+most obvious thing I'm gonna tell you
+
+217
+00:13:00,139 --> 00:13:01,720
+today but demo counts
+
+218
+00:13:01,072 --> 00:13:05,111
+if you're up opens up to a login screens
+from your really boring app review
+
+219
+00:13:05,759 --> 00:13:08,820
+so republicanism I have demo counts you
+know
+
+220
+00:13:08,082 --> 00:13:11,149
+hand along those lines you may need to
+stage some information
+
+221
+00:13:12,049 --> 00:13:16,050
+into those accounts I if your social
+opportunities within social media editor
+
+222
+00:13:16,005 --> 00:13:17,093
+Kyle Drabek gonna need to put some
+
+223
+00:13:18,038 --> 00:13:22,049
+calendar information if you're a gay man
+you really want to show off that fourth
+
+224
+00:13:22,049 --> 00:13:22,144
+level that you
+
+225
+00:13:23,044 --> 00:13:26,093
+you know kids really love you have to
+figure out a way to get that fourth
+
+226
+00:13:26,093 --> 00:13:26,166
+level
+
+227
+00:13:27,066 --> 00:13:31,080
+and I caution you don't stage anything
+in your app review that cannot be
+
+228
+00:13:31,008 --> 00:13:31,016
+accomplished
+
+229
+00:13:32,006 --> 00:13:35,075
+in your app your app review has to be
+representative the app the customer will
+
+230
+00:13:36,029 --> 00:13:36,036
+buy
+
+231
+00:13:36,099 --> 00:13:39,131
+just a caution and unknown menu doesn't
+do that but it just want to warn you
+
+232
+00:13:40,031 --> 00:13:40,113
+about that
+
+233
+00:13:41,013 --> 00:13:44,016
+also are in staging goodyear
+
+234
+00:13:44,016 --> 00:13:48,505
+about just like screenshots we can have
+any advertisements in their previous set
+
+235
+00:13:48,649 --> 00:13:51,620
+to get under stage those out
+
+236
+00:13:51,062 --> 00:13:54,721
+hunger alright but show you a cool app
+review now
+
+237
+00:13:55,279 --> 00:13:59,690
+for me talk this is a preview for our
+
+238
+00:13:59,069 --> 00:14:02,161
+our friends at from from a friend to
+talk about her for an app
+
+239
+00:14:03,061 --> 00:14:08,066
+call to collapse and they just have put
+a few capture clips together
+
+240
+00:14:09,011 --> 00:14:13,036
+they demonstrate their quirky art
+direction and they're fine you are I
+
+241
+00:14:13,036 --> 00:14:16,099
+this is not to get kids really involved
+in experimentation in science
+
+242
+00:14:16,099 --> 00:14:19,128
+just give you a great picture the app in
+a brief amount of time
+
+243
+00:14:20,019 --> 00:14:25,970
+love to show it to you right now
+
+244
+00:14:25,097 --> 00:14:31,146
+called
+
+245
+00:14:32,019 --> 00:14:35,860
+well
+
+246
+00:14:35,086 --> 00:14:41,735
+well West
+
+247
+00:14:42,509 --> 00:14:49,170
+Ste
+
+248
+00:14:49,017 --> 00:14:52,049
+go right through any I like it yes
+
+249
+00:14:52,049 --> 00:14:55,057
+please proper talk about her come on
+
+250
+00:14:56,029 --> 00:14:59,093
+that's a great app review just a series
+of clips is very basic
+
+251
+00:14:59,093 --> 00:15:02,622
+my kids addicted to these actual loves
+loves them alright
+
+252
+00:15:03,459 --> 00:15:06,465
+now or move on
+
+253
+00:15:06,519 --> 00:15:11,920
+my favorite part about this the capture
+near really expensive cable for this
+
+254
+00:15:11,092 --> 00:15:14,094
+really lots worked on killing ya you
+just a lightning cable
+
+255
+00:15:14,094 --> 00:15:19,603
+its made it so easy amazing alright a
+couple things like after
+
+256
+00:15:20,449 --> 00:15:23,980
+no estan is seventy and I was a
+
+257
+00:15:23,098 --> 00:15:26,507
+you gonna be able to you hook up your
+device via a lightning cable
+
+258
+00:15:27,389 --> 00:15:30,940
+writes your Mac open a QuickTime Player
+and your devices
+
+259
+00:15:30,094 --> 00:15:33,188
+screen output and audio are available as
+inputs
+
+260
+00:15:34,088 --> 00:15:40,837
+just like a camera would be yes there
+you go the yeah
+
+261
+00:15:41,629 --> 00:15:44,631
+through breezy I love it I love it
+
+262
+00:15:44,829 --> 00:15:50,790
+fantastic alright so to do this
+obviously
+
+263
+00:15:50,079 --> 00:15:53,106
+you need I S devices require lightning
+cables Fletcher
+
+264
+00:15:54,006 --> 00:15:58,345
+iPod touches your iPhone 5 Series your
+iPad
+
+265
+00:15:58,399 --> 00:16:03,050
+near the lightning cable support only
+works over lightning
+
+266
+00:16:03,005 --> 00:16:06,354
+but and true Apple form it just works
+
+267
+00:16:06,399 --> 00:16:10,370
+a special molds no clicking no shaking
+an overhead
+
+268
+00:16:10,037 --> 00:16:13,061
+stop on it three times that works its
+plugin
+
+269
+00:16:13,061 --> 00:16:16,540
+selecting quick time we're gonna show it
+to you today it's it's really amazing
+
+270
+00:16:17,089 --> 00:16:22,120
+just works love that couple tips for
+capture
+
+271
+00:16:22,399 --> 00:16:27,620
+arm we want to display the highest
+quality video and audio to the customers
+
+272
+00:16:27,062 --> 00:16:30,124
+and so we're we've made this capture
+tool so that you can capture the highest
+
+273
+00:16:31,024 --> 00:16:33,053
+quality video and audio love your app
+
+274
+00:16:33,269 --> 00:16:36,980
+you spend a lot of time making
+perfecting every pixel in your you I
+
+275
+00:16:36,098 --> 00:16:38,147
+know we want to capture every single
+pixel
+
+276
+00:16:39,047 --> 00:16:42,466
+the end make sure the customer sees how
+much how much love and you know
+
+277
+00:16:42,889 --> 00:16:44,420
+everything you put into your apt
+
+278
+00:16:44,042 --> 00:16:48,043
+so we're hoping that you can use these
+Apple tools
+
+279
+00:16:48,043 --> 00:16:51,872
+on a tip just like toca Boca did there
+you can start
+
+280
+00:16:52,259 --> 00:16:55,500
+your capture are you looking at it in
+from your splash screen
+
+281
+00:16:55,005 --> 00:16:59,144
+looks really kinda cool if you want but
+please don't capture street from the
+
+282
+00:16:59,639 --> 00:17:02,663
+home screen going into your aperture app
+has
+
+283
+00:17:02,879 --> 00:17:06,280
+in her apt operability door switch back
+and forth between
+
+284
+00:17:06,028 --> 00:17:09,029
+aP's this is about you're single app
+
+285
+00:17:09,038 --> 00:17:14,038
+its functions let it shine capture only
+your app
+
+286
+00:17:14,038 --> 00:17:19,247
+go-slow I know that thirty seconds scary
+to some EU but really you can make some
+
+287
+00:17:19,589 --> 00:17:21,900
+amazing app reviews were showing a
+really awesome
+
+288
+00:17:21,009 --> 00:17:24,018
+couple awesome 32nd previous second
+go-slow
+
+289
+00:17:24,099 --> 00:17:26,178
+if your customer care follow along with
+what you're doing they're not going to
+
+290
+00:17:27,078 --> 00:17:27,174
+understand
+
+291
+00:17:28,074 --> 00:17:30,120
+your app review that I can understand
+your appetite probably gonna be
+
+292
+00:17:31,002 --> 00:17:35,007
+discouraged by its a go-slow use
+intentional move smooth move
+
+293
+00:17:35,025 --> 00:17:38,031
+moves smooth Moves you know
+
+294
+00:17:38,085 --> 00:17:41,177
+and there's no filmer anything to load
+into the scare earlier only limitation
+
+295
+00:17:42,077 --> 00:17:44,082
+is your hard drives over her set retake
+it
+
+296
+00:17:45,027 --> 00:17:48,110
+you know if your flow bitten do you try
+and continue on don't don't know
+
+297
+00:17:49,001 --> 00:17:53,029
+just stop retake for her said retake it
+you're planning a time
+
+298
+00:17:53,038 --> 00:17:57,047
+make a look right this is a face that's
+now going on your apt you know for 30
+
+299
+00:17:58,028 --> 00:17:59,103
+seconds for your customers to see
+
+300
+00:18:00,003 --> 00:18:03,007
+so her street a caps you know take some
+time
+
+301
+00:18:03,043 --> 00:18:07,061
+along those lines I wanna show you a
+really cool app review
+
+302
+00:18:07,061 --> 00:18:10,118
+this app reviews of our friends up to
+you
+
+303
+00:18:11,018 --> 00:18:15,025
+a2z countering ap that I deals with the
+different levels of events
+
+304
+00:18:15,025 --> 00:18:19,104
+in your life and what they've done is a
+example what we like to call a one take
+
+305
+00:18:20,004 --> 00:18:24,101
+and seven and in clips together they've
+literally taken a 1-1 take
+
+306
+00:18:25,001 --> 00:18:29,077
+shot at their app review click Record
+about a couple graphics on the front to
+
+307
+00:18:29,077 --> 00:18:29,114
+back
+
+308
+00:18:30,014 --> 00:18:33,087
+but they click Record and they go
+through nice smooth intentional
+
+309
+00:18:33,087 --> 00:18:35,118
+movements that populate it with a lot of
+
+310
+00:18:36,018 --> 00:18:39,073
+a you know data they've stage their app
+really well
+
+311
+00:18:39,073 --> 00:18:43,119
+and in their one take video you get a
+great picture above the innovative you I
+
+312
+00:18:44,019 --> 00:18:51,019
+for their calendar app show it to you
+right now milk
+
+313
+00:19:17,049 --> 00:19:24,049
+awesome right never listen to the music
+may just it's got this great feel you
+
+314
+00:19:27,005 --> 00:19:27,046
+got you
+
+315
+00:19:27,046 --> 00:19:31,101
+get the whole app thirty-seconds
+fantastic which is a great segue into
+
+316
+00:19:32,001 --> 00:19:37,018
+are compositions action couple tips on
+composition
+
+317
+00:19:37,018 --> 00:19:41,020
+you've been developing a route for days
+weeks months years
+
+318
+00:19:41,038 --> 00:19:45,087
+you know a lot about your out well
+because we're probably doesn't have the
+
+319
+00:19:45,087 --> 00:19:45,181
+same perspective
+
+320
+00:19:46,081 --> 00:19:50,144
+so when you're making your app review
+think about their perspective you gonna
+
+321
+00:19:51,044 --> 00:19:54,122
+garage them with a bunch of information
+are assumptions about what are your app
+
+322
+00:19:55,022 --> 00:19:55,029
+does
+
+323
+00:19:55,092 --> 00:19:58,160
+there might be confused maybe put off so
+think about your customer's perspective
+
+324
+00:19:59,006 --> 00:20:02,098
+and you know this is a great great tip
+is you know use your friends and family
+
+325
+00:20:03,052 --> 00:20:04,134
+are you ever your office
+
+326
+00:20:05,034 --> 00:20:08,091
+show your offer a preview of and look at
+look for what their
+
+327
+00:20:08,091 --> 00:20:11,096
+feedback is you know see if there's
+something missing
+
+328
+00:20:11,096 --> 00:20:14,138
+your story as you might have something
+in your head that you're somebody else
+
+329
+00:20:15,038 --> 00:20:15,137
+doesn't have in their ad
+
+330
+00:20:16,037 --> 00:20:20,041
+this is a a common mistake a very very
+common mistake
+
+331
+00:20:20,041 --> 00:20:24,048
+gonna put taxed up on the screen you
+need to put it up there long enough for
+
+332
+00:20:25,011 --> 00:20:25,088
+people to read it
+
+333
+00:20:25,088 --> 00:20:29,119
+people do this all the time that
+protects up on the screen they don't
+
+334
+00:20:30,019 --> 00:20:30,061
+make it
+
+335
+00:20:30,061 --> 00:20:34,137
+value lead gone for you can read it so
+make sure she throwing text up there
+
+336
+00:20:35,037 --> 00:20:40,115
+allow people to Rieger taxed miss want
+easy for me cuz I'm always positive stay
+
+337
+00:20:41,015 --> 00:20:42,044
+positive
+
+338
+00:20:42,179 --> 00:20:46,760
+there's no worse sales pitch than a
+negative sales pitch this is about your
+
+339
+00:20:46,076 --> 00:20:46,165
+app
+
+340
+00:20:47,065 --> 00:20:50,071
+and why your app is the past or why your
+app is
+
+341
+00:20:50,071 --> 00:20:54,139
+awesome so don't imply anything about
+other applications is keeping about your
+
+342
+00:20:55,039 --> 00:20:56,085
+app and stay positive
+
+343
+00:20:56,085 --> 00:21:01,159
+missus this is real opportunity for your
+apt to shine more tips
+
+344
+00:21:02,059 --> 00:21:05,116
+you may be a cross platform developer
+
+345
+00:21:06,016 --> 00:21:09,109
+after this thirty seconds are all App
+Store so go ahead
+
+346
+00:21:10,009 --> 00:21:13,032
+relief of those platform logo's in fact
+
+347
+00:21:13,032 --> 00:21:16,073
+we've of the App Store logo use the 32nd
+30
+
+348
+00:21:16,073 --> 00:21:20,102
+we like our largest unwanted fine these
+are your thirty seconds
+
+349
+00:21:21,002 --> 00:21:25,055
+leave off the platform logos you might
+have
+
+350
+00:21:25,055 --> 00:21:29,080
+this great idea new for spring
+
+351
+00:21:29,008 --> 00:21:32,016
+in your app review and then
+
+352
+00:21:32,088 --> 00:21:35,150
+you know you think you can upload a new
+binary a couple new preview
+
+353
+00:21:36,005 --> 00:21:39,054
+and I your CAC its sector your car
+breaks down
+
+354
+00:21:39,099 --> 00:21:42,106
+and its eight months later and its
+winter
+
+355
+00:21:43,006 --> 00:21:48,012
+whatever season and now it says new for
+spring and it makes absolutely no sense
+
+356
+00:21:48,066 --> 00:21:52,130
+so keep a timeless lawyer up you just to
+be about your app in some kind of
+
+357
+00:21:53,003 --> 00:21:54,035
+neutral time-space
+
+358
+00:21:54,062 --> 00:21:57,114
+34 transitions
+
+359
+00:21:58,014 --> 00:22:01,045
+I love a star wipe or pardon or
+
+360
+00:22:01,045 --> 00:22:04,084
+or contrary as much as the next guy
+
+361
+00:22:04,084 --> 00:22:07,177
+remember this is about your app so
+stream for transitions are really
+
+362
+00:22:08,077 --> 00:22:11,094
+recommended when you're making app
+review
+
+363
+00:22:11,094 --> 00:22:14,151
+on three French transitions we actually
+found just in our task actually
+
+364
+00:22:15,051 --> 00:22:16,059
+sometimes be confusing though
+
+365
+00:22:17,031 --> 00:22:20,096
+Arjun cuts is what we recommend for
+everyone you see large on cuts here and
+
+366
+00:22:20,096 --> 00:22:21,315
+I'll show you a couple or
+
+367
+00:22:22,179 --> 00:22:26,330
+approves the have a great John cuts but
+in a couple situations we notice that
+
+368
+00:22:26,033 --> 00:22:29,130
+in junk cutting you can imply that your
+app does something the app doesn't
+
+369
+00:22:30,003 --> 00:22:31,021
+actually do
+
+370
+00:22:31,048 --> 00:22:35,081
+so another great story for transitions
+like a dissolve or a feedthrough collar
+
+371
+00:22:35,081 --> 00:22:38,134
+to give your user oh okay this is
+
+372
+00:22:39,034 --> 00:22:43,034
+a fade to another clip make sure you
+don't fly the your app does something
+
+373
+00:22:43,034 --> 00:22:43,122
+that it does not
+
+374
+00:22:44,022 --> 00:22:48,095
+don't confuse our customers we love our
+customers my last point is
+
+375
+00:22:48,095 --> 00:22:52,158
+remember the tone these are in your face
+marketing videos
+
+376
+00:22:53,058 --> 00:23:00,058
+is just simple short app usage videos
+they're fantastic remember the tone
+
+377
+00:23:00,073 --> 00:23:04,078
+alright this is my things to avoid slide
+above my deep serious voice
+
+378
+00:23:05,023 --> 00:23:10,069
+for this alright thanks to avoid that's
+not answers door
+
+379
+00:23:10,069 --> 00:23:14,103
+linking crazy flashing loud obnoxious
+things
+
+380
+00:23:15,003 --> 00:23:19,081
+this is that the nineties in these are
+banner ads
+
+381
+00:23:19,081 --> 00:23:22,129
+after watching your up preview their RD
+on your product page they've already
+
+382
+00:23:23,029 --> 00:23:26,029
+click Play you don't need a gimmick to
+draw them in
+
+383
+00:23:26,029 --> 00:23:30,084
+leave keep it simple you don't have to
+do this
+
+384
+00:23:30,084 --> 00:23:34,913
+pricing I if you're a pricing in your
+video it's going to law it's gonna be
+
+385
+00:23:35,669 --> 00:23:39,060
+gonna put you in a corner I member your
+
+386
+00:23:39,006 --> 00:23:42,071
+got a preview or your app is sold
+internationally you may put your app on
+
+387
+00:23:42,071 --> 00:23:45,113
+sale one day if you block yourself into
+pricing in your video talking to make
+
+388
+00:23:46,013 --> 00:23:46,087
+any sense
+
+389
+00:23:46,087 --> 00:23:49,175
+leave the pricing out is a good display
+in your product page product page RDS
+
+390
+00:23:50,075 --> 00:23:50,151
+pricing
+
+391
+00:23:51,051 --> 00:23:57,055
+already a storefront base pricing leave
+the pricing for the product page
+
+392
+00:23:57,091 --> 00:24:00,114
+are local
+
+393
+00:24:01,014 --> 00:24:05,041
+yeah I you know at local cloak ilysm
+means things like that
+
+394
+00:24:05,041 --> 00:24:08,054
+I references to Game of Thrones that I
+don't even understand I don't watch the
+
+395
+00:24:08,054 --> 00:24:08,122
+show
+
+396
+00:24:09,022 --> 00:24:13,057
+probably only one who doesn't arm but
+this is my route preview
+
+397
+00:24:13,057 --> 00:24:17,062
+it's not about a anything that's going
+on in the media nowadays so just keep it
+
+398
+00:24:18,007 --> 00:24:18,091
+about your app
+
+399
+00:24:18,091 --> 00:24:21,170
+keep it simple here's a big one
+
+400
+00:24:22,007 --> 00:24:25,020
+can't put anything that's just like
+screenshot just like your app
+
+401
+00:24:25,083 --> 00:24:28,106
+can't put anything in your app review
+that you don't have the rights to use
+
+402
+00:24:29,006 --> 00:24:33,102
+this includes but isn't limited to
+imagery or photography year tax
+
+403
+00:24:34,002 --> 00:24:39,073
+or sounds and music or videos if you
+don't have the rights to use it
+
+404
+00:24:39,073 --> 00:24:44,129
+do not put it in your app review right
+there was a series is gonna get
+
+405
+00:24:45,029 --> 00:24:48,047
+one thing we had in here rocks a lot of
+questions on it
+
+406
+00:24:48,047 --> 00:24:51,052
+narration absolutely
+
+407
+00:24:51,052 --> 00:24:56,105
+a powerful tool if used correctly so
+here's a couple tips
+
+408
+00:24:57,005 --> 00:25:00,077
+there is an incredible voice-over
+community out there
+
+409
+00:25:00,077 --> 00:25:04,083
+look for them they're they're so
+talented use professional voices
+
+410
+00:25:04,083 --> 00:25:07,090
+not everyone has the intonation and
+clarity
+
+411
+00:25:07,009 --> 00:25:12,091
+for voiceover work obviously I don't you
+on
+
+412
+00:25:13,072 --> 00:25:16,281
+remember this is a voice now this is the
+voice in your absence choose your words
+
+413
+00:25:16,929 --> 00:25:18,310
+wisely
+
+414
+00:25:18,031 --> 00:25:21,066
+the second one is use professional
+equipment
+
+415
+00:25:21,066 --> 00:25:24,107
+it's available everywhere are condenser
+mic spot filters
+
+416
+00:25:25,007 --> 00:25:29,040
+just recording studios in general quiet
+rooms but nobody wants their listen to
+
+417
+00:25:29,004 --> 00:25:30,022
+an app review with the
+
+418
+00:25:30,058 --> 00:25:33,080
+narration on in the game you dog barking
+in the background
+
+419
+00:25:33,008 --> 00:25:36,083
+or maybe for some more younger
+developers in on shoot me cum
+
+420
+00:25:37,055 --> 00:25:41,174
+there in a whole
+
+421
+00:25:41,669 --> 00:25:46,120
+no all lastly
+
+422
+00:25:46,012 --> 00:25:49,064
+narration is a powerful tool the time
+comes from the overuse you want to marry
+
+423
+00:25:49,064 --> 00:25:50,111
+your entire video
+
+424
+00:25:51,011 --> 00:25:54,040
+you wanna let your app speak so just use
+narration
+
+425
+00:25:54,004 --> 00:25:57,040
+wisely is what I'm gonna say and having
+said that
+
+426
+00:25:57,076 --> 00:26:00,485
+I wanna show you a really cool a preview
+
+427
+00:26:01,169 --> 00:26:04,470
+as for a game Koleos fortune which i
+think are
+
+428
+00:26:04,047 --> 00:26:08,072
+gonna design or this week getting comes
+from a UK FitFlop
+
+429
+00:26:08,072 --> 00:26:11,073
+really cool
+
+430
+00:26:11,073 --> 00:26:14,077
+so they have done something really neat
+with their narration
+
+431
+00:26:14,077 --> 00:26:18,120
+they have their character nary in the
+intro to their game so the integrated
+
+432
+00:26:19,002 --> 00:26:20,031
+that narration
+
+433
+00:26:20,049 --> 00:26:24,054
+with some capture gameplay footage you
+can get a picture above
+
+434
+00:26:24,054 --> 00:26:28,063
+the story of the game as well as the
+game play all in one
+
+435
+00:26:28,063 --> 00:26:33,127
+wheels fortune preloader show Tia I used
+to be really you pulled the gold
+
+436
+00:26:34,027 --> 00:26:37,068
+when night questions the moon from me I
+whose
+
+437
+00:26:37,068 --> 00:26:40,154
+only local the around me
+
+438
+00:26:41,054 --> 00:26:45,149
+loool to ask him the lands the for the
+
+439
+00:26:46,049 --> 00:26:48,218
+was lost
+
+440
+00:26:48,659 --> 00:26:50,410
+aboard church
+
+441
+00:26:50,041 --> 00:26:53,050
+one whose only fine
+
+442
+00:26:53,005 --> 00:26:56,032
+my fortune get it back
+
+443
+00:26:56,077 --> 00:27:00,088
+cool right
+
+444
+00:27:00,088 --> 00:27:07,088
+I love that hours after you that I
+thought I merely when by the game in
+
+445
+00:27:08,003 --> 00:27:11,098
+you know now unlike level 12 or
+something like that on okay
+
+446
+00:27:11,098 --> 00:27:15,142
+so to give me a lot of information but
+really there's no better way to get to
+
+447
+00:27:16,042 --> 00:27:17,120
+know all this then to demonstrate it
+
+448
+00:27:18,002 --> 00:27:21,009
+so what I'd like to demonstrate for sis
+capture and to do that
+
+449
+00:27:21,009 --> 00:27:24,037
+I'd like to bring up mister John dnt who
+is the
+
+450
+00:27:25,018 --> 00:27:29,073
+senior product manager for broadband was
+gonna help us capture some clips for a
+
+451
+00:27:29,073 --> 00:27:30,078
+garage band app review
+
+452
+00:27:31,023 --> 00:27:36,099
+John gonna go over a demo machine here
+
+453
+00:27:36,099 --> 00:27:39,172
+I will tune up my iPhone tuning
+
+454
+00:27:40,072 --> 00:27:43,161
+mmm well alright with a Mac running here
+
+455
+00:27:44,061 --> 00:27:47,104
+Sastry Mac Pro and it's plugged into
+this USB cable
+
+456
+00:27:48,004 --> 00:27:51,041
+lightning cable my hand at the John W
+have their
+
+457
+00:27:51,041 --> 00:27:56,050
+I have an iPhone 5s or a grudge mallone
+and I'm a plug this in
+
+458
+00:27:57,031 --> 00:28:01,037
+go ahead likes a like so that was it
+alright that's the in the demo
+
+459
+00:28:01,091 --> 00:28:04,162
+prepare I'm here tonight thank you are
+
+460
+00:28:05,062 --> 00:28:08,100
+sorter boxer on a Mac
+
+461
+00:28:09,000 --> 00:28:14,031
+we are going to open up QuickTime Player
+where to go up here to file
+
+462
+00:28:14,031 --> 00:28:19,122
+new movie recording haha
+
+463
+00:28:20,022 --> 00:28:23,055
+below this me to plan some guys there
+
+464
+00:28:23,055 --> 00:28:27,114
+%ah ready on the transfer bar is our
+input menu
+
+465
+00:28:28,014 --> 00:28:32,100
+and you can see John's phone now shows
+up as a video and audio inputs we're
+
+466
+00:28:33,000 --> 00:28:34,027
+gonna switch it over right now
+
+467
+00:28:34,027 --> 00:28:39,073
+I
+
+468
+00:28:39,073 --> 00:28:43,086
+now we're gonna switch over the audio to
+exploit the great are you at a garage
+
+469
+00:28:43,086 --> 00:28:43,120
+band
+
+470
+00:28:44,002 --> 00:28:48,029
+alright I'm gonna give you will sound
+here John
+
+471
+00:28:48,047 --> 00:28:51,068
+okay if you like a warm up Mary II
+
+472
+00:28:51,068 --> 00:28:54,117
+year I'm a little nervous system injury
+your fingers you know
+
+473
+00:28:55,017 --> 00:29:02,017
+Canada
+
+474
+00:29:08,659 --> 00:29:15,659
+thank you very much I giving thank you
+do anything less liberace maybe a little
+
+475
+00:29:16,044 --> 00:29:16,873
+more Metallica
+
+476
+00:29:17,269 --> 00:29:24,269
+9 I think so but there
+
+477
+00:29:29,057 --> 00:29:36,057
+ryan Johnson now
+
+478
+00:29:40,022 --> 00:29:47,022
+hi
+
+479
+00:29:51,012 --> 00:29:58,012
+I WWDC now what's the area
+
+480
+00:29:58,027 --> 00:30:02,040
+I
+
+481
+00:30:02,004 --> 00:30:06,069
+alright are over you doing up review now
+
+482
+00:30:07,005 --> 00:30:10,062
+I so John I
+
+483
+00:30:10,062 --> 00:30:14,094
+I was thinking doing a nap you like a
+one take 1st May will do an example one
+
+484
+00:30:14,094 --> 00:30:15,102
+take is there something about garage
+minutes
+
+485
+00:30:16,074 --> 00:30:19,135
+makes a magical the one feature that
+really stands out that we can capture in
+
+486
+00:30:20,035 --> 00:30:20,120
+under 30 seconds
+
+487
+00:30:21,002 --> 00:30:23,085
+well are these is love our smart
+instruments but I think the smart
+
+488
+00:30:24,003 --> 00:30:24,094
+strings is pretty
+
+489
+00:30:24,094 --> 00:30:27,131
+is pretty 'cause let you know that OCR
+OCR dress on a pier
+
+490
+00:30:28,031 --> 00:30:34,054
+so we are input setup and just click
+Record you ready to go I'm ready occur
+
+491
+00:30:34,054 --> 00:30:37,085
+year ago sauce went through the touch
+since my browser
+
+492
+00:30:37,085 --> 00:30:41,089
+lawn and smart strings and I'll play
+little ditty on
+
+493
+00:30:42,025 --> 00:30:48,087
+boom
+
+494
+00:30:48,087 --> 00:30:55,087
+%uh
+
+495
+00:31:01,004 --> 00:31:04,065
+it sounds very close your eyes I
+
+496
+00:31:04,065 --> 00:31:09,109
+you available for weddings
+
+497
+00:31:10,009 --> 00:31:15,011
+in bar mitzvahs I alright we just stop
+on the screen
+
+498
+00:31:15,011 --> 00:31:19,014
+was gonna say that out and we will call
+that the one take
+
+499
+00:31:19,041 --> 00:31:24,042
+right there now's a good time just to
+let you guys know
+
+500
+00:31:24,051 --> 00:31:27,126
+up the QuickTime capture capture the
+need a frame rate the your app
+
+501
+00:31:28,026 --> 00:31:31,090
+outputs so when you're putting into
+iTunes Connect we're gonna ask you to
+
+502
+00:31:31,009 --> 00:31:35,013
+normalize that to standardize frame rate
+so that one take video will still need
+
+503
+00:31:35,094 --> 00:31:36,166
+to go through something like iMovie
+
+504
+00:31:37,066 --> 00:31:40,087
+and be exported out to standardize frame
+rate before it gets
+
+505
+00:31:40,087 --> 00:31:44,093
+uploaded in Titan's connect right but
+John we're going to a different one
+
+506
+00:31:45,047 --> 00:31:48,140
+we're going to a maybe clip base yeah so
+we've got a song we started in garage
+
+507
+00:31:49,004 --> 00:31:51,032
+band already there be a good soundtrack
+and then
+
+508
+00:31:51,068 --> 00:31:54,127
+we could capture some instruments and
+added them all together K
+
+509
+00:31:55,027 --> 00:31:58,045
+from CSR a back up here and
+
+510
+00:31:58,045 --> 00:32:01,054
+checker and birds all good make sure
+
+511
+00:32:01,054 --> 00:32:04,089
+not to mention his performance record he
+set a maximum member we want to deliver
+
+512
+00:32:04,089 --> 00:32:05,133
+the highest-quality
+
+513
+00:32:06,033 --> 00:32:09,114
+video and audio to customers alright so
+you're also you probably a smart you
+
+514
+00:32:10,014 --> 00:32:10,108
+wanna play that song
+
+515
+00:32:11,008 --> 00:32:18,008
+yeah just a lil sample here so we can
+hear snappy number
+
+516
+00:32:21,046 --> 00:32:25,075
+sounds good through alright so what
+we're gonna do is capture the
+
+517
+00:32:25,075 --> 00:32:28,096
+the the clips the instruments made
+
+518
+00:32:28,096 --> 00:32:31,134
+used to make the song so what's the
+first answer we're going to we're going
+
+519
+00:32:32,034 --> 00:32:33,048
+to send space
+
+520
+00:32:33,048 --> 00:32:36,060
+well like this control panel that's
+gonna corey has really nice yes we can
+
+521
+00:32:36,006 --> 00:32:36,099
+relive the eighties
+
+522
+00:32:37,053 --> 00:32:40,096
+I he's never there okay
+
+523
+00:32:40,096 --> 00:32:43,137
+30 I'm ready to go. current record
+retire any
+
+524
+00:32:44,037 --> 00:32:48,206
+on
+
+525
+00:32:48,539 --> 00:32:49,680
+%uh
+
+526
+00:32:49,068 --> 00:32:53,106
+on like Depeche Mode under
+
+527
+00:32:54,006 --> 00:32:58,074
+love it I love it is fantastic
+
+528
+00:32:58,074 --> 00:33:02,143
+I was gonna save
+
+529
+00:33:03,043 --> 00:33:07,142
+call at the base okay
+
+530
+00:33:08,042 --> 00:33:14,053
+on another one you know when you shift I
+get another one I lied to them
+
+531
+00:33:14,053 --> 00:33:17,062
+pursue a cent ascent Springer percent
+there
+
+532
+00:33:17,062 --> 00:33:20,087
+and a up
+
+533
+00:33:20,087 --> 00:33:23,102
+how was school years we have this
+feature in garage man where we can do
+
+534
+00:33:24,002 --> 00:33:25,034
+was call pitchman out so
+
+535
+00:33:25,034 --> 00:33:28,113
+as the play we get the blue dot but you
+also can
+
+536
+00:33:29,013 --> 00:33:32,026
+the lie between the nodes
+
+537
+00:33:32,026 --> 00:33:35,099
+like Michael the show that only if any
+we're not control panel
+
+538
+00:33:35,099 --> 00:33:39,194
+you know that's in control oh yeah yes
+we pop that okay we show that possible
+
+539
+00:33:40,094 --> 00:33:43,125
+recapture that church lacquer K
+
+540
+00:33:44,025 --> 00:33:48,025
+whenever you're ready
+
+541
+00:33:48,025 --> 00:33:51,101
+castano troll this tap here
+
+542
+00:33:52,001 --> 00:33:59,001
+and then we think starter good up
+
+543
+00:34:02,016 --> 00:34:06,092
+up
+
+544
+00:34:06,092 --> 00:34:09,176
+summer have fun in a red pitch millicent
+you can't play
+
+545
+00:34:10,076 --> 00:34:15,121
+great right one last
+
+546
+00:34:16,021 --> 00:34:19,730
+instrument from John your know your
+
+547
+00:34:19,919 --> 00:34:23,995
+concert tour to get Iran Bruins winning
+the ban will be time
+
+548
+00:34:24,679 --> 00:34:28,490
+Union history and I'm a
+
+549
+00:34:28,049 --> 00:34:31,122
+cirrhosis march on silence our Terms so
+
+550
+00:34:32,022 --> 00:34:35,036
+one capsule to bring the dais animal
+will put it together enough
+
+551
+00:34:35,036 --> 00:34:39,122
+arms ago area lovers
+
+552
+00:34:40,022 --> 00:34:47,022
+brown cool
+
+553
+00:34:47,085 --> 00:34:51,171
+cool as right save and
+
+554
+00:34:52,071 --> 00:34:58,160
+that's great I'm capture
+
+555
+00:34:59,006 --> 00:35:04,027
+tell your grandpa Sir John from from
+montana
+
+556
+00:35:04,081 --> 00:35:08,086
+crew okay so there's a great transition
+
+557
+00:35:08,086 --> 00:35:11,152
+where we can now would capture clips
+let's now open up iMovie
+
+558
+00:35:12,052 --> 00:35:15,103
+let's show you how really easy it is to
+drag those clips and
+
+559
+00:35:16,003 --> 00:35:21,007
+increase your app review pop open I
+movie
+
+560
+00:35:21,043 --> 00:35:24,049
+I'm gonna black project willing to go
+
+561
+00:35:24,049 --> 00:35:27,064
+look at that current
+
+562
+00:35:27,064 --> 00:35:32,125
+we're gonna grab those clips that we
+just image are a drag mentor event
+
+563
+00:35:33,025 --> 00:35:37,086
+we ever about right here this is where
+we can browse our clips we can favorite
+
+564
+00:35:37,086 --> 00:35:37,092
+them
+
+565
+00:35:38,046 --> 00:35:41,088
+can work with them and we have our time
+line down here we can start
+
+566
+00:35:41,088 --> 00:35:45,177
+building our preview can I add titles in
+transition so let's just start with some
+
+567
+00:35:46,077 --> 00:35:49,116
+drums is our drums we captured offstage
+the real hard to capture in this room
+
+568
+00:35:50,016 --> 00:35:50,088
+with the echo
+
+569
+00:35:50,088 --> 00:35:56,177
+drag those here make the time while
+smaller second worker
+
+570
+00:35:57,077 --> 00:36:00,159
+was the next instrument that was the
+beaks
+
+571
+00:36:01,059 --> 00:36:05,131
+describing along here you can see on the
+way for view operate here
+
+572
+00:36:06,031 --> 00:36:10,089
+think I see where my audio click San
+again
+
+573
+00:36:10,089 --> 00:36:14,135
+Rico
+
+574
+00:36:15,035 --> 00:36:21,047
+to get them out base right thing
+
+575
+00:36:21,047 --> 00:36:25,050
+and was an act that was the sent right
+with the cool controllers
+
+576
+00:36:25,077 --> 00:36:28,091
+skip
+
+577
+00:36:28,091 --> 00:36:31,172
+girl
+
+578
+00:36:32,072 --> 00:36:38,170
+school we had that pause there so I'm
+going to just
+
+579
+00:36:39,007 --> 00:36:44,016
+with my way former principal ago
+
+580
+00:36:44,079 --> 00:36:47,103
+gatorade is this come in get that hit
+
+581
+00:36:48,003 --> 00:36:55,003
+for second looks good
+
+582
+00:36:56,041 --> 00:36:59,077
+okay we exported out
+
+583
+00:36:59,077 --> 00:37:02,113
+John song earlier put on the folder to
+serve in a drag
+
+584
+00:37:03,013 --> 00:37:06,034
+that down into the soundtrack section
+
+585
+00:37:06,034 --> 00:37:11,095
+rate there now I could add maybe some
+titles to this
+
+586
+00:37:11,095 --> 00:37:15,178
+from the content library but I really do
+like to end on a fade to black in any
+
+587
+00:37:16,078 --> 00:37:16,160
+video that I do
+
+588
+00:37:17,006 --> 00:37:21,018
+let's just track that on there that
+literally pro
+
+589
+00:37:21,072 --> 00:37:25,136
+when I wanna do also
+
+590
+00:37:26,036 --> 00:37:29,135
+was on mute these clips they don't
+conflict that soundtrack
+
+591
+00:37:30,035 --> 00:37:37,035
+right I was it was %um swirly israeli
+
+592
+00:37:51,089 --> 00:37:53,137
+about that the call
+
+593
+00:37:53,569 --> 00:37:57,230
+so cool
+
+594
+00:37:57,023 --> 00:38:01,027
+I love it alright so we can do what we
+can do for this we get out a couple more
+
+595
+00:38:01,063 --> 00:38:04,492
+Answer Man 3 could work on our timings
+we could fill it out a little and that's
+
+596
+00:38:05,059 --> 00:38:05,530
+actually
+
+597
+00:38:05,053 --> 00:38:08,127
+what we did the other afternoon I want
+to show you that this is a completed app
+
+598
+00:38:09,027 --> 00:38:09,089
+review
+
+599
+00:38:09,089 --> 00:38:13,068
+main garage band captured clips
+
+600
+00:38:13,869 --> 00:38:20,869
+maturity right now
+
+601
+00:38:52,065 --> 00:38:56,264
+alright I can tell their paws your proof
+so if you're happy with your %ah preview
+
+602
+00:38:56,849 --> 00:38:57,920
+if that's what you love
+
+603
+00:38:57,092 --> 00:39:02,251
+you to go up care to share you can
+export that file you can expect high
+
+604
+00:39:03,079 --> 00:39:04,630
+resolution file
+
+605
+00:39:04,063 --> 00:39:07,069
+and you gonna get ready to go into
+iTunes Connect
+
+606
+00:39:07,069 --> 00:39:10,988
+but we have already taken the time to do
+that we've explored that file onto this
+
+607
+00:39:11,609 --> 00:39:13,210
+CrossRef or on the desktop
+
+608
+00:39:13,021 --> 00:39:16,870
+and show us how to upload these aren't
+its iTunes Connect
+
+609
+00:39:17,059 --> 00:39:21,135
+on my colleagues from iTunes engineering
+was Karen present because men ski
+
+610
+00:39:21,819 --> 00:39:28,819
+gonna come up show it to you Karen hello
+i'm karen is Nancy
+
+611
+00:39:32,609 --> 00:39:36,700
+software engineer at iTunes Connect I'm
+here today to show you
+
+612
+00:39:36,007 --> 00:39:40,096
+how simple and intuitive it is to upload
+your app reviews
+
+613
+00:39:40,789 --> 00:39:44,815
+along with your images in the newly
+redesigned iTunes Connect
+
+614
+00:39:45,049 --> 00:39:48,122
+let's check it out him
+
+615
+00:39:48,779 --> 00:39:53,803
+her I it's let's open up iTunes Connect
+
+616
+00:39:54,019 --> 00:39:59,720
+and here we are nineteen connect
+
+617
+00:39:59,072 --> 00:40:03,146
+has if creating a new version of garage
+bands as you can see
+
+618
+00:40:04,046 --> 00:40:07,945
+there's currently only one im one
+screenshot so
+
+619
+00:40:08,359 --> 00:40:11,373
+let's add to its this is where we had
+
+620
+00:40:11,499 --> 00:40:15,700
+new screenshots and the app review the
+pollen John just Crean
+
+621
+00:40:15,007 --> 00:40:20,008
+we could add them the old fashion way in
+with the file chooser
+
+622
+00:40:20,071 --> 00:40:23,120
+but it would be more fun to open up
+finder
+
+623
+00:40:24,002 --> 00:40:28,621
+and simply
+
+624
+00:40:28,819 --> 00:40:35,819
+drag-and-drop from
+
+625
+00:40:36,809 --> 00:40:43,809
+had has you can see the video ends up in
+first position
+
+626
+00:40:45,045 --> 00:40:50,142
+followed by the screenshots to its right
+the screenshots can be rearranged into
+
+627
+00:40:51,042 --> 00:40:53,681
+whatever order you want by dragging and
+dropping
+
+628
+00:40:54,059 --> 00:40:58,086
+whatever order you choose is the order
+that ends up in the App Store
+
+629
+00:40:58,329 --> 00:41:02,230
+hmm the video will always remain fixed
+
+630
+00:41:02,023 --> 00:41:06,030
+in first position just as it does in the
+App Store cell
+
+631
+00:41:06,093 --> 00:41:11,095
+this is all looking really good but I
+don't love the poster frame on the app
+
+632
+00:41:11,095 --> 00:41:11,170
+review
+
+633
+00:41:12,007 --> 00:41:16,076
+by default we select a poster frame for
+you
+
+634
+00:41:16,769 --> 00:41:21,720
+by if you'd like to choose another one
+just click Edit poster frame
+
+635
+00:41:21,072 --> 00:41:25,471
+abut up pops a dialogue on with the
+video are no
+
+636
+00:41:26,119 --> 00:41:29,185
+laps and the currently selected poster
+frame on the right
+
+637
+00:41:29,779 --> 00:41:33,836
+to select another poster frame we can
+play the video
+
+638
+00:41:34,349 --> 00:41:41,349
+and pick or we can scrape through the
+video
+
+639
+00:41:45,099 --> 00:41:52,099
+right for him anytime
+
+640
+00:41:53,089 --> 00:41:57,140
+or we can get granular and step through
+
+641
+00:41:57,014 --> 00:42:00,067
+forward or backward
+
+642
+00:42:00,067 --> 00:42:04,246
+to look it's just the right for him
+
+643
+00:42:04,849 --> 00:42:07,940
+I like that one lets choose that one
+
+644
+00:42:07,094 --> 00:42:10,193
+and once you've found the perfect frame
+
+645
+00:42:11,039 --> 00:42:14,040
+just click Done and voila
+
+646
+00:42:14,049 --> 00:42:17,052
+there it is once
+
+647
+00:42:17,079 --> 00:42:24,079
+once you have your screen shots in your
+poster for am looking just the way you
+
+648
+00:42:26,809 --> 00:42:27,480
+want
+
+649
+00:42:27,048 --> 00:42:30,140
+you can click same and submit for review
+
+650
+00:42:31,004 --> 00:42:34,843
+and once
+
+651
+00:42:35,239 --> 00:42:39,266
+the app is gone through the approval
+process we can check out what it looks
+
+652
+00:42:39,509 --> 00:42:41,150
+like in the App Store
+
+653
+00:42:41,015 --> 00:42:45,124
+and their 10th
+
+654
+00:42:45,259 --> 00:42:51,920
+so simple as that
+
+655
+00:42:51,092 --> 00:42:55,097
+I'm in just a few minutes i won and
+iTunes Connect
+
+656
+00:42:56,042 --> 00:42:59,047
+drops some images dropped a video
+
+657
+00:42:59,047 --> 00:43:03,070
+said a poster frame and now how my app
+looks to the world
+
+658
+00:43:03,007 --> 00:43:07,086
+is completely defense thank you had come
+
+659
+00:43:07,779 --> 00:43:14,779
+thank you karen
+
+660
+00:43:16,098 --> 00:43:19,947
+I was awesome alright was go back
+
+661
+00:43:20,829 --> 00:43:23,910
+just 31 just the second back to that
+exporting
+
+662
+00:43:23,091 --> 00:43:26,720
+are morning yet again reiterate this we
+want to show the highest quality
+
+663
+00:43:27,539 --> 00:43:28,634
+audio/video your customer
+
+664
+00:43:29,489 --> 00:43:32,492
+so we want to we will we're gonna accept
+
+665
+00:43:32,789 --> 00:43:36,140
+and we'd like you to export out at the
+highest quality video
+
+666
+00:43:36,014 --> 00:43:40,413
+so that to coincide with the I was
+device captures
+
+667
+00:43:40,539 --> 00:43:43,613
+highest-quality video settings and that
+is for the iPad
+
+668
+00:43:44,279 --> 00:43:48,140
+900 by 1200 in portrait mode
+
+669
+00:43:48,014 --> 00:43:51,045
+1200 by nine hundred and landscape mode
+
+670
+00:43:51,045 --> 00:43:54,084
+for the iPhone in four inch series are
+
+671
+00:43:54,489 --> 00:43:57,940
+that's the 1136 by 640 I'm guessing but
+you can just
+
+672
+00:43:57,094 --> 00:44:00,713
+the National Committee 640 by 11:30 sex
+
+673
+00:44:01,559 --> 00:44:05,380
+but also we know the guys I have some
+are you have already captured footage
+
+674
+00:44:05,038 --> 00:44:08,497
+in 1080 workflows maybe rena 1080
+workflow already
+
+675
+00:44:08,839 --> 00:44:11,911
+us we're gonna take very answer 1080 as
+well for those iPhone
+
+676
+00:44:12,559 --> 00:44:16,561
+dimensions and here's some technical
+data
+
+677
+00:44:16,579 --> 00:44:19,597
+don't everybody grab your pen this will
+all be in the documentation
+
+678
+00:44:19,759 --> 00:44:22,835
+although you can take a picture if you
+are doing poses
+
+679
+00:44:23,519 --> 00:44:27,440
+by Sears Roebuck Allan Poe's is things
+like that not couple takeaways here
+
+680
+00:44:27,044 --> 00:44:31,063
+I we're gonna take to kodak's that are
+very familiar to the Apple ecosystem
+
+681
+00:44:31,063 --> 00:44:33,152
+that h264
+
+682
+00:44:33,719 --> 00:44:37,980
+and progress 422 HQ number high-quality
+want to take that Progress
+
+683
+00:44:37,098 --> 00:44:41,147
+are so you high school your customers
+I'm comin takeaways is the
+
+684
+00:44:42,029 --> 00:44:45,420
+30 frames per second would like you to
+upload your sources in 30 frames per
+
+685
+00:44:45,042 --> 00:44:46,411
+second
+
+686
+00:44:46,789 --> 00:44:49,890
+morning take stereo audio either NAAC
+
+687
+00:44:49,089 --> 00:44:53,788
+or PCM way basic this all this
+documentation will be available to you
+
+688
+00:44:54,589 --> 00:44:58,632
+don't worry about running dices que
+writing it down sorry its okay
+
+689
+00:44:59,019 --> 00:45:02,880
+it our hedge I liked and out
+
+690
+00:45:02,088 --> 00:45:06,997
+with a couple review guidelines now
+
+691
+00:45:07,789 --> 00:45:11,650
+the review guidelines we publish this
+feature a is rolled out
+
+692
+00:45:11,065 --> 00:45:14,214
+and obviously I'm not to be able to go
+over every single applicable
+
+693
+00:45:14,799 --> 00:45:17,960
+review guideline to you but I'd like to
+highlight a few that'll help
+
+694
+00:45:17,096 --> 00:45:20,435
+a find you safe passage remember things
+like
+
+695
+00:45:21,299 --> 00:45:26,331
+I am inappropriate content trademarked
+items all applied app reviews
+
+696
+00:45:26,619 --> 00:45:30,654
+so consult the app review guidelines for
+for uploading
+
+697
+00:45:30,969 --> 00:45:35,004
+your app review first one keep it
+relevant
+
+698
+00:45:35,319 --> 00:45:39,374
+if you're out has screenshots or out
+previews are absolutely not relevant to
+
+699
+00:45:39,869 --> 00:45:42,880
+to your app it will be rejected so don't
+
+700
+00:45:42,088 --> 00:45:45,267
+sneak in a plug for your uncle Murray's
+car wash
+
+701
+00:45:46,059 --> 00:45:50,083
+Korea are so you know surprise proposal
+to your fiance
+
+702
+00:45:50,299 --> 00:45:53,347
+that's not the time keep it relevant
+you're out by the way she said yes
+
+703
+00:45:53,779 --> 00:45:56,857
+were married day
+
+704
+00:45:57,559 --> 00:46:02,602
+alright max-1 just like screenshots you
+got a keeper for plus
+
+705
+00:46:02,989 --> 00:46:06,700
+90 you're sitting there maybe have a
+game called Mortal Kombat
+
+706
+00:46:06,007 --> 00:46:09,012
+and the early part of may get into
+article first or something like that no
+
+707
+00:46:10,002 --> 00:46:13,151
+but you're gonna have to get creative
+you know what its be overdoing the the
+
+708
+00:46:13,349 --> 00:46:15,398
+shark didn't work you may jobs it was
+awesome so
+
+709
+00:46:15,839 --> 00:46:19,660
+get creative creative editing I just you
+only the violence
+
+710
+00:46:19,066 --> 00:46:22,069
+those things out has to be four plus
+applicable to all audiences just like
+
+711
+00:46:22,096 --> 00:46:23,475
+screenshots
+
+712
+00:46:24,339 --> 00:46:29,343
+easy enough alright use captured footage
+
+713
+00:46:29,739 --> 00:46:32,745
+know our people in you paid for you know
+
+714
+00:46:32,799 --> 00:46:36,950
+videos and people were interacting with
+your app's no hands in the shop such a
+
+715
+00:46:36,095 --> 00:46:37,214
+move that hand
+
+716
+00:46:38,069 --> 00:46:41,930
+are this is captured footage you can use
+isn't actual amounts
+
+717
+00:46:41,093 --> 00:46:44,094
+you can use graphic elements that
+highlight points
+
+718
+00:46:44,094 --> 00:46:47,523
+but this is mostly about your app and
+your app review needs to be made
+
+719
+00:46:48,369 --> 00:46:51,371
+mostly have captured footage and we've
+given you those tools
+
+720
+00:46:51,569 --> 00:46:54,570
+so use captured footage
+
+721
+00:46:54,579 --> 00:46:58,130
+on this one simulated data please goes
+without saying
+
+722
+00:46:58,013 --> 00:47:01,412
+we still use any celebrities don't use
+anybody don't use our neighbor your
+
+723
+00:47:01,529 --> 00:47:01,580
+friend
+
+724
+00:47:02,039 --> 00:47:05,700
+person sitting next to anybody who would
+have issue with you shove their likeness
+
+725
+00:47:05,007 --> 00:47:09,055
+in your app review are you know about
+Johnny Appleseed we use it all the time
+
+726
+00:47:10,018 --> 00:47:13,057
+you need to find your own Johnny
+Appleseed's and if you're going to use
+
+727
+00:47:13,219 --> 00:47:13,227
+any data
+
+728
+00:47:14,019 --> 00:47:18,091
+in your app review miss last one I've
+got over before I go over to ken
+
+729
+00:47:18,739 --> 00:47:23,170
+you got to identify your in app
+purchases you know the sort of truth
+
+730
+00:47:23,017 --> 00:47:26,065
+the missiles are in in our touch writer
+aP here
+
+731
+00:47:26,065 --> 00:47:29,514
+you gotta figure out a way in Europe
+review for going to use those in app
+
+732
+00:47:30,099 --> 00:47:31,120
+purchase content
+
+733
+00:47:31,309 --> 00:47:34,315
+gushing our way to disclose them in your
+an app purchases
+
+734
+00:47:34,369 --> 00:47:37,435
+suppose that just a couple guidelines
+keeping your head very easy
+
+735
+00:47:38,029 --> 00:47:42,032
+made me wanna make this very easy for
+you guys alright
+
+736
+00:47:42,329 --> 00:47:45,378
+time for summary app reviews
+
+737
+00:47:45,819 --> 00:47:50,420
+are just 30 seconds app usage footage
+
+738
+00:47:50,042 --> 00:47:55,591
+need to be four plus an appropriate for
+all audiences
+
+739
+00:47:55,969 --> 00:47:59,650
+device capture using a lightning cable
+
+740
+00:47:59,065 --> 00:48:02,974
+Mac almost 10 your family and I was a
+
+741
+00:48:03,559 --> 00:48:07,920
+into QuickTime Player you can add it on
+your Mac using iMovie iMovie will be
+
+742
+00:48:07,092 --> 00:48:07,871
+updated
+
+743
+00:48:08,699 --> 00:48:11,758
+to support his native aspect ratios and
+device dimensions
+
+744
+00:48:12,289 --> 00:48:15,295
+for more advanced editing Final Cut Pro
+is
+
+745
+00:48:15,349 --> 00:48:18,390
+always a great option love Final Cut Pro
+
+746
+00:48:18,759 --> 00:48:22,250
+and we made it super easy as Karen
+showed you to upload them into iTunes
+
+747
+00:48:22,025 --> 00:48:23,034
+Connect
+
+748
+00:48:23,259 --> 00:48:27,140
+a larger binary reviewed we're gonna re
+in coding for streaming all around the
+
+749
+00:48:27,014 --> 00:48:29,017
+world
+
+750
+00:48:29,017 --> 00:48:33,050
+simple our clothes out the really cool
+app review
+
+751
+00:48:33,005 --> 00:48:36,264
+this was gonna personal to me this one
+came in I and i believe the SOP also
+
+752
+00:48:36,759 --> 00:48:37,900
+want to design a word
+
+753
+00:48:37,009 --> 00:48:41,578
+this week which is kinda neat without
+preview came in and it just touched me
+
+754
+00:48:42,469 --> 00:48:46,471
+arm ever since I was a kid I was one of
+those people that would
+
+755
+00:48:46,489 --> 00:48:50,390
+current certain look out at the stars in
+everybody does this for you
+
+756
+00:48:50,039 --> 00:48:53,065
+put your finger out you can trace the
+Big Dipper
+
+757
+00:48:53,065 --> 00:48:56,071
+are you track awry and or something like
+that
+
+758
+00:48:57,025 --> 00:49:01,134
+and this preview came in and it showed
+me an app that
+
+759
+00:49:01,359 --> 00:49:04,407
+did what I always dreamed I could do I
+meet you yet again middle ear and my
+
+760
+00:49:04,839 --> 00:49:05,861
+iPad but the app
+
+761
+00:49:06,059 --> 00:49:09,075
+went home sat out on the porch with my
+daughter and we
+
+762
+00:49:09,219 --> 00:49:15,960
+played with the Stars and this the sky
+guide
+
+763
+00:49:15,096 --> 00:49:22,096
+the No
+
+764
+00:49:31,003 --> 00:49:38,003
+the
+
+765
+00:49:43,001 --> 00:49:43,054
+lovely
+
+766
+00:49:43,054 --> 00:49:47,082
+it's just lovely yeah now sky got school
+
+767
+00:49:47,082 --> 00:49:52,178
+Super Bowl alright few me more
+information please
+
+768
+00:49:53,078 --> 00:49:56,897
+reach out to your Angeles the amazing
+incredible Rachel rock
+
+769
+00:49:57,599 --> 00:50:01,599
+a yes please stop her
+
+770
+00:50:01,599 --> 00:50:06,080
+documentation to be available this is
+actually something you might hurt
+
+771
+00:50:06,008 --> 00:50:10,047
+take a picture ok too long URL if you
+need it all
+
+772
+00:50:10,047 --> 00:50:13,090
+it'll be available on on the on and
+develop perform I and we have the job
+
+773
+00:50:13,009 --> 00:50:15,218
+forms as well you can interact get
+information
+
+774
+00:50:16,109 --> 00:50:19,790
+I we have some related sessions the new
+iTunes Connect
+
+775
+00:50:19,079 --> 00:50:21,151
+you weren't there yesterday you miss
+something amazing but you can always
+
+776
+00:50:22,051 --> 00:50:23,072
+watch it on the replay
+
+777
+00:50:23,072 --> 00:50:26,098
+the new iTunes Connect a little preview
+over here can show you with the
+
+778
+00:50:26,098 --> 00:50:29,129
+the drag and drop interface is you a
+chance to act is gonna blow your mind
+
+779
+00:50:30,029 --> 00:50:34,066
+are if you're planning on using camera
+capture and you want to integrate and
+
+780
+00:50:34,066 --> 00:50:34,765
+traps
+
+781
+00:50:35,359 --> 00:50:38,930
+there's a camera capture session watch
+these on the replay really help really
+
+782
+00:50:38,093 --> 00:50:38,149
+cool
+
+783
+00:50:39,049 --> 00:50:42,116
+listen we've given you the temps
+
+784
+00:50:43,016 --> 00:50:46,475
+we've shown you the technology you can
+have the tools going out
+
+785
+00:50:46,619 --> 00:50:50,150
+I'm a great app reviews everybody here
+
