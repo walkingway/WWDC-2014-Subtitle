@@ -1,0 +1,4399 @@
+1
+00:00:13,028 --> 00:00:14,113
+good afternoon
+
+2
+00:00:15,013 --> 00:00:16,046
+welcome to story boards and
+
+3
+00:00:16,046 --> 00:00:20,935
+trollers on a West End my name's Mike
+and I work on the Interface Builder team
+
+4
+00:00:21,349 --> 00:00:24,570
+today I'd like to show you how you can
+build your
+
+5
+00:00:24,057 --> 00:00:27,256
+I was 10 applications faster and easier
+using
+
+6
+00:00:27,769 --> 00:00:30,807
+owning storyboards in Xcode 6 and
+Yosemite
+
+7
+00:00:31,149 --> 00:00:35,300
+I'm also gonna be joined later by my
+colleague wrongly from the up kit team
+
+8
+00:00:35,003 --> 00:00:38,080
+who will come up and take a under the
+hood the new controllers API
+
+9
+00:00:39,007 --> 00:00:42,996
+to make storyboards work so just a quick
+show of hands here
+
+10
+00:00:43,059 --> 00:00:46,073
+who is already building an app today
+using
+
+11
+00:00:46,199 --> 00:00:49,226
+for I West using storyboards I'll
+
+12
+00:00:49,469 --> 00:00:54,560
+awesome cool so a your public notice a
+little bit of one but to show you
+
+13
+00:00:55,379 --> 00:00:58,530
+is got pretty familiar so what are we
+gonna see
+
+14
+00:00:58,053 --> 00:01:01,110
+first
+
+15
+00:01:02,001 --> 00:01:05,044
+I'm gonna start by giving you a brief
+overview of how storyboards work
+
+16
+00:01:05,053 --> 00:01:09,089
+then I'm gonna give a demo showing how
+you can quickly connect the top level
+
+17
+00:01:09,089 --> 00:01:09,171
+controllers
+
+18
+00:01:10,071 --> 00:01:13,077
+interface your up together using Xcode
+sex
+
+19
+00:01:13,077 --> 00:01:17,083
+hopefully you'll see how storyboards can
+help you structure your app
+
+20
+00:01:17,083 --> 00:01:20,131
+and modular in reusable view controllers
+then
+
+21
+00:01:21,031 --> 00:01:24,068
+role is going to come up and show us
+that view controller API
+
+22
+00:01:24,068 --> 00:01:27,787
+we'll see how all the pieces click
+together underneath the storyboard
+
+23
+00:01:28,399 --> 00:01:28,457
+scenes
+
+24
+00:01:28,979 --> 00:01:33,057
+and he'll show you the best places to
+hook into the infrastructure and finally
+
+25
+00:01:33,759 --> 00:01:36,830
+as a bonus he's gonna show you how to
+use the new gesture recognizers
+
+26
+00:01:37,469 --> 00:01:40,920
+in West End without having to write an
+innocent tracking
+
+27
+00:01:40,092 --> 00:01:43,134
+all you have to do is just drag connect
+to your target in action
+
+28
+00:01:44,034 --> 00:01:48,883
+are so simple its simply amazing so
+
+29
+00:01:49,189 --> 00:01:54,224
+in Xcode storyboards are great way to
+see all you I parts of your application
+
+30
+00:01:54,539 --> 00:01:58,990
+laid out in a way that understand take
+for example an application like pages
+
+31
+00:01:58,099 --> 00:02:02,468
+we can decompose you to the major pieces
+the you why
+
+32
+00:02:03,359 --> 00:02:06,453
+into each major section functionality
+like the window toolbar
+
+33
+00:02:07,299 --> 00:02:10,373
+the document area and the shape picker
+each of these use has a corresponding
+
+34
+00:02:11,039 --> 00:02:12,041
+controller
+
+35
+00:02:12,239 --> 00:02:18,470
+and we show that the storyboard as from
+each scene
+
+36
+00:02:18,047 --> 00:02:22,114
+represent view and view controller pair
+the lines connecting the scenes
+
+37
+00:02:23,014 --> 00:02:26,026
+know the segways sure the relationships
+between
+
+38
+00:02:26,026 --> 00:02:29,112
+them some of these relationships
+represent a containment
+
+39
+00:02:30,012 --> 00:02:34,038
+view controllers inside each other other
+segue lines represent transitions
+
+40
+00:02:34,038 --> 00:02:35,079
+between view controllers
+
+41
+00:02:35,079 --> 00:02:41,028
+but each one represents flow data in
+some form within the app
+
+42
+00:02:41,739 --> 00:02:45,320
+in your code
+
+43
+00:02:45,032 --> 00:02:48,451
+you controllers are where you the
+developer actually get your hands and
+
+44
+00:02:48,739 --> 00:02:50,380
+controlling both you why
+
+45
+00:02:50,038 --> 00:02:53,093
+and the underlying data model each
+top-level seem
+
+46
+00:02:53,093 --> 00:02:56,362
+in a storyboard represents one view
+controller in your code
+
+47
+00:02:57,199 --> 00:03:00,320
+each controller is a reusable
+
+48
+00:03:00,032 --> 00:03:03,094
+self-contained module user interface in
+control logic
+
+49
+00:03:03,094 --> 00:03:06,100
+within that controller seen you can do
+everything you would normally do inside
+
+50
+00:03:07,054 --> 00:03:07,463
+Ibiza
+
+51
+00:03:07,949 --> 00:03:11,993
+file like place the Y set up auto layout
+constraints
+
+52
+00:03:12,389 --> 00:03:16,820
+connect outlets and actions to their
+parents you controllers
+
+53
+00:03:16,082 --> 00:03:19,871
+and it's represented object so how to be
+seen
+
+54
+00:03:20,609 --> 00:03:23,628
+actually connect with each other well
+
+55
+00:03:23,799 --> 00:03:26,880
+segways are really in the glue or the
+connective tissues
+
+56
+00:03:27,609 --> 00:03:31,668
+between each the major blocks off your
+caps you why you may have noticed
+
+57
+00:03:32,199 --> 00:03:35,500
+the on I West Singh was usually
+represent transition
+
+58
+00:03:35,005 --> 00:03:38,994
+between whole full-screen views we took
+a look at
+
+59
+00:03:39,489 --> 00:03:42,870
+the relationships between view
+controllers and West End though
+
+60
+00:03:42,087 --> 00:03:45,916
+we noticed somewhat different
+relationship containment
+
+61
+00:03:46,699 --> 00:03:49,787
+on almost ten most applications tend to
+group their views together
+
+62
+00:03:50,579 --> 00:03:53,650
+in the same window there are many
+transitions bring
+
+63
+00:03:53,065 --> 00:03:57,144
+views on and off-screen because you
+actually have the screen real estate to
+
+64
+00:03:57,729 --> 00:03:58,470
+show the mall
+
+65
+00:03:58,047 --> 00:04:02,156
+inside the same window summer grouped in
+splits or sometimes hidden tabs
+
+66
+00:04:02,579 --> 00:04:05,592
+that's not to say that we don't have
+
+67
+00:04:05,709 --> 00:04:09,752
+presentation sideways on our 10 as well
+we just have fewer of them
+
+68
+00:04:10,139 --> 00:04:13,690
+at modal dialogs when the model sheets
+
+69
+00:04:13,069 --> 00:04:16,084
+and popovers like the presentation
+segways
+
+70
+00:04:16,084 --> 00:04:20,223
+on i OS in order to make these work it's
+your responsibility to override the
+
+71
+00:04:20,979 --> 00:04:22,470
+prepare for Segway
+
+72
+00:04:22,047 --> 00:04:25,066
+method in your parent you controller
+
+73
+00:04:25,066 --> 00:04:29,111
+from there you can take the past and and
+a storyboard segue object
+
+74
+00:04:30,011 --> 00:04:34,062
+get the destination view controller that
+and configure and set the represented
+
+75
+00:04:34,062 --> 00:04:36,351
+object or do any other initialization
+
+76
+00:04:36,909 --> 00:04:40,978
+right before it's presented up on screen
+
+77
+00:04:41,599 --> 00:04:43,684
+so if there's one line of code that is
+absolutely necessary and that you need
+
+78
+00:04:44,449 --> 00:04:44,545
+to remember
+
+79
+00:04:45,409 --> 00:04:49,590
+its prepare for Segway
+
+80
+00:04:49,059 --> 00:04:52,134
+so at build time each storyboard scene
+is broken down
+
+81
+00:04:53,034 --> 00:04:57,613
+into each its constituent parts views
+are separated from view controllers
+
+82
+00:04:57,919 --> 00:05:01,925
+windows are separated from winter
+controllers and the transition segways
+
+83
+00:05:01,979 --> 00:05:05,050
+are embedded inside of their parent
+controllers
+
+84
+00:05:05,689 --> 00:05:08,770
+this is done to make the process a
+lowering your user interface
+
+85
+00:05:08,077 --> 00:05:12,506
+as lazy as possible at runtime then as
+performance optimization
+
+86
+00:05:13,199 --> 00:05:17,202
+the container controllers absorb all
+other child controllers together in the
+
+87
+00:05:17,229 --> 00:05:19,370
+same unit
+
+88
+00:05:19,037 --> 00:05:22,826
+this is because all those controllers
+are going to be needed the initial load
+
+89
+00:05:23,159 --> 00:05:23,203
+time
+
+90
+00:05:23,599 --> 00:05:27,605
+the top-level container controller and
+it's just more efficient
+
+91
+00:05:27,659 --> 00:05:31,110
+on archive 14 then each unit
+
+92
+00:05:31,011 --> 00:05:34,320
+is compiled into a net file and then all
+the noobs
+
+93
+00:05:34,419 --> 00:05:37,494
+are bundled together inside about
+storyboard see bundle
+
+94
+00:05:38,169 --> 00:05:42,190
+then that bundles nestled inside of your
+applications resources director
+
+95
+00:05:42,379 --> 00:05:46,240
+and then appear up can go to the store
+
+96
+00:05:46,024 --> 00:05:49,090
+so we put a lot of our and work into the
+storyboard compiler
+
+97
+00:05:49,009 --> 00:05:53,058
+to make sure you get the most fission
+loading at runtime while in use the most
+
+98
+00:05:53,949 --> 00:05:54,953
+flexible yuan Lai
+
+99
+00:05:55,349 --> 00:05:59,770
+to be able to connect in rewire the
+relationships between your controllers
+
+100
+00:05:59,077 --> 00:06:03,056
+on campus all with the absolute minimum
+glucose
+
+101
+00:06:03,749 --> 00:06:07,774
+so we'll see how this all works over
+here on the demolition
+
+102
+00:06:07,999 --> 00:06:11,041
+so as a way of testing storyboards
+
+103
+00:06:11,419 --> 00:06:14,512
+and to make sure that everything that
+we're buildings actually working
+
+104
+00:06:15,349 --> 00:06:18,610
+we started by rewriting an all peace
+sample code
+
+105
+00:06:18,061 --> 00:06:21,370
+that you may be familiar with called
+sketch
+
+106
+00:06:21,919 --> 00:06:25,947
+in our story board based sketch the next
+generation
+
+107
+00:06:26,199 --> 00:06:29,330
+we're taking a class a document based
+app and we're
+
+108
+00:06:29,033 --> 00:06:32,872
+remodeling much in control logic
+interview controllers
+
+109
+00:06:33,169 --> 00:06:37,224
+so as you can see here we have the main
+story board over application
+
+110
+00:06:37,719 --> 00:06:41,240
+it already has a number of scenes that
+we've pre-populated ins
+
+111
+00:06:41,024 --> 00:06:44,753
+with view controllers and
+
+112
+00:06:44,969 --> 00:06:48,120
+what we want to do is to show you why
+that has
+
+113
+00:06:48,012 --> 00:06:51,033
+are campus where you can drop shapes
+
+114
+00:06:51,033 --> 00:06:55,065
+and use gestures to manipulate them and
+then have a split
+
+115
+00:06:55,065 --> 00:06:59,304
+and on the other side of that would be
+will be the inspector area
+
+116
+00:06:59,889 --> 00:07:02,950
+where you can see the different
+properties the currently selected shape
+
+117
+00:07:03,499 --> 00:07:08,590
+so to model this I'm going to use a
+split view controller
+
+118
+00:07:08,059 --> 00:07:11,348
+and I'm just gonna drag that out into
+the campus here
+
+119
+00:07:11,879 --> 00:07:15,330
+and it comes with two controllers
+already which I don't really mean
+
+120
+00:07:15,033 --> 00:07:17,392
+because I already have my campus
+
+121
+00:07:17,689 --> 00:07:20,695
+I can just wire up here
+
+122
+00:07:21,289 --> 00:07:24,330
+and drag connect and Chris
+
+123
+00:07:24,699 --> 00:07:27,736
+I'm out that and then we wanna where
+
+124
+00:07:28,069 --> 00:07:33,210
+inspectors well and you can see here we
+have like a little preview
+
+125
+00:07:33,021 --> 00:07:36,540
+love with the campus in the inspector
+look like and it's using
+
+126
+00:07:36,729 --> 00:07:41,080
+the auto layout constraints that have
+already been set in those views
+
+127
+00:07:41,008 --> 00:07:44,807
+also to get this to show up we wanna
+take are window controller
+
+128
+00:07:44,879 --> 00:07:47,913
+and connect the new split view
+controller and say that this is going to
+
+129
+00:07:48,219 --> 00:07:49,260
+be the windows
+
+130
+00:07:49,629 --> 00:07:52,800
+content view controller so
+
+131
+00:07:52,008 --> 00:07:56,014
+a looks like all other boxes have old
+lines connected to him let's
+
+132
+00:07:56,086 --> 00:07:59,665
+run this and shows up
+
+133
+00:08:00,439 --> 00:08:04,550
+top here is an app our application
+
+134
+00:08:04,055 --> 00:08:08,424
+and as iris 5 you'll notice that
+
+135
+00:08:08,919 --> 00:08:11,990
+you know we have a good enforced minimum
+size from
+
+136
+00:08:11,099 --> 00:08:14,180
+our auto layout constraints but the
+split is not
+
+137
+00:08:15,008 --> 00:08:18,099
+sticking kind of to the side where we
+would want it as we resize the window
+
+138
+00:08:19,071 --> 00:08:20,080
+just keeps getting bigger
+
+139
+00:08:21,061 --> 00:08:24,062
+so I know what I can do to fix this
+
+140
+00:08:24,062 --> 00:08:27,121
+I just have to go to the split view
+controller
+
+141
+00:08:28,021 --> 00:08:32,094
+and find the split view item corresponds
+to that
+
+142
+00:08:32,094 --> 00:08:35,140
+and I can the holding priority
+
+143
+00:08:36,004 --> 00:08:39,009
+the split to be just a little bit more
+than the default
+
+144
+00:08:39,009 --> 00:08:43,012
+and what we're here we must market is
+saying can collapse because you know
+
+145
+00:08:44,002 --> 00:08:47,026
+might not want to always see details I
+love the
+
+146
+00:08:47,044 --> 00:08:50,067
+shapes on campus cell let's run
+
+147
+00:08:50,067 --> 00:08:53,114
+help looks
+
+148
+00:08:54,014 --> 00:08:58,050
+alright now as a drag this we notice
+that the
+
+149
+00:08:58,005 --> 00:09:01,012
+split view edge is actually hugging the
+side window
+
+150
+00:09:01,057 --> 00:09:04,124
+as we won its so train at shape
+
+151
+00:09:05,024 --> 00:09:08,039
+0 and it looks like we don't have our
+
+152
+00:09:08,039 --> 00:09:11,044
+shape Add button hooked up so
+
+153
+00:09:11,089 --> 00:09:14,142
+I'm going to create a new kind of segue
+
+154
+00:09:15,042 --> 00:09:18,125
+and I'm going to show the shape picker
+controller
+
+155
+00:09:19,025 --> 00:09:22,060
+as a popover
+
+156
+00:09:22,006 --> 00:09:25,008
+and in order to make this work though
+
+157
+00:09:25,062 --> 00:09:29,136
+there is one one piece of code that we
+all have to remember
+
+158
+00:09:30,036 --> 00:09:33,129
+to implement in order for up these two
+workers
+
+159
+00:09:34,029 --> 00:09:37,034
+the prepare for Segway
+
+160
+00:09:37,034 --> 00:09:41,071
+so I'm actually gonna open up the
+assistant editor
+
+161
+00:09:41,071 --> 00:09:45,112
+and should see
+
+162
+00:09:46,012 --> 00:09:50,023
+the canvas you control it here we go and
+it looks like somebody
+
+163
+00:09:50,023 --> 00:09:53,045
+has already helpfully written code for
+me so I'm just gonna and comment
+
+164
+00:09:53,045 --> 00:09:56,094
+here and what it does is it takes the
+
+165
+00:09:56,094 --> 00:09:59,139
+destination view controller I love the
+past in
+
+166
+00:10:00,039 --> 00:10:03,081
+and a storyboard segue and what we're
+doing is we're
+
+167
+00:10:03,081 --> 00:10:06,163
+initializing to and saying that it the
+ship container
+
+168
+00:10:07,063 --> 00:10:10,109
+is going to be the campus which is
+ourself in this case
+
+169
+00:10:11,009 --> 00:10:15,011
+campus initiating the Segway and it's
+also going to be the destination where
+
+170
+00:10:15,029 --> 00:10:16,045
+one add new
+
+171
+00:10:16,045 --> 00:10:23,045
+checked so let's build and run us
+
+172
+00:10:25,037 --> 00:10:28,063
+and when we click on great
+
+173
+00:10:28,063 --> 00:10:31,144
+so now we have a shape a can't
+
+174
+00:10:32,044 --> 00:10:35,077
+seemed do anything with it can't move it
+by
+
+175
+00:10:35,077 --> 00:10:38,093
+I think I'll leave that for Raleigh
+
+176
+00:10:38,093 --> 00:10:41,134
+but as one more little bonus before I
+leave a
+
+177
+00:10:42,034 --> 00:10:45,067
+I want to you hookup what is going to be
+
+178
+00:10:45,067 --> 00:10:49,142
+a Preferences window and I just wanna
+show you just how easy this is cuz
+
+179
+00:10:50,042 --> 00:10:54,090
+this is on my favorite features I just
+couldn't wait to show you
+
+180
+00:10:54,009 --> 00:10:58,045
+I am right here we have tab view
+controller
+
+181
+00:10:59,026 --> 00:11:03,067
+that has both general prepping and some
+keyboard shortcuts
+
+182
+00:11:03,067 --> 00:11:06,090
+and what I can do is I can wire the SUP
+
+183
+00:11:06,009 --> 00:11:09,015
+to the preference is menu item
+
+184
+00:11:09,096 --> 00:11:12,150
+and just say for the Sega demo words
+gonna show this is a moral
+
+185
+00:11:13,005 --> 00:11:16,086
+dialogue and fire on this
+
+186
+00:11:17,031 --> 00:11:20,082
+you notice that we have
+
+187
+00:11:20,082 --> 00:11:23,109
+a sketch with
+
+188
+00:11:24,009 --> 00:11:27,054
+fully functional preferences you notice
+the nice no new crossfade
+
+189
+00:11:27,054 --> 00:11:30,063
+between these two views which comes with
+the temp controller
+
+190
+00:11:31,044 --> 00:11:35,113
+but this isn't look exactly like
+preferences when to you still
+
+191
+00:11:36,013 --> 00:11:39,017
+one other really call options that'll
+been added
+
+192
+00:11:39,017 --> 00:11:43,028
+to you have you controller is a new
+style
+
+193
+00:11:43,028 --> 00:11:46,066
+besides just happens on top or tabs on
+bottom
+
+194
+00:11:46,066 --> 00:11:49,153
+we can actually say we won toward bar
+style tabs
+
+195
+00:11:50,053 --> 00:11:54,055
+and we actually specified the class
+
+196
+00:11:54,055 --> 00:11:57,112
+our view controllers in this case this
+is the general
+
+197
+00:11:58,012 --> 00:12:01,040
+prep Spain you controller and this one
+
+198
+00:12:01,004 --> 00:12:04,007
+is the he Board Short
+
+199
+00:12:04,043 --> 00:12:07,045
+you controller I we will find
+
+200
+00:12:07,063 --> 00:12:10,070
+with in your document the
+
+201
+00:12:11,033 --> 00:12:14,048
+emit images that are named the same
+
+202
+00:12:14,048 --> 00:12:18,048
+as the class love the view controller
+
+203
+00:12:18,048 --> 00:12:21,074
+so when we run s now
+
+204
+00:12:21,074 --> 00:12:25,075
+you'll see
+
+205
+00:12:25,084 --> 00:12:28,160
+new Preferences window have the icon
+
+206
+00:12:29,006 --> 00:12:33,031
+and the titles fewer
+
+207
+00:12:33,085 --> 00:12:39,159
+the trial began
+
+208
+00:12:40,059 --> 00:12:43,073
+switch back to fly
+
+209
+00:12:43,073 --> 00:12:47,145
+so how easy was that just by wearing a
+few segways on campus
+
+210
+00:12:48,045 --> 00:12:51,121
+and overriding prepare for Segway we
+were able to plumb together the view
+
+211
+00:12:52,021 --> 00:12:52,094
+controllers
+
+212
+00:12:52,094 --> 00:12:55,142
+into a fully functional application
+Preferences window
+
+213
+00:12:56,042 --> 00:12:59,087
+didn't even use a single line of code
+cell
+
+214
+00:12:59,087 --> 00:13:02,092
+now I'd like to ask rally to come up
+Angeles house reports
+
+215
+00:13:02,092 --> 00:13:09,092
+actually works under the hood thank you
+Mike
+
+216
+00:13:12,037 --> 00:13:15,069
+now that you've seen how incredibly easy
+it is
+
+217
+00:13:15,069 --> 00:13:19,090
+to design your application using
+storyboards and the wire everything up
+
+218
+00:13:19,009 --> 00:13:22,061
+I'm gonna pop open the hood I'm going to
+take a look at the machinery and any
+
+219
+00:13:23,042 --> 00:13:27,056
+that drives this whole thing
+
+220
+00:13:27,056 --> 00:13:31,059
+we got a lot to cover here just a little
+bit of API with storyboards itself
+
+221
+00:13:31,086 --> 00:13:34,141
+there's a lot of new API we view
+controllers we talk a little bit about
+
+222
+00:13:35,041 --> 00:13:37,054
+how window controllers fits in with
+
+223
+00:13:37,054 --> 00:13:40,109
+a arpa liberation %uh view controllers
+that we're now adding
+
+224
+00:13:41,009 --> 00:13:44,098
+and wrap it up with gesture recognizers
+and how they
+
+225
+00:13:44,098 --> 00:13:47,117
+really mesh ruling night with view
+controllers
+
+226
+00:13:48,017 --> 00:13:51,041
+and designing application it's really
+awesome
+
+227
+00:13:51,041 --> 00:13:54,046
+loved it right in with storyboards
+storyboards
+
+228
+00:13:54,091 --> 00:13:58,169
+or every source file in your project
+like nerves or
+
+229
+00:13:59,069 --> 00:14:02,078
+by default you the if you to the check
+box when you create a new project a good
+
+230
+00:14:03,059 --> 00:14:04,064
+start off with the storyboard
+
+231
+00:14:05,009 --> 00:14:08,018
+are you discredit storyboarding in your
+project a new one
+
+232
+00:14:08,018 --> 00:14:11,021
+in the setting for the project for your
+target
+
+233
+00:14:11,021 --> 00:14:14,027
+you could just right there in the main
+interface set which storyboard to use as
+
+234
+00:14:14,081 --> 00:14:15,084
+your main interface
+
+235
+00:14:16,011 --> 00:14:20,046
+are even if I'll if you happen to have
+be transitioning from a no project to no
+
+236
+00:14:20,046 --> 00:14:20,083
+one
+
+237
+00:14:20,083 --> 00:14:24,085
+and the right thing will happen if you
+by yourself with the need to dig down
+
+238
+00:14:25,003 --> 00:14:27,092
+into the unpopular stands at the keys
+manually
+
+239
+00:14:27,092 --> 00:14:30,171
+the in its main story board file this is
+the key you need to set near
+
+240
+00:14:31,071 --> 00:14:36,086
+if popular to bring up the storyboard
+
+241
+00:14:36,086 --> 00:14:39,152
+we load the initial storyboard is gonna
+go through this path
+
+242
+00:14:40,052 --> 00:14:43,143
+just like you can use this API struggle
+with name to load any so reported that
+
+243
+00:14:44,043 --> 00:14:45,089
+you have in your resources
+
+244
+00:14:45,089 --> 00:14:49,151
+you could order from a name and then you
+need to instantiate the initial
+
+245
+00:14:50,051 --> 00:14:51,106
+controller
+
+246
+00:14:52,006 --> 00:14:55,091
+what's the initial controlling my task
+well that the controller that has the
+
+247
+00:14:55,091 --> 00:14:56,187
+arrow pointing to it without
+
+248
+00:14:57,087 --> 00:15:00,156
+some beginning part to it this is the
+initial guy there's always one upping
+
+249
+00:15:01,056 --> 00:15:02,073
+with your storyboard
+
+250
+00:15:02,073 --> 00:15:06,076
+that's gonna be the initial control
+earnest generally when you wanna load up
+
+251
+00:15:06,076 --> 00:15:09,165
+when with OJ Mayo storyboard file world
+automatically instantiate initial
+
+252
+00:15:10,065 --> 00:15:11,112
+controller and said it running
+
+253
+00:15:12,012 --> 00:15:15,039
+on your behalf not
+
+254
+00:15:15,039 --> 00:15:18,046
+every controller that you have in your
+storyboard need to be wired back
+
+255
+00:15:19,009 --> 00:15:22,087
+up to that initial view controller I'm
+you can have them they just stand alone
+
+256
+00:15:22,087 --> 00:15:24,166
+all on their own and can give the man
+died in a fire and you can
+
+257
+00:15:25,066 --> 00:15:29,084
+access them by getting the asking to
+instantiate the controller with identify
+
+258
+00:15:29,084 --> 00:15:29,156
+our
+
+259
+00:15:30,056 --> 00:15:33,068
+will find it in the store but with that
+name will instantiate start doing the
+
+260
+00:15:33,068 --> 00:15:33,136
+wiring up
+
+261
+00:15:34,036 --> 00:15:38,125
+and headed back to you and you can take
+from there
+
+262
+00:15:39,025 --> 00:15:42,069
+that's really all there is with
+storyboards as far as a PI
+
+263
+00:15:42,069 --> 00:15:47,134
+its there's not much there they just
+work it's really nice
+
+264
+00:15:48,034 --> 00:15:51,129
+view controllers move on to view
+controllers there's
+
+265
+00:15:52,029 --> 00:15:55,062
+ton have new API here there's so much
+like your view controllers that I've got
+
+266
+00:15:55,062 --> 00:15:56,159
+a breakdown in the sections
+
+267
+00:15:57,059 --> 00:16:01,068
+so we'll talk about loading and layout
+life cycle there but container ship
+
+268
+00:16:01,068 --> 00:16:04,112
+it's really nice mister for container
+ship triggered segways
+
+269
+00:16:05,012 --> 00:16:08,070
+as you saw the plus button to do the
+popover and will wrap it up with how to
+
+270
+00:16:08,007 --> 00:16:09,071
+do things completely manual
+
+271
+00:16:10,034 --> 00:16:13,110
+if you need to get down to that level
+
+272
+00:16:14,001 --> 00:16:17,010
+so have a lot of properties in a in a
+few controller for loading this plan
+
+273
+00:16:18,000 --> 00:16:18,068
+layout
+
+274
+00:16:18,068 --> 00:16:23,152
+all these methods here are new except
+for view loaded which is the top one
+
+275
+00:16:24,052 --> 00:16:29,087
+and wanna talk about them is unknown
+life cycle and how they're used
+
+276
+00:16:29,087 --> 00:16:32,136
+you have your view controller will get a
+knitted and allocated
+
+277
+00:16:33,036 --> 00:16:35,128
+and it doesn't have a view yet because
+view controllers like to lately though
+
+278
+00:16:36,028 --> 00:16:37,109
+the view so there's no view yet
+
+279
+00:16:38,009 --> 00:16:43,060
+you load it is gonna return 0 if yes
+first property at this point
+
+280
+00:16:43,006 --> 00:16:47,011
+then load view was going to get called a
+this is generally been the place where
+
+281
+00:16:47,065 --> 00:16:48,104
+you've gone ahead and
+
+282
+00:16:49,004 --> 00:16:52,039
+so class in a few control an overload
+override load view
+
+283
+00:16:52,039 --> 00:16:56,112
+just the cost to burn normally by
+default at get will go ahead and try and
+
+284
+00:16:57,012 --> 00:16:58,061
+load the nearby
+
+285
+00:16:58,061 --> 00:17:01,079
+with the name that you gave it a few
+initial I did it with near where
+
+286
+00:17:01,079 --> 00:17:04,248
+the net worth name but new
+
+287
+00:17:04,959 --> 00:17:07,967
+on your seventy is that you will go
+ahead and
+
+288
+00:17:08,039 --> 00:17:12,120
+if your nickname is nil will look for a
+nearby that has the same
+
+289
+00:17:12,012 --> 00:17:15,681
+name as your view controller and
+automatically know that name for you
+
+290
+00:17:15,789 --> 00:17:19,890
+so now you have the subclass view
+controller to get the right near bloated
+
+291
+00:17:19,089 --> 00:17:22,218
+you just name your net file the right
+thing and
+
+292
+00:17:23,019 --> 00:17:26,970
+it'll do it for you automatically
+
+293
+00:17:26,097 --> 00:17:29,119
+during load view said he was going to
+get called in your view is finally set
+
+294
+00:17:30,019 --> 00:17:33,083
+your view controller you load it will
+now return yes
+
+295
+00:17:33,083 --> 00:17:36,088
+they were returned from load view but
+before we continue the run though before
+
+296
+00:17:37,033 --> 00:17:37,042
+we go back
+
+297
+00:17:38,023 --> 00:17:42,182
+to giving control unification view did
+load is going to be can
+
+298
+00:17:42,389 --> 00:17:45,430
+called on your view controller it is at
+this point now instead of overwriting
+
+299
+00:17:45,799 --> 00:17:46,730
+love you
+
+300
+00:17:46,073 --> 00:17:49,632
+you're right you did load and you do you
+want I miss then she Asian
+
+301
+00:17:50,289 --> 00:17:53,860
+finalization stuff that you need to do
+there so this is something that you only
+
+302
+00:17:53,086 --> 00:17:53,495
+do
+
+303
+00:17:54,269 --> 00:17:57,950
+want to be wants when the view is loaded
+and you'll never need to do again
+
+304
+00:17:57,095 --> 00:17:57,544
+because
+
+305
+00:17:58,399 --> 00:18:01,940
+your view is going to be hanging around
+
+306
+00:18:01,094 --> 00:18:06,053
+now you gonna go ahead in which have you
+in a window get the window on screen
+
+307
+00:18:06,899 --> 00:18:12,210
+and gonna go to the life cycle love you
+
+308
+00:18:12,021 --> 00:18:15,098
+so before you gets in the window as you
+added into the window
+
+309
+00:18:15,098 --> 00:18:18,627
+I will call you will appear and there
+are few other places that you will
+
+310
+00:18:19,509 --> 00:18:20,460
+appear gets called
+
+311
+00:18:20,046 --> 00:18:23,083
+whenever the window is becoming visible
+for example
+
+312
+00:18:23,083 --> 00:18:27,682
+as ordering a front perhaps the user has
+previously hidden the wind or minimize
+
+313
+00:18:28,429 --> 00:18:29,437
+it and now they're
+
+314
+00:18:29,509 --> 00:18:32,580
+on minimizing the window into this is
+another case where you get
+
+315
+00:18:32,058 --> 00:18:35,096
+love you will appear see to do some
+really interesting things here for
+
+316
+00:18:35,096 --> 00:18:35,169
+example
+
+317
+00:18:36,069 --> 00:18:39,070
+arm you might wanna so what
+
+318
+00:18:39,007 --> 00:18:43,306
+sector highlight color so the first time
+that give you that the draw
+
+319
+00:18:43,999 --> 00:18:48,030
+draws with the correct highlight color
+for example
+
+320
+00:18:48,309 --> 00:18:51,830
+generation is now going to occur after
+you return from this
+
+321
+00:18:51,083 --> 00:18:54,532
+the window will be animated on screen if
+you're on hiding the view are you doing
+
+322
+00:18:55,279 --> 00:18:57,285
+so got a transition a transition
+animation occurs
+
+323
+00:18:57,879 --> 00:19:01,330
+when that completing your you is drawn
+at least once
+
+324
+00:19:01,033 --> 00:19:04,058
+you did appeal because in the view
+controller and now you can wire up
+
+325
+00:19:04,058 --> 00:19:06,607
+things that you didn't want to interfere
+with that information
+
+326
+00:19:07,129 --> 00:19:10,205
+and you only want to be visible while
+the window is visible in your viewers
+
+327
+00:19:10,889 --> 00:19:11,580
+displayed
+
+328
+00:19:11,058 --> 00:19:15,727
+you might want to set up 27 example some
+animation that's running here
+
+329
+00:19:16,249 --> 00:19:22,255
+a the disrupt costly but only wanted
+visible
+
+330
+00:19:22,309 --> 00:19:26,570
+at this point user interacts with your
+view interact with the user interface
+
+331
+00:19:26,057 --> 00:19:29,286
+you gonna update you constraints on your
+view you gonna dirty them
+
+332
+00:19:29,799 --> 00:19:32,811
+you can't really get the participate and
+updating the constraints with the day if
+
+333
+00:19:32,919 --> 00:19:33,580
+you can't read
+
+334
+00:19:33,058 --> 00:19:36,061
+and you get informed when layout is
+gonna happen with the will lay out and
+
+335
+00:19:36,061 --> 00:19:37,710
+after it happened you did lay out
+
+336
+00:19:38,259 --> 00:19:41,580
+see you can participate in this is you
+normally would with
+
+337
+00:19:41,058 --> 00:19:46,157
+our way out arm but you get to do it now
+if you control level
+
+338
+00:19:46,679 --> 00:19:49,679
+and at some point you can remove the
+view from the window perhaps you've
+
+339
+00:19:49,679 --> 00:19:51,590
+changed had now the view with
+
+340
+00:19:51,059 --> 00:19:55,144
+being hidden are you hiding the one to
+the user's hiding the window or you just
+
+341
+00:19:56,044 --> 00:19:57,523
+outright closing the window
+
+342
+00:19:57,919 --> 00:20:00,992
+any these cases your will be pursued
+with a view will disappear
+
+343
+00:20:01,649 --> 00:20:03,740
+that animation we started in view did
+appear this is what we would want to
+
+344
+00:20:04,559 --> 00:20:06,710
+stop it
+
+345
+00:20:06,071 --> 00:20:09,160
+then the animation occurs in the view
+out the window disappears with the
+
+346
+00:20:09,799 --> 00:20:12,850
+appropriate animation and will call you
+back with a view did disappear
+
+347
+00:20:13,309 --> 00:20:17,320
+and now you can release a any kind a
+final resources that you don't wanna
+
+348
+00:20:17,032 --> 00:20:18,037
+hang onto as the window
+
+349
+00:20:18,082 --> 00:20:22,119
+is not visible or your view is no longer
+part of the window
+
+350
+00:20:23,019 --> 00:20:26,988
+the life cycle just continues as you
+switch tabs in the views come back in
+
+351
+00:20:27,159 --> 00:20:28,247
+Galway in Windows hide/show
+
+352
+00:20:29,039 --> 00:20:34,110
+we just continue the cycle
+
+353
+00:20:34,011 --> 00:20:37,920
+new in Yosemite in a few controllers now
+in the responder chain
+
+354
+00:20:38,019 --> 00:20:41,480
+where for would start off with our
+campus you with we had no demo
+
+355
+00:20:41,048 --> 00:20:43,077
+application there
+
+356
+00:20:43,509 --> 00:20:47,534
+in a benefit at the campus few inflows
+up through the split view to the window
+
+357
+00:20:47,759 --> 00:20:51,700
+and follow you into a controller
+
+358
+00:20:51,007 --> 00:20:54,226
+if you control is there came a few to
+respect split you control cannot
+
+359
+00:20:54,919 --> 00:20:56,090
+participate in this
+
+360
+00:20:56,009 --> 00:21:00,588
+and their automatically wired up in the
+responder chain right after their view
+
+361
+00:21:00,669 --> 00:21:03,766
+so you can now participate in events and
+more importantly an action methods
+
+362
+00:21:04,639 --> 00:21:08,460
+in action method the road is where
+really comes in handy
+
+363
+00:21:08,046 --> 00:21:12,265
+up for example cut copy and paste in the
+menu bar cut copy paste
+
+364
+00:21:12,679 --> 00:21:16,940
+this wired up to the cut copy and paste
+actions to the first responder
+
+365
+00:21:16,094 --> 00:21:19,813
+that might be the campus view in this
+case like Eva you doesn't really do much
+
+366
+00:21:20,659 --> 00:21:22,694
+more thorough logic is that our campus
+view controller
+
+367
+00:21:23,009 --> 00:21:26,026
+and previously you would have had to you
+
+368
+00:21:26,179 --> 00:21:30,204
+catch pick up the pace in your view and
+somehow back get a two-year
+
+369
+00:21:30,429 --> 00:21:33,478
+controller and now back in a few
+controllers
+
+370
+00:21:33,919 --> 00:21:36,925
+in the responder chain you can put their
+copy method writing your campus view
+
+371
+00:21:37,519 --> 00:21:38,200
+controller
+
+372
+00:21:38,002 --> 00:21:41,101
+and give you can be a totally oblivious
+to this
+
+373
+00:21:42,019 --> 00:21:47,128
+and it works out really nicely I do want
+to point out though that we only wire up
+
+374
+00:21:47,299 --> 00:21:50,311
+view controllers automatically and
+respond to change if you're late on or
+
+375
+00:21:50,419 --> 00:21:53,458
+after ten 10
+
+376
+00:21:53,809 --> 00:21:56,690
+suitable for talk about to tame it we
+got some really exciting things to do
+
+377
+00:21:56,069 --> 00:21:57,058
+with containment
+
+378
+00:21:57,679 --> 00:22:01,750
+you controllers can now have children
+and you can't get back your parent
+
+379
+00:22:02,389 --> 00:22:05,412
+in the best way to talk about the
+payment it with an example so let's
+
+380
+00:22:05,619 --> 00:22:07,657
+start off with pay per view controller
+with that Deepika
+
+381
+00:22:07,999 --> 00:22:12,002
+into have you controller so in a Feb
+controllers
+
+382
+00:22:12,299 --> 00:22:16,345
+going to manage in a February manages a
+couple of other views and I'll get into
+
+383
+00:22:16,759 --> 00:22:16,845
+details there but
+
+384
+00:22:17,619 --> 00:22:20,645
+mainly manages the tab you it's going to
+
+385
+00:22:20,879 --> 00:22:24,980
+lately loaded have to use and this is
+one of my favorite things
+
+386
+00:22:24,098 --> 00:22:27,144
+and a path life I've had have used that
+had
+
+387
+00:22:28,044 --> 00:22:31,099
+a fair number of tabs on a lot a carton
+in each one of those tabs
+
+388
+00:22:31,099 --> 00:22:34,238
+and loading this never far from death
+took forever
+
+389
+00:22:35,129 --> 00:22:38,700
+now that we lately low that have used
+just the initial select the tab is going
+
+390
+00:22:38,007 --> 00:22:40,446
+to get loaded when you first bring up
+your interface
+
+391
+00:22:41,139 --> 00:22:47,166
+and it is much more responsive to the
+user that way I really love this
+
+392
+00:22:47,409 --> 00:22:50,840
+its now much easier to customize your
+had
+
+393
+00:22:50,084 --> 00:22:53,393
+using a tabbed view controller and I'll
+get into specifics about that a little
+
+394
+00:22:54,149 --> 00:22:55,580
+bit
+
+395
+00:22:55,058 --> 00:22:59,367
+and as you saw in the demo it's
+incredibly easy without code you can
+
+396
+00:22:59,889 --> 00:23:03,976
+get a nice profit is user interface star
+using a tab you controller
+
+397
+00:23:04,759 --> 00:23:07,830
+and I'll show you exactly how you would
+do that encode and its
+
+398
+00:23:07,083 --> 00:23:12,149
+just as easy as we as Mike did in the
+demo and I B
+
+399
+00:23:13,049 --> 00:23:16,088
+I maverick's in a fabulous like this
+there's
+
+400
+00:23:16,529 --> 00:23:19,544
+and Anna have you it manages the
+collection have been a have you items
+
+401
+00:23:19,679 --> 00:23:19,712
+those
+
+402
+00:23:20,009 --> 00:23:23,022
+to view items each have a view and some
+additional properties
+
+403
+00:23:23,139 --> 00:23:27,180
+such as the label so we know what label
+to put in the tabs
+
+404
+00:23:27,549 --> 00:23:30,970
+with have your controller logically
+things are now
+
+405
+00:23:30,097 --> 00:23:33,133
+%uh laid out like this there's an attack
+view controller
+
+406
+00:23:34,033 --> 00:23:38,046
+and that have you controller owns in it
+have you
+
+407
+00:23:38,046 --> 00:23:41,515
+and manages the collection have been
+attacked you items
+
+408
+00:23:41,929 --> 00:23:44,980
+to have you in a February now has a
+couple of additional properties
+
+409
+00:23:44,098 --> 00:23:47,145
+the image which is kinda fun she can get
+an image in there
+
+410
+00:23:48,045 --> 00:23:51,069
+and of course the view controller and if
+the view controller that
+
+411
+00:23:51,069 --> 00:23:54,398
+now owns the view and it can lead to
+reload the view
+
+412
+00:23:55,019 --> 00:24:00,082
+as you switch to the steps
+
+413
+00:24:00,649 --> 00:24:03,960
+since in effect you could tell a manager
+the collection of tap you items you can
+
+414
+00:24:03,096 --> 00:24:03,785
+of course
+
+415
+00:24:04,649 --> 00:24:08,700
+get that have you item array you can
+also find out what the selected have you
+
+416
+00:24:09,159 --> 00:24:10,070
+item indexes
+
+417
+00:24:10,007 --> 00:24:13,076
+in this is cave you comply it so you can
+observe this
+
+418
+00:24:13,139 --> 00:24:16,580
+is much easier to observe the selected
+to view item index then it was
+
+419
+00:24:16,058 --> 00:24:17,217
+previously to
+
+420
+00:24:17,739 --> 00:24:21,570
+have a delegate and a have to respond
+all the delegate methods
+
+421
+00:24:21,057 --> 00:24:25,036
+so you have to do that anymore as with
+any sort of containment
+
+422
+00:24:25,549 --> 00:24:28,637
+API there's the at insert removed a few
+items
+
+423
+00:24:29,429 --> 00:24:32,452
+and if you have a child view controller
+that
+
+424
+00:24:32,659 --> 00:24:35,757
+is in what are the tags you can just ask
+for that have your item associated with
+
+425
+00:24:36,639 --> 00:24:36,678
+it
+
+426
+00:24:37,029 --> 00:24:42,032
+be a tad view item for view controller
+
+427
+00:24:42,059 --> 00:24:46,142
+in a February damn also had this really
+nifty a class method on it
+
+428
+00:24:46,889 --> 00:24:50,460
+to view item with a view controller she
+could take any
+
+429
+00:24:50,046 --> 00:24:53,205
+no dinner view controller that you have
+and you can create
+
+430
+00:24:53,619 --> 00:24:57,658
+a default have you controller for it
+using this method
+
+431
+00:24:58,009 --> 00:25:02,046
+and what this does is it doesn't just
+create a generic have you item it tries
+
+432
+00:25:02,379 --> 00:25:02,421
+to
+
+433
+00:25:02,799 --> 00:25:06,080
+populated with the appropriate
+information from the
+
+434
+00:25:06,008 --> 00:25:09,327
+to view controller for example we will
+take the title
+
+435
+00:25:09,399 --> 00:25:12,860
+a bitch i love u controller and said
+that the label other have you item
+
+436
+00:25:12,086 --> 00:25:15,625
+and you will also take it a step further
+as Mike should in the demo
+
+437
+00:25:16,399 --> 00:25:19,960
+we look at the a class them at the view
+controller
+
+438
+00:25:19,096 --> 00:25:22,170
+and we try and find image resources with
+that same name are we prefer
+
+439
+00:25:23,007 --> 00:25:27,576
+is the name with a dash to view item and
+will automatically set that image
+
+440
+00:25:28,269 --> 00:25:32,450
+as the image other tab at the end of
+have you item
+
+441
+00:25:32,045 --> 00:25:37,964
+so you can get the label in the item
+just automatically that way
+
+442
+00:25:38,369 --> 00:25:41,388
+to view controller had a medicinal
+properties which are pretty interesting
+
+443
+00:25:41,559 --> 00:25:45,620
+there's the tabs style as Mike show do
+we have said made a control on top
+
+444
+00:25:46,169 --> 00:25:50,267
+it on bottom arm so the tab now drawn
+with the segmented control
+
+445
+00:25:51,149 --> 00:25:54,237
+touch on it a little bit more real soon
+there's the tow bar style
+
+446
+00:25:55,029 --> 00:25:59,031
+that's all you have to do you set the
+taps out the toolbar
+
+447
+00:25:59,049 --> 00:26:02,330
+that have you control will create the
+toolbar on your behalf
+
+448
+00:26:02,033 --> 00:26:05,722
+and place it in the window at the Tabor
+you're done
+
+449
+00:26:06,019 --> 00:26:09,054
+then there's on specify which is really
+interesting and I'll get to that a
+
+450
+00:26:09,369 --> 00:26:10,385
+little bit more
+
+451
+00:26:10,529 --> 00:26:13,552
+and just the second at the talked about
+not
+
+452
+00:26:13,759 --> 00:26:17,980
+there is a segmented control that now
+displays the tabs
+
+453
+00:26:17,098 --> 00:26:20,737
+you can get the segmented control you
+can supply your own segments control
+
+454
+00:26:21,619 --> 00:26:23,320
+subclass if you want draw them
+
+455
+00:26:23,032 --> 00:26:28,061
+a in your subclass however you wish
+
+456
+00:26:28,061 --> 00:26:31,940
+but if you said it the PAP style to
+unspecified
+
+457
+00:26:32,489 --> 00:26:35,583
+what you can do then is going apply your
+own
+
+458
+00:26:36,429 --> 00:26:39,454
+a layout constraints to the segmented
+control
+
+459
+00:26:39,679 --> 00:26:43,610
+and have the same a control appear where
+you want to appear in to the layout
+
+460
+00:26:43,061 --> 00:26:44,630
+yourself
+
+461
+00:26:45,179 --> 00:26:48,210
+so you have much more customizability a
+
+462
+00:26:48,021 --> 00:26:51,035
+with to view controller then you've had
+previously
+
+463
+00:26:51,035 --> 00:26:55,304
+there some transition options by
+automatically by default we said it
+
+464
+00:26:55,619 --> 00:26:55,700
+across a
+
+465
+00:26:56,429 --> 00:27:00,970
+Mike showed in this damn in the demo I T
+a change have-not provinces you I
+
+466
+00:27:00,097 --> 00:27:04,098
+did nice little cross fade effect you
+can set it to nine and have
+
+467
+00:27:04,098 --> 00:27:08,195
+the old style we're just switches we
+have very of lighting directions
+
+468
+00:27:09,095 --> 00:27:12,184
+up down left and right you can combine
+
+469
+00:27:13,039 --> 00:27:16,590
+directions that are on different axes
+seeking a bonded up with the left
+
+470
+00:27:16,059 --> 00:27:19,238
+but you can't combine up with a down
+that whitten
+
+471
+00:27:19,769 --> 00:27:24,350
+actually and made any think so we don't
+let you that I do really wanna point out
+
+472
+00:27:24,035 --> 00:27:25,058
+those slide forward
+
+473
+00:27:25,058 --> 00:27:28,084
+and slide backwards
+
+474
+00:27:28,084 --> 00:27:31,085
+these are really important you gonna do
+any sort of horizontal sliding because
+
+475
+00:27:31,085 --> 00:27:31,173
+they work
+
+476
+00:27:32,073 --> 00:27:35,172
+in the appropriate direction for user's
+language so they were correctly and
+
+477
+00:27:36,072 --> 00:27:39,381
+right to left languages they will go the
+right way and they will go
+
+478
+00:27:40,029 --> 00:27:43,590
+the a correct way for left-right
+languages as well
+
+479
+00:27:43,059 --> 00:27:47,268
+an out do just let at get worry about
+what the right directions or
+
+480
+00:27:47,799 --> 00:27:51,821
+and we'll handle that for you
+
+481
+00:27:52,019 --> 00:27:56,024
+as I mentioned in a Feb controller
+manages a tad view item id owned it have
+
+482
+00:27:56,519 --> 00:28:01,580
+a and an author view it owned it have
+you
+
+483
+00:28:01,058 --> 00:28:04,133
+so it's important that you let in a have
+you control and manage it for you you
+
+484
+00:28:05,033 --> 00:28:06,852
+don't really need to get to it and
+change it
+
+485
+00:28:07,149 --> 00:28:10,480
+there are a few properties very few
+properties
+
+486
+00:28:10,048 --> 00:28:13,557
+that you can modify directly get a
+better view
+
+487
+00:28:13,989 --> 00:28:16,850
+if you find you really need to do this'
+look at the InnoTab 2 controller header
+
+488
+00:28:16,085 --> 00:28:17,114
+it specifies
+
+489
+00:28:17,879 --> 00:28:21,340
+exactly what you can set but in general
+
+490
+00:28:21,034 --> 00:28:24,933
+let's have you control a manager I also
+want to point out here that
+
+491
+00:28:25,239 --> 00:28:30,100
+as interview controller is apart view
+controller it has a view
+
+492
+00:28:30,001 --> 00:28:35,770
+view is not that have you capital has a
+view that contains a tab view
+
+493
+00:28:35,869 --> 00:28:38,913
+at a segmented control and perhaps other
+views as
+
+494
+00:28:39,309 --> 00:28:43,342
+have you could challenge to manage it so
+let to view controller
+
+495
+00:28:43,639 --> 00:28:48,640
+handle it for you when you're using a
+tow bar style
+
+496
+00:28:48,649 --> 00:28:52,100
+a in a Feb controller is the delegate
+
+497
+00:28:52,001 --> 00:28:55,074
+up the toolbar you might wanna
+
+498
+00:28:55,083 --> 00:28:58,672
+override these methods credit so casa
+minha have you control an override his
+
+499
+00:28:59,419 --> 00:29:02,420
+delegate methods
+
+500
+00:29:02,429 --> 00:29:05,514
+perhaps you want to do something like
+add some additional items to the toolbar
+
+501
+00:29:06,279 --> 00:29:10,365
+a that or taps for example a search
+field right
+
+502
+00:29:11,139 --> 00:29:15,141
+you want to search for the purposes you
+I search is a tab
+
+503
+00:29:15,159 --> 00:29:18,190
+so you'll meet ok override these two
+were delegate method
+
+504
+00:29:18,019 --> 00:29:21,468
+an answer the search field yourself I do
+want to point out that
+
+505
+00:29:21,639 --> 00:29:24,738
+these have the night and it requires
+super attribute on them
+
+506
+00:29:25,629 --> 00:29:28,715
+so if you do override this method you
+must call super and the compiler will
+
+507
+00:29:29,489 --> 00:29:32,528
+help you remember that
+
+508
+00:29:32,879 --> 00:29:35,895
+letter view controller let's take a look
+at another example we're introducing
+
+509
+00:29:36,039 --> 00:29:38,124
+split view controller in your seventy
+
+510
+00:29:38,889 --> 00:29:43,986
+it manages in a split view it does lazy
+loading a views
+
+511
+00:29:44,859 --> 00:29:47,928
+and it requires auto layout does all
+love the
+
+512
+00:29:48,549 --> 00:29:52,573
+managing up the splits and how they move
+with 12 resizing all view our way out
+
+513
+00:29:52,789 --> 00:29:55,813
+it would just start adding constraints
+to your window
+
+514
+00:29:56,029 --> 00:29:59,128
+but we have all migrated our ups forward
+to using auto layout so that won't be a
+
+515
+00:30:00,019 --> 00:30:05,044
+problem right
+
+516
+00:30:05,269 --> 00:30:09,295
+so it would you controller today on
+maverick's it has a in a split view
+
+517
+00:30:09,529 --> 00:30:14,590
+it manages to a more views and as a
+divider in there
+
+518
+00:30:14,059 --> 00:30:17,120
+with and in a split view controller
+logic with no they don't like this
+
+519
+00:30:18,002 --> 00:30:19,076
+enough but view controller owns
+
+520
+00:30:19,094 --> 00:30:22,703
+and in a split view it manages the
+collection of love you items
+
+521
+00:30:23,549 --> 00:30:26,820
+those items have some nice new
+properties in a split
+
+522
+00:30:26,082 --> 00:30:30,311
+enough view item is a completely new
+class in Yosemite
+
+523
+00:30:31,049 --> 00:30:34,107
+of course it has a view controller which
+will easily load view
+
+524
+00:30:34,629 --> 00:30:37,718
+if the property such as collapse can
+collapse in the holding priority
+
+525
+00:30:38,519 --> 00:30:44,350
+Mike showed you how important holding
+priority is arm
+
+526
+00:30:44,035 --> 00:30:47,924
+days or property that you used to have
+to override the delegate for split view
+
+527
+00:30:48,239 --> 00:30:50,254
+would be the delegate for the love you
+control you don't need to do that
+
+528
+00:30:50,389 --> 00:30:52,431
+anymore you just said these properties
+right on
+
+529
+00:30:52,809 --> 00:30:55,820
+the split view item so it's a lot easier
+to do it that way
+
+530
+00:30:55,082 --> 00:30:58,801
+and of course you can create a default
+view item if you have some child view
+
+531
+00:30:59,539 --> 00:31:01,584
+controller
+
+532
+00:31:01,989 --> 00:31:06,993
+Pro tip: if you wanna enemy aside a
+collapsible
+
+533
+00:31:07,029 --> 00:31:10,125
+split you use the enemy to proxy on the
+split view item
+
+534
+00:31:10,989 --> 00:31:14,027
+pieces per view item animator that
+collapsed yes or no
+
+535
+00:31:14,369 --> 00:31:18,418
+an the collapse or expansion animation
+will happen for you and I
+
+536
+00:31:18,859 --> 00:31:21,937
+nice animated fashion
+
+537
+00:31:22,639 --> 00:31:26,080
+medicinal properties since we manage
+collections but you items of course you
+
+538
+00:31:26,008 --> 00:31:26,547
+can get to the
+
+539
+00:31:26,619 --> 00:31:29,668
+view items array the obligatory at
+insert removed
+
+540
+00:31:30,109 --> 00:31:34,840
+view item and if you have a child you
+control you can find its associated
+
+541
+00:31:34,084 --> 00:31:41,084
+view item by asking split you item for
+view controller
+
+542
+00:31:42,529 --> 00:31:45,950
+now we'll take a look look at a couple
+examples that we're doing that kid
+
+543
+00:31:45,095 --> 00:31:49,034
+I wanna point out in stressed the
+pattern were using hear you
+
+544
+00:31:49,889 --> 00:31:51,987
+in this the pattern that we think you
+should use as well if you find any to
+
+545
+00:31:52,869 --> 00:31:53,874
+write your own containment style
+
+546
+00:31:54,369 --> 00:31:58,371
+view controllers is you get a view
+controller that's going to manage some
+
+547
+00:31:58,389 --> 00:32:01,423
+collection item so that it could have
+the specific information associated with
+
+548
+00:32:01,729 --> 00:32:01,820
+that
+
+549
+00:32:02,639 --> 00:32:06,100
+that the item will go ahead in on a view
+controller that will then be able to
+
+550
+00:32:06,001 --> 00:32:07,540
+leave we load the view
+
+551
+00:32:07,639 --> 00:32:10,641
+if you're familiar with Isleworth this
+is a little different than Iowa
+
+552
+00:32:10,659 --> 00:32:14,672
+where I was you have to have a special
+type love you control a subclass that
+
+553
+00:32:14,789 --> 00:32:15,840
+they may or may not also own
+
+554
+00:32:16,299 --> 00:32:19,336
+a special type item with inverted that
+on
+
+555
+00:32:19,669 --> 00:32:24,683
+horse tenure seventy and 01 the reasons
+is that now your child view controllers
+
+556
+00:32:24,809 --> 00:32:25,852
+can be a lot more generic
+
+557
+00:32:26,239 --> 00:32:29,265
+and the the pattern that we're using
+
+558
+00:32:29,499 --> 00:32:33,580
+on Austin yosemite and the pattern we
+suggest you follow as well
+
+559
+00:32:34,309 --> 00:32:37,327
+there are some generic a container
+
+560
+00:32:37,489 --> 00:32:42,489
+API with view controllers that are
+expose that in a future level
+
+561
+00:32:42,489 --> 00:32:45,508
+you can get an array of child view
+controllers and add an Answer
+
+562
+00:32:45,679 --> 00:32:48,714
+remote job view controllers but these
+API
+
+563
+00:32:49,029 --> 00:32:52,078
+only manage the collection itself
+
+564
+00:32:52,519 --> 00:32:55,528
+it's up to you the subclass to know what
+to do with them like to have you control
+
+565
+00:32:56,419 --> 00:32:57,444
+will go ahead and create another
+
+566
+00:32:57,669 --> 00:33:01,340
+tab but what show the views although the
+views yet were split view controller
+
+567
+00:33:01,034 --> 00:33:03,563
+will go ahead and Emilie added as
+another split
+
+568
+00:33:03,869 --> 00:33:06,907
+so it becomes important to do the right
+thing
+
+569
+00:33:07,249 --> 00:33:12,249
+in your subclass there but now with the
+generic this dinner KPIs you can dig
+
+570
+00:33:12,249 --> 00:33:12,950
+down in
+
+571
+00:33:12,095 --> 00:33:15,144
+look at the chart view controllers
+associated with a view controller
+
+572
+00:33:15,999 --> 00:33:20,100
+or if you have a job you controller you
+can go back up and find its parent
+
+573
+00:33:20,001 --> 00:33:24,080
+and have a job you control you can just
+call on it removed from para view
+
+574
+00:33:24,179 --> 00:33:24,250
+controller
+
+575
+00:33:24,889 --> 00:33:28,700
+and that's the easiest way to a take
+apart the
+
+576
+00:33:28,007 --> 00:33:32,007
+parent-child relationship there
+
+577
+00:33:32,007 --> 00:33:35,956
+adieu control we have and this message
+in addition from you control to view
+
+578
+00:33:36,649 --> 00:33:36,724
+controller
+
+579
+00:33:37,399 --> 00:33:40,850
+which will do a nice enemy to transition
+on your behalf this is what
+
+580
+00:33:40,085 --> 00:33:44,464
+we have with view controller so it's the
+exact same options you can do non with
+
+581
+00:33:45,229 --> 00:33:45,305
+the crossfade
+
+582
+00:33:45,989 --> 00:33:49,570
+or slide in various directions
+
+583
+00:33:49,057 --> 00:33:54,406
+and that containment view controllers
+
+584
+00:33:54,919 --> 00:33:58,840
+there's another type relationship with
+view controllers and storyboards
+
+585
+00:33:58,084 --> 00:34:02,543
+are called triggered segways
+
+586
+00:34:03,299 --> 00:34:06,375
+Stricker said ways performer
+presentation
+
+587
+00:34:07,059 --> 00:34:10,730
+in a presentation if they haven't
+identifiers so we can find it in the
+
+588
+00:34:10,073 --> 00:34:12,702
+storyboard if needed manually
+
+589
+00:34:13,359 --> 00:34:16,520
+missed at some stores view controller
+for example the
+
+590
+00:34:16,052 --> 00:34:19,119
+campus view controller in this case is
+our source to do our shit picker
+
+591
+00:34:20,019 --> 00:34:25,428
+pop-up a destination controller which is
+going to be a shape picker controller
+
+592
+00:34:25,599 --> 00:34:28,604
+and then a file and that we did a demo
+
+593
+00:34:28,649 --> 00:34:32,780
+the Segway star was a popover and a
+
+594
+00:34:32,078 --> 00:34:35,096
+in this was the Segway depending on the
+style there might be some other
+
+595
+00:34:35,096 --> 00:34:36,815
+attributes need to set up
+
+596
+00:34:37,679 --> 00:34:40,696
+for example with the popover you need to
+set up the acre view
+
+597
+00:34:40,849 --> 00:34:43,947
+that we've had dragged it directly from
+the plus button a curfew was white up
+
+598
+00:34:44,829 --> 00:34:44,910
+automatically
+
+599
+00:34:45,639 --> 00:34:49,692
+but you can actually go in IB and set
+the interview for the popover
+
+600
+00:34:50,169 --> 00:34:53,174
+as my pointed out 11 a code that you
+really need to write
+
+601
+00:34:53,669 --> 00:34:56,694
+in the source view controller so in this
+case our campus view controller
+
+602
+00:34:56,919 --> 00:35:01,190
+endorsers you controller you need a over
+I prepare for Segway
+
+603
+00:35:01,019 --> 00:35:04,418
+from the said where you can get the
+identifiers so if you have to deal with
+
+604
+00:35:04,589 --> 00:35:05,210
+more than one
+
+605
+00:35:05,021 --> 00:35:08,119
+said where you can switch on that get
+the definition controller
+
+606
+00:35:09,019 --> 00:35:12,094
+and wire up anything that needs to be
+wired up so that you can have the proper
+
+607
+00:35:12,094 --> 00:35:13,176
+lines of communication are you can get
+
+608
+00:35:14,076 --> 00:35:17,174
+the right model data objects and show
+the UI with the correct
+
+609
+00:35:18,074 --> 00:35:21,125
+information often this is the
+represented controller
+
+610
+00:35:22,025 --> 00:35:25,047
+the represented object and you can just
+said the definition controller that
+
+611
+00:35:25,047 --> 00:35:28,140
+represented object to the right thing
+
+612
+00:35:29,004 --> 00:35:33,893
+there are a couple of additional segue
+API's that you might find useful
+
+613
+00:35:34,289 --> 00:35:37,630
+should perform several with identifiers
+center this will
+
+614
+00:35:37,063 --> 00:35:40,732
+give you a a a chance the step in a
+dynamically
+
+615
+00:35:41,299 --> 00:35:45,030
+prevent a segue from performing if you
+need to determine that pretty late
+
+616
+00:35:45,003 --> 00:35:48,542
+and if you determine that here we will
+stop the segue from really getting off
+
+617
+00:35:48,569 --> 00:35:51,200
+the ground
+
+618
+00:35:51,002 --> 00:35:55,601
+that you can call perform said way with
+identify our identifiers sender
+
+619
+00:35:55,799 --> 00:35:59,450
+and we will find the Segway in the
+storyboard for you
+
+620
+00:35:59,045 --> 00:36:02,714
+and call perform which will flowback
+
+621
+00:36:03,119 --> 00:36:06,162
+through shipper forms over with
+identifiers of course call prepare
+
+622
+00:36:06,549 --> 00:36:10,598
+for Segway any to wire up the
+represented object
+
+623
+00:36:11,039 --> 00:36:14,068
+you get nothing else on this whole
+talked and I today
+
+624
+00:36:14,329 --> 00:36:18,510
+arm its with your Segway you need to
+implement prepare for Segway
+
+625
+00:36:18,051 --> 00:36:22,140
+in the source controller wire up you
+represented object or whatever
+
+626
+00:36:22,599 --> 00:36:26,680
+pieces of information that you need to
+bridge the bridge between the two
+
+627
+00:36:26,068 --> 00:36:29,073
+animate the Segway happen
+
+628
+00:36:29,073 --> 00:36:33,082
+using Interface Builder to wire up your
+segways and do it all visually the
+
+629
+00:36:34,063 --> 00:36:37,068
+the easiest way to go with our
+recommended approach
+
+630
+00:36:37,068 --> 00:36:40,069
+what we could take apart the engine a
+little bit more time to look at the the
+
+631
+00:36:40,069 --> 00:36:40,128
+manual
+
+632
+00:36:41,028 --> 00:36:44,107
+API that's going on under the hood that
+you can also call directly so we're
+
+633
+00:36:44,359 --> 00:36:46,990
+going ahead and we're exposing this API
+
+634
+00:36:46,099 --> 00:36:49,658
+you cannot go source view controller to
+present some other controller
+
+635
+00:36:50,549 --> 00:36:55,170
+she at the modal window are the popover
+
+636
+00:36:55,017 --> 00:36:58,053
+and after definition controller the the
+
+637
+00:36:58,053 --> 00:37:02,088
+she'd or the model window the control
+that is being presented
+
+638
+00:37:02,088 --> 00:37:06,027
+you dismiss yourself by calling dismiss
+controller and
+
+639
+00:37:06,819 --> 00:37:10,170
+at get will do whatever the appropriate
+thing to do the area's
+
+640
+00:37:10,017 --> 00:37:13,051
+n dismiss the controller for you this is
+
+641
+00:37:13,051 --> 00:37:16,620
+incredibly powerful because it allows
+your definition controllers
+
+642
+00:37:17,079 --> 00:37:22,100
+to be a lot more modular and reusable
+for example
+
+643
+00:37:22,289 --> 00:37:26,250
+when I can our first during the summer
+project can I view
+
+644
+00:37:26,025 --> 00:37:29,051
+was like oh you know sheets the first
+thing in there would you have our pic to
+
+645
+00:37:29,051 --> 00:37:30,089
+come down as she
+
+646
+00:37:30,089 --> 00:37:33,100
+and we were to present view controller
+ashey
+
+647
+00:37:34,000 --> 00:37:37,089
+an up that was easy
+
+648
+00:37:37,089 --> 00:37:41,160
+that we said no no to a greater good
+look much nicer the pop over to be Korea
+
+649
+00:37:41,799 --> 00:37:45,802
+so the only thing we had the change was
+the set with type 2 presented as
+
+650
+00:37:46,099 --> 00:37:49,197
+a popover our definition controller just
+cause dismiss controller
+
+651
+00:37:50,079 --> 00:37:53,940
+didn't need to know how to dismiss a
+popover or that
+
+652
+00:37:53,094 --> 00:37:56,191
+dismissing a she in raw code is actually
+dramatically different
+
+653
+00:37:57,091 --> 00:38:00,520
+just go ahead and let in its view
+controller handle that on your behalf
+
+654
+00:38:01,339 --> 00:38:05,416
+and we'll do the appropriate thing
+
+655
+00:38:06,109 --> 00:38:09,153
+we can actually go to yet one more level
+deeper
+
+656
+00:38:09,549 --> 00:38:13,190
+and there's at the lowest level present
+view controller
+
+657
+00:38:13,019 --> 00:38:17,097
+animator and your is a view controller
+presentation animator protocol
+
+658
+00:38:17,097 --> 00:38:20,676
+and where publishing this is well in
+Yosemite
+
+659
+00:38:21,549 --> 00:38:25,556
+so you can create your own presentation
+animator object implement the protocol
+
+660
+00:38:25,619 --> 00:38:27,490
+which is just these two methods
+
+661
+00:38:27,049 --> 00:38:30,178
+Adam a presentation a view controller
+front view controller
+
+662
+00:38:30,619 --> 00:38:35,030
+so our when you do a presentation will
+take the instanceof
+
+663
+00:38:35,003 --> 00:38:38,046
+your animator object call animate
+presentation a view controller from view
+
+664
+00:38:38,046 --> 00:38:38,122
+controller
+
+665
+00:38:39,022 --> 00:38:42,100
+and you can help the animation however
+you want
+
+666
+00:38:43,000 --> 00:38:47,002
+what the users finished and dismissed
+controllers called the quill
+
+667
+00:38:47,002 --> 00:38:50,007
+bubble up to the right place we will
+take that say missus that we had before
+
+668
+00:38:50,052 --> 00:38:51,321
+we stashed it
+
+669
+00:38:51,789 --> 00:38:55,440
+will call animate dismissal animate
+dismiss love you controller from U
+
+670
+00:38:55,044 --> 00:38:55,052
+controller
+
+671
+00:38:56,024 --> 00:38:59,122
+you now responsible for doing any
+dismissal animation however you see fit
+
+672
+00:39:00,022 --> 00:39:04,161
+and what's that we what return from that
+we will go ahead and released
+
+673
+00:39:04,359 --> 00:39:09,230
+the animator object
+
+674
+00:39:09,023 --> 00:39:12,362
+that new controllers there's a lot to do
+with your view controllers is
+
+675
+00:39:12,569 --> 00:39:16,770
+really powerful 0 you can't wait to see
+what you're going to do with it
+
+676
+00:39:16,077 --> 00:39:20,896
+it's gonna be a lot of fun but not for
+talk about 10 control is a little bit
+
+677
+00:39:21,589 --> 00:39:25,670
+and how they fit in with this a large
+collection operator
+
+678
+00:39:25,067 --> 00:39:28,163
+you control is that we're going to be
+adding to our applications
+
+679
+00:39:29,063 --> 00:39:32,068
+let's just look at some other new API we
+have a window controller there's just a
+
+680
+00:39:32,068 --> 00:39:33,089
+little bit
+
+681
+00:39:33,089 --> 00:39:38,068
+namely there the car to view controller
+miss the requirement
+
+682
+00:39:38,869 --> 00:39:42,000
+in when you are in a few storyboard you
+need to set up a cut the view controller
+
+683
+00:39:42,000 --> 00:39:45,119
+to your window controller
+
+684
+00:39:45,119 --> 00:39:49,200
+in its window also has a car to view
+controller property that's new audit
+
+685
+00:39:49,002 --> 00:39:52,141
+and what happens is when window
+controller Lesley loads the window
+
+686
+00:39:52,339 --> 00:39:55,250
+it sets the windows cut the view
+controller to be there cut a view
+
+687
+00:39:55,025 --> 00:39:56,334
+controller
+
+688
+00:39:56,559 --> 00:39:59,630
+that the 12 controller hath associated
+with
+
+689
+00:39:59,063 --> 00:40:02,088
+scoresheet let you control you can also
+get the story board that voted the
+
+690
+00:40:02,088 --> 00:40:04,126
+winner controller if one or the window
+controller
+
+691
+00:40:05,026 --> 00:40:09,095
+Oro will return oh if you want a
+controller was loaded from a storyboard
+
+692
+00:40:09,095 --> 00:40:12,103
+and of course 10 controllers like view
+controllers
+
+693
+00:40:13,003 --> 00:40:16,312
+can be presented and you can call
+dismiss controller on the window
+
+694
+00:40:16,339 --> 00:40:16,415
+controller
+
+695
+00:40:17,099 --> 00:40:21,125
+and the right dismissal will happen
+
+696
+00:40:21,359 --> 00:40:24,432
+it has won a controller also implements
+the Segway protocol
+
+697
+00:40:25,089 --> 00:40:28,183
+so that the you can prepare for Segway
+
+698
+00:40:29,029 --> 00:40:33,210
+you can override that you can ask it to
+perform so well with identify our
+
+699
+00:40:33,021 --> 00:40:37,026
+and you can toss course over I should
+perform segue to do dynamic
+
+700
+00:40:37,026 --> 00:40:43,105
+a suppression and rare instances
+
+701
+00:40:43,339 --> 00:40:46,760
+what really does a window controller
+responsible for now
+
+702
+00:40:46,076 --> 00:40:49,144
+cuz we have the view controllers and all
+your logic loving way down a view
+
+703
+00:40:50,044 --> 00:40:51,049
+controller so
+
+704
+00:40:51,049 --> 00:40:54,065
+you into control should just manage the
+window you know things like
+
+705
+00:40:54,065 --> 00:40:57,123
+should I really close on the close
+button was pressed man as the title bar
+
+706
+00:40:58,023 --> 00:40:59,066
+in the toolbar make sure that
+
+707
+00:40:59,066 --> 00:41:02,097
+have the appropriate look there
+
+708
+00:41:02,097 --> 00:41:05,118
+manage the content view controller have
+a cut in the window
+
+709
+00:41:06,018 --> 00:41:10,074
+10 controls gonna hit go ahead and
+manage that
+
+710
+00:41:10,074 --> 00:41:14,076
+10 controllers over time has been has
+become a place where
+
+711
+00:41:14,076 --> 00:41:17,092
+you put a lot of view logic I'm it was a
+
+712
+00:41:17,092 --> 00:41:21,096
+giving a place to put your logic that a
+for various parts of your
+
+713
+00:41:21,096 --> 00:41:25,165
+user interface but now that we have you
+controllers and a specified
+
+714
+00:41:26,065 --> 00:41:29,264
+parent-child relationship in a hierarchy
+here with segways
+
+715
+00:41:29,849 --> 00:41:33,250
+you can move all that unrelated logic
+
+716
+00:41:33,025 --> 00:41:36,027
+down to their appropriate view
+controllers and now you have
+
+717
+00:41:36,027 --> 00:41:39,336
+few controllers which are reusable
+modules and
+
+718
+00:41:39,579 --> 00:41:43,650
+they're more cohesive independent
+modules and you don't have
+
+719
+00:41:43,065 --> 00:41:47,069
+a unrelated code and you when you could
+tell that you don't need anymore
+
+720
+00:41:47,069 --> 00:41:52,908
+she went to Tylers a lot smaller and as
+a lot more readable and maintainable
+
+721
+00:41:53,529 --> 00:41:58,180
+that's 10 controllers let's talk a
+little bit about gesture recognizers
+
+722
+00:41:58,018 --> 00:42:01,026
+I'm really excited about us to recognize
+
+723
+00:42:01,026 --> 00:42:04,315
+I'm in a bit guy at heart so like perot
+
+724
+00:42:04,549 --> 00:42:09,200
+thats so what you do things just
+recognize the store them
+
+725
+00:42:09,002 --> 00:42:12,002
+yosemite they are the API's
+
+726
+00:42:12,002 --> 00:42:16,391
+nearly identical to it to what it is on
+Iowa
+
+727
+00:42:16,589 --> 00:42:19,740
+there lotta fun
+
+728
+00:42:19,074 --> 00:42:23,126
+but when you're looking at on the
+desktop motion gestures
+
+729
+00:42:24,026 --> 00:42:27,049
+are determined the same way that they
+are on i OS on I what you have to look
+
+730
+00:42:27,049 --> 00:42:29,668
+at the raw touches and figure out what
+that means
+
+731
+00:42:30,109 --> 00:42:33,390
+if you do a pinch gesture on the
+trackpad on Austin
+
+732
+00:42:33,039 --> 00:42:36,498
+the trackpad itself recognizes that as a
+magnification
+
+733
+00:42:36,849 --> 00:42:41,500
+and it sends magnification events she
+don't have to figure that out
+
+734
+00:42:41,005 --> 00:42:45,334
+but not everything that we can recognize
+as a gesture
+
+735
+00:42:45,829 --> 00:42:49,200
+is pre recognize force at the lower
+levels
+
+736
+00:42:49,002 --> 00:42:52,033
+for example what is a click
+
+737
+00:42:52,051 --> 00:42:56,350
+you press on the trackpad which is gonna
+emulate a mouse events good
+
+738
+00:42:56,809 --> 00:43:00,500
+are you press them out but you get a
+mouth down a bit followed by mouth up a
+
+739
+00:43:00,005 --> 00:43:01,100
+bit without any drugs in between
+
+740
+00:43:02,045 --> 00:43:05,053
+so this is some different events and we
+can look at the mall
+
+741
+00:43:06,025 --> 00:43:09,644
+together relies in combine them for you
+go that a quick
+
+742
+00:43:09,869 --> 00:43:13,990
+so we can recognize a quick we can
+recognize that independently as
+
+743
+00:43:13,099 --> 00:43:16,174
+and differently than something that a
+quick a dragon release
+
+744
+00:43:17,074 --> 00:43:22,119
+that something else Janice it is just a
+recognizers really good at helping you
+
+745
+00:43:23,019 --> 00:43:27,113
+disambiguate user input how good well
+
+746
+00:43:28,013 --> 00:43:30,019
+this is coded you might have had to
+write a few had to figure it out
+
+747
+00:43:30,073 --> 00:43:30,151
+yourself
+
+748
+00:43:31,051 --> 00:43:34,099
+7 my 7
+
+749
+00:43:34,099 --> 00:43:37,176
+tracking loops deep above nectar that
+match in math
+
+750
+00:43:38,076 --> 00:43:41,355
+and with the code is trying to do is
+figure out
+
+751
+00:43:42,039 --> 00:43:46,020
+is this a click I double click a triple
+click or a dragon is trying to sort all
+
+752
+00:43:46,002 --> 00:43:49,067
+this out no large that's associated with
+
+753
+00:43:49,067 --> 00:43:53,196
+just recognizes clean this all up make
+it are much more simpler to disambiguate
+
+754
+00:43:53,799 --> 00:43:54,980
+user input
+
+755
+00:43:54,098 --> 00:43:57,727
+gives you folks to tap into there when
+you need to add some custom logic
+
+756
+00:43:58,609 --> 00:44:03,200
+and it's much easier to maintain
+
+757
+00:44:03,002 --> 00:44:07,411
+just recognizes are really good fit for
+view controllers
+
+758
+00:44:07,609 --> 00:44:10,910
+you really don't wanna have to override
+mousedown in your view controller that
+
+759
+00:44:10,091 --> 00:44:12,460
+much shopping your view controller
+should really be
+
+760
+00:44:13,279 --> 00:44:16,640
+doing in when you go to Rieger code in
+your view controller you gonna see
+
+761
+00:44:16,064 --> 00:44:19,068
+meltdown and you have to try and figure
+out with comments are by
+
+762
+00:44:19,068 --> 00:44:23,457
+really looking at the cold what is this
+meltdown trying to do
+
+763
+00:44:24,069 --> 00:44:27,920
+you controllers have a target action
+pair we will recognize the four click on
+
+764
+00:44:27,092 --> 00:44:30,101
+the four track for you and now you can
+wear that up to an action in your view
+
+765
+00:44:31,001 --> 00:44:31,077
+controller
+
+766
+00:44:31,077 --> 00:44:34,090
+just having mousedown you have select
+
+767
+00:44:34,009 --> 00:44:39,020
+are you have drag and it's now obvious
+in your code it's much more readable on
+
+768
+00:44:40,001 --> 00:44:40,100
+what to do
+
+769
+00:44:41,000 --> 00:44:45,099
+and is partitioned out better much more
+maintainable Co
+
+770
+00:44:45,099 --> 00:44:48,164
+here's an example love using just
+recognize is in place with code
+
+771
+00:44:49,064 --> 00:44:53,076
+this is Alexa knitting a modification
+gesture recognizer you hit the target in
+
+772
+00:44:53,076 --> 00:44:54,095
+the action
+
+773
+00:44:54,779 --> 00:44:57,834
+or point out a slight difference here
+from Iowa
+
+774
+00:44:58,329 --> 00:45:02,378
+on North 10 all of our controls in our
+menus have a single target action pair
+
+775
+00:45:02,819 --> 00:45:05,500
+that the paradigm we use that the
+paradigm we're continuing to use within
+
+776
+00:45:05,005 --> 00:45:06,048
+its just a recognizer
+
+777
+00:45:06,093 --> 00:45:10,114
+that's a little bit different than I owe
+us what you have just a recognizer
+
+778
+00:45:11,014 --> 00:45:14,069
+a Alexa knitted you go ahead an upset
+
+779
+00:45:14,069 --> 00:45:17,120
+on some view just recognizes need to be
+attached to a viewing recognized for
+
+780
+00:45:18,002 --> 00:45:18,027
+that
+
+781
+00:45:18,044 --> 00:45:21,116
+you optionally you may need to fit the
+delegate
+
+782
+00:45:22,016 --> 00:45:25,047
+you just a recognizer to your view
+controller perhaps you to set up some
+
+783
+00:45:25,047 --> 00:45:28,616
+more logic to help disambiguation things
+
+784
+00:45:29,039 --> 00:45:32,071
+then your poem attraction method mean
+magnify in this case
+
+785
+00:45:32,359 --> 00:45:35,520
+the center of the action method is gonna
+be the gesture recognizer
+
+786
+00:45:35,052 --> 00:45:38,074
+you probably wanna switch of the state
+
+787
+00:45:38,074 --> 00:45:42,373
+so you can for a magnified you look at
+it started it began you set up some
+
+788
+00:45:43,039 --> 00:45:44,043
+initial state
+
+789
+00:45:44,079 --> 00:45:47,490
+you do you magnification during the
+changes and when it finally
+
+790
+00:45:47,049 --> 00:45:50,123
+in you go ahead you commit your changes
+to your
+
+791
+00:45:51,023 --> 00:45:54,100
+your data model that way with this
+commit when you do and do you just get
+
+792
+00:45:55,000 --> 00:45:56,359
+one on do instead of just
+
+793
+00:45:56,359 --> 00:45:59,990
+part the magnification something like a
+quick
+
+794
+00:45:59,099 --> 00:46:02,638
+there is another state which is Rick
+just recognize
+
+795
+00:46:03,529 --> 00:46:06,670
+soft there's not a recognized that goes
+to begin change ended
+
+796
+00:46:06,067 --> 00:46:09,746
+because it's just a single a collection
+like a quick
+
+797
+00:46:10,349 --> 00:46:14,770
+your just check the recognized state
+
+798
+00:46:14,077 --> 00:46:17,126
+just recognize that we're exposing in
+Yosemite
+
+799
+00:46:17,819 --> 00:46:22,640
+are the click gesture recognizer this is
+a mouse down and up you could set which
+
+800
+00:46:22,064 --> 00:46:23,263
+button
+
+801
+00:46:23,839 --> 00:46:26,900
+to recognize or even korda buttons to
+recognize
+
+802
+00:46:26,009 --> 00:46:29,041
+there's the pair just a recognizer which
+is
+
+803
+00:46:30,022 --> 00:46:33,050
+a mouse button down drag and release
+
+804
+00:46:33,005 --> 00:46:36,027
+and a this is very similar to
+
+805
+00:46:36,072 --> 00:46:39,151
+depend just a recognizer on iowa's but I
+West take touch
+
+806
+00:46:40,051 --> 00:46:44,068
+moving release an equivalent of that on
+the desktop is obviously the mouse
+
+807
+00:46:44,068 --> 00:46:48,069
+knocked down move release and if I could
+just recognize that you can set
+
+808
+00:46:48,069 --> 00:46:52,178
+which button to recognize or Core two
+buttons
+
+809
+00:46:52,799 --> 00:46:56,730
+there's a press just a recognizer which
+is our holding off button down
+
+810
+00:46:56,073 --> 00:47:00,952
+with the time component so up a long
+press is another way that we set about
+
+811
+00:47:01,609 --> 00:47:06,420
+and in a press just organizer cook with
+the time component
+
+812
+00:47:06,042 --> 00:47:09,711
+that we have magnification gesture
+recognizer and rotation just recognizer
+
+813
+00:47:10,089 --> 00:47:14,660
+I mentioned earlier that magnification
+in rotation are already recognized for
+
+814
+00:47:14,066 --> 00:47:17,072
+us in at the hardware level and that's
+true
+
+815
+00:47:18,026 --> 00:47:22,043
+but they can still be bundled up in
+federal gesture recognizer so that you
+
+816
+00:47:22,043 --> 00:47:22,722
+can
+
+817
+00:47:23,109 --> 00:47:27,130
+get this nice arm target action
+
+818
+00:47:27,013 --> 00:47:30,018
+association with it and it continues to
+fit in
+
+819
+00:47:30,063 --> 00:47:33,063
+the model with these other gesture
+recognizers in your application so you
+
+820
+00:47:33,063 --> 00:47:34,097
+have a consistent use
+
+821
+00:47:34,097 --> 00:47:38,416
+I love gestures inside wrap and of
+course you can also set
+
+822
+00:47:39,289 --> 00:47:42,317
+the medication rotation Justin
+recognizers to
+
+823
+00:47:42,569 --> 00:47:46,190
+work at the same time simultaneously or
+you can have them
+
+824
+00:47:46,019 --> 00:47:49,928
+where no I only want to recognize
+magnifications our rotations one at a
+
+825
+00:47:50,099 --> 00:47:50,910
+time
+
+826
+00:47:50,091 --> 00:47:54,480
+so you can why those up with you various
+properties
+
+827
+00:47:55,299 --> 00:47:59,450
+arm I do wanna make one quick aside on
+magnification rotation
+
+828
+00:47:59,045 --> 00:48:02,138
+gestures the raw ovett the magnification
+rotation events
+
+829
+00:48:03,038 --> 00:48:07,072
+we've had the phase property to those
+events so the event also have
+
+830
+00:48:07,072 --> 00:48:11,451
+began a changed in ended phase is
+associated with them so you can
+
+831
+00:48:12,099 --> 00:48:15,142
+if you're looking at the wrong events
+you can determine their faces right
+
+832
+00:48:15,529 --> 00:48:17,537
+there
+
+833
+00:48:17,609 --> 00:48:20,760
+the flow is really important with
+gesture recognizers
+
+834
+00:48:20,076 --> 00:48:24,093
+um with looking out for us first about
+press for an example
+
+835
+00:48:24,093 --> 00:48:27,962
+and maverick's would work like this of
+press goes through and its applications
+
+836
+00:48:28,799 --> 00:48:28,875
+and events
+
+837
+00:48:29,559 --> 00:48:32,634
+if it doesn't get consumed their said if
+it will send it off to the event
+
+838
+00:48:33,309 --> 00:48:33,364
+observers
+
+839
+00:48:33,859 --> 00:48:36,908
+if there are any if they've been
+observers don't consume it it will flow
+
+840
+00:48:37,349 --> 00:48:38,200
+back up
+
+841
+00:48:38,002 --> 00:48:42,055
+to have sent a bit incentive it will
+send off to the appropriate window
+
+842
+00:48:42,073 --> 00:48:45,149
+that windows in a bit method is called
+the book to the event figures out
+
+843
+00:48:46,049 --> 00:48:50,608
+be a hit testing which view the Senate
+to that you get a meltdown message
+
+844
+00:48:51,049 --> 00:48:54,052
+at the mouth if the view doesn't consume
+the most down
+
+845
+00:48:54,079 --> 00:48:57,148
+it but was up to the responder chain as
+normal and whereas
+
+846
+00:48:57,769 --> 00:49:01,130
+normal now and maverick's in a use an
+excuse me
+
+847
+00:49:01,013 --> 00:49:04,202
+includes your view controllers
+
+848
+00:49:04,319 --> 00:49:07,342
+just recognizers are here there
+
+849
+00:49:07,549 --> 00:49:11,556
+what the Venice in through the window in
+when in this one does send a bit
+
+850
+00:49:11,619 --> 00:49:14,663
+it will do the gesture recognizing you
+might notice we have some dashed arrows
+
+851
+00:49:15,059 --> 00:49:16,950
+now is that a solid arrows
+
+852
+00:49:16,095 --> 00:49:19,166
+reason for that is just recognizers
+might delay a bit
+
+853
+00:49:20,066 --> 00:49:24,140
+just recognizes will take a pan for
+example which is a drag
+
+854
+00:49:25,004 --> 00:49:29,153
+you'll do a meltdown occurs will not
+sure if they're dragging yet or not we
+
+855
+00:49:29,549 --> 00:49:31,571
+don't want any every other code to
+
+856
+00:49:31,769 --> 00:49:35,774
+start trying to go into a tracking loop
+or do anything with the down yet we want
+
+857
+00:49:35,819 --> 00:49:38,470
+to wait till we know for sure if it's a
+drag or not
+
+858
+00:49:38,047 --> 00:49:41,064
+and so you just recognizes can delay a
+bit
+
+859
+00:49:41,064 --> 00:49:44,117
+if they into not consuming them then
+they will continue to flow through the
+
+860
+00:49:45,017 --> 00:49:47,676
+system as normal
+
+861
+00:49:47,829 --> 00:49:49,881
+what's really important for you to
+understand as developers here
+
+862
+00:49:50,349 --> 00:49:51,760
+centerville is a place that
+
+863
+00:49:51,076 --> 00:49:55,148
+as often overridden if you do over
+rights and evident in its application or
+
+864
+00:49:56,048 --> 00:49:56,143
+in its window
+
+865
+00:49:57,043 --> 00:50:00,051
+if you consume events that just
+recognizes have already started the
+
+866
+00:50:00,051 --> 00:50:00,117
+process
+
+867
+00:50:01,017 --> 00:50:04,906
+in that sequence you can really confuse
+a gesture recognizer
+
+868
+00:50:05,059 --> 00:50:08,140
+and then you're out will not work right
+at all
+
+869
+00:50:08,014 --> 00:50:10,913
+so you need to be careful about that and
+think about that when you're using
+
+870
+00:50:11,039 --> 00:50:12,220
+gesture recognizers
+
+871
+00:50:12,022 --> 00:50:15,361
+this also goes for even observers if you
+hadn't been observer
+
+872
+00:50:15,559 --> 00:50:18,587
+you can consume the events before the
+gesture recognizer gets to them and they
+
+873
+00:50:18,839 --> 00:50:19,936
+just recognize a really needs to you
+
+874
+00:50:20,809 --> 00:50:25,720
+have all of them that belong in a
+sequence together
+
+875
+00:50:25,072 --> 00:50:28,115
+if you're so close gesture recognizer
+you can we fully support that check out
+
+876
+00:50:29,015 --> 00:50:29,051
+the
+
+877
+00:50:29,051 --> 00:50:33,080
+in its just a recognized its file
+there's in in a subclass
+
+878
+00:50:33,539 --> 00:50:37,547
+use category this is where we've put a
+category for the additional methods
+
+879
+00:50:37,619 --> 00:50:40,650
+that so classes need to work worry about
+
+880
+00:50:40,065 --> 00:50:44,534
+and you can write a subclass and
+recognize the drug will call as
+
+881
+00:50:45,119 --> 00:50:48,180
+whatever you want to recognize it to be
+
+882
+00:50:48,018 --> 00:50:51,099
+I never got the details here so if you
+want more information please come see me
+
+883
+00:50:51,099 --> 00:50:51,168
+or the lab
+
+884
+00:50:52,068 --> 00:50:58,467
+and I will be more than happy to talk to
+you about just recognize
+
+885
+00:50:59,079 --> 00:51:02,460
+so let's put this all together a little
+bit and let's go back to our demo
+
+886
+00:51:02,046 --> 00:51:05,049
+an let's get that chick to move
+
+887
+00:51:05,076 --> 00:51:09,425
+my could get the pic to move but I think
+I can
+
+888
+00:51:10,109 --> 00:51:14,390
+okay so will run this again real quick
+
+889
+00:51:14,039 --> 00:51:18,018
+make sure we're all right back in the
+same spot they were we were
+
+890
+00:51:18,369 --> 00:51:23,510
+we've added a shape and sure enough we
+can't get it to move
+
+891
+00:51:23,051 --> 00:51:26,130
+well
+
+892
+00:51:26,589 --> 00:51:33,589
+I know
+
+893
+00:51:34,046 --> 00:51:37,098
+and then the camera's view controller I
+wrote I select
+
+894
+00:51:37,098 --> 00:51:41,177
+action method here to drag with gesture
+recognizer action method here
+
+895
+00:51:42,059 --> 00:51:45,135
+from so I know that this stuff exist
+
+896
+00:51:45,819 --> 00:51:48,822
+should be getting call so we need to
+figure out whether not getting called
+
+897
+00:51:49,119 --> 00:51:52,193
+and it so you know just like a show
+before you just switch on the state and
+
+898
+00:51:52,859 --> 00:51:53,925
+you do what you need to do there
+
+899
+00:51:54,519 --> 00:51:58,940
+so let's go back into our story board
+
+900
+00:51:58,094 --> 00:52:01,123
+and look at our campus view controller
+
+901
+00:52:02,023 --> 00:52:02,095
+and
+
+902
+00:52:02,095 --> 00:52:06,171
+and became YouTube my just a recognizes
+out there so let's go ahead and add some
+
+903
+00:52:07,071 --> 00:52:10,122
+will quickly at a pen gesture recognizer
+
+904
+00:52:11,022 --> 00:52:14,070
+and will why the pair just a recognizer
+
+905
+00:52:14,007 --> 00:52:17,666
+up to the track and we'll go ahead in
+
+906
+00:52:18,359 --> 00:52:22,430
+magnified by gesture recognizer
+
+907
+00:52:22,043 --> 00:52:27,056
+ago there we are
+
+908
+00:52:27,056 --> 00:52:31,057
+well that and wire that up to
+
+909
+00:52:31,066 --> 00:52:34,140
+magnify now should be quite
+
+910
+00:52:35,004 --> 00:52:39,086
+obvious what code is going to get ron
+runner-up
+
+911
+00:52:40,022 --> 00:52:44,039
+attache and
+
+912
+00:52:44,039 --> 00:52:47,104
+now we can drag and we can do a pinch
+and resize the shape
+
+913
+00:52:48,004 --> 00:52:51,101
+any we can add another one and they work
+independently of each other
+
+914
+00:52:52,001 --> 00:52:59,001
+an there we go view controllers
+
+915
+00:53:04,002 --> 00:53:07,401
+backing storyboards
+
+916
+00:53:07,599 --> 00:53:11,647
+superheated design applications now 10
+controllers
+
+917
+00:53:12,079 --> 00:53:15,180
+just control your window but they also
+have some nice
+
+918
+00:53:15,018 --> 00:53:18,089
+a new API to work with storyboards wire
+
+919
+00:53:18,089 --> 00:53:21,168
+up your a gestures with gesture
+recognizers
+
+920
+00:53:22,068 --> 00:53:25,076
+it easier than ever it's a lot of fun
+everything here
+
+921
+00:53:25,076 --> 00:53:28,088
+is really great kept wait to see what to
+do with it
+
+922
+00:53:28,088 --> 00:53:32,117
+for more information you can see Jake
+he's over here up in the front with the
+
+923
+00:53:33,017 --> 00:53:33,066
+nice
+
+924
+00:53:33,066 --> 00:53:38,505
+shirt it left automatic
+
+925
+00:53:39,099 --> 00:53:42,172
+commented on his shoes so I figure out
+come in on his shirt today
+
+926
+00:53:42,829 --> 00:53:46,660
+check out the what's new in Austin
+documentation we r
+
+927
+00:53:46,066 --> 00:53:51,475
+working like crazy on the documentation
+for view controller so that is going to
+
+928
+00:53:52,069 --> 00:53:52,770
+be coming
+
+929
+00:53:52,077 --> 00:53:56,896
+it's going to be really nice related
+professions such
+
+930
+00:53:57,589 --> 00:54:00,470
+check out the what's new in interface
+Boulder this along with other things are
+
+931
+00:54:00,047 --> 00:54:00,143
+going to be covered
+
+932
+00:54:01,043 --> 00:54:05,049
+i really wanna point out creating Monaco
+collapse on Thursday
+
+933
+00:54:05,049 --> 00:54:08,408
+if you're just new to writing absent Mac
+OS 10
+
+934
+00:54:08,849 --> 00:54:11,873
+Monaco collapse will cover view
+controllers a little bit but their cover
+
+935
+00:54:12,089 --> 00:54:15,680
+another a lot of other technologies that
+you should be also implementing in your
+
+936
+00:54:15,068 --> 00:54:15,757
+application
+
+937
+00:54:16,369 --> 00:54:21,300
+as a Austin application so
+
+938
+00:54:21,003 --> 00:54:22,026
+thank you driver of the company
+

@@ -1,0 +1,4136 @@
+1
+00:00:12,027 --> 00:00:16,061
+good morning everybody
+
+2
+00:00:16,061 --> 00:00:16,990
+welcome
+
+3
+00:00:17,539 --> 00:00:18,750
+I think
+
+4
+00:00:18,075 --> 00:00:22,075
+referencing I Prada long-winded on
+Julian mythic
+
+5
+00:00:22,075 --> 00:00:25,150
+and Mark Allan Stein from a team ok with
+this session for today
+
+6
+00:00:26,005 --> 00:00:29,054
+wealth for developers the company chopin
+
+7
+00:00:29,099 --> 00:00:32,668
+act when to be expected
+
+8
+00:00:33,559 --> 00:00:37,260
+solar developers alright
+
+9
+00:00:37,026 --> 00:00:40,053
+people who don't coated all anyone
+
+10
+00:00:40,053 --> 00:00:43,116
+alright great very review
+
+11
+00:00:44,016 --> 00:00:48,058
+and designers designer
+
+12
+00:00:48,058 --> 00:00:52,125
+yeah I all right and management I'd
+
+13
+00:00:53,025 --> 00:00:57,040
+I
+
+14
+00:00:57,004 --> 00:00:58,080
+third out you guys yeah
+
+15
+00:00:59,016 --> 00:01:02,065
+your plan today
+
+16
+00:01:02,065 --> 00:01:07,089
+we're gonna design and prototyping ap
+we're gonna go through the steps we
+
+17
+00:01:07,089 --> 00:01:11,137
+would go through to try something out
+and we're gonna show you a variety of
+
+18
+00:01:12,037 --> 00:01:15,105
+different prototyping map it all day
+
+19
+00:01:16,005 --> 00:01:21,024
+it can be with focus on prototyping
+experience not trying on API are testing
+
+20
+00:01:21,024 --> 00:01:22,115
+out some kind of technical feasibility
+
+21
+00:01:23,015 --> 00:01:26,034
+so who are we
+
+22
+00:01:26,034 --> 00:01:29,082
+here we come here and tell you how to
+make your apt
+
+23
+00:01:29,082 --> 00:01:32,169
+well worth mall secret team at Apple we
+work across
+
+24
+00:01:33,069 --> 00:01:37,074
+all about this product we explore what
+new interfaces
+
+25
+00:01:37,074 --> 00:01:40,563
+mean to our devices operating system and
+application
+
+26
+00:01:41,229 --> 00:01:45,190
+and we do this by making interactive
+prototypes
+
+27
+00:01:45,019 --> 00:01:48,338
+everyday sometimes 24 hours a day
+
+28
+00:01:48,509 --> 00:01:52,170
+said today
+
+29
+00:01:52,017 --> 00:01:57,021
+you're all very lucky I'm gonna unveiled
+
+30
+00:01:57,057 --> 00:02:00,152
+all love you today a world-changing
+
+31
+00:02:01,052 --> 00:02:04,140
+disruptive application
+
+32
+00:02:05,004 --> 00:02:08,473
+and I'd like to show it to you
+
+33
+00:02:08,869 --> 00:02:15,869
+right now
+
+34
+00:02:27,017 --> 00:02:30,101
+different application to explore and
+discover artisanal Coast
+
+35
+00:02:31,001 --> 00:02:35,064
+on the streets of San Francisco browse
+for toasted near you
+
+36
+00:02:35,064 --> 00:02:38,273
+find a poptart in town
+
+37
+00:02:38,849 --> 00:02:42,913
+going to get food to go share the toast
+with your friend
+
+38
+00:02:43,489 --> 00:02:47,700
+take a picture
+
+39
+00:02:47,007 --> 00:02:50,040
+share with your friends or loved one
+today
+
+40
+00:02:51,003 --> 00:02:56,079
+I give to you ladies and gentlemen
+post-modern
+
+41
+00:02:56,079 --> 00:03:03,079
+thank you thank you everyone
+
+42
+00:03:04,024 --> 00:03:05,063
+and it's available now
+
+43
+00:03:05,063 --> 00:03:08,158
+to go and get a except if not
+
+44
+00:03:09,058 --> 00:03:13,085
+none of this is real it's just a
+prototype
+
+45
+00:03:13,085 --> 00:03:17,085
+so why why we go to the trouble
+
+46
+00:03:17,085 --> 00:03:20,170
+creating this beautiful world-changing
+
+47
+00:03:21,007 --> 00:03:24,015
+disruptive application that is
+completely fake
+
+48
+00:03:25,005 --> 00:03:28,078
+well this is the picture and most people
+had
+
+49
+00:03:29,023 --> 00:03:33,088
+I have an idea then
+
+50
+00:03:33,088 --> 00:03:37,090
+I build my application then
+
+51
+00:03:38,008 --> 00:03:44,040
+step 3: profit
+
+52
+00:03:44,004 --> 00:03:47,059
+except when I see frequently is that
+
+53
+00:03:47,095 --> 00:03:50,164
+people have an idea the builder
+application
+
+54
+00:03:51,064 --> 00:03:54,081
+and somehow they're disappointed by the
+result
+
+55
+00:03:54,081 --> 00:03:58,930
+maybe the experiences and what you hope
+for
+
+56
+00:03:59,659 --> 00:04:03,703
+maybe just doesn't resonate with your
+customers and building applications are
+
+57
+00:04:04,099 --> 00:04:07,138
+difficult you guys know this takes time
+
+58
+00:04:07,489 --> 00:04:11,280
+take money people
+
+59
+00:04:11,028 --> 00:04:14,637
+sleep hard a
+
+60
+00:04:14,889 --> 00:04:20,370
+and frankly a blood-typing so that want
+to work for something
+
+61
+00:04:20,037 --> 00:04:24,836
+but you're not happy with me and so
+instead of going from the idea
+
+62
+00:04:25,169 --> 00:04:29,090
+directly to building our application
+we're gonna go from the idea
+
+63
+00:04:29,009 --> 00:04:36,009
+to a prototype in Van Gelder application
+and its best if we can do that
+
+64
+00:04:39,389 --> 00:04:43,630
+over and over again the more prototypes
+we can put between our idea
+
+65
+00:04:43,063 --> 00:04:47,075
+in her application the better the result
+is going to be
+
+66
+00:04:47,075 --> 00:04:51,087
+and we we do this is by beginning with
+something fake
+
+67
+00:04:51,087 --> 00:04:54,168
+and then gradually adding elements that
+are more real
+
+68
+00:04:55,068 --> 00:05:01,027
+along the way sprinkling it with
+interactivity so they're too important
+
+69
+00:05:01,639 --> 00:05:04,030
+reasons to prototype want everybody to
+keep in mind
+
+70
+00:05:04,003 --> 00:05:07,005
+threat today number one
+
+71
+00:05:07,005 --> 00:05:10,027
+if the test ideas to save time and money
+
+72
+00:05:10,027 --> 00:05:14,080
+building the right things for your
+application number two
+
+73
+00:05:14,008 --> 00:05:17,089
+is to get new ideas to make the
+experience up your ap
+
+74
+00:05:18,061 --> 00:05:22,133
+even better Emir so how do we do that
+
+75
+00:05:23,033 --> 00:05:28,742
+actually really simple makes a cap
+
+76
+00:05:29,039 --> 00:05:34,074
+show people and learn from their
+feedback
+
+77
+00:05:34,389 --> 00:05:38,550
+again make fake ap
+
+78
+00:05:38,055 --> 00:05:43,127
+show people and learn from their
+feedback
+
+79
+00:05:44,027 --> 00:05:49,053
+do that over and over and over again
+until the experience severe
+
+80
+00:05:49,053 --> 00:05:55,372
+out feels great so how do we make fake
+gaps for them
+
+81
+00:05:55,849 --> 00:05:58,928
+well after self three questions before
+we begin
+
+82
+00:05:59,639 --> 00:06:02,714
+the first one is what needs to be more
+real
+
+83
+00:06:03,389 --> 00:06:06,550
+everything else is going to be fake but
+what one element
+
+84
+00:06:06,055 --> 00:06:11,061
+are we trying to explore and get
+feedback on the second question
+
+85
+00:06:11,061 --> 00:06:14,155
+is what can we fake and that everything
+out everything else will pretty much
+
+86
+00:06:15,055 --> 00:06:16,354
+just be a picture
+
+87
+00:06:16,849 --> 00:06:20,000
+the third important question
+
+88
+00:06:20,000 --> 00:06:23,038
+is where we'll be in use it we want to
+make sure
+
+89
+00:06:23,038 --> 00:06:26,119
+that if we're making a prototype it
+something that we can try out
+
+90
+00:06:27,019 --> 00:06:30,107
+on the device in the play where people
+will be using
+
+91
+00:06:31,007 --> 00:06:35,156
+so we've made a fake ap
+
+92
+00:06:35,219 --> 00:06:38,276
+now it's time to show it to people we
+wanna after BAM
+
+93
+00:06:38,789 --> 00:06:42,797
+three questions as we're showing them do
+you know how to do
+
+94
+00:06:43,589 --> 00:06:47,653
+this one particular thing that we have
+protect is it
+
+95
+00:06:48,229 --> 00:06:52,130
+EV to do that thing in general
+
+96
+00:06:52,013 --> 00:06:55,022
+how can we make a bit better wanna
+
+97
+00:06:55,139 --> 00:06:58,870
+solicit kinda reform import on how we
+can improve our app
+
+98
+00:06:58,087 --> 00:07:01,126
+you be surprised interesting things
+people have to say
+
+99
+00:07:01,909 --> 00:07:04,941
+so who do we show our fake apt to
+
+100
+00:07:05,229 --> 00:07:08,320
+make sense the people you're after is
+for
+
+101
+00:07:09,139 --> 00:07:12,141
+so if your apt given for engineers
+
+102
+00:07:12,159 --> 00:07:16,620
+going fine for people who are not
+engineer don't
+
+103
+00:07:16,062 --> 00:07:19,081
+argued defend or diff
+
+104
+00:07:19,639 --> 00:07:23,960
+you're not bear to debate the pros and
+cons what you prototype
+
+105
+00:07:23,096 --> 00:07:29,055
+you're there to get information from
+people and learn from so we showed some
+
+106
+00:07:29,919 --> 00:07:29,974
+people
+
+107
+00:07:30,469 --> 00:07:33,475
+we probably taken from note three probe
+if asked a few questions
+
+108
+00:07:33,529 --> 00:07:37,570
+now we ask ourselves three questions
+about what to do next
+
+109
+00:07:37,057 --> 00:07:40,086
+what's working and what we showed them
+
+110
+00:07:40,599 --> 00:07:45,940
+what's not working what do people not
+understand when they stumble over with
+
+111
+00:07:45,094 --> 00:07:46,176
+computer with confusing and someone
+
+112
+00:07:47,076 --> 00:07:50,225
+and what other ideas to fifty about
+
+113
+00:07:50,909 --> 00:07:54,972
+about what we might want to do next so
+again
+
+114
+00:07:55,539 --> 00:07:59,620
+make showing learn we do this over and
+over again until the experience of our
+
+115
+00:08:00,349 --> 00:08:00,960
+product
+
+116
+00:08:00,096 --> 00:08:04,097
+is great and today we're going to do
+that in a few different ways for you
+
+117
+00:08:04,097 --> 00:08:06,796
+guys we're gonna protect with pictures
+
+118
+00:08:07,669 --> 00:08:11,746
+just drawing for the device they were
+protected animation
+
+119
+00:08:12,439 --> 00:08:15,439
+so we can see how different screens will
+be drawn work together
+
+120
+00:08:15,439 --> 00:08:18,740
+and then we're gonna prototype with
+interaction
+
+121
+00:08:18,074 --> 00:08:23,403
+we can see how the entire experience
+field in our hand on the device
+
+122
+00:08:24,069 --> 00:08:27,116
+now to protect the pictures were
+actually gonna do in Kenya today
+
+123
+00:08:27,539 --> 00:08:30,680
+Tina fact easy and cheap and love you
+probably already have it on your
+
+124
+00:08:30,068 --> 00:08:31,081
+computer
+
+125
+00:08:31,081 --> 00:08:34,350
+but in practice you can use anything
+that can shop up pictures
+
+126
+00:08:35,079 --> 00:08:38,087
+and rocky basic shapes
+
+127
+00:08:38,159 --> 00:08:41,640
+for animation we're actually also gonna
+prototype with keno
+
+128
+00:08:41,064 --> 00:08:45,066
+which is a surprisingly sophisticated
+animation tool but you can use anything
+
+129
+00:08:45,066 --> 00:08:48,151
+that can move pictures around on the
+screen over time
+
+130
+00:08:49,051 --> 00:08:53,093
+and a prototype for interaction were
+actually gonna use objective-c Inc or
+
+131
+00:08:53,093 --> 00:08:54,112
+animation
+
+132
+00:08:54,949 --> 00:08:58,140
+that's what we knew three can lead to
+prototype concept
+
+133
+00:08:58,014 --> 00:09:02,063
+and if actually easier than you think if
+you're not a developer
+
+134
+00:09:02,063 --> 00:09:05,147
+if you are developer you're gonna see if
+you that in a slightly different way
+
+135
+00:09:06,047 --> 00:09:09,079
+then you might be cell
+
+136
+00:09:09,079 --> 00:09:12,176
+I'd like to recap for you the key
+features a postmodern
+
+137
+00:09:13,076 --> 00:09:16,139
+are beautiful world-changing disruptive
+
+138
+00:09:17,039 --> 00:09:22,104
+application we want to find 250 feet
+near me
+
+139
+00:09:23,004 --> 00:09:26,010
+wanna find the top toasty post ofc
+
+140
+00:09:26,064 --> 00:09:31,873
+rate toast reviewing discussed host with
+my fellow test aficionado
+
+141
+00:09:32,449 --> 00:09:37,430
+your light oak features so record is
+gonna pared down to talking about
+
+142
+00:09:37,043 --> 00:09:40,101
+the first two fighting talk to a sticky
+and
+
+143
+00:09:41,001 --> 00:09:44,570
+finding toasty near me to begin the
+prototyping process
+
+144
+00:09:44,579 --> 00:09:51,579
+I'd like to ask me the donkey come to
+the stage
+
+145
+00:09:53,021 --> 00:09:56,119
+thanks Jeff good morning fell
+
+146
+00:09:57,019 --> 00:10:02,042
+so to figure out how finding togther app
+is gonna work
+
+147
+00:10:02,042 --> 00:10:08,120
+where to begin by making pictures for
+here we third of by drawing just attack
+
+148
+00:10:09,002 --> 00:10:10,051
+high enough different batches
+
+149
+00:10:10,069 --> 00:10:13,095
+to quickly get down only ideas in her
+head
+
+150
+00:10:13,095 --> 00:10:16,131
+for ways we can show nearby as well as
+top rated tho
+
+151
+00:10:17,031 --> 00:10:20,036
+now on party we always start
+
+152
+00:10:20,081 --> 00:10:24,155
+from hand-drawn concept I'm gonna really
+emphasize that you guys all do it to you
+
+153
+00:10:25,055 --> 00:10:29,072
+if you're not already doing that this
+just no faster
+
+154
+00:10:29,072 --> 00:10:32,133
+or cheaper way to get ideas flowing to
+explore
+
+155
+00:10:33,033 --> 00:10:38,034
+hope fluid direction and they're drawing
+and Ryan find
+
+156
+00:10:38,034 --> 00:10:42,126
+like who doesn't want to dream up a 10%
+increase the disposable ideas now you
+
+157
+00:10:43,026 --> 00:10:43,120
+guys rape
+
+158
+00:10:44,002 --> 00:10:48,045
+and keep in mind you don't have to be an
+artist to do this
+
+159
+00:10:48,063 --> 00:10:51,067
+maybe your drawings look more like live
+
+160
+00:10:51,067 --> 00:10:57,075
+whatever I mean don't go showing that
+flight board meetings or anything but
+
+161
+00:10:57,075 --> 00:11:02,147
+the point remain that we're trying to
+emphasize but you should
+
+162
+00:11:03,047 --> 00:11:06,065
+not star prototyping from just a single
+idea
+
+163
+00:11:06,065 --> 00:11:09,074
+you want to explore and understand the
+whole space
+
+164
+00:11:10,055 --> 00:11:13,057
+in order to figure out the best
+direction for your app
+
+165
+00:11:13,057 --> 00:11:16,124
+so when we were comparing all
+
+166
+00:11:17,024 --> 00:11:20,108
+re-do therefore that stood out as really
+compelling
+
+167
+00:11:21,008 --> 00:11:24,094
+this let's grid map
+
+168
+00:11:24,094 --> 00:11:28,168
+and gallery so why did we choose the
+former well
+
+169
+00:11:29,068 --> 00:11:32,121
+not only do they convey are typeof
+information really well
+
+170
+00:11:33,021 --> 00:11:37,078
+and they also unlike some of the other
+ideas
+
+171
+00:11:37,078 --> 00:11:40,094
+part overly complex or to elaborate
+
+172
+00:11:40,094 --> 00:11:43,139
+we want to start simple also
+
+173
+00:11:44,039 --> 00:11:48,117
+they represent four distinct directions
+that are app can take
+
+174
+00:11:49,017 --> 00:11:52,065
+as opposed to being variations a single
+idea
+
+175
+00:11:52,065 --> 00:11:55,139
+and great every move of them that we
+found
+
+176
+00:11:56,039 --> 00:11:59,121
+all this out super quick on paper before
+devoting a lot of time
+
+177
+00:12:00,021 --> 00:12:04,058
+exploring just one concept and so
+
+178
+00:12:04,058 --> 00:12:07,125
+I've got my sketches and it's no big
+deal now
+
+179
+00:12:08,025 --> 00:12:11,027
+they're just sketches so I can just
+throw away all the other ideas that
+
+180
+00:12:11,045 --> 00:12:11,141
+didn't work out
+
+181
+00:12:12,041 --> 00:12:15,128
+to just focus on making these for more
+real
+
+182
+00:12:16,028 --> 00:12:19,107
+and to do that we're gonna turn them
+into from faye caps
+
+183
+00:12:20,007 --> 00:12:24,048
+so the first question we're going to ask
+ourselves is
+
+184
+00:12:24,048 --> 00:12:27,110
+what needs to be more real why are we
+making these fake abs
+
+185
+00:12:28,001 --> 00:12:31,042
+what's our goal so right now we just
+have drawing
+
+186
+00:12:31,051 --> 00:12:35,110
+sobibor even think about touching any
+code we're gonna determine
+
+187
+00:12:36,001 --> 00:12:40,010
+how these ideas will look on the screen
+in our hands
+
+188
+00:12:40,019 --> 00:12:44,026
+second question we're gonna after South
+what can we fake
+
+189
+00:12:44,026 --> 00:12:48,071
+watch or cat can we take well we can
+take pretty much
+
+190
+00:12:48,071 --> 00:12:51,166
+all the content we don't need a database
+so
+
+191
+00:12:52,066 --> 00:12:56,089
+tell was photographed a location we can
+make up filler tax and we're gonna use
+
+192
+00:12:56,089 --> 00:12:57,105
+temporary icon
+
+193
+00:12:58,005 --> 00:13:01,073
+and Napoli where were you
+
+194
+00:13:01,073 --> 00:13:04,097
+well we're gonna put the screen on
+actual iPhone
+
+195
+00:13:04,097 --> 00:13:08,099
+and use them outside said
+
+196
+00:13:09,017 --> 00:13:13,105
+we're gonna start off with this catch a
+a toast with you sorted by rating
+
+197
+00:13:14,005 --> 00:13:18,033
+now before we dive straight into
+translating this to the screen
+
+198
+00:13:18,033 --> 00:13:22,072
+we'll see if we can save yourself some
+time by borrowing elements from in this
+
+199
+00:13:22,072 --> 00:13:23,083
+thing I what's up
+
+200
+00:13:23,083 --> 00:13:26,152
+and just term browsing on my phone
+
+201
+00:13:27,052 --> 00:13:31,111
+I've noticed that the music app actually
+have a relief similar structure
+
+202
+00:13:32,011 --> 00:13:35,059
+to our sketch so what used this I have
+
+203
+00:13:35,059 --> 00:13:39,081
+our way to kinda layout rido and
+
+204
+00:13:39,081 --> 00:13:42,097
+the way we can do that as we're just
+gonna take a snapshot
+
+205
+00:13:42,097 --> 00:13:46,109
+on the screen for my phone and imported
+
+206
+00:13:47,009 --> 00:13:51,046
+into keynote for Mac now we on our team
+
+207
+00:13:51,046 --> 00:13:54,117
+use keynote really frequently to make
+super quick prototypes because I have a
+
+208
+00:13:55,017 --> 00:13:56,090
+tiny really useful tools
+
+209
+00:13:56,009 --> 00:13:59,058
+that make aligning photograph and images
+relieving
+
+210
+00:14:00,039 --> 00:14:03,086
+but you guys should be using whatever
+image editing
+
+211
+00:14:03,086 --> 00:14:07,130
+tool you're most comfortable in so if
+you've done this type of stuff before
+
+212
+00:14:08,003 --> 00:14:11,292
+maybe you're in Photoshop or pick for
+made our sketch
+
+213
+00:14:11,589 --> 00:14:15,040
+if you're a developer who's never done
+image editing
+
+214
+00:14:15,004 --> 00:14:18,073
+for a great place to start of is preview
+for Mac
+
+215
+00:14:18,073 --> 00:14:22,302
+so we got our screenshot what do we do
+next
+
+216
+00:14:22,959 --> 00:14:26,100
+we want to block of the main areas %uh
+
+217
+00:14:26,001 --> 00:14:29,030
+the UI in order to create ourselves the
+table template
+
+218
+00:14:29,039 --> 00:14:32,044
+to drop in our own content into
+
+219
+00:14:32,044 --> 00:14:35,087
+so the way we're going to do that and he
+know is actually open up
+
+220
+00:14:35,087 --> 00:14:38,136
+the shape menu and Robin just a ton of
+boxes
+
+221
+00:14:39,036 --> 00:14:42,054
+to block of the navigation bar
+
+222
+00:14:42,054 --> 00:14:46,100
+all photograph the borders
+
+223
+00:14:47,000 --> 00:14:52,049
+in the background so great now we have a
+basic structure to work of both
+
+224
+00:14:52,049 --> 00:14:55,094
+next up if they get that navigation bar
+
+225
+00:14:55,094 --> 00:14:58,105
+to be the right color so to do that
+Aquino
+
+226
+00:14:59,005 --> 00:15:03,051
+you open up the color picker and using
+that magnifying glass tool
+
+227
+00:15:03,051 --> 00:15:06,054
+sample the color the status bar about it
+and
+
+228
+00:15:06,081 --> 00:15:10,082
+now we've got ourselves a blank
+navigation bar now that was a really
+
+229
+00:15:10,091 --> 00:15:10,182
+simple right
+
+230
+00:15:11,082 --> 00:15:15,085
+well that's because we're using a
+screenshot if you don't need to know
+
+231
+00:15:16,012 --> 00:15:20,101
+exact pixel dimensions or even colors
+you I lament
+
+232
+00:15:20,209 --> 00:15:25,230
+in order to recreate them which they've
+us a ton of time
+
+233
+00:15:25,023 --> 00:15:28,038
+and so the next thing I want to do is a
+add in some content
+
+234
+00:15:28,038 --> 00:15:31,136
+and in particular some images so
+
+235
+00:15:32,036 --> 00:15:35,037
+here is that some photographs I took
+this morning on my
+
+236
+00:15:35,037 --> 00:15:38,095
+delete host excursion and gonna have
+
+237
+00:15:38,095 --> 00:15:42,127
+put in this good-looking one and now
+what i'm looking at that photograph
+
+238
+00:15:43,027 --> 00:15:46,124
+I'm thinking maybe instead of just a
+plane square thumbnail
+
+239
+00:15:47,024 --> 00:15:51,107
+we could do something cool where we crop
+the image to a circle and fill you can
+
+240
+00:15:52,007 --> 00:15:54,073
+see the plate and the toast
+
+241
+00:15:54,073 --> 00:15:58,079
+and for luckily for us can you actually
+have a great Federer options to be able
+
+242
+00:15:58,079 --> 00:15:59,498
+to mask and image
+
+243
+00:16:00,209 --> 00:16:04,780
+to any shape so we're gonna choose the
+overall math care
+
+244
+00:16:04,078 --> 00:16:07,173
+aum's now we've got a perfectly cropped
+played host
+
+245
+00:16:08,073 --> 00:16:11,080
+that we can yeah thank you guys
+
+246
+00:16:11,008 --> 00:16:14,047
+that we can cut into our playful there
+and
+
+247
+00:16:15,019 --> 00:16:19,022
+we're just gonna repeat that same
+process for other images
+
+248
+00:16:19,022 --> 00:16:22,081
+now know if where does using the fame
+three images
+
+249
+00:16:22,081 --> 00:16:25,860
+over and over again and that's because
+we don't want to spend more time the
+
+250
+00:16:26,589 --> 00:16:28,830
+necessary creating content
+
+251
+00:16:28,083 --> 00:16:32,140
+3 picture the terrace for all your
+strength totally fine
+
+252
+00:16:33,004 --> 00:16:36,078
+and so one please images are in place
+now we can get rid of those playful
+
+253
+00:16:37,014 --> 00:16:37,022
+there's
+
+254
+00:16:37,094 --> 00:16:41,099
+and right off the bat I'm sure you note
+is a mess you can see the play protest
+
+255
+00:16:42,044 --> 00:16:43,050
+on a background
+
+256
+00:16:44,004 --> 00:16:48,086
+so how do we fix that 3 at Borders three
+and drop shadows do we change the
+
+257
+00:16:48,086 --> 00:16:49,144
+background image
+
+258
+00:16:50,044 --> 00:16:53,051
+what like what are the parameters are
+you well
+
+259
+00:16:53,051 --> 00:16:57,051
+whole lot those are all visual design
+decisions but we can make
+
+260
+00:16:57,051 --> 00:17:00,092
+further down the line if we even decide
+to go with that stir
+
+261
+00:17:00,092 --> 00:17:04,098
+this direction for now we're gonna do
+something super basic
+
+262
+00:17:05,052 --> 00:17:08,063
+and just add in a simple one people
+border
+
+263
+00:17:08,063 --> 00:17:11,142
+around all over image oath and on
+
+264
+00:17:11,709 --> 00:17:17,370
+where already more than doubled we don't
+worry about the details on that later
+
+265
+00:17:17,037 --> 00:17:20,122
+and so now we've got my images a toast I
+wanna way below
+
+266
+00:17:21,022 --> 00:17:23,111
+and fed to help with or without we're
+actually gonna take that way box where
+
+267
+00:17:24,011 --> 00:17:25,064
+you have a background
+
+268
+00:17:25,064 --> 00:17:29,073
+and make a transparent so this way the
+music app is now picking through
+
+269
+00:17:29,073 --> 00:17:32,081
+and we can see how the way both and that
+screen
+
+270
+00:17:33,053 --> 00:17:36,053
+are laid out in order to help us
+
+271
+00:17:36,053 --> 00:17:39,074
+way out m5 are intact
+
+272
+00:17:39,074 --> 00:17:42,119
+and I noticed the location doing the
+
+273
+00:17:43,019 --> 00:17:46,044
+you can get her with with go butter and
+trout on it
+
+274
+00:17:46,044 --> 00:17:50,533
+that nothing we're just faking tax
+because it quick
+
+275
+00:17:50,929 --> 00:17:56,540
+and we don't have to worry about it for
+global production really coming together
+
+276
+00:17:56,054 --> 00:18:00,072
+we just can appear pathway in the back
+on again
+
+277
+00:18:00,072 --> 00:18:04,075
+and make them little tweaks and
+adjustments about the layout worked for
+
+278
+00:18:04,075 --> 00:18:06,081
+or composition
+
+279
+00:18:07,035 --> 00:18:11,037
+so the only thing that's missing right
+now is ratings
+
+280
+00:18:11,037 --> 00:18:15,037
+and so for this I'm actually gonna go
+into the special characters menu
+
+281
+00:18:15,037 --> 00:18:19,044
+with someone you guys may or may not be
+already familiar with
+
+282
+00:18:20,007 --> 00:18:24,040
+for here we actually get a giant with a
+pre-existing them both
+
+283
+00:18:24,004 --> 00:18:27,763
+and characters that we can repurpose
+icon
+
+284
+00:18:28,159 --> 00:18:32,159
+for our layout so I found my father
+really knife
+
+285
+00:18:32,159 --> 00:18:35,390
+star some old but I wanted used to
+represent
+
+286
+00:18:35,039 --> 00:18:38,114
+ratings I was gonna drop it on other
+then
+
+287
+00:18:39,014 --> 00:18:43,049
+align them together and we've got some
+reading of them
+
+288
+00:18:43,049 --> 00:18:46,468
+now I think it puts pre doke but
+
+289
+00:18:46,909 --> 00:18:50,620
+I think the stars could really use a tan
+color cuz I wanna make them look
+
+290
+00:18:50,062 --> 00:18:55,075
+active later so what particular color
+used now
+
+291
+00:18:55,075 --> 00:18:58,159
+doesn't matter so we're just gonna go
+into keynote
+
+292
+00:18:59,059 --> 00:19:03,087
+default color palette and choose the
+color that make that
+
+293
+00:19:03,087 --> 00:19:06,183
+so here it is orange because the Peter
+whose TF color
+
+294
+00:19:07,083 --> 00:19:11,084
+the rambo great now I've got some porn
+stars
+
+295
+00:19:11,084 --> 00:19:15,127
+and then look more active already and I
+really like that color so much you gonna
+
+296
+00:19:16,027 --> 00:19:19,074
+change the border the image to be the
+same color
+
+297
+00:19:19,074 --> 00:19:22,081
+and now we've got a nice relationship
+going between the picture the terrace
+
+298
+00:19:23,044 --> 00:19:26,072
+and its rating their color
+
+299
+00:19:26,072 --> 00:19:30,511
+and so last but not least I'm gonna add
+a control to the top right hand side
+
+300
+00:19:31,159 --> 00:19:35,550
+the ap so that someone can add in a new
+photograph
+
+301
+00:19:35,055 --> 00:19:38,096
+a putative and
+
+302
+00:19:38,096 --> 00:19:43,123
+here we can get all fancy with custom
+shapes and masking and
+
+303
+00:19:44,023 --> 00:19:47,039
+doing all sorts of intricate stuff but
+remember
+
+304
+00:19:47,039 --> 00:19:50,063
+we only care about temporary icons right
+now
+
+305
+00:19:50,063 --> 00:19:55,100
+so instead we are literally going to you
+at an attack sparked
+
+306
+00:19:56,000 --> 00:19:59,001
+tape in the plot them all and
+
+307
+00:19:59,001 --> 00:20:04,063
+now you have designed an icon in five
+seconds graduation
+
+308
+00:20:04,072 --> 00:20:07,095
+alright yeah fattened
+
+309
+00:20:07,095 --> 00:20:11,140
+and must not leave just scribble on a
+title for your screen
+
+310
+00:20:12,004 --> 00:20:15,025
+and there you go one freshly baked green
+
+311
+00:20:15,061 --> 00:20:18,108
+ready to be tapped
+
+312
+00:20:19,008 --> 00:20:22,026
+now one thing to really keep in mind
+
+313
+00:20:22,026 --> 00:20:25,121
+when you're making three in on any
+program it's remembered in the room
+
+314
+00:20:26,021 --> 00:20:31,097
+out to the physical 5 the device that
+you're 30 going to live on
+
+315
+00:20:31,097 --> 00:20:35,135
+it's really easy to get caught up
+working at a zoom level
+
+316
+00:20:36,035 --> 00:20:40,062
+were everything is big and clear and
+legible
+
+317
+00:20:40,062 --> 00:20:44,097
+to remember every time you added a new
+element onto the screen
+
+318
+00:20:44,097 --> 00:20:47,112
+to view Mount and check if that peace
+attacks
+
+319
+00:20:48,012 --> 00:20:51,021
+or that picture is by the readable
+legible
+
+320
+00:20:51,021 --> 00:20:56,470
+and have a ball catch that early on
+
+321
+00:20:56,659 --> 00:21:02,730
+so now I thought 13 muddy and that
+Sprint I guess about 10 minutes to make
+
+322
+00:21:02,073 --> 00:21:06,002
+if we were to have worried too much
+about
+
+323
+00:21:06,659 --> 00:21:10,030
+all the visual nuances about the screen
+that have
+
+324
+00:21:10,003 --> 00:21:12,062
+we would be here for the next hour and
+it should be a really boring
+
+325
+00:21:12,062 --> 00:21:14,071
+presentation
+
+326
+00:21:14,071 --> 00:21:17,076
+instead we take shortcuts and that's
+fine
+
+327
+00:21:18,021 --> 00:21:22,230
+because these aren't going to be our
+final three
+
+328
+00:21:22,419 --> 00:21:26,120
+and so in a rinse and repeat that
+process up screen shotting
+
+329
+00:21:26,012 --> 00:21:31,075
+masking arranging object and adding
+basic content to the rest the right idea
+
+330
+00:21:31,075 --> 00:21:34,147
+like orbit you idea which much like the
+camera roll
+
+331
+00:21:35,047 --> 00:21:38,088
+and and practices like kinda
+
+332
+00:21:38,088 --> 00:21:42,144
+too much to ask for a lot of the lookout
+
+333
+00:21:43,044 --> 00:21:48,023
+or our map idea which I know that looks
+pretty interesting I think that would be
+
+334
+00:21:48,419 --> 00:21:51,610
+really fun to play with
+
+335
+00:21:51,061 --> 00:21:54,064
+or our gallery weather app idea
+
+336
+00:21:54,064 --> 00:21:57,115
+which just like looks really cool
+
+337
+00:21:58,015 --> 00:22:03,107
+and so now I've got my four screens and
+again they're not gonna be our final 25
+
+338
+00:22:04,007 --> 00:22:07,031
+there's many places where we can refine
+the
+
+339
+00:22:07,031 --> 00:22:11,055
+visual a parents and/or
+
+340
+00:22:11,055 --> 00:22:15,089
+a the styling overall on the screen
+
+341
+00:22:15,089 --> 00:22:18,172
+but we're not gonna do that because it's
+okay because we didn't make
+
+342
+00:22:19,072 --> 00:22:22,075
+these applications to become forge
+appear shop
+
+343
+00:22:22,075 --> 00:22:27,096
+we made them so that we could test out
+how successful each concept will be
+
+344
+00:22:27,096 --> 00:22:30,155
+that way when we do you devote our time
+and efforts
+
+345
+00:22:31,055 --> 00:22:34,120
+polishing the visuals over final screen
+10
+
+346
+00:22:35,002 --> 00:22:38,093
+we're doing it to the right idea
+
+347
+00:22:39,011 --> 00:22:42,073
+and so what's next well we have a screen
+we're gonna
+
+348
+00:22:42,073 --> 00:22:46,772
+drop them onto an iPhone and give them
+to people to test out
+
+349
+00:22:47,429 --> 00:22:50,500
+for the way we're gonna do that is when
+I go back and pick you know
+
+350
+00:22:50,005 --> 00:22:55,033
+exporter presentation into images and
+specifically PNG
+
+351
+00:22:55,078 --> 00:22:59,085
+and then use whatever method you want to
+get those images onto your phone
+
+352
+00:22:59,085 --> 00:23:02,146
+so that might be photostream the new I
+Cloud Drive
+
+353
+00:23:03,046 --> 00:23:07,133
+or you can just email them to yourself
+
+354
+00:23:08,033 --> 00:23:11,090
+and then once you've got them on your
+phone given to your friend
+
+355
+00:23:11,009 --> 00:23:14,098
+given to your coworkers given to a
+variety of people
+
+356
+00:23:15,079 --> 00:23:19,153
+and just observe them like booking app
+experience right now
+
+357
+00:23:20,053 --> 00:23:23,130
+see if they can even figure out what
+this app does
+
+358
+00:23:24,003 --> 00:23:27,027
+theater read differently indoors as
+opposed to outdoors
+
+359
+00:23:27,054 --> 00:23:33,054
+it probably will and then once you've
+just observe them for a little bit
+
+360
+00:23:33,054 --> 00:23:36,112
+you want to ask them three questions
+
+361
+00:23:37,012 --> 00:23:40,036
+do you know how to find top-rated toast
+
+362
+00:23:40,036 --> 00:23:44,047
+what about nearby toast and the feedback
+that we got was
+
+363
+00:23:44,047 --> 00:23:47,048
+yeah raining the star I can't make it
+really
+
+364
+00:23:47,057 --> 00:23:51,062
+obvious how to find top-rated terrorist
+but
+
+365
+00:23:51,062 --> 00:23:54,128
+there might has is really hard to figure
+out if it not laid out on a map
+
+366
+00:23:55,028 --> 00:23:58,053
+so that's a really useful information
+for you to have in order to make
+
+367
+00:23:58,053 --> 00:24:01,058
+iterations on your screen
+
+368
+00:24:01,058 --> 00:24:05,637
+second anyone ask if it easy to browse
+through tears
+
+369
+00:24:06,159 --> 00:24:09,950
+and it seems that yeah people are having
+a pretty
+
+370
+00:24:09,095 --> 00:24:12,114
+easy time reading through all the three
+innings except for
+
+371
+00:24:13,014 --> 00:24:18,055
+course that great view that no one likes
+because it hurt in the retina
+
+372
+00:24:18,055 --> 00:24:22,096
+and then lastly how can we make this
+better how can we improve
+
+373
+00:24:22,096 --> 00:24:26,148
+ans maybe we just got the confirm for
+fat you know you guys should really go
+
+374
+00:24:27,048 --> 00:24:30,081
+through the list and the map you that
+things are really resonate with people
+
+375
+00:24:30,081 --> 00:24:34,149
+we should probably refine the
+interactions and those two screens more
+
+376
+00:24:35,049 --> 00:24:38,124
+and so to tell you how to do that with
+animation I'm actually going to invite
+
+377
+00:24:39,024 --> 00:24:45,087
+Julia mythic onto the stage
+
+378
+00:24:45,087 --> 00:24:49,184
+thank you enough now we're getting the
+feedback I'm going to take you through
+
+379
+00:24:50,084 --> 00:24:54,098
+another spin around the Spurs I think
+cycle
+
+380
+00:24:54,098 --> 00:24:57,098
+we should take a step back and learn
+from
+
+381
+00:24:57,098 --> 00:25:01,145
+from the feedback we got with working so
+far
+
+382
+00:25:02,045 --> 00:25:05,059
+well we have a variety of methods
+
+383
+00:25:05,059 --> 00:25:08,154
+organizing with information we have
+
+384
+00:25:09,054 --> 00:25:13,058
+live and galleries grid map
+
+385
+00:25:13,058 --> 00:25:17,064
+we don't yet have one best way
+
+386
+00:25:17,064 --> 00:25:21,075
+to find and discover Toth we have a
+couple
+
+387
+00:25:21,075 --> 00:25:26,075
+sometimes people theme to prefer to look
+for toast Buy rating
+
+388
+00:25:26,075 --> 00:25:29,087
+and sometimes I just wanna find the
+closest
+
+389
+00:25:29,087 --> 00:25:33,176
+the perhaps our app could let people
+choose
+
+390
+00:25:34,076 --> 00:25:37,225
+sometimes people could search for toast
+Buy rating
+
+391
+00:25:37,909 --> 00:25:42,370
+and sometimes they can look for it on a
+map
+
+392
+00:25:42,037 --> 00:25:48,566
+would like to make a prototype to try to
+understand how this could work
+
+393
+00:25:48,899 --> 00:25:53,130
+the thing that we want to make more real
+in this prototype
+
+394
+00:25:53,013 --> 00:25:58,014
+is the connection between screens that
+have topped oath
+
+395
+00:25:58,023 --> 00:26:02,048
+and a screen has a map on it because the
+rapid can have both these things in it
+
+396
+00:26:02,048 --> 00:26:04,097
+at some point in time
+
+397
+00:26:04,097 --> 00:26:08,786
+we don't yet need to make fully
+interactive screens will need to be able
+
+398
+00:26:09,659 --> 00:26:09,735
+to tap
+
+399
+00:26:10,419 --> 00:26:13,770
+on each piece of toast we going to
+scroll through these lists we actually
+
+400
+00:26:13,077 --> 00:26:14,096
+don't even need to have
+
+401
+00:26:14,096 --> 00:26:17,133
+final designs for the screen because
+
+402
+00:26:18,033 --> 00:26:21,052
+if we're doing things correctly were
+probably actually going to go
+
+403
+00:26:21,052 --> 00:26:27,084
+back and redraw them to the screens
+based upon what we've learned
+
+404
+00:26:27,084 --> 00:26:30,157
+as we make a more realistic prototype we
+should also
+
+405
+00:26:31,057 --> 00:26:34,886
+maker contact a little bit more real so
+in this case
+
+406
+00:26:35,399 --> 00:26:38,476
+this is not the party the app forward in
+a restaurant taking pictures
+
+407
+00:26:39,169 --> 00:26:43,260
+we're still trying to find the
+restaurant we will be at
+
+408
+00:26:43,026 --> 00:26:46,415
+so I'm probably walking around
+
+409
+00:26:46,649 --> 00:26:49,810
+on a busy sidewalk starting to get
+really hungry
+
+410
+00:26:49,081 --> 00:26:52,135
+looking for a piece of toast the I'm
+gonna be kinda distracted not paying a
+
+411
+00:26:53,035 --> 00:26:55,114
+lot of attention to my phone
+
+412
+00:26:55,429 --> 00:26:59,100
+this means that I'm not going to spend a
+lot of time trying to
+
+413
+00:26:59,001 --> 00:27:02,330
+figure out how this app works and
+navigate through it I'm just looking for
+
+414
+00:27:02,429 --> 00:27:03,502
+this restaurant
+
+415
+00:27:04,159 --> 00:27:07,210
+other was mentioning before the thing
+that we want to make more realistic in
+
+416
+00:27:07,021 --> 00:27:08,034
+its prototype
+
+417
+00:27:08,034 --> 00:27:13,041
+is the connection or relationship
+between two different screen
+
+418
+00:27:14,004 --> 00:27:17,097
+at one point in time this app is going
+to have a screen
+
+419
+00:27:17,097 --> 00:27:21,103
+they will have top two the rating at
+another point I'm
+
+420
+00:27:22,057 --> 00:27:26,057
+this Apple have a screen the live nearby
+text for a map
+
+421
+00:27:26,057 --> 00:27:29,071
+foods app is going to be changing
+overtime
+
+422
+00:27:29,071 --> 00:27:32,104
+between these two screen and a change
+over time
+
+423
+00:27:33,004 --> 00:27:37,027
+is an animation rate now
+
+424
+00:27:37,027 --> 00:27:42,032
+there are a variety of tools that you
+can use to make animation
+
+425
+00:27:42,032 --> 00:27:45,037
+if you're a designer you might be
+familiar with tools such as motion
+
+426
+00:27:45,082 --> 00:27:48,084
+after-effects records composer
+
+427
+00:27:49,002 --> 00:27:52,361
+if you're a developer you might use
+tools such as
+
+428
+00:27:52,379 --> 00:27:57,720
+HTML CSS animations for processing
+
+429
+00:27:57,072 --> 00:28:00,149
+either way we think you might be able to
+use tools such as hype
+
+430
+00:28:01,049 --> 00:28:06,077
+I had producer for Tina
+
+431
+00:28:06,077 --> 00:28:10,100
+as jeff mentioned earlier we're going to
+be buildings animation think you know
+
+432
+00:28:11,000 --> 00:28:14,008
+we can actually run keynote on her
+iPhone
+
+433
+00:28:14,008 --> 00:28:18,059
+and see the animation life there we can
+make modifications rapidly
+
+434
+00:28:18,059 --> 00:28:21,071
+back on our Mac and see the changes
+reflected our iPhone
+
+435
+00:28:21,071 --> 00:28:26,154
+really quick and if the tool that we use
+a lot in our team
+
+436
+00:28:27,054 --> 00:28:30,145
+so we're just gonna open keno and we
+will grab
+
+437
+00:28:31,045 --> 00:28:34,059
+the two slides that we made earlier
+
+438
+00:28:34,059 --> 00:28:38,133
+and drop in and have the only two slides
+in our presentation
+
+439
+00:28:39,033 --> 00:28:43,582
+we will go over to the enemy palette and
+you the transition
+
+440
+00:28:43,879 --> 00:28:49,030
+here we'll just use move in from bottoms
+up
+
+441
+00:28:49,003 --> 00:28:54,064
+let's just think about looks like
+
+442
+00:28:54,064 --> 00:28:57,090
+so this flight in from bottom to top is
+perhaps
+
+443
+00:28:57,009 --> 00:29:00,067
+like some other sheet animation that I
+left has where
+
+444
+00:29:01,048 --> 00:29:04,061
+from temporary information laid on top
+I'll other information
+
+445
+00:29:04,061 --> 00:29:11,061
+maybe with move out for example E well
+this was a lot like that navigate back
+
+446
+00:29:11,064 --> 00:29:13,119
+animation you're going back up the
+navigation hierarchy
+
+447
+00:29:14,019 --> 00:29:17,088
+maybe we could flip it over
+
+448
+00:29:17,088 --> 00:29:20,106
+maybe this is
+
+449
+00:29:21,006 --> 00:29:24,011
+some kinda setting or information behind
+another screen
+
+450
+00:29:24,056 --> 00:29:27,094
+the thing that I'm trying to get across
+here
+
+451
+00:29:27,094 --> 00:29:31,156
+is that any animation you choose is
+communicating something about the
+
+452
+00:29:32,056 --> 00:29:32,141
+relationship
+
+453
+00:29:33,041 --> 00:29:37,098
+the screen have with one another even if
+it's no animation at all
+
+454
+00:29:37,098 --> 00:29:40,179
+it's just the pop that something that
+
+455
+00:29:41,079 --> 00:29:44,084
+shows almost no relationship between the
+screen they're just being replaced by
+
+456
+00:29:45,029 --> 00:29:45,086
+one another
+
+457
+00:29:45,086 --> 00:29:49,109
+but in this case that's not really
+what's going on here
+
+458
+00:29:50,009 --> 00:29:54,068
+but we have is two different views the
+same information
+
+459
+00:29:54,068 --> 00:29:57,068
+perhaps those three restaurants that are
+in the map
+
+460
+00:29:57,068 --> 00:30:01,106
+are three restaurants from that list for
+something we want to communicate as we
+
+461
+00:30:02,006 --> 00:30:03,079
+transition between the screen
+
+462
+00:30:03,079 --> 00:30:07,079
+now before we get a little bit further
+
+463
+00:30:07,079 --> 00:30:10,090
+within keno I just like to explain
+something about
+
+464
+00:30:10,009 --> 00:30:17,009
+two different types have animation we
+think you know the first is called a
+
+465
+00:30:17,092 --> 00:30:18,093
+build animation
+
+466
+00:30:19,002 --> 00:30:22,060
+either animations that happen objectors
+shapes
+
+467
+00:30:22,006 --> 00:30:25,059
+within a slide you can
+
+468
+00:30:26,013 --> 00:30:29,076
+build into shape perform actions on it
+build-out
+
+469
+00:30:29,076 --> 00:30:33,080
+you can use the builder power to set up
+a pretty sophisticated
+
+470
+00:30:34,016 --> 00:30:37,030
+sequin a build animations all with an
+applied
+
+471
+00:30:37,003 --> 00:30:41,011
+but there's another type of animation
+
+472
+00:30:41,038 --> 00:30:46,065
+called a transition and the transition
+is an animation that happens between to
+
+473
+00:30:46,065 --> 00:30:46,123
+slide
+
+474
+00:30:47,023 --> 00:30:51,075
+those are the animations we're just
+playing with now there's a particular
+
+475
+00:30:51,075 --> 00:30:52,138
+kind of transition
+
+476
+00:30:53,038 --> 00:30:56,119
+called Magic new that's really
+interesting for our purposes
+
+477
+00:30:57,019 --> 00:31:01,117
+would magic move does is it tries to
+identify
+
+478
+00:31:02,017 --> 00:31:06,018
+objects are shapes that are the same on
+the to slide
+
+479
+00:31:06,027 --> 00:31:10,038
+and it will create an interpolation
+
+480
+00:31:10,038 --> 00:31:14,127
+love the position sizing opacity and
+other properties are shape
+
+481
+00:31:15,027 --> 00:31:20,028
+so for example if magic move identifies
+
+482
+00:31:20,037 --> 00:31:25,038
+the three circles as the same on these
+two slides in might produce an animation
+
+483
+00:31:25,038 --> 00:31:30,089
+like this now if you're familiar with
+animation tools
+
+484
+00:31:30,089 --> 00:31:34,151
+you may recognize we're starting to use
+the slide as if they're keep rain
+
+485
+00:31:35,051 --> 00:31:39,124
+in a larger animation that makes it a
+lot easier to
+
+486
+00:31:40,024 --> 00:31:46,108
+sequence out and separate the different
+that the animation for you to go back to
+
+487
+00:31:47,008 --> 00:31:47,054
+Kenya
+
+488
+00:31:47,054 --> 00:31:50,133
+and choose the enemy
+
+489
+00:31:51,033 --> 00:31:54,130
+palette now that you know that he knows
+
+490
+00:31:55,003 --> 00:31:59,072
+two types of animation or does note here
+real quick if you have a shape selected
+
+491
+00:31:59,099 --> 00:32:04,125
+the enemy palette will show you build
+animation if you have no shapes like
+
+492
+00:32:05,025 --> 00:32:06,076
+that it's just the slide
+
+493
+00:32:06,076 --> 00:32:09,140
+that's when you'll get these transition
+animations that we're using today
+
+494
+00:32:10,004 --> 00:32:15,007
+we're gonna change the transition to
+magic move and without changing
+
+495
+00:32:15,043 --> 00:32:18,106
+anything at all about those two slides
+that we've dropped in
+
+496
+00:32:19,006 --> 00:32:26,006
+but the magic new gether you can see
+there's already a lot more interesting
+
+497
+00:32:27,062 --> 00:32:30,150
+than the transitions we're playing with
+earlier because we don't be floods in
+
+498
+00:32:31,005 --> 00:32:31,066
+keno
+
+499
+00:32:32,011 --> 00:32:35,103
+and use the same images
+
+500
+00:32:36,003 --> 00:32:39,071
+on both the left and the map the magic
+new transition
+
+501
+00:32:39,071 --> 00:32:42,129
+moved those images over and we can start
+to see that maybe those restaurants in
+
+502
+00:32:43,029 --> 00:32:46,035
+the famous to screen maybe that's an
+interesting way to do this transition
+
+503
+00:32:46,035 --> 00:32:49,086
+but there are a couple things we can
+make better
+
+504
+00:32:49,086 --> 00:32:53,093
+%uh the first thing that I noticed was
+there within our prototype
+
+505
+00:32:53,093 --> 00:32:57,128
+we don't really even have a take way to
+get between these two screens
+
+506
+00:32:58,028 --> 00:33:01,124
+for to make it a little bit more
+realistic for the weekend kinda imagine
+
+507
+00:33:02,024 --> 00:33:05,123
+how you would navigate between the
+screen will just drop in a tabbar
+
+508
+00:33:06,023 --> 00:33:10,072
+for now and this tab or similar to the
+thing when it was showing you earlier
+
+509
+00:33:10,072 --> 00:33:13,089
+is just a rectangle from the
+
+510
+00:33:13,089 --> 00:33:19,136
+shape tool encina the star could be from
+the special characters and star-shaped
+
+511
+00:33:20,036 --> 00:33:24,053
+and that little map icon that's just
+using the line tool to
+
+512
+00:33:24,053 --> 00:33:28,100
+draw quick littles a quick little
+playful there
+
+513
+00:33:29,000 --> 00:33:31,086
+these don't need to be perfect just yet
+because we don't even notice and the
+
+514
+00:33:31,086 --> 00:33:35,122
+direction we're going to take
+
+515
+00:33:36,022 --> 00:33:39,118
+I also noticed how the list
+
+516
+00:33:40,018 --> 00:33:43,072
+they did out we had white for a while
+
+517
+00:33:43,072 --> 00:33:47,080
+and in the map stated in this is because
+what magic move doing
+
+518
+00:33:48,052 --> 00:33:51,104
+is feeding out shapes that won't exist
+
+519
+00:33:52,004 --> 00:33:57,023
+first for the first after the animation
+and then after that midpoint
+
+520
+00:33:57,023 --> 00:34:01,056
+the second half for the animation is
+speeding in new shape
+
+521
+00:34:01,056 --> 00:34:04,120
+so we can get around that by making sure
+that are shaped exist
+
+522
+00:34:05,002 --> 00:34:08,481
+on both flied some going to copy
+
+523
+00:34:08,679 --> 00:34:13,090
+that map image that I I want to feed in
+throughout the entire duration of the
+
+524
+00:34:13,009 --> 00:34:14,098
+animation
+
+525
+00:34:14,179 --> 00:34:17,850
+gonna copy that from the second flight
+piece that
+
+526
+00:34:17,085 --> 00:34:22,128
+on that first slide move it all the way
+behind all the other shapes
+
+527
+00:34:23,028 --> 00:34:26,049
+and then just for fun make it a little
+bit larger
+
+528
+00:34:26,049 --> 00:34:30,688
+than it is on the second flight fluid
+with the magic movie animation will give
+
+529
+00:34:31,129 --> 00:34:31,750
+us
+
+530
+00:34:31,075 --> 00:34:34,111
+will be maybe a little bit other
+perspective shifted the
+
+531
+00:34:35,011 --> 00:34:38,044
+map is shrinking at speeding in
+
+532
+00:34:38,044 --> 00:34:42,533
+a few that look like
+
+533
+00:34:42,929 --> 00:34:46,934
+pretty
+
+534
+00:34:47,429 --> 00:34:50,470
+but there are couple other things we can
+do to make this even better
+
+535
+00:34:50,047 --> 00:34:54,466
+because right now we're not writing any
+code so we can try out some
+
+536
+00:34:54,889 --> 00:34:57,953
+maybe over-the-top animation and
+
+537
+00:34:58,529 --> 00:35:03,460
+take them out later pared down to to
+just what it means but for now it's so
+
+538
+00:35:03,046 --> 00:35:04,049
+little work to
+
+539
+00:35:04,076 --> 00:35:07,385
+explore a lot of interesting
+alternatives that
+
+540
+00:35:08,069 --> 00:35:14,069
+we should just try everything we think
+we might try in this example here
+
+541
+00:35:14,069 --> 00:35:17,140
+I am looking at the title
+
+542
+00:35:17,779 --> 00:35:21,630
+others to slide the title was another
+one where
+
+543
+00:35:21,063 --> 00:35:26,092
+we faded out that top tooth title and
+then faded in nearby texting defeated
+
+544
+00:35:26,092 --> 00:35:26,791
+three great
+
+545
+00:35:27,619 --> 00:35:30,685
+but I don't really like like how that
+worked
+
+546
+00:35:31,279 --> 00:35:35,890
+so I'm gonna copy the top two sleep well
+from the first slide pissed on a second
+
+547
+00:35:35,089 --> 00:35:35,144
+flight
+
+548
+00:35:36,044 --> 00:35:40,119
+do vice versa so that both those label
+this number of life I'm gonna shift
+
+549
+00:35:41,019 --> 00:35:44,068
+the one that should be fading out
+horizontally
+
+550
+00:35:44,068 --> 00:35:47,075
+off to one side drop at the past 30 down
+20
+
+551
+00:35:48,038 --> 00:35:51,041
+you're having a little bit higher def
+you can see it but
+
+552
+00:35:51,041 --> 00:35:54,090
+the fact that it will give is the title
+will be
+
+553
+00:35:54,009 --> 00:35:57,458
+stating in and sliding horizontally at
+the same time
+
+554
+00:35:58,349 --> 00:36:03,350
+as the other one is spitting out else
+wanted to do something
+
+555
+00:36:03,359 --> 00:36:09,690
+about those restaurant names on the list
+unlikely to speed it out in place
+
+556
+00:36:09,069 --> 00:36:13,070
+so I copied his restaurant names from
+the first slide
+
+557
+00:36:13,007 --> 00:36:16,032
+that list pay for them on the second
+flight
+
+558
+00:36:16,095 --> 00:36:19,170
+the map and I ship them the way of the
+side of the screen
+
+559
+00:36:20,007 --> 00:36:24,009
+will drop their path to be a little bit
+so we're gonna slide out
+
+560
+00:36:24,009 --> 00:36:29,018
+now a little bit approach appear if you
+stagger them horizontally a little bit
+
+561
+00:36:29,099 --> 00:36:33,125
+the animation speeds will be a little
+bit different
+
+562
+00:36:34,025 --> 00:36:38,050
+for each item so they will feel like the
+think items
+
+563
+00:36:38,005 --> 00:36:41,102
+not like part of one she sliding away
+because the third think items in a list
+
+564
+00:36:42,047 --> 00:36:43,066
+and would like to reinforce that
+
+565
+00:36:43,066 --> 00:36:47,102
+finally
+
+566
+00:36:48,002 --> 00:36:52,074
+15 built up both the Flies to the point
+where I'm pretty happy with them
+
+567
+00:36:52,074 --> 00:36:55,152
+I will have an animation from a lift to
+the map
+
+568
+00:36:56,052 --> 00:36:59,126
+but to get an animation from the map
+back to the list
+
+569
+00:37:00,026 --> 00:37:03,295
+all I have to do is duplicate
+
+570
+00:37:03,529 --> 00:37:06,760
+that first flight that list and place it
+at the end
+
+571
+00:37:06,076 --> 00:37:09,124
+as a third slide and now without doing
+any extra work
+
+572
+00:37:10,024 --> 00:37:13,072
+I have an animation back in the other
+direction it's important to test they'll
+
+573
+00:37:13,072 --> 00:37:13,170
+both directions
+
+574
+00:37:14,007 --> 00:37:21,007
+and it really didn't take much to do
+that we'll see what we have
+
+575
+00:37:22,041 --> 00:37:28,096
+after rebuildable animation in the back
+
+576
+00:37:28,096 --> 00:37:32,975
+now so too little flower thing and he's
+in the details maybe this isn't
+
+577
+00:37:33,839 --> 00:37:40,839
+as well as we would have it in the
+relapse we did all this without having
+
+578
+00:37:41,059 --> 00:37:41,138
+to write
+
+579
+00:37:41,849 --> 00:37:46,710
+any code you can see how maybe some love
+it is a little over the top
+
+580
+00:37:46,071 --> 00:37:53,071
+thank you to maybe something to the
+little over the top but
+
+581
+00:37:54,063 --> 00:37:57,140
+its so much easier to pare down and take
+away things when you don't have to throw
+
+582
+00:37:58,004 --> 00:37:58,085
+a code
+
+583
+00:37:59,021 --> 00:38:03,090
+it is moving shapes around that the
+really great way to try out from really
+
+584
+00:38:03,009 --> 00:38:04,038
+sophisticated animation
+
+585
+00:38:05,019 --> 00:38:08,878
+we also really liked this
+
+586
+00:38:09,049 --> 00:38:12,750
+the very graphical gallery view that
+Linda called out of
+
+587
+00:38:12,075 --> 00:38:15,434
+pretty cool earlier wanted at the howled
+work
+
+588
+00:38:16,109 --> 00:38:20,220
+if we have these angle plate the toes to
+me zoom in on one of them just
+
+589
+00:38:20,022 --> 00:38:25,096
+the Detail View back out
+
+590
+00:38:25,096 --> 00:38:32,096
+might have to back button and also the
+few get a little flower
+
+591
+00:38:36,099 --> 00:38:42,948
+the thank you so how do we build this
+animation
+
+592
+00:38:43,839 --> 00:38:47,862
+well if really was not all that
+different from the process I showed you
+
+593
+00:38:48,069 --> 00:38:48,740
+earlier
+
+594
+00:38:48,074 --> 00:38:51,146
+that one piece of toast the reason in on
+
+595
+00:38:52,046 --> 00:38:55,195
+that an angled image
+
+596
+00:38:55,609 --> 00:39:00,130
+behind all the other shapes the other
+pieces of toast
+
+597
+00:39:00,013 --> 00:39:03,041
+are similar images but there masked out
+and on top
+
+598
+00:39:03,041 --> 00:39:06,074
+that navigation bar the slide then
+
+599
+00:39:06,074 --> 00:39:09,913
+that the black rectangle that we've
+shifted off the top of the screen
+
+600
+00:39:10,579 --> 00:39:14,460
+so we should offer a little ways up
+there so it slides in a little bit later
+
+601
+00:39:14,046 --> 00:39:14,054
+in the animation
+
+602
+00:39:15,026 --> 00:39:18,068
+and that detail view
+
+603
+00:39:18,068 --> 00:39:22,094
+the toast that's that same toast image
+rotated back straight
+
+604
+00:39:22,094 --> 00:39:27,170
+a me a bit larger the other piece in the
+toaster just
+
+605
+00:39:28,007 --> 00:39:31,102
+shifted off the top and bottom of the
+screen that's really all there is to it
+
+606
+00:39:32,065 --> 00:39:36,071
+moving from images and shaped around
+until you get an animation that
+
+607
+00:39:36,071 --> 00:39:43,071
+that feels pretty good now that we've
+built examination think you know
+
+608
+00:39:44,081 --> 00:39:47,640
+we're gonna launch keynote on our iPod
+Touch here
+
+609
+00:39:48,369 --> 00:39:51,380
+and either through I cloud over email
+
+610
+00:39:51,038 --> 00:39:56,247
+however you prefer to get them across
+actually open that same presentation
+
+611
+00:39:56,589 --> 00:40:03,589
+in her hand on the device to get a sense
+for how it feels we can hand it to
+
+612
+00:40:03,619 --> 00:40:04,664
+someone and see what they try to do
+
+613
+00:40:05,069 --> 00:40:10,120
+now here you'll notice
+
+614
+00:40:10,579 --> 00:40:14,770
+that were tapping
+
+615
+00:40:14,077 --> 00:40:17,113
+on with seem like interactive element
+those aren't actually
+
+616
+00:40:18,013 --> 00:40:22,090
+interactive it just so happens that you
+can tap
+
+617
+00:40:22,009 --> 00:40:26,018
+anywhere on the screen to ban for flight
+in keno you can kinda pretend
+
+618
+00:40:26,099 --> 00:40:29,143
+that the interactive elements work
+course you tap anywhere else it's still
+
+619
+00:40:30,043 --> 00:40:31,069
+going to bat for Floyd
+
+620
+00:40:31,069 --> 00:40:34,097
+we can still get a fan for
+
+621
+00:40:34,097 --> 00:40:37,716
+where people are trying to interact with
+your screen than animation
+
+622
+00:40:38,589 --> 00:40:43,940
+and what they expect to happen we can do
+a similar thing
+
+623
+00:40:43,094 --> 00:40:50,094
+with the tab bar
+
+624
+00:40:56,077 --> 00:40:57,102
+and
+
+625
+00:40:58,002 --> 00:41:01,010
+after we show people and let them
+
+626
+00:41:01,001 --> 00:41:05,017
+express what they think these animations
+on the screens are about
+
+627
+00:41:05,026 --> 00:41:09,031
+we can now in a couple of questions to
+try to get specific be back
+
+628
+00:41:09,031 --> 00:41:13,063
+so we ask if they know how to find
+nearby too
+
+629
+00:41:13,063 --> 00:41:17,142
+well they were able to find toast
+although they didn't understand our plea
+
+630
+00:41:18,042 --> 00:41:18,130
+for icon
+
+631
+00:41:19,003 --> 00:41:22,069
+but that's fine because we knew those
+icons were playful earth
+
+632
+00:41:22,096 --> 00:41:25,114
+and if we decide to go in this direction
+we can refine them
+
+633
+00:41:26,014 --> 00:41:30,028
+we asked if it was EV
+
+634
+00:41:30,028 --> 00:41:35,034
+to switch between these two screen
+certainly they were able to use a tabbar
+
+635
+00:41:35,088 --> 00:41:37,119
+they've seen those before they could tap
+at the bottom and
+
+636
+00:41:38,019 --> 00:41:41,107
+which screen but
+
+637
+00:41:42,007 --> 00:41:46,098
+when we asked how could we make this
+better that's where we got some really
+
+638
+00:41:46,098 --> 00:41:47,115
+interesting feedback
+
+639
+00:41:48,015 --> 00:41:53,020
+someone suggested they might want to be
+able to the restaurant name
+
+640
+00:41:53,002 --> 00:41:57,076
+while they're looking at the map another
+person suggested they'd like to be able
+
+641
+00:41:57,094 --> 00:41:59,100
+to see the map well they're looking at
+the rating
+
+642
+00:42:00,000 --> 00:42:03,005
+perhaps they want to make their own
+calculations love
+
+643
+00:42:03,005 --> 00:42:08,092
+highest-rated the closest to was removed
+really interesting
+
+644
+00:42:08,092 --> 00:42:11,181
+that the feedback and I think I'm going
+to invite mark-up
+
+645
+00:42:12,081 --> 00:42:19,081
+to discuss how we can explore these
+interactively thank you
+
+646
+00:42:20,071 --> 00:42:24,106
+good morning let's have a look at what
+we've learned
+
+647
+00:42:25,006 --> 00:42:28,041
+from the feedback so far what's working
+
+648
+00:42:28,041 --> 00:42:31,047
+the transition between the map
+
+649
+00:42:31,047 --> 00:42:34,119
+and the list feel great do in showed us
+how we can do some really cool
+
+650
+00:42:35,019 --> 00:42:35,105
+animations
+
+651
+00:42:36,005 --> 00:42:41,006
+without writing a single line of code
+what's not working
+
+652
+00:42:41,015 --> 00:42:44,066
+you still have to switch between two
+screens to get
+
+653
+00:42:44,066 --> 00:42:48,110
+to all of the information about toast so
+what other ideas
+
+654
+00:42:49,001 --> 00:42:52,024
+does this give us well maybe
+
+655
+00:42:52,033 --> 00:42:55,130
+we can put the map and the lid on the
+screen
+
+656
+00:42:56,003 --> 00:43:01,060
+at the same time and that
+
+657
+00:43:01,087 --> 00:43:05,168
+a map on once-great
+
+658
+00:43:06,068 --> 00:43:10,129
+great now we've got all the information
+
+659
+00:43:11,029 --> 00:43:15,056
+accessible on once-great problem solved
+
+660
+00:43:15,056 --> 00:43:19,140
+but wait a second if this really a good
+idea
+
+661
+00:43:20,004 --> 00:43:24,042
+if you think about it the map is only
+hop up its origin of ice
+
+662
+00:43:24,078 --> 00:43:27,114
+so with the lead we have to pan the map
+more
+
+663
+00:43:28,014 --> 00:43:31,043
+we have to scroll the list more in order
+to access the fame
+
+664
+00:43:31,043 --> 00:43:38,043
+number of information to figure out
+whether it's the right thing we need to
+
+665
+00:43:38,082 --> 00:43:39,083
+be tried out
+
+666
+00:43:39,092 --> 00:43:43,150
+and that's why we create an interactive
+prototype we make another fake ap
+
+667
+00:43:44,005 --> 00:43:47,092
+and we start off by asking what needs to
+be more real
+
+668
+00:43:48,037 --> 00:43:52,041
+finding nearby post on the map need to
+be more real
+
+669
+00:43:52,041 --> 00:43:55,049
+and scanning the list for the Best Coast
+should be Maria
+
+670
+00:43:56,021 --> 00:43:59,022
+you want to be able to pan the map and
+scroll to this
+
+671
+00:43:59,022 --> 00:44:03,025
+now what can we fake what can we do
+
+672
+00:44:03,025 --> 00:44:08,027
+to speed up our process of making the
+prototype we can fake
+
+673
+00:44:08,045 --> 00:44:11,049
+the map handle it by making using
+
+674
+00:44:11,085 --> 00:44:14,097
+draggable images but more to more about
+that later
+
+675
+00:44:14,097 --> 00:44:17,126
+and where will we use
+
+676
+00:44:18,026 --> 00:44:21,119
+a lap let's keep that up in in our mind
+while we are creating
+
+677
+00:44:22,019 --> 00:44:25,085
+of a cat and of course no case
+
+678
+00:44:25,085 --> 00:44:29,108
+it's when we walk the streets of San
+Francisco trying to find the hippest
+
+679
+00:44:30,008 --> 00:44:33,010
+toast and tell now making fake ap
+
+680
+00:44:33,001 --> 00:44:36,085
+it's really easy we're following one
+principal guideline
+
+681
+00:44:36,094 --> 00:44:41,158
+that is to make pictures move in
+response to touch it and one more thing
+
+682
+00:44:42,058 --> 00:44:46,120
+its to make pictures move in response to
+touch it on the device
+
+683
+00:44:47,002 --> 00:44:50,101
+that your prototyping for you
+
+684
+00:44:51,019 --> 00:44:54,023
+whatever you want that can do that
+
+685
+00:44:54,023 --> 00:44:58,074
+if you up from a web background check
+accused html/css
+
+686
+00:44:58,074 --> 00:45:03,120
+a bit of jQuery if your game developer
+who happens to you unit unity3d
+
+687
+00:45:04,002 --> 00:45:07,063
+it's another great program to make some
+pictures move around
+
+688
+00:45:07,081 --> 00:45:10,112
+in response to touch it or
+
+689
+00:45:11,012 --> 00:45:15,073
+you could use sweat we are super excited
+about swift
+
+690
+00:45:15,073 --> 00:45:18,081
+but today we're going to use Co
+animation
+
+691
+00:45:18,081 --> 00:45:21,115
+and Xcode with objectivity this
+
+692
+00:45:22,015 --> 00:45:25,046
+because that's what we've been using an
+hour prototyping group so far
+
+693
+00:45:25,046 --> 00:45:30,051
+quick word about writing code for a
+prototype
+
+694
+00:45:30,051 --> 00:45:34,064
+it's different from writing code for me
+that
+
+695
+00:45:34,064 --> 00:45:39,102
+the idea is not to engineer at to pack
+it together as quick as a cat
+
+696
+00:45:40,002 --> 00:45:43,060
+it doesn't have to be good coat or
+reusable code
+
+697
+00:45:43,006 --> 00:45:46,070
+because the idea if that make a
+prototype to make a better decision
+
+698
+00:45:47,024 --> 00:45:49,109
+about whether you really want to spend
+the time
+
+699
+00:45:50,009 --> 00:45:54,092
+engineering that we think
+
+700
+00:45:54,092 --> 00:45:59,111
+we general you three steps to bird an
+interactive prototype
+
+701
+00:46:00,011 --> 00:46:03,079
+first step but the picture on the device
+
+702
+00:46:03,079 --> 00:46:06,098
+once you have a picture on the device
+it's a good indicator that you've got
+
+703
+00:46:06,098 --> 00:46:09,129
+your work till sorted out
+
+704
+00:46:10,029 --> 00:46:14,113
+second Sep break up the picture you want
+to prepare the picture so you can apply
+
+705
+00:46:15,013 --> 00:46:16,032
+interaction
+
+706
+00:46:16,032 --> 00:46:19,048
+to selected areas on the screen
+
+707
+00:46:19,048 --> 00:46:22,147
+and set that moved the pictures when you
+touch them
+
+708
+00:46:23,047 --> 00:46:27,135
+this is all about implementing the
+interaction
+
+709
+00:46:28,035 --> 00:46:31,100
+alright first step get the picture on
+the device
+
+710
+00:46:32,000 --> 00:46:36,066
+credo picture in Keynote and the one
+thing we have to consider if that we
+
+711
+00:46:36,066 --> 00:46:36,072
+work
+
+712
+00:46:37,026 --> 00:46:40,071
+to the actual pixel dimensions of the
+device
+
+713
+00:46:40,071 --> 00:46:43,119
+we export our like as a PNG and save it
+
+714
+00:46:44,019 --> 00:46:48,112
+into the for the structure of alexco
+project
+
+715
+00:46:49,012 --> 00:46:52,065
+now it's time to write a little bit of
+code and what you see here
+
+716
+00:46:52,065 --> 00:46:55,090
+the setup function in a class costs
+create
+
+717
+00:46:55,009 --> 00:46:59,058
+now another class to be with the Lord in
+all cases the Costco player
+
+718
+00:47:00,039 --> 00:47:03,055
+and for those of you who know about
+coordination in
+
+719
+00:47:03,055 --> 00:47:07,055
+it simply just inherits from you I
+ImageView site also has got all the
+
+720
+00:47:07,055 --> 00:47:09,147
+functionality of you live you
+
+721
+00:47:10,047 --> 00:47:13,089
+all we did it at a little bit of
+convenience functions
+
+722
+00:47:13,089 --> 00:47:16,106
+a to make a lot you get a position as a
+a
+
+723
+00:47:17,006 --> 00:47:21,028
+and to load an image into that layer
+
+724
+00:47:21,028 --> 00:47:24,030
+by the default we have lacquered screen
+
+725
+00:47:24,003 --> 00:47:27,077
+it stretches across the whole of the
+physical screen
+
+726
+00:47:28,004 --> 00:47:31,035
+and so to get a picture onto a screen
+week rate and I'll
+
+727
+00:47:31,035 --> 00:47:34,100
+and another layer called picture and
+without
+
+728
+00:47:35,000 --> 00:47:38,019
+our image into into it
+
+729
+00:47:38,019 --> 00:47:41,033
+that's it we press play
+
+730
+00:47:41,033 --> 00:47:45,084
+next coat and hit it
+
+731
+00:47:45,084 --> 00:47:51,165
+of first fake at looks pretty re already
+done that
+
+732
+00:47:52,065 --> 00:47:56,087
+thanks right let's get on second step
+
+733
+00:47:56,087 --> 00:47:59,090
+you want to break up the picture in our
+case
+
+734
+00:48:00,017 --> 00:48:03,114
+we break it up into another occasion bar
+into an image of a list
+
+735
+00:48:04,014 --> 00:48:09,015
+and an image of a map let's start with
+the lead
+
+736
+00:48:09,015 --> 00:48:13,043
+I use keynote again and Linda showed how
+you can really quickly create
+
+737
+00:48:13,043 --> 00:48:18,126
+take much of it now this time we want to
+apply some interaction to the american
+
+738
+00:48:19,026 --> 00:48:22,030
+we want to be able to scroll they met up
+and down
+
+739
+00:48:22,066 --> 00:48:25,112
+so that make sure that is much longer
+than the screen height
+
+740
+00:48:26,012 --> 00:48:30,095
+or device
+
+741
+00:48:30,095 --> 00:48:34,178
+next thing we want to create a fake
+image of a map
+
+742
+00:48:35,078 --> 00:48:39,154
+where do I get it from we improvise a
+little bit
+
+743
+00:48:40,054 --> 00:48:43,111
+I've got the eye with 10 laps up I open
+it up make it full screen take a
+
+744
+00:48:44,011 --> 00:48:45,014
+screenshot
+
+745
+00:48:45,014 --> 00:48:48,020
+put it into keynote and there it is
+
+746
+00:48:48,002 --> 00:48:52,007
+we also want to display feature at toast
+on the map
+
+747
+00:48:52,025 --> 00:48:56,119
+so sprinkle a few I can on told my toast
+map
+
+748
+00:48:57,019 --> 00:49:01,025
+kind of an partisan away no need to be
+precise
+
+749
+00:49:01,025 --> 00:49:05,086
+work with latitude longitude values just
+get it done
+
+750
+00:49:05,086 --> 00:49:10,105
+again make sure it's large enough so we
+can implement some track behavior on it
+
+751
+00:49:11,005 --> 00:49:15,063
+and possible what here we have or three
+discrete images
+
+752
+00:49:15,063 --> 00:49:20,132
+now it's time to rearrange the images so
+they become one screen again
+
+753
+00:49:21,032 --> 00:49:24,103
+them public coat crate they're called
+map a lot my map image
+
+754
+00:49:25,003 --> 00:49:28,090
+position is love roughly crater another
+lift
+
+755
+00:49:28,009 --> 00:49:31,063
+layup while air cordless rather
+
+756
+00:49:32,044 --> 00:49:35,058
+and the time I'm gonna position at
+roughly down
+
+757
+00:49:35,058 --> 00:49:41,080
+hop of the screen height and I me that
+actually okay had already left my map
+
+758
+00:49:41,008 --> 00:49:44,009
+and so does the navigation bar at the
+top
+
+759
+00:49:44,081 --> 00:49:47,112
+call we are ready to go
+
+760
+00:49:48,012 --> 00:49:52,025
+let's make some pictures move when you
+touch them
+
+761
+00:49:52,025 --> 00:49:56,083
+I want to talk to you about at the track
+misbehavior
+
+762
+00:49:56,083 --> 00:49:59,115
+what happens is you hit the map
+
+763
+00:50:00,015 --> 00:50:05,091
+a touchdown event happens then you move
+your finger
+
+764
+00:50:05,091 --> 00:50:08,097
+and you get serious of touch movie then
+
+765
+00:50:09,051 --> 00:50:12,089
+on and on each touch with you and we
+actually moving
+
+766
+00:50:12,089 --> 00:50:15,808
+the underlying image with that and the
+last event
+
+767
+00:50:16,609 --> 00:50:22,180
+is a touch-up event lift-off my thing up
+
+768
+00:50:22,018 --> 00:50:25,197
+now in order to make an image mu we
+
+769
+00:50:25,359 --> 00:50:28,410
+essentially go into it well within
+
+770
+00:50:28,041 --> 00:50:32,053
+each touch movie then week ended Oct the
+death for translation between the
+
+771
+00:50:32,053 --> 00:50:33,110
+previous touch position
+
+772
+00:50:34,001 --> 00:50:37,003
+and the current touch position that's
+what we use
+
+773
+00:50:37,012 --> 00:50:41,069
+to move the image the problem becomes
+more clear
+
+774
+00:50:41,069 --> 00:50:44,078
+in Cote so this is a bit of
+
+775
+00:50:44,078 --> 00:50:48,080
+this the coat block that get call it
+every time a touch movie event happens
+
+776
+00:50:48,008 --> 00:50:51,069
+on on that play a
+
+777
+00:50:52,041 --> 00:50:55,074
+what we do that 3 ghetto a touch of Jack
+
+778
+00:50:55,074 --> 00:50:58,077
+from that we can retreat the current
+touch position and the previous touch
+
+779
+00:50:59,004 --> 00:51:01,027
+position
+
+780
+00:51:01,027 --> 00:51:04,035
+and we calculate or Delta Pi subtracting
+the previous
+
+781
+00:51:05,007 --> 00:51:08,042
+but tough position from the current
+touch position
+
+782
+00:51:08,042 --> 00:51:11,054
+and added to on that position
+
+783
+00:51:11,054 --> 00:51:14,118
+and we do the same thing for the lead
+but in this case we only applied to
+
+784
+00:51:15,018 --> 00:51:16,079
+translation to the y coordinate
+
+785
+00:51:16,079 --> 00:51:19,133
+cause we're just going up and down
+
+786
+00:51:20,033 --> 00:51:23,080
+quick look at how it looks like court we
+can track the
+
+787
+00:51:23,008 --> 00:51:27,107
+the map and we can scroll the list
+
+788
+00:51:28,079 --> 00:51:31,142
+now we've cheated a bit here you can
+feel a bit of inertia and the author
+
+789
+00:51:32,042 --> 00:51:32,127
+constraining
+
+790
+00:51:33,027 --> 00:51:37,080
+the movement with a bit of a spring
+behavior if you're interested in that
+
+791
+00:51:37,008 --> 00:51:41,090
+you can download black spot project
+after the session
+
+792
+00:51:42,062 --> 00:51:46,065
+let's move on want to divert a little
+bit
+
+793
+00:51:46,092 --> 00:51:49,165
+to the a the part of our prototype
+
+794
+00:51:50,065 --> 00:51:54,072
+well we can share toast for the idea to
+take a picture of you toasty at a little
+
+795
+00:51:55,035 --> 00:51:56,077
+bit of information
+
+796
+00:51:56,077 --> 00:51:59,078
+and then he posted best thing is
+
+797
+00:51:59,087 --> 00:52:02,096
+I need a camera P
+
+798
+00:52:02,096 --> 00:52:05,140
+for now I just hide it at the lateral to
+screen
+
+799
+00:52:06,004 --> 00:52:10,012
+and no I need to bottom but I realized
+then already created
+
+800
+00:52:10,048 --> 00:52:15,052
+love the plus button in my navigation
+bar
+
+801
+00:52:15,052 --> 00:52:18,144
+so why do with i hook up a touch-up
+event onto my navigation bar
+
+802
+00:52:19,044 --> 00:52:23,077
+and so when you tap that poss pattern it
+were true got this line of code
+
+803
+00:52:23,077 --> 00:52:26,081
+which and make the camera image back in
+
+804
+00:52:26,081 --> 00:52:30,133
+and this is just an example of how your
+code doesn't have to be beautiful
+
+805
+00:52:31,033 --> 00:52:37,059
+but we can to pack 6 together with what
+you've got on the screen
+
+806
+00:52:37,059 --> 00:52:42,075
+it s have to Talk button you see the
+camera image
+
+807
+00:52:42,075 --> 00:52:45,081
+now so probably that there was a live
+camera preview
+
+808
+00:52:46,035 --> 00:52:49,050
+we added that to at a little bit of
+reno's to it
+
+809
+00:52:49,005 --> 00:52:53,028
+but that's why we stop when you press
+what hap the shutter button
+
+810
+00:52:53,073 --> 00:52:57,160
+we've we switch to a fake image of the
+toast
+
+811
+00:52:58,006 --> 00:53:01,065
+and that's what we continue with yet a
+few
+
+812
+00:53:02,019 --> 00:53:08,033
+a information about your toast and
+posted
+
+813
+00:53:08,033 --> 00:53:13,041
+now how did we do the keyboard typing
+sequence
+
+814
+00:53:14,013 --> 00:53:17,101
+probably already gave it away of course
+
+815
+00:53:18,001 --> 00:53:22,048
+we just use a sequence of images
+
+816
+00:53:22,048 --> 00:53:24,141
+I didn't bother about using any dynamic
+textfield or
+
+817
+00:53:25,041 --> 00:53:28,117
+a key but siding and I did all of the
+images
+
+818
+00:53:29,017 --> 00:53:33,041
+just from one flight in Keynote and this
+brings us back actually to what we
+
+819
+00:53:33,041 --> 00:53:33,117
+actually do it
+
+820
+00:53:34,017 --> 00:53:38,044
+we're creating a prototype by making
+pictures
+
+821
+00:53:38,044 --> 00:53:42,047
+move in response to touch this me doing
+that
+
+822
+00:53:42,047 --> 00:53:46,110
+to help us make better decisions about
+whether we really want to pursue
+
+823
+00:53:47,001 --> 00:53:50,077
+idea and part of this decision making
+process
+
+824
+00:53:50,086 --> 00:53:53,150
+it to show you a prototype to people
+
+825
+00:53:54,005 --> 00:53:58,008
+and if it's an interactive prototype
+it's really important that you let
+
+826
+00:53:58,008 --> 00:53:59,030
+people tried out
+
+827
+00:54:00,002 --> 00:54:03,041
+with as little explanation as possible
+the first impressions are really
+
+828
+00:54:03,041 --> 00:54:03,048
+important
+
+829
+00:54:04,011 --> 00:54:09,023
+look at what people are struggling with
+the interactions like a crater
+
+830
+00:54:09,023 --> 00:54:12,042
+and also look at what they liked them
+
+831
+00:54:12,042 --> 00:54:16,111
+and of some questions like to know how
+to fight nearby toast
+
+832
+00:54:17,011 --> 00:54:20,013
+atop toast the value your feedback
+
+833
+00:54:20,031 --> 00:54:24,080
+if the one which is Kritika if they tell
+us on the map and the
+
+834
+00:54:24,008 --> 00:54:27,050
+say there something we didn't really
+think about
+
+835
+00:54:28,022 --> 00:54:31,053
+when we had a genius idea of putting the
+map
+
+836
+00:54:31,053 --> 00:54:36,056
+and the list on 213 something we should
+result before we built the real say
+
+837
+00:54:36,056 --> 00:54:39,108
+is that you to explore toast
+
+838
+00:54:40,008 --> 00:54:43,056
+it's another good question and of
+
+839
+00:54:43,056 --> 00:54:48,058
+for suggestions how can we make this
+better I wish I could sort it out in a
+
+840
+00:54:48,076 --> 00:54:49,084
+few more different way
+
+841
+00:54:49,084 --> 00:54:52,127
+yeah I make sense not everyone wants to
+spend
+
+842
+00:54:53,027 --> 00:54:58,042
+for dollars or more for a slice of bread
+but this way I want to read
+
+843
+00:54:58,042 --> 00:55:02,070
+introduced to to summarize all session
+had concluded
+
+844
+00:55:02,007 --> 00:55:09,007
+thank you thank you mark so we learned
+some very important things for marketing
+
+845
+00:55:10,097 --> 00:55:10,190
+director predator
+
+846
+00:55:11,009 --> 00:55:16,026
+quick recap
+
+847
+00:55:17,007 --> 00:55:21,034
+do much better then we saw how the
+pictures work together
+
+848
+00:55:21,034 --> 00:55:25,126
+using from animation and then we built
+an interactive prototype we could see
+
+849
+00:55:26,026 --> 00:55:28,031
+have a whole thing work together in our
+hand
+
+850
+00:55:28,031 --> 00:55:31,084
+now couple quick comparisons to hit the
+town
+
+851
+00:55:31,084 --> 00:55:34,121
+the screen on the raid takes lot a real
+code
+
+852
+00:55:35,021 --> 00:55:38,085
+for our prototype all we did was move a
+picture around in 2d
+
+853
+00:55:38,085 --> 00:55:41,144
+removalist up and down that was really
+quick this
+
+854
+00:55:42,044 --> 00:55:46,048
+Greenview a toast we're taking home in
+true real code for our prototype
+
+855
+00:55:46,084 --> 00:55:50,089
+we just made a quick drying which with
+enough to realize that this concept
+
+856
+00:55:51,034 --> 00:55:51,093
+sucked
+
+857
+00:55:51,093 --> 00:55:54,129
+what we learned today
+
+858
+00:55:55,029 --> 00:55:58,118
+well we prototype a picture and we learn
+how to take screenshots map
+
+859
+00:55:59,018 --> 00:56:03,095
+women to rearrange them so we can make a
+lot of different options we prototyped
+
+860
+00:56:03,095 --> 00:56:03,146
+with
+
+861
+00:56:04,046 --> 00:56:07,046
+animation me learn how to animate
+pictures
+
+862
+00:56:07,046 --> 00:56:11,069
+using magic move in keno we could see a
+different screens work together
+
+863
+00:56:11,069 --> 00:56:15,070
+and we prototype with interaction
+
+864
+00:56:15,007 --> 00:56:18,036
+and we made pictures move on the screen
+a response to touches
+
+865
+00:56:18,099 --> 00:56:22,141
+so we can see how the whole thing felt
+together why do we do this
+
+866
+00:56:23,041 --> 00:56:26,092
+to resume hope your member number one of
+the test ideas
+
+867
+00:56:26,092 --> 00:56:29,151
+and number two if to get new ideas and
+how do we do it
+
+868
+00:56:30,051 --> 00:56:33,129
+this one I really hope you guys remember
+make recap
+
+869
+00:56:34,029 --> 00:56:37,105
+show people and learn from their
+feedback
+
+870
+00:56:38,005 --> 00:56:42,067
+and do that over and over again until
+the expiry in Figure ap
+
+871
+00:56:42,067 --> 00:56:46,068
+feels great so here's what I want all
+the view
+
+872
+00:56:46,068 --> 00:56:50,085
+to go into you near if you're a
+developer to company
+
+873
+00:56:50,085 --> 00:56:53,157
+I want you to tell your management the
+prototyping fifth time and money
+
+874
+00:56:54,057 --> 00:56:59,061
+by helping you build the right thing if
+you're a solo developer
+
+875
+00:56:59,061 --> 00:57:05,095
+I want you to draw animated hack before
+you go and build something and if you
+
+876
+00:57:05,095 --> 00:57:06,117
+can code it all
+
+877
+00:57:07,017 --> 00:57:11,018
+again thank you for coming draw and
+animate
+
+878
+00:57:11,018 --> 00:57:14,042
+you don't need code yet but the person
+next to you might be able to help you
+
+879
+00:57:14,042 --> 00:57:14,109
+with that part
+
+880
+00:57:15,009 --> 00:57:18,052
+designers don't just drop pictures
+
+881
+00:57:18,052 --> 00:57:21,147
+also make animated and interactive
+things to fully understand your design
+
+882
+00:57:22,047 --> 00:57:25,085
+in our management types we've
+
+883
+00:57:25,085 --> 00:57:32,085
+going make time for your designers and
+engineers to put it thank you
+
+884
+00:57:37,065 --> 00:57:41,094
+there's a lot to Turkey code on the web
+got a ghetto thank you very much
+
+885
+00:57:41,094 --> 00:57:41,136
+everybody
+

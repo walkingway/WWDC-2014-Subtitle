@@ -1,0 +1,3841 @@
+1
+00:00:16,049 --> 00:00:20,052
+everybody good morning my name is Rachel
+Roth then
+
+2
+00:00:20,052 --> 00:00:23,053
+I'm wanna Apple's user experience
+evangelists
+
+3
+00:00:23,062 --> 00:00:26,097
+now the SSN is not
+
+4
+00:00:26,097 --> 00:00:29,178
+about monetizing about having
+
+5
+00:00:30,078 --> 00:00:33,089
+a great experience with an aperture says
+
+6
+00:00:33,089 --> 00:00:37,117
+because a great experience is what's
+going to keep people coming back here
+
+7
+00:00:38,017 --> 00:00:38,110
+after game
+
+8
+00:00:39,001 --> 00:00:44,069
+time and time and time again thing about
+the last time you had a really fantastic
+
+9
+00:00:44,078 --> 00:00:45,175
+me on a great restaurant
+
+10
+00:00:46,075 --> 00:00:49,076
+for its price you always want to come
+back to write
+
+11
+00:00:49,085 --> 00:00:52,157
+for this is the bigger picture
+
+12
+00:00:53,057 --> 00:00:57,139
+have what it takes to have a great
+experience with an aperture says and
+
+13
+00:00:58,039 --> 00:01:01,128
+today fashion is all based on the
+assumption
+
+14
+00:01:01,479 --> 00:01:04,780
+that you already have a really amazing
+ap
+
+15
+00:01:04,078 --> 00:01:08,160
+our game your app meets the needs of
+your ID and
+
+16
+00:01:09,006 --> 00:01:12,065
+it's got a really intuitive interfaces
+I'm
+
+17
+00:01:12,659 --> 00:01:17,450
+executed really well for game it's just
+fun to play
+
+18
+00:01:17,045 --> 00:01:21,047
+an earth really know design secrets are
+shortcuts around a fun
+
+19
+00:01:21,065 --> 00:01:24,139
+but I know that you guys all have a
+handoff so we don't have to do well on
+
+20
+00:01:25,039 --> 00:01:26,041
+that for too long
+
+21
+00:01:26,041 --> 00:01:30,138
+now if you're using the free me mr. the
+pay me a model with an app purchase
+
+22
+00:01:31,038 --> 00:01:34,056
+fares its so important that people can
+
+23
+00:01:34,056 --> 00:01:37,087
+enjoy our game without buying anything
+
+24
+00:01:37,087 --> 00:01:40,120
+I mean I think most of us are happy
+experience you
+
+25
+00:01:41,002 --> 00:01:44,064
+get a new app from the App Store and you
+download it launch it
+
+26
+00:01:44,082 --> 00:01:48,158
+only to find that you can't do anything
+with it that's frustrating
+
+27
+00:01:49,058 --> 00:01:52,097
+need to make a purchase in order to get
+from you carry out a bit
+
+28
+00:01:52,097 --> 00:01:55,149
+would be like if you bought mixer
+
+29
+00:01:56,049 --> 00:01:59,123
+for your kitchen and it didn't come with
+any attachments you can miss any
+
+30
+00:02:00,023 --> 00:02:03,075
+mix anything be really disappointing
+
+31
+00:02:03,075 --> 00:02:08,128
+not fly mixers come with the basic
+attachment that you can use said nixon
+
+32
+00:02:09,028 --> 00:02:10,567
+see how great the mixer and
+
+33
+00:02:10,819 --> 00:02:14,360
+and many by some additional attachments
+for specialty
+
+34
+00:02:14,036 --> 00:02:17,093
+tasks like making bratter some kinda
+pastry
+
+35
+00:02:17,093 --> 00:02:21,164
+and that's where you want it she with
+your axe you wanna let people really
+
+36
+00:02:22,064 --> 00:02:25,072
+enjoyed the functionality and utility
+
+37
+00:02:25,072 --> 00:02:30,111
+quality a wrap and then you offer them
+advantages or
+
+38
+00:02:31,011 --> 00:02:34,076
+additional functionality them advanced
+features
+
+39
+00:02:34,076 --> 00:02:39,088
+when you offer those things you wanna
+make sure that you make buying easy
+
+40
+00:02:39,088 --> 00:02:43,146
+I know this probably sounds obvious but
+I'm not just talking about
+
+41
+00:02:44,046 --> 00:02:47,142
+sending a transaction for the App Store
+getting a response back
+
+42
+00:02:48,042 --> 00:02:51,066
+you want to make sure that the decision
+to buy something
+
+43
+00:02:51,066 --> 00:02:54,090
+is really easy for the people coming
+here after game
+
+44
+00:02:54,009 --> 00:03:00,025
+there's a lot of friction to making that
+decision to buy
+
+45
+00:03:01,006 --> 00:03:06,034
+and a lot of it if outside your control
+but as app developers you wanna
+
+46
+00:03:06,034 --> 00:03:06,091
+eliminate
+
+47
+00:03:06,091 --> 00:03:09,138
+any obstacle to making that decision to
+purchase something
+
+48
+00:03:10,038 --> 00:03:13,065
+inside iraq make easiest possible
+
+49
+00:03:13,065 --> 00:03:16,133
+that decision to buy that fleeting
+moment and there's
+
+50
+00:03:17,033 --> 00:03:22,077
+many traps so one of the best things
+that you can do
+
+51
+00:03:22,077 --> 00:03:27,104
+its integrate your merchandise and the
+experience many people are gonna buy
+
+52
+00:03:28,004 --> 00:03:30,030
+things if they don't know what you're
+offering
+
+53
+00:03:30,003 --> 00:03:34,412
+they can't see them talks a lot of
+developers to
+
+54
+00:03:34,709 --> 00:03:38,180
+create a really great store section
+insider there after game and then
+
+55
+00:03:38,018 --> 00:03:40,089
+they're really disappointed because no
+one's going there
+
+56
+00:03:40,089 --> 00:03:43,166
+not buying anything ask if people know
+what you're offering
+
+57
+00:03:44,066 --> 00:03:48,111
+kinda like a difference if I fad you
+wanna buy something
+
+58
+00:03:49,011 --> 00:03:53,077
+fad how much like a really great drawing
+tool
+
+59
+00:03:53,077 --> 00:03:57,086
+and and that's what you want to help
+explain with a rap by putting the
+
+60
+00:03:58,067 --> 00:03:59,128
+merchandise out on display
+
+61
+00:04:00,028 --> 00:04:04,097
+integrating it into the experience when
+you're doing that
+
+62
+00:04:04,097 --> 00:04:07,101
+I'm not suggesting that you become a
+pretty self percent
+
+63
+00:04:08,037 --> 00:04:11,095
+about an nobody wants the sky following
+them around
+
+64
+00:04:11,095 --> 00:04:14,169
+saying hey you wanna buy something hey
+hey hey you wanna buy something
+
+65
+00:04:15,069 --> 00:04:18,078
+do you want to buy something to you want
+to buy something every minute and that's
+
+66
+00:04:19,059 --> 00:04:23,059
+where you're risking if you're flashing
+a lot of alert for notifications are
+
+67
+00:04:23,059 --> 00:04:26,098
+crazy animations to try and high-speed
+contracts or
+
+68
+00:04:26,629 --> 00:04:29,661
+it's really about timing
+
+69
+00:04:29,949 --> 00:04:32,990
+and with some ap stats about
+
+70
+00:04:32,099 --> 00:04:36,107
+offering the right thing at the right
+time like at a restaurant when the
+
+71
+00:04:37,079 --> 00:04:38,105
+waiter brings you
+
+72
+00:04:39,005 --> 00:04:43,038
+the dessert menu at the end of the mail
+I mean you may not even want to for
+
+73
+00:04:43,038 --> 00:04:46,113
+right back it doesn't property that they
+offered it
+
+74
+00:04:47,013 --> 00:04:50,106
+it would feel percy if they offered it
+to you before he sat down
+
+75
+00:04:51,006 --> 00:04:54,024
+and why reading your appetizer
+
+76
+00:04:54,024 --> 00:04:57,113
+fear I think about what's the right
+moment to offer something to someone
+
+77
+00:04:58,013 --> 00:05:01,046
+and do it in a way that's really
+thoughtful
+
+78
+00:05:01,046 --> 00:05:05,094
+now with other absence about a
+presentation
+
+79
+00:05:05,094 --> 00:05:09,105
+you I think about a really great window
+display first store
+
+80
+00:05:10,005 --> 00:05:13,076
+I happened to be very partial to the
+Apple Retail window display
+
+81
+00:05:13,076 --> 00:05:16,081
+sure I'll come as no surprise to you
+guys
+
+82
+00:05:17,026 --> 00:05:21,051
+now they do a great job showing off the
+merchandise and Ron you ran
+
+83
+00:05:21,051 --> 00:05:25,088
+makes you want to find out more about
+the product really intriguing
+
+84
+00:05:25,088 --> 00:05:28,116
+and that's what you want to think about
+whether after your game
+
+85
+00:05:29,016 --> 00:05:34,024
+you wanna integrate the merchandise in a
+way that feels really natural
+
+86
+00:05:34,096 --> 00:05:38,162
+missus paper by 53 it's an Apple Design
+Award winner from years ago
+
+87
+00:05:39,062 --> 00:05:42,149
+that is still a fantastic example
+integrating
+
+88
+00:05:43,049 --> 00:05:47,097
+in app purchases into their experience
+have you ever used at
+
+89
+00:05:47,097 --> 00:05:52,176
+app is designed to capture ideas through
+scat shares and diagrams and no
+
+90
+00:05:53,076 --> 00:05:56,985
+and like that makes Turner catch and
+they give you some basic drawing tools
+
+91
+00:05:57,669 --> 00:05:59,030
+for free
+
+92
+00:05:59,003 --> 00:06:05,452
+your pen and eraser you can see from
+this example you can do to hands with it
+
+93
+00:06:05,479 --> 00:06:09,000
+but there may be occasions when you need
+a more advanced trying for a different
+
+94
+00:06:09,000 --> 00:06:09,083
+kind of
+
+95
+00:06:09,083 --> 00:06:13,091
+liner texture and so that's why these
+leave these empty spots here
+
+96
+00:06:14,063 --> 00:06:19,122
+where the restaurant Ross ago and that's
+like that window display in a store
+
+97
+00:06:20,022 --> 00:06:25,047
+its putting them out for you see there's
+no question what's available
+
+98
+00:06:25,047 --> 00:06:28,131
+what they didn't dare and Hyde
+everything an art supply store
+
+99
+00:06:29,031 --> 00:06:33,086
+or attacking a pencil case but then you
+to go push open to see what's available
+
+100
+00:06:33,086 --> 00:06:36,158
+that's creating friction at expecting
+the player that
+
+101
+00:06:37,058 --> 00:06:41,066
+your audience to do work to see what
+there
+
+102
+00:06:41,066 --> 00:06:45,135
+and another thing that they didn't do
+its trick you into thinking that you
+
+103
+00:06:45,729 --> 00:06:46,780
+already own Dhabi
+
+104
+00:06:46,078 --> 00:06:50,135
+of because if you could see them all
+then when you tap don't want to use it
+
+105
+00:06:51,035 --> 00:06:55,074
+it holds you the you paid money just to
+test out a brass
+
+106
+00:06:55,389 --> 00:06:59,000
+well that would be disappointing at nog
+that sa great experience
+
+107
+00:06:59,000 --> 00:07:03,024
+frustrating on and that's why this
+design is
+
+108
+00:07:03,024 --> 00:07:06,093
+so al again and so great it's
+informative
+
+109
+00:07:06,093 --> 00:07:09,642
+but it's not percy
+
+110
+00:07:10,479 --> 00:07:14,110
+known except let's look at that timing I
+mentioned earlier totally different
+
+111
+00:07:14,011 --> 00:07:14,096
+kinda crap
+
+112
+00:07:14,096 --> 00:07:18,137
+Bloomberg Businessweek and this is a
+business publication i has regular
+
+113
+00:07:19,037 --> 00:07:19,105
+updates
+
+114
+00:07:20,005 --> 00:07:24,012
+new content and without a subscription
+you can still browse
+
+115
+00:07:24,075 --> 00:07:30,081
+read several articles browse all the
+headlines in the introductory census
+
+116
+00:07:31,035 --> 00:07:35,082
+now if you tap on something that
+requires a subscription
+
+117
+00:07:35,082 --> 00:07:39,431
+they bring up the subscription options
+fight the dessert menu
+
+118
+00:07:40,169 --> 00:07:44,169
+you're interested in reading some other
+content cell here
+
+119
+00:07:44,169 --> 00:07:49,530
+here's the information about
+subscription see you can get it
+
+120
+00:07:49,053 --> 00:07:53,192
+for preventing it right at that perfect
+moment
+
+121
+00:07:53,669 --> 00:07:58,130
+they're making it easy for you to get
+the subscription
+
+122
+00:07:58,013 --> 00:08:01,112
+now they also have this subscribe button
+down here in the corner
+
+123
+00:08:02,012 --> 00:08:05,068
+every screen and that's great you
+
+124
+00:08:05,068 --> 00:08:08,105
+but having that in addition to the
+integrated method
+
+125
+00:08:09,005 --> 00:08:14,016
+have some reach more people for nothing
+you can't have a store section
+
+126
+00:08:14,016 --> 00:08:17,065
+you just don't wanna make it up only
+place that people can find
+
+127
+00:08:17,065 --> 00:08:20,066
+what you're offering
+
+128
+00:08:20,075 --> 00:08:24,158
+now this also works for games I don't
+know how many have you played smash at
+
+129
+00:08:25,058 --> 00:08:28,065
+its relief an arcade game that involves
+smashing things
+
+130
+00:08:29,028 --> 00:08:33,817
+as you might have guessed very
+satisfying after a long day
+
+131
+00:08:34,069 --> 00:08:37,164
+the way that it works is back at the
+arcade game and the more accurate you
+
+132
+00:08:38,019 --> 00:08:39,025
+are smashing things
+
+133
+00:08:39,079 --> 00:08:41,137
+the further you're gonna get you
+progress through the checkpoints and
+
+134
+00:08:41,659 --> 00:08:42,738
+mocking them
+
+135
+00:08:43,449 --> 00:08:46,481
+and they also offer premium percent and
+they have a great way of illustrating
+
+136
+00:08:46,769 --> 00:08:48,370
+exactly what that
+
+137
+00:08:48,037 --> 00:08:52,055
+via featured as 30 I'll
+
+138
+00:08:52,055 --> 00:08:54,152
+so here we are let's start from
+checkpoint here maybe I can get a little
+
+139
+00:08:55,052 --> 00:08:56,561
+bit further this time
+
+140
+00:08:57,029 --> 00:09:01,390
+it good
+
+141
+00:09:01,039 --> 00:09:04,075
+avatar for pars the pre members and I'm
+not ready to buy it
+
+142
+00:09:04,075 --> 00:09:07,152
+wide
+
+143
+00:09:08,052 --> 00:09:12,085
+pretty compelling right I mean if you
+had any doubt about what advantage is
+
+144
+00:09:12,085 --> 00:09:13,142
+that they're offering
+
+145
+00:09:14,042 --> 00:09:17,077
+that spells it out for you right away
+
+146
+00:09:17,077 --> 00:09:19,083
+now I don't know how many have you
+noticed that there's also this get
+
+147
+00:09:20,037 --> 00:09:23,116
+premium button here in the corner
+
+148
+00:09:24,016 --> 00:09:28,695
+and if you did would you guess that's
+what the pre members and Matt
+
+149
+00:09:28,839 --> 00:09:32,620
+I mean summer view might have might have
+tapped on its fine out and and family
+
+150
+00:09:32,062 --> 00:09:34,091
+may not have
+
+151
+00:09:34,649 --> 00:09:37,649
+and they have the details here about
+what you get
+
+152
+00:09:37,649 --> 00:09:40,654
+but having this in addition to that
+integrated math said
+
+153
+00:09:41,149 --> 00:09:46,149
+it's just much more fact there
+explaining what the featured ads for you
+
+154
+00:09:46,149 --> 00:09:51,190
+an offering it to you at the time that
+you can use that
+
+155
+00:09:51,019 --> 00:09:54,094
+23 member don't be that guy
+
+156
+00:09:54,094 --> 00:09:57,113
+nobody wants some one person in your
+face
+
+157
+00:09:57,959 --> 00:10:03,360
+hectoring pestering people have not
+going to get the results that you want
+
+158
+00:10:03,036 --> 00:10:08,111
+but powerful integration the merchandise
+well
+
+159
+00:10:09,011 --> 00:10:13,430
+now another challenge is to help people
+understand the value why you're offering
+
+160
+00:10:13,529 --> 00:10:17,620
+and FB if you walk into a clothing store
+this is easy to figure out
+
+161
+00:10:17,062 --> 00:10:21,094
+you can touch the merchandise feel feel
+with the fabric feels like
+
+162
+00:10:21,094 --> 00:10:25,112
+the filler luxurious for viagra cheap
+
+163
+00:10:26,012 --> 00:10:29,017
+the well-made seems following part
+
+164
+00:10:29,017 --> 00:10:34,024
+most importantly doesn't fit you look
+good is it gonna see your purpose there
+
+165
+00:10:34,087 --> 00:10:38,095
+so letting people try all merchandise
+before they buy it is a really effective
+
+166
+00:10:38,095 --> 00:10:38,179
+way
+
+167
+00:10:39,079 --> 00:10:42,097
+helping them understand the quality and
+the value
+
+168
+00:10:42,097 --> 00:10:45,836
+and utility what you're offering
+
+169
+00:10:46,709 --> 00:10:49,778
+me when buy a car without taking it for
+a test drive first
+
+170
+00:10:50,399 --> 00:10:53,440
+right the same principle
+
+171
+00:10:53,044 --> 00:10:56,079
+letting people use that will be the best
+way for them to understand
+
+172
+00:10:56,079 --> 00:11:02,628
+how often they are again paper by 53
+does a great job with that
+
+173
+00:11:03,339 --> 00:11:06,700
+in addition to providing a lot of FAM
+Paul about that
+
+174
+00:11:06,007 --> 00:11:09,084
+what the tools are capable %ah they put
+together an entire Journal
+
+175
+00:11:10,047 --> 00:11:14,130
+made by their staff showing of the
+different tools in their capabilities
+
+176
+00:11:15,003 --> 00:11:20,056
+and of course they let you use the tools
+the basic tools for free
+
+177
+00:11:20,083 --> 00:11:24,092
+every you have to use this topic and how
+you patrols respond beautifully to your
+
+178
+00:11:24,839 --> 00:11:27,010
+finger
+
+179
+00:11:27,001 --> 00:11:31,018
+now me telling you that isn't nearly as
+effective as you actually using the app
+
+180
+00:11:31,018 --> 00:11:32,100
+and so that's why
+
+181
+00:11:33,000 --> 00:11:36,019
+when you go to find out about these
+advanced drawing tools they let you test
+
+182
+00:11:36,019 --> 00:11:38,110
+out right there
+
+183
+00:11:38,011 --> 00:11:41,016
+you've got the sketch pads along with
+detailed information
+
+184
+00:11:41,061 --> 00:11:45,113
+and testing them out as is how you can
+determine the quality and the utility
+
+185
+00:11:46,013 --> 00:11:50,076
+work i text Saturday provide how their
+acts your finger when you're trying
+
+186
+00:11:50,076 --> 00:11:54,083
+which one is going to be right for what
+you're trying to achieve
+
+187
+00:11:54,083 --> 00:11:58,124
+and each of the sketchpad have strong
+already in progress
+
+188
+00:11:59,024 --> 00:12:02,069
+kinda like a test drive where they
+taking on certain roads to show you how
+
+189
+00:12:02,069 --> 00:12:03,168
+well the car handles
+
+190
+00:12:04,068 --> 00:12:07,101
+paper by fifty three-a setting up the
+sketch pads to show you
+
+191
+00:12:08,001 --> 00:12:11,086
+optimal use their service and suggested
+uses for this trough
+
+192
+00:12:11,086 --> 00:12:15,112
+it runs great watercolors they've set up
+a watercolor trying for you so then
+
+193
+00:12:16,012 --> 00:12:21,105
+you can jump and then an ad on earth try
+your own drinks
+
+194
+00:12:22,005 --> 00:12:25,664
+and it might seem obvious to take this
+approach for drying trough but I promise
+
+195
+00:12:25,709 --> 00:12:26,800
+that will work for almost
+
+196
+00:12:26,008 --> 00:12:31,079
+any controversial ban here's a really
+different example on that line
+
+197
+00:12:32,051 --> 00:12:38,055
+that it's a popular messaging app you
+can send and receive messages for free
+
+198
+00:12:38,091 --> 00:12:41,170
+now one of the things that
+differentiates line from its competitors
+
+199
+00:12:42,007 --> 00:12:46,024
+is the vast array of stickers but they
+offer
+
+200
+00:12:46,087 --> 00:12:49,093
+figures are kinda like really crazy
+emoji
+
+201
+00:12:50,047 --> 00:12:53,656
+you can include in your messages and
+send it back for their frantic
+
+202
+00:12:54,079 --> 00:12:57,440
+it gives your your text messages home
+life
+
+203
+00:12:57,044 --> 00:13:00,141
+now line gives you a very generous fax
+and have the stickers for free
+
+204
+00:13:01,041 --> 00:13:04,050
+you can't right now plus the ability to
+earn
+
+205
+00:13:04,005 --> 00:13:08,534
+sicker without paying anything are you
+have to do with that Hello Kitty is a
+
+206
+00:13:09,029 --> 00:13:11,097
+friends and then you get Hello Kitty
+stickers
+
+207
+00:13:11,709 --> 00:13:16,734
+some people love Hello Kitty stickers
+sir
+
+208
+00:13:16,959 --> 00:13:21,800
+and using them really helps me
+understand how great they are
+
+209
+00:13:21,008 --> 00:13:25,065
+now another thing that they offer our
+beam and when I first investigative
+
+210
+00:13:26,037 --> 00:13:29,066
+teams I'll be honest I have no idea what
+extraction
+
+211
+00:13:29,399 --> 00:13:33,620
+I thought oh great are some free ones
+let me try out the brown bear
+
+212
+00:13:33,062 --> 00:13:36,971
+have see what happened here so when you
+choose the brown bear
+
+213
+00:13:37,529 --> 00:13:40,604
+theme and forgetting the standard you
+are you can
+
+214
+00:13:41,279 --> 00:13:45,347
+bears her a everywhere all over the
+propane
+
+215
+00:13:45,959 --> 00:13:49,190
+even the tab bar icon for rare
+
+216
+00:13:49,019 --> 00:13:52,858
+now sure they can refer to description
+what if the man is there even a
+
+217
+00:13:53,029 --> 00:13:56,122
+screenshot but that wouldn't have been
+nearly as effective at combating
+
+218
+00:13:56,959 --> 00:14:01,220
+what happens when you use the theme
+giving preview of some free ones to try
+
+219
+00:14:01,022 --> 00:14:02,086
+out of the bath way
+
+220
+00:14:02,086 --> 00:14:06,161
+to really understand what they're all
+about
+
+221
+00:14:07,061 --> 00:14:10,068
+and that's worked for publication to
+anyone have any question about where to
+
+222
+00:14:11,031 --> 00:14:12,610
+get the free preview content
+
+223
+00:14:12,889 --> 00:14:18,000
+on the screen they've made it really
+easy for everybody
+
+224
+00:14:18,000 --> 00:14:21,002
+Esquire magazine wants to make sure that
+you now
+
+225
+00:14:21,002 --> 00:14:24,067
+that reading their content on an iPad is
+the bath experience
+
+226
+00:14:24,085 --> 00:14:27,116
+of law and so they give you free free
+content
+
+227
+00:14:28,016 --> 00:14:31,070
+check out it's got videos interactivity
+
+228
+00:14:31,007 --> 00:14:34,446
+and this is the equivalent to standing
+in line at the store and flipping
+
+229
+00:14:35,139 --> 00:14:36,540
+through a magazine or
+
+230
+00:14:36,054 --> 00:14:39,283
+going to comic store in checking out
+artwork
+
+231
+00:14:39,769 --> 00:14:42,781
+I have to really know whether the
+reading experience is going to be good
+
+232
+00:14:42,889 --> 00:14:48,500
+and whether the contents going to be
+something that you're interested in
+
+233
+00:14:48,005 --> 00:14:51,059
+and again this also works for games
+
+234
+00:14:52,004 --> 00:14:55,073
+now I'm pretty sure that everyone in
+this room have played candy crush saga
+
+235
+00:14:55,073 --> 00:14:59,111
+at some point but for the two Vera
+haven't it's a puzzle game
+
+236
+00:15:00,011 --> 00:15:03,079
+and and Bay they've done OK with an app
+purchases
+
+237
+00:15:03,079 --> 00:15:06,151
+you know and tho what they do at the
+beginning of every levels that they
+
+238
+00:15:07,051 --> 00:15:09,620
+offer you these boosters
+
+239
+00:15:10,079 --> 00:15:13,440
+and these losers give you a leg up on
+completing the task
+
+240
+00:15:13,044 --> 00:15:17,067
+and they become much more valuable that
+the harder the puzzle ass
+
+241
+00:15:17,067 --> 00:15:21,536
+nephew never use on you can just ignore
+them go for that big pin play button and
+
+242
+00:15:22,139 --> 00:15:25,500
+endurance for puzzle game
+
+243
+00:15:25,005 --> 00:15:28,066
+so that's why they introduced the day we
+do sir we are
+
+244
+00:15:29,011 --> 00:15:32,011
+every day you can come and get one of
+their booster
+
+245
+00:15:32,011 --> 00:15:36,030
+for free so there is nothing at standing
+in the way
+
+246
+00:15:36,003 --> 00:15:40,092
+you trying them out and once you try
+them out you really know what a
+
+247
+00:15:40,389 --> 00:15:44,050
+difference that they can make
+
+248
+00:15:44,005 --> 00:15:47,049
+so that's what I mean about offering a
+test drive
+
+249
+00:15:47,049 --> 00:15:50,148
+letting someone really experienced that
+merchandise trying it out before they
+
+250
+00:15:51,048 --> 00:15:51,142
+buy
+
+251
+00:15:52,042 --> 00:15:56,063
+is the best way to communicate the value
+and the youthfulness
+
+252
+00:15:56,063 --> 00:15:59,892
+and the quality and that's why it's
+gonna make them
+
+253
+00:16:00,459 --> 00:16:05,534
+decision to buy something easier on
+people
+
+254
+00:16:06,209 --> 00:16:09,630
+now another way to reduce the friction
+to buying as to
+
+255
+00:16:09,063 --> 00:16:14,079
+sick with your theme it's really
+important that every screen in your ass
+
+256
+00:16:14,079 --> 00:16:15,085
+or your game
+
+257
+00:16:15,085 --> 00:16:20,014
+is cohesive and you want to carry that
+visual design all the way through
+
+258
+00:16:20,779 --> 00:16:24,320
+that interaction model needs to be
+consistent
+
+259
+00:16:24,032 --> 00:16:28,111
+and you wanna put as much effort and
+time and designing the screams as you
+
+260
+00:16:29,011 --> 00:16:32,980
+anything else in your app for your game
+
+261
+00:16:33,079 --> 00:16:37,820
+so this is Russell adventure and it's
+got hundreds level the puzzle games and
+
+262
+00:16:37,082 --> 00:16:37,166
+all these various
+
+263
+00:16:38,066 --> 00:16:41,160
+see more of you start out in the 4s
+
+264
+00:16:42,006 --> 00:16:45,008
+any work for the different puzzles in
+the fourth to get to
+
+265
+00:16:45,008 --> 00:16:49,053
+other lands now every aspect of the
+forest
+
+266
+00:16:50,025 --> 00:16:54,051
+looks like the forests they've got
+doesn't matter the objective of the game
+
+267
+00:16:54,051 --> 00:16:59,125
+you can see the fourth details creeping
+in at every corner
+
+268
+00:17:00,025 --> 00:17:03,041
+now there in our purchases involved in
+our currency
+
+269
+00:17:03,041 --> 00:17:06,530
+which you can use sedan by advantages
+
+270
+00:17:06,899 --> 00:17:09,913
+for the different level of powerful beer
+
+271
+00:17:10,039 --> 00:17:14,117
+and you can earn in our currency as
+you're playing but you can of course
+
+272
+00:17:14,819 --> 00:17:18,130
+make an aperture further and a current
+fame
+
+273
+00:17:18,013 --> 00:17:22,502
+so imagine you're up against Chief
+smarty pants here and he's tough
+
+274
+00:17:22,619 --> 00:17:26,621
+so it might be worth getting some in our
+currency so that you can
+
+275
+00:17:26,639 --> 00:17:31,190
+so that go buy some in our current be
+seen it from his ministers
+
+276
+00:17:31,019 --> 00:17:34,888
+so mad then you're excited you want to
+be chief smarty pants
+
+277
+00:17:35,059 --> 00:17:38,080
+that the next thing you thought was best
+
+278
+00:17:38,008 --> 00:17:41,070
+it would be terrible right having family
+there's that
+
+279
+00:17:41,007 --> 00:17:44,045
+entirely different you either you have
+to understand
+
+280
+00:17:45,008 --> 00:17:48,087
+you to think about it its release
+sterile looking
+
+281
+00:17:48,159 --> 00:17:54,950
+not very well laid out stage right now
+the experience how the forest anymore
+
+282
+00:17:54,095 --> 00:17:58,074
+and that creates friction makes it feel
+more like work
+
+283
+00:17:58,929 --> 00:18:01,954
+that's making it harder to buy something
+now
+
+284
+00:18:02,179 --> 00:18:05,960
+thank for a travel ban sir does not do
+that I
+
+285
+00:18:05,096 --> 00:18:08,144
+they have a nice fourth fame purchasing
+experience than all the
+
+286
+00:18:09,044 --> 00:18:15,663
+visual design and enter access concerts
+at everything else in the game
+
+287
+00:18:16,059 --> 00:18:20,830
+so make sure that you maintain the world
+love your game or the look at your apt
+
+288
+00:18:20,083 --> 00:18:20,110
+on
+
+289
+00:18:21,001 --> 00:18:24,085
+everything else crane and with
+everything ok control
+
+290
+00:18:24,094 --> 00:18:27,833
+because many families snatch people I
+know that we're all
+
+291
+00:18:28,679 --> 00:18:31,690
+and they have to deal with the new
+interface our new look it's gonna feel
+
+292
+00:18:31,789 --> 00:18:32,837
+like work
+
+293
+00:18:33,269 --> 00:18:38,278
+and from the heart and buying we want it
+to be easy right
+
+294
+00:18:39,169 --> 00:18:42,245
+add to the word of warning while you are
+busy sticking with your theme
+
+295
+00:18:42,929 --> 00:18:46,003
+don't take it so far that language
+becomes confusing
+
+296
+00:18:46,669 --> 00:18:49,713
+you want to make sure that people can
+really understand exactly where they're
+
+297
+00:18:50,109 --> 00:18:51,190
+gonna be getting for their money
+
+298
+00:18:51,919 --> 00:18:56,920
+use clear language now I have you guys
+ever seen a description for an apartment
+
+299
+00:18:57,019 --> 00:18:59,033
+or house that said something like
+
+300
+00:18:59,159 --> 00:19:02,163
+needs a little work and many show up in
+its
+
+301
+00:19:02,559 --> 00:19:05,592
+now looks more like this
+
+302
+00:19:05,889 --> 00:19:09,974
+I think we've all had it for him now
+with any purchase that so important to
+
+303
+00:19:10,739 --> 00:19:10,831
+be honest
+
+304
+00:19:11,659 --> 00:19:14,745
+at there's really a fine line between
+try to be positive about something
+
+305
+00:19:15,519 --> 00:19:17,541
+highlighting the features and really
+being
+
+306
+00:19:17,739 --> 00:19:20,781
+overly optimistic about why you're
+selling nobody
+
+307
+00:19:21,159 --> 00:19:25,191
+nobody wants to be disappointed when
+they see what the merchandise actually
+
+308
+00:19:25,479 --> 00:19:27,460
+yes
+
+309
+00:19:27,046 --> 00:19:30,315
+and especially when you're coming to
+subscription Anzar
+
+310
+00:19:30,729 --> 00:19:34,792
+recurring contact you want to be as
+specific as possible
+
+311
+00:19:35,359 --> 00:19:38,440
+set people's expectations crackling
+
+312
+00:19:38,044 --> 00:19:41,373
+when are they gonna get new content how
+much content are they getting for the
+
+313
+00:19:41,769 --> 00:19:42,798
+price
+
+314
+00:19:43,059 --> 00:19:47,146
+maybe 25 something like this you know
+now is that ok sam se
+
+315
+00:19:47,929 --> 00:19:51,967
+or is it a bargain I mean if its 12
+issues than a year
+
+316
+00:19:52,309 --> 00:19:56,368
+less than a dollar an issue that that's
+pretty reasonable right
+
+317
+00:19:56,899 --> 00:19:59,923
+points here issues as well
+
+318
+00:20:00,139 --> 00:20:04,080
+I don't now in fact content really worth
+that much money me and see now I'm of
+
+319
+00:20:04,008 --> 00:20:07,717
+thinking about whether or not this is a
+purchase I wanna make
+
+320
+00:20:07,789 --> 00:20:12,200
+and set up quickly coming to a decision
+getting the new contact going off to
+
+321
+00:20:12,002 --> 00:20:12,721
+enjoy it
+
+322
+00:20:12,919 --> 00:20:16,995
+because that's what I've come to an apt
+to do come to enjoy contact have come to
+
+323
+00:20:17,679 --> 00:20:18,830
+nap to help me achieve
+
+324
+00:20:18,083 --> 00:20:22,672
+happening Jamie Oliver does a much
+better job with Beth
+
+325
+00:20:23,419 --> 00:20:27,424
+I he's a famous staff and he has a
+recipes app
+
+326
+00:20:27,919 --> 00:20:32,330
+and you'll see here that here they'd let
+you know that new contact is coming on
+
+327
+00:20:32,033 --> 00:20:33,632
+the FAC and Wednesday
+
+328
+00:20:33,929 --> 00:20:36,948
+every month crystal-clear
+
+329
+00:20:37,119 --> 00:20:42,135
+very a setback I know exactly went
+extracting
+
+330
+00:20:42,279 --> 00:20:46,294
+fit star is a personal training
+application
+
+331
+00:20:46,429 --> 00:20:51,453
+and they have a number workout and their
+tailored to your goals and also your
+
+332
+00:20:51,669 --> 00:20:51,742
+actual
+
+333
+00:20:52,399 --> 00:20:56,448
+performance now they're subscription
+screen gives you
+
+334
+00:20:56,889 --> 00:20:59,903
+detailed outline some of the programs I
+mean
+
+335
+00:21:00,029 --> 00:21:03,077
+you can find out the length of the
+workout you want something short
+
+336
+00:21:03,509 --> 00:21:06,517
+do you want something long they're
+offering bout for that
+
+337
+00:21:07,309 --> 00:21:10,353
+the advantages them are you interested
+in fat burner
+
+338
+00:21:10,749 --> 00:21:14,090
+are trying to do strength training
+
+339
+00:21:14,009 --> 00:21:17,046
+they've even point out which one is
+recommended for me based on a couple
+
+340
+00:21:17,046 --> 00:21:20,515
+questions I answered earlier
+
+341
+00:21:20,929 --> 00:21:24,320
+and when you're ready to buy not from
+scripts am
+
+342
+00:21:24,032 --> 00:21:28,047
+that screen is so clear about exactly
+what you're going to be getting
+
+343
+00:21:28,047 --> 00:21:31,856
+I love the program's unlimited free down
+there
+
+344
+00:21:32,279 --> 00:21:37,320
+maybe even highlighted the annual
+subscription with a discount
+
+345
+00:21:37,032 --> 00:21:41,094
+they've made it so easy just through the
+use of clear language
+
+346
+00:21:41,094 --> 00:21:44,109
+for me to make a decision about buying
+something
+
+347
+00:21:45,009 --> 00:21:48,148
+and now I really understand what I'm
+going for my money and I can appreciate
+
+348
+00:21:48,229 --> 00:21:51,248
+it
+
+349
+00:21:51,419 --> 00:21:54,720
+now another way that you can make this
+clear to your audience is to
+
+350
+00:21:54,072 --> 00:21:57,711
+do the math for them I don't like doing
+math
+
+351
+00:21:58,359 --> 00:22:01,960
+that's not that's not fun for me don't
+make me do the math
+
+352
+00:22:01,096 --> 00:22:06,295
+it's your job as the app developer make
+it easy on people to make a decision
+
+353
+00:22:07,159 --> 00:22:10,256
+so quick which one of these is the best
+I am
+
+354
+00:22:11,129 --> 00:22:15,090
+I mean I'm sure some love you can very
+quickly calculate best that most people
+
+355
+00:22:15,009 --> 00:22:16,084
+are not going to want you
+
+356
+00:22:16,084 --> 00:22:19,153
+it's the fun part hi and
+
+357
+00:22:19,909 --> 00:22:23,460
+and so that's why you really want to
+help people understand which is going to
+
+358
+00:22:23,046 --> 00:22:26,445
+be the most cost effective for them
+
+359
+00:22:26,859 --> 00:22:29,872
+this is love you if they're dating
+application and and
+
+360
+00:22:29,989 --> 00:22:33,690
+they offered 100 utility without a
+subscription and you can
+
+361
+00:22:33,069 --> 00:22:36,069
+fill out a profile method users
+
+362
+00:22:36,069 --> 00:22:40,158
+there's lots of ways to browse essential
+suitors including this is our radar
+
+363
+00:22:40,779 --> 00:22:41,851
+screen of what you're seeing here
+
+364
+00:22:42,499 --> 00:22:46,536
+see all the people of potential dates
+around me
+
+365
+00:22:46,869 --> 00:22:49,921
+and of course they have from premium
+premium feature
+
+366
+00:22:50,389 --> 00:22:53,820
+a happy get more exposure to people
+
+367
+00:22:53,082 --> 00:22:58,031
+and here is how they explain the
+subscription options
+
+368
+00:22:58,769 --> 00:23:01,846
+for that pennies a day to find love
+
+369
+00:23:02,539 --> 00:23:05,620
+pennies a day to find have who can
+afford pennies today
+
+370
+00:23:06,349 --> 00:23:10,444
+for lap now there's no gaffer care I
+know exactly which
+
+371
+00:23:11,299 --> 00:23:14,830
+which subscription is gonna be the
+lowest cost per day
+
+372
+00:23:14,083 --> 00:23:17,532
+but time porn if your gonna take it to
+this level
+
+373
+00:23:18,279 --> 00:23:21,317
+and make sure that you're so calling out
+the total purchase price
+
+374
+00:23:21,659 --> 00:23:25,320
+because again we want to be honest and
+clear with our language
+
+375
+00:23:25,032 --> 00:23:28,561
+people are going to want to know what
+what they expect to pay don't make them
+
+376
+00:23:28,849 --> 00:23:29,870
+do the math in reverse
+
+377
+00:23:30,059 --> 00:23:35,131
+right now if you're available worldwide
+I wanna make sure that you localize your
+
+378
+00:23:35,779 --> 00:23:36,792
+currency
+
+379
+00:23:36,909 --> 00:23:40,993
+combat the huge roadblock if you down
+
+380
+00:23:41,749 --> 00:23:45,798
+so that's what I mean about about doing
+the math for people it can be so helpful
+
+381
+00:23:46,239 --> 00:23:50,570
+in making that decision quickly
+
+382
+00:23:50,057 --> 00:23:53,836
+now another thing that's really helpful
+as showing fewer thing
+
+383
+00:23:54,349 --> 00:23:57,400
+it's about quality not about quantity
+
+384
+00:23:57,859 --> 00:24:01,870
+too many choices you risk overwhelming
+people
+
+385
+00:24:01,969 --> 00:24:04,986
+and I don't know how many have you heard
+the paradox of choice
+
+386
+00:24:05,139 --> 00:24:08,570
+ineffectual means that the more choices
+that you have
+
+387
+00:24:08,057 --> 00:24:11,071
+the harder it is to make a decision
+
+388
+00:24:11,071 --> 00:24:14,360
+and in fact when you too many choices
+that choice over loud
+
+389
+00:24:14,999 --> 00:24:19,190
+its stresses you out and what you people
+wind up doing is avoiding making a
+
+390
+00:24:19,019 --> 00:24:21,019
+decision of together
+
+391
+00:24:21,019 --> 00:24:25,928
+and you want people to make a decision
+to purchase something
+
+392
+00:24:26,099 --> 00:24:30,115
+kind of like if you've ever gone to make
+our recipe and it calls for
+
+393
+00:24:30,259 --> 00:24:35,271
+Apple of major making apple pie and so
+you got your last year the grocery store
+
+394
+00:24:35,379 --> 00:24:37,840
+and then you're faced with death
+
+395
+00:24:37,084 --> 00:24:40,753
+well kinda crap all is it called in to
+listen yes sir
+
+396
+00:24:41,509 --> 00:24:44,537
+rad USSR fuji here Pink Lady
+
+397
+00:24:44,789 --> 00:24:47,816
+year our it's too much it's overwhelming
+
+398
+00:24:48,059 --> 00:24:54,710
+too many of our and the four runs on you
+just abandoning map high all together
+
+399
+00:24:54,071 --> 00:24:58,410
+you want to avoid that reaction in your
+app too many choices become
+
+400
+00:24:59,049 --> 00:25:02,061
+stressful and that's going to result in
+people
+
+401
+00:25:02,169 --> 00:25:06,193
+avoiding a purchase decision are
+together
+
+402
+00:25:06,409 --> 00:25:09,416
+fair here maps it for different dating
+application
+
+403
+00:25:10,109 --> 00:25:14,210
+again loads are you tell me where after
+scripts an more than
+
+404
+00:25:14,021 --> 00:25:18,110
+our leading you test drive me out there
+pastor Greg giving you an entire car
+
+405
+00:25:18,299 --> 00:25:21,367
+you can fill out your profile message
+people on million way for browsing
+
+406
+00:25:21,979 --> 00:25:24,979
+including recommended partner
+
+407
+00:25:24,979 --> 00:25:28,986
+they do offer some premium premium
+features that allow and one other things
+
+408
+00:25:29,049 --> 00:25:29,122
+are seeing
+
+409
+00:25:29,779 --> 00:25:33,960
+who's viewed me Sarah tapping on that
+viewed me baton
+
+410
+00:25:33,096 --> 00:25:37,395
+brings up their subscription choices so
+they're offering me that information at
+
+411
+00:25:38,259 --> 00:25:40,283
+the time that I need it
+
+412
+00:25:40,499 --> 00:25:43,542
+now look I've got three easy choices
+here
+
+413
+00:25:43,929 --> 00:25:47,930
+maybe even highlighted the one at the
+best value
+
+414
+00:25:48,029 --> 00:25:51,043
+three choices as an easy decisions Frank
+
+415
+00:25:51,169 --> 00:25:56,174
+I don't have to for all for a long last
+have options are paged through screen
+
+416
+00:25:56,219 --> 00:25:59,210
+after screen with different subscription
+numbers on it
+
+417
+00:25:59,021 --> 00:26:02,033
+and I have to remember them in my head
+and try and figure out that makes it
+
+418
+00:26:02,033 --> 00:26:04,072
+hard
+
+419
+00:26:04,369 --> 00:26:08,381
+buying things shouldn't be hard so fewer
+thing
+
+420
+00:26:08,489 --> 00:26:11,514
+all on one screen no paging no scrolling
+
+421
+00:26:11,739 --> 00:26:18,739
+people want to be able to see all other
+options at once
+
+422
+00:26:19,389 --> 00:26:23,403
+now if someone's ready to make an impact
+that decision to buy they're ready to
+
+423
+00:26:23,529 --> 00:26:23,566
+press
+
+424
+00:26:23,899 --> 00:26:26,971
+rabbi button you really want to execute
+on it as efficiently
+
+425
+00:26:27,619 --> 00:26:30,717
+as possible you have you ever gone to
+get a cup of coffee and then you're
+
+426
+00:26:31,599 --> 00:26:32,450
+faced with
+
+427
+00:26:32,045 --> 00:26:36,984
+a long slow moving line and fair you to
+fight forget it
+
+428
+00:26:37,389 --> 00:26:41,200
+that's where you don't wanna have an in
+your apt our game
+
+429
+00:26:41,002 --> 00:26:44,077
+minimizing but the time and the number
+steps that it takes
+
+430
+00:26:44,095 --> 00:26:48,524
+make a per-share keeps people really
+engaged in your apt not thinking about
+
+431
+00:26:49,379 --> 00:26:53,402
+that purchasing process
+
+432
+00:26:53,609 --> 00:26:56,688
+so this is super not it's a builder game
+that takes place
+
+433
+00:26:57,399 --> 00:27:01,497
+in space not quite out worldwide you at
+first eighteen very soon cuz you're
+
+434
+00:27:02,379 --> 00:27:04,447
+probably gonna fire aftermath
+
+435
+00:27:05,059 --> 00:27:08,154
+now right now I'm in the process of
+preparing my TV hatin as you can see it
+
+436
+00:27:09,009 --> 00:27:09,710
+for all
+
+437
+00:27:09,071 --> 00:27:12,840
+have that I got the mama I wanna ask for
+more timber
+
+438
+00:27:13,479 --> 00:27:19,507
+but this is gonna cost me 8 time and now
+
+439
+00:27:19,759 --> 00:27:25,825
+hi everyone so what happens when i press
+that green button
+
+440
+00:27:26,419 --> 00:27:30,330
+I can get some jams right here I don't
+have to go anywhere
+
+441
+00:27:30,033 --> 00:27:35,432
+I can stay right in that moment have FTV
+hot repair
+
+442
+00:27:35,729 --> 00:27:39,830
+so in addition to clearly fading what
+I'm gonna get 200 am
+
+443
+00:27:39,083 --> 00:27:44,158
+for $4.99 they're often reminded me why
+I am seeing this in the first place
+
+444
+00:27:45,058 --> 00:27:50,147
+I need seven more only have one I needed
+a and maybe even flock to the package
+
+445
+00:27:50,669 --> 00:27:54,440
+from Sams that's closest to what I
+needed
+
+446
+00:27:54,044 --> 00:27:57,383
+happens that this is the smallest
+Packers exams but then I can make a
+
+447
+00:27:57,779 --> 00:27:58,878
+decision really quickly
+
+448
+00:27:59,769 --> 00:28:04,782
+I mean yes they have exams star and yes
+I have many more options in it
+
+449
+00:28:04,899 --> 00:28:08,440
+but taking me away from it. he had as
+more disruptive
+
+450
+00:28:08,044 --> 00:28:11,653
+money we just a pair stay focused on
+building
+
+451
+00:28:12,049 --> 00:28:15,103
+because building is what I came here to
+do you
+
+452
+00:28:15,589 --> 00:28:18,677
+you never wanted to start a game prior
+from playing the game
+
+453
+00:28:19,469 --> 00:28:23,500
+that's the fun part distracting them
+makes it easier for them since walk away
+
+454
+00:28:23,779 --> 00:28:26,804
+entirely
+
+455
+00:28:27,029 --> 00:28:31,450
+similarly candy crush saga handle fits
+really well of them
+
+456
+00:28:31,045 --> 00:28:34,774
+get you have those boosters at beginning
+at every level
+
+457
+00:28:35,179 --> 00:28:38,182
+and you have the option to purchasing
+them right here
+
+458
+00:28:38,479 --> 00:28:41,940
+they're not shipping me off to a candy
+store with a million different things to
+
+459
+00:28:41,094 --> 00:28:42,743
+choose from
+
+460
+00:28:43,589 --> 00:28:47,598
+would you like this booster here's the
+price buy it back in the game
+
+461
+00:28:47,679 --> 00:28:52,723
+fast and efficient right at the moment
+when I can use that
+
+462
+00:28:53,119 --> 00:28:57,450
+now another thing to think about it
+preloading images and data third fair
+
+463
+00:28:57,045 --> 00:28:58,824
+when people need it
+
+464
+00:28:59,229 --> 00:29:03,248
+this is because you're black that's
+another kind a match-3 puzzle game
+
+465
+00:29:03,419 --> 00:29:07,580
+now yearn clients as you're playing and
+then use the coins to buy rare gem
+
+466
+00:29:07,058 --> 00:29:11,077
+which then help you do better on the
+very have of
+
+467
+00:29:11,599 --> 00:29:14,632
+now every day you can also get some free
+coins from
+
+468
+00:29:14,929 --> 00:29:17,977
+the steering wheel
+
+469
+00:29:18,409 --> 00:29:21,415
+now you get one free throw in for David
+of course you can by
+
+470
+00:29:21,469 --> 00:29:25,710
+more sense if you like and we all pretty
+generous
+
+471
+00:29:25,071 --> 00:29:28,870
+so imagine that you're excited you're
+like okay you know what I'm doing really
+
+472
+00:29:29,509 --> 00:29:32,543
+good in the tournament this week I wanna
+be my friend
+
+473
+00:29:32,849 --> 00:29:36,857
+let me go get some more spans see what
+happens what if your face
+
+474
+00:29:36,929 --> 00:29:39,997
+with death people don't like waiting
+
+475
+00:29:40,609 --> 00:29:45,683
+that's like that long line at the coffee
+store your FM not sticking around
+
+476
+00:29:46,349 --> 00:29:50,070
+now thankfully which hope with seventy
+you that faye
+
+477
+00:29:50,007 --> 00:29:54,346
+they learned everything immediately
+where you want to do is be
+
+478
+00:29:54,409 --> 00:29:57,483
+aware what people are likely to purchase
+based on where they are
+
+479
+00:29:58,149 --> 00:30:02,830
+any rapper Game and then you can look
+for times to thoughtfully preloaded
+
+480
+00:30:02,083 --> 00:30:06,632
+so that their data and images are
+available awesome someone need it
+
+481
+00:30:07,379 --> 00:30:10,466
+so this screen is only accessible from
+that we off-screen
+
+482
+00:30:11,249 --> 00:30:14,261
+so it's the perfect opportunity to
+preload those them into
+
+483
+00:30:14,369 --> 00:30:17,411
+cannot be available the images and data
+will be there
+
+484
+00:30:17,789 --> 00:30:20,812
+people seek it out
+
+485
+00:30:21,019 --> 00:30:25,023
+and one final temp as you said cash
+artwork appropriately
+
+486
+00:30:25,059 --> 00:30:27,820
+so it's not gonna have to load
+everything all time if it doesn't meet
+
+487
+00:30:27,082 --> 00:30:28,087
+you
+
+488
+00:30:29,032 --> 00:30:32,032
+now after lunch in this room we have a
+great fashion
+
+489
+00:30:32,032 --> 00:30:35,231
+about optimizing in app purchases with
+store cat
+
+490
+00:30:35,519 --> 00:30:38,598
+so I highly recommend you come out come
+back after lunch and check it out
+
+491
+00:30:39,309 --> 00:30:39,393
+because there's
+
+492
+00:30:40,149 --> 00:30:46,158
+a lot of great tips for avoiding common
+pitfall
+
+493
+00:30:46,239 --> 00:30:50,190
+now finally what you can do to make the
+buying process easier on people is to
+
+494
+00:30:50,019 --> 00:30:52,838
+inspire people
+
+495
+00:30:53,009 --> 00:30:56,058
+someone may not want something have a
+don't know what the possibility of a
+
+496
+00:30:56,499 --> 00:30:56,565
+death
+
+497
+00:30:57,159 --> 00:31:00,256
+they don't understand how its ruler
+feature could help them
+
+498
+00:31:01,129 --> 00:31:05,460
+or have what they could achieve with
+that
+
+499
+00:31:05,046 --> 00:31:08,255
+now I'm not saying that you want to turn
+everything in for an advertising
+
+500
+00:31:08,669 --> 00:31:10,756
+experience again we're not trying to be
+pushy
+
+501
+00:31:11,539 --> 00:31:14,578
+but there's a lotta ways that you can
+really naturally illustrates
+
+502
+00:31:14,929 --> 00:31:19,200
+how things can be years
+
+503
+00:31:19,002 --> 00:31:22,391
+paper by 53 does this beautiful a
+
+504
+00:31:22,589 --> 00:31:26,595
+they've got their sample Journal that
+the staff is made that shows off not
+
+505
+00:31:26,649 --> 00:31:28,820
+only what the tools are capable of
+
+506
+00:31:28,082 --> 00:31:32,661
+but of a different ways they could be
+used you know maybe 10 wireframe
+
+507
+00:31:33,399 --> 00:31:38,445
+with it or maybe you wanna make some
+artwork
+
+508
+00:31:38,859 --> 00:31:42,944
+now another thing they do well as give
+suggestive tired also the blank journals
+
+509
+00:31:43,709 --> 00:31:47,747
+maybe you haven't considered sketching
+or journaling with a fat now we're going
+
+510
+00:31:48,089 --> 00:31:49,171
+to you
+
+511
+00:31:49,909 --> 00:31:53,932
+now have a gallery artwork created by
+people using the app
+
+512
+00:31:54,139 --> 00:32:00,163
+regular people and ask our shows off the
+variety of styles that's achievable
+
+513
+00:32:00,379 --> 00:32:06,471
+where you can do with the tools and also
+how the app can be used
+
+514
+00:32:07,299 --> 00:32:10,323
+me you can make some amazing artwork but
+you also might want to use that for
+
+515
+00:32:10,539 --> 00:32:13,563
+architectural rendering
+
+516
+00:32:13,779 --> 00:32:16,844
+and if that doesn't get you inspired
+maybe the idea of having your work
+
+517
+00:32:17,429 --> 00:32:19,511
+featured here is very exciting
+
+518
+00:32:20,249 --> 00:32:24,297
+for you just gotta ho Arthur A ways that
+you can use the app and see what the
+
+519
+00:32:24,729 --> 00:32:28,734
+tools are capable of
+
+520
+00:32:28,779 --> 00:32:32,876
+now again with games and with super not
+South Perth very well
+
+521
+00:32:33,749 --> 00:32:36,776
+kind of a different approach for the
+same idea
+
+522
+00:32:37,019 --> 00:32:40,048
+so after you learn the basic gameplay
+with super not
+
+523
+00:32:40,309 --> 00:32:43,404
+their reward you for visiting other
+people world
+
+524
+00:32:44,259 --> 00:32:47,307
+now like I said this is a builder games
+to your working on building up
+
+525
+00:32:47,739 --> 00:32:52,754
+your property and seeing how creative
+other people a ban is super inspiring
+
+526
+00:32:52,889 --> 00:32:55,988
+for your own place now this is how you
+start of
+
+527
+00:32:56,879 --> 00:32:59,975
+pretty basic in the first 15 minutes
+you're gonna get some real basic
+
+528
+00:33:00,839 --> 00:33:02,690
+structures guy
+
+529
+00:33:02,069 --> 00:33:05,408
+and after a couple hours you might wind
+up with something like that or
+
+530
+00:33:06,029 --> 00:33:09,031
+something like my TD hat
+
+531
+00:33:09,049 --> 00:33:13,120
+and when you get for a couple hours
+eating okay I know what's going on
+
+532
+00:33:13,759 --> 00:33:17,759
+I have an idea what's possible but it's
+only when you go
+
+533
+00:33:17,759 --> 00:33:20,855
+to visit other people's worlds do you
+really get a fan
+
+534
+00:33:21,719 --> 00:33:27,728
+for what's coming for what can be
+created
+
+535
+00:33:27,809 --> 00:33:30,834
+so check these out these are all real
+player
+
+536
+00:33:31,059 --> 00:33:35,064
+this is not the Super not screw
+createdby
+
+537
+00:33:35,559 --> 00:33:42,559
+amazing right me my TV hat is super lame
+by comparison
+
+538
+00:33:42,989 --> 00:33:49,057
+yeah yeah and now I'm excited now I
+wanna go in at a drag an hour
+
+539
+00:33:49,669 --> 00:33:53,730
+you know a rainbow our flager messages
+to my friends
+
+540
+00:33:54,279 --> 00:33:57,373
+I mean it makes it gets you excited
+about spending more time building thing
+
+541
+00:33:58,219 --> 00:34:04,295
+make something really cool and you can
+see what material are so forthcoming
+
+542
+00:34:04,979 --> 00:34:08,950
+so as you're thinking about how how to
+make it the buying process
+
+543
+00:34:08,095 --> 00:34:14,176
+easier make sure that people can see
+what's available with no after
+
+544
+00:34:15,076 --> 00:34:18,080
+how people understand the value what
+you're offering
+
+545
+00:34:18,008 --> 00:34:21,024
+give them that test drive experience
+
+546
+00:34:21,096 --> 00:34:24,151
+and then when it comes to the
+transaction make sure that you can
+
+547
+00:34:25,051 --> 00:34:26,096
+process on it fast
+
+548
+00:34:26,096 --> 00:34:30,096
+and efficient and don't forget to get
+people
+
+549
+00:34:30,096 --> 00:34:34,005
+excited about what you're offering
+
+550
+00:34:34,869 --> 00:34:38,440
+but the story doesn't end here your job
+not over just getting them to push the
+
+551
+00:34:38,044 --> 00:34:39,153
+buy button
+
+552
+00:34:39,549 --> 00:34:42,990
+there's a lot of things that need to
+happen to complete the transaction
+
+553
+00:34:42,099 --> 00:34:47,268
+in order to contain have a continue to
+be a really great experience
+
+554
+00:34:48,159 --> 00:34:52,010
+the first away its is and new feature
+coming in the fall
+
+555
+00:34:52,001 --> 00:34:56,022
+and Tim touched on their very briefly
+but I'd like to spend a little more time
+
+556
+00:34:56,022 --> 00:34:57,411
+because this is gonna impact
+
+557
+00:34:57,609 --> 00:35:01,010
+everyone and that's after by
+
+558
+00:35:01,001 --> 00:35:05,760
+fell in the fall you'll be able to
+associate up to six people on household
+
+559
+00:35:05,769 --> 00:35:07,480
+as a family
+
+560
+00:35:07,048 --> 00:35:10,120
+and have parted that's we're gonna have
+a new printer control called after I
+
+561
+00:35:11,002 --> 00:35:15,099
+and if it's a name of this means that a
+parent is gonna approve or decline
+
+562
+00:35:16,017 --> 00:35:21,095
+any purchases that a child makes so it's
+basically the criminal best
+
+563
+00:35:21,095 --> 00:35:25,514
+can I have it please 33 but it's all
+gonna happen
+
+564
+00:35:26,369 --> 00:35:29,444
+through your devices so here's how it
+works
+
+565
+00:35:30,119 --> 00:35:33,161
+today when you're out fans request
+
+566
+00:35:33,539 --> 00:35:39,170
+to purchase something you're going to
+get a response right back
+
+567
+00:35:39,017 --> 00:35:42,075
+that purchase our fam
+
+568
+00:35:42,075 --> 00:35:45,904
+now without to buy we're gonna check
+with the parent for
+
+569
+00:35:46,579 --> 00:35:49,651
+about survived the name out so you're
+gonna summer across for purchasing
+
+570
+00:35:50,299 --> 00:35:53,930
+the child can ask for something on the
+App Store is gonna check with the
+
+571
+00:35:53,093 --> 00:35:54,119
+parents
+
+572
+00:35:55,019 --> 00:35:58,067
+so what does that mean to you during
+Mass
+
+573
+00:35:58,067 --> 00:36:03,726
+time you're gonna get a response back up
+too far
+
+574
+00:36:04,329 --> 00:36:09,260
+and then once the parent accepts or
+decline for a class
+
+575
+00:36:09,026 --> 00:36:13,099
+that's on the App Store will let you
+know whether it's been purchased her fam
+
+576
+00:36:13,099 --> 00:36:17,121
+and this deford's taken off for up to 24
+hour
+
+577
+00:36:18,021 --> 00:36:21,100
+while waiting for a response from the
+parent rivers no response within 24
+
+578
+00:36:22,000 --> 00:36:22,849
+hours
+
+579
+00:36:22,849 --> 00:36:26,893
+it's going to default to fail and the
+child can request again
+
+580
+00:36:27,289 --> 00:36:30,940
+so what does this mean from a design
+perspective
+
+581
+00:36:30,094 --> 00:36:33,473
+well if you have moral situation
+
+582
+00:36:34,319 --> 00:36:37,368
+where people are doing purchasing you
+need to shift over
+
+583
+00:36:37,809 --> 00:36:40,834
+turn a synchronous model
+
+584
+00:36:41,059 --> 00:36:44,087
+let's say your game offers boosters at
+beginning a Lavar
+
+585
+00:36:44,339 --> 00:36:47,390
+and a child makes her quest to buy one
+you know what that's how
+
+586
+00:36:47,849 --> 00:36:50,854
+stuck there waiting for up to 24 hours
+see here
+
+587
+00:36:51,349 --> 00:36:54,920
+whether they can have a booster for the
+next level right I can guarantee you
+
+588
+00:36:54,092 --> 00:36:57,116
+they're not gonna stick around that long
+
+589
+00:36:58,016 --> 00:37:02,215
+so what can you do while you have to
+figure out what's going to be bath
+
+590
+00:37:02,359 --> 00:37:06,200
+for your after your game the important
+thing is that you let people
+
+591
+00:37:06,002 --> 00:37:09,045
+keep using and enjoying your app during
+this time
+
+592
+00:37:09,063 --> 00:37:12,982
+for child requested a booster well you
+summer costs of
+
+593
+00:37:13,549 --> 00:37:17,460
+for the parents for proof but then you
+could let them play other level of
+
+594
+00:37:17,046 --> 00:37:20,144
+or maybe they continue playing the level
+but without the booster
+
+595
+00:37:21,044 --> 00:37:23,141
+and when that approval comes then your
+bank and let them use it at a different
+
+596
+00:37:24,041 --> 00:37:26,099
+time
+
+597
+00:37:26,099 --> 00:37:29,151
+another thing that you want to think
+about it giving some sort of feedback
+
+598
+00:37:30,051 --> 00:37:33,096
+inside application so that the child
+remember
+
+599
+00:37:33,096 --> 00:37:37,415
+that something is pending but they've
+already asked mom and dad
+
+600
+00:37:38,279 --> 00:37:41,940
+and felt that you could update no label
+on the button
+
+601
+00:37:41,094 --> 00:37:45,503
+say something out or in the App Store we
+show our method
+
+602
+00:37:46,349 --> 00:37:50,170
+help the child remember that it's
+actually pending
+
+603
+00:37:50,017 --> 00:37:53,066
+power any people using a wrapper under
+18
+
+604
+00:37:53,066 --> 00:37:56,101
+you need to start preparing for that now
+
+605
+00:37:57,001 --> 00:38:00,026
+that differed fate is entirely in a row
+and you need to make sure you're
+
+606
+00:38:00,026 --> 00:38:01,565
+handling it well
+
+607
+00:38:01,799 --> 00:38:05,400
+make sure people can still continue to
+use your app
+
+608
+00:38:05,004 --> 00:38:09,663
+for your game while that differed fate
+is happening
+
+609
+00:38:10,059 --> 00:38:14,157
+and you want to make sure that if a
+response is pending that they have from
+
+610
+00:38:15,039 --> 00:38:15,690
+feedback
+
+611
+00:38:15,069 --> 00:38:18,168
+there it's really important to note that
+this isn't just
+
+612
+00:38:19,068 --> 00:38:23,457
+Iowa State Fair don't think that waiting
+for up to a year after game is going to
+
+613
+00:38:24,069 --> 00:38:27,010
+get you outta best because it's not
+going to happen
+
+614
+00:38:27,001 --> 00:38:31,043
+the ability to create families is what's
+coming with my life a day
+
+615
+00:38:31,043 --> 00:38:34,067
+but this ask my permission is going to
+apply
+
+616
+00:38:34,067 --> 00:38:39,266
+to older versions iraq Mac OS and Apple
+TV
+
+617
+00:38:39,869 --> 00:38:43,420
+cysts are preparing now
+
+618
+00:38:43,042 --> 00:38:46,046
+now whether or not a transaction
+complete immediately
+
+619
+00:38:46,046 --> 00:38:50,125
+or up to 24 hours later you always want
+to confirm that
+
+620
+00:38:50,539 --> 00:38:53,980
+that transactions completed let people
+now
+
+621
+00:38:53,098 --> 00:38:56,887
+sat on their mom help people find
+whatever they just bought
+
+622
+00:38:57,769 --> 00:39:00,823
+let them now that it's available for
+years
+
+623
+00:39:01,309 --> 00:39:04,990
+an example that you guys probably see
+all the time as the App Store
+
+624
+00:39:04,099 --> 00:39:07,147
+Sarah soon as you confirm payment for
+application
+
+625
+00:39:08,047 --> 00:39:13,071
+you see that the app starts down you get
+that feedback something's happening
+
+626
+00:39:13,071 --> 00:39:17,163
+nothing's gone wrong your merchandise is
+being transferred to you
+
+627
+00:39:18,063 --> 00:39:21,064
+and then you can open an app directly
+from the App Store
+
+628
+00:39:21,073 --> 00:39:24,147
+you have to go digging around all your
+home screen filled with maps to find it
+
+629
+00:39:25,047 --> 00:39:30,064
+you can just start playing threes right
+there for hours
+
+630
+00:39:30,064 --> 00:39:33,503
+now another thing to think about is if
+you have a game or
+
+631
+00:39:34,079 --> 00:39:38,210
+children top something really fun you
+can make this a fun experience by using
+
+632
+00:39:38,021 --> 00:39:40,100
+sound and animation
+
+633
+00:39:41,000 --> 00:39:44,065
+so this is heads up at the game that's
+really popular
+
+634
+00:39:44,065 --> 00:39:48,090
+with Ellen DeGeneres pipette honor TV
+show all the time
+
+635
+00:39:48,009 --> 00:39:53,064
+a little bit like charades designed to
+play it with real people in real life
+
+636
+00:39:54,045 --> 00:39:57,134
+each of these Dacca theme cards are
+topics that you can
+
+637
+00:39:57,539 --> 00:40:01,612
+act out for your friends and try and gas
+now they give you a couple theme packs
+
+638
+00:40:02,269 --> 00:40:04,272
+to get going to start playing
+
+639
+00:40:04,569 --> 00:40:08,390
+but then they also offer attire other
+theme packs
+
+640
+00:40:08,039 --> 00:40:12,508
+to enhance enhance the experience so
+check out what happens when you buy
+
+641
+00:40:12,859 --> 00:40:19,859
+wanna be I happen to be in eighties fun
+
+642
+00:40:24,359 --> 00:40:28,400
+she get that down and that animation
+that lets you know something else happen
+
+643
+00:40:28,769 --> 00:40:32,770
+the purchase has gone through and the
+name animate back up to the top
+
+644
+00:40:32,779 --> 00:40:39,779
+so you can see where cards arms are
+playing right away
+
+645
+00:40:40,009 --> 00:40:45,150
+now confirming that the transaction is
+completed
+
+646
+00:40:45,015 --> 00:40:49,023
+is especially important when asked by
+because your customer may not be
+
+647
+00:40:49,095 --> 00:40:53,454
+at the same place where they were when
+they requested the transaction right
+
+648
+00:40:54,309 --> 00:40:59,220
+so if you had a comic app and say the
+child as browsing all the comics that
+
+649
+00:40:59,022 --> 00:41:00,065
+are available
+
+650
+00:41:00,065 --> 00:41:03,934
+may request on and while they're waiting
+for Mom or Dad except at
+
+651
+00:41:04,519 --> 00:41:08,603
+well then they go and read one other
+issues parity half
+
+652
+00:41:09,359 --> 00:41:12,454
+the need to think about if that
+transaction complete
+
+653
+00:41:13,309 --> 00:41:16,387
+how are you gonna let people now the
+complete at a later time how you gonna
+
+654
+00:41:17,089 --> 00:41:19,134
+let people know where their merchandise
+fair
+
+655
+00:41:19,539 --> 00:41:23,542
+and how to find it
+
+656
+00:41:23,839 --> 00:41:26,960
+now no one wants a fee error code 128
+
+657
+00:41:26,096 --> 00:41:30,975
+right confusing and frustrating except
+someone
+
+658
+00:41:31,839 --> 00:41:36,690
+and it can be a little alarming for you
+wanna know your codes and present
+
+659
+00:41:36,069 --> 00:41:41,072
+information away it's going to be
+meaningful to the people using your apt
+
+660
+00:41:41,072 --> 00:41:46,881
+not all areas may require spot you don't
+have to tell your people everything
+
+661
+00:41:47,529 --> 00:41:51,533
+now if someone did cancel transaction
+let's say that you're using an app or
+
+662
+00:41:51,569 --> 00:41:53,663
+game change your mind about something
+you can split
+
+663
+00:41:54,509 --> 00:41:57,970
+is this what you wanna see it doesn't
+make sense
+
+664
+00:41:57,097 --> 00:42:01,216
+you may not need to notify people at all
+or you may just wanna make this a little
+
+665
+00:42:02,089 --> 00:42:02,094
+more
+
+666
+00:42:02,589 --> 00:42:06,210
+customer-friendly cell
+
+667
+00:42:06,021 --> 00:42:09,670
+the best experience of course is to
+avoid errors entirely
+
+668
+00:42:09,859 --> 00:42:14,200
+so again this afternoon fast and
+optimizing stark at is gonna have a ton
+
+669
+00:42:14,002 --> 00:42:15,050
+of technical taps
+
+670
+00:42:15,068 --> 00:42:21,123
+about avoiding errors and all those
+comments fast
+
+671
+00:42:22,023 --> 00:42:25,041
+now another thing that I see sometimes
+is that people tend to
+
+672
+00:42:25,041 --> 00:42:30,065
+over after purchase as you wanna let
+folks get some enjoyment
+
+673
+00:42:30,065 --> 00:42:33,964
+out of what they just pop before you
+start asking them to buy something again
+
+674
+00:42:34,549 --> 00:42:37,960
+again don't be that guy
+
+675
+00:42:37,096 --> 00:42:40,141
+it's like Christmas for you and rafter
+toy
+
+676
+00:42:41,041 --> 00:42:45,050
+are all excited and then you realize
+Arjan come with any
+
+677
+00:42:45,005 --> 00:42:49,124
+battery disappointing right
+
+678
+00:42:49,619 --> 00:42:52,710
+me just took something that was a really
+joyous occasion and turn it into a
+
+679
+00:42:53,529 --> 00:42:56,230
+frustrating experience for people
+
+680
+00:42:56,023 --> 00:42:59,074
+so make sure that when someone by
+something that they can use what they
+
+681
+00:42:59,074 --> 00:43:00,091
+just spot
+
+682
+00:43:00,091 --> 00:43:03,690
+give them that satisfaction they
+shouldn't have to make a subsequent
+
+683
+00:43:04,509 --> 00:43:04,588
+purchase
+
+684
+00:43:05,299 --> 00:43:10,500
+in order to enjoy
+
+685
+00:43:10,005 --> 00:43:13,084
+and then like I said earlier less is
+more
+
+686
+00:43:13,579 --> 00:43:16,579
+you wanna prioritized for Manning person
+that
+
+687
+00:43:16,579 --> 00:43:19,631
+how people focus on what's still
+available to them
+
+688
+00:43:20,099 --> 00:43:24,123
+if there's things they can't buy d
+prioritize bad in the UI
+
+689
+00:43:24,339 --> 00:43:27,437
+especially with nonconvex of there's no
+need to keep showing people something
+
+690
+00:43:28,319 --> 00:43:29,390
+that they've already bought
+
+691
+00:43:29,039 --> 00:43:35,158
+they already own it now in some cases it
+may not make sense to hide items that
+
+692
+00:43:35,509 --> 00:43:36,541
+have already been purchased
+
+693
+00:43:36,829 --> 00:43:42,852
+but just don't let them be the star the
+shower
+
+694
+00:43:43,059 --> 00:43:46,220
+and I think you're all aware that it's
+very important
+
+695
+00:43:46,022 --> 00:43:49,041
+that you let people restore their
+purchase that that they've made
+
+696
+00:43:49,041 --> 00:43:50,093
+previously
+
+697
+00:43:50,093 --> 00:43:53,972
+they could have made it on another
+device or they got a new piece of
+
+698
+00:43:54,809 --> 00:43:56,450
+hardware
+
+699
+00:43:56,045 --> 00:43:59,120
+and it's important that they can
+retrieve what they've already got
+
+700
+00:44:00,002 --> 00:44:03,571
+this is broken magazine and they make it
+super easy
+
+701
+00:44:03,769 --> 00:44:06,854
+if you already have a subscription well
+here's where to go to start that restore
+
+702
+00:44:07,619 --> 00:44:09,658
+process
+
+703
+00:44:10,009 --> 00:44:14,450
+but they took it one step further so if
+you were to tap on one of the
+
+704
+00:44:14,045 --> 00:44:15,123
+subscription options
+
+705
+00:44:16,023 --> 00:44:20,052
+you get the confirmation for subscribe
+to fight you an ex tax:
+
+706
+00:44:20,259 --> 00:44:23,260
+but if you can't fall
+
+707
+00:44:23,269 --> 00:44:27,150
+they ask if you are already a subscriber
+and of course there's basically two
+
+708
+00:44:27,015 --> 00:44:28,904
+reasons why
+
+709
+00:44:29,039 --> 00:44:32,130
+you might cancel subscription
+confirmation
+
+710
+00:44:32,013 --> 00:44:35,022
+one as if you change your mind about
+subscribing
+
+711
+00:44:35,022 --> 00:44:39,401
+of course and that's a much bigger
+problem for them to tackle
+
+712
+00:44:39,599 --> 00:44:43,690
+but the other is if you already had a
+subscription so in this case for helping
+
+713
+00:44:43,069 --> 00:44:46,638
+get you back on track
+
+714
+00:44:47,259 --> 00:44:50,337
+now you all know it's an app store
+requirements make restoring
+
+715
+00:44:51,039 --> 00:44:56,890
+available but a great experience is
+gonna make it easy
+
+716
+00:44:56,089 --> 00:44:59,093
+art someone must have been there faction
+and
+
+717
+00:44:59,093 --> 00:45:02,140
+and this is about notification you want
+to use them
+
+718
+00:45:03,004 --> 00:45:06,973
+stop by and this applies to push
+notification
+
+719
+00:45:07,369 --> 00:45:10,490
+as well as local notification
+
+720
+00:45:10,049 --> 00:45:13,072
+now you're not gonna have to notify
+children about after I
+
+721
+00:45:13,072 --> 00:45:17,094
+purchases complaining because the app
+stores gonna handle that for you
+
+722
+00:45:17,094 --> 00:45:21,273
+but you do you want to use notifications
+to let people know about new contact for
+
+723
+00:45:22,119 --> 00:45:22,420
+Earth
+
+724
+00:45:22,042 --> 00:45:26,891
+scripts an or maybe and those dating app
+speak about me know if I have new
+
+725
+00:45:27,269 --> 00:45:30,980
+recommended mass at circa
+
+726
+00:45:30,098 --> 00:45:33,150
+a great job with their notification they
+serve up
+
+727
+00:45:34,005 --> 00:45:38,096
+bite 5 news articles and and they give
+you updates as it's happening
+
+728
+00:45:39,041 --> 00:45:42,064
+now they're only gonna send
+notifications FL article about I
+
+729
+00:45:42,064 --> 00:45:44,066
+explicitly follow
+
+730
+00:45:44,066 --> 00:45:47,465
+orbit something that they consider
+breaking news
+
+731
+00:45:48,059 --> 00:45:52,104
+and its they're very to see about what
+they consider breaking news
+
+732
+00:45:52,509 --> 00:45:56,591
+now this is not breaking news this is
+what I followed earlier
+
+733
+00:45:57,329 --> 00:46:01,500
+writing on that notification takes you
+directly articles you can read all about
+
+734
+00:46:01,005 --> 00:46:01,824
+it
+
+735
+00:46:02,319 --> 00:46:07,322
+so they've made it really easy for me to
+return to the contact
+
+736
+00:46:07,619 --> 00:46:10,626
+see you wanna be really thought far
+about the kind and the number
+
+737
+00:46:11,319 --> 00:46:15,450
+notification that you're standing cuz
+too many notifications
+
+738
+00:46:15,045 --> 00:46:19,070
+just gonna know why everybody and not
+only do your FN turning off
+
+739
+00:46:19,007 --> 00:46:20,061
+notifications entirely
+
+740
+00:46:21,024 --> 00:46:26,043
+they might just wanna to reading your
+app if they get tired about notification
+
+741
+00:46:26,043 --> 00:46:29,172
+that not experience that we're after
+right you what
+
+742
+00:46:29,559 --> 00:46:33,583
+of America cation that will keep people
+coming back
+
+743
+00:46:33,799 --> 00:46:39,874
+make the app feel more valuable because
+family there's new content there
+
+744
+00:46:40,549 --> 00:46:43,960
+okay so make sure that you consider the
+saying
+
+745
+00:46:43,096 --> 00:46:49,164
+after customers Afghan completing the
+transaction is super important
+
+746
+00:46:50,064 --> 00:46:54,243
+which brings us to the final third stage
+have a great experience with an app
+
+747
+00:46:54,819 --> 00:46:55,892
+purchased at and not
+
+748
+00:46:56,549 --> 00:47:02,470
+measuring and refining with all good
+design it's our important a rate
+
+749
+00:47:02,047 --> 00:47:05,122
+you want to measure the success and
+quite frankly the failures
+
+750
+00:47:06,022 --> 00:47:09,911
+avoid try see how that has an effect on
+paying
+
+751
+00:47:10,109 --> 00:47:13,176
+and then make changes based on our
+
+752
+00:47:13,779 --> 00:47:17,390
+I mean all the things that I mentioned
+today are gonna work for all product
+
+753
+00:47:17,039 --> 00:47:17,116
+types in
+
+754
+00:47:18,016 --> 00:47:23,019
+audiences for the more that you really
+fine tune your approach the batter
+
+755
+00:47:23,019 --> 00:47:29,040
+more factor animeme so here are some
+questions that you can ask yourself
+
+756
+00:47:29,004 --> 00:47:33,086
+about the changes they made to help
+determine whether they were successful
+
+757
+00:47:34,022 --> 00:47:37,911
+so when where the changes made and what
+we're reading super important
+
+758
+00:47:38,109 --> 00:47:42,480
+I you wanna make a detailed note about
+exactly when he may change as
+
+759
+00:47:42,048 --> 00:47:47,120
+and all the things that you updated
+something the matter translator
+
+760
+00:47:48,002 --> 00:47:51,053
+you are trying to figure out how have
+the number change it house number
+
+761
+00:47:51,071 --> 00:47:53,380
+purchases change
+
+762
+00:47:54,019 --> 00:47:57,490
+hopefully they've gone up rights
+
+763
+00:47:57,049 --> 00:48:01,368
+and are different things being purchased
+from different places in the application
+
+764
+00:48:01,809 --> 00:48:08,809
+as a result integrating our merchandise
+reselling higher value items
+
+765
+00:48:08,809 --> 00:48:10,905
+and what's the average revenue per
+device and this is going to be really
+
+766
+00:48:11,769 --> 00:48:15,200
+easy to see in the fall with the new
+iTunes can act because we have a
+
+767
+00:48:15,002 --> 00:48:19,006
+tired after analytics coming for you
+offer free
+
+768
+00:48:19,024 --> 00:48:23,039
+and this helps you learn whether or not
+a marketing campaign was worth it
+
+769
+00:48:23,039 --> 00:48:26,408
+if you invested a certain amount of
+money per device
+
+770
+00:48:26,759 --> 00:48:30,460
+and you're not saying that revenue come
+back and well back campaign
+
+771
+00:48:30,046 --> 00:48:33,067
+not gonna be going back at 4 a.m.
+
+772
+00:48:33,067 --> 00:48:36,115
+and finally keep an eye out our people
+returning
+
+773
+00:48:37,015 --> 00:48:41,093
+more frequently because if they are
+that's an indication that you have a
+
+774
+00:48:41,093 --> 00:48:41,189
+really great
+
+775
+00:48:42,089 --> 00:48:48,140
+experience but the quality experiences
+Ghana
+
+776
+00:48:49,004 --> 00:48:54,011
+fat I hope that you guys will take at
+least one other design tips that I gave
+
+777
+00:48:54,047 --> 00:48:55,146
+each day
+
+778
+00:48:55,569 --> 00:48:58,950
+and implemented any rapper Game and then
+
+779
+00:48:58,095 --> 00:49:01,143
+see how how it affects the overall
+experience
+
+780
+00:49:02,043 --> 00:49:06,051
+coveting your gonna be really happy with
+the results
+
+781
+00:49:07,023 --> 00:49:10,122
+and I would like to hear how character
+this is my email address
+
+782
+00:49:11,022 --> 00:49:14,311
+fell let me now let me know what you
+change let me know that
+
+783
+00:49:14,509 --> 00:49:19,510
+the fact that is having on yourself and
+if you would like more design advice we
+
+784
+00:49:19,519 --> 00:49:20,650
+have time for that
+
+785
+00:49:20,065 --> 00:49:24,068
+at designing great app about developer
+Apple com
+
+786
+00:49:24,095 --> 00:49:27,174
+and if you don't all have a copy of the
+Human Interface Guidelines
+
+787
+00:49:28,074 --> 00:49:33,167
+it's a great resource a lot of good taps
+as available on the iBookstore now
+
+788
+00:49:34,067 --> 00:49:38,006
+for here all the related fashion you
+might want to see
+
+789
+00:49:38,609 --> 00:49:40,707
+ingredients and great games with
+yesterday and that talks about how to
+
+790
+00:49:41,589 --> 00:49:42,641
+have a really great
+
+791
+00:49:43,109 --> 00:49:47,890
+gaming experience and so the video
+should be available online and you can
+
+792
+00:49:47,089 --> 00:49:48,090
+watch it
+
+793
+00:49:48,099 --> 00:49:51,120
+and just before the fashion with the new
+iTunes can act
+
+794
+00:49:52,002 --> 00:49:55,070
+which had all the information about act
+analytics so look for that video to be
+
+795
+00:49:55,088 --> 00:49:57,117
+out later today
+
+796
+00:49:58,017 --> 00:50:03,156
+and then we have our optimizing in app
+purchases later today in this room
+
+797
+00:50:03,309 --> 00:50:06,334
+times and great technical taps and
+there's
+
+798
+00:50:06,559 --> 00:50:10,430
+a prototyping fast an term tomorrow
+morning
+
+799
+00:50:10,043 --> 00:50:13,882
+that's gonna tell you all about how to
+quickly integrate and test out the value
+
+800
+00:50:14,269 --> 00:50:17,321
+answered it's a great fashion to figure
+out how to quickly
+
+801
+00:50:17,789 --> 00:50:20,845
+test things out that you might want to
+integrate into your apt
+
+802
+00:50:21,349 --> 00:50:26,660
+and finally on Friday comes to
+preventing unauthorized purchases with
+
+803
+00:50:26,066 --> 00:50:26,165
+her feet
+
+804
+00:50:27,065 --> 00:50:31,094
+because you're offering really valuable
+things and we only want you to be giving
+
+805
+00:50:31,094 --> 00:50:32,189
+them to people who paid for them
+
+806
+00:50:33,089 --> 00:50:36,091
+Sarah can be a very detailed technically
+
+807
+00:50:36,091 --> 00:50:39,200
+heavy fast and I that you want to check
+out
+
+808
+00:50:40,019 --> 00:50:42,042
+thanks so much for everybody and try to
+rest
+

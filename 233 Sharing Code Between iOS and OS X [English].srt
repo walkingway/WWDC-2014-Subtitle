@@ -1,0 +1,3840 @@
+1
+00:00:12,052 --> 00:00:15,107
+good morning everyone my name is
+Elizabeth read it I'm an engineer on the
+
+2
+00:00:16,007 --> 00:00:16,053
+I work
+
+3
+00:00:16,053 --> 00:00:19,137
+team and I'm here today with one of my
+coworkers to talk to you about
+
+4
+00:00:20,037 --> 00:00:25,122
+how to share code between I less an OS
+10 so
+
+5
+00:00:26,022 --> 00:00:29,037
+you know what we're gonna do today is
+first talk about what code it's possible
+
+6
+00:00:29,037 --> 00:00:29,128
+for us share
+
+7
+00:00:30,028 --> 00:00:33,069
+what we probably don't wanna share and
+then how we can share
+
+8
+00:00:33,069 --> 00:00:36,117
+more code or have a easier to Richard
+code using some frameworks
+
+9
+00:00:37,017 --> 00:00:40,096
+anata specifically also good examples
+insured rendering code
+
+10
+00:00:40,096 --> 00:00:44,118
+and then we're going to talk about file
+formats and how you can optimize and
+
+11
+00:00:45,018 --> 00:00:46,061
+build those for a better
+
+12
+00:00:46,061 --> 00:00:50,330
+a multi-platform experience and finally
+my coworker chris is gonna talk to you
+
+13
+00:00:50,879 --> 00:00:52,690
+about how to set up your Xcode project
+
+14
+00:00:52,069 --> 00:00:56,168
+to compile cross-platform last fall
+
+15
+00:00:57,068 --> 00:01:01,517
+I work add a release where we took our
+eye West applications on our modern code
+
+16
+00:01:02,129 --> 00:01:02,670
+base
+
+17
+00:01:02,067 --> 00:01:06,069
+and we took that could base and brought
+it over to compile for a West End
+
+18
+00:01:06,069 --> 00:01:10,038
+so now we have all over applications for
+I O S 80 S 10
+
+19
+00:01:10,659 --> 00:01:14,720
+compiling from a single code base and
+that was a really big deal for us we
+
+20
+00:01:14,072 --> 00:01:15,075
+really wanted to how
+
+21
+00:01:15,075 --> 00:01:18,117
+a a single pot up location for all over
+features
+
+22
+00:01:19,017 --> 00:01:22,082
+have better user experience and and
+better engineering experience to the
+
+23
+00:01:22,082 --> 00:01:22,178
+everyone's happier
+
+24
+00:01:23,078 --> 00:01:26,142
+and so we're gonna talk to you about
+that specific transform from
+
+25
+00:01:27,042 --> 00:01:32,063
+I West Co 200 West 10 but the concepts
+and examples were gonna give you
+
+26
+00:01:32,063 --> 00:01:35,482
+are meant to be you know examples are
+not specific
+
+27
+00:01:36,049 --> 00:01:39,920
+directives on what you should do and so
+the ideas and concepts
+
+28
+00:01:39,092 --> 00:01:42,211
+should apply if you're going in the
+other direction taking an OS 10
+
+29
+00:01:43,039 --> 00:01:44,860
+application in bringing a title s
+
+30
+00:01:44,086 --> 00:01:47,805
+or even if you're building both at the
+same time is or just you know
+
+31
+00:01:48,579 --> 00:01:52,090
+principles rather than a obvious I West
+only
+
+32
+00:01:52,009 --> 00:01:55,100
+2000 s10 only and we have a lot of
+different examples because
+
+33
+00:01:56,000 --> 00:02:00,024
+I work as a really big 32 applications
+we have well over a million lines of
+
+34
+00:02:00,024 --> 00:02:00,078
+code
+
+35
+00:02:00,078 --> 00:02:04,587
+and over 10,000 unique class an obvious
+10,000 unique
+
+36
+00:02:05,289 --> 00:02:09,325
+classes over 75 percent of them are
+shared between I O S
+
+37
+00:02:09,649 --> 00:02:13,630
+and OS test now not this number is not
+
+38
+00:02:13,063 --> 00:02:16,063
+nearly a hundred percent its a large
+
+39
+00:02:16,063 --> 00:02:20,076
+chunk of code more a lot of the code but
+not all over the court within hours
+
+40
+00:02:20,076 --> 00:02:24,118
+intentional on our part we we want to
+choose which could we wanted to share
+
+41
+00:02:25,018 --> 00:02:28,327
+and which code is really meant to be
+only one on one platform
+
+42
+00:02:28,489 --> 00:02:32,810
+or the other and that gives us are
+really good common experience for our
+
+43
+00:02:32,081 --> 00:02:33,145
+users in our applications
+
+44
+00:02:34,045 --> 00:02:37,914
+well still targeting embracing the
+strength each device were running on
+
+45
+00:02:38,319 --> 00:02:41,383
+and that was really you know helpful way
+to keep to build the best applications
+
+46
+00:02:41,959 --> 00:02:42,870
+possibly could
+
+47
+00:02:42,087 --> 00:02:47,456
+so where do we start we started with
+Rius applications
+
+48
+00:02:48,239 --> 00:02:51,264
+we have Rd had I work running on iPad
+and iPhone
+
+49
+00:02:51,489 --> 00:02:54,495
+and we had a team really you know
+excited and passionate
+
+50
+00:02:54,549 --> 00:02:57,624
+developers who wanted to take this code
+and bring it to our
+
+51
+00:02:58,299 --> 00:03:02,010
+to our Mac platform and have everything
+running from one location
+
+52
+00:03:02,001 --> 00:03:05,093
+and our code was set up something like
+this rough estimate
+
+53
+00:03:05,093 --> 00:03:08,482
+hopefully you guys are familiar with his
+pattern but just a review the
+
+54
+00:03:09,319 --> 00:03:11,150
+model-view-controller design pattern is
+
+55
+00:03:11,015 --> 00:03:15,184
+is where the model is that the data off
+your application it's the contents
+
+56
+00:03:15,319 --> 00:03:19,780
+made your son of the wire sitting on
+desk the viewers what your users looking
+
+57
+00:03:19,078 --> 00:03:20,457
+out or interacting with
+
+58
+00:03:21,159 --> 00:03:24,217
+and you don't really want those to ever
+to talk directly to each other
+
+59
+00:03:24,739 --> 00:03:28,450
+if you're your model changes and you
+don't want your view to change
+
+60
+00:03:28,045 --> 00:03:31,078
+if they're tied directly to each other
+that's you have to change both sides
+
+61
+00:03:31,078 --> 00:03:35,134
+or vice versa and so instead we have
+controllers them use as a translator
+
+62
+00:03:36,034 --> 00:03:40,047
+to negotiate between the two of them so
+you don't need to worry about
+
+63
+00:03:40,047 --> 00:03:44,120
+having a model in your view too tightly
+intertwined sorry
+
+64
+00:03:45,002 --> 00:03:48,033
+look at each section of this we started
+with the model and we
+
+65
+00:03:48,051 --> 00:03:51,097
+want to figure out if we could share a
+model code and for us that was part in
+
+66
+00:03:51,097 --> 00:03:53,148
+one of the major points above this
+particular rewrite
+
+67
+00:03:54,048 --> 00:03:57,947
+we really wanted our our files to be the
+same everywhere
+
+68
+00:03:58,379 --> 00:04:02,030
+and and most in a very important part of
+that is having our model code:
+
+69
+00:04:02,003 --> 00:04:06,028
+talk to our files also be the same
+everywhere and center model code:
+
+70
+00:04:06,028 --> 00:04:09,087
+isn't talking to the view code have our
+controllers in between we should be able
+
+71
+00:04:09,087 --> 00:04:10,131
+to share our model code:
+
+72
+00:04:11,031 --> 00:04:14,240
+all talk a bit more later about the
+actual content of the model
+
+73
+00:04:14,519 --> 00:04:18,120
+but for now we're gonna say that the
+model code we're gonna share women
+
+74
+00:04:18,012 --> 00:04:19,221
+shared in this context
+
+75
+00:04:19,329 --> 00:04:23,150
+next we looked the at the Vue code
+
+76
+00:04:23,015 --> 00:04:27,071
+can we share our view code we want to
+share a few Kobe really want our
+
+77
+00:04:27,071 --> 00:04:28,084
+applications have
+
+78
+00:04:28,084 --> 00:04:32,003
+the same content for users you know
+files when we open and display them on
+
+79
+00:04:32,759 --> 00:04:33,460
+screen
+
+80
+00:04:33,046 --> 00:04:36,050
+we want those look the same everywhere
+because our car users
+
+81
+00:04:36,005 --> 00:04:40,023
+carefully crafted their their document
+took exactly how they want
+
+82
+00:04:40,068 --> 00:04:44,075
+but there some problems with Sharon view
+code first ball
+
+83
+00:04:44,075 --> 00:04:48,994
+there's actual interaction per platform
+on OS 10 the way that users interact
+
+84
+00:04:49,669 --> 00:04:51,550
+with your applications over the mouth
+
+85
+00:04:51,055 --> 00:04:54,146
+and keyboard hotkeys you know that
+they're using the cursor which is a very
+
+86
+00:04:55,046 --> 00:04:55,125
+precise
+
+87
+00:04:56,025 --> 00:04:59,028
+single pointer where is on I left you
+have
+
+88
+00:04:59,055 --> 00:05:02,059
+multi-touch you have 10 very
+
+89
+00:05:02,059 --> 00:05:05,061
+a wonderful but less precise fingers
+
+90
+00:05:05,061 --> 00:05:07,144
+Human Interface Guidelines says
+anti-western major buttons to be at
+
+91
+00:05:08,044 --> 00:05:10,060
+least 44 by 44 points
+
+92
+00:05:10,006 --> 00:05:13,011
+just make sure that your users are able
+to tap them and that's you know
+
+93
+00:05:14,001 --> 00:05:17,076
+less precise than your OS 10
+interactions
+
+94
+00:05:17,085 --> 00:05:19,118
+and so that's you know one thing we're
+gonna have to take into account with our
+
+95
+00:05:20,018 --> 00:05:21,072
+view code
+
+96
+00:05:21,072 --> 00:05:24,801
+another thing we need to consider is the
+fact that the actual display size
+
+97
+00:05:25,449 --> 00:05:27,110
+between the different devices
+
+98
+00:05:27,011 --> 00:05:31,016
+is going to be different the kinds of
+content we can show the space we have
+
+99
+00:05:31,016 --> 00:05:32,031
+for controls
+
+100
+00:05:32,031 --> 00:05:36,084
+is going to vary based on platform it
+even more extreme on iphone verses map
+
+101
+00:05:36,084 --> 00:05:39,913
+and so we want to take advantage of all
+the space we have available to us
+
+102
+00:05:40,669 --> 00:05:43,728
+when it is available and handle the fact
+that sometimes that space will be
+
+103
+00:05:44,259 --> 00:05:45,150
+available
+
+104
+00:05:45,015 --> 00:05:48,097
+on smaller devices and we're gonna
+happen to craft our code
+
+105
+00:05:48,097 --> 00:05:52,105
+for each platform a little bit in that
+do space
+
+106
+00:05:53,077 --> 00:05:57,085
+also on i OS your user is looking
+directly at your content
+
+107
+00:05:57,085 --> 00:06:02,088
+your application and nothing else that's
+that's how I was devices work
+
+108
+00:06:02,088 --> 00:06:06,125
+and on OS 10 you can have multiple
+windows mobile applications are doing
+
+109
+00:06:07,025 --> 00:06:08,784
+multiple things the same time
+
+110
+00:06:09,009 --> 00:06:12,047
+and you really need to take into account
+that there's gonna be other things
+
+111
+00:06:12,389 --> 00:06:14,050
+happening on your OS 10
+
+112
+00:06:14,005 --> 00:06:16,097
+platforms and you need to build your
+view accordingly you don't get to use
+
+113
+00:06:16,097 --> 00:06:19,133
+all over the room all of the time
+
+114
+00:06:20,033 --> 00:06:24,592
+by more technical note you literally
+can't compile new code cross-platform
+
+115
+00:06:24,889 --> 00:06:28,720
+if you take a class that inherits from
+you live you and you try to compile it
+
+116
+00:06:28,072 --> 00:06:32,072
+on OS 10 actor will look something like
+this and it kinda mad at you
+
+117
+00:06:32,072 --> 00:06:35,491
+and so you there's that technical hurdle
+as well
+
+118
+00:06:36,139 --> 00:06:39,226
+now someone you may be looking at this
+and saying I I know how to handle this
+
+119
+00:06:40,009 --> 00:06:43,050
+I can fix this problem and you might be
+thinking of something that looks like
+
+120
+00:06:43,419 --> 00:06:43,512
+this
+
+121
+00:06:44,349 --> 00:06:48,396
+we called a shinning and I work it's
+also known as conditional compilation
+
+122
+00:06:48,819 --> 00:06:52,160
+and it's where you had your subclass
+inheriting from
+
+123
+00:06:52,016 --> 00:06:55,030
+either you live you on I less were an
+issue
+
+124
+00:06:55,003 --> 00:06:58,066
+on a West 10 and it that changes made at
+compile-time
+
+125
+00:06:58,093 --> 00:07:01,130
+and here at the same code and has a
+different superclass
+
+126
+00:07:02,003 --> 00:07:05,008
+on each platform now you know this will
+compile
+
+127
+00:07:05,008 --> 00:07:10,036
+absolutely and it does work but there
+are some problems with shinning
+
+128
+00:07:11,008 --> 00:07:14,086
+now views how think they are you live
+you in an issue
+
+129
+00:07:14,086 --> 00:07:17,149
+have many similarities they serve the
+same basic purpose in your code
+
+130
+00:07:18,049 --> 00:07:21,478
+they're there to head all user
+interaction events and put content on
+
+131
+00:07:21,919 --> 00:07:23,060
+screen
+
+132
+00:07:23,006 --> 00:07:26,021
+but there are a number of differences
+between them as well
+
+133
+00:07:26,021 --> 00:07:28,950
+they have different API the sport
+different features and there's some
+
+134
+00:07:29,139 --> 00:07:30,490
+subtle differences in their
+
+135
+00:07:30,049 --> 00:07:34,103
+common behavior as well and so if you
+build for example driving drop sport
+
+136
+00:07:35,003 --> 00:07:39,071
+on your OS 10 application with your view
+annual compiled on I less
+
+137
+00:07:39,071 --> 00:07:42,116
+those API's don't exist and your code
+will compile
+
+138
+00:07:43,016 --> 00:07:46,585
+and so fucin you're gonna break the
+build fairly often
+
+139
+00:07:46,729 --> 00:07:50,810
+because of the differences and API's
+between platforms
+
+140
+00:07:50,081 --> 00:07:53,146
+also it's very very hard to target your
+fix
+
+141
+00:07:54,046 --> 00:07:57,094
+shoot a platform that your trying to fix
+so if you have
+
+142
+00:07:57,094 --> 00:08:01,130
+a particular issue or change wanna make
+or only on OS 10
+
+143
+00:08:02,003 --> 00:08:05,092
+what your code is compiled in both
+places you now
+
+144
+00:08:05,389 --> 00:08:08,590
+gonna have trouble getting that code to
+only 60 at 10
+
+145
+00:08:08,059 --> 00:08:12,318
+and not ISL s and so you could do more
+conditional compilation absolutely that
+
+146
+00:08:12,849 --> 00:08:13,905
+you have in your code
+
+147
+00:08:14,409 --> 00:08:17,800
+that makes you could really hard to read
+and also really hard to maintain
+
+148
+00:08:17,008 --> 00:08:20,030
+so overtime more and more problems may
+arise
+
+149
+00:08:21,002 --> 00:08:24,431
+as you reach the edge cases have your
+behavior
+
+150
+00:08:24,449 --> 00:08:27,453
+also if you build a view hierarchy on I
+less
+
+151
+00:08:27,849 --> 00:08:30,878
+and looks great on your iPad or your
+iPhone
+
+152
+00:08:31,139 --> 00:08:34,216
+a new shit to bring it over to West End
+and you get everything that can compile
+
+153
+00:08:34,909 --> 00:08:36,928
+compiling you put it on screen
+
+154
+00:08:37,099 --> 00:08:40,174
+your UI is going to look like it's built
+for I less remember how r buttons are
+
+155
+00:08:40,849 --> 00:08:43,750
+supposed to be larger for the fingers to
+tap some
+
+156
+00:08:43,075 --> 00:08:47,117
+then you would use for your cursor you
+if you build the same do code in both
+
+157
+00:08:48,017 --> 00:08:50,026
+places that new code is going to look
+like it was designed
+
+158
+00:08:51,007 --> 00:08:54,062
+wherever you built in the first place
+and will look a little unnatural
+
+159
+00:08:54,062 --> 00:08:57,096
+for the platform where it wasn't
+intentionally designs
+
+160
+00:08:57,096 --> 00:09:00,131
+and you really want to have the best
+experience possible and embrace the
+
+161
+00:09:01,031 --> 00:09:03,082
+Human Interface Guidelines and
+lifestyles
+
+162
+00:09:03,082 --> 00:09:07,116
+over the platform on what you're running
+so in general we think that
+
+163
+00:09:08,016 --> 00:09:12,018
+shinning is something that if not you
+know it's helpful in Flex cases it's not
+
+164
+00:09:12,018 --> 00:09:14,020
+definitely the wrong thing to do all the
+time
+
+165
+00:09:14,038 --> 00:09:18,090
+you know its it has its moments but just
+be aware of some of the problems that
+
+166
+00:09:18,009 --> 00:09:19,017
+may arise
+
+167
+00:09:19,098 --> 00:09:23,112
+if you're using shining in your own code
+if nothing else you're pushing all the
+
+168
+00:09:24,012 --> 00:09:27,015
+complexity understanding what the
+platform differences are
+
+169
+00:09:27,015 --> 00:09:31,040
+aunt your clients in a way that isn't
+necessarily obvious from the beginning
+
+170
+00:09:31,004 --> 00:09:34,018
+rather than keeping it all into in a
+single location we could handle all the
+
+171
+00:09:34,054 --> 00:09:35,058
+details yourself
+
+172
+00:09:35,094 --> 00:09:39,178
+and let everybody else not worry about
+it also note about swift
+
+173
+00:09:40,078 --> 00:09:43,142
+if you literally translate how you would
+shame with objective-c
+
+174
+00:09:44,042 --> 00:09:47,049
+this one are compiling swept there are
+ways to
+
+175
+00:09:47,049 --> 00:09:50,110
+Shin your code in swift you get more
+complicated than your basic
+
+176
+00:09:51,001 --> 00:09:55,090
+conditional compilation that we can use
+objective-c just a side note about swift
+
+177
+00:09:55,099 --> 00:09:58,135
+so for now we're gonna say that our view
+code needs to be platform-specific
+
+178
+00:09:59,035 --> 00:10:02,051
+so that we don't run into these problems
+
+179
+00:10:02,051 --> 00:10:06,088
+next up is the controller code can we
+share our controllers
+
+180
+00:10:06,088 --> 00:10:08,180
+we found that it really depends on the
+kind of control or that we're dealing
+
+181
+00:10:09,008 --> 00:10:09,097
+with
+
+182
+00:10:10,069 --> 00:10:13,084
+some things that are called controllers
+like view controllers you I view
+
+183
+00:10:13,084 --> 00:10:15,116
+controller and and ask you control or
+
+184
+00:10:16,016 --> 00:10:19,027
+are really tightly coupled with the
+views themselves and like to view
+
+185
+00:10:19,027 --> 00:10:21,052
+themselves they won't cross compile
+
+186
+00:10:21,052 --> 00:10:25,146
+and and so controllers that are meant to
+be used for get a platform specific
+
+187
+00:10:26,046 --> 00:10:28,048
+behaviors user interaction events hot
+
+188
+00:10:28,048 --> 00:10:31,057
+she's not handling multi-touch gestures
+
+189
+00:10:32,038 --> 00:10:35,065
+all those are very platform-specific
+controllers
+
+190
+00:10:35,065 --> 00:10:37,127
+we probably don't wanna share those for
+the same reasons we don't want to share
+
+191
+00:10:38,027 --> 00:10:39,090
+these themselves
+
+192
+00:10:39,009 --> 00:10:43,074
+however a lot over controllers are happy
+do contain more shared logic there
+
+193
+00:10:44,055 --> 00:10:44,146
+talking to the
+
+194
+00:10:45,046 --> 00:10:48,060
+model more directly rather than dealing
+with the intricacies
+
+195
+00:10:48,006 --> 00:10:52,047
+up the view itself and so we'll we would
+like to share those controllers if we
+
+196
+00:10:53,001 --> 00:10:56,016
+possibly can because that's where a lot
+of the CoreLogic
+
+197
+00:10:56,016 --> 00:11:00,031
+other applications live sorus eighty per
+share some controllers
+
+198
+00:11:00,031 --> 00:11:03,058
+but not all hopefully you're gonna share
+more controllers the non it really
+
+199
+00:11:03,058 --> 00:11:03,119
+depends on
+
+200
+00:11:04,019 --> 00:11:08,060
+on higher code is set up to to give you
+an example what this might look like if
+
+201
+00:11:08,006 --> 00:11:08,031
+u
+
+202
+00:11:08,083 --> 00:11:11,096
+with your controller code in and I work
+we had
+
+203
+00:11:11,096 --> 00:11:14,114
+a file was called canvas new controller
+it
+
+204
+00:11:15,014 --> 00:11:18,020
+inherited from you I view controller and
+it had a lot have stuff in it
+
+205
+00:11:18,074 --> 00:11:21,127
+it'd I did a lot of different things for
+us and we realize that
+
+206
+00:11:22,027 --> 00:11:25,028
+your the split up the code in that file
+with kinda
+
+207
+00:11:25,028 --> 00:11:29,074
+similar ratio here where some other code
+with absolutely platform-specific it was
+
+208
+00:11:29,074 --> 00:11:33,140
+part of its job GUID controller it was
+controlling the view as specified
+
+209
+00:11:34,004 --> 00:11:38,020
+but a lot of stuff we had in there was
+more shareable logic it was about
+
+210
+00:11:38,056 --> 00:11:41,094
+they're managing states in handling some
+renderings Dauphin
+
+211
+00:11:41,094 --> 00:11:44,186
+and you know scrolling and zooming some
+earnings that we can handle any more
+
+212
+00:11:45,086 --> 00:11:46,122
+shared way
+
+213
+00:11:47,022 --> 00:11:51,043
+and so we really wanted to keep that
+code and use it on both platforms
+
+214
+00:11:51,043 --> 00:11:54,068
+to solve this problem we split it in
+half now we have
+
+215
+00:11:54,068 --> 00:11:57,070
+the IRS can issue controller that's
+really in charge
+
+216
+00:11:57,007 --> 00:12:01,016
+actual you control your behavior road
+and you could pick you control behavior
+
+217
+00:12:01,079 --> 00:12:04,153
+plus some other stuff and then we have a
+shared canvas controller whose job it is
+
+218
+00:12:05,053 --> 00:12:08,100
+to actually control our share tender
+subject which will talk to them
+
+219
+00:12:09,000 --> 00:12:12,029
+bit more about later and then we created
+a counterpart
+
+220
+00:12:12,029 --> 00:12:16,085
+on the last 10 the OS tent embassy
+controller tell the platform-specific
+
+221
+00:12:16,085 --> 00:12:19,130
+you control your needs on that side as
+well and here we have a very clear
+
+222
+00:12:20,003 --> 00:12:22,018
+separation of concerns
+
+223
+00:12:22,045 --> 00:12:26,047
+so we know exactly what you'd object job
+is and you can put the code in the right
+
+224
+00:12:26,047 --> 00:12:26,092
+place
+
+225
+00:12:26,092 --> 00:12:31,166
+based on what its its real purposes how
+it should be use
+
+226
+00:12:32,066 --> 00:12:36,071
+a real-life example this a you know with
+actual pictures and so forth
+
+227
+00:12:36,071 --> 00:12:40,099
+is rotation in in I work there are a few
+different ways you can rotate objects
+
+228
+00:12:40,099 --> 00:12:43,113
+and also really depends on the platform
+you're using
+
+229
+00:12:44,013 --> 00:12:48,026
+on I once you put two fingers down and
+you rotate them relative to each other
+
+230
+00:12:48,026 --> 00:12:52,072
+any object will rotate on OS 10 hold on
+the command hotkey
+
+231
+00:12:52,072 --> 00:12:55,133
+you click on the handle and you drag it
+and the object will rotate
+
+232
+00:12:56,033 --> 00:12:59,110
+and those are really different
+interaction paradigm really did you both
+
+233
+00:13:00,001 --> 00:13:01,030
+of them are very much
+
+234
+00:13:01,039 --> 00:13:05,072
+using the platform specific interactions
+you can't do any other platform
+
+235
+00:13:05,072 --> 00:13:08,097
+but the underlying model changes are in
+fact exactly the same
+
+236
+00:13:08,097 --> 00:13:11,151
+it's just an angle that we're applying
+to an object and all map it goes along
+
+237
+00:13:12,051 --> 00:13:13,054
+with it
+
+238
+00:13:13,081 --> 00:13:16,081
+so we wanted to share as much about code
+is possible because there are some
+
+239
+00:13:16,081 --> 00:13:19,174
+you know exciting math in there well
+keeping the platform-specific logic
+
+240
+00:13:20,074 --> 00:13:20,173
+separate
+
+241
+00:13:21,073 --> 00:13:25,073
+so reset are cut up like this we have a
+shared rotation controller
+
+242
+00:13:25,073 --> 00:13:28,145
+that does all the you note the the real
+math and and state management
+
+243
+00:13:29,045 --> 00:13:32,057
+and it talks were model object when
+appropriate and we have a
+
+244
+00:13:32,057 --> 00:13:34,135
+platform-specific gesture recognizer on
+iowa's
+
+245
+00:13:35,035 --> 00:13:37,130
+that handles the multi-touch and
+translate that into an angle their
+
+246
+00:13:38,003 --> 00:13:40,064
+rotation controller can understand
+
+247
+00:13:40,091 --> 00:13:44,095
+and we have a platform-specific mouse
+and keyboard handler on OS 10
+
+248
+00:13:44,095 --> 00:13:47,191
+that handles both are hot key and
+clicking interactions to tell us that
+
+249
+00:13:48,091 --> 00:13:52,097
+you know again translate that into an
+angle for rotation control
+
+250
+00:13:53,051 --> 00:13:56,112
+so that are in pretty helpful we have
+shared coherent have platform specific
+
+251
+00:13:57,012 --> 00:13:58,041
+logic
+
+252
+00:13:58,041 --> 00:14:02,070
+but there's actually more ways for us to
+rotate in our I work applications
+
+253
+00:14:02,007 --> 00:14:06,019
+on OS 10 we have inspectors and you can
+actually just typing angle directly into
+
+254
+00:14:06,082 --> 00:14:07,093
+a text field
+
+255
+00:14:07,093 --> 00:14:10,151
+hit enter I will rotate the object and
+so
+
+256
+00:14:11,051 --> 00:14:14,100
+we also have had or that calls into the
+exact same rotation code that you would
+
+257
+00:14:15,000 --> 00:14:15,075
+call
+
+258
+00:14:15,075 --> 00:14:18,100
+if you're doing it with your mouth or if
+you're doing it
+
+259
+00:14:19,000 --> 00:14:22,061
+with your fingers on my last and
+everything is exactly the same except
+
+260
+00:14:22,061 --> 00:14:23,087
+thing that translates
+
+261
+00:14:23,087 --> 00:14:27,112
+the user interaction into an angle for
+our rotation control
+
+262
+00:14:28,012 --> 00:14:32,071
+also new in OS 10 yosemite we have NS
+gesture recognizer API
+
+263
+00:14:32,071 --> 00:14:35,093
+that they have a lot like I left you I
+gesture recognizer
+
+264
+00:14:35,093 --> 00:14:38,174
+and we could also theoretically plugged
+the same thing in to our rotation logic
+
+265
+00:14:39,074 --> 00:14:39,140
+and have yes
+
+266
+00:14:40,004 --> 00:14:43,035
+third way for our user to you interact
+
+267
+00:14:43,071 --> 00:14:48,077
+and rotate our objects so if you look at
+just the bottom half of this diagram
+
+268
+00:14:49,031 --> 00:14:51,116
+you know sharing code between platforms
+aside this is a really powerful
+
+269
+00:14:52,016 --> 00:14:53,097
+abstraction for us
+
+270
+00:14:53,097 --> 00:14:56,108
+we have three completely different ways
+to rotate an object
+
+271
+00:14:57,008 --> 00:15:01,020
+but most have our logic is still share
+and we can also plug this in for things
+
+272
+00:15:01,002 --> 00:15:01,027
+like
+
+273
+00:15:01,041 --> 00:15:05,058
+testing if you want to just test our
+rotation Monjack we get a fourth pass
+
+274
+00:15:05,058 --> 00:15:08,133
+I'm just a tester that as I would like
+your attended by 10 degrees
+
+275
+00:15:09,033 --> 00:15:12,041
+and all the rest the code is the same so
+our actual testing
+
+276
+00:15:12,041 --> 00:15:16,054
+our logic and not just our interface we
+could also use disorders abstraction for
+
+277
+00:15:16,054 --> 00:15:17,092
+quick look for plugins
+
+278
+00:15:17,092 --> 00:15:20,113
+there's a lot of different ways you can
+apply this attraction
+
+279
+00:15:21,013 --> 00:15:24,109
+in your own code to now we have
+
+280
+00:15:25,009 --> 00:15:29,102
+share model code: not sure I'm not sure
+did you code and some controller shared
+
+281
+00:15:30,002 --> 00:15:30,095
+and some not
+
+282
+00:15:30,095 --> 00:15:33,171
+and we want to share more code and now
+so we looked at the founding that the
+
+283
+00:15:34,071 --> 00:15:35,117
+framework supplied
+
+284
+00:15:36,017 --> 00:15:39,108
+it supplied by Apple and we noticed that
+most to them
+
+285
+00:15:40,008 --> 00:15:44,069
+are the same on both platforms they have
+the same APIs to have the same behaviors
+
+286
+00:15:44,069 --> 00:15:47,085
+and so we could use them in both places
+if you're if you read some core data
+
+287
+00:15:47,085 --> 00:15:47,137
+code
+
+288
+00:15:48,037 --> 00:15:51,135
+10 from the same on both sides there are
+some very much the however that aren't
+
+289
+00:15:52,035 --> 00:15:53,083
+the same on both sides
+
+290
+00:15:53,083 --> 00:15:57,094
+if you're using Qt kit now will compile
+and I less it's just not supported we
+
+291
+00:15:57,094 --> 00:15:59,139
+recommend you try it eighty foundation
+
+292
+00:16:00,039 --> 00:16:03,116
+and and not an important thing to note
+is that acted and you like it
+
+293
+00:16:04,016 --> 00:16:07,109
+well they serve the same purpose in your
+code are not the same framework
+
+294
+00:16:08,009 --> 00:16:12,017
+have many similar API you can use them
+in many similar ways
+
+295
+00:16:12,017 --> 00:16:15,029
+but you should treat them as separate
+objects in your own architecture
+
+296
+00:16:15,029 --> 00:16:18,091
+and handle them accordingly we'll to
+this list
+
+297
+00:16:18,091 --> 00:16:21,178
+we we thought that we could use
+coronation core graphics to have
+
+298
+00:16:22,078 --> 00:16:26,084
+more shared rendering code not right now
+we have non rendering coach shared
+
+299
+00:16:26,084 --> 00:16:29,132
+and it really like to have some comic
+code their
+
+300
+00:16:30,032 --> 00:16:33,088
+coronation as useful because it has
+these things called CA layers
+
+301
+00:16:33,088 --> 00:16:36,142
+CA layers are used to put content on
+screen and make them
+
+302
+00:16:37,042 --> 00:16:40,105
+and they behave exactly the same on both
+platforms and that's really helpful for
+
+303
+00:16:41,005 --> 00:16:42,019
+us
+
+304
+00:16:42,019 --> 00:16:45,075
+core graphics is is good for more dense
+graphics operations you can build
+
+305
+00:16:45,075 --> 00:16:47,101
+content with core graphics that you
+can't build
+
+306
+00:16:48,001 --> 00:16:52,004
+coronation alone take that content and
+put it into corn mission there
+
+307
+00:16:52,031 --> 00:16:56,076
+to get it on screen animated there are
+some caveats
+
+308
+00:16:56,076 --> 00:16:59,098
+core graphics contact I in you I've used
+in
+
+309
+00:16:59,098 --> 00:17:02,107
+an excuse our foot relative to each
+other in the y axis
+
+310
+00:17:03,088 --> 00:17:07,907
+the origin for you I views on the upper
+left and for an issues on the lower left
+
+311
+00:17:08,699 --> 00:17:12,370
+and you know that makes our math more
+complicated but you can fix this
+
+312
+00:17:12,037 --> 00:17:15,065
+by overriding is flipped on an issue
+
+313
+00:17:15,065 --> 00:17:18,128
+and that makes are origins in the same
+location in both places
+
+314
+00:17:19,028 --> 00:17:22,054
+and this is really helpful for us not to
+share our views but instead to have
+
+315
+00:17:22,054 --> 00:17:23,058
+shared rendering code
+
+316
+00:17:23,094 --> 00:17:26,116
+it doesn't need to worry about that
+extra flip while we're calculating
+
+317
+00:17:27,016 --> 00:17:31,032
+where things should appear on screen
+
+318
+00:17:31,032 --> 00:17:34,033
+and the Wii U score animation core
+graphics to build
+
+319
+00:17:34,042 --> 00:17:37,105
+are layer tree elaire tree for our the
+eye which campus
+
+320
+00:17:38,005 --> 00:17:42,011
+the I work and this is this part here
+it's the its actual user content that
+
+321
+00:17:42,011 --> 00:17:44,016
+they interact with on screen
+
+322
+00:17:44,016 --> 00:17:47,024
+and the code that renders that can this
+is exactly the same on
+
+323
+00:17:47,024 --> 00:17:50,110
+I'm on both platforms we his coronation
+call graphics
+
+324
+00:17:51,001 --> 00:17:54,032
+have the same rendering code in both
+places so we can make sure that the
+
+325
+00:17:54,041 --> 00:17:55,084
+user's content will look the same
+
+326
+00:17:55,084 --> 00:17:58,095
+now because coronation core graphics
+
+327
+00:17:58,095 --> 00:18:01,096
+our platform specific for are not
+platform-specific rather
+
+328
+00:18:02,005 --> 00:18:05,014
+we're losing a platform-specific support
+that we could get using
+
+329
+00:18:05,014 --> 00:18:08,083
+views so you know on i OS if you have
+
+330
+00:18:08,083 --> 00:18:11,116
+your content you have a charge that's in
+its own view
+
+331
+00:18:12,016 --> 00:18:15,030
+you could put a gesture on that if you
+directly to turn it to interact with
+
+332
+00:18:15,003 --> 00:18:15,074
+just that
+
+333
+00:18:16,001 --> 00:18:19,022
+that chart however that charted in just
+a layer
+
+334
+00:18:19,022 --> 00:18:22,028
+you can't directly target gesture to a
+layer
+
+335
+00:18:22,028 --> 00:18:25,105
+you have to add an extra layer up
+support to handle the platform specific
+
+336
+00:18:26,005 --> 00:18:26,074
+aspect
+
+337
+00:18:26,074 --> 00:18:29,149
+that rendering system so there are some
+downsides to this but we found it was
+
+338
+00:18:30,049 --> 00:18:32,073
+very helpful for us and I work
+
+339
+00:18:32,073 --> 00:18:35,074
+so now we have a little better shared
+new code but that you could was very
+
+340
+00:18:35,083 --> 00:18:36,137
+carefully crafted to have
+
+341
+00:18:37,037 --> 00:18:42,045
+a stronger user experience and and more
+unified rendering situation
+
+342
+00:18:42,045 --> 00:18:45,098
+but there's one last ep we that we
+needed before we can actually get that
+
+343
+00:18:45,098 --> 00:18:45,131
+picture
+
+344
+00:18:46,031 --> 00:18:49,070
+100 logic to compile
+
+345
+00:18:49,007 --> 00:18:52,061
+we ship we're under a lot of images and
+you have NSA wrench
+
+346
+00:18:53,024 --> 00:18:56,030
+on August 10 and UI image on I'll ass
+
+347
+00:18:56,003 --> 00:18:59,084
+and they're both really fantastic and
+really helpful objects do some
+
+348
+00:19:00,011 --> 00:19:03,072
+really powerful things trust to help you
+know memory management and caching they
+
+349
+00:19:03,072 --> 00:19:03,106
+get
+
+350
+00:19:04,006 --> 00:19:07,045
+information on your bundle and we don't
+really want to reproduce that logic
+
+351
+00:19:07,045 --> 00:19:08,126
+ourselves
+
+352
+00:19:09,026 --> 00:19:11,087
+but we also don't want our shared
+rendering go to have to care which one
+
+353
+00:19:11,087 --> 00:19:12,101
+is talking to you
+
+354
+00:19:13,001 --> 00:19:17,024
+for us all we really wanted from our
+images was the ability to get a CG image
+
+355
+00:19:17,024 --> 00:19:21,078
+out for me image order under that image
+directly into a core graphics context
+
+356
+00:19:21,078 --> 00:19:25,087
+and because those behaviors are pretty
+simple we bill will be calling image rap
+
+357
+00:19:25,087 --> 00:19:29,120
+an image rappers away for the calling
+code not care about the platform
+
+358
+00:19:30,002 --> 00:19:33,059
+specific issues are the rent or the
+implementation details
+
+359
+00:19:33,077 --> 00:19:36,156
+you you define a sieve a simple API and
+implemented
+
+360
+00:19:37,056 --> 00:19:40,059
+twice 14 each subclass thats
+
+361
+00:19:40,086 --> 00:19:43,127
+private internal for class costs or so
+we have a
+
+362
+00:19:44,027 --> 00:19:47,089
+my image superclass thats abstract
+superclass
+
+363
+00:19:47,089 --> 00:19:50,151
+and a platform specific implementation
+that talks either directly to an NS
+
+364
+00:19:51,051 --> 00:19:51,124
+image
+
+365
+00:19:52,024 --> 00:19:55,073
+or directly to our you eye image and
+translator API
+
+366
+00:19:55,073 --> 00:19:58,172
+based on how he did that work and this
+is really helpful because we're not
+
+367
+00:19:59,072 --> 00:20:00,074
+losing the power
+
+368
+00:20:00,074 --> 00:20:03,137
+%uh NS imagine you I image all their
+great features were still got to use
+
+369
+00:20:04,037 --> 00:20:07,059
+for our shared code doesn't have to
+worry about which one is actually
+
+370
+00:20:07,059 --> 00:20:07,127
+getting use
+
+371
+00:20:08,027 --> 00:20:11,038
+when it's calling the code
+
+372
+00:20:11,038 --> 00:20:15,039
+now not hear that we're gonna have to
+translate your API calls directly
+
+373
+00:20:15,048 --> 00:20:18,067
+ourselves in our upper layer and that
+means that
+
+374
+00:20:18,067 --> 00:20:21,116
+you know rappers are really useful for
+simpler objects like images
+
+375
+00:20:22,016 --> 00:20:25,024
+but it harder to wrap things like new
+controllers which are very complicated
+
+376
+00:20:25,024 --> 00:20:26,028
+and powerful
+
+377
+00:20:26,028 --> 00:20:29,032
+and behave a little you know there's
+enough different behaviors
+
+378
+00:20:29,032 --> 00:20:32,053
+that trying to translate them all
+yourself would be rather difficult so we
+
+379
+00:20:32,053 --> 00:20:33,072
+can rappers are
+
+380
+00:20:33,072 --> 00:20:37,088
+most useful for simple objects
+
+381
+00:20:37,088 --> 00:20:40,112
+so now we have our application compiling
+and running on both platforms
+
+382
+00:20:41,012 --> 00:20:45,012
+we have shared rendering systems or are
+our content should look the same in both
+
+383
+00:20:45,012 --> 00:20:46,041
+places
+
+384
+00:20:46,041 --> 00:20:49,109
+and one other designers made a a Dec and
+they put this image in
+
+385
+00:20:50,009 --> 00:20:54,083
+and they open on the Mac looks like this
+but then they opened it on the iPad and
+
+386
+00:20:54,083 --> 00:20:54,136
+the image
+
+387
+00:20:55,036 --> 00:20:58,051
+looked funny it the colors were off and
+sent
+
+388
+00:20:58,051 --> 00:21:00,137
+we really wanted our content look the
+same that was part the point of having
+
+389
+00:21:01,037 --> 00:21:02,040
+assured rendering system
+
+390
+00:21:02,067 --> 00:21:05,081
+me you know scratch our heads and but
+for a while
+
+391
+00:21:05,081 --> 00:21:08,148
+and we realize that the problem was that
+the image that that we had use
+
+392
+00:21:09,048 --> 00:21:14,048
+had a CMYK color profile for those of
+you unfamiliar with car models
+
+393
+00:21:14,048 --> 00:21:17,048
+CMYK cyan magenta yellow black
+
+394
+00:21:17,048 --> 00:21:20,104
+which are it's designed to best use for
+printers at those are the
+
+395
+00:21:21,004 --> 00:21:24,065
+the standard printer ink colors and so
+
+396
+00:21:24,065 --> 00:21:28,074
+computers don't you know your pixels
+your pixels on your screen rather than
+
+397
+00:21:28,074 --> 00:21:32,116
+than Inc and so a lot of RU our content
+on computers as
+
+398
+00:21:33,016 --> 00:21:37,060
+is made with the RGB or red green blue
+collar model
+
+399
+00:21:37,006 --> 00:21:40,010
+and there are other color models out in
+the world and so you know there's a lot
+
+400
+00:21:40,064 --> 00:21:43,111
+of different ways you can specify colors
+in the universe
+
+401
+00:21:44,011 --> 00:21:47,038
+but I left devices do the best job
+rendering
+
+402
+00:21:47,038 --> 00:21:50,083
+sRGB content which is particular kind of
+RGB
+
+403
+00:21:50,083 --> 00:21:54,170
+and so we found that you know any image
+that was it sRGB was probably look a
+
+404
+00:21:55,007 --> 00:21:56,021
+little bit different
+
+405
+00:21:56,084 --> 00:21:59,087
+when you open on an eyelash device I
+wouldn't want that to happen
+
+406
+00:22:00,014 --> 00:22:03,103
+so what we did it which all over content
+that what already sRGB
+
+407
+00:22:04,003 --> 00:22:08,069
+and converted sRGB when the user
+inserted it into our documents
+
+408
+00:22:08,069 --> 00:22:11,111
+and so that was ok and that way R are
+content to look the same on both
+
+409
+00:22:12,011 --> 00:22:12,100
+platforms
+
+410
+00:22:13,000 --> 00:22:16,008
+so this is you know if you wanna learn
+more about core management in general
+
+411
+00:22:16,008 --> 00:22:19,057
+there's a a session you can you can see
+on mine best practices for color
+
+412
+00:22:20,029 --> 00:22:20,117
+management
+
+413
+00:22:21,017 --> 00:22:25,022
+there's also a lab right after the stop
+downstairs at 10:15
+
+414
+00:22:25,067 --> 00:22:29,073
+so now we have arm itches looking the
+same on both platforms
+
+415
+00:22:30,027 --> 00:22:33,099
+so now we can opener our documents milk
+the same for real this time on both
+
+416
+00:22:33,099 --> 00:22:34,102
+platforms
+
+417
+00:22:35,029 --> 00:22:38,034
+on but we built a large document with
+lost images we're testing out this
+
+418
+00:22:38,034 --> 00:22:38,133
+behavior
+
+419
+00:22:39,033 --> 00:22:42,039
+I me notice that it took a while to open
+the documents when they got there gonna
+
+420
+00:22:42,093 --> 00:22:45,127
+and and we figured you know OS 10
+devices have
+
+421
+00:22:46,027 --> 00:22:49,055
+a lot of resources available to us we
+should be able to to make this a better
+
+422
+00:22:49,055 --> 00:22:49,151
+user experience in
+
+423
+00:22:50,051 --> 00:22:53,144
+and be faster sore what are the
+different resources we have available to
+
+424
+00:22:54,044 --> 00:22:54,125
+us
+
+425
+00:22:55,025 --> 00:22:58,092
+well there's personal between I lesson
+OS 10
+
+426
+00:22:58,092 --> 00:23:00,127
+there are different chips that are
+actually reading your hardware and
+
+427
+00:23:01,027 --> 00:23:02,041
+that's gonna you know those
+
+428
+00:23:02,041 --> 00:23:05,049
+those will affect how the hardware
+behave other performance will be
+
+429
+00:23:06,021 --> 00:23:06,112
+slightly different
+
+430
+00:23:07,012 --> 00:23:10,037
+things are can be faster on one platform
+or the other
+
+431
+00:23:10,037 --> 00:23:13,069
+also the memory bandwidth available to
+use different based on the device upon
+
+432
+00:23:13,069 --> 00:23:14,070
+which running
+
+433
+00:23:14,079 --> 00:23:17,136
+the total ran you have available has
+also been a very and
+
+434
+00:23:18,036 --> 00:23:21,130
+and the exact media that support will be
+different again based on the chips
+
+435
+00:23:22,003 --> 00:23:25,020
+and so this you know the combination of
+these factors would have slightly
+
+436
+00:23:25,047 --> 00:23:26,091
+different performance profiled
+
+437
+00:23:26,091 --> 00:23:30,153
+depending on both platform running on
+also the specific hardware
+
+438
+00:23:31,053 --> 00:23:34,137
+and so we want optimize you know various
+parts of our applications
+
+439
+00:23:35,037 --> 00:23:38,131
+per platform in the case have opening
+the document
+
+440
+00:23:39,031 --> 00:23:42,116
+slowly and we want to get quickly we
+mail easily loaded model
+
+441
+00:23:43,016 --> 00:23:46,049
+different parts of our our documents you
+each slide in Keynote
+
+442
+00:23:46,049 --> 00:23:49,057
+is a self-contained unit it doesn't need
+to reference things on other sides
+
+443
+00:23:50,029 --> 00:23:51,101
+immediately when you open them
+
+444
+00:23:52,001 --> 00:23:55,012
+and so far have a three hundred 5.2 Dec
+
+445
+00:23:55,012 --> 00:23:58,097
+animal looking at the first 10 slides on
+my screen I don't need to read the third
+
+446
+00:23:58,097 --> 00:24:01,142
+300 slide from desk
+
+447
+00:24:02,042 --> 00:24:05,084
+so we're only gonna read the parts of
+the model the user's
+
+448
+00:24:05,084 --> 00:24:08,123
+actually looking at and what they
+actually need interact with
+
+449
+00:24:09,023 --> 00:24:12,024
+and also we can load each of those in
+parallel
+
+450
+00:24:12,024 --> 00:24:15,108
+because again they are referencing each
+other and these things combine will give
+
+451
+00:24:16,008 --> 00:24:17,009
+us a faster
+
+452
+00:24:17,018 --> 00:24:20,109
+experience opening a document because
+real estate a and we're doing your bit
+
+453
+00:24:21,009 --> 00:24:22,040
+at the same time
+
+454
+00:24:22,004 --> 00:24:25,005
+and again this was an optimization for
+you know multi-core
+
+455
+00:24:25,041 --> 00:24:29,049
+male the more cores we have the more
+parallel reading would help us
+
+456
+00:24:29,049 --> 00:24:32,120
+and to this was kinda targeted for a
+West End specifically we also had other
+
+457
+00:24:33,002 --> 00:24:34,043
+optimizations and I less
+
+458
+00:24:34,061 --> 00:24:37,063
+but you know this is just to give you an
+example of the kind of things you want
+
+459
+00:24:37,063 --> 00:24:37,148
+to do
+
+460
+00:24:38,048 --> 00:24:41,129
+while building your applications for
+each platform
+
+461
+00:24:42,029 --> 00:24:45,125
+so now we have you know our documents we
+have a model that we had became played
+
+462
+00:24:46,025 --> 00:24:49,028
+begin loading Lisa Ling and in parallel
+what actually
+
+463
+00:24:49,055 --> 00:24:52,057
+in our model what's in our documents
+
+464
+00:24:52,075 --> 00:24:55,079
+one thing to keep in mind is that your
+users not going to update
+
+465
+00:24:56,015 --> 00:24:59,018
+all your applications at exactly the
+same time they're gonna be running
+
+466
+00:24:59,045 --> 00:24:59,054
+different versions
+
+467
+00:25:00,035 --> 00:25:03,038
+on different devices at the same time
+
+468
+00:25:03,065 --> 00:25:05,144
+and your own fortune just you know this
+is a fact of life know how to deal with
+
+469
+00:25:06,044 --> 00:25:06,130
+this
+
+470
+00:25:07,003 --> 00:25:10,010
+and so you note the most fundamental
+first step if this is you need to
+
+471
+00:25:10,037 --> 00:25:11,040
+version your data
+
+472
+00:25:11,067 --> 00:25:15,151
+you know for a fact what version of your
+application actually built this document
+
+473
+00:25:16,051 --> 00:25:19,123
+so that if you change how your motto is
+written to disk you can handle that
+
+474
+00:25:20,023 --> 00:25:23,055
+appropriately set the first important
+step
+
+475
+00:25:23,055 --> 00:25:26,068
+however you can't do something a little
+bit more interesting than that
+
+476
+00:25:26,068 --> 00:25:29,105
+just inside a bit version it purely on
+the application version:
+
+477
+00:25:30,005 --> 00:25:33,016
+you can version based on the features in
+the document
+
+478
+00:25:33,016 --> 00:25:37,415
+so if I have a version of keynote that
+has some great features and and kind of
+
+479
+00:25:37,559 --> 00:25:37,634
+things we write
+
+480
+00:25:38,309 --> 00:25:41,710
+to disk and we Updater application mad
+
+481
+00:25:41,071 --> 00:25:44,126
+a chart feature so that our chart model
+will be different but everything else is
+
+482
+00:25:45,026 --> 00:25:46,039
+exactly the same
+
+483
+00:25:46,039 --> 00:25:49,066
+if I have a document in my new keynote
+
+484
+00:25:49,066 --> 00:25:52,132
+and I sent it to somebody who's using
+the older version keynote or open it on
+
+485
+00:25:53,032 --> 00:25:56,086
+but on my own device that during an old
+version of keynote and my document
+
+486
+00:25:56,086 --> 00:25:57,153
+doesn't have a chart in it
+
+487
+00:25:58,053 --> 00:26:01,085
+that should open ideally you know if
+you're not using a new feature
+
+488
+00:26:01,085 --> 00:26:04,114
+you should still be able to open your
+document and that way you have
+
+489
+00:26:05,014 --> 00:26:08,183
+you're more likely to have your users
+have a positive experience if they could
+
+490
+00:26:08,309 --> 00:26:09,370
+open their documents
+
+491
+00:26:09,037 --> 00:26:13,108
+as much as possible one real life
+example this that you might be more
+
+492
+00:26:14,008 --> 00:26:14,737
+familiar with
+
+493
+00:26:14,809 --> 00:26:17,820
+rx coded you can actually say visited
+
+494
+00:26:17,082 --> 00:26:19,179
+there's two different formats and you
+can choose the format based on the
+
+495
+00:26:20,079 --> 00:26:21,087
+features you actually want to use
+
+496
+00:26:22,059 --> 00:26:25,145
+an expert will handle that
+
+497
+00:26:26,045 --> 00:26:29,049
+another thing to keep in mind when
+you're building your on disk model
+
+498
+00:26:29,085 --> 00:26:32,134
+and also help translating into your
+memory in memory model
+
+499
+00:26:33,034 --> 00:26:38,070
+is that you know the way that you store
+your application data in memory
+
+500
+00:26:38,007 --> 00:26:42,010
+if you rearrange that that doesn't
+necessarily mean you're going to change
+
+501
+00:26:43,000 --> 00:26:46,043
+on disk representation they don't need
+to look exactly the same
+
+502
+00:26:46,043 --> 00:26:49,115
+as long as the overall data that you're
+stating on this key is the same
+
+503
+00:26:50,015 --> 00:26:53,042
+and you can translate from one to the
+other and this way even if you update
+
+504
+00:26:53,042 --> 00:26:56,099
+how you are in fact handling things in
+your application to make your life
+
+505
+00:26:56,099 --> 00:26:57,114
+easier
+
+506
+00:26:58,014 --> 00:27:02,049
+trying to change the actual document
+model much absolutely hafter
+
+507
+00:27:02,049 --> 00:27:05,142
+finally if you're working with a
+doctrine based application
+
+508
+00:27:06,042 --> 00:27:09,139
+we recommend you check out the creating
+docket based ap session
+
+509
+00:27:10,039 --> 00:27:14,111
+which is probably online now Friday
+
+510
+00:27:15,011 --> 00:27:18,065
+so just to summarize what we've been
+talking about
+
+511
+00:27:18,065 --> 00:27:21,146
+when you're trying to share code between
+I lesson OS 10 first look at how the
+
+512
+00:27:22,046 --> 00:27:22,141
+code is actually
+
+513
+00:27:23,041 --> 00:27:26,094
+use is it used in a way that should be
+shared or is it
+
+514
+00:27:26,094 --> 00:27:29,117
+handling something that should be
+platform-specific in which case you
+
+515
+00:27:30,017 --> 00:27:32,065
+don't necessarily want to share it
+
+516
+00:27:32,065 --> 00:27:35,163
+also really recognize and embrace that
+the platforms do have differences in the
+
+517
+00:27:36,063 --> 00:27:39,067
+way that users should use them in a way
+that you're you I should book
+
+518
+00:27:39,067 --> 00:27:42,073
+should be different based on the
+platform upon which a running
+
+519
+00:27:43,027 --> 00:27:46,088
+also consider using shared frameworks
+when possible which will make your life
+
+520
+00:27:46,088 --> 00:27:46,177
+easier and
+
+521
+00:27:47,077 --> 00:27:50,366
+and make it to that allotted your code
+doesn't need to be rewritten
+
+522
+00:27:51,059 --> 00:27:56,780
+her platform and investigate the design
+patterns among all new controller
+
+523
+00:27:56,078 --> 00:27:59,607
+and wraps and again keep in mind that
+
+524
+00:28:00,309 --> 00:28:04,030
+we're not saying that these examples I'm
+giving you are absolutely going to apply
+
+525
+00:28:04,003 --> 00:28:06,017
+for you in your applications
+
+526
+00:28:06,017 --> 00:28:09,084
+and what works for us won't necessarily
+work for you but these are meant to be
+
+527
+00:28:09,084 --> 00:28:12,119
+more like universal concept that we're
+giving you examples of
+
+528
+00:28:13,019 --> 00:28:17,047
+rather than universal solution and now
+I'm gonna hand it over to Chris
+
+529
+00:28:17,047 --> 00:28:24,047
+and he's gonna talk about how to set
+your Xcode project thank you
+
+530
+00:28:27,000 --> 00:28:30,093
+thanks Elizabeth so now that we've
+learned patterns and technologies
+
+531
+00:28:30,093 --> 00:28:34,097
+that made sure in code easier for us I'd
+love to walk you through how we made
+
+532
+00:28:34,097 --> 00:28:34,182
+this transition
+
+533
+00:28:35,082 --> 00:28:40,128
+from Xcode configuration perspective so
+as elizabeth was saying earlier
+
+534
+00:28:41,028 --> 00:28:45,035
+we had 3i wesat that we were very proud
+of and we wanted to bring
+
+535
+00:28:45,035 --> 00:28:49,036
+each back to the Mac I work is a large
+code base
+
+536
+00:28:49,045 --> 00:28:52,073
+so all the things I want to share with
+you may not impact you now
+
+537
+00:28:52,073 --> 00:28:56,097
+and in the event that they do not today
+will be all the more prepared
+
+538
+00:28:56,097 --> 00:28:59,116
+sugar at ever evolved in a direction
+similar hours
+
+539
+00:29:00,016 --> 00:29:04,028
+and since the techniques I'll be sharing
+with you
+
+540
+00:29:04,028 --> 00:29:07,116
+trend for the two all over aP's I'm
+going to focus just on what we did with
+
+541
+00:29:08,016 --> 00:29:08,077
+keynote
+
+542
+00:29:08,077 --> 00:29:12,096
+because the same overarching principles
+applied to both pages
+
+543
+00:29:12,096 --> 00:29:16,103
+and numbers as well the first
+
+544
+00:29:17,003 --> 00:29:20,065
+small yet pivotal step to moving keynote
+to the Mac
+
+545
+00:29:20,065 --> 00:29:25,068
+was to create a new Mac target for the
+half so
+
+546
+00:29:25,095 --> 00:29:29,159
+what the target a target contains
+instructions for building a single
+
+547
+00:29:30,059 --> 00:29:30,127
+product
+
+548
+00:29:31,027 --> 00:29:35,030
+the most common type a target as an
+application target which builds perhaps
+
+549
+00:29:35,057 --> 00:29:38,061
+for this also unit test targets among
+many others
+
+550
+00:29:38,061 --> 00:29:43,082
+targets also organized everything that
+gets passed into Xcode built
+
+551
+00:29:43,082 --> 00:29:46,166
+which is Xcode build system and lastly
+targets
+
+552
+00:29:47,066 --> 00:29:53,107
+our part a project it's pretty easy to
+add the Mac target to the current IRS
+
+553
+00:29:54,007 --> 00:29:54,075
+project
+
+554
+00:29:54,075 --> 00:29:57,119
+all we need to do is click on the
+project in the navigator on the left
+
+555
+00:29:58,019 --> 00:29:58,087
+hand side
+
+556
+00:29:58,087 --> 00:30:02,115
+and click on the plus button on the
+bottom then
+
+557
+00:30:03,015 --> 00:30:06,042
+we select the Cocoa application template
+from the West End category
+
+558
+00:30:06,042 --> 00:30:09,070
+we give it with the name something
+profound in this case
+
+559
+00:30:09,007 --> 00:30:12,009
+keynote for Mac and we press Finish
+
+560
+00:30:12,072 --> 00:30:15,086
+and what we've accomplished the first
+
+561
+00:30:15,086 --> 00:30:18,165
+fundamental step we now have two
+application targets
+
+562
+00:30:19,065 --> 00:30:22,081
+one for the keynote for IRS and one for
+the Mac
+
+563
+00:30:22,081 --> 00:30:25,087
+so right now it doesn't do anything too
+fancy
+
+564
+00:30:25,087 --> 00:30:28,109
+we press building run we see something
+that looks like this
+
+565
+00:30:29,009 --> 00:30:33,071
+and this is a course a far cry from the
+keynote experience
+
+566
+00:30:33,071 --> 00:30:37,072
+the reason for this because we haven't
+added any functionality to our Mac
+
+567
+00:30:37,072 --> 00:30:37,079
+target yet
+
+568
+00:30:38,042 --> 00:30:42,057
+so let's take a look what functionality
+there is available to add
+
+569
+00:30:42,057 --> 00:30:46,060
+luckily for us with a fair number up
+subsystems
+
+570
+00:30:46,087 --> 00:30:50,122
+ever want to take advantage of for Mac
+application one example
+
+571
+00:30:51,022 --> 00:30:54,058
+is the I work and this which is
+Elizabeth for sharing with us earlier
+
+572
+00:30:54,058 --> 00:30:57,089
+being able to use the scene Candice and
+oliver aP's
+
+573
+00:30:57,089 --> 00:31:00,135
+is incredibly important to us because we
+want all over documents
+
+574
+00:31:01,035 --> 00:31:04,071
+to look the same across all the devices
+that we support
+
+575
+00:31:04,071 --> 00:31:09,127
+we also want to make sure that our file
+format and model is the same for both I
+
+576
+00:31:10,027 --> 00:31:12,032
+with Kanye West End versions are perhaps
+
+577
+00:31:12,077 --> 00:31:15,146
+so we would want to point our common
+persistence framework as well
+
+578
+00:31:16,046 --> 00:31:20,122
+we also want to bring over all of our
+common utilities
+
+579
+00:31:21,022 --> 00:31:25,063
+these utilities include mechanisms for
+blogging convenience methods common data
+
+580
+00:31:25,063 --> 00:31:25,118
+types
+
+581
+00:31:26,018 --> 00:31:29,021
+and many other classes whose
+functionality span across our entire
+
+582
+00:31:29,048 --> 00:31:29,054
+suite
+
+583
+00:31:30,008 --> 00:31:33,031
+these elements we separated into
+libraries
+
+584
+00:31:33,031 --> 00:31:37,125
+so what the library simply put
+
+585
+00:31:38,025 --> 00:31:41,062
+it's a bottle collection of coke more
+specifically
+
+586
+00:31:41,062 --> 00:31:44,095
+they are targets in Xcode but they are
+not execute a ble
+
+587
+00:31:44,095 --> 00:31:48,143
+they just exist as a way for you to
+share code primarily across projects
+
+588
+00:31:49,043 --> 00:31:54,047
+to that end we found it didn't make
+sense to break code into libraries
+
+589
+00:31:54,083 --> 00:31:57,175
+unless it was going to be shared by
+multiple projects otherwise
+
+590
+00:31:58,075 --> 00:32:02,104
+we can just add the shared code to both
+the IRS and Mac targets for our app
+
+591
+00:32:03,004 --> 00:32:06,043
+and it's important to note that if you
+have a single project
+
+592
+00:32:06,043 --> 00:32:09,131
+ap this may be all you need to do and
+that is absolutely fine
+
+593
+00:32:10,031 --> 00:32:13,074
+again we feel it's sharing libraries
+make sense
+
+594
+00:32:13,074 --> 00:32:16,131
+as a means to share code across projects
+and not necessarily
+
+595
+00:32:17,031 --> 00:32:21,057
+inside projects and lastly
+
+596
+00:32:21,057 --> 00:32:25,130
+libraries can be either static for
+dynamic so
+
+597
+00:32:26,003 --> 00:32:31,007
+what does that mean all static libraries
+are built with the project whenever any
+
+598
+00:32:31,034 --> 00:32:32,087
+other targets reference them
+
+599
+00:32:32,087 --> 00:32:35,098
+and there included as part of the final
+ap
+
+600
+00:32:35,098 --> 00:32:39,169
+that you build think ima libraries can
+be external to the project
+
+601
+00:32:40,069 --> 00:32:43,072
+and this makes unfavorable for a few
+reasons first
+
+602
+00:32:43,099 --> 00:32:47,105
+once you build them you don't need to
+build them again until you change them
+
+603
+00:32:48,005 --> 00:32:51,097
+and second they can be put in a shared
+location and not rolled into the final
+
+604
+00:32:51,097 --> 00:32:52,100
+application you build
+
+605
+00:32:53,027 --> 00:32:57,048
+which makes your application smaller
+
+606
+00:32:57,048 --> 00:33:00,100
+a concrete example a dynamic library as
+a framework
+
+607
+00:33:01,000 --> 00:33:04,003
+simply put they're packaged up and
+precompiled
+
+608
+00:33:04,003 --> 00:33:08,079
+dynamic library remarks have just been
+brought to Iowa State
+
+609
+00:33:08,079 --> 00:33:11,082
+if you'd like to learn more about how to
+make modern frameworks I encourage you
+
+610
+00:33:12,009 --> 00:33:14,084
+to look at that building modern
+frameworks talk video
+
+611
+00:33:14,084 --> 00:33:18,141
+available on Apple developer website
+
+612
+00:33:19,041 --> 00:33:22,054
+so we currently have a free market cap
+sending functionality shared across
+
+613
+00:33:22,054 --> 00:33:26,069
+I'll I work for I was aP's and let's see
+what happens
+
+614
+00:33:26,069 --> 00:33:29,133
+may try to extend are shared app
+framework to work with OS 10
+
+615
+00:33:30,033 --> 00:33:33,039
+as well as Iowa
+
+616
+00:33:33,039 --> 00:33:36,112
+so here's the I work shared Xcode
+project are going to add a new framework
+
+617
+00:33:37,012 --> 00:33:37,100
+target
+
+618
+00:33:38,000 --> 00:33:42,002
+just like we did earlier by pressing the
+plus button on the bottom
+
+619
+00:33:42,002 --> 00:33:45,014
+we slept Cocoa framework we click Next
+
+620
+00:33:45,032 --> 00:33:49,088
+again we give it a name the press Finish
+
+621
+00:33:49,088 --> 00:33:52,171
+and again we have a new target the first
+part of the battle
+
+622
+00:33:53,071 --> 00:33:56,074
+as one let's roll up our sleeves
+
+623
+00:33:56,074 --> 00:33:59,103
+break out the sledgehammer and create a
+new common group
+
+624
+00:34:00,003 --> 00:34:04,012
+an Xcode let's talk about what sort of
+things we might want to put
+
+625
+00:34:04,012 --> 00:34:08,108
+in this common group we currently have a
+class and i OS that represent the
+
+626
+00:34:09,008 --> 00:34:09,091
+document
+
+627
+00:34:09,091 --> 00:34:13,109
+and its platform specific because it
+extends you I document
+
+628
+00:34:14,009 --> 00:34:17,838
+you a document does not exist in our 10
+so we'll need to introduce a new Mac
+
+629
+00:34:17,919 --> 00:34:17,992
+document
+
+630
+00:34:18,649 --> 00:34:22,320
+extend something else as a basis for a
+document functionality
+
+631
+00:34:22,032 --> 00:34:25,083
+luckily for us and this document as
+everything we need to read
+
+632
+00:34:25,083 --> 00:34:28,125
+update and savor documents
+
+633
+00:34:29,025 --> 00:34:33,030
+that said we'd like all callers are a
+model to be as agnostic as the platform
+
+634
+00:34:33,003 --> 00:34:34,026
+as possible
+
+635
+00:34:34,053 --> 00:34:38,102
+don't want to expose a common interface
+between both documents
+
+636
+00:34:39,002 --> 00:34:43,066
+and this we can express and shared
+interface called I work document
+
+637
+00:34:43,066 --> 00:34:46,141
+this interface to convey clear comment
+behavior shared across both
+
+638
+00:34:47,041 --> 00:34:50,044
+I West and the Mac let's take a look
+
+639
+00:34:50,044 --> 00:34:53,095
+and what I work document might look like
+
+640
+00:34:53,095 --> 00:34:56,167
+here's the shared I work document
+interface declares methods for treating
+
+641
+00:34:57,067 --> 00:35:00,115
+saving and updating objects in a
+document
+
+642
+00:35:01,015 --> 00:35:04,084
+and then we can create a Mac and its
+document subclass
+
+643
+00:35:04,084 --> 00:35:08,125
+and the clear conformance to the shared
+interface we just created
+
+644
+00:35:09,025 --> 00:35:15,092
+and then we implement the required
+methods as declared in the interface
+
+645
+00:35:15,092 --> 00:35:18,137
+now let's dive into the project itself
+bear with me
+
+646
+00:35:19,037 --> 00:35:22,046
+I know this is going to be a little
+tedious which is actually part of our
+
+647
+00:35:22,046 --> 00:35:22,143
+point
+
+648
+00:35:23,043 --> 00:35:26,045
+I'll show you how to leader make this
+easier to manage we wanna show you
+
+649
+00:35:26,063 --> 00:35:28,139
+what's happening under the hood
+
+650
+00:35:29,039 --> 00:35:33,134
+fourth so what there's one thing we need
+to do to I work shared project before we
+
+651
+00:35:34,034 --> 00:35:35,107
+move on to the Keno project
+
+652
+00:35:36,007 --> 00:35:39,016
+and very important that we do so but
+click on
+
+653
+00:35:39,016 --> 00:35:43,018
+I were captured Mac target in the middle
+sidebar and double-click on the public
+
+654
+00:35:43,018 --> 00:35:45,075
+headers folder path option
+
+655
+00:35:45,075 --> 00:35:49,077
+a popover appears but to move within
+their already
+
+656
+00:35:49,077 --> 00:35:53,102
+and give it a name this name is the
+first part that goes
+
+657
+00:35:54,002 --> 00:35:58,005
+after our import exploration and before
+the flash in class is that import logic
+
+658
+00:35:58,032 --> 00:36:00,113
+from this remark
+
+659
+00:36:01,013 --> 00:36:04,068
+okay now we're ready to go back to keno
+and use this new
+
+660
+00:36:04,068 --> 00:36:07,075
+Mac document object
+
+661
+00:36:07,075 --> 00:36:10,156
+so open up my document window controller
+in the header for the keynote for Mac
+
+662
+00:36:11,056 --> 00:36:13,056
+project
+
+663
+00:36:13,056 --> 00:36:16,072
+at the import exploration i press build
+
+664
+00:36:16,072 --> 00:36:19,085
+and it fails what happened
+
+665
+00:36:19,085 --> 00:36:24,103
+I thought I just to clear the I work
+sugar I were shared her former pastor
+
+666
+00:36:25,003 --> 00:36:28,010
+well we still need to tell the Mac
+target to look at the place we just said
+
+667
+00:36:28,073 --> 00:36:31,080
+we're going to deposit the headers to
+navigate to the header search path
+
+668
+00:36:32,043 --> 00:36:32,092
+section
+
+669
+00:36:32,092 --> 00:36:35,137
+the Mac build settings we double click
+on the item
+
+670
+00:36:36,037 --> 00:36:40,070
+a popover appears we type dollar sign
+parenthesis
+
+671
+00:36:40,007 --> 00:36:44,016
+configuration builder and for intensive
+
+672
+00:36:44,079 --> 00:36:47,157
+and then we hit enter this stealth tax
+code that when we're building keynote
+
+673
+00:36:48,057 --> 00:36:48,141
+for the Mac
+
+674
+00:36:49,041 --> 00:36:52,050
+they should look in the headers
+directory where things are built
+
+675
+00:36:52,005 --> 00:36:56,044
+which in this case is the location and
+the shared framework
+
+676
+00:36:56,089 --> 00:36:59,165
+then we dismiss the popover and now the
+keynote Mac target knows how to look for
+
+677
+00:37:00,065 --> 00:37:04,157
+the shared Mac library headers
+
+678
+00:37:05,057 --> 00:37:08,057
+so I start putting my implementation and
+then
+
+679
+00:37:08,057 --> 00:37:12,082
+try to build it again and get a bunch of
+linker errors
+
+680
+00:37:12,082 --> 00:37:15,166
+thanks so what happened here is that I
+didn't link the Mac
+
+681
+00:37:16,066 --> 00:37:19,143
+ap target with the library nor they list
+the library is a dependency
+
+682
+00:37:20,043 --> 00:37:23,135
+so that's why it failed but fix that
+
+683
+00:37:24,035 --> 00:37:27,069
+so go back to the keynote for Mac
+targeting the keynote project I click on
+
+684
+00:37:27,069 --> 00:37:30,145
+the bill faces tab
+
+685
+00:37:31,045 --> 00:37:34,072
+expanded disclosure triangle next to
+target dependencies
+
+686
+00:37:34,072 --> 00:37:37,128
+a click the plus button reflect our
+library
+
+687
+00:37:38,028 --> 00:37:42,050
+i press add note that if you're not
+seeing the library is an option
+
+688
+00:37:42,005 --> 00:37:45,082
+you'll need to drag in the project
+owning a library into your containing ap
+
+689
+00:37:46,027 --> 00:37:49,030
+project
+
+690
+00:37:49,003 --> 00:37:52,025
+are shared library now shows up as a
+dependency this means that before we
+
+691
+00:37:52,052 --> 00:37:53,121
+build the keynote for Mac target
+
+692
+00:37:54,021 --> 00:37:58,037
+exco to make sure the library is built
+first
+
+693
+00:37:58,037 --> 00:38:01,073
+next we need to link at binary with the
+framework
+
+694
+00:38:01,073 --> 00:38:04,151
+to do this we click on the disclosure
+triangle next to the each link binary
+
+695
+00:38:05,051 --> 00:38:06,073
+with library section
+
+696
+00:38:06,073 --> 00:38:09,159
+and click on the plus
+
+697
+00:38:10,059 --> 00:38:14,088
+reflector framework we press add and
+then it shows up
+
+698
+00:38:14,088 --> 00:38:18,112
+then when we try to build and run it
+works
+
+699
+00:38:19,012 --> 00:38:22,109
+for now keynote for Mac is building on
+top of the shared Mac remark
+
+700
+00:38:23,009 --> 00:38:26,031
+and it's not too hard too extreme and
+extending the same process
+
+701
+00:38:26,031 --> 00:38:30,097
+to other frameworks and libraries used
+by keynote as well
+
+702
+00:38:30,097 --> 00:38:33,129
+to combine with extending our shared
+framework to be Mac friendly
+
+703
+00:38:34,029 --> 00:38:37,050
+we also need to create max this abuse in
+view controllers
+
+704
+00:38:37,005 --> 00:38:42,012
+that use the three marks to produce the
+keynote experience on the Mac
+
+705
+00:38:42,057 --> 00:38:45,141
+with a bit I'm elbow grease a hand
+weaving a wonderful thing happened
+
+706
+00:38:46,041 --> 00:38:50,065
+we have a fully functioning Mac ap
+
+707
+00:38:50,065 --> 00:38:53,147
+so at a high level one can now imagine a
+project looking something like this
+
+708
+00:38:54,047 --> 00:38:57,073
+we have Xcode project for pages Numbers
+and Keynote
+
+709
+00:38:57,073 --> 00:39:00,169
+and each project has a Mac and I went to
+Target
+
+710
+00:39:01,069 --> 00:39:04,102
+these targets build on top of at
+specific libraries
+
+711
+00:39:05,002 --> 00:39:08,015
+which in turn bill on top of the
+cross-platform canvas
+
+712
+00:39:08,015 --> 00:39:11,087
+persistence and shared core utilities
+frameworks
+
+713
+00:39:11,087 --> 00:39:15,158
+wow this is great or not quite out of
+the woods yet
+
+714
+00:39:16,058 --> 00:39:21,063
+one big problem as I build settings are
+somewhat disorganized
+
+715
+00:39:21,063 --> 00:39:24,150
+remember how we manually set the header
+search for and Aquino Mac target
+
+716
+00:39:25,005 --> 00:39:28,087
+and the same thing with the public
+header search path
+
+717
+00:39:29,032 --> 00:39:32,124
+so present each targeted own build
+things associated with it
+
+718
+00:39:33,024 --> 00:39:36,108
+while this works everyone should change
+the building somewhere
+
+719
+00:39:37,008 --> 00:39:40,026
+we need to change it for every target in
+the project and only did
+
+720
+00:39:40,026 --> 00:39:44,079
+to trust myself to make that change
+everywhere consistently
+
+721
+00:39:44,079 --> 00:39:47,158
+how we fix this as a Xcode config files
+
+722
+00:39:48,058 --> 00:39:51,066
+and they look like this they simply
+contain a title
+
+723
+00:39:51,066 --> 00:39:55,101
+and a value each line control something
+specific about your build process
+
+724
+00:39:56,001 --> 00:40:00,015
+you can customize every aspect of your
+build here
+
+725
+00:40:00,015 --> 00:40:03,077
+some common examples the properties you
+can set our header search paths
+
+726
+00:40:03,077 --> 00:40:06,082
+which dictate the directories in the
+filesystem Xcode should use for finding
+
+727
+00:40:07,027 --> 00:40:08,124
+public headers
+
+728
+00:40:09,024 --> 00:40:12,056
+compiler warnings or what sorts a
+potential bugs in the code you'd like
+
+729
+00:40:12,056 --> 00:40:14,068
+exco to tell you about
+
+730
+00:40:14,068 --> 00:40:18,125
+architecture which defines the type that
+CPU your target can build
+
+731
+00:40:19,025 --> 00:40:22,089
+St case which define a platform and
+version at the STK
+
+732
+00:40:22,089 --> 00:40:25,170
+the target you should you'd like to use
+and employment targets
+
+733
+00:40:26,007 --> 00:40:29,019
+which declared the minimum version I
+West End I O S
+
+734
+00:40:29,082 --> 00:40:32,159
+a user needs to have in order to build
+and run your app
+
+735
+00:40:33,059 --> 00:40:37,082
+these are a few examples a popular
+properties than many other remain
+
+736
+00:40:37,082 --> 00:40:40,119
+and for the fullest you can look at for
+
+737
+00:40:41,019 --> 00:40:45,050
+configuring exco configuration files
+please refer to the Xcode build settings
+
+738
+00:40:45,005 --> 00:40:45,068
+reference
+
+739
+00:40:46,013 --> 00:40:49,109
+available on Apple's developer website
+
+740
+00:40:50,009 --> 00:40:54,038
+the real advantage exco config files is
+that you can use inheritance
+
+741
+00:40:54,038 --> 00:40:58,104
+in other words you can create a common
+Xcode config file for II West and Mac
+
+742
+00:40:59,004 --> 00:41:02,047
+and then have an extent a common one
+
+743
+00:41:02,047 --> 00:41:04,145
+and a common file would place build
+settings that apply to your whole
+
+744
+00:41:05,045 --> 00:41:06,076
+project
+
+745
+00:41:06,076 --> 00:41:09,130
+and a platform specific configuration
+files you would add directives that are
+
+746
+00:41:10,003 --> 00:41:11,055
+specific to be there I West
+
+747
+00:41:11,082 --> 00:41:15,089
+or the Mac an under-strength affects
+could convict files
+
+748
+00:41:16,052 --> 00:41:19,088
+is that they can be reused across
+projects in other words
+
+749
+00:41:19,088 --> 00:41:22,163
+you can read it I was configured file
+for numbers pages and Keynote
+
+750
+00:41:23,063 --> 00:41:26,074
+and then have all other I was aP's use
+the same
+
+751
+00:41:26,074 --> 00:41:30,151
+II West config so let's create an Xcode
+config file for Mac target
+
+752
+00:41:31,051 --> 00:41:35,056
+and implement it together to create an
+ex-convict file
+
+753
+00:41:36,001 --> 00:41:39,048
+we select File new from the Xcode main
+menu
+
+754
+00:41:39,048 --> 00:41:43,056
+with like the configuration settings
+file and press Next
+
+755
+00:41:43,056 --> 00:41:46,125
+we give a name in this case Mac
+
+756
+00:41:47,025 --> 00:41:51,056
+and for starters with associate it with
+the keynote Mac target
+
+757
+00:41:51,056 --> 00:41:55,063
+you click Finish and now we have a exco
+configs file for the Mac
+
+758
+00:41:56,026 --> 00:41:59,071
+but this conflict file does not know but
+the common configuration is building on
+
+759
+00:41:59,071 --> 00:42:00,126
+top at the
+
+760
+00:42:01,026 --> 00:42:04,040
+to accomplish this we simply add pound
+include to this child
+
+761
+00:42:04,004 --> 00:42:09,045
+in Fig followed by the name XE can fix
+file we'd like to extend
+
+762
+00:42:09,081 --> 00:42:15,119
+and of course we later at any Mac
+specific settings that we care about
+
+763
+00:42:16,019 --> 00:42:19,024
+once we've done that we can associate or
+target with these configurations using
+
+764
+00:42:19,069 --> 00:42:20,072
+the project editor
+
+765
+00:42:20,099 --> 00:42:23,157
+will still need to set this up for each
+target in each project
+
+766
+00:42:24,057 --> 00:42:27,090
+after we set this up we never may never
+need to touch build things
+
+767
+00:42:27,009 --> 00:42:32,012
+each target ever again so let's try for
+the keynote project
+
+768
+00:42:32,093 --> 00:42:35,136
+we can do this by expanding the
+configurations disclosure triangle
+
+769
+00:42:36,036 --> 00:42:40,133
+and then for every configuration setting
+the appropriate can fix file
+
+770
+00:42:41,033 --> 00:42:44,088
+and we can verify the defending the
+American think files propagated to the
+
+771
+00:42:44,088 --> 00:42:44,142
+target
+
+772
+00:42:45,042 --> 00:42:48,103
+we take a closer look at their bill
+thanks
+
+773
+00:42:49,003 --> 00:42:52,047
+and here's what's provided by the Mac
+Xcode config file
+
+774
+00:42:52,047 --> 00:42:55,063
+for example we can see here that we're
+building against the latest
+
+775
+00:42:55,063 --> 00:42:58,109
+West End STK as opposed to the current
+STK
+
+776
+00:42:59,009 --> 00:43:02,107
+we can also see the configs file had an
+impact and the supported platforms
+
+777
+00:43:03,007 --> 00:43:07,043
+and ballot architectures at the Mac
+target as well
+
+778
+00:43:07,043 --> 00:43:10,068
+so now we have a sustainable highly
+customizable
+
+779
+00:43:10,068 --> 00:43:13,151
+bill process and a great native Kenya
+experience
+
+780
+00:43:14,051 --> 00:43:19,052
+running on the Mac and as such our work
+is done here
+
+781
+00:43:19,061 --> 00:43:23,072
+so take a step back and review we
+accomplish together this morning
+
+782
+00:43:23,072 --> 00:43:26,094
+meet a target for each platform that we
+wanted to support
+
+783
+00:43:26,094 --> 00:43:29,165
+me broke some other functionality across
+multiple projects and platforms into
+
+784
+00:43:30,065 --> 00:43:32,099
+reusable frameworks
+
+785
+00:43:32,099 --> 00:43:35,132
+we told at Target Harry use the shared
+frameworks
+
+786
+00:43:36,032 --> 00:43:39,086
+and we streamlined our bill
+configuration across every one of our
+
+787
+00:43:39,086 --> 00:43:39,152
+targets
+
+788
+00:43:40,052 --> 00:43:44,083
+using Xcode config files
+
+789
+00:43:44,083 --> 00:43:47,140
+so while there's no silver bullet as
+elizabeth mentioned earlier
+
+790
+00:43:48,004 --> 00:43:51,069
+we found the design principles and Xcode
+project configuration we shared with you
+
+791
+00:43:52,005 --> 00:43:52,062
+this morning
+
+792
+00:43:52,062 --> 00:43:55,110
+to be incredibly helpful to us and we
+can only hope
+
+793
+00:43:56,001 --> 00:44:01,073
+the find the ideas we shared with you as
+hell useful to you as they were too of
+
+794
+00:44:01,082 --> 00:44:04,103
+also we compiled a simple project called
+photo memories
+
+795
+00:44:05,003 --> 00:44:09,017
+which exercises and up a cross-platform
+concept and exco configurations
+
+796
+00:44:09,017 --> 00:44:10,063
+mentioned in this talk
+
+797
+00:44:10,063 --> 00:44:13,067
+the sample code is available on Apple's
+developer website
+
+798
+00:44:13,067 --> 00:44:16,088
+and explains how to implement similar
+patterns and practices week
+
+799
+00:44:16,088 --> 00:44:20,159
+talk about today in even deeper detail
+
+800
+00:44:21,059 --> 00:44:24,062
+if you're interested in learning more
+about cross-platform applications
+
+801
+00:44:24,062 --> 00:44:27,062
+there is no shortage other sessions per
+ticket deep died
+
+802
+00:44:27,062 --> 00:44:30,125
+and a similar topics we touched on this
+morning and if you're interested
+
+803
+00:44:31,025 --> 00:44:34,070
+all the session presentation videos and
+demo materials will be available
+
+804
+00:44:34,007 --> 00:44:37,064
+Apple's developer website and finally
+
+805
+00:44:38,027 --> 00:44:41,031
+if you have any questions about what you
+for today please don't hesitate to
+
+806
+00:44:41,031 --> 00:44:42,062
+contact check their hands
+
+807
+00:44:42,062 --> 00:44:45,064
+or deep too long or consult the
+developer forms
+
+808
+00:44:45,064 --> 00:44:48,075
+at their forums Apple dot com
+
+809
+00:44:48,075 --> 00:44:51,099
+and with that we wish you the best of
+luck in your cross-platform application
+
+810
+00:44:51,099 --> 00:44:51,164
+adventures
+
+811
+00:44:52,064 --> 00:44:54,139
+and enjoy the rest your time in San
+Francisco thank you very much
+
