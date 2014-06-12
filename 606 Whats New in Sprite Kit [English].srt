@@ -1,0 +1,4355 @@
+1
+00:00:11,028 --> 00:00:16,047
+low my name's Norman I like to give you
+a quick tour
+
+2
+00:00:16,047 --> 00:00:20,123
+does on what's new in spike it so last
+year we have announced break it
+
+3
+00:00:21,023 --> 00:00:25,282
+at a conference a high-performance 2d
+game engine with building physics
+
+4
+00:00:25,489 --> 00:00:26,060
+support
+
+5
+00:00:26,006 --> 00:00:30,007
+we also built walls writings have axe
+call to help developing improved their
+
+6
+00:00:30,007 --> 00:00:30,080
+in common
+
+7
+00:00:30,008 --> 00:00:34,071
+you to recent I'm like the particle
+editor and automatic pactor outlets
+
+8
+00:00:35,043 --> 00:00:38,100
+generator and this year women's bracket
+even better
+
+9
+00:00:39,000 --> 00:00:42,097
+we have awesome graphics technologies
+like cedars
+
+10
+00:00:42,097 --> 00:00:45,162
+lighting their shadows the help you
+really bring all the liveliness of your
+
+11
+00:00:46,062 --> 00:00:46,501
+game
+
+12
+00:00:47,059 --> 00:00:51,100
+we also have good simulation
+technologies like per pixel physics
+
+13
+00:00:51,001 --> 00:00:51,530
+closure
+
+14
+00:00:51,629 --> 00:00:55,030
+physics feel in risk animatics and
+constraints
+
+15
+00:00:55,003 --> 00:00:59,952
+I really allow you to build reach user
+interactions so that's not all
+
+16
+00:00:59,979 --> 00:01:03,004
+UNESCO sex really is we now have a spiky
+
+17
+00:01:03,229 --> 00:01:06,520
+editor billion to the ides that allow
+you to create
+
+18
+00:01:06,052 --> 00:01:10,081
+game scenes with a rating any cold I can
+use the very same
+
+19
+00:01:10,549 --> 00:01:15,320
+editor to give iraq with any of the new
+and existing spray kit features
+
+20
+00:01:15,032 --> 00:01:20,123
+talk with that so for the adapter for
+the study session we're gonna start
+
+21
+00:01:21,023 --> 00:01:23,100
+looking at Hull to use custom satyrs to
+
+22
+00:01:24,000 --> 00:01:28,074
+customize the drawing behaviors of your
+sprite how to add light English saddles
+
+23
+00:01:28,074 --> 00:01:28,165
+to your scene
+
+24
+00:01:29,065 --> 00:01:32,112
+and we have a lot on your physics update
+I like to give your
+
+25
+00:01:33,012 --> 00:01:36,045
+update on and the uruguay show a scene
+kid really bring
+
+26
+00:01:36,045 --> 00:01:41,058
+new possibility of writing to the games
+he also blurs the lines between
+
+27
+00:01:41,058 --> 00:01:45,065
+the actual 20-game a three-game
+implementations colossally I'm going to
+
+28
+00:01:46,028 --> 00:01:47,047
+give you a quick tour
+
+29
+00:01:47,047 --> 00:01:50,053
+and demo of the new spec editor and
+
+30
+00:01:50,053 --> 00:01:53,114
+some old improvement already existing
+ATI's
+
+31
+00:01:54,014 --> 00:01:57,083
+so the first thing i wanna talk about a
+shade urs
+
+32
+00:01:57,083 --> 00:02:01,104
+spray kit does a fantastic job of
+distracting
+
+33
+00:02:02,004 --> 00:02:06,053
+the lower level platform peep and
+graphics API is away from our users
+
+34
+00:02:06,053 --> 00:02:09,069
+but from time to time does this always
+
+35
+00:02:09,069 --> 00:02:12,143
+a very special effect the one achieve
+see a custom Bloor
+
+36
+00:02:13,043 --> 00:02:18,087
+or a you keep the signature win a trough
+or movies and the
+
+37
+00:02:18,087 --> 00:02:21,126
+the posse fact or when you build a space
+game
+
+38
+00:02:22,026 --> 00:02:25,069
+where the space ship it taking a damn
+and you want to have a custom were being
+
+39
+00:02:25,069 --> 00:02:25,125
+a factor
+
+40
+00:02:26,025 --> 00:02:30,594
+on a sprite cedars become a more
+relevant solution in this case
+
+41
+00:02:30,819 --> 00:02:36,700
+and for this release we do give you the
+ability so here we have a spectator time
+
+42
+00:02:36,007 --> 00:02:36,039
+all
+
+43
+00:02:37,002 --> 00:02:41,040
+we actually does run during a single
+sprite without any pictures up but it
+
+44
+00:02:41,004 --> 00:02:43,059
+just but despite itself is running a
+commentator's
+
+45
+00:02:43,095 --> 00:02:46,143
+so the sooner does a lot of things here
+is running all the stars in the
+
+46
+00:02:47,043 --> 00:02:51,322
+background is also drawing the grade of
+Applied working in fact off the grid
+
+47
+00:02:51,709 --> 00:02:55,620
+and also when the tax use user part is
+any of the screen
+
+48
+00:02:55,062 --> 00:02:58,140
+areas as gonna provide a and the fact
+solved is
+
+49
+00:02:59,004 --> 00:03:02,065
+a dong initiators too so to do this we
+also passing
+
+50
+00:03:03,001 --> 00:03:07,079
+the actual touch locations topple the
+Cedars uniform so initiator
+
+51
+00:03:07,079 --> 00:03:10,170
+Cedar Knolls okay you there just touch
+this area now let's run to the working
+
+52
+00:03:11,007 --> 00:03:11,075
+here
+
+53
+00:03:12,038 --> 00:03:17,086
+i render the energy fact associated with
+it so let's have a look at what overview
+
+54
+00:03:17,086 --> 00:03:18,105
+of a shaker look like
+
+55
+00:03:19,005 --> 00:03:23,006
+so seder hope you're really caught my
+eye the way to spice it wrong
+
+56
+00:03:23,015 --> 00:03:26,112
+you have a hundred percent control of
+whole every single pixels are gonna be
+
+57
+00:03:27,012 --> 00:03:28,019
+all put on the screen
+
+58
+00:03:28,019 --> 00:03:32,073
+the seders impact use a very few like
+to. SL syntax
+
+59
+00:03:32,073 --> 00:03:36,100
+and they are very powerful tool to have
+any of the the powerful you fact
+
+60
+00:03:37,000 --> 00:03:41,489
+image processing or to all the way to
+fast motion blurs that the
+
+61
+00:03:41,489 --> 00:03:45,620
+that's been using 3d games I whether you
+are new to strike at
+
+62
+00:03:45,062 --> 00:03:49,106
+or existing spiky users you can drop
+this custom scenery and with just a
+
+63
+00:03:50,006 --> 00:03:50,105
+single line of code
+
+64
+00:03:51,005 --> 00:03:54,017
+sought to use custom cheaters
+
+65
+00:03:54,017 --> 00:03:58,051
+we create a brand new object SK cedar
+object it is actually a cop a nod to
+
+66
+00:03:58,051 --> 00:03:59,110
+hold the G all
+
+67
+00:03:59,569 --> 00:04:03,597
+at all open Dr yes fragments later so
+we're falling 30 0 SL
+
+68
+00:04:03,849 --> 00:04:07,040
+doping di oh yes 2.0 standard and
+
+69
+00:04:07,004 --> 00:04:10,203
+the ones here I to say they can be
+deployed to both always 10
+
+70
+00:04:10,239 --> 00:04:13,560
+I'll ask so heroes are the list of a
+
+71
+00:04:13,056 --> 00:04:16,635
+know that's being supported and Spike it
+so as case right now support custom
+
+72
+00:04:17,139 --> 00:04:17,650
+traders
+
+73
+00:04:17,065 --> 00:04:20,294
+ask a shape note now support custom
+cedar samples
+
+74
+00:04:20,879 --> 00:04:23,967
+drawing the stalking and failing and
+ASCII middle
+
+75
+00:04:24,759 --> 00:04:28,020
+so with the particle the fact you have a
+custom changer
+
+76
+00:04:28,002 --> 00:04:31,002
+run the art every single you made a
+particles in a scene
+
+77
+00:04:31,002 --> 00:04:35,033
+colossally the fact know to ask AC now
+support custom cheaters
+
+78
+00:04:35,033 --> 00:04:39,034
+so that gives you the powerful ability
+to not only use the sky filters
+
+79
+00:04:39,043 --> 00:04:43,129
+to have a force manufact but also you
+have a sea turtle have any possible
+
+80
+00:04:44,029 --> 00:04:48,087
+in fact that you want to implement so a
+source the Cedars getting uploaded to
+
+81
+00:04:48,087 --> 00:04:50,153
+the sprite is being run at the pixel
+level
+
+82
+00:04:51,053 --> 00:04:54,110
+we also passing a lotta building
+actually feels to a seder so you'll have
+
+83
+00:04:55,001 --> 00:04:55,092
+to
+
+84
+00:04:56,001 --> 00:04:59,053
+set up a brand new attribute our
+uniforms and pass it in
+
+85
+00:04:59,053 --> 00:05:02,087
+so for example here we're passing that
+you texture they give it to you as
+
+86
+00:05:02,087 --> 00:05:05,144
+what actors being used for the current
+sprite as well as well as well as that
+
+87
+00:05:06,044 --> 00:05:07,063
+packs a cornet
+
+88
+00:05:07,063 --> 00:05:11,158
+and the size of the sprite that scene
+pixel size
+
+89
+00:05:12,058 --> 00:05:15,079
+so hard to say to work in sprite kept
+once you have
+
+90
+00:05:15,079 --> 00:05:18,103
+you know about after Taylor Potts now
+eight
+
+91
+00:05:19,003 --> 00:05:23,047
+has to possible actual bills that you
+can start of the first one is the Cedar
+
+92
+00:05:23,047 --> 00:05:23,124
+source
+
+93
+00:05:24,024 --> 00:05:27,041
+you can create a share from two
+possibilities by attacking the source
+
+94
+00:05:27,041 --> 00:05:31,100
+why is creating the Seder from a a file
+and also you can
+
+95
+00:05:32,000 --> 00:05:36,054
+said the Seder from us track & Touche to
+resolve also have a
+
+96
+00:05:36,054 --> 00:05:40,107
+are real uniforms these optional by the
+if you're shade or actually requires any
+
+97
+00:05:41,007 --> 00:05:43,029
+of the external parameters that being
+said
+
+98
+00:05:43,029 --> 00:05:46,105
+your game you can use at ASCII uniforms
+
+99
+00:05:47,005 --> 00:05:51,060
+on the uniforms property so now once we
+have the school property set
+
+100
+00:05:51,006 --> 00:05:55,010
+the Seder is loaded and is ready to go
+
+101
+00:05:56,000 --> 00:06:00,001
+and we have a saying here for example SE
+has three separate sprites
+
+102
+00:06:00,001 --> 00:06:03,630
+you cannot find a satyr directly to the
+scene you can I find
+
+103
+00:06:03,729 --> 00:06:07,754
+at the Cedar to any of the sprite and
+the pick up the fact right away
+
+104
+00:06:07,979 --> 00:06:11,985
+in an xterm in an extreme
+
+105
+00:06:12,039 --> 00:06:15,350
+so create a seder will have the new API
+I S case a dirty cash
+
+106
+00:06:15,035 --> 00:06:19,694
+cray with the file esposito was found
+name way passing like blurred a FSH
+
+107
+00:06:20,009 --> 00:06:24,037
+by Seder is actually look like energy
+opened OpenGL fragment program that has
+
+108
+00:06:24,289 --> 00:06:25,305
+a main function
+
+109
+00:06:25,449 --> 00:06:29,300
+I in the return value seventy of red
+collar and it was a tourney than any
+
+110
+00:06:29,003 --> 00:06:30,342
+other custom uniforms
+
+111
+00:06:30,639 --> 00:06:35,050
+you can just set uniforms are a here we
+creating I ski uniform uniform
+
+112
+00:06:35,005 --> 00:06:38,124
+I with name you give it a name here we
+call you read
+
+113
+00:06:38,169 --> 00:06:42,840
+that's a floating type and the next one
+we setting are your tax /url passing in
+
+114
+00:06:42,084 --> 00:06:43,162
+a sec the second retexture
+
+115
+00:06:44,062 --> 00:06:48,581
+to the concentrator so the supported
+types are float
+
+116
+00:06:49,139 --> 00:06:52,400
+taxer back to two three or four and
+matrix
+
+117
+00:06:52,004 --> 00:06:56,803
+to buy 2303 and format for
+
+118
+00:06:57,199 --> 00:07:01,030
+and for the full list of the Customs and
+Border were passing into the Seder %uh
+
+119
+00:07:01,003 --> 00:07:02,062
+soon as you see there is getting run
+
+120
+00:07:02,062 --> 00:07:05,155
+here's the full list so in from the
+uniform you get direct access to this
+
+121
+00:07:06,055 --> 00:07:10,056
+to the texture of the sprite the Spry
+sizing from in pixels
+
+122
+00:07:10,056 --> 00:07:13,155
+the global time and continue to any
+other animation from the callers are
+
+123
+00:07:14,055 --> 00:07:15,144
+shaped
+
+124
+00:07:15,639 --> 00:07:19,750
+and you also have access if you're have
+custom cedar that's running on a shape
+
+125
+00:07:19,075 --> 00:07:22,584
+to the ship path land in terms of
+varying
+
+126
+00:07:23,259 --> 00:07:26,660
+we passing the tax for cornet the color
+makes
+
+127
+00:07:26,066 --> 00:07:31,075
+as well as the distance of the path and
+we also have a very company a method in
+
+128
+00:07:31,669 --> 00:07:33,590
+a satyr so you can call directly
+
+129
+00:07:33,059 --> 00:07:36,118
+call escapee for sharing this is as if
+
+130
+00:07:37,018 --> 00:07:40,044
+you work let's break it to run their to
+current sprite
+
+131
+00:07:40,044 --> 00:07:43,053
+and gimme the pixel value
+
+132
+00:07:43,053 --> 00:07:46,058
+of the car behavior
+
+133
+00:07:46,058 --> 00:07:50,063
+so the shooters are cool there some best
+practices I like to call out
+
+134
+00:07:50,063 --> 00:07:53,065
+so number one I like to recommended
+using
+
+135
+00:07:53,083 --> 00:07:57,422
+believe uniforms as much as possible so
+we do passing a law to you too far for
+
+136
+00:07:58,169 --> 00:08:00,030
+you to use that gives you a lot of
+
+137
+00:08:00,003 --> 00:08:03,078
+raw at abuse of what we draw what we
+doing at the open to: level
+
+138
+00:08:03,078 --> 00:08:06,159
+but if you do need to access all the
+same uniforms
+
+139
+00:08:07,059 --> 00:08:10,698
+please use their building 12 minimized
+the moderate honesty
+
+140
+00:08:11,229 --> 00:08:16,530
+and also or would reckon man to avoid
+changing the status or so
+
+141
+00:08:16,053 --> 00:08:20,074
+in a maid of a frame because there were
+four such a to recompile Asian happening
+
+142
+00:08:20,074 --> 00:08:23,813
+at a backhand also when the Cedars being
+loaded
+
+143
+00:08:24,479 --> 00:08:29,020
+and you will recommend to loss at all
+the uniforms Apr on
+
+144
+00:08:29,002 --> 00:08:32,151
+and you can change uniforms every frame
+that's nice and fast
+
+145
+00:08:32,169 --> 00:08:37,241
+but adding or removing uniform also
+called another Cedar Creek a politician
+
+146
+00:08:37,889 --> 00:08:41,930
+also in terms of drawl call performance
+would like to share
+
+147
+00:08:41,093 --> 00:08:44,099
+the same same shade or yes there's as
+much as possible because
+
+148
+00:08:44,099 --> 00:08:47,185
+the same say they're running our
+monopole drawing yes there's gas to back
+
+149
+00:08:48,085 --> 00:08:49,804
+together
+
+150
+00:08:50,569 --> 00:08:54,730
+and will recommend to initial I the
+Seder a long time
+
+151
+00:08:54,073 --> 00:08:57,432
+and unify the shade or using a file name
+rather than
+
+152
+00:08:58,089 --> 00:09:02,098
+initial I say they're using string
+because if the satyrs are
+
+153
+00:09:02,179 --> 00:09:05,211
+model traders are sharing the same
+shooter source as practical pick it up
+
+154
+00:09:05,499 --> 00:09:06,100
+as a
+
+155
+00:09:06,001 --> 00:09:10,460
+a identical satyrs ok top at Dhaka
+batting performers
+
+156
+00:09:10,559 --> 00:09:15,110
+will remain high so the summary of using
+custom satyrs
+
+157
+00:09:15,011 --> 00:09:18,023
+allow you to completely customize the
+way sprite
+
+158
+00:09:18,023 --> 00:09:21,105
+are being rendered on screen you have
+brought access to a lot of the building
+
+159
+00:09:22,005 --> 00:09:22,072
+actually feels
+
+160
+00:09:22,072 --> 00:09:25,131
+that we're passing dow arm to the Seder
+
+161
+00:09:25,779 --> 00:09:29,600
+and he could create even a number of
+kuwait uniquely fax for a game
+
+162
+00:09:29,006 --> 00:09:33,031
+next I wanna talk about lighting sash
+adults
+
+163
+00:09:33,085 --> 00:09:37,304
+so lightings eyeshadows really play all
+the liveliness of your game say if I'm
+
+164
+00:09:38,069 --> 00:09:41,111
+building a Dodgers game I'm walking in
+the long corridor
+
+165
+00:09:41,489 --> 00:09:45,517
+all of Southern the area gets dark and
+all is an ICA
+
+166
+00:09:45,769 --> 00:09:48,825
+at very p.m. a shaky light at the end of
+the hallway that kinda
+
+167
+00:09:49,329 --> 00:09:55,332
+bring out that really scary atmosphere
+and mood for a player
+
+168
+00:09:55,629 --> 00:09:58,706
+so too cradle I'd in spike at we
+introduce
+
+169
+00:09:59,399 --> 00:10:02,417
+a new pipe cut XK light note you can
+
+170
+00:10:02,579 --> 00:10:05,646
+added to see you and position to
+anywhere you want
+
+171
+00:10:06,249 --> 00:10:09,300
+and they can apply to any of the spray
+that's being participated
+
+172
+00:10:09,003 --> 00:10:12,022
+in the car light you can change the
+color
+
+173
+00:10:12,319 --> 00:10:15,368
+shadow a fall of all the light and with
+support
+
+174
+00:10:15,809 --> 00:10:19,856
+up to having 8 life like for singles
+right
+
+175
+00:10:20,279 --> 00:10:24,331
+and the bottom line is SK light no they
+just another as keynote
+
+176
+00:10:24,799 --> 00:10:27,875
+you can move it around parent it when
+another sprite if you want to lie to
+
+177
+00:10:28,559 --> 00:10:29,624
+follow wanna be a sprite
+
+178
+00:10:30,209 --> 00:10:35,213
+you can write actions on it have a trial
+for all paths
+
+179
+00:10:35,249 --> 00:10:38,342
+is really cool so now let's look at some
+other basic
+
+180
+00:10:39,179 --> 00:10:42,223
+at properties for SK like an old so here
+we have a scene
+
+181
+00:10:42,619 --> 00:10:46,658
+it's very bland we at a light source in
+a scene
+
+182
+00:10:47,009 --> 00:10:50,078
+now if we can't into the light colored
+if it's a bit like a lot to be yellow
+
+183
+00:10:50,699 --> 00:10:53,790
+as a yellow camp to the collect collar
+
+184
+00:10:53,079 --> 00:10:57,058
+and now if we set a shadow color to be
+gray
+
+185
+00:10:57,769 --> 00:11:01,110
+and now the boxes star casting shadows
+
+186
+00:11:01,011 --> 00:11:04,016
+and lastly if we wanna see a little bit
+more of the scene
+
+187
+00:11:04,061 --> 00:11:07,210
+with seven Indian caller to really bring
+in a sea of op
+
+188
+00:11:07,759 --> 00:11:11,766
+a little bit more so let's look at the
+Addison your actually feels for ask a
+
+189
+00:11:11,829 --> 00:11:11,892
+line on
+
+190
+00:11:12,459 --> 00:11:16,475
+number one follow-up fall of controls
+the the radius of the light
+
+191
+00:11:16,619 --> 00:11:21,660
+in bed in terms are be at the fact and
+with also picked what works really well
+
+192
+00:11:21,066 --> 00:11:22,595
+with our physics
+
+193
+00:11:23,189 --> 00:11:26,194
+properties with the category B masks so
+with sprite
+
+194
+00:11:26,689 --> 00:11:30,707
+note now you have individual big control
+of whether the sprite is participating
+
+195
+00:11:30,869 --> 00:11:31,790
+in the lining
+
+196
+00:11:31,079 --> 00:11:34,110
+whether it's casting shadows or whether
+it's receiving channels
+
+197
+00:11:35,001 --> 00:11:38,027
+you high-flying control of exactly how
+you want to control these three
+
+198
+00:11:38,036 --> 00:11:38,875
+attributes
+
+199
+00:11:39,199 --> 00:11:42,231
+for each individual sprite
+
+200
+00:11:42,519 --> 00:11:45,588
+and now it seems we're talking about
+spread out sprain old also have a brand
+
+201
+00:11:46,209 --> 00:11:50,660
+new property called normal pack sure
+which you can I find all attacks or Web
+
+202
+00:11:50,066 --> 00:11:54,165
+so usually normal character is were
+happily using 3d games
+
+203
+00:11:54,759 --> 00:11:58,790
+and not what actor accused the pixel RGB
+a value to describe what a normal factor
+
+204
+00:11:59,069 --> 00:11:59,077
+for the services
+
+205
+00:11:59,869 --> 00:12:03,730
+on it works so the lighting calculation
+can be can be used up all with the
+
+206
+00:12:03,073 --> 00:12:03,552
+normal
+
+207
+00:12:04,209 --> 00:12:07,288
+factors so here we using the exact same
+for Miller
+
+208
+00:12:07,999 --> 00:12:12,290
+so to render the scene with a normal map
+
+209
+00:12:12,029 --> 00:12:16,308
+we use the traditional a plot be equal
+see for Miller which means you supplied
+
+210
+00:12:16,569 --> 00:12:17,596
+the picture
+
+211
+00:12:17,839 --> 00:12:21,790
+supplied a normal catcher strike a chord
+with magic
+
+212
+00:12:21,079 --> 00:12:24,998
+and gave you the result which is
+lighting up the scene where
+
+213
+00:12:25,709 --> 00:12:28,726
+with the bumpy service that's being
+mapped so here you
+
+214
+00:12:28,879 --> 00:12:32,917
+you as you can see I kinda sad normal
+Patrick directly on a ask a sprite note
+
+215
+00:12:33,259 --> 00:12:38,170
+by loading at from the normal top PNG
+file
+
+216
+00:12:38,017 --> 00:12:41,054
+to now be in spy kids: we like to make
+oral
+
+217
+00:12:41,054 --> 00:12:45,122
+users live as easy as possible so in
+addition to the a plot see
+
+218
+00:12:46,022 --> 00:12:50,022
+be equal see for Miller we get your
+directly from able see
+
+219
+00:12:50,022 --> 00:12:54,621
+you do not need to supply and any normal
+map so all we do is we take the source
+
+220
+00:12:54,819 --> 00:12:58,970
+packs for image a perform image analyze
+Asian
+
+221
+00:12:58,097 --> 00:13:01,206
+on every single pixel one based on the
+premise of each pixel
+
+222
+00:13:02,079 --> 00:13:05,420
+we have a multi-pass ok with them that
+generate the best
+
+223
+00:13:05,042 --> 00:13:08,051
+normal map that describe the current
+picture
+
+224
+00:13:08,429 --> 00:13:12,475
+so if you give us a picture that you
+take from the beach was part of
+
+225
+00:13:12,889 --> 00:13:15,968
+rocks in the air rounded ads is really
+sharp
+
+226
+00:13:16,679 --> 00:13:21,692
+yet the surf Israel remain very small so
+here is very easy is magic one-liner
+
+227
+00:13:21,809 --> 00:13:24,893
+all we need to do a just sprite nah
+attacker be called
+
+228
+00:13:25,649 --> 00:13:32,649
+generate a normal map from the existing
+sprite picture
+
+229
+00:13:36,239 --> 00:13:40,410
+that's not all there's not a solution
+
+230
+00:13:40,041 --> 00:13:43,380
+or a one-size-fits-all solution so
+
+231
+00:13:43,749 --> 00:13:47,540
+e-edition would provide two more
+problems for you guys to change the
+
+232
+00:13:47,054 --> 00:13:50,073
+dynamic behavior of the generate a
+normal map
+
+233
+00:13:50,559 --> 00:13:53,621
+in from los mas mas in terms of contrast
+which is whole
+
+234
+00:13:54,179 --> 00:13:59,100
+Pompey you wanna may surface to be and
+this will give in combination give you
+
+235
+00:13:59,001 --> 00:14:02,063
+if in a number of lockhart for example
+or cops tall
+
+236
+00:14:02,072 --> 00:14:07,031
+I just have to call for help running on
+these two primers with 1 second delay
+
+237
+00:14:07,679 --> 00:14:10,688
+as you can see he actually change the
+look you can get if in a number looks
+
+238
+00:14:11,579 --> 00:14:11,647
+all over
+
+239
+00:14:12,259 --> 00:14:15,292
+and the best part about automatic normal
+map generation is
+
+240
+00:14:15,589 --> 00:14:19,658
+you can't do this on dynamic content if
+you to take a picture from
+
+241
+00:14:20,279 --> 00:14:23,321
+all side and decide to put her in a game
+guess what you can't light it without
+
+242
+00:14:23,699 --> 00:14:24,717
+any normal taxer
+
+243
+00:14:24,879 --> 00:14:28,881
+we can't do they all orders for you
+
+244
+00:14:28,899 --> 00:14:32,948
+so to summarize lighting and shadows
+they are very easy to use
+
+245
+00:14:33,389 --> 00:14:36,475
+as K Line Road is just like any askin
+all the camera animation on a
+
+246
+00:14:37,249 --> 00:14:38,264
+comparative
+
+247
+00:14:38,399 --> 00:14:42,970
+you can set up collars and everything is
+a one-liner automatic normal map
+
+248
+00:14:42,097 --> 00:14:46,366
+generation really provide is dynamic
+look for you you don't have to span
+
+249
+00:14:47,239 --> 00:14:50,302
+time sitting down with art isn't trying
+to figure out how to hi I'm paying them
+
+250
+00:14:50,869 --> 00:14:50,877
+normal map
+
+251
+00:14:51,669 --> 00:14:54,761
+always purple facing all were dark grey
+facing to the left
+
+252
+00:14:55,589 --> 00:14:58,610
+you don't have to do any of that we
+would take over the nitty gritty detail
+
+253
+00:14:58,799 --> 00:14:58,878
+for you
+
+254
+00:14:59,589 --> 00:15:03,637
+either some best for practice in terms
+of performance I like to play now
+
+255
+00:15:04,069 --> 00:15:07,136
+it's okay to have multiple light in a
+scene under runs reasonably fast
+
+256
+00:15:07,739 --> 00:15:10,745
+but if have the number of flights
+
+257
+00:15:10,799 --> 00:15:13,850
+that's riding the very same sprite
+actually matters
+
+258
+00:15:13,085 --> 00:15:16,116
+and you have more than two lights
+lighting the same sprite
+
+259
+00:15:17,016 --> 00:15:21,355
+you mice not be able to stay our cost is
+$60 on certain I O S on mars
+
+260
+00:15:21,499 --> 00:15:25,507
+just something to pop point out
+
+261
+00:15:25,579 --> 00:15:29,582
+Nexus I like to point out all the new
+physics features that we have so that's
+
+262
+00:15:29,609 --> 00:15:30,790
+a look at them
+
+263
+00:15:30,079 --> 00:15:34,038
+number one per pixel physics updates we
+have a
+
+264
+00:15:34,749 --> 00:15:37,792
+constraints allowed on remove the
+boilerplate code
+
+265
+00:15:38,179 --> 00:15:41,248
+your updates we also have inverse
+kinematics allowed to
+
+266
+00:15:41,869 --> 00:15:45,895
+field biomechanical way I we also have
+physics field that
+
+267
+00:15:46,129 --> 00:15:50,214
+applied his forces are allowed to build
+the next space game simulation
+
+268
+00:15:50,979 --> 00:15:53,983
+so let's look at the perfect offices
+body creation
+
+269
+00:15:54,379 --> 00:15:57,474
+with the current implementation on the
+left side if I wanna
+
+270
+00:15:58,329 --> 00:16:01,338
+build it cures game I kept
+
+271
+00:16:01,419 --> 00:16:04,436
+the best thing I can do is using parking
+circles
+
+272
+00:16:04,589 --> 00:16:08,592
+I create the bombing circle are on these
+boxes the skiers
+
+273
+00:16:08,619 --> 00:16:11,674
+they will actually quite each other and
+appeared only in Turlock
+
+274
+00:16:12,169 --> 00:16:16,100
+okay maybe I configure the late a bit I
+reduce the reviews on the fifth his body
+
+275
+00:16:16,001 --> 00:16:16,780
+for the
+
+276
+00:16:16,879 --> 00:16:19,892
+to keep my overlap but they still don't
+
+277
+00:16:20,009 --> 00:16:23,061
+toxic exactly and also the but the
+
+278
+00:16:23,529 --> 00:16:26,565
+the angular velocity don't transfer from
+one cure to another
+
+279
+00:16:26,889 --> 00:16:29,957
+but now with a single line of code you
+can generate from
+
+280
+00:16:30,569 --> 00:16:33,970
+go from there too give you a physics
+
+281
+00:16:33,097 --> 00:16:36,446
+I up pics pixel-based fit his body
+
+282
+00:16:37,319 --> 00:16:40,368
+it's very easy some
+
+283
+00:16:40,809 --> 00:16:43,880
+so will your trust back the source
+cement a base on the alpha mask
+
+284
+00:16:44,519 --> 00:16:49,040
+we generate iraq shape and based on the
+shape we generate exact shape that's the
+
+285
+00:16:49,004 --> 00:16:49,783
+minimum all
+
+286
+00:16:49,819 --> 00:16:52,832
+yell to fade occurrence right it's very
+accurate
+
+287
+00:16:52,949 --> 00:16:56,043
+and now the bill gears them all you can
+just have a couple one-liners
+
+288
+00:16:56,889 --> 00:17:00,953
+have the same code in there just changed
+from using bombing sarcos to using
+
+289
+00:17:01,529 --> 00:17:04,571
+image-based his body and the you are
+good to go and they can be
+
+290
+00:17:04,949 --> 00:17:09,022
+can't they can be transferring an
+interlocking it's really fun
+
+291
+00:17:09,679 --> 00:17:12,760
+so let's look at how we do it so
+
+292
+00:17:12,076 --> 00:17:16,102
+with the curry PI to create a fitness
+body you with the bombing box
+
+293
+00:17:17,002 --> 00:17:22,071
+visit was busy body and the body with
+rectangle of size would give you our
+
+294
+00:17:22,089 --> 00:17:25,620
+exact on the box of the dimension that
+you have specified
+
+295
+00:17:25,062 --> 00:17:29,251
+now with the new API as the same
+initializer coming in
+
+296
+00:17:29,809 --> 00:17:33,450
+instead you just passing the texture on
+the size of the texture
+
+297
+00:17:33,045 --> 00:17:36,874
+for example a hammer here we give you
+the exact camera body that tree through
+
+298
+00:17:37,279 --> 00:17:38,352
+the all I you no longer have to
+
+299
+00:17:39,009 --> 00:17:45,084
+do that yourself or title bill any
+opossum Mason on the faces body
+
+300
+00:17:45,759 --> 00:17:48,788
+just like the automatic a normal map
+generation there's not a one solution
+
+301
+00:17:49,049 --> 00:17:49,820
+fits all
+
+302
+00:17:49,082 --> 00:17:53,801
+if you have a source are the has a lot
+of semi transparent pixels
+
+303
+00:17:54,539 --> 00:17:57,612
+we do allow despised by the of us finds
+of a threshold
+
+304
+00:17:58,269 --> 00:18:02,331
+which defines which part pixels being
+interpolated during the process as a pic
+
+305
+00:18:02,889 --> 00:18:05,891
+or not
+
+306
+00:18:05,909 --> 00:18:08,944
+so in some rain per pixel fit his body
+
+307
+00:18:09,259 --> 00:18:13,830
+is read very easy to create and they're
+very accurate
+
+308
+00:18:13,083 --> 00:18:17,087
+add whether you are existing spiky users
+are new to
+
+309
+00:18:18,023 --> 00:18:22,094
+the API's it's just a matter of setting
+one line change
+
+310
+00:18:22,094 --> 00:18:25,333
+you're a code to create really actor
+physics simulations
+
+311
+00:18:26,179 --> 00:18:29,830
+so again like to point out the
+performance tips
+
+312
+00:18:29,083 --> 00:18:32,402
+spike it does a really good job
+optimizing this algorithm
+
+313
+00:18:33,149 --> 00:18:37,330
+I we provide a good balance between
+performance at accuracy
+
+314
+00:18:37,033 --> 00:18:42,111
+by the picture size matters so you if
+you are passing year a2k by 2k taxer
+
+315
+00:18:43,011 --> 00:18:46,024
+ask you live down to 10 percent
+rendering
+
+316
+00:18:46,024 --> 00:18:50,843
+a twenty by two hundred by two hundred
+sprite we do have to walk down the hall
+
+317
+00:18:51,059 --> 00:18:52,490
+to kept by 2k pics
+
+318
+00:18:52,049 --> 00:18:55,075
+pixels in order to figure out the exact
+shape
+
+319
+00:18:55,075 --> 00:18:59,082
+I so just something to think about
+
+320
+00:19:00,045 --> 00:19:04,394
+next a brand new API the cost range to
+help you
+
+321
+00:19:04,799 --> 00:19:07,886
+really a simplified a game up the logic
+
+322
+00:19:08,669 --> 00:19:11,674
+the country and motivational training
+cost reprises to really im removed a
+
+323
+00:19:12,169 --> 00:19:13,120
+boilerplate
+
+324
+00:19:13,012 --> 00:19:17,441
+cold in your update so a lot of times I
+wanna move a character
+
+325
+00:19:17,549 --> 00:19:21,700
+but I want healthy indicator to follow
+the character that exactly five pixels a
+
+326
+00:19:21,007 --> 00:19:21,012
+ball
+
+327
+00:19:22,002 --> 00:19:26,014
+to pick those behind I need to put the
+end of the summer
+
+328
+00:19:26,032 --> 00:19:29,111
+and you have a camera you wanna Auriemma
+can learn the following airplane
+
+329
+00:19:30,011 --> 00:19:34,011
+guess what I need to add a cold and to
+calculate the angle and
+
+330
+00:19:34,011 --> 00:19:37,690
+figure out the Delta translated bit of a
+rotation as a translation
+
+331
+00:19:37,789 --> 00:19:41,940
+or the airplane wanna land on a runway
+and you don't worry in that first
+
+332
+00:19:41,094 --> 00:19:48,053
+we do all that work for you can with do
+it with simple contract
+
+333
+00:19:48,899 --> 00:19:51,963
+so now we add because the cost rain is
+being added
+
+334
+00:19:52,539 --> 00:19:56,220
+we need to add some new features in our
+update loop
+
+335
+00:19:56,022 --> 00:19:59,821
+so in up little expanded to some new
+selectors
+
+336
+00:20:00,019 --> 00:20:03,190
+number one right after physics
+simulation now
+
+337
+00:20:03,019 --> 00:20:06,058
+the scene start kicking in the
+constraint soul customers are not
+
+338
+00:20:06,058 --> 00:20:06,867
+limited asx:
+
+339
+00:20:07,389 --> 00:20:10,730
+to physics anymore so you don't have to
+worry about all with the character
+
+340
+00:20:10,073 --> 00:20:13,134
+expanding on a conveyor belt is gonna be
+pushed over
+
+341
+00:20:14,034 --> 00:20:17,121
+because the box is right beside it
+constraint take care of that for you
+
+342
+00:20:18,021 --> 00:20:22,050
+and right after class rank update user
+have another chance public
+
+343
+00:20:22,005 --> 00:20:26,284
+doing another update we do gave use or
+call back up did apply ka strain
+
+344
+00:20:26,779 --> 00:20:32,806
+so here you have a chance to do any
+other last-minute cleanup
+
+345
+00:20:33,049 --> 00:20:37,100
+and the bases and constraints again have
+a new object to ask a cost rain object
+
+346
+00:20:37,559 --> 00:20:40,617
+and is used to wrap around this
+mathematical cost rain on the properties
+
+347
+00:20:41,139 --> 00:20:43,240
+of the know the one enemy
+
+348
+00:20:43,024 --> 00:20:47,085
+so the cost rains at their attached a
+note via the new cars trains
+
+349
+00:20:47,085 --> 00:20:50,144
+RA and the scene will apply the cost
+rains
+
+350
+00:20:50,909 --> 00:20:55,910
+to the attacks no so what kinda
+construct an effect on a note
+
+351
+00:20:56,009 --> 00:20:59,750
+you can set cost rate composition or an
+tation
+
+352
+00:20:59,075 --> 00:21:04,724
+and distance and can quickly able and
+disabled between frames
+
+353
+00:21:05,399 --> 00:21:08,980
+so for example it will go quick example
+of Bob Holt who
+
+354
+00:21:08,098 --> 00:21:12,107
+Korean to note cost frameworks so we
+just call ask a constraint with
+
+355
+00:21:13,007 --> 00:21:14,856
+Warrington old initializer
+
+356
+00:21:14,919 --> 00:21:18,340
+and follow a note so here DA rotors for
+
+357
+00:21:18,034 --> 00:21:21,097
+following the circle and we're just
+passing the circle yes nevertheless
+
+358
+00:21:21,097 --> 00:21:22,026
+keynote
+
+359
+00:21:22,899 --> 00:21:27,230
+and the reins of Saturday's 0 and you
+can send I wanna leave the circle
+
+360
+00:21:27,023 --> 00:21:28,202
+following and/or
+
+361
+00:21:28,409 --> 00:21:31,410
+lacking at you have that possibility
+
+362
+00:21:31,419 --> 00:21:34,508
+so once the cost rain is created i jus
+directly soccer sat on the air earth
+
+363
+00:21:35,309 --> 00:21:39,345
+arm cost ranch property
+
+364
+00:21:39,669 --> 00:21:44,681
+next call to reset positional constraint
+so here we create a personal rains up
+
+365
+00:21:44,789 --> 00:21:47,825
+far minus a hundred to a hundred we can
+first
+
+366
+00:21:48,149 --> 00:21:53,190
+set the limit of constrained on the
+x-axis this will limit the moment
+
+367
+00:21:53,019 --> 00:21:58,378
+in the x-direction of the No now we can
+also sat on the y direction they will
+
+368
+00:21:58,549 --> 00:21:59,645
+give a limitation on the y-axis
+
+369
+00:22:00,509 --> 00:22:04,509
+and if you combine these two together
+
+370
+00:22:04,509 --> 00:22:09,950
+you are limiting the movement of the
+current node to out to 100 back 200 box
+
+371
+00:22:09,095 --> 00:22:12,183
+very very simple to use you no longer
+have the right all these update code
+
+372
+00:22:13,083 --> 00:22:18,135
+that will manually snapped the object
+back in the box
+
+373
+00:22:19,035 --> 00:22:22,083
+so in summary it really hope you remove
+a lot of the boilerplate cold
+
+374
+00:22:22,083 --> 00:22:25,542
+making sure you just try to call the
+focusing on building the game you want
+
+375
+00:22:26,289 --> 00:22:26,351
+rather than
+
+376
+00:22:26,909 --> 00:22:30,240
+having to fix up things and also the
+
+377
+00:22:30,024 --> 00:22:33,062
+because the cost ran to the is our rainy
+that
+
+378
+00:22:33,062 --> 00:22:36,751
+you care add the ER the cost model
+
+379
+00:22:37,309 --> 00:22:41,190
+constraints into the same Iran and order
+of evaluation happens from
+
+380
+00:22:41,019 --> 00:22:45,100
+well is based on the order of things are
+going to direct I we also offer a lot of
+
+381
+00:22:46,000 --> 00:22:49,149
+varieties of constraint position or
+orientation
+
+382
+00:22:49,149 --> 00:22:52,247
+and distance
+
+383
+00:22:53,129 --> 00:22:57,690
+next I like to talk about numerous
+kinematics is usually a very strange
+
+384
+00:22:57,069 --> 00:22:58,133
+word for people who doesn't have
+
+385
+00:22:59,033 --> 00:23:02,120
+I are a mechanical engineering degree of
+people happen
+
+386
+00:23:03,002 --> 00:23:06,731
+returner animation engine three members
+kinematics
+
+387
+00:23:06,929 --> 00:23:11,240
+allow you to use can manage the
+equations to solve
+
+388
+00:23:11,024 --> 00:23:15,053
+the joint problem occurs if you have a
+drawing hierarchy trying to reach for
+
+389
+00:23:15,269 --> 00:23:16,283
+things
+
+390
+00:23:16,409 --> 00:23:21,370
+in a 2d space so here I am trying to use
+the robot arm reaching for where my
+
+391
+00:23:21,037 --> 00:23:22,426
+mouse cursors pointing
+
+392
+00:23:22,759 --> 00:23:26,764
+and I want to set up the exact behavior
+of Hall robot will move
+
+393
+00:23:26,809 --> 00:23:31,480
+I magnin to do than your update yourself
+and try to do as every frame okays easy
+
+394
+00:23:31,048 --> 00:23:34,337
+to move the hand and now what does the
+the lower Hannah's gonna do
+
+395
+00:23:34,769 --> 00:23:37,772
+I followed by what is our brands gonna
+do to provide a realistic
+
+396
+00:23:37,799 --> 00:23:40,885
+behavior so you can do this for arms and
+you can't do this for lax
+
+397
+00:23:41,659 --> 00:23:44,970
+you can do it with plan with the
+animation
+
+398
+00:23:44,097 --> 00:23:48,110
+so number one abusing a schematic thing
+you have a joint hierarchy
+
+399
+00:23:49,001 --> 00:23:52,920
+so for example if a look at a robot arm
+it's a drawing of three pieces
+
+400
+00:23:53,019 --> 00:23:56,370
+we start with the our problem that's
+
+401
+00:23:56,037 --> 00:23:59,098
+the root node followed by the lower arm
+
+402
+00:23:59,098 --> 00:24:02,367
+which attach as a child to Darbar
+
+403
+00:24:03,249 --> 00:24:06,303
+and I'll have the claw which is attach
+other child
+
+404
+00:24:06,789 --> 00:24:12,740
+to the lower arm to not use of these
+joints to create real estate look
+
+405
+00:24:12,074 --> 00:24:15,083
+I need to set up some cost rain for
+example
+
+406
+00:24:15,083 --> 00:24:18,562
+my are my all bull probably opens at 180
+degrees
+
+407
+00:24:19,309 --> 00:24:23,690
+and close up 30 and anything beyond the
+Rangers gonna snap I can't take it
+
+408
+00:24:23,069 --> 00:24:24,128
+anymore
+
+409
+00:24:24,749 --> 00:24:28,775
+I am so you can set up the cost ran for
+each individual notebook
+
+410
+00:24:29,009 --> 00:24:33,090
+create that really realistic behavior
+
+411
+00:24:33,009 --> 00:24:37,418
+so with bracket how do you do inverse
+kinematics all the way I set up the cost
+
+412
+00:24:37,499 --> 00:24:40,970
+rain how do I setup the parent-child
+hierarchy
+
+413
+00:24:40,097 --> 00:24:43,196
+you don't have to do that because we use
+the existing single out there already
+
+414
+00:24:44,096 --> 00:24:45,905
+have the parent-child relationship
+
+415
+00:24:46,769 --> 00:24:51,070
+and we are good to go the only thing in
+your set-up a setting up the cost reins
+
+416
+00:24:51,007 --> 00:24:53,062
+of how each client's open and close
+
+417
+00:24:53,062 --> 00:24:57,361
+create a realistic look that you want
+and we provide actions to drive these
+
+418
+00:24:57,919 --> 00:24:58,620
+cars trains
+
+419
+00:24:58,062 --> 00:25:01,961
+other track so that's why Israel case
+there are you think a point
+
+420
+00:25:02,519 --> 00:25:05,840
+so by default Inc appointed .5 .5 I may
+live
+
+421
+00:25:05,084 --> 00:25:08,096
+realistic format shoulder obvious at all
+
+422
+00:25:08,096 --> 00:25:12,285
+0.5 r0 land 0.5
+
+423
+00:25:13,149 --> 00:25:16,173
+so the cost rather we sat as call ask a
+risk of strain of Dec
+
+424
+00:25:16,389 --> 00:25:19,480
+is simply have to property the lower
+angle Amanda upper angle limit
+
+425
+00:25:20,299 --> 00:25:23,590
+once you have the school angles
+specified
+
+426
+00:25:23,059 --> 00:25:27,348
+you can attach that to any of the SK
+know that in the scene
+
+427
+00:25:27,879 --> 00:25:31,917
+and now we have a perfectly working
+drawing hierarchy hauled away
+
+428
+00:25:32,259 --> 00:25:35,264
+drive it to drive it would provide SK
+
+429
+00:25:35,309 --> 00:25:38,330
+actions we have two variants reach to
+know
+
+430
+00:25:38,033 --> 00:25:41,034
+I reached to position so if you wanna
+restore
+
+431
+00:25:41,034 --> 00:25:44,753
+a moving target on a stationary position
+within the scene
+
+432
+00:25:45,059 --> 00:25:48,460
+you can use I they're all the variants
+that's being specified
+
+433
+00:25:48,046 --> 00:25:51,745
+so here have a quick example of
+one-liner
+
+434
+00:25:52,159 --> 00:25:55,185
+writing running the ASCII action of
+reaching
+
+435
+00:25:55,419 --> 00:25:59,570
+a constraint so here we have a simple
+Ford three joints
+
+436
+00:25:59,057 --> 00:26:02,070
+constraint is constrained a 2.0 have
+
+437
+00:26:02,007 --> 00:26:05,095
+across rate of opening from 0 to 180
+degrees as you can see when the mouse
+
+438
+00:26:06,058 --> 00:26:06,637
+moves
+
+439
+00:26:07,159 --> 00:26:10,490
+he actually obeys the cost ran a tight
+not to over ban
+
+440
+00:26:10,049 --> 00:26:13,358
+and but really give you that realistic
+look of
+
+441
+00:26:13,799 --> 00:26:17,882
+mechanical Bell mechanical me I
+
+442
+00:26:18,629 --> 00:26:21,654
+and now we also take the same embers
+kinda Matix
+
+443
+00:26:21,879 --> 00:26:25,870
+calmer too sweetie a place much much
+more interesting but it's also very
+
+444
+00:26:25,087 --> 00:26:27,506
+closely implemented just like this by
+Cape
+
+445
+00:26:28,289 --> 00:26:31,850
+API's we have escaped I see I K cost
+rain
+
+446
+00:26:31,085 --> 00:26:35,169
+and he still has a ask it cost rains RA
+you can say discuss radar
+
+447
+00:26:36,069 --> 00:26:39,398
+also have a animation influence factor
+so here
+
+448
+00:26:40,019 --> 00:26:43,070
+just give real a quick demo have a 3d
+scene
+
+449
+00:26:43,529 --> 00:26:46,543
+with the 3d character playing a part
+animation
+
+450
+00:26:46,669 --> 00:26:50,960
+nothing is and nothing else and running
+
+451
+00:26:50,096 --> 00:26:53,805
+but now with I K running I K Camp
+Blanding
+
+452
+00:26:54,669 --> 00:26:58,990
+are top of the animation playback at 60
+frames per second
+
+453
+00:26:58,099 --> 00:27:01,518
+making sure the hand is always Ponting
+and a red party
+
+454
+00:27:02,409 --> 00:27:05,446
+so now imagine a possibility of I'm
+building a pennis game
+
+455
+00:27:05,779 --> 00:27:08,850
+all I now need is 20 nations why is that
+
+456
+00:27:08,085 --> 00:27:11,134
+back panel and for paddle everything
+else are light
+
+457
+00:27:12,034 --> 00:27:15,043
+I keep a caravan so I don't have the
+field but given the number of animation
+
+458
+00:27:16,024 --> 00:27:17,423
+combinations for the game
+
+459
+00:27:17,639 --> 00:27:20,648
+also have the realistic a lot so that's
+really open up
+
+460
+00:27:21,539 --> 00:27:27,190
+a lot of opportunity
+
+461
+00:27:27,019 --> 00:27:30,061
+so in summary I you working americans
+really easy to use
+
+462
+00:27:30,061 --> 00:27:33,600
+you don't even need to set it up the the
+scene crop take care of it
+
+463
+00:27:34,149 --> 00:27:38,080
+at a cost rains can be set on every
+single drawing they have you got caught
+
+464
+00:27:38,008 --> 00:27:39,107
+on the opening and closing angle
+
+465
+00:27:40,007 --> 00:27:44,019
+and to drive these chains users run a
+single action one-liner
+
+466
+00:27:44,019 --> 00:27:48,388
+tell the going to resell for position
+Arnold
+
+467
+00:27:48,559 --> 00:27:53,820
+next wanna talk about physics field
+
+468
+00:27:53,082 --> 00:27:56,801
+now physics feels our type of your
+forces
+
+469
+00:27:57,539 --> 00:28:02,590
+the applied the generator forces to the
+object that's being part of the scene
+
+470
+00:28:03,049 --> 00:28:06,730
+so here I am having a space cannon
+launching of cannonballs
+
+471
+00:28:06,073 --> 00:28:11,078
+that interact with two different real
+gravity field
+
+472
+00:28:12,023 --> 00:28:17,172
+as you can see as the cannonballs gets
+closer to the planet
+
+473
+00:28:17,379 --> 00:28:21,360
+the thank D Alene your where at the
+linear acceleration gets covered in two
+
+474
+00:28:21,036 --> 00:28:22,725
+angular velocity and
+
+475
+00:28:23,049 --> 00:28:27,071
+star orbiting the planar shows how
+
+476
+00:28:27,269 --> 00:28:31,271
+so we use the feels personally Anne
+physical feel forces
+
+477
+00:28:31,289 --> 00:28:35,341
+and feels can interact was the fifth his
+body that's in the region
+
+478
+00:28:35,809 --> 00:28:39,880
+and the reason is the place where we
+define the field effect area
+
+479
+00:28:40,519 --> 00:28:44,520
+and we have a lot of different feels
+less provided as this release
+
+480
+00:28:44,529 --> 00:28:47,580
+but the ball pen of them so when does
+feel
+
+481
+00:28:48,039 --> 00:28:51,113
+get updated so number one I need to have
+feel knows
+
+482
+00:28:51,779 --> 00:28:55,740
+in the scene graph they're just like any
+ask a naughty cat add them to a scene
+
+483
+00:28:55,074 --> 00:28:58,843
+you can run action on them as well you
+can pattern it when other sprite
+
+484
+00:28:59,509 --> 00:29:03,080
+so you want to have I really big cookie
+planet
+
+485
+00:29:03,008 --> 00:29:07,097
+you to add every to grab the field as a
+child a move that could be planned in
+
+486
+00:29:07,097 --> 00:29:08,276
+Iran and India
+
+487
+00:29:09,149 --> 00:29:12,970
+the field is gonna for follow it and
+even after this body that's located
+
+488
+00:29:12,097 --> 00:29:13,144
+within the region
+
+489
+00:29:14,044 --> 00:29:18,893
+and a bit mathematics is the interaction
+was are happening
+
+490
+00:29:19,289 --> 00:29:22,324
+now the cutoff feels feels would provide
+the law to prohibit ers are you
+
+491
+00:29:22,639 --> 00:29:26,220
+allowed to get the exact look and
+different interactions for you
+
+492
+00:29:26,022 --> 00:29:29,034
+what you can't control number one reason
+that's
+
+493
+00:29:29,034 --> 00:29:32,109
+the area of the fact of whole big of the
+area want
+
+494
+00:29:33,009 --> 00:29:36,218
+the field to interact with you there
+with
+
+495
+00:29:36,299 --> 00:29:40,220
+now the strength you come by in
+combination of all of
+
+496
+00:29:40,022 --> 00:29:43,951
+controls what's the magnitude of force
+that's being applied to eat some
+
+497
+00:29:44,149 --> 00:29:46,177
+individual object that's in the field
+
+498
+00:29:46,429 --> 00:29:50,429
+I minimum radius as just a clamp 3ds and
+a bit
+
+499
+00:29:50,429 --> 00:29:54,478
+mask can be used to differentiate which
+fits his body you want to interact with
+
+500
+00:29:54,919 --> 00:29:57,005
+this field or not
+
+501
+00:29:57,779 --> 00:30:00,876
+now let's look at the region's that's
+key regions defined the area of the fact
+
+502
+00:30:01,749 --> 00:30:03,590
+for this particular field
+
+503
+00:30:03,059 --> 00:30:06,108
+the reason defies this DC area in 20
+space
+
+504
+00:30:07,008 --> 00:30:11,307
+by default it is infinite and you can
+create a rectangle circle are you ok
+
+505
+00:30:11,379 --> 00:30:12,456
+with region from CD path
+
+506
+00:30:13,149 --> 00:30:16,570
+began to a lot of complicated operation
+on them like
+
+507
+00:30:16,057 --> 00:30:20,606
+in bird from track Union intersect so
+far from here on building
+
+508
+00:30:21,119 --> 00:30:24,970
+I'll earth here and their real gravity
+are on earth
+
+509
+00:30:24,097 --> 00:30:28,536
+is you can see is pouring everything
+towards the center
+
+510
+00:30:29,409 --> 00:30:33,820
+so you have this into physics bodies
+feels kept also interact with
+
+511
+00:30:33,082 --> 00:30:37,761
+bracket particle effects so as long as
+you said the field bit mask on a
+
+512
+00:30:38,499 --> 00:30:39,460
+particle in fact
+
+513
+00:30:39,046 --> 00:30:43,097
+every single minute object particles can
+interact with the field so here we have
+
+514
+00:30:43,097 --> 00:30:45,936
+a noise field out playa coherent noise
+force
+
+515
+00:30:46,809 --> 00:30:49,904
+to you so that you made a particles
+
+516
+00:30:50,759 --> 00:30:53,795
+now let's look at some other the basic
+feel that's been provided so
+
+517
+00:30:54,119 --> 00:30:57,124
+everyone can to get a feeling of what
+feels
+
+518
+00:30:57,169 --> 00:31:00,200
+are really looking like
+
+519
+00:31:00,002 --> 00:31:03,026
+so by default would provide the
+basically no gravity field this is just
+
+520
+00:31:03,044 --> 00:31:04,473
+to simulate Earth's gravity
+
+521
+00:31:04,869 --> 00:31:08,990
+in one dimension I can change in the
+direction many times only for co-op
+
+522
+00:31:08,099 --> 00:31:12,378
+they were attracted the object at a
+correct location
+
+523
+00:31:13,269 --> 00:31:16,950
+a second if I wanna similar laid a space
+game have a plant ariane
+
+524
+00:31:16,095 --> 00:31:19,134
+gravity a fact we have the real gravity
+
+525
+00:31:19,989 --> 00:31:24,190
+of you know they can't get you can use
+for example here too object carries a
+
+526
+00:31:24,019 --> 00:31:27,328
+linear velocity but I when the rates
+close to the orbit
+
+527
+00:31:27,499 --> 00:31:31,970
+I billion a gravity coming into I
+angular velocities org BRK actually
+
+528
+00:31:31,097 --> 00:31:33,046
+Korean I get around the
+
+529
+00:31:33,919 --> 00:31:37,860
+the planet we also have a Springfield
+
+530
+00:31:37,086 --> 00:31:41,515
+this is imaginary fielder the demanding
+every single object in the scene
+
+531
+00:31:42,289 --> 00:31:46,700
+in the field actually have a spring hook
+from land and attached to the north
+
+532
+00:31:46,007 --> 00:31:51,031
+so here you can see there being of the
+late it back and forth
+
+533
+00:31:51,094 --> 00:31:54,159
+I we also have noise field that apply a
+coherent
+
+534
+00:31:55,059 --> 00:31:58,858
+noise force to every single object
+that's being
+
+535
+00:31:59,389 --> 00:32:04,467
+participate in a scene
+
+536
+00:32:05,169 --> 00:32:08,600
+an elective feels a particularly cool so
+
+537
+00:32:08,006 --> 00:32:12,315
+imagine YouTube dog have targeted
+positive charges a negative charges and
+
+538
+00:32:12,909 --> 00:32:12,992
+here we have
+
+539
+00:32:13,739 --> 00:32:16,767
+a you like to feel that carries
+
+540
+00:32:17,019 --> 00:32:20,580
+positive target and positive charge
+tracks
+
+541
+00:32:20,058 --> 00:32:24,070
+objects with negative charges i repel
+
+542
+00:32:24,007 --> 00:32:27,546
+object with the same card so here rad
+particles
+
+543
+00:32:28,239 --> 00:32:33,243
+are red can answer actually wanna carry
+positive Kartik at repel the way
+
+544
+00:32:33,639 --> 00:32:36,717
+and the green ones carries the negative
+charge and being a track and
+
+545
+00:32:37,419 --> 00:32:40,515
+in Iraq with the electric feel
+
+546
+00:32:41,379 --> 00:32:45,070
+to feel that would provide physics you
+with us building blocks is like Lengel
+
+547
+00:32:45,007 --> 00:32:45,070
+see
+
+548
+00:32:45,007 --> 00:32:49,346
+feel free to interacted with the I'm
+build combine them together
+
+549
+00:32:50,039 --> 00:32:54,040
+to get combine them up together to have
+a big building blocks
+
+550
+00:32:54,049 --> 00:32:57,061
+I eat on the field to interact with
+different field
+
+551
+00:32:57,169 --> 00:33:02,176
+so for example we found wanna
+implemented one variation of the Lorenz
+
+552
+00:33:02,239 --> 00:33:07,317
+a tractor I can simply have for magnetic
+feel sitting right by each other with
+
+553
+00:33:08,019 --> 00:33:09,350
+opposite charge
+
+554
+00:33:09,035 --> 00:33:12,674
+and what happens if I send a particles
+
+555
+00:33:12,989 --> 00:33:19,989
+through the field that's what it look
+like
+
+556
+00:33:20,021 --> 00:33:23,810
+for which is very cool
+
+557
+00:33:23,999 --> 00:33:27,090
+thank you
+
+558
+00:33:27,909 --> 00:33:30,996
+so in some rain the feels a very fast
+they're very efficient
+
+559
+00:33:31,779 --> 00:33:35,804
+we have a brand new implementation for
+and we actually have a lot of
+
+560
+00:33:36,029 --> 00:33:39,032
+spend a lot of them as a cipher on this
+feature
+
+561
+00:33:39,059 --> 00:33:43,094
+and you can use fielding interact either
+physics bodies a party cause to have a
+
+562
+00:33:43,409 --> 00:33:46,950
+really fine interaction experience for
+the user
+
+563
+00:33:46,095 --> 00:33:49,183
+and you can also use feels to interact
+with other feel to have a comp
+
+564
+00:33:50,083 --> 00:33:54,161
+combined effect next i wanna talk about
+integration I think it
+
+565
+00:33:55,061 --> 00:33:58,480
+we work really closely together with the
+sink a team to make sure we have the
+
+566
+00:33:59,029 --> 00:34:00,590
+best possible experience
+
+567
+00:34:00,059 --> 00:34:03,072
+a brain 3d content into 20 games
+
+568
+00:34:03,072 --> 00:34:07,151
+so here we have a demo spaceship is in
+3d object that scene that will be seen
+
+569
+00:34:07,799 --> 00:34:09,720
+as a mother to
+
+570
+00:34:09,072 --> 00:34:13,261
+same as the asteroid last seen a 3d 3d
+optimal brain
+
+571
+00:34:13,909 --> 00:34:17,936
+into debt to the background
+
+572
+00:34:18,179 --> 00:34:21,310
+so the immigration bring your
+possibilities to
+
+573
+00:34:21,031 --> 00:34:24,840
+developing to the game so we can now you
+can't official E
+
+574
+00:34:25,119 --> 00:34:28,450
+includes week of animals fighting games
+you can't control
+
+575
+00:34:28,045 --> 00:34:32,124
+any of the 3d object just like any other
+ask a naughty can run action on it and
+
+576
+00:34:33,024 --> 00:34:33,032
+run scale
+
+577
+00:34:34,004 --> 00:34:39,823
+you can make it fall path are you make
+any 3d manipulations
+
+578
+00:34:39,859 --> 00:34:43,911
+aids deeply integrated of the two
+Fremont yet we remain loosely coupled
+
+579
+00:34:44,379 --> 00:34:48,379
+as two independent I am solutions for
+the game developers
+
+580
+00:34:48,379 --> 00:34:51,407
+so is render very efficiently together
+think it is rendering
+
+581
+00:34:51,659 --> 00:34:54,706
+directly into the open GL contact when
+are passing when are rendering to
+
+582
+00:34:55,129 --> 00:34:57,203
+texture and the passing tax R&B
+financial framework
+
+583
+00:34:57,869 --> 00:35:01,230
+this is a very efficient solution
+
+584
+00:35:01,023 --> 00:35:04,382
+so the bring 3d coffin into toward the
+base games
+
+585
+00:35:04,589 --> 00:35:07,960
+we create a ask a 3d known it is the
+toll free bridge
+
+586
+00:35:07,096 --> 00:35:11,115
+allow it to incorporate any 3d
+continental spiking based games
+
+587
+00:35:12,015 --> 00:35:16,078
+so once you have sk3 naughty cat
+attacked any of the st. in scenes
+
+588
+00:35:16,078 --> 00:35:19,126
+to this ass case we know you know the
+fight to render in this
+
+589
+00:35:20,026 --> 00:35:23,119
+SKC once you have the as he is seeing
+you can set
+
+590
+00:35:24,019 --> 00:35:27,091
+essence in property I S case we denote
+and the all-star using this
+
+591
+00:35:27,091 --> 00:35:31,800
+CK render in our in the past
+
+592
+00:35:32,619 --> 00:35:36,760
+so how do we create as case we know we
+have the initializer create a scene old
+
+593
+00:35:36,076 --> 00:35:39,077
+where three or four sides you specify i
+sat excise
+
+594
+00:35:39,077 --> 00:35:43,089
+you can attach to any of the ass unity
+in a scene casings are sinking of Jack
+
+595
+00:35:43,089 --> 00:35:46,117
+through the as he has seen property
+
+596
+00:35:47,017 --> 00:35:51,020
+you also have access to Essien no which
+gives you the point of view all were two
+
+597
+00:35:51,047 --> 00:35:51,926
+people camera
+
+598
+00:35:52,349 --> 00:35:56,440
+all if there is a camera where's the
+pointer why the camera looking at the
+
+599
+00:35:56,044 --> 00:35:57,066
+current scene
+
+600
+00:35:57,066 --> 00:36:00,705
+and everything doesn't have any lighting
+you can use a one-liner automatic
+
+601
+00:36:01,299 --> 00:36:05,306
+although we enable the for lighting that
+will to wrong at the fall I to the scene
+
+602
+00:36:05,369 --> 00:36:08,630
+so all the objects a property let
+
+603
+00:36:08,063 --> 00:36:12,099
+so here's a quick example gonna add a 3d
+a Leo from a COLLADA following to ask a
+
+604
+00:36:12,099 --> 00:36:13,102
+scene
+
+605
+00:36:14,002 --> 00:36:18,003
+we just call it gets really know
+initialize without the fall your part
+
+606
+00:36:18,003 --> 00:36:22,052
+Lauder St Encino that said a senior
+added to
+
+607
+00:36:22,052 --> 00:36:27,871
+added to the SKC now the 3d alien object
+is going to appear
+
+608
+00:36:28,339 --> 00:36:33,220
+now you think we should also gold both
+ways spike in now powers all the tax a
+
+609
+00:36:33,022 --> 00:36:34,113
+need for C can as well as South
+
+610
+00:36:35,013 --> 00:36:38,702
+so you can use any spray kit texture
+object directly all seen care
+
+611
+00:36:38,819 --> 00:36:42,160
+but including all the tools we build
+from the last version
+
+612
+00:36:42,016 --> 00:36:45,088
+which is the automatic tax for Apple as
+generation with an axe or
+
+613
+00:36:45,088 --> 00:36:48,146
+as well as that procedurally generated
+lot of normal map
+
+614
+00:36:49,046 --> 00:36:53,053
+weekend you to automatically generate a
+normal map but iraq any 3d object
+
+615
+00:36:53,053 --> 00:36:57,099
+and the fact looks really really cool as
+regular I think it also share the same
+
+616
+00:36:57,099 --> 00:37:00,150
+audio playback interface
+
+617
+00:37:01,005 --> 00:37:04,012
+so having the innovation within the
+toll-free much really really
+
+618
+00:37:05,002 --> 00:37:09,621
+add a lot of possibilities here you can
+have another level interaction with your
+
+619
+00:37:09,819 --> 00:37:13,990
+user for example have a cough and
+background of three also the UCR 3d
+
+620
+00:37:13,099 --> 00:37:14,107
+object flying on the screen
+
+621
+00:37:15,079 --> 00:37:19,121
+is actually making user having of a
+third perspective
+
+622
+00:37:20,021 --> 00:37:24,027
+of what a game look like last year i
+wanna talk about
+
+623
+00:37:24,027 --> 00:37:27,096
+tools here so for ask 06
+
+624
+00:37:27,096 --> 00:37:30,121
+we have released a brand-new spiky
+editor
+
+625
+00:37:31,021 --> 00:37:34,095
+it is part of actual release and you can
+use it to create
+
+626
+00:37:34,095 --> 00:37:38,126
+any of the game scenes without reading
+any coal you can also use it in Iraq any
+
+627
+00:37:39,026 --> 00:37:41,048
+of this bracket features
+
+628
+00:37:41,048 --> 00:37:44,897
+international everything you have seen
+here today
+
+629
+00:37:45,329 --> 00:37:48,331
+can be down instead of biking editor
+without writing
+
+630
+00:37:48,349 --> 00:37:52,420
+any lines of code a forces you also
+
+631
+00:37:52,042 --> 00:37:58,201
+switch to are thank you
+
+632
+00:37:58,579 --> 00:38:02,601
+he also be able to you to ride the
+data-driven
+
+633
+00:38:02,799 --> 00:38:07,803
+a model raining games usually deal with
+a lot of data
+
+634
+00:38:07,839 --> 00:38:11,861
+and we want to shift focus from focusing
+on designing one level
+
+635
+00:38:12,059 --> 00:38:16,114
+rather than have a generic approach of
+data oriented programming model
+
+636
+00:38:16,609 --> 00:38:20,400
+so now always cranky at a fair we
+actually separate the game content from
+
+637
+00:38:20,004 --> 00:38:21,029
+the game logic
+
+638
+00:38:21,065 --> 00:38:24,118
+so you no longer have to manually add a
+spaceship
+
+639
+00:38:25,018 --> 00:38:28,024
+Saturday be a tent and along to the game
+compiler
+
+640
+00:38:28,024 --> 00:38:31,078
+lost a game and I'm about five petals of
+maybe I'll
+
+641
+00:38:31,078 --> 00:38:34,897
+at if I pixels and it picked all the
+getting work all of your uterus and
+
+642
+00:38:35,599 --> 00:38:41,622
+process
+
+643
+00:38:41,829 --> 00:38:44,881
+I we also provide a simplified game
+template
+
+644
+00:38:45,349 --> 00:38:48,380
+that simple so swift and objective-c
+
+645
+00:38:48,038 --> 00:38:51,091
+so although the box your good ago and I
+have a brand new
+
+646
+00:38:51,091 --> 00:38:55,530
+seem created for you ready for drag and
+drop in play create your level
+
+647
+00:38:56,349 --> 00:39:00,421
+and making sure your game is running on
+day one
+
+648
+00:39:01,069 --> 00:39:04,930
+not only you can use Preki added her as
+a editor you can use it as a bee partner
+
+649
+00:39:04,093 --> 00:39:05,272
+as well
+
+650
+00:39:06,109 --> 00:39:10,204
+so if you're in the middle running your
+scene wanna be your ship becomes missing
+
+651
+00:39:11,059 --> 00:39:14,670
+you can use this one line of code is
+paid the in the debugger
+
+652
+00:39:14,067 --> 00:39:18,141
+you gather SKS file I guess what you can
+load that back in ice cold I see what
+
+653
+00:39:19,041 --> 00:39:22,940
+was going off on ice in the neutral back
+exactly we'll see her ricky is
+
+654
+00:39:23,309 --> 00:39:27,650
+so in the case of say if the spaceship
+to hear them because it is the order
+
+655
+00:39:27,065 --> 00:39:30,074
+you can totally see that within the ACO
+
+656
+00:39:30,074 --> 00:39:33,115
+and if you have existing game that not
+even written
+
+657
+00:39:34,015 --> 00:39:37,069
+for the door in a programming you can
+use the same line of code of your life
+
+658
+00:39:37,069 --> 00:39:37,153
+out
+
+659
+00:39:38,053 --> 00:39:41,072
+and even you to retouch it or adding
+
+660
+00:39:41,549 --> 00:39:46,549
+new features dragging the waco and use
+the editor and add new features and
+
+661
+00:39:46,549 --> 00:39:52,680
+they are ready to go
+
+662
+00:39:52,068 --> 00:39:55,094
+so some other basic features that would
+provide respect the editor allowed to do
+
+663
+00:39:55,094 --> 00:39:58,763
+basic object manipulation a placement
+they include position
+
+664
+00:39:59,609 --> 00:40:03,430
+or am patient and scale you can set up a
+fifth his body is
+
+665
+00:40:03,043 --> 00:40:06,138
+Bonnie box pong sarcos are you in a
+brand-new per pixel physics
+
+666
+00:40:07,038 --> 00:40:10,075
+set up you can bring a 3d content from
+qualified
+
+667
+00:40:10,075 --> 00:40:13,116
+directly into a $20 seniors saving and
+loading game
+
+668
+00:40:14,016 --> 00:40:17,103
+I see the 3d object and ready for ready
+to be manipulated
+
+669
+00:40:18,003 --> 00:40:22,342
+an we can set up your shadows on
+lighting your fax line numerous
+
+670
+00:40:22,369 --> 00:40:23,400
+kinematics
+
+671
+00:40:23,004 --> 00:40:26,163
+because I mean a schematic a joint
+hierarchy right inside
+
+672
+00:40:26,559 --> 00:40:29,650
+echoed and preview that a factor right
+here
+
+673
+00:40:29,065 --> 00:40:33,067
+we also providing integrated shave your
+editor allow you to have a Weezy where
+
+674
+00:40:33,067 --> 00:40:34,148
+give fact
+
+675
+00:40:35,048 --> 00:40:38,102
+of adding your shoulders and 20 share
+uniforms
+
+676
+00:40:39,002 --> 00:40:44,021
+so I'm gonna give you a quick demo
+
+677
+00:40:44,039 --> 00:40:47,680
+so from Monday's talk busted up the
+Union demo hopefully you have see how to
+
+678
+00:40:47,068 --> 00:40:48,477
+use Pekka editor to create
+
+679
+00:40:49,089 --> 00:40:52,115
+his body set up for pics of ethics have
+
+680
+00:40:52,349 --> 00:40:55,450
+illusions and also in Iraq with few
+forces
+
+681
+00:40:55,045 --> 00:40:59,102
+and 3d object so from Monday's talk
+busted up the Union demo hopefully you
+
+682
+00:41:00,002 --> 00:41:01,096
+have see how to use Pekka editor to
+create
+
+683
+00:41:01,096 --> 00:41:04,435
+his body set up for pics of ethics have
+
+684
+00:41:05,299 --> 00:41:08,380
+illusions and also in Iraq with few
+forces
+
+685
+00:41:08,038 --> 00:41:12,043
+a 3d object so today the topping I'm
+gonna cover is how to use
+
+686
+00:41:12,043 --> 00:41:15,682
+spike it added her to set up lights
+shadows
+
+687
+00:41:16,069 --> 00:41:19,700
+using inverse kinematics haha use the
+building she there at a tear to quickly
+
+688
+00:41:19,007 --> 00:41:20,346
+to reduce haters
+
+689
+00:41:21,039 --> 00:41:24,530
+with us have a look so here
+
+690
+00:41:24,053 --> 00:41:27,882
+we have a brand new lighting thing so
+nothing here
+
+691
+00:41:28,359 --> 00:41:32,000
+and ready to go I'll if you click
+
+692
+00:41:32,000 --> 00:41:35,579
+in the Object Library this give you any
+existing textures that in the current
+
+693
+00:41:35,579 --> 00:41:38,660
+project sorry fighters dragging ok
+almost all
+
+694
+00:41:38,066 --> 00:41:41,099
+and I can make it slightly bigger
+
+695
+00:41:41,099 --> 00:41:44,099
+anatole see any of the spike it with it
+you just open
+
+696
+00:41:44,099 --> 00:41:47,120
+object library here and because we're
+adding strike a scene is contact
+
+697
+00:41:48,002 --> 00:41:48,055
+sensitive
+
+698
+00:41:48,073 --> 00:41:51,125
+no's these artists backing of Jack
+that's relevant for this
+
+699
+00:41:52,025 --> 00:41:55,096
+others editing experience now as drag a
+light im
+
+700
+00:41:55,096 --> 00:41:58,100
+doesn't know quite what I want yet
+because I haven't let yet
+
+701
+00:41:59,000 --> 00:42:02,829
+as you can see the lighting mask that we
+have on the sprite
+
+702
+00:42:02,829 --> 00:42:06,450
+a cobblestone is not set here for said
+to be one
+
+703
+00:42:06,045 --> 00:42:09,074
+you see there right away no colder
+writing nothing
+
+704
+00:42:09,074 --> 00:42:12,172
+sorry for saying this file loading your
+scene this is exactly what you're gonna
+
+705
+00:42:13,072 --> 00:42:13,421
+get
+
+706
+00:42:14,069 --> 00:42:19,000
+because spec added her actually use a
+spike it writings on tobacco
+
+707
+00:42:19,000 --> 00:42:22,027
+so now we can move to see around will
+delight a row
+
+708
+00:42:22,027 --> 00:42:26,856
+as a defining a fact and now it's kinda
+to the yes camp Landis
+
+709
+00:42:27,099 --> 00:42:30,390
+maybe we can change that texture so we
+can automatically generate a normal map
+
+710
+00:42:30,039 --> 00:42:31,046
+on the fly
+
+711
+00:42:31,046 --> 00:42:36,051
+say from my make stole a base sharp but
+also have a big contrast
+
+712
+00:42:36,051 --> 00:42:39,052
+I can do that as a two numbers
+
+713
+00:42:39,052 --> 00:42:42,341
+and if I wanna make a slightly in the
+name and
+
+714
+00:42:42,809 --> 00:42:46,930
+too sharp my look very discomfort walk
+all
+
+715
+00:42:46,093 --> 00:42:51,492
+so fire want to have lower that that's
+slightly more subtle look and if I moved
+
+716
+00:42:52,329 --> 00:42:53,410
+at
+
+717
+00:42:53,041 --> 00:42:56,430
+object for ron is can see the light real
+
+718
+00:42:56,799 --> 00:42:59,890
+feel like the mouth let's go ahead and
+add
+
+719
+00:42:59,089 --> 00:43:02,091
+a storm object here
+
+720
+00:43:02,091 --> 00:43:06,142
+a little bit to bake that make a smaller
+and I want the stone to be lit as well
+
+721
+00:43:07,042 --> 00:43:08,141
+so let's settle any mass two-b_-one
+
+722
+00:43:09,041 --> 00:43:12,042
+same as the same object
+
+723
+00:43:12,042 --> 00:43:15,951
+okay am because the law we want to have
+a maybe a
+
+724
+00:43:16,329 --> 00:43:20,240
+a 3d Lockhart as maybe stone will need a
+cash adl's we just need to
+
+725
+00:43:20,024 --> 00:43:26,040
+sectional mask on that move it around it
+
+726
+00:43:26,004 --> 00:43:29,031
+and now weekend change some properties
+
+727
+00:43:29,067 --> 00:43:32,118
+applying so I can change that light in
+color
+
+728
+00:43:33,018 --> 00:43:36,024
+well that's a little weird
+
+729
+00:43:36,078 --> 00:43:41,597
+something normal ish warm color is the
+way to go
+
+730
+00:43:42,299 --> 00:43:45,375
+so there hustlers you hear the File Save
+
+731
+00:43:46,059 --> 00:43:50,210
+the scene is ready and you are good to
+go you don't have to
+
+732
+00:43:50,021 --> 00:43:54,073
+to ask a line 0 the in net added 14
+position he called
+
+733
+00:43:54,073 --> 00:43:57,102
+non-black so very cool
+
+734
+00:43:58,002 --> 00:44:02,020
+from necktie washoe is humor schematic
+so here I have a pre-assembled robot
+
+735
+00:44:02,002 --> 00:44:06,085
+I'm just gonna give you a quick a review
+so here I have Armada Jack
+
+736
+00:44:07,003 --> 00:44:11,592
+Armas para they directly to the scene
+for the RR
+
+737
+00:44:11,619 --> 00:44:14,750
+the lower arm as attached as a parent
+for
+
+738
+00:44:14,075 --> 00:44:17,614
+upper arm and have a claw where iPad
+
+739
+00:44:18,289 --> 00:44:21,910
+to the lower soul to what are set up
+
+740
+00:44:21,091 --> 00:44:25,128
+humor schematic for this robot I just
+need to start simulating
+
+741
+00:44:26,028 --> 00:44:29,327
+solak these object
+
+742
+00:44:29,579 --> 00:44:32,627
+an ACA I can run in a schematic on the
+robot
+
+743
+00:44:33,059 --> 00:44:36,700
+reins of the editor and to see how a
+setup
+
+744
+00:44:36,007 --> 00:44:39,156
+and if you want that doesn't look quite
+right maybe and you to set a little bit
+
+745
+00:44:39,849 --> 00:44:41,240
+of constraint on their
+
+746
+00:44:41,024 --> 00:44:46,099
+maybe annual limit to say ninety-degree
+200 ATT grateful dead right
+
+747
+00:44:46,099 --> 00:44:52,188
+and you can have the same effect
+
+748
+00:44:53,079 --> 00:44:56,510
+as you can see actually respect many
+will not over a band arm
+
+749
+00:44:56,051 --> 00:44:59,051
+the all so that simmers kinematics
+
+750
+00:44:59,051 --> 00:45:02,095
+very easy to set up again you don't have
+the right any lines of code
+
+751
+00:45:02,095 --> 00:45:05,098
+to see the quarterback on use any of the
+features here
+
+752
+00:45:06,025 --> 00:45:09,094
+but i wanna go over a shade urs your
+shoulders
+
+753
+00:45:09,319 --> 00:45:14,500
+is very easy so here from that which it
+lybrand I can does polling
+
+754
+00:45:14,005 --> 00:45:17,864
+a solid color of Sprite here happened
+have
+
+755
+00:45:18,359 --> 00:45:22,435
+hey custom share Nana can run Holloway
+said a concentrator
+
+756
+00:45:23,119 --> 00:45:27,130
+specchio added automatic process the
+workspace a figure out how many FS it
+
+757
+00:45:27,013 --> 00:45:28,192
+file that you have
+
+758
+00:45:28,309 --> 00:45:31,310
+so here have a single one I said that
+ample
+
+759
+00:45:31,319 --> 00:45:38,130
+I'm good to go so
+
+760
+00:45:38,013 --> 00:45:41,076
+this is only half the equation to
+actually
+
+761
+00:45:41,076 --> 00:45:45,355
+the the eatery shakespeare's is even
+better
+
+762
+00:45:46,039 --> 00:45:49,067
+to hear if I wanna make a change to the
+satyr
+
+763
+00:45:49,319 --> 00:45:52,323
+I just Colleen the assistant editor
+
+764
+00:45:52,359 --> 00:45:56,378
+if I just click on the object n knows
+what shade or use
+
+765
+00:45:56,549 --> 00:45:59,630
+a bring up the sheeter source side by
+side ready to
+
+766
+00:45:59,063 --> 00:46:03,088
+added you ready to make changes a
+monetary whole workspace
+
+767
+00:46:03,088 --> 00:46:06,096
+so now if I know this the the
+
+768
+00:46:06,096 --> 00:46:09,098
+3ds are the center of the circle I wanna
+shifted a little bit
+
+769
+00:46:10,016 --> 00:46:13,655
+save exchange 2.2 I'm point2
+
+770
+00:46:13,799 --> 00:46:18,410
+and then what happened usually you need
+to rebuild your application
+
+771
+00:46:18,041 --> 00:46:22,052
+injury run the application the
+application will upload new cedar
+
+772
+00:46:22,052 --> 00:46:25,065
+to open to: drivers to your driver will
+compile whether
+
+773
+00:46:25,065 --> 00:46:29,089
+if you forget a semi-colon guess what
+you start the process again
+
+774
+00:46:29,089 --> 00:46:32,143
+here you just needed to file safe
+
+775
+00:46:33,043 --> 00:46:37,067
+so if I make of an automatic say for me
+reverted back to .5
+
+776
+00:46:37,067 --> 00:46:42,140
+5 File Save see the live change right
+here
+
+777
+00:46:43,004 --> 00:46:46,393
+I what if I decide to add a brand-new
+uniforms
+
+778
+00:46:46,789 --> 00:46:51,900
+to the shade or so here I wanna at a be
+the primary so I can control
+
+779
+00:46:51,009 --> 00:46:54,478
+the fact that I'm having here so if I
+save that
+
+780
+00:46:55,369 --> 00:46:58,442
+guess what you have real opened y'all
+penalties in the air
+
+781
+00:46:59,099 --> 00:47:03,460
+Writing Center max code so here because
+I introduce a new uniform
+
+782
+00:47:03,046 --> 00:47:06,128
+that is not being been cleared for the
+decoration of current I'm fails
+
+783
+00:47:07,028 --> 00:47:10,043
+Anne the two the to other places that
+reference
+
+784
+00:47:10,043 --> 00:47:14,222
+talk aren't I'm will fail as well so how
+do we fix that because we're at his new
+
+785
+00:47:14,609 --> 00:47:15,530
+uniform
+
+786
+00:47:15,053 --> 00:47:19,053
+at school had at that in a dictionary
+
+787
+00:47:19,053 --> 00:47:22,882
+so because we calling it you speed will
+make sure to name matches
+
+788
+00:47:23,359 --> 00:47:27,180
+you speed and has a value of $0
+
+789
+00:47:27,018 --> 00:47:30,092
+and about change that one I see that
+live in fact a ride
+
+790
+00:47:30,092 --> 00:47:33,100
+in the editor and make a spin faster
+
+791
+00:47:34,000 --> 00:47:39,046
+both ears okay let me go slower
+
+792
+00:47:39,046 --> 00:47:44,365
+saw live CD ratting riding subway
+
+793
+00:47:44,779 --> 00:47:47,860
+the less the demo of all respected
+editor
+
+794
+00:47:48,589 --> 00:47:51,616
+lastly I wanna go over for me additional
+improvements that we have done to the
+
+795
+00:47:51,859 --> 00:47:55,150
+existing spike a priori API's
+
+796
+00:47:55,015 --> 00:47:59,194
+so for those available and Neal to spike
+it here's the brand new
+
+797
+00:47:59,329 --> 00:48:03,405
+updates clock that we have done for this
+year
+
+798
+00:48:04,089 --> 00:48:07,167
+as the frame starts we start with up
+they function so this is where you can
+
+799
+00:48:07,869 --> 00:48:10,200
+sample game logic
+
+800
+00:48:10,002 --> 00:48:14,058
+after that see more starting value
+actions
+
+801
+00:48:14,076 --> 00:48:17,355
+after the actions i evaluate it user get
+a call back
+
+802
+00:48:18,039 --> 00:48:21,730
+thing okay if I animate are moved as of
+Dec from A to B
+
+803
+00:48:21,073 --> 00:48:24,402
+do I need to do anything else after the
+actions
+
+804
+00:48:25,059 --> 00:48:30,250
+physics kicks in and set up the
+physically step in for the Frank
+
+805
+00:48:30,025 --> 00:48:33,584
+once physics simulations finished user
+get another call back with this
+
+806
+00:48:33,809 --> 00:48:35,160
+personally physics
+
+807
+00:48:35,016 --> 00:48:38,215
+this is where you can set up say and the
+player gets pushed off
+
+808
+00:48:38,359 --> 00:48:41,690
+maybe I moved back by another five
+pixels
+
+809
+00:48:41,069 --> 00:48:44,678
+and now with the brand use sconce crazy
+P I we adding
+
+810
+00:48:45,299 --> 00:48:49,326
+a scene will apply ka strains right at
+this moment
+
+811
+00:48:49,569 --> 00:48:54,010
+of the cost trance are being applied
+user get another notification
+
+812
+00:48:54,001 --> 00:48:59,045
+up with did cut apply constraint and now
+we also add one more selector for user
+
+813
+00:48:59,045 --> 00:49:04,050
+to react on cockpit finish optic this is
+absolutely the last stop before us break
+
+814
+00:49:04,005 --> 00:49:05,096
+a package everything up and send it to
+the
+
+815
+00:49:06,041 --> 00:49:09,670
+graphics to view for the conference
+
+816
+00:49:10,039 --> 00:49:14,041
+let's break it renders the car frame and
+the same loop continues
+
+817
+00:49:14,059 --> 00:49:18,065
+sixty times a second now asking texture
+
+818
+00:49:18,119 --> 00:49:21,162
+got delayed the revamp here weep
+introduce a new type of picture
+
+819
+00:49:21,549 --> 00:49:22,631
+commutable taxer
+
+820
+00:49:23,369 --> 00:49:26,390
+you can create from data can be modified
+very efficiently
+
+821
+00:49:26,039 --> 00:49:29,045
+every frame we provide a call back block
+allow you to make
+
+822
+00:49:29,099 --> 00:49:32,126
+modification to the raw pointers so here
+if I'm just
+
+823
+00:49:33,026 --> 00:49:36,385
+make it tended to the raw pixel data you
+can set that
+
+824
+00:49:36,619 --> 00:49:40,690
+so if you have a really core CPU based
+post-processing in fact you wanna
+
+825
+00:49:40,069 --> 00:49:40,150
+modifier
+
+826
+00:49:41,005 --> 00:49:45,344
+attacker you have the freedom to do that
+if you want to have a custom
+
+827
+00:49:45,839 --> 00:49:49,650
+data you wanna Senate wash Eder as the
+input by setting up a
+
+828
+00:49:49,065 --> 00:49:53,094
+all the betas taxers you can do that as
+well
+
+829
+00:49:53,094 --> 00:49:56,773
+also SK taxers can generate nooit noise
+textures now
+
+830
+00:49:57,619 --> 00:50:01,693
+degenerate coherent noise that gives you
+that lard and noise factor farmers fear
+
+831
+00:50:02,359 --> 00:50:05,381
+so it's a for both the noise generator
+in the crease kill color
+
+832
+00:50:05,579 --> 00:50:09,880
+grayscale or the color of it events
+generate some noise factor
+
+833
+00:50:09,088 --> 00:50:13,287
+we have to stay in there that the color
+of what specs but here to create the
+
+834
+00:50:14,079 --> 00:50:17,440
+that noise factor just call picture with
+noise with you can control the
+
+835
+00:50:17,044 --> 00:50:17,893
+smoothness
+
+836
+00:50:18,289 --> 00:50:22,290
+as well as control the size
+
+837
+00:50:22,299 --> 00:50:25,480
+nice kiss shape known also receive a lot
+a revamped this year
+
+838
+00:50:25,048 --> 00:50:29,067
+so we had a calming and constructors for
+commish a plainclothes rectangles
+
+839
+00:50:29,067 --> 00:50:32,070
+circles eclipse and splines
+
+840
+00:50:32,007 --> 00:50:35,346
+we also allow you to set picture
+
+841
+00:50:36,039 --> 00:50:39,430
+shade urs football's the skulk and fell
+
+842
+00:50:39,043 --> 00:50:43,922
+for the actual shape you can use shape
+no to interact with your physical well
+
+843
+00:50:44,309 --> 00:50:47,910
+if you build up is a very complex com
+complex shape
+
+844
+00:50:47,091 --> 00:50:51,220
+are using shape note you can just access
+the past property directly
+
+845
+00:50:52,039 --> 00:50:56,070
+and then get a CD past send it directly
+to physics faces or quit his body for
+
+846
+00:50:56,349 --> 00:50:58,398
+you
+
+847
+00:50:58,839 --> 00:51:03,200
+we've also made creating can join much
+much easier
+
+848
+00:51:03,002 --> 00:51:08,026
+for with ask a physics bawdy we now have
+a new property copy and
+
+849
+00:51:08,044 --> 00:51:11,088
+to can object to
+
+850
+00:51:11,088 --> 00:51:15,317
+another object you just need to set one
+property so here I have a big year
+
+851
+00:51:16,109 --> 00:51:20,170
+I wanna pin it to the board I just set a
+property to yes
+
+852
+00:51:20,017 --> 00:51:23,044
+speckle figure I'll all the parents the
+
+853
+00:51:23,044 --> 00:51:26,120
+commercial space on whether the other
+dog has his body with Pixar followed
+
+854
+00:51:27,002 --> 00:51:28,401
+that detail for you
+
+855
+00:51:28,599 --> 00:51:33,750
+very cool now in addition to can join
+well sold make
+
+856
+00:51:33,075 --> 00:51:36,104
+creating well joined really easy so
+
+857
+00:51:36,779 --> 00:51:39,838
+well joining a just the same as pain
+joint which means Pennycook yes
+
+858
+00:51:40,369 --> 00:51:43,417
+by the fact that allow rotation my means
+I'm
+
+859
+00:51:43,849 --> 00:51:46,926
+welded to my parents here have small
+beer
+
+860
+00:51:47,619 --> 00:51:52,680
+they'll be welded to the big year so we
+set to properties
+
+861
+00:51:52,068 --> 00:51:56,937
+and the physics on Mac is set up for you
+
+862
+00:51:57,549 --> 00:52:00,549
+e-edition Phys body can now be created
+using
+
+863
+00:52:00,549 --> 00:52:04,000
+copies as bodies on you to do is just in
+SK
+
+864
+00:52:04,000 --> 00:52:08,559
+for the body where the new nikolai the
+car body with bodies you pass in RAR
+
+865
+00:52:08,559 --> 00:52:11,562
+the different phases body shapes and for
+example hammer here
+
+866
+00:52:11,589 --> 00:52:15,210
+is campaign always two rectangles of a
+top 10
+
+867
+00:52:15,021 --> 00:52:18,026
+and handle
+
+868
+00:52:18,026 --> 00:52:21,545
+now ask it after Alice aids our
+
+869
+00:52:21,779 --> 00:52:25,781
+one of the key component to allow user
+to you have efficient
+
+870
+00:52:25,799 --> 00:52:28,980
+graphics performance so anything that an
+attacker Alice
+
+871
+00:52:28,098 --> 00:52:31,119
+we allow OpenGL to do you fish in
+batting here
+
+872
+00:52:32,019 --> 00:52:35,148
+so it's now support football's spike in
+sync and
+
+873
+00:52:35,319 --> 00:52:38,910
+with poor balls right now a non-resident
+not resolutions
+
+874
+00:52:38,091 --> 00:52:43,102
+so if you have a game and have all the
+asset putting in my folder
+
+875
+00:52:44,002 --> 00:52:46,098
+the tax for Apple a generator will
+separate them for you so you don't have
+
+876
+00:52:46,098 --> 00:52:47,150
+to pay the memory overhead
+
+877
+00:52:48,005 --> 00:52:51,554
+if you're loading the passer alors on
+Iran a device
+
+878
+00:52:52,049 --> 00:52:56,730
+and you have to lower their now reno
+asset also support
+
+879
+00:52:56,073 --> 00:53:01,149
+the for 32-bit pixel format and also to
+compress 16 for Mac
+
+880
+00:53:02,049 --> 00:53:06,146
+now one of the big changes way announce
+a prop 24 K by 4k resolution so it's a
+
+881
+00:53:07,046 --> 00:53:07,144
+simple
+
+882
+00:53:08,044 --> 00:53:13,090
+are changed in the axe call settings for
+your project
+
+883
+00:53:13,009 --> 00:53:18,208
+yet this shit we support runtime:
+patcher Apple as generation
+
+884
+00:53:19,099 --> 00:53:22,880
+so if you have a downloadable content
+same use a dollar on a new level
+
+885
+00:53:22,088 --> 00:53:25,287
+everything is coming along files or user
+take
+
+886
+00:53:26,079 --> 00:53:30,079
+go out to take some pictures and decide
+to use action game askew map
+
+887
+00:53:30,079 --> 00:53:33,079
+you can to simply passing to basket
+after Apple's API
+
+888
+00:53:33,079 --> 00:53:37,140
+and we'll automatic a stitch it for you
+and tremble to not turn
+
+889
+00:53:37,014 --> 00:53:41,153
+trim to mop too transparent pixels
+
+890
+00:53:41,279 --> 00:53:45,900
+so in summary we really have a lot of
+new features packed in this year's
+
+891
+00:53:45,009 --> 00:53:48,010
+spec a release we have a lot of cool
+graphics technology like
+
+892
+00:53:49,000 --> 00:53:54,099
+compensators lighting and chattels we
+have really course immolation the fact
+
+893
+00:53:54,099 --> 00:53:57,640
+like inverse kinematics physics field
+
+894
+00:53:57,064 --> 00:54:00,523
+per pixel physics and cost right
+
+895
+00:54:01,099 --> 00:54:04,200
+all of these features can be down using
+one-line
+
+896
+00:54:04,002 --> 00:54:07,045
+are no lines at all if we use the spiky
+editor
+
+897
+00:54:07,063 --> 00:54:11,102
+for the spec editor is a new edition to
+tackle family and is really cool feature
+
+898
+00:54:12,002 --> 00:54:12,095
+how in car to
+
+899
+00:54:12,095 --> 00:54:17,244
+use it and it's also a good learning
+experience to see how any of the new
+
+900
+00:54:18,099 --> 00:54:21,690
+features in iraq was eat with each other
+within a scene
+
+901
+00:54:21,069 --> 00:54:23,168
+and we can't wait to see what you can
+come up with all these technology and
+
+902
+00:54:24,068 --> 00:54:25,075
+tools we provide
+
+903
+00:54:25,075 --> 00:54:29,123
+for this release so with a Sat if you
+have any questions or feedback or
+
+904
+00:54:30,023 --> 00:54:32,070
+anything you wanna see in the future
+
+905
+00:54:32,007 --> 00:54:35,336
+you like to you can't feel free to
+contact our
+
+906
+00:54:36,029 --> 00:54:39,250
+developer evangelist Alex Shaffer have
+Philip
+
+907
+00:54:39,025 --> 00:54:42,314
+ily ask you and we have a revamped
+
+908
+00:54:42,539 --> 00:54:46,220
+revamp the spike it programming guide
+that's on the developer portal
+
+909
+00:54:46,022 --> 00:54:49,024
+so you wanna pick up the documentation
+for these new features they're already
+
+910
+00:54:49,024 --> 00:54:50,063
+there
+
+911
+00:54:50,063 --> 00:54:53,070
+and for release this session right after
+the session is the best practice of
+
+912
+00:54:53,007 --> 00:54:54,086
+beatings bracket games
+
+913
+00:54:54,779 --> 00:54:57,857
+we gonna go into stepped-up what are the
+best performance practice as a whole set
+
+914
+00:54:58,559 --> 00:55:00,631
+up a game right in order to use these
+new features
+
+915
+00:55:01,279 --> 00:55:04,284
+an set up for scale ability
+
+916
+00:55:04,329 --> 00:55:07,720
+and as I said before we worked really
+closely with the sink 18
+
+917
+00:55:07,072 --> 00:55:11,167
+making sure think it is also a
+high-level arm 3d API just like spike it
+
+918
+00:55:12,067 --> 00:55:15,076
+highly encourage you to tackle the
+stinky sections for tomorrow in the same
+
+919
+00:55:15,076 --> 00:55:17,145
+room for two sessions
+
+920
+00:55:17,829 --> 00:55:20,851
+and with less at thank you very much
+this at the end of Sakha
+
+921
+00:55:21,049 --> 00:55:22,950
+we gotta have the address above great
+

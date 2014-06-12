@@ -1,0 +1,3817 @@
+1
+00:00:17,015 --> 00:00:20,030
+everyone welcome tent reducing health
+care
+
+2
+00:00:20,003 --> 00:00:23,052
+my name's Justin i mean i OS
+
+3
+00:00:23,349 --> 00:00:27,450
+engineer and i'll be joined appear in a
+little while by my colleague CG
+
+4
+00:00:27,045 --> 00:00:30,046
+CGI got to work together on health care
+
+5
+00:00:30,055 --> 00:00:34,062
+and we're really excited to show to
+today so
+
+6
+00:00:34,062 --> 00:00:38,136
+there are a ton have health and fitness
+aP's
+
+7
+00:00:39,036 --> 00:00:43,265
+on the App Store today they do all sorts
+of awesome things
+
+8
+00:00:43,589 --> 00:00:46,910
+the lead our users get healthy and stay
+healthy
+
+9
+00:00:46,091 --> 00:00:49,490
+problem is not a lot of the zaps
+
+10
+00:00:50,309 --> 00:00:55,220
+can share data between each other this
+makes it really hard for our users to
+
+11
+00:00:55,022 --> 00:00:56,421
+get a cohesive you
+
+12
+00:00:56,619 --> 00:00:59,850
+their current health the few aP's
+
+13
+00:00:59,085 --> 00:01:03,474
+they can share data had to write all
+sorts of custom code to do so
+
+14
+00:01:04,239 --> 00:01:07,420
+which means you spend your time an
+energy
+
+15
+00:01:07,042 --> 00:01:10,058
+working on features that aren't court to
+the experience
+
+16
+00:01:10,058 --> 00:01:13,099
+if your applications now
+
+17
+00:01:13,099 --> 00:01:17,102
+we recognize the different applications
+have different needs
+
+18
+00:01:18,002 --> 00:01:21,027
+the way we see it they can be grouped
+into three
+
+19
+00:01:21,027 --> 00:01:27,035
+main categories first their applications
+that perform statistical analysis
+
+20
+00:01:27,035 --> 00:01:32,083
+using graphs trans next their
+applications to let users
+
+21
+00:01:32,083 --> 00:01:36,088
+enter information last
+
+22
+00:01:36,088 --> 00:01:40,110
+their applications put out by health
+providers to let users sync data
+
+23
+00:01:41,001 --> 00:01:45,008
+with their personal medical record these
+are three very different scenarios
+
+24
+00:01:45,008 --> 00:01:48,008
+but we don't health kit so that it can
+handle all of them
+
+25
+00:01:48,008 --> 00:01:53,117
+we're gonna show you how does that today
+throughout the stalk
+
+26
+00:01:53,909 --> 00:01:58,400
+we're going to refer to the health ap
+this is talking about the new health
+
+27
+00:01:58,004 --> 00:01:58,090
+application
+
+28
+00:01:59,026 --> 00:02:04,072
+that we're introducing with IOSA to use
+our agenda for today
+
+29
+00:02:04,072 --> 00:02:07,170
+we're gonna start off by walking you
+through the health care API
+
+30
+00:02:08,007 --> 00:02:11,079
+so you can learn how to create data how
+to save data
+
+31
+00:02:12,042 --> 00:02:17,108
+and how to ask for data as well 10 CDs
+gonna come up here and give you a demo
+
+32
+00:02:18,008 --> 00:02:21,079
+so you can see how to incorporate health
+kit and your own applications
+
+33
+00:02:21,079 --> 00:02:25,088
+will finish things off with some help
+get best practices
+
+34
+00:02:25,799 --> 00:02:28,846
+health kit
+
+35
+00:02:29,269 --> 00:02:33,355
+is a framework that lets you store and
+retrieve health and fitness information
+
+36
+00:02:34,129 --> 00:02:40,810
+so data is really important we're gonna
+start off by talking about what data is
+
+37
+00:02:40,081 --> 00:02:44,740
+and health care storing health
+information
+
+38
+00:02:45,469 --> 00:02:49,730
+in a way that can scale to work all
+across the world has presented some
+
+39
+00:02:49,073 --> 00:02:52,080
+challenging problems every time you step
+on your scale
+
+40
+00:02:53,043 --> 00:02:57,222
+your weight maybe pounds in the United
+States stones in England
+
+41
+00:02:57,609 --> 00:03:02,790
+her kilograms and many other areas we
+didn't want you to have to do unit
+
+42
+00:03:02,079 --> 00:03:03,338
+conversion yourself
+
+43
+00:03:04,049 --> 00:03:07,102
+so we handle unit conversion for you
+writing health kit
+
+44
+00:03:07,579 --> 00:03:10,700
+units are handled
+
+45
+00:03:10,007 --> 00:03:14,091
+by HK unit in HK unit
+
+46
+00:03:15,054 --> 00:03:19,118
+represents a particular unit in the
+metric or imperial units system
+
+47
+00:03:20,018 --> 00:03:23,051
+these can be simple such as grams
+
+48
+00:03:23,051 --> 00:03:26,126
+but they can be complex like milligrams
+per deciliter
+
+49
+00:03:27,026 --> 00:03:30,675
+base units are classified
+
+50
+00:03:30,909 --> 00:03:35,700
+in two types: types defined which units
+are compatible with each other
+
+51
+00:03:35,007 --> 00:03:38,856
+for example a mass units value can be
+converted
+
+52
+00:03:39,549 --> 00:03:42,601
+to any other mass unit here you can see
+
+53
+00:03:43,069 --> 00:03:46,108
+the milligrams per deciliter is an
+example amass
+
+54
+00:03:46,459 --> 00:03:51,510
+per volume unit we give you a couple
+have different ways to create units
+
+55
+00:03:51,969 --> 00:03:54,971
+first you can specify them explicitly
+
+56
+00:03:55,169 --> 00:03:58,227
+incurred here we're creating a gram unit
+
+57
+00:03:58,749 --> 00:04:03,818
+and then we're creating a de salir unit
+and we're combining the two
+
+58
+00:04:04,439 --> 00:04:09,505
+to make a grams protest leader unit this
+works really well for sample units
+
+59
+00:04:10,099 --> 00:04:13,177
+but as you can see it gets pretty
+unwieldy as we expand to more complex
+
+60
+00:04:13,879 --> 00:04:14,650
+want
+
+61
+00:04:14,065 --> 00:04:18,154
+to make things easier on you we let you
+specify units using unit strings
+
+62
+00:04:19,054 --> 00:04:23,062
+like so so this line will create an
+identical
+
+63
+00:04:23,062 --> 00:04:27,096
+unit to the three lines above it
+
+64
+00:04:27,096 --> 00:04:30,107
+once you have your unit the next thing
+you're going to want to do
+
+65
+00:04:31,007 --> 00:04:35,166
+is create in HK quantity in HK quantity
+
+66
+00:04:35,229 --> 00:04:39,680
+is a double value relative to a
+particular unit
+
+67
+00:04:39,068 --> 00:04:43,367
+what's really cool about quantities
+though is that they can be used to do
+
+68
+00:04:43,979 --> 00:04:46,370
+unit conversion for you
+
+69
+00:04:46,037 --> 00:04:49,068
+let's take a look at how they do that
+here
+
+70
+00:04:49,068 --> 00:04:53,427
+we start off by making a quantity have
+twenty grams
+
+71
+00:04:54,039 --> 00:04:59,210
+next we can ask for its double value in
+kilograms
+
+72
+00:04:59,021 --> 00:05:02,094
+this will give us back point 02
+
+73
+00:05:02,094 --> 00:05:06,223
+unfortunately not all units play nicely
+together
+
+74
+00:05:07,069 --> 00:05:11,360
+if you ask a quantity for its value and
+a unit it's not compatible with
+
+75
+00:05:11,036 --> 00:05:15,090
+we're going to throw an exception you
+can always gorgeous often code
+
+76
+00:05:15,009 --> 00:05:19,558
+by asking a quantity if it's compatible
+with the particular unit
+
+77
+00:05:20,449 --> 00:05:23,990
+to return a ball so
+
+78
+00:05:23,099 --> 00:05:26,678
+now that you have your quantity the
+question should be asking yourself
+
+79
+00:05:27,569 --> 00:05:30,660
+is what is this a quantity of to answer
+that question
+
+80
+00:05:31,479 --> 00:05:34,570
+we're going to take a look at object
+types
+
+81
+00:05:35,389 --> 00:05:39,030
+object types represent all the different
+kinds data
+
+82
+00:05:39,003 --> 00:05:44,084
+that we can store in health care there
+are over 60 different types
+
+83
+00:05:44,084 --> 00:05:48,383
+major groups have types for organized
+into their own classes
+
+84
+00:05:49,139 --> 00:05:55,770
+all these classes and hair from HK
+object-type
+
+85
+00:05:55,077 --> 00:05:58,496
+characteristic types are characteristics
+the user
+
+86
+00:05:59,189 --> 00:06:02,195
+or trade that don't change overtime
+
+87
+00:06:02,789 --> 00:06:07,580
+these are things such as their blood
+type or date of birth
+
+88
+00:06:07,058 --> 00:06:10,517
+sample types on the other hand are
+treated the user that
+
+89
+00:06:11,039 --> 00:06:15,090
+do change over time as such they can be
+sampled
+
+90
+00:06:15,009 --> 00:06:18,065
+at a particular point in time
+
+91
+00:06:18,065 --> 00:06:22,304
+one kind of sample type its K quantity
+type
+
+92
+00:06:22,889 --> 00:06:26,944
+these are the kind today didn't they can
+be represented fine HK quantity
+
+93
+00:06:27,439 --> 00:06:30,439
+they're by far the most common kinds of
+data and health care
+
+94
+00:06:30,439 --> 00:06:34,000
+and represent everything from blood
+pressure to potassium
+
+95
+00:06:34,000 --> 00:06:38,012
+to the number of steps you taken
+
+96
+00:06:38,012 --> 00:06:41,043
+last we have is K category type
+
+97
+00:06:41,043 --> 00:06:45,052
+category types described the kind of
+data they can be categorized
+
+98
+00:06:45,439 --> 00:06:49,505
+into an enumeration values an example if
+category type
+
+99
+00:06:50,099 --> 00:06:53,400
+is sleeping Alice which is how we store
+sleep
+
+100
+00:06:53,004 --> 00:06:58,035
+and health kit let's talk about how you
+create in instance
+
+101
+00:06:58,071 --> 00:07:02,270
+I'm in HK object-type every type has its
+own
+
+102
+00:07:02,909 --> 00:07:06,710
+type identify you cannot create your own
+types
+
+103
+00:07:06,071 --> 00:07:10,620
+or type identifiers but it's important
+to understand how their structured
+
+104
+00:07:11,259 --> 00:07:15,520
+so that you can use auto complete tear
+drainage
+
+105
+00:07:15,052 --> 00:07:20,041
+here we have are identifiers for heart
+rate
+
+106
+00:07:20,509 --> 00:07:24,340
+the first part of the identifiers is
+which object-type subclass
+
+107
+00:07:24,034 --> 00:07:27,703
+it represents as you can see heart rate
+
+108
+00:07:28,009 --> 00:07:31,022
+is a quantity type
+
+109
+00:07:31,139 --> 00:07:34,139
+the second part did identifiers is the
+type
+
+110
+00:07:34,139 --> 00:07:38,050
+name or what you would call the type
+
+111
+00:07:38,005 --> 00:07:41,704
+once you have your type identifiers you
+can pass it to one of these three
+
+112
+00:07:41,749 --> 00:07:42,830
+constructors
+
+113
+00:07:42,083 --> 00:07:46,165
+on HK object-type it's important to note
+that your identifiers
+
+114
+00:07:47,065 --> 00:07:50,068
+and your constructor need to match up
+
+115
+00:07:50,068 --> 00:07:53,587
+so if you were to pass a category type
+identifiers
+
+116
+00:07:54,199 --> 00:07:57,271
+to quantity type for identifiers you're
+going to get back
+
+117
+00:07:57,919 --> 00:08:00,946
+nell
+
+118
+00:08:01,189 --> 00:08:04,221
+so now we have a quantity
+
+119
+00:08:04,509 --> 00:08:08,310
+and we have an object type it sounds
+like you're ready
+
+120
+00:08:08,031 --> 00:08:12,087
+to create some data all data are stored
+and health care
+
+121
+00:08:12,087 --> 00:08:15,696
+is a subclass its K object
+
+122
+00:08:16,479 --> 00:08:21,960
+here we have a diagram other its K
+object class hierarchy
+
+123
+00:08:21,096 --> 00:08:24,168
+you I noticed that this is pretty
+similar to the hierarchy we just saw
+
+124
+00:08:25,068 --> 00:08:28,487
+for HK object-type this is by design
+
+125
+00:08:29,099 --> 00:08:34,630
+as object types and objects are very
+closely tied together
+
+126
+00:08:34,063 --> 00:08:37,126
+let's take a look at some of these
+different classes
+
+127
+00:08:38,026 --> 00:08:41,031
+will start off with its K quantity
+sample
+
+128
+00:08:41,031 --> 00:08:44,119
+this is by far the most common kind of
+HK object and health kit
+
+129
+00:08:45,019 --> 00:08:48,110
+there how we store quantities in the
+database
+
+130
+00:08:49,001 --> 00:08:52,010
+every quality sample has a quantity type
+
+131
+00:08:52,019 --> 00:08:56,107
+this is what kind of data the sample
+represents
+
+132
+00:08:57,007 --> 00:09:00,008
+they also have a quantity which is the
+value
+
+133
+00:09:00,017 --> 00:09:03,022
+at the sample it's important to note
+
+134
+00:09:03,022 --> 00:09:07,028
+that your quantities unit and your
+quantity type need to match up
+
+135
+00:09:07,082 --> 00:09:10,104
+every quantity type expects a certain
+kind of the unit
+
+136
+00:09:11,004 --> 00:09:16,010
+and if there's a mismatch here then
+we'll throw an exception
+
+137
+00:09:16,001 --> 00:09:19,072
+next we have its K category sample
+category samples
+
+138
+00:09:19,081 --> 00:09:23,148
+are very similar to quality samples they
+have a category type
+
+139
+00:09:24,048 --> 00:09:28,112
+which again describes what kind of data
+the sample represent
+
+140
+00:09:29,012 --> 00:09:32,051
+and they have a valued now
+
+141
+00:09:32,051 --> 00:09:36,090
+remember the category types for the
+kinds of data they can be categorized
+
+142
+00:09:36,009 --> 00:09:39,035
+into an and numeration values
+
+143
+00:09:40,016 --> 00:09:43,027
+as such every category type is paired
+
+144
+00:09:43,027 --> 00:09:46,116
+with the corresponding Keenum this value
+property
+
+145
+00:09:47,016 --> 00:09:50,031
+must be one of the members that the num
+
+146
+00:09:50,031 --> 00:09:53,084
+if an invalid value is provided we throw
+an exception
+
+147
+00:09:53,084 --> 00:09:57,167
+just like we do for quantity samples
+
+148
+00:09:58,067 --> 00:10:02,093
+both these inherit from HK sample
+
+149
+00:10:02,093 --> 00:10:05,101
+remembered that samples are the kind to
+data they can be sampled
+
+150
+00:10:06,073 --> 00:10:09,140
+at a particular point in time to support
+this
+
+151
+00:10:10,004 --> 00:10:14,030
+every sample has both a start date and
+and a
+
+152
+00:10:14,066 --> 00:10:17,088
+why but the start date mandate might ask
+well
+
+153
+00:10:17,088 --> 00:10:20,095
+for some kind today to such as your way
+
+154
+00:10:20,095 --> 00:10:23,104
+the reading is pretty instantaneous so
+your start date and end date
+
+155
+00:10:24,085 --> 00:10:28,092
+should probably be the same for other
+kinds a dated oh
+
+156
+00:10:28,092 --> 00:10:31,134
+you're reading My take place over a
+period of time
+
+157
+00:10:32,034 --> 00:10:35,126
+you might wanna say that your heart rate
+wasn't averages 80 beats per minute
+
+158
+00:10:36,026 --> 00:10:40,044
+over the course have 30 seconds
+
+159
+00:10:40,044 --> 00:10:43,079
+every sample also has a sample type
+
+160
+00:10:43,079 --> 00:10:47,081
+this is going to be the same as your
+category type or quantity type
+
+161
+00:10:47,081 --> 00:10:52,087
+depending on which subclass you choose
+to implement
+
+162
+00:10:53,041 --> 00:10:57,074
+all these inherit from HK object
+
+163
+00:10:57,074 --> 00:11:01,080
+every object has a UUID which is a
+unique identifiers that has persisted
+
+164
+00:11:02,034 --> 00:11:04,071
+for the lifetime of the object
+
+165
+00:11:04,071 --> 00:11:07,163
+so you can count on this always being
+the same
+
+166
+00:11:08,063 --> 00:11:11,154
+they also have a source because health
+information
+
+167
+00:11:12,054 --> 00:11:17,067
+is so sensitive we wanted to make sure
+that every object could identify
+
+168
+00:11:17,067 --> 00:11:21,073
+where it came from each application
+represents
+
+169
+00:11:21,073 --> 00:11:24,080
+its own source but sources can also be
+pieces of hardware
+
+170
+00:11:25,043 --> 00:11:31,074
+such is a Bluetooth heart rate monitor
+or the step tracker near fun
+
+171
+00:11:31,074 --> 00:11:34,097
+meta data is an important part the
+extensibility
+
+172
+00:11:34,097 --> 00:11:39,181
+up an object you can create an object
+with whatever method eighty like
+
+173
+00:11:40,081 --> 00:11:43,087
+note that meta data is a regular annis
+dictionary
+
+174
+00:11:43,087 --> 00:11:46,155
+except it can only store strings as keys
+
+175
+00:11:47,055 --> 00:11:51,081
+and strings numbers and dates is values
+
+176
+00:11:51,081 --> 00:11:55,104
+we give you a few predefined meta-data
+keys which we think you might be used
+
+177
+00:11:56,004 --> 00:11:59,073
+which we think might be useful we
+encourage you to create your own
+
+178
+00:11:59,073 --> 00:12:00,073
+meta-data keys
+
+179
+00:12:00,073 --> 00:12:03,102
+as well
+
+180
+00:12:04,002 --> 00:12:09,061
+now you may have noticed that all of the
+properties you saw here are read-only
+
+181
+00:12:09,061 --> 00:12:13,063
+this is because all data and health kit
+is immutable
+
+182
+00:12:13,063 --> 00:12:16,068
+as great as it would be to go back and
+change my high need really doesn't make
+
+183
+00:12:17,013 --> 00:12:18,070
+any sense
+
+184
+00:12:18,007 --> 00:12:22,013
+so you can create objects using
+constructors on HK quantity sample
+
+185
+00:12:23,003 --> 00:12:26,096
+NHK category sample
+
+186
+00:12:27,023 --> 00:12:30,115
+this is an example how you might create
+object to represent someone's body
+
+187
+00:12:31,015 --> 00:12:33,078
+temperature
+
+188
+00:12:33,078 --> 00:12:37,106
+first we create our quantity type which
+in this case is the quantity type
+
+189
+00:12:38,006 --> 00:12:41,027
+for body temperature
+
+190
+00:12:41,027 --> 00:12:45,115
+next week create are quantity let's say
+this person feeling pretty healthy today
+
+191
+00:12:46,015 --> 00:12:49,040
+so their temperature is ninety eight
+
+192
+00:12:49,004 --> 00:12:53,012
+points6 degrees Fahrenheit
+
+193
+00:12:53,048 --> 00:12:57,076
+last recreates a medida this piece a
+meta data says that the person probably
+
+194
+00:12:57,076 --> 00:12:57,131
+took
+
+195
+00:12:58,031 --> 00:13:02,113
+their body temperature using your
+thermometer
+
+196
+00:13:03,013 --> 00:13:06,046
+we can then pass all this to HK quantity
+samples
+
+197
+00:13:06,046 --> 00:13:09,130
+quanti sample with type: and given a
+start date and end date
+
+198
+00:13:10,003 --> 00:13:13,099
+right now
+
+199
+00:13:14,026 --> 00:13:18,101
+now that you have your data what do you
+actually do with it
+
+200
+00:13:19,001 --> 00:13:22,079
+well to really do anything with health
+kit the first thing you need
+
+201
+00:13:22,079 --> 00:13:26,110
+is in HK help store you can think if
+your health store
+
+202
+00:13:27,001 --> 00:13:30,058
+is your link to the database
+
+203
+00:13:30,067 --> 00:13:33,121
+it lets you save objects and as we'll
+find out a little bit
+
+204
+00:13:34,021 --> 00:13:38,023
+it lets you ask for data as well
+
+205
+00:13:38,041 --> 00:13:41,139
+remember though that you really only
+need one health store
+
+206
+00:13:42,039 --> 00:13:45,054
+they should be long-lived and you don't
+really get anything out of having
+
+207
+00:13:45,054 --> 00:13:46,152
+multiple ones floating around
+
+208
+00:13:47,052 --> 00:13:51,108
+so create one hold on to it and you're
+done
+
+209
+00:13:52,008 --> 00:13:56,062
+here's an example a bus saving some data
+to health kit
+
+210
+00:13:56,062 --> 00:13:59,129
+first we create our health store
+
+211
+00:14:00,029 --> 00:14:03,101
+next we create a quantity sample
+
+212
+00:14:04,001 --> 00:14:08,016
+we can then pass our sample to our
+health store using safe object
+
+213
+00:14:08,016 --> 00:14:13,031
+with completion and wala we have
+officially saved data
+
+214
+00:14:13,031 --> 00:14:16,035
+and health kit
+
+215
+00:14:16,035 --> 00:14:20,036
+so saving date is great but it's not
+really any fine
+
+216
+00:14:20,045 --> 00:14:24,106
+unless we can ask for it back right
+health kit gives you lots of ways
+
+217
+00:14:25,006 --> 00:14:29,054
+task for data the easiest information to
+get
+
+218
+00:14:29,054 --> 00:14:33,139
+are characteristics at the user because
+these don't change over time
+
+219
+00:14:34,039 --> 00:14:37,095
+we really only care about the current
+value so you can just
+
+220
+00:14:37,095 --> 00:14:40,156
+ask your health store directly
+
+221
+00:14:41,056 --> 00:14:44,085
+here's an example a bus asking our
+health store for the users
+
+222
+00:14:44,085 --> 00:14:48,121
+date of birth this doesn't work for
+everything though
+
+223
+00:14:49,021 --> 00:14:52,046
+so to ask for the book about data we're
+gonna need something
+
+224
+00:14:52,046 --> 00:14:55,050
+a little more heavy duty this
+
+225
+00:14:55,005 --> 00:14:59,096
+is work where he's come in queries
+provide a structured mechanism
+
+226
+00:15:00,041 --> 00:15:04,075
+for you to look at health data in a
+variety of ways
+
+227
+00:15:04,075 --> 00:15:08,154
+all queries inherit from HK query
+
+228
+00:15:09,054 --> 00:15:12,102
+in HK query has a sample type which is
+what kind of data
+
+229
+00:15:13,002 --> 00:15:16,075
+is being queried for they also
+
+230
+00:15:16,075 --> 00:15:19,109
+have a predicate predicate isn't NS
+predicate
+
+231
+00:15:20,009 --> 00:15:24,058
+that filters which objects are to be
+returned by the query
+
+232
+00:15:24,058 --> 00:15:27,085
+you can create predicates and a couple
+different ways
+
+233
+00:15:27,085 --> 00:15:30,128
+first you can use regular and its
+predicate constructors what you may
+
+234
+00:15:31,028 --> 00:15:33,087
+already be used to
+
+235
+00:15:33,087 --> 00:15:36,129
+we give you a constant for every key
+path that you can use
+
+236
+00:15:37,029 --> 00:15:41,080
+with predicates this is a really
+powerful tool
+
+237
+00:15:41,008 --> 00:15:44,063
+we wanted to make it easy on you to
+create the predicates that are most
+
+238
+00:15:45,035 --> 00:15:46,102
+commonly used
+
+239
+00:15:47,002 --> 00:15:51,088
+so we provide some convenience
+constructors right punished a query
+
+240
+00:15:51,088 --> 00:15:54,129
+note that these two methods are going to
+create identical predicates
+
+241
+00:15:55,029 --> 00:16:00,066
+so you can use whichever method you feel
+more comfortable with
+
+242
+00:16:00,066 --> 00:16:05,102
+now let's say that you're working on a
+brand new application
+
+243
+00:16:06,002 --> 00:16:09,046
+this app is for a fancy new health
+tracker they can measure the user's
+
+244
+00:16:09,046 --> 00:16:09,125
+blood sugar
+
+245
+00:16:10,025 --> 00:16:13,059
+and sink it to their fun your app
+
+246
+00:16:13,059 --> 00:16:17,110
+already saves all that state and health
+kit now you want to create a screen
+
+247
+00:16:18,001 --> 00:16:21,093
+that will show the user their most
+recent blood sugar reading
+
+248
+00:16:22,002 --> 00:16:26,003
+you can do this with HK sample query
+
+249
+00:16:26,003 --> 00:16:29,008
+every sample query has a limit this
+defines how many
+
+250
+00:16:29,053 --> 00:16:32,074
+objects were going to be returned by the
+query
+
+251
+00:16:32,074 --> 00:16:36,105
+if you don't wanna limit your results
+you can specify HK object query
+
+252
+00:16:37,005 --> 00:16:42,012
+no limit they also have a sort order
+
+253
+00:16:42,012 --> 00:16:45,070
+this is an array event assert
+descriptors that dictates the order for
+
+254
+00:16:45,007 --> 00:16:48,073
+which you'll receive your result
+
+255
+00:16:49,036 --> 00:16:53,072
+here's an example thus creating a sample
+query to get our most recent blood sugar
+
+256
+00:16:53,072 --> 00:16:55,097
+reading
+
+257
+00:16:55,097 --> 00:17:00,138
+first we create our quality type which
+in this case his blood sugar
+
+258
+00:17:01,038 --> 00:17:05,112
+next we create our sort descriptor
+because we want the most recent
+
+259
+00:17:06,012 --> 00:17:09,431
+we want to order a result and end date:
+by just
+
+260
+00:17:09,539 --> 00:17:14,020
+in descending order when we create our
+sample query
+
+261
+00:17:14,002 --> 00:17:18,181
+we ended it with a sample type blood
+sugar
+
+262
+00:17:18,199 --> 00:17:22,760
+until predicate because we don't want to
+filter results
+
+263
+00:17:22,076 --> 00:17:25,135
+a limit love one because we want the one
+most recent
+
+264
+00:17:26,035 --> 00:17:29,052
+and an array containing the sort
+descriptor
+
+265
+00:17:29,052 --> 00:17:32,088
+we just created
+
+266
+00:17:32,088 --> 00:17:35,173
+in a result handler because we know
+there's only going to be at most one
+
+267
+00:17:36,073 --> 00:17:39,112
+result we can just ask are ask a result
+for the last
+
+268
+00:17:40,012 --> 00:17:44,061
+object soured pretty well
+
+269
+00:17:44,061 --> 00:17:48,070
+but you realize that every time a new
+reading comes over from your health
+
+270
+00:17:48,007 --> 00:17:48,013
+tracker
+
+271
+00:17:49,003 --> 00:17:52,021
+nothing happened will be really great if
+
+272
+00:17:52,048 --> 00:17:56,061
+every time you received a new reading
+the display would just update
+
+273
+00:17:56,061 --> 00:18:01,095
+all by itself you could create some kind
+of pull mechanism to do this
+
+274
+00:18:01,095 --> 00:18:04,142
+where every 30 seconds or so you checked
+with the most recent has
+
+275
+00:18:05,042 --> 00:18:08,056
+but will be a lot nicer if you could
+just be alerted
+
+276
+00:18:08,056 --> 00:18:11,109
+when things actually change this is the
+job
+
+277
+00:18:12,009 --> 00:18:17,009
+a HK observer query observer queries are
+very simple
+
+278
+00:18:17,009 --> 00:18:21,092
+all they do is watch for changes in the
+database
+
+279
+00:18:21,092 --> 00:18:23,166
+their little bit different than sample
+queries in the sense that their
+
+280
+00:18:24,066 --> 00:18:24,162
+long-running
+
+281
+00:18:25,062 --> 00:18:28,158
+so you're up to a hand there's going to
+be called every time a new object is
+
+282
+00:18:29,058 --> 00:18:29,119
+saved
+
+283
+00:18:30,019 --> 00:18:34,066
+or removed from the database
+
+284
+00:18:34,066 --> 00:18:38,093
+you might notice that in Europe they
+hand there there's a completion handler
+
+285
+00:18:38,093 --> 00:18:41,108
+this is for a future that we won't have
+time to go into today
+
+286
+00:18:42,008 --> 00:18:46,072
+called background livery if you have any
+questions about back on delivery
+
+287
+00:18:46,072 --> 00:18:50,113
+please come by whenever laps
+
+288
+00:18:51,013 --> 00:18:54,014
+hears us creating an observer query
+
+289
+00:18:54,023 --> 00:18:57,105
+all we do is tell it that we want all
+blood sugar readings
+
+290
+00:18:58,005 --> 00:19:01,064
+and our up to a hand there will be
+called every time a new blood sugar
+
+291
+00:19:01,064 --> 00:19:01,109
+reading
+
+292
+00:19:02,009 --> 00:19:07,061
+is saved or removed from the database
+
+293
+00:19:07,061 --> 00:19:11,066
+now let's say that you're health up the
+your out
+
+294
+00:19:11,066 --> 00:19:14,129
+is partnering with the health provider
+
+295
+00:19:15,029 --> 00:19:18,033
+what it's supposed to do is take all the
+blood sugar readings
+
+296
+00:19:18,033 --> 00:19:22,070
+that it's created and think im to the
+cloud
+
+297
+00:19:22,007 --> 00:19:25,104
+you could do this using sample query
+where every time you query for all the
+
+298
+00:19:26,067 --> 00:19:27,122
+objects in the database
+
+299
+00:19:28,022 --> 00:19:32,068
+and figure out which ones you haven't
+sent yet probably using the UUID
+
+300
+00:19:32,068 --> 00:19:35,132
+but this is a lot of work
+
+301
+00:19:36,032 --> 00:19:39,105
+and it would be a lot nicer if and would
+be a waste to pull all the objects from
+
+302
+00:19:40,005 --> 00:19:41,010
+the database
+
+303
+00:19:41,001 --> 00:19:45,065
+just to find out that nothing has
+actually changed
+
+304
+00:19:45,074 --> 00:19:50,120
+this is the perfect job for HK anchored
+object query
+
+305
+00:19:51,002 --> 00:19:54,068
+and anchored objects larry has a limit
+which again defines how many
+
+306
+00:19:54,086 --> 00:19:59,158
+results are to be returned by the query
+it also
+
+307
+00:20:00,058 --> 00:20:03,064
+has an anchor the
+
+308
+00:20:03,064 --> 00:20:07,081
+Watson anchor well behind-the-scenes
+
+309
+00:20:07,081 --> 00:20:10,132
+every object stored in health care has
+its own anchor
+
+310
+00:20:11,032 --> 00:20:15,106
+in the database your query anchor says
+that you want everything after
+
+311
+00:20:16,006 --> 00:20:19,255
+a certain point so if you're to provide
+
+312
+00:20:19,309 --> 00:20:22,340
+a query anchor 0 you get back
+
+313
+00:20:22,034 --> 00:20:26,099
+everything if you're to provide a query
+anchor at three
+
+314
+00:20:26,099 --> 00:20:30,184
+you'd only get back objects for 5 and
+sex
+
+315
+00:20:31,084 --> 00:20:35,169
+so in creating and anchored object query
+your anchor should represent the last
+
+316
+00:20:36,069 --> 00:20:37,070
+piece of data
+
+317
+00:20:37,079 --> 00:20:40,158
+that you've seen if you haven't seen any
+day D at
+
+318
+00:20:41,058 --> 00:20:45,062
+then you can specify 0 which means you
+don't have an anchor
+
+319
+00:20:45,098 --> 00:20:48,139
+in your call back you'll receive a new
+anchor
+
+320
+00:20:49,039 --> 00:20:53,111
+which you can then use and subsequent
+queries
+
+321
+00:20:54,011 --> 00:20:58,089
+here's an example a bus creating and
+anchored objects query
+
+322
+00:20:58,089 --> 00:21:01,121
+at some point I'm probably during our
+initializer
+
+323
+00:21:02,021 --> 00:21:06,103
+we set our last anchor to be 0
+
+324
+00:21:07,003 --> 00:21:11,078
+when we create a query we talked we want
+all blood sugar readings
+
+325
+00:21:11,078 --> 00:21:17,089
+that have occurred since our last anchor
+and we don't want to limit our results
+
+326
+00:21:17,089 --> 00:21:20,097
+and in our completion handler we'll get
+our results as well as a new anchor
+
+327
+00:21:21,069 --> 00:21:24,115
+which we can then use your next query
+
+328
+00:21:25,015 --> 00:21:28,071
+let's see how this would look with some
+actual data
+
+329
+00:21:28,071 --> 00:21:33,075
+let's say our database has three objects
+in it since I haven't seen anything yet
+
+330
+00:21:33,075 --> 00:21:36,090
+will say that my current anchor 0
+
+331
+00:21:36,009 --> 00:21:40,014
+when I run my query I'll get back
+objects one two and three
+
+332
+00:21:41,004 --> 00:21:45,028
+and my current anchor will now be three
+
+333
+00:21:45,064 --> 00:21:49,137
+next two objects were added to the
+database
+
+334
+00:21:50,037 --> 00:21:54,090
+when I run another query I'll get back
+objects for in five
+
+335
+00:21:54,009 --> 00:22:00,047
+and my current anchor will now be five
+
+336
+00:22:01,028 --> 00:22:05,030
+so I've shown you a few different
+queries and some situations that are
+
+337
+00:22:05,003 --> 00:22:05,082
+useful in
+
+338
+00:22:06,009 --> 00:22:10,064
+but we haven't talked about how to
+actually run your queries
+
+339
+00:22:10,064 --> 00:22:13,113
+this is done using two methods on a
+scale health store
+
+340
+00:22:14,013 --> 00:22:20,041
+execute query and stop query execute
+query tells a query to begin running
+
+341
+00:22:20,041 --> 00:22:23,127
+at any point I'm you can call stop query
+
+342
+00:22:24,027 --> 00:22:29,103
+which will kill your query and prevent
+any call backs that haven't happened yet
+
+343
+00:22:30,003 --> 00:22:33,014
+you can call stop query is many times as
+you want
+
+344
+00:22:33,014 --> 00:22:36,070
+it doesn't matter but you can only
+execute a query
+
+345
+00:22:36,007 --> 00:22:40,013
+once this is because once a query is
+stopped
+
+346
+00:22:40,076 --> 00:22:45,100
+its call back are invalidated to prevent
+retain cycles
+
+347
+00:22:46,000 --> 00:22:49,054
+remember though that you only need to
+stop long-running queries
+
+348
+00:22:49,054 --> 00:22:53,099
+such is the observer query other queries
+no to stop themselves
+
+349
+00:22:53,099 --> 00:22:58,144
+once they received their national data
+
+350
+00:22:59,044 --> 00:23:02,053
+now all the queries we've talked about
+so far
+
+351
+00:23:02,053 --> 00:23:05,102
+let you get actual objects from the
+database
+
+352
+00:23:06,002 --> 00:23:09,094
+but oftentimes we don't care about the
+individual objects
+
+353
+00:23:09,094 --> 00:23:12,123
+themselves what we really care about
+
+354
+00:23:13,023 --> 00:23:16,068
+our statistics on our data
+
+355
+00:23:16,068 --> 00:23:19,165
+you could use a sample query and iterate
+over all your results
+
+356
+00:23:20,065 --> 00:23:23,142
+summing the quantities together but this
+would be
+
+357
+00:23:24,042 --> 00:23:28,046
+a lot of work and a lot of objects in
+memory considering all we really care
+
+358
+00:23:28,046 --> 00:23:28,395
+about
+
+359
+00:23:28,809 --> 00:23:32,910
+is the sum to support operations like
+this
+
+360
+00:23:32,091 --> 00:23:37,097
+statistics are first-class citizen and
+health kit
+
+361
+00:23:38,051 --> 00:23:42,094
+statistics are handled by HK statistics
+
+362
+00:23:42,094 --> 00:23:45,141
+and HK statistics object is an
+aggregation
+
+363
+00:23:46,041 --> 00:23:49,041
+have multiple kinds of statistics such
+as some
+
+364
+00:23:49,041 --> 00:23:52,075
+men max an average
+
+365
+00:23:52,075 --> 00:23:55,082
+you can ask for statistics across all
+data
+
+366
+00:23:55,082 --> 00:24:01,123
+or only for statistics that came from a
+particular source
+
+367
+00:24:02,023 --> 00:24:05,082
+because we're talking about numerical
+analysis statistics are
+
+368
+00:24:05,082 --> 00:24:09,104
+only valid for quantity types
+
+369
+00:24:10,004 --> 00:24:13,013
+remember though did not all types are
+the same
+
+370
+00:24:13,094 --> 00:24:16,185
+we care about different statistics
+depending on what kind of data
+
+371
+00:24:17,085 --> 00:24:20,087
+we're looking at we classify types
+
+372
+00:24:20,087 --> 00:24:24,140
+is either discrete or cumulative
+
+373
+00:24:25,004 --> 00:24:28,018
+discrete types by things like your
+height wat
+
+374
+00:24:28,054 --> 00:24:32,103
+her blood pressure the kinds of data
+where an individual sample
+
+375
+00:24:33,003 --> 00:24:37,782
+has although the context you need to
+make sense if its quantity
+
+376
+00:24:37,809 --> 00:24:41,460
+the only statistics we care about for
+discrete types Armin
+
+377
+00:24:41,046 --> 00:24:44,101
+max an average if I were to take all of
+my way
+
+378
+00:24:45,001 --> 00:24:48,064
+readings and add them together I
+wouldn't get any useful information
+
+379
+00:24:48,064 --> 00:24:51,983
+whatsoever
+
+380
+00:24:52,559 --> 00:24:56,980
+cumulative types Arctic are things like
+your step count or the number of
+
+381
+00:24:56,098 --> 00:24:58,427
+calories the print
+
+382
+00:24:59,309 --> 00:25:03,314
+in contrast to discrete types I really
+don't care about an individual sample
+
+383
+00:25:03,809 --> 00:25:08,390
+when i care about. is an aggregation of
+samples over a period of time
+
+384
+00:25:08,039 --> 00:25:11,114
+for example that I took seven thousand
+steps today
+
+385
+00:25:12,014 --> 00:25:15,433
+so the only statistic we care about on
+cumulative types
+
+386
+00:25:15,559 --> 00:25:21,110
+is some
+
+387
+00:25:21,011 --> 00:25:24,108
+so every quantity type is classified is
+either discrete
+
+388
+00:25:25,008 --> 00:25:28,107
+or cumulative
+
+389
+00:25:28,179 --> 00:25:31,360
+in our type identifiers header every
+type identifiers
+
+390
+00:25:31,036 --> 00:25:35,735
+is listed with its aggregation style
+
+391
+00:25:36,059 --> 00:25:40,390
+if you wanna check incurred though HK
+quantity type has an aggregation style
+
+392
+00:25:40,039 --> 00:25:41,045
+property
+
+393
+00:25:41,045 --> 00:25:45,107
+that we return either cumulative or
+discrete
+
+394
+00:25:46,007 --> 00:25:50,030
+now back to statistics as you may or may
+not know
+
+395
+00:25:50,003 --> 00:25:53,132
+generating statistics on large amounts
+of data and
+
+396
+00:25:53,429 --> 00:25:59,000
+can be rather expensive because if this
+we had you tell us what you want
+
+397
+00:25:59,000 --> 00:26:02,006
+ahead of time using a bitmask HK
+
+398
+00:26:02,006 --> 00:26:05,084
+statistics options
+
+399
+00:26:06,038 --> 00:26:10,116
+average man max and some each have their
+own statistics option
+
+400
+00:26:11,016 --> 00:26:15,064
+these are marked is either discrete
+accumulative if you ask a cumulative
+
+401
+00:26:15,064 --> 00:26:15,136
+type
+
+402
+00:26:16,036 --> 00:26:20,091
+for discrete statistic we're going to
+throw an exception
+
+403
+00:26:20,091 --> 00:26:23,172
+a little bit less straightforward is
+separate by source
+
+404
+00:26:24,072 --> 00:26:28,150
+this lets you askin its K statistics
+object for the statistics that came from
+
+405
+00:26:29,005 --> 00:26:31,040
+a particular source
+
+406
+00:26:31,085 --> 00:26:36,097
+the why is this important let's say that
+we have two sources
+
+407
+00:26:36,097 --> 00:26:39,101
+source a and source be
+
+408
+00:26:40,001 --> 00:26:45,050
+both the sources a writing step data to
+health care at the same time
+
+409
+00:26:45,059 --> 00:26:48,370
+now the say that I want to sum up my
+steps
+
+410
+00:26:48,037 --> 00:26:51,090
+I could take all the samples in the
+database and adn together
+
+411
+00:26:51,009 --> 00:26:54,068
+which would give me 41 which is also
+
+412
+00:26:55,049 --> 00:27:00,062
+wrong because these sources were saving
+data at the same time
+
+413
+00:27:00,062 --> 00:27:03,085
+in many cases I was actually double
+counting
+
+414
+00:27:03,085 --> 00:27:06,112
+to handle this we let the user-specified
+
+415
+00:27:07,012 --> 00:27:10,078
+in the health up which sources are most
+important to them
+
+416
+00:27:10,078 --> 00:27:14,095
+for a particular quantity type we then
+use this information
+
+417
+00:27:14,095 --> 00:27:17,824
+to try to figure out what actually
+happened
+
+418
+00:27:18,679 --> 00:27:22,590
+if you don't like armor strategy then
+you can always perform your own
+
+419
+00:27:22,059 --> 00:27:26,113
+by separating by source
+
+420
+00:27:27,013 --> 00:27:31,038
+now back to your application let's say
+that your health tracker just gone
+
+421
+00:27:31,038 --> 00:27:34,084
+awesome new feature now can count the
+user steps
+
+422
+00:27:34,084 --> 00:27:37,182
+to support this you want to have a new
+screen that shows the user
+
+423
+00:27:38,082 --> 00:27:41,941
+their total steps for the day this is a
+some
+
+424
+00:27:42,679 --> 00:27:46,900
+so you know you want to use statistics
+but how do you actually generate
+
+425
+00:27:46,009 --> 00:27:48,408
+statistics
+
+426
+00:27:49,299 --> 00:27:52,880
+this is done through its K statistics
+query
+
+427
+00:27:52,088 --> 00:27:56,115
+statistics queries take a bitmask have
+statistics options
+
+428
+00:27:57,015 --> 00:28:01,019
+and return statistics object
+
+429
+00:28:01,019 --> 00:28:06,067
+so here's an example of us creating
+statistics query
+
+430
+00:28:06,067 --> 00:28:09,456
+first we get are quietly type which in
+this case
+
+431
+00:28:10,059 --> 00:28:13,240
+step count
+
+432
+00:28:13,024 --> 00:28:16,463
+next we perform some day calculations to
+
+433
+00:28:16,679 --> 00:28:21,330
+only return objects that happened today
+
+434
+00:28:21,033 --> 00:28:24,127
+we create our statistics options which
+in this case is some
+
+435
+00:28:25,027 --> 00:28:29,053
+and then when we create our query we
+tell we want all steps that happened
+
+436
+00:28:29,053 --> 00:28:30,100
+today
+
+437
+00:28:31,000 --> 00:28:35,179
+and we want to take their some and in
+our completion handler
+
+438
+00:28:35,179 --> 00:28:39,090
+will be given in HK statistics object
+the week and then asked for it some
+
+439
+00:28:39,009 --> 00:28:41,075
+quantity
+
+440
+00:28:41,075 --> 00:28:44,133
+well you feel like a rock star right now
+
+441
+00:28:45,033 --> 00:28:48,099
+using your UI code from your blood sugar
+screening you're able to bust this out
+
+442
+00:28:48,099 --> 00:28:51,174
+in like five minutes with all that extra
+time
+
+443
+00:28:52,074 --> 00:28:55,165
+you decide it would be really cool if
+you could show the user
+
+444
+00:28:56,065 --> 00:29:00,109
+their daily step count throughout the
+week
+
+445
+00:29:01,009 --> 00:29:05,012
+how do you do this you could execute 7
+statistics queries
+
+446
+00:29:05,039 --> 00:29:08,054
+one for each day and once they all
+return
+
+447
+00:29:08,054 --> 00:29:11,078
+use the results to drive your truck
+
+448
+00:29:11,078 --> 00:29:16,089
+the sound like a lot of effort though
+this is actually the perfect job for HK
+
+449
+00:29:16,089 --> 00:29:18,158
+statistics collection
+
+450
+00:29:19,058 --> 00:29:22,144
+from high-level statistics collection is
+just a collection
+
+451
+00:29:23,044 --> 00:29:27,049
+after test subjects it splits timeout
+
+452
+00:29:27,049 --> 00:29:30,057
+into a series of time intervals and
+generate statistics
+
+453
+00:29:30,057 --> 00:29:33,546
+on each other's time intervals
+
+454
+00:29:34,059 --> 00:29:41,059
+let's take a look at how this actually
+works
+
+455
+00:29:43,091 --> 00:29:46,095
+miss diagram each have our gray boxes
+
+456
+00:29:46,095 --> 00:29:50,147
+represents its own HK statistic subject
+
+457
+00:29:51,047 --> 00:29:55,006
+we call our delta T are interval
+components and this isn't an acidic
+
+458
+00:29:55,429 --> 00:29:57,630
+components object
+
+459
+00:29:57,063 --> 00:30:01,232
+the reason why we chose to use an estate
+components is because when we talk about
+
+460
+00:30:01,799 --> 00:30:03,200
+health information
+
+461
+00:30:03,002 --> 00:30:06,005
+and historical way we tend to talk about
+it
+
+462
+00:30:06,023 --> 00:30:09,032
+in days weeks months in years
+
+463
+00:30:10,013 --> 00:30:14,075
+to do this properly you need to use day
+components
+
+464
+00:30:14,075 --> 00:30:17,129
+if you're curious about day calculations
+please see last year's
+
+465
+00:30:18,029 --> 00:30:23,113
+video solutions to common date and time
+challenges
+
+466
+00:30:24,013 --> 00:30:27,017
+so now let's say that we have an
+internal components
+
+467
+00:30:27,017 --> 00:30:32,021
+have one day the problem is we don't
+know if you want your day to be midnight
+
+468
+00:30:32,057 --> 00:30:33,059
+to midnight
+
+469
+00:30:33,059 --> 00:30:37,065
+noon to noon are something completely
+different
+
+470
+00:30:37,065 --> 00:30:40,146
+to handle this we have you give us an
+anchor date
+
+471
+00:30:41,046 --> 00:30:44,128
+all the anchored it does is tell you
+what the edge up wanna be your time
+
+472
+00:30:45,028 --> 00:30:46,042
+intervals is
+
+473
+00:30:46,042 --> 00:30:51,671
+and that's all we need to create a
+collection have statistics for you
+
+474
+00:30:52,049 --> 00:30:55,720
+let's see how this would look with some
+actual data
+
+475
+00:30:55,072 --> 00:30:58,123
+want to get your anchor date and your
+interval components we split up
+
+476
+00:30:59,023 --> 00:31:02,342
+all time in this series time intervals
+
+477
+00:31:02,549 --> 00:31:07,630
+week and then grouped data into these
+different time intervals
+
+478
+00:31:07,063 --> 00:31:11,492
+and collect statistics on such as ask
+for it some
+
+479
+00:31:12,059 --> 00:31:15,330
+so this is what the statistics
+collection is
+
+480
+00:31:15,033 --> 00:31:18,069
+but how do you actually interact with
+the subject
+
+481
+00:31:18,069 --> 00:31:21,073
+because we don't force you to give us a
+start date porn and eight
+
+482
+00:31:22,009 --> 00:31:26,026
+there's potential and infinite numbers
+statistics
+
+483
+00:31:26,026 --> 00:31:31,079
+the first thing you can do is asked for
+an array evolve the populated statistics
+
+484
+00:31:31,079 --> 00:31:34,094
+populated statistics are the ones where
+their time interval
+
+485
+00:31:34,094 --> 00:31:37,095
+actually had data and
+
+486
+00:31:37,095 --> 00:31:41,124
+you can ask for the statistics that
+occurred on a particular date
+
+487
+00:31:42,024 --> 00:31:46,213
+what this will do is find out which time
+period your date falls into
+
+488
+00:31:46,429 --> 00:31:49,850
+and give you back the statistics from
+that time period
+
+489
+00:31:49,085 --> 00:31:52,140
+whether or not there is any data
+
+490
+00:31:53,004 --> 00:31:56,413
+last you can enumerate across all this
+test statistics
+
+491
+00:31:56,809 --> 00:32:00,270
+between two dates this will return both
+populated
+
+492
+00:32:00,027 --> 00:32:04,936
+and non populated statistics objects
+
+493
+00:32:05,179 --> 00:32:09,000
+sup this seems like it's gonna work
+pretty well
+
+494
+00:32:09,000 --> 00:32:13,027
+all you need to do s best find anchored
+80 Sunday at midnight
+
+495
+00:32:13,027 --> 00:32:16,038
+an internal components have one day
+
+496
+00:32:16,038 --> 00:32:20,467
+and that's about it so how do you
+actually create
+
+497
+00:32:20,809 --> 00:32:27,809
+statistics collection this is done with
+an HK statistics collection query
+
+498
+00:32:28,038 --> 00:32:31,095
+the steak a bit mask if statistics
+options
+
+499
+00:32:31,095 --> 00:32:35,148
+an anchor day and an internal components
+object
+
+500
+00:32:36,048 --> 00:32:39,070
+and give you back and HK statistics
+collection
+
+501
+00:32:39,007 --> 00:32:42,035
+that easy
+
+502
+00:32:42,098 --> 00:32:45,927
+now I'm gonna hang things over to CG so
+that she can show you how to incorporate
+
+503
+00:32:46,809 --> 00:32:47,740
+health kit
+
+504
+00:32:47,074 --> 00:32:52,090
+and your own applications thank you
+Justin he everybody good morning
+
+505
+00:32:52,009 --> 00:32:55,091
+I'm the delay to Tom and I'm one of the
+engineers and help get really excited to
+
+506
+00:32:56,072 --> 00:32:57,127
+be here today to give you this quick
+
+507
+00:32:58,027 --> 00:33:02,101
+demo for the three things that you will
+see in this demo
+
+508
+00:33:03,001 --> 00:33:07,083
+first you see how you can leverage help
+get to retrieve existing information
+
+509
+00:33:07,083 --> 00:33:09,138
+about the user from head start
+
+510
+00:33:10,038 --> 00:33:13,065
+not this information might have been
+inserted into head start by some other
+
+511
+00:33:13,065 --> 00:33:15,069
+app
+
+512
+00:33:15,069 --> 00:33:18,938
+Sechin you'll see how you can read and
+write cute own data objects into heads
+
+513
+00:33:19,559 --> 00:33:20,880
+to Rick
+
+514
+00:33:20,088 --> 00:33:24,877
+into you see some examples are the
+greedy for Justin spoke about
+
+515
+00:33:25,669 --> 00:33:28,720
+now for the purpose this demo I'm going
+to walk you through making a fitness
+
+516
+00:33:29,179 --> 00:33:31,540
+check it out
+
+517
+00:33:31,054 --> 00:33:35,148
+the goal this app would be to track in
+net energy burnt but a given day
+
+518
+00:33:36,048 --> 00:33:39,121
+and beer going to define the net energy
+burned as the total energy burn my
+
+519
+00:33:40,021 --> 00:33:41,230
+activity
+
+520
+00:33:41,419 --> 00:33:44,700
+subjected by the total energy consumed
+
+521
+00:33:44,007 --> 00:33:49,026
+now with that in mind let's go take a
+quick look at the demo
+
+522
+00:33:49,089 --> 00:33:52,164
+so we know that we're going to be using
+health get ready to suit its needs
+
+523
+00:33:53,064 --> 00:33:56,135
+but before we can do that many the
+user's permission and this is the code
+
+524
+00:33:57,035 --> 00:34:00,047
+that you will try to get the user's
+permission
+
+525
+00:34:00,047 --> 00:34:03,108
+the first you check with your health kit
+is supported and the current I was still
+
+526
+00:34:04,008 --> 00:34:04,076
+life
+
+527
+00:34:04,076 --> 00:34:07,875
+and this is because some devices such as
+the iPad does not support
+
+528
+00:34:08,559 --> 00:34:12,571
+can't get next you create an instant
+offense to it
+
+529
+00:34:12,679 --> 00:34:15,720
+and then use testers are today the shin
+ABA's
+
+530
+00:34:16,089 --> 00:34:19,141
+to request leave shared access to these
+different set
+
+531
+00:34:19,609 --> 00:34:24,612
+updated I now I have already set up my
+device to be on today's but the first
+
+532
+00:34:24,909 --> 00:34:26,960
+time you done this piece of code
+
+533
+00:34:26,096 --> 00:34:30,925
+you're going to get this dialogue she
+pop up that request permissions from you
+
+534
+00:34:31,789 --> 00:34:36,200
+now let's look at the app
+
+535
+00:34:36,002 --> 00:34:39,731
+now since you're dealing with
+user-specific energy bring calculations
+
+536
+00:34:39,929 --> 00:34:42,986
+let's assume that we need some you there
+specific statistics if it
+
+537
+00:34:43,499 --> 00:34:46,530
+for instance the user's each height we
+
+538
+00:34:46,809 --> 00:34:49,816
+now I fed up day at such that the user
+can endure these details
+
+539
+00:34:50,509 --> 00:34:54,510
+maybe feel much cooler if you can look
+at health store thief the values already
+
+540
+00:34:54,519 --> 00:34:54,581
+exist in
+
+541
+00:34:55,139 --> 00:34:58,208
+if so does it leave it in this play for
+the use of information
+
+542
+00:34:58,829 --> 00:35:03,400
+so let's go tonight the court but I'd go
+to do just that
+
+543
+00:35:03,004 --> 00:35:06,035
+I'm a quick note before that and not
+doing much anything good in this demo
+
+544
+00:35:06,071 --> 00:35:09,094
+but that a sample code for this absolute
+it online and there'll be a much better
+
+545
+00:35:09,094 --> 00:35:10,145
+day
+
+546
+00:35:11,045 --> 00:35:14,594
+now to get that uses age we debated
+
+547
+00:35:14,999 --> 00:35:18,180
+breakbeat is a characteristic phenotype
+and help get
+
+548
+00:35:18,018 --> 00:35:21,063
+and head start has this convenient
+synchronous method to directly access
+
+549
+00:35:21,063 --> 00:35:22,071
+users pretty
+
+550
+00:35:23,043 --> 00:35:26,122
+let's go ahead and use that method here
+
+551
+00:35:26,509 --> 00:35:29,970
+and once we have to beat the heat it
+simple beat Matt to get the user's
+
+552
+00:35:29,097 --> 00:35:32,876
+age notice here
+
+553
+00:35:33,749 --> 00:35:36,758
+that I am passing each back and
+completion block
+
+554
+00:35:36,839 --> 00:35:42,841
+let's run this code in C
+
+555
+00:35:42,859 --> 00:35:48,130
+dunno eat it does show up and how this
+happened because earlier today I use
+
+556
+00:35:48,013 --> 00:35:50,732
+happened pent up to insert my birthday
+
+557
+00:35:50,849 --> 00:35:53,941
+up into history now let's look at user
+height
+
+558
+00:35:54,769 --> 00:35:59,771
+in beat next who height read a quantity
+be today
+
+559
+00:35:59,789 --> 00:36:03,847
+in health kit and to get quality samples
+out a pen Stewart me today to sample
+
+560
+00:36:04,369 --> 00:36:04,378
+query
+
+561
+00:36:05,269 --> 00:36:08,342
+let's go ahead and radar for some pic
+reading this convenient method
+
+562
+00:36:08,999 --> 00:36:13,011
+between give us like the most recent one
+in December any given day today
+
+563
+00:36:13,119 --> 00:36:16,208
+so this is our first sample grading
+
+564
+00:36:17,009 --> 00:36:20,062
+now I want single moved to the thing
+quantity sample
+
+565
+00:36:20,539 --> 00:36:23,680
+of a given day today and so for that I'm
+first going to start
+
+566
+00:36:23,068 --> 00:36:26,089
+my existing samples in descending order
+
+567
+00:36:26,089 --> 00:36:31,228
+and then a specified limit of want to
+get just the first one out of it
+
+568
+00:36:32,029 --> 00:36:35,180
+I don't want to filter the does my
+predicate is nil
+
+569
+00:36:35,018 --> 00:36:40,707
+and the be to God that I am interested
+in is fastened into this method
+
+570
+00:36:40,869 --> 00:36:44,907
+now Mendes greeleyville it turns I get
+in at the back
+
+571
+00:36:45,249 --> 00:36:48,257
+and this is a natty of quantity samples
+
+572
+00:36:48,329 --> 00:36:52,356
+in nike's if they're is invalid quantity
+sample existing in history
+
+573
+00:36:52,599 --> 00:36:56,651
+the new gonna get just one quantities
+and the back so what we are going to do
+
+574
+00:36:57,119 --> 00:37:00,181
+is get the quantity objects associated
+with that wanna be found the back
+
+575
+00:37:00,739 --> 00:37:06,815
+and about that in the completion doc
+political and I'd go to do that
+
+576
+00:37:07,499 --> 00:37:10,550
+to look at the first subject and passes
+it on the completion DUP
+
+577
+00:37:11,009 --> 00:37:17,950
+emitting Barton 20 video clearly please
+don't forget to execute the query
+
+578
+00:37:17,095 --> 00:37:21,120
+ok now let's use this convenient method
+
+579
+00:37:22,002 --> 00:37:25,591
+to actually get the user's height fill
+its first going by that method
+
+580
+00:37:25,789 --> 00:37:29,680
+just wrote now you think height
+
+581
+00:37:29,068 --> 00:37:33,897
+is a quite a debate Mitt identify and
+height and fly past that in
+
+582
+00:37:34,509 --> 00:37:37,670
+now integrated don't I get the most
+recent quantity
+
+583
+00:37:37,067 --> 00:37:40,216
+object and has just released talking
+about earlier
+
+584
+00:37:40,819 --> 00:37:43,874
+a quantity object is nothing but a
+double value associated with the
+
+585
+00:37:44,369 --> 00:37:45,443
+particular unit
+
+586
+00:37:46,109 --> 00:37:50,710
+now I wanna sure my height inches
+
+587
+00:37:50,071 --> 00:37:53,093
+and so I am gonna specify
+
+588
+00:37:53,093 --> 00:37:56,120
+its key in it each unit
+
+589
+00:37:57,002 --> 00:38:00,871
+and months at half height we need to
+pass it back to the view controller who
+
+590
+00:38:01,069 --> 00:38:02,088
+wants it
+
+591
+00:38:02,259 --> 00:38:05,334
+mcnaught that creatiefste uninstall
+wizard on on on on a month
+
+592
+00:38:06,009 --> 00:38:11,880
+anonymous background cute 3 need to make
+sure we switch back to the mean queue
+
+593
+00:38:11,088 --> 00:38:14,537
+and if that should give us the height
+now I have already set up
+
+594
+00:38:15,329 --> 00:38:18,920
+good to do the exact same for getting
+the user three the only difference is
+
+595
+00:38:18,092 --> 00:38:21,241
+that the identify it here is that for
+body mass
+
+596
+00:38:22,069 --> 00:38:25,200
+and the unit that I'm interested in is
+bound
+
+597
+00:38:25,002 --> 00:38:29,061
+Nolan stern that's good
+
+598
+00:38:29,259 --> 00:38:36,259
+name it makes the knife okay
+
+599
+00:38:36,279 --> 00:38:40,180
+okay only 41
+
+600
+00:38:40,018 --> 00:38:44,067
+so be are interested in getting the net
+energy going to be defined as the
+
+601
+00:38:44,067 --> 00:38:48,766
+daughter energy but make DVD subjected
+by the total energy consumed
+
+602
+00:38:49,369 --> 00:38:53,950
+let's give the user a chance to enter
+details about the energy consumed
+
+603
+00:38:53,095 --> 00:38:57,924
+now I'm already set up this app too sure
+a possible if the food items consumed
+
+604
+00:38:58,779 --> 00:39:02,838
+but really this app doesn't do much is
+right now what I wanted to be able to do
+
+605
+00:39:03,369 --> 00:39:06,430
+is then I select an item I wanna see
+
+606
+00:39:06,043 --> 00:39:09,089
+that item details and to help Stewart
+and then I come back to this means clean
+
+607
+00:39:09,089 --> 00:39:11,788
+I wanted achieve those details and
+display it
+
+608
+00:39:12,589 --> 00:39:16,641
+let's go in like the court date code to
+do that now
+
+609
+00:39:17,109 --> 00:39:21,150
+I get a quick note so food item is a lot
+more damage than just calories
+
+610
+00:39:21,015 --> 00:39:24,144
+but for the purpose of this to move into
+focus on saving just the gallery
+
+611
+00:39:24,279 --> 00:39:26,358
+information
+
+612
+00:39:27,069 --> 00:39:31,090
+so I'm going to treat each food item as
+a quantity sample and i wanna see the
+
+613
+00:39:31,279 --> 00:39:34,307
+food items need and calorie information
+
+614
+00:39:34,559 --> 00:39:38,560
+a theme as MIDI da and calorie
+information as the quantity object
+
+615
+00:39:38,569 --> 00:39:38,647
+associated with that
+
+616
+00:39:39,349 --> 00:39:46,349
+twenty-something let's cook leader first
+quality sample
+
+617
+00:39:47,509 --> 00:39:51,880
+now the be denied that I'm going to see
+if the food sample as
+
+618
+00:39:51,088 --> 00:39:55,247
+is that updated d-calif and solid
+specify that
+
+619
+00:39:56,039 --> 00:40:00,058
+now the quantity object as we just
+mentioned will be the calorie count
+
+620
+00:40:00,229 --> 00:40:04,255
+and fu
+
+621
+00:40:04,489 --> 00:40:08,490
+will be key locality unit
+
+622
+00:40:08,499 --> 00:40:13,420
+and the double value is passed into this
+method
+
+623
+00:40:13,042 --> 00:40:16,651
+and that are going to be object now I'm
+just gonna see this food sample with a
+
+624
+00:40:17,029 --> 00:40:19,034
+good indeed and I'm
+
+625
+00:40:19,079 --> 00:40:22,650
+and as I mentioned earlier the medical
+you down they had the food name
+
+626
+00:40:22,065 --> 00:40:23,091
+associated with it
+
+627
+00:40:23,091 --> 00:40:26,200
+noted here that helped get actually
+provide
+
+628
+00:40:27,019 --> 00:40:30,380
+the thin mean strings to be used as key
+is in medicaid and
+
+629
+00:40:30,038 --> 00:40:34,117
+so you just gonna use the food AP and
+that's it we have officially created our
+
+630
+00:40:35,017 --> 00:40:36,396
+first sample
+
+631
+00:40:36,549 --> 00:40:41,575
+now let's go and see this into the day
+to be into head start
+
+632
+00:40:41,809 --> 00:40:44,905
+and their done of another bf
+
+633
+00:40:45,769 --> 00:40:49,771
+see these items let's take good effects
+these items are then displayed
+
+634
+00:40:49,969 --> 00:40:53,004
+now we already know what we are going to
+use to get quality samples out offense
+
+635
+00:40:53,319 --> 00:40:54,160
+to it
+
+636
+00:40:54,016 --> 00:40:57,965
+yep let's try to some degree
+
+637
+00:40:58,109 --> 00:41:00,890
+the sample type that I'm interested in
+is that have time to look at least
+
+638
+00:41:00,089 --> 00:41:03,958
+because that's what I saved it in a
+
+639
+00:41:04,759 --> 00:41:09,150
+now in this key if I wanna filtered
+samples out and get only both samples
+
+640
+00:41:09,015 --> 00:41:10,904
+that were inserted infertility
+
+641
+00:41:11,039 --> 00:41:15,047
+so I have a predicate but the start date
+and then indeed
+
+642
+00:41:15,839 --> 00:41:20,410
+and start be done and it will be start
+of 2d and enough to be
+
+643
+00:41:20,041 --> 00:41:23,069
+now I don't really care about the number
+of samples as long as they get all of
+
+644
+00:41:23,069 --> 00:41:23,118
+them back
+
+645
+00:41:24,018 --> 00:41:27,887
+and I don't wanna fight them some
+ministers find it here
+
+646
+00:41:28,049 --> 00:41:31,190
+know again been discredited don't
+
+647
+00:41:31,019 --> 00:41:34,918
+I'm going to get on the quantity samples
+back and what I want to do is it really
+
+648
+00:41:35,089 --> 00:41:36,164
+relevant information from each
+
+649
+00:41:36,839 --> 00:41:39,892
+wanna b sample mitchen I Keith will be
+the food items name
+
+650
+00:41:40,369 --> 00:41:45,393
+and calorie information and I'm gonna
+package that into an anti
+
+651
+00:41:45,609 --> 00:41:48,632
+so that's what this code does here
+notice here that I get back
+
+652
+00:41:48,839 --> 00:41:52,460
+the calorie information and the calorie
+meal
+
+653
+00:41:52,046 --> 00:41:56,075
+and I put that into the Atty and once I
+happy early I'm gonna switch back to the
+
+654
+00:41:56,489 --> 00:41:57,567
+mean queue and send it back in the
+completion
+
+655
+00:41:58,269 --> 00:42:01,297
+up
+
+656
+00:42:01,549 --> 00:42:07,552
+as always let's not forget to execute
+the query once we have written a grating
+
+657
+00:42:07,849 --> 00:42:13,430
+let's see whether this works
+
+658
+00:42:13,043 --> 00:42:16,046
+so I had oatmeal
+
+659
+00:42:16,046 --> 00:42:20,138
+me that break and banana
+
+660
+00:42:21,038 --> 00:42:24,114
+so now that we have in dade these
+details we can actually go ahead in
+
+661
+00:42:25,014 --> 00:42:25,713
+computer
+
+662
+00:42:25,839 --> 00:42:28,846
+a net energy way so didn't define and
+energy burn
+
+663
+00:42:29,539 --> 00:42:32,597
+as the total energy burn subjected by
+the total energy consumed
+
+664
+00:42:33,119 --> 00:42:36,155
+so ideally the daughter here good
+
+665
+00:42:36,479 --> 00:42:41,930
+would be this duty energy consumed but
+what about the total energy burn
+
+666
+00:42:41,093 --> 00:42:44,752
+Philip as you now that I'm adding this
+imaginary fitness tracker device
+
+667
+00:42:45,589 --> 00:42:49,700
+feared and every time I think my iPhone
+with the fitness tracker device
+
+668
+00:42:49,007 --> 00:42:53,676
+in third active energy bone samples and
+different story
+
+669
+00:42:54,369 --> 00:43:01,369
+so that state court actually get the
+total of all these quality samples
+
+670
+00:43:03,065 --> 00:43:06,454
+now I goodnight a sample grading get all
+the quantity samples that I am
+
+671
+00:43:07,039 --> 00:43:08,039
+interested in and then
+
+672
+00:43:08,039 --> 00:43:11,068
+iteratively leg over you can compute the
+value but
+
+673
+00:43:11,329 --> 00:43:14,333
+really what I want to do we get is you
+the statistically because that's what
+
+674
+00:43:14,369 --> 00:43:15,700
+this is meant to do
+
+675
+00:43:15,007 --> 00:43:19,026
+so as always let's have a convenience
+method
+
+676
+00:43:19,089 --> 00:43:23,448
+and then in that a trader for statistics
+creating
+
+677
+00:43:24,249 --> 00:43:28,900
+the quantity type and I'm interested in
+will be passed into this method
+
+678
+00:43:28,009 --> 00:43:32,058
+now again the predicate will be
+filtering based on studied nd
+
+679
+00:43:33,039 --> 00:43:38,168
+because I'm interested only in samples
+that are relevant for 2d
+
+680
+00:43:38,519 --> 00:43:43,544
+and studied in ended up going to be
+start have to be an entity
+
+681
+00:43:43,769 --> 00:43:46,771
+now this is interesting but you know I'm
+going to specify cumulated
+
+682
+00:43:46,969 --> 00:43:49,983
+some because that's the quantity that
+I'm interested in
+
+683
+00:43:50,109 --> 00:43:54,197
+and then discreetly take turns note that
+been going to get in each key statistics
+
+684
+00:43:54,989 --> 00:43:55,072
+object back
+
+685
+00:43:55,819 --> 00:43:58,950
+and what I want to do is get the
+quantity object associated with the
+
+686
+00:43:58,095 --> 00:43:58,754
+statistics
+
+687
+00:43:59,609 --> 00:44:02,651
+object back and pass it along
+
+688
+00:44:03,029 --> 00:44:09,650
+so I do that and let's not forget to
+execute the query
+
+689
+00:44:09,065 --> 00:44:13,254
+not actually get the total energy
+consumed with this greedy
+
+690
+00:44:13,839 --> 00:44:17,864
+silicon dipping means method that we
+just chillin
+
+691
+00:44:18,089 --> 00:44:21,128
+the energy type that I am interested in
+is that have died legalities because
+
+692
+00:44:21,479 --> 00:44:24,560
+that's what I saved it in
+
+693
+00:44:25,289 --> 00:44:28,342
+and finally when I get the quantity back
+
+694
+00:44:28,819 --> 00:44:32,836
+I know that i won the unit ask you look
+at the unit
+
+695
+00:44:32,989 --> 00:44:37,041
+as always let's switch back to the main
+cue and returned it
+
+696
+00:44:37,509 --> 00:44:40,960
+now I've already setup go to do the
+exact same but active energy bone
+
+697
+00:44:40,096 --> 00:44:41,645
+samples that were inserted by
+
+698
+00:44:42,509 --> 00:44:45,690
+my fitness tracker device
+
+699
+00:44:45,069 --> 00:44:49,148
+the only difference here is that if they
+don't teach will now be active energy
+
+700
+00:44:49,769 --> 00:44:51,801
+buying
+
+701
+00:44:52,089 --> 00:44:56,131
+let's even it this week
+
+702
+00:44:56,509 --> 00:45:00,960
+and keep know I should see 255 kennedy
+feared
+
+703
+00:45:00,096 --> 00:45:04,005
+and that Bernanke and now let's see what
+they're thinking reaction to actually
+
+704
+00:45:04,869 --> 00:45:05,908
+get mine and energy when
+
+705
+00:45:06,259 --> 00:45:09,281
+ended I'm on track with my net energy
+burned
+
+706
+00:45:09,479 --> 00:45:13,512
+and that was a quick demo so we thought
+in less than 10 minutes how he managed
+
+707
+00:45:13,809 --> 00:45:13,861
+to integrate
+
+708
+00:45:14,329 --> 00:45:17,382
+help get but %uh ap I hope you guys
+enjoyed it
+
+709
+00:45:17,859 --> 00:45:21,960
+for the time being good for this up demo
+is already uploaded online
+
+710
+00:45:21,096 --> 00:45:28,096
+he's come to allowed to do you have any
+more questions own already Justin
+
+711
+00:45:33,359 --> 00:45:36,460
+thanks so much CG as you can see
+
+712
+00:45:36,046 --> 00:45:39,365
+it's really easy to incorporate health
+care in your own applications
+
+713
+00:45:39,779 --> 00:45:43,650
+next we're gonna talk through some
+health kit best practices
+
+714
+00:45:43,065 --> 00:45:47,093
+so before you can use health care the
+first thing you need to do
+
+715
+00:45:47,093 --> 00:45:50,252
+is let us know that you intend to use it
+
+716
+00:45:51,089 --> 00:45:55,115
+to support this we've got health kit
+right and the capabilities pain
+
+717
+00:45:55,349 --> 00:45:59,361
+the tax code so that you can manage it
+in the same way you use to managing
+
+718
+00:45:59,469 --> 00:45:59,523
+things
+
+719
+00:46:00,009 --> 00:46:04,200
+like Game Center or passbook
+
+720
+00:46:04,002 --> 00:46:07,121
+want you given your apt to health kit
+capability
+
+721
+00:46:07,319 --> 00:46:11,130
+the last thing you need his permission
+from the user to access their health
+
+722
+00:46:11,013 --> 00:46:12,040
+data
+
+723
+00:46:12,004 --> 00:46:15,963
+but remember health data is really
+sensitive
+
+724
+00:46:16,359 --> 00:46:20,454
+too many of our users we want to
+encourage our users to only give out
+
+725
+00:46:21,309 --> 00:46:25,315
+access to the information that they feel
+comfortable sharing
+
+726
+00:46:25,369 --> 00:46:28,388
+to support this we let users give your
+app permission
+
+727
+00:46:28,559 --> 00:46:31,950
+on a per object type basis
+
+728
+00:46:31,095 --> 00:46:34,096
+that way if the only thing your
+application needs
+
+729
+00:46:34,096 --> 00:46:38,138
+is step data they don't need to give it
+access to what may be more sensitive
+
+730
+00:46:39,038 --> 00:46:42,657
+kind data we also let them
+
+731
+00:46:42,999 --> 00:46:48,004
+give your app separate read and write
+permissions per object type
+
+732
+00:46:48,049 --> 00:46:52,066
+and a user might be totally fine with
+your application saving data
+
+733
+00:46:52,219 --> 00:46:55,900
+to health care but might not wanna
+reading data that came from other
+
+734
+00:46:55,009 --> 00:46:57,668
+sources
+
+735
+00:46:58,559 --> 00:47:01,650
+to request access for set of types you
+can use
+
+736
+00:47:01,065 --> 00:47:04,089
+HK health stores request authorization
+status:
+
+737
+00:47:04,089 --> 00:47:07,095
+request authorization to share types
+
+738
+00:47:07,095 --> 00:47:12,146
+re types completion this should be
+called before you start interacting with
+
+739
+00:47:13,046 --> 00:47:14,085
+your health store
+
+740
+00:47:14,499 --> 00:47:17,555
+so the you can ensure that the users
+been given a chance to grant your app
+
+741
+00:47:18,059 --> 00:47:21,061
+access
+
+742
+00:47:21,079 --> 00:47:24,160
+want to ask for authorization to a new
+type
+
+743
+00:47:24,016 --> 00:47:29,195
+the user's going to be presented with
+this authorization sheet
+
+744
+00:47:29,339 --> 00:47:32,348
+this is a little bit different then the
+authorization alert you may be used to
+
+745
+00:47:33,239 --> 00:47:33,910
+seeing
+
+746
+00:47:33,091 --> 00:47:38,540
+from other frameworks this a specially
+designed so that the user can manage
+
+747
+00:47:39,359 --> 00:47:40,630
+multiple permissions
+
+748
+00:47:40,063 --> 00:47:43,392
+for your application at the same time
+
+749
+00:47:43,959 --> 00:47:47,690
+to give your user the best experience
+possible you should request
+
+750
+00:47:47,069 --> 00:47:50,478
+authorization for all types you intend
+to use
+
+751
+00:47:51,099 --> 00:47:54,170
+at the same time
+
+752
+00:47:54,017 --> 00:47:57,070
+once you've requested authorization the
+next thing you're probably going to want
+
+753
+00:47:57,007 --> 00:47:58,036
+to do
+
+754
+00:47:58,729 --> 00:48:01,752
+its check if you've been granted access
+
+755
+00:48:01,959 --> 00:48:05,021
+in health care we let you see whether
+you've been granted sharing
+
+756
+00:48:05,579 --> 00:48:08,621
+or right access to particular type
+
+757
+00:48:08,999 --> 00:48:12,072
+but you can't see if you've been granted
+read access
+
+758
+00:48:12,729 --> 00:48:15,791
+this is because for some kind of
+information knowing that the user
+
+759
+00:48:16,349 --> 00:48:17,370
+blocked your app
+
+760
+00:48:17,559 --> 00:48:22,580
+can be just as private as what the as
+knowing the data itself
+
+761
+00:48:22,769 --> 00:48:25,826
+for example if you a user to block your
+out from reading
+
+762
+00:48:26,339 --> 00:48:29,364
+their blood sugar in my indicate that
+their diabetic
+
+763
+00:48:29,589 --> 00:48:33,592
+and we don't want to leak this
+information
+
+764
+00:48:33,619 --> 00:48:36,624
+you can check your authorization status:
+for particular type
+
+765
+00:48:37,119 --> 00:48:44,119
+using a scale health stores
+authorization status: for type
+
+766
+00:48:44,789 --> 00:48:47,910
+our users are spread all around the
+world
+
+767
+00:48:47,091 --> 00:48:51,040
+to be able to reach all these people
+it's really important that your app
+
+768
+00:48:51,859 --> 00:48:53,925
+supports localization
+
+769
+00:48:54,519 --> 00:48:57,588
+foundation already has a set event is
+for matters
+
+770
+00:48:58,209 --> 00:49:01,217
+that let you localize things such as
+numbers dates
+
+771
+00:49:01,289 --> 00:49:05,180
+and even by Coun you could use a number
+formatter
+
+772
+00:49:05,018 --> 00:49:12,018
+to localize the quantities value but you
+have to localize the unit yourself
+
+773
+00:49:12,309 --> 00:49:15,404
+to help you localize some kinda the data
+that we keep in health care
+
+774
+00:49:16,259 --> 00:49:19,890
+we've added three brand new for matters
+to foundation
+
+775
+00:49:19,089 --> 00:49:24,318
+and this mass formatter and a slang for
+matter and anise anergy formatter
+
+776
+00:49:25,119 --> 00:49:29,140
+these let you display thing such as
+weight energy and distant
+
+777
+00:49:29,014 --> 00:49:33,183
+in a way that's pertinent to the user's
+current locale
+
+778
+00:49:33,309 --> 00:49:37,357
+let's take a look at how you might use
+annis mass for matter
+
+779
+00:49:37,789 --> 00:49:40,808
+first we create our formatter
+
+780
+00:49:40,979 --> 00:49:44,032
+and we tell it that is to be used per
+person mass
+
+781
+00:49:44,509 --> 00:49:47,510
+this is pretty important because
+depending on your region
+
+782
+00:49:47,609 --> 00:49:51,160
+you might use a different unit to
+measure the weight of a person
+
+783
+00:49:51,016 --> 00:49:55,085
+then you would to measure the way object
+
+784
+00:49:55,229 --> 00:49:58,235
+next week creator quantity and gets
+double value
+
+785
+00:49:58,289 --> 00:50:02,381
+in kilograms we then passed this weight
+in kilograms
+
+786
+00:50:03,209 --> 00:50:06,215
+to our formatter and it gives us a
+localized string
+
+787
+00:50:06,269 --> 00:50:09,353
+including the unit string note that our
+formatter
+
+788
+00:50:10,109 --> 00:50:13,125
+explicitly takes its value in kilograms
+
+789
+00:50:13,269 --> 00:50:18,292
+behind the scenes will convert this
+value to the proper unit
+
+790
+00:50:18,499 --> 00:50:21,890
+this works great if all you're doing is
+putting
+
+791
+00:50:21,089 --> 00:50:25,144
+a value in a label but oftentimes you
+need to know what the unit
+
+792
+00:50:26,044 --> 00:50:29,113
+which unit was actually used to support
+this
+
+793
+00:50:30,013 --> 00:50:33,064
+you can pass and NS mass formatter unit
+pointer
+
+794
+00:50:33,064 --> 00:50:37,033
+to your formatter and it will be filled
+with wood every unit was used by the
+
+795
+00:50:37,609 --> 00:50:41,644
+formatter
+
+796
+00:50:41,959 --> 00:50:45,690
+so we talked about a lot of stuff today
+
+797
+00:50:45,069 --> 00:50:48,148
+what I really want you to take away from
+this is that health kit
+
+798
+00:50:48,769 --> 00:50:52,670
+makes it easy for you to store and share
+health data
+
+799
+00:50:52,067 --> 00:50:55,936
+which means you can spend your time
+doing what you do best
+
+800
+00:50:56,539 --> 00:51:01,539
+keeping our users happy and healthy
+
+801
+00:51:01,539 --> 00:51:04,541
+before you go there's one thing that I
+would love for all of you to do
+
+802
+00:51:04,739 --> 00:51:08,746
+after the session tryout health kit for
+yourself
+
+803
+00:51:08,809 --> 00:51:13,450
+through you can make with it check out
+our sample code so you can see some
+
+804
+00:51:13,045 --> 00:51:15,184
+examples of how to properly use
+
+805
+00:51:15,589 --> 00:51:18,687
+health care for more information you can
+reach out to one of our
+
+806
+00:51:19,569 --> 00:51:22,658
+awesome evangelists data long David
+Harrington
+
+807
+00:51:23,459 --> 00:51:26,459
+our sample code is already available on
+developer
+
+808
+00:51:26,459 --> 00:51:29,670
+that Apple dot com and we encourage you
+to ask questions
+
+809
+00:51:29,067 --> 00:51:32,106
+honor Apple developer forums
+
+810
+00:51:32,709 --> 00:51:35,745
+we have one related session which
+unfortunately
+
+811
+00:51:36,069 --> 00:51:39,086
+has already passed you should totally
+check it out online
+
+812
+00:51:39,239 --> 00:51:43,291
+and it on it has some great information
+on how Bluetooth devices are integrated
+
+813
+00:51:43,759 --> 00:51:47,841
+right now health kit thank you and
+everybody have a fantastic
+
+814
+00:51:48,579 --> 00:51:49,430
+WWDC
+

@@ -1,0 +1,3852 @@
+1
+00:00:16,081 --> 00:00:19,115
+hello everyone my name's sake I have the
+pleasure of managing the scheme
+
+2
+00:00:20,015 --> 00:00:24,047
+modest team I'll I'm here to today to
+start to offer the best practices from
+
+3
+00:00:24,047 --> 00:00:24,115
+will expect
+
+4
+00:00:25,015 --> 00:00:29,041
+game so we're gonna start this off with
+talking a little bit
+
+5
+00:00:29,041 --> 00:00:33,120
+but this respect it one-years-old I am
+
+6
+00:00:33,489 --> 00:00:37,710
+you guys from eight thousand news
+bracket and I'm sure you've seen from
+
+7
+00:00:37,071 --> 00:00:38,600
+successful ones out there like
+
+8
+00:00:39,239 --> 00:00:43,610
+100 balls for example even achieving
+that the top on Fri spot
+
+9
+00:00:43,061 --> 00:00:47,440
+so what you guys have done with it is
+absolutely amazing
+
+10
+00:00:47,989 --> 00:00:50,960
+and we hope that from the new features
+without it really gonna help you make
+
+11
+00:00:50,096 --> 00:00:50,875
+that next game
+
+12
+00:00:51,739 --> 00:00:55,260
+so let's go through with the stocks can
+you about
+
+13
+00:00:55,026 --> 00:00:58,061
+we can discuss
+
+14
+00:00:58,061 --> 00:01:02,094
+skill-building best practices to help
+you save on costs you develop your game
+
+15
+00:01:02,094 --> 00:01:05,182
+and also set yourself up for the future
+we can talk about
+
+16
+00:01:06,082 --> 00:01:10,661
+game structure best practices and then
+nikka go talk to you about performance
+
+17
+00:01:11,399 --> 00:01:12,210
+prospects
+
+18
+00:01:12,021 --> 00:01:15,109
+so did Australian to skill ability to
+strike sis
+
+19
+00:01:16,009 --> 00:01:20,017
+so what i'm talking about here is
+setting yourself up
+
+20
+00:01:20,017 --> 00:01:24,078
+so that you can add content to your game
+with the smallest possible cost
+
+21
+00:01:24,078 --> 00:01:27,120
+so you can collaborate with the rescue
+team
+
+22
+00:01:28,002 --> 00:01:32,006
+and also perhaps work better for the
+future
+
+23
+00:01:32,024 --> 00:01:36,029
+learning polytechnics so all the
+problems vacancy as a as a
+
+24
+00:01:36,074 --> 00:01:39,343
+beginning in developer I used to be one
+of those
+
+25
+00:01:40,009 --> 00:01:44,106
+is you get really excited and so you
+start on this idea that you have
+
+26
+00:01:44,979 --> 00:01:49,130
+in a mean the ideas right you want to
+get your game going as fast as possible
+
+27
+00:01:49,013 --> 00:01:53,036
+sea diving hard code everything's done
+in one scene
+
+28
+00:01:53,036 --> 00:01:57,036
+all orifices done in the one placing
+code
+
+29
+00:01:57,036 --> 00:02:02,495
+a hard code level 1 level 2
+
+30
+00:02:02,819 --> 00:02:05,847
+was be more work to make a difference
+level 3
+
+31
+00:02:06,099 --> 00:02:09,101
+looks the same cuz face it you just did
+copy and paste
+
+32
+00:02:09,119 --> 00:02:12,300
+and well you probably stuck on all four
+
+33
+00:02:12,003 --> 00:02:16,009
+you thinkin different asking time
+probably going to copy and paste again
+
+34
+00:02:16,009 --> 00:02:20,052
+the second problem is you tend to get
+tempted
+
+35
+00:02:21,033 --> 00:02:24,055
+to write data as code
+
+36
+00:02:24,055 --> 00:02:27,122
+and here's just an example of some you
+could get stuck doing
+
+37
+00:02:28,022 --> 00:02:31,080
+even inspected on suspected as is
+actually probably look fabulous but
+
+38
+00:02:31,008 --> 00:02:34,027
+you like a circus another API your
+
+39
+00:02:34,099 --> 00:02:37,128
+encoding things like the position your
+nodes
+
+40
+00:02:38,028 --> 00:02:41,082
+inside code your including rotations
+
+41
+00:02:41,082 --> 00:02:44,111
+you're probably when encoding the number
+of objects you have
+
+42
+00:02:45,011 --> 00:02:48,049
+in code maybe encoding properties like
+me.
+
+43
+00:02:48,049 --> 00:02:51,135
+point to get what types units are the
+colors
+
+44
+00:02:52,035 --> 00:02:57,083
+in code and we end up with is that
+
+45
+00:02:57,083 --> 00:03:01,092
+you may change Rs its meaning in the
+coat
+
+46
+00:03:01,092 --> 00:03:05,095
+right so now the artist and the code
+above admitted to the same time
+
+47
+00:03:06,022 --> 00:03:09,075
+the only visual feedback you get miss
+you build run
+
+48
+00:03:09,075 --> 00:03:14,079
+radiation talisman worsened and you're
+forcing you to sign this reprogramming
+
+49
+00:03:14,079 --> 00:03:14,608
+scares
+
+50
+00:03:15,319 --> 00:03:21,470
+the data code 22 games I'm on the second
+level here
+
+51
+00:03:21,047 --> 00:03:24,134
+you also duplicated structural code and
+
+52
+00:03:25,034 --> 00:03:28,075
+court date is not very efficient I
+they're they're better way to describe
+
+53
+00:03:28,075 --> 00:03:28,152
+data
+
+54
+00:03:29,052 --> 00:03:34,101
+namely they up I'll and also targeted
+collaboratively because
+
+55
+00:03:35,001 --> 00:03:38,097
+you're probably doing this at its in the
+same and more mm file
+
+56
+00:03:38,097 --> 00:03:42,100
+for all the changes so artist has
+changed and our asset
+
+57
+00:03:43,000 --> 00:03:47,048
+11m file change so when you first tosses
+to look exactly the same as
+
+58
+00:03:47,048 --> 00:03:50,136
+game designer changing browner so
+
+59
+00:03:51,036 --> 00:03:54,053
+the solution while
+
+60
+00:03:54,053 --> 00:03:57,059
+you get a separate game content from
+game logic a storm touched on earlier
+
+61
+00:03:58,013 --> 00:04:01,112
+you wanna separate few structure from
+assets
+
+62
+00:04:02,012 --> 00:04:06,014
+so structurally she might be different
+from the actual artwork delivered
+
+63
+00:04:06,014 --> 00:04:10,443
+annual separate data from code we also
+
+64
+00:04:10,569 --> 00:04:14,920
+wanna make sure you visualizing as early
+as possible building on its not the best
+
+65
+00:04:14,092 --> 00:04:17,741
+system in the world done so
+
+66
+00:04:18,569 --> 00:04:21,569
+implement solution
+
+67
+00:04:21,569 --> 00:04:26,000
+consists of opening game logic in my
+scene but I am referencing that here
+
+68
+00:04:26,000 --> 00:04:26,088
+because that's what you get
+
+69
+00:04:26,088 --> 00:04:31,099
+template you for two games structure
+inside the think it's your life up
+
+70
+00:04:31,099 --> 00:04:34,101
+the my scene SKS anybody seen
+
+71
+00:04:35,019 --> 00:04:39,080
+affect in several SKS files but you're
+referencing and if you can decide car
+
+72
+00:04:39,008 --> 00:04:39,046
+dealer
+
+73
+00:04:40,018 --> 00:04:44,019
+we are fantastic former cop you lift
+which is XML
+
+74
+00:04:44,028 --> 00:04:49,667
+on at and buy me when you deploy so the
+tools that we provide for you to do this
+
+75
+00:04:49,919 --> 00:04:54,040
+in Xcode 6 israel's have a strike a
+template both objective-c
+
+76
+00:04:54,004 --> 00:04:57,060
+and swift editor as long as or earlier
+
+77
+00:04:57,006 --> 00:05:01,024
+let's give your feedback official
+editing she because media
+
+78
+00:05:01,078 --> 00:05:04,094
+and you can also add a.m.
+
+79
+00:05:04,094 --> 00:05:07,095
+simulate if it's clutch
+
+80
+00:05:08,004 --> 00:05:12,007
+we also have and have had for a long
+time the ability for you to add a purist
+
+81
+00:05:12,007 --> 00:05:12,091
+files
+
+82
+00:05:12,091 --> 00:05:15,570
+inside Xcode as a simple screening
+appeals follow
+
+83
+00:05:16,389 --> 00:05:20,250
+adding a raise dictionaries to them and
+reading them back in you could a super
+
+84
+00:05:20,025 --> 00:05:22,123
+simple
+
+85
+00:05:23,023 --> 00:05:26,028
+so no show you a demo love respected
+public
+
+86
+00:05:26,073 --> 00:05:31,130
+and how easy it is to get set up but the
+wrong way and the right way
+
+87
+00:05:32,003 --> 00:05:39,003
+okay so let me show you here
+
+88
+00:05:43,033 --> 00:05:46,042
+my very rushed example making a
+
+89
+00:05:47,023 --> 00:05:52,040
+sorta topple over the towers game
+
+90
+00:05:52,004 --> 00:05:55,553
+so I made a a little hammer throwing him
+here
+
+91
+00:05:55,949 --> 00:06:00,400
+a store that totem and I get score
+
+92
+00:06:00,004 --> 00:06:03,055
+are so excited I'm making this so I just
+threw everything
+
+93
+00:06:03,091 --> 00:06:06,100
+its overusing Inka
+
+94
+00:06:07,000 --> 00:06:10,068
+I'm sure another you ever see this for
+arm
+
+95
+00:06:10,068 --> 00:06:14,027
+you see here on reference York right
+inside the scenes file
+
+96
+00:06:14,639 --> 00:06:17,790
+I'm sitting positions things into new
+properties
+
+97
+00:06:17,079 --> 00:06:20,087
+so I got this going to quickly and it
+seems is totally wrong for you to do
+
+98
+00:06:21,059 --> 00:06:24,140
+whatever you do to make money and get
+success is great
+
+99
+00:06:25,004 --> 00:06:28,041
+I'll just can provide an alternative so
+
+100
+00:06:28,077 --> 00:06:32,083
+this ran that the job that's great
+
+101
+00:06:33,037 --> 00:06:36,556
+however you could structure this
+
+102
+00:06:36,889 --> 00:06:40,060
+slightly differently so here have a
+scene
+
+103
+00:06:40,006 --> 00:06:44,087
+which first-world with Richard operate
+in a similar fashion
+
+104
+00:06:44,087 --> 00:06:47,104
+okay yep
+
+105
+00:06:48,004 --> 00:06:51,086
+the same stuff used to using game
+
+106
+00:06:51,086 --> 00:06:54,125
+what I've done here so use the spark a
+template
+
+107
+00:06:55,025 --> 00:06:58,056
+which provides you start of
+
+108
+00:06:58,056 --> 00:07:02,059
+Sebring code and affect
+
+109
+00:07:02,059 --> 00:07:06,094
+lucky you're gonna see is right on this
+line here
+
+110
+00:07:06,094 --> 00:07:10,136
+game scene archive from file seems kinda
+cool
+
+111
+00:07:11,036 --> 00:07:14,625
+what's actually happening well the
+template here has set you up with
+
+112
+00:07:14,949 --> 00:07:18,990
+something to meeting you guys that we
+have the already using from foundation
+
+113
+00:07:18,099 --> 00:07:22,118
+school and is keyed archiver the value
+load
+
+114
+00:07:23,009 --> 00:07:26,030
+save all data this release see
+
+115
+00:07:26,003 --> 00:07:29,006
+perspective so
+
+116
+00:07:29,033 --> 00:07:32,402
+this a super special people magic that
+we doing here
+
+117
+00:07:32,699 --> 00:07:36,330
+we're telling Ricky darker to replace
+any instance
+
+118
+00:07:36,033 --> 00:07:39,087
+SKC with their own class
+
+119
+00:07:39,087 --> 00:07:43,416
+listening for any occasion that you laid
+you can make it automatically load
+
+120
+00:07:44,199 --> 00:07:48,460
+on own info so now is time logic
+together with assets
+
+121
+00:07:48,046 --> 00:07:51,087
+even the time separately
+
+122
+00:07:51,087 --> 00:07:55,106
+okay I was going to the actual games
+here
+
+123
+00:07:55,889 --> 00:07:59,350
+noticed the setup level one here is
+
+124
+00:07:59,035 --> 00:08:03,086
+markedly smaller than it was in the
+previous example
+
+125
+00:08:03,086 --> 00:08:06,485
+soul what's happening here well we're
+using
+
+126
+00:08:07,259 --> 00:08:10,280
+spike its powerful search features to
+Newry
+
+127
+00:08:10,028 --> 00:08:13,041
+through the continent seen and by green
+
+128
+00:08:13,041 --> 00:08:16,920
+upon no names and conventions with you
+artist
+
+129
+00:08:17,289 --> 00:08:21,660
+you can make it really easy to pull the
+logical a metallic sheen
+
+130
+00:08:21,066 --> 00:08:25,165
+by name and her team up to code here
+
+131
+00:08:25,759 --> 00:08:29,750
+we've said this total and we can attach
+children
+
+132
+00:08:29,075 --> 00:08:33,154
+based on level 1 so let's go through
+senior
+
+133
+00:08:33,829 --> 00:08:36,875
+this is the basic structure over this
+first
+
+134
+00:08:37,289 --> 00:08:40,294
+fee it's a base it's got a background
+
+135
+00:08:40,789 --> 00:08:44,990
+political empty note here which I mean
+totem
+
+136
+00:08:44,099 --> 00:08:47,118
+so in code I'm going to load up the
+scene
+
+137
+00:08:48,018 --> 00:08:52,837
+in effect the node called for them
+
+138
+00:08:52,999 --> 00:08:57,057
+at that node I'm going to tax level on
+
+139
+00:08:57,579 --> 00:09:00,624
+level 1 looks like that
+
+140
+00:09:01,029 --> 00:09:05,053
+so separated out the structure the theme
+which is like game
+
+141
+00:09:05,269 --> 00:09:09,800
+with the content too little on which is
+just stack
+
+142
+00:09:09,008 --> 00:09:13,167
+and continuing the stream land
+
+143
+00:09:13,959 --> 00:09:18,008
+I do my game logic I keep using names
+
+144
+00:09:18,449 --> 00:09:21,454
+in order to value whether or not enough
+to totem
+
+145
+00:09:21,949 --> 00:09:26,420
+this means that artist in that incident
+what Dec not mean totem
+
+146
+00:09:26,042 --> 00:09:29,761
+I'd love to see the don't affect the
+scoring game
+
+147
+00:09:30,139 --> 00:09:33,196
+just just a simple example what we
+should do
+
+148
+00:09:33,709 --> 00:09:36,766
+to separate out game logic from the
+dealer
+
+149
+00:09:37,279 --> 00:09:44,279
+okay pics
+
+150
+00:09:46,081 --> 00:09:46,115
+okay
+
+151
+00:09:47,015 --> 00:09:52,034
+let's recap so you saw spec a template
+what we're doing is
+
+152
+00:09:52,034 --> 00:09:55,042
+we're taking see file which in this case
+is my feelers care
+
+153
+00:09:56,014 --> 00:09:59,067
+and your basic code files from isolates
+
+154
+00:09:59,067 --> 00:10:03,083
+mice in the a.m I was a free Apple Logic
+from the assets
+
+155
+00:10:03,083 --> 00:10:06,121
+the key here season is keyed on archiver
+
+156
+00:10:07,021 --> 00:10:11,047
+something you might not be familiar with
+already you insert
+
+157
+00:10:11,047 --> 00:10:15,079
+the class replacement in this case part
+
+158
+00:10:15,079 --> 00:10:18,138
+that class my senior class for class
+lame
+
+159
+00:10:19,038 --> 00:10:22,083
+sqft this replaces any reference
+
+160
+00:10:22,083 --> 00:10:27,150
+between inside the scene for with your
+own class and to support up
+
+161
+00:10:28,005 --> 00:10:32,033
+so it's going to be in such a
+perspective
+
+162
+00:10:32,078 --> 00:10:36,129
+you see an example motivation here's
+
+163
+00:10:37,029 --> 00:10:41,096
+course get your game running on the
+first day how are you know
+
+164
+00:10:41,096 --> 00:10:47,112
+games fun if you're not playing soak it
+up a million for state you want do this
+
+165
+00:10:48,012 --> 00:10:49,030
+without compromising on
+
+166
+00:10:49,003 --> 00:10:54,003
+skilled earlier don't rush into it and
+set yourself up to iterate
+
+167
+00:10:54,003 --> 00:10:55,010
+collaboratively
+
+168
+00:10:55,037 --> 00:10:59,038
+designs from the designer supporters
+from the artist coaters
+
+169
+00:10:59,047 --> 00:11:04,128
+on me all the above so
+
+170
+00:11:05,028 --> 00:11:08,047
+make a genetic level assertion example
+
+171
+00:11:08,047 --> 00:11:11,126
+make it simple you designed it to commit
+to wear
+
+172
+00:11:12,026 --> 00:11:15,093
+the general gameplay is gonna happen
+what objects interacting with what
+
+173
+00:11:15,093 --> 00:11:21,097
+add place all the content go through
+that shortly
+
+174
+00:11:21,097 --> 00:11:24,186
+a competitor action so this is you as a
+coder
+
+175
+00:11:25,086 --> 00:11:29,086
+and the designer working out when it
+records from it to be there it again was
+
+176
+00:11:29,086 --> 00:11:29,148
+working
+
+177
+00:11:30,048 --> 00:11:34,062
+and then of course easiest part of to so
+
+178
+00:11:34,062 --> 00:11:37,066
+finish the game alright said
+
+179
+00:11:38,002 --> 00:11:42,033
+make your to next level this should be
+logically up only
+
+180
+00:11:42,033 --> 00:11:45,044
+so if you don't have the art work right
+now don't worry about
+
+181
+00:11:45,044 --> 00:11:49,069
+place markers what you think conference
+meant to go
+
+182
+00:11:49,069 --> 00:11:52,126
+so if you have action going from left to
+right well
+
+183
+00:11:53,026 --> 00:11:57,060
+struck UCLA please mark as we think the
+heroes going to begin
+
+184
+00:11:57,006 --> 00:12:01,042
+name Mr Trujillo place market for you
+think enemies are gonna start out in
+
+185
+00:12:01,096 --> 00:12:01,150
+seem
+
+186
+00:12:02,005 --> 00:12:05,101
+pollen in the NE and any logically
+enough
+
+187
+00:12:06,046 --> 00:12:10,112
+for just platforms on the the background
+when measuring Opportunity Act that the
+
+188
+00:12:11,012 --> 00:12:14,024
+in the background when you move on
+
+189
+00:12:14,024 --> 00:12:18,107
+you place on the content is often what
+we called red boxing
+
+190
+00:12:19,007 --> 00:12:22,008
+so pick a colour
+
+191
+00:12:22,008 --> 00:12:27,066
+but you like for your heroes blue
+perhaps is perfect at them
+
+192
+00:12:27,066 --> 00:12:30,095
+colored sprite nodes don't bother will
+text you right now
+
+193
+00:12:30,095 --> 00:12:33,103
+just put them in the right spot right
+size
+
+194
+00:12:34,003 --> 00:12:37,086
+is the key to your artist but you saying
+I want this to be
+
+195
+00:12:37,086 --> 00:12:40,095
+roughly the size over here like this
+artist going on the cruise yet
+
+196
+00:12:41,076 --> 00:12:44,145
+okay now make her
+
+197
+00:12:45,045 --> 00:12:49,084
+Childress ca2+ soap ArticleMS locations
+if you're making a train game
+
+198
+00:12:49,084 --> 00:12:52,173
+is highly likely that's ok is gonna
+clouds look back
+
+199
+00:12:53,073 --> 00:12:57,091
+and that's what should probably leave
+with the train set that up as a parent
+
+200
+00:12:57,091 --> 00:12:57,178
+child relationship
+
+201
+00:12:58,078 --> 00:13:01,100
+next up
+
+202
+00:13:02,000 --> 00:13:05,021
+hook up the attractions so this is the
+past
+
+203
+00:13:05,021 --> 00:13:08,029
+where you're going through the physical
+attraction from the sure they're right
+
+204
+00:13:08,029 --> 00:13:11,084
+so for example if obviously topple over
+
+205
+00:13:11,084 --> 00:13:14,135
+argument to stay absolutely put on the
+hit by
+
+206
+00:13:15,035 --> 00:13:18,091
+hammer for sale sort out the collision
+of
+
+207
+00:13:18,091 --> 00:13:22,125
+which are determined to track which and
+make sure it's in like this
+
+208
+00:13:23,025 --> 00:13:28,087
+right within the scope right from the
+start the league game logic working
+
+209
+00:13:28,087 --> 00:13:32,089
+and this is really in this lets you see
+lodging in large together so you using
+
+210
+00:13:32,089 --> 00:13:33,146
+those names that you set up in seen
+
+211
+00:13:34,046 --> 00:13:37,058
+you hooking them up to search code
+within your
+
+212
+00:13:37,058 --> 00:13:40,075
+actual game code and
+
+213
+00:13:40,075 --> 00:13:43,080
+we had a placeholder inside the sample
+before
+
+214
+00:13:44,025 --> 00:13:48,104
+with totem we loaded the level seen in a
+place that where the totem empty locator
+
+215
+00:13:49,004 --> 00:13:49,039
+was
+
+216
+00:13:49,039 --> 00:13:54,045
+this is where you wanna do that so
+
+217
+00:13:54,045 --> 00:13:57,079
+here's a sample of me having the scene
+structure following
+
+218
+00:13:57,079 --> 00:14:01,166
+on one side little secret on the right
+and I'm just making sure that I
+
+219
+00:14:02,066 --> 00:14:08,055
+Michael matters what I think the
+structures so
+
+220
+00:14:08,649 --> 00:14:12,570
+of course just taking up the probably
+not gonna make you gain great and fun
+
+221
+00:14:12,057 --> 00:14:16,135
+you can make sure those to him what its
+need to be doing and they've got units
+
+222
+00:14:17,035 --> 00:14:17,123
+that floated
+
+223
+00:14:18,023 --> 00:14:21,097
+scores and similar things there to lodge
+complaints
+
+224
+00:14:21,097 --> 00:14:25,086
+within you seem to do this is one which
+is on first load
+
+225
+00:14:25,959 --> 00:14:30,002
+which called in it with coder and is
+going to get called automatically
+
+226
+00:14:30,389 --> 00:14:33,620
+by the key to knock over second one is
+
+227
+00:14:33,062 --> 00:14:36,101
+did move to you and this is when you
+present yet as
+
+228
+00:14:37,001 --> 00:14:41,570
+seen on the rescue solar
+
+229
+00:14:41,579 --> 00:14:46,100
+jump into the details that so on first
+load as a set automatically
+
+230
+00:14:46,001 --> 00:14:49,059
+called by a mosquito not cover as
+reloading fight Chordata
+
+231
+00:14:49,068 --> 00:14:54,347
+sound for example AI or any unit stats
+are gonna change
+
+232
+00:14:54,959 --> 00:14:58,047
+it's called in a coder make sure you go
+super in it
+
+233
+00:14:58,839 --> 00:15:01,880
+in it with coated depending upon we
+should pick of the
+
+234
+00:15:01,088 --> 00:15:04,144
+and load up the enemy stats here had
+sliders and
+
+235
+00:15:05,044 --> 00:15:08,097
+a slurry from Felix very simple as the
+one-liner
+
+236
+00:15:08,097 --> 00:15:12,180
+next up you can move to Europe
+
+237
+00:15:13,008 --> 00:15:17,010
+on first shown in the slices point this
+is Colin SK view
+
+238
+00:15:17,082 --> 00:15:21,221
+present scene is called with your scene
+and this is a great place to cash your
+
+239
+00:15:21,959 --> 00:15:22,850
+visual elements
+
+240
+00:15:22,085 --> 00:15:25,092
+so SBC is gonna
+
+241
+00:15:25,092 --> 00:15:28,141
+it loaded by the King archiver and all
+the visual elements
+
+242
+00:15:29,041 --> 00:15:32,119
+PNG's the reference again the allotted
+well before you get to hear
+
+243
+00:15:33,019 --> 00:15:37,048
+so you can actually be quite a bit of
+work inside new to you
+
+244
+00:15:37,048 --> 00:15:41,101
+without worrying about a lotta loading
+costly things if you have a lot of
+
+245
+00:15:42,001 --> 00:15:43,440
+visual on its a contract with
+
+246
+00:15:43,449 --> 00:15:47,110
+catch them right here in this case I'm
+finding all the enemies
+
+247
+00:15:47,011 --> 00:15:50,011
+and unseemly in Miami re
+
+248
+00:15:50,011 --> 00:15:55,063
+some motivation
+
+249
+00:15:55,063 --> 00:15:58,098
+for doing this the site you want to have
+
+250
+00:15:58,098 --> 00:16:01,185
+a simple way taking a logical com1
+
+251
+00:16:02,085 --> 00:16:06,118
+and have a lot to code they're two
+different methods for searching
+
+252
+00:16:07,018 --> 00:16:12,104
+child node name fursuit for finding a
+filament and enumerate child nodes
+
+253
+00:16:13,004 --> 00:16:17,101
+with name from I'll and test results I
+really cast
+
+254
+00:16:18,001 --> 00:16:22,086
+you saw
+
+255
+00:16:22,086 --> 00:16:26,088
+in the previous lives just a quick can
+Research Center
+
+256
+00:16:26,088 --> 00:16:31,088
+might not have been parent to you first
+we have an extra
+
+257
+00:16:31,088 --> 00:16:35,180
+style search you seen which this case
+will slash slash
+
+258
+00:16:36,008 --> 00:16:39,647
+any what that means is fine
+
+259
+00:16:40,439 --> 00:16:44,420
+all enemies from the router personally
+down
+
+260
+00:16:44,042 --> 00:16:48,701
+examples here hero which is find a child
+called here without
+
+261
+00:16:49,079 --> 00:16:53,300
+percy flashlights hero would find all
+the notes and hero
+
+262
+00:16:53,003 --> 00:16:58,852
+in riker's order we can also search by
+class not a single class
+
+263
+00:16:59,149 --> 00:17:02,217
+sickness last session with the node fun
+all the middle notes
+
+264
+00:17:02,829 --> 00:17:06,130
+in your city and you could also use
+
+265
+00:17:06,013 --> 00:17:09,842
+club style partial matches such as the
+wild card here
+
+266
+00:17:09,959 --> 00:17:14,030
+where it's anything any known named
+starting with P
+
+267
+00:17:14,669 --> 00:17:19,350
+super powerful and this is going to be
+your best way lodging up
+
+268
+00:17:19,035 --> 00:17:22,040
+of hooking up your logical seen with the
+actual game code
+
+269
+00:17:22,004 --> 00:17:26,543
+and obviously that's what we did
+
+270
+00:17:26,939 --> 00:17:31,090
+in the sample so before you can see
+child not remain
+
+271
+00:17:31,009 --> 00:17:34,012
+being used extensively find it objects
+within the scene
+
+272
+00:17:34,039 --> 00:17:38,075
+inside the gate code is very fast you
+can do it often
+
+273
+00:17:38,075 --> 00:17:41,152
+but we do recommend cash results if
+
+274
+00:17:42,052 --> 00:17:46,136
+it possible from but last step on this
+great loss over the phone
+
+275
+00:17:47,036 --> 00:17:50,037
+easy they'll is the game
+
+276
+00:17:50,037 --> 00:17:53,065
+that's totally up to you course at the
+artwork
+
+277
+00:17:53,065 --> 00:17:56,464
+you can then replace the Texas red boxes
+
+278
+00:17:57,049 --> 00:18:02,290
+hopefully artist delivered them at the
+right size at levels that you need
+
+279
+00:18:02,029 --> 00:18:05,034
+which should be easy for the point at
+any effect
+
+280
+00:18:05,079 --> 00:18:09,086
+Norman showed you how easy this at
+Cedars two things because he's Korean
+
+281
+00:18:09,086 --> 00:18:10,125
+midfielder Sulley affect not
+
+282
+00:18:11,025 --> 00:18:15,046
+at that special image post-processing
+effect and of course
+
+283
+00:18:15,046 --> 00:18:19,108
+play test iterate I can't stress this
+enough and
+
+284
+00:18:20,008 --> 00:18:23,025
+have fun this is again is all about
+
+285
+00:18:23,025 --> 00:18:26,584
+sure you have been following me again
+okay
+
+286
+00:18:26,809 --> 00:18:29,844
+when we head over to Nick now to talk
+about forest prospectuses
+
+287
+00:18:30,159 --> 00:18:37,159
+pixels of a shock
+
+288
+00:18:39,058 --> 00:18:43,104
+am today i wanna talk about my two
+favorite things
+
+289
+00:18:44,004 --> 00:18:47,053
+an but two of my favorite things one
+which is
+
+290
+00:18:47,053 --> 00:18:50,151
+improving performance and order to
+squeeze down the amount of time that
+
+291
+00:18:51,051 --> 00:18:52,057
+your game takes to
+
+292
+00:18:52,057 --> 00:18:55,123
+execute six times a second and then
+increasing
+
+293
+00:18:56,023 --> 00:18:59,057
+the awesome that you can squeeze into
+that space that you made by improving
+
+294
+00:18:59,057 --> 00:19:01,134
+your performance
+
+295
+00:19:02,034 --> 00:19:05,051
+so I have a bunch of topics to go
+through an
+
+296
+00:19:05,051 --> 00:19:08,079
+to stir quickly give you a preview and
+talk about
+
+297
+00:19:08,079 --> 00:19:11,127
+understanding what is involved in drying
+where the
+
+298
+00:19:12,027 --> 00:19:15,436
+time is gonna go in a taco actions and
+constraints
+
+299
+00:19:15,679 --> 00:19:18,800
+how their secret window into the
+underlying
+
+300
+00:19:18,008 --> 00:19:22,074
+spray can Jen an physics there's a cost
+hierarchy theirs is very helpful to
+
+301
+00:19:23,046 --> 00:19:24,057
+understand
+
+302
+00:19:24,057 --> 00:19:27,132
+similarly for shape nodes talk a little
+bit about a fax
+
+303
+00:19:28,032 --> 00:19:34,055
+and some good to know facts about are
+lighting systems
+
+304
+00:19:34,055 --> 00:19:38,063
+so drying performance
+
+305
+00:19:39,035 --> 00:19:43,077
+Christian things that impact your John
+performance
+
+306
+00:19:43,077 --> 00:19:46,151
+in a big big way 1 is there
+
+307
+00:19:47,051 --> 00:19:51,710
+choice dry order how it is make your
+sprites to the engine
+
+308
+00:19:52,169 --> 00:19:55,580
+and to years sharing the resources
+
+309
+00:19:55,058 --> 00:19:58,086
+thirty years to accomplish that drying
+now
+
+310
+00:19:58,086 --> 00:20:03,145
+spray kit has by default
+
+311
+00:20:04,045 --> 00:20:09,080
+a sibling order drop rule which plants
+that standard painters under them
+
+312
+00:20:09,008 --> 00:20:12,065
+there's two roles your parent to paint
+us first
+
+313
+00:20:13,037 --> 00:20:16,726
+very curses down and draws the children
+and their children and so on
+
+314
+00:20:17,059 --> 00:20:22,210
+as it goes children are rendered in the
+order that the appear in the child away
+
+315
+00:20:22,021 --> 00:20:25,053
+now in this diagram here obviously the
+helicopter
+
+316
+00:20:25,053 --> 00:20:28,148
+has got its very bottom missiles dan the
+body in on
+
+317
+00:20:29,048 --> 00:20:32,051
+and the rotors and its straightforward
+
+318
+00:20:32,078 --> 00:20:35,607
+to create this in code just by adding
+the various parts
+
+319
+00:20:36,309 --> 00:20:39,340
+now this is very convenient for
+
+320
+00:20:39,034 --> 00:20:43,045
+prototyping but what is it due to drying
+performance
+
+321
+00:20:43,045 --> 00:20:46,133
+so here's my amazing game scene
+
+322
+00:20:47,033 --> 00:20:52,382
+and its can have a bunch helicopters and
+
+323
+00:20:52,679 --> 00:20:56,330
+the each peace as we workers down to
+draw order
+
+324
+00:20:56,033 --> 00:20:59,612
+comes an one at a time followed rock all
+
+325
+00:20:59,909 --> 00:21:03,490
+and for individual dropped calls you
+take some time
+
+326
+00:21:03,049 --> 00:21:06,056
+and you get the idea Field mall in there
+now
+
+327
+00:21:07,019 --> 00:21:10,022
+let's break it gives you in order to
+avoid this problem
+
+328
+00:21:10,049 --> 00:21:15,208
+years the magical
+
+329
+00:21:15,649 --> 00:21:19,020
+third dimension so
+
+330
+00:21:19,002 --> 00:21:22,010
+let's have a look at what we can do with
+that if
+
+331
+00:21:22,001 --> 00:21:26,028
+we sat ignore sibling order to yes
+
+332
+00:21:26,037 --> 00:21:29,071
+which means death to control order
+
+333
+00:21:29,071 --> 00:21:32,104
+that's gonna be pretty helpful so we've
+got a helicopter re organ arbitrarily
+
+334
+00:21:33,004 --> 00:21:33,088
+set it on
+
+335
+00:21:33,088 --> 00:21:37,123
+level 100 let's stretch out the rotors
+in
+
+336
+00:21:38,023 --> 00:21:42,028
+pulled him towards the camera an at
+level 1
+
+337
+00:21:42,073 --> 00:21:45,155
+now was pushed missiles back like that
+
+338
+00:21:46,055 --> 00:21:49,080
+so now the stock now
+
+339
+00:21:49,008 --> 00:21:52,074
+spray kit knows what you intended with
+your composite
+
+340
+00:21:53,046 --> 00:21:56,109
+it's not based on the order was added in
+code or anything like that it's based on
+
+341
+00:21:57,009 --> 00:21:58,013
+something absolutely
+
+342
+00:21:58,013 --> 00:22:01,017
+which is where is my current space
+
+343
+00:22:01,053 --> 00:22:04,064
+so does that do for drying
+
+344
+00:22:04,064 --> 00:22:07,823
+well bit by bit you can see that we've
+got
+
+345
+00:22:08,399 --> 00:22:11,451
+a lot less struggles because we're done
+already so that's
+
+346
+00:22:11,919 --> 00:22:15,470
+great and you've got a whole bunch
+performance back right away
+
+347
+00:22:15,047 --> 00:22:20,626
+especially have lots of objects but you
+can go further course
+
+348
+00:22:21,049 --> 00:22:25,540
+use texture analysis so here I put all
+of the sprite Fanta
+
+349
+00:22:25,054 --> 00:22:29,075
+one texture and house I can help me
+
+350
+00:22:29,075 --> 00:22:33,134
+well here's my magical Union force
+helicopters
+
+351
+00:22:33,809 --> 00:22:36,960
+and boom I'm done spray kit can
+
+352
+00:22:36,096 --> 00:22:40,100
+know that's one texture knows what order
+all the bits have to be drawn an
+
+353
+00:22:41,000 --> 00:22:44,059
+he's bashing a lot for the Jeep UN
+blasted on out
+
+354
+00:22:44,059 --> 00:22:49,095
+an potentially of one single call that's
+pretty awesome
+
+355
+00:22:49,095 --> 00:22:52,180
+now this whole bunch of other things
+that can be shared
+
+356
+00:22:53,008 --> 00:22:56,039
+and should be aware of those things we
+have
+
+357
+00:22:57,011 --> 00:23:00,047
+and you normal map generation scheme and
+
+358
+00:23:00,047 --> 00:23:03,456
+you can see that their arsenal flower
+block an
+
+359
+00:23:03,879 --> 00:23:07,190
+because spray kit textures keyed of a
+name
+
+360
+00:23:07,019 --> 00:23:11,022
+an and normal maps were generated
+on-the-fly
+
+361
+00:23:11,049 --> 00:23:15,058
+and with out a name and just to find
+somewhere if you can ease that normal
+
+362
+00:23:15,058 --> 00:23:15,063
+map
+
+363
+00:23:16,008 --> 00:23:19,021
+on the block you need to know let the
+engine now that its
+
+364
+00:23:19,021 --> 00:23:22,230
+genuinely shared thing so generate
+
+365
+00:23:22,419 --> 00:23:26,300
+your normal map start on attack sure in
+a sign that tax roll this breakthrough
+
+366
+00:23:26,003 --> 00:23:26,098
+any user
+
+367
+00:23:27,025 --> 00:23:32,033
+as opposed to you every time we have
+that block asking for it to be generated
+
+368
+00:23:32,033 --> 00:23:35,128
+similarly we've got some cool procedural
+nice which might like
+
+369
+00:23:36,028 --> 00:23:39,677
+like to use initiators sir to provide
+some serve you know television star
+
+370
+00:23:39,929 --> 00:23:40,976
+factor something like that
+
+371
+00:23:41,399 --> 00:23:44,530
+if you can reuse the noise at the scale
+that you've generated
+
+372
+00:23:44,053 --> 00:23:47,192
+cashed out of because every night
+structure that you make is gonna consume
+
+373
+00:23:47,669 --> 00:23:49,230
+memory and once again
+
+374
+00:23:49,023 --> 00:23:53,023
+break it won't know unless if you tell
+it by sharing a variable in a
+
+375
+00:23:53,023 --> 00:23:56,028
+cash winter somewhere that yet it is
+actually the same texture now
+
+376
+00:23:56,028 --> 00:24:00,137
+and you won't be able to batch
+
+377
+00:24:00,389 --> 00:24:03,980
+couple of other some more points if you
+reference shooters from files
+
+378
+00:24:03,098 --> 00:24:06,497
+spray kit will now that were textile FSH
+
+379
+00:24:07,379 --> 00:24:11,700
+is for texts or FSH everywhere you
+reference a so when you're prototyping
+
+380
+00:24:11,007 --> 00:24:14,186
+its often very convenient to reference
+cheaters from strings
+
+381
+00:24:14,879 --> 00:24:17,600
+so go ahead and do that during
+prototyping let's break it doesn't
+
+382
+00:24:17,006 --> 00:24:19,091
+really have any way of knowing that
+genuinely these two shooters the same
+
+383
+00:24:20,045 --> 00:24:21,974
+even though the source code might be the
+same
+
+384
+00:24:22,379 --> 00:24:25,750
+if you reference it from a file going
+into account to Premium houses
+
+385
+00:24:25,075 --> 00:24:29,107
+beforehand just cash it all off and its
+gonna go that much faster
+
+386
+00:24:30,007 --> 00:24:33,031
+because if all those helicopters have
+the same sheer once again
+
+387
+00:24:33,031 --> 00:24:36,096
+it knows it's just passed them off like
+that and then
+
+388
+00:24:36,096 --> 00:24:39,128
+finally slightly esoteric point on
+bashing your is
+
+389
+00:24:40,028 --> 00:24:43,082
+we offer a number of planned modes
+searchers an
+
+390
+00:24:43,082 --> 00:24:46,086
+additive for multiplicative or whatever
+
+391
+00:24:46,086 --> 00:24:49,171
+because changing a planned no changes
+the GP state
+
+392
+00:24:50,071 --> 00:24:54,083
+we have to actually interrupt the drying
+every tiny change that state
+
+393
+00:24:54,083 --> 00:24:57,162
+in order to allow the buying to occur so
+trick you can use
+
+394
+00:24:58,062 --> 00:25:01,097
+you can imagine for example if you had
+some sort of a misty forest scene for
+
+395
+00:25:01,097 --> 00:25:01,101
+layer
+
+396
+00:25:02,037 --> 00:25:05,071
+treason and layers creatures in a not
+earlier
+
+397
+00:25:05,071 --> 00:25:08,134
+trees in the trees have alpha and I'm if
+you put all those things
+
+398
+00:25:09,034 --> 00:25:12,069
+on the same Z like literally exactly the
+same Z
+
+399
+00:25:12,069 --> 00:25:15,147
+let's break it will know these things go
+together with their black and mild
+
+400
+00:25:16,047 --> 00:25:19,047
+and for example olive trees in the front
+can go out
+
+401
+00:25:19,047 --> 00:25:22,226
+in one drop call with 11 mode and that
+
+402
+00:25:22,649 --> 00:25:27,260
+may or may not be just that will extra
+bit you needed to get a little more time
+
+403
+00:25:27,026 --> 00:25:30,079
+to squeeze in that little more awesome
+
+404
+00:25:30,079 --> 00:25:34,131
+now their stools to help you evaluate
+graphics performance
+
+405
+00:25:35,031 --> 00:25:39,070
+so you don't just need to have Lake I'm
+serious mental model if these things
+
+406
+00:25:39,007 --> 00:25:42,019
+an there's actual you know
+
+407
+00:25:42,082 --> 00:25:45,171
+quantitative things you can do you to
+get some insight into what's break is
+
+408
+00:25:46,071 --> 00:25:48,158
+doing behind the scenes
+
+409
+00:25:49,058 --> 00:25:52,637
+the first ball there's a number of flags
+
+410
+00:25:53,159 --> 00:25:56,850
+on the view which you can turn on and
+off in order to get some
+
+411
+00:25:56,085 --> 00:25:59,127
+insight there's a obvious frame counter
+
+412
+00:26:00,027 --> 00:26:03,055
+FBS frames per second there's a draw
+count
+
+413
+00:26:03,055 --> 00:26:07,107
+which is actually gonna tell you how
+many batches did I get
+
+414
+00:26:08,007 --> 00:26:11,606
+an there is your note count which is how
+many
+
+415
+00:26:11,669 --> 00:26:15,220
+ask a light spray kit nodes actually
+went down the pipeline
+
+416
+00:26:15,022 --> 00:26:18,079
+and finally the five-count if you're
+using something like a shape that might
+
+417
+00:26:18,079 --> 00:26:19,083
+be comprised
+
+418
+00:26:19,083 --> 00:26:22,086
+have multiple sub quads
+
+419
+00:26:22,086 --> 00:26:25,095
+so its gonna tell you that and I have
+
+420
+00:26:26,076 --> 00:26:30,087
+just quick little thing here to show you
+that I have all these gears
+
+421
+00:26:30,087 --> 00:26:34,100
+an it's showing 12 nodes you'd have to
+inspect my scene graph to discover why
+
+422
+00:26:35,000 --> 00:26:35,094
+there's 12
+
+423
+00:26:35,094 --> 00:26:38,333
+but there's six years you can probably
+guess sort of what might be going on
+
+424
+00:26:39,179 --> 00:26:40,070
+there
+
+425
+00:26:40,007 --> 00:26:43,076
+the heck of a lot of quads like really a
+lot
+
+426
+00:26:43,076 --> 00:26:46,735
+have 12 draws but it's running at 60
+frames a second so
+
+427
+00:26:47,419 --> 00:26:53,830
+I'm pretty happy with that right now
+from my magical your game
+
+428
+00:26:53,083 --> 00:26:57,182
+so the other thing you've got is that G
+of RAM
+
+429
+00:26:57,929 --> 00:27:00,978
+Joe friend better so there's all kinds
+of cool gauges
+
+430
+00:27:01,419 --> 00:27:04,515
+an tell you what proportion of this and
+that is happening striker frame
+
+431
+00:27:05,379 --> 00:27:09,290
+and I'll give you some insight into what
+y'all calls being invoked on fly
+
+432
+00:27:09,029 --> 00:27:12,097
+an had a lot of documentation
+information %uh this is a really
+
+433
+00:27:12,097 --> 00:27:13,526
+fantastic tool
+
+434
+00:27:14,399 --> 00:27:17,450
+for understanding the runtime
+characteristics of your game
+
+435
+00:27:17,045 --> 00:27:21,254
+nope notice as you run this thing what's
+going on in the hardware
+
+436
+00:27:21,659 --> 00:27:25,210
+and correspondent what's going on in
+your game and study that
+
+437
+00:27:25,021 --> 00:27:29,105
+I'll give you did insight into but the
+engine is going for you
+
+438
+00:27:30,005 --> 00:27:34,594
+so to kinda rolled out a lot
+
+439
+00:27:34,639 --> 00:27:38,530
+the idea here is pose your seems as
+layers
+
+440
+00:27:38,053 --> 00:27:42,912
+Commons the values are gonna help you a
+lot for reasons I mentioned
+
+441
+00:27:43,389 --> 00:27:46,500
+overlapping things in different layers
+order control
+
+442
+00:27:46,005 --> 00:27:49,154
+the draw order instead of using the
+sibling order
+
+443
+00:27:49,649 --> 00:27:53,460
+an something andrea's share your stuff
+
+444
+00:27:53,046 --> 00:27:57,102
+line modes go together and use the
+hudson profilers turd
+
+445
+00:27:58,002 --> 00:28:02,021
+really understand but the engine is
+going
+
+446
+00:28:02,021 --> 00:28:05,440
+alright next up actions and constraints
+
+447
+00:28:05,629 --> 00:28:08,630
+as I mentioned and in the introduction
+
+448
+00:28:08,639 --> 00:28:12,050
+cool thing about actions is they really
+are
+
+449
+00:28:12,005 --> 00:28:16,080
+and magic window into the very got spray
+kit execution engine
+
+450
+00:28:16,008 --> 00:28:19,063
+deep down inside we continuously improve
+the performance
+
+451
+00:28:20,035 --> 00:28:23,334
+other various operations to spray kit
+provides
+
+452
+00:28:23,649 --> 00:28:27,820
+actions Rd little objective-c things
+that might think
+
+453
+00:28:27,082 --> 00:28:31,100
+that might be heavy but it's not it
+really cute such instructions for the
+
+454
+00:28:32,000 --> 00:28:33,023
+execution engine
+
+455
+00:28:33,023 --> 00:28:36,060
+just couple bites here and there to tell
+you what's going to happen
+
+456
+00:28:36,006 --> 00:28:40,068
+and then it puts it off in turn turn
+accuse and what not
+
+457
+00:28:41,022 --> 00:28:45,221
+to run so
+
+458
+00:28:45,419 --> 00:28:48,750
+make an action here I've got an old
+
+459
+00:28:48,075 --> 00:28:52,100
+and I'm going to rotate by hi parently
+for one second
+
+460
+00:28:53,000 --> 00:28:57,369
+you can change them group down reuse
+them
+
+461
+00:28:57,369 --> 00:29:01,100
+here well airplanes that you may not be
+familiar with
+
+462
+00:29:01,001 --> 00:29:05,280
+and the rotating continuously for a
+period of a second
+
+463
+00:29:05,379 --> 00:29:08,383
+am they're moving around in the scaling
+
+464
+00:29:08,419 --> 00:29:12,610
+its really simple to set the stuff up
+execution engine is ticking
+
+465
+00:29:12,061 --> 00:29:16,098
+it over its almost re it's great to let
+this break engine do stuff for you
+
+466
+00:29:16,098 --> 00:29:16,757
+rather
+
+467
+00:29:17,639 --> 00:29:21,710
+encoding it all up in your update so
+
+468
+00:29:21,071 --> 00:29:24,098
+little bit about sequencing say I've got
+
+469
+00:29:24,098 --> 00:29:28,125
+something that I have got waiting off
+stage left like the secret monster who
+
+470
+00:29:29,025 --> 00:29:30,030
+make is
+
+471
+00:29:30,003 --> 00:29:34,034
+parents in less than one second an I can
+have it way
+
+472
+00:29:34,061 --> 00:29:40,073
+and ann milf so that's like a sequence
+
+473
+00:29:40,073 --> 00:29:44,462
+also man my monster comes might rotate
+and scale and feet away
+
+474
+00:29:45,119 --> 00:29:48,220
+he is merely a ghost
+
+475
+00:29:48,022 --> 00:29:54,071
+so thats the use if I can ask a Action
+Group
+
+476
+00:29:54,071 --> 00:29:57,104
+and then you can compose those things as
+deeply in complex
+
+477
+00:29:58,004 --> 00:30:04,143
+complex Haveli as you like my love to
+make up words
+
+478
+00:30:04,179 --> 00:30:08,960
+right so and this case my monsters gonna
+move his scale rotate and its gonna fade
+
+479
+00:30:08,096 --> 00:30:10,110
+away
+
+480
+00:30:11,001 --> 00:30:15,045
+now St action I teaches your friend is
+the documentation here
+
+481
+00:30:15,054 --> 00:30:19,060
+am like you all to carefully read these
+all down
+
+482
+00:30:19,006 --> 00:30:22,054
+actually go look at the documentation is
+a lottt now
+
+483
+00:30:23,008 --> 00:30:26,084
+there's a ton of power and there's a lot
+of fun to play with constraints
+
+484
+00:30:26,084 --> 00:30:29,089
+and you're here for the previous section
+and
+
+485
+00:30:30,034 --> 00:30:33,108
+non-interest quite well and I have just
+got a quick little
+
+486
+00:30:34,008 --> 00:30:37,357
+summary slide here constraints for
+another sang an
+
+487
+00:30:37,429 --> 00:30:40,452
+which gives you access to the high
+performance engine running underneath
+
+488
+00:30:40,659 --> 00:30:43,600
+break it in this case it's running
+inverse kinematics
+
+489
+00:30:43,006 --> 00:30:46,041
+and this full scene was set up in Xcode
+an
+
+490
+00:30:46,095 --> 00:30:49,110
+very quickly just an looking
+
+491
+00:30:50,001 --> 00:30:54,810
+and setting up couple grounders
+
+492
+00:30:54,909 --> 00:30:57,933
+here's another one that's actually new
+and cool
+
+493
+00:30:58,149 --> 00:31:01,460
+and you can create a follow a path now
+which seeks to see
+
+494
+00:31:01,046 --> 00:31:05,395
+after a and if you've ever spent any
+time with Betty spines and what not
+
+495
+00:31:05,809 --> 00:31:08,840
+the math is kinda scary especially
+making things move
+
+496
+00:31:09,119 --> 00:31:12,450
+at a uniform speeders particularly hairy
+so
+
+497
+00:31:12,045 --> 00:31:15,504
+if when hadn't given you and ASCII
+action to follow a path
+
+498
+00:31:15,909 --> 00:31:20,020
+along the spine the create account
+morons line if you care
+
+499
+00:31:20,002 --> 00:31:26,661
+an and will move things along at a
+constant velocity for you
+
+500
+00:31:26,679 --> 00:31:29,760
+click your
+
+501
+00:31:29,076 --> 00:31:33,455
+right Korean to node similar sort of
+thing
+
+502
+00:31:34,139 --> 00:31:37,330
+you don't need to bother with York
+tangent in a lot sorry thing
+
+503
+00:31:37,033 --> 00:31:43,072
+the blue balls moving around the arrows
+following
+
+504
+00:31:43,072 --> 00:31:46,076
+and the other really cool thing about
+actions
+
+505
+00:31:46,076 --> 00:31:49,080
+is the kind of blatant in memory when
+you create them
+
+506
+00:31:49,008 --> 00:31:53,847
+build them once take advantage in the
+fact that the copy on dad
+
+507
+00:31:54,639 --> 00:31:57,730
+and that the run when you add it to the
+scene mine
+
+508
+00:31:57,073 --> 00:32:00,149
+example here City might have spaceship
+our Monster
+
+509
+00:32:01,049 --> 00:32:04,132
+its gonna enter from stage left in the
+same way every time and maybe follow a
+
+510
+00:32:05,032 --> 00:32:06,551
+path and then leave
+
+511
+00:32:06,839 --> 00:32:11,230
+if you create that node with the
+spaceship and the action
+
+512
+00:32:11,023 --> 00:32:14,070
+cash in on a pointer and then cokie it
+
+513
+00:32:14,007 --> 00:32:17,090
+an ad to your scene it'll run every
+single time
+
+514
+00:32:18,053 --> 00:32:23,148
+and exactly the same way very very
+little overhead
+
+515
+00:32:24,048 --> 00:32:27,075
+and another fun thing that's easy to
+overlook
+
+516
+00:32:27,075 --> 00:32:30,080
+is the purpose naming your actions
+
+517
+00:32:30,008 --> 00:32:33,127
+so in this example here
+
+518
+00:32:33,919 --> 00:32:37,937
+what I've got is the idea that I have a
+spray tan
+
+519
+00:32:38,099 --> 00:32:41,107
+basically gonna do something like they
+follow a touch point
+
+520
+00:32:41,179 --> 00:32:45,184
+I might run in action that is like move
+two points I give it the name
+
+521
+00:32:45,679 --> 00:32:49,696
+move now I can override that action in
+time I want
+
+522
+00:32:49,849 --> 00:32:52,970
+just by using the same key so it might
+be in progress
+
+523
+00:32:52,097 --> 00:32:56,098
+around the action again with a new point
+it'll immediately segue without a hat
+
+524
+00:32:56,098 --> 00:32:56,957
+your starter
+
+525
+00:32:57,839 --> 00:33:00,864
+onto the new action and continue on and
+finally
+
+526
+00:33:01,089 --> 00:33:04,770
+if I monsters coming in here and then he
+saw that I had you know the big monster
+
+527
+00:33:04,077 --> 00:33:05,726
+re repeller 2000
+
+528
+00:33:06,419 --> 00:33:09,960
+and he decides he doesn't want to go all
+the way into the scene
+
+529
+00:33:09,096 --> 00:33:12,133
+we can just use a move action from key
+with his move
+
+530
+00:33:13,033 --> 00:33:16,042
+key and tell counsel that action right
+away
+
+531
+00:33:16,339 --> 00:33:19,690
+and he can go into something else we
+don't have to wait for the ex fusion
+
+532
+00:33:19,069 --> 00:33:23,758
+at play out the ant
+
+533
+00:33:24,379 --> 00:33:28,020
+right next physics
+
+534
+00:33:28,002 --> 00:33:31,054
+physics a lot of fun I really really
+love
+
+535
+00:33:31,054 --> 00:33:35,153
+there new simulation tool that we've got
+an Xcode because
+
+536
+00:33:35,639 --> 00:33:38,940
+the hardest thing about working with
+physics
+
+537
+00:33:38,094 --> 00:33:42,106
+is getting the parameters right now
+which set things up good
+
+538
+00:33:43,006 --> 00:33:46,073
+defaults for example he said a massive
+wine and a strength wanna
+
+539
+00:33:46,073 --> 00:33:50,232
+on rigid body in a strength one on a
+field the gun interacting kind of an
+
+540
+00:33:50,889 --> 00:33:52,460
+interesting way out as the bad
+
+541
+00:33:52,046 --> 00:33:55,485
+but that's just the starting point for
+your iteration
+
+542
+00:33:55,899 --> 00:33:59,968
+so rigid bodies are just mentioned ready
+should bodies that's all things your
+
+543
+00:34:00,589 --> 00:34:00,673
+game there
+
+544
+00:34:01,429 --> 00:34:04,780
+passing falling ruling sliding an
+
+545
+00:34:04,078 --> 00:34:07,086
+the things that the physics engine has
+to do each frame
+
+546
+00:34:08,058 --> 00:34:10,126
+are you a rigid bodies handling
+collisions and letting you know that
+
+547
+00:34:11,026 --> 00:34:12,165
+they've occurred
+
+548
+00:34:12,399 --> 00:34:16,030
+and physics feels now
+
+549
+00:34:16,003 --> 00:34:19,079
+a primary thing for getting access to
+iteration
+
+550
+00:34:19,079 --> 00:34:23,638
+and understanding what's going on years
+the new physics visualizer
+
+551
+00:34:24,349 --> 00:34:28,260
+so was just go back to mine years came
+here I'm
+
+552
+00:34:28,026 --> 00:34:31,365
+dropping in these wonderful years and
+
+553
+00:34:31,599 --> 00:34:34,940
+wait a second his key for
+
+554
+00:34:34,094 --> 00:34:37,107
+acting properly what's up with that
+
+555
+00:34:38,007 --> 00:34:42,023
+the other ones are interlocking just not
+that one
+
+556
+00:34:42,023 --> 00:34:46,024
+so I'll turn on the visualize earning
+can see 0
+
+557
+00:34:46,024 --> 00:34:49,079
+that was a circle I made a mistake
+somewhere so I can go
+
+558
+00:34:49,079 --> 00:34:52,145
+your tax code in click on my thang are
+its procedural
+
+559
+00:34:53,045 --> 00:34:57,069
+I can look at my code I can find out why
+did this one slip through the cracks
+
+560
+00:34:57,069 --> 00:35:00,073
+so this is here this is a great first
+
+561
+00:35:00,073 --> 00:35:03,099
+line of defense for just understanding
+what the dynamic behavior is
+
+562
+00:35:03,099 --> 00:35:06,120
+it's not what you expected you can also
+use this mild
+
+563
+00:35:07,002 --> 00:35:11,881
+for identifying quickly am what is the
+cause
+
+564
+00:35:12,079 --> 00:35:15,930
+physics performance issues an object
+might be stuck in a wall
+
+565
+00:35:15,093 --> 00:35:18,182
+and it might be an invisible all because
+it was only there is a physics body
+
+566
+00:35:19,082 --> 00:35:22,095
+now you'll just be able to see that well
+it's continuously pushing
+
+567
+00:35:22,095 --> 00:35:25,754
+in and out of collision encounter escape
+and
+
+568
+00:35:26,609 --> 00:35:32,510
+the next steps to solve that problem
+will probably occur to you
+
+569
+00:35:32,051 --> 00:35:37,630
+so in order to take best advantage in
+physics
+
+570
+00:35:38,089 --> 00:35:42,540
+in order to get performance you can
+squeeze down the amount of time spending
+
+571
+00:35:42,054 --> 00:35:44,054
+key squeeze in more awesome
+
+572
+00:35:44,054 --> 00:35:47,055
+is to understand the cost hierarchy
+
+573
+00:35:47,055 --> 00:35:50,119
+first of all dynamic objects
+
+574
+00:35:51,019 --> 00:35:54,025
+cost more because the clinicians need to
+be resolved
+
+575
+00:35:54,079 --> 00:35:57,138
+and they need to be moved outta
+intersection
+
+576
+00:35:57,849 --> 00:36:02,220
+then objects that are static like
+hopefully the stage than standing on
+
+577
+00:36:02,022 --> 00:36:05,023
+so if you can set an object
+
+578
+00:36:05,023 --> 00:36:08,029
+dude dynamic equals now
+
+579
+00:36:08,029 --> 00:36:12,118
+you're gonna get a lot of performance
+back right away
+
+580
+00:36:13,018 --> 00:36:17,089
+at most efficient and at the scale our
+circles
+
+581
+00:36:17,089 --> 00:36:21,093
+you have dozens of circles for every
+other kind of shape
+
+582
+00:36:22,029 --> 00:36:25,077
+that you can have and she circles might
+work
+
+583
+00:36:25,077 --> 00:36:28,116
+really really good for a lot of things
+especially if for circular
+
+584
+00:36:29,016 --> 00:36:32,090
+hurt their small issue not really notice
+that the interaction house
+
+585
+00:36:32,009 --> 00:36:35,087
+circle doesn't fit very well on the
+hammer
+
+586
+00:36:36,068 --> 00:36:40,497
+that's a bit better the hammer at least
+you know has edges and stuff
+
+587
+00:36:41,109 --> 00:36:45,940
+this is more expensive down the circle
+we could have doesn't the circle sicken
+
+588
+00:36:45,094 --> 00:36:48,094
+have maybe I don't know eights these
+just
+
+589
+00:36:48,094 --> 00:36:52,151
+will build its leader an polygons a
+better
+
+590
+00:36:53,051 --> 00:36:57,380
+this is probably gonna be and the one
+that serves a lot of complicated shapes
+
+591
+00:36:57,839 --> 00:36:57,914
+the best
+
+592
+00:36:58,589 --> 00:37:02,710
+it's more expensive than a rectangle
+because is more edges to compute
+
+593
+00:37:02,071 --> 00:37:05,139
+camp on objects an
+
+594
+00:37:06,039 --> 00:37:09,103
+need to be iterated through all the way
+for all the pieces
+
+595
+00:37:10,003 --> 00:37:16,057
+lotsa circles compounded are a lot
+cheaper than a lot of boxes compounded
+
+596
+00:37:16,057 --> 00:37:19,156
+and finally there's the an perfect
+
+597
+00:37:20,056 --> 00:37:23,095
+pixel often ask bodies these
+
+598
+00:37:23,095 --> 00:37:27,100
+are potentially cheap if it was a circle
+
+599
+00:37:28,000 --> 00:37:31,045
+going to be cheap actually but if it's
+got a convex
+
+600
+00:37:31,045 --> 00:37:34,106
+a complex convoluted shape and iraqi a
+lot of cum
+
+601
+00:37:35,006 --> 00:37:39,042
+computation involved there so just be
+careful with these
+
+602
+00:37:39,042 --> 00:37:42,107
+you need to pick the representation the
+past two starts here
+
+603
+00:37:43,007 --> 00:37:48,022
+serves your game you might find that the
+per pixel thank is actually better
+
+604
+00:37:48,022 --> 00:37:52,039
+dan having like say twenty will circles
+to describe something
+
+605
+00:37:52,039 --> 00:37:55,064
+but prefers things on
+
+606
+00:37:55,064 --> 00:37:58,095
+the fish inside of the charge as much as
+he can
+
+607
+00:37:58,095 --> 00:38:01,484
+serve you can play
+
+608
+00:38:02,339 --> 00:38:06,680
+alright collision masks is another thing
+that you can use
+
+609
+00:38:06,068 --> 00:38:09,070
+to regain performance
+
+610
+00:38:09,088 --> 00:38:13,057
+especially in a case like yes I've got
+these two jars
+
+611
+00:38:13,849 --> 00:38:16,890
+late charge my marbles green jar
+
+612
+00:38:16,089 --> 00:38:19,808
+with green marbles now the funny thing
+about this
+
+613
+00:38:20,609 --> 00:38:24,900
+it's a pretty close together and you
+might be hard for the engine to actually
+
+614
+00:38:24,009 --> 00:38:25,188
+understand
+
+615
+00:38:26,079 --> 00:38:29,105
+that the white marbles have no way
+getting in the green journ
+
+616
+00:38:29,339 --> 00:38:34,210
+vice versa see you can help the engine
+out
+
+617
+00:38:34,021 --> 00:38:39,023
+this is what the engine sees like
+
+618
+00:38:39,023 --> 00:38:42,041
+for everyone others green marbles
+
+619
+00:38:42,041 --> 00:38:45,118
+every one of those white marbles are
+they hitting so
+
+620
+00:38:46,018 --> 00:38:52,031
+just imagine how many comparison site is
+
+621
+00:38:52,031 --> 00:38:55,040
+putting the jar back again now
+
+622
+00:38:55,004 --> 00:38:58,046
+if he is a collision mask give the white
+marbles
+
+623
+00:38:58,082 --> 00:39:02,601
+mask wine and a green marbles mask to
+you
+
+624
+00:39:03,339 --> 00:39:07,341
+you're gonna get a halt on a performance
+back this is an order and squared
+
+625
+00:39:07,359 --> 00:39:08,360
+problem
+
+626
+00:39:08,369 --> 00:39:12,490
+and so by cutting the number of
+comparisons and half
+
+627
+00:39:12,049 --> 00:39:15,068
+well dude the mouth
+
+628
+00:39:15,068 --> 00:39:20,144
+a lot of computation that you can get
+back just through this temple experience
+
+629
+00:39:21,044 --> 00:39:24,113
+right none introduced force feels very
+nicely in the previous ones I'm not
+
+630
+00:39:25,013 --> 00:39:25,055
+gonna
+
+631
+00:39:25,055 --> 00:39:28,074
+and labor what all the different force
+fields are in there feels and things
+
+632
+00:39:28,074 --> 00:39:29,096
+like that
+
+633
+00:39:29,096 --> 00:39:32,127
+but I am gonna point out an that they're
+building blocks
+
+634
+00:39:33,027 --> 00:39:36,082
+use them together and use actions
+
+635
+00:39:36,082 --> 00:39:39,100
+and to fade in and out have a big nasty
+
+636
+00:39:40,000 --> 00:39:43,849
+particle system here and what I've done
+is just made a whole bunch a force field
+
+637
+00:39:43,849 --> 00:39:45,880
+throughout the center the screen
+
+638
+00:39:45,088 --> 00:39:48,132
+and just using an action to modulate the
+strength
+
+639
+00:39:49,032 --> 00:39:52,117
+%uh each force field so they smoothly
+said way one into the other
+
+640
+00:39:53,017 --> 00:39:56,021
+that's a lot nicer than just turning
+them on or off an
+
+641
+00:39:56,021 --> 00:39:59,100
+well I love playing with these things
+are mostly at
+
+642
+00:40:00,000 --> 00:40:04,003
+for that slide n now here's another
+example
+
+643
+00:40:04,003 --> 00:40:08,032
+have how for skills to help you out in
+reducing game logic
+
+644
+00:40:08,032 --> 00:40:11,093
+and simplifying updates similarly to the
+way that
+
+645
+00:40:11,093 --> 00:40:14,129
+the actions 30 window into the engine
+
+646
+00:40:15,029 --> 00:40:18,042
+force feels are another thing that you
+can use
+
+647
+00:40:18,042 --> 00:40:21,093
+to replace game logic so even
+
+648
+00:40:21,093 --> 00:40:24,119
+kinda tell without me even telling you
+what kind of game this one is going to
+
+649
+00:40:25,019 --> 00:40:25,050
+be
+
+650
+00:40:25,005 --> 00:40:29,052
+but was just your looks like for second
+
+651
+00:40:29,097 --> 00:40:33,100
+in Seattle geyser following house cursor
+around
+
+652
+00:40:34,027 --> 00:40:37,079
+and doing their darndest not to run into
+those
+
+653
+00:40:37,079 --> 00:40:41,145
+green planet things I guess spacious
+nearly as big as a planet that's kind of
+
+654
+00:40:42,045 --> 00:40:42,107
+amazing
+
+655
+00:40:43,007 --> 00:40:46,018
+an
+
+656
+00:40:46,018 --> 00:40:49,081
+its hypnotic
+
+657
+00:40:49,081 --> 00:40:52,140
+okay I think I can stop staring at that
+now alright
+
+658
+00:40:53,004 --> 00:40:56,042
+will wait that's the big reveal let's go
+back to the pictures the
+
+659
+00:40:56,078 --> 00:40:59,079
+me if you can or maybe not
+
+660
+00:40:59,079 --> 00:41:02,898
+before I show you that next like an what
+I want to tell you
+
+661
+00:41:03,609 --> 00:41:06,980
+is using Xcode I made that level so
+
+662
+00:41:06,098 --> 00:41:09,145
+I Houston idea like that I like to call
+prefabs
+
+663
+00:41:10,045 --> 00:41:13,067
+likely fabricated objects to make a
+little scene graph
+
+664
+00:41:13,067 --> 00:41:17,113
+with the spaceships picture and a force
+field right underneath it
+
+665
+00:41:18,013 --> 00:41:21,472
+I gave the force field on the spaceship
+a negative strength we push each other
+
+666
+00:41:21,589 --> 00:41:22,520
+apart
+
+667
+00:41:22,052 --> 00:41:25,061
+I gave the planet child which is a force
+field
+
+668
+00:41:26,042 --> 00:41:29,049
+with a negative strength so that it
+pushes
+
+669
+00:41:29,049 --> 00:41:32,094
+little space ships away I made the
+planet's not dynamic
+
+670
+00:41:32,094 --> 00:41:36,483
+and I made spaceships dynamic okay now
+we can look at that
+
+671
+00:41:37,329 --> 00:41:40,403
+re: so this is the whole entire
+
+672
+00:41:41,069 --> 00:41:44,880
+that game aside from the bit that I
+built in Xcode its
+
+673
+00:41:44,088 --> 00:41:48,104
+next to nothing and you're getting the
+same sort of behavior the scene classic
+
+674
+00:41:49,004 --> 00:41:51,011
+RTS is like your Starcraft or whatever
+
+675
+00:41:51,074 --> 00:41:54,943
+so but is doing from top to bottom this
+just
+
+676
+00:41:55,609 --> 00:41:58,720
+the target is where I tap the screen
+
+677
+00:41:58,072 --> 00:42:01,148
+an my not the ship's position as I'm
+calculating
+
+678
+00:42:02,048 --> 00:42:06,081
+an I don't divide by 0 some checking for
+that little minimum length I'm
+
+679
+00:42:06,081 --> 00:42:09,096
+getting the velocity from the physics
+body I'm finding out
+
+680
+00:42:09,096 --> 00:42:13,096
+what direction the velocity is an will
+arc tangent gives me an angled
+
+681
+00:42:13,096 --> 00:42:16,125
+slap on the rotation
+
+682
+00:42:17,025 --> 00:42:20,025
+I'm taking the position difference
+
+683
+00:42:20,025 --> 00:42:23,080
+where I wanna go from where I am
+subtracting
+
+684
+00:42:23,008 --> 00:42:27,297
+the velocity multiplying it by a magic
+number
+
+685
+00:42:28,089 --> 00:42:31,760
+which I arrived at by iterating
+
+686
+00:42:31,076 --> 00:42:34,092
+and then I just applying an impulse
+using
+
+687
+00:42:34,092 --> 00:42:38,148
+back out with magic number and you
+basically get looks like artificial
+
+688
+00:42:39,048 --> 00:42:40,079
+intelligence
+
+689
+00:42:40,079 --> 00:42:44,128
+for having done nothing at all now gonna
+learn more about that stuff you can
+
+690
+00:42:45,028 --> 00:42:48,087
+like search the internet for blades
+there's a
+
+691
+00:42:48,339 --> 00:42:51,800
+wonderful body of work around these
+kinds of techniques
+
+692
+00:42:51,008 --> 00:42:55,067
+now just like physics debug drying
+
+693
+00:42:55,859 --> 00:42:58,860
+can give you insight into what's going
+on
+
+694
+00:42:58,869 --> 00:43:01,893
+here's you know the wizard behind the
+curtain the
+
+695
+00:43:02,109 --> 00:43:06,660
+I've turned on the field by drying you
+can see the fields around the ship's
+
+696
+00:43:06,066 --> 00:43:11,115
+the fields around the planet and how
+they interact and
+
+697
+00:43:12,015 --> 00:43:15,027
+I don't know it's a crazy amount of fun
+for like 10 minutes coding
+
+698
+00:43:15,027 --> 00:43:22,027
+so yield of mathematical spaceship games
+free download and play
+
+699
+00:43:24,004 --> 00:43:27,433
+I don't like that's like a way because
+I'll just watch forever
+
+700
+00:43:27,829 --> 00:43:32,220
+okay so physics choose
+
+701
+00:43:32,022 --> 00:43:36,031
+I don't know which is:--what's gesture
+how I had to keep down at the
+
+702
+00:43:36,031 --> 00:43:39,043
+that side of the screen and she is the
+cheapest one
+
+703
+00:43:39,043 --> 00:43:42,052
+and that scan best serve your game
+
+704
+00:43:42,052 --> 00:43:45,064
+use the expensive ones judiciously to
+serve you can play
+
+705
+00:43:45,064 --> 00:43:49,783
+separate your group with mass see engine
+knows what your intent is cuz
+
+706
+00:43:50,359 --> 00:43:53,359
+that's the only way that it can read
+your mind an
+
+707
+00:43:53,359 --> 00:43:56,730
+feels replace up the logic
+
+708
+00:43:56,073 --> 00:43:59,075
+fuel creative thinking imagination
+
+709
+00:43:59,075 --> 00:44:02,077
+and the debug drying Skyview all kinds
+in sight
+
+710
+00:44:02,077 --> 00:44:05,078
+into what the engine is doing for a
+behind-the-scenes
+
+711
+00:44:05,078 --> 00:44:08,167
+so my next topic
+
+712
+00:44:08,869 --> 00:44:13,810
+shapes had little refresher here
+
+713
+00:44:13,081 --> 00:44:16,600
+on the difference between it now part an
+
+714
+00:44:17,329 --> 00:44:23,060
+sector UN carry gas which is the factor
+
+715
+00:44:23,006 --> 00:44:26,073
+now there's a cost iraqi shapes
+
+716
+00:44:26,073 --> 00:44:29,932
+just like there's a cost hierarchy
+physics
+
+717
+00:44:30,589 --> 00:44:34,640
+you know what I can say they're she's
+won Best service again
+
+718
+00:44:35,099 --> 00:44:38,650
+these guys in particular squares
+
+719
+00:44:38,065 --> 00:44:42,080
+and rectangles are really cheap
+
+720
+00:44:42,008 --> 00:44:46,053
+I'm to say that sprite are way way way
+off
+
+721
+00:44:47,025 --> 00:44:51,051
+the cheap steel beyond these guys but
+not that far off
+
+722
+00:44:51,051 --> 00:44:54,088
+you can use these things a lot worse
+appropriate
+
+723
+00:44:54,088 --> 00:44:58,567
+these are just a bit more Spencer you
+can use them a lot
+
+724
+00:44:59,359 --> 00:45:04,700
+be's have had a tire on love put into
+them in this iteration stray cat
+
+725
+00:45:04,007 --> 00:45:07,012
+an you can dry so many maps in
+
+726
+00:45:08,002 --> 00:45:11,031
+you know compass roses all kinds of
+things like that
+
+727
+00:45:11,049 --> 00:45:14,105
+with factors that in previous iterations
+this break it
+
+728
+00:45:15,005 --> 00:45:18,063
+you might have had them in the judicious
+column now there in the
+
+729
+00:45:18,063 --> 00:45:21,090
+d-licious column
+
+730
+00:45:21,009 --> 00:45:25,014
+alright stroked Kors now
+
+731
+00:45:26,004 --> 00:45:29,673
+I wish I could have no hockey sticks to
+show you the cost here
+
+732
+00:45:30,069 --> 00:45:33,530
+the same look really great and
+
+733
+00:45:33,053 --> 00:45:36,362
+use a few of them and you not gonna
+really your performance at all
+
+734
+00:45:36,839 --> 00:45:40,040
+is by inch now may get a call from on
+
+735
+00:45:40,004 --> 00:45:45,013
+finally feeling the man costs even more
+
+736
+00:45:45,013 --> 00:45:48,020
+so as full a bracket there see you now
+
+737
+00:45:48,002 --> 00:45:52,007
+which is the cheap ass in which is
+expensive half use the thing that's
+
+738
+00:45:52,025 --> 00:45:55,025
+perfect your game
+
+739
+00:45:55,025 --> 00:45:58,072
+just because I can't stop myself I made
+a fractal
+
+740
+00:45:58,072 --> 00:46:02,075
+space point curving with tens of
+thousands
+
+741
+00:46:02,075 --> 00:46:05,103
+points in at an just kinda say
+
+742
+00:46:06,003 --> 00:46:10,004
+K they're cheap use them
+
+743
+00:46:10,004 --> 00:46:13,013
+alright affect notes use
+
+744
+00:46:13,013 --> 00:46:16,462
+a fag nodes when you want to have a
+subtree
+
+745
+00:46:16,579 --> 00:46:20,650
+sprites or whatever that our goal going
+to gather
+
+746
+00:46:20,065 --> 00:46:23,119
+how some kind of a fact apply to them
+such as
+
+747
+00:46:24,019 --> 00:46:28,056
+tenting or blurring
+
+748
+00:46:28,056 --> 00:46:31,057
+they have to be drawn off screen and
+then
+
+749
+00:46:31,066 --> 00:46:34,113
+brought back to the frame buffer for
+feeling so
+
+750
+00:46:35,013 --> 00:46:38,050
+there's a cost you can get me
+
+751
+00:46:38,005 --> 00:46:41,057
+powerful car image support even run
+
+752
+00:46:42,002 --> 00:46:46,068
+very sophisticated filters an all kinds
+of amazing things
+
+753
+00:46:46,068 --> 00:46:51,081
+by its expansive use them when you need
+to
+
+754
+00:46:51,081 --> 00:46:54,600
+shade urs are an awesome option
+
+755
+00:46:55,329 --> 00:46:59,140
+whenever you don't need to have things
+composited
+
+756
+00:46:59,014 --> 00:47:02,051
+off-screen particularly a can just go
+ahead and rock
+
+757
+00:47:02,051 --> 00:47:05,124
+shares will save your performance bacon
+
+758
+00:47:06,024 --> 00:47:09,075
+if you want to just tent everything
+green that's a really simple shaker
+
+759
+00:47:09,075 --> 00:47:12,151
+you just bypass you know the whole
+processing stock just go
+
+760
+00:47:13,051 --> 00:47:17,116
+right now to the hardware so learn about
+that
+
+761
+00:47:18,016 --> 00:47:21,044
+an should Rasta rise just
+
+762
+00:47:21,044 --> 00:47:24,223
+gives us a hand about what can be cashed
+in hangin'
+
+763
+00:47:24,619 --> 00:47:27,619
+will hang around for a while and what
+needs to be be composited
+
+764
+00:47:27,619 --> 00:47:31,280
+every screen
+
+765
+00:47:31,028 --> 00:47:34,051
+if you've got things that are going to
+be static for a while
+
+766
+00:47:34,051 --> 00:47:38,055
+for example maybe you've got some kinda
+had displayed only updates once every 10
+
+767
+00:47:38,055 --> 00:47:39,061
+seconds but you might have
+
+768
+00:47:40,015 --> 00:47:43,042
+you know and cool glows and blurs and
+
+769
+00:47:43,042 --> 00:47:46,043
+real starts in all kinds of things going
+on
+
+770
+00:47:46,052 --> 00:47:49,143
+last redoubt there's a couple of cool
+things he can do here
+
+771
+00:47:50,043 --> 00:47:53,202
+you can create a texture from an old an
+just
+
+772
+00:47:53,589 --> 00:47:57,800
+specify the note ask give you a raster
+for United gotta textures slap that up
+
+773
+00:47:57,008 --> 00:47:59,327
+soon cost almost nothing
+
+774
+00:48:00,119 --> 00:48:05,190
+have CI filter there's the other and
+writer
+
+775
+00:48:05,829 --> 00:48:09,160
+right that's what I have to say about a
+fax
+
+776
+00:48:09,016 --> 00:48:12,975
+now for lighting
+
+777
+00:48:13,119 --> 00:48:16,143
+we have sung introduction from Norman in
+the last section about lighting
+
+778
+00:48:16,359 --> 00:48:19,381
+sign a talk about the performance cost
+so
+
+779
+00:48:19,579 --> 00:48:22,626
+the first thing that you need to now is
+a
+
+780
+00:48:23,049 --> 00:48:26,049
+well we're gonna compete the lighting
+per pixel
+
+781
+00:48:26,049 --> 00:48:29,053
+so the cost is there for proportional to
+the amount
+
+782
+00:48:29,089 --> 00:48:33,660
+like blue pixels you can optimize that
+with
+
+783
+00:48:33,066 --> 00:48:36,119
+it now if you say some things are going
+to be wet
+
+784
+00:48:37,019 --> 00:48:40,848
+thing and I can pay that cost so that's
+what that's all about
+
+785
+00:48:41,019 --> 00:48:47,070
+and the inlay is free
+
+786
+00:48:47,529 --> 00:48:50,583
+you can have eight light for sprite
+
+787
+00:48:51,069 --> 00:48:54,120
+now your to pay for you know eight times
+the processing
+
+788
+00:48:54,579 --> 00:48:59,582
+per pixel spray so way if you want to do
+that
+
+789
+00:48:59,609 --> 00:49:02,690
+and keep the cost down with that now
+
+790
+00:49:02,069 --> 00:49:06,143
+normal maps archie she did you see sews
+up so
+
+791
+00:49:07,043 --> 00:49:12,116
+stick on maps on they'll agree remember
+to share them
+
+792
+00:49:13,016 --> 00:49:16,020
+shadows are cost
+
+793
+00:49:16,002 --> 00:49:19,851
+proportional to the number of flights
+it's pretty much constand
+
+794
+00:49:20,049 --> 00:49:23,490
+so if you turn on one shadow that's
+gonna cost you
+
+795
+00:49:23,049 --> 00:49:26,068
+wine to shadows is in a cost you to you
+
+796
+00:49:26,068 --> 00:49:30,089
+so keep the number of those things down
+
+797
+00:49:30,089 --> 00:49:33,163
+you potentially have to shadow the whole
+entire screen
+
+798
+00:49:34,063 --> 00:49:38,732
+so they look really great you can add a
+lot of impact an awesome
+
+799
+00:49:39,299 --> 00:49:43,324
+use them don't abuse and
+
+800
+00:49:43,549 --> 00:49:46,960
+alright so we talked about
+
+801
+00:49:46,096 --> 00:49:49,113
+drying performance understand what
+
+802
+00:49:50,013 --> 00:49:53,015
+controls batching and dry order
+
+803
+00:49:53,015 --> 00:49:58,364
+an learn about the tools to get insight
+into what's going on
+
+804
+00:49:58,499 --> 00:50:02,554
+actions and constraints are your window
+into this break it down Jan
+
+805
+00:50:03,049 --> 00:50:06,400
+we improve the efficiency all the time
+the more you use actions
+
+806
+00:50:06,004 --> 00:50:09,009
+the more you're gonna get performance
+back over time this week generate
+
+807
+00:50:09,045 --> 00:50:12,364
+frameworks physics
+
+808
+00:50:12,769 --> 00:50:17,803
+understand the cost iraqi choose
+appropriately to serve you can play
+
+809
+00:50:18,109 --> 00:50:22,670
+same with shapes a fax understand the
+cost
+
+810
+00:50:22,067 --> 00:50:27,746
+use them wisely and lighting is a cheap
+easy way to extra awesome
+
+811
+00:50:28,349 --> 00:50:32,425
+and i'd like y'all maker games awesome
+as possible
+
+812
+00:50:33,109 --> 00:50:36,174
+right so today
+
+813
+00:50:36,759 --> 00:50:40,680
+we talked about structure and games for
+scalability
+
+814
+00:50:40,068 --> 00:50:43,437
+understanding how to setup scene graphs
+
+815
+00:50:44,049 --> 00:50:48,125
+and scene graph snippets the can put
+things together in a data-driven way
+
+816
+00:50:48,809 --> 00:50:51,878
+and we talked a whole bunch about
+performance
+
+817
+00:50:52,499 --> 00:50:56,556
+for more information encourage you to
+contact Allen Schaeffer
+
+818
+00:50:57,069 --> 00:51:01,440
+and Philip yes Q who are a games
+evangelist
+
+819
+00:51:01,044 --> 00:51:04,383
+spring kit programming guide recently
+refresh has a tiny interesting
+
+820
+00:51:04,779 --> 00:51:06,180
+information and
+
+821
+00:51:06,018 --> 00:51:09,021
+and of course there's always the forms
+
+822
+00:51:09,048 --> 00:51:13,049
+and tomorrow i'd love did he call come
+visit us in
+
+823
+00:51:13,049 --> 00:51:17,067
+the labs an talk about what you've got
+going on in
+
+824
+00:51:17,067 --> 00:51:20,114
+you know say hi and with that
+
+825
+00:51:21,014 --> 00:51:24,040
+and thanks very much and I'll see ya
+later
+

@@ -1,0 +1,4087 @@
+1
+00:00:11,269 --> 00:00:13,530
+good morning everyone my name is Jeff
+
+2
+00:00:13,053 --> 00:00:15,127
+I'm an engineer vector in america
+
+3
+00:00:16,027 --> 00:00:20,048
+a mix of framework exploit free-market
+the collection a
+
+4
+00:00:20,048 --> 00:00:23,064
+13th which deliver huge range of
+functionality
+
+5
+00:00:23,064 --> 00:00:26,082
+all the functionality is going to be
+extremely fast
+
+6
+00:00:26,082 --> 00:00:31,126
+and be very energy-efficient today why
+introduce some new features and
+
+7
+00:00:32,026 --> 00:00:33,112
+functionality killer framework
+
+8
+00:00:34,012 --> 00:00:38,021
+which are designed to release a simple
+by the way that you access
+
+9
+00:00:38,021 --> 00:00:43,029
+this high performance functionality so
+what are you gonna find in the XRF amor
+
+10
+00:00:44,001 --> 00:00:49,026
+to break this into four broad categories
+the first image processing
+
+11
+00:00:49,026 --> 00:00:55,026
+here you gonna find convergence between
+various pixel format were
+
+12
+00:00:55,026 --> 00:01:00,043
+shears convolutions et cetera we've got
+digital signal processing
+
+13
+00:01:00,043 --> 00:01:04,044
+I fifties the FT's bike rides very
+specter
+
+14
+00:01:04,044 --> 00:01:08,086
+operations vector math functionality
+
+15
+00:01:08,086 --> 00:01:11,178
+so a lot of the things that you can find
+math that age for example
+
+16
+00:01:12,078 --> 00:01:15,083
+operating on factors so sign a factor
+cuz I'm
+
+17
+00:01:16,028 --> 00:01:20,039
+vector era and then finally linear
+algebra
+
+18
+00:01:20,039 --> 00:01:23,158
+on solving systems of linear equations
+
+19
+00:01:23,509 --> 00:01:26,670
+I get values matrix matrix operations
+
+20
+00:01:26,067 --> 00:01:33,067
+a lot of functionality in here as well
+de klerk from work with a lot more than
+
+21
+00:01:34,099 --> 00:01:35,178
+just functionality to the table
+
+22
+00:01:36,078 --> 00:01:39,977
+I first it's extremely high performance
+when we say this there's too many
+
+23
+00:01:40,679 --> 00:01:42,704
+metrics that we pay a lot of attention
+to you
+
+24
+00:01:42,929 --> 00:01:46,220
+the first speed it's going to be
+extremely fast
+
+25
+00:01:46,022 --> 00:01:49,066
+there's two key tools that we use to
+achieve this
+
+26
+00:01:49,066 --> 00:01:52,145
+the first two short back to you meant so
+on Intel were taking advantage of the
+
+27
+00:01:53,045 --> 00:01:53,774
+agency
+
+28
+00:01:54,179 --> 00:01:57,237
+in-ad act and on armor taking advantage
+in neon
+
+29
+00:01:57,759 --> 00:02:01,750
+also in some situations were utilizing
+multiple cores
+
+30
+00:02:01,075 --> 00:02:04,284
+we're gonna do this automatically so
+we're really gonna take advantage of all
+
+31
+00:02:04,959 --> 00:02:06,220
+the processing
+
+32
+00:02:06,022 --> 00:02:11,041
+that's available for you the other
+metric that we spent a lot of time
+
+33
+00:02:11,041 --> 00:02:12,116
+looking at his energy efficiency
+
+34
+00:02:13,016 --> 00:02:16,073
+so where increasingly relying on our
+portable devices
+
+35
+00:02:16,073 --> 00:02:19,150
+I it's important that we keep an eye on
+this I
+
+36
+00:02:20,005 --> 00:02:23,354
+generally when we improve speed and
+performance I
+
+37
+00:02:23,849 --> 00:02:28,030
+energy efficiency in improved as well so
+when you'd optics alert from work you're
+
+38
+00:02:28,003 --> 00:02:28,090
+going to be fast
+
+39
+00:02:28,009 --> 00:02:31,052
+and energy-efficient the killer
+
+40
+00:02:32,033 --> 00:02:36,119
+framework is available on both the last
+10 and I O S and it's optimized for all
+
+41
+00:02:37,019 --> 00:02:38,058
+generations a partner
+
+42
+00:02:38,058 --> 00:02:42,135
+so when you adopt the X or a framework
+you're gonna write one
+
+43
+00:02:43,035 --> 00:02:46,040
+you're gonna get code that runs
+extremely fast and as energy-efficient
+
+44
+00:02:46,004 --> 00:02:47,085
+no matter where it ends up running
+
+45
+00:02:48,021 --> 00:02:55,021
+that's really convenient for you today
+wanna talk about the
+
+46
+00:02:55,007 --> 00:02:57,085
+the new features and functionalities to
+make it easier to get to this
+
+47
+00:02:58,048 --> 00:02:58,140
+high-performance
+
+48
+00:02:59,004 --> 00:03:02,100
+we've got some great new features in the
+image which really round out what you
+
+49
+00:03:03,036 --> 00:03:04,042
+can do with the image
+
+50
+00:03:04,042 --> 00:03:07,080
+and i wanna spend the rest of the time
+introducing
+
+51
+00:03:07,008 --> 00:03:10,023
+two new pieces at work the first
+designed to
+
+52
+00:03:10,095 --> 00:03:13,144
+really simplify the way that you access
+high-performance linear algebra
+
+53
+00:03:14,044 --> 00:03:18,081
+we're calling this linear algebra
+departed the XRF amor
+
+54
+00:03:18,081 --> 00:03:21,142
+the other piece is not actually a part
+of the axillary Famer
+
+55
+00:03:22,042 --> 00:03:25,096
+on it's a collection of vector program
+in Providence
+
+56
+00:03:25,096 --> 00:03:29,124
+it's found in sandy Doddridge and
+
+57
+00:03:30,024 --> 00:03:33,122
+for those view that one earlier on
+high-performance specter implementations
+
+58
+00:03:34,022 --> 00:03:37,037
+there's going to be some great great
+tools
+
+59
+00:03:37,037 --> 00:03:42,111
+in here to help you do that so now let's
+jump right into the image
+
+60
+00:03:43,011 --> 00:03:47,029
+this is our high-performance enterprise
+image processing library
+
+61
+00:03:47,029 --> 00:03:50,033
+it's got a huge range of functionality
+
+62
+00:03:50,069 --> 00:03:53,137
+I wanna show you some of the things that
+you can do with a short video
+
+63
+00:03:54,037 --> 00:03:57,054
+you can perform
+
+64
+00:03:57,054 --> 00:04:00,099
+alpha blending dilation erosion
+
+65
+00:04:00,099 --> 00:04:04,144
+you can create so both filters to at you
+edge detection
+
+66
+00:04:05,044 --> 00:04:08,059
+convolutions for blur and Deibler
+
+67
+00:04:08,059 --> 00:04:13,124
+you can create multi colonel convolved
+there's min and max
+
+68
+00:04:14,024 --> 00:04:17,983
+filters various color transformations
+
+69
+00:04:18,199 --> 00:04:21,265
+and worked and cheers
+
+70
+00:04:21,859 --> 00:04:25,720
+this is just sum up what you can do with
+the image
+
+71
+00:04:25,072 --> 00:04:28,134
+really you can do almost any of your
+image processing needs with the tools
+
+72
+00:04:29,034 --> 00:04:30,059
+that are available and
+
+73
+00:04:30,059 --> 00:04:33,998
+the image I wanna move now in to use
+
+74
+00:04:34,529 --> 00:04:37,551
+them work that we introduced last year
+and
+
+75
+00:04:37,749 --> 00:04:40,752
+this is about getting your image into a
+format
+
+76
+00:04:40,779 --> 00:04:44,792
+the image can consume specifically for
+coming from a CD amatuer
+
+77
+00:04:44,909 --> 00:04:48,710
+so until last year this was a this is a
+difficult task
+
+78
+00:04:48,071 --> 00:04:52,156
+if you didn't know exactly what the
+pixel format abuse the gym a giraffe was
+
+79
+00:04:53,056 --> 00:04:56,071
+for whatever reason it could be
+difficult to
+
+80
+00:04:56,071 --> 00:05:00,133
+get it into the 8-bit air GB or whatever
+format that you saw on the image that
+
+81
+00:05:01,033 --> 00:05:03,462
+you wanted to work with
+
+82
+00:05:03,759 --> 00:05:07,960
+the last year we introduced a a single
+routine that allows this to happen
+
+83
+00:05:07,096 --> 00:05:10,025
+I'm just gonna move through this at a
+high level make you wear that for
+
+84
+00:05:10,889 --> 00:05:13,891
+further details please see last year's
+talk
+
+85
+00:05:13,909 --> 00:05:17,110
+I'm but all you do now is you create a
+structure
+
+86
+00:05:17,011 --> 00:05:22,440
+which describes the pixel format that
+you're trying to get to you
+
+87
+00:05:22,539 --> 00:05:25,548
+and then you're gonna make a single
+function call the image buffer and it
+
+88
+00:05:25,629 --> 00:05:27,648
+was CD image
+
+89
+00:05:27,819 --> 00:05:31,847
+mistakes in on initializing the image
+buffer it takes the structure describing
+
+90
+00:05:32,099 --> 00:05:33,100
+the format
+
+91
+00:05:33,199 --> 00:05:36,298
+and the CD image I at the end of this is
+gonna return in
+
+92
+00:05:37,189 --> 00:05:42,251
+fully nationalized the image buffer and
+you can now do whatever you need to do
+
+93
+00:05:42,809 --> 00:05:46,370
+the round trip is just as easy single
+function call so now we've
+
+94
+00:05:46,037 --> 00:05:50,266
+performed all the operations on the
+image buffer I stayed in the same format
+
+95
+00:05:50,599 --> 00:05:54,674
+so you can use the same structure
+describing the the pixel format
+
+96
+00:05:55,349 --> 00:05:59,406
+and this is gonna return to CG amatuer
+so some really great interoperability
+
+97
+00:05:59,919 --> 00:05:59,952
+with
+
+98
+00:06:00,249 --> 00:06:03,284
+I with CD image ref: it's really easy to
+get your
+
+99
+00:06:03,599 --> 00:06:06,612
+image data in an hour the image this way
+
+100
+00:06:06,729 --> 00:06:09,740
+last year we also see a introduced some
+
+101
+00:06:09,074 --> 00:06:12,393
+a high-level I entry points you
+
+102
+00:06:13,059 --> 00:06:17,092
+some really amazing convergence for and
+this is through the image convert any
+
+103
+00:06:17,389 --> 00:06:19,150
+time
+
+104
+00:06:19,015 --> 00:06:22,094
+it does exactly what it sounds like it's
+going to do allows you to convert
+
+105
+00:06:22,229 --> 00:06:22,740
+between
+
+106
+00:06:22,074 --> 00:06:26,243
+nearly any pixel format and any other
+pics format
+
+107
+00:06:26,909 --> 00:06:30,330
+again just a high level for further
+details the last year
+
+108
+00:06:30,033 --> 00:06:33,732
+stock I'm but the way that it works is
+your gonna create
+
+109
+00:06:34,029 --> 00:06:38,032
+to the structures describing the pixel
+format one for the source that
+
+110
+00:06:38,059 --> 00:06:42,360
+for the source format one for the
+destination type
+
+111
+00:06:42,036 --> 00:06:47,077
+when you create a converter and then
+with that converter you can create image
+
+112
+00:06:47,077 --> 00:06:51,165
+you can convert between the two image
+formats convert as many as you want with
+
+113
+00:06:52,065 --> 00:06:55,143
+a single converter so
+
+114
+00:06:56,043 --> 00:06:59,522
+this allows you to convert between you
+know any pixel format to the power user
+
+115
+00:06:59,909 --> 00:07:01,370
+this means that you can get
+
+116
+00:07:01,037 --> 00:07:04,102
+almost any have your image formats into
+a format that
+
+117
+00:07:05,002 --> 00:07:09,231
+the image can consume very easily very
+efficiently and its gonna run extremely
+
+118
+00:07:09,249 --> 00:07:12,322
+fast
+
+119
+00:07:12,979 --> 00:07:16,015
+you got that some really great things to
+say about these two new features
+
+120
+00:07:16,339 --> 00:07:19,346
+I one Twitter user said functions that
+convert the image objects
+
+121
+00:07:20,039 --> 00:07:24,094
+the CD image objects and back thumbs up
+
+122
+00:07:24,589 --> 00:07:30,210
+another Twitter user said the image
+convert any to any is magical
+
+123
+00:07:30,021 --> 00:07:35,370
+I threaded and vector as conversion
+between nearly any to pick the format
+
+124
+00:07:35,559 --> 00:07:39,610
+we really appreciate the feedback I'll
+we're very happy that you guys are using
+
+125
+00:07:39,061 --> 00:07:40,320
+this and find it
+
+126
+00:07:40,869 --> 00:07:44,960
+useful please keep the feedback coming
+
+127
+00:07:44,096 --> 00:07:47,705
+through that I want to introduce I video
+support
+
+128
+00:07:48,569 --> 00:07:51,615
+to you the image this is new in both
+
+129
+00:07:52,029 --> 00:07:57,150
+ilsa and OS 10 dot 10
+
+130
+00:07:57,015 --> 00:08:00,094
+I'm gonna start with a high level
+functionality
+
+131
+00:08:00,229 --> 00:08:04,316
+from I see the pics about forever so
+this is a a single video frame
+
+132
+00:08:05,099 --> 00:08:08,174
+and we're introducing the same
+interoperability the same
+
+133
+00:08:08,849 --> 00:08:11,921
+easy views that we saw with core
+graphics
+
+134
+00:08:12,569 --> 00:08:16,637
+to know if you want to get your CV pics
+a buffer rather into a format the VM it
+
+135
+00:08:17,249 --> 00:08:18,830
+can operate on
+
+136
+00:08:18,083 --> 00:08:22,412
+it's a single function call you use the
+same structure which describes the
+
+137
+00:08:23,159 --> 00:08:25,237
+format what you're trying to get to you
+
+138
+00:08:25,939 --> 00:08:29,986
+and the recall the image buffer and it
+would see the pics about for
+
+139
+00:08:30,409 --> 00:08:33,416
+it takes in uninitialized the image
+buffer
+
+140
+00:08:33,479 --> 00:08:38,546
+it takes the structure describing the
+format and the see the pics a buffer
+
+141
+00:08:39,149 --> 00:08:41,244
+there's some additional arguments for
+the power user which will see a little
+
+142
+00:08:42,099 --> 00:08:45,240
+bit more about and second
+
+143
+00:08:45,024 --> 00:08:48,049
+at the end of this you've got a freshly
+initialized the image buffer
+
+144
+00:08:48,049 --> 00:08:52,108
+and you can perform any operation on
+
+145
+00:08:53,008 --> 00:08:56,071
+the round trip is just as easy serve the
+image buffer back to see the pic soap
+
+146
+00:08:56,071 --> 00:08:57,093
+operas
+
+147
+00:08:57,093 --> 00:09:00,171
+is the image buffer copy to see the pics
+a buffer
+
+148
+00:09:01,071 --> 00:09:04,162
+takes the image buffer that you just
+finished working with the buffer format
+
+149
+00:09:05,062 --> 00:09:05,147
+describing this
+
+150
+00:09:06,047 --> 00:09:11,088
+the pixel format and then the CP pics a
+buffer that you trying to come back to
+
+151
+00:09:11,088 --> 00:09:13,099
+you
+
+152
+00:09:13,099 --> 00:09:20,099
+so some great interoperability now with
+core graphics as well
+
+153
+00:09:21,021 --> 00:09:24,035
+to support the high-level functionality
+that we just saw
+
+154
+00:09:24,035 --> 00:09:28,046
+there's a lot going on behind the scenes
+all this expert is exposed to you as
+
+155
+00:09:28,046 --> 00:09:28,055
+well
+
+156
+00:09:29,036 --> 00:09:33,065
+so the lower level interfaces there's 41
+new video convergence which are
+
+157
+00:09:33,065 --> 00:09:35,067
+supported
+
+158
+00:09:35,085 --> 00:09:38,132
+you can through some of the other
+arguments that we saw do things like
+
+159
+00:09:39,032 --> 00:09:41,065
+manage the chroma citing
+
+160
+00:09:41,065 --> 00:09:45,109
+I work with transfer functions and
+conversion matrices
+
+161
+00:09:46,009 --> 00:09:49,067
+there's a lot you can do with this
+
+162
+00:09:49,067 --> 00:09:53,082
+another one that's really neat if you've
+worked with video formats before his RGB
+
+163
+00:09:53,082 --> 00:09:55,090
+color space is
+
+164
+00:09:55,009 --> 00:09:58,094
+so there's some subtleties and some some
+
+165
+00:09:59,075 --> 00:10:02,084
+a it it's just it's a little bit chicken
+complicated
+
+166
+00:10:03,065 --> 00:10:09,103
+to get an RGB color space and the image
+makes this really simple and easy to do
+
+167
+00:10:10,003 --> 00:10:13,054
+the image converter any to any is
+extended to support all the video
+
+168
+00:10:13,054 --> 00:10:15,081
+formats now
+
+169
+00:10:15,081 --> 00:10:18,134
+and there's two great new convenience
+routines which allow you to commit
+
+170
+00:10:19,034 --> 00:10:22,088
+create converters to convert back and
+forth between core graphics
+
+171
+00:10:22,088 --> 00:10:27,140
+thank or video so now the video support
+in the image we've got great
+
+172
+00:10:28,004 --> 00:10:30,051
+interoperability with both core graphics
+
+173
+00:10:30,087 --> 00:10:33,149
+core video really fast convergence for
+
+174
+00:10:34,049 --> 00:10:38,071
+for both image and video for pixel
+formats
+
+175
+00:10:38,071 --> 00:10:42,090
+and really fast operations once you're
+in the image
+
+176
+00:10:42,009 --> 00:10:45,055
+I wanna show you some typical
+performance I thought I have here
+
+177
+00:10:46,036 --> 00:10:49,038
+is performance from video toolbox
+
+178
+00:10:49,056 --> 00:10:52,147
+this is available in core media
+
+179
+00:10:53,047 --> 00:10:56,108
+and what I've got on this graph showing
+the
+
+180
+00:10:57,008 --> 00:11:00,020
+the speed in mega pixels per second on
+the y-axis
+
+181
+00:11:00,002 --> 00:11:04,003
+to convert from BRG a 8-bit
+
+182
+00:11:04,021 --> 00:11:09,045
+pixel format to the picture format shown
+on the x-axis
+
+183
+00:11:09,045 --> 00:11:12,124
+the Graybar is always turned out nine
+this is before
+
+184
+00:11:13,024 --> 00:11:16,111
+video toolbox had adopted the image
+
+185
+00:11:17,011 --> 00:11:21,023
+and the blue bar is a standout 10 after
+video toolbox
+
+186
+00:11:21,023 --> 00:11:25,037
+adopted the image we see if you think
+here
+
+187
+00:11:25,037 --> 00:11:28,055
+first we see some really great
+performance improvements
+
+188
+00:11:28,055 --> 00:11:31,101
+soviet image conversions are gonna be
+really fast in some cases were up to
+
+189
+00:11:32,001 --> 00:11:35,014
+five times faster
+
+190
+00:11:35,014 --> 00:11:40,090
+the other thing that we see all the way
+at the right the v2.10 image format
+
+191
+00:11:40,009 --> 00:11:44,076
+was even supported before even supports
+a wide range of formats and it made it
+
+192
+00:11:45,057 --> 00:11:48,069
+really easy for them to introduce new
+features
+
+193
+00:11:48,069 --> 00:11:52,088
+ob once they adopted the image video
+support
+
+194
+00:11:52,088 --> 00:11:56,134
+so this is what you can expect out of
+the image great performance
+
+195
+00:11:57,034 --> 00:12:00,083
+simple easy to use I get
+interoperability with calligraphic
+
+196
+00:12:00,083 --> 00:12:04,107
+Concordia
+
+197
+00:12:05,007 --> 00:12:08,009
+now on a move on to linear algebra
+
+198
+00:12:08,027 --> 00:12:12,041
+this is a new sub framework annex or a
+primer
+
+199
+00:12:12,041 --> 00:12:19,041
+it is designed to be simple access high
+performance linear algebra
+
+200
+00:12:19,052 --> 00:12:23,053
+I want to begin with the motivating
+example
+
+201
+00:12:23,062 --> 00:12:26,110
+how do you solve a system of linear
+equations I'll
+
+202
+00:12:27,001 --> 00:12:30,060
+let's look at how you do this with the
+way back also available in excellent
+
+203
+00:12:30,069 --> 00:12:31,122
+primer
+
+204
+00:12:32,022 --> 00:12:35,093
+and this is saying if we've got a system
+of equations
+
+205
+00:12:35,093 --> 00:12:39,134
+and some major a and the right hand side
+and some metrics be
+
+206
+00:12:40,034 --> 00:12:44,041
+how do we find a tactical be
+
+207
+00:12:45,004 --> 00:12:49,082
+so with the way pack it's gonna look
+something like this:
+
+208
+00:12:49,082 --> 00:12:52,087
+it's not terribly straightforward
+
+209
+00:12:53,032 --> 00:12:56,051
+the naming convention in a way pack use
+a short names
+
+210
+00:12:56,051 --> 00:12:59,052
+so you're gonna have to figure out that
+STEs
+
+211
+00:12:59,052 --> 00:13:02,069
+the means thought system of linear
+equations
+
+212
+00:13:02,069 --> 00:13:06,126
+what you there the argument names are
+not going to be much better
+
+213
+00:13:07,026 --> 00:13:10,093
+the you're passing by reference here
+
+214
+00:13:10,093 --> 00:13:13,145
+and all the argument types are still a
+packager
+
+215
+00:13:14,045 --> 00:13:17,128
+so there's gonna be a lot of explicit
+cast
+
+216
+00:13:18,028 --> 00:13:20,101
+additionally there's gonna be a lot of
+memory management that you need to do
+
+217
+00:13:21,001 --> 00:13:21,009
+explicitly
+
+218
+00:13:21,081 --> 00:13:26,090
+work spaces or in this case a pivot
+factor that you need to create
+
+219
+00:13:26,009 --> 00:13:28,098
+so there's a lot to just finding the
+right routine and then using it
+
+220
+00:13:29,079 --> 00:13:30,081
+correctly
+
+221
+00:13:30,099 --> 00:13:33,181
+we think it should be much simpler than
+that
+
+222
+00:13:34,081 --> 00:13:39,153
+let's look at how you solve a system of
+linear equations with linear algebra
+
+223
+00:13:40,053 --> 00:13:45,136
+it's going to be really simple it's
+simply going to be LA Sol
+
+224
+00:13:46,036 --> 00:13:51,082
+all the details are going to be managed
+very behind-the-scenes
+
+225
+00:13:51,082 --> 00:13:54,113
+so with that let's dive into what
+exactly you're going to get out a bill
+
+226
+00:13:55,013 --> 00:13:57,028
+in the Rajya Sabha member
+
+227
+00:13:57,028 --> 00:14:00,083
+so its new in both I O S 8 and other
+standout
+
+228
+00:14:00,083 --> 00:14:03,147
+10 is designed to be simple
+
+229
+00:14:04,047 --> 00:14:09,060
+with good performance
+
+230
+00:14:09,006 --> 00:14:12,081
+it is got single and double purses
+precision support
+
+231
+00:14:13,035 --> 00:14:19,113
+I'm so it's not going to be mixed much
+like Basel a pack
+
+232
+00:14:20,013 --> 00:14:24,076
+it is a got support for objective-c so
+the object is going to be a native
+
+233
+00:14:24,076 --> 00:14:30,118
+objective-c object
+
+234
+00:14:31,018 --> 00:14:34,034
+what are you gonna find in linear
+algebra
+
+235
+00:14:34,034 --> 00:14:37,087
+there's a huge range of functionality
+we've got element wise operations
+
+236
+00:14:37,087 --> 00:14:40,154
+add subtract matrix products
+
+237
+00:14:41,054 --> 00:14:44,153
+me in our product out a product matrix
+matrix
+
+238
+00:14:45,053 --> 00:14:50,129
+chance poses their support for norms and
+normalization
+
+239
+00:14:51,029 --> 00:14:54,046
+a spur for solving systems of linear
+equations
+
+240
+00:14:54,046 --> 00:14:57,051
+and into pieces which are unique to the
+lineout reception marking
+
+241
+00:14:57,051 --> 00:15:01,068
+and other supplies and splat we'll see
+about those in further detail little bit
+
+242
+00:15:01,068 --> 00:15:03,090
+later
+
+243
+00:15:03,009 --> 00:15:06,083
+let's begin with the lineout project
+
+244
+00:15:07,064 --> 00:15:10,132
+winner other object is a reference
+Canada pic object
+
+245
+00:15:11,032 --> 00:15:14,128
+as I said it's an objective-c object in
+objective-c
+
+246
+00:15:15,028 --> 00:15:18,111
+still works in see though
+
+247
+00:15:19,011 --> 00:15:22,024
+it manages a lot of things for you so in
+here
+
+248
+00:15:22,024 --> 00:15:26,030
+in that initial laid-back example we saw
+that for each argument you're tracking a
+
+249
+00:15:26,003 --> 00:15:27,031
+pointer
+
+250
+00:15:27,058 --> 00:15:30,157
+the row and column dimensions leading to
+mention our stride there's a lot of
+
+251
+00:15:31,057 --> 00:15:32,064
+things for each argument
+
+252
+00:15:32,064 --> 00:15:35,136
+means you have a lot of arguments
+there's a lot going on
+
+253
+00:15:36,036 --> 00:15:39,057
+here the object is gonna keep track at
+the data buffer
+
+254
+00:15:39,057 --> 00:15:42,060
+its gonna keep track in the dimensions
+of each of these objects
+
+255
+00:15:42,006 --> 00:15:45,045
+errors and warnings are attached
+directly to the object making really
+
+256
+00:15:45,099 --> 00:15:46,172
+convenient
+
+257
+00:15:47,072 --> 00:15:51,106
+and then finally scaler type I so it was
+in a way back we've got all the API's
+
+258
+00:15:52,006 --> 00:15:53,013
+duplicated
+
+259
+00:15:53,013 --> 00:15:56,076
+one for single and one for double week
+collapse all that down to half the
+
+260
+00:15:56,076 --> 00:16:00,345
+number BAPI
+
+261
+00:16:01,029 --> 00:16:05,050
+memory management for these liberals
+were objects again is a reference
+
+262
+00:16:05,005 --> 00:16:05,734
+counted
+
+263
+00:16:05,779 --> 00:16:08,850
+objects there's a lot of documentation
+about reference can object there's
+
+264
+00:16:08,085 --> 00:16:09,124
+nothing new here
+
+265
+00:16:10,024 --> 00:16:13,030
+just very briefly from C are you can use
+LA release
+
+266
+00:16:13,084 --> 00:16:17,131
+and Ellie retain you do not ever free
+these
+
+267
+00:16:18,031 --> 00:16:21,086
+from objective-c I they take the
+standard release retain
+
+268
+00:16:21,086 --> 00:16:25,141
+messages and then finally objective-c
+with are
+
+269
+00:16:26,041 --> 00:16:29,046
+which is what we recommend just let you
+read exactly where you want with no
+
+270
+00:16:29,091 --> 00:16:31,129
+explicit memory management
+
+271
+00:16:32,029 --> 00:16:35,095
+from here on out all the examples that I
+show are going to be objective see
+
+272
+00:16:35,095 --> 00:16:41,129
+are using our so there's going to be no
+memory management
+
+273
+00:16:42,029 --> 00:16:47,031
+so how do you get your data into one of
+these linear algebra objects
+
+274
+00:16:47,031 --> 00:16:50,127
+in this example we're gonna allocate a
+buffer
+
+275
+00:16:51,027 --> 00:16:54,063
+it's going to be some number rose by
+some number cons and we know the
+
+276
+00:16:54,063 --> 00:16:59,145
+the bro Strider number elements we're
+gonna feel that as a row major metrics
+
+277
+00:17:00,045 --> 00:17:04,384
+then to get that matrix into linear
+algebra demand we're going to just call
+
+278
+00:17:04,789 --> 00:17:08,130
+LA matrix from float or double buffer
+
+279
+00:17:08,013 --> 00:17:11,062
+it takes the pointer the dimensions of
+the matrix
+
+280
+00:17:11,179 --> 00:17:14,183
+the roast ride and then him
+
+281
+00:17:14,579 --> 00:17:18,860
+which will see on the next slide a
+little bit more details about those
+
+282
+00:17:18,086 --> 00:17:22,425
+and then attributes which are attached
+to an object
+
+283
+00:17:23,199 --> 00:17:28,210
+these attributes allow you to do things
+like enable additional debug logging
+
+284
+00:17:28,309 --> 00:17:31,840
+in this particular case the data is
+copyrighted a to the user's retained
+
+285
+00:17:31,084 --> 00:17:32,097
+alright stay
+
+286
+00:17:32,097 --> 00:17:37,103
+in this case they needed for it
+
+287
+00:17:38,057 --> 00:17:42,070
+so hints when you're passing data to
+linear algebra
+
+288
+00:17:42,007 --> 00:17:45,034
+there's some information I can be
+beneficial to the framework to deliver
+
+289
+00:17:45,097 --> 00:17:46,195
+the maximum performance
+
+290
+00:17:47,095 --> 00:17:51,183
+I so hence are designed to allow for
+this to allow for you to you
+
+291
+00:17:52,083 --> 00:17:56,087
+give us details and insights about the
+buffer
+
+292
+00:17:57,023 --> 00:18:01,026
+so that we can use the right routines
+behind scenes
+
+293
+00:18:01,026 --> 00:18:04,079
+so for example if you know that your
+diagonal or triangular matrix
+
+294
+00:18:04,079 --> 00:18:07,144
+we can leverage that either him
+
+295
+00:18:08,044 --> 00:18:11,055
+so if you pass the wrong hint it's not
+gonna give you wrong result
+
+296
+00:18:11,055 --> 00:18:18,055
+just may add additional overhead I if
+you don't know just use LA no hint
+
+297
+00:18:20,099 --> 00:18:24,122
+the next piece i wanna talk about it
+ways evaluation
+
+298
+00:18:25,022 --> 00:18:28,033
+I wanna do that with the fairly large
+example for slide
+
+299
+00:18:28,033 --> 00:18:30,042
+I'm so it's not important that you
+understand exactly what's going on in
+
+300
+00:18:31,023 --> 00:18:32,060
+all this code
+
+301
+00:18:32,006 --> 00:18:35,071
+I just one walk to lead a high-level the
+you can understand what's going on
+
+302
+00:18:36,025 --> 00:18:40,088
+behind the scenes
+
+303
+00:18:40,088 --> 00:18:43,107
+%uh when you're out for use in a
+valuation graph when you create an
+
+304
+00:18:44,007 --> 00:18:44,080
+object
+
+305
+00:18:44,008 --> 00:18:47,016
+evaluation is not necessarily going to
+occur it's going to be added into this
+
+306
+00:18:48,006 --> 00:18:52,097
+valuation graph so the star this
+function we've got to valuation graphs
+
+307
+00:18:53,051 --> 00:18:56,076
+with a single node in each of them
+
+308
+00:18:56,076 --> 00:18:59,093
+and as we stepped through this code
+we're gonna create additional objects
+
+309
+00:18:59,093 --> 00:19:04,192
+so in this case we create a transfers we
+add that to our valuation graph
+
+310
+00:19:05,092 --> 00:19:09,108
+that we take this summer on elements
+attacks and and the
+
+311
+00:19:10,008 --> 00:19:15,029
+even elements attacks again we just add
+that to the valuation graph
+
+312
+00:19:15,029 --> 00:19:18,029
+and we continue at this time the product
+the
+
+313
+00:19:18,029 --> 00:19:21,078
+eighty and next to you
+
+314
+00:19:21,078 --> 00:19:25,177
+all skill by 3.2 all this is just added
+to this valuation graph
+
+315
+00:19:26,077 --> 00:19:29,154
+at no point has any evaluation occurred
+or
+
+316
+00:19:30,054 --> 00:19:35,140
+any temporary data structures been
+allocated
+
+317
+00:19:36,004 --> 00:19:40,004
+I'm so no competition is going to occur
+and tell you trigger
+
+318
+00:19:40,004 --> 00:19:44,413
+this allows us to not perform a lot of
+frivolous
+
+319
+00:19:44,809 --> 00:19:48,210
+memory allocations and computations
+right now we don't
+
+320
+00:19:48,021 --> 00:19:52,097
+trigger a competition to you explicitly
+ask for data back
+
+321
+00:19:52,097 --> 00:19:55,160
+this is gonna happen with LA metrics to
+float or double buffer
+
+322
+00:19:56,006 --> 00:20:00,035
+or related activity for or double buffer
+
+323
+00:20:00,089 --> 00:20:04,098
+so again creating the subject is gonna
+be lightweight we're gonna do a lot of
+
+324
+00:20:04,098 --> 00:20:07,151
+work behind the scenes to make this run
+extremely fast
+
+325
+00:20:08,051 --> 00:20:12,129
+and we're only going to compute the data
+that you request that the and
+
+326
+00:20:13,029 --> 00:20:18,085
+I want to show you some performance
+results for the routine that we just saw
+
+327
+00:20:18,085 --> 00:20:21,414
+before I do that I one introduced that
+would blahs
+
+328
+00:20:22,179 --> 00:20:26,350
+this is an open source implementation
+applause I so if you weren't aware
+
+329
+00:20:26,035 --> 00:20:29,097
+that was is available next oratvnetwork
+this is probably the implementation that
+
+330
+00:20:29,097 --> 00:20:32,134
+you would find yourself using
+
+331
+00:20:33,034 --> 00:20:37,126
+so now let's look at the the performance
+that routine that we're looking at four
+
+332
+00:20:38,026 --> 00:20:41,121
+on the x-axis we've got various metric
+sizes
+
+333
+00:20:42,021 --> 00:20:47,052
+on the y-axis we've got bigger flops so
+hires gonna be better
+
+334
+00:20:47,052 --> 00:20:50,084
+here's the performance the early as a
+reformer
+
+335
+00:20:50,084 --> 00:20:53,136
+we can see it's pretty good let's
+compare to the XO requires
+
+336
+00:20:54,036 --> 00:20:59,095
+the eight an extremely high performance
+benchmark here
+
+337
+00:20:59,095 --> 00:21:02,100
+what we see here is the router is
+getting most of the performance that the
+
+338
+00:21:03,045 --> 00:21:03,089
+X or
+
+339
+00:21:03,089 --> 00:21:07,095
+from work and deliver much simpler to
+get all the performance from running out
+
+340
+00:21:07,095 --> 00:21:08,152
+for
+
+341
+00:21:09,052 --> 00:21:12,128
+there is a discrepancy on the small and
+are there are fixed cost
+
+342
+00:21:13,028 --> 00:21:16,045
+associated with these objects which are
+magnified for smaller
+
+343
+00:21:16,045 --> 00:21:20,094
+matrices but overall you're getting most
+if the performance
+
+344
+00:21:20,094 --> 00:21:23,127
+with a really simple clean API
+
+345
+00:21:24,027 --> 00:21:27,028
+I just wanna put this performance
+comparison into perspective
+
+346
+00:21:27,037 --> 00:21:30,066
+with you had used that open source
+network implementation
+
+347
+00:21:30,066 --> 00:21:34,124
+laws performance would look like this
+
+348
+00:21:35,024 --> 00:21:39,025
+you can see you're getting a lot of the
+a lot of the possible performance
+
+349
+00:21:39,025 --> 00:21:43,099
+from linear algebra
+
+350
+00:21:43,099 --> 00:21:47,197
+next on talkback air handling so I've
+got here's just a sequence of operations
+
+351
+00:21:48,097 --> 00:21:49,113
+with linear algebra
+
+352
+00:21:50,013 --> 00:21:54,044
+after each operation we're checking in
+their status
+
+353
+00:21:54,044 --> 00:21:57,112
+we don't recommend doing it this way
+
+354
+00:21:58,012 --> 00:22:02,013
+what we recommend doing is checking
+their once at the end
+
+355
+00:22:02,022 --> 00:22:06,022
+so errors are gonna be attached to you
+and propagated through these valuation
+
+356
+00:22:06,022 --> 00:22:06,104
+grab
+
+357
+00:22:07,004 --> 00:22:10,078
+so if we have an area in the first
+statement that there's going to be
+
+358
+00:22:10,078 --> 00:22:11,087
+attached to the object
+
+359
+00:22:11,087 --> 00:22:15,158
+AB some is going to see that there's an
+air they're just propagated through
+
+360
+00:22:16,058 --> 00:22:21,127
+additionally with ways evaluation is a
+classic errors that may not be triggered
+
+361
+00:22:22,027 --> 00:22:22,123
+it will come
+
+362
+00:22:23,023 --> 00:22:28,098
+computation time so it's always best to
+check the status as late as possible
+
+363
+00:22:28,098 --> 00:22:31,145
+in this case were trying to write back
+to the buffer before we even check the
+
+364
+00:22:32,045 --> 00:22:34,063
+status
+
+365
+00:22:34,063 --> 00:22:37,112
+the way you we recommend checking the
+status is I
+
+366
+00:22:37,679 --> 00:22:41,960
+if status 0 or LA success that
+everything went well
+
+367
+00:22:41,096 --> 00:22:45,135
+in this case you got it in your buffer
+if its greater than 0 there are some
+
+368
+00:22:46,035 --> 00:22:46,113
+warning
+
+369
+00:22:47,013 --> 00:22:51,075
+are you gonna have dated there but you
+may not have full accuracy
+
+370
+00:22:51,075 --> 00:22:54,504
+and then finally less than zero some
+harder occurred
+
+371
+00:22:55,179 --> 00:22:58,470
+in this case there's going to be no I
+did in that buffer
+
+372
+00:22:58,047 --> 00:23:01,079
+this might be something like that
+dimension mismatch or something that you
+
+373
+00:23:01,079 --> 00:23:04,105
+just can't recover from
+
+374
+00:23:05,005 --> 00:23:08,097
+to this or begs the question: I do we
+debug this if we've got all this
+
+375
+00:23:08,097 --> 00:23:15,097
+a later checking lazy evaluation
+
+376
+00:23:17,028 --> 00:23:20,084
+the way the best way to do this is to
+enable debug logging
+
+377
+00:23:20,084 --> 00:23:25,088
+with LA Activia enable logging when you
+do this and you encounter an error
+
+378
+00:23:25,088 --> 00:23:25,184
+warning
+
+379
+00:23:26,084 --> 00:23:30,097
+you're going to get a message like this
+to standard air I this is good
+
+380
+00:23:30,097 --> 00:23:33,170
+this is going to help you determine what
+the air was and where it occurred
+
+381
+00:23:34,007 --> 00:23:38,486
+which really helps you quickly narrow
+down where the problems coming from
+
+382
+00:23:39,179 --> 00:23:42,920
+i wanna talk a little bit about the
+details have the SOL ass if you're
+
+383
+00:23:42,092 --> 00:23:43,096
+familiar with where out for a
+
+384
+00:23:44,032 --> 00:23:48,096
+I'm workable a pack for you know that
+there's a lot of options here
+
+385
+00:23:48,096 --> 00:23:51,164
+so I just wanna talk about what
+ourselves doing at this point
+
+386
+00:23:52,064 --> 00:23:56,089
+so it is square nonsingular matrix it's
+going to compute the solution
+
+387
+00:23:56,089 --> 00:23:59,150
+to a tactic was being it is square
+
+388
+00:24:00,005 --> 00:24:03,094
+and its singular it's going to produce
+an heir I'm
+
+389
+00:24:04,039 --> 00:24:08,048
+so right now it's pretty straightforward
+
+390
+00:24:08,048 --> 00:24:14,117
+to do I'm and this is what you're going
+to get out
+
+391
+00:24:15,017 --> 00:24:18,024
+the next piece which is unique to linear
+algebra is slicing
+
+392
+00:24:18,087 --> 00:24:23,183
+this listing is lightweight access to
+partial object
+
+393
+00:24:24,083 --> 00:24:27,174
+I say lightweight access so there's
+going to be no buffer allocation and no
+
+394
+00:24:28,074 --> 00:24:32,091
+copying things that you can do with
+slices are for example taking be on
+
+395
+00:24:32,091 --> 00:24:34,108
+elements vector
+
+396
+00:24:35,008 --> 00:24:39,019
+we shouldn't have to allocate a
+temporary buffer and copy those are
+
+397
+00:24:39,019 --> 00:24:40,071
+elements out into that but for
+
+398
+00:24:40,071 --> 00:24:43,128
+we don't need to you
+
+399
+00:24:44,028 --> 00:24:47,076
+and when I say that there's no
+allocation and no copy don't confuse
+
+400
+00:24:47,076 --> 00:24:50,089
+this with lazy evaluation this is that
+evaluation time
+
+401
+00:24:50,089 --> 00:24:55,166
+we're gonna do everything that we can to
+just access that data in place
+
+402
+00:24:56,066 --> 00:24:59,128
+this three piece of information that you
+need to create a slice
+
+403
+00:25:00,028 --> 00:25:04,069
+that is of that stride and dimension
+
+404
+00:25:04,069 --> 00:25:07,308
+let's look at an example I would say we
+wanted to slice
+
+405
+00:25:07,929 --> 00:25:11,530
+and get some arria some of the elements
+out of an existing
+
+406
+00:25:11,053 --> 00:25:15,061
+actor already the first argument is
+going to be the offset
+
+407
+00:25:16,033 --> 00:25:21,079
+zero-based offset asserted start with
+the 80 minutes gary 7
+
+408
+00:25:21,079 --> 00:25:24,145
+stride is the the direction and
+
+409
+00:25:25,045 --> 00:25:29,274
+number of elements that were going to
+move in this case it's negative to you
+
+410
+00:25:29,679 --> 00:25:33,080
+so we're going to move back to elements
+and then finally
+
+411
+00:25:33,008 --> 00:25:36,044
+the dimension is three so we're gonna
+have this view
+
+412
+00:25:36,044 --> 00:25:40,135
+30 min vector which is really elements
+out and some larger vector
+
+413
+00:25:41,035 --> 00:25:45,092
+again no copy no allocation here just a
+lightweight access
+
+414
+00:25:45,092 --> 00:25:49,185
+developments in some large object
+
+415
+00:25:50,085 --> 00:25:54,147
+what are the ways that you might use
+this is to create a tiling and Jim
+
+416
+00:25:55,047 --> 00:25:59,096
+let's just look at a simple example you
+wanna some two major cities together
+
+417
+00:25:59,096 --> 00:26:02,123
+where the ways that you could do this is
+with us a simple nested loop
+
+418
+00:26:03,023 --> 00:26:06,029
+I'm and you put your slices
+
+419
+00:26:06,029 --> 00:26:10,041
+inside the room and you're splitting the
+two operands A&B in this case here
+
+420
+00:26:10,041 --> 00:26:13,098
+and you're creating a partial results
+see just using that the
+
+421
+00:26:13,098 --> 00:26:16,182
+getting the next partial some
+
+422
+00:26:17,082 --> 00:26:20,166
+so you can do it this way and it's going
+to work
+
+423
+00:26:21,066 --> 00:26:24,097
+but we can actually do a lot of this
+work for you
+
+424
+00:26:24,097 --> 00:26:27,103
+so instead what we recommend doing
+
+425
+00:26:28,003 --> 00:26:32,054
+is hoisting that some out a little with
+a lazy evaluation nothing's gonna happen
+
+426
+00:26:32,054 --> 00:26:34,313
+here
+
+427
+00:26:34,799 --> 00:26:39,700
+and instead it just put the Flies on the
+result
+
+428
+00:26:39,007 --> 00:26:42,040
+SAR pictures change a little bit it
+looks like
+
+429
+00:26:43,003 --> 00:26:46,079
+something different is happening here
+but behind the scenes you're actually
+
+430
+00:26:46,079 --> 00:26:48,120
+getting what you saw on a previous life
+
+431
+00:26:49,002 --> 00:26:52,029
+you get exactly what you want we're
+doing all the work for you behind the
+
+432
+00:26:52,047 --> 00:26:52,096
+scenes
+
+433
+00:26:52,096 --> 00:26:55,097
+so it's really easy to work with the
+slices
+
+434
+00:26:55,097 --> 00:27:02,097
+and the rule of thumb is to put them as
+close to the result as possible
+
+435
+00:27:03,021 --> 00:27:06,049
+the next piece is a splat aspirants away
+
+436
+00:27:06,049 --> 00:27:09,096
+to you work with scaler values with the
+I'm actor
+
+437
+00:27:09,096 --> 00:27:12,135
+vectors and matrices so it's the one at
+
+438
+00:27:13,035 --> 00:27:16,064
+to to you every element vector
+
+439
+00:27:16,064 --> 00:27:19,091
+the whether you're gonna do this is your
+call LA some
+
+440
+00:27:19,091 --> 00:27:23,186
+with your vector object and then you're
+gonna flatness killer value to you
+
+441
+00:27:24,086 --> 00:27:28,108
+so it's really easy to do certain
+operations now it's killers
+
+442
+00:27:29,008 --> 00:27:33,032
+on matrices and vectors
+
+443
+00:27:33,032 --> 00:27:37,049
+so that a high-level summary linear
+algebra it's got a really simple easy to
+
+444
+00:27:37,049 --> 00:27:37,147
+use API
+
+445
+00:27:38,047 --> 00:27:42,132
+got some great modern language in
+runtime features
+
+446
+00:27:43,032 --> 00:27:46,065
+and its gonna deliver really good
+performance
+
+447
+00:27:46,065 --> 00:27:49,159
+without I want to turn it over to Steve
+to talk about went back
+
+448
+00:27:50,059 --> 00:27:53,114
+thanks Jeff some Steve cannon
+
+449
+00:27:54,014 --> 00:27:57,433
+I am a senior engineer and the vector
+numerics group work with Jeff
+
+450
+00:27:57,559 --> 00:28:00,710
+and I mean it talk about our
+
+451
+00:28:00,071 --> 00:28:03,780
+other new features shortly but before I
+do that I thought we have a little bit
+
+452
+00:28:04,419 --> 00:28:04,890
+of fun
+
+453
+00:28:04,089 --> 00:28:07,096
+and just talk about went back to quickly
+
+454
+00:28:07,096 --> 00:28:10,177
+so Linpack is a benchmark that
+originated in high performance computing
+
+455
+00:28:11,077 --> 00:28:15,366
+community and what it really measures is
+how fast
+
+456
+00:28:16,059 --> 00:28:19,250
+are you able to solve a system of linear
+equations
+
+457
+00:28:19,025 --> 00:28:22,094
+now this might seem like kind of an
+arbitrary benchmark
+
+458
+00:28:22,094 --> 00:28:26,121
+but it turns out that lots the
+computation we do every day
+
+459
+00:28:27,021 --> 00:28:31,048
+boil down to solving your problems so
+this is really an important thing to be
+
+460
+00:28:31,048 --> 00:28:33,064
+able to quickly
+
+461
+00:28:33,064 --> 00:28:36,113
+now when you talk about when pack it's
+important to keep in mind
+
+462
+00:28:37,013 --> 00:28:40,029
+the twin pack is measuring disputable
+hardware
+
+463
+00:28:40,029 --> 00:28:43,035
+and software you can't have
+
+464
+00:28:43,035 --> 00:28:46,073
+great performance on Linpack without
+
+465
+00:28:46,073 --> 00:28:51,171
+good hardware and without good software
+it takes advantage of hardware the half
+
+466
+00:28:52,071 --> 00:28:55,076
+the past few years we've shown you
+
+467
+00:28:55,076 --> 00:28:58,082
+a shootout between excelerate running
+and i OS devices
+
+468
+00:28:59,036 --> 00:29:02,855
+and what we like to call brand a
+
+469
+00:29:03,179 --> 00:29:07,750
+last year we showed you a chart to look
+like this
+
+470
+00:29:07,075 --> 00:29:10,121
+comparing excelerate running on the
+iPhone 5
+
+471
+00:29:11,021 --> 00:29:15,099
+against the best Linpack score that we
+were able to find anywhere
+
+472
+00:29:15,099 --> 00:29:18,154
+for any friend a device so this is
+
+473
+00:29:19,054 --> 00:29:22,102
+performance in gif of the double
+precision did it
+
+474
+00:29:23,002 --> 00:29:26,004
+saw it on the iPhone 5 gives you about
+three-and-a-half bigger flaps on when
+
+475
+00:29:26,022 --> 00:29:26,098
+back
+
+476
+00:29:26,098 --> 00:29:29,115
+which is a really impressive number it's
+great
+
+477
+00:29:30,015 --> 00:29:33,674
+now the past few years we showed you a
+chart like this and then
+
+478
+00:29:33,809 --> 00:29:37,580
+the next year brand a hardware would
+have improved enough to make the
+
+479
+00:29:37,058 --> 00:29:38,027
+comparison
+
+480
+00:29:38,549 --> 00:29:42,490
+more interesting and then we could blow
+you away again with how much faster
+
+481
+00:29:42,049 --> 00:29:46,091
+salary us but sense last year
+
+482
+00:29:46,091 --> 00:29:49,119
+find a hardware hasn't change that much
+
+483
+00:29:50,019 --> 00:29:54,088
+and so the great software primitives
+that we give you an accelerator
+
+484
+00:29:54,088 --> 00:29:57,144
+well assist on the iPhone 5 and you can
+see it's not
+
+485
+00:29:58,044 --> 00:30:01,133
+that interesting comparison so this year
+we thought we do something
+
+486
+00:30:02,033 --> 00:30:05,110
+different we can find some new
+competition
+
+487
+00:30:06,001 --> 00:30:10,060
+instead of comparing current IRS
+hardware against brand a
+
+488
+00:30:10,069 --> 00:30:14,070
+we compare accelerate running on the
+iPhone
+
+489
+00:30:14,079 --> 00:30:18,083
+against accelerate running on some other
+device
+
+490
+00:30:18,083 --> 00:30:21,148
+what should we pick we chose to look at
+the 2010
+
+491
+00:30:22,048 --> 00:30:25,094
+Mac Book Air this was a sweet laptop I
+had one of these
+
+492
+00:30:25,094 --> 00:30:27,963
+fantastic this was like the first one
+that we shipped with the current
+
+493
+00:30:28,809 --> 00:30:31,010
+hardware design on the outside
+
+494
+00:30:31,001 --> 00:30:34,089
+to really nice machine it's just a few
+years old you can see it's more than
+
+495
+00:30:34,089 --> 00:30:36,096
+twice as fast as the iPhone 5 watts
+
+496
+00:30:37,059 --> 00:30:41,060
+so how do you think the iPhone 5s tax
+
+497
+00:30:41,069 --> 00:30:46,088
+well should have some clue I probably
+wouldn't be showing you the graph
+
+498
+00:30:46,088 --> 00:30:50,102
+if it wasn't at least gonna be clerks
+but on the other hand this
+
+499
+00:30:51,002 --> 00:30:54,531
+this is a pretty sweet laptop from just
+a few years ago and we're gonna
+
+500
+00:30:54,549 --> 00:30:58,030
+compared against the phone that fits in
+your pocket like so
+
+501
+00:30:58,003 --> 00:31:03,098
+I don't know who thinks that the that
+the iPhone 5s its master
+
+502
+00:31:03,098 --> 00:31:06,099
+who thinks that the MacBook Airs faster
+
+503
+00:31:07,008 --> 00:31:10,061
+okay so let's see what happens the
+iPhone 5s
+
+504
+00:31:10,061 --> 00:31:13,069
+we give you 10 .4 Giger flops
+
+505
+00:31:13,069 --> 00:31:17,120
+double precision Linpack and we have
+other islets devices to
+
+506
+00:31:18,002 --> 00:31:21,079
+on the iPad air we give you 14 points 6
+
+507
+00:31:21,097 --> 00:31:24,103
+double precision get a fox and
+
+508
+00:31:25,003 --> 00:31:29,044
+you don't need to be expert in high
+performance computing
+
+509
+00:31:29,044 --> 00:31:32,107
+in memory hierarchies in vectorization
+in multi-threading
+
+510
+00:31:33,007 --> 00:31:36,026
+to get this you just use simple
+
+511
+00:31:36,026 --> 00:31:39,087
+primitives we give you for matrix
+operations
+
+512
+00:31:39,087 --> 00:31:45,124
+and you get this kind of performance so
+I think this is really cool
+
+513
+00:31:46,024 --> 00:31:49,049
+that I'm gonna move onto our last
+
+514
+00:31:49,049 --> 00:31:52,065
+new feature for the day just called
+Cindy
+
+515
+00:31:52,065 --> 00:31:56,834
+now simdi traditionally is a a name used
+to talk about hardware stand for single
+
+516
+00:31:57,419 --> 00:31:58,130
+instruction
+
+517
+00:31:58,013 --> 00:32:02,037
+multiple data and that's not exactly
+what we're talking about here
+
+518
+00:32:02,037 --> 00:32:05,846
+this is a new library that we're
+introducing in iowa say
+
+519
+00:32:06,179 --> 00:32:10,280
+and almost any assembly and it has three
+
+520
+00:32:10,028 --> 00:32:13,033
+primary purpose first one is to support
+
+521
+00:32:13,078 --> 00:32:16,165
+2d 3d and 40 vector math and geometry
+
+522
+00:32:17,065 --> 00:32:21,123
+the second purpose for seventy is to
+provide
+
+523
+00:32:22,023 --> 00:32:25,060
+a lot of the features of metal in C
+
+524
+00:32:25,006 --> 00:32:28,037
+c plus plus and objective-c running on
+the CPU
+
+525
+00:32:28,091 --> 00:32:31,153
+so it can make it easier to prototype
+code maybe you want to run the CPU
+
+526
+00:32:32,053 --> 00:32:33,112
+before you deal with you
+
+527
+00:32:34,012 --> 00:32:37,047
+stuff maybe wanna move code between the
+CPU in the pew
+
+528
+00:32:37,047 --> 00:32:40,121
+makes it a little bit easier to do that
+and finally
+
+529
+00:32:41,021 --> 00:32:44,070
+Cindy library provides an abstraction
+over
+
+530
+00:32:44,007 --> 00:32:48,028
+the actual hardware Cindy and types an
+intrinsic state you often used to
+
+531
+00:32:48,091 --> 00:32:48,185
+program against
+
+532
+00:32:49,085 --> 00:32:53,138
+the making easier to write your own
+factor code when you need it
+
+533
+00:32:54,038 --> 00:32:57,082
+so I think the most interesting thing
+about this is the vector math geometry
+
+534
+00:32:57,082 --> 00:33:01,095
+and I'm gonna dive right into that there
+are already
+
+535
+00:33:01,095 --> 00:33:04,172
+a couple love vector math geometry
+levers on the platform
+
+536
+00:33:05,072 --> 00:33:08,077
+there's all the features accelerate
+which can do just about anything you
+
+537
+00:33:08,077 --> 00:33:09,103
+want
+
+538
+00:33:10,003 --> 00:33:14,008
+there's GL kit spray kit scene kit the
+physics library that goes with them
+
+539
+00:33:14,008 --> 00:33:18,012
+so if we're going to do a whole new one
+we had better
+
+540
+00:33:18,012 --> 00:33:21,035
+get some things right so my wishlist
+
+541
+00:33:21,035 --> 00:33:24,041
+love well I really like the should look
+like
+
+542
+00:33:24,041 --> 00:33:27,127
+is a is is kinda like this first of
+which have in line implementations
+
+543
+00:33:28,027 --> 00:33:29,084
+everything we possibly can
+
+544
+00:33:29,084 --> 00:33:33,098
+because when you're doing you know a
+forty dot product or something
+
+545
+00:33:33,098 --> 00:33:36,787
+there's not a lot of arithmetic it's
+just for multiplies and free at
+
+546
+00:33:37,669 --> 00:33:40,900
+see have to actually make an external
+function call
+
+547
+00:33:40,009 --> 00:33:43,078
+to a jump that's not what you want to do
+
+548
+00:33:44,059 --> 00:33:47,078
+you're only gonna do seven arithmetic
+operations
+
+549
+00:33:47,078 --> 00:33:50,227
+and because this essentially everything
+and Cindy
+
+550
+00:33:50,929 --> 00:33:54,080
+is header in line so just get inserted
+into your code
+
+551
+00:33:54,008 --> 00:33:57,059
+if you really nice performance next
+which def
+
+552
+00:33:57,059 --> 00:34:00,060
+concise functions don't have a lot of
+extra parameters
+
+553
+00:34:00,069 --> 00:34:03,112
+if you want to do a dot product 3d dot
+product using blogs
+
+554
+00:34:04,012 --> 00:34:07,101
+it looks like this got all these extra
+parameters
+
+555
+00:34:08,001 --> 00:34:11,410
+we are things you need to write this if
+you're going to do it
+
+556
+00:34:11,419 --> 00:34:15,280
+using GL kit which is a great library I
+love D ok
+
+557
+00:34:15,028 --> 00:34:18,797
+but the compiler should know that X&Y
+are
+
+558
+00:34:19,049 --> 00:34:21,131
+three national factors you shouldn't
+need to tell it that in every function
+
+559
+00:34:21,869 --> 00:34:21,965
+you call
+
+560
+00:34:22,829 --> 00:34:25,837
+with Cindy you just read this
+
+561
+00:34:26,629 --> 00:34:31,310
+factor dot X&Y functions overloaded the
+sport all the different vector types
+
+562
+00:34:31,031 --> 00:34:31,109
+that we have
+
+563
+00:34:32,009 --> 00:34:35,048
+it just works it inserts the correct
+implementation and your code
+
+564
+00:34:35,048 --> 00:34:38,131
+be a great performance if you're writing
+C plus plus then
+
+565
+00:34:39,031 --> 00:34:42,038
+we have even shorter names 170 namespace
+and these look
+
+566
+00:34:43,001 --> 00:34:46,076
+just like metal so you can take mail
+code
+
+567
+00:34:46,076 --> 00:34:49,099
+move it India at the using namespace MD
+
+568
+00:34:49,099 --> 00:34:52,195
+and a lot of it will just work using
+Cindy hatter's has really can be anyone
+
+569
+00:34:53,095 --> 00:34:55,824
+reading on code
+
+570
+00:34:56,679 --> 00:35:00,040
+the last feature there to i think is
+important is that
+
+571
+00:35:00,004 --> 00:35:04,057
+arithmetic should use operators so you
+on average two vectors
+
+572
+00:35:04,057 --> 00:35:07,129
+rather than needing to rate this
+
+573
+00:35:08,029 --> 00:35:12,052
+you should just field the right 0.5
+times X plus Y
+
+574
+00:35:12,052 --> 00:35:15,097
+knife the average defect has a lot
+easier to write
+
+575
+00:35:15,097 --> 00:35:19,236
+it's a lot easier to read Xcode more
+natural
+
+576
+00:35:20,109 --> 00:35:24,390
+let's let's let's dive into what
+actually available here we're doing
+
+577
+00:35:24,039 --> 00:35:27,097
+first the basic types we have a lot of
+vector types
+
+578
+00:35:27,097 --> 00:35:30,100
+available in Sandy but the ones that
+you're gonna used
+
+579
+00:35:31,000 --> 00:35:34,024
+most often when you're doing vector math
+geometry
+
+580
+00:35:34,024 --> 00:35:38,053
+are the two three and four dimensional
+foot factors which are just vector float
+
+581
+00:35:38,053 --> 00:35:42,147
+to sector 43 and vector float for if
+you're writing C plus plus code
+
+582
+00:35:43,047 --> 00:35:46,051
+again we have the the names that match
+metal they're in the same the namespace
+
+583
+00:35:46,051 --> 00:35:46,129
+you can just say
+
+584
+00:35:47,029 --> 00:35:53,032
+flow to 43 for and these are based on a
+Clank future: called extended factors
+
+585
+00:35:53,059 --> 00:35:56,143
+and that gives us a lot of functionality
+for free that made writing this library
+
+586
+00:35:57,043 --> 00:35:58,982
+really pleasant
+
+587
+00:35:59,369 --> 00:36:04,090
+so first off arithmetic on factors
+pretty much just works
+
+588
+00:36:04,009 --> 00:36:07,064
+you can use all your favorite arthritic
+operators on vectors
+
+589
+00:36:07,064 --> 00:36:10,081
+and on scalars everything is nice
+
+590
+00:36:10,081 --> 00:36:14,100
+in mexico DC to read and to show you
+another example right now
+
+591
+00:36:15,000 --> 00:36:19,064
+so a pretty basic function for graphics
+library is a vector reflect
+
+592
+00:36:19,064 --> 00:36:22,076
+so we take a vector axe and we take
+
+593
+00:36:22,076 --> 00:36:26,154
+a unit vector an that unit vector
+determine to play
+
+594
+00:36:27,054 --> 00:36:30,065
+and we're going to reflect acts through
+that plane this is a really
+
+595
+00:36:30,065 --> 00:36:34,524
+common operation graphics and there's a
+simple mathematical expression
+
+596
+00:36:35,109 --> 00:36:38,630
+that gives the result now before we
+might have
+
+597
+00:36:38,063 --> 00:36:41,141
+had have a lot of promos function calls
+to compute this expression
+
+598
+00:36:42,041 --> 00:36:45,490
+but with Cindy it's really simple we
+just right X minus
+
+599
+00:36:45,859 --> 00:36:49,190
+twice the dot product affection the
+normal vector
+
+600
+00:36:49,019 --> 00:36:53,688
+times normal actor says just as simple
+as the mathematics is
+
+601
+00:36:53,859 --> 00:36:58,470
+it makes your code again really easy to
+write really easy to read
+
+602
+00:36:58,047 --> 00:37:02,051
+I think it's its it's much nicer they're
+a bunch of other features
+
+603
+00:37:02,051 --> 00:37:05,077
+that we get with these factors without
+needing to colony functions or do
+
+604
+00:37:05,077 --> 00:37:06,116
+anything
+
+605
+00:37:07,016 --> 00:37:11,017
+we get access to vector elements and
+some factors really easily
+
+606
+00:37:11,017 --> 00:37:14,020
+array subscript in just works if you
+wanna pull out
+
+607
+00:37:14,002 --> 00:37:17,039
+the the second home in a vector you just
+subscript it just like you would if it
+
+608
+00:37:17,057 --> 00:37:18,856
+were an array
+
+609
+00:37:19,369 --> 00:37:23,130
+name sub-sectors just work so if you
+have a factor of four floats
+
+610
+00:37:23,013 --> 00:37:26,082
+you can get the lower half first two
+elements by just using
+
+611
+00:37:26,082 --> 00:37:29,381
+the name in the vector dot low the high
+half is just are high
+
+612
+00:37:30,119 --> 00:37:33,218
+you can get the even elements to get the
+on elements and I should point out the
+
+613
+00:37:34,109 --> 00:37:35,340
+some factors
+
+614
+00:37:35,034 --> 00:37:38,076
+and elements the LWC can assigned to
+them as well
+
+615
+00:37:38,076 --> 00:37:41,167
+as reading from them and this is really
+useful when you're
+
+616
+00:37:42,067 --> 00:37:44,152
+writing your in fact especially fitting
+perspective coordinates or something
+
+617
+00:37:45,052 --> 00:37:46,651
+like that a lot of times you need to
+just
+
+618
+00:37:47,119 --> 00:37:50,770
+set some value in the fourth quarter net
+for example
+
+619
+00:37:50,077 --> 00:37:53,082
+this is really nice if you go totally
+hog wild with this
+
+620
+00:37:53,082 --> 00:37:56,095
+it will make it harder for the compiler
+to generate great code for you
+
+621
+00:37:56,095 --> 00:37:59,178
+but use sparingly this is a really
+powerful feature
+
+622
+00:38:00,078 --> 00:38:03,104
+we have some other thats that's about
+what you get
+
+623
+00:38:04,004 --> 00:38:07,013
+for free with the types now we also give
+you lotsa functions
+
+624
+00:38:07,094 --> 00:38:10,123
+attack that give you the operations that
+you want
+
+625
+00:38:11,023 --> 00:38:14,108
+we have three haters that have tons of
+stuff that comes up all the time for
+
+626
+00:38:15,008 --> 00:38:16,287
+math and geometry
+
+627
+00:38:16,359 --> 00:38:19,700
+math common and geometry
+
+628
+00:38:19,007 --> 00:38:23,008
+in C and objective-c those functions
+look like this
+
+629
+00:38:23,008 --> 00:38:26,082
+she noticed the math functions look just
+like the math functions that use for
+
+630
+00:38:27,054 --> 00:38:28,063
+scalars
+
+631
+00:38:28,063 --> 00:38:31,084
+they're overloaded so now they work for
+floats for doubles
+
+632
+00:38:31,084 --> 00:38:34,143
+for vectors afloat for all earlier
+floating-point vector types
+
+633
+00:38:35,043 --> 00:38:39,104
+just works you want the square root
+vector just call square root
+
+634
+00:38:40,004 --> 00:38:43,095
+everything is is there the common
+functions you may be familiar with a few
+
+635
+00:38:43,095 --> 00:38:44,172
+furnish a darker before if you've done
+
+636
+00:38:45,072 --> 00:38:48,124
+a lot graphics programming these are
+operations that are really useful when
+
+637
+00:38:49,024 --> 00:38:51,030
+you're dealing with coordinates are
+colors
+
+638
+00:38:51,084 --> 00:38:54,101
+you have a dialogue before them may be
+new to you but don't worry about that
+
+639
+00:38:55,001 --> 00:38:55,042
+their
+
+640
+00:38:55,042 --> 00:38:58,107
+easy to understand there's a lot of
+documentation for them hatter's
+
+641
+00:38:59,007 --> 00:39:02,023
+and then there's the geometry functions
+as well
+
+642
+00:39:02,023 --> 00:39:06,054
+now in c plus plus and metal again we
+have shorter names available in C pas
+
+643
+00:39:06,054 --> 00:39:07,147
+plus these are under the same the
+namespace
+
+644
+00:39:08,047 --> 00:39:11,068
+at these exactly match the metal
+functionality so
+
+645
+00:39:11,068 --> 00:39:15,080
+again this makes it really easy to move
+code between CC plus plus
+
+646
+00:39:15,008 --> 00:39:18,047
+objective-c and metal when you need to
+
+647
+00:39:19,019 --> 00:39:22,042
+I wanna call out that some of these
+functions
+
+648
+00:39:22,042 --> 00:39:28,055
+come in two variants there's a precise
+version and there's fast furs
+
+649
+00:39:28,055 --> 00:39:31,064
+now precise is the default because if
+you don't know
+
+650
+00:39:32,045 --> 00:39:35,081
+which one you need its it's better to be
+safe and give you the
+
+651
+00:39:35,081 --> 00:39:38,180
+the most accurate when we have but their
+is also
+
+652
+00:39:39,008 --> 00:39:43,010
+a fast version if you compile with fast
+math then you get the fast ones by the
+
+653
+00:39:44,000 --> 00:39:45,599
+fall
+
+654
+00:39:45,599 --> 00:39:49,560
+the fast ones just may not be totally
+accurate the last bit
+
+655
+00:39:49,056 --> 00:39:53,151
+about half the bits in a floating point
+number with the faster
+
+656
+00:39:54,051 --> 00:39:57,149
+now even if you compile the fast math
+you can still call
+
+657
+00:39:58,049 --> 00:40:01,064
+the precise ones individually when you
+need to by just
+
+658
+00:40:01,064 --> 00:40:05,126
+introducing precise into the name and
+simile vice versa if you don't have fast
+
+659
+00:40:06,026 --> 00:40:06,375
+math
+
+660
+00:40:06,609 --> 00:40:10,640
+specified you can always call the fast
+ferry and and C plus plus
+
+661
+00:40:10,064 --> 00:40:14,023
+we do this with namespaces there's a sub
+namespace called fast in a sub namespace
+
+662
+00:40:14,599 --> 00:40:15,510
+called precise
+
+663
+00:40:15,051 --> 00:40:20,051
+the you use you can just override the
+default really easily
+
+664
+00:40:20,051 --> 00:40:23,900
+now last when we talk about vector math
+and geometry
+
+665
+00:40:24,359 --> 00:40:28,760
+wouldn't really be complete if we did a
+major cities
+
+666
+00:40:28,076 --> 00:40:31,142
+so we have a set matrix types char
+matrix float
+
+667
+00:40:32,042 --> 00:40:36,063
+an by M it could be two three or four
+and they don't need to be square you can
+
+668
+00:40:36,063 --> 00:40:36,532
+have it
+
+669
+00:40:37,099 --> 00:40:40,290
+for by two matrix or to buy three matrix
+
+670
+00:40:40,029 --> 00:40:43,117
+I want to point out that n is the number
+of columns am as the number of rows
+
+671
+00:40:44,017 --> 00:40:48,019
+if you're a mathematician this may be a
+little strange to you to buy free
+
+672
+00:40:48,019 --> 00:40:52,032
+matrix has two columns and three rows
+instead of vice versa
+
+673
+00:40:52,032 --> 00:40:55,095
+but if you come from a graphics
+backgrounds is very natural as follows
+
+674
+00:40:55,095 --> 00:40:56,101
+the precedent
+
+675
+00:40:57,001 --> 00:41:01,048
+that metal and open CL India axe and
+GLSL in all of these
+
+676
+00:41:01,048 --> 00:41:05,073
+these libraries have have always used so
+that's that's why we do it
+
+677
+00:41:05,073 --> 00:41:08,098
+there are lots of operations available
+on matrices as well
+
+678
+00:41:08,098 --> 00:41:11,457
+you don't get the operators for free in
+C++ and objective-c sorry
+
+679
+00:41:12,339 --> 00:41:16,080
+you do have to make some function calls
+but we have and I said a function to
+
+680
+00:41:16,008 --> 00:41:16,096
+create matrices
+
+681
+00:41:16,096 --> 00:41:19,745
+we have no cell functions operate on
+matrices and matrices and vectors
+
+682
+00:41:20,609 --> 00:41:23,657
+this is just a certain the broad
+overview we have some other stuff as
+
+683
+00:41:24,089 --> 00:41:25,570
+well
+
+684
+00:41:25,057 --> 00:41:28,326
+it c plus plus you get operator
+overloading so you can
+
+685
+00:41:28,839 --> 00:41:33,730
+you can add and subtract multiply by
+scalars multiply matrices and vectors
+
+686
+00:41:33,073 --> 00:41:35,128
+you have we are some nice constructors
+the make it easier to create these
+
+687
+00:41:36,028 --> 00:41:36,124
+objects
+
+688
+00:41:37,024 --> 00:41:41,068
+really nice to work with really easy to
+write your record
+
+689
+00:41:41,068 --> 00:41:44,727
+so that's that's where the vector math
+and geometry story
+
+690
+00:41:45,339 --> 00:41:48,930
+and now I wanna talk a little bit about
+reading your own city code
+
+691
+00:41:48,093 --> 00:41:51,155
+using library so we also have
+
+692
+00:41:52,055 --> 00:41:55,092
+lots of other types mention the the
+beginning vector float
+
+693
+00:41:55,092 --> 00:41:58,103
+is just a few of them we also have
+actors doubles
+
+694
+00:41:59,003 --> 00:42:02,075
+doctors have signed and unsigned
+integers 8-bit 16-bit
+
+695
+00:42:02,075 --> 00:42:05,151
+32-bit and 64-bit integers Wii sport
+longer vector types
+
+696
+00:42:06,051 --> 00:42:09,070
+8 16 32 or months this is really useful
+
+697
+00:42:09,007 --> 00:42:12,032
+to rate just a little bit of code and
+have the compiler effectively unreel
+
+698
+00:42:12,095 --> 00:42:14,129
+your lips for you
+
+699
+00:42:15,029 --> 00:42:20,338
+we also have online factor support all
+of the
+
+700
+00:42:20,599 --> 00:42:24,160
+normal vector types are aligned by the
+fall
+
+701
+00:42:24,016 --> 00:42:27,078
+which is great when you're doing
+geometry because
+
+702
+00:42:27,078 --> 00:42:30,141
+you're not usually getting the data from
+somewhere else you know
+
+703
+00:42:31,041 --> 00:42:34,063
+we just want to align we want to give
+you the best performance you can
+
+704
+00:42:34,063 --> 00:42:37,102
+however when you're right here on vector
+code usually your operating on data
+
+705
+00:42:38,002 --> 00:42:40,097
+buffers that came in from somewhere and
+as buffers may not be allowed
+
+706
+00:42:40,097 --> 00:42:43,138
+so we also provide online types for your
+work with
+
+707
+00:42:44,038 --> 00:42:47,777
+I'll show you an example that a little
+bit later
+
+708
+00:42:48,119 --> 00:42:51,680
+now just like floating-point factors I
+showed you
+
+709
+00:42:51,068 --> 00:42:54,077
+you get lots of operators for free you
+get the normal arithmetic operators
+
+710
+00:42:55,058 --> 00:42:58,133
+is just work you also get that was
+operators those just work on factors
+
+711
+00:42:59,033 --> 00:43:00,077
+they work with actors and scalars
+
+712
+00:43:00,077 --> 00:43:03,133
+you can shift every element vector right
+by three I just writing
+
+713
+00:43:04,033 --> 00:43:07,091
+factor shift right free we also have
+
+714
+00:43:07,091 --> 00:43:10,152
+a big set of conversion functions for
+you these let you convert
+
+715
+00:43:11,052 --> 00:43:14,138
+from one vector type to another I want
+to point out that you should use the
+
+716
+00:43:15,038 --> 00:43:16,056
+conversion functions
+
+717
+00:43:16,056 --> 00:43:20,061
+don't cast vectors because all surely
+doesn't do what you want to do
+
+718
+00:43:21,006 --> 00:43:24,089
+when you cast factors reinterprets the
+data in the vector
+
+719
+00:43:24,089 --> 00:43:27,100
+as the other type this means the you
+can't even
+
+720
+00:43:28,000 --> 00:43:33,008
+cast say a vector a four 16-bit enters
+into a vector for 32-bit integers
+
+721
+00:43:33,008 --> 00:43:36,079
+because they have different sizes so
+rather than casting them
+
+722
+00:43:36,079 --> 00:43:39,094
+call the conversion functions which will
+convert one factor type
+
+723
+00:43:39,094 --> 00:43:43,190
+to another factor type for you give you
+the right behavior
+
+724
+00:43:44,009 --> 00:43:49,076
+you also get comparisons so comparisons
+just work on factors
+
+725
+00:43:50,057 --> 00:43:53,070
+a little bit strange though because I I
+can't really talk meaningfully about one
+
+726
+00:43:53,007 --> 00:43:53,084
+vector being
+
+727
+00:43:54,047 --> 00:43:57,926
+less then another factor right that
+doesn't make sense to magically
+
+728
+00:43:58,349 --> 00:44:02,400
+so comparisons produce a vector results
+
+729
+00:44:02,004 --> 00:44:05,057
+where each lane of the result vector is
+-1
+
+730
+00:44:05,093 --> 00:44:08,166
+all one's if the comparison is true in
+that lane
+
+731
+00:44:09,066 --> 00:44:12,145
+and its zeros if the comparison is false
+and that line shown in Example
+
+732
+00:44:13,045 --> 00:44:17,077
+here's a vector for floats May compared
+against other vector for floats
+
+733
+00:44:17,077 --> 00:44:20,133
+see if X is less than why so in the
+first line
+
+734
+00:44:21,033 --> 00:44:25,092
+0 is not less than zero parents false
+results here
+
+735
+00:44:25,092 --> 00:44:29,100
+now one is less then 3.1 for 159 so the
+result is all one's
+
+736
+00:44:30,072 --> 00:44:33,099
+saw to was not less than mice infinity 3
+
+737
+00:44:33,099 --> 00:44:36,104
+is less than 42 now
+
+738
+00:44:37,004 --> 00:44:40,015
+I I just went through this but it's
+going to turn out this doesn't matter a
+
+739
+00:44:40,015 --> 00:44:41,081
+lot to most at the time
+
+740
+00:44:41,081 --> 00:44:44,122
+because almost always when you do a
+comparison you're gonna consume the
+
+741
+00:44:45,022 --> 00:44:46,108
+result of that comparison
+
+742
+00:44:47,008 --> 00:44:50,017
+with one of three operations vector any
+
+743
+00:44:50,017 --> 00:44:53,018
+vector all and vector but select
+
+744
+00:44:53,018 --> 00:44:56,075
+vector any is true if the comparison is
+true in
+
+745
+00:44:56,075 --> 00:44:59,121
+any lane of the vector vector all is
+true
+
+746
+00:45:00,021 --> 00:45:03,660
+if it's true in every lane the vector
+and it select
+
+747
+00:45:03,849 --> 00:45:07,180
+lets you select between the elements of
+two vectors
+
+748
+00:45:07,018 --> 00:45:10,024
+based on summaries of the comparison
+
+749
+00:45:10,024 --> 00:45:13,080
+so most of the time these give you the
+functionality you really want from
+
+750
+00:45:13,008 --> 00:45:15,055
+comparisons anyway you don't need to
+worry
+
+751
+00:45:16,027 --> 00:45:20,119
+about the theory details love what the
+type but the result is
+
+752
+00:45:21,019 --> 00:45:25,938
+now I'm gonna show you an example
+abusing this trigger on Pacha
+
+753
+00:45:26,109 --> 00:45:29,150
+I'm you choose an example that's
+something that we normally
+
+754
+00:45:29,015 --> 00:45:32,042
+don't really think about actress it's
+not that hard defectors
+
+755
+00:45:32,042 --> 00:45:34,116
+but it's something that you know it's
+outside the realm of third
+
+756
+00:45:35,016 --> 00:45:37,040
+floating-point computation things that
+we normally think
+
+757
+00:45:37,004 --> 00:45:40,010
+we look at string up so here's a simple
+
+758
+00:45:41,000 --> 00:45:45,589
+scaler implementation string officer
+right out kNR
+
+759
+00:45:45,589 --> 00:45:49,280
+and all we do is we iterate through the
+bites at the source
+
+760
+00:45:49,028 --> 00:45:53,617
+and we copy them to the destination and
+when we reach a bite the 0
+
+761
+00:45:53,869 --> 00:45:58,290
+we stop copy at complete implementation
+right there
+
+762
+00:45:58,029 --> 00:46:01,092
+now as I said this isn't too hard to
+vector ice
+
+763
+00:46:01,092 --> 00:46:04,119
+here's started a typical SSE intrinsic
+
+764
+00:46:05,019 --> 00:46:08,438
+implementation string copy I haven't
+pulled out
+
+765
+00:46:08,609 --> 00:46:14,080
+all the crazy stuff here but this this
+is sort of a a reasonable accommodation
+
+766
+00:46:14,008 --> 00:46:18,017
+and this is fine it wasn't too hard
+right it's a little bit ugly
+
+767
+00:46:18,089 --> 00:46:22,167
+I I find it kind of a pain to read on
+
+768
+00:46:22,869 --> 00:46:27,220
+the big problem with this is that this
+works for 32-bit and 64-bit Intel
+
+769
+00:46:27,022 --> 00:46:30,151
+but we might wanna now runner code on
+army after right
+
+770
+00:46:30,349 --> 00:46:33,520
+of either right a whole new
+implementation or just
+
+771
+00:46:33,052 --> 00:46:36,123
+fall back on the scale occurred so we
+want to give you the tools
+
+772
+00:46:37,023 --> 00:46:42,039
+track fast implementations that you can
+run on all of our platforms
+
+773
+00:46:42,039 --> 00:46:45,040
+here's with us in the implementation a
+string of it looks like
+
+774
+00:46:45,004 --> 00:46:49,061
+first off it's a little bit shorter than
+the than the assessee intrinsics version
+
+775
+00:46:49,097 --> 00:46:52,103
+and I think it will be cleaner I'm gonna
+walk you through it the first part here
+
+776
+00:46:53,057 --> 00:46:56,076
+we just go buy buy buy: until the source
+
+777
+00:46:56,589 --> 00:47:00,800
+has 16 byte alignment skin able to use
+aligned words from the source
+
+778
+00:47:00,008 --> 00:47:03,031
+from that point on I am I'm not gonna
+
+779
+00:47:04,003 --> 00:47:07,031
+get too much into the nitty-gritty
+details why it's important to do this
+
+780
+00:47:07,031 --> 00:47:11,080
+but when you're dealing with implicit
+leg data objects like strings
+
+781
+00:47:11,359 --> 00:47:15,000
+you you do you really need to light your
+source offers
+
+782
+00:47:15,000 --> 00:47:18,839
+having aligned are sore spot for now in
+its gonna cast
+
+783
+00:47:18,839 --> 00:47:22,240
+the source and destination pointers into
+pointers defectors
+
+784
+00:47:22,024 --> 00:47:25,115
+you notice I used two different vector
+types here number I aligned
+
+785
+00:47:26,015 --> 00:47:32,046
+the source buffer so it's a vector hair
+16 that allied has 16 byte aligned
+
+786
+00:47:32,046 --> 00:47:35,051
+the destination vector is not
+necessarily want
+
+787
+00:47:35,051 --> 00:47:38,140
+there's no guarantee that by allowing
+the source did the destination is allied
+
+788
+00:47:39,004 --> 00:47:42,031
+so instead I mean use this packed car 16
+type
+
+789
+00:47:42,067 --> 00:47:46,069
+which is a unaligned vector type for
+this nation
+
+790
+00:47:46,069 --> 00:47:49,071
+so now that I've I've set up my types
+the actual
+
+791
+00:47:49,071 --> 00:47:52,143
+meet of the copy is really just these
+two lights
+
+792
+00:47:53,043 --> 00:47:57,082
+all we do is low defector from the
+source compared to zero
+
+793
+00:47:57,082 --> 00:48:00,156
+if any lane is equal to 0
+
+794
+00:48:01,056 --> 00:48:04,121
+then we stop the copy itself not
+
+795
+00:48:05,021 --> 00:48:09,047
+any when a factor 0- we're done
+
+796
+00:48:09,047 --> 00:48:13,052
+week we continue as soon as they relate
+to zero word on
+
+797
+00:48:13,097 --> 00:48:16,148
+so than in the copy we just copy that
+vector
+
+798
+00:48:17,048 --> 00:48:20,177
+from the source to the destination and
+
+799
+00:48:20,609 --> 00:48:24,960
+advance both the pointers to expect
+really simple
+
+800
+00:48:24,096 --> 00:48:28,101
+and then finally if we did find a zero
+if we found the end of the string
+
+801
+00:48:29,046 --> 00:48:33,051
+in the neck 16 bytes well was just copy
+bite by bite from there
+
+802
+00:48:33,051 --> 00:48:36,080
+until we reach the act is a really
+simple importation
+
+803
+00:48:36,008 --> 00:48:40,033
+it's not the best implementation it's
+possible right but it was really easy
+
+804
+00:48:41,005 --> 00:48:45,006
+and its gonna give us a nice performance
+let's look at that
+
+805
+00:48:45,015 --> 00:48:48,018
+we look at the performance measured in
+bytes per nanosecond
+
+806
+00:48:48,018 --> 00:48:51,427
+for a variety of string lights now this
+bytes for nasa
+
+807
+00:48:51,589 --> 00:48:55,190
+how fast were copying so that more data
+we copy
+
+808
+00:48:55,019 --> 00:48:59,021
+the the better off we're doing higher is
+better on this graph
+
+809
+00:48:59,021 --> 00:49:02,039
+we start with that scale occurred we had
+Nancy we get up to about
+
+810
+00:49:02,039 --> 00:49:05,091
+half a bike for a nanosecond which is at
+but still
+
+811
+00:49:05,091 --> 00:49:09,270
+500 megabytes a second we're moving a
+lot of data
+
+812
+00:49:10,089 --> 00:49:13,440
+but we're gonna do a lot better let's
+look at that same the implementation
+
+813
+00:49:13,044 --> 00:49:19,433
+that you recall is just if you want code
+it's almost 10 times faster
+
+814
+00:49:19,829 --> 00:49:23,881
+and as I said it's possible to do better
+if you really part the stops
+
+815
+00:49:24,349 --> 00:49:27,480
+here's the parents that we get from
+Lipsy on the platform which is it's also
+
+816
+00:49:27,048 --> 00:49:28,687
+a vectorized implementation
+
+817
+00:49:29,119 --> 00:49:32,770
+and it does some really clever things
+about edging an alignment to get
+
+818
+00:49:32,077 --> 00:49:36,120
+more performance but you notice we're
+getting most of the performance of lives
+
+819
+00:49:37,002 --> 00:49:40,161
+we got nearly 10 X when we're within
+eighty percent of the performance of
+
+820
+00:49:40,359 --> 00:49:41,240
+Lipsy
+
+821
+00:49:41,024 --> 00:49:45,041
+furlong vectors we got that with just a
+few lines of code
+
+822
+00:49:45,041 --> 00:49:48,088
+they were really easy to write Lipsy
+contains an assembly
+
+823
+00:49:48,088 --> 00:49:52,166
+we wrote four lines see basically to get
+get the performance we see here
+
+824
+00:49:53,066 --> 00:49:57,141
+and that's really what are our message
+for today is
+
+825
+00:49:58,041 --> 00:50:01,042
+that XLR has always given you
+
+826
+00:50:01,051 --> 00:50:04,103
+really fast vector good
+
+827
+00:50:05,003 --> 00:50:08,071
+and what we're doing now is try to make
+it even simpler for you to get at that
+
+828
+00:50:08,071 --> 00:50:11,114
+to make it so that more developers can
+easily take advantage
+
+829
+00:50:12,014 --> 00:50:15,052
+but the performance at the hardware
+offers now I want to know
+
+830
+00:50:15,052 --> 00:50:18,090
+the linear algebra and Cindy are both
+brand new libraries
+
+831
+00:50:18,009 --> 00:50:21,009
+they do have some rough edges I'm sure
+you'll try to do things that we haven't
+
+832
+00:50:21,009 --> 00:50:22,063
+far
+
+833
+00:50:23,044 --> 00:50:27,713
+but that also means that you can tell us
+what use cases are really important to
+
+834
+00:50:28,109 --> 00:50:28,920
+you
+
+835
+00:50:28,092 --> 00:50:31,141
+and will take that into account you can
+have an enormous impact on
+
+836
+00:50:32,041 --> 00:50:35,049
+the way that these libraries develop
+
+837
+00:50:35,049 --> 00:50:38,064
+if you want more information about
+
+838
+00:50:38,064 --> 00:50:41,113
+excelerate or Cindy if two great
+contacts
+
+839
+00:50:42,013 --> 00:50:46,081
+hold and bold and George Warner there's
+a budget documentation available for
+
+840
+00:50:46,081 --> 00:50:49,104
+the image invidious p online
+
+841
+00:50:50,004 --> 00:50:53,068
+I would also recommend looking at the
+headers and accelerate if you need
+
+842
+00:50:53,068 --> 00:50:54,072
+documentation
+
+843
+00:50:54,072 --> 00:50:57,116
+the image and the DSP linear algebra and
+Cindy
+
+844
+00:50:58,016 --> 00:51:02,092
+all have lots and lots of documentation
+and headers it's a fantastic resource
+
+845
+00:51:02,092 --> 00:51:05,107
+if you want to know more about how
+things work the developer forums are
+
+846
+00:51:06,007 --> 00:51:08,092
+pretty good place to ask for help with
+things
+
+847
+00:51:08,092 --> 00:51:12,127
+I'll if your gonna file any comments in
+the developer forums
+
+848
+00:51:13,027 --> 00:51:16,076
+the place to file this under core OS
+that's that's where your
+
+849
+00:51:16,076 --> 00:51:19,100
+you're most likely get the attention you
+want and
+
+850
+00:51:20,000 --> 00:51:23,000
+the bug reporters also a great way to
+report issues
+
+851
+00:51:23,000 --> 00:51:26,031
+make feature requests you'd kill you
+don't only need to use this
+
+852
+00:51:26,031 --> 00:51:29,300
+if there's a bug in the conventional
+sense you can say
+
+853
+00:51:29,579 --> 00:51:33,270
+hey it would be great if you know I
+could do this thing that's
+
+854
+00:51:33,027 --> 00:51:36,376
+a little bit different what you're doing
+or make an entirely new feature request
+
+855
+00:51:36,619 --> 00:51:39,667
+or say I try to do this and the
+performance wasn't quite as good as I
+
+856
+00:51:40,099 --> 00:51:41,660
+thought it should be
+
+857
+00:51:41,066 --> 00:51:44,091
+those are absolutely bugs in the things
+we want to look at so file bugs early
+
+858
+00:51:44,091 --> 00:51:46,173
+and often we love to get them and we
+love to get feature request from you
+
+859
+00:51:47,073 --> 00:51:48,452
+guys
+
+860
+00:51:49,109 --> 00:51:52,550
+but on other stuff that we've done in
+the past two years has been motivated by
+
+861
+00:51:52,055 --> 00:51:55,374
+feature request we got from external
+developers
+
+862
+00:51:55,869 --> 00:51:58,770
+related sessions that are worth checking
+out if you're here you're almost
+
+863
+00:51:58,077 --> 00:52:01,090
+certainly engaged in the middle sessions
+there tomorrow morning
+
+864
+00:52:01,009 --> 00:52:03,024
+was a great thing to check out thanks
+love to come I guess
+

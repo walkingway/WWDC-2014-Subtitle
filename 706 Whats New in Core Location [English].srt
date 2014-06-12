@@ -1,0 +1,3738 @@
+1
+00:00:11,076 --> 00:00:18,076
+hello good afternoon the
+
+2
+00:00:19,041 --> 00:00:21,138
+welcome to our session on what's new in
+car location
+
+3
+00:00:22,038 --> 00:00:25,117
+my name is Steven Rea and I work on the
+car location framework
+
+4
+00:00:26,017 --> 00:00:29,061
+support occasion is available
+
+5
+00:00:29,061 --> 00:00:32,099
+both I O S and always 10 but today
+
+6
+00:00:32,099 --> 00:00:35,100
+the new features that we're going to be
+talking about today are specifically for
+
+7
+00:00:36,000 --> 00:00:38,005
+I O S now some love you
+
+8
+00:00:38,005 --> 00:00:41,064
+maybe new to court location or even i OS
+in general
+
+9
+00:00:42,009 --> 00:00:46,478
+this will not be a review existing car
+location functionality
+
+10
+00:00:46,559 --> 00:00:50,620
+for that we recommend you go to our past
+WWDC
+
+11
+00:00:50,062 --> 00:00:54,125
+presentations online or check out our
+great documentation also available
+
+12
+00:00:55,025 --> 00:00:55,092
+online
+
+13
+00:00:55,092 --> 00:00:58,123
+also we'll be having a lab session this
+Thursday
+
+14
+00:00:59,023 --> 00:01:02,132
+so I recommend you all come out and join
+us there with any questions that you
+
+15
+00:01:02,339 --> 00:01:02,418
+have for us
+
+16
+00:01:03,129 --> 00:01:06,300
+however I think that today will still be
+
+17
+00:01:06,003 --> 00:01:09,050
+equally applicable an interesting to
+those of you who are new
+
+18
+00:01:09,077 --> 00:01:13,095
+to IRS incall location to those %uh view
+foresees an app developers
+
+19
+00:01:13,095 --> 00:01:17,124
+familiar with but I O S incall location
+so what's new
+
+20
+00:01:18,024 --> 00:01:23,111
+incall location and IOSA today we're
+going to be talking about location
+
+21
+00:01:24,011 --> 00:01:24,106
+authorization
+
+22
+00:01:25,006 --> 00:01:31,059
+visit monitoring and finally what's new
+is indoor positioning
+
+23
+00:01:31,059 --> 00:01:34,368
+however we won't have time to talk about
+that in this session
+
+24
+00:01:34,899 --> 00:01:39,700
+but directly following the session here
+in Marina they'll be a dedicated session
+
+25
+00:01:39,007 --> 00:01:42,316
+to indoor positioning so I recommend you
+all stick around for that
+
+26
+00:01:43,009 --> 00:01:46,027
+so before we go on
+
+27
+00:01:46,189 --> 00:01:49,286
+I like to start with a brief history
+publication IRS
+
+28
+00:01:50,159 --> 00:01:53,430
+location was first introduced in i OS
+two
+
+29
+00:01:53,043 --> 00:01:58,802
+and then I O S three we added the
+ability to get heading updates and I
+
+30
+00:01:59,189 --> 00:01:59,271
+hours for
+
+31
+00:02:00,009 --> 00:02:04,030
+with the introduction of multitasking
+came a whole slew of new functionality
+
+32
+00:02:04,003 --> 00:02:05,122
+for location
+
+33
+00:02:05,149 --> 00:02:08,170
+including continuous back on the cation
+
+34
+00:02:08,017 --> 00:02:12,096
+which allows your app to get continuous
+location updates while in the background
+
+35
+00:02:12,096 --> 00:02:15,117
+and region monitoring also noticed your
+fencing
+
+36
+00:02:16,017 --> 00:02:20,113
+which allows our apt to be launched and
+notified when the user enters or exits
+
+37
+00:02:21,013 --> 00:02:24,056
+a predefined region to significant
+location changes
+
+38
+00:02:24,056 --> 00:02:27,123
+which also allows her out to be launched
+and notified when the user's location
+
+39
+00:02:28,023 --> 00:02:29,100
+has changed significantly
+
+40
+00:02:30,000 --> 00:02:34,087
+and I was 5 we introduce new APIs for
+geocoding
+
+41
+00:02:34,087 --> 00:02:38,096
+both forward and reverse it allows you
+to take a position
+
+42
+00:02:38,879 --> 00:02:43,010
+that is the latitude and longitude and
+covered it to an address or place mark
+
+43
+00:02:43,001 --> 00:02:46,480
+and vice versa in Iowa sixth
+
+44
+00:02:46,489 --> 00:02:49,520
+we introduced a power-efficient means of
+getting location updates
+
+45
+00:02:49,799 --> 00:02:53,860
+referred to as the forward-looking Asian
+updates and which locations will be
+
+46
+00:02:53,086 --> 00:02:53,167
+batched up
+
+47
+00:02:54,067 --> 00:02:57,119
+and delivered to your application at a
+app specified
+
+48
+00:02:58,019 --> 00:03:02,178
+time and/or distance interval and just
+last year
+
+49
+00:03:02,349 --> 00:03:05,530
+and I i seven we introduced ID can
+technology
+
+50
+00:03:05,053 --> 00:03:09,067
+which is really been taking off this
+allows you to determine proximity
+
+51
+00:03:09,067 --> 00:03:14,140
+be arranging and region monitoring API's
+which brings us to Iowa State which is
+
+52
+00:03:15,004 --> 00:03:16,703
+what we're here to talk about today
+
+53
+00:03:17,099 --> 00:03:20,390
+as you can see in location functionality
+has been growing
+
+54
+00:03:20,039 --> 00:03:24,040
+and I O S as have the number maps that
+you guys have been developing
+
+55
+00:03:24,004 --> 00:03:27,051
+in fact there are over 600 80,000
+
+56
+00:03:27,087 --> 00:03:31,626
+ups using location I O S these are all
+kind about
+
+57
+00:03:32,409 --> 00:03:35,470
+ranged from navigation to help users
+find their way home
+
+58
+00:03:36,019 --> 00:03:40,052
+to travel app top users find interesting
+things to do
+
+59
+00:03:40,349 --> 00:03:45,420
+around them the fitness app to allow
+users to tractor exercise sessions
+
+60
+00:03:45,042 --> 00:03:49,123
+and shopping app to help users find
+stores and deals around them
+
+61
+00:03:50,023 --> 00:03:54,392
+to social app to allow users to interact
+with their friends
+
+62
+00:03:54,599 --> 00:03:58,500
+and even gaming out to allow interesting
+uses
+
+63
+00:03:58,005 --> 00:04:05,005
+their location so what is location look
+like on the device today
+
+64
+00:04:06,011 --> 00:04:10,065
+there's a visual indication publication
+in use fear the status bar
+
+65
+00:04:10,065 --> 00:04:13,264
+location arrow icon this can be solid
+
+66
+00:04:13,849 --> 00:04:17,220
+as we see here an example of maps which
+is displaying the user's current
+
+67
+00:04:17,022 --> 00:04:17,881
+location
+
+68
+00:04:18,079 --> 00:04:21,110
+jelly the solid arrow indicates that
+location
+
+69
+00:04:21,011 --> 00:04:24,013
+or ranging or significant location
+changes is a news
+
+70
+00:04:24,031 --> 00:04:29,120
+here even on the home screen here
+
+71
+00:04:30,002 --> 00:04:33,064
+even on the home screen if there's an
+application using location or
+
+72
+00:04:33,082 --> 00:04:34,241
+significant location
+
+73
+00:04:34,979 --> 00:04:38,070
+changes in the background the solid
+arrow remain lit
+
+74
+00:04:38,889 --> 00:04:42,560
+in addition to the solitaire oh we have
+the hollow arrow which indicates that
+
+75
+00:04:42,056 --> 00:04:43,062
+region monitoring
+
+76
+00:04:43,062 --> 00:04:46,128
+is in use here we see a traditional
+example a bridge in monitoring the
+
+77
+00:04:47,028 --> 00:04:48,040
+reminders ap
+
+78
+00:04:48,004 --> 00:04:51,005
+with you this region monitoring to
+deliver reminders
+
+79
+00:04:51,041 --> 00:04:56,062
+when the user has entered or exited a
+predefined location
+
+80
+00:04:56,062 --> 00:04:59,951
+and again on the home screen if they are
+still app using region might run a
+
+81
+00:05:00,509 --> 00:05:01,509
+background
+
+82
+00:05:01,509 --> 00:05:04,562
+the hollow arrow remain in the status
+bar indicating that region monitoring is
+
+83
+00:05:05,039 --> 00:05:07,900
+still in use
+
+84
+00:05:07,009 --> 00:05:10,016
+next user control and get a finer
+picture
+
+85
+00:05:10,097 --> 00:05:13,140
+publication usage you know location
+services settings
+
+86
+00:05:14,004 --> 00:05:18,079
+this is in the Settings app under
+privacy location services
+
+87
+00:05:19,015 --> 00:05:23,077
+at the top we provide global control
+publication services
+
+88
+00:05:23,077 --> 00:05:26,158
+and down below we provide individual per
+app control
+
+89
+00:05:27,058 --> 00:05:30,111
+publication in addition per app
+
+90
+00:05:31,011 --> 00:05:34,087
+we provide an indication obligation
+usage by that up
+
+91
+00:05:34,087 --> 00:05:37,756
+this can be indicated by solid purple
+arrow indicating that location has
+
+92
+00:05:38,539 --> 00:05:40,490
+recently been used
+
+93
+00:05:40,049 --> 00:05:43,121
+to install a gray arrow indication
+indicating that location has been used
+
+94
+00:05:44,021 --> 00:05:47,058
+within the last 24 hours or a hollow
+
+95
+00:05:47,058 --> 00:05:53,061
+purple arrow indicating that region
+monitoring is in use by the app
+
+96
+00:05:53,088 --> 00:05:58,093
+so what is authorization look like today
+authorization is a single request
+
+97
+00:05:58,093 --> 00:06:01,702
+that is it prompted implicitly on first
+usage publication by
+
+98
+00:06:02,539 --> 00:06:05,740
+you're out this is for all occasion
+functionality
+
+99
+00:06:05,074 --> 00:06:09,090
+including location directly in the app
+location from the background
+
+100
+00:06:09,009 --> 00:06:15,077
+location used to be a region monitoring
+and significant location changes
+
+101
+00:06:16,058 --> 00:06:19,072
+the taxes also customize all by the app
+here we see
+
+102
+00:06:19,072 --> 00:06:22,136
+camera would like to use your current
+location with a description of why
+
+103
+00:06:23,036 --> 00:06:25,075
+camera user's location
+
+104
+00:06:25,075 --> 00:06:29,114
+one location was first introduced their
+requests for the user's current location
+
+105
+00:06:29,789 --> 00:06:31,650
+was pretty clear
+
+106
+00:06:31,065 --> 00:06:35,394
+however with the advent of multitasking
+and all the powerful location
+
+107
+00:06:35,979 --> 00:06:38,620
+functionality that we talked about was
+introduced
+
+108
+00:06:38,062 --> 00:06:41,074
+allowing you to create very cool and
+powerful aP's
+
+109
+00:06:41,074 --> 00:06:45,075
+we felt that the user can use more
+clarity a one location is being used
+
+110
+00:06:45,084 --> 00:06:48,177
+and more importantly we felt that you're
+asking benefit to
+
+111
+00:06:49,077 --> 00:06:52,152
+we don't want the user to disable
+location overall
+
+112
+00:06:53,052 --> 00:06:55,144
+either globally or for your app
+disabling some the core functionality
+
+113
+00:06:56,044 --> 00:06:57,048
+that you develop
+
+114
+00:06:57,084 --> 00:07:01,693
+developed using location we want them to
+understand exactly how location is being
+
+115
+00:07:02,449 --> 00:07:03,150
+used
+
+116
+00:07:03,015 --> 00:07:06,019
+so ultimately they can make better more
+informed decisions
+
+117
+00:07:06,055 --> 00:07:10,140
+and we believe that this is better for
+battery and better for privacy
+
+118
+00:07:11,004 --> 00:07:14,086
+so to that end we're changing the way
+that location services works
+
+119
+00:07:15,022 --> 00:07:19,066
+and Iowa State we started by looking at
+first
+
+120
+00:07:19,066 --> 00:07:22,084
+and all the functionality that location
+services provide
+
+121
+00:07:22,084 --> 00:07:25,122
+and categorized it into continuous
+update
+
+122
+00:07:26,022 --> 00:07:30,080
+which includes location background
+location and ranging
+
+123
+00:07:30,008 --> 00:07:35,024
+and also location monitoring our bank
+which may launch the application
+
+124
+00:07:35,096 --> 00:07:38,149
+to deliver call back this includes
+region monitoring and significant
+
+125
+00:07:39,049 --> 00:07:41,728
+location changes
+
+126
+00:07:42,169 --> 00:07:45,780
+and we broke it down into two operation
+types the first
+
+127
+00:07:45,078 --> 00:07:50,437
+being always this is just like what
+location operation provide an Iowa 7
+
+128
+00:07:51,139 --> 00:07:55,530
+it provided both access to continuous
+updates and location monitoring
+
+129
+00:07:55,053 --> 00:07:58,072
+even when the app is in the background
+
+130
+00:07:58,072 --> 00:08:03,481
+but then we also introduce twining use
+which is only for continuous updates
+
+131
+00:08:04,129 --> 00:08:09,155
+and it's only when the app is clearly in
+use by the user
+
+132
+00:08:09,389 --> 00:08:13,330
+so let's take a closer look at back on
+location
+
+133
+00:08:13,033 --> 00:08:16,038
+starting with continuous back on
+location which is specified statically
+
+134
+00:08:16,083 --> 00:08:17,132
+by the app
+
+135
+00:08:17,879 --> 00:08:20,955
+either via the capabilities have an
+Xcode for back Ryan Moats
+
+136
+00:08:21,639 --> 00:08:25,620
+location updates or via your abs
+information properly list
+
+137
+00:08:25,062 --> 00:08:29,601
+he had a UI back remote key specifying a
+valuable location
+
+138
+00:08:30,159 --> 00:08:33,460
+the SS before must be started in the
+foreground otherwise
+
+139
+00:08:33,046 --> 00:08:36,255
+or if your app is using significant
+location changes
+
+140
+00:08:36,669 --> 00:08:40,430
+and this is available with one in years
+location authorization
+
+141
+00:08:40,043 --> 00:08:44,125
+because now in Iowa State will provide
+an indication in the status bar
+
+142
+00:08:45,025 --> 00:08:48,041
+that your app is using location
+
+143
+00:08:48,041 --> 00:08:51,126
+this is just like the status bar for
+navigation navigation is running in the
+
+144
+00:08:52,026 --> 00:08:53,052
+background
+
+145
+00:08:53,052 --> 00:08:56,057
+here will indicate which ap is using
+location
+
+146
+00:08:56,057 --> 00:08:59,111
+and if there are multiple will indicate
+the number back to the location
+
+147
+00:09:00,011 --> 00:09:03,023
+and the user can tap on the status bar
+to quickly return
+
+148
+00:09:03,023 --> 00:09:06,032
+the most recent app using location in
+the background
+
+149
+00:09:07,013 --> 00:09:10,031
+OneNote is that if the application is
+authorized for
+
+150
+00:09:10,031 --> 00:09:14,064
+always look Asian access the status bar
+will not be presented
+
+151
+00:09:14,064 --> 00:09:17,066
+because the user has granted access for
+that app
+
+152
+00:09:17,066 --> 00:09:20,071
+his location at any time which is what
+is needed
+
+153
+00:09:21,016 --> 00:09:24,050
+in order to access location any time
+from the background
+
+154
+00:09:24,005 --> 00:09:27,036
+for example when your app is running in
+the background data back on
+
+155
+00:09:27,081 --> 00:09:32,103
+at refresh or did the region monitoring
+or due to significant location changes
+
+156
+00:09:33,003 --> 00:09:37,037
+this requires expertly always
+authorization
+
+157
+00:09:37,037 --> 00:09:40,051
+so on the topic of multitasking I'd like
+to clarify
+
+158
+00:09:40,051 --> 00:09:44,103
+location behavior when the user quit an
+app from the App switcher
+
+159
+00:09:45,003 --> 00:09:48,027
+this will immediately stop continuous
+back on location
+
+160
+00:09:48,027 --> 00:09:51,029
+however this will not stop location
+monitoring
+
+161
+00:09:51,029 --> 00:09:54,034
+such as significant location changes our
+region monitoring
+
+162
+00:09:54,079 --> 00:09:58,123
+this latter point is the behavior as a I
+was 7.1
+
+163
+00:09:59,023 --> 00:10:03,048
+and now NIOS a disabling background at
+refresh
+
+164
+00:10:03,048 --> 00:10:06,051
+will no longer disable any location
+functionality
+
+165
+00:10:06,051 --> 00:10:10,055
+because we believe with the introduction
+of the new notation authorization types
+
+166
+00:10:10,055 --> 00:10:13,131
+the user is now in complete control
+publication usage
+
+167
+00:10:14,031 --> 00:10:18,058
+so how does it all look like to the user
+
+168
+00:10:18,058 --> 00:10:22,094
+absence now expressly request operation
+via new API's
+
+169
+00:10:22,094 --> 00:10:25,102
+will get into the exact details of what
+this looks like in just a bit
+
+170
+00:10:26,074 --> 00:10:31,082
+Afghan request for either one in years
+or for always authorization
+
+171
+00:10:31,082 --> 00:10:35,086
+here we see an example of the operation
+dialogue presented to the user
+
+172
+00:10:35,086 --> 00:10:39,110
+for compass it says allow compass to
+access your location while you use the
+
+173
+00:10:40,001 --> 00:10:40,098
+app
+
+174
+00:10:41,007 --> 00:10:44,059
+and below we see that customizable tax
+that your app can provide
+
+175
+00:10:44,059 --> 00:10:47,086
+indicating why it is that you're at
+user's location
+
+176
+00:10:47,086 --> 00:10:51,103
+this tax is now mandatory and no longer
+optional
+
+177
+00:10:52,003 --> 00:10:55,099
+this dialogue will be presented only
+once the user
+
+178
+00:10:55,099 --> 00:10:58,121
+for either request to location access
+for
+
+179
+00:10:59,021 --> 00:11:02,022
+waning years are always
+
+180
+00:11:02,031 --> 00:11:06,038
+as we said that taxes customizable and
+is mandatory to provide
+
+181
+00:11:07,001 --> 00:11:10,097
+quickly we see an example the always
+authorization dialogue word States
+
+182
+00:11:10,097 --> 00:11:14,158
+allow whether to access your location
+even when you are not using the app
+
+183
+00:11:15,058 --> 00:11:18,094
+again the text description below
+describing why it is
+
+184
+00:11:18,094 --> 00:11:22,139
+at the app would like to use the user's
+location
+
+185
+00:11:23,039 --> 00:11:26,042
+says we see this always authorization
+which is what users got
+
+186
+00:11:26,042 --> 00:11:29,047
+and I 07 is pretty powerful because at
+this
+
+187
+00:11:29,092 --> 00:11:34,097
+if always authorization was granted by
+the user user will be asked to confirm
+
+188
+00:11:34,097 --> 00:11:39,115
+a few days later on only if they're
+always operation was exercised
+
+189
+00:11:40,015 --> 00:11:43,039
+that is that the app did you look Asian
+in the background perhaps
+
+190
+00:11:43,039 --> 00:11:46,062
+in a region monitoring or significant
+location changes
+
+191
+00:11:46,062 --> 00:11:50,077
+here we see an example of what that
+dialogue looks like ford says whether
+
+192
+00:11:50,077 --> 00:11:53,131
+has been using your location in the
+background you want to continue
+
+193
+00:11:54,031 --> 00:11:58,036
+allowing this and again we see that the
+pact is customizable
+
+194
+00:11:58,036 --> 00:12:01,113
+is the same uses description provided in
+their original quest for location
+
+195
+00:12:02,013 --> 00:12:05,034
+authorization
+
+196
+00:12:05,034 --> 00:12:09,053
+so now let's take a look at the new
+location services settings pane
+
+197
+00:12:09,053 --> 00:12:13,101
+African support one in years and or
+always authorization types
+
+198
+00:12:14,001 --> 00:12:17,012
+and in this is specified statically by
+the app
+
+199
+00:12:17,012 --> 00:12:21,066
+again what are the details on exactly
+how you can do this in just a bit
+
+200
+00:12:21,066 --> 00:12:25,089
+and now in the settings pain for each at
+next to the location you syndication
+
+201
+00:12:25,089 --> 00:12:30,090
+it will have the text describing exactly
+what that app is authorized for
+
+202
+00:12:30,009 --> 00:12:35,026
+in addition user can tap on the app to
+see what operation status types are
+
+203
+00:12:36,007 --> 00:12:37,046
+supported by that up
+
+204
+00:12:37,046 --> 00:12:41,127
+with a text description below indicating
+describing that current selection
+
+205
+00:12:42,027 --> 00:12:46,043
+here we see an example for when you stop
+
+206
+00:12:46,043 --> 00:12:49,142
+and quickly another example for tap that
+supports always
+
+207
+00:12:50,042 --> 00:12:53,089
+note that in this pain we don't show the
+
+208
+00:12:53,089 --> 00:12:56,131
+apt description a why that would like
+Houston be
+
+209
+00:12:57,031 --> 00:13:00,066
+location in the currency however
+
+210
+00:13:00,066 --> 00:13:03,075
+US developers to prepare for this
+because we believe that this may present
+
+211
+00:13:04,056 --> 00:13:06,141
+another great opportunity to inform the
+user
+
+212
+00:13:07,041 --> 00:13:12,055
+why it is that you're at user's location
+
+213
+00:13:12,055 --> 00:13:15,055
+now also knew and I always say when the
+easier
+
+214
+00:13:15,055 --> 00:13:18,124
+when the user goes to the Settings app
+for your app specifically
+
+215
+00:13:19,024 --> 00:13:22,092
+a link to privacy will be included which
+also includes willing to location
+
+216
+00:13:22,092 --> 00:13:23,093
+services
+
+217
+00:13:23,093 --> 00:13:26,176
+if applicable here we see an example
+fitness app
+
+218
+00:13:27,076 --> 00:13:30,164
+the app settings pane we see the privacy
+the user can tap on that
+
+219
+00:13:31,064 --> 00:13:34,077
+and get to the location services pain
+specifically for
+
+220
+00:13:34,077 --> 00:13:37,139
+its ap right there and change the
+operating sys that is
+
+221
+00:13:38,039 --> 00:13:42,070
+immediately now this is going to be even
+more powerful for us. app developers
+
+222
+00:13:42,007 --> 00:13:43,010
+because now
+
+223
+00:13:43,073 --> 00:13:47,151
+in Iowa State your app has the ability
+to programmatically jump directly to
+
+224
+00:13:48,051 --> 00:13:49,140
+your app settings pane
+
+225
+00:13:50,004 --> 00:13:53,096
+this is done with the existing up in
+your arm at it i knew i application
+
+226
+00:13:54,032 --> 00:13:57,125
+providing the new constant and I i say
+UI application
+
+227
+00:13:58,025 --> 00:14:03,047
+open settings URL string will see
+exactly how useful this can be
+
+228
+00:14:03,047 --> 00:14:07,089
+later in an example so you're probably
+wondering that looks great in all
+
+229
+00:14:07,089 --> 00:14:10,116
+so what is it that I the developer have
+to do
+
+230
+00:14:11,016 --> 00:14:14,100
+well starting with the actual interface
+changes there are only three changes
+
+231
+00:14:15,000 --> 00:14:17,046
+that you need to be aware
+
+232
+00:14:17,046 --> 00:14:20,063
+the relevant info key in this case that
+we talked about
+
+233
+00:14:20,063 --> 00:14:23,067
+the authorization status: you know
+values and finally
+
+234
+00:14:24,003 --> 00:14:27,012
+the new authorization request API's
+
+235
+00:14:27,012 --> 00:14:31,044
+so let's dive right in for starting with
+the info pls keys
+
+236
+00:14:31,044 --> 00:14:34,047
+previously we had and its location uses
+description
+
+237
+00:14:34,074 --> 00:14:38,075
+which was option all and allow you to
+customize the text displayed to the user
+
+238
+00:14:38,084 --> 00:14:40,180
+why it is that you're at user's location
+
+239
+00:14:41,008 --> 00:14:44,055
+this is now deprecated and replaced by
+tune your keys
+
+240
+00:14:45,027 --> 00:14:49,034
+and its location always uses description
+and and its location whining use uses
+
+241
+00:14:49,097 --> 00:14:52,112
+description note again that's best find
+one
+
+242
+00:14:53,012 --> 00:14:57,055
+are both these is now mandatory
+depending on which operation type it is
+
+243
+00:14:57,055 --> 00:15:01,063
+that your application supports the value
+is a string
+
+244
+00:15:01,063 --> 00:15:05,070
+describing to the user exactly why it is
+that you're at user's location
+
+245
+00:15:06,033 --> 00:15:09,100
+we believe that this is really going to
+help users understand how it is
+
+246
+00:15:10,000 --> 00:15:14,015
+that you're at user's location
+
+247
+00:15:14,015 --> 00:15:17,023
+moving on to the co-operation status in
+town
+
+248
+00:15:17,095 --> 00:15:20,133
+previously there are a number of values
+one of which was KCL
+
+249
+00:15:21,033 --> 00:15:24,084
+operation status authorize now
+
+250
+00:15:24,084 --> 00:15:27,153
+this is deprecated and replaced by two
+new values
+
+251
+00:15:28,053 --> 00:15:31,057
+authorized always and authorize wanting
+use
+
+252
+00:15:31,093 --> 00:15:34,157
+depending on which operation was
+requested by rap
+
+253
+00:15:35,057 --> 00:15:38,072
+and which authorization was granted by
+the user
+
+254
+00:15:38,072 --> 00:15:42,072
+accessing authorization status: for your
+app has not changed
+
+255
+00:15:42,072 --> 00:15:45,103
+this can be done either be a the class
+method
+
+256
+00:15:46,003 --> 00:15:49,010
+on CL location manager opposition status
+
+257
+00:15:49,001 --> 00:15:53,002
+or be a delegate call back the change
+authorization status:
+
+258
+00:15:53,011 --> 00:15:56,016
+on the co-manager delegate however
+
+259
+00:15:56,016 --> 00:15:59,034
+requesting authorization has changed
+
+260
+00:15:59,034 --> 00:16:04,096
+which brings us to the third interface
+change request authorization API
+
+261
+00:16:04,096 --> 00:16:09,114
+requesting authorization is now explicit
+either for always
+
+262
+00:16:10,014 --> 00:16:13,048
+or for one in years your app can make
+calls
+
+263
+00:16:13,048 --> 00:16:16,052
+to this request API's repeatedly however
+
+264
+00:16:16,088 --> 00:16:19,094
+it will only prompt to the user the
+first time
+
+265
+00:16:19,094 --> 00:16:23,120
+and not per type so if you support both
+operation types you need to carefully
+
+266
+00:16:24,002 --> 00:16:24,096
+consider
+
+267
+00:16:25,014 --> 00:16:29,046
+which you want to request in your app
+well before dawn this an example in just
+
+268
+00:16:29,046 --> 00:16:30,077
+a bit
+
+269
+00:16:30,077 --> 00:16:33,108
+so putting it all together there are
+three simple steps
+
+270
+00:16:34,008 --> 00:16:37,077
+to adopting a new authorization and I i
+say
+
+271
+00:16:37,077 --> 00:16:41,101
+first you want to decide which authorize
+a shit is that your app supports
+
+272
+00:16:42,001 --> 00:16:45,040
+by asking yourself these two questions
+
+273
+00:16:45,004 --> 00:16:48,063
+what location functionality does your
+app use
+
+274
+00:16:48,099 --> 00:16:51,166
+and is that a mandatory functionality or
+a nice to have functionality for your
+
+275
+00:16:52,066 --> 00:16:53,101
+app
+
+276
+00:16:54,001 --> 00:16:59,062
+second a you one explain it to your user
+exactly how you're at user's location
+
+277
+00:16:59,062 --> 00:17:04,065
+and third you wanna make the right call
+to request authorization
+
+278
+00:17:04,065 --> 00:17:07,076
+and you want to do it when needed
+
+279
+00:17:07,076 --> 00:17:10,165
+for example when you're out first
+launches don't make the request
+
+280
+00:17:11,065 --> 00:17:15,110
+you access location because the user
+won't understand why it is
+
+281
+00:17:16,001 --> 00:17:19,079
+your app is requesting location
+authorization and they may be inclined
+
+282
+00:17:19,088 --> 00:17:24,088
+to just deny that instead do in response
+to a specific user action
+
+283
+00:17:24,088 --> 00:17:27,115
+so that they have contact and in
+addition to the user's description
+
+284
+00:17:28,015 --> 00:17:29,036
+string that you provide
+
+285
+00:17:29,036 --> 00:17:32,128
+wire at user's location these are can
+then make an informed choice
+
+286
+00:17:33,028 --> 00:17:36,084
+whether to allow or disallow location
+access to be a
+
+287
+00:17:36,084 --> 00:17:40,143
+let's go through some examples first
+let's say you've developed this great
+
+288
+00:17:41,043 --> 00:17:41,128
+fitness app
+
+289
+00:17:42,028 --> 00:17:46,031
+that tracks users runs you want to start
+by first determining
+
+290
+00:17:46,058 --> 00:17:49,084
+how is that location issues obviously
+
+291
+00:17:49,084 --> 00:17:52,093
+this app is going to use location in
+addition is going to use back on the
+
+292
+00:17:53,074 --> 00:17:53,168
+occasion
+
+293
+00:17:54,068 --> 00:17:57,151
+in or that the user may home on your app
+and switch to the music app
+
+294
+00:17:58,051 --> 00:18:03,134
+and play their favorite tunes
+
+295
+00:18:04,034 --> 00:18:07,112
+so back from okay background location
+can be enabled the Xcode in the
+
+296
+00:18:08,012 --> 00:18:09,040
+capabilities tab
+
+297
+00:18:09,004 --> 00:18:12,085
+making sure that back Ryan Moats is on
+
+298
+00:18:13,021 --> 00:18:16,075
+and that location updates to selected
+alternatively
+
+299
+00:18:16,075 --> 00:18:19,075
+you can edit your information properly
+this for your app
+
+300
+00:18:19,075 --> 00:18:24,140
+specifying the UI back remote key with
+the value of location
+
+301
+00:18:25,004 --> 00:18:28,013
+second step is to add their property
+
+302
+00:18:28,049 --> 00:18:31,073
+he raps information properly this here
+in Xcode
+
+303
+00:18:31,073 --> 00:18:34,079
+will go to the information properly this
+editor
+
+304
+00:18:34,079 --> 00:18:37,123
+and add a new key for and its location
+whining use uses
+
+305
+00:18:38,023 --> 00:18:42,066
+description providing the description to
+the user at your location is used to
+
+306
+00:18:42,066 --> 00:18:42,071
+track
+
+307
+00:18:43,016 --> 00:18:47,075
+Iran and third the final step
+
+308
+00:18:47,075 --> 00:18:50,172
+is to make the appropriate API call to
+request operation
+
+309
+00:18:51,072 --> 00:18:54,167
+and do it when needed so here after
+crying your location manager setting a
+
+310
+00:18:55,067 --> 00:18:55,073
+delegate
+
+311
+00:18:56,027 --> 00:18:59,049
+and right before making a call to start
+updating location
+
+312
+00:18:59,049 --> 00:19:02,134
+all you need to do is make the call to
+request one in years authorization
+
+313
+00:19:03,034 --> 00:19:07,087
+pretty simple right let's move on to
+another example
+
+314
+00:19:07,087 --> 00:19:10,098
+let's say you've created this great
+welcome home now that's going to
+
+315
+00:19:10,098 --> 00:19:11,155
+automatically turn on the light
+
+316
+00:19:12,055 --> 00:19:16,083
+and maybe even unlock the front door
+when the user has arrived at home
+
+317
+00:19:16,083 --> 00:19:21,090
+again you want to start by determining
+how location is being used by route
+
+318
+00:19:21,009 --> 00:19:25,022
+in this case is using region monitoring
+didn't act 1 the user has arrived at
+
+319
+00:19:26,003 --> 00:19:27,071
+home
+
+320
+00:19:27,071 --> 00:19:30,074
+next you need to add the appropriate
+uses description key
+
+321
+00:19:30,074 --> 00:19:33,162
+to your apt information properly list
+again you go to
+
+322
+00:19:34,062 --> 00:19:37,097
+the information properly editor in Xcode
+and this time
+
+323
+00:19:37,097 --> 00:19:40,173
+a key for NS location always uses
+description
+
+324
+00:19:41,073 --> 00:19:44,171
+providing a description to the user here
+in this example your location is used to
+
+325
+00:19:45,071 --> 00:19:45,160
+determine
+
+326
+00:19:46,006 --> 00:19:49,024
+when you arrive home and finally
+
+327
+00:19:49,078 --> 00:19:52,151
+you wanna make the appropriate call to
+request authorization
+
+328
+00:19:53,051 --> 00:19:57,086
+and again do it as needed in this case
+right before the call
+
+329
+00:19:57,086 --> 00:20:00,149
+to start monitoring for region you want
+to add the call to request
+
+330
+00:20:01,049 --> 00:20:06,071
+always authorization again pretty
+straightforward
+
+331
+00:20:06,071 --> 00:20:10,087
+how about if you're up actually supports
+both authorization types
+
+332
+00:20:10,087 --> 00:20:13,143
+that saved about this great app for
+amusement park
+
+333
+00:20:14,043 --> 00:20:17,046
+in the general use case it'll show the
+apt current location
+
+334
+00:20:17,073 --> 00:20:21,076
+in the amusement park map but let's say
+you've developed this cool feature
+
+335
+00:20:21,076 --> 00:20:25,128
+that war additionally deliver a call
+information about nearby attractions to
+
+336
+00:20:26,028 --> 00:20:27,063
+the user
+
+337
+00:20:27,063 --> 00:20:30,139
+and in this case you want to determine
+exactly how it is that your app is using
+
+338
+00:20:31,039 --> 00:20:32,090
+location
+
+339
+00:20:32,009 --> 00:20:34,081
+obviously for the general use case
+displaying the user's location on the
+
+340
+00:20:35,062 --> 00:20:35,109
+map
+
+341
+00:20:36,009 --> 00:20:39,018
+you're using location but for that cool
+feature that tells them about cool
+
+342
+00:20:39,099 --> 00:20:40,140
+attractions nearby
+
+343
+00:20:41,004 --> 00:20:44,077
+you're going to be using region
+monitoring
+
+344
+00:20:45,013 --> 00:20:49,014
+so again we followed the same steps
+first one to add their proper uses
+
+345
+00:20:49,014 --> 00:20:50,033
+description case
+
+346
+00:20:50,033 --> 00:20:53,039
+to the apt information properly with
+again by going to the
+
+347
+00:20:53,093 --> 00:20:57,170
+properly this editor next code of our
+start by adding a key for NS
+
+348
+00:20:58,007 --> 00:21:02,061
+location one in use uses description
+specifying that your current location
+
+349
+00:21:03,024 --> 00:21:06,042
+is may be shown on the map
+
+350
+00:21:06,042 --> 00:21:10,108
+in addition to that because your app
+also supports always authorization
+
+351
+00:21:11,008 --> 00:21:14,016
+you add a key to and its location always
+use a subscription
+
+352
+00:21:14,088 --> 00:21:18,096
+again provide a description to why it is
+that you're at user's location
+
+353
+00:21:18,096 --> 00:21:21,118
+here this app will use your location
+information
+
+354
+00:21:22,018 --> 00:21:26,030
+to identify nearby attractions
+
+355
+00:21:26,003 --> 00:21:29,059
+so in your abt information proper list
+you actually have
+
+356
+00:21:29,086 --> 00:21:32,151
+both these uses description key is
+because your app supports both these
+
+357
+00:21:33,051 --> 00:21:35,084
+authorization types
+
+358
+00:21:35,084 --> 00:21:38,147
+and finally you wanna make the
+corresponding operational quest API
+
+359
+00:21:39,047 --> 00:21:39,120
+calls
+
+360
+00:21:40,002 --> 00:21:43,065
+again you want to do this when needed
+for example
+
+361
+00:21:43,083 --> 00:21:46,089
+in the map view that displays the museum
+part map
+
+362
+00:21:46,089 --> 00:21:50,094
+you want to right before start updating
+location
+
+363
+00:21:50,094 --> 00:21:54,171
+y'all make the call to request wanting
+you see authorization
+
+364
+00:21:55,071 --> 00:21:58,075
+and for that power user use case still
+
+365
+00:21:59,011 --> 00:22:02,097
+in response to user action perhaps the
+user is now
+
+366
+00:22:02,097 --> 00:22:05,170
+enabled the feature that enables the
+automatic
+
+367
+00:22:06,007 --> 00:22:10,014
+attraction in for mod that delivers
+information about right
+
+368
+00:22:11,004 --> 00:22:14,087
+times for the nearby attractions or
+store sales
+
+369
+00:22:15,023 --> 00:22:18,037
+or restaurant specials but in this case
+
+370
+00:22:18,037 --> 00:22:21,052
+you may want to check your apt
+operations that its first
+
+371
+00:22:21,052 --> 00:22:24,079
+because if it's denied or when in use
+
+372
+00:22:24,079 --> 00:22:27,136
+you need to tell the user that they need
+to authorize your app for always
+
+373
+00:22:28,036 --> 00:22:29,121
+operation
+
+374
+00:22:30,021 --> 00:22:33,110
+and in this case you may want to present
+an alert indicating that
+
+375
+00:22:34,001 --> 00:22:37,014
+an offer to take them directly to the
+settings ap
+
+376
+00:22:37,023 --> 00:22:40,062
+for your app's settings pane using that
+
+377
+00:22:40,062 --> 00:22:44,093
+mentioned open your all matted with the
+new UI application open settings you're
+
+378
+00:22:44,093 --> 00:22:45,151
+all strain
+
+379
+00:22:46,051 --> 00:22:50,115
+and then finally right before you start
+the call to start monitoring for region
+
+380
+00:22:51,015 --> 00:22:57,024
+you make the call to request always
+authorization
+
+381
+00:22:57,024 --> 00:23:00,103
+some additional details what if you
+wanna support both
+
+382
+00:23:01,003 --> 00:23:06,057
+Iowa 7 and Iowa State with your app all
+there are three things that you want to
+
+383
+00:23:06,057 --> 00:23:06,066
+consider
+
+384
+00:23:07,047 --> 00:23:10,064
+that line up with the three interface
+changes we discussed earlier
+
+385
+00:23:10,064 --> 00:23:13,077
+first you want to continue to provide
+the deprecated
+
+386
+00:23:13,077 --> 00:23:16,148
+and its location uses description string
+if you're doing so before
+
+387
+00:23:17,048 --> 00:23:20,064
+in addition to specify one or both
+
+388
+00:23:20,064 --> 00:23:26,082
+the new always use this description or
+when in use your sister ships in case
+
+389
+00:23:26,082 --> 00:23:30,094
+next you want to guard the request
+authorization API call with response a
+
+390
+00:23:30,094 --> 00:23:30,182
+selector
+
+391
+00:23:31,082 --> 00:23:34,093
+so that your Apple still work on iis7
+
+392
+00:23:34,093 --> 00:23:38,192
+here's a quick example of exactly how to
+do that
+
+393
+00:23:39,092 --> 00:23:42,108
+and third you want to continue to use
+the deprecated
+
+394
+00:23:43,008 --> 00:23:46,069
+Casey authorization status: authorized
+value
+
+395
+00:23:46,069 --> 00:23:52,112
+in addition to the new authorized always
+an authorized running use values
+
+396
+00:23:53,012 --> 00:23:56,023
+so I bet you're wondering what about
+legacy of support
+
+397
+00:23:56,023 --> 00:23:59,044
+what if you don't update your app but
+your user upgrades
+
+398
+00:23:59,044 --> 00:24:02,055
+his system to IOSA what's gonna happen
+
+399
+00:24:02,055 --> 00:24:05,129
+well your Apple still continue to work
+but
+
+400
+00:24:06,029 --> 00:24:09,035
+it will use always authorization
+
+401
+00:24:09,035 --> 00:24:13,244
+so you don't want to rely on this
+because 1 the user uses your app in
+
+402
+00:24:13,559 --> 00:24:15,480
+user's location for the first time
+
+403
+00:24:15,048 --> 00:24:18,057
+it's going to pop that dialogue asking
+for location access always
+
+404
+00:24:19,038 --> 00:24:22,126
+even if your app only uses one in use
+location functionality
+
+405
+00:24:23,026 --> 00:24:26,064
+such as location and the app or
+background location
+
+406
+00:24:26,064 --> 00:24:29,107
+arranging so you use them at that point
+
+407
+00:24:30,007 --> 00:24:33,103
+decide to disallow location usage so you
+don't want this to happen
+
+408
+00:24:34,003 --> 00:24:39,080
+you want to update your out now and you
+saw exactly how simple it is to do so
+
+409
+00:24:39,008 --> 00:24:43,025
+so what about updating your out you can
+change it supported authorization types
+
+410
+00:24:43,097 --> 00:24:45,104
+any time you update your app
+
+411
+00:24:46,067 --> 00:24:49,138
+and so on your user updates the version
+of the app
+
+412
+00:24:50,038 --> 00:24:54,096
+version of your app on his phone order
+or device
+
+413
+00:24:54,096 --> 00:24:57,165
+it will preserve the user's
+authorization if still supported
+
+414
+00:24:58,065 --> 00:25:01,117
+otherwise it will go from
+
+415
+00:25:02,017 --> 00:25:07,017
+always 21 in use for example if you're
+at no longer supports always operation
+
+416
+00:25:07,017 --> 00:25:10,109
+but now supports one in use and it'll go
+from one in years
+
+417
+00:25:11,009 --> 00:25:14,091
+to prompt again for example again after
+at no longer sports when used in this
+
+418
+00:25:14,091 --> 00:25:14,490
+case
+
+419
+00:25:15,309 --> 00:25:18,630
+and may now support always authorization
+
+420
+00:25:18,063 --> 00:25:23,076
+but again don't wait to adopt because if
+the user denies location access to your
+
+421
+00:25:23,076 --> 00:25:23,137
+app
+
+422
+00:25:24,037 --> 00:25:28,091
+it will stay denied even if you
+subsequently Changer app to support the
+
+423
+00:25:28,091 --> 00:25:28,143
+one in years
+
+424
+00:25:29,043 --> 00:25:33,130
+authorization type
+
+425
+00:25:34,003 --> 00:25:38,262
+so what about other frameworks for
+location is used
+
+426
+00:25:38,559 --> 00:25:42,200
+let's go back to the example welcome
+home out let's say
+
+427
+00:25:42,002 --> 00:25:45,010
+you don't want your apt to automatically
+turn on the lights
+
+428
+00:25:45,028 --> 00:25:48,064
+or even more dangerously unlock the
+front door automatically
+
+429
+00:25:48,064 --> 00:25:51,069
+instead all you want to do is notify the
+user
+
+430
+00:25:51,069 --> 00:25:55,140
+and let them decide to choose to take
+action on that notification
+
+431
+00:25:56,004 --> 00:25:59,040
+in this case your app actually doesn't
+need to be launched just the
+
+432
+00:25:59,076 --> 00:26:00,175
+notification is to be provided
+
+433
+00:26:01,075 --> 00:26:05,083
+and now and I O S eight we've added a
+region-based triggering
+
+434
+00:26:05,083 --> 00:26:08,142
+to you I local notifications via the
+specification
+
+435
+00:26:09,042 --> 00:26:13,058
+are the see all region property on the
+UI local notification
+
+436
+00:26:13,058 --> 00:26:17,063
+in this case here at doesn't need always
+authorization because your Apple not be
+
+437
+00:26:18,008 --> 00:26:18,060
+launched
+
+438
+00:26:18,006 --> 00:26:21,033
+in response the region monitoring
+instead the system will provide the
+
+439
+00:26:21,087 --> 00:26:22,154
+notification that you specified
+
+440
+00:26:23,054 --> 00:26:26,087
+to be provided to the user on behalf
+
+441
+00:26:26,087 --> 00:26:29,101
+and only one the user decides to respond
+to that notification
+
+442
+00:26:30,001 --> 00:26:34,064
+and launcher app we are at actually be
+in use
+
+443
+00:26:34,064 --> 00:26:38,139
+so you think this API requires either
+authorization always are one in years
+
+444
+00:26:39,039 --> 00:26:43,090
+but only nature ap to be supported for
+wanting use authorization
+
+445
+00:26:43,009 --> 00:26:47,034
+and the steps to use this API are the
+same as any other location functionality
+
+446
+00:26:48,015 --> 00:26:51,099
+you want to specify the desired uses
+description key
+
+447
+00:26:51,099 --> 00:26:54,132
+here in populous with a text string
+describing how is your
+
+448
+00:26:55,032 --> 00:26:59,108
+app uses location and call the
+corresponding authorization request API
+
+449
+00:27:00,008 --> 00:27:03,012
+as needed
+
+450
+00:27:03,012 --> 00:27:07,055
+what if you use and came out to you and
+your app to display a map view
+
+451
+00:27:07,055 --> 00:27:11,083
+what the user's current location year
+the show's user location
+
+452
+00:27:11,083 --> 00:27:15,085
+property on the MK map view class
+
+453
+00:27:16,003 --> 00:27:19,040
+again this requires either authorization
+
+454
+00:27:19,004 --> 00:27:23,060
+for your app but only needs your apt 3
+authorized for wanting you
+
+455
+00:27:23,096 --> 00:27:26,184
+authorization and the same steps as
+before
+
+456
+00:27:27,084 --> 00:27:30,176
+you need to specify which authorization
+your app supports
+
+457
+00:27:31,076 --> 00:27:34,084
+in your perhaps information property
+list
+
+458
+00:27:34,084 --> 00:27:37,553
+and make the corresponding API call to
+request operation
+
+459
+00:27:38,309 --> 00:27:43,640
+when needed one last 1i like to talk
+about web views
+
+460
+00:27:43,064 --> 00:27:46,158
+to allow web content that uses html5
+geolocation
+
+461
+00:27:47,058 --> 00:27:50,114
+to access the user's current location
+
+462
+00:27:51,014 --> 00:27:55,047
+this one also requires either
+authorization but again only needs the
+
+463
+00:27:55,047 --> 00:27:55,103
+one in years
+
+464
+00:27:56,003 --> 00:27:59,057
+authorization again you specify
+
+465
+00:27:59,057 --> 00:28:03,074
+in your abs information properly this
+uses description key is relevant
+
+466
+00:28:03,074 --> 00:28:06,075
+with a text description why it is that
+your app would like to use the user's
+
+467
+00:28:06,075 --> 00:28:07,116
+location
+
+468
+00:28:08,016 --> 00:28:12,088
+however in this case the authorization
+request will be made automatically for
+
+469
+00:28:12,088 --> 00:28:12,162
+one in use
+
+470
+00:28:13,062 --> 00:28:17,134
+on your behalf because you may not know
+when the user navigates to a web page
+
+471
+00:28:18,034 --> 00:28:21,060
+that uses geolocation however
+
+472
+00:28:21,006 --> 00:28:24,033
+if your app users of always operation
+
+473
+00:28:24,087 --> 00:28:27,133
+you want to make that operators in a
+request in advance
+
+474
+00:28:28,033 --> 00:28:32,071
+if so desired
+
+475
+00:28:32,071 --> 00:28:37,082
+so a quick recap get ready for the
+location of radiation changes that are
+
+476
+00:28:37,082 --> 00:28:38,126
+coming and I i say
+
+477
+00:28:39,026 --> 00:28:42,047
+by following these 3 simple steps: first
+
+478
+00:28:42,047 --> 00:28:45,060
+think about how you're at user's
+location
+
+479
+00:28:45,006 --> 00:28:48,029
+second explain it to your users
+
+480
+00:28:48,083 --> 00:28:53,152
+and third and finally make the call to
+request authorization
+
+481
+00:28:54,052 --> 00:28:58,076
+don't weigh do it today and then if you
+have any questions
+
+482
+00:28:58,076 --> 00:29:02,245
+on Thursday you can come to us in our
+lab session here this week at WWC
+
+483
+00:29:02,929 --> 00:29:06,040
+with any issues or questions that you
+encounter
+
+484
+00:29:06,004 --> 00:29:09,097
+next I'd like to introduce Brad is here
+to talk about
+
+485
+00:29:09,097 --> 00:29:12,171
+visit monitoring thank Stephen I'm Brad
+Jensen
+
+486
+00:29:13,071 --> 00:29:16,109
+I'm a core location engineer and I'm
+excited to introduce to you
+
+487
+00:29:17,009 --> 00:29:22,010
+visit monitoring but first I wanna ride
+a nap with you
+
+488
+00:29:22,001 --> 00:29:25,053
+see Apple engineers aren't allowed to
+publish shops and i really wanna
+
+489
+00:29:25,062 --> 00:29:27,371
+journaling up so you're gonna have to
+help me out with this
+
+490
+00:29:27,929 --> 00:29:33,210
+journaling ups are really interesting to
+me but more importantly
+
+491
+00:29:33,021 --> 00:29:37,039
+they're a great example visit monitoring
+it's a great
+
+492
+00:29:37,039 --> 00:29:41,061
+type app that makes use of this new
+technology so what constitutes
+
+493
+00:29:41,061 --> 00:29:44,069
+a journal yep well first and foremost
+
+494
+00:29:44,069 --> 00:29:47,072
+it's got to provide the user a list of
+locations
+
+495
+00:29:47,072 --> 00:29:51,076
+where they've been during the day but
+more importantly
+
+496
+00:29:52,012 --> 00:29:55,041
+that list of locations needs to be
+relevant to them if
+
+497
+00:29:55,041 --> 00:29:58,310
+we list every time they stopped at the
+intersection or stop sign
+
+498
+00:29:58,679 --> 00:30:01,767
+then they're not going to find that list
+especially useful
+
+499
+00:30:02,559 --> 00:30:05,770
+finally we want to make sure that our
+journey up
+
+500
+00:30:05,077 --> 00:30:08,236
+can last all day if it's gonna drain
+users battery and
+
+501
+00:30:08,929 --> 00:30:12,870
+two to three hours it's not going to be
+very useful
+
+502
+00:30:12,087 --> 00:30:15,176
+so let's take a look at the different
+qualification API's that exist today
+
+503
+00:30:16,076 --> 00:30:19,080
+and you'll see why none of them really
+work well for journaling aP's
+
+504
+00:30:19,008 --> 00:30:22,031
+if you're working on a check a nap you
+might find this of
+
+505
+00:30:23,003 --> 00:30:26,049
+familiar first up
+
+506
+00:30:26,049 --> 00:30:29,085
+is a standard location service this is
+where we provide your app with
+
+507
+00:30:29,085 --> 00:30:32,149
+periodic location updates as they become
+available
+
+508
+00:30:33,049 --> 00:30:36,061
+naturally if we're going to be providing
+updates throughout this requires the
+
+509
+00:30:36,061 --> 00:30:37,135
+phone to be awake
+
+510
+00:30:38,035 --> 00:30:41,120
+and even more importantly the radios
+have to stay awake
+
+511
+00:30:42,002 --> 00:30:45,047
+we have to periodically scan for WiFi
+networks
+
+512
+00:30:45,065 --> 00:30:49,138
+for cell towers or GPS
+
+513
+00:30:50,038 --> 00:30:54,051
+now all this is fairly expensive and
+that means that
+
+514
+00:30:54,051 --> 00:30:57,137
+the app is going to be consuming a lot
+of power
+
+515
+00:30:58,037 --> 00:31:02,072
+in addition the app is going to receive
+a lot of irrelevant data
+
+516
+00:31:02,072 --> 00:31:05,113
+you're going to have to take this stream
+of locations and try and make sense it
+
+517
+00:31:06,013 --> 00:31:11,022
+try and identify those locations that
+are probably significant to the user
+
+518
+00:31:11,022 --> 00:31:14,050
+so this isn't really a good fit for a
+journaling up
+
+519
+00:31:14,005 --> 00:31:17,043
+but if we were instead writing in
+navigation app
+
+520
+00:31:17,088 --> 00:31:19,177
+this would make a lot of sense you need
+the most up to date information
+
+521
+00:31:20,077 --> 00:31:21,110
+available
+
+522
+00:31:22,001 --> 00:31:26,053
+in order to tell the user went to make
+their next move
+
+523
+00:31:26,062 --> 00:31:29,501
+before we totally throw out standard
+location service for
+
+524
+00:31:30,059 --> 00:31:34,240
+a journaling ups their couple
+improvement we might consider
+
+525
+00:31:34,024 --> 00:31:37,042
+a while ago we introduced the automatic
+pas feature
+
+526
+00:31:37,042 --> 00:31:40,108
+this allows qualification to save power
+by
+
+527
+00:31:41,008 --> 00:31:45,023
+parking location updates once that's
+determined that the device probably
+
+528
+00:31:45,023 --> 00:31:47,061
+isn't in motion anymore
+
+529
+00:31:47,061 --> 00:31:50,069
+this is really exciting because it means
+well we get to save power
+
+530
+00:31:51,041 --> 00:31:54,107
+device gets to keep journaling longer
+unfortunately
+
+531
+00:31:55,007 --> 00:31:58,015
+once the user starts moving again your
+Apple have to resume those location
+
+532
+00:31:58,087 --> 00:32:02,026
+updates
+
+533
+00:32:02,809 --> 00:32:06,090
+and so we won't actually help
+
+534
+00:32:06,009 --> 00:32:09,040
+or this one actually save standard
+location service in terms of writing
+
+535
+00:32:09,004 --> 00:32:09,043
+during
+
+536
+00:32:09,079 --> 00:32:12,085
+caps if we were writing that navigation
+app however
+
+537
+00:32:13,039 --> 00:32:17,064
+this would be a huge win once the user
+stopped at a gas station
+
+538
+00:32:17,064 --> 00:32:20,151
+automatic pas will save their phones
+battery
+
+539
+00:32:21,051 --> 00:32:24,108
+another option we might consider is the
+first location updates
+
+540
+00:32:25,008 --> 00:32:29,008
+this one is really interesting as well
+it allows call location to save power by
+
+541
+00:32:29,008 --> 00:32:29,051
+weight
+
+542
+00:32:29,051 --> 00:32:32,060
+waking up your app less up wake up
+scoffed power
+
+543
+00:32:33,041 --> 00:32:37,053
+and so fewer app launches means more
+power saved
+
+544
+00:32:37,053 --> 00:32:41,202
+unfortunately generating locations is
+still quite expensive
+
+545
+00:32:41,679 --> 00:32:44,970
+and so even though we're saving power by
+not watching your ap every time there's
+
+546
+00:32:44,097 --> 00:32:44,173
+new data
+
+547
+00:32:45,073 --> 00:32:48,107
+were still generating all those
+locations and
+
+548
+00:32:49,007 --> 00:32:53,029
+not especially great sup
+
+549
+00:32:53,029 --> 00:32:56,100
+for location updates aren't exactly what
+we want
+
+550
+00:32:57,000 --> 00:33:00,549
+however if we were writing a fitness app
+
+551
+00:33:00,549 --> 00:33:04,570
+they would be great if you're writing a1
+Tracker app
+
+552
+00:33:04,057 --> 00:33:07,124
+you don't necessarily need the latest
+location the moment it's available
+
+553
+00:33:08,024 --> 00:33:14,029
+you might be OK to receive it every mile
+or every 15 minutes or so
+
+554
+00:33:14,029 --> 00:33:17,029
+art what else do we have for us well
+
+555
+00:33:17,029 --> 00:33:20,120
+there's the standard are the significant
+location change API
+
+556
+00:33:21,002 --> 00:33:25,010
+this one is a lot more power efficient
+than continuous location updates
+
+557
+00:33:25,028 --> 00:33:28,070
+but there's a cost to this instead love
+getting
+
+558
+00:33:28,007 --> 00:33:32,023
+all of the data you get very course
+tracks where the user went
+
+559
+00:33:32,086 --> 00:33:36,098
+specifically you only get location
+updates every few hundred meters
+
+560
+00:33:36,098 --> 00:33:40,104
+device moves this is going to make it
+incredibly difficult for us to identify
+
+561
+00:33:41,058 --> 00:33:43,067
+places that the user stopped at
+
+562
+00:33:43,067 --> 00:33:48,114
+sense when the user stopped we stop
+getting updates here up
+
+563
+00:33:49,014 --> 00:33:52,100
+if we're writing a different app for
+example one that showed the user
+
+564
+00:33:53,000 --> 00:33:57,007
+the path they took home maybe identifies
+them freeways they drove on
+
+565
+00:33:57,007 --> 00:34:00,075
+then significant location changes would
+make a lot of sense
+
+566
+00:34:00,075 --> 00:34:05,107
+but we're working on it turning up today
+so we're gonna have to keep looking
+
+567
+00:34:06,007 --> 00:34:09,826
+our last option is region monitoring
+region monitoring
+
+568
+00:34:09,889 --> 00:34:13,190
+is really cool because it's highly
+power-efficient
+
+569
+00:34:13,019 --> 00:34:17,188
+region monitoring can continue while the
+phone is asleep
+
+570
+00:34:17,359 --> 00:34:21,405
+and Europe only receives information
+that is directly relevant to it
+
+571
+00:34:21,819 --> 00:34:26,310
+unfortunately you have to specify which
+locations are interesting here
+
+572
+00:34:26,031 --> 00:34:29,050
+and that won't exactly work for our use
+case because
+
+573
+00:34:29,005 --> 00:34:32,104
+we want to know about all the
+interesting locations these are my go to
+
+574
+00:34:33,049 --> 00:34:38,060
+and there are far too many interesting
+places to monitor for them all
+
+575
+00:34:38,006 --> 00:34:41,098
+so that's all that core location has
+today to give up
+
+576
+00:34:42,052 --> 00:34:46,053
+I have to give up on my dream ap not yet
+there's another one
+
+577
+00:34:46,053 --> 00:34:49,119
+we're introducing today visit monitoring
+
+578
+00:34:50,019 --> 00:34:53,025
+what makes visit monitoring different
+from the other core location API's
+
+579
+00:34:53,079 --> 00:34:56,908
+is that it monitors for destinations
+
+580
+00:34:57,619 --> 00:35:02,260
+so instead of giving you information
+about a how the user got from a to be
+
+581
+00:35:02,026 --> 00:35:06,120
+it gives you information about a and B
+
+582
+00:35:07,002 --> 00:35:10,021
+it will launcher app when it detects
+that the user has departed from a
+
+583
+00:35:10,039 --> 00:35:12,057
+location or ride a new one
+
+584
+00:35:12,057 --> 00:35:18,109
+and so naturally this will require
+always authorization
+
+585
+00:35:19,009 --> 00:35:22,055
+visit monitoring is incredibly powerful
+chant
+
+586
+00:35:22,055 --> 00:35:25,122
+we employ all sorts of neat tricks
+behind the scenes to ensure this
+
+587
+00:35:26,022 --> 00:35:31,070
+for example while the device is asleep
+periodically performs wifi scan
+
+588
+00:35:31,007 --> 00:35:35,014
+if visit monitoring is active were able
+to harvest all those scans that would
+
+589
+00:35:35,077 --> 00:35:36,169
+otherwise have not generated locations
+
+590
+00:35:37,069 --> 00:35:41,117
+and use them to enhance our visit
+detection
+
+591
+00:35:42,017 --> 00:35:45,020
+visit monitoring is also opportunistic
+so
+
+592
+00:35:45,002 --> 00:35:48,009
+if you're up is using his monitoring and
+use our polls out maps and start
+
+593
+00:35:48,009 --> 00:35:49,017
+navigating
+
+594
+00:35:49,098 --> 00:35:53,177
+all the locations that maps request are
+fed into the visit detection algorithm
+
+595
+00:35:54,077 --> 00:35:56,151
+and so you're ap benefits from other app
+seems
+
+596
+00:35:57,051 --> 00:36:00,115
+location finally
+
+597
+00:36:01,015 --> 00:36:04,069
+it utilizes information from across the
+entire system
+
+598
+00:36:04,069 --> 00:36:08,118
+for example suppose the user arrives
+home and plugs in their phone to start
+
+599
+00:36:09,018 --> 00:36:10,041
+charging
+
+600
+00:36:10,041 --> 00:36:12,140
+it's much more likely that the user
+would consider this location where they
+
+601
+00:36:13,004 --> 00:36:13,087
+started charging
+
+602
+00:36:14,023 --> 00:36:17,121
+to be an important part of their day and
+so will use that as a hint
+
+603
+00:36:18,021 --> 00:36:21,022
+that the user has just arrived somewhere
+when we see
+
+604
+00:36:21,031 --> 00:36:25,059
+hence will trigger a rival events much
+more readily
+
+605
+00:36:25,059 --> 00:36:29,075
+finally I'd like to point out that visit
+laundering is not tied to
+
+606
+00:36:29,075 --> 00:36:34,091
+landmarks I mean when you receive
+information about a location
+
+607
+00:36:34,091 --> 00:36:37,095
+it's not necessarily an intrinsically
+interesting location
+
+608
+00:36:38,031 --> 00:36:41,097
+it's just a location which is
+interesting because the user has spent
+
+609
+00:36:41,097 --> 00:36:42,104
+time there
+
+610
+00:36:43,004 --> 00:36:46,009
+or we've seen some hints which indicate
+the user might
+
+611
+00:36:46,009 --> 00:36:49,084
+think it's interesting so
+
+612
+00:36:49,084 --> 00:36:52,085
+let's look at what a visit actually is
+
+613
+00:36:52,094 --> 00:36:56,169
+suppose your user has a turn on his
+monitoring through your
+
+614
+00:36:57,069 --> 00:37:00,127
+and they decide they want to go get a
+cup of coffee so they start walking from
+
+615
+00:37:01,027 --> 00:37:01,096
+their home
+
+616
+00:37:01,096 --> 00:37:05,195
+to the coffee shop at some point core
+location will get its first location
+
+617
+00:37:06,095 --> 00:37:09,104
+on the user at the coffee shop I don't
+know about you but I can't see the
+
+618
+00:37:10,085 --> 00:37:10,168
+future
+
+619
+00:37:11,068 --> 00:37:14,141
+and so court location is going to have
+to wait a little while before can say
+
+620
+00:37:15,041 --> 00:37:17,117
+for sure whether the user is passing by
+the coffee shop
+
+621
+00:37:18,017 --> 00:37:22,019
+or whether they're they're to stay for
+some time after we get a little bit more
+
+622
+00:37:22,019 --> 00:37:22,094
+data
+
+623
+00:37:22,094 --> 00:37:26,023
+it becomes clear that yes the user
+intends to say at the coffee shop for a
+
+624
+00:37:26,869 --> 00:37:27,560
+while
+
+625
+00:37:27,056 --> 00:37:30,078
+maybe it's time to notify synapse at
+this point
+
+626
+00:37:30,078 --> 00:37:34,083
+Core Location launcher app and provided
+some information about the arrival
+
+627
+00:37:35,028 --> 00:37:38,037
+most importantly however it will do its
+best estimate the true arrival time of
+
+628
+00:37:39,018 --> 00:37:39,106
+the user
+
+629
+00:37:40,006 --> 00:37:44,010
+at the location departures work
+similarly
+
+630
+00:37:44,001 --> 00:37:47,007
+after some amount of time we'll get our
+last location
+
+631
+00:37:47,007 --> 00:37:51,009
+a the user at the coffee shop but core
+location will
+
+632
+00:37:51,072 --> 00:37:53,171
+wait until it gets a little bit more
+data and totes sure that the user has
+
+633
+00:37:54,071 --> 00:37:55,080
+left
+
+634
+00:37:55,008 --> 00:37:58,103
+at that point we want wake you up again
+and will provide a departure
+
+635
+00:37:59,075 --> 00:37:59,174
+notification
+
+636
+00:38:00,074 --> 00:38:05,140
+doing our best estimate the true time
+when the user left the location
+
+637
+00:38:06,004 --> 00:38:10,063
+sup let's take a look at the API we've
+added two new methods to the location
+
+638
+00:38:10,099 --> 00:38:11,106
+manager
+
+639
+00:38:12,006 --> 00:38:15,013
+specifically start monitoring visits and
+
+640
+00:38:15,013 --> 00:38:18,108
+stop monitoring visits when we have
+information to deliver to your app
+
+641
+00:38:19,008 --> 00:38:23,056
+will do it through the new delegate
+method location manager did visit
+
+642
+00:38:23,056 --> 00:38:26,108
+some of you may have noticed there's a
+new class and that method signature
+
+643
+00:38:27,008 --> 00:38:30,105
+specifically field visit let's take a
+look at that
+
+644
+00:38:31,005 --> 00:38:34,010
+sealed is it is a fairly simple class
+it's got four properties
+
+645
+00:38:34,055 --> 00:38:37,109
+the first two our arrival date and
+departure date
+
+646
+00:38:38,009 --> 00:38:42,074
+these described when the user arrived
+and departed respectively
+
+647
+00:38:42,074 --> 00:38:46,122
+the cornet which represents the place
+the user was visiting
+
+648
+00:38:47,022 --> 00:38:50,043
+and horizontal accuracy which is an
+estimate
+
+649
+00:38:50,043 --> 00:38:54,049
+the air on the location on the court in
+it
+
+650
+00:38:55,003 --> 00:38:59,010
+a few things you might want to know
+about this monitoring
+
+651
+00:38:59,001 --> 00:39:04,010
+the values the pores on 20 accuracy and
+corn it may differ between arrival event
+
+652
+00:39:04,109 --> 00:39:07,260
+and a departure and this shouldn't be
+too surprising
+
+653
+00:39:07,026 --> 00:39:10,104
+these are estimates based on the data we
+have seen and as we get more data
+
+654
+00:39:11,004 --> 00:39:14,006
+will be able to produce better estimates
+
+655
+00:39:14,006 --> 00:39:17,051
+you should also note that horizontal
+accuracy should be
+
+656
+00:39:17,051 --> 00:39:20,147
+no worse then the horizontal accuracy on
+a wifi base position
+
+657
+00:39:21,047 --> 00:39:24,110
+so if you find wifi dispositions are
+suitable for
+
+658
+00:39:25,001 --> 00:39:31,036
+your app this monitoring will probably
+produce things people value
+
+659
+00:39:31,045 --> 00:39:34,046
+naturally since this is a background
+
+660
+00:39:34,055 --> 00:39:37,101
+monitoring service well launcher app
+even if it's been quiet as Stephen
+
+661
+00:39:38,001 --> 00:39:39,073
+mentioned
+
+662
+00:39:39,073 --> 00:39:42,134
+in addition if the phone is rebooted or
+your app crashes
+
+663
+00:39:43,034 --> 00:39:48,077
+will still launch it and provide it with
+this information
+
+664
+00:39:48,077 --> 00:39:51,142
+you should also know that there are
+cases in which visit monitoring my
+
+665
+00:39:52,042 --> 00:39:52,104
+detect
+
+666
+00:39:53,004 --> 00:39:56,072
+multiple visit events at the same time
+and deliver them to you up
+
+667
+00:39:56,072 --> 00:39:59,121
+in a single large so when you receive is
+it
+
+668
+00:40:00,021 --> 00:40:03,100
+you should be prepared to handle
+multiple
+
+669
+00:40:04,000 --> 00:40:07,077
+you may have noticed that field is it
+doesn't had a is arrival or
+
+670
+00:40:07,077 --> 00:40:10,152
+his departure property so let's take a
+look at how you can determine whether
+
+671
+00:40:11,052 --> 00:40:12,150
+visit represents an arrival meant
+
+672
+00:40:13,005 --> 00:40:17,022
+or departure vent the secrets to look
+
+673
+00:40:17,067 --> 00:40:20,088
+at the arrival date and departure date
+properties
+
+674
+00:40:20,088 --> 00:40:23,090
+on arrival notification the arrival date
+will
+
+675
+00:40:24,008 --> 00:40:27,777
+unsurprisingly be our best estimate when
+the user a ride
+
+676
+00:40:27,849 --> 00:40:32,590
+the departure date however will be an
+estate distant future
+
+677
+00:40:32,059 --> 00:40:37,078
+our departure notification the departure
+date will be our best estimate
+
+678
+00:40:37,078 --> 00:40:41,397
+the arrival date I I'd like to point out
+could be distant past
+
+679
+00:40:42,099 --> 00:40:47,590
+this happens if your app wasn't
+authorized for the arrival moment
+
+680
+00:40:47,059 --> 00:40:52,070
+so how do we check if 8 cyl visit
+represents an arrival or departure
+
+681
+00:40:52,007 --> 00:40:55,926
+you simply compare the departure date
+too distant future
+
+682
+00:40:56,619 --> 00:41:00,290
+now let's get back to that app there
+should be a
+
+683
+00:41:00,029 --> 00:41:03,090
+four steps implementing it first
+
+684
+00:41:03,009 --> 00:41:06,718
+we need to adopt a new authorization
+model that Stephen described
+
+685
+00:41:07,609 --> 00:41:11,580
+after that we need to create our
+location manager
+
+686
+00:41:11,058 --> 00:41:14,071
+writer Spartans taught math its and
+finally
+
+687
+00:41:14,071 --> 00:41:19,970
+handle the visits that are delivered by
+core location
+
+688
+00:41:20,609 --> 00:41:24,330
+adopting the new authorization isn't too
+difficult the hardest part
+
+689
+00:41:24,033 --> 00:41:27,055
+is coming up with a great way to
+describe your users how you intend to
+
+690
+00:41:27,055 --> 00:41:28,061
+use their location
+
+691
+00:41:29,015 --> 00:41:32,082
+for this example journaling up we might
+say this at major locations
+
+692
+00:41:32,082 --> 00:41:37,114
+automatically detect the places you
+visit during your day
+
+693
+00:41:38,014 --> 00:41:41,015
+after that we create our location
+manager
+
+694
+00:41:41,024 --> 00:41:44,041
+I went ahead and did that in the
+application delegate
+
+695
+00:41:44,041 --> 00:41:50,070
+because it provides a great main thread
+context for us allocated in
+
+696
+00:41:50,007 --> 00:41:53,050
+the Spartans methods are fairly simple
+the only catch is you have to remember
+
+697
+00:41:54,013 --> 00:41:54,752
+to request
+
+698
+00:41:54,869 --> 00:41:57,880
+always authorization and the stop
+
+699
+00:41:57,088 --> 00:42:01,096
+is even easier you just call stop
+monitoring visits
+
+700
+00:42:01,096 --> 00:42:04,142
+finally the delegate this is where
+
+701
+00:42:05,042 --> 00:42:08,089
+you take over
+
+702
+00:42:08,089 --> 00:42:12,094
+please keep in mind that background
+execution time is limited and as I
+
+703
+00:42:12,094 --> 00:42:14,145
+mentioned you may receive multiple
+visits
+
+704
+00:42:15,045 --> 00:42:19,116
+so you shouldn't kick off some
+long-running computationally expensive
+
+705
+00:42:20,016 --> 00:42:23,108
+processing task here for a simple
+journaling up it might be best to just
+
+706
+00:42:24,008 --> 00:42:25,051
+record this visit
+
+707
+00:42:25,051 --> 00:42:28,056
+in a database and then save it for later
+when the user
+
+708
+00:42:28,056 --> 00:42:31,064
+actually launch is your up
+
+709
+00:42:31,064 --> 00:42:34,108
+if you're writing a check a nap now
+might be a good time
+
+710
+00:42:35,008 --> 00:42:38,025
+to take a look at the location see if
+it's accurate enough for you to actually
+
+711
+00:42:38,025 --> 00:42:39,394
+determine
+
+712
+00:42:39,619 --> 00:42:43,270
+if the user's at a specific restaurant
+for example
+
+713
+00:42:43,027 --> 00:42:46,052
+and then maybe fire offer you our local
+notification saying
+
+714
+00:42:46,052 --> 00:42:50,121
+would you like to check in
+
+715
+00:42:51,021 --> 00:42:54,024
+before I give the stage back to Stephen
+
+716
+00:42:54,024 --> 00:42:56,883
+and like to give you some advice from
+the court location pain about this
+
+717
+00:42:57,099 --> 00:42:58,500
+monitoring
+
+718
+00:42:58,005 --> 00:43:01,078
+visit monitoring is not a replacement
+for region monitoring
+
+719
+00:43:02,023 --> 00:43:05,104
+if you're currently using region
+monitoring to receive useful information
+
+720
+00:43:06,004 --> 00:43:10,047
+about the user riding after departing
+from specific locations
+
+721
+00:43:10,047 --> 00:43:13,141
+you should continue to do so region
+monitoring is more power-efficient
+
+722
+00:43:14,041 --> 00:43:19,042
+and will give you more timely
+information about those events
+
+723
+00:43:19,042 --> 00:43:23,089
+in addition visit monitoring is not a
+replacement for significant location
+
+724
+00:43:23,089 --> 00:43:23,167
+changes
+
+725
+00:43:24,067 --> 00:43:27,102
+they provide you very different
+information significant location changes
+
+726
+00:43:28,002 --> 00:43:28,070
+is about
+
+727
+00:43:28,007 --> 00:43:31,033
+the path the user took whereas visit
+monitoring is about
+
+728
+00:43:31,096 --> 00:43:34,189
+the destination
+
+729
+00:43:35,089 --> 00:43:38,167
+so what do you do when you encounter new
+technology you should try it out
+
+730
+00:43:39,067 --> 00:43:42,067
+and evaluate it for your use case see if
+his
+
+731
+00:43:42,067 --> 00:43:46,089
+monitoring cover something that you the
+rap needs
+
+732
+00:43:46,089 --> 00:43:49,141
+then on Thursday we're hosting
+
+733
+00:43:50,041 --> 00:43:53,114
+allowed you should come to our lab
+session bring any questions you
+
+734
+00:43:54,014 --> 00:43:57,019
+might have any problems you might have
+encountered and we'll do our best to
+
+735
+00:43:57,019 --> 00:43:57,107
+help you get your app
+
+736
+00:43:58,007 --> 00:44:02,105
+up and running finally
+
+737
+00:44:03,005 --> 00:44:07,041
+please respect our users privacy this is
+an incredible technology that will give
+
+738
+00:44:07,041 --> 00:44:07,094
+you up
+
+739
+00:44:07,094 --> 00:44:10,097
+a new level location awareness but
+
+740
+00:44:11,024 --> 00:44:14,071
+you should try to respect our users
+privacy
+
+741
+00:44:14,071 --> 00:44:18,120
+just because you can obtain this data
+doesn't mean you necessarily should
+
+742
+00:44:19,002 --> 00:44:22,007
+if you have any questions there's going
+to be a session about
+
+743
+00:44:22,007 --> 00:44:26,089
+security and privacy later this week I
+highly recommend you attended
+
+744
+00:44:27,052 --> 00:44:30,076
+with that I'd like to invite Stephen
+back up onto the stage to tell you about
+
+745
+00:44:30,076 --> 00:44:32,077
+what's next
+
+746
+00:44:32,077 --> 00:44:37,077
+thank you Brad so what else is new
+incall location and I i say
+
+747
+00:44:37,077 --> 00:44:40,128
+although is that they're bullet point we
+talked about indoor positioning
+
+748
+00:44:41,028 --> 00:44:44,029
+unfortunately we don't have enough time
+to cover that in this session
+
+749
+00:44:44,038 --> 00:44:48,073
+in summary we talked about location
+authorization and changes
+
+750
+00:44:48,073 --> 00:44:51,442
+and recall that there are just three
+steps and you need to follow to adopt
+
+751
+00:44:52,099 --> 00:44:53,920
+the changes and I i say
+
+752
+00:44:53,092 --> 00:44:56,126
+first you want to think about how your
+app uses location
+
+753
+00:44:57,026 --> 00:45:00,885
+second you wanna explain it to your
+users and third
+
+754
+00:45:01,119 --> 00:45:05,720
+you wanna make the call to request
+authorization and you try this out today
+
+755
+00:45:05,072 --> 00:45:08,115
+because come Thursday you can come back
+to us if any questions or issues that
+
+756
+00:45:09,015 --> 00:45:09,964
+you encounter
+
+757
+00:45:10,099 --> 00:45:14,910
+in our lab session we also talked about
+this in monitoring
+
+758
+00:45:14,091 --> 00:45:17,280
+take the opportunity to assess your
+app's needs for location
+
+759
+00:45:18,099 --> 00:45:21,990
+and see if this visit monitoring is cool
+technology is something that your app
+
+760
+00:45:21,099 --> 00:45:23,103
+can take advantage of
+
+761
+00:45:24,003 --> 00:45:27,099
+but again remember as prime mention to
+respect your users privacy
+
+762
+00:45:27,099 --> 00:45:30,168
+and also on this one give it a try see
+what you can do
+
+763
+00:45:31,068 --> 00:45:34,073
+and then come back to us on Thursday
+what sample code or any issues or
+
+764
+00:45:34,073 --> 00:45:35,084
+questions that you have
+
+765
+00:45:35,084 --> 00:45:39,143
+regarding this new API for more
+information
+
+766
+00:45:40,043 --> 00:45:44,077
+check out our great documentation online
+we have the core location framework
+
+767
+00:45:44,077 --> 00:45:45,077
+reference
+
+768
+00:45:45,077 --> 00:45:48,152
+which is updated with everything that we
+talked about today
+
+769
+00:45:49,052 --> 00:45:53,088
+we also have a location and maps program
+guide which is always being updated of
+
+770
+00:45:53,088 --> 00:45:55,121
+new and useful information
+
+771
+00:45:56,021 --> 00:46:01,047
+and as always visit the Apple Developer
+forms
+
+772
+00:46:01,047 --> 00:46:04,055
+for related sessions we have a number
+that we highly recommend
+
+773
+00:46:05,027 --> 00:46:08,074
+the first on the modern like it API
+unfortunately is at the same time is
+
+774
+00:46:08,074 --> 00:46:10,098
+this session said thank you for joining
+us
+
+775
+00:46:10,098 --> 00:46:14,113
+but for more information about web views
+go check out the videos online
+
+776
+00:46:15,013 --> 00:46:19,070
+afterwards also as we mentioned directly
+following the session
+
+777
+00:46:19,007 --> 00:46:23,090
+taking court location indoors for more
+on what's new incall location
+
+778
+00:46:24,053 --> 00:46:28,120
+also tomorrow I highly recommend part 2
+writing energy efficient code
+
+779
+00:46:29,002 --> 00:46:32,035
+which will cover some good practices
+when using location
+
+780
+00:46:32,053 --> 00:46:35,054
+in addition to other technology in your
+app's
+
+781
+00:46:35,054 --> 00:46:38,093
+also tomorrow what's new in IRS
+notifications
+
+782
+00:46:38,093 --> 00:46:41,118
+for more on the region based UI local
+notifications
+
+783
+00:46:42,018 --> 00:46:45,053
+and more and on Thursday
+
+784
+00:46:45,053 --> 00:46:48,132
+visit the user privacy and I always and
+always 10
+
+785
+00:46:48,609 --> 00:46:52,010
+for more details on location
+authorization and privacy
+
+786
+00:46:52,001 --> 00:46:55,001
+and other privacy related topics on both
+I O S
+
+787
+00:46:55,001 --> 00:46:55,600
+and always 10
+

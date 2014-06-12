@@ -1,0 +1,4588 @@
+1
+00:00:11,076 --> 00:00:14,120
+good morning welcome to what's new in
+Cocoa my name with all the other I'm the
+
+2
+00:00:15,002 --> 00:00:16,021
+director
+
+3
+00:00:16,039 --> 00:00:19,748
+frameworks at Apple so I gotta pack
+agenda today we're going to give you a
+
+4
+00:00:20,099 --> 00:00:21,190
+high level coverage of the changes
+
+5
+00:00:22,009 --> 00:00:26,460
+in cocoa and North in Yosemite I'm gonna
+get pointers to related sessions and
+
+6
+00:00:26,046 --> 00:00:26,945
+relevant labs
+
+7
+00:00:27,359 --> 00:00:30,447
+as well and the topics recovering are
+new look
+
+8
+00:00:31,239 --> 00:00:35,240
+extensions on hand of which are big user
+features you saw yesterday
+
+9
+00:00:35,339 --> 00:00:38,960
+and I we don't talk about them API such
+a storyboard a new controllers
+
+10
+00:00:38,096 --> 00:00:41,445
+API modernization effort we've been
+doing of course we don't talk about
+
+11
+00:00:42,309 --> 00:00:43,100
+swept
+
+12
+00:00:43,001 --> 00:00:46,780
+and implications on cocoa and Cocoa
+Touch API and a number of other topics
+
+13
+00:00:46,879 --> 00:00:47,780
+as well
+
+14
+00:00:47,078 --> 00:00:50,155
+and to fight I wanna put this badge on
+everything applied
+
+15
+00:00:51,055 --> 00:00:54,494
+pretty much everything we're talking
+about today is new and I or scan your
+
+16
+00:00:54,989 --> 00:00:57,190
+seventy or in some cases I was 8 as well
+
+17
+00:00:57,019 --> 00:01:00,084
+okay so with that let's get started with
+
+18
+00:01:00,084 --> 00:01:03,153
+new look there's very a
+
+19
+00:01:04,053 --> 00:01:07,562
+components to new look you saw them
+yesterday and you probably seen if you
+
+20
+00:01:08,039 --> 00:01:09,390
+installed your so many on your
+
+21
+00:01:09,039 --> 00:01:12,074
+machines there's an updated look for
+controls there's translucent skin
+
+22
+00:01:12,074 --> 00:01:14,080
+vibrancy there's new window styles
+
+23
+00:01:14,008 --> 00:01:18,967
+and there's also a new font in yosemite
+let's take a look at updated look for
+
+24
+00:01:19,759 --> 00:01:19,845
+controls
+
+25
+00:01:20,619 --> 00:01:24,610
+here is the %ah good old found prep
+preferences panel
+
+26
+00:01:24,061 --> 00:01:27,075
+in a maverick and here's the same panel
+
+27
+00:01:27,075 --> 00:01:30,100
+in Yosemite so one thing to notice is
+that I'm
+
+28
+00:01:31,000 --> 00:01:34,025
+you know there's a lighter there's
+lighter brighter colors
+
+29
+00:01:34,025 --> 00:01:38,096
+there is a queen and simpler look I'm
+not gonna go into the details here we're
+
+30
+00:01:38,096 --> 00:01:38,152
+gonna do
+
+31
+00:01:39,052 --> 00:01:42,097
+more of that in some other talks but it
+is sort of a wider
+
+32
+00:01:42,097 --> 00:01:46,098
+pressure look of course another thing to
+note of that controls are pretty much
+
+33
+00:01:47,007 --> 00:01:48,060
+metrics compatible
+
+34
+00:01:48,006 --> 00:01:52,073
+that's important important thing to note
+here's another a comparison this is the
+
+35
+00:01:53,027 --> 00:01:54,030
+add a new mail account
+
+36
+00:01:54,057 --> 00:01:58,059
+panel one thing you'll notice of course
+is there the default button in maverick
+
+37
+00:01:58,077 --> 00:01:59,136
+this poll thing
+
+38
+00:01:59,829 --> 00:02:02,900
+continuously poll thing while the one in
+Yosemite is not whole thing
+
+39
+00:02:03,539 --> 00:02:06,618
+another thing to notice is the focus
+ring the one in Yosemite is
+
+40
+00:02:07,329 --> 00:02:11,410
+a lot cleaner while the one in maverick
+is a bit by the they both a rapid
+
+41
+00:02:11,041 --> 00:02:14,085
+control but your 71 have a cleaner look
+that's of course in line with the
+
+42
+00:02:14,085 --> 00:02:14,143
+overall
+
+43
+00:02:15,043 --> 00:02:18,078
+overlook of yes seventy now
+
+44
+00:02:18,078 --> 00:02:22,095
+we have gotten rid of these long-running
+animations like that the default button
+
+45
+00:02:22,095 --> 00:02:25,144
+but we have some subtle animations in in
+its place
+
+46
+00:02:26,044 --> 00:02:29,069
+you noticed the radio button in the
+opera operate them
+
+47
+00:02:29,069 --> 00:02:32,148
+they sorta gently respond York like are
+your pictures
+
+48
+00:02:32,769 --> 00:02:36,580
+just like that you think it's another
+some other cases as well such as I check
+
+49
+00:02:36,058 --> 00:02:37,100
+boxes and search fields
+
+50
+00:02:38,000 --> 00:02:41,019
+now the good thing about all this
+
+51
+00:02:41,019 --> 00:02:44,040
+all these updated look for controls
+they're all
+
+52
+00:02:44,004 --> 00:02:49,040
+automatic in your applications I when
+your application runs on your seventy
+
+53
+00:02:49,076 --> 00:02:52,077
+it will pretty much inherit all these
+looks and behaviors
+
+54
+00:02:52,086 --> 00:02:56,075
+up I mean unless you're doing something
+very custom using custom artwork once on
+
+55
+00:02:56,849 --> 00:02:59,935
+your caps will get the assembly look in
+fact we do not even sport the Mavericks
+
+56
+00:03:00,709 --> 00:03:01,150
+look
+
+57
+00:03:01,015 --> 00:03:07,714
+for applications on your sanity okay let
+me talk now about translucent skin
+
+58
+00:03:07,849 --> 00:03:08,690
+vibrancy
+
+59
+00:03:08,069 --> 00:03:12,106
+the translucent see as you saw yesterday
+castles and see the combination of
+
+60
+00:03:13,006 --> 00:03:14,081
+transparency and blur
+
+61
+00:03:14,081 --> 00:03:17,840
+and enable the purse now P of the
+desktop or the content that you're
+
+62
+00:03:18,569 --> 00:03:19,190
+looking at
+
+63
+00:03:19,019 --> 00:03:23,019
+to come through in your Windows and
+
+64
+00:03:23,019 --> 00:03:26,038
+very aesthetically pleasing way so let's
+look at
+
+65
+00:03:26,209 --> 00:03:29,500
+places where use I translucent be here
+is your
+
+66
+00:03:29,005 --> 00:03:34,774
+people to stop picture keeping up with
+the party window with and desist are the
+
+67
+00:03:35,269 --> 00:03:36,200
+favorites view
+
+68
+00:03:36,002 --> 00:03:39,005
+you see that the whole window has a
+translucent background here
+
+69
+00:03:39,023 --> 00:03:42,532
+this is usually not the case in most
+cases know once you start looking at
+
+70
+00:03:42,739 --> 00:03:43,540
+content
+
+71
+00:03:43,054 --> 00:03:46,643
+the translucency is usually limited to
+the sidebar for instance
+
+72
+00:03:47,129 --> 00:03:51,060
+here in your I'm Nimes sure what's your
+favorite app
+
+73
+00:03:51,006 --> 00:03:54,070
+Xcode mail also had the same for the
+treatment in five are you get the
+
+74
+00:03:54,007 --> 00:03:56,009
+transport translucency in the sidebar
+
+75
+00:03:56,009 --> 00:03:59,158
+area another use of caps associate
+something like
+
+76
+00:04:00,049 --> 00:04:04,060
+up preview application here I have an
+image and I am in school that yet but
+
+77
+00:04:04,006 --> 00:04:05,515
+once I start to scroll
+
+78
+00:04:05,569 --> 00:04:09,610
+you'll see that to images gonna start
+coming through the toolbar title bar
+
+79
+00:04:09,061 --> 00:04:09,550
+area
+
+80
+00:04:10,099 --> 00:04:13,188
+of the window now note that this case is
+what we call
+
+81
+00:04:13,989 --> 00:04:18,260
+in window translucency while the other
+cases were behind a window or through
+
+82
+00:04:18,026 --> 00:04:20,114
+the window translucent see their you're
+seeing to the desktop
+
+83
+00:04:21,014 --> 00:04:24,071
+here we're just seeing through the title
+bar the content
+
+84
+00:04:24,071 --> 00:04:29,150
+of the window to my document you other
+case a path to see include
+
+85
+00:04:30,005 --> 00:04:33,034
+the menu bar I'm sorry to menus
+
+86
+00:04:33,529 --> 00:04:36,690
+and sheets as well and pop overs as well
+
+87
+00:04:36,069 --> 00:04:39,077
+have destroyed a treatment so traffic
+through Cincy is automatic
+
+88
+00:04:40,049 --> 00:04:43,648
+in many cases she menus popovers except
+rap
+
+89
+00:04:44,089 --> 00:04:48,097
+source list these are the table view
+than outlined views which are configured
+
+90
+00:04:48,169 --> 00:04:48,890
+to
+
+91
+00:04:48,089 --> 00:04:52,608
+look like those sidebars will also get a
+translucent the automatically in most
+
+92
+00:04:53,409 --> 00:04:54,440
+cases
+
+93
+00:04:54,044 --> 00:04:57,333
+and also title bars and toolbars will
+get a chance to Cincy
+
+94
+00:04:57,729 --> 00:05:01,680
+in a number of cases let me talk about
+that
+
+95
+00:05:01,068 --> 00:05:04,157
+whenever you have a window and you have
+a ScrollView next to the title bar
+
+96
+00:05:05,057 --> 00:05:08,105
+like in the case a preview you'll get
+Rasmussen C treatment
+
+97
+00:05:09,005 --> 00:05:12,056
+four-dot title bar area the psych review
+does
+
+98
+00:05:12,056 --> 00:05:16,089
+this is the case first an app like text
+that as well
+
+99
+00:05:16,089 --> 00:05:19,138
+now in other cases where you wanna you
+more sophisticated things are not
+
+100
+00:05:20,038 --> 00:05:22,113
+getting translucent the automatically
+for your title bar
+
+101
+00:05:23,013 --> 00:05:26,732
+you can use this new I window style
+mouth called NS
+
+102
+00:05:26,849 --> 00:05:29,917
+full-size content you window mask
+
+103
+00:05:30,529 --> 00:05:34,620
+in addition we have I'd property such as
+title visibility entitled appears
+
+104
+00:05:34,062 --> 00:05:35,721
+transparent and this window
+
+105
+00:05:36,279 --> 00:05:39,280
+and I will have other talks were going
+to depth about these
+
+106
+00:05:39,289 --> 00:05:42,430
+but these new out features allow you to
+do
+
+107
+00:05:42,043 --> 00:05:45,202
+highly customized windows with
+translucent see an example
+
+108
+00:05:45,589 --> 00:05:48,930
+is the messages window burns's the
+messages window
+
+109
+00:05:48,093 --> 00:05:51,512
+has the circus but look with the
+commentary on the right
+
+110
+00:05:52,349 --> 00:05:55,880
+and that the five are on that left for
+your for the messages
+
+111
+00:05:55,088 --> 00:05:59,807
+and if you %uh put this on top of art
+desktop here you'll see that there is
+
+112
+00:06:00,599 --> 00:06:04,599
+through window translucent see on the
+left side in window travel some fee for
+
+113
+00:06:04,599 --> 00:06:05,800
+the Mets just content
+
+114
+00:06:05,008 --> 00:06:08,307
+on your right side the good news is we
+have API
+
+115
+00:06:09,099 --> 00:06:12,104
+for you to do this sort of thing in your
+own applications as well where
+
+116
+00:06:12,149 --> 00:06:12,990
+appropriate
+
+117
+00:06:12,099 --> 00:06:15,838
+so you can do substantive design like
+this
+
+118
+00:06:16,729 --> 00:06:20,800
+know byron see goes very much hand in
+hand with translucency
+
+119
+00:06:20,008 --> 00:06:23,015
+now translucent in general is of course
+averaging
+
+120
+00:06:23,087 --> 00:06:27,006
+the foreground and background but as it
+blurs the background
+
+121
+00:06:27,789 --> 00:06:31,120
+and sometimes this could result in
+reduce contrast
+
+122
+00:06:31,012 --> 00:06:34,038
+and it could even result reduce overall
+impact of
+
+123
+00:06:34,038 --> 00:06:37,107
+what you're trying to show the user I'm
+now Byron C
+
+124
+00:06:38,007 --> 00:06:41,008
+what privacy does that help all the
+elements out
+
+125
+00:06:41,008 --> 00:06:45,045
+by a blending in fancy ways for instance
+by using colored Dodge color burn or
+
+126
+00:06:45,045 --> 00:06:47,050
+variants of such blending modes
+
+127
+00:06:47,005 --> 00:06:50,005
+let me show you an example hear what I
+mean here is
+
+128
+00:06:50,005 --> 00:06:54,924
+a I'm no love you by Brent you which
+include some tech
+
+129
+00:06:55,419 --> 00:06:58,455
+and image and there now being treated
+vibrancy
+
+130
+00:06:58,779 --> 00:07:01,990
+not plywood to remove vibrancy from this
+
+131
+00:07:01,099 --> 00:07:04,518
+you get this through slightly a know
+what punch
+
+132
+00:07:05,409 --> 00:07:10,630
+to that it's more more gray ash it's not
+as impactful 11 at the vibrancy back in
+
+133
+00:07:10,063 --> 00:07:13,158
+it's really adding not punch that allows
+the users content to come through and
+
+134
+00:07:14,058 --> 00:07:17,327
+separated from the background and be
+presented to the user
+
+135
+00:07:17,849 --> 00:07:21,881
+so this is vibrancy now vibrancy is
+automatic in context
+
+136
+00:07:22,169 --> 00:07:26,580
+in most cases are applying translucency
+and it's for controls and other and this
+
+137
+00:07:26,058 --> 00:07:29,113
+abuse where appropriate but not
+appropriate for all cases now
+
+138
+00:07:30,013 --> 00:07:33,042
+example of that in a few seconds
+
+139
+00:07:33,159 --> 00:07:36,510
+now to enable vibrancy and also
+translucency explicitly in your
+
+140
+00:07:36,051 --> 00:07:38,190
+applications
+
+141
+00:07:38,649 --> 00:07:41,650
+we have a new view called an official
+affect you
+
+142
+00:07:41,659 --> 00:07:45,370
+you created you I have you specify what
+kind of translucent
+
+143
+00:07:45,037 --> 00:07:49,050
+you want either in window or behind
+window and you specify what kinda
+
+144
+00:07:49,005 --> 00:07:52,100
+vibrant appearance you want you have
+choice of dark or light
+
+145
+00:07:53,045 --> 00:07:56,634
+and then you populate it with by been
+capable controls
+
+146
+00:07:57,039 --> 00:08:00,095
+and you can recognize such controls
+because they return yes from this new
+
+147
+00:08:00,599 --> 00:08:02,623
+property called allows vibrancy
+
+148
+00:08:02,839 --> 00:08:05,908
+and if I mentioned earlier some controls
+offer
+
+149
+00:08:06,529 --> 00:08:10,360
+vibrancy they I'll Bay up into vibrancy
+
+150
+00:08:10,036 --> 00:08:13,039
+at appropriate times let me give an
+example of that
+
+151
+00:08:13,039 --> 00:08:17,042
+here's a window with two image use in it
+on the left we have an ImageView with a
+
+152
+00:08:17,069 --> 00:08:18,158
+template image
+
+153
+00:08:18,779 --> 00:08:21,817
+and on the right we have an ImageView
+with just the regular image
+
+154
+00:08:22,159 --> 00:08:25,630
+now this is on the regular no
+translucent the window I'm gonna put
+
+155
+00:08:25,063 --> 00:08:26,962
+this on Doc vibrancy
+
+156
+00:08:27,529 --> 00:08:32,300
+and as you saw the the viewed imagery on
+the left is applying the vibrancy
+
+157
+00:08:32,003 --> 00:08:35,097
+and out treating the template image to
+give it the appropriate look on papa doc
+
+158
+00:08:36,024 --> 00:08:37,043
+byron back Ron
+
+159
+00:08:37,043 --> 00:08:40,081
+wild elephant image remains put not
+affected at all
+
+160
+00:08:40,081 --> 00:08:43,139
+similarly fights which like vibrancy
+again you're getting that
+
+161
+00:08:44,039 --> 00:08:48,051
+by twenty applied to the template image
+wild elephant image against a spot that
+
+162
+00:08:48,051 --> 00:08:49,075
+a No ImageView
+
+163
+00:08:49,075 --> 00:08:55,083
+is dynamically deciding between being by
+but not depending on its content
+
+164
+00:08:55,083 --> 00:08:59,125
+we made some changes mouth color we've
+updated existing system colors
+
+165
+00:09:00,025 --> 00:09:04,083
+to be a consistent with of course the
+overall look of your seventy
+
+166
+00:09:04,083 --> 00:09:07,130
+and we also made it so that some and the
+scholars have appearance
+
+167
+00:09:08,003 --> 00:09:11,021
+specific very so what that means is
+
+168
+00:09:11,048 --> 00:09:14,050
+I below you an example here is some text
+use
+
+169
+00:09:14,068 --> 00:09:18,120
+drawing a drawn with the system color
+and hear the same text drawn
+
+170
+00:09:19,002 --> 00:09:23,006
+on a dark fiber surface these are both
+using a new system color we've added
+
+171
+00:09:23,024 --> 00:09:24,033
+called secondary
+
+172
+00:09:24,033 --> 00:09:28,035
+label color and you'll know that note
+that in the dark fiber in case the Texas
+
+173
+00:09:28,053 --> 00:09:29,061
+actually appearing
+
+174
+00:09:29,061 --> 00:09:32,158
+white so to fairly different color so
+you need to you know if you
+
+175
+00:09:33,058 --> 00:09:36,116
+ever assuming I'm the color stay put
+through the
+
+176
+00:09:37,016 --> 00:09:40,024
+through like I'm a nap or in different
+contexts notes good
+
+177
+00:09:40,024 --> 00:09:46,052
+stop the sumptin and just use and that
+scholars as is without taking them apart
+
+178
+00:09:46,052 --> 00:09:49,068
+we have a new pop and you think that
+that
+
+179
+00:09:49,068 --> 00:09:52,073
+the new park as hell but Cano yeah it's
+been optimized for almost ten
+
+180
+00:09:53,018 --> 00:09:56,113
+with metrics similar to loose the
+grounding
+
+181
+00:09:57,013 --> 00:10:00,099
+now you should obtain the spot with
+methods such as a system pop-up size
+
+182
+00:10:00,099 --> 00:10:03,142
+which is of course what happened by
+default when you drive elements out and
+
+183
+00:10:04,042 --> 00:10:08,087
+Xcode Interface Builder
+
+184
+00:10:08,087 --> 00:10:11,182
+and um now would for compatibility
+
+185
+00:10:12,082 --> 00:10:15,167
+if you're up for existing binary
+applications are already out there that
+
+186
+00:10:16,067 --> 00:10:19,098
+applications which are linked against
+the 10 not nine SPK
+
+187
+00:10:19,098 --> 00:10:22,126
+or and earlier we do two things one
+
+188
+00:10:23,026 --> 00:10:26,035
+if we see explicit references to lose
+the ground they know you I element
+
+189
+00:10:27,016 --> 00:10:30,021
+we assume that you really meant have a
+deacon or your
+
+190
+00:10:30,021 --> 00:10:33,102
+and we don't the replacement in addition
+if we find out
+
+191
+00:10:34,002 --> 00:10:39,004
+the text clips or wraps because it's too
+wide for the area it has
+
+192
+00:10:39,004 --> 00:10:42,077
+will compress it so it its debts so that
+of course
+
+193
+00:10:42,077 --> 00:10:45,106
+insurers compatible p for existing
+applications
+
+194
+00:10:46,006 --> 00:10:49,011
+now note that we do not do this once
+your application is reeling
+
+195
+00:10:49,011 --> 00:10:53,084
+3 built against the 10 not 10 STK there
+we want you to take a look at your apt
+
+196
+00:10:53,084 --> 00:10:56,120
+and correct any places where there may
+be problems
+
+197
+00:10:57,002 --> 00:11:00,099
+I'm now for secure funding up help your
+controls are too tight and not fitting
+
+198
+00:11:01,017 --> 00:11:04,038
+night like to recommend you actually
+look at or layout as a way to
+
+199
+00:11:04,038 --> 00:11:07,060
+not only fix this problem but also make
+your application
+
+200
+00:11:07,006 --> 00:11:10,031
+a more forward-looking and more local
+either we look like
+
+201
+00:11:10,085 --> 00:11:15,129
+and so on laughing on the talk about
+here in the section this in a segmented
+
+202
+00:11:16,029 --> 00:11:18,091
+control we have a new style of segmented
+control
+
+203
+00:11:18,091 --> 00:11:22,114
+segment style separated it allows you to
+do things like the backboard but then
+
+204
+00:11:23,014 --> 00:11:24,057
+you see here in Safari
+
+205
+00:11:24,057 --> 00:11:27,140
+it's also visible in a few other apt as
+well I just a new style but did not
+
+206
+00:11:28,004 --> 00:11:31,068
+represent the back forward buttons and
+other similar kind abuses that
+
+207
+00:11:32,004 --> 00:11:36,083
+you can switch to we have to relate to
+sessions for the new-look
+
+208
+00:11:36,083 --> 00:11:39,139
+one this afternoon that up in your
+adapting your apt to the new book
+
+209
+00:11:40,039 --> 00:11:43,057
+a of yosemite and another
+
+210
+00:11:43,057 --> 00:11:47,075
+another one tomorrow which is a more
+advanced talk where you can learn about
+
+211
+00:11:47,075 --> 00:11:47,164
+how to
+
+212
+00:11:48,064 --> 00:11:51,101
+used by been seeing more subs it ways
+and create Windows
+
+213
+00:11:52,001 --> 00:11:56,099
+like that messages ap you saw okay so
+now let me talk a bit about extensions
+
+214
+00:11:56,099 --> 00:12:00,196
+again extension to the future I you saw
+yesterday
+
+215
+00:12:01,096 --> 00:12:04,140
+extensions provide accessed your app's
+functionality and content
+
+216
+00:12:05,004 --> 00:12:09,053
+in other APs for those of you familiar
+with the Services menu from
+
+217
+00:12:09,089 --> 00:12:12,183
+earlier or Stanley says so it's all
+about the Services menu
+
+218
+00:12:13,083 --> 00:12:16,165
+start over spiritual precursor to the
+speaker it's a much more limited scope
+
+219
+00:12:17,065 --> 00:12:21,110
+version up two extensions feature
+
+220
+00:12:22,001 --> 00:12:25,050
+extensions run in a separate process
+from the app in which there been invoked
+
+221
+00:12:25,059 --> 00:12:26,131
+which of course means there's
+
+222
+00:12:27,031 --> 00:12:31,069
+security performance and stability
+benefits
+
+223
+00:12:31,069 --> 00:12:34,146
+and extensions are delivered with ap as
+this think bundles within
+
+224
+00:12:35,046 --> 00:12:39,057
+the application so as you ship a nap on
+the App Store or
+
+225
+00:12:39,057 --> 00:12:42,064
+wherever you may ship it you may bundled
+extensions inside of it end the users
+
+226
+00:12:43,027 --> 00:12:45,034
+can enable those extensions if they
+
+227
+00:12:45,034 --> 00:12:49,055
+find them useful not an extension
+through application
+
+228
+00:12:49,055 --> 00:12:52,064
+in Xcode you would go ahead and specify
+that you want a new target within your
+
+229
+00:12:53,045 --> 00:12:54,122
+application project
+
+230
+00:12:55,022 --> 00:13:00,031
+and then on North can you have choice of
+four extensions
+
+231
+00:13:00,031 --> 00:13:03,096
+action extensions are like extensions
+you saw yesterday
+
+232
+00:13:03,096 --> 00:13:07,143
+the markup extension they work with and
+this excuse and web use
+
+233
+00:13:08,043 --> 00:13:11,089
+a and a the translate
+
+234
+00:13:11,089 --> 00:13:14,097
+extension use on afternoon is out or
+maybe the morning after which
+
+235
+00:13:15,069 --> 00:13:19,085
+was also another example of that finder
+think extensions let you customize
+
+236
+00:13:19,085 --> 00:13:22,109
+finders drawing in a safe manner
+
+237
+00:13:23,009 --> 00:13:27,062
+share extensions allow you to extend the
+share menu
+
+238
+00:13:27,062 --> 00:13:30,085
+and today extensions August augment to
+today view
+
+239
+00:13:30,085 --> 00:13:33,177
+in the Notification Center point since
+like reminders and you saw examples of
+
+240
+00:13:34,077 --> 00:13:34,139
+this
+
+241
+00:13:35,039 --> 00:13:40,047
+yesterday not to use extension their
+three new API three new classes
+
+242
+00:13:41,019 --> 00:13:44,020
+let me just show you how you would use
+these in your extension
+
+243
+00:13:44,002 --> 00:13:47,066
+inside after extension you have a
+principal class
+
+244
+00:13:47,084 --> 00:13:50,085
+with something you typically specify and
+tell us
+
+245
+00:13:50,094 --> 00:13:53,190
+for you I base extension it would be a
+subclass of in SU controller are you I
+
+246
+00:13:54,009 --> 00:13:55,023
+view controller
+
+247
+00:13:56,004 --> 00:13:59,026
+the principal class has appointed
+extension contact
+
+248
+00:13:59,026 --> 00:14:03,080
+which is basically the central point for
+that extensions data
+
+249
+00:14:03,008 --> 00:14:06,022
+and an extension context has an array of
+another extension
+
+250
+00:14:06,094 --> 00:14:09,125
+items where he cannot extension item
+represent
+
+251
+00:14:10,025 --> 00:14:13,060
+8 data that the user one operate on
+
+252
+00:14:13,006 --> 00:14:16,045
+points in the case of the markup
+extension the image that the user wants
+
+253
+00:14:16,099 --> 00:14:17,198
+to edit
+
+254
+00:14:18,089 --> 00:14:21,240
+would be represented by hand extension
+item
+
+255
+00:14:21,024 --> 00:14:25,024
+internet each and its extension item
+points array of item providers
+
+256
+00:14:25,024 --> 00:14:28,031
+item providers are basically what makes
+the data
+
+257
+00:14:28,031 --> 00:14:31,063
+for that extension item available there
+might be one
+
+258
+00:14:31,063 --> 00:14:34,067
+there might be more and extension can
+choose which provided
+
+259
+00:14:34,067 --> 00:14:37,163
+once use it's pretty straightforward you
+these API
+
+260
+00:14:38,063 --> 00:14:41,091
+inside after extension to get the
+derailed items
+
+261
+00:14:41,091 --> 00:14:44,143
+you would just say extension context
+that input items
+
+262
+00:14:45,043 --> 00:14:48,048
+and then you know you work on them are
+you like to use our work on them as in
+
+263
+00:14:48,048 --> 00:14:48,117
+the case of
+
+264
+00:14:49,017 --> 00:14:52,038
+mark-up when you're done you want to
+return to results
+
+265
+00:14:52,038 --> 00:14:55,071
+you put them in an array or maybe that's
+an array of one of course if there's
+
+266
+00:14:55,071 --> 00:14:56,073
+only one result
+
+267
+00:14:56,073 --> 00:14:59,166
+may call this a PI complete requests
+returning items completion handler
+
+268
+00:15:00,066 --> 00:15:03,099
+now but turns out the user canceled the
+operation
+
+269
+00:15:03,099 --> 00:15:06,137
+or there was an error you can call the
+other API cancel request
+
+270
+00:15:07,037 --> 00:15:11,122
+with are so it's pretty straightforward
+yep two sessions for extensions
+
+271
+00:15:12,022 --> 00:15:15,075
+want this afternoon creating extensions
+part 1
+
+272
+00:15:15,075 --> 00:15:18,161
+and another one tomorrow morning both
+talk about hand-off
+
+273
+00:15:19,061 --> 00:15:22,088
+again feature you saw yesterday at the
+keynote
+
+274
+00:15:22,088 --> 00:15:26,091
+hand-off enables users to seamlessly
+transition activities between their
+
+275
+00:15:27,018 --> 00:15:28,065
+devices
+
+276
+00:15:28,065 --> 00:15:31,066
+and there is a simple bass API here
+called and that
+
+277
+00:15:31,066 --> 00:15:35,150
+user activity and their related API than
+enough application in this document and
+
+278
+00:15:36,005 --> 00:15:37,013
+thats responder
+
+279
+00:15:37,058 --> 00:15:40,082
+and also in there you like it
+counterparts as well that you know the
+
+280
+00:15:40,082 --> 00:15:40,171
+cross-platform
+
+281
+00:15:41,071 --> 00:15:45,170
+feature in the future activity
+encapsulate
+
+282
+00:15:46,007 --> 00:15:51,039
+hand of information about a single user
+activity
+
+283
+00:15:52,002 --> 00:15:55,068
+so you create one I would in it with it
+activity type
+
+284
+00:15:55,068 --> 00:15:59,077
+you specify is sir I don't fire with for
+the activity user might be doing whether
+
+285
+00:15:59,077 --> 00:16:01,396
+it's browsing the web page playing a
+game
+
+286
+00:16:02,089 --> 00:16:07,089
+editing a document whatever and then you
+go ahead and use at various information
+
+287
+00:16:07,089 --> 00:16:11,120
+a that would enable recreating a
+activity another device
+
+288
+00:16:11,399 --> 00:16:14,630
+as you can see here maybe the level the
+location the score that you're in the
+
+289
+00:16:14,063 --> 00:16:14,150
+game
+
+290
+00:16:15,005 --> 00:16:19,019
+and even going in for a title which is
+usable title for that activity
+
+291
+00:16:19,064 --> 00:16:22,068
+and then at appropriate times you make
+that current
+
+292
+00:16:22,068 --> 00:16:25,227
+or you tell it's no longer current in
+the system apparently
+
+293
+00:16:25,839 --> 00:16:29,820
+system looks at what activities current
+and make available to other nearby
+
+294
+00:16:29,082 --> 00:16:32,086
+devices as appropriate we just need to
+worry about telling us
+
+295
+00:16:33,022 --> 00:16:37,057
+whence current in months not current
+look pretty straightforward
+
+296
+00:16:37,057 --> 00:16:41,326
+enough application we have several API's
+the first one here
+
+297
+00:16:41,839 --> 00:16:45,490
+indicates few that the user has
+indicated an interest in moving activity
+
+298
+00:16:45,049 --> 00:16:46,057
+to your device
+
+299
+00:16:46,057 --> 00:16:50,088
+and you can return yet if you out are
+handling it or you can read
+
+300
+00:16:50,088 --> 00:16:54,132
+return 0 and let the system handle it
+the next API application continues her
+
+301
+00:16:55,032 --> 00:16:55,129
+activity
+
+302
+00:16:56,029 --> 00:16:59,037
+actually gives you then this user
+activity which has the data from which
+
+303
+00:16:59,037 --> 00:17:02,045
+you can recreate the activity
+
+304
+00:17:02,045 --> 00:17:05,127
+not you're using and this document
+there's easy hand of sport bike lock
+
+305
+00:17:06,027 --> 00:17:06,124
+documents you
+
+306
+00:17:07,024 --> 00:17:10,047
+really just have to do one thing and
+that is at the ski
+
+307
+00:17:10,047 --> 00:17:13,616
+here in for that P left for your
+document type: indicating that you are
+
+308
+00:17:14,039 --> 00:17:16,130
+sporting hand-off for this document
+
+309
+00:17:16,013 --> 00:17:19,792
+you specify a unique type i dont fire as
+you can see her calm but Apple not
+
+310
+00:17:19,909 --> 00:17:20,620
+accept that
+
+311
+00:17:20,062 --> 00:17:23,141
+editing not gonna do something more
+sophisticated
+
+312
+00:17:23,699 --> 00:17:27,270
+for instance specified selection or a
+some other
+
+313
+00:17:27,027 --> 00:17:30,063
+viewing parameters with that hand of I'm
+information
+
+314
+00:17:30,063 --> 00:17:33,146
+you have a handle to the user activity
+of a fan of document that you can
+
+315
+00:17:34,046 --> 00:17:37,144
+that the parameters in next time to talk
+about storyboards and U controller
+
+316
+00:17:38,044 --> 00:17:38,136
+switches
+
+317
+00:17:39,036 --> 00:17:42,040
+set up new API for adding two of us 10
+now if you
+
+318
+00:17:42,076 --> 00:17:45,080
+done I with development you're very
+likely familiar with
+
+319
+00:17:45,008 --> 00:17:48,017
+concept of storyboard storyboard the
+visual representation of the user
+
+320
+00:17:49,007 --> 00:17:49,075
+interface
+
+321
+00:17:50,038 --> 00:17:53,117
+of your application so it's giving you a
+higher level
+
+322
+00:17:54,017 --> 00:17:57,526
+you of your user interface with higher
+level than
+
+323
+00:17:57,679 --> 00:18:02,717
+creating individual names and may be
+sending party connections together
+
+324
+00:18:03,059 --> 00:18:06,070
+I'm and if you wanna just create a
+storyboard applications fairly
+
+325
+00:18:06,007 --> 00:18:09,014
+straightforward in Xcode as you're
+creating your new app you just go check
+
+326
+00:18:09,014 --> 00:18:10,014
+the checkbox
+
+327
+00:18:10,014 --> 00:18:14,052
+couldn't be simpler at and will give you
+a default template that you can
+
+328
+00:18:14,052 --> 00:18:18,064
+modify from there now storyboard specify
+different parts of your UI
+
+329
+00:18:18,064 --> 00:18:22,066
+as different scenes and then you would
+use segways to connect or transition
+
+330
+00:18:22,084 --> 00:18:22,146
+between
+
+331
+00:18:23,046 --> 00:18:27,125
+these storyboards between the thin
+
+332
+00:18:28,025 --> 00:18:32,034
+their two classes and a storyboard and
+storyboard segue these are
+
+333
+00:18:32,034 --> 00:18:36,040
+very are parallel to their UI kit
+counterparts
+
+334
+00:18:36,004 --> 00:18:39,017
+we also have a new protocol segue
+performing
+
+335
+00:18:39,053 --> 00:18:42,101
+just collect the Segway performing
+methods because on our
+
+336
+00:18:43,001 --> 00:18:46,050
+can we have two classes that respond to
+these methods view controller
+
+337
+00:18:46,005 --> 00:18:50,032
+and window controller as well so they
+both respond to these I think what
+
+338
+00:18:50,077 --> 00:18:50,175
+performing that that's
+
+339
+00:18:51,075 --> 00:18:54,157
+in addition these two classes also
+provide access to the storyboard be a
+
+340
+00:18:55,057 --> 00:18:58,124
+a property so you can get find out the
+storyboard that they came from that they
+
+341
+00:18:59,024 --> 00:19:00,075
+were created from
+
+342
+00:19:00,075 --> 00:19:03,122
+now we have two new view controllers as
+well that of course
+
+343
+00:19:04,022 --> 00:19:07,117
+help you create better storyboards have
+your controller and
+
+344
+00:19:08,017 --> 00:19:11,035
+with your controller and day they
+
+345
+00:19:11,035 --> 00:19:14,117
+no in spirit there similar to ours
+counterpart there's a few differences
+
+346
+00:19:15,017 --> 00:19:18,095
+let me tell you how these work
+
+347
+00:19:18,095 --> 00:19:21,176
+so you have a cab your controller the
+tablet controller has an array of
+
+348
+00:19:22,076 --> 00:19:25,135
+an effort have you items now you might
+be familiar with Anna have you item
+
+349
+00:19:26,035 --> 00:19:29,039
+the class we had for a long time we
+augment just a bit
+
+350
+00:19:29,075 --> 00:19:32,116
+to work with you controllers each tab
+you I don't
+
+351
+00:19:33,016 --> 00:19:36,074
+intern has a new property view
+controller and that might
+
+352
+00:19:36,074 --> 00:19:40,080
+point to a view controller in the case
+of a cab view controller setup like this
+
+353
+00:19:41,034 --> 00:19:44,091
+that's pretty straightforward let me
+show you how you create one of these are
+
+354
+00:19:44,091 --> 00:19:46,110
+structures
+
+355
+00:19:47,001 --> 00:19:51,070
+there are two ways to do it to add a
+trial controller to a tabbed view
+
+356
+00:19:51,079 --> 00:19:51,167
+controller
+
+357
+00:19:52,067 --> 00:19:55,113
+one where you could do it is you just
+first create item
+
+358
+00:19:56,013 --> 00:19:59,055
+enough have you I don't have you I then
+the few controller
+
+359
+00:19:59,055 --> 00:20:02,064
+you go through that and that creates so
+that creates that
+
+360
+00:20:02,064 --> 00:20:05,075
+a relationship there you can go ahead
+and set their
+
+361
+00:20:05,075 --> 00:20:08,104
+properties on the item
+
+362
+00:20:09,004 --> 00:20:12,091
+point since its label and whatever else
+you want and then you go ahead and add
+
+363
+00:20:12,091 --> 00:20:12,164
+the item
+
+364
+00:20:13,064 --> 00:20:17,066
+to the view controller with at have the
+item so this is one way to do it
+
+365
+00:20:17,066 --> 00:20:20,138
+another way to do it it simply take the
+trial view controller
+
+366
+00:20:21,038 --> 00:20:24,101
+this guy here and added to the tablet
+controller directly without the child
+
+367
+00:20:25,001 --> 00:20:28,072
+new controller which is the generic API
+we expose an issue controller
+
+368
+00:20:28,072 --> 00:20:31,090
+this will automatically create the tab
+you item for you and inserted in there
+
+369
+00:20:31,009 --> 00:20:31,091
+so this is the
+
+370
+00:20:32,072 --> 00:20:35,078
+it through the approach you on the use
+if you want to deal with the item at all
+
+371
+00:20:36,032 --> 00:20:39,033
+but if you do wanna said properties on
+the item later
+
+372
+00:20:39,033 --> 00:20:42,098
+you can still get the item corresponding
+to that child view controller
+
+373
+00:20:42,098 --> 00:20:47,187
+and then you can set the properties just
+like he did in the other case
+
+374
+00:20:48,087 --> 00:20:51,088
+now let's look at with your controller
+and no surprise that
+
+375
+00:20:51,097 --> 00:20:54,175
+turns out to be very parallel ass but
+the controller has an area
+
+376
+00:20:55,075 --> 00:20:59,081
+but you items which point to their view
+controllers to create it you do the item
+
+377
+00:21:00,035 --> 00:21:01,066
+you're added are you create
+
+378
+00:21:01,066 --> 00:21:04,113
+at the child you controller got it ok
+
+379
+00:21:05,013 --> 00:21:08,090
+mary Fallin now we have some methods
+from you control a presentation
+
+380
+00:21:08,009 --> 00:21:10,108
+if you wanna do your own manual
+presentation rather than going through
+
+381
+00:21:11,089 --> 00:21:12,110
+segways
+
+382
+00:21:13,001 --> 00:21:16,006
+I you can present two controllers sheep
+you can Controller
+
+383
+00:21:16,015 --> 00:21:19,094
+you can present it as a model window or
+the popover you can also of course
+
+384
+00:21:19,094 --> 00:21:21,097
+dismiss you controllers
+
+385
+00:21:22,024 --> 00:21:25,065
+you can transitions between your
+controllers with this method here
+
+386
+00:21:25,065 --> 00:21:28,067
+options give you the trend to how you
+wanna transition
+
+387
+00:21:28,067 --> 00:21:31,148
+a one-goal tip their options let you go
+I'm
+
+388
+00:21:32,048 --> 00:21:35,075
+flied left or right you can also choose
+to slide
+
+389
+00:21:35,075 --> 00:21:38,874
+forward or backward which is a much more
+international Saudi way of doing it
+
+390
+00:21:39,549 --> 00:21:40,500
+because an art
+
+391
+00:21:40,005 --> 00:21:43,008
+at the right to left language it will go
+the a
+
+392
+00:21:43,053 --> 00:21:46,094
+go the other way which is appropriate
+for that for the users
+
+393
+00:21:46,094 --> 00:21:50,953
+you why we also have methods which will
+be familiar
+
+394
+00:21:51,799 --> 00:21:55,070
+to you from my OS method that let you
+see i
+
+395
+00:21:55,007 --> 00:21:58,029
+for
+
+396
+00:21:58,029 --> 00:22:01,115
+thank I got to talk about this first I
+gotta say
+
+397
+00:22:02,015 --> 00:22:06,026
+2008 Buell appear and then the like and
+also met to find out when my outlook
+
+398
+00:22:06,026 --> 00:22:09,110
+you're so pretty straightforward stuff
+and a good addition to the class
+
+399
+00:22:10,001 --> 00:22:14,024
+I one more thing about you controller is
+that it's now automatically added
+
+400
+00:22:14,033 --> 00:22:20,040
+into the responder chaim car there you
+go
+
+401
+00:22:20,004 --> 00:22:23,046
+I have and again let me just show a
+picture and then trying to read those
+
+402
+00:22:23,082 --> 00:22:24,159
+two bollocks here's your view
+
+403
+00:22:25,059 --> 00:22:27,154
+here's a responder chain you have your
+parent use all the way up to the windows
+
+404
+00:22:28,054 --> 00:22:30,079
+you control are you up child abuse
+pointing
+
+405
+00:22:30,079 --> 00:22:33,176
+at the view and view controller with
+sorta hang around in the side
+
+406
+00:22:34,076 --> 00:22:38,084
+you know not part of that whole group
+there on out part of that group
+
+407
+00:22:38,084 --> 00:22:42,053
+not that we tried doing this for all out
+and we ran into responder chain cycle
+
+408
+00:22:42,809 --> 00:22:46,330
+not a good idea so this happens that
+this changes affect the only perhaps
+
+409
+00:22:46,033 --> 00:22:48,059
+building if the 1010 SPK
+
+410
+00:22:48,059 --> 00:22:51,104
+let me now talk a about
+
+411
+00:22:52,004 --> 00:22:55,012
+something a little different API
+modernization
+
+412
+00:22:55,012 --> 00:22:59,037
+now they're been many a bath in
+objective-c or in recent years
+
+413
+00:22:59,037 --> 00:23:02,121
+a for instance at property that's been
+around for a while now
+
+414
+00:23:03,021 --> 00:23:06,058
+instance type enough to text with
+underlying types
+
+415
+00:23:06,058 --> 00:23:11,066
+NS require super and a new one because
+added and after the gate and a slider
+
+416
+00:23:11,066 --> 00:23:13,148
+that lets you identified as need
+initializer
+
+417
+00:23:14,048 --> 00:23:18,497
+and then 1010 and I was a testy case we
+made a concerted
+
+418
+00:23:18,929 --> 00:23:24,630
+effort to adopt these and a lot more are
+PPI
+
+419
+00:23:24,063 --> 00:23:27,161
+and why are we doing this well-being
+allow
+
+420
+00:23:28,061 --> 00:23:31,150
+up to state the API's more precisely
+more correctly
+
+421
+00:23:32,005 --> 00:23:35,100
+and that of course has many benefits
+API's are now more self documenting you
+
+422
+00:23:36,045 --> 00:23:39,061
+don't have to go to the documentation
+that much it's much clearer right there
+
+423
+00:23:39,061 --> 00:23:40,630
+in the other file one API does
+
+424
+00:23:41,179 --> 00:23:45,700
+it allowed API to be more consistent you
+don't ever ask the question now why is
+
+425
+00:23:45,007 --> 00:23:47,052
+this a property in this other thing that
+looks very much like it
+
+426
+00:23:48,015 --> 00:23:52,038
+not a property it allow pics go to be
+more helpful
+
+427
+00:23:52,038 --> 00:23:56,071
+you now get much better context since
+the completion from some cases
+
+428
+00:23:56,071 --> 00:23:59,280
+it allows the composite enable the
+compiler to
+
+429
+00:23:59,919 --> 00:24:03,880
+our Warren and a it did detect and
+warned about potential bugs and this is
+
+430
+00:24:03,088 --> 00:24:06,887
+really a big win I mean it will really
+find some errors
+
+431
+00:24:07,679 --> 00:24:11,470
+and out last but not least that allows
+better exposure or API
+
+432
+00:24:11,047 --> 00:24:14,116
+and swept a script for instance has a
+stricter definition
+
+433
+00:24:15,016 --> 00:24:19,024
+for the up property is and by declaring
+the properties experts will be in
+
+434
+00:24:19,096 --> 00:24:20,177
+objective-c we allowed them to be
+exposed
+
+435
+00:24:21,077 --> 00:24:25,163
+properly and sweat as well
+
+436
+00:24:26,063 --> 00:24:30,135
+now one a consequence of all this is
+that as you build your applications
+
+437
+00:24:31,035 --> 00:24:34,102
+against the new st. case you may see new
+warnings and errors in your bill
+
+438
+00:24:35,002 --> 00:24:38,027
+please pay attention to them because
+some of them might actually be potential
+
+439
+00:24:38,027 --> 00:24:41,073
+a real bugs lurking around in your code
+
+440
+00:24:41,073 --> 00:24:45,112
+K I wanna just talk a bit about one of
+these areas here and that's the at
+
+441
+00:24:46,012 --> 00:24:48,033
+property change:
+
+442
+00:24:48,033 --> 00:24:51,112
+now we converted many accessors many
+getter setter pairs and getters not if
+
+443
+00:24:52,012 --> 00:24:54,071
+the ice to at property
+
+444
+00:24:54,071 --> 00:24:57,145
+and obvious ones for instance if you
+look at as control the target property
+
+445
+00:24:58,045 --> 00:24:59,097
+in object Valley property are now
+
+446
+00:24:59,097 --> 00:25:02,676
+real property you must at the target
+property is weak I'm gonna talk about
+
+447
+00:25:03,549 --> 00:25:05,640
+that in a second
+
+448
+00:25:05,064 --> 00:25:09,070
+but we also conducted what are computed
+properties or possibly Computer
+
+449
+00:25:09,007 --> 00:25:09,062
+Properties
+
+450
+00:25:10,025 --> 00:25:13,069
+at property fourth integer value in
+string value enough
+
+451
+00:25:13,069 --> 00:25:17,136
+control might be computed of object
+value property but we don't want to
+
+452
+00:25:18,036 --> 00:25:19,235
+expose that
+
+453
+00:25:19,559 --> 00:25:23,910
+implementation detail in our API so we
+make them all into poverty
+
+454
+00:25:23,091 --> 00:25:27,095
+no you don't care as the API consumer
+another thing we commend the property is
+
+455
+00:25:27,095 --> 00:25:29,103
+something like this corruption which is
+obvious the computer
+
+456
+00:25:30,075 --> 00:25:33,082
+every kind called it's going to generate
+the description but that's also a good
+
+457
+00:25:34,045 --> 00:25:38,524
+property we believe and we made it into
+a proper
+
+458
+00:25:38,929 --> 00:25:42,028
+so use property for anything up about
+the value our state on object or its
+
+459
+00:25:42,919 --> 00:25:44,690
+relationship to other objects
+
+460
+00:25:44,069 --> 00:25:48,308
+so then you might be wondering what is
+not a property
+
+461
+00:25:48,929 --> 00:25:53,140
+well okay not every method which can be
+expressed as a property should be
+
+462
+00:25:53,014 --> 00:25:56,089
+not every method but looks like a
+property should be not sometimes but
+
+463
+00:25:56,089 --> 00:25:57,091
+looks like a duck
+
+464
+00:25:58,009 --> 00:26:02,044
+it's not a doc the canonical example is
+the retain method you know the good ol
+
+465
+00:26:02,044 --> 00:26:04,109
+became method for those of you still
+remember what that is
+
+466
+00:26:05,009 --> 00:26:09,026
+I'll it returns a value it takes no
+arguments looks like a getter
+
+467
+00:26:09,026 --> 00:26:12,035
+but it's not a doc neither on a property
+
+468
+00:26:12,035 --> 00:26:15,076
+either so what are our some example
+
+469
+00:26:15,076 --> 00:26:19,138
+of bad can it with her back and it's for
+a property
+
+470
+00:26:20,038 --> 00:26:23,107
+so methods which do things such as load
+part and particle
+
+471
+00:26:24,007 --> 00:26:27,032
+these might return like apart state they
+might turn a result they might turn a
+
+472
+00:26:27,032 --> 00:26:27,101
+bully and
+
+473
+00:26:28,001 --> 00:26:31,044
+and they might pick no arguments but
+they're not properties you can usually
+
+474
+00:26:31,044 --> 00:26:33,052
+recognize these car they have a burr
+prefix
+
+475
+00:26:33,052 --> 00:26:37,100
+on the name generators like in it not
+that cocky about that some of these also
+
+476
+00:26:38,000 --> 00:26:41,095
+at the first rule of course or object
+enumerator these guys
+
+477
+00:26:41,095 --> 00:26:44,314
+are returning your result every time
+they're not returning
+
+478
+00:26:45,169 --> 00:26:49,160
+values that I results that are I'd
+important meaning the same every time so
+
+479
+00:26:49,016 --> 00:26:51,109
+they're not good candidates for
+properties
+
+480
+00:26:52,009 --> 00:26:55,077
+another category is method which change
+state such as next object
+
+481
+00:26:55,077 --> 00:26:59,116
+not a good another attended for part B
+as well
+
+482
+00:27:00,016 --> 00:27:03,089
+we have to make sure the methods also
+swim like a duck and quacks like a duck
+
+483
+00:27:03,089 --> 00:27:05,093
+before you make up the property
+
+484
+00:27:06,029 --> 00:27:09,088
+not earlier you saw week property on
+enough on the target
+
+485
+00:27:09,088 --> 00:27:13,093
+probably be I'm we use the rowing week
+for target now
+
+486
+00:27:14,038 --> 00:27:17,827
+that the cleared with the week actually
+on the target now to see what effect the
+
+487
+00:27:18,169 --> 00:27:21,190
+only an application to link against the
+1010 STK
+
+488
+00:27:21,019 --> 00:27:24,046
+up preview for other applications that
+thing binaries
+
+489
+00:27:24,046 --> 00:27:27,265
+targets still have the a fine behavior
+
+490
+00:27:27,679 --> 00:27:30,684
+now we're also using week for delegates
+and data sources
+
+491
+00:27:31,179 --> 00:27:34,280
+moving forward new API's front of your
+the new API we add
+
+492
+00:27:34,028 --> 00:27:37,071
+this relief however we're not changing
+the existing delegate and datasource
+
+493
+00:27:37,071 --> 00:27:38,083
+methods
+
+494
+00:27:38,083 --> 00:27:43,132
+to use we properties there's too many
+compatible considerations for that one
+
+495
+00:27:44,032 --> 00:27:48,048
+now as I said we've done these in our
+API's but you can also modernize your
+
+496
+00:27:48,048 --> 00:27:48,133
+code as well
+
+497
+00:27:49,033 --> 00:27:52,110
+if you'd like into good idea because it
+might help you find bugs in your code
+
+498
+00:27:53,001 --> 00:27:54,088
+and you get the benefit type shown
+
+499
+00:27:54,097 --> 00:27:58,173
+the convert the modern objective-c them
+pack mod a
+
+500
+00:27:59,073 --> 00:28:02,148
+refactoring tool which is actually next
+go today has been augmented
+
+501
+00:28:03,048 --> 00:28:06,132
+to do so the to do thought these changes
+as well
+
+502
+00:28:07,032 --> 00:28:10,271
+ICANN fee outcome of them in the a panel
+you get
+
+503
+00:28:10,559 --> 00:28:13,620
+and you can choose which ones you and do
+and go ahead and do them now one word of
+
+504
+00:28:14,169 --> 00:28:15,233
+warning though
+
+505
+00:28:15,809 --> 00:28:19,760
+I'm this tool doesn't do all the changes
+it also
+
+506
+00:28:19,076 --> 00:28:22,089
+may not get everything right point that
+might not get the exact
+
+507
+00:28:22,089 --> 00:28:25,878
+type of property right so you really
+need to review the
+
+508
+00:28:26,679 --> 00:28:29,730
+the changes offered up by the school and
+I
+
+509
+00:28:29,073 --> 00:28:34,081
+accept them or tweet them as needed
+
+510
+00:28:35,053 --> 00:28:38,061
+the next I'm not talk about swept now
+they're lot of questions about swept
+
+511
+00:28:39,033 --> 00:28:42,122
+so I'm not gonna go into any language
+details or anything else about try to
+
+512
+00:28:43,022 --> 00:28:43,089
+teach you certain
+
+513
+00:28:43,089 --> 00:28:46,124
+anything like that so I'm I hope you'll
+be able to go to go sessions and enjoy
+
+514
+00:28:47,024 --> 00:28:47,083
+does
+
+515
+00:28:47,083 --> 00:28:52,110
+I'm said I'm just gonna talk to
+basically about the API attractions
+
+516
+00:28:53,001 --> 00:28:55,007
+within the context of cocoa and Cocoa
+Touch
+
+517
+00:28:55,016 --> 00:28:59,165
+Swift is the new language for cocoa and
+provide seamless interoperability with
+
+518
+00:28:59,309 --> 00:29:04,520
+the cocoa API's and of course a
+objective-c code
+
+519
+00:29:04,052 --> 00:29:07,083
+now as you know API is a API design is
+
+520
+00:29:07,083 --> 00:29:10,091
+a near and dear to our hearts I
+
+521
+00:29:10,091 --> 00:29:13,850
+given a few AP I'd find talking about so
+we think deeply about
+
+522
+00:29:14,669 --> 00:29:18,100
+API consideration
+
+523
+00:29:18,001 --> 00:29:22,089
+and existing API guidelines we have in
+cocoa for objective-c
+
+524
+00:29:22,098 --> 00:29:26,417
+pretty much applied uswest as well and
+with just one exception but I'll talk
+
+525
+00:29:27,299 --> 00:29:28,850
+about later dinette methods
+
+526
+00:29:28,085 --> 00:29:31,146
+there's really no changes in API as
+their exposed
+
+527
+00:29:32,046 --> 00:29:35,101
+in swept now this doesn't mean of course
+as we
+
+528
+00:29:36,001 --> 00:29:40,002
+out start adopting more apps which
+features in our API
+
+529
+00:29:40,011 --> 00:29:43,019
+more API's forward not be taking
+advantage of something new and exciting
+
+530
+00:29:43,019 --> 00:29:45,108
+features apps with objective-c does not
+offer
+
+531
+00:29:46,008 --> 00:29:50,071
+so we're gonna be doing up over time of
+course
+
+532
+00:29:50,071 --> 00:29:53,116
+so just let me just show you how some
+cocoa AP I've come across in sweat
+
+533
+00:29:54,016 --> 00:29:57,165
+first properties there's a pretty
+obvious one
+
+534
+00:29:57,309 --> 00:30:02,345
+at the and that's wrecked a at the frame
+propagandist you typed as an abstract
+
+535
+00:30:02,669 --> 00:30:06,210
+be straightforward here's how it looks
+like in sweat
+
+536
+00:30:06,021 --> 00:30:09,069
+now as I'm showing the fight if you have
+a comp is a lot which lines objective-c
+
+537
+00:30:09,069 --> 00:30:12,071
+which line the swift just look for the
+lack of semicolon
+
+538
+00:30:12,071 --> 00:30:15,075
+that identified the sweat line there's
+another one
+
+539
+00:30:15,075 --> 00:30:18,078
+storyboard property of of an issue
+controller
+
+540
+00:30:18,078 --> 00:30:22,084
+here's what looks like in swept note the
+exclamation mark there on the storyboard
+
+541
+00:30:23,038 --> 00:30:25,087
+which indicates that the property of
+this could be no
+
+542
+00:30:25,087 --> 00:30:28,149
+and to get which indicate that this is a
+read-only property
+
+543
+00:30:29,049 --> 00:30:32,086
+and here's one more case the sub use
+property of %uh
+
+544
+00:30:32,086 --> 00:30:35,182
+an SRA which is of course declared as an
+SRA in objective-c
+
+545
+00:30:36,082 --> 00:30:39,116
+which implicitly means an SRA of ID
+
+546
+00:30:40,016 --> 00:30:44,114
+it comes across the swift as an array of
+any object for any object is the
+
+547
+00:30:45,014 --> 00:30:49,088
+counterpart I D not just want to refine
+what I'm talking about as we move
+
+548
+00:30:49,088 --> 00:30:49,187
+forward
+
+549
+00:30:50,087 --> 00:30:53,182
+you wanna declared API better because we
+this is really an area and this
+
+550
+00:30:54,082 --> 00:30:57,941
+use of course right now this is not
+coming through the API
+
+551
+00:30:58,679 --> 00:31:01,830
+here but its refinement but we'd like to
+do here and other places and more
+
+552
+00:31:01,083 --> 00:31:01,169
+importantly
+
+553
+00:31:02,069 --> 00:31:05,101
+as you define your own API since work
+within your programs you take advantage
+
+554
+00:31:06,001 --> 00:31:06,086
+of sweat
+
+555
+00:31:06,086 --> 00:31:09,101
+unique features to express your program
+
+556
+00:31:10,001 --> 00:31:13,009
+better
+
+557
+00:31:13,009 --> 00:31:17,013
+now let me show you some mapping of
+methods point method with no arguments
+
+558
+00:31:17,013 --> 00:31:20,039
+there's a simple case display if needed
+here's what looks like an
+
+559
+00:31:20,039 --> 00:31:23,068
+swept and here's what the call looks
+like in swept
+
+560
+00:31:23,419 --> 00:31:27,370
+display need it with open poster and at
+the end to indicate that this is a
+
+561
+00:31:27,037 --> 00:31:29,049
+method called pretty straightforward
+
+562
+00:31:29,049 --> 00:31:32,148
+there's a method with one argument
+
+563
+00:31:33,048 --> 00:31:36,070
+and at some you method
+
+564
+00:31:36,007 --> 00:31:39,726
+here's what it looks like in sweat now
+nope this a view here
+
+565
+00:31:40,419 --> 00:31:44,431
+and one thing to note is that this a
+view colon is not a label
+
+566
+00:31:44,539 --> 00:31:48,590
+the name of this method does add sup you
+this a view is simply that name of the
+
+567
+00:31:48,059 --> 00:31:48,146
+variable
+
+568
+00:31:49,046 --> 00:31:53,255
+the name of the local variable for that
+argument existing objective-c Heather
+
+569
+00:31:53,669 --> 00:31:58,140
+making its way into the swift interface
+here so really there method signature of
+
+570
+00:31:58,014 --> 00:32:00,048
+this method is at sub you and it takes
+an in-depth
+
+571
+00:32:00,048 --> 00:32:03,060
+you calling something like this is
+
+572
+00:32:03,006 --> 00:32:07,955
+again also pretty straightforward at sup
+you and and your arguments right there
+
+573
+00:32:08,549 --> 00:32:12,500
+now let's look at the are case with
+multiple arguments
+
+574
+00:32:12,005 --> 00:32:16,013
+there's a new method performs take what
+identifiers that take a Segway ID and a
+
+575
+00:32:16,058 --> 00:32:19,065
+Fender
+
+576
+00:32:19,065 --> 00:32:22,132
+the first part name goes outside the car
+and and then any
+
+577
+00:32:23,032 --> 00:32:27,121
+labels for second and further arguments
+go inside the parent like this
+
+578
+00:32:28,021 --> 00:32:32,110
+not that the Segway ID is again the
+variable name for the local argument
+
+579
+00:32:32,299 --> 00:32:36,335
+that up goes there and the fender goes
+right there with the fender sis
+
+580
+00:32:36,659 --> 00:32:39,723
+that label and argument name are the
+same a swift collapse
+
+581
+00:32:40,299 --> 00:32:43,700
+them for you into one it doesn't repeat
+the word sender so note that in this
+
+582
+00:32:43,007 --> 00:32:44,099
+case the Segway ideas not
+
+583
+00:32:45,062 --> 00:32:48,851
+part of than it's on the label it's not
+part of the name of the method but the
+
+584
+00:32:49,409 --> 00:32:50,380
+fender is
+
+585
+00:32:50,038 --> 00:32:53,124
+so really the method signature for this
+is performed segment I don't fire
+
+586
+00:32:54,024 --> 00:32:59,085
+extreme argument and then senator Colin
+twitches and in the object argument
+
+587
+00:32:59,085 --> 00:33:04,150
+an indication of this is pretty
+straightforward as you can see here
+
+588
+00:33:05,005 --> 00:33:08,164
+so Coco API so many experts that label
+on the first argument
+
+589
+00:33:08,659 --> 00:33:14,080
+we saw that with the I'm with their
+example from the previous slide
+
+590
+00:33:14,008 --> 00:33:17,032
+here's another example points this is
+how you call a delegate methods but you
+
+591
+00:33:17,032 --> 00:33:18,511
+can collapse up to you
+
+592
+00:33:18,799 --> 00:33:22,280
+it works very well the first part of the
+name includes the
+
+593
+00:33:22,028 --> 00:33:26,090
+the type of the first argument and other
+labels described other arguments
+
+594
+00:33:26,009 --> 00:33:29,018
+here's another example with three
+argument that resource value values the
+
+595
+00:33:29,909 --> 00:33:32,830
+first argument and four key and error
+explicit labels
+
+596
+00:33:32,083 --> 00:33:36,150
+on the subsequent arguments this results
+in natural method mean for their easy to
+
+597
+00:33:37,005 --> 00:33:37,794
+read
+
+598
+00:33:38,289 --> 00:33:43,990
+easy to speak and easy to really crap as
+redeveloping API
+
+599
+00:33:43,099 --> 00:33:46,187
+now you might be thinking when to use
+when should you consider labels on the
+
+600
+00:33:47,087 --> 00:33:48,094
+first time in because swift will
+
+601
+00:33:49,057 --> 00:33:52,152
+RR you to put labels on the first
+argument methodName it's just not the
+
+602
+00:33:53,052 --> 00:33:55,069
+default behavior
+
+603
+00:33:55,069 --> 00:33:58,071
+up one cases where argument technique we
+weighed
+
+604
+00:33:58,071 --> 00:34:01,170
+subpart so the whole funds but the other
+method called moved to XY
+
+605
+00:34:02,007 --> 00:34:06,009
+in swept it would come across like this
+and may be worth a look so good
+
+606
+00:34:06,072 --> 00:34:09,211
+wide extruded what somewhat differently
+than why
+
+607
+00:34:09,859 --> 00:34:12,862
+you might consider method names like
+this
+
+608
+00:34:12,889 --> 00:34:15,931
+and is actually the kind of structure
+you will see increased and free-form
+
+609
+00:34:16,309 --> 00:34:17,343
+functions in sweat
+
+610
+00:34:17,649 --> 00:34:21,667
+where you have the ability to put labels
+on argument
+
+611
+00:34:21,829 --> 00:34:24,858
+but it's better in these cases the store
+to think about if these are all
+
+612
+00:34:25,119 --> 00:34:28,125
+equally weights apart for the whole is
+there some combo type that represents
+
+613
+00:34:28,719 --> 00:34:28,724
+them
+
+614
+00:34:29,219 --> 00:34:32,282
+force in this case the CG point on and
+this point there are many other benefits
+
+615
+00:34:32,849 --> 00:34:35,888
+to using a combo type you're not
+shopping all the arguments all over the
+
+616
+00:34:36,239 --> 00:34:36,940
+place
+
+617
+00:34:36,094 --> 00:34:40,803
+also a using a comp combined single type
+is a more promising approach the API
+
+618
+00:34:41,649 --> 00:34:44,710
+guidance pathfinder arguments one by one
+you're specifying this one
+
+619
+00:34:45,259 --> 00:34:48,336
+whole thing to represent them and you
+know we have many other types to
+
+620
+00:34:49,029 --> 00:34:51,126
+represent combine types an estate in a
+state components
+
+621
+00:34:51,999 --> 00:34:56,051
+I'm you I collar and a scholar and a
+strange CD rack we have a new FB and
+
+622
+00:34:56,519 --> 00:34:57,578
+vector three types represent
+
+623
+00:34:58,109 --> 00:35:02,170
+points and 3d space and so on so now you
+such types where appropriate and the
+
+624
+00:35:02,719 --> 00:35:06,751
+you get rid of this problem now earlier
+I mentioned it methods
+
+625
+00:35:07,039 --> 00:35:13,039
+it methods I are an exception to the
+label thing it's another case
+
+626
+00:35:13,039 --> 00:35:17,094
+that the to the rule with the about the
+first argument here than it with frame
+
+627
+00:35:17,589 --> 00:35:20,596
+in objective-c here's how it comes
+across
+
+628
+00:35:21,289 --> 00:35:24,293
+in threat again frame here
+
+629
+00:35:24,329 --> 00:35:27,422
+is a label and the way you call this
+
+630
+00:35:28,259 --> 00:35:33,460
+is in a few throw the constructor syntax
+initializer syntax with the frame
+
+631
+00:35:33,046 --> 00:35:34,065
+argument at the label
+
+632
+00:35:34,065 --> 00:35:37,934
+in this case save now we see in the
+sense of the code you read and
+
+633
+00:35:38,519 --> 00:35:42,390
+and flight yesterday
+
+634
+00:35:42,039 --> 00:35:45,978
+and there's the fear the frame label now
+communis constructors
+
+635
+00:35:46,329 --> 00:35:50,331
+I'm as you know in objective-c we've had
+initializer Zenit methods
+
+636
+00:35:50,529 --> 00:35:53,537
+we also have what we call these
+constructor method like this one and a
+
+637
+00:35:53,609 --> 00:35:54,150
+scholar
+
+638
+00:35:54,015 --> 00:35:58,039
+color but pattern image and these were
+just another way to say that method
+
+639
+00:35:58,039 --> 00:35:59,042
+except you don't have to call
+
+640
+00:35:59,042 --> 00:36:02,096
+out lock and the communion affect
+stripped
+
+641
+00:36:02,096 --> 00:36:05,455
+recognize these patterns it in fact it
+
+642
+00:36:06,319 --> 00:36:10,336
+I'm it reflects that as an initializer
+method just like this so swift
+
+643
+00:36:10,489 --> 00:36:12,900
+recognizes that this method is really in
+it
+
+644
+00:36:12,009 --> 00:36:15,688
+with a pattern image argument so this
+actually comes across in sweat
+
+645
+00:36:16,579 --> 00:36:20,160
+just like initializer does will actually
+great because it simplifies
+
+646
+00:36:20,016 --> 00:36:24,675
+that dichotomy between companies
+constructors and magnet methods
+
+647
+00:36:24,819 --> 00:36:28,140
+I let me talk about one more thing about
+API I'm
+
+648
+00:36:28,014 --> 00:36:32,088
+induct in MI two types because this one
+is really really pretty cool
+
+649
+00:36:32,088 --> 00:36:36,717
+here's a new I you know we've added
+recently a few releases ago
+
+650
+00:36:37,509 --> 00:36:40,606
+might come format account style note
+that it's got four values but it's so
+
+651
+00:36:41,479 --> 00:36:42,515
+hard to figure out
+
+652
+00:36:42,839 --> 00:36:45,878
+what's different about those for now
+they are these not long words which are
+
+653
+00:36:46,229 --> 00:36:47,630
+night in this trip there but
+
+654
+00:36:47,063 --> 00:36:50,422
+it sorta like what's going on there
+here's what this looks like and sweat
+
+655
+00:36:50,989 --> 00:36:54,190
+it's really like breath of fresh air
+like while you know if I'll
+
+656
+00:36:54,019 --> 00:36:57,928
+memory death more by Andrea really cool
+and you think is really pretty neat to
+
+657
+00:36:58,099 --> 00:36:58,700
+hear that
+
+658
+00:36:58,007 --> 00:37:02,176
+you know I am up to call it you might
+say and its by come from other counts
+
+659
+00:37:02,869 --> 00:37:03,440
+style
+
+660
+00:37:03,044 --> 00:37:06,141
+not file however in context where the
+argument type is known
+
+661
+00:37:07,041 --> 00:37:10,046
+you really just after you stop file and
+you know I can fit that
+
+662
+00:37:10,091 --> 00:37:13,145
+bulletin to one line and Val improve our
+slides moving forward
+
+663
+00:37:14,045 --> 00:37:17,141
+its people that
+
+664
+00:37:18,041 --> 00:37:21,250
+thanks
+
+665
+00:37:21,619 --> 00:37:24,660
+so let's talk about gesture recognizers
+which is a known you a prob added
+
+666
+00:37:25,029 --> 00:37:29,670
+in and again a few gesture recognizers
+on IRC this is Artus will feel familiar
+
+667
+00:37:29,067 --> 00:37:30,476
+to you
+
+668
+00:37:31,079 --> 00:37:34,700
+gesture recognizers allow you to
+eliminate large chunks of code
+
+669
+00:37:34,007 --> 00:37:38,636
+by doing there mouse tracking for you
+and just generating an action at the end
+
+670
+00:37:39,329 --> 00:37:40,334
+for the appropriate texture
+
+671
+00:37:40,829 --> 00:37:44,831
+it also i helped disintegrate between
+various types of quicksand drags it
+
+672
+00:37:44,849 --> 00:37:48,670
+might sometimes be hard to figure out
+there's a new class gesture recognizer
+
+673
+00:37:48,067 --> 00:37:52,143
+it's got five apartment and you can also
+create your own subclasses because we
+
+674
+00:37:53,043 --> 00:37:55,352
+provide API that specifically
+
+675
+00:37:55,739 --> 00:37:58,801
+designed for supply thing that gesture
+recognizer
+
+676
+00:37:59,359 --> 00:38:01,423
+there's gonna be more about gesture
+recognizers at the storyboards and
+
+677
+00:38:01,999 --> 00:38:03,053
+controllers talk which is
+
+678
+00:38:03,539 --> 00:38:08,544
+this afternoon at 4:30 now if you want
+to deal with events yourself
+
+679
+00:38:08,589 --> 00:38:12,380
+ordeal with other kinds of events other
+than mouse events there's a block-based
+
+680
+00:38:12,038 --> 00:38:16,527
+event tracking API this also helps
+eliminate a lot of code by taking over
+
+681
+00:38:16,869 --> 00:38:16,962
+that
+
+682
+00:38:17,799 --> 00:38:21,170
+new that you might are often have to
+ride this a
+
+683
+00:38:21,017 --> 00:38:24,146
+whips let me show you that I think there
+you go so this
+
+684
+00:38:24,299 --> 00:38:27,324
+I'm to lobby the path the math
+governmental interest in a time out and
+
+685
+00:38:27,549 --> 00:38:28,420
+there's a block up
+
+686
+00:38:28,042 --> 00:38:31,114
+called ended the tracking will continue
+until your
+
+687
+00:38:32,014 --> 00:38:39,014
+Telep stop or the timeout timeout with
+the key
+
+688
+00:38:40,007 --> 00:38:43,019
+in
+
+689
+00:38:43,082 --> 00:38:46,091
+we have some new accessibility API the
+new API's are
+
+690
+00:38:46,091 --> 00:38:52,091
+simpler their express tax bill p-values
+exploit the values for various Rylance
+
+691
+00:38:52,091 --> 00:38:53,096
+and you I i'm
+
+692
+00:38:54,041 --> 00:38:59,042
+properties are expressed directly as
+property there's no need to subclass
+
+693
+00:38:59,051 --> 00:39:02,140
+in bogus umbria some review the old API
+
+694
+00:39:03,004 --> 00:39:06,010
+and I bear bear a compile-time warnings
+as well because they're now
+
+695
+00:39:07,000 --> 00:39:10,007
+actual property is being used here let
+me give you an example
+
+696
+00:39:10,007 --> 00:39:14,046
+before you had this acceptable catchment
+value method which you had to override
+
+697
+00:39:14,109 --> 00:39:16,260
+any other theories if statements to deal
+with it
+
+698
+00:39:16,026 --> 00:39:19,094
+now you can either just going to
+override acceptable P label method
+
+699
+00:39:19,094 --> 00:39:22,102
+fairly straightforward I can actually
+affect the property as well if you're
+
+700
+00:39:23,002 --> 00:39:24,004
+not supply from there
+
+701
+00:39:24,022 --> 00:39:27,099
+apart from that class for other reasons
+so know much cleaner
+
+702
+00:39:27,099 --> 00:39:31,128
+much cleaner approach let me talk a bit
+about power and
+
+703
+00:39:32,028 --> 00:39:36,043
+count on my power the kind of power that
+comes out of a wall clock it but
+
+704
+00:39:36,043 --> 00:39:39,094
+even that kinda even with that kind of
+power comes great responsibility
+
+705
+00:39:39,094 --> 00:39:44,097
+because you need to use it wisely new
+API we've added across the system
+
+706
+00:39:45,024 --> 00:39:48,393
+in a number of class and cocoa is this
+concept of quality of service
+
+707
+00:39:48,609 --> 00:39:52,890
+it finance operation at operation Q&A
+thread and so on
+
+708
+00:39:52,089 --> 00:39:56,097
+this allows indicating the nature and
+importance of the work
+
+709
+00:39:56,097 --> 00:39:59,171
+you're doing in lets us to manage
+resources
+
+710
+00:40:00,071 --> 00:40:03,127
+between your processing across processes
+are possible
+
+711
+00:40:04,027 --> 00:40:09,080
+let me talk about what the values of
+this quality of service property
+
+712
+00:40:09,008 --> 00:40:14,797
+are I'll just go through use cases for
+it the first one user interactive is an
+
+713
+00:40:15,589 --> 00:40:17,430
+interactive session with the user
+
+714
+00:40:17,043 --> 00:40:21,068
+such as a drawing program or maybe
+scrolling and human email message you
+
+715
+00:40:21,068 --> 00:40:23,129
+really want 60 frames per second there
+
+716
+00:40:24,029 --> 00:40:28,858
+for the user and up that represents that
+kinda work the next hour later here
+
+717
+00:40:29,119 --> 00:40:33,220
+user initiated is like when the user
+clicks email message they want to appear
+
+718
+00:40:33,022 --> 00:40:36,911
+there very quickly but maybe don't have
+the same 60 pips continuous behavior
+
+719
+00:40:37,109 --> 00:40:40,730
+all these wanna get no whatever is
+possible to get that to happen as
+
+720
+00:40:40,073 --> 00:40:41,094
+quickly as possible
+
+721
+00:40:41,094 --> 00:40:45,253
+you to a PR quality of services
+something like periodic male patch these
+
+722
+00:40:46,099 --> 00:40:49,530
+are expected to happen expected to
+happen fast on a regular basis
+
+723
+00:40:49,053 --> 00:40:52,122
+but you know can be off by a few seconds
+if the system is busy with other things
+
+724
+00:40:53,022 --> 00:40:56,050
+we have a background quality of service
+which is like indexing
+
+725
+00:40:56,005 --> 00:40:59,009
+which needs to happen but could be
+delayed if they're more important things
+
+726
+00:40:59,054 --> 00:40:59,119
+happening
+
+727
+00:41:00,019 --> 00:41:03,072
+and then the default which allows the
+quality of service
+
+728
+00:41:03,072 --> 00:41:07,074
+be inferred from other operations are
+going on sometimes you might have a
+
+729
+00:41:07,092 --> 00:41:09,105
+dependent operation that will dictate
+
+730
+00:41:10,005 --> 00:41:13,030
+what the resulting what the resulting
+quality of service here
+
+731
+00:41:13,003 --> 00:41:17,061
+is we also have a new API nuke what's
+called a nice background activity
+
+732
+00:41:17,088 --> 00:41:21,557
+scheduler this is basically a coke a
+little interface XPC activity API
+
+733
+00:41:22,349 --> 00:41:25,354
+mythological schedule maintenance or
+background
+
+734
+00:41:25,849 --> 00:41:29,930
+kinda path for instance periodic picking
+up mail or maybe I
+
+735
+00:41:29,093 --> 00:41:33,155
+indexing and so on you can provide again
+quality of service that you want on this
+
+736
+00:41:34,055 --> 00:41:37,067
+this operation we have a number of talks
+about power
+
+737
+00:41:37,067 --> 00:41:40,746
+here's pointers to to a bomb ones
+tomorrow morning riding energy efficient
+
+738
+00:41:41,349 --> 00:41:42,351
+code part 1
+
+739
+00:41:42,369 --> 00:41:45,690
+there's also a part 2 as well that can
+go to after this one if you want
+
+740
+00:41:45,069 --> 00:41:49,117
+and powerful from for diagnostics what's
+new in GCB annex PC and thats Thursday
+
+741
+00:41:50,017 --> 00:41:51,018
+afternoon at cue
+
+742
+00:41:51,027 --> 00:41:54,045
+I'll let me talk a
+
+743
+00:41:54,045 --> 00:41:58,081
+to you a bit about in a string we have a
+new API
+
+744
+00:41:58,081 --> 00:42:02,166
+in a string encoding detector this is to
+allow
+
+745
+00:42:03,066 --> 00:42:06,485
+detecting encodings of random back to
+bite
+
+746
+00:42:07,079 --> 00:42:10,080
+which come from who knows where
+
+747
+00:42:10,089 --> 00:42:13,810
+who knows where they've been but you
+need to show it to the user and
+
+748
+00:42:13,081 --> 00:42:17,380
+typically we r encodings up there some
+bad characters in there are other bad be
+
+749
+00:42:18,109 --> 00:42:21,270
+generated or corrupt along the way it
+becomes pretty hard to make heads or
+
+750
+00:42:21,027 --> 00:42:23,068
+tails out and that's what the PPI tries
+to do
+
+751
+00:42:23,068 --> 00:42:28,165
+you have number options a among the
+options are debited specify which in
+
+752
+00:42:29,065 --> 00:42:30,484
+coatings to include
+
+753
+00:42:31,069 --> 00:42:34,750
+consider for sure which including to
+exclude taking give hand
+
+754
+00:42:34,075 --> 00:42:37,122
+to make the operation more focused you
+can
+
+755
+00:42:38,022 --> 00:42:41,641
+tell us whether you want lofty
+conversion or not if
+
+756
+00:42:41,839 --> 00:42:45,310
+including conversion is not possible
+without loss
+
+757
+00:42:45,031 --> 00:42:49,050
+well just do it anyway and maybe some
+characters are lost and finally
+
+758
+00:42:49,329 --> 00:42:52,280
+not finally this is just another option
+can provide a language came to which
+
+759
+00:42:52,028 --> 00:42:53,119
+allows day including conversion
+
+760
+00:42:54,019 --> 00:42:57,115
+to again focus more that knows what
+language that encoding is intended to be
+
+761
+00:42:58,015 --> 00:42:59,098
+in
+
+762
+00:42:59,098 --> 00:43:04,115
+we have to you small new API's contained
+in string in Lok life cases contain
+
+763
+00:43:05,015 --> 00:43:05,069
+string
+
+764
+00:43:05,069 --> 00:43:08,498
+might be thinking you mean though these
+right there well they were you know you
+
+765
+00:43:09,119 --> 00:43:10,460
+could use range of string
+
+766
+00:43:10,046 --> 00:43:13,140
+but after some years we decided you know
+even though these are just one
+
+767
+00:43:14,004 --> 00:43:19,088
+whiners even
+
+768
+00:43:20,024 --> 00:43:23,077
+thank you even though these are
+one-liners and you know that's right to
+
+769
+00:43:23,077 --> 00:43:24,099
+append the API
+
+770
+00:43:24,099 --> 00:43:27,106
+sensibility of why create a one-line
+communion they're really good
+
+771
+00:43:28,069 --> 00:43:31,145
+for discover bill T you know campaign
+string at the lawn or this Carlton
+
+772
+00:43:32,045 --> 00:43:35,101
+range of strings up here we have them
+okay
+
+773
+00:43:36,001 --> 00:43:39,004
+the one other thing on the talking about
+that this might impact your abscess
+
+774
+00:43:39,031 --> 00:43:40,580
+tagged pointer strings
+
+775
+00:43:40,859 --> 00:43:44,730
+what we do here is we take a hole in a
+string object and we
+
+776
+00:43:44,073 --> 00:43:47,082
+stop it into the base pointer and
+something roller dealing with some
+
+777
+00:43:48,063 --> 00:43:50,150
+objects like enough numbers and the
+state and now we're doing a banana
+
+778
+00:43:51,005 --> 00:43:52,057
+strings as well
+
+779
+00:43:53,002 --> 00:43:56,095
+let me give you a visual guide of how
+this works here you're creating a utf8
+
+780
+00:43:56,095 --> 00:43:58,744
+string
+
+781
+00:43:59,599 --> 00:44:02,960
+typically you have your object pointer
+base pointer which is
+
+782
+00:44:02,096 --> 00:44:06,181
+the a pointer and that in turn points to
+an object which contains the is up plus
+
+783
+00:44:07,081 --> 00:44:10,152
+some bookkeeping information and then
+the bites of the string
+
+784
+00:44:11,052 --> 00:44:14,131
+so just a call that and we shove it just
+like that
+
+785
+00:44:14,599 --> 00:44:17,601
+into the base pointer and you saw how
+that works and
+
+786
+00:44:17,619 --> 00:44:20,880
+no we don't need for the pointer anymore
+so being a real point you're so now in
+
+787
+00:44:20,088 --> 00:44:21,547
+that 64 bits we have
+
+788
+00:44:22,339 --> 00:44:26,410
+the bolstering up with along with some
+it but keeping information
+
+789
+00:44:26,041 --> 00:44:29,102
+now turns out we can do this for about
+25 to 40 40 percent of your strings in
+
+790
+00:44:30,002 --> 00:44:31,801
+some applications
+
+791
+00:44:31,819 --> 00:44:35,180
+there are some things to watch for
+there's no is a pointer
+
+792
+00:44:35,018 --> 00:44:38,020
+now you aren't supposed to be acting as
+a pointer but if you were you will
+
+793
+00:44:38,038 --> 00:44:39,767
+really crash right now
+
+794
+00:44:40,109 --> 00:44:44,170
+in their different performance
+characteristics some operations get much
+
+795
+00:44:44,017 --> 00:44:45,052
+faster and some get
+
+796
+00:44:45,052 --> 00:44:49,093
+low-floor and they're better out of
+bounds checking
+
+797
+00:44:49,093 --> 00:44:52,762
+we've make sure that these can do much
+better outta bounds checking we try to
+
+798
+00:44:53,599 --> 00:44:56,600
+get outta bounds checking but there are
+some cases where the math and actually
+
+799
+00:44:56,609 --> 00:44:57,810
+does a better job
+
+800
+00:44:57,081 --> 00:45:00,360
+since all of these three are potential
+compatibility concerns
+
+801
+00:45:01,089 --> 00:45:05,200
+we actually make it so that this changes
+enabled for 1010 link
+
+802
+00:45:05,002 --> 00:45:10,026
+ap or later but not earlier aP's and of
+course only 46 for the haps
+
+803
+00:45:10,044 --> 00:45:14,133
+cuz trying to shovel them to a 3-pointer
+it was not fun
+
+804
+00:45:15,033 --> 00:45:18,562
+let me talk a bit about for matters and
+here we have I
+
+805
+00:45:18,859 --> 00:45:22,700
+but when you format your classes in this
+format a classis
+
+806
+00:45:22,007 --> 00:45:26,014
+the first three are fairly
+straightforward mas por matter
+
+807
+00:45:26,077 --> 00:45:30,123
+energy for matter and length for matter
+
+808
+00:45:31,023 --> 00:45:34,912
+we also have a date in trouble for
+matter that we should take two dates and
+
+809
+00:45:35,119 --> 00:45:38,400
+show you that a
+
+810
+00:45:38,004 --> 00:45:41,083
+thank you and a date components for
+matter which Walden
+
+811
+00:45:42,019 --> 00:45:46,448
+show you a duration for three hours 25
+
+812
+00:45:46,619 --> 00:45:49,666
+an Arby's have some various
+customization options for slot
+
+813
+00:45:50,089 --> 00:45:57,089
+last one could be customized say know
+about 10 minutes remaining
+
+814
+00:45:58,077 --> 00:46:01,926
+and now note that these are for
+formatting only not for parsing
+
+815
+00:46:02,619 --> 00:46:06,010
+so it's for output of beta
+
+816
+00:46:06,001 --> 00:46:09,025
+in we have a form and context
+
+817
+00:46:09,025 --> 00:46:12,884
+property on all are and as for matters
+
+818
+00:46:13,109 --> 00:46:17,290
+and here's what looks like and I'll DEF
+explain to you what some of these are
+
+819
+00:46:17,029 --> 00:46:20,117
+for what form and context does that tell
+the formatter where the result of the
+
+820
+00:46:21,017 --> 00:46:21,102
+formatting
+
+821
+00:46:22,002 --> 00:46:26,051
+is intended to be used and that allows
+it to give a different result
+
+822
+00:46:26,069 --> 00:46:29,790
+where possible went with if your arm
+
+823
+00:46:29,079 --> 00:46:32,118
+formatting date in French
+
+824
+00:46:33,018 --> 00:46:36,042
+beginning of a sentence would look like
+this June with a capital J
+
+825
+00:46:36,042 --> 00:46:39,991
+while the middle of a sentence would use
+a Little J now this dynamic here one is
+
+826
+00:46:40,369 --> 00:46:40,437
+pretty cool
+
+827
+00:46:41,049 --> 00:46:47,420
+because what it does is depending on
+about the result is used
+
+828
+00:46:47,042 --> 00:46:50,921
+in the context of in a string formatting
+depending on whether to use at the
+
+829
+00:46:51,299 --> 00:46:53,450
+beginning of a sentence middle of a
+sentence or
+
+830
+00:46:53,045 --> 00:46:56,073
+found along it will use one of the other
+three options to do the right thing
+
+831
+00:46:56,073 --> 00:46:59,148
+such downs usually the one you want to
+use on the you definitely know whatever
+
+832
+00:47:00,048 --> 00:47:03,053
+the result is going
+
+833
+00:47:03,053 --> 00:47:06,148
+there the internationalization talked
+this morning if you missed it
+
+834
+00:47:07,048 --> 00:47:10,122
+you can't action on video of course let
+me talk a bit about
+
+835
+00:47:11,022 --> 00:47:14,911
+I cloud and you heard about I card
+yesterday of course
+
+836
+00:47:15,109 --> 00:47:19,380
+we have new API the clock at API with
+the new framework for managing structure
+
+837
+00:47:19,038 --> 00:47:20,070
+they don't i cloud
+
+838
+00:47:20,007 --> 00:47:23,051
+in for sharing such data between users
+as well
+
+839
+00:47:24,014 --> 00:47:27,108
+and clout it was also as an
+implementation detail the back
+
+840
+00:47:28,008 --> 00:47:33,019
+and the for I clarke document storage as
+well
+
+841
+00:47:33,019 --> 00:47:36,056
+I'm not gonna talk about pocket anymore
+other than just telling you there too
+
+842
+00:47:36,056 --> 00:47:40,065
+great sessions you can go to this
+afternoon and Thursday afternoon
+
+843
+00:47:40,569 --> 00:47:44,490
+now iPod document storage as you know i
+ka documents or just something we've had
+
+844
+00:47:44,049 --> 00:47:50,052
+for a while and this document and you I
+document provides support for it
+
+845
+00:47:50,052 --> 00:47:53,077
+so having you back and in the form of
+cloud kid
+
+846
+00:47:53,077 --> 00:47:56,083
+and we also another feature a document
+versions are now available
+
+847
+00:47:56,083 --> 00:48:01,116
+on I clout in addition you heard about I
+call drive yesterday where
+
+848
+00:48:02,016 --> 00:48:05,017
+all applications can now read and write
+files from
+
+849
+00:48:05,026 --> 00:48:10,113
+I clout thanks to die Cloud Drive as
+well
+
+850
+00:48:11,013 --> 00:48:15,017
+now in the moving to the new back and
+
+851
+00:48:15,017 --> 00:48:18,100
+and taking advantages up some of these
+other changes some of the
+
+852
+00:48:19,000 --> 00:48:22,599
+way we work but I car documents has
+changed
+
+853
+00:48:22,599 --> 00:48:26,020
+now course abusing us document in you I
+document
+
+854
+00:48:26,002 --> 00:48:29,038
+perhaps you don't have to worry about
+these perhaps you do
+
+855
+00:48:29,038 --> 00:48:32,131
+handling of noun downloaded files has
+changed previously there'd be a file
+
+856
+00:48:33,031 --> 00:48:35,117
+with the same name as the Nano the
+document
+
+857
+00:48:36,017 --> 00:48:40,166
+and we just fell in overtime now such
+files are tracked with invisible filed
+
+858
+00:48:40,319 --> 00:48:41,650
+with different names
+
+859
+00:48:41,065 --> 00:48:44,024
+if you're using AP of such as Medicare
+Quarrymen today the item pile
+
+860
+00:48:44,609 --> 00:48:46,680
+coordinator you're probably in good
+shape and you probably won't have to
+
+861
+00:48:47,319 --> 00:48:48,310
+worry about this
+
+862
+00:48:48,031 --> 00:48:51,056
+but you're a new meeting I called
+contain yourself
+
+863
+00:48:51,056 --> 00:48:54,595
+you need to I'm ignore hidden or
+unrecognized files
+
+864
+00:48:55,099 --> 00:48:58,470
+but better yet just switch to one of
+these other API if you can
+
+865
+00:48:58,047 --> 00:49:01,119
+higher level the better we'll talk some
+APIs URL
+
+866
+00:49:02,019 --> 00:49:05,063
+that allow you to get meta data for
+possibly
+
+867
+00:49:05,063 --> 00:49:09,302
+undone loud and downloaded element and
+this is like get promised item resource
+
+868
+00:49:09,869 --> 00:49:11,130
+value for thier
+
+869
+00:49:11,013 --> 00:49:15,054
+there are few other method like this as
+well
+
+870
+00:49:15,054 --> 00:49:18,098
+I just a quick job update on core data
+
+871
+00:49:18,098 --> 00:49:22,101
+we have a number of new API's in core
+data and that's backed up data quest
+
+872
+00:49:23,001 --> 00:49:27,096
+a lousy new batch updates and at
+actually pretty cool and on
+
+873
+00:49:27,096 --> 00:49:29,158
+you know small memory striations that's
+what you can do a lot of updates
+
+874
+00:49:30,058 --> 00:49:31,567
+efficiently
+
+875
+00:49:32,089 --> 00:49:35,115
+and efficient inspector crest is a new
+class for doing a few
+
+876
+00:49:35,349 --> 00:49:39,400
+inspecting it provides a nice progress
+support which allows you to
+
+877
+00:49:39,004 --> 00:49:43,703
+I'm monitor progress and also in fact
+cancelled operation as well
+
+878
+00:49:44,099 --> 00:49:47,160
+and finally of course it's worth
+mentioning that the new back and fry
+
+879
+00:49:47,016 --> 00:49:48,039
+clout
+
+880
+00:49:48,039 --> 00:49:51,123
+is I is also up underneath core data as
+well
+
+881
+00:49:52,023 --> 00:49:55,862
+so there's infrastructure improvements
+we do have a related session what's new
+
+882
+00:49:56,069 --> 00:49:59,090
+in court it up Thursday morning
+
+883
+00:49:59,279 --> 00:50:03,660
+I'll or layout you have some we've been
+improving our way out all along are
+
+884
+00:50:03,066 --> 00:50:03,133
+allowed in
+
+885
+00:50:04,033 --> 00:50:08,542
+remains a very important I'm a that's
+all pnr frameworks both
+
+886
+00:50:08,839 --> 00:50:14,260
+I'm on Iowa and North Penn we have some
+you APIC I'm just can't talk about it
+
+887
+00:50:14,026 --> 00:50:18,125
+poom these arm allow you to activate and
+a flat-out constraints directly as you
+
+888
+00:50:19,025 --> 00:50:22,079
+might know a way out constrain has
+pointed to the views that its
+
+889
+00:50:22,079 --> 00:50:26,152
+um the defining a relationship or
+surrounded and talking to their
+
+890
+00:50:27,052 --> 00:50:31,138
+views you cannot talk layout constraints
+directly to activate and deactivate them
+
+891
+00:50:32,038 --> 00:50:35,757
+which is a much Queen our model so what
+this means is that these three methods
+
+892
+00:50:36,099 --> 00:50:36,175
+here at
+
+893
+00:50:36,859 --> 00:50:43,859
+the two methods put the property replace
+these for existing methods effectively
+
+894
+00:50:44,018 --> 00:50:47,083
+NFL is on its way to form a deprecation
+I think we've been saying this for a few
+
+895
+00:50:47,083 --> 00:50:48,097
+years now
+
+896
+00:50:48,097 --> 00:50:51,183
+a I'm it Phillips
+
+897
+00:50:52,083 --> 00:50:56,127
+I so some enough LAPI have been promoted
+to their corresponding control for
+
+898
+00:50:57,027 --> 00:50:57,121
+classes
+
+899
+00:50:58,021 --> 00:51:01,023
+and so you should use the controls where
+possible
+
+900
+00:51:01,041 --> 00:51:05,054
+no don't use self control now have the
+API's hopefully and you can refer to
+
+901
+00:51:05,054 --> 00:51:06,118
+them
+
+902
+00:51:07,018 --> 00:51:10,137
+and i felt basic cable you has been
+deprecated use the view-based
+
+903
+00:51:10,299 --> 00:51:13,330
+table view that also allows you to get
+to my new the new features will be in
+
+904
+00:51:13,609 --> 00:51:15,626
+showing you with new look and so on much
+more
+
+905
+00:51:15,779 --> 00:51:20,210
+you going enough metric space and this
+browser is deprecated use the item based
+
+906
+00:51:20,021 --> 00:51:21,106
+on this browser API's
+
+907
+00:51:22,006 --> 00:51:25,555
+and its major convulsants way out since
+its so Anna cell-based
+
+908
+00:51:25,609 --> 00:51:30,400
+I'm 1 one of the most common uses
+brightness matrixes was of course that
+
+909
+00:51:30,004 --> 00:51:33,032
+radio button behavior very quick one in
+all the others turned off
+
+910
+00:51:33,068 --> 00:51:37,113
+now sibling radio buttons with the same
+action will now operate as a group
+
+911
+00:51:38,013 --> 00:51:43,452
+so this is a way to get at matrix
+functionality without using make
+
+912
+00:51:43,569 --> 00:51:46,730
+okay I'm gonna go quickly threw out some
+other news
+
+913
+00:51:46,073 --> 00:51:52,074
+stall you can slowed us down when you
+watch the video Q&A catch more about it
+
+914
+00:51:52,074 --> 00:51:56,863
+I am sign up table %um out my music and
+creepy statically now if you have a pic
+
+915
+00:51:57,529 --> 00:51:59,561
+stable you would like five rows and
+
+916
+00:51:59,849 --> 00:52:02,750
+don't do anything else you don't wanna
+provide data source you can do that now
+
+917
+00:52:02,075 --> 00:52:03,141
+there's a way to do it
+
+918
+00:52:04,041 --> 00:52:07,096
+and if the mitchell out in space by
+passing Reseda reciting behaviors you
+
+919
+00:52:07,096 --> 00:52:08,147
+can specify cap insert
+
+920
+00:52:09,047 --> 00:52:12,049
+you can I'm also specify resizing out
+and you can also
+
+921
+00:52:12,049 --> 00:52:16,158
+you such enough images as math for
+additional affect you fun
+
+922
+00:52:16,599 --> 00:52:19,626
+forget and as bitmap image wrapped
+allied
+
+923
+00:52:19,869 --> 00:52:23,917
+specify I'm Indian this and other bitmap
+format so you can actually sport
+
+924
+00:52:24,349 --> 00:52:28,220
+BGR a data friends and
+
+925
+00:52:28,022 --> 00:52:31,621
+if you're into that sort of thing and
+after catalogs
+
+926
+00:52:31,819 --> 00:52:36,930
+have in Xcode now sport more of formats
+like JPG images
+
+927
+00:52:36,093 --> 00:52:40,022
+and up yeltsin also are you could just
+fly thing and the use of course the
+
+928
+00:52:40,859 --> 00:52:45,860
+estimates captain said API to expose
+that flight information
+
+929
+00:52:45,869 --> 00:52:49,810
+you can do later prospects affect the
+tributes ring
+
+930
+00:52:49,081 --> 00:52:52,156
+popovers now how much is your way to
+detach you don't have to worry about
+
+931
+00:52:53,056 --> 00:52:54,083
+paying the rent or whatever
+
+932
+00:52:54,083 --> 00:52:58,168
+just responses delegate method combo box
+datepicker pop up button search your
+
+933
+00:52:59,068 --> 00:53:00,507
+pants but you know all too
+
+934
+00:53:01,119 --> 00:53:05,121
+right to left properly and will let and
+you might as the user might expect
+
+935
+00:53:05,319 --> 00:53:08,950
+and so you don't have to worry about
+
+936
+00:53:08,095 --> 00:53:12,114
+no bloating have a new API to do custom
+set up in your view subclass
+
+937
+00:53:13,014 --> 00:53:16,038
+for live use sport and Interface Builder
+to just
+
+938
+00:53:16,038 --> 00:53:19,081
+to use in context Interface Builder if
+you wanna do something custom
+
+939
+00:53:19,081 --> 00:53:24,082
+while for debugging purposes OpenGL
+context you can now carry some property
+
+940
+00:53:24,091 --> 00:53:26,170
+so you don't have to go down to the CDL
+context
+
+941
+00:53:27,007 --> 00:53:31,056
+file coordinator has a methods for a
+sickness waiting
+
+942
+00:53:32,019 --> 00:53:35,072
+so rather than having to all these
+methods on your own background cues you
+
+943
+00:53:35,072 --> 00:53:37,171
+let the file coordinator create and
+manage the queues for you
+
+944
+00:53:38,071 --> 00:53:42,096
+so much better way to do this and its
+workspace have methods
+
+945
+00:53:42,096 --> 00:53:45,125
+as your opening your alls you can now
+specify exactly which
+
+946
+00:53:46,025 --> 00:53:49,073
+ap you want to be used
+
+947
+00:53:49,073 --> 00:53:53,124
+NS Euro also have a lot of new API's one
+for instance while I it's result Ilyas
+
+948
+00:53:54,024 --> 00:53:54,075
+file
+
+949
+00:53:54,075 --> 00:53:57,091
+with this you I'll buy you something
+else alias file
+
+950
+00:53:57,091 --> 00:54:02,183
+if you are okay and we have our last few
+and this process info has methods to get
+
+951
+00:54:03,083 --> 00:54:05,129
+the operating system version and can be
+operating system
+
+952
+00:54:06,029 --> 00:54:10,083
+version comparisons a few months and and
+a fix PC Connection of sport enough
+
+953
+00:54:10,083 --> 00:54:10,174
+progress part
+
+954
+00:54:11,074 --> 00:54:15,113
+across processes which actually is a
+pretty cool feature as well
+
+955
+00:54:16,013 --> 00:54:19,074
+okay so no more pictures of food cuz
+we're done
+
+956
+00:54:19,074 --> 00:54:23,079
+a here are the things we talked about
+many exciting features some of these are
+
+957
+00:54:24,024 --> 00:54:25,092
+free from not
+
+958
+00:54:25,092 --> 00:54:28,106
+now as you go down to lunch I expect you
+to try to adopt these in your
+
+959
+00:54:29,006 --> 00:54:33,008
+application see how it's working and
+come find us at the lab doesn't work
+
+960
+00:54:33,008 --> 00:54:37,027
+I'm and heroes information what with the
+contact Jake barons
+
+961
+00:54:37,027 --> 00:54:41,556
+is sitting right there is a pretty great
+guy and OneNote our release notes
+
+962
+00:54:41,799 --> 00:54:47,799
+for yosemite are not yet available we
+hope to make available very soon
+
+963
+00:54:47,799 --> 00:54:51,000
+and the related sessions are shown you
+most of these what you meant race
+
+964
+00:54:51,000 --> 00:54:53,005
+builder and show you that before thats
+my afternoon
+
+965
+00:54:53,005 --> 00:54:54,364
+and with that thank you very much
+
