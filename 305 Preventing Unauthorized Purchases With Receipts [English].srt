@@ -1,0 +1,4766 @@
+1
+00:00:12,034 --> 00:00:15,112
+hi my name's James Wilson I'm
+engineering manager and
+
+2
+00:00:16,012 --> 00:00:19,085
+things on my team works on is the
+frameworks that power the App Store on
+
+3
+00:00:19,085 --> 00:00:20,124
+the iBookstore analyst 10
+
+4
+00:00:21,024 --> 00:00:25,026
+witching course course includes the
+unified receipt format that we
+
+5
+00:00:25,044 --> 00:00:26,055
+introduced last year
+
+6
+00:00:26,055 --> 00:00:30,120
+so in this session preventing
+unauthorized purchases with receipts
+
+7
+00:00:31,002 --> 00:00:35,065
+what was specifically going to talk
+about is a way in which
+
+8
+00:00:35,083 --> 00:00:39,105
+you can use this concept of a receipt to
+protect your revenue enforce protection
+
+9
+00:00:40,005 --> 00:00:41,048
+if your business model
+
+10
+00:00:41,048 --> 00:00:45,075
+directly into your app as well as into
+your serve as an issue in content
+
+11
+00:00:45,075 --> 00:00:51,078
+based on an in app purchase having been
+made ultimately we use receipts to know
+
+12
+00:00:52,005 --> 00:00:54,030
+exactly what the customer has paid for
+
+13
+00:00:54,003 --> 00:00:57,052
+you can do this both within your app
+
+14
+00:00:57,079 --> 00:01:01,150
+so you can build logic in Europe binary
+itself that verifies the receipt knows
+
+15
+00:01:02,005 --> 00:01:03,012
+that it came from Apple
+
+16
+00:01:03,057 --> 00:01:07,083
+and knows exactly what the user has paid
+for as well as you can engineer logic
+
+17
+00:01:07,083 --> 00:01:08,085
+into your servers
+
+18
+00:01:08,085 --> 00:01:12,128
+to do that same verification to make
+sure real monetary transaction has
+
+19
+00:01:13,028 --> 00:01:14,046
+occurred with the App Store
+
+20
+00:01:14,046 --> 00:01:18,129
+to make sure that you're going to be
+paid for all this comes down to one
+
+21
+00:01:19,029 --> 00:01:19,113
+simple thing
+
+22
+00:01:20,013 --> 00:01:25,080
+protecting your revenue now the receipt
+is a lot like
+
+23
+00:01:25,008 --> 00:01:28,014
+the physical proof of purchase docket or
+receipt the you get
+
+24
+00:01:28,086 --> 00:01:31,089
+when you're shopping in a store the same
+sort of concept
+
+25
+00:01:32,016 --> 00:01:36,110
+it's a trusted record of the ap and in
+app purchases that have been made
+
+26
+00:01:37,001 --> 00:01:40,088
+and just like that physical receipt you
+get when you shopping in a store
+
+27
+00:01:40,097 --> 00:01:43,166
+it's the way that you can build security
+into your app
+
+28
+00:01:44,066 --> 00:01:47,123
+to make sure that you are going to be
+paid for those features and content the
+
+29
+00:01:48,023 --> 00:01:50,024
+yuan locking in providing to your users
+
+30
+00:01:50,033 --> 00:01:53,131
+you're just like a department store can
+look at your receipt and know exactly
+
+31
+00:01:54,031 --> 00:01:56,089
+what you paid for before you walk out
+with goods
+
+32
+00:01:56,089 --> 00:01:59,093
+you can do the exact same thing in your
+app and that's what we're gonna show you
+
+33
+00:02:00,029 --> 00:02:04,111
+in the session the receipts office store
+on the device
+
+34
+00:02:05,011 --> 00:02:09,520
+Naz API's you can use to access it and
+the receipt is issued by the App Store
+
+35
+00:02:09,619 --> 00:02:10,628
+will issue a receipt
+
+36
+00:02:10,709 --> 00:02:15,200
+every time a transaction takes place so
+when an app is purchased
+
+37
+00:02:15,002 --> 00:02:18,151
+and installed there's a receipt in that
+when
+
+38
+00:02:18,349 --> 00:02:22,840
+in a purchase occurs a receipt is issued
+and it's available to you to verify that
+
+39
+00:02:22,084 --> 00:02:22,156
+purchase
+
+40
+00:02:23,056 --> 00:02:27,065
+likewise when pretty previous
+transactions are restored
+
+41
+00:02:27,569 --> 00:02:30,631
+another receipt is issued that will
+allow you to verify the authenticity
+
+42
+00:02:31,189 --> 00:02:35,281
+those purchases and we achieve that by
+having the receipt signed
+
+43
+00:02:36,109 --> 00:02:39,110
+in a way that is verifiable by you at
+the code level
+
+44
+00:02:39,209 --> 00:02:42,282
+so once you get this receipt you can
+confirm that really came from Apple
+
+45
+00:02:42,939 --> 00:02:47,958
+and haven't been tampered with at all
+the most importantly the receipt file
+
+46
+00:02:48,129 --> 00:02:51,430
+is unique to your app on a single device
+
+47
+00:02:51,043 --> 00:02:54,722
+it makes sure that when you verify that
+receipt you can be
+
+48
+00:02:55,109 --> 00:02:58,870
+absolutely certain that this purchase
+happened for your app
+
+49
+00:02:58,087 --> 00:03:01,266
+from this user on this single device
+alone
+
+50
+00:03:02,049 --> 00:03:05,115
+now when we're working with receipts
+
+51
+00:03:05,709 --> 00:03:08,765
+as you'll see in this session it's a lot
+like a recipe
+
+52
+00:03:09,269 --> 00:03:14,295
+there's a recipe that Apple gives you
+but there are things that you are going
+
+53
+00:03:14,529 --> 00:03:16,260
+to need to bring to the table as well
+
+54
+00:03:16,026 --> 00:03:19,985
+this decisions that you will need to
+make along the way to make sure the your
+
+55
+00:03:20,219 --> 00:03:21,257
+receipt implementation
+
+56
+00:03:21,599 --> 00:03:26,650
+your ability to protect your revenue in
+your app suits your unique needs
+
+57
+00:03:26,065 --> 00:03:29,824
+there's a lot of flexibility built into
+the system
+
+58
+00:03:30,409 --> 00:03:33,920
+now in particular what apple provides
+you with
+
+59
+00:03:33,092 --> 00:03:37,159
+is the receipt format specification and
+we build this receipt on a bunch of open
+
+60
+00:03:38,059 --> 00:03:38,137
+standards
+
+61
+00:03:39,037 --> 00:03:43,076
+there's nothing proprietary about these
+receipts the great thing about that is
+
+62
+00:03:43,076 --> 00:03:47,165
+because they're all open standards that
+a very very widely used in many places
+
+63
+00:03:47,849 --> 00:03:51,856
+you have lots of options available for
+you for how to work with receipts
+
+64
+00:03:51,919 --> 00:03:57,090
+we give you the receipt itself nes API's
+to find where the receipt is located
+
+65
+00:03:57,009 --> 00:04:01,068
+and we're giving you instructions on how
+to do on device receipt validation and
+
+66
+00:04:01,068 --> 00:04:02,797
+that'll be the main focus in this
+session
+
+67
+00:04:03,409 --> 00:04:06,510
+and we also provide an online service
+
+68
+00:04:06,051 --> 00:04:09,098
+that allows your servers to verify the
+authenticity a receipt
+
+69
+00:04:09,098 --> 00:04:13,467
+what use the developing need to choose
+
+70
+00:04:14,349 --> 00:04:18,730
+is the level of security that's
+appropriate for your products
+
+71
+00:04:18,073 --> 00:04:22,512
+and likewise that will translate into
+determining the level of complexity
+
+72
+00:04:23,169 --> 00:04:28,050
+in your implementation that suits your
+needs
+
+73
+00:04:28,005 --> 00:04:31,018
+this three key decisions that you're
+going to need to make and will call
+
+74
+00:04:31,018 --> 00:04:34,007
+these out as we go through this session
+to help you with that
+
+75
+00:04:34,169 --> 00:04:37,650
+the first decision you're going to need
+to make his how will you verify the
+
+76
+00:04:37,065 --> 00:04:38,514
+signature in the receipt
+
+77
+00:04:39,099 --> 00:04:42,131
+what will you use to determine that the
+receipt
+
+78
+00:04:42,419 --> 00:04:47,250
+definitely came from Apple and hasn't
+been tampered with since women today
+
+79
+00:04:47,025 --> 00:04:51,784
+second is how would you verify the
+receipt is intended for your app
+
+80
+00:04:52,009 --> 00:04:56,470
+on this device and lastly you will need
+to decide
+
+81
+00:04:56,047 --> 00:04:59,090
+how you wish to interpret that purchase
+started that's contained within the
+
+82
+00:04:59,009 --> 00:05:00,018
+receipt itself
+
+83
+00:05:00,099 --> 00:05:05,148
+so you know exactly what the user paid
+for
+
+84
+00:05:06,039 --> 00:05:11,061
+when you making these decisions the
+primary thing that factors into this
+
+85
+00:05:11,259 --> 00:05:16,550
+is the value of your products and
+therefore how much importance your place
+
+86
+00:05:16,055 --> 00:05:20,111
+on protecting that revenue he is one way
+to look at it
+
+87
+00:05:21,011 --> 00:05:25,040
+if you are a very high value product you
+typically selling im
+
+88
+00:05:25,004 --> 00:05:28,098
+perhaps an in app purchase that's
+designed to be a one-off purchase
+
+89
+00:05:29,034 --> 00:05:32,543
+large value and that one single in app
+purchase
+
+90
+00:05:32,849 --> 00:05:36,877
+is the primary revenue stream for your
+app and the primary enabler for all the
+
+91
+00:05:37,129 --> 00:05:38,214
+features and content that you're selling
+
+92
+00:05:38,979 --> 00:05:44,190
+to the user now in that sense you're a
+lot like a high-end jewelry store
+
+93
+00:05:44,019 --> 00:05:47,178
+and when you think about your shopping
+experience in a jewelry store
+
+94
+00:05:47,349 --> 00:05:51,350
+you notice that they implement very
+complex levels of security
+
+95
+00:05:51,449 --> 00:05:54,495
+to make sure that not one single pole
+can walk out that door
+
+96
+00:05:54,909 --> 00:05:57,991
+without having been paid for you when
+you go to a
+
+97
+00:05:58,729 --> 00:06:02,440
+jewelry store you see jury hidden behind
+glass cases
+
+98
+00:06:02,044 --> 00:06:06,096
+see security staff position at the door
+mighty security wandering through
+
+99
+00:06:06,096 --> 00:06:09,193
+making sure that everything's okay they
+might be metal detectors
+
+100
+00:06:10,093 --> 00:06:14,137
+your perfect purchase checking et cetera
+it's a very high level of security
+
+101
+00:06:15,037 --> 00:06:19,296
+and quite complex but the reason they go
+to these lengths
+
+102
+00:06:19,629 --> 00:06:23,550
+is because their business model is
+centered around that one of
+
+103
+00:06:23,055 --> 00:06:28,152
+large purchase the you're not going to
+make very frequently
+
+104
+00:06:29,052 --> 00:06:34,131
+but at the complete other into the
+spectrum is low value products
+
+105
+00:06:34,599 --> 00:06:37,640
+and these are typically the low value in
+app purchases
+
+106
+00:06:38,009 --> 00:06:41,800
+dollar two dollars maybe up to five
+dollars and the typically things the
+
+107
+00:06:41,008 --> 00:06:42,467
+consumables
+
+108
+00:06:43,259 --> 00:06:47,560
+and your business model probably relies
+on customers coming back again and again
+
+109
+00:06:47,056 --> 00:06:50,405
+to enjoy the same product buying more
+currency
+
+110
+00:06:50,909 --> 00:06:54,991
+final gas for the car mobloc so they can
+build amazing things
+
+111
+00:06:55,729 --> 00:06:59,816
+in this sense you're a lot more like a
+grocery store
+
+112
+00:07:00,599 --> 00:07:04,590
+think about your shopping experience in
+a grocery store grocery store wants you
+
+113
+00:07:04,059 --> 00:07:07,128
+to feel incredibly comfortable and happy
+shopping there
+
+114
+00:07:07,659 --> 00:07:12,687
+so the you come back again and again and
+again and keep spending with them
+
+115
+00:07:12,939 --> 00:07:15,967
+grocery stores filled with hundreds and
+hundreds of products that are probably
+
+116
+00:07:16,219 --> 00:07:19,620
+selling for a dollar or two and not much
+more
+
+117
+00:07:19,062 --> 00:07:22,141
+they rely on the same sort of business
+model that you would if you're selling
+
+118
+00:07:22,699 --> 00:07:24,860
+those low value consumables
+
+119
+00:07:24,086 --> 00:07:27,137
+they want you to have a great shopping
+experience to feel comfortable and
+
+120
+00:07:28,037 --> 00:07:28,115
+welcome
+
+121
+00:07:29,015 --> 00:07:33,036
+and to enjoy it every single time and
+the not gonna care too much of a couple
+
+122
+00:07:33,036 --> 00:07:35,805
+the grapes walk out of the store without
+being paid for
+
+123
+00:07:36,129 --> 00:07:41,650
+unless you keep coming back again
+against doing the grapes
+
+124
+00:07:41,065 --> 00:07:44,150
+to take a look at how we work with
+receipts in the workflow
+
+125
+00:07:45,005 --> 00:07:48,066
+starting off with the basics the receipt
+itself
+
+126
+00:07:49,011 --> 00:07:52,320
+is stored in the app bundle or in your
+sandbox container
+
+127
+00:07:52,419 --> 00:07:57,456
+and as an API in Ennis bundle to get to
+the URL to locate where that receipt is
+
+128
+00:07:57,789 --> 00:08:02,020
+it's a single flap file so it's really
+easy to work with
+
+129
+00:08:02,002 --> 00:08:06,033
+it's not too complicated contained
+within that single flat file
+
+130
+00:08:06,033 --> 00:08:09,152
+is purchased on or about the app
+purchase itself as well as in app
+
+131
+00:08:09,449 --> 00:08:11,580
+purchases that have been made
+
+132
+00:08:11,058 --> 00:08:15,131
+and there's also a signature that allows
+us to check the authenticity
+
+133
+00:08:16,031 --> 00:08:19,055
+you see we take that purchase
+information what you're particularly
+
+134
+00:08:19,055 --> 00:08:20,137
+interested in as a developer
+
+135
+00:08:21,037 --> 00:08:24,052
+and wrap it around certificates and
+signatures
+
+136
+00:08:24,052 --> 00:08:27,131
+the make sure that when we write that
+purchase information into the receipt
+
+137
+00:08:28,031 --> 00:08:32,052
+we sign it and add a signature the means
+you can verify
+
+138
+00:08:32,052 --> 00:08:35,136
+that it's exactly as we intended when
+women to the receipt and no ones tried
+
+139
+00:08:36,036 --> 00:08:38,077
+to fake it by adding in any product
+
+140
+00:08:38,077 --> 00:08:42,109
+changing purchase information at cetera
+
+141
+00:08:43,009 --> 00:08:46,078
+and we build this on open standards in
+particular
+
+142
+00:08:46,078 --> 00:08:50,447
+the signing that we use to wrap up a lot
+of daughter in a signature so compact am
+
+143
+00:08:51,149 --> 00:08:51,990
+but we've
+
+144
+00:08:51,099 --> 00:08:54,192
+is known as a PKcs 7 cryptographic
+container
+
+145
+00:08:55,092 --> 00:08:57,186
+don't let the acronyms for you here
+there's a lot of information available
+
+146
+00:08:58,086 --> 00:09:03,118
+online and these very widely used in
+many many places
+
+147
+00:09:04,018 --> 00:09:07,737
+the daughter itself in that payload the
+purchase information
+
+148
+00:09:07,899 --> 00:09:11,410
+we encode that that is we structured at
+the bite level
+
+149
+00:09:11,041 --> 00:09:16,045
+using a standard called sn1 now you
+would be amazed at the huge
+
+150
+00:09:16,045 --> 00:09:19,048
+number of places that a yes and one is
+used
+
+151
+00:09:19,048 --> 00:09:22,055
+its a standard that has been around for
+a very very long time
+
+152
+00:09:23,018 --> 00:09:26,080
+which is great because when you combine
+the fact that both these are very widely
+
+153
+00:09:26,008 --> 00:09:27,035
+used
+
+154
+00:09:28,007 --> 00:09:31,024
+it means that you going to find that
+you're not the first person to try and
+
+155
+00:09:31,024 --> 00:09:33,037
+implement support for this
+
+156
+00:09:33,037 --> 00:09:36,044
+in fact as we progress through the
+session you'll see that all those
+
+157
+00:09:37,007 --> 00:09:38,074
+decisions you need to make
+
+158
+00:09:38,074 --> 00:09:41,092
+they generally Spanish gamma from
+
+159
+00:09:41,092 --> 00:09:44,135
+at one in the extreme they will be
+off-the-shelf offerings the you can
+
+160
+00:09:45,035 --> 00:09:47,129
+simply pick up and run with straight
+away
+
+161
+00:09:48,029 --> 00:09:51,198
+in the middle ground is probably a lot a
+sample code up at the you can find a
+
+162
+00:09:51,459 --> 00:09:52,527
+maybe copy and
+
+163
+00:09:53,139 --> 00:09:58,470
+adjusted to suit your needs someone but
+then because these are open standards
+
+164
+00:09:58,047 --> 00:10:01,051
+and the specifications are freely
+available you're completely empowered to
+
+165
+00:10:01,087 --> 00:10:02,160
+write your own implementation
+
+166
+00:10:03,006 --> 00:10:08,011
+if that was important here that is if
+you want complete control
+
+167
+00:10:09,001 --> 00:10:14,020
+over how you protect your revenue you
+can do that
+
+168
+00:10:14,029 --> 00:10:17,116
+so so many options open SSL
+
+169
+00:10:18,016 --> 00:10:21,105
+which I'm sure everyone has heard of is
+a cryptographic library
+
+170
+00:10:22,005 --> 00:10:25,104
+that serves many functions beyond just
+HTTPS and secure Sockets that it's more
+
+171
+00:10:26,004 --> 00:10:27,055
+widely known for
+
+172
+00:10:27,055 --> 00:10:30,774
+a bonus for sale include support for not
+only doing the PKcs 7 signature
+
+173
+00:10:31,269 --> 00:10:32,230
+verification
+
+174
+00:10:32,023 --> 00:10:35,117
+but also for reading sn1 what kind of a
+one stop shop if you wanted
+
+175
+00:10:36,017 --> 00:10:39,029
+alive re that was available the could do
+this for you
+
+176
+00:10:39,029 --> 00:10:41,066
+there's also some other command line
+tools that can help you out with this
+
+177
+00:10:41,066 --> 00:10:43,160
+man sure there is a lot of other
+offerings out there
+
+178
+00:10:44,006 --> 00:10:49,855
+but you can still create your own if
+that's what you want to do
+
+179
+00:10:50,449 --> 00:10:53,512
+so I'm gonna take you through in this
+session is a three-step process
+
+180
+00:10:54,079 --> 00:10:58,820
+that you can use to verify these
+receipts the first thing we have to do
+
+181
+00:10:58,082 --> 00:11:01,147
+is make sure we know that the receipt is
+authentic
+
+182
+00:11:02,047 --> 00:11:05,286
+and trusted that is it came from Apple
+
+183
+00:11:05,709 --> 00:11:10,250
+and no one's tampered with once we know
+we have a receipt that is authentic and
+
+184
+00:11:10,025 --> 00:11:11,049
+trusted
+
+185
+00:11:11,049 --> 00:11:15,068
+we can move on to confirming that the
+receipt was in fact intended for
+
+186
+00:11:15,068 --> 00:11:18,079
+our app on this device
+
+187
+00:11:18,079 --> 00:11:20,172
+because just as it's important to make
+sure that no one's tampered with the
+
+188
+00:11:21,072 --> 00:11:27,072
+receipt we also want to make sure no
+ones just copied it from another device
+
+189
+00:11:27,072 --> 00:11:30,551
+now once we have a receipt that we know
+we trust and it's for hour upon the
+
+190
+00:11:31,199 --> 00:11:32,440
+single device
+
+191
+00:11:32,044 --> 00:11:35,883
+we can go ahead and start interpreting
+the purchase toda to know exactly what
+
+192
+00:11:36,279 --> 00:11:39,110
+the user has paid for
+
+193
+00:11:39,011 --> 00:11:42,043
+missed out this offer the demo I have
+here
+
+194
+00:11:42,043 --> 00:11:45,047
+a very simple project
+
+195
+00:11:45,047 --> 00:11:48,118
+that's just gonna get us started in
+terms of getting a receipt to work with
+
+196
+00:11:49,018 --> 00:11:52,062
+we all this is great but if you haven't
+been able to get a receipt to actually
+
+197
+00:11:52,062 --> 00:11:52,068
+start
+
+198
+00:11:53,022 --> 00:11:56,044
+verifying the signature with this
+process can be difficult so let's see
+
+199
+00:11:56,044 --> 00:11:57,683
+how we go about doing that
+
+200
+00:11:58,079 --> 00:12:01,100
+really simple app application did finish
+launching
+
+201
+00:12:01,001 --> 00:12:04,057
+and the first thing I do is a call this
+NS bundle API
+
+202
+00:12:04,066 --> 00:12:08,435
+to get the URL to the App Store recede
+I'm simply going to use and is filed
+
+203
+00:12:09,029 --> 00:12:09,850
+manager here
+
+204
+00:12:09,085 --> 00:12:12,754
+to determine if the file exists or not
+that is do we have a receipt to work
+
+205
+00:12:13,519 --> 00:12:14,750
+with
+
+206
+00:12:14,075 --> 00:12:17,087
+if we do have set myself up a method
+that can go ahead and do that validation
+
+207
+00:12:17,087 --> 00:12:18,112
+for me
+
+208
+00:12:19,012 --> 00:12:23,091
+but if not if I don't have a receipt
+
+209
+00:12:23,199 --> 00:12:28,268
+what I do is on OS 10 I exit my up with
+the special exit code 173
+
+210
+00:12:28,889 --> 00:12:33,320
+that tells the OS and the App Store the
+you believe your CDs battle missing
+
+211
+00:12:33,032 --> 00:12:36,119
+and lets the App Store going to get a
+receipt for your
+
+212
+00:12:37,019 --> 00:12:39,113
+so this is all in the documentation and
+it seems pretty straight forward at this
+
+213
+00:12:40,013 --> 00:12:40,104
+point
+
+214
+00:12:41,004 --> 00:12:44,031
+signing a clean this project make sure
+we have no receipt
+
+215
+00:12:44,031 --> 00:12:47,055
+in a builder in a runner
+
+216
+00:12:47,055 --> 00:12:50,284
+now notice I've got to break point set
+up here the first as I wanted to check
+
+217
+00:12:50,779 --> 00:12:51,796
+that I got my
+
+218
+00:12:51,949 --> 00:12:57,300
+app store receipt if we see down here in
+the debug console I definitely did
+
+219
+00:12:57,003 --> 00:13:00,077
+and ask for a manager if that receipt
+exists
+
+220
+00:13:01,004 --> 00:13:05,023
+it says no course cuz I'm running from
+Xcode and I have not yet put my app on
+
+221
+00:13:05,023 --> 00:13:06,992
+the store so close we don't have a
+receipt
+
+222
+00:13:07,199 --> 00:13:10,204
+but we want one so we can start testing
+and validation
+
+223
+00:13:10,699 --> 00:13:17,230
+so the documentation says exit 173 let's
+do that
+
+224
+00:13:17,023 --> 00:13:21,042
+and nothing happens this is the first
+point the developers kinda get stuck
+
+225
+00:13:21,042 --> 00:13:21,125
+with
+
+226
+00:13:22,025 --> 00:13:25,804
+they get started with receipt validation
+put the code in place running an ex-con
+
+227
+00:13:26,029 --> 00:13:26,430
+go
+
+228
+00:13:26,043 --> 00:13:29,050
+I doesn't miss do anything reason for
+that is
+
+229
+00:13:30,013 --> 00:13:34,019
+when you run your app in Xcode like that
+and it hits that exit 173 code
+
+230
+00:13:34,073 --> 00:13:38,107
+only Xcode sees that exit code said I
+was in the App Store's not aware that
+
+231
+00:13:39,007 --> 00:13:41,080
+you're actually running your Apple
+morning to get a receipt
+
+232
+00:13:41,008 --> 00:13:44,667
+so here's a trick to help you do that
+this time when I run the Apple hit the
+
+233
+00:13:45,459 --> 00:13:46,870
+same breakpoint
+
+234
+00:13:46,087 --> 00:13:49,106
+me to go down here to the doc control
+click on
+
+235
+00:13:50,006 --> 00:13:53,060
+the app-icon down here and I use options
+
+236
+00:13:53,006 --> 00:13:56,045
+show in Finder that brings up find a
+
+237
+00:13:56,099 --> 00:13:59,125
+to my debug build version of the app
+that we're running
+
+238
+00:14:00,025 --> 00:14:03,043
+because remember I want this to exit
+with that special coding for the App
+
+239
+00:14:03,043 --> 00:14:04,092
+Store to see that exit code
+
+240
+00:14:04,092 --> 00:14:08,100
+so it gets me in your receipt so watch
+what I do here go back to Xcode and I
+
+241
+00:14:09,000 --> 00:14:11,072
+stopped that instanceof the app
+
+242
+00:14:11,072 --> 00:14:15,105
+back to find a and now I run the app
+from Phineas and look what happened
+
+243
+00:14:16,005 --> 00:14:20,044
+we did the same logic receipt was in pay
+and we exited 173
+
+244
+00:14:20,089 --> 00:14:23,720
+now the App Store has seen that and is
+prompting me to sign in
+
+245
+00:14:23,072 --> 00:14:26,088
+so that we can go and get a receipt to
+start working with
+
+246
+00:14:26,088 --> 00:14:29,110
+and because my up worse I'm with my
+development certificate I'm connected to
+
+247
+00:14:30,001 --> 00:14:32,720
+the App Store's test environment using
+iTunes Connect
+
+248
+00:14:32,819 --> 00:14:36,970
+test accounts to get a test receipt for
+us to start working with
+
+249
+00:14:36,097 --> 00:14:39,143
+so I sign in we get our seed and my
+really simple app
+
+250
+00:14:40,043 --> 00:14:43,049
+has finished launching with the receipt
+now
+
+251
+00:14:43,049 --> 00:14:46,054
+just to double check if I go back here
+in Xcode
+
+252
+00:14:46,054 --> 00:14:49,083
+we got a URL to the receipt and this
+time
+
+253
+00:14:49,569 --> 00:14:54,610
+we have the receipt ready to start
+working with the validation that recede
+
+254
+00:14:54,061 --> 00:14:57,540
+now if you working with I O S receipts
+
+255
+00:14:58,089 --> 00:15:01,630
+one other team I find handy is if you're
+having trouble getting a receipt in the
+
+256
+00:15:01,063 --> 00:15:02,322
+test environment
+
+257
+00:15:02,889 --> 00:15:05,957
+making in app purchase when you make an
+in app purchase you will get in your
+
+258
+00:15:06,569 --> 00:15:07,040
+receipt
+
+259
+00:15:07,004 --> 00:15:12,075
+and you can use that to test a
+validation code
+
+260
+00:15:12,075 --> 00:15:15,080
+so let's go to first step verifying the
+signature in that receipt so we know
+
+261
+00:15:16,025 --> 00:15:17,794
+that this receipt is authentic
+
+262
+00:15:18,019 --> 00:15:23,620
+untrusted and unaltered
+
+263
+00:15:23,062 --> 00:15:27,021
+so this vet this verification the sing
+to make sure the receipt hasn't been
+
+264
+00:15:27,579 --> 00:15:28,920
+altered since it left Apple
+
+265
+00:15:28,092 --> 00:15:31,571
+because we don't want anyone tampering
+with and it came from Apple
+
+266
+00:15:32,399 --> 00:15:36,050
+so that no one else can just meant their
+own receipts that look otherwise Ballard
+
+267
+00:15:36,005 --> 00:15:42,011
+but are in fact frauds this is where the
+PKcs 7 cryptographic contain it comes in
+
+268
+00:15:42,011 --> 00:15:46,016
+it's how we wrapped up for that
+protected body have purchase information
+
+269
+00:15:46,016 --> 00:15:50,085
+around those signatures and certificates
+so we can confirm authenticity
+
+270
+00:15:50,085 --> 00:15:53,161
+now you options available for you for
+doing this authenticity check
+
+271
+00:15:54,061 --> 00:15:57,350
+we mention before there's open SSL can
+do this for you there's no doubt many
+
+272
+00:15:57,899 --> 00:16:00,300
+other frameworks out there that can do
+this for you
+
+273
+00:16:00,003 --> 00:16:05,008
+but of course can roll your own if you
+choose
+
+274
+00:16:05,035 --> 00:16:08,039
+to get you started the first thing you
+need to do is find that receipt
+
+275
+00:16:08,075 --> 00:16:11,144
+week organised bundle main bundle App
+Store ctrl
+
+276
+00:16:11,819 --> 00:16:16,190
+that gives us the URL to the receipt
+once we've got that URL
+
+277
+00:16:16,019 --> 00:16:19,035
+we need to get read into memory so we
+can start working on it
+
+278
+00:16:19,035 --> 00:16:24,124
+and that's the simple as using something
+like in a startup it with content URL
+
+279
+00:16:25,024 --> 00:16:28,069
+Milwaukee through here and open SSL
+example of how to do this signature
+
+280
+00:16:28,069 --> 00:16:29,268
+verification
+
+281
+00:16:29,889 --> 00:16:32,907
+this is straight out of a documentation
+we have online
+
+282
+00:16:33,069 --> 00:16:36,430
+but one thing to note is this example
+makes two assumptions
+
+283
+00:16:36,043 --> 00:16:39,812
+we assume that you've already read the
+receipt in the memory and have stored in
+
+284
+00:16:40,199 --> 00:16:40,292
+this variable called
+
+285
+00:16:41,129 --> 00:16:46,155
+the receipt am we also assume that
+you've got a copy Apple's root CA at
+
+286
+00:16:46,389 --> 00:16:47,670
+root certificate authority
+
+287
+00:16:47,067 --> 00:16:50,116
+which you can find online and you have
+that in your app on knowing you've read
+
+288
+00:16:51,016 --> 00:16:54,047
+into memory and stored in this variable
+Colby X 599
+
+289
+00:16:54,047 --> 00:16:58,156
+why 599 because X 599 is the standard by
+which that
+
+290
+00:16:58,579 --> 00:17:03,730
+RCA's encoded so once we've got those
+two key ingredients
+
+291
+00:17:03,073 --> 00:17:07,136
+the first thing we want to do is convert
+tableau binary that represents the
+
+292
+00:17:08,036 --> 00:17:09,062
+receipt in memory
+
+293
+00:17:09,062 --> 00:17:13,063
+into useful data structure we can start
+working with and we do that by calling
+
+294
+00:17:13,063 --> 00:17:15,002
+the really simply an aptly named
+
+295
+00:17:15,569 --> 00:17:20,390
+d2 I PKcs 7 be I up
+
+296
+00:17:20,039 --> 00:17:23,113
+done with these names full-year what
+you'll see here is despite the fact that
+
+297
+00:17:24,013 --> 00:17:26,077
+these were named by someone very arcane
+
+298
+00:17:26,077 --> 00:17:29,132
+these are simple concept we're reading a
+file into memory
+
+299
+00:17:30,032 --> 00:17:33,073
+we're setting up in a structure so we
+can work with that and we're checking
+
+300
+00:17:33,073 --> 00:17:36,078
+we're calling some functions on it and
+checking the result
+
+301
+00:17:36,078 --> 00:17:40,080
+anyone can do that so once we've got a
+data structure
+
+302
+00:17:40,098 --> 00:17:43,122
+we've got a receipt on one hand but the
+other thing we need
+
+303
+00:17:44,022 --> 00:17:48,341
+is out certificate that we expect this
+receipt to match up against
+
+304
+00:17:48,539 --> 00:17:52,240
+right we want to compare these two
+things we have a receipt we want to make
+
+305
+00:17:52,024 --> 00:17:55,035
+sure that it came from Apple hasn't been
+altered since Apple created
+
+306
+00:17:55,035 --> 00:18:00,073
+so we set up the certificate store and
+we adding to that store Apple's root CA
+
+307
+00:18:00,073 --> 00:18:03,772
+because if the certificate if this
+signature in the receipt is valid
+
+308
+00:18:04,429 --> 00:18:08,620
+it has to appear that it's come from
+Apple's root CA
+
+309
+00:18:08,062 --> 00:18:12,134
+now we get into the meat of this we
+called a much better named PKcs 7 verify
+
+310
+00:18:13,034 --> 00:18:13,100
+function
+
+311
+00:18:14,000 --> 00:18:18,045
+pas since what our receipt and how
+certificate store
+
+312
+00:18:18,045 --> 00:18:22,083
+we just checked the result if the result
+is equal to 1
+
+313
+00:18:22,083 --> 00:18:25,115
+that means our receipt signatures valid
+came from Apple
+
+314
+00:18:26,015 --> 00:18:30,101
+his trusted hasn't been altered since
+Apple min to the receipt
+
+315
+00:18:31,001 --> 00:18:34,047
+now you also get another bonus from
+calling this function and that is
+
+316
+00:18:34,047 --> 00:18:38,128
+that it will return back to you the
+actual payload have the receipt itself
+
+317
+00:18:39,028 --> 00:18:42,049
+so that body of purchase information
+that you can start inspecting to know
+
+318
+00:18:42,049 --> 00:18:43,478
+what the user paid for
+
+319
+00:18:43,919 --> 00:18:49,490
+and you get that back in this example in
+the B receipt payload variable
+
+320
+00:18:49,049 --> 00:18:52,120
+so I have another project here the build
+upon that simple example that we saw
+
+321
+00:18:53,002 --> 00:18:54,060
+before
+
+322
+00:18:54,078 --> 00:18:57,086
+you see here that I have my same
+
+323
+00:18:57,086 --> 00:19:00,098
+did finish launching method where a
+check the receipt
+
+324
+00:19:00,098 --> 00:19:03,132
+we know we've got a receipt from the
+last demo and so I fleshed out my
+
+325
+00:19:04,032 --> 00:19:06,011
+validate receded URL method
+
+326
+00:19:06,299 --> 00:19:11,323
+with these exact same calls that we've
+just saw in that slide before
+
+327
+00:19:11,539 --> 00:19:15,570
+so you build this
+
+328
+00:19:15,057 --> 00:19:18,057
+hi 12 warnings
+
+329
+00:19:18,057 --> 00:19:21,094
+12 errors not a great stop
+
+330
+00:19:21,094 --> 00:19:24,313
+again this is another point the
+developers confined really frustrating
+
+331
+00:19:25,159 --> 00:19:26,720
+with this process
+
+332
+00:19:26,072 --> 00:19:29,099
+when you take this example code and try
+and use it you going to run into a few
+
+333
+00:19:29,099 --> 00:19:29,188
+roadblocks
+
+334
+00:19:30,088 --> 00:19:35,094
+but we can get through this the first
+thing is
+
+335
+00:19:35,094 --> 00:19:38,583
+you reason you getting all these our
+compiler warnings here
+
+336
+00:19:39,429 --> 00:19:43,280
+telling you that all these methods were
+deprecated is because in fact they are
+
+337
+00:19:43,028 --> 00:19:47,073
+why I'm out here on stage telling you to
+use duplicating methods
+
+338
+00:19:47,073 --> 00:19:50,119
+we deprecated these in OS 10 10 7
+
+339
+00:19:51,019 --> 00:19:55,118
+because we want developers that
+especially if you're concerned about
+
+340
+00:19:55,289 --> 00:19:59,390
+your strong cryptography and security
+like this we want developers to create
+
+341
+00:19:59,039 --> 00:20:02,115
+and roll their on building open SSL is a
+static library
+
+342
+00:20:03,015 --> 00:20:06,096
+and integrate that open SSL build
+straight into your
+
+343
+00:20:06,096 --> 00:20:10,132
+applications binary think of it this way
+
+344
+00:20:11,032 --> 00:20:15,871
+when you build your app unlink against
+things like you like it an app care
+
+345
+00:20:16,159 --> 00:20:20,590
+that's an external dependency you're up
+can run on one machine on one version of
+
+346
+00:20:20,059 --> 00:20:20,638
+the OS
+
+347
+00:20:21,169 --> 00:20:24,900
+and run just fine on another version of
+the OS even know app can you like it
+
+348
+00:20:24,009 --> 00:20:25,418
+might be very different
+
+349
+00:20:26,309 --> 00:20:29,510
+their external dependencies that can be
+swapped out from under you and as long
+
+350
+00:20:29,051 --> 00:20:32,052
+as those API's match up to what you're
+up to spec expecting
+
+351
+00:20:32,052 --> 00:20:36,099
+it'll run Magin how easy it would be
+
+352
+00:20:36,099 --> 00:20:40,175
+for someone who wanted to try and attack
+your apt to try and rip you off
+
+353
+00:20:41,075 --> 00:20:45,100
+to simply swap out and external
+dependency like open SSL
+
+354
+00:20:46,000 --> 00:20:49,007
+for version about an SSL that they
+brawled themselves
+
+355
+00:20:49,007 --> 00:20:54,049
+but simply said yeah everything's fine
+this receipts valid trust me
+
+356
+00:20:54,049 --> 00:20:57,070
+see when you use that external
+dependency for strong cryptography in
+
+357
+00:20:57,007 --> 00:20:59,008
+privacy some stuff like this
+
+358
+00:20:59,071 --> 00:21:02,520
+you can run into problems where you
+create big attack vector the mixer
+
+359
+00:21:03,159 --> 00:21:04,980
+really easy for someone to circumvent
+
+360
+00:21:04,098 --> 00:21:07,787
+the logic you're putting in Europe to
+protect your revenue enforcer business
+
+361
+00:21:08,669 --> 00:21:09,732
+model
+
+362
+00:21:10,299 --> 00:21:13,323
+so what we need to do here is build our
+own open SSL
+
+363
+00:21:13,539 --> 00:21:17,390
+now it's not as near nearly as scary as
+it sounds I got some tips for you in the
+
+364
+00:21:17,039 --> 00:21:18,678
+next slide
+
+365
+00:21:19,029 --> 00:21:22,580
+in fact I've already built my own open
+SSL and I have it here
+
+366
+00:21:22,058 --> 00:21:25,507
+on the desktop in a folder called open
+SSL
+
+367
+00:21:26,029 --> 00:21:29,850
+now when you build open SSL it produces
+two things for you
+
+368
+00:21:29,085 --> 00:21:32,090
+a folder called include full love the
+header files for what we want to work
+
+369
+00:21:32,009 --> 00:21:32,082
+with
+
+370
+00:21:33,063 --> 00:21:36,110
+and also a lib folder that contains that
+dot a static library
+
+371
+00:21:37,001 --> 00:21:41,560
+we've built now using this is actually
+pretty simple
+
+372
+00:21:41,659 --> 00:21:45,220
+I like to keep my projects pretty clean
+so I'm gonna go ahead and
+
+373
+00:21:45,022 --> 00:21:48,095
+create myself a group here
+
+374
+00:21:48,095 --> 00:21:52,152
+called open SSL facts
+
+375
+00:21:53,052 --> 00:21:56,831
+there we go an all I have to do is
+simply drag and drop this build product
+
+376
+00:21:57,299 --> 00:22:01,750
+from open SSL straight into my project
+header files and static libraries
+
+377
+00:22:01,075 --> 00:22:04,604
+make sure you click this copy items into
+
+378
+00:22:05,279 --> 00:22:08,720
+destination group folder that make sure
+that we copy those headers
+
+379
+00:22:08,072 --> 00:22:12,021
+and the static libraries built directly
+into your project itself otherwise
+
+380
+00:22:12,669 --> 00:22:15,757
+you'll have a dangling external
+dependencies might go away
+
+381
+00:22:16,549 --> 00:22:20,561
+finish I add in my freshly built open
+SSL to my product
+
+382
+00:22:20,669 --> 00:22:24,270
+call build
+
+383
+00:22:24,027 --> 00:22:27,058
+built succeeds but I still have 11
+compiler warnings
+
+384
+00:22:27,058 --> 00:22:29,096
+and if you're like me you care a lot
+about your project building with 0
+
+385
+00:22:29,096 --> 00:22:30,139
+warnings
+
+386
+00:22:31,039 --> 00:22:34,122
+so why we still getting these different
+had warnings because Xcode
+
+387
+00:22:35,022 --> 00:22:38,119
+is trying to build against the SDK the
+chips with the OS that has that
+
+388
+00:22:39,019 --> 00:22:40,063
+deprecated open SSL
+
+389
+00:22:40,063 --> 00:22:43,135
+the way we get around that is we have to
+tell Xcode
+
+390
+00:22:44,035 --> 00:22:48,048
+that for this app that we're building we
+actually want Xcode to use album
+
+391
+00:22:48,048 --> 00:22:51,074
+I R open SSL we just added to the
+project
+
+392
+00:22:51,074 --> 00:22:54,883
+so I went to my project settings here I
+have clicked on
+
+393
+00:22:55,549 --> 00:22:58,830
+this target and I'm gonna go to build
+settings
+
+394
+00:22:58,083 --> 00:23:02,086
+and as an option you'll find call head
+of search parts
+
+395
+00:23:02,086 --> 00:23:06,086
+double click on that and I need to tell
+Xcode here where to find those are
+
+396
+00:23:06,086 --> 00:23:07,755
+necessary file for me just add
+
+397
+00:23:08,529 --> 00:23:13,210
+an easy trick for doing that his pop
+this open here on the side panel
+
+398
+00:23:13,021 --> 00:23:16,870
+find one ahead as open up this sign
+inspector
+
+399
+00:23:17,059 --> 00:23:21,760
+and there you'll see the full power to
+wear that had a file is located in the
+
+400
+00:23:21,076 --> 00:23:22,098
+project
+
+401
+00:23:22,098 --> 00:23:25,527
+notice in this case I've got within my
+
+402
+00:23:26,409 --> 00:23:29,486
+project folder and it's in a folder
+hierarchy call include slash
+
+403
+00:23:30,179 --> 00:23:33,490
+include okay so we just need to tell
+Xcode
+
+404
+00:23:33,049 --> 00:23:37,094
+to go in allow files to be imported from
+that location for headers
+
+405
+00:23:37,094 --> 00:23:41,139
+so I double click here and rather than
+having to enter that full directory path
+
+406
+00:23:42,039 --> 00:23:43,818
+I can use shortcut assaying
+
+407
+00:23:44,169 --> 00:23:47,350
+it's in source route slash include slash
+
+408
+00:23:47,035 --> 00:23:50,048
+include because that's where we saw the
+file just before
+
+409
+00:23:50,048 --> 00:23:53,126
+add that in put it to the top because I
+want that before anything else in the
+
+410
+00:23:54,026 --> 00:23:54,695
+system
+
+411
+00:23:54,929 --> 00:23:58,941
+I wanna make sure we look at my open SSL
+files first
+
+412
+00:23:59,049 --> 00:24:04,260
+done we say that was updated their close
+this far to go back to a rap delegate we
+
+413
+00:24:04,026 --> 00:24:06,925
+had all these mornings
+
+414
+00:24:07,159 --> 00:24:11,223
+done all those compiler warnings went
+away
+
+415
+00:24:11,799 --> 00:24:16,090
+because now we're building a project
+against our open SSL that we built
+
+416
+00:24:16,009 --> 00:24:20,978
+that we know the integrity of the way to
+ship built into apt binary to protect
+
+417
+00:24:21,059 --> 00:24:23,158
+our revenue and check our receipts
+
+418
+00:24:24,049 --> 00:24:27,140
+so let's run this and see how it goes
+
+419
+00:24:27,014 --> 00:24:30,423
+so we've already got a receipt from the
+earlier damn it we did and now we can
+
+420
+00:24:30,549 --> 00:24:32,450
+enter a valid 8 receded URL
+
+421
+00:24:32,045 --> 00:24:36,086
+method here these are the same cause we
+saw just on the slide before I load the
+
+422
+00:24:36,086 --> 00:24:36,182
+receipt into memory
+
+423
+00:24:37,082 --> 00:24:41,100
+I load the root CA in the memory t2i
+PKcs 7 by our
+
+424
+00:24:42,000 --> 00:24:46,919
+to load that Baba proceed into a usable
+data structure called p7
+
+425
+00:24:46,919 --> 00:24:50,520
+create my certificate store and now I'm
+ready to do the magic
+
+426
+00:24:50,052 --> 00:24:55,119
+does this receipt stack up against that
+root CA certificate
+
+427
+00:24:56,019 --> 00:24:59,858
+I step over that and if I look down here
+in the console shorn of
+
+428
+00:25:00,029 --> 00:25:05,370
+result is one that means we can now move
+forward knowing that we have a real
+
+429
+00:25:05,037 --> 00:25:08,111
+valid and trusted receipt we can start
+getting purchase information out of
+
+430
+00:25:09,011 --> 00:25:12,048
+and what before we do that we need to
+confirm that for
+
+431
+00:25:12,048 --> 00:25:15,107
+intended for our up on this device
+
+432
+00:25:15,539 --> 00:25:18,541
+but now we're over the hurdle not only
+working with the receipt we got from the
+
+433
+00:25:18,559 --> 00:25:19,630
+test environment
+
+434
+00:25:19,063 --> 00:25:22,087
+but we now got open SSL integrated into
+a project
+
+435
+00:25:22,087 --> 00:25:25,098
+to be ready to be built for both I O S
+and OS 10
+
+436
+00:25:25,098 --> 00:25:28,187
+all I'm doing everything here using OS
+10
+
+437
+00:25:29,087 --> 00:25:32,112
+everything I cover here applies to I was
+just as it does on a West Ham
+
+438
+00:25:33,012 --> 00:25:37,024
+if there's any platform differences I'll
+call them out for you
+
+439
+00:25:37,024 --> 00:25:40,120
+a couple tips on building open SSL for
+you first is you need to build
+
+440
+00:25:41,002 --> 00:25:44,089
+as a static library not I'll im not a
+framework
+
+441
+00:25:45,007 --> 00:25:50,044
+not something that can be external to a
+binary you needed to be a static library
+
+442
+00:25:50,044 --> 00:25:54,122
+so that when you build your app unlink
+it it takes that dante and puts right
+
+443
+00:25:55,022 --> 00:25:55,601
+into
+
+444
+00:25:55,799 --> 00:26:00,010
+your caps binary so no one else can swap
+it out from you
+
+445
+00:26:00,001 --> 00:26:02,039
+nephew building for multiple
+architectures which you almost certainly
+
+446
+00:26:02,039 --> 00:26:03,798
+will be few building for IOUs
+
+447
+00:26:04,149 --> 00:26:08,174
+all the different arm architectures them
+what you need to do is build a separate
+
+448
+00:26:08,399 --> 00:26:08,940
+dante
+
+449
+00:26:08,094 --> 00:26:12,203
+separate static library for each
+architecture you want to support the
+
+450
+00:26:13,049 --> 00:26:17,054
+on the seven on 64 whatever you might
+need to build for
+
+451
+00:26:17,549 --> 00:26:20,550
+of x86-64 no están
+
+452
+00:26:20,649 --> 00:26:24,520
+and when you create those individual dot
+a static libraries
+
+453
+00:26:24,052 --> 00:26:27,077
+for each other's architectures use the
+life ok a mental
+
+454
+00:26:27,077 --> 00:26:30,226
+to take all those little dot i+
+architecture slices
+
+455
+00:26:30,919 --> 00:26:35,006
+and combine them into one fat binary
+that is one single die static library
+
+456
+00:26:35,789 --> 00:26:40,802
+the combined all about slices
+all-america Texas we want to support
+
+457
+00:26:40,919 --> 00:26:44,950
+and then you can just drag that strange
+a project like we did just before
+
+458
+00:26:44,095 --> 00:26:47,924
+now we build open SSL the first thing
+you do is you to configure script to
+
+459
+00:26:48,779 --> 00:26:49,792
+configure up in a self
+
+460
+00:26:49,909 --> 00:26:53,936
+as a cell for the platforms you building
+on he's too tipsy you'll find handy
+
+461
+00:26:54,179 --> 00:26:59,270
+if you're building for OS 10 64-bit
+configure with the Don 64x64
+
+462
+00:26:59,027 --> 00:27:04,048
+x86-64 CC host type if you see
+documentation from a tell you something
+
+463
+00:27:04,048 --> 00:27:05,737
+BST generic types
+
+464
+00:27:06,169 --> 00:27:10,080
+you're going to run into trouble so this
+is much easier and it ensures a proper
+
+465
+00:27:10,008 --> 00:27:11,020
+build open SSL
+
+466
+00:27:11,002 --> 00:27:14,003
+on x86-64 refusing
+
+467
+00:27:14,021 --> 00:27:18,970
+our if you believe I O S try using the
+iPhone OS cross-post typing the
+
+468
+00:27:19,159 --> 00:27:22,248
+configure script to configured for I O S
+accordingly
+
+469
+00:27:23,049 --> 00:27:26,510
+the you will definitely not be the first
+person ever that has tried to build open
+
+470
+00:27:26,051 --> 00:27:27,107
+SSL for the OS 10
+
+471
+00:27:28,007 --> 00:27:31,846
+or IRS we deprecated open SSL a while
+back in OS 10
+
+472
+00:27:31,909 --> 00:27:35,935
+and we never shipped an open SSL NIOS
+the developers can use
+
+473
+00:27:36,169 --> 00:27:39,170
+so lots of folks have been through this
+for a lot to different reasons
+
+474
+00:27:39,269 --> 00:27:44,950
+there's lots of examples available to
+you online
+
+475
+00:27:44,095 --> 00:27:47,914
+to note about doing the verification no
+matter how you do the verification be an
+
+476
+00:27:48,769 --> 00:27:49,690
+open SSL
+
+477
+00:27:49,069 --> 00:27:53,110
+roll-your-own another offering do not
+check the expiry date
+
+478
+00:27:54,001 --> 00:27:58,460
+on the certificate when you're
+contacting the web server vir Panesar
+
+479
+00:27:58,559 --> 00:27:59,596
+Virage TPS
+
+480
+00:27:59,929 --> 00:28:03,014
+it's important to you verify the expiry
+date of the signature
+
+481
+00:28:03,779 --> 00:28:06,780
+you don't want to be talking to a web
+server out there
+
+482
+00:28:06,789 --> 00:28:10,950
+using a secure transport with a
+certificate has since expired
+
+483
+00:28:10,095 --> 00:28:13,100
+but the reverse is true here for
+receipts keep in mind the fact that we
+
+484
+00:28:14,045 --> 00:28:16,132
+meant this receipt at a point in time
+
+485
+00:28:17,032 --> 00:28:19,126
+and that comes with your apt when
+someone downloads it'll make snap
+
+486
+00:28:20,026 --> 00:28:21,175
+purchase
+
+487
+00:28:21,409 --> 00:28:24,960
+now at that point in time they will be
+certificates included in that receipt
+
+488
+00:28:24,096 --> 00:28:27,295
+that have an expiry date if FedEx
+
+489
+00:28:28,159 --> 00:28:31,970
+if someone buys a rap today and then a
+year down the track that certificate
+
+490
+00:28:31,097 --> 00:28:32,183
+expires within the receipt
+
+491
+00:28:33,083 --> 00:28:36,172
+that does not make the receipt invalid
+
+492
+00:28:36,919 --> 00:28:40,840
+the receipt is just as valid as it was
+the day that you purchased
+
+493
+00:28:40,084 --> 00:28:43,111
+and would be a terrible experience for
+that user
+
+494
+00:28:44,011 --> 00:28:48,019
+if all of a sudden your app stopped
+working only because the receipt
+
+495
+00:28:48,019 --> 00:28:51,026
+has a certificate in there that has
+since expired
+
+496
+00:28:51,089 --> 00:28:54,114
+bore you do absolutely wanna make sure
+you do when you do you receive
+
+497
+00:28:55,014 --> 00:28:58,086
+validation is evaluate the trust of the
+certificates
+
+498
+00:28:58,086 --> 00:29:03,110
+right up to the root CA you see the
+certificates exist in a chain
+
+499
+00:29:04,001 --> 00:29:07,064
+but at the head of the chain at the root
+has to be Apple's root certificate
+
+500
+00:29:07,073 --> 00:29:08,075
+authority
+
+501
+00:29:08,075 --> 00:29:11,163
+that's the only way you can be
+absolutely certain that it came from us
+
+502
+00:29:12,063 --> 00:29:17,742
+and not from someone else trying to pose
+as Apple
+
+503
+00:29:18,309 --> 00:29:21,345
+wanting a quick word though about
+examples and sample code
+
+504
+00:29:21,669 --> 00:29:24,692
+I've mentioned a lot throughout the
+session that a
+
+505
+00:29:24,899 --> 00:29:27,860
+there are a lot of samples out there
+there's examples I'm sure there's
+
+506
+00:29:27,086 --> 00:29:27,164
+off-the-shelf
+
+507
+00:29:28,064 --> 00:29:31,100
+offerings you could literally download
+inputs trading your project would do
+
+508
+00:29:32,000 --> 00:29:34,159
+this for you
+
+509
+00:29:34,159 --> 00:29:37,570
+the convenience comes at a price
+
+510
+00:29:37,057 --> 00:29:40,123
+you have to keep in mind the reusing
+code brings with it bugs and
+
+511
+00:29:41,023 --> 00:29:41,109
+vulnerabilities
+
+512
+00:29:42,009 --> 00:29:47,038
+no matter how with the developer is no
+matter how well use the sample code is
+
+513
+00:29:47,038 --> 00:29:48,317
+no matter how much you might have
+
+514
+00:29:48,659 --> 00:29:51,748
+paid for it any code comes with bugs
+
+515
+00:29:52,549 --> 00:29:55,970
+and possible vulnerabilities
+
+516
+00:29:55,097 --> 00:29:59,098
+and the more people that use the exact
+same way of doing receipt validation
+
+517
+00:29:59,098 --> 00:30:05,100
+the more there is the chance of one
+exploit affecting many many APs
+
+518
+00:30:06,000 --> 00:30:09,084
+you know back in a jewelry example
+imagine if every jeweler's shop around
+
+519
+00:30:09,084 --> 00:30:09,159
+the world
+
+520
+00:30:10,059 --> 00:30:14,064
+use the same lock on the cabinets and
+then one day someone finds out a really
+
+521
+00:30:15,009 --> 00:30:16,096
+easy way to open at Lock
+
+522
+00:30:16,096 --> 00:30:20,113
+not gonna be good for anyone earning
+jewelry store right
+
+523
+00:30:21,013 --> 00:30:25,071
+same sorta principle here although this
+can seem so convenient to just grab
+
+524
+00:30:25,071 --> 00:30:28,170
+something of get hubbell somewhere else
+and drop it in your project and have got
+
+525
+00:30:28,809 --> 00:30:31,010
+receipt validation protected revenue
+
+526
+00:30:31,001 --> 00:30:34,057
+you need to make sure you understand the
+risks of what you bringin
+
+527
+00:30:34,057 --> 00:30:37,072
+because that's your revenue stream at
+the end of the day
+
+528
+00:30:37,072 --> 00:30:40,164
+not third-party the road that code not
+the nice individual the put up some
+
+529
+00:30:41,064 --> 00:30:42,963
+sample code help you get this done
+
+530
+00:30:43,539 --> 00:30:46,840
+it's not their revenue it's your revenue
+
+531
+00:30:46,084 --> 00:30:49,138
+so make sure you make decisions that
+suit your product
+
+532
+00:30:50,038 --> 00:30:52,957
+maybe you're okay with those sorts of
+vulnerabilities in bugs and the
+
+533
+00:30:53,299 --> 00:30:55,830
+possibility of a single export affecting
+your app
+
+534
+00:30:55,083 --> 00:30:59,097
+maybe that suits the business model and
+level of protection you want
+
+535
+00:30:59,097 --> 00:31:05,046
+but either way know in the room know the
+risks and owners risks yourself
+
+536
+00:31:05,919 --> 00:31:09,005
+alright so we've got a you receipt that
+we know is trusted & verified in a came
+
+537
+00:31:09,779 --> 00:31:10,990
+from Apple
+
+538
+00:31:10,099 --> 00:31:13,128
+now we need to make sure that it is
+intended for your ap
+
+539
+00:31:14,019 --> 00:31:21,019
+on this device only to do that we need
+to look at the receipt payload itself
+
+540
+00:31:21,299 --> 00:31:24,396
+now this is a very high level ok at how
+a receipt is structured it structured as
+
+541
+00:31:25,269 --> 00:31:27,272
+a series about tributes
+
+542
+00:31:27,299 --> 00:31:30,580
+you could think of these attributes as a
+cross between an SRA and in Ennis
+
+543
+00:31:30,058 --> 00:31:31,657
+dictionary
+
+544
+00:31:32,179 --> 00:31:35,350
+they like in its dictionary because they
+have things like
+
+545
+00:31:35,035 --> 00:31:39,084
+a type and a value a lot like a
+dictionary has a key in object
+
+546
+00:31:39,399 --> 00:31:42,840
+but they like an array because there is
+a sequence of days
+
+547
+00:31:42,084 --> 00:31:45,095
+throughout the receipt you can loop over
+to interpret
+
+548
+00:31:45,095 --> 00:31:48,107
+they also have a version on each
+
+549
+00:31:49,007 --> 00:31:52,466
+these attributes but that's not too
+important to us right now the key thing
+
+550
+00:31:52,529 --> 00:31:54,070
+we need to know is
+
+551
+00:31:54,007 --> 00:31:58,024
+inside that body of data in the receipt
+is a series about tributes
+
+552
+00:31:58,024 --> 00:32:01,443
+a chechen it has a type that tells us
+what it is what it means
+
+553
+00:32:01,659 --> 00:32:08,130
+and in a value the corresponds to what
+this attribute is telling us
+
+554
+00:32:08,013 --> 00:32:11,182
+so the first thing we need to do is
+check if this receipt was actually
+
+555
+00:32:11,299 --> 00:32:12,880
+intended for our app
+
+556
+00:32:12,088 --> 00:32:15,185
+in those attributes that we won call
+type 2 and one call type 3
+
+557
+00:32:16,085 --> 00:32:20,044
+all the attributes and named by a number
+so attribute our two
+
+558
+00:32:20,809 --> 00:32:23,842
+in the receipt if you read that
+attributes value it will be the bundle
+
+559
+00:32:24,139 --> 00:32:26,203
+identify this receipt was intended for
+
+560
+00:32:26,779 --> 00:32:31,510
+and then type 3 the bundle version but
+this receipt was intended for
+
+561
+00:32:31,051 --> 00:32:34,052
+so you can check the bundle identify and
+make sure it's for your app
+
+562
+00:32:34,061 --> 00:32:37,096
+you can check the bundle version if you
+wanna even high-level security perhaps
+
+563
+00:32:37,096 --> 00:32:37,905
+you wanna make
+
+564
+00:32:38,769 --> 00:32:42,340
+absolutely certain that someone's not
+using a receipt from older version of
+
+565
+00:32:42,034 --> 00:32:42,111
+your app
+
+566
+00:32:43,011 --> 00:32:46,076
+the perhaps doesn't have the same
+features and content
+
+567
+00:32:46,076 --> 00:32:50,124
+the one thing to note is use hard coded
+values for the comparison
+
+568
+00:32:51,024 --> 00:32:56,193
+why because if you simply grab the
+values that have your info palest
+
+569
+00:32:56,409 --> 00:32:59,840
+and compare them against the values in
+the receipt it's all too easy for
+
+570
+00:32:59,084 --> 00:32:59,159
+someone to go on
+
+571
+00:33:00,059 --> 00:33:03,070
+edit your info appeal is to make it look
+exactly like the receipt that they're
+
+572
+00:33:03,007 --> 00:33:05,044
+trying to fake you with
+
+573
+00:33:06,007 --> 00:33:09,034
+so hardcore those values into your apt
+the expecting
+
+574
+00:33:09,034 --> 00:33:14,125
+that way they parted the code signed up
+binary much harder to try and circumvent
+
+575
+00:33:15,025 --> 00:33:19,164
+now it was a very high level look at how
+this receipt daughter is structured in
+
+576
+00:33:19,389 --> 00:33:20,460
+terms of attributes
+
+577
+00:33:20,046 --> 00:33:23,113
+but as I said before this is encoded as
+in the bites are arranged
+
+578
+00:33:24,013 --> 00:33:27,084
+using a standard called OPI sn1
+
+579
+00:33:27,084 --> 00:33:31,053
+this to other attributes along with type
+2 and type 3
+
+580
+00:33:31,809 --> 00:33:36,380
+so we use type 2 and type 3 to confirm
+that this receipt was for our app
+
+581
+00:33:36,038 --> 00:33:39,187
+but now we need to confirm that it was
+actually intended for this device
+
+582
+00:33:39,529 --> 00:33:42,568
+only because we don't want someone to
+simply be able to copier ended
+
+583
+00:33:42,919 --> 00:33:46,510
+receipt around to their friends so that
+they can use the app without paying for
+
+584
+00:33:46,051 --> 00:33:47,580
+it
+
+585
+00:33:48,039 --> 00:33:50,128
+so included in the receipt is an
+attribute call type for which is an
+
+586
+00:33:50,929 --> 00:33:51,860
+opaque value
+
+587
+00:33:51,086 --> 00:33:55,175
+just blah but bytes and type 5 which is
+a sha-1 hash
+
+588
+00:33:56,075 --> 00:33:59,086
+national familiar with hashing hashing
+is a way to take a large beloved
+
+589
+00:33:59,086 --> 00:34:00,035
+daughter
+
+590
+00:34:00,809 --> 00:34:04,090
+and boil it down to a unique smaller
+daughter
+
+591
+00:34:04,009 --> 00:34:07,478
+that will be absolutely unique to that
+larger data set that was the input to
+
+592
+00:34:07,559 --> 00:34:10,100
+the hash
+
+593
+00:34:10,001 --> 00:34:13,080
+so those tight five attributes is a
+sha-1 hash
+
+594
+00:34:13,179 --> 00:34:16,970
+of three key values it's a bundle I day
+
+595
+00:34:16,097 --> 00:34:19,152
+plus a unique device identifiers like
+the guy we don't know is 10
+
+596
+00:34:20,052 --> 00:34:23,126
+or their device vendor on I O S
+
+597
+00:34:24,026 --> 00:34:27,027
+and also this opaque value
+
+598
+00:34:27,027 --> 00:34:30,124
+how does this work to actually confirm
+that it intended for your device
+
+599
+00:34:31,024 --> 00:34:35,053
+for a single device you see the App
+Store knows
+
+600
+00:34:35,053 --> 00:34:39,070
+these three key pieces of information at
+the time that purchases made
+
+601
+00:34:39,007 --> 00:34:42,038
+with someone taps the buy button on your
+Apple run ended up purchasing complete
+
+602
+00:34:43,001 --> 00:34:44,013
+the transaction
+
+603
+00:34:44,013 --> 00:34:48,029
+the App Store knows three casings 1 we
+know the bundle ID if the app making the
+
+604
+00:34:48,029 --> 00:34:49,046
+purchase
+
+605
+00:34:49,046 --> 00:34:53,057
+to we know the device identifiers from
+that device because it sent to the store
+
+606
+00:34:53,057 --> 00:34:55,059
+when the transaction is made
+
+607
+00:34:55,059 --> 00:34:59,117
+and three on server side we create this
+opaque value this been a friend a mentor
+
+608
+00:35:00,017 --> 00:35:01,106
+Peter Rhee inject into this process
+
+609
+00:35:02,006 --> 00:35:06,022
+to make it harder to attack so the App
+Store knows these three key things at
+
+610
+00:35:06,022 --> 00:35:07,036
+the time of purchase
+
+611
+00:35:07,036 --> 00:35:11,060
+creates the sha-1 hash makes it into the
+receipt along with opaque value that we
+
+612
+00:35:11,006 --> 00:35:12,039
+used
+
+613
+00:35:12,093 --> 00:35:15,180
+the great thing is that your app can
+know the same three values
+
+614
+00:35:16,008 --> 00:35:19,031
+at the time after receipt validation
+
+615
+00:35:20,003 --> 00:35:23,078
+so because you know the three values and
+you can string them together in that
+
+616
+00:35:23,078 --> 00:35:26,087
+long concatenation of bites and create
+the hash
+
+617
+00:35:26,087 --> 00:35:29,136
+and the App Store on you these three key
+values and created the same hash input
+
+618
+00:35:30,036 --> 00:35:31,104
+in the receipt
+
+619
+00:35:32,004 --> 00:35:35,100
+if the hash you calculate exactly
+matches the hash that the App Store
+
+620
+00:35:36,000 --> 00:35:37,082
+created in putting the receipt
+
+621
+00:35:37,082 --> 00:35:40,169
+then you're certain the dis- receipt was
+intended for your app on this device
+
+622
+00:35:41,069 --> 00:35:42,084
+only
+
+623
+00:35:42,084 --> 00:35:47,110
+it's completely unique to this device
+
+624
+00:35:48,001 --> 00:35:52,012
+now about I S and one
+
+625
+00:35:52,021 --> 00:35:55,026
+these high-level this high-level look at
+the attributes
+
+626
+00:35:55,026 --> 00:35:57,108
+that explains how we structure them and
+how you work with the different
+
+627
+00:35:58,008 --> 00:36:01,014
+attributes and how we store them as an
+array of attributes with a type in a
+
+628
+00:36:01,014 --> 00:36:01,097
+value
+
+629
+00:36:01,097 --> 00:36:05,135
+how they encode at the actual bite level
+how do you work with us in code
+
+630
+00:36:06,035 --> 00:36:09,129
+the way you do that is by harnessing sn1
+
+631
+00:36:10,029 --> 00:36:13,121
+heslin one is this way in which we can
+use a textual definition the see here on
+
+632
+00:36:14,021 --> 00:36:14,105
+screen
+
+633
+00:36:15,005 --> 00:36:19,062
+to describe how the bites are arranged
+in the receipt
+
+634
+00:36:19,062 --> 00:36:22,078
+we provide you with this I S and one
+definition of how we structure the
+
+635
+00:36:22,078 --> 00:36:22,167
+receipt
+
+636
+00:36:23,067 --> 00:36:27,136
+and what you seeing up on screen is that
+you have a receipt model defined
+
+637
+00:36:28,036 --> 00:36:32,083
+and in that receipt there is a payload
+and that payload is a separate seat
+
+638
+00:36:32,083 --> 00:36:33,132
+attributes
+
+639
+00:36:34,032 --> 00:36:38,079
+and the receipt attribute will be part
+of a sequence and it contains a type
+
+640
+00:36:38,079 --> 00:36:42,093
+which relates to that type that we just
+saw before as well as a value
+
+641
+00:36:42,093 --> 00:36:45,191
+it is an octet string or a bunch bytes
+and that refers to things like that
+
+642
+00:36:46,091 --> 00:36:46,142
+opaque
+
+643
+00:36:47,042 --> 00:36:51,115
+value in the shower 1/2 we looked at
+just before
+
+644
+00:36:52,015 --> 00:36:55,020
+working with the sn1 the trick is
+
+645
+00:36:55,065 --> 00:36:58,074
+you need to find a way to go from that
+textual definition
+
+646
+00:36:59,055 --> 00:37:02,148
+that's based on the open standard about
+an SSL to actually being able to read in
+
+647
+00:37:03,048 --> 00:37:03,129
+writing
+
+648
+00:37:04,029 --> 00:37:08,063
+work with it in the code level says a
+few options for you because of course
+
+649
+00:37:08,063 --> 00:37:10,149
+this is very widely used
+
+650
+00:37:11,049 --> 00:37:15,136
+one option is again open SSL just as it
+did the PKcs 7 verification he can read
+
+651
+00:37:16,036 --> 00:37:18,089
+as: in one just fine
+
+652
+00:37:18,089 --> 00:37:21,096
+you can create your own pasta if you
+want to to again have full control over
+
+653
+00:37:21,096 --> 00:37:22,167
+this
+
+654
+00:37:23,067 --> 00:37:26,083
+let's look at an open SSL example
+
+655
+00:37:26,083 --> 00:37:29,158
+when we did that first step verifying
+the receipt we got back to p7 data
+
+656
+00:37:30,058 --> 00:37:32,075
+structure remember that
+
+657
+00:37:32,075 --> 00:37:35,163
+now we can use that same data structure
+to actually get that payload oversee
+
+658
+00:37:36,063 --> 00:37:39,078
+daughter the tin ko tin I S and one it's
+buried in there
+
+659
+00:37:39,078 --> 00:37:43,090
+in the p7 data structure we see their
+once we've got that we can call this
+
+660
+00:37:43,009 --> 00:37:45,010
+function call sn1 GetObject
+
+661
+00:37:46,000 --> 00:37:51,000
+to start pulling those objects out of
+that as someone coated bite stream
+
+662
+00:37:51,000 --> 00:37:54,098
+the object to things like to be an
+object for the top-level receipt
+
+663
+00:37:54,098 --> 00:37:57,112
+there'll be an option up to I object in
+it for the payload
+
+664
+00:37:58,012 --> 00:38:01,054
+they'll be an object in there for the
+receipt attribute and then subject under
+
+665
+00:38:01,054 --> 00:38:03,146
+there for reaching the type value
+inversion
+
+666
+00:38:04,046 --> 00:38:08,081
+seats arrange very high rocky play and
+that follows the same structure that we
+
+667
+00:38:08,081 --> 00:38:11,176
+just saw an SAS in one text chill
+definition
+
+668
+00:38:12,076 --> 00:38:16,172
+now this is not perfectly coated but it
+gives you an example of how in which
+
+669
+00:38:17,072 --> 00:38:22,074
+you would work with a sn1 in open SSL if
+that's how you choose to do this
+
+670
+00:38:22,092 --> 00:38:25,111
+it set up a while loop to essentially
+move a
+
+671
+00:38:26,011 --> 00:38:30,035
+par move the pointer throughout that
+stream the fights that represents the
+
+672
+00:38:30,035 --> 00:38:30,119
+receipt
+
+673
+00:38:31,019 --> 00:38:34,114
+we want to basically walk through the
+receipt and read it as we go
+
+674
+00:38:35,014 --> 00:38:38,016
+so we set up the wild open stock calling
+sn1 get object
+
+675
+00:38:38,016 --> 00:38:41,025
+to pull those attributes and values out
+of the receipt
+
+676
+00:38:42,006 --> 00:38:46,080
+so I make one call to get my attribute
+for example another call to get the type
+
+677
+00:38:46,008 --> 00:38:50,029
+and notice I'm moving the pointer value
+along like a finger following words in a
+
+678
+00:38:51,001 --> 00:38:52,002
+book
+
+679
+00:38:52,011 --> 00:38:55,034
+and I'm calling is someone get object to
+read each in those words out
+
+680
+00:38:55,034 --> 00:38:59,080
+and so I can use them after a few more
+calls today someone get object
+
+681
+00:38:59,008 --> 00:39:03,067
+I'm ready to switch on that attribute
+types I can see what I'm looking for
+
+682
+00:39:04,039 --> 00:39:07,067
+in this case just for simple example i'm
+looking for. attribute type 2
+
+683
+00:39:07,067 --> 00:39:10,101
+which you know is a bundle I day and
+then I could stop processing that by
+
+684
+00:39:11,001 --> 00:39:12,038
+calling sn1 get
+
+685
+00:39:12,038 --> 00:39:15,109
+object to actually read the string value
+when compared against my hard coded
+
+686
+00:39:16,009 --> 00:39:18,035
+bundle ID
+
+687
+00:39:18,035 --> 00:39:21,060
+but course I want to show you that this
+is real world thing that anyone can do
+
+688
+00:39:21,006 --> 00:39:25,028
+so he is married Emma now same as before
+I got a third project here to build upon
+
+689
+00:39:25,082 --> 00:39:28,169
+the same two samples we've seen so far
+
+690
+00:39:29,069 --> 00:39:33,076
+see here we have the old familiar
+loading up with the receipt certificate
+
+691
+00:39:33,076 --> 00:39:35,144
+store and then calling PKcs 7 verify
+
+692
+00:39:36,044 --> 00:39:39,085
+but now when we get a result of one and
+we know this thing is valid and
+
+693
+00:39:39,085 --> 00:39:40,110
+unaltered
+
+694
+00:39:41,001 --> 00:39:44,004
+and we want to start reading the
+purchase information out I'm gonna go
+
+695
+00:39:44,013 --> 00:39:47,041
+ahead and start using open SSL to do
+that to actually read the information
+
+696
+00:39:47,041 --> 00:39:50,055
+about what someone purchased
+
+697
+00:39:50,055 --> 00:39:53,056
+so just like we saw before I find the
+actual
+
+698
+00:39:53,056 --> 00:39:56,093
+octet string that stream of bytes the
+represents the receipt
+
+699
+00:39:56,093 --> 00:39:59,109
+buried within my pee 7.0 structure I
+start calling this
+
+700
+00:40:00,009 --> 00:40:04,055
+sn1 get object method to start reading
+those bits of information at byte stream
+
+701
+00:40:04,055 --> 00:40:05,154
+one at a time
+
+702
+00:40:06,054 --> 00:40:10,065
+when I start doing that in my while loop
+to walk over each of those bites
+
+703
+00:40:10,065 --> 00:40:12,163
+you see that I set up that point earn
+each time a call as someone get object
+
+704
+00:40:13,063 --> 00:40:14,108
+here
+
+705
+00:40:15,008 --> 00:40:19,044
+I advance that pointer along just like
+the finger following the word in a book
+
+706
+00:40:19,044 --> 00:40:21,137
+so make a few cost as someone get object
+because I want to get things like the
+
+707
+00:40:22,037 --> 00:40:23,110
+attribute I pay tribute version
+
+708
+00:40:24,001 --> 00:40:27,080
+and then the actual object itself set up
+a switch statement
+
+709
+00:40:27,089 --> 00:40:31,090
+and got a case to hear looking for
+bundle I day and a final call here I SM
+
+710
+00:40:31,099 --> 00:40:32,140
+one GetObject
+
+711
+00:40:33,004 --> 00:40:36,035
+it allows me to form a string which will
+be a bundle ID
+
+712
+00:40:36,071 --> 00:40:40,074
+let's run and see it work
+
+713
+00:40:40,074 --> 00:40:44,091
+notice by the fact that I had done the
+open SSL integration before in this
+
+714
+00:40:44,091 --> 00:40:44,173
+project
+
+715
+00:40:45,073 --> 00:40:47,151
+I don't have to mess around with that
+again this project is already setup just
+
+716
+00:40:48,051 --> 00:40:51,095
+like we had before
+
+717
+00:40:51,095 --> 00:40:54,190
+so I got a receipt great we move into a
+valid receipt
+
+718
+00:40:55,009 --> 00:41:00,011
+we've gone and called the PKcs 7 verify
+here to make sure the receipt is trusted
+
+719
+00:41:01,001 --> 00:41:01,076
+unaltered
+
+720
+00:41:01,085 --> 00:41:05,164
+and Indians now we can start reading it
+so I got the byte stream
+
+721
+00:41:06,064 --> 00:41:09,099
+I start calling sn1 get object to read
+that receipt in
+
+722
+00:41:09,099 --> 00:41:12,170
+then I set up my wilder to irate over
+each that series about tributes in the
+
+723
+00:41:13,007 --> 00:41:14,079
+receipt
+
+724
+00:41:15,042 --> 00:41:19,094
+and as we see is we sale down this first
+attempt at getting an object out of the
+
+725
+00:41:19,094 --> 00:41:24,106
+recede we get all the way down to a
+switch statement
+
+726
+00:41:25,006 --> 00:41:29,099
+and if we pull up the debug console here
+you'll see in fact what we found
+
+727
+00:41:29,099 --> 00:41:32,112
+first is a tribute type for so as you
+
+728
+00:41:33,012 --> 00:41:35,106
+irate over this while loop is
+essentially finding each of those
+
+729
+00:41:36,006 --> 00:41:38,015
+attributes that we saw in the receipt
+
+730
+00:41:38,015 --> 00:41:43,093
+and he set up the switch statement here
+to work with them accordingly
+
+731
+00:41:43,093 --> 00:41:46,139
+so in fact if we let this run we would
+see a bunch of break points hit here in
+
+732
+00:41:47,039 --> 00:41:49,041
+a switch statement
+
+733
+00:41:49,041 --> 00:41:52,120
+switching and as we looked over each of
+those attributes we can see this time
+
+734
+00:41:53,002 --> 00:41:54,038
+we've got type for
+
+735
+00:41:54,056 --> 00:41:58,065
+advance again we get different values as
+we go forward
+
+736
+00:41:58,065 --> 00:42:01,091
+we can begin working with those to pull
+out things like the bundle ID to confirm
+
+737
+00:42:01,091 --> 00:42:01,159
+that
+
+738
+00:42:02,059 --> 00:42:09,059
+the hash value a former hash to confirm
+that it is intended for this device
+
+739
+00:42:10,097 --> 00:42:13,151
+we nearly there we have a receipt that
+we know is trusted
+
+740
+00:42:14,051 --> 00:42:17,128
+with confirmed for an hour on this
+device now we can get down to the money
+
+741
+00:42:18,028 --> 00:42:19,043
+into this
+
+742
+00:42:19,043 --> 00:42:22,100
+and finding out what the user has in
+fact paid for so we know what
+
+743
+00:42:23,000 --> 00:42:26,085
+unlock me know what content to provide
+them
+
+744
+00:42:26,085 --> 00:42:30,094
+now along with those attributes type
+2345 we just looked at
+
+745
+00:42:30,094 --> 00:42:33,192
+you'll also see one or more attributes
+have types 17
+
+746
+00:42:34,092 --> 00:42:37,129
+type 17 is a record of an in app
+purchase having been made
+
+747
+00:42:38,029 --> 00:42:41,090
+and this is how you verified that in app
+purchase was real and authentic
+
+748
+00:42:41,009 --> 00:42:44,090
+and is going to result in money making
+its way to you
+
+749
+00:42:45,071 --> 00:42:49,115
+the value of the type 17 attribute is in
+fact a nested set
+
+750
+00:42:50,015 --> 00:42:53,106
+all that repeats itself so you find the
+type 17 attribute
+
+751
+00:42:54,006 --> 00:42:58,033
+get the value and add value is going to
+be a nested said about tributes the tell
+
+752
+00:42:58,033 --> 00:42:59,050
+you the quantity
+
+753
+00:42:59,005 --> 00:43:02,042
+product identifiers and a transaction
+identifiers purchased a
+
+754
+00:43:02,087 --> 00:43:05,120
+for an in app purchase that has been
+made and again
+
+755
+00:43:06,002 --> 00:43:12,004
+Wii U VA sn1 representation of that so
+you know how it's structured
+
+756
+00:43:12,022 --> 00:43:15,060
+now if you have a paid app in the store
+and every morning to make the transition
+
+757
+00:43:15,006 --> 00:43:16,057
+to being a freemium ap
+
+758
+00:43:17,011 --> 00:43:21,049
+that is free with an app purchases one
+thing you don't want to do is leave
+
+759
+00:43:21,049 --> 00:43:23,133
+those loyal paying customers out in the
+cold
+
+760
+00:43:24,033 --> 00:43:27,042
+if they've already paid the full price
+for your app they shouldn't have to go
+
+761
+00:43:27,042 --> 00:43:30,120
+into a bunch of in app purchases just to
+get back what they've already paid for
+
+762
+00:43:31,002 --> 00:43:34,023
+so here's a trick you can do including
+the receipt now
+
+763
+00:43:34,041 --> 00:43:38,058
+is this type 19 attribute called
+original application version:
+
+764
+00:43:38,058 --> 00:43:42,107
+that is the application version: that
+the user originally purchased
+
+765
+00:43:43,007 --> 00:43:46,105
+so if two years ago I purchased this app
+the receipt will always reflect
+
+766
+00:43:47,005 --> 00:43:50,089
+version that was in the store at the
+time I made a purchase all those years
+
+767
+00:43:50,089 --> 00:43:51,138
+ago
+
+768
+00:43:52,038 --> 00:43:56,049
+and that's your way of knowing whether
+to treat the app as a paid version and
+
+769
+00:43:56,049 --> 00:43:57,105
+give them what they paid for
+
+770
+00:43:58,005 --> 00:44:01,023
+or to know that they purchase the app
+when you're free me a map
+
+771
+00:44:01,023 --> 00:44:04,039
+to not unlock features and content until
+you see those in app purchases being
+
+772
+00:44:04,039 --> 00:44:05,098
+made
+
+773
+00:44:05,098 --> 00:44:09,120
+now in terms of your purchases different
+types of content have different life
+
+774
+00:44:10,002 --> 00:44:12,003
+cycles in terms of what is seen
+
+775
+00:44:12,021 --> 00:44:16,033
+in the receipt if you are dealing with
+consumable
+
+776
+00:44:16,033 --> 00:44:19,075
+and non renewing subscriptions so things
+like
+
+777
+00:44:19,075 --> 00:44:22,076
+our gas in a race car in a racing game
+
+778
+00:44:22,076 --> 00:44:25,159
+koreans blocks currency not consumable
+
+779
+00:44:26,059 --> 00:44:30,085
+sorry consumables are things that you
+buy use on a single device
+
+780
+00:44:30,085 --> 00:44:34,134
+and they get used up those sorts of
+items because they are that purchase the
+
+781
+00:44:35,034 --> 00:44:37,088
+comic again and again and are intended
+to be used
+
+782
+00:44:37,088 --> 00:44:40,175
+on a single device they only appear once
+
+783
+00:44:41,075 --> 00:44:46,080
+in the receipt and only in the receipt
+that's issued at the time of purchase
+
+784
+00:44:46,008 --> 00:44:49,101
+so when that purchases made few 500
+gallons a gas in the race car
+
+785
+00:44:50,073 --> 00:44:53,138
+you need to interpret the receipt at
+that point in time invalidated
+
+786
+00:44:54,038 --> 00:44:58,057
+and then stash that state that is up the
+gas tank by five hundred gallons or
+
+787
+00:44:58,057 --> 00:44:59,083
+whatever it might be
+
+788
+00:44:59,083 --> 00:45:02,089
+you need to stash that state your cell
+
+789
+00:45:02,089 --> 00:45:05,173
+that transaction will not be present in
+any subsequent receipts that we issue
+
+790
+00:45:06,073 --> 00:45:09,159
+know will be present if you perform the
+restore completed transactions
+
+791
+00:45:10,059 --> 00:45:14,087
+there a one-shot deal when the
+transaction is done
+
+792
+00:45:14,087 --> 00:45:17,152
+you inspect the receipt stash that state
+your cell
+
+793
+00:45:18,052 --> 00:45:22,138
+now the total opposite to that is non
+consumable and order your subscriptions
+
+794
+00:45:23,038 --> 00:45:26,110
+if you're selling on consumables like
+levels in a game for example
+
+795
+00:45:27,001 --> 00:45:30,094
+those are things that a user buys once
+and I would rightly expect to be able to
+
+796
+00:45:31,003 --> 00:45:33,059
+use that game level on other devices
+
+797
+00:45:33,059 --> 00:45:37,066
+fight on by new phone and re download
+your app I expect to get back all the
+
+798
+00:45:37,066 --> 00:45:39,132
+lovely levels and I've already paid for
+
+799
+00:45:40,032 --> 00:45:43,064
+so because these non consumables and
+ordering your subscriptions have that
+
+800
+00:45:43,064 --> 00:45:45,065
+sense opponents say about them
+
+801
+00:45:45,065 --> 00:45:49,133
+they are always in the receipt and you
+can use the stalking API's to restore
+
+802
+00:45:50,033 --> 00:45:51,065
+completed transactions
+
+803
+00:45:51,065 --> 00:45:54,067
+which is how the user gets back all
+those things they've bought from you
+
+804
+00:45:54,085 --> 00:45:54,173
+before
+
+805
+00:45:55,073 --> 00:45:58,131
+in terms of non consumable and order
+renewable subscriptions
+
+806
+00:45:59,031 --> 00:46:03,054
+there are still valid
+
+807
+00:46:03,054 --> 00:46:06,098
+we've talked about so far is all about
+the happy part for the receipt being
+
+808
+00:46:06,098 --> 00:46:09,167
+valid and true water for seats are
+invalid
+
+809
+00:46:10,067 --> 00:46:13,076
+what if when you validate this city the
+missing or something appears wrong with
+
+810
+00:46:14,057 --> 00:46:15,124
+it
+
+811
+00:46:16,024 --> 00:46:20,063
+the fact is that doesn't mean something
+bad has happened
+
+812
+00:46:20,063 --> 00:46:24,126
+that does not necessarily mean someone
+is trying to rip you off
+
+813
+00:46:25,026 --> 00:46:30,100
+there are many real-world scenarios the
+your app will definitely run into her
+
+814
+00:46:31,000 --> 00:46:35,052
+where a receipt is missing or invalid
+through no fault of the user
+
+815
+00:46:35,052 --> 00:46:39,080
+not because they want to rip you off but
+if you see this happen what you need to
+
+816
+00:46:39,008 --> 00:46:41,034
+do is refresh the receipt
+
+817
+00:46:42,006 --> 00:46:45,080
+on I O S if the receipt doesn't exist or
+appears to be invalid you refresh
+
+818
+00:46:45,008 --> 00:46:49,094
+using stalk it stock it has the SK
+receipt refresh operation
+
+819
+00:46:50,066 --> 00:46:54,069
+which allows you to you can now looking
+at this as k receipt refresh request
+
+820
+00:46:54,069 --> 00:46:55,085
+object
+
+821
+00:46:55,085 --> 00:46:57,093
+said a delegate so you get the call
+backs when the reefer she's done and
+
+822
+00:46:58,065 --> 00:47:00,116
+then start the Refresh
+
+823
+00:47:01,016 --> 00:47:04,040
+with that request completes you should
+get back in your seat
+
+824
+00:47:04,004 --> 00:47:08,052
+you can repair a fire but not the
+getting in your say
+
+825
+00:47:08,088 --> 00:47:12,102
+we have to talk to the App Store soco's
+network connection will be required
+
+826
+00:47:13,002 --> 00:47:17,070
+which you use and may not always have
+store sign in will be required so that
+
+827
+00:47:17,007 --> 00:47:20,049
+we can go and verify that this person
+really is them and check the purchase
+
+828
+00:47:21,012 --> 00:47:24,026
+history before we wish you the receipt
+
+829
+00:47:24,026 --> 00:47:27,048
+but what you need to do is avoid
+continuous loop serve refreshments and a
+
+830
+00:47:27,048 --> 00:47:30,053
+tree for Shalit ivory fresh ballot acres
+each time you do that
+
+831
+00:47:30,098 --> 00:47:32,197
+the user's gonna get stuck in this
+horrible luper prompt for all yes I
+
+832
+00:47:33,097 --> 00:47:34,149
+signed in
+
+833
+00:47:35,049 --> 00:47:39,144
+still bad sign in again and all this
+network traffic goes back and forward
+
+834
+00:47:40,044 --> 00:47:43,053
+so what you should do is on launch
+validate the receipt
+
+835
+00:47:44,034 --> 00:47:47,117
+if it's missing or invalid you can
+refresh at once if it still missing
+
+836
+00:47:48,017 --> 00:47:48,110
+invalid
+
+837
+00:47:49,001 --> 00:47:53,012
+that's it dunk or refresh again
+
+838
+00:47:53,021 --> 00:47:56,055
+but always tended is a course a little
+different as we saw before if the
+
+839
+00:47:56,055 --> 00:47:58,106
+receipt is invalid or missing
+
+840
+00:47:59,006 --> 00:48:02,102
+you exit with code 173 to tell EOS in
+the App Store the you need to get in
+
+841
+00:48:03,002 --> 00:48:05,057
+your receipt
+
+842
+00:48:05,057 --> 00:48:08,111
+the OS is that exit code tell the App
+Store
+
+843
+00:48:09,011 --> 00:48:13,014
+and the App Store going getting your
+seat for you but just like a mile s
+
+844
+00:48:13,014 --> 00:48:18,061
+he will require a network connection and
+still signing will be requested
+
+845
+00:48:18,061 --> 00:48:23,069
+so this is definitely not something you
+want to automatically on launch
+
+846
+00:48:23,069 --> 00:48:27,130
+now when you do you receive elevation
+and it appears to be invalid or missing
+
+847
+00:48:28,003 --> 00:48:33,009
+and you request in your receipt even if
+then you still don't have a receipt
+
+848
+00:48:33,036 --> 00:48:36,039
+or it still appears to be invalid
+
+849
+00:48:36,039 --> 00:48:40,113
+what you do next is entirely up to you
+
+850
+00:48:41,013 --> 00:48:44,100
+invalid or missing receipts will happen
+everyone's ap
+
+851
+00:48:45,000 --> 00:48:48,062
+will see a condition where this happens
+and it could be entirely legitimate
+
+852
+00:48:48,062 --> 00:48:51,085
+he's an example if i sync an app from
+iTunes
+
+853
+00:48:51,085 --> 00:48:57,126
+to my OS device it lands on the I was
+device with no receipt
+
+854
+00:48:58,026 --> 00:49:00,034
+because it wasn't purchased directly
+from the App Store the app store doesn't
+
+855
+00:49:01,006 --> 00:49:02,084
+have that unique device identifiers
+
+856
+00:49:02,084 --> 00:49:06,088
+week on issue a receipt so it lands on
+the device with Norris aid
+
+857
+00:49:06,088 --> 00:49:09,101
+and when your app launches ill find the
+receipt and need to refresh if you wanna
+
+858
+00:49:10,001 --> 00:49:12,029
+validate the receipt
+
+859
+00:49:12,029 --> 00:49:15,120
+so to real-world scenario that will
+happen you need to configure that you
+
+860
+00:49:16,002 --> 00:49:18,095
+need to consider the case that that
+refresher the receipt may not be
+
+861
+00:49:19,013 --> 00:49:20,056
+possible
+
+862
+00:49:20,056 --> 00:49:23,120
+right what if I got my eye wonderful app
+from the from the iTunes Store the App
+
+863
+00:49:24,002 --> 00:49:24,061
+Store
+
+864
+00:49:24,079 --> 00:49:27,171
+and I'm really excited about using it on
+the plane flight about to get on
+
+865
+00:49:28,071 --> 00:49:31,077
+plug my OS device in sync the up across
+unplugged
+
+866
+00:49:32,031 --> 00:49:36,073
+jump on a plane no wifi
+
+867
+00:49:36,073 --> 00:49:41,155
+I can get a receipt sup to you now to
+decide how you want to handle a
+
+868
+00:49:42,055 --> 00:49:45,070
+okay you should ideally match
+
+869
+00:49:45,007 --> 00:49:49,010
+the user experience to the value of your
+app miss comes back to the concepts were
+
+870
+00:49:50,000 --> 00:49:51,047
+talking before
+
+871
+00:49:51,047 --> 00:49:54,090
+are you can allow full access to the
+app's content features
+
+872
+00:49:54,009 --> 00:49:57,085
+even if the receipt invalid if you
+choose you compare haiti have a
+
+873
+00:49:58,066 --> 00:50:01,073
+you maybe have a grace period where you
+will allow some use in the app
+
+874
+00:50:02,036 --> 00:50:05,095
+you could limit access to certain areas
+have the app perhaps is one area of the
+
+875
+00:50:05,095 --> 00:50:05,157
+app
+
+876
+00:50:06,057 --> 00:50:09,093
+that is particularly valuable the you
+wouldn't want to let them access
+
+877
+00:50:09,093 --> 00:50:14,121
+even if they can't get a receipt or you
+could block functionality entirely
+
+878
+00:50:15,021 --> 00:50:18,026
+you could have the app do nothing until
+a valid receipt is sane
+
+879
+00:50:18,071 --> 00:50:21,128
+on I was 10 only you can in fact force
+the apt to quit if you want to
+
+880
+00:50:22,028 --> 00:50:26,053
+but the concept does not exist on iowa's
+on iowa's the app is always running
+
+881
+00:50:26,053 --> 00:50:29,097
+so it's up to you to decide what to do
+but again
+
+882
+00:50:29,097 --> 00:50:32,102
+think about which business model you are
+more like
+
+883
+00:50:33,002 --> 00:50:36,063
+are you like the grocery store that once
+a comfortable really happy
+
+884
+00:50:36,063 --> 00:50:40,067
+buying experience and usage experience
+every time and maybe you don't care
+
+885
+00:50:40,067 --> 00:50:43,074
+want to ban on its goes out the door
+maybe don't care too much for receipts
+
+886
+00:50:44,037 --> 00:50:47,044
+invalid for a little bit of time
+
+887
+00:50:47,044 --> 00:50:50,066
+or maybe you are more like the high-end
+jewelry store
+
+888
+00:50:50,066 --> 00:50:53,098
+and maybe it's totally not OK for your
+apt to be used in
+
+889
+00:50:53,098 --> 00:50:56,144
+anyway on this is a valid receipt it's
+up to you
+
+890
+00:50:57,044 --> 00:51:00,061
+you should really think about the value
+of your product and how you want the
+
+891
+00:51:00,061 --> 00:51:01,127
+user experience to be
+
+892
+00:51:02,027 --> 00:51:05,123
+if they don't have a receipt know
+everything we talked about so far is
+
+893
+00:51:06,023 --> 00:51:09,061
+about validating that receive on a
+device but you can also do that same
+
+894
+00:51:09,061 --> 00:51:09,120
+process
+
+895
+00:51:10,002 --> 00:51:13,010
+on your servers if you have service
+issue in content based on an in app
+
+896
+00:51:14,000 --> 00:51:15,021
+purchase being made
+
+897
+00:51:15,021 --> 00:51:18,086
+he's what you can do when you request
+that content
+
+898
+00:51:18,086 --> 00:51:21,171
+send the receipt up to a server your
+server can talk to Apple's validation
+
+899
+00:51:22,071 --> 00:51:22,160
+service
+
+900
+00:51:23,006 --> 00:51:27,007
+and we will return back a blocker chase
+on that will tell you
+
+901
+00:51:27,007 --> 00:51:30,009
+whether or not the receipt is valid and
+will also include the purchase
+
+902
+00:51:30,009 --> 00:51:31,041
+information
+
+903
+00:51:32,022 --> 00:51:35,074
+your server can interpret the purchase
+information and decide only to him back
+
+904
+00:51:35,074 --> 00:51:36,152
+to content
+
+905
+00:51:37,052 --> 00:51:40,097
+based on that real monetary transaction
+having taken place
+
+906
+00:51:40,097 --> 00:51:43,114
+great way to secure and lock down the
+access to that content
+
+907
+00:51:44,014 --> 00:51:48,099
+the hosting online now for this service
+it's over to serve a validation
+
+908
+00:51:48,099 --> 00:51:51,140
+its only designed for your service to
+validate the receipt before they issue
+
+909
+00:51:52,004 --> 00:51:53,029
+content
+
+910
+00:51:53,065 --> 00:51:56,149
+and it's your app that needs to send the
+receipt to your server
+
+911
+00:51:57,049 --> 00:52:00,058
+you need to secure that into in
+communication channel and then
+
+912
+00:52:01,039 --> 00:52:05,065
+only your server sends the receipt to
+Apple's validation server
+
+913
+00:52:05,065 --> 00:52:10,140
+never never never ever send the receipt
+directly from your app on a device
+
+914
+00:52:11,004 --> 00:52:14,092
+to the validation service way too easy
+for someone to sit in the middle and
+
+915
+00:52:15,028 --> 00:52:16,083
+return a false positive
+
+916
+00:52:16,083 --> 00:52:21,084
+and you'll also be exposing a shared
+secret for using that validation service
+
+917
+00:52:21,084 --> 00:52:23,173
+the good thing is the response you get
+back as in Jason which is really is a
+
+918
+00:52:24,073 --> 00:52:25,077
+possible Chile
+
+919
+00:52:25,077 --> 00:52:28,148
+any server platform out there
+
+920
+00:52:29,048 --> 00:52:32,099
+now what you absolutely have to make
+sure you do if you implementing receipt
+
+921
+00:52:32,099 --> 00:52:34,103
+validation is tested thoroughly
+
+922
+00:52:35,003 --> 00:52:38,061
+a bug in this area of code could be
+disastrous for you
+
+923
+00:52:38,061 --> 00:52:40,150
+because it could lock someone out at the
+features and content they really have
+
+924
+00:52:41,005 --> 00:52:41,087
+paid for
+
+925
+00:52:42,032 --> 00:52:45,110
+and I guarantee that a one-way trip to
+one-star reviews
+
+926
+00:52:46,001 --> 00:52:49,012
+to Tess really thoroughly has you up to
+heaven is no receipt
+
+927
+00:52:49,021 --> 00:52:52,105
+has a behave when the receipt looks to
+be invalid has a behave when the app
+
+928
+00:52:53,005 --> 00:52:53,042
+first
+
+929
+00:52:53,042 --> 00:52:57,046
+when the receipt appears to be valid
+after refresh what if the Refresh failed
+
+930
+00:52:57,046 --> 00:52:59,107
+in its still invalid how does europe
+behave
+
+931
+00:53:00,007 --> 00:53:03,023
+and if you're selling your app using the
+volume purchase program for business and
+
+932
+00:53:03,023 --> 00:53:04,029
+education
+
+933
+00:53:04,029 --> 00:53:07,106
+beware the extra feels there in the
+receipt to tell you whether you at has
+
+934
+00:53:08,006 --> 00:53:09,090
+been allocated to use a
+
+935
+00:53:09,009 --> 00:53:14,094
+or revoked the really important message
+that I wanna make sure get through
+
+936
+00:53:15,075 --> 00:53:19,136
+is that these are not edge cases your
+Apple will launch without a receipt
+
+937
+00:53:20,036 --> 00:53:23,104
+your Apple launch with the receipt looks
+invalid know that example before I gave
+
+938
+00:53:24,004 --> 00:53:26,055
+you an Iowa sapping sent from iTunes
+
+939
+00:53:26,055 --> 00:53:30,137
+when you buy a new Mac and you move your
+caps from you all Mac team new Mac
+
+940
+00:53:31,037 --> 00:53:34,089
+guess what the receipt moves from the
+all-mac to the new Mac
+
+941
+00:53:34,089 --> 00:53:37,110
+so when you happy launches its gonna
+recede see a receipt that was not
+
+942
+00:53:38,001 --> 00:53:39,095
+intended for the new Mac
+
+943
+00:53:40,004 --> 00:53:43,012
+so these are real things that happen
+that definitely
+
+944
+00:53:43,012 --> 00:53:46,015
+knowledge cases at all
+
+945
+00:53:46,015 --> 00:53:49,111
+now you testing this on I O S you need
+to use the app stores test environment
+
+946
+00:53:50,011 --> 00:53:53,046
+to do that you run the app in Xcode
+performing in app purchase to get the
+
+947
+00:53:53,046 --> 00:53:54,107
+receipt
+
+948
+00:53:55,007 --> 00:53:59,078
+but you must have your app signed with
+the development certificate
+
+949
+00:53:59,078 --> 00:54:02,083
+OS 10 similar but different build in
+Xcode
+
+950
+00:54:03,028 --> 00:54:06,029
+run the app from find remember so finder
+in the OS
+
+951
+00:54:06,038 --> 00:54:10,131
+and the App Store sees that exit code
+and we know you need to get a receipt
+
+952
+00:54:11,031 --> 00:54:14,036
+when you exit with that receipt you must
+make sure
+
+953
+00:54:14,036 --> 00:54:17,109
+eggs with the codes are you must make
+sure the OAP is signed
+
+954
+00:54:18,009 --> 00:54:22,064
+with its development certificate
+
+955
+00:54:22,064 --> 00:54:26,142
+case you missed the very very deliver
+repetition in those last two slides
+
+956
+00:54:27,042 --> 00:54:31,106
+your ap must be signed with your
+developments difficult why
+
+957
+00:54:32,006 --> 00:54:35,011
+well because the first thing we do with
+the App Store layer
+
+958
+00:54:35,011 --> 00:54:38,042
+when you're up says hell when you
+receive hey wanna make an app purchase
+
+959
+00:54:38,042 --> 00:54:41,048
+is we inspect your code signature if the
+app
+
+960
+00:54:41,048 --> 00:54:43,096
+appears to be signed with your
+development certificate we know you're a
+
+961
+00:54:43,096 --> 00:54:44,150
+developer testing your app
+
+962
+00:54:45,005 --> 00:54:48,056
+so we're out those request to the test
+environment so you can make an app
+
+963
+00:54:49,001 --> 00:54:49,066
+purchases
+
+964
+00:54:49,066 --> 00:54:53,071
+test to receive elevation without
+actually buying something
+
+965
+00:54:53,071 --> 00:54:56,100
+but if we see the app is signed with the
+production App Store certificate
+
+966
+00:54:57,000 --> 00:54:59,084
+we know this is an app it's been
+purchased it's out there in the wheel
+
+967
+00:54:59,084 --> 00:54:59,178
+real-world
+
+968
+00:55:00,078 --> 00:55:03,082
+so therefore we're out those requests to
+the production store
+
+969
+00:55:03,082 --> 00:55:08,150
+so that you get paid for the
+transactions for customers making
+
+970
+00:55:09,005 --> 00:55:12,077
+lastly a quick word on the app
+submission process especially as hell
+
+971
+00:55:13,022 --> 00:55:15,108
+pertains to receipts
+
+972
+00:55:16,008 --> 00:55:19,073
+when you developing your app development
+signed of course and you working with
+
+973
+00:55:19,073 --> 00:55:22,166
+the App Store's test environment to test
+arena purchase a receipt validation
+
+974
+00:55:23,066 --> 00:55:26,119
+the receipt to get back test environment
+receipts
+
+975
+00:55:27,019 --> 00:55:30,032
+now because Europe may not already be on
+the store yet and using a test
+
+976
+00:55:30,032 --> 00:55:30,040
+environment
+
+977
+00:55:31,012 --> 00:55:34,048
+there'll be some difference in the
+fields that are present
+
+978
+00:55:34,048 --> 00:55:38,052
+when you ap is on sale in the App Store
+and its production signed
+
+979
+00:55:38,052 --> 00:55:41,101
+you will see production receipts that
+have some more fields in them
+
+980
+00:55:42,001 --> 00:55:45,060
+because your app Israel and live on the
+store
+
+981
+00:55:45,006 --> 00:55:49,059
+but app review is different
+
+982
+00:55:50,013 --> 00:55:54,096
+app review uses test receipts using a
+production signed ap
+
+983
+00:55:54,096 --> 00:55:57,174
+naps not something you can do only app
+review candor
+
+984
+00:55:58,074 --> 00:56:02,131
+but what you need to be aware of is that
+when you're testing your app
+
+985
+00:56:03,031 --> 00:56:06,083
+if you try to get too clever and think
+oh I found a way to determine that these
+
+986
+00:56:06,083 --> 00:56:07,090
+receipts from the test environment
+
+987
+00:56:08,053 --> 00:56:11,122
+and I never ever ever ever want someone
+out there to be getting a receipt using
+
+988
+00:56:12,022 --> 00:56:13,121
+my up from the test environment
+
+989
+00:56:14,021 --> 00:56:17,114
+if you try and implement code that
+rejects a test environment receipt
+
+990
+00:56:18,014 --> 00:56:20,052
+because your production signed
+
+991
+00:56:20,052 --> 00:56:23,119
+guess what app review can review your
+app
+
+992
+00:56:24,019 --> 00:56:27,050
+we won't be able to use your purchases
+
+993
+00:56:27,005 --> 00:56:31,031
+and therefore ill get rejected so just
+be aware that you will
+
+994
+00:56:31,076 --> 00:56:34,138
+have your live production signed version
+of the app that you submitted
+
+995
+00:56:35,038 --> 00:56:40,089
+it will see test receipts during app
+review
+
+996
+00:56:40,089 --> 00:56:43,170
+so if you'd like more information you
+can contact Arab Angeles TCE
+
+997
+00:56:44,007 --> 00:56:47,104
+there's also documentation online with
+the receipt validation programming guide
+
+998
+00:56:48,067 --> 00:56:50,155
+and of course as the Apple Developer
+forms which are a great place to discuss
+
+999
+00:56:51,055 --> 00:56:51,106
+this
+
+1000
+00:56:52,006 --> 00:56:55,028
+and ask for help some related sessions
+
+1001
+00:56:55,028 --> 00:56:58,067
+on Wednesday I gave a session about
+optimizing your in app purchases
+
+1002
+00:56:58,067 --> 00:57:01,129
+that was around creating a trouble-free
+in smooth in app purchase experience
+
+1003
+00:57:02,029 --> 00:57:06,113
+every single time and my colleague
+Rachel gave an x1 session earlier that
+
+1004
+00:57:07,013 --> 00:57:07,084
+morning
+
+1005
+00:57:07,084 --> 00:57:10,090
+it was about how to design for a great
+in app purchase experience
+
+1006
+00:57:11,044 --> 00:57:14,076
+it's great to protect a revenue even
+better to have a trouble free in app
+
+1007
+00:57:14,076 --> 00:57:14,143
+experience
+
+1008
+00:57:15,043 --> 00:57:19,055
+every time you've got also create that
+irresistible sales experience
+
+1009
+00:57:19,055 --> 00:57:22,074
+so do go and check out the sessions they
+were really good
+
+1010
+00:57:22,074 --> 00:57:22,128
+thanks very much
+

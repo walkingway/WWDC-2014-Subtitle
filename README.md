@@ -1,7 +1,6 @@
 ###[WWDC 2014 Subtitle](https://developer.apple.com/videos/wwdc/2014/)
 
-###Transform from google，Uncompleted.
-
+###Transform from google（Unofficial），Uncompleted.
 ------------------------------------
 ###Update 2014-6-13
 经samuelcai提醒，苹果已经开始逐步提供官方字幕，

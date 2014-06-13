@@ -1,0 +1,4745 @@
+1
+00:00:11,031 --> 00:00:14,037
+hi welcome to Swift playgrounds I'm Rick
+Ballard
+
+2
+00:00:14,091 --> 00:00:17,095
+and with me today is my colleague under
+walk a mile we're both engineers are the
+
+3
+00:00:18,031 --> 00:00:18,102
+expert team
+
+4
+00:00:19,002 --> 00:00:23,029
+we've been working hard to bring
+playgrounds for life richard is preggers
+
+5
+00:00:23,029 --> 00:00:24,358
+the world Monday morning
+
+6
+00:00:24,619 --> 00:00:27,930
+you talk a little bit more about the
+Monday afternoon and yesterday
+
+7
+00:00:27,093 --> 00:00:31,149
+work today going to going to a lot more
+depth we're gonna start today with some
+
+8
+00:00:32,049 --> 00:00:33,073
+conceptual background
+
+9
+00:00:33,073 --> 00:00:36,076
+what playgrounds actually are and what
+you can use them for
+
+10
+00:00:37,003 --> 00:00:41,010
+and then we'll show you examples how do
+you stay grid for learning exploration
+
+11
+00:00:41,001 --> 00:00:45,042
+and visualization and the result if your
+cur we'll show you how you can use your
+
+12
+00:00:45,051 --> 00:00:47,072
+own custom resources with your
+playground
+
+13
+00:00:47,072 --> 00:00:50,080
+and how to use program for algorithm
+development
+
+14
+00:00:50,008 --> 00:00:54,087
+and development other several pieces of
+code were introduced the XT playground
+
+15
+00:00:55,059 --> 00:00:55,115
+framework
+
+16
+00:00:56,015 --> 00:00:59,026
+which include some really powerful
+utilities that you can use to enhance
+
+17
+00:00:59,026 --> 00:01:00,027
+your playgrounds
+
+18
+00:01:00,036 --> 00:01:03,083
+and we'll show you how you can develop
+your own custom Quick Looks
+
+19
+00:01:03,083 --> 00:01:06,172
+to the you can visualize your own
+classes the same way you visualize the
+
+20
+00:01:07,072 --> 00:01:08,147
+clashes that come with the frameworks
+
+21
+00:01:09,047 --> 00:01:13,079
+next we'll show you a great day my love
+how awesome playgrounds are for
+
+22
+00:01:13,079 --> 00:01:16,124
+developing custom views and any other
+kind of custom drawing
+
+23
+00:01:17,024 --> 00:01:20,039
+and we'll show you how you can use your
+own a synchronous code
+
+24
+00:01:20,039 --> 00:01:24,118
+fragrance finally will finish up to date
+with a little bit back
+
+25
+00:01:24,469 --> 00:01:29,523
+limitations apply contact today so what
+exactly are playgrounds
+
+26
+00:01:30,009 --> 00:01:33,090
+records our new type of document
+introduced in Xcode sex
+
+27
+00:01:33,819 --> 00:01:36,877
+and they're actually a fire rapper
+containing a few useful things
+
+28
+00:01:37,399 --> 00:01:40,464
+first ball is your script code the code
+will be run
+
+29
+00:01:41,049 --> 00:01:44,054
+and resort I and generate results to
+display automatically
+
+30
+00:01:44,549 --> 00:01:47,648
+every tiny editor program file swiss
+burger
+
+31
+00:01:48,539 --> 00:01:53,060
+also contain a folder embedded resources
+which are made available to your code
+
+32
+00:01:53,006 --> 00:01:56,355
+or your program can reference resources
+elsewhere on your system you wanna make
+
+33
+00:01:56,409 --> 00:01:57,130
+available
+
+34
+00:01:57,013 --> 00:02:00,078
+finally your pecker can contain a time
+line
+
+35
+00:02:00,078 --> 00:02:03,087
+fourth time in items to provide used for
+visualization
+
+36
+00:02:03,789 --> 00:02:09,720
+view results yard what you see in the
+sidebar when you first open a playground
+
+37
+00:02:09,072 --> 00:02:10,109
+we show the playground editor
+
+38
+00:02:11,009 --> 00:02:14,988
+with your swift code on the left &
+Resorts sidebar on the right
+
+39
+00:02:15,069 --> 00:02:19,240
+showing the result every expression in
+your code every tiny
+
+40
+00:02:19,024 --> 00:02:23,043
+edit your source rerun your playground
+source from the top to the bottom
+
+41
+00:02:23,043 --> 00:02:26,122
+and protect the new results from that
+run in the sidebar
+
+42
+00:02:27,022 --> 00:02:32,321
+this is the basic editor mode but if you
+go into the assistant editor mode
+
+43
+00:02:32,519 --> 00:02:36,580
+will show the time line assisted by
+default which allows you to visualize a
+
+44
+00:02:36,058 --> 00:02:37,101
+result in more detail
+
+45
+00:02:38,001 --> 00:02:42,025
+for example you can display the value
+history from a light in your code
+
+46
+00:02:42,025 --> 00:02:45,078
+in this case into the numeric value will
+draw a graph
+
+47
+00:02:45,078 --> 00:02:49,097
+that value overtime I since it was
+iterated multiple times in a loop
+
+48
+00:02:49,097 --> 00:02:52,101
+if you're looking for consul I put like
+that from print men
+
+49
+00:02:53,037 --> 00:02:57,095
+you also find that in the time assistant
+their couple other useful things
+
+50
+00:02:57,095 --> 00:03:00,134
+you I wanna call out here in lower right
+hand corner
+
+51
+00:03:00,989 --> 00:03:04,997
+there's a time stepper and this controls
+how long your playground will continue
+
+52
+00:03:05,069 --> 00:03:05,610
+to run
+
+53
+00:03:05,061 --> 00:03:08,140
+after the top %uh sources finished if
+you're using my views
+
+54
+00:03:09,004 --> 00:03:13,063
+or indefinite execution explain what
+both those are little later on
+
+55
+00:03:13,459 --> 00:03:16,460
+there's also a slider
+
+56
+00:03:16,469 --> 00:03:20,170
+which allows you to go back in time and
+view results in the time line from a
+
+57
+00:03:20,017 --> 00:03:22,196
+specific point near playground execution
+
+58
+00:03:22,349 --> 00:03:26,380
+so here you can see reviewing a numeric
+result from part with you to take an
+
+59
+00:03:26,659 --> 00:03:27,390
+execution
+
+60
+00:03:27,039 --> 00:03:31,050
+but you for this is very usefull with
+live uses it allows you to scrub back
+
+61
+00:03:31,005 --> 00:03:34,073
+through the recording that view and see
+exactly what your animation was doing at
+
+62
+00:03:35,018 --> 00:03:36,297
+a specific point in time
+
+63
+00:03:36,459 --> 00:03:39,870
+that's what programs are
+
+64
+00:03:39,087 --> 00:03:42,095
+let's talk a little bit about what you
+can use them for we think your first
+
+65
+00:03:43,067 --> 00:03:45,075
+great use a playground is going to be
+learning
+
+66
+00:03:45,075 --> 00:03:48,134
+we've introduced a brand new language
+for you to learn and we think the best
+
+67
+00:03:49,034 --> 00:03:49,803
+way to get started
+
+68
+00:03:50,109 --> 00:03:53,158
+is just to open a playground and dive in
+and play around
+
+69
+00:03:53,599 --> 00:03:57,480
+our documentation also includes a
+special
+
+70
+00:03:57,048 --> 00:04:00,059
+interactive program called the swift to
+work I
+
+71
+00:04:00,059 --> 00:04:03,578
+this allows you to see documentation and
+playground editor
+
+72
+00:04:04,109 --> 00:04:07,164
+side by side in the same editors so you
+can read about how to do something
+
+73
+00:04:07,659 --> 00:04:12,510
+and try it out right there without
+leaving the editor friendly
+
+74
+00:04:12,051 --> 00:04:15,084
+we think Tiger are a fantastic way for
+people to learn how to program in the
+
+75
+00:04:15,084 --> 00:04:15,160
+first place
+
+76
+00:04:16,006 --> 00:04:20,115
+beginners don't have to learn how to
+configure a project in targeting
+
+77
+00:04:20,709 --> 00:04:24,570
+building run and debug they can just
+type code into a player and editor
+
+78
+00:04:24,057 --> 00:04:27,466
+and immediately see the results if you
+know anyone who want to learn how to
+
+79
+00:04:27,979 --> 00:04:28,600
+program
+
+80
+00:04:28,006 --> 00:04:32,008
+we encourage you to suggest trying in a
+playground we picked records are also
+
+81
+00:04:32,008 --> 00:04:34,055
+going to be an indispensable tool in
+your toolbox
+
+82
+00:04:35,027 --> 00:04:39,049
+for everyday code development if you're
+developing an algorithm or any other
+
+83
+00:04:39,049 --> 00:04:40,698
+separable chekhov code
+
+84
+00:04:41,139 --> 00:04:44,810
+you consider starting at the playground
+working and apparently have it how you
+
+85
+00:04:44,081 --> 00:04:44,140
+want it
+
+86
+00:04:45,004 --> 00:04:50,008
+and then driving that code in your
+project for use in your application
+
+87
+00:04:50,008 --> 00:04:53,277
+any sort of drawing code you want to do
+is also great in a playground because
+
+88
+00:04:54,069 --> 00:04:54,490
+you can
+
+89
+00:04:54,049 --> 00:04:57,087
+immediately see the visual result what
+your code is doing
+
+90
+00:04:57,087 --> 00:05:00,144
+and every time you change your code you
+can immediately see how that affects the
+
+91
+00:05:01,044 --> 00:05:02,125
+visual result
+
+92
+00:05:03,025 --> 00:05:06,087
+finally processing code like value
+transformers or secretive
+
+93
+00:05:06,087 --> 00:05:09,124
+image filters are great in playgrounds
+because you can visualize
+
+94
+00:05:10,024 --> 00:05:13,025
+the result that every step in the
+transformation process
+
+95
+00:05:13,025 --> 00:05:16,081
+when you change something you can see
+how that change ripples through all your
+
+96
+00:05:16,081 --> 00:05:17,144
+results
+
+97
+00:05:18,044 --> 00:05:22,053
+we think you'll find a playgrounds are
+fertile ground for experimentation
+
+98
+00:05:22,053 --> 00:05:25,842
+and in particular anytime you trying to
+learn some new API
+
+99
+00:05:26,319 --> 00:05:29,530
+you should try to turn a program because
+you can immediately see how it works and
+
+100
+00:05:29,053 --> 00:05:30,061
+what result gives you
+
+101
+00:05:31,033 --> 00:05:34,044
+you don't need a project you don't need
+to build and run
+
+102
+00:05:34,044 --> 00:05:37,077
+you just open up even a standalone
+program document
+
+103
+00:05:37,077 --> 00:05:41,696
+type in your code and see what happens
+I'm sure already have many a time
+
+104
+00:05:42,389 --> 00:05:45,900
+going to create a new project from the
+application template
+
+105
+00:05:45,009 --> 00:05:48,082
+not define application did finish
+watching just a borderline echoed in two
+
+106
+00:05:49,063 --> 00:05:50,097
+tries in API
+
+107
+00:05:50,097 --> 00:05:53,131
+when you probably have to in a small get
+to see you can see what happened
+
+108
+00:05:54,031 --> 00:05:57,540
+you don't have to do that anymore now
+you can just open up a playground
+
+109
+00:05:57,819 --> 00:06:00,860
+and try it papi you wanna try effect
+
+110
+00:06:01,229 --> 00:06:04,370
+we recommend you consider keeping a
+playground in your dock at all times for
+
+111
+00:06:04,037 --> 00:06:04,130
+quick access
+
+112
+00:06:05,003 --> 00:06:09,212
+to any can you try something it's right
+there your fingertips
+
+113
+00:06:09,509 --> 00:06:13,500
+so with all that said let's dive in and
+take a look at national program
+
+114
+00:06:13,005 --> 00:06:16,096
+to do that I'm going to invite my
+colleague Qatar Open Stage
+
+115
+00:06:17,041 --> 00:06:20,610
+thank you Rick hello everyone my name is
+Connor I'm an engineer
+
+116
+00:06:20,979 --> 00:06:23,991
+on the Xcode team in today I'll be
+talking to you about how you can work
+
+117
+00:06:24,099 --> 00:06:25,220
+with playgrounds
+
+118
+00:06:25,022 --> 00:06:29,065
+as well some other things which we think
+programs would be really great for
+
+119
+00:06:29,065 --> 00:06:32,644
+now trick is already covered many of the
+basic concepts behind playgrounds
+
+120
+00:06:33,229 --> 00:06:35,238
+and so I think really the best way to
+show you how to work with playgrounds
+
+121
+00:06:36,129 --> 00:06:38,250
+actually just by jumping straight into a
+demo
+
+122
+00:06:38,025 --> 00:06:41,071
+to let's go ahead and do that so here I
+am at the diminishing
+
+123
+00:06:41,071 --> 00:06:46,000
+and I'm just going to go ahead and
+launch Xcode
+
+124
+00:06:46,639 --> 00:06:49,657
+you notice here on the Welcome window
+for Xcode
+
+125
+00:06:49,819 --> 00:06:53,620
+we've added this brand new get started
+with a playground but it's that way we
+
+126
+00:06:53,062 --> 00:06:55,149
+want to make it really easy for you just
+get started with one
+
+127
+00:06:56,049 --> 00:06:59,115
+please click on that okay to play ground
+and I just given a name
+
+128
+00:07:00,015 --> 00:07:03,046
+and a place to save it so my playground
+is fine and click on the desktop is fine
+
+129
+00:07:03,046 --> 00:07:04,005
+as well
+
+130
+00:07:04,419 --> 00:07:08,930
+so they create and then we have here our
+playground itself
+
+131
+00:07:08,093 --> 00:07:11,096
+you know if that were importing Co Co so
+we have full access to be
+
+132
+00:07:11,096 --> 00:07:15,305
+Coco API's and then we're also creating
+a string
+
+133
+00:07:16,169 --> 00:07:19,990
+and we're signing the value hello
+playground to that string
+
+134
+00:07:19,099 --> 00:07:22,588
+illness that I in the result sidebar
+
+135
+00:07:23,479 --> 00:07:26,501
+we're seeing the result about so in this
+case where seeing the string hello
+
+136
+00:07:26,699 --> 00:07:27,774
+playground
+
+137
+00:07:28,449 --> 00:07:32,500
+okay so best to come to the basic idea
+let's try something with numbers
+
+138
+00:07:32,005 --> 00:07:35,102
+so say 4i and 0-10
+
+139
+00:07:36,047 --> 00:07:39,071
+say I times I see their
+
+140
+00:07:39,071 --> 00:07:42,124
+that we execute the code and we're
+getting an indicator in the result
+
+141
+00:07:43,024 --> 00:07:43,105
+sidebar
+
+142
+00:07:44,005 --> 00:07:49,044
+we've executed echoed ten times okay
+I'll try putting that up to 100
+
+143
+00:07:49,044 --> 00:07:52,052
+let it run and will see there that we
+immediately get an indication that this
+
+144
+00:07:52,052 --> 00:07:54,125
+code is executed 100 times
+
+145
+00:07:55,025 --> 00:07:58,083
+now nine that is very useful information
+but sometimes actually wanna see the
+
+146
+00:07:58,083 --> 00:07:58,482
+value
+
+147
+00:07:59,229 --> 00:08:02,800
+there and we have support for that as
+well it's okay I'll just
+
+148
+00:08:02,008 --> 00:08:05,024
+hover over this results you'll see that
+we're highlighting line of code with
+
+149
+00:08:05,096 --> 00:08:05,150
+which its
+
+150
+00:08:06,005 --> 00:08:09,086
+with which it is associated and were
+also showing this button here
+
+151
+00:08:10,031 --> 00:08:13,106
+that's called the value history button
+and I go ahead and click on it
+
+152
+00:08:14,006 --> 00:08:17,205
+will open up the assistant editor into
+the time line mode
+
+153
+00:08:17,259 --> 00:08:20,340
+this is the place where you can see
+results over time as well the place for
+
+154
+00:08:20,034 --> 00:08:23,065
+you to store results would you like to
+see persistently
+
+155
+00:08:23,065 --> 00:08:26,084
+as in this case we're showing the graph
+for I times I
+
+156
+00:08:26,084 --> 00:08:29,086
+we've seen as you know that night a
+curfew
+
+157
+00:08:29,086 --> 00:08:32,159
+so K so that's how the basics abusing at
+the time line
+
+158
+00:08:33,059 --> 00:08:36,137
+and killing numbers at the trust me a
+little bit more interesting
+
+159
+00:08:37,037 --> 00:08:40,041
+out let's go ahead and do you I
+something with apt-get assets
+
+160
+00:08:40,077 --> 00:08:43,084
+first start by cutting a color say black
+color equals
+
+161
+00:08:44,047 --> 00:08:47,122
+and its color da blue color
+
+162
+00:08:48,022 --> 00:08:51,024
+you see there that we're now showing in
+the result sidebar a color swatch
+
+163
+00:08:51,042 --> 00:08:54,124
+indicating what the color is as well as
+indicators and all the components which
+
+164
+00:08:55,024 --> 00:08:57,303
+make up at color
+
+165
+00:08:57,519 --> 00:09:00,860
+as I can you pick the color and its
+credit should be string using it
+
+166
+00:09:00,086 --> 00:09:03,107
+so say lent achieve its training equals
+in S
+
+167
+00:09:04,007 --> 00:09:07,091
+attributed string it will pass it and
+the
+
+168
+00:09:07,091 --> 00:09:11,116
+string and attributes: dictionary to
+leave the street we already have
+
+169
+00:09:12,016 --> 00:09:16,023
+and will create a dictionary CL CNS
+
+170
+00:09:16,023 --> 00:09:19,097
+foreground color actually name help
+after the color we have
+
+171
+00:09:19,097 --> 00:09:22,131
+and they all say INS font attribute name
+
+172
+00:09:23,031 --> 00:09:26,110
+others pass the parts of saying this
+font stamp on its size and
+
+173
+00:09:27,001 --> 00:09:31,034
+go something fairly big so I just put in
+42 to about looks like
+
+174
+00:09:31,043 --> 00:09:34,322
+okay so here you notice that we're
+getting a result for this as well
+
+175
+00:09:34,709 --> 00:09:37,510
+his team that we're showing the plain
+text representation this as well as an
+
+176
+00:09:37,051 --> 00:09:38,087
+icon indicating
+
+177
+00:09:38,087 --> 00:09:41,092
+that it is and attributed string
+
+178
+00:09:41,092 --> 00:09:44,097
+now that's great you know we know this
+girl is executed but I really wanna see
+
+179
+00:09:45,042 --> 00:09:46,094
+what the actual value is there see
+
+180
+00:09:46,094 --> 00:09:49,142
+how the attributed string look for
+itself I am disappointed as well
+
+181
+00:09:50,042 --> 00:09:54,063
+so I can just hover over the results and
+in addition to the value history button
+
+182
+00:09:54,063 --> 00:09:58,066
+you'll see that we have a quick look but
+and so if I go ahead and click on that
+
+183
+00:09:58,066 --> 00:10:02,092
+will show a quick look about value as to
+show you the full representation ovett
+
+184
+00:10:02,092 --> 00:10:05,111
+ad was created in the playground source
+
+185
+00:10:06,011 --> 00:10:09,076
+so Kate that colors and strings at let's
+try something with images
+
+186
+00:10:09,076 --> 00:10:12,113
+attack was set up by creating an array
+of his name's sauce a
+
+187
+00:10:13,013 --> 00:10:16,712
+but image names equals will put an array
+there and
+
+188
+00:10:16,829 --> 00:10:19,898
+and out something to do you think in
+this image name user or accounts or
+
+189
+00:10:20,519 --> 00:10:22,490
+something in that line so I was gonna
+create an
+
+190
+00:10:22,049 --> 00:10:25,078
+array with image names I think you could
+be
+
+191
+00:10:25,519 --> 00:10:28,557
+image image name user
+
+192
+00:10:28,899 --> 00:10:33,980
+aim user accounts image name user
+
+193
+00:10:34,709 --> 00:10:38,610
+group and Tecate beer in the code any
+notice that we now have
+
+194
+00:10:38,061 --> 00:10:41,085
+an array of strings action wanna see an
+array
+
+195
+00:10:41,085 --> 00:10:44,134
+images and that's very easy to you going
+to say something like
+
+196
+00:10:44,899 --> 00:10:47,948
+but images equals image names that map
+
+197
+00:10:48,389 --> 00:10:52,760
+a passive trailing closer to just say
+image named
+
+198
+00:10:52,076 --> 00:10:55,094
+acid at the positional argument dollars
+and zero
+
+199
+00:10:55,094 --> 00:10:58,169
+in an affair that we're now seeing that
+the final code executed four times
+
+200
+00:10:59,069 --> 00:11:02,075
+and so basically we can see that you
+have okay that makes sense where
+
+201
+00:11:03,029 --> 00:11:06,067
+exceeding the final cut three times for
+the challenge closure itself
+
+202
+00:11:06,067 --> 00:11:09,094
+they're executing at once for the
+assignment two images
+
+203
+00:11:09,094 --> 00:11:12,553
+actually only wanna see the images array
+itself and we have a nice double check
+
+204
+00:11:13,399 --> 00:11:14,980
+for doing that in a playground
+
+205
+00:11:14,098 --> 00:11:18,327
+you just go ahead and put the thing that
+you wanna see on a line by itself
+
+206
+00:11:19,209 --> 00:11:23,170
+so there you see it with the image is
+there we run the code and we're seeing
+
+207
+00:11:23,017 --> 00:11:26,076
+the images array I can put that and I
+can see
+
+208
+00:11:26,076 --> 00:11:29,079
+ok you know here's the image i'm looking
+for. and so
+
+209
+00:11:29,079 --> 00:11:32,188
+I just get that image Philip image
+
+210
+00:11:32,899 --> 00:11:38,240
+equals images 0 will be runnin output
+look to make sure it's okay and
+
+211
+00:11:38,024 --> 00:11:43,123
+in fact get 1 I'm looking for let's go
+ahead and put this into an ImageView
+
+212
+00:11:43,339 --> 00:11:48,680
+so say but ImageView equal INS ImageView
+
+213
+00:11:48,068 --> 00:11:51,073
+will pass ourself a frame so saying it's
+pract
+
+214
+00:11:52,018 --> 00:11:55,927
+I will say year for the origin because
+it really care about that
+
+215
+00:11:56,089 --> 00:11:59,188
+they also say 512 by 512 for the size
+
+216
+00:12:00,079 --> 00:12:03,120
+now I'm gonna go ahead and put this
+image view on it so might as well
+
+217
+00:12:03,012 --> 00:12:06,100
+I can put show this result in the time
+line
+
+218
+00:12:07,000 --> 00:12:10,022
+this is a neat little way a building
+something up you take the
+
+219
+00:12:10,022 --> 00:12:13,038
+the use are creating the object and then
+you put the
+
+220
+00:12:13,038 --> 00:12:16,063
+own other line where we show it as a
+result and working after could in
+
+221
+00:12:16,063 --> 00:12:18,892
+between there to see how it builds up
+over time
+
+222
+00:12:19,459 --> 00:12:21,546
+so we see here that we're starting out
+with empty ImageView you know we're not
+
+223
+00:12:22,329 --> 00:12:23,490
+seeing anything interesting there
+
+224
+00:12:23,049 --> 00:12:26,085
+so at let's go ahead and add our image
+the image view
+
+225
+00:12:26,085 --> 00:12:30,117
+something in his view that image equals
+image
+
+226
+00:12:31,017 --> 00:12:34,088
+react if you you'll see here now that
+we're in fact showing the image there
+
+227
+00:12:34,088 --> 00:12:35,166
+but it's not feeling the full image view
+
+228
+00:12:36,066 --> 00:12:39,098
+it's not doing what we expect and
+because we haven't sent a PM skelly
+
+229
+00:12:39,098 --> 00:12:40,104
+appropriately
+
+230
+00:12:41,004 --> 00:12:45,026
+SoCal set that as well
+
+231
+00:12:45,026 --> 00:12:48,069
+say image scaling equals image scale
+
+232
+00:12:48,069 --> 00:12:51,168
+proportionally up or down
+
+233
+00:12:52,068 --> 00:12:55,124
+react with you and now you see that
+we're seeing the image at full size
+
+234
+00:12:56,024 --> 00:12:59,563
+in the ImageView we've seen what we
+expect its okay
+
+235
+00:12:59,779 --> 00:13:04,290
+taken work with system resources country
+have many resources at your own d like
+
+236
+00:13:04,029 --> 00:13:05,072
+to use and playgrounds as well
+
+237
+00:13:05,072 --> 00:13:08,081
+and we support that too there is going
+to go ahead and I'm going to show
+
+238
+00:13:09,062 --> 00:13:13,116
+the final inspector of item on the right
+hand of my
+
+239
+00:13:14,016 --> 00:13:17,079
+playground you notice here that we're
+seeing we have this new section called
+
+240
+00:13:17,079 --> 00:13:19,091
+playground settings which is shown every
+year
+
+241
+00:13:19,091 --> 00:13:22,174
+viewing a plague on document you can
+select the platform against which the
+
+242
+00:13:23,074 --> 00:13:24,080
+plague on should execute
+
+243
+00:13:24,008 --> 00:13:28,013
+and you know I was 10 is what we're
+doing right now but we also support i OS
+
+244
+00:13:29,003 --> 00:13:33,034
+any conflict a path for resources is the
+faults to none but you can select one
+
+245
+00:13:33,061 --> 00:13:36,910
+if you have resources that you're
+interested in escaped I was going to say
+
+246
+00:13:37,459 --> 00:13:41,190
+I have a folder resources on my desktop
+to dismiss a
+
+247
+00:13:41,019 --> 00:13:46,528
+I'll it is the absolute path option can
+go ahead and choose that
+
+248
+00:13:46,699 --> 00:13:49,743
+say here's my resources folder shoes
+that
+
+249
+00:13:50,139 --> 00:13:53,610
+and then want to make that choice I'm
+actually go ahead at hyde
+
+250
+00:13:53,061 --> 00:13:56,138
+the utilities area
+
+251
+00:13:57,038 --> 00:14:00,047
+and to access the images themselves I
+just use you know
+
+252
+00:14:00,389 --> 00:14:03,360
+in this bundle API you know the
+resources shoppers resources for the
+
+253
+00:14:03,036 --> 00:14:03,122
+main bundle
+
+254
+00:14:04,022 --> 00:14:07,141
+I can see something like that my image
+equals in a
+
+255
+00:14:07,339 --> 00:14:11,370
+image named I have an image in here
+that's just called Xcode so
+
+256
+00:14:11,649 --> 00:14:15,560
+let's grab at will be executes
+
+257
+00:14:15,056 --> 00:14:18,075
+and understand when now we're getting
+the Image result here
+
+258
+00:14:18,579 --> 00:14:21,940
+a quick look to confirm that it's what
+I'm thinking in San in fact is we're
+
+259
+00:14:21,094 --> 00:14:22,193
+seeing px but I come there
+
+260
+00:14:23,093 --> 00:14:26,192
+and not going to happen ImageView show
+The X but I can't step
+
+261
+00:14:27,029 --> 00:14:30,170
+sauce a image view Dan image equals
+
+262
+00:14:30,017 --> 00:14:33,069
+my image well we execute
+
+263
+00:14:33,069 --> 00:14:36,898
+and I think this new result let's add it
+to the time line as well
+
+264
+00:14:37,519 --> 00:14:41,180
+you can see here that we have what we
+expected the exit icon is showing up in
+
+265
+00:14:41,018 --> 00:14:42,094
+our Image you
+
+266
+00:14:42,094 --> 00:14:45,803
+try also notice that we're still seeing
+the older version here with the
+
+267
+00:14:46,649 --> 00:14:50,930
+user icon in the ImageView and that's
+because playground actually capture
+
+268
+00:14:50,093 --> 00:14:52,992
+results on every single line if
+execution she can't so you can do these
+
+269
+00:14:53,829 --> 00:14:55,310
+kinds of comparisons
+
+270
+00:14:55,031 --> 00:14:59,042
+like in France city no but they could be
+an issue we first created and it's empty
+
+271
+00:14:59,042 --> 00:15:02,138
+then I added the user icon to their and
+so we see that earlier version that
+
+272
+00:15:03,038 --> 00:15:03,135
+without words
+
+273
+00:15:04,035 --> 00:15:08,084
+small in the center the next to the
+image scaling appropriately
+
+274
+00:15:08,399 --> 00:15:12,540
+and now filling full image you finally I
+updated its use my image and we're
+
+275
+00:15:12,054 --> 00:15:14,067
+seeing that it's showing px Kodak
+
+276
+00:15:14,067 --> 00:15:16,143
+that's great so that you don't have to
+you know go back and see what happened
+
+277
+00:15:17,043 --> 00:15:21,050
+at a particular point we're catching the
+data for you as a player executes
+
+278
+00:15:22,013 --> 00:15:25,016
+I think that about covers the basics so
+let's go back to slides and
+
+279
+00:15:25,016 --> 00:15:28,695
+talk a little bit more about playgrounds
+one of the key ideas that you saw there
+
+280
+00:15:28,839 --> 00:15:31,440
+is that playgrounds will automatically
+execute
+
+281
+00:15:31,044 --> 00:15:35,122
+he just type in some code you'll see the
+result in the sidebar on the right
+
+282
+00:15:36,022 --> 00:15:39,069
+additionally you saw that we can at a
+value history to the time
+
+283
+00:15:39,069 --> 00:15:42,088
+so here we have a live coal which
+executed 100 times
+
+284
+00:15:42,709 --> 00:15:45,753
+I hover over that result to see this
+value history back
+
+285
+00:15:46,149 --> 00:15:48,940
+I click it was switching to the
+assistant editor and will show that as a
+
+286
+00:15:48,094 --> 00:15:50,933
+history of that value
+
+287
+00:15:51,779 --> 00:15:54,822
+additionally many values in the
+playground have QuickBooks ice on this
+
+288
+00:15:55,209 --> 00:15:56,920
+case we have been attributed string
+
+289
+00:15:56,092 --> 00:16:00,121
+we don't see the full representation in
+the sidebar just had the plaintext a bit
+
+290
+00:16:00,949 --> 00:16:03,961
+the pic click on the quick look button
+will see the attributed string as it was
+
+291
+00:16:04,069 --> 00:16:07,083
+created in the playground source
+
+292
+00:16:07,209 --> 00:16:09,214
+we support many different types for
+quick look in the playground with
+
+293
+00:16:09,709 --> 00:16:10,490
+support
+
+294
+00:16:10,049 --> 00:16:14,135
+colors strings both plain text and
+attributed
+
+295
+00:16:15,035 --> 00:16:20,056
+we can show images use in this case will
+capture a snapshot of the
+
+296
+00:16:20,056 --> 00:16:24,075
+at that point I'm we can show a raise in
+dictionaries
+
+297
+00:16:24,579 --> 00:16:28,180
+as also a structured version at the rare
+dictionary I like you might see in the
+
+298
+00:16:28,018 --> 00:16:30,537
+variables the on the bugger
+
+299
+00:16:30,699 --> 00:16:33,704
+we can show points exercises how to
+create a graphical representation of
+
+300
+00:16:34,199 --> 00:16:35,262
+those
+
+301
+00:16:35,829 --> 00:16:38,836
+because you're busy iPads so both
+inexpensive path on the Mac
+
+302
+00:16:38,899 --> 00:16:41,918
+and you like to see a path on I last
+
+303
+00:16:42,089 --> 00:16:45,610
+you can show your else for this will
+take the plaintext BRL
+
+304
+00:16:45,061 --> 00:16:48,063
+showed in the sidebar but a few quick
+look it will show you a WebView with the
+
+305
+00:16:48,063 --> 00:16:50,572
+content that the URL
+
+306
+00:16:51,139 --> 00:16:54,550
+and finally for texas we don't have any
+too quickly representation
+
+307
+00:16:54,055 --> 00:16:58,113
+we can usually get a structured be a bit
+again the cutesy and the variables you
+
+308
+00:16:59,013 --> 00:17:03,035
+in the debugger so here I have an an
+object other class that I created in the
+
+309
+00:17:03,035 --> 00:17:03,131
+playground
+
+310
+00:17:04,031 --> 00:17:08,052
+and it is it has a couple properties if
+you property and a bar property
+
+311
+00:17:08,052 --> 00:17:12,087
+using the values that those at that line
+of code when executed
+
+312
+00:17:12,087 --> 00:17:15,152
+in this demo I also show you how you can
+use your own resources with playgrounds
+
+313
+00:17:16,052 --> 00:17:21,063
+in this is actually fairly easy the just
+go ahead and show the final inspector
+
+314
+00:17:21,063 --> 00:17:24,111
+you select a location for playground
+resources and for this we have three
+
+315
+00:17:25,011 --> 00:17:26,022
+options
+
+316
+00:17:26,022 --> 00:17:29,034
+got in absolute path option which
+basically says
+
+317
+00:17:29,034 --> 00:17:32,090
+okay about this folder resources some on
+my computer and I'd like to show it in
+
+318
+00:17:32,009 --> 00:17:32,041
+the
+
+319
+00:17:33,022 --> 00:17:37,063
+use it with the playground we have a
+relative to take on path
+
+320
+00:17:37,063 --> 00:17:41,065
+option and this is really great if
+you're sticking your playground at SCM
+
+321
+00:17:41,065 --> 00:17:44,098
+because he can say oh you know here's
+this playground and here's the spoiler
+
+322
+00:17:44,098 --> 00:17:47,126
+resources this next to it against the
+south and then when you other people
+
+323
+00:17:48,026 --> 00:17:48,123
+check out
+
+324
+00:17:49,023 --> 00:17:53,048
+your repository Bilawal automatically be
+able to use the playground with its
+
+325
+00:17:53,048 --> 00:17:54,132
+resources
+
+326
+00:17:55,032 --> 00:17:58,078
+finally we support inside playground
+option this is great if you're sharing
+
+327
+00:17:58,078 --> 00:17:58,135
+in ways
+
+328
+00:17:59,035 --> 00:18:02,037
+other than vs CM because you can just
+say I
+
+329
+00:18:02,037 --> 00:18:06,039
+you on so my resources in my playground
+email that out to other people
+
+330
+00:18:06,057 --> 00:18:09,073
+and see at when they open it will be
+able to see those resources
+
+331
+00:18:09,073 --> 00:18:12,074
+immediately
+
+332
+00:18:12,074 --> 00:18:15,147
+want to have made the selection to
+access these resources in your
+
+333
+00:18:16,047 --> 00:18:17,059
+playground source
+
+334
+00:18:17,059 --> 00:18:20,071
+just use things like in its final path
+resource a type
+
+335
+00:18:20,071 --> 00:18:24,071
+an innocent named the resources just
+show up as be resources for the main
+
+336
+00:18:24,071 --> 00:18:24,144
+bundle
+
+337
+00:18:25,044 --> 00:18:29,079
+during program execution
+
+338
+00:18:29,079 --> 00:18:32,126
+so now that we have the basics out of
+the way I think I'd like to start
+
+339
+00:18:33,026 --> 00:18:34,098
+talking to you about some the use cases
+
+340
+00:18:34,098 --> 00:18:39,120
+for which bygones be really great and
+the first abuses experimentation
+
+341
+00:18:40,002 --> 00:18:42,076
+I'm sure that all the out there have a
+folder on your computer which looks
+
+342
+00:18:42,094 --> 00:18:43,125
+something like this is just
+
+343
+00:18:44,025 --> 00:18:47,047
+a buncha next good projects created from
+the template that
+
+344
+00:18:47,047 --> 00:18:51,144
+REM maybe one or two changes to see how
+something works or to test out an idea
+
+345
+00:18:52,044 --> 00:18:55,069
+it's actually isn't that easy for
+process you have to do many different
+
+346
+00:18:55,069 --> 00:18:58,164
+first choose the right project template
+then find the right file in that
+
+347
+00:18:59,064 --> 00:19:03,109
+project at which maybe if you're maybe
+not depending on which simply chose
+
+348
+00:19:04,009 --> 00:19:08,078
+nephew what you're trying to do in the
+first place and that's right thing coat
+
+349
+00:19:08,078 --> 00:19:11,143
+what you've written something you have
+to build your project
+
+350
+00:19:12,043 --> 00:19:16,047
+in run but every bill and for I watched
+the me involved point2 simulator to a
+
+351
+00:19:16,083 --> 00:19:17,148
+device
+
+352
+00:19:18,048 --> 00:19:21,081
+and if you didn't get it right the first
+time you don't have to redo this stop in
+
+353
+00:19:21,081 --> 00:19:24,127
+the debugger and scepter your coat
+figure out where things are going wrong
+
+354
+00:19:25,027 --> 00:19:28,033
+we think playgrounds can handle this a
+whole lot better
+
+355
+00:19:28,033 --> 00:19:31,080
+it's because there's really only two
+steps you just say get started with the
+
+356
+00:19:31,008 --> 00:19:31,079
+playground
+
+357
+00:19:32,051 --> 00:19:35,096
+and write your code once you start
+writing your code
+
+358
+00:19:35,096 --> 00:19:38,109
+will automatically executed for you and
+show you the result in the sidebar
+
+359
+00:19:39,009 --> 00:19:42,016
+so you can see where things are going
+wrong
+
+360
+00:19:42,079 --> 00:19:45,094
+now I think a pic to show you a demo but
+this looks like so let's go back to the
+
+361
+00:19:45,094 --> 00:19:45,160
+demolition
+
+362
+00:19:46,006 --> 00:19:50,009
+so here I am I'm going to go ahead and
+just want tax code again
+
+363
+00:19:50,009 --> 00:19:53,010
+and the summer going to create an Iowa
+State's playground sauce a
+
+364
+00:19:54,000 --> 00:19:57,095
+file new file
+
+365
+00:19:57,095 --> 00:20:00,152
+and all say ISL s playground and
+
+366
+00:20:01,052 --> 00:20:04,146
+I one actually test out how the UI table
+view cell File API works
+
+367
+00:20:05,046 --> 00:20:08,067
+as I was gonna called the K this
+playground and call it test
+
+368
+00:20:08,067 --> 00:20:12,104
+table you cell save it to the desktop
+
+369
+00:20:13,004 --> 00:20:17,042
+and okay so here we have RI with
+playground its importing you like it
+
+370
+00:20:17,042 --> 00:20:21,108
+I'll but otherwise the same way to
+screen a string saying it to a variable
+
+371
+00:20:22,008 --> 00:20:26,096
+so if I want to use you a table view
+cell style any day you a table view cell
+
+372
+00:20:26,096 --> 00:20:29,129
+and best way to show that is with the UI
+table you
+
+373
+00:20:30,029 --> 00:20:33,057
+in order to get the cells into you a
+table view any data source
+
+374
+00:20:33,057 --> 00:20:36,131
+at some let's just go ahead and
+implement a datasource so say
+
+375
+00:20:37,031 --> 00:20:41,033
+class datasource will hear from in this
+object
+
+376
+00:20:41,051 --> 00:20:47,089
+or conform to the UI tableview
+datasource protocol
+
+377
+00:20:47,089 --> 00:20:50,121
+nice now that we're getting an issue
+here and that's because the datasource
+
+378
+00:20:51,021 --> 00:20:53,050
+we've created is actually conform to
+your table
+
+379
+00:20:53,005 --> 00:20:57,072
+datasource and the impact expected we
+have actually implementing methods yet
+
+380
+00:20:58,017 --> 00:21:02,052
+so I'm actually going to jumped to
+declaration you a table view data source
+
+381
+00:21:02,052 --> 00:21:05,141
+by Command Option clicking on it you see
+that we've been open the assistant
+
+382
+00:21:06,041 --> 00:21:06,118
+editor
+
+383
+00:21:07,018 --> 00:21:10,059
+and instead of showing you you a table
+view that H we're going to show you a
+
+384
+00:21:10,059 --> 00:21:11,105
+swift version
+
+385
+00:21:12,005 --> 00:21:15,042
+I'll thats header in this case we're
+seeing
+
+386
+00:21:15,042 --> 00:21:19,043
+here's our protocol we're seeing that we
+need to implement these two methods
+
+387
+00:21:19,043 --> 00:21:22,109
+and so okay I was going to take this one
+this first one to you
+
+388
+00:21:23,009 --> 00:21:26,030
+atop a table view the number of rows per
+section
+
+389
+00:21:26,003 --> 00:21:30,011
+I'm gonna copy and paste it in here
+understand it to sort things out
+
+390
+00:21:30,038 --> 00:21:33,057
+return 1 from this okay
+
+391
+00:21:33,057 --> 00:21:38,120
+that number rose I let's also by the
+south
+
+392
+00:21:39,002 --> 00:21:43,055
+and okay let's just go ahead and create
+are you a table view cell say let's sell
+
+393
+00:21:43,073 --> 00:21:46,165
+equals I table you sell
+
+394
+00:21:47,065 --> 00:21:50,086
+need to pick typo here
+
+395
+00:21:50,086 --> 00:21:54,115
+will say style what to say that font
+style
+
+396
+00:21:55,015 --> 00:21:58,022
+and then for the you say then fire we
+are actually going to be reusing the
+
+397
+00:21:58,085 --> 00:21:58,127
+cells
+
+398
+00:21:59,027 --> 00:22:02,115
+so we can just pass no for this
+parameter okay
+
+399
+00:22:03,015 --> 00:22:06,081
+so that we have our cell let's go ahead
+and configure so I can say something
+
+400
+00:22:06,081 --> 00:22:07,158
+like sell that text label
+
+401
+00:22:08,058 --> 00:22:12,105
+that text equals text
+
+402
+00:22:13,005 --> 00:22:16,091
+okay so that's the text label will see
+what that looks like UT will you sell
+
+403
+00:22:16,091 --> 00:22:18,107
+may also have a detailed text label
+
+404
+00:22:19,007 --> 00:22:22,052
+that's not guaranteed to be the case
+going explicitly handle the fact that
+
+405
+00:22:22,052 --> 00:22:23,146
+it's an optional I can say something
+like
+
+406
+00:22:24,046 --> 00:22:27,145
+if flat detailed text able equals
+
+407
+00:22:28,045 --> 00:22:31,045
+sell that detailed text label
+
+408
+00:22:31,045 --> 00:22:34,076
+and so if this at the code inside this
+if executes
+
+409
+00:22:34,076 --> 00:22:37,133
+they will know that we have a detailed
+text label second say something like
+
+410
+00:22:38,033 --> 00:22:41,075
+detailed text label texts
+
+411
+00:22:41,075 --> 00:22:45,100
+equals detailed text and we know this is
+safe we're not going to axe
+
+412
+00:22:46,000 --> 00:22:50,027
+accidentally tried to sign a property
+now that we configure your table view
+
+413
+00:22:50,027 --> 00:22:50,074
+cell
+
+414
+00:22:50,074 --> 00:22:53,169
+I can't go ahead return that you can see
+now that we
+
+415
+00:22:54,069 --> 00:22:57,076
+no longer have an issue in our
+playground I'll go up not getting any
+
+416
+00:22:58,039 --> 00:23:01,045
+result in the sidebar that because we
+have actually instantiated art
+
+417
+00:23:01,045 --> 00:23:04,119
+are datasource so others say something
+like a datasource
+
+418
+00:23:05,019 --> 00:23:08,081
+equals datasource and the neck and you
+know
+
+419
+00:23:08,081 --> 00:23:11,114
+Asgard tableview and helped you start
+datasource
+
+420
+00:23:12,014 --> 00:23:17,049
+so that table view equals I tableview
+
+421
+00:23:17,049 --> 00:23:20,094
+will pass it frame so CG racked
+
+422
+00:23:20,094 --> 00:23:24,187
+again we don't care about the origin
+I'll pass 320 for the width and for the
+
+423
+00:23:25,087 --> 00:23:26,143
+height we just need enough to be able to
+
+424
+00:23:27,043 --> 00:23:31,054
+show the all the cells we care about
+such a system like 240
+
+425
+00:23:31,054 --> 00:23:35,060
+family will pass if I love playing until
+the table view
+
+426
+00:23:35,006 --> 00:23:38,075
+to use our data source
+
+427
+00:23:39,029 --> 00:23:43,081
+and then we will tell the table view to
+reload data
+
+428
+00:23:43,081 --> 00:23:46,083
+what that plague on execute and one
+spandex
+
+429
+00:23:46,083 --> 00:23:49,182
+finished executing I will be able to see
+be at a table we
+
+430
+00:23:50,082 --> 00:23:54,097
+we created so I'm gonna just go ahead
+and the the time I'm we can see here
+
+431
+00:23:54,097 --> 00:23:57,102
+we've created a table view we're seeing
+the south we want with the tax that we
+
+432
+00:23:58,047 --> 00:23:59,085
+want
+
+433
+00:23:59,085 --> 00:24:02,102
+okay so that you know get it up and
+running but actually want to see
+
+434
+00:24:03,002 --> 00:24:06,007
+be styles for all the styles that we
+have
+
+435
+00:24:06,007 --> 00:24:10,101
+I so I went to jump back to the
+declaration a guy table view cell style
+
+436
+00:24:11,001 --> 00:24:15,002
+and see here there are four options sign
+going to change this one to a4
+
+437
+00:24:15,011 --> 00:24:18,078
+so we're four rows and some always
+passing the default style I'm going to
+
+438
+00:24:18,078 --> 00:24:20,103
+criticize it based on the road that
+we're currently
+
+439
+00:24:21,003 --> 00:24:24,008
+at sol se let row equals
+
+440
+00:24:24,008 --> 00:24:27,073
+and XPath row nothing like
+
+441
+00:24:27,073 --> 00:24:31,148
+let's I'll equals you a table you self
+style
+
+442
+00:24:32,048 --> 00:24:36,136
+that from rock well past the row this
+from Rob will convert
+
+443
+00:24:37,036 --> 00:24:40,088
+the the UI tape the Rob Rowe integer
+
+444
+00:24:40,088 --> 00:24:43,185
+into you a table view cell style
+optional we can confirm that basically
+
+445
+00:24:44,085 --> 00:24:44,134
+help
+
+446
+00:24:45,034 --> 00:24:48,106
+and we can see that oh yes in fact the
+style is an optional you a table view
+
+447
+00:24:49,006 --> 00:24:50,032
+cell style
+
+448
+00:24:50,032 --> 00:24:53,065
+we were past this directly here we were
+getting in air
+
+449
+00:24:53,065 --> 00:24:56,087
+you can see here we net we need to
+experts we
+
+450
+00:24:56,087 --> 00:24:59,112
+handled the fact that could be no you
+know the US he will you sell
+
+451
+00:25:00,012 --> 00:25:04,019
+initializer doesn't expect that thoughts
+go ahead and
+
+452
+00:25:04,019 --> 00:25:07,027
+check that's will say if we have a style
+what's unwrap it
+
+453
+00:25:07,099 --> 00:25:10,106
+otherwise you just use the default style
+
+454
+00:25:11,006 --> 00:25:15,067
+it's okay and we've handled that well
+the play country execute and thus impact
+
+455
+00:25:15,067 --> 00:25:17,094
+the time when using the jump are
+
+456
+00:25:17,094 --> 00:25:20,123
+and wanted to be executed will notice
+here that
+
+457
+00:25:21,023 --> 00:25:24,106
+we're now seeing all the different UI
+tableview cell styles
+
+458
+00:25:25,006 --> 00:25:28,034
+in our table you ansohn I have a play
+around with second share with my
+
+459
+00:25:28,034 --> 00:25:31,062
+coworkers or just keep as a reference
+for myself see with each you a table
+
+460
+00:25:31,062 --> 00:25:32,117
+yourself style looks like
+
+461
+00:25:33,017 --> 00:25:36,105
+I let's go back to sites now so that
+should you how great playgrounds are for
+
+462
+00:25:37,005 --> 00:25:37,097
+experimentation
+
+463
+00:25:37,097 --> 00:25:41,133
+you just it started with an idea write
+some code in see how it works
+
+464
+00:25:42,033 --> 00:25:45,080
+announcement by Rick back on stage to
+talk about another great idea we have
+
+465
+00:25:45,008 --> 00:25:46,014
+for playgrounds and thats
+
+466
+00:25:46,086 --> 00:25:49,170
+algorithm development wreck
+
+467
+00:25:50,007 --> 00:25:53,010
+ex-governor developing algorithms
+
+468
+00:25:54,000 --> 00:25:57,072
+any other several pieces occurred in a
+playground is a great way to go
+
+469
+00:25:57,072 --> 00:26:00,149
+if you're sure you that I'm gonna dive
+right into a demo so we're gonna do
+
+470
+00:26:01,049 --> 00:26:01,100
+today
+
+471
+00:26:02,000 --> 00:26:05,095
+is implant insertion sort fairly
+straightforward sort we're gonna create
+
+472
+00:26:05,095 --> 00:26:06,179
+a brand new playground to do that
+
+473
+00:26:07,079 --> 00:26:10,085
+so I just say get started with a program
+mccall playground
+
+474
+00:26:11,039 --> 00:26:15,095
+insertion sort and save it on the
+desktop
+
+475
+00:26:15,095 --> 00:26:18,132
+if you don't play with insertion sort
+imagine that you have a handcart
+
+476
+00:26:19,032 --> 00:26:22,088
+you were put in an order with the lowest
+price on the left and the highest praise
+
+477
+00:26:22,088 --> 00:26:23,093
+on the right
+
+478
+00:26:23,093 --> 00:26:26,125
+when we might do that is start with the
+second to last post card
+
+479
+00:26:27,025 --> 00:26:31,086
+and compare try reference card if it's
+max it swapped the position it to cards
+
+480
+00:26:31,086 --> 00:26:32,108
+in your hand
+
+481
+00:26:33,008 --> 00:26:36,010
+you can look at the third to last post
+card and compared to the second to last
+
+482
+00:26:36,001 --> 00:26:36,057
+most
+
+483
+00:26:36,066 --> 00:26:39,081
+if thats swap it compared to rappers
+cart
+
+484
+00:26:39,081 --> 00:26:43,093
+swap if needed and going are doing this
+for every card in your hand
+
+485
+00:26:43,093 --> 00:26:46,130
+into every card reach the correct or
+position when you're done
+
+486
+00:26:47,003 --> 00:26:50,006
+your hand will be in order so I let's
+
+487
+00:26:50,033 --> 00:26:53,092
+let's implement that a playground to
+start with we need some random data that
+
+488
+00:26:53,092 --> 00:26:53,175
+we're gonna sort
+
+489
+00:26:54,075 --> 00:26:57,160
+so I mean go ahead and I mean it
+prepared a rave data
+
+490
+00:26:58,006 --> 00:27:02,039
+I will use bar because this needs to be
+mutable array so I can add to it in sort
+
+491
+00:27:02,093 --> 00:27:02,187
+it
+
+492
+00:27:03,087 --> 00:27:07,160
+it will just make an interior in Star
+Trek and I can say for I
+
+493
+00:27:08,006 --> 00:27:11,052
+in 00:03:20 maybe 120 data points
+
+494
+00:27:12,006 --> 00:27:15,049
+if it got out of hand to add a new
+element and that use the
+
+495
+00:27:15,049 --> 00:27:19,063
+arc for random function to generate a
+random number
+
+496
+00:27:19,063 --> 00:27:22,134
+that is returning swift it so we're
+gonna cash it explicitly to a swift and
+
+497
+00:27:23,034 --> 00:27:27,076
+modular set by 100 to get a number
+between 0 and 99
+
+498
+00:27:27,076 --> 00:27:31,133
+so far look at data here you can see I
+have a result you're on the right
+
+499
+00:27:32,033 --> 00:27:35,080
+I here's an array have what looks like
+pretty random numbers
+
+500
+00:27:35,008 --> 00:27:38,067
+you're finished by at the precursors
+again reruns and I get a different a
+
+501
+00:27:39,039 --> 00:27:40,110
+rare brain remembers
+
+502
+00:27:41,001 --> 00:27:46,044
+okay so that's great I well effective
+generated data but
+
+503
+00:27:46,053 --> 00:27:48,148
+are probably wanted to change in me
+every time it to pay current source I
+
+504
+00:27:49,048 --> 00:27:51,071
+make it hard to develop biographer so
+
+505
+00:27:51,071 --> 00:27:54,152
+let's grab this rain and data and use it
+every time
+
+506
+00:27:55,052 --> 00:27:58,133
+to do that i mean a quick over the
+result sidebar and use command a
+
+507
+00:27:59,033 --> 00:28:03,049
+to select this data command see to copy
+it
+
+508
+00:28:03,049 --> 00:28:06,136
+and I'm just going to pace the same here
+as an array literal an actor work of the
+
+509
+00:28:07,036 --> 00:28:08,048
+same random data
+
+510
+00:28:08,048 --> 00:28:12,061
+every time okay selector implementing
+our algorithm
+
+511
+00:28:12,061 --> 00:28:15,124
+the first thing we need is a function
+tests what you pointed at a
+
+512
+00:28:16,024 --> 00:28:19,078
+in RA there actually is a built-in
+function called swap for this already
+
+513
+00:28:19,078 --> 00:28:20,083
+but for the sake of argument well
+
+514
+00:28:21,028 --> 00:28:25,049
+implemented herself seventy fun a coal
+mine exchange
+
+515
+00:28:25,049 --> 00:28:28,095
+I you know we're gonna make this a
+generic because
+
+516
+00:28:28,095 --> 00:28:31,143
+well we have an array of its are
+insurgents or should be able to work on
+
+517
+00:28:32,043 --> 00:28:33,062
+any type
+
+518
+00:28:33,062 --> 00:28:37,091
+on so any type at least as long as its
+compare about one element
+
+519
+00:28:37,091 --> 00:28:40,180
+can be compared as greater than or less
+than another so we're mostly work on
+
+520
+00:28:41,008 --> 00:28:42,062
+compare all types here
+
+521
+00:28:43,034 --> 00:28:46,085
+exchange function to work on any type
+because we swapping tax
+
+522
+00:28:46,085 --> 00:28:53,085
+so this is an exchanging a tight t and
+it's going to take an array ft
+
+523
+00:28:53,093 --> 00:28:56,157
+and two indexes which we're going to
+exchange
+
+524
+00:28:57,057 --> 00:29:01,114
+in the array so the simplest way to
+exchange the object is to assign one to
+
+525
+00:29:02,014 --> 00:29:03,023
+a temporary variable
+
+526
+00:29:03,023 --> 00:29:06,038
+its and the second to the first and
+assign a temporary variable to the
+
+527
+00:29:06,038 --> 00:29:07,075
+second so we can say that
+
+528
+00:29:07,075 --> 00:29:10,116
+10 because Dad II data
+
+529
+00:29:11,016 --> 00:29:14,041
+I equals data J and data
+
+530
+00:29:14,041 --> 00:29:18,106
+J equals 10 okay I think we've
+implemented as quickly but
+
+531
+00:29:19,006 --> 00:29:24,027
+let's try to find out are going to
+exchange past my dad I rank
+
+532
+00:29:24,027 --> 00:29:28,098
+and was a change 0 element with the
+second and we'll take a look at our a
+
+533
+00:29:28,098 --> 00:29:31,166
+when we're done so before own it 0 was
+12
+
+534
+00:29:32,066 --> 00:29:35,101
+in a moment she was 15 now amateurs 15
+
+535
+00:29:36,001 --> 00:29:40,052
+and I am into his 12 so it looks like
+exchange works properly
+
+536
+00:29:40,052 --> 00:29:43,078
+okay the next thing we need is a
+function to given index
+
+537
+00:29:43,078 --> 00:29:46,160
+look at the data point that index
+compare to the data point which left
+
+538
+00:29:47,006 --> 00:29:51,028
+if last exchange them and keep comparing
+in exchanging until it reaches the
+
+539
+00:29:51,082 --> 00:29:51,175
+correct position
+
+540
+00:29:52,075 --> 00:29:58,133
+indirect so let's call this function
+swap laugh
+
+541
+00:29:59,033 --> 00:30:03,041
+again it's a chair at this time we need
+to actually do comparisons or Saar
+
+542
+00:30:03,041 --> 00:30:07,105
+haiti is compare a ball ever gonna pass
+an array ft
+
+543
+00:30:08,005 --> 00:30:13,007
+index the that appointment to start
+swapping left
+
+544
+00:30:13,025 --> 00:30:16,111
+okay so let's implement this we're gonna
+I start with her indexing go back to
+
+545
+00:30:17,011 --> 00:30:18,039
+position one
+
+546
+00:30:18,039 --> 00:30:22,072
+not 0k there's nothing to left here to
+swap sanity for I
+
+547
+00:30:22,072 --> 00:30:25,170
+in and you know I could do a range from
+12 index
+
+548
+00:30:26,007 --> 00:30:29,060
+but what I really wanted index to one
+term in a reverse the range
+
+549
+00:30:30,023 --> 00:30:36,028
+with reverse wine three dots makes it a
+fully close range which means go all the
+
+550
+00:30:36,073 --> 00:30:37,107
+way to index
+
+551
+00:30:38,007 --> 00:30:42,026
+so then reversing this goes from index
+in in that one
+
+552
+00:30:42,026 --> 00:30:45,026
+and free to these our data points I'm
+just gonna say if
+
+553
+00:30:45,026 --> 00:30:48,073
+data have I is less than data I
+
+554
+00:30:48,073 --> 00:30:51,086
+-1
+
+555
+00:30:51,086 --> 00:30:54,109
+exchange data
+
+556
+00:30:55,009 --> 00:30:58,084
+I and II -1 okay if it's not less than
+
+557
+00:30:58,084 --> 00:31:02,086
+data I -1 imagery the correct order
+position in the race so we can stop
+
+558
+00:31:03,004 --> 00:31:03,078
+there
+
+559
+00:31:03,078 --> 00:31:06,086
+so it's a else break
+
+560
+00:31:06,086 --> 00:31:10,109
+okay let's try this function out I am
+gonna go ahead and say it's
+
+561
+00:31:11,009 --> 00:31:14,100
+swap laugh past data and thats
+
+562
+00:31:15,000 --> 00:31:18,009
+pass on an 1,2,3,4,5 sex respect element
+sex
+
+563
+00:31:18,009 --> 00:31:21,076
+left and look at
+
+564
+00:31:22,057 --> 00:31:26,089
+our data and you can see 0 has moved all
+the way from the six position
+
+565
+00:31:26,089 --> 00:31:29,091
+the beginning here a everything's been
+moved to the right
+
+566
+00:31:29,091 --> 00:31:32,177
+it looks like its functions working
+great too okay the last thing we need is
+
+567
+00:31:33,077 --> 00:31:33,165
+to actually
+
+568
+00:31:34,065 --> 00:31:38,069
+implement the sort should be pretty
+simple well caller function I sort
+
+569
+00:31:38,069 --> 00:31:41,110
+works again on tape he that is
+compatible
+
+570
+00:31:42,001 --> 00:31:45,100
+and we can just pass array ft answer
+correct
+
+571
+00:31:46,009 --> 00:31:49,101
+you this and is gonna say for I in one
+we're starting at one cuz there's
+
+572
+00:31:50,001 --> 00:31:50,054
+nothing
+
+573
+00:31:50,054 --> 00:31:53,063
+left here sortie to you
+
+574
+00:31:53,063 --> 00:31:56,109
+data doc count
+
+575
+00:31:57,009 --> 00:32:00,028
+swap left
+
+576
+00:32:00,028 --> 00:32:03,110
+data II so let's try it out
+
+577
+00:32:04,001 --> 00:32:08,065
+I sort data and we look at her dad I
+remembered I'm
+
+578
+00:32:08,074 --> 00:32:11,140
+you can see it did a whole buncha
+retirement appear and now here's our
+
+579
+00:32:12,004 --> 00:32:13,043
+final array
+
+580
+00:32:13,079 --> 00:32:16,128
+and it looks like this is in sorted
+order so we've correctly abroad
+
+581
+00:32:17,028 --> 00:32:18,116
+insertion sort
+
+582
+00:32:19,016 --> 00:32:22,067
+so this is great for simple algorithm I
+can search insert that wasn't too hard
+
+583
+00:32:22,067 --> 00:32:24,164
+but you know if I was doing something
+more complicated it might be nice to
+
+584
+00:32:25,064 --> 00:32:28,081
+have more visibility into exactly what's
+going on here
+
+585
+00:32:28,081 --> 00:32:31,154
+let's look at how we might visualize a
+result in more detail
+
+586
+00:32:32,054 --> 00:32:37,063
+westerner with extra graph the resort's
+added at the beginning
+
+587
+00:32:37,063 --> 00:32:39,072
+do that it's gonna say for action
+director iterate through every data
+
+588
+00:32:40,053 --> 00:32:40,149
+point
+
+589
+00:32:41,049 --> 00:32:44,107
+edges prayer X it so you see
+
+590
+00:32:45,007 --> 00:32:48,038
+there twenty get a point here sits right
+next year twenty times
+
+591
+00:32:48,038 --> 00:32:53,057
+a quick on the value history button I
+get a nice crack here showing my dad at
+
+592
+00:32:53,057 --> 00:32:54,064
+the beginning and boy
+
+593
+00:32:54,064 --> 00:32:57,133
+that does look random okay so
+
+594
+00:32:58,033 --> 00:33:01,052
+now I I wanna try to print out another
+graph
+
+595
+00:33:01,052 --> 00:33:05,070
+everytime swap left is called so I can
+see what's happening to the graft over
+
+596
+00:33:05,007 --> 00:33:06,068
+iterations have swapped left
+
+597
+00:33:07,031 --> 00:33:10,038
+and I could put this for statement in
+the end it's what left again
+
+598
+00:33:11,001 --> 00:33:15,017
+ensure that I history but a given value
+history term I am forgiven
+
+599
+00:33:15,017 --> 00:33:18,035
+I line is when show all the data from
+that line
+
+600
+00:33:18,035 --> 00:33:21,066
+so you can swap it it's called if that
+would be appended to the same
+
+601
+00:33:21,066 --> 00:33:25,091
+i graph that's not what I want I want a
+new graph every time it's called
+
+602
+00:33:25,091 --> 00:33:28,142
+to do that we're gonna need a new tool
+in our toolbox I'm gonna go back to
+
+603
+00:33:29,042 --> 00:33:29,087
+stride
+
+604
+00:33:29,087 --> 00:33:32,111
+show you that with playgrounds
+worshiping a new framework called
+
+605
+00:33:33,011 --> 00:33:36,026
+XE playground it contains some very
+useful utilities
+
+606
+00:33:36,026 --> 00:33:39,103
+for enhancing your playgrounds right now
+with I have
+
+607
+00:33:40,003 --> 00:33:43,082
+API for menu recapturing values to
+display in time line item
+
+608
+00:33:43,082 --> 00:33:48,156
+showing your views live extending
+execution for a synchronous code
+
+609
+00:33:49,056 --> 00:33:53,081
+right now we're going to use the API for
+many capturing value
+
+610
+00:33:53,081 --> 00:33:56,099
+that API is called XCP capture value
+
+611
+00:33:56,099 --> 00:33:59,143
+it's a function that takes a ride in a
+fire which is a string
+
+612
+00:34:00,043 --> 00:34:03,044
+and your value which is at any time
+
+613
+00:34:03,044 --> 00:34:07,046
+when you pass it your value it would
+take at value and put it in a time line
+
+614
+00:34:07,046 --> 00:34:08,455
+item for you
+
+615
+00:34:08,869 --> 00:34:12,918
+but so the aid in a fire that you pass
+it identified what time I am you want
+
+616
+00:34:13,359 --> 00:34:14,383
+that night to go to
+
+617
+00:34:14,599 --> 00:34:18,625
+if you call this function a different
+lines but passed the same identifiers
+
+618
+00:34:18,859 --> 00:34:21,891
+the values from the different lines go
+to the same time line item
+
+619
+00:34:22,179 --> 00:34:26,204
+conversely and what we were here if you
+have one line because actually be
+
+620
+00:34:26,429 --> 00:34:27,490
+captured value
+
+621
+00:34:27,049 --> 00:34:29,988
+but it's called multiple times with
+different identifiers and it passes
+
+622
+00:34:30,429 --> 00:34:31,451
+those different identifiers
+
+623
+00:34:31,649 --> 00:34:34,674
+that 19 can generate but whatever time
+line items
+
+624
+00:34:34,899 --> 00:34:39,270
+for grabs in our case that inter-party
+talks are shown as the name at the time
+
+625
+00:34:39,027 --> 00:34:39,094
+line item
+
+626
+00:34:39,094 --> 00:34:42,094
+you can easily see what data is what
+
+627
+00:34:42,094 --> 00:34:45,100
+the value passed can be anything it's a
+generic but it helps
+
+628
+00:34:46,054 --> 00:34:49,055
+if it's a type a value that we know had
+a quick look appropriately
+
+629
+00:34:49,055 --> 00:34:52,152
+so let's go back give this a shot to
+start out with any
+
+630
+00:34:53,052 --> 00:34:58,056
+import a key player in to make APR
+available
+
+631
+00:34:58,092 --> 00:35:01,164
+and I'm gonna go ahead and define a new
+function
+
+632
+00:35:02,064 --> 00:35:05,101
+a car visualize and it's a generic and
+take
+
+633
+00:35:06,001 --> 00:35:10,050
+an array of type T and I'm going to use
+this for the pin it
+
+634
+00:35:10,005 --> 00:35:14,081
+so distant that and close the Fortune up
+but instead of just putting a tax
+
+635
+00:35:15,026 --> 00:35:19,050
+what we want to do is capture that I
+soco XCP capture value
+
+636
+00:35:19,005 --> 00:35:22,012
+I need needed a fireside chat when
+terror function so
+
+637
+00:35:22,057 --> 00:35:25,098
+I don't get a fire string
+
+638
+00:35:25,098 --> 00:35:28,107
+and we can pass it in a fire
+
+639
+00:35:29,007 --> 00:35:33,074
+an hour value is X okay so let's try
+this version now
+
+640
+00:35:33,074 --> 00:35:36,076
+and visualize the data at the start have
+are sort
+
+641
+00:35:36,076 --> 00:35:40,098
+Emily which star it in a fire just so we
+know it's white
+
+642
+00:35:40,098 --> 00:35:43,195
+and you can see Iran in here's our data
+at the start
+
+643
+00:35:44,095 --> 00:35:48,160
+that's a good start now we're gonna go
+ahead and visualize your data after
+
+644
+00:35:49,006 --> 00:35:50,010
+every iteration
+
+645
+00:35:50,064 --> 00:35:53,092
+swap left second call visualize
+
+646
+00:35:53,092 --> 00:35:56,108
+a pass data as it is after his
+iterations right left
+
+647
+00:35:57,008 --> 00:36:01,009
+and brighter fire that certainly would
+after the iteration
+
+648
+00:36:01,009 --> 00:36:05,010
+number time it's robert is called which
+is the index
+
+649
+00:36:05,001 --> 00:36:08,085
+parameter at seven let us right now
+
+650
+00:36:08,094 --> 00:36:11,096
+you can see it's generated multiple
+graphs lady
+
+651
+00:36:12,014 --> 00:36:16,020
+labeled after the iteration that were on
+so now we can just scroll through here
+
+652
+00:36:16,002 --> 00:36:19,031
+and see what's happening to our data
+overtime as
+
+653
+00:36:19,049 --> 00:36:23,077
+swap left runs and the sort completes
+you can see it looks record data is
+
+654
+00:36:23,077 --> 00:36:23,084
+getting started
+
+655
+00:36:24,047 --> 00:36:28,140
+piece by piece into at the end we have a
+nicely sorted array
+
+656
+00:36:29,004 --> 00:36:33,060
+so there we can easily visualize exactly
+what's going on with our algorithm
+
+657
+00:36:33,096 --> 00:36:36,194
+we think you'll find it's very very
+useful
+
+658
+00:36:37,094 --> 00:36:40,129
+okay let's move on to another example
+ago he
+
+659
+00:36:41,029 --> 00:36:44,036
+they can I made here earlier and it's
+got this he prefered crash
+
+660
+00:36:44,099 --> 00:36:47,101
+top which explain in a moment but to me
+this crash
+
+661
+00:36:48,001 --> 00:36:51,040
+is my keep grass which I if you're not
+familiar with the heap
+
+662
+00:36:51,004 --> 00:36:54,015
+a heap is a type a balanced binary tree
+
+663
+00:36:54,051 --> 00:36:57,129
+with the value every node is greater
+than or equal to the value of its
+
+664
+00:36:58,029 --> 00:37:00,033
+children
+
+665
+00:37:00,033 --> 00:37:02,039
+each are often used to implement
+priority queues because it's very
+
+666
+00:37:02,093 --> 00:37:05,164
+efficient to remove the highest priority
+and that's the top of the tree
+
+667
+00:37:06,064 --> 00:37:09,083
+it's our tradition to insert new aliens
+into the correct position in the tree
+
+668
+00:37:09,083 --> 00:37:11,086
+for their priority
+
+669
+00:37:11,086 --> 00:37:14,101
+wherever amending our heap with an
+underlying array
+
+670
+00:37:15,001 --> 00:37:18,015
+to represent the tree and inner ring the
+
+671
+00:37:18,015 --> 00:37:22,020
+tree noted index hi has children it
+indexes I times to you
+
+672
+00:37:22,002 --> 00:37:26,038
+and I tends two parts one you can see
+that here at the bottom
+
+673
+00:37:26,056 --> 00:37:29,154
+we've got some random data that we see
+ourselves with and we created new heat
+
+674
+00:37:30,054 --> 00:37:31,068
+with that data
+
+675
+00:37:31,068 --> 00:37:35,095
+and we he provide the heap which is to
+say with that data into correctly heap
+
+676
+00:37:35,095 --> 00:37:37,099
+sorted order
+
+677
+00:37:37,099 --> 00:37:40,163
+on the right in the result sidebar you
+can see our default
+
+678
+00:37:41,063 --> 00:37:44,090
+treatment are discussed in class it's
+sure the name in the crash
+
+679
+00:37:44,009 --> 00:37:48,051
+and show its properties in this case it
+is one property which is that he parade
+
+680
+00:37:49,032 --> 00:37:52,086
+and here it is before it's been here a
+fight when it's not a correct E
+
+681
+00:37:52,086 --> 00:37:55,169
+and here it is after its been here for
+five minutes reportedly Creek keep
+
+682
+00:37:56,069 --> 00:37:59,130
+you know it's really hard to tell
+looking at this array
+
+683
+00:38:00,003 --> 00:38:03,018
+whether that's a correct keep this
+history represents a tree in
+
+684
+00:38:03,045 --> 00:38:06,052
+you know that's a good at visualizing
+overhears I am here I times to you in
+
+685
+00:38:07,015 --> 00:38:11,023
+yeah that's less wouldn't be much better
+if I could just visualize this
+
+686
+00:38:11,023 --> 00:38:15,042
+as a tree everywhere my hip is reference
+to my pregnant source
+
+687
+00:38:15,042 --> 00:38:19,065
+so let's see how to do that in order to
+visualize my own custom back
+
+688
+00:38:19,065 --> 00:38:23,161
+we're going to implement custom
+QuickBooks support for this class
+
+689
+00:38:24,061 --> 00:38:27,094
+our custom QuickBooks support allows you
+to add QuickBooks
+
+690
+00:38:27,094 --> 00:38:31,113
+for I said prices have in this object on
+me right now
+
+691
+00:38:32,013 --> 00:38:35,102
+and to do it you implement the debug
+QuickBooks object method
+
+692
+00:38:36,002 --> 00:38:40,045
+which takes no parameters and returns
+any object is an optional
+
+693
+00:38:40,045 --> 00:38:43,131
+and you're gonna return the value that
+you want to represent your object as its
+
+694
+00:38:44,031 --> 00:38:45,075
+quick look
+
+695
+00:38:45,075 --> 00:38:48,109
+on so right now that value
+
+696
+00:38:49,009 --> 00:38:52,067
+the values that we support here art
+colors
+
+697
+00:38:52,067 --> 00:38:55,156
+strings both pain and attributed images
+
+698
+00:38:56,056 --> 00:39:00,117
+and busy a Pats for your custom cookbook
+you can use any of these tax
+
+699
+00:39:01,017 --> 00:39:04,035
+so let's try to
+
+700
+00:39:04,035 --> 00:39:08,053
+okay so I imagine before I head over low
+heat graph request that I wrote
+
+701
+00:39:08,053 --> 00:39:11,139
+that's right across the new data taken
+arraigned right is a treat for you that
+
+702
+00:39:12,039 --> 00:39:16,117
+well implement our debug quick look
+object method
+
+703
+00:39:17,017 --> 00:39:20,019
+it takes NERR returns any object
+
+704
+00:39:20,019 --> 00:39:24,071
+as an optional and we're just gonna
+create whatever
+
+705
+00:39:24,071 --> 00:39:27,148
+he graph first
+
+706
+00:39:28,048 --> 00:39:30,124
+and the see CREF earners had a
+generation in this image which is one of
+
+707
+00:39:31,024 --> 00:39:31,058
+the
+
+708
+00:39:31,058 --> 00:39:34,116
+custom quick look tight support tights
+so we're just gonna return the images
+
+709
+00:39:35,016 --> 00:39:37,038
+generated G dark grafite
+
+710
+00:39:37,038 --> 00:39:40,069
+and past self that he parade
+
+711
+00:39:40,069 --> 00:39:43,148
+and now when this runs instead of
+showing the people representation for a
+
+712
+00:39:44,048 --> 00:39:44,121
+class
+
+713
+00:39:45,021 --> 00:39:48,072
+it shows our custom quick look
+representation which is an image
+
+714
+00:39:48,072 --> 00:39:51,077
+and so when a quick quick quick button
+you can see here
+
+715
+00:39:51,077 --> 00:39:55,080
+it's drying my keep as a tree this is
+before it's been here before I
+
+716
+00:39:55,008 --> 00:39:59,095
+when you can see for example 78 I is
+less than 89 to this is not a gritty
+
+717
+00:40:00,067 --> 00:40:03,115
+but if I quick look at after its been he
+provide
+
+718
+00:40:04,015 --> 00:40:08,036
+I can now go a great +91 is greater than
+86 89
+
+719
+00:40:08,036 --> 00:40:11,121
+86 is greater than 84 in 79 and so on
+and so forth
+
+720
+00:40:12,021 --> 00:40:16,053
+and I can really easily visually verify
+that this is the correct keep
+
+721
+00:40:16,053 --> 00:40:19,079
+that's how you can quickly your own
+prices in playgrounds
+
+722
+00:40:19,079 --> 00:40:22,147
+we think you'll find that very useful
+art next we'd like to move on to showing
+
+723
+00:40:23,047 --> 00:40:23,085
+you
+
+724
+00:40:23,085 --> 00:40:26,106
+how great it is to develop do custom
+view development and other drawing
+
+725
+00:40:27,006 --> 00:40:27,079
+development
+
+726
+00:40:27,079 --> 00:40:30,085
+in playgrounds and to do that I'm gonna
+hand it over to Connor
+
+727
+00:40:31,039 --> 00:40:35,041
+thank you Rick another great a use case
+we think playgrounds
+
+728
+00:40:35,041 --> 00:40:38,138
+I will be used for is custom you
+development that's because you can just
+
+729
+00:40:39,038 --> 00:40:40,041
+start writing some code
+
+730
+00:40:40,068 --> 00:40:43,152
+and see the actual view as it's being
+drawn as you're saying to build up your
+
+731
+00:40:44,052 --> 00:40:45,117
+drawing code:
+
+732
+00:40:46,017 --> 00:40:49,065
+syphilis I have a goal I want to take
+this play can I come in at some
+
+733
+00:40:49,065 --> 00:40:50,120
+animation to it
+
+734
+00:40:51,002 --> 00:40:54,063
+the economy have is really great pygmies
+the playfulness the playgrounds
+
+735
+00:40:54,081 --> 00:40:57,085
+but my playground themselves it's static
+there's
+
+736
+00:40:58,021 --> 00:41:02,049
+nothing dynamic about it and so I'm
+going to try to add animation to this
+
+737
+00:41:02,049 --> 00:41:05,073
+and what better way to do that then when
+in a playground itself so
+
+738
+00:41:05,073 --> 00:41:09,159
+what's improper to the demo so OK out
+here and then ok go ahead and open up
+
+739
+00:41:10,059 --> 00:41:14,066
+a plague on the party started
+
+740
+00:41:15,029 --> 00:41:18,063
+okay so here we got a playground we've
+got our so passive in its view
+
+741
+00:41:18,063 --> 00:41:21,084
+a player and i cant view as a few the
+
+742
+00:41:21,084 --> 00:41:24,125
+layers attendees at three instance
+
+743
+00:41:25,025 --> 00:41:28,060
+rd3 instance methods I was actually the
+Center for those layers
+
+744
+00:41:28,006 --> 00:41:31,015
+you see that their animal minute right
+now and we'll come back to that moment
+
+745
+00:41:32,005 --> 00:41:35,083
+also have an extension I finish color
+which defines a couple
+
+746
+00:41:36,028 --> 00:41:39,091
+love colors for the play and i cum
+itself
+
+747
+00:41:39,091 --> 00:41:42,097
+I didn't have as a helper function to
+convert
+
+748
+00:41:42,097 --> 00:41:46,179
+in in this busy a path to a CG path for
+use with caca player
+
+749
+00:41:47,079 --> 00:41:50,133
+family I just go ahead and create an
+intense my playground I can view
+
+750
+00:41:51,033 --> 00:41:54,033
+and then I put on a separate line so I
+can add some stuff later
+
+751
+00:41:54,033 --> 00:41:58,070
+let's go ahead and show that in the time
+
+752
+00:41:58,007 --> 00:42:03,083
+okay to see now that we've just got
+ourselves in Mt view here
+
+753
+00:42:04,046 --> 00:42:08,078
+see if we have an interview here we
+actually just now need to go ahead and
+
+754
+00:42:08,078 --> 00:42:08,165
+implement these
+
+755
+00:42:09,065 --> 00:42:12,070
+setup functions I so let's go ahead and
+do that
+
+756
+00:42:13,015 --> 00:42:19,079
+so set up by creating the path for the
+background player
+
+757
+00:42:19,079 --> 00:42:22,128
+so you can you see here working in this
+busy Pathan we can put look at to make
+
+758
+00:42:23,028 --> 00:42:23,106
+sure it looks right
+
+759
+00:42:24,006 --> 00:42:27,011
+M in fact yeah that looks more less like
+the playground icon
+
+760
+00:42:27,056 --> 00:42:31,130
+so tell outside set up earlier
+
+761
+00:42:32,003 --> 00:42:35,099
+taking our saying at the lair you can
+see here in the time line that we're now
+
+762
+00:42:36,026 --> 00:42:39,122
+dry in the lair where you have the back
+and we've got a little border there and
+
+763
+00:42:40,022 --> 00:42:40,047
+so
+
+764
+00:42:40,046 --> 00:42:44,113
+okay it got back on set up but also do
+the C sub base and will do the same
+
+765
+00:42:45,013 --> 00:42:45,055
+thing
+
+766
+00:42:45,055 --> 00:42:48,138
+while create a path for that
+
+767
+00:42:49,038 --> 00:42:52,080
+and will that execute and we'll see here
+let's quick look make sure
+
+768
+00:42:52,008 --> 00:42:55,029
+yep it looks more less like the little
+base that we have for the player for the
+
+769
+00:42:56,001 --> 00:43:01,027
+see-saw so let's set the layer south as
+well
+
+770
+00:43:01,027 --> 00:43:03,116
+and their we just make that change
+immediately get the feedback i've seen
+
+771
+00:43:04,016 --> 00:43:04,092
+what that looks like
+
+772
+00:43:04,092 --> 00:43:08,092
+when drawn in our view so did the sea
+somewhere
+
+773
+00:43:08,092 --> 00:43:12,176
+about sankara set that up as well see
+here that we just you know have a
+
+774
+00:43:13,076 --> 00:43:16,173
+closure which will create the child by
+itself with an II
+
+775
+00:43:17,073 --> 00:43:20,076
+create couples layers for the children
+on each side have the
+
+776
+00:43:20,076 --> 00:43:24,117
+see-saw I know is that the bench itself
+and then add those layers to our city
+
+777
+00:43:25,017 --> 00:43:26,086
+somewhere
+
+778
+00:43:26,086 --> 00:43:28,168
+okay so now we've got ourselves
+something that looks kinda like the
+
+779
+00:43:29,068 --> 00:43:30,123
+playground icon
+
+780
+00:43:31,023 --> 00:43:34,090
+but like the icon itself it's not
+animating so let's go ahead that support
+
+781
+00:43:34,009 --> 00:43:36,107
+for an emissions are playing on my
+country
+
+782
+00:43:37,088 --> 00:43:40,090
+I wasn't for that as well and so
+
+783
+00:43:41,008 --> 00:43:45,057
+let's walk through this is doing I find
+a constant for the maximum angle and the
+
+784
+00:43:45,057 --> 00:43:45,106
+see-saw
+
+785
+00:43:46,006 --> 00:43:49,013
+I'm you know what do this I think I over
+twelve is about right
+
+786
+00:43:49,076 --> 00:43:52,109
+awesome a property for the current hang
+on the see-saw after any pending
+
+787
+00:43:53,009 --> 00:43:55,023
+animations finish
+
+788
+00:43:55,023 --> 00:43:59,023
+and have a property which determines
+whether or not it should be animating
+
+789
+00:43:59,023 --> 00:44:02,048
+I'd set out as false but we have this
+code here which executes where this is
+
+790
+00:44:02,048 --> 00:44:02,093
+set
+
+791
+00:44:02,093 --> 00:44:06,120
+say well if the animation state has
+changed and we're told to enemy
+
+792
+00:44:07,002 --> 00:44:11,081
+men just start animating dipping on the
+current angle the see-saw
+
+793
+00:44:11,099 --> 00:44:15,100
+and have thus helping method were
+actually performing animation itself
+
+794
+00:44:16,009 --> 00:44:19,102
+there is no go ahead courtesy a basic
+animation said a couple values
+
+795
+00:44:20,002 --> 00:44:23,083
+Center timing function to match but a
+sees how it actually looks like
+
+796
+00:44:23,083 --> 00:44:27,091
+the duration to what was passed in which
+defaults to 1/2 seconds
+
+797
+00:44:27,091 --> 00:44:31,154
+Abbott can be customized depending on
+the angle the see-saw
+
+798
+00:44:32,054 --> 00:44:36,059
+within an animation to RC Sullair we set
+the underlying chance for property that
+
+799
+00:44:37,004 --> 00:44:39,032
+sea salt layer so that what the
+animation completes
+
+800
+00:44:39,032 --> 00:44:44,055
+it looks cracked and then we update our
+currency sign your property accordingly
+
+801
+00:44:44,055 --> 00:44:47,060
+finally we have I we implement the
+animation did stop finished
+
+802
+00:44:48,005 --> 00:44:51,099
+delegate call back basically say that if
+we finish and was the first is to be
+
+803
+00:44:51,099 --> 00:44:51,187
+animating
+
+804
+00:44:52,087 --> 00:44:56,120
+then just go ahead and me to the OPs in
+angola but we currently are at
+
+805
+00:44:57,002 --> 00:45:04,002
+soaking let's go ahead and some disputes
+are in a meeting
+
+806
+00:45:05,008 --> 00:45:09,009
+so what do that and you'll notice that
+after reruns we've seen the view
+
+807
+00:45:09,009 --> 00:45:12,080
+update its look you know so we see that
+it tilted over to the side
+
+808
+00:45:12,008 --> 00:45:15,029
+we're not in the animation itself if
+that we're going to need some help from
+
+809
+00:45:16,001 --> 00:45:17,026
+the XT playground framework
+
+810
+00:45:17,026 --> 00:45:20,027
+so but switchback decides to see what I
+could look like
+
+811
+00:45:20,036 --> 00:45:23,040
+the second piece of functionality which
+the XT playground framework provides the
+
+812
+00:45:23,076 --> 00:45:25,172
+ability to show live use and the time
+
+813
+00:45:26,072 --> 00:45:30,075
+he do that by calling this XTP show View
+Function it takes in identifiers
+
+814
+00:45:31,002 --> 00:45:34,053
+and the view that you wanna show after
+calling it will show the view live by
+
+815
+00:45:34,053 --> 00:45:35,069
+the playground executes
+
+816
+00:45:35,069 --> 00:45:38,136
+anything over court frames as the pecan
+executes see can play them back
+
+817
+00:45:39,036 --> 00:45:43,053
+what execution finishes they defy you
+pass a dysfunction
+
+818
+00:45:43,053 --> 00:45:46,112
+must be unique insight at the playground
+because this is how we refer to the live
+
+819
+00:45:47,012 --> 00:45:48,089
+you internally in Xcode
+
+820
+00:45:48,089 --> 00:45:53,091
+I and it is also a week show as the
+title for the five you in the time
+
+821
+00:45:54,009 --> 00:45:57,057
+the view past must also not have a
+superb you this is because we will add
+
+822
+00:45:57,057 --> 00:45:57,121
+it to our own
+
+823
+00:45:58,021 --> 00:46:02,102
+the hierarchy and it would generally not
+produce the results you looking for
+
+824
+00:46:03,002 --> 00:46:07,041
+so with with this in our toolbox let's
+jump back to the demo and see how to use
+
+825
+00:46:07,041 --> 00:46:13,053
+so go ahead and just go ahead and import
+XE playground
+
+826
+00:46:13,053 --> 00:46:16,080
+and then come here incentives having
+this view item I'm gonna remove that
+
+827
+00:46:16,008 --> 00:46:17,092
+from the time line
+
+828
+00:46:18,064 --> 00:46:21,072
+I say something like XTP show view
+
+829
+00:46:22,044 --> 00:46:25,136
+pass in identifying it can be anything
+as long as its unique sauce a
+
+830
+00:46:26,036 --> 00:46:29,078
+playground icon you
+
+831
+00:46:29,078 --> 00:46:33,136
+in the past the view that we created so
+we'll just let that we execute
+
+832
+00:46:34,036 --> 00:46:38,085
+you see there that in the time I'm
+showing the view live as its animating
+
+833
+00:46:38,085 --> 00:46:41,113
+yasser probably noticed at this little
+timeout feel down here
+
+834
+00:46:42,013 --> 00:46:45,018
+and that led to specify the amount of
+time which will let the playground
+
+835
+00:46:45,063 --> 00:46:45,155
+continue executing
+
+836
+00:46:46,055 --> 00:46:49,079
+after you reach the end execution at the
+top of a coat
+
+837
+00:46:49,079 --> 00:46:52,170
+now i'd the faucet 30 seconds but I can
+adjust the fountain I know my animation
+
+838
+00:46:53,007 --> 00:46:53,094
+only takes about
+
+839
+00:46:54,057 --> 00:46:58,082
+a second half so under 10 seconds to get
+a few times around
+
+840
+00:46:58,082 --> 00:47:01,096
+after we had that will rerun it an and
+so
+
+841
+00:47:01,096 --> 00:47:04,173
+that's great we see it running back and
+I like to show you how you can integrate
+
+842
+00:47:05,073 --> 00:47:09,134
+XTP should be with the XCP capture value
+API mentioned earlier
+
+843
+00:47:10,034 --> 00:47:14,047
+and so what I wanna do then to capture
+be angle at the see-saw
+
+844
+00:47:14,047 --> 00:47:18,063
+ira the left it to the see-saw an
+
+845
+00:47:18,063 --> 00:47:21,063
+as we're animating so here is conveying
+XTP
+
+846
+00:47:21,063 --> 00:47:25,072
+capture value a pass left see-saw
+
+847
+00:47:25,072 --> 00:47:29,109
+position else has the role because we
+know at this point but it you know
+
+848
+00:47:30,009 --> 00:47:34,086
+it's flat on there make take this and
+I'm going to put it in our animation did
+
+849
+00:47:34,086 --> 00:47:36,099
+stop finished call back
+
+850
+00:47:36,099 --> 00:47:40,143
+now in his past the negative currency
+tying goal
+
+851
+00:47:41,043 --> 00:47:44,092
+SS because that's what we need to do in
+order to get at the left
+
+852
+00:47:44,092 --> 00:47:48,041
+position at the see-saw edged having all
+works out for the chance for
+
+853
+00:47:48,869 --> 00:47:52,100
+see he see here that as we're executing
+within the graft and a building up over
+
+854
+00:47:52,001 --> 00:47:53,020
+time
+
+855
+00:47:53,119 --> 00:47:56,700
+and then what execution finishes the
+graph snap back into place in cash show
+
+856
+00:47:56,007 --> 00:47:56,050
+you
+
+857
+00:47:57,013 --> 00:48:00,027
+their best view of the data collected
+
+858
+00:48:00,027 --> 00:48:03,072
+suck it you probably also noticed the
+slider became active
+
+859
+00:48:03,072 --> 00:48:06,127
+and I can just go ahead and take that
+and dragged through here
+
+860
+00:48:07,027 --> 00:48:10,036
+and you'll notice that where updating
+the graph at the bottom or also showing
+
+861
+00:48:10,036 --> 00:48:10,075
+you
+
+862
+00:48:10,075 --> 00:48:14,158
+the animation your adamant there in time
+so this is the I fairly basic animation
+
+863
+00:48:15,058 --> 00:48:18,092
+and doing what we expected but yeah if
+you had something more complex than you
+
+864
+00:48:18,092 --> 00:48:19,129
+wanted this kind of take a look at
+
+865
+00:48:20,029 --> 00:48:24,035
+small portion a beer animation you could
+do that as well
+
+866
+00:48:24,035 --> 00:48:27,106
+ackhouse do something like you know
+click on wannabes points secretary see
+
+867
+00:48:28,006 --> 00:48:28,043
+it
+
+868
+00:48:28,043 --> 00:48:31,107
+no that the two things are in sync I
+could bear that that's the point
+
+869
+00:48:32,007 --> 00:48:35,046
+he's the heir key is to go through the
+graphs points and see that okay yeah you
+
+870
+00:48:35,046 --> 00:48:36,118
+know we're doing what we expect
+
+871
+00:48:37,018 --> 00:48:41,054
+it to do and so that's how you can show
+wide use in the time line
+
+872
+00:48:41,054 --> 00:48:44,086
+with the ex the playground framework but
+the back to fight now
+
+873
+00:48:44,086 --> 00:48:46,092
+now I'd like to talk to you about how
+you can use a synchronous code in your
+
+874
+00:48:47,046 --> 00:48:48,052
+playgrounds
+
+875
+00:48:48,052 --> 00:48:50,059
+it'll taste in this minimum before but
+like to go into a little bit more detail
+
+876
+00:48:51,022 --> 00:48:52,111
+now
+
+877
+00:48:53,011 --> 00:48:56,022
+the third piece of functionality which
+the XT taken framework for brides
+
+878
+00:48:56,022 --> 00:48:59,065
+is the ability to extend execution
+
+879
+00:48:59,065 --> 00:49:02,136
+by default execution turn it's what all
+top overcoats executed
+
+880
+00:49:03,036 --> 00:49:06,131
+at the playground ok provides API for
+extending execution and definitely
+
+881
+00:49:07,031 --> 00:49:11,043
+that this XCP said execution should
+continue indefinitely function
+
+882
+00:49:11,043 --> 00:49:14,066
+he's gonna this is actually not quite
+indefinite the execution time is
+
+883
+00:49:14,066 --> 00:49:16,071
+controlled by the timelines timeout
+
+884
+00:49:17,016 --> 00:49:20,090
+which defaults to thirty seconds
+additionally
+
+885
+00:49:20,009 --> 00:49:24,023
+at execution will be terminated if you
+at the playground while it's running
+
+886
+00:49:25,004 --> 00:49:28,006
+at this is so that we can show you up to
+date results rather than let
+
+887
+00:49:28,024 --> 00:49:32,076
+leaving you with sale results while way
+for an earlier execution to finish
+
+888
+00:49:32,076 --> 00:49:35,115
+additionally at the Sun lasting oh we oh
+we can actually call this function but
+
+889
+00:49:36,015 --> 00:49:36,089
+we saw
+
+890
+00:49:36,089 --> 00:49:40,123
+bad execution continued after we reach
+the in a palpable code
+
+891
+00:49:41,023 --> 00:49:45,051
+that's because XCP shove you implicitly
+calls XTP said execution should continue
+
+892
+00:49:45,051 --> 00:49:46,080
+indefinitely
+
+893
+00:49:46,008 --> 00:49:49,084
+you think about this as if nothing in
+the plague on sources told Xcode that
+
+894
+00:49:50,056 --> 00:49:51,127
+the plague on Lisa say live
+
+895
+00:49:52,027 --> 00:49:56,072
+in the playground will stop executing
+one seriously in the top
+
+896
+00:49:56,072 --> 00:49:58,130
+now officially a quick demo but it's
+like he's a synchronous code and
+
+897
+00:49:59,003 --> 00:50:00,025
+playgrounds
+
+898
+00:50:00,052 --> 00:50:04,131
+he ran back here and I have playground
+which uses at a synchronous code
+
+899
+00:50:05,031 --> 00:50:08,094
+we create AAA we have our session
+delegate which is an if you're all
+
+900
+00:50:08,094 --> 00:50:09,128
+sessions I'll get
+
+901
+00:50:10,028 --> 00:50:13,049
+has a few call backs I and then we also
+just you know
+
+902
+00:50:13,049 --> 00:50:16,105
+benefits every delegate pitted miss you
+are out session
+
+903
+00:50:17,005 --> 00:50:20,051
+and then created a task to add download
+the content
+
+904
+00:50:20,051 --> 00:50:24,082
+at the Apple homepage with Intel the
+data task tourism
+
+905
+00:50:24,082 --> 00:50:27,115
+and you notice that you know the plan
+itself is executed but were not
+
+906
+00:50:28,015 --> 00:50:29,060
+receiving any results appear
+
+907
+00:50:29,006 --> 00:50:32,101
+and if I open up the assistant editor
+
+908
+00:50:33,055 --> 00:50:35,130
+you know is that we have received any
+consular output even though they're
+
+909
+00:50:36,003 --> 00:50:37,072
+clearly longing
+
+910
+00:50:37,369 --> 00:50:40,830
+here I that we've received some bites
+
+911
+00:50:40,083 --> 00:50:43,088
+and it's because nothing in the
+playground has told the playing on the
+
+912
+00:50:43,088 --> 00:50:44,151
+to continue executing
+
+913
+00:50:45,051 --> 00:50:48,142
+I so we at call past that reason we
+resume the task and then
+
+914
+00:50:49,042 --> 00:50:52,088
+estimate that measures we could be in
+the top level code: and the plague under
+
+915
+00:50:52,088 --> 00:50:53,159
+stops executing
+
+916
+00:50:54,059 --> 00:50:57,147
+let's go ahead and say imports XE
+playground
+
+917
+00:50:58,047 --> 00:51:03,056
+and then could say XP set execution she
+continue
+
+918
+00:51:03,056 --> 00:51:06,140
+except execution should continue
+indefinitely either take the ball
+
+919
+00:51:07,004 --> 00:51:10,009
+that defaults to true see typically
+don't need to pass anything there and I
+
+920
+00:51:10,045 --> 00:51:11,101
+want you back here
+
+921
+00:51:12,001 --> 00:51:15,063
+now noticed that you know we were seeing
+results from here processing the Consul
+
+922
+00:51:15,063 --> 00:51:16,092
+output we expect
+
+923
+00:51:16,092 --> 00:51:19,106
+in the time okay at a use
+
+924
+00:51:20,006 --> 00:51:23,065
+a sickness can play counts let's go back
+fights now
+
+925
+00:51:23,119 --> 00:51:26,800
+there are few alternatives but we really
+think that you should at typically is
+
+926
+00:51:26,008 --> 00:51:29,010
+actually peace and execution should
+continue indefinitely when you trying to
+
+927
+00:51:29,082 --> 00:51:31,111
+use a secret code in playgrounds
+
+928
+00:51:32,011 --> 00:51:34,107
+if that won't work for you though you
+can use other methods for waiting for a
+
+929
+00:51:35,007 --> 00:51:37,011
+synchronous operations to finish
+
+930
+00:51:37,011 --> 00:51:39,770
+basically just need to make sure you
+don't reach the end a typable code
+
+931
+00:51:39,869 --> 00:51:42,140
+before your operation completes
+
+932
+00:51:42,014 --> 00:51:44,088
+before we leave today I'd like to talk
+to you a little bit about from the
+
+933
+00:51:44,088 --> 00:51:46,096
+limitations we have playgrounds
+
+934
+00:51:47,068 --> 00:51:51,080
+first of you should not use performance
+playgrounds for any performance testing
+
+935
+00:51:51,008 --> 00:51:54,017
+I that's because the long a result in
+the playground will generally dominate
+
+936
+00:51:54,089 --> 00:51:54,163
+the runtime
+
+937
+00:51:55,063 --> 00:51:58,155
+I'm not your actual code this means that
+the performance will be dependent on the
+
+938
+00:51:59,055 --> 00:52:00,150
+number of lines of code executed
+
+939
+00:52:01,005 --> 00:52:04,008
+that the actual performance whatever it
+is you're developing
+
+940
+00:52:04,053 --> 00:52:07,082
+and that's not necessarily what you'd
+expect
+
+941
+00:52:07,082 --> 00:52:11,085
+he said we'd suggest that you use the XT
+test framework to perform a test in a
+
+942
+00:52:11,085 --> 00:52:11,138
+testament
+
+943
+00:52:12,038 --> 00:52:15,135
+where you can get at more accurate
+results every session later this week of
+
+944
+00:52:16,035 --> 00:52:20,132
+testing an expert sex which will go into
+this and more detail
+
+945
+00:52:21,032 --> 00:52:24,060
+there are few more limitations of
+playgrounds play Dance Camp use for
+
+946
+00:52:24,006 --> 00:52:25,034
+things which require
+
+947
+00:52:25,088 --> 00:52:28,186
+user interaction so we have great sport
+for showing my views
+
+948
+00:52:29,086 --> 00:52:32,130
+be can only see them you can't touch
+them
+
+949
+00:52:33,003 --> 00:52:35,084
+we all should not support you can play
+counts for anything which require custom
+
+950
+00:52:36,011 --> 00:52:37,108
+entitlements
+
+951
+00:52:38,008 --> 00:52:41,034
+for I was playgrounds we only support
+executing against the simulator
+
+952
+00:52:41,034 --> 00:52:45,109
+Sony thing which requires a device I
+will not be supported with playgrounds
+
+953
+00:52:46,009 --> 00:52:50,036
+and finally we do not support using your
+own app for free Marco in a playground
+
+954
+00:52:50,036 --> 00:52:52,063
+I wanted something that you can just
+copy and paste into the playground
+
+955
+00:52:52,063 --> 00:52:52,071
+source
+
+956
+00:52:53,043 --> 00:52:56,132
+basically you can only use things in the
+standard library in the fck
+
+957
+00:52:57,032 --> 00:53:00,051
+or that in the play concerts self
+
+958
+00:53:00,051 --> 00:53:03,132
+in get around some these limitations by
+using the rebel rebel is the command
+
+959
+00:53:04,032 --> 00:53:05,066
+line interface the swift
+
+960
+00:53:05,066 --> 00:53:08,161
+and it works this way because at the
+rebel can actually executing your own
+
+961
+00:53:09,061 --> 00:53:09,140
+process
+
+962
+00:53:10,004 --> 00:53:14,062
+you just stop at a breakpoint and that
+the LDP prompt yet few the rebel command
+
+963
+00:53:14,098 --> 00:53:17,166
+and you'll be destruct down right into
+the swift trouble
+
+964
+00:53:18,066 --> 00:53:21,085
+gonzo provide a richer experience the
+red in the rebel that's because you
+
+965
+00:53:21,085 --> 00:53:23,091
+automatically execute your code from a
+non-state
+
+966
+00:53:24,045 --> 00:53:27,124
+I means you know you make a single edit
+to align and then you know we just be
+
+967
+00:53:28,024 --> 00:53:29,061
+run it from zero
+
+968
+00:53:29,061 --> 00:53:32,108
+whereas with the rebel if you wanted to
+make an avid something earlier in the
+
+969
+00:53:33,008 --> 00:53:36,297
+source the retainer getting get the
+process back into the state
+
+970
+00:53:36,369 --> 00:53:39,970
+then you re enter the raffle retype
+everything making it one change to see
+
+971
+00:53:39,097 --> 00:53:41,104
+how it affects things
+
+972
+00:53:42,004 --> 00:53:44,102
+Picasa support from these high-level
+features like but looks and the time
+
+973
+00:53:45,002 --> 00:53:45,075
+line
+
+974
+00:53:45,075 --> 00:53:49,114
+which we do not support which the rebel
+does not support
+
+975
+00:53:50,014 --> 00:53:53,106
+you like to learn more about the rebel
+in go to the introduction to Aldi be in
+
+976
+00:53:54,006 --> 00:53:55,041
+the swift rebel talk
+
+977
+00:53:55,041 --> 00:53:59,050
+and we're going to much more detail
+about how at the rebel works
+
+978
+00:54:00,031 --> 00:54:03,089
+in summary we think playgrounds are a
+great way play with swift
+
+979
+00:54:03,089 --> 00:54:07,107
+cocoa and Cocoa Touch you can use them
+for things like burning
+
+980
+00:54:08,007 --> 00:54:11,806
+exploration and visualization and
+frankly public on the things that we
+
+981
+00:54:11,869 --> 00:54:13,760
+haven't even thought of yet
+
+982
+00:54:13,076 --> 00:54:16,149
+yes the playground framework provides
+API's for use in your playgrounds
+
+983
+00:54:17,049 --> 00:54:20,101
+for more advanced things so you can do
+things like menu week after values with
+
+984
+00:54:21,001 --> 00:54:23,044
+the XCP capture value API
+
+985
+00:54:23,044 --> 00:54:26,135
+you can show my views and the time I by
+calling XCP show view
+
+986
+00:54:27,035 --> 00:54:30,132
+and you can also extend execution for a
+synchronous operations with the XCP said
+
+987
+00:54:31,032 --> 00:54:34,067
+execution should continue indefinitely
+function
+
+988
+00:54:34,067 --> 00:54:37,110
+finally we really like to think ready to
+go out and get pic on the Tri
+
+989
+00:54:38,001 --> 00:54:41,010
+thank you know the really approachable
+and if you just sit down with them for a
+
+990
+00:54:41,019 --> 00:54:43,072
+little bit you'll find a number of great
+ways to integrate them into our
+
+991
+00:54:43,072 --> 00:54:45,134
+development process
+
+992
+00:54:46,034 --> 00:54:49,123
+for more information you can contact our
+developer tools evangelist Dave too long
+
+993
+00:54:50,023 --> 00:54:53,075
+assassin information up against the
+source editor help racks good sex
+
+994
+00:54:53,075 --> 00:54:57,153
+you can also ask questions about
+playgrounds on the Apple Developer forms
+
+995
+00:54:58,053 --> 00:55:01,059
+if several related sessions about us
+with this week
+
+996
+00:55:01,059 --> 00:55:04,094
+I so there is an introduction to Swift
+session yesterday
+
+997
+00:55:04,094 --> 00:55:07,158
+which impact on the video we also have
+an intermediate sweat session
+
+998
+00:55:08,058 --> 00:55:12,587
+out later this afternoon there's also in
+advance which session at tomorrow which
+
+999
+00:55:13,109 --> 00:55:14,780
+will be able to see
+
+1000
+00:55:14,078 --> 00:55:17,104
+we had an integrating switch with
+objective-c session atlee
+
+1001
+00:55:18,004 --> 00:55:21,013
+earlier this morning which he kept on
+video and we also have
+
+1002
+00:55:21,013 --> 00:55:25,013
+admits with interoperability in-depth
+session later this afternoon
+
+1003
+00:55:25,013 --> 00:55:27,066
+finally if you'd like to learn more
+about the swift Apple you go to the
+
+1004
+00:55:27,066 --> 00:55:28,095
+introduction to LBB
+
+1005
+00:55:28,095 --> 00:55:30,104
+in a swift rebel session thank you all
+for coming and I hope you have a great
+
+1006
+00:55:31,085 --> 00:55:32,101
+week here at WWDC
+

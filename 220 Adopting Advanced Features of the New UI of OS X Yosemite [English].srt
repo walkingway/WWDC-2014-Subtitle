@@ -1,0 +1,4294 @@
+1
+00:00:11,044 --> 00:00:13,048
+hi
+
+2
+00:00:13,048 --> 00:00:15,102
+hope hope you all a good lunch
+
+3
+00:00:16,002 --> 00:00:19,027
+the section 220 adopting advanced
+features on the new UI
+
+4
+00:00:19,027 --> 00:00:22,059
+and Mac OS 10 yosemite on I'm Chris
+treason
+
+5
+00:00:22,059 --> 00:00:26,061
+and the let me start by showing off some
+others new
+
+6
+00:00:26,079 --> 00:00:29,127
+UI features in Yosemite so
+
+7
+00:00:30,027 --> 00:00:33,028
+up to be in with your the a simple
+Finder window
+
+8
+00:00:33,028 --> 00:00:36,060
+and the big changes to your house the
+doc is kind of
+
+9
+00:00:36,006 --> 00:00:39,097
+just grabbing the color from the desktop
+picture likewise
+
+10
+00:00:40,051 --> 00:00:44,077
+the Finder sidebar is infused with the
+the bright pinks and oranges
+
+11
+00:00:44,077 --> 00:00:47,089
+on the desktop picture and it's really
+complimenting
+
+12
+00:00:47,089 --> 00:00:50,096
+do users content on-screen are
+
+13
+00:00:50,096 --> 00:00:54,101
+likewise we have a picture above Safari
+here
+
+14
+00:00:55,001 --> 00:00:58,014
+and the continent harmonies radovan
+Finder window
+
+15
+00:00:58,014 --> 00:01:02,067
+but a the toolbar is is just grabbing
+that color from the web page
+
+16
+00:01:02,067 --> 00:01:05,126
+and making the you I really really
+complement the
+
+17
+00:01:05,729 --> 00:01:09,940
+the web content here and %uh finally
+
+18
+00:01:09,094 --> 00:01:12,172
+we have Notification Center arm which
+has been around
+
+19
+00:01:13,072 --> 00:01:16,168
+a little while now but in Yosemite you
+can see it's using the
+
+20
+00:01:17,068 --> 00:01:20,141
+whatever you occurrences and its point
+up the the really bright reds and
+
+21
+00:01:21,041 --> 00:01:22,119
+oranges and yellows from the desktop
+picture
+
+22
+00:01:23,019 --> 00:01:26,038
+and it's not just the background of the
+Texas pointed out the buns are pulling
+
+23
+00:01:26,209 --> 00:01:26,890
+it up
+
+24
+00:01:26,089 --> 00:01:30,108
+and we're gonna show you how to build
+you eyes that also grab color from the
+
+25
+00:01:31,008 --> 00:01:32,010
+environment like this
+
+26
+00:01:32,001 --> 00:01:36,610
+a so to start with I'm gonna mention a
+few
+
+27
+00:01:36,709 --> 00:01:40,709
+changes in existing acted API's
+especially in this car and its image
+
+28
+00:01:40,709 --> 00:01:43,717
+then ima spend while talking about a
+title bars and toolbars
+
+29
+00:01:44,509 --> 00:01:48,970
+section I like to call pile apartment to
+a farce and a
+
+30
+00:01:48,097 --> 00:01:52,114
+after the alibi Corbin on stage to talk
+about some
+
+31
+00:01:53,014 --> 00:01:57,633
+important new classes that allow you to
+use these visual effects
+
+32
+00:01:57,759 --> 00:02:01,830
+particular bill that we like to refer to
+as Byron C and
+
+33
+00:02:01,083 --> 00:02:04,136
+finally will top it off with the
+discussion performance regarding these
+
+34
+00:02:05,036 --> 00:02:05,043
+new effects
+
+35
+00:02:06,006 --> 00:02:09,059
+about to begin reviewing our
+
+36
+00:02:09,059 --> 00:02:12,083
+are all the Bugatti API's the
+
+37
+00:02:12,083 --> 00:02:15,822
+this is Anna segment control in Yosemite
+arm
+
+38
+00:02:16,569 --> 00:02:20,840
+you'll notice the be a finder in the
+background in this picture so far in for
+
+39
+00:02:20,084 --> 00:02:20,119
+round
+
+40
+00:02:21,019 --> 00:02:24,051
+near the back four controls on these are
+separate elements now
+
+41
+00:02:24,051 --> 00:02:27,066
+but they're not actually separate as
+controls
+
+42
+00:02:27,066 --> 00:02:31,073
+this is the same in a segment rose
+always we just configured it that
+
+43
+00:02:32,036 --> 00:02:33,054
+segment style property
+
+44
+00:02:33,054 --> 00:02:37,127
+with a new value the and a segment style
+enumeration has been augmented with Anna
+
+45
+00:02:38,027 --> 00:02:39,050
+segments I'll separated
+
+46
+00:02:39,005 --> 00:02:41,092
+and this gives you the destroyed
+appearance between the back and forward
+
+47
+00:02:42,037 --> 00:02:42,091
+buttons
+
+48
+00:02:42,091 --> 00:02:45,177
+so when you're up K that parents don't
+throw to Aspen's at
+
+49
+00:02:46,077 --> 00:02:51,109
+just using a segmented control and the
+senate segment style a
+
+50
+00:02:52,009 --> 00:02:55,050
+so I like to talk about and its image
+now on
+
+51
+00:02:55,005 --> 00:02:57,068
+especially if you've been using you I am
+and will be familiar with some other
+
+52
+00:02:58,013 --> 00:02:58,111
+things I'm talking about
+
+53
+00:02:59,011 --> 00:03:02,056
+but a was to start with this little
+sample image here
+
+54
+00:03:02,056 --> 00:03:05,144
+just kind of a button or about your
+background of some sort and if you tried
+
+55
+00:03:06,044 --> 00:03:09,052
+to stretch it using the SMS GTI ring I
+put in as an interview where you draw
+
+56
+00:03:10,024 --> 00:03:10,088
+yourself
+
+57
+00:03:10,088 --> 00:03:13,136
+you're going to notice the image is
+stretched uniformly
+
+58
+00:03:14,036 --> 00:03:17,077
+so the corners here the store as the
+image is resized
+
+59
+00:03:17,077 --> 00:03:20,082
+and thats kind of neat but if we're
+going for a button
+
+60
+00:03:21,027 --> 00:03:24,099
+or window background it's not really
+affect me one and
+
+61
+00:03:24,099 --> 00:03:27,130
+you images had this for quite a few
+releases
+
+62
+00:03:28,003 --> 00:03:31,069
+a but an estimate now joins it in
+introducing the captain sets property
+
+63
+00:03:31,096 --> 00:03:34,150
+and the stakes in a sentence that struck
+thank you thank you
+
+64
+00:03:35,005 --> 00:03:39,063
+ok States and its agents that's trucked
+which lets you specify the
+
+65
+00:03:40,008 --> 00:03:43,033
+distance to the edges to make these caps
+and
+
+66
+00:03:43,033 --> 00:03:46,034
+those Capen sets are in the image court
+system
+
+67
+00:03:46,043 --> 00:03:49,095
+serve you the NS image court system
+begins at a
+
+68
+00:03:49,095 --> 00:03:52,187
+are 00 in the lower left him in size and
+height the right their way
+
+69
+00:03:53,087 --> 00:03:56,090
+he said the captain sat on an image and
+wrought like used to resize
+
+70
+00:03:57,017 --> 00:04:00,063
+you know we're now holding the edges and
+corners
+
+71
+00:04:00,063 --> 00:04:03,142
+constant while resizing the interior the
+image so this lets you get the
+
+72
+00:04:04,042 --> 00:04:04,136
+stretchable buttons
+
+73
+00:04:05,036 --> 00:04:09,135
+the stretchable backgrounds a quite
+easily I
+
+74
+00:04:09,459 --> 00:04:12,459
+there's one other thing I want to
+mention about this up
+
+75
+00:04:12,459 --> 00:04:15,550
+so again if you're familiar with you I
+am and you know the you a matter sizing
+
+76
+00:04:15,055 --> 00:04:15,092
+mode
+
+77
+00:04:15,092 --> 00:04:18,591
+we now have an asymmetry sizing mode
+which offers traction tile options
+
+78
+00:04:19,419 --> 00:04:22,503
+stretched the fall it back to the
+behavior we've used a Mac OS 10
+
+79
+00:04:23,259 --> 00:04:27,220
+pretty much forever now tiles a new
+option and these are exposed on the
+
+80
+00:04:27,022 --> 00:04:27,118
+surprisingly named
+
+81
+00:04:28,018 --> 00:04:31,033
+resizing Road property on its image
+thank you got
+
+82
+00:04:31,033 --> 00:04:35,040
+a so as an example here the senator
+sizing mode the tile
+
+83
+00:04:35,004 --> 00:04:39,047
+and a you know doesn't quite do justice
+as across the here but you can see how
+
+84
+00:04:39,083 --> 00:04:41,089
+the image is actually being piled into
+these larger sizes
+
+85
+00:04:42,043 --> 00:04:45,121
+so if you have interesting detail you
+don't want stretched you want replicated
+
+86
+00:04:46,021 --> 00:04:46,027
+and said
+
+87
+00:04:46,081 --> 00:04:49,280
+this is how you would pull it off and
+you can use it with any s binder nans
+
+88
+00:04:50,009 --> 00:04:51,240
+ImageView
+
+89
+00:04:51,024 --> 00:04:55,533
+arm so to set up the slicing you buy
+part you have your programmatically now
+
+90
+00:04:55,749 --> 00:04:59,490
+but you can also do this with Xcode and
+to do that you just open your image
+
+91
+00:04:59,049 --> 00:05:02,438
+your ass a cataloging a nice preview of
+it here here's that might 9 slice
+
+92
+00:05:02,879 --> 00:05:05,885
+checkerboard image and you can set this
+up using the
+
+93
+00:05:06,479 --> 00:05:10,560
+ID inspector in this area here we've got
+the
+
+94
+00:05:10,056 --> 00:05:13,565
+the slicing motyar horizontal and
+vertical here for nine slicing mention
+
+95
+00:05:14,069 --> 00:05:15,085
+of the 23 sliced
+
+96
+00:05:15,229 --> 00:05:18,620
+horizontal to vertical on
+
+97
+00:05:18,062 --> 00:05:22,071
+and if you want to change the tiling
+mode we have the structures option here
+
+98
+00:05:22,071 --> 00:05:26,310
+so you can do that graphically without
+ever having to change your code
+
+99
+00:05:26,949 --> 00:05:29,830
+that covered in this image I like to
+mention a few things about and its
+
+100
+00:05:29,083 --> 00:05:32,722
+appearance in Yosemite
+
+101
+00:05:33,469 --> 00:05:36,547
+so s appearances in a county had
+Richardson maverick's
+
+102
+00:05:37,249 --> 00:05:40,610
+I we offer to a appearances and
+maverick's
+
+103
+00:05:40,061 --> 00:05:43,090
+which you can get out using the
+appearance named class method
+
+104
+00:05:43,639 --> 00:05:47,360
+on the ass appearance class and a
+
+105
+00:05:47,036 --> 00:05:51,025
+the default is and as a parent same aqua
+which is what we use forever we continue
+
+106
+00:05:51,349 --> 00:05:52,412
+to use it as the default the parents
+
+107
+00:05:52,979 --> 00:05:55,982
+and we have this other parents are
+called as a parent's name light content
+
+108
+00:05:56,009 --> 00:05:57,900
+which is used by pop overs
+
+109
+00:05:57,009 --> 00:06:00,118
+and in Yosemite we are saying goodbye
+
+110
+00:06:01,009 --> 00:06:04,037
+to write content don't use that anymore
+instead
+
+111
+00:06:04,289 --> 00:06:08,352
+pop overs use one of our new parents
+names which is by bright lights
+
+112
+00:06:08,919 --> 00:06:12,300
+and byron dark and poor man's gonna talk
+a lot about these and his section
+
+113
+00:06:12,003 --> 00:06:14,712
+but let me just give you a preview of
+what these look like we have byron white
+
+114
+00:06:15,009 --> 00:06:15,930
+on the left
+
+115
+00:06:15,093 --> 00:06:19,202
+and byron dark on the right you can see
+how the background in the elements are
+
+116
+00:06:20,039 --> 00:06:22,123
+bike with pulling up that color from
+beneath the window in this case and how
+
+117
+00:06:22,879 --> 00:06:23,882
+the house image
+
+118
+00:06:23,909 --> 00:06:28,550
+is is much more offers much more
+contrast against that background
+
+119
+00:06:28,055 --> 00:06:31,124
+and I'm I did before assignments and
+color here
+
+120
+00:06:32,024 --> 00:06:34,983
+so probably won't surprise anyone to
+know that and a scholar has some notable
+
+121
+00:06:35,199 --> 00:06:37,214
+mentions here
+
+122
+00:06:37,349 --> 00:06:40,411
+about the day one is that system colors
+are appear insensitive suffused by Matt
+
+123
+00:06:40,969 --> 00:06:41,973
+later by been dark
+
+124
+00:06:42,009 --> 00:06:45,210
+the system colors are going to return
+different effective values
+
+125
+00:06:45,021 --> 00:06:48,470
+so something called the things I control
+background color control text color
+
+126
+00:06:48,659 --> 00:06:53,080
+there's dozens more arm there in the and
+a scholar header and the documentation
+
+127
+00:06:53,008 --> 00:06:56,008
+we also have to new system colors
+
+128
+00:06:56,008 --> 00:07:00,557
+and that's label color and secondary
+label color and a Corbin will also
+
+129
+00:07:00,629 --> 00:07:03,650
+talk about these in-depth
+
+130
+00:07:03,839 --> 00:07:07,300
+alright my favorite section here title
+bars and toolbars
+
+131
+00:07:07,003 --> 00:07:10,031
+we're all familiar with handle bars and
+toolbars but
+
+132
+00:07:10,058 --> 00:07:13,146
+in Yosemite they have a new default
+appearance and one of the key elements
+
+133
+00:07:14,046 --> 00:07:18,645
+that new default appearance is that they
+blur document content
+
+134
+00:07:19,059 --> 00:07:23,710
+so up here's a slightly awkward video of
+me scrolling a picture in preview
+
+135
+00:07:23,071 --> 00:07:27,140
+and you can see that I scroll the title
+bar in tow bar are actually absorbing
+
+136
+00:07:27,779 --> 00:07:28,818
+and boring that content
+
+137
+00:07:29,169 --> 00:07:32,244
+in real time and a preview didn't have
+to do anything two-game this they they
+
+138
+00:07:32,919 --> 00:07:33,490
+got that
+
+139
+00:07:33,049 --> 00:07:36,121
+feature for free up let me explain how
+that
+
+140
+00:07:37,021 --> 00:07:40,033
+that works so if you have a ScrollView
+
+141
+00:07:40,033 --> 00:07:44,582
+and its adjacent your title bar Toolbar
+we're going to automatically drawl that
+
+142
+00:07:44,879 --> 00:07:49,110
+that previously obscure content and
+would work for you
+
+143
+00:07:49,011 --> 00:07:52,720
+if you're ScrollView isn't adjacent to
+the title bar we're going to ignore it
+
+144
+00:07:52,819 --> 00:07:55,520
+C&C on the left that kinda made a
+mock-up showing that the title bar
+
+145
+00:07:55,052 --> 00:07:57,058
+blurring that orange document content
+
+146
+00:07:57,058 --> 00:08:00,083
+and on the right it's not adjacent to
+the title bar so we're not boring at
+
+147
+00:08:00,083 --> 00:08:03,232
+were absorbing at all and that works
+really well
+
+148
+00:08:03,979 --> 00:08:08,930
+for almost all content out there but
+there's a few cases I want to call out
+
+149
+00:08:08,093 --> 00:08:12,142
+where are magic there can use a little
+bit help
+
+150
+00:08:12,979 --> 00:08:16,054
+so what are those is movie news
+
+151
+00:08:16,729 --> 00:08:19,807
+this is a big area where we can Tucson
+Medical replicate the content for you
+
+152
+00:08:20,509 --> 00:08:25,512
+likewise opens your views are in a
+similar place
+
+153
+00:08:25,539 --> 00:08:27,542
+you may notice kinda
+hardware-accelerated thing going on
+
+154
+00:08:27,839 --> 00:08:29,050
+using the Jeep you
+
+155
+00:08:29,005 --> 00:08:32,039
+and that's a good observation some types
+of players
+
+156
+00:08:32,039 --> 00:08:35,878
+also need a little bit helping users
+movie layers and open Joe layers kinda
+
+157
+00:08:36,229 --> 00:08:37,760
+grandfathered in with the views
+
+158
+00:08:37,076 --> 00:08:41,080
+but other things like a layers with 3d
+transforms and layers with core image
+
+159
+00:08:41,008 --> 00:08:41,092
+filters
+
+160
+00:08:42,064 --> 00:08:45,953
+also require little bit of help to show
+up in the title bar and pool bar
+
+161
+00:08:46,529 --> 00:08:49,940
+let me show you how you can do that
+
+162
+00:08:49,094 --> 00:08:52,168
+we have to play some there explicitly
+and we can do this using this new window
+
+163
+00:08:53,068 --> 00:08:57,073
+style mask called NS full-size content
+the window mask
+
+164
+00:08:57,073 --> 00:09:00,151
+on as a simple them up by threw together
+this is using a
+
+165
+00:09:01,051 --> 00:09:04,094
+asylum after does not include the full
+size cotton you flag
+
+166
+00:09:04,094 --> 00:09:07,135
+and you can see our content view is
+vertically beneath the title bar and
+
+167
+00:09:08,035 --> 00:09:08,106
+pool bar
+
+168
+00:09:09,006 --> 00:09:13,013
+and this content you just has a slightly
+odd red box and black box
+
+169
+00:09:13,076 --> 00:09:16,082
+if we add the full size Khan a new
+window mask
+
+170
+00:09:16,082 --> 00:09:20,148
+also on the the content the size hasn't
+changed but I Warenkorb are overlaid on
+
+171
+00:09:21,048 --> 00:09:22,131
+top of that content you can see a boring
+
+172
+00:09:23,031 --> 00:09:26,032
+the red and the black in the title bar
+there
+
+173
+00:09:26,041 --> 00:09:29,072
+so if you look at this mockup used
+before size content you
+
+174
+00:09:29,072 --> 00:09:33,103
+when no mask a problem notices that
+those controls you used have the top of
+
+175
+00:09:34,003 --> 00:09:34,057
+your window
+
+176
+00:09:34,057 --> 00:09:37,086
+are still at the top of your window but
+the title bar
+
+177
+00:09:37,086 --> 00:09:41,097
+overlays them and unless you're trying
+to play a very
+
+178
+00:09:41,097 --> 00:09:43,191
+interred at mine game with your user and
+if you are your job is done
+
+179
+00:09:44,091 --> 00:09:45,123
+congratulations
+
+180
+00:09:46,023 --> 00:09:49,105
+you're going to want to figure out a way
+to you get your controls to be anchored
+
+181
+00:09:50,005 --> 00:09:54,043
+at the bottom of the title bar again and
+probably the easiest way to do this
+
+182
+00:09:54,043 --> 00:09:57,050
+is by using auto layout so
+
+183
+00:09:58,013 --> 00:10:01,087
+and its window offers a new property
+called content layout died
+
+184
+00:10:01,087 --> 00:10:04,128
+and this returns an object to that you
+can use
+
+185
+00:10:05,028 --> 00:10:08,031
+a layout constrain just like you would
+use an ass few
+
+186
+00:10:08,058 --> 00:10:11,085
+the example here and creating a
+constraint which binds the top of my
+
+187
+00:10:11,085 --> 00:10:11,163
+view
+
+188
+00:10:12,063 --> 00:10:15,100
+to the top of the windows content layout
+guide and that means that the the top
+
+189
+00:10:16,000 --> 00:10:18,068
+corner to both our views is going to be
+at the same place in the window
+
+190
+00:10:18,068 --> 00:10:21,079
+while at least them out arm
+
+191
+00:10:21,079 --> 00:10:24,160
+if you're not using a laptop sorry a we
+have a new API
+
+192
+00:10:25,006 --> 00:10:29,020
+yosemite gonna layout constraints called
+the active property
+
+193
+00:10:29,074 --> 00:10:32,112
+and you can now install constrain just
+by sending to be active
+
+194
+00:10:33,012 --> 00:10:36,048
+you don't need to find a common ancestor
+at at the constraint few
+
+195
+00:10:36,048 --> 00:10:40,080
+up constrained to in this case the
+content lab guide doesn't necessarily
+
+196
+00:10:40,008 --> 00:10:41,060
+have a common ancestor
+
+197
+00:10:42,032 --> 00:10:45,088
+and this API takes care of it for you
+
+198
+00:10:45,088 --> 00:10:48,107
+if you're not using our way out we have
+another property for you
+
+199
+00:10:49,007 --> 00:10:52,030
+called content layout wrecked and that's
+just an ass wrecked that
+
+200
+00:10:52,003 --> 00:10:55,042
+represent the on obscure area up the
+window
+
+201
+00:10:55,069 --> 00:10:58,104
+a its key value observing compliant
+
+202
+00:10:59,004 --> 00:11:01,090
+which means if you register as a
+key/value observer for you're gonna get
+
+203
+00:11:01,009 --> 00:11:02,014
+called back when it changes
+
+204
+00:11:03,004 --> 00:11:07,035
+and that's important because it can
+change the title bar can change height
+
+205
+00:11:07,071 --> 00:11:10,139
+the toolbar have items added or removed
+or labels out and move you know from
+
+206
+00:11:11,039 --> 00:11:12,046
+small icon to large I come out
+
+207
+00:11:13,009 --> 00:11:17,048
+so it's important to be aware and
+assuming we use one of those methods we
+
+208
+00:11:17,048 --> 00:11:18,116
+can outweigh our buttons
+
+209
+00:11:19,016 --> 00:11:22,029
+beneath the title by the way they want
+their accessible to the user again
+
+210
+00:11:22,029 --> 00:11:25,032
+but the scroll view presents kinda
+challenge force
+
+211
+00:11:25,059 --> 00:11:29,153
+we wanted to start of on obscured by the
+title bar and we don't want the scroller
+
+212
+00:11:30,053 --> 00:11:33,116
+to be upskirt obscured by the title bar
+either however if we just leave the
+
+213
+00:11:34,016 --> 00:11:35,022
+scroll the US position that
+
+214
+00:11:35,076 --> 00:11:40,094
+to take up the entire hi to the content
+view it will be so in a way to fix that
+
+215
+00:11:40,094 --> 00:11:43,121
+and we have a way to fix that we have a
+new API
+
+216
+00:11:44,021 --> 00:11:48,026
+on a ScrollView called content and sets
+and this just adds margins
+
+217
+00:11:48,026 --> 00:11:52,032
+are around a ScrollView where we'll
+inset the content you
+
+218
+00:11:52,032 --> 00:11:56,107
+arm ok so in this example I'm using the
+content lautrec property at the window
+
+219
+00:11:57,007 --> 00:12:00,104
+and the windows frame to infer the
+offset between the top of the window
+
+220
+00:12:01,004 --> 00:12:04,081
+and the top in the content area I just
+gone ahead and set a content and sets
+
+221
+00:12:04,081 --> 00:12:06,157
+where its top property is equal to that
+of Sep
+
+222
+00:12:07,057 --> 00:12:10,076
+there's an easier way of doing this if
+you do this you're going to keep values
+
+223
+00:12:10,076 --> 00:12:12,142
+are the content where a property knows
+when it changes
+
+224
+00:12:13,042 --> 00:12:17,042
+and a ScrollView also offers a boolean
+called automatically adjust content and
+
+225
+00:12:17,042 --> 00:12:18,056
+sets
+
+226
+00:12:18,056 --> 00:12:21,087
+and he set the stage yes it will
+automatically
+
+227
+00:12:21,087 --> 00:12:24,181
+mu are up adjuster content for the
+scroller isn't obscured by the title bar
+
+228
+00:12:25,081 --> 00:12:29,090
+and the content itself will start on
+obscured by the title bar
+
+229
+00:12:29,009 --> 00:12:32,070
+so we had back are all summer for
+example here this is how the window look
+
+230
+00:12:33,051 --> 00:12:33,086
+like
+
+231
+00:12:33,086 --> 00:12:36,175
+up when it opened by the user when they
+began scrolling
+
+232
+00:12:37,075 --> 00:12:40,144
+the scroll Yukon against all slide under
+the title bar just the way we want
+
+233
+00:12:41,044 --> 00:12:44,052
+and we can get this a its appearance
+love blurring the document content at
+
+234
+00:12:45,024 --> 00:12:45,121
+the title bar
+
+235
+00:12:46,021 --> 00:12:50,082
+without packet replicating it for you
+
+236
+00:12:50,082 --> 00:12:53,131
+a for like to take a yr trying another
+screenshot here the picture
+
+237
+00:12:54,031 --> 00:12:58,031
+Safari and some your note about knows
+about it is that
+
+238
+00:12:58,031 --> 00:13:01,036
+the title of the window isn't there
+instead the window with its on the
+
+239
+00:13:01,081 --> 00:13:01,087
+toolbar
+
+240
+00:13:02,041 --> 00:13:06,050
+share the same row likewise here's a
+picture up maps
+
+241
+00:13:06,005 --> 00:13:09,076
+it's doing a similar thing notice the
+the title bars grabbing that content
+
+242
+00:13:10,021 --> 00:13:10,116
+from
+
+243
+00:13:11,016 --> 00:13:15,042
+the window again but it's also leaving
+out the title in the window
+
+244
+00:13:15,042 --> 00:13:18,046
+so you want to do this in your app's
+it's not difficult
+
+245
+00:13:18,082 --> 00:13:21,105
+we have a new generation called and
+that's when the title visibility
+
+246
+00:13:22,005 --> 00:13:25,046
+has three states visible hidden hidden
+one active
+
+247
+00:13:25,046 --> 00:13:28,107
+a in one active adds a little bit of
+context so windows in the background the
+
+248
+00:13:29,007 --> 00:13:30,026
+title comes back
+
+249
+00:13:30,026 --> 00:13:33,029
+that can distinguish it from other why
+some more windows
+
+250
+00:13:33,029 --> 00:13:37,125
+arm these are settable through the ass
+window title visibility property
+
+251
+00:13:38,025 --> 00:13:41,099
+so stupid example here's that Finder
+window again this is titled visible
+
+252
+00:13:41,099 --> 00:13:44,116
+and you can see it has a separate row
+for the widgets in the title followed by
+
+253
+00:13:45,016 --> 00:13:47,039
+the to walk
+
+254
+00:13:47,039 --> 00:13:50,071
+whereas as well the title hidden it's
+gone the title bar
+
+255
+00:13:50,071 --> 00:13:53,080
+the titles Don the window which is in
+the toolbar share the same row
+
+256
+00:13:54,061 --> 00:13:57,068
+here's another picture this is a an app
+called reminders if you if you didn't
+
+257
+00:13:57,068 --> 00:13:58,094
+know this was our miners
+
+258
+00:13:58,094 --> 00:14:01,097
+there's a hint the top a
+
+259
+00:14:01,097 --> 00:14:04,105
+but you can see the windows divided into
+two sections they have a
+
+260
+00:14:05,077 --> 00:14:08,125
+a sidebar that runs all the way from the
+bottom of the window
+
+261
+00:14:09,025 --> 00:14:12,047
+to the top of the window we all know the
+sidebars not being blurred by the title
+
+262
+00:14:12,047 --> 00:14:12,081
+bar
+
+263
+00:14:12,081 --> 00:14:16,085
+ok likewise here's a picture notes and
+they're in a similar thing
+
+264
+00:14:17,021 --> 00:14:20,067
+the the note on the right actually has a
+size paper texture to it and that paper
+
+265
+00:14:20,067 --> 00:14:22,156
+texture goes all the way to the top of
+the window again
+
+266
+00:14:23,056 --> 00:14:26,108
+and %uh this is also easy to accomplish
+a and this window
+
+267
+00:14:27,008 --> 00:14:30,010
+has a new property call title barker's
+transparent
+
+268
+00:14:30,028 --> 00:14:34,071
+so if we go back to my silly little red
+box black box example
+
+269
+00:14:34,071 --> 00:14:36,165
+this is that went idle workers
+transparent Eagles know and thats the
+
+270
+00:14:37,065 --> 00:14:37,128
+fall
+
+271
+00:14:38,028 --> 00:14:43,075
+so you can see the title bars boring or
+content with a TS
+
+272
+00:14:43,075 --> 00:14:47,075
+the a the red box in the black box are
+obscure so you can do tricks like could
+
+273
+00:14:47,075 --> 00:14:49,162
+use that go all the way from the bottom
+of the window to the top
+
+274
+00:14:50,062 --> 00:14:53,129
+on or otherwise augment the title bar
+
+275
+00:14:54,029 --> 00:14:58,043
+so I'd like to invite corman on stage
+he's going to talk about some new API's
+
+276
+00:14:58,043 --> 00:15:01,043
+that let you take advantage of our
+visual fax especially one
+
+277
+00:15:01,043 --> 00:15:04,045
+call Byron C welcome carbon thanks Chris
+
+278
+00:15:04,045 --> 00:15:08,051
+so my name's Corbin and I'm not get
+software engineer
+
+279
+00:15:08,051 --> 00:15:12,082
+so bottom and talk about today I'm gonna
+talk about a new class apk it
+
+280
+00:15:12,082 --> 00:15:15,150
+to do these boring visual effects called
+in a special affect you
+
+281
+00:15:16,005 --> 00:15:19,036
+my talk about his appearance and some
+materials and how to get that
+
+282
+00:15:19,081 --> 00:15:23,115
+custom colors and whatnot that we have
+democrat about piracy in how to get that
+
+283
+00:15:24,015 --> 00:15:24,094
+apartment E
+
+284
+00:15:24,094 --> 00:15:27,113
+and how doing your controls has gone to
+control the napkin
+
+285
+00:15:28,013 --> 00:15:31,091
+and finally my discussed briefly some
+the standard controls in at K
+
+286
+00:15:31,091 --> 00:15:35,106
+that dot these creatures and how we
+doing how it affects you
+
+287
+00:15:36,006 --> 00:15:40,017
+so personal let's jump right and and go
+to a demo
+
+288
+00:15:40,017 --> 00:15:44,060
+this demo is called visual fact
+playground and it's not an actual
+
+289
+00:15:44,006 --> 00:15:48,020
+playground ap like you might think back
+
+290
+00:15:48,074 --> 00:15:51,149
+what has here's shows a lot of features
+that I'm going to discuss today
+
+291
+00:15:52,049 --> 00:15:56,055
+there are a lot of buttons this app and
+the show he's thing that I talk about
+
+292
+00:15:56,055 --> 00:15:59,123
+search in the developer site free
+assembly for visual fact playground
+
+293
+00:16:00,023 --> 00:16:03,069
+you can find this taken apart and play
+around and figure out how to create ap
+
+294
+00:16:03,069 --> 00:16:04,097
+psych this
+
+295
+00:16:04,097 --> 00:16:07,123
+something that as if I click when these
+images here iShares Dow
+
+296
+00:16:08,023 --> 00:16:13,049
+how to create basically your own type a
+sidebar I do some Byron C
+
+297
+00:16:13,049 --> 00:16:16,135
+there's a couple examples and how do
+some type of blurring with an app Skype
+
+298
+00:16:17,035 --> 00:16:18,063
+application
+
+299
+00:16:18,063 --> 00:16:23,097
+how to get them we're here and also a
+blender the tile bar to
+
+300
+00:16:23,097 --> 00:16:26,146
+another one showing off our dark look to
+and how do you do something similar to
+
+301
+00:16:27,046 --> 00:16:29,081
+what they stand as
+
+302
+00:16:29,081 --> 00:16:32,082
+so these new visual effects I'm and talk
+about new class called
+
+303
+00:16:32,082 --> 00:16:35,149
+individual back to you and here's a
+screenshot of it and we see that
+
+304
+00:16:36,049 --> 00:16:39,130
+its blending with step behind the window
+
+305
+00:16:40,003 --> 00:16:43,018
+there's no screenshot that demo
+application and its planning with stuff
+
+306
+00:16:43,045 --> 00:16:45,091
+inside the window
+
+307
+00:16:45,091 --> 00:16:48,175
+and now this is an important difference
+to note because we have two concepts
+
+308
+00:16:49,075 --> 00:16:49,130
+here
+
+309
+00:16:50,003 --> 00:16:53,095
+we have behind 10 blending where with
+whatever's behind the fuel behind the
+
+310
+00:16:54,022 --> 00:16:55,047
+window is blended with
+
+311
+00:16:55,047 --> 00:16:59,144
+what you see we have in window blending
+so they're two different modes for this
+
+312
+00:17:00,044 --> 00:17:03,088
+and so that's reflected in the API
+France visual affect you
+
+313
+00:17:03,088 --> 00:17:06,397
+there's an genome individual effect
+blending mode
+
+314
+00:17:07,189 --> 00:17:10,264
+and has two options planning mode behind
+window and
+
+315
+00:17:10,939 --> 00:17:15,630
+a blending mode within window and their
+property said
+
+316
+00:17:15,063 --> 00:17:18,102
+so you can just set in code or
+
+317
+00:17:18,669 --> 00:17:21,723
+you can open up here at application
+inside
+
+318
+00:17:22,209 --> 00:17:26,220
+your face builder and you can go ahead
+and set the blending mode directly here
+
+319
+00:17:26,022 --> 00:17:31,058
+truly easy to do get that behind window
+where and when to when
+
+320
+00:17:31,058 --> 00:17:34,119
+so how does this work how does the
+behind window blending
+
+321
+00:17:35,019 --> 00:17:39,083
+actually behave and what does it do well
+our implementation is ing
+
+322
+00:17:39,083 --> 00:17:42,122
+for graphics in the Windows Server this
+means that as your window is moving
+
+323
+00:17:43,022 --> 00:17:43,105
+around
+
+324
+00:17:44,005 --> 00:17:47,005
+now the content years in your Windows
+actually read wrong
+
+325
+00:17:47,005 --> 00:17:50,061
+its manage for you automatically bar
+Windows Server
+
+326
+00:17:50,061 --> 00:17:54,127
+what is visual effect you guys the kind
+to find regions with the Windows Server
+
+327
+00:17:55,027 --> 00:17:58,093
+the tally hey this is the area that I
+want to be vibrant or two people heard
+
+328
+00:17:58,093 --> 00:18:01,097
+and do it automatically division affect
+you
+
+329
+00:18:02,033 --> 00:18:05,069
+also implement fire in C numba discuss
+about that
+
+330
+00:18:05,069 --> 00:18:08,154
+in detail in a little bit
+
+331
+00:18:09,054 --> 00:18:12,148
+cell one thing to note about this and
+the visual thank you with behind when
+
+332
+00:18:13,048 --> 00:18:13,107
+opening
+
+333
+00:18:14,007 --> 00:18:18,009
+whatever is behind your view entire
+application is going to be
+
+334
+00:18:18,009 --> 00:18:22,014
+poked out were knocked out so glad to
+have you inside my window
+
+335
+00:18:22,014 --> 00:18:25,095
+thanks on top of an image you a picture
+this elephant its gonna poke out
+
+336
+00:18:25,095 --> 00:18:26,117
+whatever is behind it
+
+337
+00:18:27,017 --> 00:18:31,046
+and so it kinda just just just knocks it
+out said something to be aware of
+
+338
+00:18:31,046 --> 00:18:34,059
+in your application
+
+339
+00:18:34,059 --> 00:18:37,115
+saw how does within window blending work
+
+340
+00:18:38,015 --> 00:18:42,021
+within 10 blending utilizes for
+animation to achieve this effect
+
+341
+00:18:42,075 --> 00:18:45,173
+as visual effects you is a special
+where's special filters to do this
+
+342
+00:18:46,073 --> 00:18:50,073
+work behind the scenes quite missions
+also used implement the vibrancy which
+
+343
+00:18:50,073 --> 00:18:53,079
+I'll talk about more in a little bit
+
+344
+00:18:54,033 --> 00:18:59,040
+now if it is in Coronation and you set
+the property to be with and window
+
+345
+00:18:59,004 --> 00:19:02,053
+it requires their backing and so this is
+a screenshot
+
+346
+00:19:02,089 --> 00:19:05,154
+what happens they're faced over if you
+don't have it where backed in a show it
+
+347
+00:19:06,054 --> 00:19:06,082
+as
+
+348
+00:19:06,082 --> 00:19:09,158
+red 10k hey you're doing something wrong
+major prime make it where backed
+
+349
+00:19:10,058 --> 00:19:14,061
+but you probably don't wanna make just
+your visual fact you
+
+350
+00:19:14,088 --> 00:19:18,097
+the thing that's where backed you wanna
+make the thing that contains it
+
+351
+00:19:18,097 --> 00:19:21,135
+be there back so in this case the
+content do you ever wonder would be the
+
+352
+00:19:22,035 --> 00:19:23,089
+thing that you make their back
+
+353
+00:19:23,089 --> 00:19:26,508
+because it needs to be when those things
+together and they both the coronation
+
+354
+00:19:27,309 --> 00:19:27,740
+where's
+
+355
+00:19:27,074 --> 00:19:31,096
+in order to achieve that
+
+356
+00:19:31,096 --> 00:19:34,141
+so how can he said it well you can also
+set
+
+357
+00:19:35,041 --> 00:19:39,062
+I dis easily inside a tax code
+
+358
+00:19:39,062 --> 00:19:42,114
+if you don't to encode for the once
+there a kiss check that box
+
+359
+00:19:43,014 --> 00:19:48,060
+enough merit that's been around for a
+while cremation there
+
+360
+00:19:48,006 --> 00:19:51,037
+now let me talk about some state the
+visual effect you has
+
+361
+00:19:51,091 --> 00:19:55,160
+inactive state which we see here
+blending with the wind up
+
+362
+00:19:56,006 --> 00:19:59,055
+and it also has in on key or inactive
+stay
+
+363
+00:20:00,009 --> 00:20:04,078
+so I'm actually removes the blurring and
+just goes to being a solid color
+
+364
+00:20:04,078 --> 00:20:08,124
+fell this is also represent an API
+
+365
+00:20:09,024 --> 00:20:13,025
+so the visual effect few has property
+called state
+
+366
+00:20:13,025 --> 00:20:16,834
+and it's in the new value and its visual
+back state
+
+367
+00:20:17,059 --> 00:20:20,920
+and has as visual effects state follows
+window active state
+
+368
+00:20:20,092 --> 00:20:23,123
+which is probably what you want to do
+what this means is
+
+369
+00:20:24,023 --> 00:20:28,028
+when your Windows key and Windows Active
+that visual effect you will be key an
+
+370
+00:20:28,028 --> 00:20:28,090
+active
+
+371
+00:20:28,009 --> 00:20:31,016
+but you may want to control more
+explicitly seeking expert with that
+
+372
+00:20:32,006 --> 00:20:33,017
+active state
+
+373
+00:20:33,071 --> 00:20:36,079
+works closely set to inactive state
+
+374
+00:20:36,079 --> 00:20:39,161
+and actually have for powerful control
+over this
+
+375
+00:20:40,061 --> 00:20:43,128
+now the things about that as I said
+before you want probably always use the
+
+376
+00:20:44,028 --> 00:20:44,086
+followers
+
+377
+00:20:44,086 --> 00:20:48,114
+went to active state value because when
+it becomes key and ninety
+
+378
+00:20:49,014 --> 00:20:52,060
+are automatically do the work for you
+and you have to do anything
+
+379
+00:20:52,006 --> 00:20:55,022
+want to use the active state explicitly
+very sparingly
+
+380
+00:20:55,076 --> 00:20:58,090
+it can affect performance and battery
+life because if you have a lot of visual
+
+381
+00:20:58,009 --> 00:21:01,023
+factories around there always active
+
+382
+00:21:02,004 --> 00:21:04,086
+but you pry want to use in places where
+you know that you is always going to be
+
+383
+00:21:04,086 --> 00:21:04,179
+active
+
+384
+00:21:05,079 --> 00:21:08,085
+and maybe it's a panel that can become a
+key for whatever reason
+
+385
+00:21:09,039 --> 00:21:12,066
+internally we use in things like pop
+overs and sheets which always want how
+
+386
+00:21:12,066 --> 00:21:15,162
+that particular look
+
+387
+00:21:16,062 --> 00:21:20,115
+so that was discussing some basic
+properties official affect you
+
+388
+00:21:21,015 --> 00:21:24,082
+now let me discuss how to set the
+material and how it works with in
+
+389
+00:21:24,082 --> 00:21:24,175
+disappearance
+
+390
+00:21:25,075 --> 00:21:28,089
+and issue of fact you itself
+
+391
+00:21:28,089 --> 00:21:31,092
+as Chris mentioned here are two
+screenshots showing
+
+392
+00:21:32,019 --> 00:21:36,025
+two different parents is we happy in its
+appearance name by Brightlight
+
+393
+00:21:36,025 --> 00:21:40,072
+get it to get this light appearance I'm
+like controls
+
+394
+00:21:40,072 --> 00:21:43,100
+and we have disappearance same byron
+dark to get the dark look
+
+395
+00:21:44,000 --> 00:21:48,014
+and dark appearance knows the controls
+automatically look different
+
+396
+00:21:48,014 --> 00:21:53,053
+and automatically are changing the
+colors as needed
+
+397
+00:21:53,053 --> 00:21:56,145
+easy to do this you can just use visual
+fact few doubt appearance
+
+398
+00:21:57,045 --> 00:22:00,046
+and set the appearance to either firing
+like her firing dark
+
+399
+00:22:00,046 --> 00:22:03,085
+can do it in code very simple or
+
+400
+00:22:03,085 --> 00:22:07,162
+as usual you can go into Interface
+Builder selective visual affect you
+
+401
+00:22:08,062 --> 00:22:11,127
+and when you select the visual effect
+you they parents
+
+402
+00:22:12,027 --> 00:22:15,119
+property when I have vibrant light and
+Barb dark is options
+
+403
+00:22:16,019 --> 00:22:19,026
+other views won't have this option so
+the
+
+404
+00:22:19,089 --> 00:22:23,134
+vibrant appearances work wire in this
+issue of fact you
+
+405
+00:22:24,034 --> 00:22:27,107
+I'm gonna say more about this and that
+why
+
+406
+00:22:28,007 --> 00:22:31,080
+that visual effect fuking be a direct
+ancestor
+
+407
+00:22:31,008 --> 00:22:34,012
+perhaps to be a direct ancestor have
+your child abuse
+
+408
+00:22:34,084 --> 00:22:37,095
+in order to get the vibrant a look and
+Barbuda fact
+
+409
+00:22:37,095 --> 00:22:40,183
+however whatever material shown by the
+visual effect on you
+
+410
+00:22:41,083 --> 00:22:44,151
+maybe different than what their parents
+Assange
+
+411
+00:22:45,051 --> 00:22:48,086
+and let me describe that a little bit
+differently
+
+412
+00:22:48,086 --> 00:22:53,087
+visual effect you has a property called
+material
+
+413
+00:22:53,087 --> 00:22:56,171
+in a special effect material has several
+Union values
+
+414
+00:22:57,071 --> 00:23:00,169
+the first one is what you will probably
+use the majority the time
+
+415
+00:23:01,069 --> 00:23:04,080
+in this visual effect material
+appearance-based
+
+416
+00:23:04,008 --> 00:23:07,095
+so let me show you how that one works
+
+417
+00:23:08,067 --> 00:23:11,091
+if you have a visual effect on you and
+it's set to
+
+418
+00:23:11,091 --> 00:23:16,091
+NS issue of fact mature appearance-based
+the actual material shown by the visual
+
+419
+00:23:16,091 --> 00:23:16,158
+fact you
+
+420
+00:23:17,058 --> 00:23:20,114
+is on a Mac be determined by their
+parents
+
+421
+00:23:21,014 --> 00:23:24,067
+said he set the vibrant light appearance
+the material light
+
+422
+00:23:24,067 --> 00:23:28,112
+will appear for that matter of fact you
+set the vibrant dark parents
+
+423
+00:23:29,012 --> 00:23:32,079
+immaterial dark walk here for the visual
+fact you
+
+424
+00:23:32,079 --> 00:23:35,123
+now you can explicitly set the material
+and not set their parents which is why
+
+425
+00:23:36,023 --> 00:23:37,092
+didn't you know option
+
+426
+00:23:37,092 --> 00:23:41,095
+so the last option here is in this
+visual fact material
+
+427
+00:23:41,095 --> 00:23:44,104
+title bar that's what this material is
+for
+
+428
+00:23:45,004 --> 00:23:48,065
+is for you to create your own had a bar
+like views
+
+429
+00:23:48,065 --> 00:23:51,099
+so you may have a need in your
+application to replicate that had a bar
+
+430
+00:23:51,099 --> 00:23:51,170
+that we do
+
+431
+00:23:52,007 --> 00:23:56,736
+inside pocket and we just use this this
+issue of equity up at a bar internally
+
+432
+00:23:57,429 --> 00:24:01,442
+and so you can also use it to create
+your own had a bars if you need to
+
+433
+00:24:01,559 --> 00:24:05,850
+are so that was discussing visual effect
+you appearance
+
+434
+00:24:05,085 --> 00:24:10,107
+and some other materials so now my talk
+about vibrancy and cut some controls
+
+435
+00:24:11,007 --> 00:24:14,009
+first serve all what is a vibrancy
+
+436
+00:24:14,027 --> 00:24:17,050
+and byron she is just basically a
+special blend were taking
+
+437
+00:24:17,005 --> 00:24:20,082
+two different pixels combine them
+together getting a different result that
+
+438
+00:24:21,027 --> 00:24:21,098
+works
+
+439
+00:24:21,098 --> 00:24:24,173
+more vibrant when the combined together
+its bankruptcy just
+
+440
+00:24:25,073 --> 00:24:28,146
+abstract term that week winding up kid
+and that we don't have to worry about
+
+441
+00:24:29,046 --> 00:24:30,089
+the actual implementation
+
+442
+00:24:30,089 --> 00:24:34,089
+the actual implementation and blending
+we do could be when your burn
+
+443
+00:24:34,089 --> 00:24:39,111
+a collar dodge by Steve Purcell it
+doesn't matter reps tracking it for you
+
+444
+00:24:40,011 --> 00:24:44,036
+but if you don't know what those terms
+mean let me give an example
+
+445
+00:24:44,036 --> 00:24:47,065
+so cures just a simple image have some
+
+446
+00:24:47,065 --> 00:24:50,161
+flowers and if I drop it low square on
+to it
+
+447
+00:24:51,061 --> 00:24:54,120
+it's just the skies are grey square with
+that doctor border
+
+448
+00:24:55,002 --> 00:24:59,008
+and if I set to be color burned are you
+can see it looks more vibrant
+
+449
+00:24:59,026 --> 00:25:02,057
+so effectively this is what we're doing
+to our controls and this is just a very
+
+450
+00:25:02,057 --> 00:25:03,286
+simple example
+
+451
+00:25:03,799 --> 00:25:07,874
+what color burn and what we mean by
+vibrancy
+
+452
+00:25:08,549 --> 00:25:11,650
+so how does this work with visual fact
+few
+
+453
+00:25:11,065 --> 00:25:14,108
+and how does the attacks become vibrate
+
+454
+00:25:15,008 --> 00:25:18,054
+let's take a look at at what you have to
+do
+
+455
+00:25:18,054 --> 00:25:21,098
+for small in order to get any sort by
+twenty you have to use the vibe in
+
+456
+00:25:21,098 --> 00:25:22,107
+appearance
+
+457
+00:25:23,007 --> 00:25:27,011
+they have to set the fire right reviving
+dark parents an environment she is
+
+458
+00:25:27,011 --> 00:25:30,083
+on Mactan abstractly applied
+
+459
+00:25:30,083 --> 00:25:33,182
+so for this low piece a text here
+
+460
+00:25:34,082 --> 00:25:37,166
+in order to get this text to look
+vibrant and it might be difficult to see
+
+461
+00:25:38,066 --> 00:25:41,149
+but it is actually blending with the
+conference behind the window
+
+462
+00:25:42,049 --> 00:25:47,054
+you just use and a scholar label color
+and it looks more like a bird
+
+463
+00:25:47,054 --> 00:25:50,120
+you may also have a need for a secondary
+vibrant look
+
+464
+00:25:51,002 --> 00:25:55,016
+and this one just slightly lighter and
+looks a little bit different
+
+465
+00:25:55,034 --> 00:25:58,373
+and again we have a new collar and ask
+our secondary label color
+
+466
+00:25:58,679 --> 00:26:04,150
+to achieve this vibrancy in in this text
+field
+
+467
+00:26:04,015 --> 00:26:07,050
+now let me remind you about some
+template images
+
+468
+00:26:07,005 --> 00:26:10,054
+you may or may not be aware that in this
+image has had at
+
+469
+00:26:10,549 --> 00:26:14,570
+a template property sense 10:05 and it's
+really simple
+
+470
+00:26:14,057 --> 00:26:17,079
+you can't create your image as a black
+and white image
+
+471
+00:26:17,079 --> 00:26:21,144
+and due Sept yes we have a specific
+naming convention to make a template
+
+472
+00:26:22,044 --> 00:26:25,049
+I get your company image where we can
+apply a tax on top and inside
+
+473
+00:26:25,094 --> 00:26:29,136
+apk it so if you're using a template
+image
+
+474
+00:26:30,036 --> 00:26:33,070
+in this image you automatically apply
+vibrancy
+
+475
+00:26:33,007 --> 00:26:36,101
+so here's an example have a regular
+image
+
+476
+00:26:37,064 --> 00:26:41,473
+not a template image and I'm athlete
+does not have RNC
+
+477
+00:26:42,049 --> 00:26:46,070
+however at this image below I'm at the
+has I fancy
+
+478
+00:26:46,007 --> 00:26:49,090
+because it's using a temp damage so if
+you in your application
+
+479
+00:26:49,009 --> 00:26:52,102
+use temple images can harm at to get
+vibrancy
+
+480
+00:26:53,083 --> 00:26:56,086
+so that big the question was how does
+something like image you
+
+481
+00:26:57,013 --> 00:27:00,078
+say hey I want to be vibrant or not the
+vibrant and how is it dynamically
+
+482
+00:27:00,078 --> 00:27:02,227
+chooses answer
+
+483
+00:27:02,929 --> 00:27:06,950
+and the answer is we have new a API in
+and ask you to do this
+
+484
+00:27:06,095 --> 00:27:09,166
+and this is basically the implementation
+inside this image you
+
+485
+00:27:10,066 --> 00:27:15,071
+it says allows vibrancy is the new API
+anti-cancer to allow tyrants he is
+
+486
+00:27:16,016 --> 00:27:19,069
+South the image that is template
+purchasing hey if I'm a template
+
+487
+00:27:19,069 --> 00:27:22,073
+I can be vibrant I'm not template i
+campi fiber
+
+488
+00:27:22,073 --> 00:27:26,110
+very simple so you may be wondering then
+
+489
+00:27:27,001 --> 00:27:31,010
+well how do i signal to the system that
+that's change with my answers
+
+490
+00:27:32,000 --> 00:27:35,072
+changing based on something that I said
+I change the image or what not
+
+491
+00:27:35,072 --> 00:27:39,138
+and just like normal ap get things if
+you change the state a vibrancy or need
+
+492
+00:27:40,038 --> 00:27:40,137
+the question to be
+
+493
+00:27:41,037 --> 00:27:44,069
+and asked you again just cost that needs
+display
+
+494
+00:27:44,069 --> 00:27:51,069
+and on that the call back and update the
+vibrancy effect for your view
+
+495
+00:27:52,015 --> 00:27:55,028
+now in this text field also is vibrant
+
+496
+00:27:55,028 --> 00:27:58,110
+his text field he's a very similar to
+end this image you
+
+497
+00:27:59,001 --> 00:28:03,002
+and it answers yes to allow siren T if
+you're using their particular vibrant
+
+498
+00:28:03,011 --> 00:28:03,107
+colors
+
+499
+00:28:04,007 --> 00:28:07,033
+so if you're inside the fire in
+appearance and using label color
+
+500
+00:28:07,033 --> 00:28:11,262
+secondary label color or any other
+colors which might be custom for that
+
+501
+00:28:11,559 --> 00:28:12,530
+appearance
+
+502
+00:28:12,053 --> 00:28:16,115
+he will probably appear vibrant feed
+don't want to text appear by bring
+
+503
+00:28:17,015 --> 00:28:20,090
+you need to explicitly opt out by
+setting the control
+
+504
+00:28:20,009 --> 00:28:23,288
+pack scholar or some other color that's
+not there
+
+505
+00:28:24,179 --> 00:28:28,278
+in its appearance also has a method
+called allows haven't seen on it
+
+506
+00:28:29,169 --> 00:28:32,280
+this is using API and no effort
+officially
+
+507
+00:28:32,028 --> 00:28:35,927
+particular appearance needs by means
+you're not we discussed more about this
+
+508
+00:28:36,179 --> 00:28:37,960
+in detail later
+
+509
+00:28:37,096 --> 00:28:41,114
+but what this kansas is it gives us a
+recipe
+
+510
+00:28:42,014 --> 00:28:46,022
+to let new know when a particular view
+is going to be a vibrant
+
+511
+00:28:46,022 --> 00:28:50,077
+any view will be vibrant if all these
+conditions up here true
+
+512
+00:28:50,077 --> 00:28:54,124
+the appearance has to say yes from
+allows vibrancy which means currently
+
+513
+00:28:55,024 --> 00:28:58,593
+that it's the virus like retiring dark
+appearance
+
+514
+00:28:58,809 --> 00:29:01,840
+your view subclass has to override
+allows vibrancy
+
+515
+00:29:01,084 --> 00:29:04,137
+and say yes have used expressing that it
+can be vibrant
+
+516
+00:29:05,037 --> 00:29:09,336
+and that viewer has to be inside the
+visual fact you
+
+517
+00:29:09,669 --> 00:29:13,707
+the visual effect US order that the glue
+that binds it all together
+
+518
+00:29:14,049 --> 00:29:18,160
+if it's not contained inside official
+affect you arms he will not work
+
+519
+00:29:18,016 --> 00:29:22,110
+when all these conditions are met you
+control will become vibrant
+
+520
+00:29:23,001 --> 00:29:26,004
+so let's talk about custom controllers
+and vibrancy what you can do in your
+
+521
+00:29:26,013 --> 00:29:26,096
+control
+
+522
+00:29:26,096 --> 00:29:29,305
+to make them buy right so here we have
+
+523
+00:29:30,169 --> 00:29:33,460
+a custom view it's just drawing a
+
+524
+00:29:33,046 --> 00:29:36,075
+gray awful and then another great on one
+side a bit
+
+525
+00:29:36,075 --> 00:29:40,088
+and this was appearing vibrant you can
+see how it's deeper orange collar
+
+526
+00:29:40,088 --> 00:29:45,887
+graze being blended with what's behind
+the window produces vibrant a fact
+
+527
+00:29:46,679 --> 00:29:50,280
+and went not individual back to you that
+same exact heel
+
+528
+00:29:50,028 --> 00:29:53,084
+is drawing on vibrantly is trying its
+normal great colors
+
+529
+00:29:53,084 --> 00:29:56,141
+with no work from you developer in
+addition
+
+530
+00:29:57,041 --> 00:30:01,089
+and everything to play on this to you
+this bottom view here
+
+531
+00:30:01,089 --> 00:30:04,186
+it is inside the visual affect you yet
+it's not appearing by Bert
+
+532
+00:30:05,086 --> 00:30:09,089
+I discuss how to achieve that affect you
+in a short bit
+
+533
+00:30:09,089 --> 00:30:12,171
+how do you actually go ahead and
+implement this well for some all
+
+534
+00:30:13,071 --> 00:30:16,150
+in your cutting the subclass as I
+mentioned before you overwrite allows
+
+535
+00:30:17,005 --> 00:30:17,684
+vibrancy
+
+536
+00:30:18,179 --> 00:30:21,700
+and your pie return yes that way when
+you're in a buyer in appearance
+
+537
+00:30:21,007 --> 00:30:25,056
+you on that they will appear vibrant and
+then inside you draw a racket pages do
+
+538
+00:30:26,019 --> 00:30:27,098
+whatever you're doing today
+
+539
+00:30:27,098 --> 00:30:30,172
+you sector particular colors fill up our
+
+540
+00:30:31,072 --> 00:30:34,161
+or do whatever type ad wrong you want an
+alarm ACK to become vibrant
+
+541
+00:30:35,061 --> 00:30:38,134
+sure I'm just wrong with some regular
+callers have
+
+542
+00:30:39,034 --> 00:30:42,034
+variation in black with a different how
+to value
+
+543
+00:30:42,034 --> 00:30:46,112
+and this few on Mac it becomes byron
+
+544
+00:30:47,012 --> 00:30:52,020
+now because I Q says yes to allows
+vibrancy anything drawn in fact that he
+
+545
+00:30:52,002 --> 00:30:52,035
+will
+
+546
+00:30:52,053 --> 00:30:55,128
+automatically become by rent even if you
+do images
+
+547
+00:30:56,028 --> 00:30:59,030
+any taxed any caller everything inside
+it will be vibrant
+
+548
+00:30:59,048 --> 00:31:02,090
+you don't have to use label color or
+secondary label color
+
+549
+00:31:02,009 --> 00:31:06,043
+to get vibrancy and that you
+
+550
+00:31:07,024 --> 00:31:11,049
+however what you can do as you can
+utilize named system collars
+
+551
+00:31:11,049 --> 00:31:14,108
+to have your application haircuts and
+you be more dynamic
+
+552
+00:31:15,008 --> 00:31:19,099
+depending on what kind appearances and
+its ally to parents are darker periods
+
+553
+00:31:19,099 --> 00:31:22,174
+suffering through something like and its
+color control text color now is
+
+554
+00:31:23,074 --> 00:31:26,143
+dark when it's on a light appearance and
+light
+
+555
+00:31:26,809 --> 00:31:29,890
+and inside dark appearance
+
+556
+00:31:29,089 --> 00:31:32,128
+something to be aware if you're taking
+these colors and storing them in your
+
+557
+00:31:32,929 --> 00:31:34,953
+apt store the name collar
+
+558
+00:31:35,169 --> 00:31:39,490
+don't convert that car to a CD color or
+don't compare it to a color space
+
+559
+00:31:39,049 --> 00:31:42,058
+don't extract RGB elements and save them
+off because if you do that
+
+560
+00:31:43,039 --> 00:31:46,127
+you lose that dynamic nature of the
+color instead to save the color
+
+561
+00:31:47,027 --> 00:31:50,032
+itself like to ask our control X color
+and utilize it
+
+562
+00:31:50,032 --> 00:31:55,251
+again and again now again if you change
+your parents on a particular view
+
+563
+00:31:55,539 --> 00:31:59,460
+I automatically knowledge the sub use so
+you're calling on TAC color
+
+564
+00:31:59,046 --> 00:32:05,145
+not to worry about balloting things is
+that automatically
+
+565
+00:32:05,559 --> 00:32:08,840
+so let's take a look at some code that
+uses a system color because you may not
+
+566
+00:32:08,084 --> 00:32:09,108
+be familiar with that
+
+567
+00:32:10,008 --> 00:32:13,036
+we have colorless and sinking easily
+grab
+
+568
+00:32:13,036 --> 00:32:16,059
+a colorless name system and what the
+sample code
+
+569
+00:32:16,059 --> 00:32:21,148
+is doing and again this is providing
+that demo application mentions the start
+
+570
+00:32:21,679 --> 00:32:25,220
+its gonna go and septum attributes can
+you read through all the colors in the
+
+571
+00:32:25,022 --> 00:32:26,024
+car list
+
+572
+00:32:26,024 --> 00:32:30,033
+grabbed a clear color out Bayside ski
+accuse the name in the collar
+
+573
+00:32:30,033 --> 00:32:34,050
+US at a bit and just do a wreck still to
+fill that color
+
+574
+00:32:34,005 --> 00:32:37,070
+one after another so if we look at a few
+
+575
+00:32:38,015 --> 00:32:41,076
+where all its doing is drying the
+scholars and this looks very
+
+576
+00:32:41,076 --> 00:32:44,122
+very I busy so let me explain it
+
+577
+00:32:45,022 --> 00:32:49,022
+this is what we would get this is what
+that day my application does so in the
+
+578
+00:32:49,022 --> 00:32:50,091
+first column
+
+579
+00:32:50,289 --> 00:32:53,294
+this is just wrong the name a particular
+color
+
+580
+00:32:53,789 --> 00:32:57,710
+next column is drawing day same color
+same to you
+
+581
+00:32:57,071 --> 00:33:02,148
+in the Aqua appearance same color same
+unify reply to parents
+
+582
+00:33:03,048 --> 00:33:06,094
+same color and same to you in the
+vibrant darker parents
+
+583
+00:33:06,094 --> 00:33:09,176
+and if resume and say can see one
+particular row this is the control text
+
+584
+00:33:10,076 --> 00:33:10,147
+color
+
+585
+00:33:11,047 --> 00:33:14,376
+as you can see there aqua every lighten
+dark dark
+
+586
+00:33:14,799 --> 00:33:18,980
+the collars are all slightly different
+depending on what we decide apt-get
+
+587
+00:33:18,098 --> 00:33:22,111
+to make it look for particular parents
+way here they are different
+
+588
+00:33:23,011 --> 00:33:26,057
+thing on your parents so if we take a
+look at that
+
+589
+00:33:26,057 --> 00:33:31,101
+custom view again that was drawing the
+circles if you use his car label color
+
+590
+00:33:32,001 --> 00:33:35,095
+is color secondary level color that you
+would look good
+
+591
+00:33:35,095 --> 00:33:38,157
+if it's an ally to parents or darker
+parents without you having to do
+
+592
+00:33:39,057 --> 00:33:40,076
+anything
+
+593
+00:33:40,076 --> 00:33:43,745
+now one thing snow in his view at that
+bottom there is
+
+594
+00:33:44,429 --> 00:33:48,160
+one is custom views that's not trying
+privately 208
+
+595
+00:33:48,016 --> 00:33:51,019
+opt-out a vibrancy and what did it do
+
+596
+00:33:51,019 --> 00:33:55,066
+it's very simple all that view is doing
+and this is just an inside Interface
+
+597
+00:33:55,066 --> 00:33:56,445
+Builder you can do in code
+
+598
+00:33:57,039 --> 00:34:01,100
+as I haven't selected and I glance at
+their parents back to Aqua
+
+599
+00:34:01,001 --> 00:34:05,004
+ok and so it no longer meets the
+criteria being a pirate control
+
+600
+00:34:05,013 --> 00:34:10,012
+and it won't drive I really
+
+601
+00:34:10,129 --> 00:34:13,450
+so the things to note: is that you can
+opt out a particular controls from
+
+602
+00:34:13,045 --> 00:34:13,774
+vibrancy
+
+603
+00:34:14,179 --> 00:34:17,195
+one at a time or you can do I believe
+you are key
+
+604
+00:34:17,339 --> 00:34:20,363
+cicada harkin controls opt in or out by
+setting
+
+605
+00:34:20,579 --> 00:34:23,656
+I can't air to be want to take their
+parents or not
+
+606
+00:34:24,349 --> 00:34:27,970
+not in and out dipping what you need
+
+607
+00:34:27,097 --> 00:34:30,306
+one thing to know is your view
+
+608
+00:34:31,179 --> 00:34:34,810
+that's apparent can't have already said
+yes to allow tyrants a
+
+609
+00:34:34,081 --> 00:34:40,190
+because there are caveats with that
+which I will discuss in a little bit
+
+610
+00:34:40,919 --> 00:34:44,210
+let's discuss how you would actually
+achieve something like this
+
+611
+00:34:44,021 --> 00:34:48,960
+where the same to you words individual
+affect your draws one way
+
+612
+00:34:49,149 --> 00:34:53,149
+and went in the regular aqua appearances
+try another way in this case
+
+613
+00:34:53,149 --> 00:34:57,320
+went in the Aqua parents and drying red
+and purple Justin be dramatically
+
+614
+00:34:57,032 --> 00:34:58,068
+different
+
+615
+00:34:58,068 --> 00:35:02,074
+so why would you wanna do this well in
+application my want provide
+
+616
+00:35:02,074 --> 00:35:07,100
+different artwork for when you're inside
+a vibrant vibe in appearance
+
+617
+00:35:08,000 --> 00:35:11,049
+than when you're not have I been
+appearance and when you're inside her
+
+618
+00:35:11,049 --> 00:35:11,100
+regular
+
+619
+00:35:12,000 --> 00:35:15,093
+aqua appearance or you can use different
+collars
+
+620
+00:35:15,093 --> 00:35:18,159
+or something or something along that
+line in this particular case
+
+621
+00:35:19,059 --> 00:35:23,095
+I'm just using different colors it's
+really easy to use
+
+622
+00:35:23,095 --> 00:35:27,114
+as I mentioned before in disappearance
+has a allows vibrancy
+
+623
+00:35:28,014 --> 00:35:31,023
+property and its yes when it's in the
+lab in appearance
+
+624
+00:35:32,004 --> 00:35:35,081
+and Serco kinky of that in this view has
+a method
+
+625
+00:35:35,081 --> 00:35:38,085
+caught active appearance where it find
+out what
+
+626
+00:35:39,021 --> 00:35:42,077
+the parents set on it or somewhere up
+the chain
+
+627
+00:35:42,077 --> 00:35:46,089
+and you can query that and see if it
+allows haven't see and if it does
+
+628
+00:35:46,089 --> 00:35:49,091
+it's that one particular color if it
+doesn't you can send our caller
+
+629
+00:35:50,009 --> 00:35:53,056
+so here's just saying the red car when
+it's in not an apartment
+
+630
+00:35:53,056 --> 00:35:59,071
+parents so let me discuss some have
+yachts with vibrancy and lending
+
+631
+00:35:59,071 --> 00:36:02,970
+this is the within 10 blending mode and
+some caveats with it
+
+632
+00:36:03,609 --> 00:36:07,030
+so let's say that we have this superb
+you here
+
+633
+00:36:07,003 --> 00:36:11,028
+the one with the grace their darker
+square around it
+
+634
+00:36:11,028 --> 00:36:16,029
+and has some seventies not that super
+view says yes to allows vibrancy
+
+635
+00:36:16,038 --> 00:36:19,527
+what's going to happen is all this abuse
+are going up
+
+636
+00:36:19,869 --> 00:36:23,410
+always be vibrant and so it's a little
+difficult to see here
+
+637
+00:36:23,041 --> 00:36:26,067
+but now that sub you that image you
+
+638
+00:36:26,067 --> 00:36:29,154
+is doing a different blending it looks a
+little bit murky muddy
+
+639
+00:36:30,054 --> 00:36:35,142
+because it's doing a fire in planning
+and thats not desired
+
+640
+00:36:36,042 --> 00:36:40,118
+so thing to be aware of here is if your
+custom view is returning yes from allows
+
+641
+00:36:41,018 --> 00:36:42,030
+carbon C
+
+642
+00:36:42,003 --> 00:36:45,552
+all your stuff he is going to be a
+vibrant so if you're designing
+
+643
+00:36:45,849 --> 00:36:49,849
+applications you need to keep this in
+mind and design are some used to be a
+
+644
+00:36:49,849 --> 00:36:54,800
+my written and or or to be aware that
+they're going to be vibrant
+
+645
+00:36:54,008 --> 00:36:58,013
+were designed it so much that your
+parent view is not saying yes to ours
+
+646
+00:36:59,003 --> 00:37:00,007
+having tea
+
+647
+00:37:00,034 --> 00:37:05,098
+overlapping with the siblings our
+children
+
+648
+00:37:05,098 --> 00:37:08,099
+there also some other caveats with
+behind 10 blending
+
+649
+00:37:08,099 --> 00:37:11,128
+has that same once vibrant always
+battling a fact
+
+650
+00:37:12,028 --> 00:37:16,124
+but there's an additional problem here
+than going to highlight
+
+651
+00:37:17,024 --> 00:37:20,043
+and wet is happening here is have this
+
+652
+00:37:20,043 --> 00:37:24,075
+little box which is saying no I don't
+want vibrancy
+
+653
+00:37:24,075 --> 00:37:27,149
+however there's a text field on side of
+it which is using label color
+
+654
+00:37:28,049 --> 00:37:32,141
+which as you can know from before saying
+yes to allowed piracy
+
+655
+00:37:33,041 --> 00:37:37,134
+say tax 13 vibrant but the thing drum
+behind wants to not be vibrant
+
+656
+00:37:38,034 --> 00:37:42,313
+are those areas are overlapping we just
+described this to the Windows Server
+
+657
+00:37:42,619 --> 00:37:45,710
+and so what's going to happen is
+anything in that square the tax
+
+658
+00:37:45,071 --> 00:37:48,073
+is going to be vibrant including what
+was drawn behind it
+
+659
+00:37:48,073 --> 00:37:52,116
+that blue area and so it gets also
+vibrancy apply today
+
+660
+00:37:53,016 --> 00:37:56,041
+so this is another caveat what you
+should be aware and
+
+661
+00:37:56,041 --> 00:38:00,078
+and not do instead taiwan architects to
+not be vibrant
+
+662
+00:38:00,078 --> 00:38:03,120
+or how that will control to be firing so
+everything is Iran
+
+663
+00:38:04,002 --> 00:38:09,028
+another thing that we have is visual
+effect you can have a mask image
+
+664
+00:38:09,046 --> 00:38:10,088
+property
+
+665
+00:38:10,088 --> 00:38:13,317
+the mask image all you can ask it
+
+666
+00:38:14,109 --> 00:38:17,760
+right here to visual effect is one is
+the light appearance climate Iran are
+
+667
+00:38:17,076 --> 00:38:18,158
+used in a dark material
+
+668
+00:38:19,058 --> 00:38:23,119
+if i said im asking me johnnie to them
+chest area blending behind it
+
+669
+00:38:24,019 --> 00:38:27,102
+to behind the window is only inside that
+mask area
+
+670
+00:38:28,002 --> 00:38:32,081
+say just see that for the actual house
+icon where the gear icon
+
+671
+00:38:32,099 --> 00:38:35,560
+and what was drawn in the window you can
+now see the poppy flower
+
+672
+00:38:35,056 --> 00:38:39,099
+and again had em up occasion shows this
+
+673
+00:38:39,099 --> 00:38:43,104
+you can easily set a mask image or you
+can use and its image image resize
+
+674
+00:38:44,049 --> 00:38:47,063
+and do the block and already created on
+the fly
+
+675
+00:38:47,063 --> 00:38:50,082
+to hear sending it to be a as a power
+
+676
+00:38:50,082 --> 00:38:54,121
+just around wreck and when you do
+something like this
+
+677
+00:38:54,859 --> 00:38:58,260
+it's how you would achieve this shown in
+the demo app works around wreck
+
+678
+00:38:58,026 --> 00:39:03,071
+mind our window using them mask image
+property
+
+679
+00:39:03,071 --> 00:39:06,149
+some notes about mask image Chris
+highlighted some the new features
+
+680
+00:39:07,049 --> 00:39:11,083
+that we use with an S image so you know
+set as captains had taken properly
+
+681
+00:39:11,083 --> 00:39:12,166
+structured mask image
+
+682
+00:39:13,066 --> 00:39:16,079
+and everything worked fine
+
+683
+00:39:16,079 --> 00:39:19,167
+okay so that was discussing visual
+effect for you mask image
+
+684
+00:39:20,067 --> 00:39:23,140
+appearance and how to get piracy when we
+talk about
+
+685
+00:39:24,004 --> 00:39:27,043
+love our standard controls napkin how
+they do vibrancy
+
+686
+00:39:27,079 --> 00:39:30,103
+and things to be aware of for small
+
+687
+00:39:31,003 --> 00:39:36,332
+cable viewing outlined you and came here
+now I'm you configured as a source list
+
+688
+00:39:36,359 --> 00:39:40,490
+is automatically opting into a farm in
+appearance now
+
+689
+00:39:40,049 --> 00:39:43,117
+they see that something like the sidebar
+and male
+
+690
+00:39:44,017 --> 00:39:47,216
+calendars et cetera
+
+691
+00:39:47,369 --> 00:39:51,980
+so how does this work and has worked
+with your applications already
+
+692
+00:39:51,098 --> 00:39:54,174
+appears in the selection high lifestyle
+have NSW selection
+
+693
+00:39:55,074 --> 00:39:58,157
+Alex dow source list that tells the
+table well im view that
+
+694
+00:39:59,057 --> 00:40:02,131
+it wants to BS West list and essays you
+set that
+
+695
+00:40:03,031 --> 00:40:07,036
+either in code for an air base builder
+it is always had side effects
+
+696
+00:40:07,081 --> 00:40:11,100
+and these are documenting the release
+notes but I'm gonna reiterate come here
+
+697
+00:40:12,000 --> 00:40:15,026
+out llanview's indentation is on Mac be
+affected in control
+
+698
+00:40:15,026 --> 00:40:18,048
+to meet specific metrics new 10/10
+
+699
+00:40:18,048 --> 00:40:21,050
+we start tweaking the inner cellspacing
+just slightly to make it meet new
+
+700
+00:40:21,068 --> 00:40:22,076
+metrics
+
+701
+00:40:23,048 --> 00:40:26,081
+if you think it will sell view its
+position and imagery and texture I'm at
+
+702
+00:40:26,081 --> 00:40:28,370
+the control to where it needs to be
+
+703
+00:40:29,099 --> 00:40:32,310
+and we apply actually for the tax to
+make it appear cracked
+
+704
+00:40:32,031 --> 00:40:35,108
+so if your application is using a source
+list I like before and didn't make any
+
+705
+00:40:36,008 --> 00:40:39,091
+significant changes though I make to get
+the new tent and look for source this
+
+706
+00:40:39,091 --> 00:40:42,098
+in sidebar the latter but here is
+
+707
+00:40:42,098 --> 00:40:45,127
+background-color: for the actual source
+list for the table
+
+708
+00:40:46,027 --> 00:40:49,044
+is set to a magical internal color
+
+709
+00:40:49,044 --> 00:40:52,080
+it's important to be aware of this
+
+710
+00:40:52,008 --> 00:40:55,042
+because it has magical color what's
+happening
+
+711
+00:40:56,014 --> 00:41:00,058
+inside a bad kid when we see that you're
+using that special background-color:
+
+712
+00:41:00,058 --> 00:41:04,337
+we're gonna go ahead and put a visual
+effect you behind your table view
+
+713
+00:41:04,859 --> 00:41:09,490
+and do the blurring automatically for
+you see you don't have to do anything
+
+714
+00:41:09,049 --> 00:41:13,066
+you don't want that behavior after you
+set this lecture highlights out the
+
+715
+00:41:13,066 --> 00:41:14,015
+source list
+
+716
+00:41:14,609 --> 00:41:17,700
+you can change the background color
+anything else he could change it back to
+
+717
+00:41:17,007 --> 00:41:17,069
+clear
+
+718
+00:41:18,032 --> 00:41:21,053
+what to nothing and it will not do the
+operation
+
+719
+00:41:21,053 --> 00:41:24,612
+and this is the way it's always worked
+and so we respect or behavior
+
+720
+00:41:25,089 --> 00:41:28,090
+opting out about our phone caller white
+background blur
+
+721
+00:41:28,099 --> 00:41:31,410
+say could do it manually and some other
+super view if you need to for some
+
+722
+00:41:31,041 --> 00:41:33,990
+reason
+
+723
+00:41:34,359 --> 00:41:39,250
+now the No or thing to be aware of is
+now on Mac the intent and
+
+724
+00:41:39,025 --> 00:41:42,118
+the sidebar so restless for cable
+viewers on a Mac to get there appearance
+
+725
+00:41:43,018 --> 00:41:44,026
+set to the vibrant light appearance
+
+726
+00:41:44,098 --> 00:41:48,191
+for you and you don't have to do that
+
+727
+00:41:49,091 --> 00:41:53,104
+now the control inside pocket popover is
+now utilizing
+
+728
+00:41:54,004 --> 00:41:57,081
+the light at like Dark Materials as
+necessary
+
+729
+00:41:57,081 --> 00:42:01,083
+and it will have its appearance at the
+barber like or vibrant dark as necessary
+
+730
+00:42:02,001 --> 00:42:05,082
+and you have to do anything for that
+
+731
+00:42:05,082 --> 00:42:08,120
+soap that was an overview the standard
+app controls
+
+732
+00:42:09,002 --> 00:42:13,076
+and sad about get I'm gonna bring back
+to Chris to talk more about performance
+
+733
+00:42:13,094 --> 00:42:16,131
+and we can do to make ya pass with these
+new visual fax:
+
+734
+00:42:17,031 --> 00:42:20,033
+thank you for it alright that was fun
+
+735
+00:42:20,051 --> 00:42:23,139
+talk about performance which is also fun
+so we're
+
+736
+00:42:24,039 --> 00:42:28,518
+you notice that blur we had and this may
+not surprise you
+
+737
+00:42:28,869 --> 00:42:33,190
+a but the perfect isn't exactly free it
+does cost something
+
+738
+00:42:33,019 --> 00:42:36,096
+and that something is graphics
+performance and battery usage
+
+739
+00:42:36,096 --> 00:42:41,097
+and the sometimes though the cost is
+worth the results
+
+740
+00:42:42,006 --> 00:42:46,024
+so something you should be aware appears
+you're not trying to not use this affect
+
+741
+00:42:46,024 --> 00:42:47,065
+you wanna wrap up utiful
+
+742
+00:42:47,065 --> 00:42:49,143
+you just need to pay attention to
+striking a balance between that
+
+743
+00:42:50,043 --> 00:42:50,121
+appearance
+
+744
+00:42:51,021 --> 00:42:55,066
+and the resource utilization so here's a
+small example these two
+
+745
+00:42:55,066 --> 00:42:58,131
+images on the left and right appeared
+that was actually control with reimage
+
+746
+00:42:59,031 --> 00:42:59,810
+views
+
+747
+00:43:00,089 --> 00:43:03,089
+and these byron template houses and
+
+748
+00:43:03,089 --> 00:43:06,380
+requirements requires a visual effect
+you so there's actually
+
+749
+00:43:06,038 --> 00:43:10,039
+a few ways of accomplishing this but on
+the left
+
+750
+00:43:10,039 --> 00:43:14,039
+which is to accomplish this with a
+single visual effect you
+
+751
+00:43:14,039 --> 00:43:17,138
+meanwhile on the right we can accomplish
+this with three visual effects use
+
+752
+00:43:18,038 --> 00:43:21,052
+and there some obvious reasons the
+structure things on the right person
+
+753
+00:43:21,052 --> 00:43:21,128
+left
+
+754
+00:43:22,028 --> 00:43:24,100
+one that would be flexibility if you
+need a different appearances are
+
+755
+00:43:25,000 --> 00:43:26,006
+different materials
+
+756
+00:43:26,006 --> 00:43:29,079
+for this house on the right you need is
+visual effect is however
+
+757
+00:43:29,079 --> 00:43:32,170
+a you should be cautious about how many
+visual effect is using and when you're
+
+758
+00:43:33,007 --> 00:43:34,008
+using them
+
+759
+00:43:34,008 --> 00:43:37,053
+in this case the number of pixels
+affected here the surface area of these
+
+760
+00:43:38,025 --> 00:43:38,089
+houses
+
+761
+00:43:38,089 --> 00:43:41,103
+is almost identical between the left and
+the right
+
+762
+00:43:42,003 --> 00:43:46,018
+and in that case a single visual effect
+you is going to be more performance
+
+763
+00:43:46,018 --> 00:43:49,018
+there's less information for us to track
+a
+
+764
+00:43:49,018 --> 00:43:52,447
+the option in this case is also true if
+you had a window with say some very
+
+765
+00:43:52,609 --> 00:43:54,632
+small areas %uh vibrancy
+
+766
+00:43:54,839 --> 00:43:57,900
+and there are different and in the
+window it might be more efficient use to
+
+767
+00:43:57,009 --> 00:43:58,022
+visual effect use
+
+768
+00:43:59,003 --> 00:44:02,029
+and set up a single enormous official
+affect you
+
+769
+00:44:02,029 --> 00:44:05,071
+something else to be aware of especially
+for in 10 colors
+
+770
+00:44:05,071 --> 00:44:08,083
+is frequently updated content on what I
+am back from the updated content
+
+771
+00:44:08,083 --> 00:44:12,095
+well I mean Louise I'm animations I even
+mean blinking cursor
+
+772
+00:44:12,095 --> 00:44:16,140
+arm these are gonna be updating at 2430
+tips or 63 animation
+
+773
+00:44:17,004 --> 00:44:20,443
+or even to fit circling Kercher's and
+the thing is whenever these update
+
+774
+00:44:20,839 --> 00:44:24,390
+we're going to have to re computer a
+blur this is also true
+
+775
+00:44:24,039 --> 00:44:27,068
+for behind window blurs but you don't
+usually control the content behind the
+
+776
+00:44:27,068 --> 00:44:30,154
+window in your apt so that's not
+something you really need to worry about
+
+777
+00:44:31,054 --> 00:44:34,078
+a Corbin mention that layers are often
+required
+
+778
+00:44:34,078 --> 00:44:37,647
+a especially for and window bars and
+later usage is increasing just
+
+779
+00:44:38,349 --> 00:44:41,740
+in general a but something I want to
+mention is that
+
+780
+00:44:41,074 --> 00:44:45,117
+if you're using layers the dirty shapes
+on screen are any different
+
+781
+00:44:46,017 --> 00:44:50,018
+then if you're not using layers so
+here's an example love a mock text you
+
+782
+00:44:50,027 --> 00:44:52,123
+that just blinks and insertion point and
+this this %ah rectangle
+
+783
+00:44:53,023 --> 00:44:57,049
+when it's not later backed and you can
+see here we we have this
+
+784
+00:44:57,049 --> 00:45:00,054
+waking cursor well you probably can't
+see is I've actually it turned on color
+
+785
+00:45:00,099 --> 00:45:01,167
+flush in one of our debug tools
+
+786
+00:45:02,067 --> 00:45:06,073
+and this rectangle is turning yellow
+every time the cursor updates
+
+787
+00:45:06,073 --> 00:45:09,081
+a for not only are back to you that
+small rectangle is all that's left on
+
+788
+00:45:10,053 --> 00:45:11,118
+screen
+
+789
+00:45:12,018 --> 00:45:15,024
+if however we r we say we do want to
+wear for this we're still using the
+
+790
+00:45:15,078 --> 00:45:16,113
+small to redirect
+
+791
+00:45:17,013 --> 00:45:21,018
+but whatever the view updates we see
+this instead
+
+792
+00:45:21,063 --> 00:45:24,152
+the entire layers flushed it's not that
+we're trying anymore our application is
+
+793
+00:45:25,052 --> 00:45:27,121
+still just drawing that tiny purse a
+wreck
+
+794
+00:45:27,589 --> 00:45:31,150
+it's just that poor animation has been
+built for GPUs to involve summit in
+
+795
+00:45:31,015 --> 00:45:32,080
+geometry in large batches
+
+796
+00:45:32,008 --> 00:45:35,056
+so we just watch the entire contents
+layer to the screen
+
+797
+00:45:36,028 --> 00:45:39,101
+if for example you had a visual effect
+you that overlaid the right side of this
+
+798
+00:45:40,001 --> 00:45:43,099
+this view even though only the insertion
+point are insertion point on the left is
+
+799
+00:45:43,099 --> 00:45:43,958
+blinking
+
+800
+00:45:44,849 --> 00:45:48,800
+that blurs gonna have to be re computed
+so that is something
+
+801
+00:45:48,008 --> 00:45:51,033
+keep in mind com something else to
+beware of
+
+802
+00:45:52,005 --> 00:45:54,794
+if you're using update where are you
+have your own where tree in your setting
+
+803
+00:45:54,839 --> 00:45:58,390
+your own their properties like the
+corner radius or other ailments directly
+
+804
+00:45:58,039 --> 00:46:01,130
+will the entire layer still gonna be
+flush in one on one pass their
+
+805
+00:46:02,003 --> 00:46:06,015
+so that caveat applies update where
+users also
+
+806
+00:46:06,042 --> 00:46:09,139
+often though you can fix this by just
+three factor in your view here he first
+
+807
+00:46:10,039 --> 00:46:13,122
+for a little so for example if you're
+frequently updating content
+
+808
+00:46:14,022 --> 00:46:17,070
+try to put it in a small view and have
+reserve large news
+
+809
+00:46:17,007 --> 00:46:20,896
+for static or and frequently updated
+content
+
+810
+00:46:21,589 --> 00:46:25,664
+from an unrelated but very important to
+be aware an S 10 has no pic property
+
+811
+00:46:26,339 --> 00:46:29,416
+and you shouldn't mess with it if using
+Visual Effects use in the past if you
+
+812
+00:46:30,109 --> 00:46:32,720
+needed to punch a hole through your
+window or have transparency you had to
+
+813
+00:46:32,072 --> 00:46:32,125
+set the stage
+
+814
+00:46:33,025 --> 00:46:36,032
+yes however if you're using Visual
+Effects use you don't have to do that we
+
+815
+00:46:36,095 --> 00:46:37,754
+take care of it automatically
+
+816
+00:46:38,609 --> 00:46:41,790
+he said this to know you're gonna take
+away a lot of information the Windows
+
+817
+00:46:41,079 --> 00:46:42,088
+Server users
+
+818
+00:46:42,088 --> 00:46:45,182
+to call obscured Windows and it'll be
+doing a lot more dry in the necessary
+
+819
+00:46:46,082 --> 00:46:51,084
+so avoid this unless you're already
+using it for other reasons
+
+820
+00:46:52,002 --> 00:46:55,065
+on I want to point out this option and
+the accessibility preference
+
+821
+00:46:55,065 --> 00:46:58,082
+this in the display subsection called
+this transparency
+
+822
+00:46:58,082 --> 00:47:01,121
+and that'll actually turn off or blurs
+on a system-wide basis
+
+823
+00:47:02,021 --> 00:47:07,400
+and I'm not suggesting this as a user
+feature in 72 just as a diagnostic tool
+
+824
+00:47:07,589 --> 00:47:10,615
+if you add a lot of visual effect just
+your app and all the sudden notice that
+
+825
+00:47:10,849 --> 00:47:14,900
+made your window resize animations are
+four screen transitions have become slow
+
+826
+00:47:14,009 --> 00:47:17,073
+you can set this to yes and the so avoid
+the cost
+
+827
+00:47:18,054 --> 00:47:21,103
+WEA we pay it when doing that were
+
+828
+00:47:21,589 --> 00:47:24,617
+so if you notice when this is turned on
+your performance is fine
+
+829
+00:47:24,869 --> 00:47:28,580
+with turned off performance is kinda
+sluggish it's probably
+
+830
+00:47:28,058 --> 00:47:32,114
+you're using a visual effects that's too
+large or too many visual effect use
+
+831
+00:47:33,014 --> 00:47:37,025
+and that's a cute dial down the the
+transparency and boring
+
+832
+00:47:37,025 --> 00:47:40,064
+in the app some other things I want to
+mention
+
+833
+00:47:40,064 --> 00:47:43,102
+is a to perform its all good news for
+this
+
+834
+00:47:44,002 --> 00:47:47,006
+so I used courts debug Torana up
+
+835
+00:47:47,006 --> 00:47:50,008
+coloring and dirty areas that the
+Windows Server had to redraw and that
+
+836
+00:47:50,026 --> 00:47:53,385
+can be very useful for diagnosing cases
+where you may be drawing more content
+
+837
+00:47:53,619 --> 00:47:54,570
+than you're expecting
+
+838
+00:47:54,057 --> 00:47:56,153
+or when you're using layers and you're
+drawing a little bit of content but it's
+
+839
+00:47:57,053 --> 00:47:57,141
+affecting entire
+
+840
+00:47:58,041 --> 00:48:02,750
+you something wanna point out about a
+lot of are trying here is that
+
+841
+00:48:03,119 --> 00:48:06,140
+the perfect actually happens out a
+process that happens in the Windows
+
+842
+00:48:06,329 --> 00:48:08,530
+Server and furthermore happens on the
+Jeep you
+
+843
+00:48:08,053 --> 00:48:11,138
+and that means that profiling your own
+process won't necessarily tell you as
+
+844
+00:48:12,038 --> 00:48:13,071
+much as you would hope
+
+845
+00:48:13,071 --> 00:48:16,073
+I'm store ever going to call out the
+instrument store
+
+846
+00:48:16,073 --> 00:48:20,182
+because the the Windows Server and your
+app archive competing to get frames on
+
+847
+00:48:20,839 --> 00:48:23,250
+the screen in a single display cycle
+
+848
+00:48:23,025 --> 00:48:26,114
+and at the faster you can make your app
+in the letter G PU it utilizes
+
+849
+00:48:27,014 --> 00:48:29,099
+the more that is available for Windows
+Server see you can still improve the
+
+850
+00:48:29,099 --> 00:48:30,156
+performance of the system as a whole
+
+851
+00:48:31,056 --> 00:48:34,103
+by just improving the performance a wrap
+and instruments gives you the tools
+
+852
+00:48:35,003 --> 00:48:38,022
+to monitor all that comp if you're just
+doing the
+
+853
+00:48:38,022 --> 00:48:41,028
+wider development on your app having
+Activity Monitor open Internet be useful
+
+854
+00:48:41,082 --> 00:48:44,591
+it's certainly not as in depth as
+instruments but it will tell you how
+
+855
+00:48:45,329 --> 00:48:46,405
+much CPU doing and more importantly
+
+856
+00:48:47,089 --> 00:48:50,210
+it'll tell you how much energy your app
+a is is taking
+
+857
+00:48:50,021 --> 00:48:52,097
+to do what it's doing if you see that
+offering a little higher than you're
+
+858
+00:48:52,097 --> 00:48:52,173
+expecting
+
+859
+00:48:53,073 --> 00:48:56,148
+that maybe another Q that your visual
+effects and usage has
+
+860
+00:48:57,048 --> 00:49:01,437
+gotten a little excessive finally for
+the purest amongst you who really
+
+861
+00:49:01,869 --> 00:49:04,943
+don't want to impact what they're after
+doing by adding some do we stop the
+
+862
+00:49:05,609 --> 00:49:06,390
+profiler
+
+863
+00:49:06,039 --> 00:49:09,056
+you can ssh in you sample for example
+which will tell you what your app is
+
+864
+00:49:09,056 --> 00:49:10,079
+doing
+
+865
+00:49:10,079 --> 00:49:13,648
+so we cover lots into quick summary
+these things
+
+866
+00:49:14,359 --> 00:49:17,407
+I mention the m.s and Ron Haskins
+especially Capen sets
+
+867
+00:49:17,839 --> 00:49:21,320
+also mentioned the new behaviors best
+color the importance of Venice
+
+868
+00:49:21,032 --> 00:49:21,117
+appearance
+
+869
+00:49:22,017 --> 00:49:26,052
+and some significant role at the eye we
+cover new window features
+
+870
+00:49:26,052 --> 00:49:30,901
+especially the full-size content view up
+but also the title with Billy option C
+
+871
+00:49:31,369 --> 00:49:34,140
+you can make your title bars look like
+Safari and maps
+
+872
+00:49:34,014 --> 00:49:37,048
+arm we also covered the transparent I'll
+bar which is what notes and reminders
+
+873
+00:49:37,048 --> 00:49:39,187
+are using to have that Christmas parents
+
+874
+00:49:39,619 --> 00:49:43,450
+all the way from the bottom to the top
+of their windows up
+
+875
+00:49:43,045 --> 00:49:46,080
+Corbin gave you a huge run through on
+its visual effect you and what you can
+
+876
+00:49:46,008 --> 00:49:47,032
+do with our visual effects
+
+877
+00:49:48,004 --> 00:49:51,543
+how appearances environments they are
+accomplished and finally
+
+878
+00:49:51,579 --> 00:49:54,730
+course remember like 40 seconds ago we
+talk a little bit about performance
+
+879
+00:49:54,073 --> 00:49:57,212
+and I do hope your your cake summers
+performance Methodist heart
+
+880
+00:49:57,869 --> 00:50:01,060
+a when you leave oh literally
+
+881
+00:50:01,006 --> 00:50:04,525
+wanna have failed to mention though is a
+be a new escrow you API
+
+882
+00:50:04,579 --> 00:50:07,800
+they were using contract with full-size
+content you didn't make it into the
+
+883
+00:50:07,008 --> 00:50:08,537
+scene you got earlier this week
+
+884
+00:50:09,329 --> 00:50:12,700
+but it will be available to you shortly
+
+885
+00:50:12,007 --> 00:50:15,052
+up so I like to point out Jay parents
+are
+
+886
+00:50:16,015 --> 00:50:19,016
+primer to evangelist he is here in the
+
+887
+00:50:19,016 --> 00:50:22,955
+plaid shirt and be dark a vibrant
+appearance shoes we have taken to
+
+888
+00:50:23,099 --> 00:50:25,950
+describing his appearance in great
+detail throughout the course of the week
+
+889
+00:50:25,095 --> 00:50:27,140
+I'm here to see what we come up with
+tomorrow
+
+890
+00:50:28,004 --> 00:50:31,007
+um we also for some documentation
+available online
+
+891
+00:50:31,043 --> 00:50:33,982
+a developer Apple com is also where you
+can get the courts to bug too I
+
+892
+00:50:34,369 --> 00:50:34,443
+mentioned
+
+893
+00:50:35,109 --> 00:50:39,640
+and of course Adele performs there some
+relation related sessions
+
+894
+00:50:39,064 --> 00:50:42,088
+adapting wrapped in New why I was the
+session yesterday that
+
+895
+00:50:42,088 --> 00:50:46,287
+available online now additionally later
+this afternoon there's what's new in
+
+896
+00:50:47,079 --> 00:50:49,570
+Interface Builder which will cover not
+only a bit what we
+
+897
+00:50:49,057 --> 00:50:52,093
+we show you doing their best for the day
+but other use for fiscal yr tools for
+
+898
+00:50:52,093 --> 00:50:53,242
+design your app
+
+899
+00:50:54,079 --> 00:50:57,560
+and a tomorrow morning is creating
+modern Co collapse
+
+900
+00:50:57,056 --> 00:51:00,085
+which if you found some of these new
+guys interesting that will cover a lot
+
+901
+00:51:00,589 --> 00:51:01,970
+more what's going to Coco
+
+902
+00:51:01,097 --> 00:51:02,126
+recent thank you very much
+
