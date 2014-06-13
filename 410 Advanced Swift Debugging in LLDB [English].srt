@@ -1,0 +1,3383 @@
+1
+00:00:13,459 --> 00:00:19,530
+hello everyone
+
+2
+00:00:19,053 --> 00:00:21,106
+how's it going I heard the bash
+
+3
+00:00:22,006 --> 00:00:25,099
+was pretty amazing last night and I'm
+sure a lot of you are hun your
+
+4
+00:00:25,099 --> 00:00:28,180
+so I'll speak release toughly to so that
+now
+
+5
+00:00:29,008 --> 00:00:32,013
+just kidding there's no mercy here let's
+get rights
+
+6
+00:00:32,085 --> 00:00:35,122
+carnage we have a lot of great content
+for use more ink
+
+7
+00:00:36,022 --> 00:00:39,030
+you may have heard that Apple
+
+8
+00:00:39,003 --> 00:00:43,064
+released a new programming language
+newsweek it's called swift up Ryan Kylie
+
+9
+00:00:43,091 --> 00:00:46,136
+and its the new language for the cocoa
+and Cocoa Touch platforms
+
+10
+00:00:47,036 --> 00:00:50,051
+it's a language we told her we live in
+filth just saw some
+
+11
+00:00:50,051 --> 00:00:54,135
+and what's even better is that the told
+you know 1 lob the axe call you know a
+
+12
+00:00:55,035 --> 00:00:56,133
+lot the source added for you know a lot
+
+13
+00:00:57,033 --> 00:01:01,044
+they all just feel great and debugger
+you know I'll of
+
+14
+00:01:01,044 --> 00:01:04,050
+albee Baby also feels jobs great
+
+15
+00:01:05,004 --> 00:01:11,019
+the thirty years you've heard about
+tools that can help you
+
+16
+00:01:11,019 --> 00:01:14,047
+explore swift one of them
+
+17
+00:01:14,047 --> 00:01:18,059
+one of them that is not usually thought
+of as a tool for exploration
+
+18
+00:01:18,059 --> 00:01:21,107
+is the teabagger 30 Bacher
+
+19
+00:01:22,007 --> 00:01:25,085
+has the unique property that it can help
+you explore
+
+20
+00:01:25,085 --> 00:01:29,157
+in the context of your application most
+of you probably do you have aP's
+
+21
+00:01:30,057 --> 00:01:34,099
+and those are written in objective-c and
+US started of things we've
+
+22
+00:01:34,099 --> 00:01:37,163
+features so what you can do you can code
+some swift
+
+23
+00:01:38,063 --> 00:01:41,081
+inside your application and you can use
+the debugger
+
+24
+00:01:41,081 --> 00:01:44,100
+to help your staff through your code
+look at your data
+
+25
+00:01:45,000 --> 00:01:48,032
+and feel your heart are your fancy new
+suite features
+
+26
+00:01:48,032 --> 00:01:51,961
+are interacting with your existing code
+base and of course
+
+27
+00:01:52,249 --> 00:01:56,520
+if he that ever happened that there were
+bags in your code
+
+28
+00:01:56,052 --> 00:01:59,127
+you could actually use the debugger to
+be productive to fix them
+
+29
+00:02:00,027 --> 00:02:03,556
+we have a lot of stuff to cover
+
+30
+00:02:03,799 --> 00:02:06,895
+we're going to talk about
+
+31
+00:02:07,759 --> 00:02:12,250
+some swift types email DB we're going to
+talk about
+
+32
+00:02:12,025 --> 00:02:15,079
+optional types protocols and generics
+
+33
+00:02:15,079 --> 00:02:18,085
+these are all category subtypes this
+with introduces
+
+34
+00:02:19,039 --> 00:02:22,097
+what can you expect when you're
+debugging your code and you try to use
+
+35
+00:02:22,097 --> 00:02:22,148
+this
+
+36
+00:02:23,048 --> 00:02:26,134
+we're going to talk about the makes a
+match situation
+
+37
+00:02:27,034 --> 00:02:30,040
+like I have some objective-c code and
+some swift code clerk
+
+38
+00:02:30,004 --> 00:02:33,028
+inter operating together and you have to
+be back to resolve that
+
+39
+00:02:33,064 --> 00:02:36,078
+we're going to call our staff pick
+
+40
+00:02:36,078 --> 00:02:40,117
+we're going to talk about data for
+matters and how you can expect data for
+
+41
+00:02:41,017 --> 00:02:42,073
+matters to work in swift
+
+42
+00:02:42,073 --> 00:02:45,115
+and we're going to stock would name
+uniqueness
+
+43
+00:02:46,015 --> 00:02:49,414
+explain how swift solves name clashes
+senior
+
+44
+00:02:49,549 --> 00:02:53,400
+your code between different frameworks
+elaborates and from there are we gonna
+
+45
+00:02:53,004 --> 00:02:54,793
+see how that very same feature
+
+46
+00:02:55,189 --> 00:03:01,680
+also helps make debugging awesome of
+optional types
+
+47
+00:03:01,068 --> 00:03:04,167
+optional types introduce a leveling
+direction
+
+48
+00:03:05,067 --> 00:03:08,996
+if something inside the optional or is
+it not
+
+49
+00:03:09,599 --> 00:03:12,890
+the way I like to think I'll optional
+types
+
+50
+00:03:12,089 --> 00:03:15,186
+East a box I get a box
+
+51
+00:03:16,086 --> 00:03:19,575
+add excess there's a string here but
+
+52
+00:03:20,349 --> 00:03:23,433
+I have to actually open the box to look
+at the string in C
+
+53
+00:03:24,189 --> 00:03:27,870
+purvis ring here manufacturers nothing
+here
+
+54
+00:03:27,087 --> 00:03:32,016
+inchoate that opening the box is
+something you have to do
+
+55
+00:03:32,799 --> 00:03:37,920
+and it's called and dropping the
+optional LDB helps you out
+
+56
+00:03:37,092 --> 00:03:40,751
+when you're debugging it will employees
+silly out a medically
+
+57
+00:03:41,579 --> 00:03:45,640
+and wrap the optional opened the box for
+you and show you the contents
+
+58
+00:03:45,064 --> 00:03:48,090
+and if there are no contents will just
+say Neil
+
+59
+00:03:48,009 --> 00:03:54,086
+how can we expect that to look but they
+were riding coat and we train about to
+
+60
+00:03:55,067 --> 00:03:55,136
+buy apples
+
+61
+00:03:56,036 --> 00:03:59,039
+we create a native swift strange
+optional
+
+62
+00:03:59,039 --> 00:04:02,228
+we create and then it's racked it breaks
+C struct
+
+63
+00:04:02,579 --> 00:04:05,653
+optional and we created a nicer out
+optional
+
+64
+00:04:06,319 --> 00:04:10,730
+and we choose to not put anything in DNS
+a row the viable views
+
+65
+00:04:10,073 --> 00:04:13,912
+will transparently I'm prop for you your
+strength
+
+66
+00:04:14,569 --> 00:04:19,010
+will show just book contents of the
+string literal you put aimed
+
+67
+00:04:19,001 --> 00:04:23,067
+in the optional the box is open others a
+string LDP will show you the streak
+
+68
+00:04:23,067 --> 00:04:26,081
+the same thing if through for DNS
+wrecked
+
+69
+00:04:26,081 --> 00:04:29,140
+of the actual a rectangle in there I'll
+tell you about it sergeant and
+
+70
+00:04:30,004 --> 00:04:34,069
+its sites and 50 NS you're out happens
+to be Neil
+
+71
+00:04:35,005 --> 00:04:39,099
+well just say Neil there's a point
+
+72
+00:04:39,099 --> 00:04:44,124
+one this situation gets a little
+trickier since option also like boxes
+
+73
+00:04:45,024 --> 00:04:48,071
+I can put boxes into marxists it
+
+74
+00:04:48,071 --> 00:04:51,140
+probably happened to all of a tomboy we
+order something online
+
+75
+00:04:52,004 --> 00:04:56,005
+and the shipping company sends of really
+big ball key box
+
+76
+00:04:56,005 --> 00:05:00,037
+and now we opened a really big bulky box
+and this is more a box inside
+
+77
+00:05:00,082 --> 00:05:04,088
+and that is not a smaller box inside and
+then a naturally for all the packaging
+
+78
+00:05:04,088 --> 00:05:07,139
+all we order is a tiny little thing like
+a clicker
+
+79
+00:05:08,039 --> 00:05:11,052
+in swift you can do a similar thing by
+having
+
+80
+00:05:11,052 --> 00:05:15,141
+nasty adoption of in this example we had
+an optional an optional
+
+81
+00:05:16,041 --> 00:05:20,100
+and what we say is in the outermost
+optional in a big box
+
+82
+00:05:21,000 --> 00:05:27,027
+were actually putting a smaller box but
+was more a box is empty
+
+83
+00:05:27,027 --> 00:05:30,094
+there's a fundamental fright pension at
+war here
+
+84
+00:05:30,094 --> 00:05:34,125
+if I am the debugger I have to decide
+what the calendar story
+
+85
+00:05:35,025 --> 00:05:39,061
+I have to decide if I want to tell you
+that there's few boxes here
+
+86
+00:05:39,061 --> 00:05:42,070
+and one of them is fall and one of them
+is empty
+
+87
+00:05:42,007 --> 00:05:46,030
+or I can just look inside the whole
+layering a boxes
+
+88
+00:05:46,093 --> 00:05:49,149
+and be doesn't mark died tells you yeah
+you know what does
+
+89
+00:05:50,049 --> 00:05:53,140
+nothing here just per gallon just to
+bother with that
+
+90
+00:05:54,004 --> 00:05:58,041
+by default all the beach show this to be
+that smart guy
+
+91
+00:05:58,077 --> 00:06:01,176
+a look inside all the level a box s
+added calcium
+
+92
+00:06:02,076 --> 00:06:05,082
+you know what I looked there's really
+nothing there is no stranger at the end
+
+93
+00:06:05,082 --> 00:06:07,139
+of the day
+
+94
+00:06:08,039 --> 00:06:12,094
+but in some cases I may actually want to
+know
+
+95
+00:06:12,094 --> 00:06:16,119
+that there's a box with a box and that
+there's more boxes the one to Tempe
+
+96
+00:06:17,019 --> 00:06:22,038
+maybe matters for my API contract but
+that's the way things are
+
+97
+00:06:22,038 --> 00:06:25,046
+for dose cases what you wanna be using
+
+98
+00:06:25,046 --> 00:06:30,078
+is the road display mode let me give you
+a little background here
+
+99
+00:06:30,078 --> 00:06:34,151
+by default al BB has a feature called a
+tougher matters
+
+100
+00:06:35,051 --> 00:06:38,113
+the data for matter feature is used
+throughout the debugger when you're
+
+101
+00:06:39,013 --> 00:06:40,047
+looking at data
+
+102
+00:06:40,047 --> 00:06:46,121
+to present %um no frills just get needed
+a data matters in my contacts situation
+
+103
+00:06:47,021 --> 00:06:50,035
+but sometimes you need to actually I'm
+
+104
+00:06:50,035 --> 00:06:55,048
+CD underlying true without the debugger
+trying to be smart about what to show
+
+105
+00:06:55,048 --> 00:06:55,145
+you
+
+106
+00:06:56,045 --> 00:07:01,053
+in those situations what you want to use
+is this raw display mode
+
+107
+00:07:01,053 --> 00:07:06,070
+at the LDP console the row display the
+show me the real gotshall
+
+108
+00:07:06,007 --> 00:07:09,104
+up my object in memory without
+formatting it in an intelligent way
+
+109
+00:07:10,067 --> 00:07:13,069
+is invoked with the dash dash role or
+for short
+
+110
+00:07:13,087 --> 00:07:17,103
+dash uppercase are option to the
+expression command
+
+111
+00:07:18,003 --> 00:07:22,018
+or the frame viable command
+
+112
+00:07:22,018 --> 00:07:26,085
+some love you have probably Nadia's the
+frame battle command before
+
+113
+00:07:26,085 --> 00:07:29,144
+it's a little bit a beautiful debugger
+trivia
+
+114
+00:07:30,044 --> 00:07:33,088
+there some kid this work me be your
+debugging really
+
+115
+00:07:33,088 --> 00:07:36,096
+really tricky situation and you're
+trying to
+
+116
+00:07:37,068 --> 00:07:41,117
+this barb to perturb the state of the
+route as little as possible while you
+
+117
+00:07:42,017 --> 00:07:45,033
+try to figure out is really weird
+situation
+
+118
+00:07:45,033 --> 00:07:48,080
+in those kids this you want to look at
+your data
+
+119
+00:07:48,008 --> 00:07:52,037
+but idk dont want to be running code
+that could change the state other up
+
+120
+00:07:53,009 --> 00:07:57,025
+as you look at data you can use the
+frame variable command
+
+121
+00:07:57,025 --> 00:08:00,054
+to say show me one variable show me a
+bunch a viable
+
+122
+00:08:00,054 --> 00:08:05,056
+surely all my locals without having to
+execute code
+
+123
+00:08:05,056 --> 00:08:08,117
+and that is the friend parable Kamat if
+you also batted
+
+124
+00:08:09,017 --> 00:08:12,018
+the bash our option you got the road
+display
+
+125
+00:08:12,027 --> 00:08:15,036
+you get things for what they really are
+other callers
+
+126
+00:08:16,017 --> 00:08:20,045
+and if we don't act or big box was more
+box for nothing inside
+
+127
+00:08:20,045 --> 00:08:23,142
+we see that the first thing I know the
+beach house of is
+
+128
+00:08:24,042 --> 00:08:27,133
+that yup their ES a big box
+
+129
+00:08:28,033 --> 00:08:31,054
+and I see the curse something in that
+that's what that some
+
+130
+00:08:31,054 --> 00:08:37,063
+its now I'm your panties big box and see
+exactly what is in there
+
+131
+00:08:37,063 --> 00:08:40,162
+and we see that the race as more box
+
+132
+00:08:41,062 --> 00:08:46,094
+would nothing inside but it doesn't stop
+here
+
+133
+00:08:46,094 --> 00:08:50,163
+week told the swift compiler that we
+wanted a box
+
+134
+00:08:51,009 --> 00:08:55,047
+that would feed us 3 Inc and those with
+compiler made other box
+
+135
+00:08:55,389 --> 00:08:59,110
+that was fetus frink if there was a
+string here
+
+136
+00:08:59,011 --> 00:09:03,550
+we were pretty much see that we would
+see bill low-level no frills
+
+137
+00:09:03,649 --> 00:09:06,800
+representation office with Frank
+
+138
+00:09:06,008 --> 00:09:10,052
+but there's no string in this case so
+everything in a storage that the comp I
+
+139
+00:09:11,024 --> 00:09:12,853
+restart from a string
+
+140
+00:09:13,069 --> 00:09:20,069
+is 0 out because we're actually is not
+think
+
+141
+00:09:21,016 --> 00:09:25,048
+we've been talking about optional types
+
+142
+00:09:25,048 --> 00:09:28,507
+but we can also talk more in general
+about types
+
+143
+00:09:28,939 --> 00:09:32,958
+we could ask ourselves the question when
+we talk about it type
+
+144
+00:09:33,129 --> 00:09:36,135
+what are we talking about
+
+145
+00:09:36,189 --> 00:09:39,860
+and that's a deep philosophical question
+that's a question
+
+146
+00:09:39,086 --> 00:09:44,005
+with potentially a lot of answers and
+I'm sure we would all like to spend the
+
+147
+00:09:44,779 --> 00:09:49,802
+rest of the session going back and forth
+exchange in definitions up type
+
+148
+00:09:50,009 --> 00:09:53,086
+or you could just write me for a moment
+I could give a definition that works in
+
+149
+00:09:53,779 --> 00:09:54,853
+the context of the following slides
+
+150
+00:09:55,519 --> 00:09:59,920
+and we could keep moving just do that
+well with
+
+151
+00:09:59,092 --> 00:10:03,451
+I'm going to go with the idea that a
+type is a classification
+
+152
+00:10:04,279 --> 00:10:09,540
+the house may give him some data how can
+I expect that data to be represented
+
+153
+00:10:09,054 --> 00:10:13,085
+how can I expect to be interacting with
+that data
+
+154
+00:10:13,085 --> 00:10:16,173
+in a sense I'm going to talk about it
+type
+
+155
+00:10:17,073 --> 00:10:20,362
+as if it was a hat therapies update at
+him where
+
+156
+00:10:21,019 --> 00:10:25,056
+had data can wear little hat saying I
+many
+
+157
+00:10:25,389 --> 00:10:28,407
+anarchism data can say I'm a string
+
+158
+00:10:28,569 --> 00:10:32,600
+and a fancy guy down the whole can fade
+I make you live you I'm really pretty
+
+159
+00:10:32,006 --> 00:10:36,175
+look at me
+
+160
+00:10:36,769 --> 00:10:40,850
+the interesting thing is unlike on
+people's heads
+
+161
+00:10:40,085 --> 00:10:43,097
+data can have multiple types the same
+please update up
+
+162
+00:10:43,097 --> 00:10:46,186
+can wear multiple hats at the same time
+
+163
+00:10:47,086 --> 00:10:52,098
+host of possible there's a number ways
+to look at that
+
+164
+00:10:52,098 --> 00:10:56,437
+one of the ways the one that is actually
+interesting in the contents above
+
+165
+00:10:57,319 --> 00:11:01,351
+language runtime sandbaggers is for
+instance the static dynamic
+
+166
+00:11:01,639 --> 00:11:04,640
+type distinction where all
+
+167
+00:11:04,649 --> 00:11:09,692
+pretty familiar I assume with the
+concept of declaring a variable
+
+168
+00:11:10,079 --> 00:11:14,740
+we've all done that at one point or
+another one of the things we do
+
+169
+00:11:14,074 --> 00:11:17,173
+well require viable if gimme dat
+
+170
+00:11:17,839 --> 00:11:21,170
+type what are we doing explicitly
+
+171
+00:11:21,017 --> 00:11:25,020
+liking see your objective c- all we
+liked the swift compiler
+
+172
+00:11:25,047 --> 00:11:28,716
+in for that for us we declare a variable
+
+173
+00:11:29,139 --> 00:11:33,142
+and a viable hands up having type
+
+174
+00:11:33,439 --> 00:11:37,310
+what's left that tied deal in the
+declaration
+
+175
+00:11:37,031 --> 00:11:40,092
+in a sense that type is telling the
+compiler
+
+176
+00:11:40,092 --> 00:11:43,801
+to keep ass the code writers honest
+
+177
+00:11:44,629 --> 00:11:47,694
+when I black how the compiler that think
+
+178
+00:11:48,279 --> 00:11:53,310
+is an any object I'm in a sense i'm
+kalin the compiler
+
+179
+00:11:53,031 --> 00:11:56,560
+please make sure that whenever I used
+that object
+
+180
+00:11:56,839 --> 00:11:59,900
+i play by the rules are there any object
+
+181
+00:12:00,449 --> 00:12:04,467
+and as long as I do that the compiler
+will be happy
+
+182
+00:12:04,629 --> 00:12:07,642
+and if I break the contract black told
+the compiler
+
+183
+00:12:07,759 --> 00:12:14,759
+this is an any update keep me honest
+than the compiler will complain
+
+184
+00:12:14,819 --> 00:12:19,881
+when I'm in run time I ever things
+become a little different
+
+185
+00:12:20,439 --> 00:12:23,660
+let's say I wanna get the hash code for
+
+186
+00:12:23,066 --> 00:12:26,415
+senator al object but that object
+
+187
+00:12:27,009 --> 00:12:31,102
+there's a lot of different ways to get
+the hash code for some think
+
+188
+00:12:31,939 --> 00:12:36,600
+how tough the system no wanna see your
+outdoor hash
+
+189
+00:12:36,006 --> 00:12:40,038
+the implementation that I expect is the
+one that will get cold
+
+190
+00:12:40,092 --> 00:12:43,621
+harassed at work well that
+
+191
+00:12:44,449 --> 00:12:47,532
+can't rely on the fact that that's in
+any object cousin any object could
+
+192
+00:12:48,279 --> 00:12:49,284
+potentially be
+
+193
+00:12:49,329 --> 00:12:54,341
+almost and I think at that point
+adjuster well choose randomly
+
+194
+00:12:54,449 --> 00:12:58,110
+what happens is that our reliance on the
+run
+
+195
+00:12:58,011 --> 00:13:01,074
+time type up the object the system looks
+at the
+
+196
+00:13:01,074 --> 00:13:05,118
+hype that that ought to the house while
+my code is running at that moment
+
+197
+00:13:06,018 --> 00:13:09,237
+and that called a runtime dynamic type
+
+198
+00:13:09,399 --> 00:13:12,442
+and uses that information to decide
+which
+
+199
+00:13:12,829 --> 00:13:17,800
+hash gets called that's the magic a
+little mechanism
+
+200
+00:13:17,008 --> 00:13:21,087
+called dynamic dispatch
+
+201
+00:13:21,879 --> 00:13:24,935
+so we're here and we have are real
+you're all object
+
+202
+00:13:25,439 --> 00:13:28,480
+I would trying to call hashing it
+
+203
+00:13:28,048 --> 00:13:32,087
+we sat does a hat on our URL object that
+s
+
+204
+00:13:32,519 --> 00:13:38,100
+I'm a URL it turns off that's sort of
+true
+
+205
+00:13:38,001 --> 00:13:41,077
+that object has I've arsov course but he
+also has
+
+206
+00:13:41,086 --> 00:13:44,097
+type information forgot to view that
+
+207
+00:13:44,097 --> 00:13:49,076
+use objective-c that would-be self the
+ease up on her for that object would be
+
+208
+00:13:49,949 --> 00:13:52,110
+to type information
+
+209
+00:13:52,011 --> 00:13:55,460
+what are the Finks that the type
+information power
+
+210
+00:13:55,559 --> 00:13:58,606
+of is which Matt thoughts
+
+211
+00:13:59,029 --> 00:14:02,170
+that these objects type implement
+
+212
+00:14:02,017 --> 00:14:05,086
+and in this case one of the ones that
+and I shall implement
+
+213
+00:14:05,086 --> 00:14:09,097
+the sample and applied is hash so we
+found it
+
+214
+00:14:09,097 --> 00:14:14,826
+we know which cash the call and we're
+done that I'm a dispatch actually worked
+
+215
+00:14:15,699 --> 00:14:19,740
+what if we're trying to call something
+that is not
+
+216
+00:14:19,074 --> 00:14:22,333
+in the least a matter that that object
+type implements
+
+217
+00:14:22,999 --> 00:14:26,610
+what we could try asking the base class
+
+218
+00:14:26,061 --> 00:14:29,340
+if something have the and that's your al
+Haq
+
+219
+00:14:29,889 --> 00:14:32,912
+it probably also have the end its object
+hacked
+
+220
+00:14:33,119 --> 00:14:36,203
+that means we can say any that didn't
+work for you
+
+221
+00:14:36,959 --> 00:14:40,057
+as an ass a row maybe that will work for
+US on a subject
+
+222
+00:14:40,939 --> 00:14:45,860
+and thats what happens man I'm a
+dispatch we go to the base type
+
+223
+00:14:45,086 --> 00:14:48,235
+we try to find a method our if that
+succeeds
+
+224
+00:14:49,009 --> 00:14:53,160
+than we found it we can tell the method
+papules an option for you please
+
+225
+00:14:53,016 --> 00:14:57,315
+do your thing for me thank you
+
+226
+00:14:57,459 --> 00:15:00,920
+the same concept is also interesting
+
+227
+00:15:00,092 --> 00:15:03,691
+in the context of me back
+
+228
+00:15:04,519 --> 00:15:08,580
+let's say we have a code example like
+that with a base class
+
+229
+00:15:09,129 --> 00:15:12,194
+with a derived class which out some
+information
+
+230
+00:15:12,779 --> 00:15:15,870
+and we have a math out we have a
+function but takes an operative the base
+
+231
+00:15:16,689 --> 00:15:17,723
+class
+
+232
+00:15:18,029 --> 00:15:22,180
+we're telling the compiler in that
+function keep me on FB
+
+233
+00:15:22,018 --> 00:15:26,018
+and make sure all we do things that are
+okay for me to do
+
+234
+00:15:26,018 --> 00:15:30,667
+with the base class type
+
+235
+00:15:30,829 --> 00:15:34,170
+but I can call with an option to the
+right class can I knocked
+
+236
+00:15:34,017 --> 00:15:38,156
+that's perfectly OK
+
+237
+00:15:38,309 --> 00:15:43,110
+when I hit my break point the compiler
+has the kid me on it
+
+238
+00:15:43,011 --> 00:15:46,730
+but the debugger doesn't have to give me
+that honest actually
+
+239
+00:15:46,829 --> 00:15:49,867
+the very opposite I want the debugger
+
+240
+00:15:50,209 --> 00:15:53,740
+to tell me as much information as
+possible about that
+
+241
+00:15:53,074 --> 00:15:56,643
+argument axe I wonder debugger to tell
+me
+
+242
+00:15:57,309 --> 00:16:01,309
+the dynamic typeof axe because I'm that
+dynamic type
+
+243
+00:16:01,309 --> 00:16:04,342
+rely the fact that I coulda morning
+Subbaiah
+
+244
+00:16:04,639 --> 00:16:07,738
+that I could have changes in behavior
+and indeed
+
+245
+00:16:08,629 --> 00:16:12,050
+that is exactly what I'll divvied up by
+default
+
+246
+00:16:12,005 --> 00:16:19,005
+it shows you the dynamic typing a viable
+spiel
+
+247
+00:16:19,559 --> 00:16:22,573
+similar thinks apply to
+
+248
+00:16:22,699 --> 00:16:25,724
+protocols is we've protocols are
+
+249
+00:16:25,949 --> 00:16:30,023
+pipes that means a number of things
+
+250
+00:16:30,689 --> 00:16:33,730
+Iman laminne means that I can be climate
+variables
+
+251
+00:16:33,073 --> 00:16:36,412
+as of some protocol type in means that
+
+252
+00:16:37,069 --> 00:16:40,540
+I can declare functions they cannot
+documents a protocol type
+
+253
+00:16:40,054 --> 00:16:45,193
+or returning upset the protocol type
+
+254
+00:16:45,679 --> 00:16:48,762
+by design Optional Protocol type
+
+255
+00:16:49,509 --> 00:16:52,534
+are leaving Egypt their constraint there
+we
+
+256
+00:16:52,759 --> 00:16:57,860
+ollie let you play by the rules of the
+protocol
+
+257
+00:16:57,086 --> 00:17:00,091
+that's the whole point I wanna make sure
+
+258
+00:17:00,091 --> 00:17:04,113
+that only do what's okay to do on the
+protocol type
+
+259
+00:17:05,013 --> 00:17:09,572
+but again when I'm debugging I want to
+see the full truth
+
+260
+00:17:09,689 --> 00:17:12,788
+actually want to see my implemented
+object and that's what I'll be we'll
+
+261
+00:17:13,679 --> 00:17:14,870
+show you
+
+262
+00:17:14,087 --> 00:17:17,546
+let's look at an example what's a
+
+263
+00:17:18,329 --> 00:17:22,330
+and riding any our 40 system
+
+264
+00:17:22,033 --> 00:17:25,099
+and I'm product I don't think so I have
+
+265
+00:17:25,099 --> 00:17:29,147
+abacha previous year I have a cat and a
+dog I don't have a doc how yep that is a
+
+266
+00:17:30,047 --> 00:17:31,048
+prototype but
+
+267
+00:17:31,057 --> 00:17:34,100
+I'll get that
+
+268
+00:17:35,000 --> 00:17:38,032
+I have a function that takes 10 Mike
+Richards
+
+269
+00:17:38,032 --> 00:17:42,080
+and asks it replace peak your works for
+me
+
+270
+00:17:42,008 --> 00:17:45,034
+we can hit a break point there
+
+271
+00:17:46,006 --> 00:17:49,089
+were in a similar situation as before
+woody clarke something
+
+272
+00:17:49,089 --> 00:17:52,147
+we gave something a static type that is
+somehow
+
+273
+00:17:53,047 --> 00:17:58,129
+abstract compared to the real thing that
+were probably passing around time
+
+274
+00:17:59,029 --> 00:18:04,032
+and LDB no still figure out the dynamic
+type information on our behalf
+
+275
+00:18:04,059 --> 00:18:08,123
+and show us that even though we sat we
+want to just any creature
+
+276
+00:18:09,023 --> 00:18:12,079
+in that specific moment why lock code is
+executing
+
+277
+00:18:12,079 --> 00:18:19,079
+what we got here is a poppy and a very
+happy puppy for that matter
+
+278
+00:18:22,011 --> 00:18:26,070
+for those over you that like the LDP
+console you may be tempted to try to
+
+279
+00:18:26,007 --> 00:18:28,044
+reproduce this result
+
+280
+00:18:29,007 --> 00:18:32,013
+be careful by default if you just
+
+281
+00:18:32,013 --> 00:18:36,058
+ask the debugger can you please show me
+dis viable or protocol type
+
+282
+00:18:36,058 --> 00:18:39,063
+the result could get maybe a legal
+disappointing
+
+283
+00:18:40,008 --> 00:18:44,073
+you will probably look like that
+
+284
+00:18:44,073 --> 00:18:49,084
+what's going up what is that that'll
+look happy puppy at all
+
+285
+00:18:49,084 --> 00:18:52,181
+what is happening is you're seeing the
+static type
+
+286
+00:18:53,081 --> 00:18:57,130
+we mentioned that the protocol is
+somehow it limiting
+
+287
+00:18:58,003 --> 00:19:01,038
+object by design it once at the same
+time
+
+288
+00:19:01,065 --> 00:19:04,070
+to make sure that you all your things
+that are
+
+289
+00:19:04,007 --> 00:19:08,010
+declared in the protocol but you also
+get the dynamic dispatching
+
+290
+00:19:09,000 --> 00:19:12,063
+are this operations the real object that
+implements bad
+
+291
+00:19:12,063 --> 00:19:16,129
+the result the that is what you see on
+the screen
+
+292
+00:19:17,029 --> 00:19:20,090
+what you want to do is you want to tell
+DB
+
+293
+00:19:20,009 --> 00:19:23,101
+please resolve the dynamic type for me
+
+294
+00:19:24,082 --> 00:19:31,082
+the way to do that is with the dash deep
+black 2x pressure from babble.com and
+
+295
+00:19:32,054 --> 00:19:36,110
+that left the debugger resolve dynamic
+types
+
+296
+00:19:37,001 --> 00:19:40,097
+now risk you ways in which you can ask
+the debugger to resolve that I am in
+
+297
+00:19:41,006 --> 00:19:42,065
+types
+
+298
+00:19:42,065 --> 00:19:46,080
+doesn't less restrictive and a more
+restrictive way
+
+299
+00:19:46,008 --> 00:19:49,086
+sometimes in order to figure out the
+dynamic type other objects
+
+300
+00:19:50,058 --> 00:19:55,096
+the debugger might decide that it's best
+or run some code on their collars
+
+301
+00:19:55,096 --> 00:19:59,178
+to go watch the language runtime can you
+help me out here
+
+302
+00:20:00,078 --> 00:20:03,167
+in that most liberal settings the run
+the alarm target
+
+303
+00:20:04,067 --> 00:20:07,111
+are here citing you tell the debugger
+okay
+
+304
+00:20:08,011 --> 00:20:11,045
+you can go around some could offer me I
+don't think there's gonna be any problem
+
+305
+00:20:11,045 --> 00:20:12,047
+if you do that
+
+306
+00:20:12,047 --> 00:20:15,083
+just plumbing other than any type when
+you're dumb place
+
+307
+00:20:15,083 --> 00:20:18,134
+and understanding is do not from target
+
+308
+00:20:19,034 --> 00:20:23,035
+in the lot in the nod from target mode
+you're telling the debugger
+
+309
+00:20:23,044 --> 00:20:26,136
+I feel really like to know about the
+dynamic type on this thing
+
+310
+00:20:27,036 --> 00:20:31,102
+but I've free for real not to run any
+Cody mime fear process
+
+311
+00:20:32,002 --> 00:20:35,094
+if it turns out that you have to do that
+them just don't tell me about it and I'm
+
+312
+00:20:35,094 --> 00:20:36,103
+a type that's okay
+
+313
+00:20:37,003 --> 00:20:40,007
+understand the mancation is
+
+314
+00:20:40,007 --> 00:20:44,106
+dad information to resolve the type will
+be passed along your data
+
+315
+00:20:45,006 --> 00:20:48,042
+you will call it a night function within
+Inc annual you're a
+
+316
+00:20:48,042 --> 00:20:51,079
+data will be passed to the function as
+well as Medicaid up
+
+317
+00:20:51,079 --> 00:20:56,101
+double towel the language this is that
+Inc you're dealing with
+
+318
+00:20:57,001 --> 00:21:02,058
+all the be can use that same information
+to reconstruct the meaning of code
+
+319
+00:21:02,058 --> 00:21:05,064
+how does that look like
+
+320
+00:21:06,018 --> 00:21:10,076
+let's say we have a protocol for
+producing arbitrary thinks
+
+321
+00:21:10,076 --> 00:21:14,119
+and then we have a concrete class that
+implements the protocol that conforms to
+
+322
+00:21:15,019 --> 00:21:16,054
+that protocol
+
+323
+00:21:16,054 --> 00:21:19,120
+and it produces ins and now we have a
+function
+
+324
+00:21:20,002 --> 00:21:23,083
+that fast I can accept any producer for
+things
+
+325
+00:21:24,001 --> 00:21:29,070
+as long as what they produce the same if
+I hit a break point
+
+326
+00:21:29,007 --> 00:21:32,012
+I expect to see my Jarrett result
+
+327
+00:21:33,002 --> 00:21:37,085
+that is indeed what happens but how does
+it work
+
+328
+00:21:38,003 --> 00:21:43,012
+well Ltd looks at your function and in
+realizes that your function takes
+
+329
+00:21:43,012 --> 00:21:46,100
+a generic argument be so all to be
+
+330
+00:21:47,000 --> 00:21:52,027
+have to look for type information to
+result beat and he finds it
+
+331
+00:21:52,027 --> 00:21:55,102
+when you buy generic code you're going
+to see a lot of these dollars with top
+
+332
+00:21:56,002 --> 00:21:57,071
+type: .name
+
+333
+00:21:57,071 --> 00:22:02,072
+special variables the special variables
+carried a generic type information
+
+334
+00:22:02,081 --> 00:22:05,173
+there be swift object meta-data for your
+generic type
+
+335
+00:22:06,073 --> 00:22:09,098
+armed with that knowledge 1l BBC's
+
+336
+00:22:09,098 --> 00:22:13,129
+the argument of type be he knows to
+actually use the generic type
+
+337
+00:22:14,029 --> 00:22:15,032
+information
+
+338
+00:22:15,032 --> 00:22:22,032
+to resolve it to its actual dynamic type
+
+339
+00:22:23,017 --> 00:22:26,018
+we talked about a few roles about how
+
+340
+00:22:26,027 --> 00:22:29,085
+protocols and generics behave in swift
+those are
+
+341
+00:22:29,085 --> 00:22:32,103
+general rules and for the most part
+
+342
+00:22:33,003 --> 00:22:37,071
+they apply to the black Belles a debug
+build up your code
+
+343
+00:22:37,071 --> 00:22:40,077
+is a very very very literal translation
+
+344
+00:22:40,077 --> 00:22:45,111
+up the call you just broke into native
+execute a ble code
+
+345
+00:22:46,011 --> 00:22:50,027
+the fact that it's very liberal a
+translation is actually good thing for
+
+346
+00:22:50,027 --> 00:22:50,111
+tobacco Billy
+
+347
+00:22:51,011 --> 00:22:55,095
+and thats wider call the buck bales if
+my code is translated literally
+
+348
+00:22:55,095 --> 00:22:59,194
+as an be back in through it it's really
+easy for me to see the correspondence
+
+349
+00:23:00,094 --> 00:23:03,138
+evolution on evolution in machine code
+execution
+
+350
+00:23:04,038 --> 00:23:08,067
+evolution in source code execution it's
+really easy for the buyer to maintain
+
+351
+00:23:08,067 --> 00:23:10,084
+the correspondence between what he wrote
+
+352
+00:23:10,084 --> 00:23:14,126
+and what is actually going on at the bar
+on a bar madeleine the hardware
+
+353
+00:23:15,026 --> 00:23:19,111
+in an optimized build your code while
+maintaining the same semantics
+
+354
+00:23:20,011 --> 00:23:24,057
+the compiler is actually free shuffle
+things
+
+355
+00:23:24,057 --> 00:23:28,106
+a little bit behind your back and that
+means that that literal evolution a
+
+356
+00:23:29,006 --> 00:23:29,097
+machine code
+
+357
+00:23:29,097 --> 00:23:34,099
+will not correspond anymore to the same
+sequence evolution of your source code
+
+358
+00:23:35,017 --> 00:23:39,073
+there will be staff there will be champs
+data will not be doubted it was supposed
+
+359
+00:23:39,073 --> 00:23:42,082
+to be there
+
+360
+00:23:42,082 --> 00:23:46,179
+as a result of that the first rule up
+the bond an optimized code
+
+361
+00:23:47,079 --> 00:23:53,082
+is that you dont I'm sure it's a lesson
+some unions have had to learn
+
+362
+00:23:53,082 --> 00:23:56,161
+you probably have our ups and you
+probably get box from
+
+363
+00:23:57,061 --> 00:24:00,063
+those outsmart by rally I'm sure
+
+364
+00:24:00,081 --> 00:24:03,153
+but sometimes it happens and a first
+think
+
+365
+00:24:04,053 --> 00:24:07,104
+you should only get one of those rare
+incoming box
+
+366
+00:24:08,004 --> 00:24:11,101
+is reproduce it in a debug build up your
+app
+
+367
+00:24:12,001 --> 00:24:15,046
+ollie if that doesn't work
+
+368
+00:24:15,046 --> 00:24:20,054
+as I'm sorry tough luck you're gonna
+have to be back optimized code
+
+369
+00:24:20,054 --> 00:24:23,080
+all the usual caveats applied has waived
+
+370
+00:24:23,008 --> 00:24:27,009
+and there's a couple new while that are
+specific to things recovered
+
+371
+00:24:27,009 --> 00:24:33,074
+in the previous lights while in general
+tied monotonous passed along
+
+372
+00:24:34,055 --> 00:24:37,104
+this with compiler is free in optimized
+builds
+
+373
+00:24:38,004 --> 00:24:41,030
+to actually specialized away some
+
+374
+00:24:41,003 --> 00:24:47,012
+types some your generic functions for
+some specific types
+
+375
+00:24:47,039 --> 00:24:51,130
+also of if the compiler can understand
+what's going on with protocols
+
+376
+00:24:52,003 --> 00:24:55,021
+and the concrete I plan implement them
+it's free to do
+
+377
+00:24:55,048 --> 00:24:59,073
+the virtualization to skip dynamic
+dispatching indirectly calling for
+
+378
+00:24:59,073 --> 00:25:05,117
+implementing object
+
+379
+00:25:06,017 --> 00:25:11,018
+objective-c isn't really going anywhere
+
+380
+00:25:11,018 --> 00:25:14,020
+some love you we sat already have
+elapsed
+
+381
+00:25:14,038 --> 00:25:18,044
+and if are likely those are written in
+objective-c
+
+382
+00:25:18,044 --> 00:25:22,045
+but even if you start a brand new Swift
+out for the first time
+
+383
+00:25:22,054 --> 00:25:25,125
+today after the session you're going to
+use
+
+384
+00:25:26,025 --> 00:25:30,038
+Coco of Cocoa Touch you're going to
+import
+
+385
+00:25:30,038 --> 00:25:36,074
+foundation import you like it those
+frameworks are written in objective-c
+
+386
+00:25:36,074 --> 00:25:40,089
+that means wherever you look around
+there's gonna be objective seeing the
+
+387
+00:25:40,089 --> 00:25:42,134
+picture
+
+388
+00:25:43,034 --> 00:25:47,133
+and you're going to have to deal with
+the Bakken mixed swift and objective-c
+
+389
+00:25:48,033 --> 00:25:50,098
+situations
+
+390
+00:25:50,098 --> 00:25:53,192
+what can you expect when that happens
+what can you expect to see
+
+391
+00:25:54,092 --> 00:25:58,099
+in the LD be in the tax code bibles mu
+what to expect as you try to evaluate
+
+392
+00:25:58,099 --> 00:25:59,197
+expressions and yelled to be consul
+
+393
+00:26:00,097 --> 00:26:06,160
+what can you expect when you try to PO
+your objects
+
+394
+00:26:07,006 --> 00:26:11,060
+the variables view goes by what's called
+a mass media experience
+
+395
+00:26:12,014 --> 00:26:15,036
+will show you data in the language in
+which the
+
+396
+00:26:15,036 --> 00:26:19,080
+type was first raked in in this case
+
+397
+00:26:19,008 --> 00:26:23,081
+which he is with three Inc and
+administering side by side
+
+398
+00:26:24,053 --> 00:26:27,065
+and a swift training is shown at this
+with three little
+
+399
+00:26:27,065 --> 00:26:31,124
+as your tie pins with source code the
+Objective C string literal
+
+400
+00:26:32,024 --> 00:26:35,053
+is shown as an objective C string
+literal is shown
+
+401
+00:26:35,053 --> 00:26:40,129
+as if as you type that same thing in
+Objective C source code
+
+402
+00:26:41,029 --> 00:26:44,031
+in all cases data format us we'll
+
+403
+00:26:44,031 --> 00:26:47,087
+apply
+
+404
+00:26:47,087 --> 00:26:50,110
+if I'm evaluating expressions however
+things
+
+405
+00:26:51,001 --> 00:26:55,069
+become a legal more strongly separated
+
+406
+00:26:55,078 --> 00:26:58,132
+expressions CQ sapper waltz
+
+407
+00:26:59,032 --> 00:27:04,037
+objects that exist is which frames are
+all usable by Swift expressions
+
+408
+00:27:04,082 --> 00:27:08,106
+and the same is true for objects in
+objective-c court frames
+
+409
+00:27:09,006 --> 00:27:13,099
+your results you're a result ables they
+get to suffer namespaces
+
+410
+00:27:13,099 --> 00:27:17,152
+a little background on that when you
+type in LB expression command
+
+411
+00:27:18,052 --> 00:27:21,150
+the result that expression is stored
+away in the debugger generated
+
+412
+00:27:22,005 --> 00:27:23,047
+persistent viable
+
+413
+00:27:23,092 --> 00:27:26,101
+which you're very welcome three years in
+subsequent expressions
+
+414
+00:27:27,082 --> 00:27:30,136
+the results appear objective-c
+expressions well get stored in variables
+
+415
+00:27:31,036 --> 00:27:34,128
+name dollar zero dollar wonder what you
+you get the idea
+
+416
+00:27:35,028 --> 00:27:38,037
+and the results are a swift expressions
+will be stored in variables name
+
+417
+00:27:39,018 --> 00:27:44,084
+dollar r0 dollar r1 and you get the idea
+
+418
+00:27:44,084 --> 00:27:47,160
+let's see an example of the whole system
+works
+
+419
+00:27:48,006 --> 00:27:53,017
+we're stopped in Coco frame the aft
+command Calif
+
+420
+00:27:53,071 --> 00:27:57,078
+South of the frame are recurrently stop
+we type
+
+421
+00:27:57,078 --> 00:28:01,121
+and objective-c expression because we're
+in objective-c frame just be self
+
+422
+00:28:02,021 --> 00:28:06,033
+and we got it viable dollar 0 that
+stored away
+
+423
+00:28:06,033 --> 00:28:09,067
+South now was pepper on
+
+424
+00:28:09,067 --> 00:28:12,075
+a little bit and we'll and in a swift
+freight
+
+425
+00:28:13,047 --> 00:28:16,104
+now we like to try and use the dollar's
+
+426
+00:28:17,004 --> 00:28:20,030
+here a persistent variable and would
+like to ride in the check to see
+
+427
+00:28:20,003 --> 00:28:22,031
+expression that involves at
+
+428
+00:28:22,058 --> 00:28:25,076
+doctor of life so well
+
+429
+00:28:25,076 --> 00:28:29,157
+since we're in a swift frame those with
+compiler is trying to compile your swift
+
+430
+00:28:30,057 --> 00:28:30,098
+your
+
+431
+00:28:30,098 --> 00:28:33,100
+expression we just with Pentax
+
+432
+00:28:34,000 --> 00:28:37,015
+but that house with syntax thats
+Objective C syntax
+
+433
+00:28:37,015 --> 00:28:40,015
+and saw the compiler gets really a happy
+
+434
+00:28:40,015 --> 00:28:45,079
+any mentions things like and Nani more
+scores argument not contain a click here
+
+435
+00:28:45,079 --> 00:28:48,104
+a care must be doing something wrong
+here
+
+436
+00:28:49,004 --> 00:28:53,011
+well what's going on is you're trying to
+use P R language
+
+437
+00:28:53,074 --> 00:28:56,152
+and as a way for you to do that but you
+have to Cali be
+
+438
+00:28:57,052 --> 00:29:00,121
+don't automatically infertile and you're
+my expressions from the language %uh the
+
+439
+00:29:01,021 --> 00:29:03,066
+freemen stopped in
+
+440
+00:29:03,066 --> 00:29:06,138
+use the language I CaL you to use
+
+441
+00:29:07,038 --> 00:29:10,120
+in this example we're using the bash L
+or dash national language
+
+442
+00:29:11,002 --> 00:29:14,057
+flag expression command when can only be
+
+443
+00:29:14,075 --> 00:29:18,171
+use the Objective C plus plus expression
+evaluator use the clan compiler
+
+444
+00:29:19,071 --> 00:29:22,129
+that is inside a view to actually parse
+that expression
+
+445
+00:29:23,029 --> 00:29:26,101
+and then that works but there's a caveat
+
+446
+00:29:27,001 --> 00:29:30,036
+little with the caveat your locals
+
+447
+00:29:30,036 --> 00:29:33,105
+will not be available since you change
+your language
+
+448
+00:29:34,005 --> 00:29:39,012
+as we said before locals are not
+available
+
+449
+00:29:39,075 --> 00:29:42,080
+P always in a way similar to the
+expression command
+
+450
+00:29:42,008 --> 00:29:46,021
+but it actually want to get the result
+the expression
+
+451
+00:29:46,093 --> 00:29:50,098
+it goes back to that martin et
+experience that the parable be leaves by
+
+452
+00:29:50,098 --> 00:29:54,149
+swift objects will display using data
+for matters
+
+453
+00:29:55,049 --> 00:29:59,052
+objective-c objects will display using
+their description method
+
+454
+00:29:59,079 --> 00:30:03,146
+much like they did for before Xcode sex
+
+455
+00:30:04,046 --> 00:30:07,047
+second cat funny real quick
+
+456
+00:30:07,056 --> 00:30:10,138
+I can have is with class that in our
+tennis object
+
+457
+00:30:11,038 --> 00:30:14,047
+and I can actually override description
+for that class
+
+458
+00:30:15,028 --> 00:30:19,102
+in swift but if I try to PO 18 LDB
+
+459
+00:30:20,002 --> 00:30:23,070
+how to be will not even look at that
+description I'll be will use data for
+
+460
+00:30:23,007 --> 00:30:24,011
+matters
+
+461
+00:30:24,074 --> 00:30:29,116
+and that's when I'll get because that's
+a swift object
+
+462
+00:30:30,016 --> 00:30:34,047
+prefect we want to use my description
+what if actually want to you
+
+463
+00:30:34,047 --> 00:30:38,051
+CD objective seaside thinks it turns out
+
+464
+00:30:38,051 --> 00:30:43,109
+there is a way when there's a will
+there's always that way
+
+465
+00:30:44,009 --> 00:30:47,026
+i cant far from there and I guess I have
+to ride
+
+466
+00:30:47,026 --> 00:30:50,061
+an expression and I guess I have to ride
+
+467
+00:30:50,061 --> 00:30:56,085
+and objective-c expression since I'm
+trying to get in objective-c behavior
+
+468
+00:30:56,085 --> 00:31:00,158
+came in for help for peole an expression
+
+469
+00:31:01,058 --> 00:31:06,092
+I can discover that the PO behavior is
+actually triggered by a flag expression
+
+470
+00:31:06,092 --> 00:31:06,143
+command
+
+471
+00:31:07,043 --> 00:31:12,094
+the dash shopper CAISO flag for object
+description
+
+472
+00:31:12,094 --> 00:31:16,168
+and so I can guess that I need to write
+an objective-c expression to get an
+
+473
+00:31:17,068 --> 00:31:19,111
+object description
+
+474
+00:31:20,011 --> 00:31:26,106
+but not much change language now i cant
+you as my object local anymore
+
+475
+00:31:27,006 --> 00:31:31,058
+I can resort to using its address I know
+it live somewhere in memory
+
+476
+00:31:31,058 --> 00:31:35,144
+and PO told me why leaves a memory I can
+use that information
+
+477
+00:31:36,044 --> 00:31:40,139
+to go across the language barrier and
+bring my option along with me
+
+478
+00:31:41,039 --> 00:31:44,066
+but but I'm not using might
+
+479
+00:31:44,066 --> 00:31:47,125
+local type information anymore so that a
+number
+
+480
+00:31:48,025 --> 00:31:53,036
+for all client knows I'm asking it pay
+please show me that number
+
+481
+00:31:53,036 --> 00:31:56,097
+I need to tell the compiler that were
+actually want to see
+
+482
+00:31:56,097 --> 00:31:59,118
+is not the number of black 2000
+something
+
+483
+00:32:00,018 --> 00:32:04,039
+I want the CD object at that location in
+memory
+
+484
+00:32:04,039 --> 00:32:08,117
+the simplest way to get there just got
+through it
+
+485
+00:32:09,017 --> 00:32:12,060
+and after all these magic
+
+486
+00:32:12,006 --> 00:32:19,006
+a result shows up just like that
+
+487
+00:32:21,041 --> 00:32:25,080
+thank you thank you
+
+488
+00:32:25,008 --> 00:32:28,082
+left very quickly stopped for a couple
+stabbing scenario s
+
+489
+00:32:29,054 --> 00:32:32,110
+protocols enclosures
+
+490
+00:32:33,001 --> 00:32:37,072
+let's say I set a breakpoint right why
+I'm trying to use one on my
+
+491
+00:32:37,081 --> 00:32:41,175
+creature objects and I step incorrectly
+wanna see implementation
+
+492
+00:32:42,075 --> 00:32:45,132
+up that coated step through it and see
+what's going on
+
+493
+00:32:46,032 --> 00:32:50,044
+it turns out that that just works
+Alnylam's right why would expect
+
+494
+00:32:50,044 --> 00:32:53,065
+but there's one extra frame on the stack
+
+495
+00:32:53,065 --> 00:32:56,065
+does for frame call prodigal witness
+
+496
+00:32:56,065 --> 00:33:00,164
+for creature dot speak on the stack that
+frame
+
+497
+00:33:01,064 --> 00:33:05,087
+if the protocol is the prodigal economic
+dispatch frame
+
+498
+00:33:05,087 --> 00:33:09,095
+it's the code that is with runtime uses
+between where at my call
+
+499
+00:33:09,095 --> 00:33:12,149
+star someone my code a month the cold
+cold start executing
+
+500
+00:33:13,049 --> 00:33:16,115
+tracker Lipper from the namic dispatch
+LD be automatically
+
+501
+00:33:17,015 --> 00:33:21,043
+step through it right into my coat and
+if I step out
+
+502
+00:33:21,043 --> 00:33:24,100
+say magic happens in reverse the product
+awareness frame
+
+503
+00:33:25,000 --> 00:33:28,018
+just disappears and I get right back
+into my code
+
+504
+00:33:28,018 --> 00:33:33,062
+transparently and have more good news
+for you
+
+505
+00:33:33,062 --> 00:33:36,109
+you can set breakpoints inside closures
+
+506
+00:33:37,009 --> 00:33:41,017
+you can expect only be two year break
+fight inside your closure even if it's
+
+507
+00:33:41,017 --> 00:33:43,109
+an inline anonymous closure
+
+508
+00:33:44,009 --> 00:33:48,016
+and that's what you'll see in the Speccy
+that sister Khloe juries in line and
+
+509
+00:33:48,016 --> 00:33:48,089
+anonymous
+
+510
+00:33:48,089 --> 00:33:51,141
+it's called closure number one in my
+call Mike calling function
+
+511
+00:33:52,041 --> 00:33:55,136
+you can also expect to see your locals
+
+512
+00:33:56,036 --> 00:33:59,119
+even though steps even those dollar
+variables that are automatically
+
+513
+00:34:00,019 --> 00:34:01,070
+generated by the compiler
+
+514
+00:34:01,007 --> 00:34:07,476
+and you never declared good news all
+over the board first app Inc
+
+515
+00:34:08,169 --> 00:34:12,217
+now this topic is really dear to my
+heart
+
+516
+00:34:12,649 --> 00:34:17,060
+because thats what I usually walk up
+data for matters
+
+517
+00:34:17,006 --> 00:34:22,015
+data for matters are weighing only be to
+improve the way our data show
+
+518
+00:34:22,069 --> 00:34:26,088
+to hide implementation details and all
+we focus on the core things that matter
+
+519
+00:34:26,259 --> 00:34:28,293
+to you when you get back
+
+520
+00:34:28,599 --> 00:34:31,960
+much like we do for c-bus boss in
+objective-c
+
+521
+00:34:31,096 --> 00:34:34,215
+we automatically format type seen as
+with full ivory
+
+522
+00:34:35,079 --> 00:34:39,146
+you don't have to worry about that that
+will happen out a medical for you
+
+523
+00:34:39,749 --> 00:34:42,788
+but the good news is that the mechanism
+is pliable
+
+524
+00:34:43,139 --> 00:34:46,212
+this caller in great detail in lost your
+fashion
+
+525
+00:34:46,869 --> 00:34:50,936
+which are welcome to watch online or on
+the Ltd website
+
+526
+00:34:51,539 --> 00:34:55,563
+will just quickly go through example to
+show that you can roll your own suite
+
+527
+00:34:55,779 --> 00:34:56,781
+for matters
+
+528
+00:34:56,799 --> 00:34:59,823
+much like you couldn't ship of loss and
+objective-c
+
+529
+00:35:00,039 --> 00:35:04,460
+let's say we have a structure represents
+a person's address
+
+530
+00:35:04,046 --> 00:35:10,097
+and we try to be all my address card
+represented in this track
+
+531
+00:35:10,097 --> 00:35:15,896
+I felt horrible display but it looks
+nothing like an address would look right
+
+532
+00:35:16,769 --> 00:35:19,800
+I want to make these more handle up like
+
+533
+00:35:20,079 --> 00:35:23,670
+I won this little we'll be more like I
+was drying my address
+
+534
+00:35:23,067 --> 00:35:27,926
+on an amp I can do that with the old
+B-type summary at command
+
+535
+00:35:28,529 --> 00:35:32,640
+the type summary at commander's lol BBS
+command to say
+
+536
+00:35:32,064 --> 00:35:35,173
+when you're showing me a viable a beast
+type here's the
+
+537
+00:35:35,749 --> 00:35:39,720
+at a glance information I'd like to see
+shit are presented
+
+538
+00:35:39,072 --> 00:35:42,093
+and so we can tell Debbie you should use
+the
+
+539
+00:35:42,093 --> 00:35:46,121
+Dyeables name you should use that name
+of the person
+
+540
+00:35:47,021 --> 00:35:50,119
+you should use the stadium September
+separatist you buy a new line since
+
+541
+00:35:51,019 --> 00:35:51,928
+erratic
+
+542
+00:35:52,099 --> 00:35:55,140
+now bought a new one in there for me
+will you
+
+543
+00:35:55,014 --> 00:35:59,093
+and riders zip code and then after a
+call in the space
+
+544
+00:35:59,093 --> 00:36:03,032
+can you please but the state this is the
+US address format basically
+
+545
+00:36:03,869 --> 00:36:08,190
+and we're saying you stop for the
+address object
+
+546
+00:36:08,019 --> 00:36:12,618
+now only pee on me again
+
+547
+00:36:12,789 --> 00:36:17,390
+we got something that looks a lot more
+like an actual address
+
+548
+00:36:17,039 --> 00:36:22,043
+data for matters mission accomplished
+
+549
+00:36:22,043 --> 00:36:26,048
+I told us all with caveats there's a few
+more
+
+550
+00:36:26,048 --> 00:36:29,627
+when you actually tell only be buying
+this for a matter to be
+
+551
+00:36:30,059 --> 00:36:33,740
+type you have to use the form qualified
+name
+
+552
+00:36:33,074 --> 00:36:38,099
+that includes the name of the module
+we'll talk about that a lil bit
+
+553
+00:36:38,099 --> 00:36:42,146
+if you're right I'm pie dough for matter
+you want to use has been valued at some
+
+554
+00:36:43,046 --> 00:36:46,095
+are you when asked objects for a summary
+
+555
+00:36:46,509 --> 00:36:50,564
+even for staying studying see our
+objective c- look like basic types that
+
+556
+00:36:51,059 --> 00:36:53,410
+have a value like an ant or float
+
+557
+00:36:53,041 --> 00:36:56,940
+in swift there's a legal more intricacy
+going on under the hood
+
+558
+00:36:57,309 --> 00:37:01,406
+so what you want to show we want to ask
+if the object summary
+
+559
+00:37:02,279 --> 00:37:05,312
+caveat to the Ka'ba except for enough's
+
+560
+00:37:05,609 --> 00:37:09,930
+when you have a swift enough and you
+want to figure out which cases selected
+
+561
+00:37:09,093 --> 00:37:14,462
+you of the value
+
+562
+00:37:15,299 --> 00:37:19,910
+let's talk about game uniqueness
+
+563
+00:37:19,091 --> 00:37:22,800
+let's say you you guys are running an
+awesome objective-c up
+
+564
+00:37:23,619 --> 00:37:27,691
+and as a really good framework that will
+help make you so much more productive
+
+565
+00:37:28,339 --> 00:37:32,430
+its four-dot framework of course Ford of
+framework has developers were
+
+566
+00:37:33,249 --> 00:37:37,690
+really good tasting class name Inc their
+case Inc last name is so good that they
+
+567
+00:37:37,069 --> 00:37:37,143
+came up
+
+568
+00:37:38,043 --> 00:37:41,442
+we have a really nice last name
+
+569
+00:37:41,829 --> 00:37:46,200
+unfortunately this guys have to go to a
+taste for their own good
+
+570
+00:37:46,002 --> 00:37:49,401
+a little while later the developer some
+another great framework
+
+571
+00:37:49,599 --> 00:37:52,668
+bardot framework came up with the same
+super
+
+572
+00:37:53,289 --> 00:37:57,311
+classname now the resolve this
+
+573
+00:37:57,509 --> 00:38:02,150
+if not nice at all the result of this is
+on the fine
+
+574
+00:38:02,015 --> 00:38:05,041
+a few frameworks with the same class
+with the same name
+
+575
+00:38:05,041 --> 00:38:09,042
+trying to correct this in the same up at
+the same time that's not nice but on the
+
+576
+00:38:09,042 --> 00:38:09,441
+fun
+
+577
+00:38:09,819 --> 00:38:13,420
+you don't get to choose which class gets
+actually loaded
+
+578
+00:38:13,042 --> 00:38:16,631
+is with that's got
+
+579
+00:38:17,009 --> 00:38:21,670
+smoke
+
+580
+00:38:21,067 --> 00:38:25,226
+thank you swift provides uniqueness
+
+581
+00:38:25,829 --> 00:38:30,230
+among function overloads and among
+classes in different frameworks
+
+582
+00:38:30,023 --> 00:38:33,095
+the way to that all this good mashed
+
+583
+00:38:33,095 --> 00:38:37,147
+is a Fisher cold Mangal names family
+only come from c-bus class
+
+584
+00:38:38,047 --> 00:38:42,636
+and may be familiar with that already
+let's talk about it
+
+585
+00:38:43,059 --> 00:38:47,440
+distill guys and they're both runs with
+colored better know about each other
+
+586
+00:38:47,044 --> 00:38:52,683
+but they bought think that my class is
+the best name ever for a class
+
+587
+00:38:53,079 --> 00:38:56,150
+I don't agree with that but that's their
+choice
+
+588
+00:38:56,015 --> 00:38:59,063
+they want the summit there go to those
+with compiler
+
+589
+00:38:59,063 --> 00:39:02,094
+the first guy goes on and off it
+
+590
+00:39:02,094 --> 00:39:05,493
+as a result he gets a compiled version
+of this code
+
+591
+00:39:06,339 --> 00:39:09,431
+war his class is actually called
+something my mom you my class
+
+592
+00:39:10,259 --> 00:39:14,730
+we go back to that in a second when the
+second I doubt that
+
+593
+00:39:14,073 --> 00:39:17,095
+the same thing to try to compile
+
+594
+00:39:17,095 --> 00:39:21,117
+his class actually gets called something
+modern to my class
+
+595
+00:39:22,017 --> 00:39:27,106
+now they don't clash anymore Marshall
+won my class model to my class
+
+596
+00:39:27,259 --> 00:39:32,410
+there's a little price to pay not if I
+actually look at the screen and seal
+
+597
+00:39:32,041 --> 00:39:35,098
+what the name of the class became a
+linkage time
+
+598
+00:39:35,098 --> 00:39:38,103
+it's cold underscore copper King St
+
+599
+00:39:39,048 --> 00:39:42,817
+lower case T copper Casey Saban
+
+600
+00:39:43,249 --> 00:39:47,180
+module one Saban Mike loss
+
+601
+00:39:47,018 --> 00:39:50,447
+and that's just for the guy in the class
+now
+
+602
+00:39:50,609 --> 00:39:53,900
+the wall is actually a scary place
+sometimes
+
+603
+00:39:53,009 --> 00:39:57,010
+what if you are out there in the wild
+roaming through a dark straits
+
+604
+00:39:57,091 --> 00:40:02,040
+and out a little alley a mangle name
+came right at you
+
+605
+00:40:02,859 --> 00:40:05,873
+that could happen while you're enough
+you're just sitting there in Interface
+
+606
+00:40:05,999 --> 00:40:07,035
+Builder doing things and
+
+607
+00:40:07,359 --> 00:40:11,420
+orgasm angle named are or worse even
+
+608
+00:40:11,042 --> 00:40:15,141
+your app just crashed not all you're
+gonna crash report a window
+
+609
+00:40:15,519 --> 00:40:19,900
+you're also got a mantle names and our
+doesn't get much worse than that
+
+610
+00:40:19,009 --> 00:40:23,598
+X abt swifty mandel comes to the rescue
+
+611
+00:40:24,489 --> 00:40:28,515
+thrifty mando is a little told them
+chips relax code:
+
+612
+00:40:28,749 --> 00:40:32,920
+the black sea bass is the input on the
+command line one or more swift Mangal
+
+613
+00:40:32,092 --> 00:40:33,211
+names
+
+614
+00:40:34,039 --> 00:40:38,137
+and be magically provide to the mangled
+version
+
+615
+00:40:39,019 --> 00:40:46,019
+so fear no more and congressman rangel
+names in dark Alice
+
+616
+00:40:46,519 --> 00:40:50,520
+this is a magical modulus this is the
+magical modulus
+
+617
+00:40:50,619 --> 00:40:55,890
+in the context all name uniqueness on
+avoiding clashes
+
+618
+00:40:55,089 --> 00:41:00,008
+models can do a lot more for out
+motorcycle he make debugging
+
+619
+00:41:00,809 --> 00:41:03,828
+alarm or of some why
+
+620
+00:41:03,999 --> 00:41:07,700
+how let's look at it I have
+
+621
+00:41:07,007 --> 00:41:10,031
+source code for my up returns with
+
+622
+00:41:10,094 --> 00:41:13,763
+I give it to those with compiler
+
+623
+00:41:14,609 --> 00:41:17,674
+the output up that process is an op
+
+624
+00:41:18,259 --> 00:41:25,180
+and Marshall information wife extreme
+porn on the model information
+
+625
+00:41:25,018 --> 00:41:30,617
+while it turns out that much like it
+contains a copy of Clank
+
+626
+00:41:30,779 --> 00:41:33,826
+only contains a copy of the swift
+compiler inside
+
+627
+00:41:34,249 --> 00:41:38,310
+and that's yours of course a Sparta
+expression evaluation for swift
+
+628
+00:41:38,859 --> 00:41:41,940
+but there's a little more for the story
+
+629
+00:41:41,094 --> 00:41:45,253
+now when I try to debug that out
+
+630
+00:41:46,099 --> 00:41:49,720
+the call dropped the compiler we'll
+actually be able to in purple
+
+631
+00:41:49,072 --> 00:41:53,074
+to ingest the model information for
+compiled up
+
+632
+00:41:53,092 --> 00:41:56,171
+wife that's so important let me give you
+
+633
+00:41:57,071 --> 00:42:01,410
+a legal perspective on what happens when
+you compile a nap for debugging
+
+634
+00:42:02,049 --> 00:42:06,093
+and then to try to debug it when you
+tell the compiler
+
+635
+00:42:06,489 --> 00:42:09,496
+any compiler a let's go we climbed
+example
+
+636
+00:42:09,559 --> 00:42:13,390
+when you tell Clank police compile map
+for the bike Inc
+
+637
+00:42:13,039 --> 00:42:16,738
+what clanged off is it ingests your code
+as usual
+
+638
+00:42:17,089 --> 00:42:22,640
+it understands it recorded gets a man
+told model on it in some sense
+
+639
+00:42:22,064 --> 00:42:26,923
+then you tell Klein gimme in formation
+to hold me back my up
+
+640
+00:42:27,499 --> 00:42:31,505
+but that process stuff is generates
+dewar
+
+641
+00:42:31,559 --> 00:42:34,583
+wharf is a format used specifically for
+
+642
+00:42:34,799 --> 00:42:38,851
+containing the bag information so clang
+get an understanding of the type system
+
+643
+00:42:39,319 --> 00:42:43,710
+of your up it takes that understanding
+it translates 8
+
+644
+00:42:43,071 --> 00:42:46,073
+into a different format dwarf
+
+645
+00:42:46,073 --> 00:42:49,862
+the debugger LDB than in Jaz
+
+646
+00:42:50,519 --> 00:42:53,525
+that dwarf information and hes still
+
+647
+00:42:53,579 --> 00:42:57,970
+recreate an understanding on the type
+system of your app
+
+648
+00:42:57,097 --> 00:43:00,191
+the way LDB doubt that is it generates
+climate types
+
+649
+00:43:01,091 --> 00:43:04,163
+outer door hold on a sec
+
+650
+00:43:05,063 --> 00:43:08,068
+so what your kalin me here is basically
+that clan
+
+651
+00:43:09,013 --> 00:43:12,652
+generates client types outta my source
+code
+
+652
+00:43:12,769 --> 00:43:18,880
+that it translates that into war that
+LDB consumes the dwarf
+
+653
+00:43:18,088 --> 00:43:22,089
+and generates Klein pipes back
+
+654
+00:43:22,089 --> 00:43:25,117
+why only be really nice if
+
+655
+00:43:26,017 --> 00:43:30,040
+allenby could directly understand the
+compiler notion of types
+
+656
+00:43:30,004 --> 00:43:33,007
+but only big crate if we didn't have the
+intermediate steps
+
+657
+00:43:33,007 --> 00:43:36,101
+and the compiler part is your source
+code understands it
+
+658
+00:43:37,064 --> 00:43:41,213
+create some representation of the types
+it's all representation of the types in
+
+659
+00:43:41,789 --> 00:43:42,700
+your app
+
+660
+00:43:42,007 --> 00:43:45,896
+and the debugger get things that same
+representation
+
+661
+00:43:46,589 --> 00:43:49,686
+that's certainly seems nice it certainly
+seems that for our house
+
+662
+00:43:50,559 --> 00:43:54,450
+that have to actually ride the debugger
+which keep one step we can directly use
+
+663
+00:43:54,045 --> 00:43:56,354
+the compilers notion of the trip
+
+664
+00:43:56,759 --> 00:44:00,791
+it's also really nice for you note to
+users: up to the doctor
+
+665
+00:44:01,079 --> 00:44:04,710
+the reason well there's a couple of
+reasons
+
+666
+00:44:04,071 --> 00:44:07,600
+the obvious one is that if we could do
+that
+
+667
+00:44:08,239 --> 00:44:11,245
+never be no potential for loss of
+information in different place from
+
+668
+00:44:11,839 --> 00:44:12,980
+process
+
+669
+00:44:12,098 --> 00:44:15,102
+week what we will go from source clan
+types
+
+670
+00:44:16,038 --> 00:44:19,073
+dwarf clang types to source
+
+671
+00:44:19,073 --> 00:44:26,073
+types types while I stopped wearing
+permission and your loss
+
+672
+00:44:26,789 --> 00:44:29,970
+that is what happens in swift
+
+673
+00:44:29,097 --> 00:44:32,686
+this rift compiler generates a Marshall
+which is
+
+674
+00:44:33,559 --> 00:44:36,653
+the compilers understanding up the proof
+over your program
+
+675
+00:44:37,499 --> 00:44:40,523
+at the time he was being compiled
+
+676
+00:44:40,739 --> 00:44:45,770
+I will debase copy others with compiler
+in Jax that model information
+
+677
+00:44:46,049 --> 00:44:50,420
+and can use it to reproduce the type
+system that the compiler was staying at
+
+678
+00:44:50,042 --> 00:44:52,451
+the time your program was being compiled
+
+679
+00:44:52,829 --> 00:44:55,858
+there's no law some information and
+there's no need for the intermediate
+
+680
+00:44:56,119 --> 00:44:56,217
+step
+
+681
+00:44:57,099 --> 00:45:02,190
+on recreating the types from back from
+nor
+
+682
+00:45:02,019 --> 00:45:05,448
+there's one more advantage
+
+683
+00:45:05,619 --> 00:45:08,624
+some of you every 10 see boss boss code
+and you're probably years
+
+684
+00:45:09,119 --> 00:45:13,121
+generics for that situation
+
+685
+00:45:13,319 --> 00:45:17,320
+I'm sure a ball right into it you tried
+to use some generic function
+
+686
+00:45:17,329 --> 00:45:21,470
+and ok you actually in the year starting
+your source program
+
+687
+00:45:21,047 --> 00:45:25,116
+and now eileen is complaining are you
+trying to use this function which is
+
+688
+00:45:25,539 --> 00:45:26,710
+really weird name
+
+689
+00:45:26,071 --> 00:45:29,123
+that is not present in the target
+
+690
+00:45:30,023 --> 00:45:33,842
+it turns out for that what happened in
+swift
+
+691
+00:45:34,049 --> 00:45:38,650
+fish generics are actually typed that
+the compiler understand nakedly
+
+692
+00:45:38,065 --> 00:45:43,004
+and since we have the compilers barry
+own understanding of the truth
+
+693
+00:45:43,589 --> 00:45:47,640
+now we get Avery type and every function
+through model information
+
+694
+00:45:48,099 --> 00:45:55,099
+even though she did not using your
+source code and even generic once
+
+695
+00:45:55,016 --> 00:45:58,195
+there was a lot of ground cover today
+
+696
+00:45:58,339 --> 00:46:02,410
+if you remember one thing from the
+fashion
+
+697
+00:46:02,041 --> 00:46:05,140
+well there's always comments but no luck
+that's not the thing I wanted to
+
+698
+00:46:05,509 --> 00:46:07,542
+remember
+
+699
+00:46:07,839 --> 00:46:11,410
+you can choose your language and hourly
+be will be there
+
+700
+00:46:11,041 --> 00:46:15,123
+every step of the way with helpful
+investigation tools
+
+701
+00:46:16,023 --> 00:46:20,812
+what are your it up rather using use
+with feature so you buy your existing
+
+702
+00:46:21,019 --> 00:46:21,960
+code base
+
+703
+00:46:21,096 --> 00:46:24,925
+the helpful fissures in the debugger
+will be there to help you make your op
+
+704
+00:46:25,789 --> 00:46:29,810
+are some we talked about a bunch of
+topics
+
+705
+00:46:29,999 --> 00:46:33,430
+we talked about Smith types that being
+data for matters
+
+706
+00:46:33,043 --> 00:46:37,362
+much of and probably a more on that
+
+707
+00:46:37,749 --> 00:46:42,749
+be important thing years your feedback
+matters a lot to us
+
+708
+00:46:42,749 --> 00:46:46,805
+I've been in the labs last couple days
+I've read the blog spear last couple a
+
+709
+00:46:47,309 --> 00:46:47,970
+base
+
+710
+00:46:47,097 --> 00:46:50,216
+and I've gotten from I've seen from you
+guys
+
+711
+00:46:51,089 --> 00:46:55,380
+some amazing feedback i've seen the
+great things have started doing is
+
+712
+00:46:55,038 --> 00:46:55,677
+waived
+
+713
+00:46:56,019 --> 00:47:00,100
+included a floppy birds up in swift i've
+seen that
+
+714
+00:47:00,829 --> 00:47:05,730
+we've got an email store people power
+amazing things about how they expect
+
+715
+00:47:05,073 --> 00:47:09,095
+this new tools to change their lives to
+make their programming batter
+
+716
+00:47:09,095 --> 00:47:12,144
+keep that coming your feedback matters a
+lot to us
+
+717
+00:47:13,044 --> 00:47:16,113
+let us know what we're doing great let
+us know what we can do better
+
+718
+00:47:17,013 --> 00:47:21,992
+and of course thank you everyone i win
+
+719
+00:47:22,109 --> 00:47:22,134
+thank you
+
