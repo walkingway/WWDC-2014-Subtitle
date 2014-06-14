@@ -1,0 +1,4404 @@
+1
+00:00:11,071 --> 00:00:15,160
+hi everyone I'm team in a few minutes my
+colleague Brady will come up
+
+2
+00:00:16,006 --> 00:00:20,041
+we both engineers on apples would
+contain how often have you heard a
+
+3
+00:00:20,095 --> 00:00:21,139
+presentation start with
+
+4
+00:00:22,039 --> 00:00:25,088
+today I'm really excited to talk to you
+about blah blah blah
+
+5
+00:00:25,439 --> 00:00:29,320
+and I told myself I didn't really wanna
+introduced this session that way and
+
+6
+00:00:29,032 --> 00:00:31,077
+then I realized I actually am really
+passionate about this topic
+
+7
+00:00:31,077 --> 00:00:34,084
+because over the past two years have
+worked on a lot of graphics technology
+
+8
+00:00:35,047 --> 00:00:36,526
+on the web like a CG
+
+9
+00:00:36,949 --> 00:00:39,954
+canvas CSS transforms animations
+
+10
+00:00:40,449 --> 00:00:44,478
+filters and I really think like web-dl
+is the next significant leap in the talk
+
+11
+00:00:44,739 --> 00:00:46,420
+graphics you can do in webbrowser
+
+12
+00:00:46,042 --> 00:00:50,047
+repeal takes the the power
+
+13
+00:00:50,092 --> 00:00:55,071
+the open gles standard which is popular
+on my ball chips
+
+14
+00:00:55,899 --> 00:00:58,958
+and combines it with Nick speed and
+convenience have JavaScript
+
+15
+00:00:59,489 --> 00:01:02,730
+the web programming language this means
+well
+
+16
+00:01:02,073 --> 00:01:05,149
+because you got this proliferation
+really powerful keep you hardware
+
+17
+00:01:06,049 --> 00:01:11,051
+um combined with this incredible
+performance improvement in JavaScript
+
+18
+00:01:11,069 --> 00:01:13,158
+we've had this sort of sweet spot we can
+do these amazing graphics
+
+19
+00:01:14,058 --> 00:01:19,127
+this gonna give you before power for
+configurable and programmable pipeline
+
+20
+00:01:20,027 --> 00:01:25,356
+as well as performance but because you
+talking directly to the GP you
+
+21
+00:01:25,599 --> 00:01:28,612
+and because JavaScript is
+
+22
+00:01:28,729 --> 00:01:32,360
+a super fast nowadays this get allow you
+to write
+
+23
+00:01:32,036 --> 00:01:35,134
+web content such is showing an
+interactive 3d model
+
+24
+00:01:36,034 --> 00:01:39,099
+while still maintaining their
+flexibility and he's abusive having your
+
+25
+00:01:39,099 --> 00:01:41,458
+text in the attractive controls in HTML
+
+26
+00:01:42,349 --> 00:01:45,470
+maybe wanna take that 3d model little
+bit further
+
+27
+00:01:45,047 --> 00:01:48,196
+and do something like a an architectural
+walk work a
+
+28
+00:01:48,619 --> 00:01:52,000
+flow-through a a building site you can
+see here we've got
+
+29
+00:01:52,000 --> 00:01:59,000
+more advanced lighting shadows is also
+data visualization
+
+30
+00:02:01,239 --> 00:02:05,130
+and mapping unit 3d mapping is becoming
+more popular
+
+31
+00:02:05,013 --> 00:02:09,028
+but such as 3d let's say you want to do
+a 2d
+
+32
+00:02:09,028 --> 00:02:12,065
+you wouldn't provide something like an
+image editor that's doing to day
+
+33
+00:02:12,065 --> 00:02:13,089
+operations on your
+
+34
+00:02:13,089 --> 00:02:16,137
+your content and he get to do something
+the previously wasn't available
+
+35
+00:02:17,037 --> 00:02:24,037
+always difficult to do in regular
+JavaScript awesome is very popular on
+
+36
+00:02:24,095 --> 00:02:27,143
+on the web is just doing image
+transitions so you got something
+
+37
+00:02:28,043 --> 00:02:32,112
+bit more be more exciting than a normal
+image slide we can do a 3d ripple effect
+
+38
+00:02:33,012 --> 00:02:36,017
+and of course those games this is a
+
+39
+00:02:36,062 --> 00:02:39,133
+a demo angry bought by unity where you
+got this console level
+
+40
+00:02:40,033 --> 00:02:44,081
+game engine which has things like a
+realistic lighting particles
+
+41
+00:02:44,081 --> 00:02:47,099
+and shadows and also the ability to
+destroy
+
+42
+00:02:47,099 --> 00:02:50,103
+evil robot or maybe you want to do
+something
+
+43
+00:02:51,039 --> 00:02:54,064
+make you to do something like casual
+gaming
+
+44
+00:02:54,064 --> 00:02:58,077
+and this is a sweep by play campus and
+it's a really great innovative take on
+
+45
+00:02:58,077 --> 00:02:58,114
+that
+
+46
+00:02:59,014 --> 00:03:02,067
+infinite to tear on a incentive like
+sliding along in 2d
+
+47
+00:03:02,067 --> 00:03:05,102
+you're actually flying this summer nice
+stylized I
+
+48
+00:03:06,002 --> 00:03:13,002
+plane around this radio Island it's
+quite fun so what did you learn today
+
+49
+00:03:13,067 --> 00:03:16,216
+I'm will stop by how to setup
+
+50
+00:03:16,819 --> 00:03:20,180
+had to get access to a video and send it
+up in your web page
+
+51
+00:03:20,018 --> 00:03:24,033
+and they were gonna show had to do basic
+drawing with you on this is going to be
+
+52
+00:03:24,033 --> 00:03:26,124
+sort of like a crash course in how to
+draw something with web DL
+
+53
+00:03:27,024 --> 00:03:30,122
+and you get an idea of how powerful the
+rendering system is
+
+54
+00:03:31,022 --> 00:03:34,027
+went to get that were actually gonna
+move on to advanced roaring
+
+55
+00:03:34,027 --> 00:03:37,100
+and had to do simple animation and
+nothing because its web technology
+
+56
+00:03:38,000 --> 00:03:41,459
+we want to tell you how would your feet
+into other part to the web platform
+
+57
+00:03:41,459 --> 00:03:45,730
+important topic is whereas web-dl
+available
+
+58
+00:03:45,073 --> 00:03:48,151
+and we're happy to side with deal is
+available in Safari on almost any
+
+59
+00:03:49,051 --> 00:03:49,103
+seventy
+
+60
+00:03:50,003 --> 00:03:56,025
+and I was announced on Monday and what
+wasn't announced
+
+61
+00:03:56,025 --> 00:03:59,068
+but I'm happy to say that also available
+in Safari on eyewear
+
+62
+00:03:59,068 --> 00:04:04,957
+I'm
+
+63
+00:04:05,569 --> 00:04:10,240
+be even better news is this with deals
+available on every device that can
+
+64
+00:04:10,024 --> 00:04:11,090
+install these operating systems
+
+65
+00:04:11,009 --> 00:04:15,088
+I'm if your program on you want to use
+web video content in your app
+
+66
+00:04:16,069 --> 00:04:20,088
+you gonna wanna know about the modern
+web kid API and its wk we view
+
+67
+00:04:20,088 --> 00:04:24,097
+class now one of the many benefits of
+using this new modern API
+
+68
+00:04:24,097 --> 00:04:29,150
+is that you get full benefit love the
+the jumps with nitro engine which means
+
+69
+00:04:30,005 --> 00:04:30,046
+you're
+
+70
+00:04:30,091 --> 00:04:33,094
+your contents gonna be running super
+fast which we all know is
+
+71
+00:04:34,021 --> 00:04:37,045
+Craigs mom's favorite feature and she's
+updated elapse
+
+72
+00:04:37,045 --> 00:04:40,119
+do the modern API I'm something else is
+
+73
+00:04:41,019 --> 00:04:44,058
+that the a the API service
+
+74
+00:04:44,058 --> 00:04:47,140
+area between I O S in with 10 is
+identical this means that your
+
+75
+00:04:48,004 --> 00:04:51,066
+your content should run this time on
+both devices with a course
+
+76
+00:04:52,002 --> 00:04:56,053
+the understanding that some devices
+don't run don't have as powerful GP use
+
+77
+00:04:56,053 --> 00:04:59,078
+but otherwise it's identical and simply
+because it's a web standard
+
+78
+00:04:59,078 --> 00:05:04,104
+that same content should run on other
+browsers that support web DL
+
+79
+00:05:05,004 --> 00:05:08,023
+now creating great 3d content is
+
+80
+00:05:08,023 --> 00:05:11,038
+made a lot easier if you have a good
+tool system and
+
+81
+00:05:11,038 --> 00:05:14,044
+even though a deals a relatively young
+technology it does have a sort of
+
+82
+00:05:14,044 --> 00:05:15,047
+thriving ecosystem
+
+83
+00:05:15,047 --> 00:05:18,143
+tools the couple I wanna call out in
+particular and he's a big vendors
+
+84
+00:05:19,043 --> 00:05:23,125
+Epic Games the makers have Unreal Engine
+and Unity Technologies makers have unity
+
+85
+00:05:24,025 --> 00:05:28,026
+but both have announced web-dl export
+from their systems
+
+86
+00:05:28,026 --> 00:05:31,028
+um this means not only to get the
+state-of-the-art 3d
+
+87
+00:05:31,046 --> 00:05:34,103
+engines and editing environments US get
+access to the marketplace where you can
+
+88
+00:05:35,003 --> 00:05:36,059
+purchase 3d models
+
+89
+00:05:36,059 --> 00:05:41,065
+or materials or other assets to help you
+make your content
+
+90
+00:05:41,065 --> 00:05:44,072
+another example is the company could
+play campus who also have a 3d engine
+
+91
+00:05:45,035 --> 00:05:46,035
+and editing tool
+
+92
+00:05:46,035 --> 00:05:48,126
+but they do it all within the web
+browser and this means that you can have
+
+93
+00:05:49,026 --> 00:05:50,055
+distributed teams
+
+94
+00:05:50,055 --> 00:05:54,096
+working inside a browser editing the
+same content it's pretty cool
+
+95
+00:05:54,096 --> 00:05:57,100
+if you're a developer there's a bunch of
+open source liar is not just listed a
+
+96
+00:05:58,000 --> 00:05:59,012
+few here
+
+97
+00:05:59,012 --> 00:06:03,014
+much to these dues wrapped the lower
+level with DAPI in something
+
+98
+00:06:03,032 --> 00:06:07,113
+from the higher which allows you to
+program in terms of fees in q2 materials
+
+99
+00:06:08,013 --> 00:06:11,016
+rather than buffers and triangles
+
+100
+00:06:11,016 --> 00:06:13,087
+but today we gotta talk about buses and
+triangles because we think it's
+
+101
+00:06:13,087 --> 00:06:13,169
+important
+
+102
+00:06:14,069 --> 00:06:17,132
+that you understand that level love have
+programming such as if you are using
+
+103
+00:06:18,032 --> 00:06:19,108
+from these high-level tools
+
+104
+00:06:20,008 --> 00:06:23,009
+you have some hints as to what might be
+going wrong what you can do to improve
+
+105
+00:06:23,018 --> 00:06:25,029
+the content
+
+106
+00:06:25,029 --> 00:06:28,047
+before getting to that I just wanna talk
+about one thing which is
+
+107
+00:06:28,047 --> 00:06:31,113
+a motivation why we doing this so Apple
+is always
+
+108
+00:06:32,013 --> 00:06:35,068
+considered rich powerful graphics to be
+super important to
+
+109
+00:06:35,068 --> 00:06:38,106
+web developers into this fiery engine
+effect this is why
+
+110
+00:06:39,006 --> 00:06:42,065
+about a decade ago we invented the
+campus element which is what the bases
+
+111
+00:06:42,065 --> 00:06:44,554
+away geo is
+
+112
+00:06:45,139 --> 00:06:48,217
+I'm as soon as where deal was announced
+we joined the working group
+
+113
+00:06:48,919 --> 00:06:52,919
+and to this day we volunteer ourselves
+as the editor the specification
+
+114
+00:06:52,919 --> 00:06:55,922
+the next question is why do we choose
+Open GL
+
+115
+00:06:55,949 --> 00:07:00,810
+and I'm jail is the most important
+standard a graphics API that around
+
+116
+00:07:00,081 --> 00:07:03,940
+I'm it's already been demonstrated it
+can run on a billion mobile devices
+
+117
+00:07:04,669 --> 00:07:07,725
+and the content you create there is
+still just amazing on on other devices
+
+118
+00:07:08,229 --> 00:07:12,310
+more powerful devices as well so again
+it's sorta made
+
+119
+00:07:12,031 --> 00:07:15,034
+a no brainer that we choose the best
+standard and that way all browsers can
+
+120
+00:07:15,034 --> 00:07:19,056
+implement we end up with web-dl
+
+121
+00:07:19,056 --> 00:07:22,154
+okay so let's get coding I like all
+
+122
+00:07:23,054 --> 00:07:26,137
+program examples we want to start with
+hello world and
+
+123
+00:07:27,037 --> 00:07:31,896
+went to the hello world GL so image in
+your opening your text editor
+
+124
+00:07:32,229 --> 00:07:35,276
+and with starting with a blank slate
+which is good type a few commands and
+
+125
+00:07:35,699 --> 00:07:36,820
+create something
+
+126
+00:07:36,082 --> 00:07:41,085
+that this summer the 3d interactive
+environment
+
+127
+00:07:41,085 --> 00:07:45,103
+where actually start with something very
+simple which is a triangle but
+
+128
+00:07:46,003 --> 00:07:49,040
+well that might and disappointing if we
+go back to the 3d environment
+
+129
+00:07:49,004 --> 00:07:52,803
+we look at it and think actually let's
+take a look at actually made up
+
+130
+00:07:53,199 --> 00:07:57,130
+millions a little triangles makes those
+triangles have hair color
+
+131
+00:07:57,013 --> 00:08:00,090
+or texture applied to some lighting and
+then we're entering it again with
+
+132
+00:08:00,009 --> 00:08:02,053
+another part where we might be doing
+blurs
+
+133
+00:08:03,034 --> 00:08:06,113
+a close eye shadows or whatever when you
+combine all together
+
+134
+00:08:07,013 --> 00:08:10,055
+you actually do get the advanced
+rendering so you
+
+135
+00:08:10,055 --> 00:08:13,112
+you learn a lot of detail from how to
+draw one triangle
+
+136
+00:08:14,012 --> 00:08:18,091
+and the power that you learn goes on to
+create better things
+
+137
+00:08:18,199 --> 00:08:24,199
+so it start creating configuring and
+roaring and for that we need four things
+
+138
+00:08:24,199 --> 00:08:28,240
+first we gonna meet somewhere to draw to
+something to drawn to
+
+139
+00:08:28,024 --> 00:08:31,099
+them again in the coming to draw with me
+to configure that
+
+140
+00:08:31,099 --> 00:08:34,938
+being tuzla paint we wanted wanna paint
+with and lastly we going to do the
+
+141
+00:08:35,829 --> 00:08:38,843
+drawing will go through to the steps one
+by one
+
+142
+00:08:38,969 --> 00:08:42,130
+let's start with something to draw on to
+and
+
+143
+00:08:42,013 --> 00:08:46,142
+artists like myself call this a canvas
+which is a super
+
+144
+00:08:46,259 --> 00:08:49,303
+convenient because HTML already has an
+element called can def
+
+145
+00:08:49,699 --> 00:08:53,732
+so use that and this is like a regular
+image element except
+
+146
+00:08:54,029 --> 00:08:58,077
+instead of getting the the graphics to
+draw from say a fall on the web
+
+147
+00:08:58,509 --> 00:09:02,551
+you provide the command in javascript
+that drawing to the image in the brown
+
+148
+00:09:02,929 --> 00:09:03,950
+surrendered that
+
+149
+00:09:04,139 --> 00:09:07,144
+you might already have one in your pages
+the camps element we can create 13
+
+150
+00:09:07,639 --> 00:09:09,910
+JavaScript by create a lament
+
+151
+00:09:09,091 --> 00:09:12,440
+in my example under pretend I'm already
+got one in the page I'm gonna selected
+
+152
+00:09:13,259 --> 00:09:14,170
+using the
+
+153
+00:09:14,017 --> 00:09:18,026
+Dom a PRI and restoring the local
+variable campus cuz I wanna reference to
+
+154
+00:09:18,179 --> 00:09:19,223
+it lighter
+
+155
+00:09:19,619 --> 00:09:22,720
+now before I can draw into it I need to
+tell the system
+
+156
+00:09:22,072 --> 00:09:25,161
+how big an image it is or how many
+pixels it needs to allocate
+
+157
+00:09:25,809 --> 00:09:30,480
+so that when I draw the the rendering
+happens into that into that image
+
+158
+00:09:30,048 --> 00:09:33,347
+I do that by setting the width and
+height variables on the campus
+
+159
+00:09:33,779 --> 00:09:37,670
+here I want to set it to 600 by four
+hundred but also want to take into
+
+160
+00:09:37,067 --> 00:09:37,986
+account
+
+161
+00:09:38,589 --> 00:09:41,601
+if I'm on a Retina Display I wanna high
+resolution image from clearing
+
+162
+00:09:41,709 --> 00:09:44,750
+window device pixel ratio
+
+163
+00:09:45,119 --> 00:09:47,197
+that's all I need for me to draw the
+next thing is I need something to draw
+
+164
+00:09:47,899 --> 00:09:47,965
+with
+
+165
+00:09:48,559 --> 00:09:51,606
+and in with GL that is the web your
+rendering context this is the object
+
+166
+00:09:52,029 --> 00:09:55,097
+that exposes the entire web geo API
+
+167
+00:09:55,709 --> 00:09:58,797
+I'm income for me do that you get one
+quite easily disco get context
+
+168
+00:09:59,589 --> 00:10:02,606
+passing the cracked the screen printed a
+web DL I'm
+
+169
+00:10:02,759 --> 00:10:05,792
+if you're familiar with to decamp it's
+raining would have seen someone call
+
+170
+00:10:06,089 --> 00:10:07,100
+this with the 2d eight
+
+171
+00:10:07,199 --> 00:10:10,490
+to the string and you get the two DAPI
+so he we've
+
+172
+00:10:10,049 --> 00:10:13,518
+we could with witty oh and we have a
+very cool GL which is
+
+173
+00:10:13,959 --> 00:10:17,003
+the thing we gonna draw with if you're
+familiar with
+
+174
+00:10:17,399 --> 00:10:21,480
+native open geo programming you might be
+wondering where did I set my pixel
+
+175
+00:10:21,048 --> 00:10:21,767
+format
+
+176
+00:10:22,199 --> 00:10:25,222
+and create my rent a buffer zone from
+about 6-8 ra you don't have to do that
+
+177
+00:10:25,429 --> 00:10:27,220
+in web DL
+
+178
+00:10:27,022 --> 00:10:30,671
+the previous step allocated the image to
+get a drawing to and this step is giving
+
+179
+00:10:30,869 --> 00:10:34,922
+you the context that you get a draw with
+that all you have to do
+
+180
+00:10:35,399 --> 00:10:38,460
+next we're gonna need something to we
+need to configure the system
+
+181
+00:10:39,009 --> 00:10:42,160
+and this is where it gets a little bit
+tricky so if with very few lines with
+
+182
+00:10:42,016 --> 00:10:47,035
+we've got time to draw with now we're
+getting into the made in the system
+
+183
+00:10:47,035 --> 00:10:49,098
+we're going to give this is where we
+will start the crash course in in with
+
+184
+00:10:49,098 --> 00:10:50,647
+your rendering
+
+185
+00:10:51,529 --> 00:10:54,576
+before we able to render something we
+need to do a few things we need to
+
+186
+00:10:54,999 --> 00:10:58,076
+create buffer and buffers are just a set
+of data that we gotta upload to the Jeep
+
+187
+00:10:58,769 --> 00:10:58,851
+you
+
+188
+00:10:59,589 --> 00:11:01,657
+and that data can be any types of things
+but they're almost certainly go to
+
+189
+00:11:02,269 --> 00:11:05,286
+contain the geometry that we won a
+random
+
+190
+00:11:05,439 --> 00:11:08,508
+next thing we need is a program which is
+going to be the actual way that we have
+
+191
+00:11:09,129 --> 00:11:10,191
+your renders it
+
+192
+00:11:10,749 --> 00:11:13,777
+now you baby milk be confused here
+because I we're already making a program
+
+193
+00:11:14,029 --> 00:11:14,410
+what's
+
+194
+00:11:14,041 --> 00:11:17,122
+is another program and the answer is it
+is we could get into the details of what
+
+195
+00:11:18,022 --> 00:11:18,921
+it is later
+
+196
+00:11:19,119 --> 00:11:21,970
+but just imagine that you gonna be
+running from specialized code to get
+
+197
+00:11:21,097 --> 00:11:23,826
+uploaded also to the Jeep you an
+executed their
+
+198
+00:11:24,699 --> 00:11:28,731
+let's start with the buffers I wanna
+draw this triangle
+
+199
+00:11:29,019 --> 00:11:32,023
+and the triangle just made up of three
+points
+
+200
+00:11:32,059 --> 00:11:35,860
+in with GL the coordinate system goes
+from -1 -1 on the bottom left
+
+201
+00:11:35,086 --> 00:11:40,235
+to 11 in the top right and I wanna
+create a buffer out of the 3-point
+
+202
+00:11:41,009 --> 00:11:45,027
+so I'm going to do is allocate six
+values arrive six values
+
+203
+00:11:45,189 --> 00:11:50,191
+am at those points to those six values
+so you're good x1 y1 x2 y2
+
+204
+00:11:50,209 --> 00:11:53,216
+x3 y3
+
+205
+00:11:53,279 --> 00:11:57,338
+and this is all I need to apply to the
+Jeep use on a show you had to do that in
+
+206
+00:11:57,869 --> 00:11:57,935
+with GL
+
+207
+00:11:58,529 --> 00:12:01,920
+in javascript we'll start with the rave
+six values
+
+208
+00:12:01,092 --> 00:12:06,761
+this is JavaScript awry and I'm gonna
+sign it into a flight 32 Ryan this is a
+
+209
+00:12:07,589 --> 00:12:08,683
+special type to rain JavaScript
+
+210
+00:12:09,529 --> 00:12:12,530
+telling the system that I want it to
+imagine
+
+211
+00:12:12,629 --> 00:12:15,672
+or allocate the stators affixed length
+awry
+
+212
+00:12:16,059 --> 00:12:19,158
+where each value is a is a 4-byte
+floating point number
+
+213
+00:12:20,049 --> 00:12:22,980
+this comes in handy because when we
+uploaded to the Jeep you we've already
+
+214
+00:12:22,098 --> 00:12:23,147
+told the system
+
+215
+00:12:24,029 --> 00:12:27,122
+what the typeof data is in that way it
+doesn't have to do another conversion
+
+216
+00:12:27,959 --> 00:12:30,170
+from JavaScript
+
+217
+00:12:30,017 --> 00:12:33,085
+to actually create a buffer chemical
+create the
+
+218
+00:12:33,085 --> 00:12:36,161
+create buffer command and younger
+provide the data that is going to be
+
+219
+00:12:37,061 --> 00:12:37,580
+uploaded
+
+220
+00:12:38,129 --> 00:12:41,970
+the Jeep you so I just tell it type of
+the you just created send that verdict
+
+221
+00:12:41,097 --> 00:12:41,936
+vertices
+
+222
+00:12:42,809 --> 00:12:47,970
+variable up there and that's all we had
+to do to create a buffer
+
+223
+00:12:47,097 --> 00:12:51,126
+they will talk about the program now
+conceptually what we doing
+
+224
+00:12:51,999 --> 00:12:55,220
+is we've got some jobs could command
+Rick executing
+
+225
+00:12:55,022 --> 00:12:58,571
+and then we gonna end up with pixels on
+the screen who are really happens
+
+226
+00:12:58,769 --> 00:13:01,790
+is that we present some javascript
+
+227
+00:13:01,079 --> 00:13:04,048
+it gets into the rent with your
+rendering pipeline and it's something
+
+228
+00:13:04,759 --> 00:13:06,821
+that draws we've really gotta understand
+what's happening in the wave your
+
+229
+00:13:07,379 --> 00:13:08,411
+rendering pipeline
+
+230
+00:13:08,699 --> 00:13:11,767
+now you can look up Open GL text books
+and I'll explain the same thing
+
+231
+00:13:12,379 --> 00:13:15,910
+but it made up and basically I steps and
+each of these eight steps you have
+
+232
+00:13:15,091 --> 00:13:18,110
+different configuration options you can
+pass to them
+
+233
+00:13:19,001 --> 00:13:22,360
+but this to the you have almost complete
+control over near the two most important
+
+234
+00:13:22,459 --> 00:13:24,460
+ones are the ones we gonna talk about to
+die
+
+235
+00:13:24,559 --> 00:13:28,615
+and that the vertex a two-step and the
+fragments a two-step
+
+236
+00:13:29,119 --> 00:13:32,290
+we take them in isolation we can really
+consider that for the sake of this
+
+237
+00:13:32,029 --> 00:13:32,998
+presentation
+
+238
+00:13:33,259 --> 00:13:36,332
+I'm executing JavaScript I'm gonna send
+the command into the vertex ada
+
+239
+00:13:36,989 --> 00:13:39,991
+the FedEx site is going to do something
+with it sent the commands in the output
+
+240
+00:13:40,189 --> 00:13:42,220
+on to the fragment China which is going
+to do something to it
+
+241
+00:13:42,499 --> 00:13:46,100
+and eventually with the pixels on the
+screen and this combination at the
+
+242
+00:13:46,001 --> 00:13:49,026
+vertex I turn the fragment China is what
+we were referring to is the program
+
+243
+00:13:49,035 --> 00:13:50,184
+before
+
+244
+00:13:50,499 --> 00:13:53,600
+shoulders at this these little programs
+that you gotta
+
+245
+00:13:53,006 --> 00:13:56,465
+right in another language which we get
+to lie to and the things that execute on
+
+246
+00:13:57,059 --> 00:13:57,155
+the Jeep you
+
+247
+00:13:58,019 --> 00:14:00,105
+and the reason is to have them if
+they're two different operations the
+
+248
+00:14:00,879 --> 00:14:03,910
+picture is mostly about geometry so
+you're passing in
+
+249
+00:14:03,091 --> 00:14:07,520
+a points to it and it's gonna output
+converted point
+
+250
+00:14:08,339 --> 00:14:11,480
+the fragment writers really about what
+color pixels you gonna do
+
+251
+00:14:11,048 --> 00:14:14,947
+based on the input have point we're I
+type this
+
+252
+00:14:15,379 --> 00:14:19,230
+diagram clockwise 90 degrees we'll look
+at another way
+
+253
+00:14:19,023 --> 00:14:22,742
+here got the buffer the al Qaeda before
+upload the Jeep you
+
+254
+00:14:22,949 --> 00:14:26,720
+I'm ascended into the vertex ada he said
+it doesn't quite work this way
+
+255
+00:14:26,072 --> 00:14:30,621
+and this is where the parity pews comes
+into play I'm actually get a separate
+
+256
+00:14:31,269 --> 00:14:34,295
+each of those it the buffering to set up
+three vertices
+
+257
+00:14:34,529 --> 00:14:37,613
+and it gets 10 to a different instanceof
+the vertex shader and these are all
+
+258
+00:14:38,369 --> 00:14:43,372
+I executed in parallel on the Jeep
+usually get this great performance
+
+259
+00:14:43,399 --> 00:14:46,970
+so given a vertex which is just the XY
+point in this case
+
+260
+00:14:46,097 --> 00:14:49,266
+the FedEx site is going to do something
+and create another point
+
+261
+00:14:50,139 --> 00:14:53,170
+and send it back to the system month
+system is is
+
+262
+00:14:53,017 --> 00:14:56,035
+collected all the points it's going to
+do what's called restaurants Asian
+
+263
+00:14:56,035 --> 00:14:59,464
+so now knows where the geometry on the
+screen is going to be displayed
+
+264
+00:14:59,779 --> 00:15:03,794
+and which pixels going to be touched but
+still doesn't know what color to draw
+
+265
+00:15:03,929 --> 00:15:04,941
+the pixels
+
+266
+00:15:05,049 --> 00:15:08,074
+and its this is the next step where it's
+very similar to the vet excited step
+
+267
+00:15:08,299 --> 00:15:09,364
+it's gonna take all those pixels
+
+268
+00:15:09,949 --> 00:15:12,992
+and then send them out to bunch a
+parallel instances the fragment Childers
+
+269
+00:15:13,379 --> 00:15:15,392
+and fragment shaders just have the one
+task
+
+270
+00:15:15,509 --> 00:15:18,511
+given a pixel what color should it be
+
+271
+00:15:18,709 --> 00:15:21,776
+let's look at the code for this I miss
+up by creating
+
+272
+00:15:22,379 --> 00:15:25,480
+at vertex shader object which I do like
+red china
+
+273
+00:15:25,048 --> 00:15:29,057
+passing in the promoter tell you that
+it's gonna be a type that excite a
+
+274
+00:15:29,489 --> 00:15:32,492
+annex I'm gonna tell it provide some
+source code for the shade I'm not
+
+275
+00:15:32,519 --> 00:15:34,220
+showing you the source code at the
+moment
+
+276
+00:15:34,022 --> 00:15:37,011
+you can just imagine I'm getting it from
+somewhere it might be I created by
+
+277
+00:15:37,209 --> 00:15:38,220
+JavaScript
+
+278
+00:15:38,022 --> 00:15:41,811
+Armada preloaded at all got it from the
+internet and we'll get to that later
+
+279
+00:15:42,009 --> 00:15:45,015
+I'm gonna compiler which is turning it
+in command we can use
+
+280
+00:15:45,069 --> 00:15:48,136
+later on the Jeep you I did the same
+thing with the fragment China
+
+281
+00:15:48,739 --> 00:15:51,746
+its pretty much identical course I'm
+gonna use different source code which
+
+282
+00:15:51,809 --> 00:15:52,862
+will see
+
+283
+00:15:53,339 --> 00:15:56,385
+once we have those two objects the
+vertex shade on the fragments ada
+
+284
+00:15:56,799 --> 00:16:01,160
+I want to create a program and you tell
+a program that it's two objects that
+
+285
+00:16:01,016 --> 00:16:03,555
+needs to talk to the two shyts we
+created
+
+286
+00:16:03,699 --> 00:16:06,790
+and Italy kit and then lastly I'm gonna
+tell where GLD this is the program I
+
+287
+00:16:07,609 --> 00:16:10,642
+wanted to use when you do you draw ring
+
+288
+00:16:10,939 --> 00:16:13,972
+little we have to do for configuration
+so we now have
+
+289
+00:16:14,269 --> 00:16:17,270
+a setup where we have something to draw
+or we have something to draw with
+
+290
+00:16:17,369 --> 00:16:19,465
+and with configured to draw or and the
+last thing we need to do is render a
+
+291
+00:16:20,329 --> 00:16:23,980
+masterpiece
+
+292
+00:16:23,098 --> 00:16:26,197
+now the next rikki step
+
+293
+00:16:27,079 --> 00:16:31,160
+I haven't shown you any source code but
+what week but the general idea is here
+
+294
+00:16:31,016 --> 00:16:32,125
+we have a bunch a wedgie
+
+295
+00:16:32,269 --> 00:16:35,326
+we had have a bunch of JavaScript we
+have some buffers on the on the Jeep you
+
+296
+00:16:35,839 --> 00:16:36,885
+that what I want to render
+
+297
+00:16:37,299 --> 00:16:40,303
+and about these programs that go to
+render it and I need to
+
+298
+00:16:40,339 --> 00:16:43,339
+at two you through JavaScript tell the
+system
+
+299
+00:16:43,339 --> 00:16:47,356
+helm binding the data in those buffers
+two variables in my program
+
+300
+00:16:47,509 --> 00:16:50,410
+you see the variables in the program
+later the first thing I'm going to do
+
+301
+00:16:50,041 --> 00:16:51,260
+here is say
+
+302
+00:16:51,629 --> 00:16:54,704
+when you come to execute the program is
+going to be a variable called a position
+
+303
+00:16:55,379 --> 00:16:58,478
+and I want you to associate every vertex
+in the print that you've uploaded as a
+
+304
+00:16:59,369 --> 00:16:59,427
+buffer
+
+305
+00:16:59,949 --> 00:17:03,018
+to that variable
+
+306
+00:17:03,639 --> 00:17:06,657
+next when you actually go to use the
+buffer have to tell the system
+
+307
+00:17:06,819 --> 00:17:09,871
+well I uploaded X why XY XY
+
+308
+00:17:10,339 --> 00:17:13,413
+so what you do is to it a shame that
+when you're processing this buffer
+
+309
+00:17:14,079 --> 00:17:19,240
+take it to a time and that they're
+floating point values
+
+310
+00:17:19,024 --> 00:17:23,028
+then I just have to draw or a send-up of
+a I'm gonna draw or the vertices number
+
+311
+00:17:23,028 --> 00:17:26,073
+of a starting position 0 and about three
+of them which makes the three points in
+
+312
+00:17:26,073 --> 00:17:26,149
+the Triangle
+
+313
+00:17:27,049 --> 00:17:32,067
+and eventually we end up with that with
+the trying on screen
+
+314
+00:17:32,067 --> 00:17:35,098
+now that a if you have a look at the
+source code all at once you might be a
+
+315
+00:17:35,098 --> 00:17:38,100
+little bit worried that it was actually
+a favor the source code I skip someone
+
+316
+00:17:39,000 --> 00:17:41,083
+the slides because I wanted at ameritech
+you whatever
+
+317
+00:17:41,083 --> 00:17:44,106
+but the important thing is actually
+while you any true red triangle is an
+
+318
+00:17:45,006 --> 00:17:46,015
+insane amount of
+
+319
+00:17:46,015 --> 00:17:49,079
+hell behind that red triangle the power
+comes from the shyts and that's what
+
+320
+00:17:49,079 --> 00:17:51,170
+we're gonna look at next
+
+321
+00:17:52,007 --> 00:17:55,065
+so I didn't show the source code shyts
+getting would get into that
+
+322
+00:17:56,028 --> 00:17:59,127
+shade is a written in a language could
+jheel shutting my major GLSL
+
+323
+00:18:00,027 --> 00:18:04,070
+it is he like languages designed for
+parallel graphics
+
+324
+00:18:04,007 --> 00:18:07,008
+what this means is that it's got its
+looks like say but it's got some
+
+325
+00:18:07,008 --> 00:18:11,009
+extra premiums for the I'm vectors and
+matrices
+
+326
+00:18:11,009 --> 00:18:14,028
+and also some operations on those
+premiums so that you can multiply
+
+327
+00:18:15,009 --> 00:18:17,104
+matrices and whatever you don't have to
+do the math itself
+
+328
+00:18:18,004 --> 00:18:22,027
+it also has a bunch a built-in functions
+such as trigonometry functions or other
+
+329
+00:18:22,027 --> 00:18:26,029
+up operations on the mattress is like
+dot product than normal
+
+330
+00:18:26,029 --> 00:18:29,038
+and some other other so helper functions
+to make
+
+331
+00:18:29,038 --> 00:18:33,038
+the common in in graphics operations
+
+332
+00:18:33,038 --> 00:18:36,044
+let's go back to the the view the
+rendering pipe
+
+333
+00:18:36,044 --> 00:18:39,100
+so I had the Buffalo sending off to
+multiple burdick shade is that was
+
+334
+00:18:40,000 --> 00:18:40,008
+standing on
+
+335
+00:18:40,008 --> 00:18:43,036
+franchise will simplify it again and
+come back now
+
+336
+00:18:44,008 --> 00:18:47,010
+the data I was sending in the buffer at
+the top that you familiar with
+
+337
+00:18:47,001 --> 00:18:52,003
+I at the moment only have XY positions
+but really you can send any data into it
+
+338
+00:18:52,003 --> 00:18:55,046
+so here I just added some other book
+other data and again
+
+339
+00:18:55,073 --> 00:18:58,141
+this is the this your input to the
+vertex I'd each pot chunk of the
+
+340
+00:18:59,041 --> 00:19:02,043
+buffer is going to be associated with
+the vertex
+
+341
+00:19:02,043 --> 00:19:05,058
+turned into a particular instance
+
+342
+00:19:05,058 --> 00:19:08,146
+but you might wanna send their data into
+the vet excited that shared across
+
+343
+00:19:09,046 --> 00:19:13,107
+all the instances the running and you do
+that by using uniforms
+
+344
+00:19:14,007 --> 00:19:17,070
+and the global constants 0 good example
+that this might be the current frame of
+
+345
+00:19:17,007 --> 00:19:17,071
+the animation
+
+346
+00:19:18,034 --> 00:19:21,057
+you wanna Ronald mouse position or the
+time the the
+
+347
+00:19:21,057 --> 00:19:24,129
+rendering time the a all maybe the
+camera position
+
+348
+00:19:25,029 --> 00:19:29,041
+on matrix that you want to do is a
+viewing position
+
+349
+00:19:29,041 --> 00:19:32,093
+so the bit excited cop right on most
+dubstep to the inputs ones coming per
+
+350
+00:19:32,093 --> 00:19:32,176
+vertex
+
+351
+00:19:33,076 --> 00:19:35,174
+and the other one that's coming as
+global variables not only has one
+
+352
+00:19:36,074 --> 00:19:37,168
+Toscana to produce a point
+
+353
+00:19:38,068 --> 00:19:41,083
+the producer that point by writing to
+the global very vocal goin to skool
+
+354
+00:19:41,083 --> 00:19:43,096
+position
+
+355
+00:19:43,096 --> 00:19:46,139
+the franchise quite similar its ghetto
+use the position that was passed by the
+
+356
+00:19:47,039 --> 00:19:49,040
+vertex Ada and any other data
+
+357
+00:19:49,004 --> 00:19:52,057
+and the global constants and its gonna
+write to one thing which is the color
+
+358
+00:19:52,093 --> 00:19:52,168
+the pixel
+
+359
+00:19:53,068 --> 00:19:56,142
+which does by writing to the global
+variable geo fragment position
+
+360
+00:19:57,042 --> 00:20:00,094
+let's look at the finally look at the
+source code
+
+361
+00:20:00,094 --> 00:20:03,095
+so by Vidic shade of I've picked the
+
+362
+00:20:03,095 --> 00:20:06,101
+basically the most simple vertex shader
+I can I can do
+
+363
+00:20:07,055 --> 00:20:10,131
+now remember we saw that we were binding
+in in javascript
+
+364
+00:20:11,031 --> 00:20:14,099
+the value a position that the sorry
+variable a position to the buffers we
+
+365
+00:20:14,099 --> 00:20:14,164
+passed in
+
+366
+00:20:15,064 --> 00:20:19,065
+he's right actually get to do it so here
+I am in the ship that excite a saying
+
+367
+00:20:19,074 --> 00:20:22,120
+the data comes in from the vertex the I
+want you to
+
+368
+00:20:23,002 --> 00:20:26,004
+associated with the very well I position
+and
+
+369
+00:20:26,004 --> 00:20:28,096
+I'm doing the one thing I have to do
+which is running 2g opposition and I'm
+
+370
+00:20:29,032 --> 00:20:32,050
+just riding the same value that I got in
+its just sending the input straight
+
+371
+00:20:32,005 --> 00:20:32,101
+through
+
+372
+00:20:33,046 --> 00:20:36,075
+I'm this step normally you would do
+something like I
+
+373
+00:20:36,075 --> 00:20:40,114
+map from your world cornett system into
+the camera cornett system which then the
+
+374
+00:20:41,014 --> 00:20:43,077
+camera maps it into the screen
+coordinate system
+
+375
+00:20:43,077 --> 00:20:47,079
+because I the dangerous and is actually
+really an already in spring court system
+
+376
+00:20:47,097 --> 00:20:49,195
+I can just pass through for convenience
+
+377
+00:20:50,095 --> 00:20:54,108
+the fragment traders equally simple all
+the French example equally simple
+
+378
+00:20:55,008 --> 00:20:58,033
+I thought was a boilerplate the boiler
+plate is telling the system
+
+379
+00:20:58,033 --> 00:21:02,119
+what level of precision I want to use
+for floating-point operations
+
+380
+00:21:03,019 --> 00:21:06,058
+and then going right the color the pixel
+and in this case
+
+381
+00:21:06,058 --> 00:21:09,150
+I'm running to G of RAM color and right
+every every instance the fragment
+
+382
+00:21:10,005 --> 00:21:11,067
+shaders writing the same value
+
+383
+00:21:12,012 --> 00:21:15,021
+which in this case is for a
+
+384
+00:21:15,021 --> 00:21:19,028
+Victor for values which is the red green
+blue and alpha values
+
+385
+00:21:19,028 --> 00:21:23,093
+so here I am writing a hundred percent
+red 0 green 0 blue one hundred percent
+
+386
+00:21:23,093 --> 00:21:28,121
+alpha and this is why every pixel came
+out as read
+
+387
+00:21:29,021 --> 00:21:32,075
+that it was pretty simple and to take it
+show you a little bit more power
+
+388
+00:21:32,075 --> 00:21:35,099
+the shade as I'm gonna show a a live
+demo
+
+389
+00:21:35,099 --> 00:21:39,100
+okay so he's a triangle now this is
+running into far into web page
+
+390
+00:21:40,000 --> 00:21:43,099
+and what you've got is a the top of the
+screen is a web video campus throwing
+
+391
+00:21:43,099 --> 00:21:44,168
+the triangle we did before
+
+392
+00:21:45,068 --> 00:21:48,077
+the bottom of the screen showing the the
+source code to the shyts
+
+393
+00:21:49,058 --> 00:21:53,071
+so in this case it's showing the the
+vertex ada
+
+394
+00:21:53,071 --> 00:21:56,147
+and he's the fragment Jayda and this
+
+395
+00:21:57,047 --> 00:22:00,075
+whole environment is life so if I make
+an edit in the page here
+
+396
+00:22:00,075 --> 00:22:03,157
+it's got to grab the source code at the
+page recompile the program
+
+397
+00:22:04,057 --> 00:22:08,061
+applied to the Jeep you and render again
+it's actually rendering constantly hear
+
+398
+00:22:08,097 --> 00:22:11,168
+you just don't see it because nothing's
+changing so he's an example let's say
+
+399
+00:22:12,068 --> 00:22:15,077
+his his the the me running the color the
+
+400
+00:22:16,058 --> 00:22:20,144
+the pixel an upset at 2100 one if a
+change is to just one
+
+401
+00:22:21,044 --> 00:22:25,136
+I get full red green 0 blue and I get
+yellow let's reset that go back to the
+
+402
+00:22:26,036 --> 00:22:27,087
+frack the vertex ada
+
+403
+00:22:27,087 --> 00:22:31,091
+again he see here is the the is the
+
+404
+00:22:31,091 --> 00:22:35,106
+attribute imparting in I'm also passing
+in some uniform values which is the time
+
+405
+00:22:36,006 --> 00:22:36,050
+isn't
+
+406
+00:22:36,005 --> 00:22:40,009
+every time i render I update that values
+that I can read it in the shade up
+
+407
+00:22:40,009 --> 00:22:43,037
+so I could do something tricky here like
+will maybe I wanna do some kinda corny
+
+408
+00:22:44,018 --> 00:22:44,096
+transform
+
+409
+00:22:44,096 --> 00:22:47,164
+on it make
+
+410
+00:22:48,064 --> 00:22:51,078
+the triangle twice as high so I just
+multiply the walk position
+
+411
+00:22:51,078 --> 00:22:55,177
+or I can do something like if I take the
+attribute Ian and I say I want the
+
+412
+00:22:56,077 --> 00:22:59,102
+Excel you to be the one billion why
+Valley TX value we've got this
+
+413
+00:23:00,002 --> 00:23:05,033
+flipped triangle and that preloaded one
+which is doing it here
+
+414
+00:23:05,033 --> 00:23:10,065
+so in this case what I'm doing is I've
+got the input variable in a post in Cle
+
+415
+00:23:10,065 --> 00:23:13,072
+time into mapping that between 0&1 in
+calling it
+
+416
+00:23:13,072 --> 00:23:17,116
+it's on it to the very will progress and
+then when I come to write the position
+
+417
+00:23:18,016 --> 00:23:21,042
+I'm just telling the position that I
+want to a
+
+418
+00:23:21,042 --> 00:23:24,060
+interplay between the X&Y positions
+using that program
+
+419
+00:23:24,006 --> 00:23:29,011
+value that's where you get this nice
+reflection across the diagonal axis
+
+420
+00:23:29,065 --> 00:23:32,148
+it's reset again to go back to the
+fragments ada I'm
+
+421
+00:23:33,048 --> 00:23:36,139
+now we can do some cool things in the
+fragment rada
+
+422
+00:23:37,039 --> 00:23:41,074
+for example I've I've got this
+communication between the the vertex a
+
+423
+00:23:41,074 --> 00:23:41,119
+donde
+
+424
+00:23:42,019 --> 00:23:45,035
+and the fragments thereof Alec have
+telling it the che to
+
+425
+00:23:45,035 --> 00:23:49,044
+with a position in X and why is that the
+fragment so if I say instead of the
+
+426
+00:23:49,044 --> 00:23:49,129
+green value
+
+427
+00:23:50,029 --> 00:23:53,087
+I said to be safe right position
+
+428
+00:23:53,087 --> 00:23:57,092
+X then we get a gradient because the
+value moves from zero to one across the
+
+429
+00:23:58,037 --> 00:24:03,085
+across the triangle I'm again after a
+preset one thought on it type it out
+
+430
+00:24:03,085 --> 00:24:06,146
+I'm doing something similar here with
+the the red value is the exposition the
+
+431
+00:24:07,046 --> 00:24:10,139
+the Green Valley with what position and
+Anna Bligh value is of lighting over
+
+432
+00:24:11,039 --> 00:24:12,084
+time to get this nice
+
+433
+00:24:12,084 --> 00:24:15,140
+triangle it's moving I'm kinda getting
+sicker the triangle
+
+434
+00:24:16,004 --> 00:24:19,012
+so let's have a look at it in why Prime
+I'd
+
+435
+00:24:19,048 --> 00:24:23,048
+now he said really GL's bedroom with two
+triangles I wanna draw
+
+436
+00:24:23,048 --> 00:24:26,110
+I A a a rectangle which is really just
+two triangles
+
+437
+00:24:27,001 --> 00:24:30,004
+join together and if we go back to the
+solemn I do see that the same animation
+
+438
+00:24:30,004 --> 00:24:32,013
+is still running
+
+439
+00:24:32,049 --> 00:24:35,102
+know what's really impressive is def
+program is running
+
+440
+00:24:36,002 --> 00:24:39,019
+and calculating the value every pixel
+every time we draw or
+
+441
+00:24:39,019 --> 00:24:42,082
+and this really blew my mind when I
+first sort but even this is a pretty
+
+442
+00:24:42,082 --> 00:24:43,125
+simple example we can do
+
+443
+00:24:44,025 --> 00:24:49,053
+way more cool things three's a little
+bit more code
+
+444
+00:24:49,053 --> 00:24:52,061
+but what it's really doing is just
+taking some sign wives
+
+445
+00:24:52,061 --> 00:24:55,083
+and with slightly different offset and
+adding them up to get this
+
+446
+00:24:55,083 --> 00:25:00,129
+this a this interactive thing no images
+here it's all been calculated life
+
+447
+00:25:01,029 --> 00:25:04,070
+and a cool thing is you can play around
+with stuff so here is where I basically
+
+448
+00:25:04,007 --> 00:25:05,092
+choose the frequency of the
+
+449
+00:25:06,055 --> 00:25:09,076
+plasma make it a little bit a higher
+
+450
+00:25:09,076 --> 00:25:13,087
+by dividing by leff and that's a
+
+451
+00:25:13,087 --> 00:25:16,172
+I don't really like the colors this is
+the his the point I'm sign in color
+
+452
+00:25:17,072 --> 00:25:17,134
+value
+
+453
+00:25:18,034 --> 00:25:23,080
+at saint -4 do plus for like those
+colors will be better
+
+454
+00:25:23,008 --> 00:25:26,070
+and I can go up here and say well he's
+the number generations and I'm adding up
+
+455
+00:25:27,042 --> 00:25:28,116
+so it's a go down
+
+456
+00:25:29,016 --> 00:25:32,025
+in 2007 do something like three
+
+457
+00:25:32,025 --> 00:25:36,093
+come like that looks pretty cool
+
+458
+00:25:36,093 --> 00:25:39,107
+now as programs you know that you can do
+cool things like
+
+459
+00:25:40,007 --> 00:25:43,086
+here let's say I want to change the
+value of pi something it's quite hard to
+
+460
+00:25:43,086 --> 00:25:46,143
+do in the real world as far as i'm
+concerned. who say something like five
+
+461
+00:25:47,043 --> 00:25:48,077
+six
+
+462
+00:25:48,077 --> 00:25:52,123
+we can go it's the kind not affect you
+even do something crazy happens when
+
+463
+00:25:53,023 --> 00:25:56,029
+I'm now come across something earlier in
+the week which
+
+464
+00:25:56,083 --> 00:26:00,128
+I which I really liked which was a eyes
+are on the web knows a guy in his name's
+
+465
+00:26:01,028 --> 00:26:01,101
+Israel
+
+466
+00:26:02,001 --> 00:26:06,006
+and he saw the WWC branding and said hey
+I could write a shaded the does this
+
+467
+00:26:06,006 --> 00:26:09,013
+and I asked him if I could use it and
+he's the code this is really cool so
+
+468
+00:26:09,076 --> 00:26:09,162
+this is again
+
+469
+00:26:10,062 --> 00:26:13,067
+a program that's running for every pixel
+every time we draw or
+
+470
+00:26:13,067 --> 00:26:16,152
+and it's a love that this interactive a
+WWC logo
+
+471
+00:26:17,052 --> 00:26:21,091
+Sea scroll down to the fabled code
+amazing that all running every step
+
+472
+00:26:21,091 --> 00:26:25,093
+so uncommon out the final one get black
+here to see what he was doing in each
+
+473
+00:26:26,011 --> 00:26:29,025
+step so there's a gradient
+
+474
+00:26:29,025 --> 00:26:32,101
+there was the balls that he was on a and
+many many some of them out to
+
+475
+00:26:33,001 --> 00:26:38,033
+that and then eventually gets the
+squaring
+
+476
+00:26:38,033 --> 00:26:42,102
+I think this is really cool so I'm I
+wrote this whole system in a couple of
+
+477
+00:26:43,002 --> 00:26:43,085
+hours
+
+478
+00:26:43,085 --> 00:26:46,086
+what's up important to you is that this
+actually couple communities out there
+
+479
+00:26:46,086 --> 00:26:49,111
+that have something very similar shade a
+toy to calm and the GLSL
+
+480
+00:26:50,011 --> 00:26:53,110
+a a workspace overcoming what school
+playground maybe
+
+481
+00:26:54,001 --> 00:26:57,030
+if you look these up you'll see a whole
+example %uh amazing shade as the rule
+
+482
+00:26:57,039 --> 00:26:59,090
+really blow your mind
+
+483
+00:26:59,009 --> 00:27:03,074
+sewn up up shade is I see like programs
+that you write
+
+484
+00:27:04,055 --> 00:27:07,153
+in GLSL and upload to the Jeep you you
+get complete control over the
+
+485
+00:27:08,053 --> 00:27:11,116
+vertex positions the party in and the
+color the pixels
+
+486
+00:27:12,016 --> 00:27:16,040
+you a rent this grain and they're
+extremely powerful
+
+487
+00:27:16,004 --> 00:27:19,009
+so with that I'm gonna pass it on to my
+colleague Brady
+
+488
+00:27:19,045 --> 00:27:22,131
+who's going to talk to you about how to
+do advance rendering
+
+489
+00:27:23,031 --> 00:27:27,120
+think it in
+
+490
+00:27:28,002 --> 00:27:31,014
+so far we've seen the hello world
+program web GL
+
+491
+00:27:31,032 --> 00:27:35,097
+the basic triangle in ya there was a
+little bit an effort to get that basic
+
+492
+00:27:35,097 --> 00:27:36,113
+trying on the screen
+
+493
+00:27:37,013 --> 00:27:41,092
+but once we'd gone through that effort
+with just a few lines a share code
+
+494
+00:27:41,092 --> 00:27:45,173
+we started XIV some pretty fancy things
+pretty quickly
+
+495
+00:27:46,073 --> 00:27:49,097
+there's a lot more to be said about
+cheaters and we'll get into that
+
+496
+00:27:49,097 --> 00:27:54,175
+more very soon but i wanna start out
+focusing back in that red triangle
+
+497
+00:27:55,075 --> 00:27:58,083
+so what is that triangle the triangle is
+three points in space
+
+498
+00:27:59,055 --> 00:28:04,058
+I can rearrange those three points and
+move this triangle on reshape it however
+
+499
+00:28:04,058 --> 00:28:06,083
+I'd like to
+
+500
+00:28:06,083 --> 00:28:09,091
+make you really skinny and tall knife
+two triangles
+
+501
+00:28:10,063 --> 00:28:13,104
+to slightly different colors this is
+Arnold very familiar to me for some
+
+502
+00:28:14,004 --> 00:28:15,011
+reason
+
+503
+00:28:15,074 --> 00:28:18,108
+hello that's why okay so that's part of
+the needle
+
+504
+00:28:19,008 --> 00:28:22,062
+love the compass and thus far logo
+
+505
+00:28:22,062 --> 00:28:26,075
+so let's build up on this a little bit
+we're gonna take this for a logo
+
+506
+00:28:26,075 --> 00:28:30,078
+and we're going to bring into the third
+dimension
+
+507
+00:28:31,005 --> 00:28:36,018
+using my geo so this is the most basic
+example other 3d
+
+508
+00:28:36,018 --> 00:28:40,072
+compass you could say but except for
+that picture on top
+
+509
+00:28:40,072 --> 00:28:44,079
+it's basically just a great desk
+
+510
+00:28:45,042 --> 00:28:49,103
+so the greatest is actually very similar
+to that red triangle that we started out
+
+511
+00:28:50,003 --> 00:28:50,039
+with
+
+512
+00:28:50,039 --> 00:28:54,090
+and by that I mean it's nothing but a
+whole bunch of triangles itself
+
+513
+00:28:54,009 --> 00:28:58,418
+as the is already mentioned even the
+most complex scenes in with GL
+
+514
+00:28:59,309 --> 00:29:06,300
+are just hundreds thousands maybe even
+million two triangles
+
+515
+00:29:06,003 --> 00:29:09,069
+so free to those triangles we have three
+points of course
+
+516
+00:29:09,096 --> 00:29:12,113
+was collected the code the deans already
+showed us where we
+
+517
+00:29:13,013 --> 00:29:19,029
+take three points to make a basic flat
+triangle and uploaded to the GPO
+
+518
+00:29:19,029 --> 00:29:22,097
+in for are desk our basic little gray
+desk
+
+519
+00:29:22,097 --> 00:29:25,178
+we're just gon do more the same a lot
+
+520
+00:29:26,078 --> 00:29:29,134
+moreover the same so how do they get all
+these
+
+521
+00:29:30,034 --> 00:29:33,066
+these coordinates here I tell you what I
+didn't do
+
+522
+00:29:33,066 --> 00:29:37,132
+I didn't calculate them by hand I didn't
+Titan out by hand
+
+523
+00:29:38,032 --> 00:29:41,521
+I use the tool as Dean is already
+touched on
+
+524
+00:29:41,809 --> 00:29:45,490
+your toolbox is very important when
+programming with wedge heel
+
+525
+00:29:45,049 --> 00:29:49,093
+unless you doing the most basic examples
+a handful triangles
+
+526
+00:29:49,093 --> 00:29:53,151
+you're probably going to want to rely on
+3d modeling tools
+
+527
+00:29:54,051 --> 00:29:58,350
+pre-existing 3d models to shape your
+geometry
+
+528
+00:29:58,809 --> 00:30:03,110
+and the parents and get them into your
+web DL program
+
+529
+00:30:03,011 --> 00:30:06,058
+the street native tools is great web
+tools out there Dean touched on a few
+
+530
+00:30:06,058 --> 00:30:10,157
+but what they all have in common is that
+they'll export vertex data
+
+531
+00:30:11,057 --> 00:30:14,104
+and that is any data you want that's
+whatever Texas
+
+532
+00:30:15,004 --> 00:30:20,050
+its any data you want for any point you
+want
+
+533
+00:30:20,005 --> 00:30:22,096
+we've already touched on the most
+obvious believe this data which is the
+
+534
+00:30:23,041 --> 00:30:27,114
+cornet XY and z. cornet at that point in
+space
+
+535
+00:30:28,014 --> 00:30:32,085
+we can also directly include the color
+over the point
+
+536
+00:30:32,085 --> 00:30:35,119
+but then as we get into more advanced
+graphics programming want to include the
+
+537
+00:30:36,019 --> 00:30:37,102
+normal doctors have the point
+
+538
+00:30:38,002 --> 00:30:41,040
+this tells web GL which direction the
+point is facing
+
+539
+00:30:41,004 --> 00:30:46,040
+which is important for things such as
+lighting later on
+
+540
+00:30:46,076 --> 00:30:49,155
+and then we can also include texture
+court minutes
+
+541
+00:30:50,055 --> 00:30:53,060
+so watered pictures pictures are just
+
+542
+00:30:53,006 --> 00:30:57,012
+lacked bitmap images an array of pixels
+
+543
+00:30:57,066 --> 00:31:00,071
+each pixel has a color to it you know
+this as an image
+
+544
+00:31:01,016 --> 00:31:06,024
+right so here's the Safari icon it's
+just an image
+
+545
+00:31:06,024 --> 00:31:09,083
+but what X accordance do is they mapped
+those pixels from the image
+
+546
+00:31:09,083 --> 00:31:13,114
+on two or three dimensional shape so we
+can have a basic uncolored
+
+547
+00:31:14,014 --> 00:31:17,030
+3d shape and use a flat image
+
+548
+00:31:17,003 --> 00:31:20,048
+to define what colors that will show
+
+549
+00:31:20,075 --> 00:31:24,173
+so how does this look in code better
+example uploading the geometry for shape
+
+550
+00:31:25,073 --> 00:31:26,097
+onto the GP you
+
+551
+00:31:26,097 --> 00:31:29,188
+for use in our shooters program are
+sheeter programs
+
+552
+00:31:30,088 --> 00:31:33,090
+here's the first 10 pixels from the disk
+
+553
+00:31:34,008 --> 00:31:37,237
+so for each have these 10 vertices
+
+554
+00:31:37,309 --> 00:31:40,340
+we have an XY and z. cornet
+
+555
+00:31:40,034 --> 00:31:43,055
+and then our tool can also output the
+texture coordinates
+
+556
+00:31:43,055 --> 00:31:46,184
+these are just X&Y coordinates
+
+557
+00:31:46,679 --> 00:31:50,650
+into a texture image to map the pixels
+on to our geometry
+
+558
+00:31:50,065 --> 00:31:54,136
+instead of working from the native pixel
+count the image
+
+559
+00:31:55,036 --> 00:32:00,121
+it works from zero 21
+
+560
+00:32:01,021 --> 00:32:05,072
+so once we have that data from our tool
+we need to get it onto the GPO
+
+561
+00:32:05,072 --> 00:32:08,144
+so you've already seen the codeine
+showed us but how to get the position
+
+562
+00:32:09,044 --> 00:32:10,052
+vertices
+
+563
+00:32:10,052 --> 00:32:13,099
+up onto the GPO we're going to do a
+little bit more
+
+564
+00:32:13,099 --> 00:32:17,117
+the same to get the texture coordinates
+to the GPO we're gonna satisfy
+
+565
+00:32:18,017 --> 00:32:21,032
+a new attribute remembered attribute is
+away
+
+566
+00:32:21,032 --> 00:32:26,047
+to specify to the GP you the input into
+the shitter programs
+
+567
+00:32:26,047 --> 00:32:29,122
+and we're gonna say that the input to
+the picture corner attribute is
+
+568
+00:32:30,022 --> 00:32:34,051
+or texture cornet buffer
+
+569
+00:32:34,051 --> 00:32:41,051
+and then we'll go hand upload the data
+from a javascript array onto the GPO
+
+570
+00:32:41,066 --> 00:32:45,075
+now back to our vertex shader source
+code this is the most basic vertex
+
+571
+00:32:45,075 --> 00:32:45,120
+shader
+
+572
+00:32:46,002 --> 00:32:51,029
+example Idina showed us where we have
+that position attribute as an input
+
+573
+00:32:51,047 --> 00:32:54,108
+will just go ahead and add the texture
+corner attribute as an input as well
+
+574
+00:32:55,008 --> 00:33:00,035
+and now it's available to the vertex
+shader
+
+575
+00:33:00,035 --> 00:33:03,061
+one of the examples Dean shown the demo
+had what's called
+
+576
+00:33:03,061 --> 00:33:07,010
+varying variable in the share program
+get in touch and what that is
+
+577
+00:33:07,559 --> 00:33:11,730
+so I'll tell you now varying variable is
+a quick and easy way
+
+578
+00:33:11,073 --> 00:33:14,078
+for the two share programs to share data
+so I declaring
+
+579
+00:33:15,023 --> 00:33:19,059
+the view text record in variable we can
+pass data from the vertex shader
+
+580
+00:33:19,059 --> 00:33:23,648
+to the fragment share and then since
+we've already pre calculated
+
+581
+00:33:24,179 --> 00:33:27,300
+what the texture coordinates are we
+don't need to transform them anyway in
+
+582
+00:33:27,003 --> 00:33:27,092
+any way
+
+583
+00:33:28,019 --> 00:33:32,114
+we're just gonna pass from one directly
+to our fragment share
+
+584
+00:33:33,014 --> 00:33:36,027
+so over in the fragment shader source
+code will
+
+585
+00:33:36,027 --> 00:33:40,091
+make a similar change will declare that
+texture cornet attributes
+
+586
+00:33:40,091 --> 00:33:44,099
+and now it's available in the fragment
+shader so this is the texture
+
+587
+00:33:44,099 --> 00:33:44,173
+coordinates
+
+588
+00:33:45,073 --> 00:33:48,109
+we've gotten from our tool we've gotten
+a javascript array for them
+
+589
+00:33:49,009 --> 00:33:52,092
+we've uploaded into the Jeep you now the
+cordon survey able and a fragment shader
+
+590
+00:33:52,092 --> 00:33:53,601
+program
+
+591
+00:33:54,429 --> 00:33:58,720
+no need to worry about the texture
+itself
+
+592
+00:33:58,072 --> 00:34:01,135
+so the way web-dl gets the textual data
+from
+
+593
+00:34:02,035 --> 00:34:06,078
+an image that is your texture and uses
+it initiator programs
+
+594
+00:34:06,078 --> 00:34:09,099
+is why using a sampler
+
+595
+00:34:09,099 --> 00:34:12,428
+so back in our JavaScript were
+configuring our shooters will just
+
+596
+00:34:13,319 --> 00:34:14,370
+declare sampler variable
+
+597
+00:34:14,829 --> 00:34:18,470
+this is uniform variable as Dean already
+mentioned it's a global variable the
+
+598
+00:34:18,047 --> 00:34:19,656
+JavaScript can assign to
+
+599
+00:34:20,079 --> 00:34:24,079
+to pass in data into the shooter
+programs
+
+600
+00:34:24,079 --> 00:34:27,087
+someone has been declared in javascript
+
+601
+00:34:27,159 --> 00:34:31,222
+we can go back to a fragment shader and
+declare their in GLSL
+
+602
+00:34:31,789 --> 00:34:35,862
+the type your sample to the that's one
+of the few types
+
+603
+00:34:36,519 --> 00:34:39,593
+in the G language that operate on
+
+604
+00:34:40,259 --> 00:34:43,320
+pictures and once we have that sampler
+
+605
+00:34:43,869 --> 00:34:47,894
+will change that straight red color we
+were saying every pixel was read
+
+606
+00:34:48,119 --> 00:34:51,157
+and I will use the sampler with this
+quick function call what this motion
+
+607
+00:34:51,499 --> 00:34:52,516
+call does
+
+608
+00:34:52,669 --> 00:34:55,743
+is a says for the texture source
+
+609
+00:34:56,409 --> 00:35:00,470
+represented in the sampler I want the
+color of the pixel
+
+610
+00:35:00,047 --> 00:35:03,846
+at the structure cornet and then we
+assign a 2g of red color
+
+611
+00:35:04,269 --> 00:35:07,354
+and that's what's gonna show up in the
+same
+
+612
+00:35:08,119 --> 00:35:11,128
+so toucher source what is a texture
+source
+
+613
+00:35:12,019 --> 00:35:16,102
+in open GL it means one thing: Karen
+Webb GL working with web technologies
+
+614
+00:35:16,849 --> 00:35:19,890
+there's a few different options for your
+texture source
+
+615
+00:35:20,259 --> 00:35:23,312
+the most obvious is the image on if you
+have an image
+
+616
+00:35:23,789 --> 00:35:28,130
+in your HTML page in the markup in your
+pages finish loading
+
+617
+00:35:28,013 --> 00:35:31,162
+you can use that image on it as a
+texture source
+
+618
+00:35:31,279 --> 00:35:34,303
+you can also create an image on a
+dynamically and as long as he waited for
+
+619
+00:35:34,519 --> 00:35:35,420
+it to load
+
+620
+00:35:35,042 --> 00:35:40,121
+those pixels are ready to be uploaded to
+the GPO
+
+621
+00:35:40,499 --> 00:35:45,504
+you can also grab data from a server
+directly using XML HTTP request
+
+622
+00:35:45,549 --> 00:35:48,597
+you can and actually she to your quest
+has the ability to
+
+623
+00:35:49,029 --> 00:35:54,085
+grab the Rob bites at the response and
+that is used in web DL to get those
+
+624
+00:35:54,589 --> 00:35:59,638
+protects points into the shitter
+
+625
+00:36:00,079 --> 00:36:04,084
+and as a video on the video min is a
+great way to display video
+
+626
+00:36:04,579 --> 00:36:07,645
+in your web page without using any
+plugins in a native
+
+627
+00:36:08,239 --> 00:36:11,230
+web technology manner that interacts
+with all the other web technology is
+
+628
+00:36:11,023 --> 00:36:12,062
+great
+
+629
+00:36:12,269 --> 00:36:15,328
+but what a video really is just sequence
+images
+
+630
+00:36:15,859 --> 00:36:19,878
+safe use a video element as your texture
+source when you're drawing a frame
+
+631
+00:36:20,049 --> 00:36:23,056
+if you're seen ill grab the freeze frame
+love whatever's being shown in the video
+
+632
+00:36:23,749 --> 00:36:25,460
+meant at that point in time
+
+633
+00:36:25,046 --> 00:36:30,138
+and that freeze-frame will be used as
+the image for the texture
+
+634
+00:36:31,038 --> 00:36:34,067
+last but definitely not least some
+pretty cool
+
+635
+00:36:34,067 --> 00:36:38,506
+possibilities with the canvas element
+being used as a texture source
+
+636
+00:36:39,109 --> 00:36:42,720
+you can draw whatever you like into a
+canvas Alma and image
+
+637
+00:36:42,072 --> 00:36:47,211
+taxed you can use the canvas 2d drawing
+API's to try to be seen
+
+638
+00:36:47,859 --> 00:36:52,907
+you can also use the wedgie lepi to draw
+three-dimensional scene into a campus
+
+639
+00:36:53,339 --> 00:36:57,407
+and then use that campus as a texture
+source for different web GLC
+
+640
+00:36:58,019 --> 00:37:01,019
+this way you can render 13 be seen
+
+641
+00:37:01,019 --> 00:37:05,390
+to use in another three seen for a movie
+screen or a billboard
+
+642
+00:37:05,039 --> 00:37:10,228
+television or much more creative ideas
+
+643
+00:37:10,579 --> 00:37:13,655
+but how the solution code words can
+stick to the basic image on it
+
+644
+00:37:14,339 --> 00:37:17,361
+here's an image on and I have in my
+issue mark-up
+
+645
+00:37:17,559 --> 00:37:23,690
+and is pointing to an image that
+represents the Safari logo
+
+646
+00:37:23,069 --> 00:37:26,468
+now in javascript first we asked the GO
+Contacts
+
+647
+00:37:27,089 --> 00:37:32,091
+to create a texture and then similar to
+what we've done a few times
+
+648
+00:37:32,289 --> 00:37:36,336
+we bind and do some binding doo-doo
+
+649
+00:37:36,759 --> 00:37:40,650
+to specify which structure we're working
+on
+
+650
+00:37:40,065 --> 00:37:43,073
+picture 0 this constant might seem a
+little weird
+
+651
+00:37:43,073 --> 00:37:47,652
+the story behind textures euro is a each
+program you said a shaker programs
+
+652
+00:37:48,309 --> 00:37:52,160
+can access up to 32 textures and there's
+a constant for textures 0
+
+653
+00:37:52,016 --> 00:37:56,095
+one to all the way up to 31 what is
+using one in this example so we'll stick
+
+654
+00:37:56,239 --> 00:37:58,301
+with the first
+
+655
+00:37:58,859 --> 00:38:01,931
+then we get our texture source using
+this basic da maybe I we grabbed a
+
+656
+00:38:02,579 --> 00:38:05,677
+reference to the image on
+
+657
+00:38:06,559 --> 00:38:09,634
+now this line of code is where the magic
+happens in this line of code
+
+658
+00:38:10,309 --> 00:38:14,160
+for updating the rock pixel data RGBA
+bites
+
+659
+00:38:14,016 --> 00:38:18,097
+eight bytes for component and we're
+uploading it to the GP YouTube use
+
+660
+00:38:18,097 --> 00:38:21,120
+initiator programs in the key in this
+line
+
+661
+00:38:22,002 --> 00:38:25,078
+is the texture source and that's the
+image on the eve grabbed
+
+662
+00:38:25,096 --> 00:38:28,435
+and this is where you might put X
+Malaysia to your request the video or
+
+663
+00:38:29,299 --> 00:38:34,347
+the canvas element has a texture source
+if that's what you're doing
+
+664
+00:38:34,779 --> 00:38:37,863
+and then we're gonna go head and
+interact with that uniform variable that
+
+665
+00:38:38,619 --> 00:38:39,716
+we created earlier the sampler
+
+666
+00:38:40,589 --> 00:38:44,910
+and now we actually need to set its
+value and the value were sitting here 0
+
+667
+00:38:44,091 --> 00:38:48,010
+because we're working on texture 0
+behind-the-scenes web-dl translator
+
+668
+00:38:48,829 --> 00:38:52,200
+into an object that says I'm gonna be
+sampling
+
+669
+00:38:52,002 --> 00:38:57,311
+pixel data from texture image 0
+
+670
+00:38:57,509 --> 00:39:01,450
+now we're ready to go and that vertex
+share
+
+671
+00:39:01,045 --> 00:39:05,094
+can put those pixels onto the screen
+from a texture
+
+672
+00:39:05,094 --> 00:39:08,096
+so using textures we can map a flat
+
+673
+00:39:08,096 --> 00:39:11,122
+2d-image onto our 3d geometry
+
+674
+00:39:12,022 --> 00:39:15,048
+in this example I've been talking about
+so far
+
+675
+00:39:15,048 --> 00:39:20,897
+it's a very basic disk and a very flat
+image that's just mapping 121
+
+676
+00:39:21,329 --> 00:39:25,331
+by using our tools we can have a much
+more complicated texture
+
+677
+00:39:25,349 --> 00:39:28,396
+we're different regions are the texture
+represent different parts
+
+678
+00:39:28,819 --> 00:39:32,822
+the geometry and then we can have much
+more geometry as well
+
+679
+00:39:32,849 --> 00:39:36,914
+side like to show you a live demo I love
+what we've talked about so far
+
+680
+00:39:37,499 --> 00:39:40,880
+some not gonna show you any coding this
+demo I just think it helps
+
+681
+00:39:40,088 --> 00:39:43,987
+to visualize would have been talking
+about with the structure cornets
+
+682
+00:39:44,779 --> 00:39:48,780
+by building up an example so here's our
+very basic
+
+683
+00:39:48,789 --> 00:39:51,789
+three-dimensional deaths
+
+684
+00:39:51,789 --> 00:39:55,796
+you can see it's kinda wireframe which
+is nothing but a whole buncha triangles
+
+685
+00:39:56,489 --> 00:40:00,480
+the build-up this round shape
+
+686
+00:40:00,048 --> 00:40:03,052
+but as I alluded to in the slide right
+before sir the demo we can have a much
+
+687
+00:40:03,088 --> 00:40:04,787
+more complex version of this
+
+688
+00:40:05,579 --> 00:40:09,624
+we can build up the geometry to
+represent the futures have the compass
+
+689
+00:40:10,029 --> 00:40:13,400
+in three dimensions
+
+690
+00:40:13,004 --> 00:40:16,010
+and then we can go ahead and apply that
+
+691
+00:40:16,046 --> 00:40:20,139
+complicated structure onto that geometry
+and now we have a live 3d representation
+
+692
+00:40:21,039 --> 00:40:24,138
+the compass
+
+693
+00:40:24,489 --> 00:40:29,460
+now to really came into its life let's
+start animating
+
+694
+00:40:29,046 --> 00:40:32,615
+sirs this is a really quick little
+routine that just in a meeting a camera
+
+695
+00:40:33,029 --> 00:40:34,060
+around the campus
+
+696
+00:40:34,339 --> 00:40:38,950
+following some sine waves and the time
+
+697
+00:40:38,095 --> 00:40:41,102
+just kinda given who all have you ever
+
+698
+00:40:42,065 --> 00:40:45,684
+to further convince you that this is a
+live 3d model I can show you the parts
+
+699
+00:40:46,269 --> 00:40:47,290
+that are independent from another
+
+700
+00:40:47,479 --> 00:40:51,560
+so let's go and start that needle
+spinning
+
+701
+00:40:52,289 --> 00:40:55,690
+saw that data are generated using a tool
+its outputted
+
+702
+00:40:55,069 --> 00:40:58,448
+the corner and information the texture
+
+703
+00:40:59,069 --> 00:41:02,142
+I'm the position card information the
+tax record information
+
+704
+00:41:02,799 --> 00:41:05,847
+it's also in outputted whole bunch of
+other vertex information
+
+705
+00:41:06,279 --> 00:41:10,200
+we've uploaded to our share programs and
+can be using
+
+706
+00:41:10,002 --> 00:41:14,341
+to show this compass know the same code
+was being
+
+707
+00:41:14,539 --> 00:41:18,180
+executed both in javascript and on the
+shoulders
+
+708
+00:41:18,018 --> 00:41:22,897
+no matter which geometry and vertices
+I'm passing into it
+
+709
+00:41:23,059 --> 00:41:26,083
+but vertex information does not need to
+come from a tool
+
+710
+00:41:26,299 --> 00:41:30,343
+we can also procedurally generated for
+tax information
+
+711
+00:41:30,739 --> 00:41:34,700
+so here we have a train underneath the
+compass that we're generating in
+
+712
+00:41:34,007 --> 00:41:34,806
+javascript
+
+713
+00:41:35,499 --> 00:41:38,523
+it's just a few dozen lines of code to
+generate this
+
+714
+00:41:38,739 --> 00:41:43,660
+stripper train and Ernie so we can move
+the compass over to train
+
+715
+00:41:43,066 --> 00:41:46,745
+the needle still spending and some more
+advanced things we can do to
+
+716
+00:41:47,339 --> 00:41:51,420
+right now haven't talked about yet but
+we'll get into in a little bit more
+
+717
+00:41:51,042 --> 00:41:52,097
+detail later
+
+718
+00:41:52,097 --> 00:41:56,366
+to add some lighting so now we have some
+lights and a meeting over the train
+
+719
+00:41:57,239 --> 00:42:02,323
+you can see how they affect the entire
+scene and the compass itself
+
+720
+00:42:03,079 --> 00:42:06,086
+so in a demo re showed alive
+representation
+
+721
+00:42:06,779 --> 00:42:10,380
+few the concepts you've been talking
+about so far output in complex geometry
+
+722
+00:42:10,038 --> 00:42:14,937
+from into out putting tax information
+from it all
+
+723
+00:42:15,279 --> 00:42:18,460
+but the code there in a demo really was
+only
+
+724
+00:42:18,046 --> 00:42:21,155
+a few dozen lines a javascript and
+vertex shader
+
+725
+00:42:21,569 --> 00:42:24,670
+programming that we've already gone over
+there's some additional javascript to
+
+726
+00:42:24,067 --> 00:42:28,120
+enemy things
+
+727
+00:42:29,002 --> 00:42:32,171
+but it barely scrape the surface of what
+web DL can do
+
+728
+00:42:32,369 --> 00:42:36,413
+even with that procedural terrain
+generation and the lighting affects
+
+729
+00:42:36,809 --> 00:42:40,930
+which I've been told you any details
+about that still barely scratched the
+
+730
+00:42:40,093 --> 00:42:41,145
+surface what we goin to
+
+731
+00:42:42,045 --> 00:42:46,134
+it is immensely powerful it is a tool
+box unto itself
+
+732
+00:42:46,539 --> 00:42:50,540
+and trying to describe everything would
+take a lot more the sessions
+
+733
+00:42:50,549 --> 00:42:54,970
+psalm I'm not going to go into much more
+detail on any of that
+
+734
+00:42:54,097 --> 00:42:57,876
+but im gonna talk about a different tool
+box now like to shift gears
+
+735
+00:42:58,749 --> 00:43:01,777
+and touch up on the web platform a
+little bit
+
+736
+00:43:02,029 --> 00:43:06,034
+the web platform is premature at this
+point it's been around
+
+737
+00:43:06,529 --> 00:43:10,660
+for dozens of years and web GL is just
+
+738
+00:43:10,066 --> 00:43:14,113
+one of the newest star children tools in
+the web platform
+
+739
+00:43:15,013 --> 00:43:18,092
+but there's also some very basic tools
+that are still there
+
+740
+00:43:18,092 --> 00:43:22,281
+issue miles what started it all issue
+male specifies the content and structure
+
+741
+00:43:23,109 --> 00:43:26,173
+but the document your web page
+
+742
+00:43:26,749 --> 00:43:30,970
+and then a little bit later we introduce
+CSS which specifies how that content is
+
+743
+00:43:30,097 --> 00:43:31,136
+presented
+
+744
+00:43:32,009 --> 00:43:36,190
+CSS can do simple things like change the
+font have some taxed
+
+745
+00:43:36,019 --> 00:43:40,092
+but it can also animate the transitions
+oven imager any ailment
+
+746
+00:43:40,092 --> 00:43:43,491
+from different points on the page
+including 3d transforms
+
+747
+00:43:44,319 --> 00:43:47,386
+that's already been available in CSS
+native a
+
+748
+00:43:47,989 --> 00:43:52,051
+a native web technology that resisted
+web-dl
+
+749
+00:43:52,609 --> 00:43:56,130
+and then of course there's JavaScript we
+talked a lot about JavaScript today
+
+750
+00:43:56,013 --> 00:43:56,612
+because
+
+751
+00:43:56,729 --> 00:43:59,950
+use JavaScript to drive a wedge EL
+JavaScript
+
+752
+00:43:59,095 --> 00:44:02,414
+also has native Don bindings to the HTML
+content
+
+753
+00:44:03,269 --> 00:44:07,440
+and can transition styles on the page
+
+754
+00:44:07,044 --> 00:44:11,103
+so using just his bottom tier the
+technology is the smell the CSS and
+
+755
+00:44:11,499 --> 00:44:12,220
+JavaScript
+
+756
+00:44:12,022 --> 00:44:15,063
+we've already been able to do some
+pretty cool things
+
+757
+00:44:15,063 --> 00:44:19,071
+for example if I wanted to go into and
+create a 3d image gallery
+
+758
+00:44:19,071 --> 00:44:23,160
+I would need to jump in the web jail
+just to do that the HTML Kansas fi
+
+759
+00:44:23,799 --> 00:44:24,897
+series of images
+
+760
+00:44:25,779 --> 00:44:29,160
+and their relation to each other the
+order in which they appear
+
+761
+00:44:29,016 --> 00:44:33,155
+the CSS can define a 3d
+
+762
+00:44:33,299 --> 00:44:37,303
+presentation at those images and
+JavaScript contrive some CSS animations
+
+763
+00:44:37,339 --> 00:44:41,450
+between them
+
+764
+00:44:41,045 --> 00:44:44,704
+something else has already been possible
+is really advanced
+
+765
+00:44:45,109 --> 00:44:50,157
+tax operations using HTML and CSS and
+things like the font face rules
+
+766
+00:44:50,589 --> 00:44:55,180
+you can add your own fonts the content
+you can really finally tweak
+
+767
+00:44:55,018 --> 00:44:58,127
+how the fun is rendered and
+
+768
+00:44:58,289 --> 00:45:02,362
+its pretty simple to do versus if you
+tried to do for rendering in red GL you
+
+769
+00:45:03,019 --> 00:45:03,890
+might find it
+
+770
+00:45:03,089 --> 00:45:07,090
+much more difficult also in this little
+video I just showed
+
+771
+00:45:07,009 --> 00:45:10,348
+you can see that HTML and Javascript
+have built-in
+
+772
+00:45:11,239 --> 00:45:14,660
+event handling for the mouse pointer and
+a whole bunch is
+
+773
+00:45:14,066 --> 00:45:17,675
+built-in controls and built-in hit
+testing for different elements on the
+
+774
+00:45:18,269 --> 00:45:18,351
+page
+
+775
+00:45:19,089 --> 00:45:24,107
+these are all built in an easy to use
+already
+
+776
+00:45:24,269 --> 00:45:27,450
+and then added even more basic level
+woody shemale does
+
+777
+00:45:27,045 --> 00:45:31,091
+is layout content it lays out taxed and
+other elements on a page
+
+778
+00:45:31,091 --> 00:45:35,167
+you can see in this I book example the
+text flows beautifully around elements
+
+779
+00:45:36,067 --> 00:45:36,996
+on the page
+
+780
+00:45:37,599 --> 00:45:40,606
+and that was basically all free for
+whoever wrote that content
+
+781
+00:45:41,299 --> 00:45:46,150
+and put that image into that document
+
+782
+00:45:46,015 --> 00:45:49,091
+and then very importantly sticking with
+the native web technologies whenever you
+
+783
+00:45:49,091 --> 00:45:49,170
+can
+
+784
+00:45:50,007 --> 00:45:55,030
+get to accessibility for free
+
+785
+00:45:55,093 --> 00:45:59,442
+so today we're talking a lot about tools
+and
+
+786
+00:46:00,279 --> 00:46:03,306
+the point I'd just like to drive home
+here is to use
+
+787
+00:46:03,549 --> 00:46:07,577
+the appropriate tool whenever you can
+it's an old programming at age
+
+788
+00:46:07,829 --> 00:46:11,890
+in its really true when we take a
+platform is mature is the web platform
+
+789
+00:46:11,089 --> 00:46:17,448
+and introduces something as powerful as
+well Geo
+
+790
+00:46:18,249 --> 00:46:22,333
+finally have one more thing we need to
+talk about that's when to drop
+
+791
+00:46:23,089 --> 00:46:26,640
+so far deny have described a lot about
+how you render
+
+792
+00:46:26,064 --> 00:46:29,119
+and individual frame in your scene you
+set up
+
+793
+00:46:30,019 --> 00:46:34,019
+the geometry objects and the colors and
+you set up your shoulders
+
+794
+00:46:34,019 --> 00:46:37,046
+and then you make a call to draw
+triangles and boom
+
+795
+00:46:37,046 --> 00:46:41,090
+you've rendered still friends you should
+the demoss we showed you
+
+796
+00:46:41,009 --> 00:46:44,017
+had animation evolved how that animation
+happen
+
+797
+00:46:45,007 --> 00:46:48,079
+well as you know by now JavaScript
+drives drying
+
+798
+00:46:49,042 --> 00:46:54,141
+in web GL but Javascript is not always
+running
+
+799
+00:46:54,519 --> 00:46:57,571
+take this beautiful web page here its
+clean and
+
+800
+00:46:58,039 --> 00:47:01,072
+looks nice but it's also very static
+
+801
+00:47:01,369 --> 00:47:04,393
+and as long as I'm the user and I'm not
+touching the mouse or keyboard
+
+802
+00:47:04,609 --> 00:47:08,660
+Anna interacting with the page it all in
+the pages very static it does now timers
+
+803
+00:47:08,066 --> 00:47:09,895
+or any other things going on
+
+804
+00:47:10,489 --> 00:47:13,550
+no javascript is executing so how can we
+render web-dl
+
+805
+00:47:14,099 --> 00:47:17,190
+no javascript is executing well
+
+806
+00:47:18,009 --> 00:47:21,880
+but then if I start moving the mouse
+over the page and selecting things and
+
+807
+00:47:21,088 --> 00:47:22,089
+dragging in
+
+808
+00:47:22,089 --> 00:47:26,097
+bringing at menus now JavaScript is
+executing a whole bunch
+
+809
+00:47:27,069 --> 00:47:30,117
+except it's responding to all these
+events that are happening its executing
+
+810
+00:47:31,017 --> 00:47:32,096
+a synchronously
+
+811
+00:47:32,249 --> 00:47:35,249
+hundreds of times a second
+
+812
+00:47:35,249 --> 00:47:39,670
+so in one of those little JavaScript
+executions you could do some drawing
+
+813
+00:47:39,067 --> 00:47:42,476
+but you probably shouldn't draw in every
+single
+
+814
+00:47:43,079 --> 00:47:46,105
+event handler that's called takers dad
+just be crazy
+
+815
+00:47:46,339 --> 00:47:49,437
+you be drying trying to draw hundreds of
+times a second
+
+816
+00:47:50,319 --> 00:47:53,368
+that can possibly work because drying
+takes a long time compared to how
+
+817
+00:47:53,809 --> 00:47:55,836
+quickly these events would normally be
+handled
+
+818
+00:47:56,079 --> 00:48:00,140
+you can only get bits to the screen
+sixty times a second
+
+819
+00:48:00,014 --> 00:48:02,933
+so basically you just slow down
+responsiveness you start chewing through
+
+820
+00:48:03,059 --> 00:48:04,150
+CPU and better luck battery life
+
+821
+00:48:04,969 --> 00:48:08,430
+and you wouldn't even get anything out
+of it
+
+822
+00:48:08,043 --> 00:48:11,046
+but there are times when you might want
+to draw in direct response
+
+823
+00:48:11,046 --> 00:48:14,068
+to one of these events imagine if you're
+entering a 3d button
+
+824
+00:48:14,068 --> 00:48:18,507
+using web DL in the user clicks on it
+you might immediately want to
+
+825
+00:48:19,119 --> 00:48:22,190
+redraw your scene to update the state
+there that's great
+
+826
+00:48:22,829 --> 00:48:26,890
+that make sense if you have a complex
+scene that is animating a lot of
+
+827
+00:48:26,089 --> 00:48:27,318
+geometry though
+
+828
+00:48:28,119 --> 00:48:32,142
+you probably want a smooth animation you
+probably are going for that 60 frames
+
+829
+00:48:32,349 --> 00:48:32,447
+per second
+
+830
+00:48:33,329 --> 00:48:39,400
+animation now to get that I can tell you
+one step house rule
+
+831
+00:48:39,004 --> 00:48:42,353
+please don't use timers JavaScript
+timers
+
+832
+00:48:42,749 --> 00:48:45,832
+our way to execute a channel code at
+some point in the future
+
+833
+00:48:46,579 --> 00:48:49,607
+that's based on the time delay dis
+
+834
+00:48:49,859 --> 00:48:54,140
+it turns out is not appropriate for
+rendering animations
+
+835
+00:48:54,014 --> 00:48:58,593
+on one example words inappropriate is
+that the system might be under load
+
+836
+00:48:58,719 --> 00:49:02,190
+and you might not be able to keep up
+with 60 frames per second so if you set
+
+837
+00:49:02,019 --> 00:49:02,090
+a timer
+
+838
+00:49:02,009 --> 00:49:05,638
+to run 60 frames per second not knowing
+the systems under load
+
+839
+00:49:06,529 --> 00:49:09,556
+you're going to be trying to draw more
+often
+
+840
+00:49:09,799 --> 00:49:13,160
+then your drying can be presented on the
+screen
+
+841
+00:49:13,016 --> 00:49:16,092
+this is just wasteful its gonna waste
+CPU heat up
+
+842
+00:49:16,092 --> 00:49:21,261
+user's mobile device burn through
+battery
+
+843
+00:49:22,089 --> 00:49:25,089
+so what can we use instead
+
+844
+00:49:25,089 --> 00:49:28,430
+there's an API specifically for drying
+
+845
+00:49:28,043 --> 00:49:33,070
+that you should use incentive timers and
+it's called request animation frame
+
+846
+00:49:33,007 --> 00:49:37,806
+much like a timer you pass a call back
+to request an emission-free
+
+847
+00:49:38,499 --> 00:49:42,950
+such the first thing you do to use it
+know when is your call that called
+
+848
+00:49:42,095 --> 00:49:45,894
+your call back is invoked when WebKit
+Safari
+
+849
+00:49:46,749 --> 00:49:49,783
+or that your application that runs
+WebKit
+
+850
+00:49:50,089 --> 00:49:53,380
+knows that it's time to draw
+
+851
+00:49:53,038 --> 00:49:56,119
+so if the system load as lights and your
+drying is simple enough
+
+852
+00:49:57,019 --> 00:50:00,848
+you can keep up that 60 frames a second
+circus animation frame will be called
+
+853
+00:50:01,019 --> 00:50:02,101
+sixty times a second
+
+854
+00:50:02,839 --> 00:50:05,892
+if the systems under a little bit a
+heavier load and you can't keep up with
+
+855
+00:50:06,369 --> 00:50:06,880
+that
+
+856
+00:50:06,088 --> 00:50:10,177
+it'll call requests it'll call your call
+back less often
+
+857
+00:50:10,969 --> 00:50:14,048
+if your web content is in a background
+tab in Safari for example
+
+858
+00:50:14,759 --> 00:50:17,835
+or the canvas your web GL is painting
+into is
+
+859
+00:50:18,519 --> 00:50:21,526
+off-screen request an emission-free
+might be called
+
+860
+00:50:21,589 --> 00:50:24,627
+much less often or not at all because
+what it knows
+
+861
+00:50:24,969 --> 00:50:31,969
+that trying a scene that can't be seen
+is not important
+
+862
+00:50:32,039 --> 00:50:36,638
+so here we have a drying called a
+culture in and we set it up to be called
+
+863
+00:50:36,989 --> 00:50:41,992
+by calling request and mission frame
+with the triangle that
+
+864
+00:50:42,289 --> 00:50:45,400
+insider call back we do some drying
+
+865
+00:50:45,004 --> 00:50:48,393
+this can be updating physics based on
+the amount of time that's passed
+
+866
+00:50:48,789 --> 00:50:51,796
+responding to cue that user events that
+we've logged as the user was moving the
+
+867
+00:50:52,489 --> 00:50:53,518
+mouse around in
+
+868
+00:50:53,779 --> 00:50:58,900
+pressing keys in search and then we can
+drive the individual moments were seen
+
+869
+00:50:58,009 --> 00:51:02,358
+the compass other entities the train in
+the background
+
+870
+00:51:03,249 --> 00:51:07,280
+and then when we're done drying we
+request the next compaq
+
+871
+00:51:07,559 --> 00:51:10,612
+were telling WebKit hey we finish trying
+one frame
+
+872
+00:51:11,089 --> 00:51:16,910
+now it's time for me to be told when to
+draw the next room
+
+873
+00:51:16,091 --> 00:51:23,091
+and that's it
+
+874
+00:51:24,004 --> 00:51:27,070
+so that's all we have to talk about
+about these nitty-gritty topics
+
+875
+00:51:27,007 --> 00:51:30,053
+the code and how things fit together if
+the web platform
+
+876
+00:51:31,016 --> 00:51:35,024
+but i wanna show you one final demo or
+call it the request animation frame demo
+
+877
+00:51:35,096 --> 00:51:38,179
+because this demo certainly does use
+request animation frame
+
+878
+00:51:39,079 --> 00:51:44,111
+but it also uses a whole lot more so our
+friends at Epic Games
+
+879
+00:51:45,011 --> 00:51:49,013
+we're happy to let us use this demo from
+the Unreal Engine
+
+880
+00:51:49,031 --> 00:51:53,032
+and this is just a really cool little
+temple thing we have
+
+881
+00:51:53,041 --> 00:51:57,084
+money go and take a full screen so this
+is rendering in Safari
+
+882
+00:51:57,084 --> 00:52:00,129
+this is executing JavaScript this is
+executing
+
+883
+00:52:01,029 --> 00:52:04,062
+fragment shooters and vertex shares
+
+884
+00:52:04,062 --> 00:52:08,145
+and what we're seeing is just
+
+885
+00:52:09,045 --> 00:52:12,128
+amazing so there's a lot going on here
+
+886
+00:52:13,028 --> 00:52:16,106
+we have light reflection allottees
+surfaces
+
+887
+00:52:17,006 --> 00:52:20,080
+really interesting marble and glass we
+have fire casting
+
+888
+00:52:20,008 --> 00:52:25,037
+reflections in light as we move around
+you can see the background scene being
+
+889
+00:52:26,009 --> 00:52:26,095
+reflected
+
+890
+00:52:26,095 --> 00:52:31,096
+of the shiny walls finest tears over
+here
+
+891
+00:52:32,005 --> 00:52:36,011
+says enter this hallway
+
+892
+00:52:36,065 --> 00:52:39,131
+me go back and forth to three times I
+love this you can see this
+
+893
+00:52:40,031 --> 00:52:43,088
+orange reflection on the wall some
+wondering where that weren't as coming
+
+894
+00:52:43,088 --> 00:52:43,134
+from
+
+895
+00:52:44,034 --> 00:52:47,068
+something also interesting as you see
+this room overhears a lot brighter
+
+896
+00:52:47,068 --> 00:52:50,117
+the engine is doing HDR for dynamic
+lighting effects
+
+897
+00:52:51,017 --> 00:52:58,017
+to great effect so we can see that these
+fires on these podiums here
+
+898
+00:52:59,007 --> 00:53:02,065
+they're casting shatters into the
+hallway here's a more example the HDR
+
+899
+00:53:02,065 --> 00:53:02,073
+contrast
+
+900
+00:53:03,045 --> 00:53:09,120
+I mean it's a bright room so it's dark
+off in the distance this in millions are
+
+901
+00:53:10,002 --> 00:53:12,015
+triangles millions vertices
+
+902
+00:53:12,033 --> 00:53:15,035
+it was generated with some pretty
+advanced tools
+
+903
+00:53:15,035 --> 00:53:20,096
+but then the actual code the drives it
+isn't nearly as advances the data that's
+
+904
+00:53:20,096 --> 00:53:20,174
+coming in
+
+905
+00:53:21,074 --> 00:53:24,125
+it's just relying on the power G on the
+power the web platform
+
+906
+00:53:25,025 --> 00:53:28,032
+to do previously impossible things
+
+907
+00:53:28,032 --> 00:53:32,126
+using the tools to the web platform and
+
+908
+00:53:33,026 --> 00:53:36,074
+to rapper sup I like to invite my
+colleague dean back on stage
+
+909
+00:53:36,074 --> 00:53:43,074
+thanks very that
+
+910
+00:53:44,045 --> 00:53:48,084
+pretty awesome and like I said the start
+with jill is insanely fun technology to
+
+911
+00:53:48,084 --> 00:53:48,091
+play with
+
+912
+00:53:49,054 --> 00:53:52,111
+so while you might not get quite to the
+Unreal Engine straight away you can
+
+913
+00:53:53,011 --> 00:53:54,047
+certainly play with stuff
+
+914
+00:53:54,047 --> 00:53:58,052
+right away and get some amazing input
+let's wrap up
+
+915
+00:53:58,052 --> 00:54:02,069
+so with jail provides rich fast powerful
+graphics inside the web browser
+
+916
+00:54:02,069 --> 00:54:05,143
+it's available in Safari on both I was
+10
+
+917
+00:54:06,043 --> 00:54:13,043
+you seventy and I oocyte and it's also
+available in the modern market I PIKK we
+
+918
+00:54:13,047 --> 00:54:14,066
+have you if you're a developer
+
+919
+00:54:14,066 --> 00:54:18,140
+with that I wanna tell you drink eat
+more information is an
+
+920
+00:54:19,004 --> 00:54:22,082
+email address you can get for contacted
+Apple as a few web-sites
+
+921
+00:54:23,018 --> 00:54:26,019
+because with kate is an open source
+project so you can follow along with the
+
+922
+00:54:26,019 --> 00:54:26,080
+development
+
+923
+00:54:26,008 --> 00:54:30,085
+on wiki total the some related sessions
+the one yesterday on the bond market
+
+924
+00:54:31,057 --> 00:54:31,155
+APRI
+
+925
+00:54:32,055 --> 00:54:35,063
+which is definitely worth checking out
+and we've got one
+
+926
+00:54:35,063 --> 00:54:39,150
+tomorrow on the web inspector and modern
+JavaScript which causes important to NGO
+
+927
+00:54:40,005 --> 00:54:43,024
+and we're looking forward to seeing what
+we do have a great rest the conference
+

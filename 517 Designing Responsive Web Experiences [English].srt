@@ -1,0 +1,3141 @@
+1
+00:00:12,004 --> 00:00:17,098
+good morning everyone a
+
+2
+00:00:17,098 --> 00:00:21,127
+p some hard for when people hear
+specially on
+
+3
+00:00:22,027 --> 00:00:25,124
+you know the morning after the beer bash
+know you're all hardware
+
+4
+00:00:26,024 --> 00:00:29,039
+I'm welcome to the designing responsive
+web experiences
+
+5
+00:00:29,039 --> 00:00:32,088
+session my name is Casey and Ted
+
+6
+00:00:32,439 --> 00:00:36,180
+and today we're gonna show you how you
+can build one website
+
+7
+00:00:36,018 --> 00:00:39,062
+that's gonna look great everywhere I'm
+by the way
+
+8
+00:00:39,062 --> 00:00:42,076
+anytime if a website during that session
+we mean
+
+9
+00:00:42,076 --> 00:00:46,055
+any wet media I'm on the iBooks team and
+on the web gettin
+
+10
+00:00:46,739 --> 00:00:51,000
+I we want both your digital books and
+your website
+
+11
+00:00:51,000 --> 00:00:55,051
+to a great everywhere so we don't have
+to tell you that
+
+12
+00:00:55,051 --> 00:00:59,127
+your website is being viewed on a whole
+variety different devices and screen cut
+
+13
+00:01:00,027 --> 00:01:03,103
+what we can do though is teach you some
+
+14
+00:01:04,003 --> 00:01:08,006
+really easy techniques that you can use
+to ensure that your website looks great
+
+15
+00:01:08,033 --> 00:01:08,096
+on all
+
+16
+00:01:08,096 --> 00:01:11,149
+I would be very clear it up
+
+17
+00:01:12,049 --> 00:01:15,057
+what we are not going to talk about
+today
+
+18
+00:01:15,057 --> 00:01:20,356
+is building multiple versions region
+these devices back today fashion
+
+19
+00:01:20,869 --> 00:01:23,944
+it in the antithesis I'll the mobile
+specific site
+
+20
+00:01:24,619 --> 00:01:27,644
+there will be no iNDOT domain name
+
+21
+00:01:27,869 --> 00:01:31,900
+here so instead arnold one website looks
+great on out
+
+22
+00:01:32,179 --> 00:01:35,248
+an effect that had the design
+
+23
+00:01:35,869 --> 00:01:38,874
+they can adapt and adjust always look
+good on all
+
+24
+00:01:39,369 --> 00:01:42,436
+all these different devices is usually
+referred to
+
+25
+00:01:43,039 --> 00:01:46,140
+as a website that has a response and
+design
+
+26
+00:01:46,014 --> 00:01:49,072
+responding design
+
+27
+00:01:49,072 --> 00:01:53,361
+it just just a buzzword it just means
+that your website
+
+28
+00:01:54,009 --> 00:01:57,660
+its sensitive to its environment which
+will allow it to adapt
+
+29
+00:01:57,066 --> 00:02:03,445
+in change just simply always look good
+and so did a 10 denier gonna show you
+
+30
+00:02:04,039 --> 00:02:06,170
+not only what a simple
+
+31
+00:02:06,017 --> 00:02:10,856
+idea a responsive design is but really
+how simple it is to implement
+
+32
+00:02:11,009 --> 00:02:14,170
+we're gonna look
+
+33
+00:02:14,017 --> 00:02:18,089
+at response a cock columns are really
+great way to both at them
+
+34
+00:02:18,089 --> 00:02:21,117
+visual interest your website is well as
+
+35
+00:02:22,017 --> 00:02:27,034
+improve the legibility oversight will
+also teach you about
+
+36
+00:02:27,034 --> 00:02:31,098
+on trial 2 units and how you can use
+them to make sure that your layout
+
+37
+00:02:31,098 --> 00:02:37,145
+has been Belletti every font size and
+intense going to show you how you can
+
+38
+00:02:38,045 --> 00:02:39,364
+use the S shake
+
+39
+00:02:39,769 --> 00:02:43,775
+to rap text around images I will make
+sure that those
+
+40
+00:02:43,829 --> 00:02:48,030
+images are ready ready and for the
+
+41
+00:02:48,003 --> 00:02:52,028
+up larger design changes that we need to
+make will use media queries
+
+42
+00:02:52,028 --> 00:02:55,092
+and finally the finishing touch will be
+hairlines
+
+43
+00:02:55,092 --> 00:02:58,154
+we can really dive indeed and make you
+so those beautiful red
+
+44
+00:02:59,054 --> 00:03:03,223
+so why are we talking about this anyway
+
+45
+00:03:03,709 --> 00:03:07,732
+no when he does a really great job
+making sure
+
+46
+00:03:07,939 --> 00:03:10,941
+that your website looks just as great
+
+47
+00:03:10,959 --> 00:03:16,790
+on the iPhone as it does on the desktop
+it just shrinks your site down
+
+48
+00:03:16,079 --> 00:03:20,448
+and makes a bit on the phone screen and
+then the user can double tap or pinch to
+
+49
+00:03:21,159 --> 00:03:22,370
+zoom in to make sure
+
+50
+00:03:22,037 --> 00:03:27,516
+that they can be that text the text
+becomes larger that and it looks great
+
+51
+00:03:27,849 --> 00:03:32,340
+notta lotta work Fri and when he does
+the same thing
+
+52
+00:03:32,034 --> 00:03:36,101
+for more complex sites like this one
+that had an i mean just shrinks all that
+
+53
+00:03:37,001 --> 00:03:38,480
+formatting and layout down
+
+54
+00:03:38,489 --> 00:03:43,480
+into one screen and it feels great right
+can you read that text
+
+55
+00:03:43,048 --> 00:03:46,837
+barely at all not really in any
+
+56
+00:03:47,269 --> 00:03:50,278
+mobile designers our website designers
+have looked at this in fed
+
+57
+00:03:50,359 --> 00:03:55,290
+I can't have that I'm gonna have to make
+a mobile specific site
+
+58
+00:03:55,029 --> 00:03:59,948
+you know we get you want your website to
+look great
+
+59
+00:04:00,209 --> 00:04:04,246
+you want to be clear and easy to read
+without users having two double tap
+
+60
+00:04:04,579 --> 00:04:09,667
+and pensions zoom and pan around and
+something you may be thinking well
+
+61
+00:04:10,459 --> 00:04:14,560
+of course it doesn't look great you need
+to add a medic you portray
+
+62
+00:04:14,056 --> 00:04:19,104
+another great first step medically
+imports gonna make your text larger
+
+63
+00:04:20,004 --> 00:04:24,059
+relation to the screen size but the
+thing is is that your layout
+
+64
+00:04:24,059 --> 00:04:28,059
+still all Tinian shrunk down so now
+you've got these big words
+
+65
+00:04:28,059 --> 00:04:32,077
+and shrunk down layout and it just that
+what's up
+
+66
+00:04:32,077 --> 00:04:35,144
+right so lest you think
+
+67
+00:04:36,044 --> 00:04:40,109
+okay casey you know really we're gonna
+have to make a mobile specific site now
+
+68
+00:04:41,009 --> 00:04:46,055
+please keep in mind that we're not
+building web sites for just
+
+69
+00:04:46,055 --> 00:04:50,064
+the iPhone the iPad the desktop
+
+70
+00:04:51,045 --> 00:04:54,073
+and to prove it if your look at our
+website
+
+71
+00:04:54,073 --> 00:04:57,107
+on the desktop looks great right we
+designed it
+
+72
+00:04:58,007 --> 00:05:01,045
+we designed for this window size
+basically but a I
+
+73
+00:05:01,045 --> 00:05:04,124
+shrink down the window who
+
+74
+00:05:05,024 --> 00:05:10,025
+I've got the thing problem here that I
+do on the phone
+
+75
+00:05:10,034 --> 00:05:14,073
+so we need to make sure that we're
+building a site that looks great
+
+76
+00:05:14,073 --> 00:05:18,108
+no matter what our windows so so far
+I've laid out
+
+77
+00:05:19,008 --> 00:05:23,090
+just a whole lotta knows I said I we
+can't make mobile specific site
+
+78
+00:05:23,009 --> 00:05:27,060
+I'm using a medical report isn't going
+to get you on the way there
+
+79
+00:05:28,041 --> 00:05:31,060
+and you have to build a website that
+works for
+
+80
+00:05:31,006 --> 00:05:34,092
+everything all possible permutation on
+the desktop so
+
+81
+00:05:35,046 --> 00:05:39,095
+what can we do well done
+
+82
+00:05:39,095 --> 00:05:42,169
+our goal here is to use some simple as
+hard as I and techniques
+
+83
+00:05:43,069 --> 00:05:46,072
+and seems like the best way to
+foreigners just to identify
+
+84
+00:05:46,099 --> 00:05:49,104
+specific problems that we're seeing
+right now
+
+85
+00:05:50,004 --> 00:05:54,026
+and has worked to the one-time sounds
+good I mean the first one is obvious to
+
+86
+00:05:54,026 --> 00:05:55,071
+me is that
+
+87
+00:05:55,071 --> 00:05:58,093
+masthead atop become so tall
+
+88
+00:05:58,093 --> 00:06:01,111
+on the phone and I have to scroll to see
+the content
+
+89
+00:06:02,011 --> 00:06:05,096
+and the other thing is is those columns
+are just really skinny like
+
+90
+00:06:05,096 --> 00:06:09,137
+so it's completely legible and that
+caption on our galaxy is blowing right
+
+91
+00:06:10,037 --> 00:06:10,132
+out of the image in
+
+92
+00:06:11,032 --> 00:06:15,035
+covering earns taxer yeah it's pretty
+horrible where do you think we should
+
+93
+00:06:15,035 --> 00:06:16,092
+start
+
+94
+00:06:16,092 --> 00:06:19,174
+I think we're sorry the columns as the
+protection of
+
+95
+00:06:20,074 --> 00:06:24,116
+okay but certainly cock I personally
+really like all
+
+96
+00:06:25,016 --> 00:06:29,021
+I it love that they add both the visual
+interest to my website
+
+97
+00:06:29,066 --> 00:06:32,125
+and that they improve the legibility
+it's really the perfect combination of
+
+98
+00:06:33,025 --> 00:06:37,058
+form and function
+
+99
+00:06:37,058 --> 00:06:40,137
+and columns are great for this because
+they're able to
+
+100
+00:06:41,037 --> 00:06:44,096
+I divide up big blocks attack
+
+101
+00:06:44,096 --> 00:06:48,125
+into more legible choc so what I we
+might have had a big block a really long
+
+102
+00:06:49,025 --> 00:06:52,081
+line for tax I'm now able to have very
+consumable
+
+103
+00:06:52,081 --> 00:06:55,090
+side ray now the problem we ran into
+
+104
+00:06:56,071 --> 00:06:59,092
+with our website and why those homes
+weren't looking good
+
+105
+00:06:59,092 --> 00:07:02,126
+is because we define set number
+
+106
+00:07:03,026 --> 00:07:06,098
+up call that had to be there for every
+screen size
+
+107
+00:07:06,098 --> 00:07:09,116
+right so when our window shot down those
+
+108
+00:07:10,016 --> 00:07:13,018
+homes had to be calm really narrow
+
+109
+00:07:13,018 --> 00:07:17,019
+and we were only able to have a few
+words per line
+
+110
+00:07:17,028 --> 00:07:21,030
+soda make your columns responsive
+
+111
+00:07:21,003 --> 00:07:24,038
+all we have to do is instead a defining
+a column count
+
+112
+00:07:24,065 --> 00:07:29,109
+where set number of columns on our page
+we just to find the conduit
+
+113
+00:07:30,009 --> 00:07:34,097
+so to give you an example of this I have
+to web page is here
+
+114
+00:07:34,097 --> 00:07:39,194
+a simplified a where one has the comms
+defining column with
+
+115
+00:07:40,094 --> 00:07:44,166
+one has the comp to find the compound by
+car like to add to my site
+
+116
+00:07:45,066 --> 00:07:49,120
+now when I resize that window
+
+117
+00:07:50,002 --> 00:07:53,068
+re says that window I the column
+
+118
+00:07:53,086 --> 00:07:56,091
+though the page that we define the
+column with that
+
+119
+00:07:56,091 --> 00:08:00,093
+we have to call maintained that legible
+with
+
+120
+00:08:01,011 --> 00:08:04,065
+whereas the column count had a shrink
+down like we saw before
+
+121
+00:08:04,065 --> 00:08:07,065
+so responder homes really great
+
+122
+00:08:07,065 --> 00:08:10,131
+defining the column with is really great
+because WebKit will automatically
+
+123
+00:08:11,031 --> 00:08:14,102
+add or eliminate columns as room becomes
+available
+
+124
+00:08:15,002 --> 00:08:19,041
+hours removed and we recommend when you
+are defining
+
+125
+00:08:19,041 --> 00:08:22,085
+%uh your column with that you use a
+
+126
+00:08:22,085 --> 00:08:26,101
+bond relative unit final two minutes
+really great because
+
+127
+00:08:27,001 --> 00:08:32,037
+if your user resizes their tax the
+columns with what of the resize
+
+128
+00:08:32,037 --> 00:08:37,051
+to match that to give you a simplified
+example
+
+129
+00:08:37,051 --> 00:08:40,390
+here we have the alphabet right there's
+5
+
+130
+00:08:40,849 --> 00:08:43,866
+letters on that first line in the first
+column
+
+131
+00:08:44,019 --> 00:08:49,310
+ABCD any now because my columns with is
+to find
+
+132
+00:08:49,031 --> 00:08:54,540
+and a pot relative unit when I make my
+text smaller
+
+133
+00:08:54,819 --> 00:08:58,790
+I will maintain those five letters
+across the top and the same thing goes
+
+134
+00:08:58,079 --> 00:09:01,788
+with the number words on your call will
+maintain a legible bring
+
+135
+00:09:02,499 --> 00:09:05,514
+word so all this
+
+136
+00:09:05,649 --> 00:09:08,712
+great functionality in these responses
+Kong's it seems like you're getting a
+
+137
+00:09:09,279 --> 00:09:10,287
+lot here right
+
+138
+00:09:11,079 --> 00:09:14,172
+it's just one CSS property you just to
+calm with
+
+139
+00:09:15,009 --> 00:09:19,230
+to find home with and define it with the
+bottle to unit in this case for using
+
+140
+00:09:19,023 --> 00:09:22,132
+15 min so to show you
+
+141
+00:09:22,339 --> 00:09:26,860
+how great columns are in real time
+here's had the demo
+
+142
+00:09:26,086 --> 00:09:29,125
+okay thanks KC here we are so here's
+this
+
+143
+00:09:29,899 --> 00:09:35,180
+website the case in adults and looking
+pretty great at this
+
+144
+00:09:35,018 --> 00:09:40,037
+that's really fast at this window with
+
+145
+00:09:40,037 --> 00:09:45,056
+but as you saw when we make it 1 an hour
+
+146
+00:09:45,056 --> 00:09:48,118
+the column seconding harder harder to
+read
+
+147
+00:09:49,018 --> 00:09:53,055
+and to the point we had hearings just
+very logical so if they can sit in the
+
+148
+00:09:53,055 --> 00:09:55,074
+corner I have a little bit a javascript
+showing me
+
+149
+00:09:55,074 --> 00:10:00,913
+what the window with this so I can make
+adjustments as necessary
+
+150
+00:10:01,579 --> 00:10:04,603
+sup has cases suggested let's try
+
+151
+00:10:04,819 --> 00:10:08,740
+setting at home with incentive our
+compound so and this code you can see I
+
+152
+00:10:08,074 --> 00:10:09,403
+have
+
+153
+00:10:10,069 --> 00:10:17,069
+the compound 3 skill that's
+
+154
+00:10:19,769 --> 00:10:23,813
+i sat with said in a calm with 215
+around like a suggested
+
+155
+00:10:24,209 --> 00:10:27,276
+save that hillard
+
+156
+00:10:27,879 --> 00:10:30,912
+and nothing's changed are when they're
+with the still wide enough to
+
+157
+00:10:31,209 --> 00:10:34,160
+accommodate three columns like we had
+before
+
+158
+00:10:34,016 --> 00:10:37,315
+at this time as we get more now
+
+159
+00:10:37,459 --> 00:10:40,490
+will have a point but see her happens
+right okay here
+
+160
+00:10:40,049 --> 00:10:43,098
+around 1100 pixels without that two
+columns
+
+161
+00:10:43,098 --> 00:10:47,927
+still really logical and again as we get
+even smaller
+
+162
+00:10:48,809 --> 00:10:51,824
+we're at a point around seven hundred
+and
+
+163
+00:10:51,959 --> 00:10:54,976
+somewhat pixels where we go doubt one
+call which
+
+164
+00:10:55,129 --> 00:10:59,162
+even at Nara sweater with still a very
+logical
+
+165
+00:10:59,459 --> 00:11:03,470
+amount of tax I mean we're not on that
+side bar stool is terrible
+
+166
+00:11:03,047 --> 00:11:07,124
+but that's really all I have to do to
+get
+
+167
+00:11:08,024 --> 00:11:12,055
+support on Scarlett just single property
+
+168
+00:11:12,055 --> 00:11:16,824
+was done a little bit more into
+
+169
+00:11:17,319 --> 00:11:20,418
+the features a the Caesars columns
+
+170
+00:11:21,309 --> 00:11:24,990
+call model okay
+
+171
+00:11:24,099 --> 00:11:28,104
+so you seen the column counts and call
+with properties
+
+172
+00:11:29,004 --> 00:11:32,010
+which are pretty straightforward when
+you are
+
+173
+00:11:32,001 --> 00:11:37,007
+laying out a page with columns it's best
+to has a white space between the columns
+
+174
+00:11:37,016 --> 00:11:41,055
+if you don't the lines can run together
+be really hard to read
+
+175
+00:11:41,199 --> 00:11:46,160
+and this is controlled with the conga
+property
+
+176
+00:11:46,016 --> 00:11:49,073
+are you might wanna decorative line
+inside the cap you can
+
+177
+00:11:49,073 --> 00:11:53,242
+to find such lot with the car real
+property whose syntax is just like the
+
+178
+00:11:53,899 --> 00:11:56,943
+border properties are you seeing already
+
+179
+00:11:57,339 --> 00:12:00,347
+and finally if you'd like an element to
+pop out your columns
+
+180
+00:12:01,139 --> 00:12:06,050
+span across the aisle I you can easily
+do this with the can span property
+
+181
+00:12:06,005 --> 00:12:09,060
+which looks really great
+
+182
+00:12:09,006 --> 00:12:12,965
+so to sum up making response columns and
+adjust
+
+183
+00:12:13,559 --> 00:12:18,567
+two different fireman is super easy I'm
+sees as get you a lot of that free
+
+184
+00:12:18,639 --> 00:12:21,663
+by isn't home with property
+
+185
+00:12:21,879 --> 00:12:24,891
+I want to expand a bit though on why
+
+186
+00:12:24,999 --> 00:12:29,083
+we chose to use Farrell to the unit
+there
+
+187
+00:12:29,839 --> 00:12:33,470
+farrell to the units are exactly what
+the sound like they're
+
+188
+00:12:33,047 --> 00:12:36,105
+CSS units that are defined in terms of
+your car font-size:
+
+189
+00:12:37,005 --> 00:12:41,068
+or some other text metric that's related
+font-size:
+
+190
+00:12:41,068 --> 00:12:45,092
+and it's very common to use is a Sep the
+filesize itself
+
+191
+00:12:45,092 --> 00:12:48,186
+but you can also use them for any party
+a layout whose size should be
+
+192
+00:12:49,086 --> 00:12:51,172
+proportional to the current excise
+
+193
+00:12:52,072 --> 00:12:56,481
+an obvious example would be the margins
+are under paragraphs
+
+194
+00:12:57,129 --> 00:13:01,155
+as fun size increases you like those
+margins also increase
+
+195
+00:13:01,389 --> 00:13:04,540
+in proportion to that
+
+196
+00:13:04,054 --> 00:13:07,098
+and the big benefit hears that by using
+his
+
+197
+00:13:07,098 --> 00:13:11,193
+units your layout will automatically
+adjust to different font sizes
+
+198
+00:13:12,093 --> 00:13:16,099
+now you set up a lot size are you so
+much change it they could use command
+
+199
+00:13:16,099 --> 00:13:16,161
+passing
+
+200
+00:13:17,061 --> 00:13:21,160
+minus or perhaps they've changed the
+minimum
+
+201
+00:13:21,709 --> 00:13:26,470
+fun size setting which is very common
+for low-vision users
+
+202
+00:13:26,047 --> 00:13:32,066
+see should always make your layout just
+to font size are you not expecting
+
+203
+00:13:32,066 --> 00:13:36,345
+there are four relative units and see is
+a phat relative units and CSS
+
+204
+00:13:36,939 --> 00:13:40,410
+I'll there's the AM which I'm sure
+you're all very familiar with its very
+
+205
+00:13:40,041 --> 00:13:41,049
+popular
+
+206
+00:13:41,049 --> 00:13:46,088
+very common on the web and and M is
+defined in terms of the font size
+
+207
+00:13:46,529 --> 00:13:52,740
+other car talent which may be inherited
+from its ancestors
+
+208
+00:13:52,074 --> 00:13:56,363
+less common as the axe which is
+approximately half an hour
+
+209
+00:13:57,029 --> 00:14:00,052
+it's really supposed to be basically the
+height %uh
+
+210
+00:14:00,259 --> 00:14:03,290
+a lower his letter on
+
+211
+00:14:03,029 --> 00:14:06,558
+this is very useful when you're trying
+to size an element
+
+212
+00:14:06,819 --> 00:14:12,360
+inside a lot of Texel looks natural next
+to the rest the text-align:
+
+213
+00:14:12,036 --> 00:14:15,255
+the CH is based on the
+
+214
+00:14:15,579 --> 00:14:19,850
+with I love the numeral 0 which may seem
+random
+
+215
+00:14:19,085 --> 00:14:22,090
+a that is a typical character with
+
+216
+00:14:23,035 --> 00:14:26,061
+and so you can use it for sizing an
+input element
+
+217
+00:14:26,061 --> 00:14:30,040
+where you're expecting save 30
+characters you could say 30 ch
+
+218
+00:14:30,589 --> 00:14:33,597
+and will be a approximately the right
+size and finally
+
+219
+00:14:34,389 --> 00:14:37,470
+we come to the RAM which is the unit the
+cases using
+
+220
+00:14:37,047 --> 00:14:40,906
+a the RAM is just like the AM that
+you're already familiar with
+
+221
+00:14:41,329 --> 00:14:45,330
+but instead of being based on the font
+size a the current element
+
+222
+00:14:45,339 --> 00:14:50,800
+its always based on the font size up the
+body at the root element
+
+223
+00:14:50,008 --> 00:14:53,069
+so I would you want to use Rams
+incentive Adams you are using ann's
+
+224
+00:14:54,041 --> 00:14:58,150
+their great for you here's a simple
+example
+
+225
+00:14:58,519 --> 00:15:01,574
+that a simple website with a header
+
+226
+00:15:02,069 --> 00:15:05,125
+hello on the left a size with aum's
+
+227
+00:15:05,629 --> 00:15:09,350
+on the right side with brooms
+
+228
+00:15:09,035 --> 00:15:14,704
+okay so far this is a they're they're
+identical everything works the same
+
+229
+00:15:15,019 --> 00:15:18,107
+well few months from now I me to change
+my website
+
+230
+00:15:18,899 --> 00:15:23,350
+added a container element happens to
+have the center inside it
+
+231
+00:15:23,035 --> 00:15:26,074
+and because someone told me is how I
+roll to the Nats
+
+232
+00:15:26,389 --> 00:15:29,456
+I went ahead and size that hot size for
+them as well
+
+233
+00:15:30,059 --> 00:15:34,136
+so what i expect to happen is this I
+want ok nothing to change
+
+234
+00:15:34,829 --> 00:15:38,891
+a but if I'd use Em's for my header
+
+235
+00:15:39,449 --> 00:15:43,542
+what happens the browsers as well this
+font sizes and M's
+
+236
+00:15:44,379 --> 00:15:48,350
+okay well what's up air France is all
+that stands and keep looking up until
+
+237
+00:15:48,035 --> 00:15:49,774
+find the country font-size:
+
+238
+00:15:50,089 --> 00:15:54,112
+and then computes the sort of compound
+font-size:
+
+239
+00:15:54,319 --> 00:15:57,910
+and so the result is something way
+bigger than I intended when I for size
+
+240
+00:15:57,091 --> 00:15:57,142
+Hatter
+
+241
+00:15:58,042 --> 00:16:01,491
+few months ago unlike that
+
+242
+00:16:01,869 --> 00:16:05,860
+in the case a friend's its always
+looking back to the body element its
+
+243
+00:16:05,086 --> 00:16:06,105
+gaping asshole
+
+244
+00:16:07,005 --> 00:16:10,534
+and has a chance so I've never have a
+different font size
+
+245
+00:16:10,579 --> 00:16:13,653
+than expected okay
+
+246
+00:16:14,319 --> 00:16:17,393
+so take a quick look at fun relative
+units and
+
+247
+00:16:18,059 --> 00:16:21,102
+why I think the Rams pretty great
+
+248
+00:16:21,489 --> 00:16:27,492
+let's take a look at our website and see
+where we are
+
+249
+00:16:27,519 --> 00:16:30,525
+offense looking pretty good and it's
+definitely better
+
+250
+00:16:30,579 --> 00:16:33,628
+on we definitely stop the sidebar there
+
+251
+00:16:34,069 --> 00:16:37,126
+that a significant issue but I think
+tackle that
+
+252
+00:16:37,639 --> 00:16:41,651
+later hi what you want to do next I also
+what kind loving me is all that weight
+
+253
+00:16:41,759 --> 00:16:41,823
+tax
+
+254
+00:16:42,399 --> 00:16:45,405
+around the unknown right all that extra
+white space I just I feel like we're not
+
+255
+00:16:45,999 --> 00:16:47,037
+making a good use
+
+256
+00:16:47,379 --> 00:16:50,381
+this been released a and just feel kinda
+clunky
+
+257
+00:16:50,579 --> 00:16:53,615
+yeah I mean the whole point love
+adjusting our call with in the first
+
+258
+00:16:53,939 --> 00:16:55,942
+place was to have a nice readable
+
+259
+00:16:56,239 --> 00:17:00,243
+alliance and our moon is really a
+interfering with that wind is really
+
+260
+00:17:00,279 --> 00:17:00,340
+narrow
+
+261
+00:17:00,889 --> 00:17:04,650
+by the tech sector definitely so let's
+take a look at that
+
+262
+00:17:04,065 --> 00:17:07,151
+so to simplify here's our moon we
+floated it
+
+263
+00:17:08,051 --> 00:17:11,088
+in our column in those lines next to it
+the fly-around
+
+264
+00:17:11,088 --> 00:17:14,417
+the image element and they look really
+now
+
+265
+00:17:15,209 --> 00:17:18,270
+and well
+
+266
+00:17:18,027 --> 00:17:21,062
+and a whole lotta time to fix this so
+the easiest thing
+
+267
+00:17:21,062 --> 00:17:25,097
+is you know we had to stop huddling and
+that way there's no Nara lines extabit
+
+268
+00:17:25,097 --> 00:17:28,175
+looks pretty good rent okay at 10
+
+269
+00:17:29,075 --> 00:17:32,137
+you could do that on I have a feeling
+though that you have a much
+
+270
+00:17:33,037 --> 00:17:36,586
+clever easy solution to that and
+
+271
+00:17:36,919 --> 00:17:40,320
+is just kinda feels like a cop-out it
+okay
+
+272
+00:17:40,032 --> 00:17:43,061
+fair enough a so
+
+273
+00:17:43,061 --> 00:17:46,070
+with a new feature called sees the
+shapes
+
+274
+00:17:46,007 --> 00:17:49,012
+is available in your sanity and I would
+say
+
+275
+00:17:50,002 --> 00:17:53,451
+we can actually flow that text around
+the courage to the minute look really
+
+276
+00:17:53,649 --> 00:17:54,820
+great
+
+277
+00:17:54,082 --> 00:17:57,146
+I'm so what's going on here CSS shapes
+
+278
+00:17:58,046 --> 00:18:02,755
+it's a simple feature that allows you to
+flow text around
+
+279
+00:18:03,169 --> 00:18:07,169
+afloat element with uninteresting shaper
+geometry
+
+280
+00:18:07,169 --> 00:18:10,181
+so in this case triangle
+
+281
+00:18:10,289 --> 00:18:13,364
+or circle like a moon or cases favorite
+
+282
+00:18:14,039 --> 00:18:17,760
+miss pacman come
+
+283
+00:18:17,076 --> 00:18:20,133
+soccer is this four-man so
+
+284
+00:18:21,033 --> 00:18:25,061
+like we saw before we have our militant
+it's just an element of course
+
+285
+00:18:25,061 --> 00:18:28,159
+and we floated it within our call
+
+286
+00:18:29,059 --> 00:18:32,258
+now it just so happens that this image
+to the moon is on a transparent
+
+287
+00:18:32,789 --> 00:18:35,100
+background
+
+288
+00:18:35,001 --> 00:18:39,087
+and sees the shapes has a great feature
+where you can provide it with an image
+
+289
+00:18:39,096 --> 00:18:42,145
+and I will use here the visible are
+opaque part that image
+
+290
+00:18:43,045 --> 00:18:46,754
+to the final shape into this with one
+property
+
+291
+00:18:47,159 --> 00:18:51,184
+property is called shape outside and
+this case for providing at the image of
+
+292
+00:18:51,409 --> 00:18:51,472
+the Moon
+
+293
+00:18:52,039 --> 00:18:56,051
+it'll look into the image data and say
+okay here's the opec part
+
+294
+00:18:56,159 --> 00:19:01,460
+as you can see our by the text now
+flying around the answer them
+
+295
+00:19:01,046 --> 00:19:08,046
+it's that easy critique or a course it's
+not easy
+
+296
+00:19:08,549 --> 00:19:11,600
+of course it's not easy because I lucked
+out my moon is on transparent background
+
+297
+00:19:12,059 --> 00:19:13,340
+already
+
+298
+00:19:13,034 --> 00:19:16,973
+but a lot of times it's not you have an
+image that's entirely up a
+
+299
+00:19:17,279 --> 00:19:21,500
+and it don't on how to photoshop skills
+to go and in
+
+300
+00:19:21,005 --> 00:19:24,029
+fix-up I certainly that actually love
+you do share
+
+301
+00:19:24,074 --> 00:19:28,145
+a so I do now so as you can see I still
+have a chip on side property
+
+302
+00:19:29,045 --> 00:19:32,101
+but this is a pic min so
+
+303
+00:19:33,001 --> 00:19:37,300
+shape doesn't have anything to go on
+here
+
+304
+00:19:37,309 --> 00:19:40,383
+fortunately we can also in in addition
+to using an image
+
+305
+00:19:41,049 --> 00:19:44,940
+as a source for the shape their we can
+simply use some basic
+
+306
+00:19:44,094 --> 00:19:47,151
+geometric shapes as well and of course
+the moon a
+
+307
+00:19:48,051 --> 00:19:51,139
+luckily for me %uh is a circle
+
+308
+00:19:52,039 --> 00:19:55,058
+so what I want to do is
+
+309
+00:19:55,409 --> 00:19:59,700
+somehow tell the season shapes model to
+use this
+
+310
+00:19:59,007 --> 00:20:02,099
+circled for the text around and I do
+that using the
+
+311
+00:20:03,062 --> 00:20:06,107
+circle function pretty straight forward
+it takes
+
+312
+00:20:07,007 --> 00:20:11,038
+one argument the radius in this case I
+use fifty percent because I wanted the
+
+313
+00:20:11,038 --> 00:20:12,067
+diameter the moon
+
+314
+00:20:12,409 --> 00:20:15,970
+at that the diameter the circle to be
+the full with the initial
+
+315
+00:20:15,097 --> 00:20:18,159
+nice looking pretty good
+
+316
+00:20:19,059 --> 00:20:22,075
+there are other predefined shapes to
+take one example
+
+317
+00:20:22,075 --> 00:20:25,124
+a you can use an ellipse
+
+318
+00:20:26,024 --> 00:20:29,026
+a course in lips with the same
+dimensions
+
+319
+00:20:29,026 --> 00:20:32,695
+iXYS just circles I really haven't
+changed anything
+
+320
+00:20:32,929 --> 00:20:36,070
+but you can get really interesting with
+this too a
+
+321
+00:20:36,007 --> 00:20:41,085
+if there's a polygon function allows you
+to define fairly arbitrary shape
+
+322
+00:20:41,085 --> 00:20:45,086
+so as an example I drew an octagon
+around my man
+
+323
+00:20:45,095 --> 00:20:48,099
+partner function takes a sequence of x,y
+coordinates
+
+324
+00:20:48,099 --> 00:20:52,258
+and it was pretty great actually
+
+325
+00:20:53,149 --> 00:20:58,237
+and all this was still again with just
+one seize the property
+
+326
+00:20:59,029 --> 00:21:02,500
+okay cool we see how easy it is
+
+327
+00:21:02,005 --> 00:21:05,081
+to use CSS shapes to get a really great
+visual effect those
+
+328
+00:21:06,026 --> 00:21:10,044
+basically a possible 24
+
+329
+00:21:10,044 --> 00:21:14,101
+we will do next well let's take a look
+back at our Web site
+
+330
+00:21:15,001 --> 00:21:18,003
+so now we have the text going around the
+moon really well which I
+
+331
+00:21:18,021 --> 00:21:22,062
+think looks much better I'm
+
+332
+00:21:22,062 --> 00:21:26,136
+the one thing that I i'm saying no is
+those images look a little
+
+333
+00:21:27,036 --> 00:21:30,485
+by the on on the phone you think
+
+334
+00:21:30,809 --> 00:21:33,960
+I agree I mean look at that galaxy
+
+335
+00:21:33,096 --> 00:21:37,111
+yeah I I definitely think that we need
+to make our site
+
+336
+00:21:38,011 --> 00:21:43,180
+ready at all pixelated yeah that's not
+as having too many beers the burbs
+
+337
+00:21:43,279 --> 00:21:46,860
+so let's provide a high-resolution image
+for this
+
+338
+00:21:46,086 --> 00:21:50,160
+I'm you know in the past a previous
+study thieves we've talked about
+
+339
+00:21:51,006 --> 00:21:54,575
+how to rectify I think that's a word
+right
+
+340
+00:21:55,169 --> 00:21:58,170
+retin-a by check it's working now you
+can write it down
+
+341
+00:21:58,179 --> 00:22:01,267
+we're going to talk about how to rectify
+your website so that you have
+
+342
+00:22:02,059 --> 00:22:06,690
+some brilliant clearer images on all
+your website
+
+343
+00:22:06,069 --> 00:22:09,163
+and in the past we talked about and
+talked about how to use kinda
+
+344
+00:22:10,063 --> 00:22:14,111
+alternatives images so long you know one
+example that was like
+
+345
+00:22:15,011 --> 00:22:19,022
+instead abusing a image for gradient
+
+346
+00:22:19,022 --> 00:22:22,024
+you should use a CSS gradient right
+
+347
+00:22:22,024 --> 00:22:25,713
+the one thing we haven't talked about
+though is how
+
+348
+00:22:25,929 --> 00:22:28,976
+like what I do which is just make boats
+like
+
+349
+00:22:29,399 --> 00:22:32,400
+i've a web site with all my photography
+
+350
+00:22:32,409 --> 00:22:35,471
+when I do with that we having be an
+attack on the image of me
+
+351
+00:22:36,029 --> 00:22:39,610
+yet what the heck right so own new
+
+352
+00:22:39,061 --> 00:22:42,146
+to OS 10 and I i say
+
+353
+00:22:43,046 --> 00:22:47,144
+we have image subset image source:
+that's what you really
+
+354
+00:22:48,044 --> 00:22:51,048
+easily add both a standard
+
+355
+00:22:51,084 --> 00:22:54,893
+resolution image and the retina
+resolution image and the WebKit
+
+356
+00:22:55,649 --> 00:22:58,725
+well just magically pick the right one
+depending on what
+
+357
+00:22:59,409 --> 00:23:03,496
+type a screen your website being viewed
+
+358
+00:23:04,279 --> 00:23:07,288
+and it looks kinda like this so
+
+359
+00:23:08,179 --> 00:23:11,730
+here's my galaxy image on a standard
+screen
+
+360
+00:23:11,073 --> 00:23:14,902
+it looks pretty good by here it is
+
+361
+00:23:15,559 --> 00:23:18,582
+on a Retina screen it's pretty pixelated
+
+362
+00:23:18,789 --> 00:23:23,830
+so fortunately it's very very easy to
+fix
+
+363
+00:23:23,083 --> 00:23:27,162
+and all you have to do is to start with
+the image on it
+
+364
+00:23:28,062 --> 00:23:32,501
+so here's a middleman she look pretty
+familiar to most view
+
+365
+00:23:33,059 --> 00:23:36,690
+it hasn't really changed since the 90's
+ray up but
+
+366
+00:23:36,069 --> 00:23:39,098
+because I'm always look for an
+opportunity to tell up tax
+
+367
+00:23:39,098 --> 00:23:43,167
+I'm gonna go to walk you through it us
+our first act review and they're is our
+
+368
+00:23:44,049 --> 00:23:44,074
+all
+
+369
+00:23:44,299 --> 00:23:49,130
+at review please always included because
+anyone who's using a screen reader
+
+370
+00:23:49,013 --> 00:23:53,672
+need to understand what is going on in
+this big beautiful image you provide in
+
+371
+00:23:53,789 --> 00:23:56,830
+and then second I have my source
+attribute
+
+372
+00:23:56,083 --> 00:24:00,272
+which is just the location up the image
+
+373
+00:24:01,019 --> 00:24:06,230
+so to make this standard image element
+into an image source at
+
+374
+00:24:06,023 --> 00:24:10,034
+all you have to do is add the source at
+Acuvue
+
+375
+00:24:10,034 --> 00:24:13,035
+so inside my source actually view is
+
+376
+00:24:13,044 --> 00:24:16,753
+literally a second images I have
+
+377
+00:24:17,149 --> 00:24:21,165
+my standard Galaxy .jp hang am a super
+galaxy
+
+378
+00:24:21,309 --> 00:24:25,630
+.jp for meyer et screens and the
+difference between those is this
+
+379
+00:24:25,063 --> 00:24:25,136
+modifier
+
+380
+00:24:26,036 --> 00:24:29,815
+1x per standard in two acts for rent
+rights and then
+
+381
+00:24:30,139 --> 00:24:33,200
+web pic think can automatically
+understand which
+
+382
+00:24:33,002 --> 00:24:36,091
+images for which screen
+
+383
+00:24:36,289 --> 00:24:39,330
+now some love you who are actually
+reading through my syntax
+
+384
+00:24:39,033 --> 00:24:42,222
+might have noticed some redundancy in
+there
+
+385
+00:24:42,519 --> 00:24:45,870
+you're saying doubted if a twice yeah so
+
+386
+00:24:45,087 --> 00:24:49,116
+galaxy that a pic my standard resolution
+images in their two-time
+
+387
+00:24:49,899 --> 00:24:52,924
+and you might think well let's just
+
+388
+00:24:53,149 --> 00:25:00,090
+that's the source rate but browsers that
+do not understand source at
+
+389
+00:25:00,009 --> 00:25:04,088
+are not gonna know what to do it so for
+backwards compatibility let's keep the
+
+390
+00:25:04,169 --> 00:25:04,740
+source
+
+391
+00:25:04,074 --> 00:25:08,162
+and instead we will back out every move
+that 1x
+
+392
+00:25:09,062 --> 00:25:12,136
+resolution image from the source at so
+
+393
+00:25:13,036 --> 00:25:16,735
+back wake very little amount mark-up
+rate
+
+394
+00:25:17,059 --> 00:25:21,059
+with just a small amount a mark-up we've
+made our website
+
+395
+00:25:21,059 --> 00:25:24,750
+are image on it retin-a ready in
+research that's a really
+
+396
+00:25:24,075 --> 00:25:28,138
+great they load only the right image so
+you're going to avoid that double
+
+397
+00:25:29,038 --> 00:25:30,187
+download
+
+398
+00:25:30,529 --> 00:25:33,730
+there's no additional CSS you don't have
+to go
+
+399
+00:25:33,073 --> 00:25:36,109
+in there in muck around with your
+dimensions or anything like that
+
+400
+00:25:37,009 --> 00:25:41,095
+and is backwards compatible which is
+this little amount as intact this one
+
+401
+00:25:41,095 --> 00:25:43,654
+after him
+
+402
+00:25:44,509 --> 00:25:47,730
+so so far I've talked to you about image
+source: set
+
+403
+00:25:47,073 --> 00:25:50,148
+in your HTML it just so happens that
+their
+
+404
+00:25:51,048 --> 00:25:56,577
+is another feature that we talked about
+at BBC in the past that has
+
+405
+00:25:57,009 --> 00:26:00,074
+incredibly similar name and an
+incredibly similar function
+
+406
+00:26:00,659 --> 00:26:03,695
+so we're gonna go over that real quick
+to so that you can understand when you
+
+407
+00:26:04,019 --> 00:26:04,570
+use
+
+408
+00:26:04,057 --> 00:26:07,095
+which and why so images
+
+409
+00:26:07,095 --> 00:26:10,944
+source at which we discover during your
+HTML
+
+410
+00:26:11,799 --> 00:26:16,460
+but image that living RCS that and their
+intended
+
+411
+00:26:16,046 --> 00:26:21,095
+for styling your website like orders are
+background
+
+412
+00:26:21,095 --> 00:26:26,064
+so image that for say I do have one of
+those background images that I want
+
+413
+00:26:26,919 --> 00:26:31,924
+to make retin-a ready I'll just start
+with my background image
+
+414
+00:26:32,419 --> 00:26:36,610
+you see I have my URL my galaxy .jp had
+
+415
+00:26:36,061 --> 00:26:39,108
+and to make it into an image that I had
+a
+
+416
+00:26:40,008 --> 00:26:43,073
+second background-image: property and
+with in it
+
+417
+00:26:43,073 --> 00:26:46,111
+is the image Sat function
+
+418
+00:26:47,011 --> 00:26:50,046
+and not functioning contains both the my
+edges
+
+419
+00:26:50,046 --> 00:26:54,095
+it contains the Galaxy J Pak my favorite
+1x
+
+420
+00:26:54,095 --> 00:26:57,182
+am a super galaxy Jay pag with to act
+
+421
+00:26:58,082 --> 00:27:02,100
+and then when kept from here what
+automatically select the right one
+
+422
+00:27:03,000 --> 00:27:06,659
+I'd like to point out that you do need
+to have both love your background image
+
+423
+00:27:06,659 --> 00:27:07,710
+properties there
+
+424
+00:27:07,071 --> 00:27:10,110
+for backwards compatibility so
+
+425
+00:27:11,001 --> 00:27:15,004
+image that image source: that they're
+great
+
+426
+00:27:15,013 --> 00:27:18,075
+there easy they make it super easy for
+adding both standard
+
+427
+00:27:18,075 --> 00:27:21,614
+and Brett images when people pick the
+right one
+
+428
+00:27:22,289 --> 00:27:25,380
+just remember that your H your HTML
+
+429
+00:27:25,038 --> 00:27:29,060
+image source at are for your content
+those big beautiful photographs we
+
+430
+00:27:29,006 --> 00:27:30,045
+talked about
+
+431
+00:27:30,639 --> 00:27:34,210
+and your CFS image that's are for your
+style
+
+432
+00:27:34,021 --> 00:27:38,220
+so your background images your borders
+
+433
+00:27:38,409 --> 00:27:43,740
+so I think both are going to be a really
+great solution for your website
+
+434
+00:27:43,074 --> 00:27:48,003
+juicy iraq yes
+
+435
+00:27:48,669 --> 00:27:52,674
+well it's way better really happy about
+that I was worried that
+
+436
+00:27:53,169 --> 00:27:58,181
+they've had too much fun to the rest
+last night okay so where are we now
+
+437
+00:27:58,289 --> 00:28:01,960
+we've got I read the image and
+
+438
+00:28:01,096 --> 00:28:04,935
+we still have a bunch of basic math
+problems on this page
+
+439
+00:28:05,799 --> 00:28:08,820
+that we haven't dressed yet yeah I read
+it image
+
+440
+00:28:08,082 --> 00:28:12,271
+looks good I S except that you can't
+really fear right at the giant caption
+
+441
+00:28:13,009 --> 00:28:14,017
+over its ridiculous
+
+442
+00:28:14,809 --> 00:28:19,700
+suspects up some her remaining their
+problems by using CSS me decrease
+
+443
+00:28:19,007 --> 00:28:23,062
+I'm sure love you uses all time a
+solicits jump right in
+
+444
+00:28:24,025 --> 00:28:31,025
+and take care these remaining issues
+
+445
+00:28:31,069 --> 00:28:34,168
+here we are again much love from there
+can see the
+
+446
+00:28:34,789 --> 00:28:38,827
+text loading their round on me now so
+pretty good
+
+447
+00:28:39,169 --> 00:28:42,620
+big fan okay what's a and
+
+448
+00:28:42,062 --> 00:28:46,071
+as you know as we
+
+449
+00:28:46,629 --> 00:28:49,850
+maker his narrower the lead gets more
+more crazy
+
+450
+00:28:49,085 --> 00:28:52,162
+in particular I don't like how the
+
+451
+00:28:53,062 --> 00:28:57,157
+mass had a by page here's taking up so
+much vertical space
+
+452
+00:28:58,057 --> 00:29:02,786
+this caption as really offer the overlap
+my image
+
+453
+00:29:03,299 --> 00:29:07,190
+in fact it's blown way out of it and
+overlapping the heading below it
+
+454
+00:29:07,019 --> 00:29:10,868
+and then the sidebar is really really
+narrow
+
+455
+00:29:11,039 --> 00:29:14,080
+artery let's fix it to these
+
+456
+00:29:14,008 --> 00:29:18,057
+also with the header
+
+457
+00:29:18,129 --> 00:29:21,147
+so as you can see at the corner like a
+mess and I have that any better
+
+458
+00:29:21,309 --> 00:29:23,330
+JavaScript to show how what I would do
+it
+
+459
+00:29:23,519 --> 00:29:26,597
+so where a does the header start go
+
+460
+00:29:27,299 --> 00:29:31,460
+go off it seems like between
+
+461
+00:29:31,046 --> 00:29:36,099
+650 and 700 pixels somewhere in there we
+hit multiple lines
+
+462
+00:29:36,099 --> 00:29:39,238
+as is our earlier on the phone we have
+like four lines of
+
+463
+00:29:40,129 --> 00:29:45,230
+text so I'm I want to adjust the size of
+a header somewhere around
+
+464
+00:29:45,023 --> 00:29:48,202
+but 290 pixels or something
+
+465
+00:29:48,409 --> 00:29:52,070
+let's let's do that do this in many
+years
+
+466
+00:29:52,007 --> 00:29:56,586
+the at media rule
+
+467
+00:29:56,649 --> 00:30:00,820
+so here I have in at media rule
+
+468
+00:30:00,082 --> 00:30:03,173
+this is the part css3 provide immediate
+very in this case
+
+469
+00:30:04,073 --> 00:30:07,149
+max with the 675 pixels and then
+
+470
+00:30:08,049 --> 00:30:11,318
+inside braces you press the provide
+whole style sheet of things you'd like
+
+471
+00:30:11,759 --> 00:30:13,950
+to change at that point
+
+472
+00:30:13,095 --> 00:30:19,099
+in this case I'm finding that masthead
+header and adjusting its fun size down
+
+473
+00:30:19,099 --> 00:30:23,108
+okay so we made that change to refresh
+
+474
+00:30:24,008 --> 00:30:30,087
+nothing changed because this is wider
+than that brake plant 675 pixels
+
+475
+00:30:30,159 --> 00:30:34,120
+so let's make their site were narrow and
+there we go
+
+476
+00:30:34,012 --> 00:30:40,681
+I had a smaller and those great even
+here at this very nice
+
+477
+00:30:40,789 --> 00:30:44,865
+walking next I think I'll take care love
+this caption
+
+478
+00:30:45,549 --> 00:30:49,573
+so just like with the header I need to
+figure out where it starts looking
+
+479
+00:30:49,789 --> 00:30:53,790
+bad it's looks great out here two lines
+
+480
+00:30:53,889 --> 00:30:56,978
+I'm still pretty happy with it here and
+it seems to be right around where it
+
+481
+00:30:57,779 --> 00:30:58,110
+goes
+
+482
+00:30:58,011 --> 00:31:01,032
+four lines where that bottom right
+corner
+
+483
+00:31:01,032 --> 00:31:05,123
+isn't ruling in spike out saying really
+kinda ruining the mood
+
+484
+00:31:06,023 --> 00:31:09,322
+okay so where was that that seems to be
+here between
+
+485
+00:31:09,529 --> 00:31:13,544
+seven hundred and 750 pixels
+
+486
+00:31:13,679 --> 00:31:16,700
+okay sold just like with a header
+
+487
+00:31:16,889 --> 00:31:19,903
+I use it at media rule this time
+
+488
+00:31:20,029 --> 00:31:23,980
+with the match with that said 150 pixels
+and what we're doing here is
+
+489
+00:31:23,098 --> 00:31:26,120
+are initially my caption a
+
+490
+00:31:27,002 --> 00:31:31,064
+is absolutely positioned so that it can
+be a overlay on top of my image
+
+491
+00:31:31,082 --> 00:31:34,181
+and its witness at 30 percent so that it
+
+492
+00:31:34,919 --> 00:31:38,580
+takes about half the size limits like
+Sep
+
+493
+00:31:38,058 --> 00:31:41,094
+so in my military here I want to
+override
+
+494
+00:31:41,094 --> 00:31:44,403
+both the position and with properties so
+that
+
+495
+00:31:45,249 --> 00:31:48,265
+it will simply appear below the image
+
+496
+00:31:48,409 --> 00:31:51,474
+%uh and take up the full with the call
+not that
+
+497
+00:31:52,059 --> 00:31:56,320
+so we'll save and Kyle
+
+498
+00:31:56,032 --> 00:31:59,211
+and fresh
+
+499
+00:31:59,499 --> 00:32:02,480
+and as you can see the site before
+nothing's changed because I'm still
+
+500
+00:32:02,048 --> 00:32:02,122
+wider than
+
+501
+00:32:03,022 --> 00:32:09,023
+that may decrease test but as we get
+closer to the bad part
+
+502
+00:32:09,023 --> 00:32:12,692
+there's a pop down it's quite legible or
+image
+
+503
+00:32:12,899 --> 00:32:16,440
+and doesn't interfere with that no
+matter how narrow in this screen gets
+
+504
+00:32:16,044 --> 00:32:21,873
+okay cool let's take care that site by
+that I think the last bit but looks
+
+505
+00:32:22,269 --> 00:32:29,269
+pretty bad in our size so where does
+that get unreadable
+
+506
+00:32:29,084 --> 00:32:32,086
+in this case I I feel like right around
+here's where
+
+507
+00:32:32,086 --> 00:32:35,123
+the blockquote inside my sidebars
+getting
+
+508
+00:32:36,023 --> 00:32:40,062
+to be you know one or two pair words per
+line it's religion our
+
+509
+00:32:40,269 --> 00:32:45,306
+so let's make an adjustment around a
+hundred a 50 pixels
+
+510
+00:32:45,639 --> 00:32:49,666
+but now I think you know the drill this
+adjustment is exactly like the other
+
+511
+00:32:49,909 --> 00:32:51,971
+ones we have an admiral
+
+512
+00:32:52,529 --> 00:32:57,460
+for with 800 pixels apparently the
+sidebar is floated over
+
+513
+00:32:57,046 --> 00:33:01,865
+so I'm disabling the flow just like with
+my caption I'm
+
+514
+00:33:02,279 --> 00:33:05,293
+resetting the with so will automatically
+be a
+
+515
+00:33:05,419 --> 00:33:09,470
+the with its container and killing some
+in the margins we have their
+
+516
+00:33:09,047 --> 00:33:14,366
+so that the sidebar the %ah set from the
+calls text
+
+517
+00:33:14,789 --> 00:33:17,820
+so if we come back and refresh
+
+518
+00:33:17,082 --> 00:33:20,151
+still there but as I get smaller there
+we go
+
+519
+00:33:20,889 --> 00:33:25,952
+the sidebars popped and now in line with
+the rest of your document
+
+520
+00:33:26,519 --> 00:33:29,543
+and even the really really narrow screen
+size
+
+521
+00:33:29,759 --> 00:33:32,834
+start to look pretty good
+
+522
+00:33:33,509 --> 00:33:36,596
+okay
+
+523
+00:33:37,379 --> 00:33:43,360
+let's talk a little bit more about me
+series
+
+524
+00:33:43,036 --> 00:33:46,465
+as he saw a reuse many crews and CSS
+
+525
+00:33:46,789 --> 00:33:50,873
+by using at media role which takes a
+
+526
+00:33:51,629 --> 00:33:56,100
+Munich Re test and then some CSS to
+apply
+
+527
+00:33:56,001 --> 00:34:00,025
+when that military matches so here I am
+
+528
+00:34:00,034 --> 00:34:04,703
+fixing a caption like this are earlier
+by using a Mac with military
+
+529
+00:34:05,009 --> 00:34:08,600
+and then I'm overriding the position
+with properties
+
+530
+00:34:08,006 --> 00:34:11,105
+this is in general how you use it at
+meteorol you have some rules somewhere
+
+531
+00:34:12,059 --> 00:34:13,127
+else in your style sheet
+
+532
+00:34:14,027 --> 00:34:19,124
+and then you say okay but and sometimes
+I need to override this
+
+533
+00:34:20,024 --> 00:34:23,071
+in all three cases we use the match with
+media period because we were just saying
+
+534
+00:34:23,071 --> 00:34:25,270
+for when things got an hour
+
+535
+00:34:25,909 --> 00:34:28,927
+there are several other media here is
+that you know of money is
+
+536
+00:34:29,089 --> 00:34:32,440
+when doing responsive design there is a
+corresponding
+
+537
+00:34:32,044 --> 00:34:36,213
+men with military a where you can adjust
+things as the
+
+538
+00:34:36,609 --> 00:34:39,690
+seichas wider and also up
+
+539
+00:34:39,069 --> 00:34:43,072
+an exact with mediocre
+
+540
+00:34:43,072 --> 00:34:48,231
+when you're adjusting your site to be
+retin-a reading
+
+541
+00:34:48,879 --> 00:34:51,977
+in addition to using the features that
+cases showed you earlier you might need
+
+542
+00:34:52,859 --> 00:34:54,270
+to make some let it just means
+
+543
+00:34:54,027 --> 00:34:57,101
+and you can test for I read the device
+by using
+
+544
+00:34:58,001 --> 00:35:01,610
+the device pixel ratio military which
+just like with
+
+545
+00:35:01,619 --> 00:35:07,980
+takes min and max variance
+
+546
+00:35:07,098 --> 00:35:10,217
+when adjusting your lawn with a Munich
+Re
+
+547
+00:35:11,099 --> 00:35:14,100
+there's a few things just keep in mind
+
+548
+00:35:14,109 --> 00:35:17,900
+first of the admiral is actually a very
+blunt
+
+549
+00:35:17,009 --> 00:35:20,074
+instruments what you're doing is
+
+550
+00:35:21,055 --> 00:35:26,119
+making an entire altar in style sheet
+that applies in certain circumstances
+
+551
+00:35:27,019 --> 00:35:31,638
+you have to duplicate the selectors are
+using in here to fall style sheet to
+
+552
+00:35:31,809 --> 00:35:33,760
+over I particular properties
+
+553
+00:35:33,076 --> 00:35:37,092
+and as your site grows this can lead to
+a really
+
+554
+00:35:37,092 --> 00:35:41,011
+a large maintenance burden you might
+double or triple or quadruple the size
+
+555
+00:35:41,839 --> 00:35:42,740
+of your
+
+556
+00:35:42,074 --> 00:35:45,089
+style sheet
+
+557
+00:35:45,089 --> 00:35:48,098
+so instead
+
+558
+00:35:48,098 --> 00:35:53,119
+when possible should try to use CSS
+features that naturally adapt your side
+
+559
+00:35:54,019 --> 00:35:57,103
+without having to duplicate all your
+work we sought to earlier
+
+560
+00:35:58,003 --> 00:36:02,049
+a the calm with property allowed us to
+adjust the number of columns magically
+
+561
+00:36:02,049 --> 00:36:02,868
+basically
+
+562
+00:36:03,309 --> 00:36:07,460
+without resorting to military and the
+image that function
+
+563
+00:36:07,046 --> 00:36:10,945
+allows us to pick the right image for
+our display without having to use the
+
+564
+00:36:11,359 --> 00:36:13,250
+device disarray share property
+
+565
+00:36:13,025 --> 00:36:17,027
+military it secondly
+
+566
+00:36:17,027 --> 00:36:20,070
+when I was adjusting early out there
+
+567
+00:36:20,007 --> 00:36:23,886
+I was doing experiments Lee a lot on my
+side
+
+568
+00:36:24,579 --> 00:36:28,460
+fiddle with by screen have window with
+and found where
+
+569
+00:36:28,046 --> 00:36:31,093
+each part of my lap when pat and then
+made adjustments
+
+570
+00:36:31,093 --> 00:36:34,722
+for that I didn't look up the
+
+571
+00:36:35,559 --> 00:36:39,180
+dimensions a particular screen on
+Wikipedia
+
+572
+00:36:39,018 --> 00:36:43,114
+I let my concert actually tell me where
+it needed to be adjusted
+
+573
+00:36:44,014 --> 00:36:47,014
+this'll make your cut content more
+resilient to
+
+574
+00:36:47,014 --> 00:36:53,102
+and ever increasing granger scenarios
+where it might be worth it
+
+575
+00:36:54,002 --> 00:36:58,081
+okay so we've made her final and
+adjustments with
+
+576
+00:36:58,099 --> 00:37:02,780
+so many queries and there's just one
+little bit I wanted to address
+
+577
+00:37:02,078 --> 00:37:05,097
+before we can holiday
+
+578
+00:37:05,097 --> 00:37:08,496
+and this is
+
+579
+00:37:09,369 --> 00:37:13,140
+some of these borders on our site so you
+can see up top there we have this little
+
+580
+00:37:13,014 --> 00:37:14,493
+byline of
+
+581
+00:37:14,619 --> 00:37:17,950
+the Friday edition of the Daily space
+digest
+
+582
+00:37:17,095 --> 00:37:21,189
+and bottom borders around it and they
+look great on live laptop
+
+583
+00:37:22,089 --> 00:37:25,092
+on but their little thick
+
+584
+00:37:25,092 --> 00:37:28,147
+on my phone I i mean one pic support
+
+585
+00:37:29,047 --> 00:37:32,068
+and I wanted it to be a one pixel border
+a
+
+586
+00:37:32,068 --> 00:37:36,076
+but of course as yard now
+
+587
+00:37:36,076 --> 00:37:41,151
+when I say one picks on CSS I don't
+actually get one pixel on let's play
+
+588
+00:37:42,051 --> 00:37:46,064
+the CSS pixel is defined to be a sort of
+
+589
+00:37:46,064 --> 00:37:50,077
+abstract measurement that roughly
+corresponds
+
+590
+00:37:50,077 --> 00:37:54,095
+to one physical pixel on a pre read its
+way
+
+591
+00:37:54,095 --> 00:37:58,141
+but now with reading device once is a
+special actually contains for
+
+592
+00:37:59,041 --> 00:38:02,720
+by special
+
+593
+00:38:03,089 --> 00:38:07,160
+so I want to do is to reach into this is
+a special and you speak
+
+594
+00:38:07,016 --> 00:38:11,030
+full use each other's device pixels I
+wanna try
+
+595
+00:38:11,003 --> 00:38:14,028
+hairline borders
+
+596
+00:38:14,055 --> 00:38:17,114
+okay some right now
+
+597
+00:38:18,014 --> 00:38:22,022
+I'm dry my border a with one picks on
+CSS
+
+598
+00:38:22,094 --> 00:38:25,096
+and when that draws on a standard
+display
+
+599
+00:38:25,096 --> 00:38:29,485
+I get with an islamic past look at and
+on a Retina display
+
+600
+00:38:30,349 --> 00:38:33,740
+I get this a line is twice as thick
+
+601
+00:38:33,074 --> 00:38:38,150
+as actually what so what I want to do is
+really only use one
+
+602
+00:38:39,005 --> 00:38:42,098
+row or column are of device pixel to get
+this line
+
+603
+00:38:43,043 --> 00:38:46,072
+so how to do it that's
+
+604
+00:38:46,072 --> 00:38:52,146
+look at our CSS here I'm sending my
+border with one pixel
+
+605
+00:38:53,046 --> 00:38:57,053
+I'm not the only one who is what airline
+borders love you have to
+
+606
+00:38:57,053 --> 00:39:00,118
+and I gotta say some other solutions
+people have come up with are
+
+607
+00:39:01,018 --> 00:39:06,051
+amazing and horrified
+
+608
+00:39:06,051 --> 00:39:08,060
+here's my favorite says pretty brilliant
+
+609
+00:39:09,041 --> 00:39:14,117
+it uses a a inline SVG image annotator
+URL as a background image
+
+610
+00:39:15,017 --> 00:39:18,060
+everyone got that it's really easy to
+remember how to type this as I'm sure
+
+611
+00:39:18,006 --> 00:39:18,102
+you can see
+
+612
+00:39:19,056 --> 00:39:23,092
+art let's cut this out
+
+613
+00:39:23,092 --> 00:39:26,160
+this is ridiculous and now
+
+614
+00:39:27,006 --> 00:39:30,094
+I'm really pleased to say that in
+yosemite and I'll essay
+
+615
+00:39:31,048 --> 00:39:35,055
+WebKit has an able to feature that we
+call sub-pixel layup
+
+616
+00:39:36,018 --> 00:39:39,090
+now mostly this won't affect we doing at
+all
+
+617
+00:39:39,009 --> 00:39:41,083
+it's a magical under the hood
+improvement that just makes things a
+
+618
+00:39:42,064 --> 00:39:42,140
+little bit better
+
+619
+00:39:43,004 --> 00:39:46,066
+we can take advantage of it to get the
+headlines we want
+
+620
+00:39:47,002 --> 00:39:50,080
+without having to do this sort of thing
+okay
+
+621
+00:39:50,008 --> 00:39:54,056
+how we do it so here we have our 1 pixel
+for center display
+
+622
+00:39:55,028 --> 00:39:58,090
+and out just like we saw before with our
+media queries
+
+623
+00:39:58,009 --> 00:40:01,070
+write a check to buy space for issued a
+CRO arianna redness pain
+
+624
+00:40:02,051 --> 00:40:05,095
+we r great and all we're doing is saying
+we're on our readiness
+
+625
+00:40:05,095 --> 00:40:08,096
+display great just use a half pixel
+
+626
+00:40:08,096 --> 00:40:11,139
+remember the CSS pixel is
+
+627
+00:40:12,039 --> 00:40:15,043
+to device pixels innings to mention so I
+have a pixel
+
+628
+00:40:15,079 --> 00:40:18,085
+corresponds to that beautiful thing and
+device pixel
+
+629
+00:40:19,039 --> 00:40:23,041
+and now I can actually read this and
+remember what I meant when I for it
+
+630
+00:40:23,041 --> 00:40:26,109
+that's exciting and here we are
+
+631
+00:40:27,009 --> 00:40:32,041
+got my right now iPad and if we use the
+magic if he notices a min on that
+
+632
+00:40:32,041 --> 00:40:35,056
+you can see those lines are still as I
+possibly get
+
+633
+00:40:35,056 --> 00:40:42,056
+who I ThinkPad re:
+
+634
+00:40:43,089 --> 00:40:47,114
+so our website now looks home much
+better
+
+635
+00:40:48,014 --> 00:40:51,107
+minus are that engineering design field
+and it looks great
+
+636
+00:40:52,007 --> 00:40:56,008
+on every device and when very little
+mark-up I come
+
+637
+00:40:56,008 --> 00:40:59,054
+coming on the coded video I think we
+actually own a chance about 20 lines
+
+638
+00:40:59,054 --> 00:41:02,118
+pretty good ray I'm yes
+
+639
+00:41:03,018 --> 00:41:08,023
+thank you all we had to do.
+
+640
+00:41:08,023 --> 00:41:14,032
+was maker columns response that we
+define the with the bar column instead
+
+641
+00:41:14,032 --> 00:41:15,035
+of a compound
+
+642
+00:41:15,035 --> 00:41:20,099
+we also designed our layout so that it
+wasn't bomb relative units which means
+
+643
+00:41:20,099 --> 00:41:20,146
+that
+
+644
+00:41:21,046 --> 00:41:25,055
+our users change their font size we are
+going to have
+
+645
+00:41:25,055 --> 00:41:28,147
+fidelity to our layout also 10 show you
+how do you see a
+
+646
+00:41:29,047 --> 00:41:32,100
+shapes so that now we have the text
+flowing
+
+647
+00:41:33,000 --> 00:41:36,071
+beautifully around the curvature for
+moon and
+
+648
+00:41:36,071 --> 00:41:39,114
+both our galaxy Inter Milan image are
+retin-a ready
+
+649
+00:41:40,014 --> 00:41:45,042
+then we also covered how to use media
+queries are blunt instrument
+
+650
+00:41:45,042 --> 00:41:49,047
+for did making larger layout changes
+when necessary
+
+651
+00:41:49,047 --> 00:41:52,125
+and icing on the cake for those
+beautiful
+
+652
+00:41:53,025 --> 00:41:57,027
+hairline borders that really reach into
+the red screen
+
+653
+00:41:57,045 --> 00:42:02,084
+so from our information as always you
+can contact Apple evangelism
+
+654
+00:42:02,084 --> 00:42:05,160
+and check out our documentation and thus
+far Developer Center
+
+655
+00:42:06,006 --> 00:42:10,089
+are and participate in the wanna our
+sessions over at Art Bell performs
+
+656
+00:42:11,043 --> 00:42:14,086
+it's Friday morning so
+
+657
+00:42:14,086 --> 00:42:17,108
+are line session was a course earlier
+this week and if you missed it
+
+658
+00:42:18,008 --> 00:42:22,035
+that lets check out the videos really
+great we've also
+
+659
+00:42:22,035 --> 00:42:25,037
+talked about several things with that
+come up in previous studies have
+
+660
+00:42:25,037 --> 00:42:25,105
+releases
+
+661
+00:42:26,005 --> 00:42:29,058
+into
+
+662
+00:42:29,058 --> 00:42:32,123
+2012 we introduce the image set function
+for CSS
+
+663
+00:42:33,023 --> 00:42:36,025
+in a great talk occurs in a
+
+664
+00:42:36,043 --> 00:42:40,066
+extreme depth and how to make a cartoon
+retin-a ready it's really really
+
+665
+00:42:40,066 --> 00:42:40,141
+wonderful
+
+666
+00:42:41,041 --> 00:42:46,070
+and the last year we introduce several
+new layout features
+
+667
+00:42:46,007 --> 00:42:49,080
+which we didn't go into here like CSS
+regions
+
+668
+00:42:50,043 --> 00:42:54,089
+fluxbox and the some really great
+advance let you can do in CSS
+
+669
+00:42:54,089 --> 00:42:57,121
+that will make your site really great
+and
+
+670
+00:42:58,021 --> 00:43:01,112
+to please check that out I know
+something to travel from hype are to be
+
+671
+00:43:02,012 --> 00:43:02,063
+here
+
+672
+00:43:02,063 --> 00:43:04,080
+hope you have safe travels home thanks
+everyone
+

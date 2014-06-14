@@ -1,0 +1,4152 @@
+1
+00:00:11,081 --> 00:00:15,126
+alright good morning everyone
+
+2
+00:00:16,026 --> 00:00:20,041
+come to session 5 11 this is the
+introduction to the photos frameworks
+
+3
+00:00:20,041 --> 00:00:25,120
+collectively known as photo kit and my
+name is Adam swift no jokes please
+
+4
+00:00:26,002 --> 00:00:29,991
+I'm a software engineer on the IRS
+frameworks photos very much dean
+
+5
+00:00:30,189 --> 00:00:33,420
+alright so
+
+6
+00:00:33,042 --> 00:00:36,060
+we're really excited about introducing
+you to fuck it today
+
+7
+00:00:36,006 --> 00:00:41,025
+the fuck it up for kate is comprised of
+two frameworks the first framework is
+
+8
+00:00:41,079 --> 00:00:42,086
+the photos framework
+
+9
+00:00:42,086 --> 00:00:45,182
+which gives you access to the photos and
+videos
+
+10
+00:00:46,082 --> 00:00:50,105
+from the user's photo library and you
+can use it to build
+
+11
+00:00:51,005 --> 00:00:56,033
+a full-featured ap like the built-in
+photos application the second framework
+
+12
+00:00:56,033 --> 00:00:57,094
+is the photos UI framework
+
+13
+00:00:57,094 --> 00:01:00,158
+and this is a framework that will allow
+you to build a photo
+
+14
+00:01:01,058 --> 00:01:05,061
+editing extension ap extension that can
+be used right within the built-in Photos
+
+15
+00:01:05,088 --> 00:01:05,125
+app
+
+16
+00:01:06,025 --> 00:01:10,254
+so
+
+17
+00:01:10,479 --> 00:01:13,570
+in the session we're going to focus
+first on
+
+18
+00:01:13,057 --> 00:01:18,078
+how you can use the photos framework to
+faction manipulate photo library model
+
+19
+00:01:18,078 --> 00:01:18,132
+data
+
+20
+00:01:19,032 --> 00:01:23,049
+handle external changes and both
+retrieve an edit
+
+21
+00:01:23,049 --> 00:01:26,091
+photo and video content in the Iowa
+State photo library
+
+22
+00:01:26,091 --> 00:01:29,123
+now we're gonna turn our attention to
+
+23
+00:01:30,023 --> 00:01:34,074
+the photos UI framework and walk you
+through the steps and the concepts in
+
+24
+00:01:34,074 --> 00:01:38,142
+you need to understand in order to build
+your own affects engine for editing
+
+25
+00:01:39,042 --> 00:01:44,088
+photo and video content alright so let's
+get started
+
+26
+00:01:44,088 --> 00:01:50,089
+with the photos framework the photos
+framework is a new
+
+27
+00:01:50,098 --> 00:01:54,104
+objective-c framework in IOSA and
+
+28
+00:01:55,058 --> 00:01:58,065
+it allows you to make your application
+
+29
+00:01:58,065 --> 00:02:03,131
+a first-class citizen other system photo
+library for everything from something
+
+30
+00:02:04,031 --> 00:02:06,119
+simple like a custom image picture in
+your application
+
+31
+00:02:07,019 --> 00:02:10,106
+to going a in building a full-featured
+custom
+
+32
+00:02:11,006 --> 00:02:14,040
+application for or browsing the photo
+library and editing
+
+33
+00:02:14,004 --> 00:02:20,015
+and we really believe in this because
+we're using
+
+34
+00:02:20,051 --> 00:02:23,950
+the photos framework in our own photos
+and camera applications that are built
+
+35
+00:02:24,409 --> 00:02:24,440
+in
+
+36
+00:02:24,719 --> 00:02:28,761
+in IOSA for those have you have worked
+with photos in the past
+
+37
+00:02:29,139 --> 00:02:33,142
+this photos framework is designed to
+supersede the a
+
+38
+00:02:33,439 --> 00:02:40,439
+AL assets library which doesn't provide
+which doesn't provide much of the
+
+39
+00:02:42,829 --> 00:02:44,920
+functionality and features that you get
+with the photos framework
+
+40
+00:02:45,739 --> 00:02:50,748
+so what do you get with the photos from
+work
+
+41
+00:02:50,829 --> 00:02:54,837
+yet access the photo and video assets
+albums and moments
+
+42
+00:02:54,909 --> 00:02:58,290
+something you couldn't get with the
+assets library and then
+
+43
+00:02:58,029 --> 00:03:02,037
+in you can also add/remove
+
+44
+00:03:02,037 --> 00:03:06,406
+modify assets in albums right in the
+system white photo library
+
+45
+00:03:06,739 --> 00:03:10,765
+you can then also edit photo and video
+content
+
+46
+00:03:10,999 --> 00:03:14,057
+and meta-data that is written directly
+into
+
+47
+00:03:14,579 --> 00:03:18,640
+the system photo library now works at
+about a2
+
+48
+00:03:19,189 --> 00:03:22,370
+its okay on so
+
+49
+00:03:22,037 --> 00:03:25,126
+we're gonna walk through this API and a
+couple steps the first section is going
+
+50
+00:03:26,026 --> 00:03:27,087
+to focus on the model data
+
+51
+00:03:27,087 --> 00:03:31,106
+and this is going to walk you through
+how to fetch the model object
+
+52
+00:03:32,006 --> 00:03:35,805
+how to change model data how to handle
+external changes
+
+53
+00:03:35,859 --> 00:03:39,864
+and then we'll turn our attention to
+working with the image and video content
+
+54
+00:03:40,359 --> 00:03:44,340
+%uh there's ass how to retrieve it
+efficiently
+
+55
+00:03:44,034 --> 00:03:48,076
+and tips for working with a different
+types of image and video content
+
+56
+00:03:48,076 --> 00:03:52,235
+and then how to go ahead and make
+changes and apply those back to the
+
+57
+00:03:52,919 --> 00:03:52,993
+photo library
+
+58
+00:03:53,659 --> 00:03:56,900
+so I can start of looking at
+
+59
+00:03:56,009 --> 00:04:01,168
+model data so model data in the photos
+framework is represented with
+
+60
+00:04:02,059 --> 00:04:05,068
+what we called model objects and knees I
+represent the structure
+
+61
+00:04:05,959 --> 00:04:10,021
+%uh the photo library these are the
+records that represent photo and video
+
+62
+00:04:10,579 --> 00:04:10,653
+assets
+
+63
+00:04:11,319 --> 00:04:15,353
+moments albums and folders and
+
+64
+00:04:15,659 --> 00:04:19,850
+the key concept I want you to take away
+from this section
+
+65
+00:04:19,085 --> 00:04:23,099
+what are the key concept is that model
+objects that are presented in the photo
+
+66
+00:04:23,099 --> 00:04:23,171
+framework
+
+67
+00:04:24,071 --> 00:04:27,100
+are read-only and that is I
+
+68
+00:04:28,000 --> 00:04:31,026
+a nice benefit because it means you can
+work with those objects
+
+69
+00:04:31,026 --> 00:04:34,055
+in a thread safe manner you can pass
+them between threads without worrying
+
+70
+00:04:34,055 --> 00:04:36,112
+about their data changing out from
+underneath you
+
+71
+00:04:37,012 --> 00:04:40,048
+there's no worries about locking and I
+am
+
+72
+00:04:40,048 --> 00:04:43,101
+handling I can't rent changes
+
+73
+00:04:44,001 --> 00:04:48,040
+so I'd like to walkthrough their
+different model objects that we provide
+
+74
+00:04:48,004 --> 00:04:51,030
+with an illustration using the built-in
+I S eight
+
+75
+00:04:51,066 --> 00:04:55,067
+photos application so we'll start with
+the assets
+
+76
+00:04:55,076 --> 00:05:00,130
+these are the photos and videos that you
+see here and the Photos app
+
+77
+00:05:01,003 --> 00:05:04,011
+and then containing assets we have at
+the next level up
+
+78
+00:05:05,001 --> 00:05:09,029
+asset collections what we call asa
+collections in the photos framework
+
+79
+00:05:09,038 --> 00:05:12,052
+and in the case we're looking at a view
+that shows I
+
+80
+00:05:12,052 --> 00:05:18,105
+moments and a moment is comprised of a
+collection of assets
+
+81
+00:05:19,005 --> 00:05:22,039
+at the next level above that we have
+what we call
+
+82
+00:05:22,039 --> 00:05:26,067
+collection lists and these are lists
+amass a collections
+
+83
+00:05:26,067 --> 00:05:29,163
+and in the case you're looking at here
+we're seeing the year moment for you
+
+84
+00:05:30,063 --> 00:05:33,100
+which is comprised of a series of
+moments which then in turn
+
+85
+00:05:34,000 --> 00:05:38,055
+are comprised assets
+
+86
+00:05:38,055 --> 00:05:41,146
+now let's walk through these model
+objects in terms of the API's that are
+
+87
+00:05:42,046 --> 00:05:44,077
+exposed to you through the photos
+framework
+
+88
+00:05:44,077 --> 00:05:47,120
+the first one look at is the assets
+photos and videos
+
+89
+00:05:48,002 --> 00:05:51,057
+and photos and videos assets are
+represented by the pH
+
+90
+00:05:51,075 --> 00:05:54,174
+asset class and as you look through this
+UI
+
+91
+00:05:55,074 --> 00:06:00,156
+in the phone as application you can see
+it's a photo that's the media type
+
+92
+00:06:01,056 --> 00:06:04,084
+but then at the top of the screen you
+can see we're displaying the creation
+
+93
+00:06:04,084 --> 00:06:04,157
+date:
+
+94
+00:06:05,057 --> 00:06:08,104
+and the location which are both
+properties of the asset
+
+95
+00:06:09,004 --> 00:06:12,027
+down at the bottom of the screen you can
+see an icon representing
+
+96
+00:06:12,027 --> 00:06:17,036
+a heart that is whether that asset has
+been marked as a favorite
+
+97
+00:06:17,036 --> 00:06:20,061
+and these are all properties available
+to you in the model object
+
+98
+00:06:20,061 --> 00:06:23,134
+pH asset
+
+99
+00:06:24,034 --> 00:06:27,076
+at the next level up we're talking about
+the ass a collection and again we're a
+
+100
+00:06:27,076 --> 00:06:27,105
+little
+
+101
+00:06:28,005 --> 00:06:32,061
+illustrating that with the moment an ass
+a collection is a general
+
+102
+00:06:32,061 --> 00:06:35,116
+ordered collection assets so they're
+couple different types we've got
+
+103
+00:06:36,016 --> 00:06:39,025
+moments like you can see here we also
+have albums
+
+104
+00:06:39,025 --> 00:06:42,036
+and Smart Albums
+
+105
+00:06:42,036 --> 00:06:45,089
+the essay collection unsurprisingly
+represented by the pH
+
+106
+00:06:45,089 --> 00:06:49,155
+as a collection class and it has the
+properties of the type
+
+107
+00:06:50,055 --> 00:06:57,055
+title and start and end date and you can
+see these properties reflected in the UI
+
+108
+00:06:57,063 --> 00:07:00,124
+going one level higher we have the
+collection list
+
+109
+00:07:01,024 --> 00:07:04,060
+and a collection last is an ordered
+collection
+
+110
+00:07:04,006 --> 00:07:08,075
+up collections and the case we're
+looking at here we've got a moment year
+
+111
+00:07:09,029 --> 00:07:12,120
+but you can also have a collection list
+that represents a folder
+
+112
+00:07:13,002 --> 00:07:16,008
+and something that's unique about a
+folder verses a
+
+113
+00:07:16,026 --> 00:07:19,099
+a a moment year typeof collection list
+is that a folder
+
+114
+00:07:19,099 --> 00:07:22,168
+can actually contains subfolders as well
+as albums
+
+115
+00:07:23,068 --> 00:07:27,109
+so that's why we say a and ordered
+collection of collections where those
+
+116
+00:07:28,009 --> 00:07:29,028
+collections might be
+
+117
+00:07:29,028 --> 00:07:34,127
+and has a collection or a collection
+left
+
+118
+00:07:35,027 --> 00:07:38,116
+the collection list classes the pH
+collection last and similar to the essay
+
+119
+00:07:39,016 --> 00:07:40,022
+collection has a type
+
+120
+00:07:40,076 --> 00:07:45,110
+title and a start and end date
+
+121
+00:07:46,001 --> 00:07:49,086
+so when you wanna work with these model
+objects you need to get them out in the
+
+122
+00:07:49,095 --> 00:07:50,131
+photo library
+
+123
+00:07:51,031 --> 00:07:56,089
+so in ordered I to get these model
+objects out of the photo library the key
+
+124
+00:07:56,089 --> 00:07:57,167
+concept here that I want you do
+
+125
+00:07:58,067 --> 00:08:01,073
+to focus on in this section for fetching
+is that
+
+126
+00:08:02,027 --> 00:08:06,082
+you use the class methods on the model
+object that you want to fetch out
+
+127
+00:08:06,082 --> 00:08:11,105
+so when you wanna fetch up assets say
+you wanted to fetch all the video assets
+
+128
+00:08:12,005 --> 00:08:15,082
+you look for the class method on the pH
+asset class fetch assets
+
+129
+00:08:15,082 --> 00:08:19,167
+with media type specifying the media
+type video
+
+130
+00:08:20,067 --> 00:08:24,124
+similarly as I said before a moment is a
+type of asset collection
+
+131
+00:08:25,024 --> 00:08:30,060
+so to fetch moments we use a class
+method on the ass a collection class
+
+132
+00:08:30,006 --> 00:08:34,055
+to fetch moments with options now in
+both these
+
+133
+00:08:34,649 --> 00:08:38,610
+examples I'm admitted the options but
+they give you an opportunity to do
+
+134
+00:08:38,061 --> 00:08:39,680
+things like filter or
+
+135
+00:08:40,229 --> 00:08:45,233
+sort the results that you get back
+
+136
+00:08:45,269 --> 00:08:49,620
+so the next key concept I wanna I cover
+as far as collections
+
+137
+00:08:49,062 --> 00:08:53,066
+are concerned is that collections in the
+
+138
+00:08:53,066 --> 00:08:57,147
+photos framework runtime don't actually
+cash their contents
+
+139
+00:08:58,047 --> 00:09:02,135
+excused so what that means is that in
+order to find the assets them
+
+140
+00:09:03,035 --> 00:09:06,114
+live in an album you need to perform a
+fetch similar to the ones that we just
+
+141
+00:09:07,014 --> 00:09:07,020
+saw
+
+142
+00:09:07,074 --> 00:09:10,126
+for general-purpose fetching so here's
+an illustration of that
+
+143
+00:09:11,026 --> 00:09:15,058
+defects the assets in an asset
+collection represented by an album
+
+144
+00:09:15,058 --> 00:09:18,063
+we're getting back assets 0 is 0 class
+method on the pH asset
+
+145
+00:09:19,008 --> 00:09:22,021
+class and fat assets in the ass a
+collection
+
+146
+00:09:22,021 --> 00:09:25,028
+my album
+
+147
+00:09:25,091 --> 00:09:28,148
+now the next construct that I want to
+cover here is
+
+148
+00:09:29,048 --> 00:09:33,052
+something we call a transient collection
+and this is a really
+
+149
+00:09:33,052 --> 00:09:36,116
+useful on concert that we've made a lot
+of you serve
+
+150
+00:09:37,016 --> 00:09:41,057
+in the phone is application where we
+wanted to represent
+
+151
+00:09:41,057 --> 00:09:44,151
+a collection that isn't represented in
+the actual photo library
+
+152
+00:09:45,051 --> 00:09:49,116
+an example that is a search result or
+user selection as they're picking up
+
+153
+00:09:50,016 --> 00:09:50,063
+items
+
+154
+00:09:50,063 --> 00:09:53,082
+in the UI and
+
+155
+00:09:53,082 --> 00:09:57,133
+by taking that selection I've other
+items are our model objects and putting
+
+156
+00:09:58,033 --> 00:09:59,114
+it into a transient collection
+
+157
+00:10:00,014 --> 00:10:04,100
+the benefit is the transient collection
+is interchangeable
+
+158
+00:10:05,000 --> 00:10:08,092
+with the regular collections that you
+might fetch at the photo library
+
+159
+00:10:08,092 --> 00:10:11,144
+so you can do things like reuse your
+existing view controllers
+
+160
+00:10:12,044 --> 00:10:15,090
+or fetch the contents of a changing
+collection without worrying about
+
+161
+00:10:15,009 --> 00:10:17,017
+whether it's represented by something
+that really exists on
+
+162
+00:10:18,007 --> 00:10:21,092
+on the fund a library or if it's just
+something that you users working within
+
+163
+00:10:22,055 --> 00:10:23,079
+the runtime
+
+164
+00:10:23,079 --> 00:10:28,128
+to create a transient collection there's
+a class method on the ass a collection
+
+165
+00:10:28,839 --> 00:10:29,720
+class to create a
+
+166
+00:10:29,072 --> 00:10:32,154
+transit as a collection you can also
+create a transient collection list
+
+167
+00:10:33,054 --> 00:10:36,083
+but to create a trendy nasa collection
+we call transit as a collection
+
+168
+00:10:36,083 --> 00:10:39,842
+with assets and simply pass n an array
+of assets
+
+169
+00:10:40,589 --> 00:10:46,130
+as well as an optional title
+
+170
+00:10:46,013 --> 00:10:49,090
+so what are you getting back when you
+perform these fetches most the time when
+
+171
+00:10:49,009 --> 00:10:51,090
+you're writing an application to work
+with photos you're going to be
+
+172
+00:10:52,071 --> 00:10:55,118
+reading those objects looking through
+them working with them
+
+173
+00:10:56,018 --> 00:10:59,062
+so we wanted to make it as simple as
+possible to get those objects out and to
+
+174
+00:10:59,062 --> 00:11:00,100
+work with them directly
+
+175
+00:11:01,000 --> 00:11:05,081
+so you wanted to get synchronous results
+and you want to quickly
+
+176
+00:11:05,081 --> 00:11:08,117
+but especially when you think about i
+cud photo library
+
+177
+00:11:09,017 --> 00:11:13,026
+the result so that affects a result in
+effect could be potentially very large
+
+178
+00:11:13,026 --> 00:11:16,097
+in the tens of thousands of assets are
+even more
+
+179
+00:11:16,097 --> 00:11:18,186
+so it's really important that you don't
+fit all those objects into memory at
+
+180
+00:11:19,086 --> 00:11:20,090
+once
+
+181
+00:11:20,009 --> 00:11:23,011
+and you really want to work with them in
+batches as your
+
+182
+00:11:23,092 --> 00:11:26,118
+working with them are displaying them on
+screen
+
+183
+00:11:27,018 --> 00:11:30,027
+but we didn't want to put that
+complexity on you so what we did
+
+184
+00:11:31,008 --> 00:11:35,051
+is we've introduced a class to represent
+the objects that you get back from a
+
+185
+00:11:35,051 --> 00:11:35,099
+fetch
+
+186
+00:11:35,099 --> 00:11:39,448
+holiday pH fetch result and the peach
+FET result takes care
+
+187
+00:11:40,339 --> 00:11:43,520
+up tracking the full a results at
+
+188
+00:11:43,052 --> 00:11:47,090
+by keeping track at the lightweight ID
+is representing each other contents
+
+189
+00:11:47,009 --> 00:11:51,044
+that fetch but when you access the
+content so that fed result to
+
+190
+00:11:52,025 --> 00:11:55,106
+to pull one of the objects out will then
+you a fully realized object
+
+191
+00:11:56,006 --> 00:11:59,035
+that you can work with it's got an API
+that
+
+192
+00:11:59,089 --> 00:12:02,130
+familiar and similar to the end of the
+race so it should be easy to
+
+193
+00:12:02,013 --> 00:12:06,100
+to to work with and I'd like to show you
+an example of what
+
+194
+00:12:07,000 --> 00:12:11,093
+I it looks like as your working with a
+fete result
+
+195
+00:12:11,093 --> 00:12:14,121
+so II on the slide here at shown
+
+196
+00:12:15,021 --> 00:12:18,113
+a federal tax representing say offensive
+10,000 assets
+
+197
+00:12:19,013 --> 00:12:23,022
+and as we're iterating through that
+result set pulling out assets
+
+198
+00:12:23,022 --> 00:12:26,100
+has we access an act a 10 the indexes
+
+199
+00:12:27,000 --> 00:12:30,069
+will behind the scenes pulling a full
+batch to represent that object
+
+200
+00:12:30,069 --> 00:12:34,087
+as well as many of the others in it as
+you iterate through
+
+201
+00:12:34,087 --> 00:12:37,110
+over that match to the next batch will
+pull in the next
+
+202
+00:12:38,001 --> 00:12:41,007
+Batcave objects but released the
+previous ones so you don't wanna
+
+203
+00:12:41,007 --> 00:12:45,054
+mind a pulling out all that memory
+
+204
+00:12:46,017 --> 00:12:50,105
+so now that you've got the thanks
+
+205
+00:12:51,005 --> 00:12:54,294
+now that you've got a model objects that
+you're working within your
+
+206
+00:12:54,339 --> 00:12:57,800
+application your user may will
+
+207
+00:12:57,008 --> 00:13:00,032
+oftentimes wanna make changes to those
+objects so
+
+208
+00:13:01,004 --> 00:13:04,041
+I wanna take a look at how you can make
+model changes
+
+209
+00:13:04,041 --> 00:13:07,070
+with those model objects to support
+things like
+
+210
+00:13:07,007 --> 00:13:10,018
+the user wanting to favor the photo or
+added
+
+211
+00:13:10,081 --> 00:13:13,550
+our photo to an album because as ice
+
+212
+00:13:14,279 --> 00:13:18,040
+I said earlier the model objects
+themselves a read-only see can't mutate
+
+213
+00:13:18,004 --> 00:13:20,066
+them directly
+
+214
+00:13:20,066 --> 00:13:23,135
+so the way we express changes is there a
+change request API
+
+215
+00:13:24,035 --> 00:13:28,051
+thats based on change request classes
+
+216
+00:13:28,051 --> 00:13:31,073
+that you create in a change request
+block
+
+217
+00:13:31,073 --> 00:13:34,077
+and then hand to the photo library so
+that he can
+
+218
+00:13:34,077 --> 00:13:37,164
+apply those changes a synchronously how
+to process
+
+219
+00:13:38,064 --> 00:13:41,147
+and the reason those changes are applied
+out a process and a synchronously
+
+220
+00:13:42,047 --> 00:13:45,120
+is twofold the first reason is
+
+221
+00:13:46,002 --> 00:13:49,019
+for some operations it may be very a
+
+222
+00:13:49,037 --> 00:13:52,946
+expensive or processor intensive or just
+take a long time
+
+223
+00:13:53,279 --> 00:13:57,060
+but even more importantly than that
+because you're working with the user's
+
+224
+00:13:57,006 --> 00:13:58,073
+actual photo library
+
+225
+00:13:58,073 --> 00:14:01,170
+some others actions may require user
+authentication
+
+226
+00:14:02,007 --> 00:14:05,586
+for example if you wanted to delete 10
+photos
+
+227
+00:14:06,279 --> 00:14:10,372
+the photo library is going to prompt the
+user to say is this application
+
+228
+00:14:11,209 --> 00:14:16,190
+allowed to for a delete these 10 photos
+to allow the user to have a chance to
+
+229
+00:14:16,019 --> 00:14:19,228
+confirm that
+
+230
+00:14:19,399 --> 00:14:22,260
+so let's take a look at the change
+request classes it's actually pretty
+
+231
+00:14:22,026 --> 00:14:22,094
+simple
+
+232
+00:14:22,094 --> 00:14:26,099
+for each a model object class there's a
+change request class we got the
+
+233
+00:14:26,099 --> 00:14:29,152
+asset change request ass a collection
+change request and
+
+234
+00:14:30,052 --> 00:14:33,150
+the collection was change request and
+each of these changes has classes
+
+235
+00:14:34,005 --> 00:14:34,077
+provide
+
+236
+00:14:35,022 --> 00:14:39,047
+model object specific API's to allow you
+to perform the types of changes that
+
+237
+00:14:39,047 --> 00:14:41,058
+they allow
+
+238
+00:14:41,058 --> 00:14:45,120
+so the example I'm showing here is for
+the acid change request where you can
+
+239
+00:14:46,002 --> 00:14:46,007
+set
+
+240
+00:14:46,007 --> 00:14:53,007
+the creation date for an asset or two
+said it has a favorite
+
+241
+00:14:53,098 --> 00:14:56,517
+about some other things to to understand
+about the change request classes
+
+242
+00:14:57,399 --> 00:15:01,020
+that they are not subclasses up the
+model classes
+
+243
+00:15:01,002 --> 00:15:04,018
+and there's a good reason for that we
+wanted to provide a really clear
+
+244
+00:15:04,018 --> 00:15:05,073
+separation between
+
+245
+00:15:05,073 --> 00:15:10,081
+the thread safe immutable model objects
+and the objects that express mutations
+
+246
+00:15:10,081 --> 00:15:14,143
+that's the change request these change
+occurs classes are also only valid to
+
+247
+00:15:15,043 --> 00:15:15,108
+work with
+
+248
+00:15:16,008 --> 00:15:20,051
+in a change quest block hi so I'd like
+to illustrate that
+
+249
+00:15:20,051 --> 00:15:24,093
+I with an example now
+
+250
+00:15:24,093 --> 00:15:28,147
+so here's an example I where I've
+provided a sample implementation
+
+251
+00:15:29,047 --> 00:15:32,075
+a method to toggle whether an asset
+
+252
+00:15:32,075 --> 00:15:35,132
+has been marked as a favorite
+
+253
+00:15:36,032 --> 00:15:39,036
+so the first thing will do in this
+method is
+
+254
+00:15:39,036 --> 00:15:42,118
+asked the fish a shared photo library to
+perform some changes
+
+255
+00:15:43,018 --> 00:15:48,032
+and will pass n a change request block
+here
+
+256
+00:15:48,032 --> 00:15:52,032
+first step in that block is to create a
+change request for the asset that we
+
+257
+00:15:52,032 --> 00:15:53,131
+were provided in the method
+
+258
+00:15:54,031 --> 00:15:59,075
+and we're using their pH asset change
+request class here you can see
+
+259
+00:15:59,075 --> 00:16:03,087
+and then the last step is simply to set
+
+260
+00:16:03,087 --> 00:16:06,112
+on the change request the value our
+favorite
+
+261
+00:16:07,012 --> 00:16:12,026
+to the inverse value up what the asset
+currently haz
+
+262
+00:16:12,026 --> 00:16:16,605
+that's enough 24 the block to get past
+to the photo library
+
+263
+00:16:16,839 --> 00:16:20,883
+and those changes to be performed on
+your behalf
+
+264
+00:16:21,279 --> 00:16:24,790
+after those changes are performed will
+call back to completion handler
+
+265
+00:16:24,079 --> 00:16:27,155
+and let you know if there is I if you
+were successful
+
+266
+00:16:28,055 --> 00:16:33,274
+and performing those changes
+
+267
+00:16:33,769 --> 00:16:37,700
+so one other aspect working with change
+request that you want to work with that
+
+268
+00:16:37,007 --> 00:16:37,092
+you wanna do
+
+269
+00:16:38,055 --> 00:16:42,058
+is to create new model object and you
+can create new model objects
+
+270
+00:16:42,058 --> 00:16:45,126
+with the same change across classes but
+creating a different kind of change
+
+271
+00:16:46,026 --> 00:16:47,044
+request
+
+272
+00:16:47,044 --> 00:16:50,943
+using a creation request so in this case
+sectioning example where
+
+273
+00:16:51,339 --> 00:16:55,640
+you can create a new asset from an image
+using the creation request
+
+274
+00:16:55,064 --> 00:16:58,122
+for asset from image class method
+
+275
+00:16:59,022 --> 00:17:03,701
+and if all you want to do is create a
+new asset from an image
+
+276
+00:17:03,899 --> 00:17:06,962
+are you're done you just passed you just
+make this call within a change request
+
+277
+00:17:07,529 --> 00:17:08,220
+block
+
+278
+00:17:08,022 --> 00:17:11,221
+and the low library will take care of
+adding the ass
+
+279
+00:17:11,419 --> 00:17:15,472
+but if you want to work with that asset
+within that change request blocked his
+
+280
+00:17:15,949 --> 00:17:16,955
+do some additional work
+
+281
+00:17:17,549 --> 00:17:20,613
+say to add it to an album
+
+282
+00:17:21,189 --> 00:17:24,228
+well remember that the asset won't
+actually be created
+
+283
+00:17:24,579 --> 00:17:28,980
+until the work is performed out a
+process so
+
+284
+00:17:28,098 --> 00:17:32,667
+within the same change request block we
+a you can access a placeholder object
+
+285
+00:17:33,549 --> 00:17:35,070
+from the change request
+
+286
+00:17:35,007 --> 00:17:39,036
+representing that new unsaved object and
+then you can use that place holder
+
+287
+00:17:39,036 --> 00:17:42,117
+to add a new asset to a collection or
+
+288
+00:17:43,017 --> 00:17:47,109
+even potentially in new place holder for
+a collection
+
+289
+00:17:48,009 --> 00:17:51,028
+one other thing you can get from a
+placeholder object is
+
+290
+00:17:51,028 --> 00:17:55,030
+you can access the local identify which
+is a unique string that you can use
+
+291
+00:17:55,048 --> 00:17:58,050
+later on your application to fetch that
+object back
+
+292
+00:17:58,005 --> 00:18:01,092
+even on another invocation
+
+293
+00:18:02,037 --> 00:18:05,476
+so what happens to these changes
+
+294
+00:18:05,809 --> 00:18:09,250
+well the changes are done when the
+completion handler is invoked
+
+295
+00:18:09,025 --> 00:18:12,054
+but the model object to read only
+
+296
+00:18:12,054 --> 00:18:16,056
+and they aren't automatically refreshed
+or modified out from underneath you
+
+297
+00:18:16,074 --> 00:18:19,167
+but more important in these two things
+when we're talking about changes
+
+298
+00:18:20,067 --> 00:18:23,121
+as a really important thing to
+understand the changes that you
+
+299
+00:18:24,021 --> 00:18:25,360
+requested me
+
+300
+00:18:25,549 --> 00:18:28,590
+incur side effects or
+
+301
+00:18:28,059 --> 00:18:32,112
+I may be influenced by external changes
+coming in from elsewhere
+
+302
+00:18:33,012 --> 00:18:37,013
+in fact there are a lot of sources for
+change into the photo library
+
+303
+00:18:37,022 --> 00:18:41,025
+there's your application there's the
+built-in application as I club photo
+
+304
+00:18:41,025 --> 00:18:41,824
+library
+
+305
+00:18:42,049 --> 00:18:46,340
+cloud photo sharing and my photostream
+and all of these things can have an
+
+306
+00:18:46,034 --> 00:18:46,091
+impact
+
+307
+00:18:46,091 --> 00:18:49,124
+on the data that you're working with so
+what we recommend
+
+308
+00:18:50,024 --> 00:18:53,109
+is that instead of trying to take the
+result of a change in your completion
+
+309
+00:18:54,009 --> 00:18:54,092
+handler
+
+310
+00:18:54,092 --> 00:18:57,161
+you work with the single change
+notification system
+
+311
+00:18:58,061 --> 00:19:03,082
+to handle changes there and reflect them
+to user that way
+
+312
+00:19:03,082 --> 00:19:07,110
+so what happens is anytime there's a
+change to the photo library
+
+313
+00:19:08,001 --> 00:19:12,079
+will publish a pH change to registered
+observers
+
+314
+00:19:12,088 --> 00:19:15,165
+and that changes delivered on a
+background cue and it provides details
+
+315
+00:19:16,065 --> 00:19:16,090
+on
+
+316
+00:19:16,088 --> 00:19:20,184
+updated and deleted object but where
+begins to get really powerful
+
+317
+00:19:21,084 --> 00:19:25,803
+is when you're working with fat results
+where you can provide you details on
+
+318
+00:19:26,559 --> 00:19:28,850
+what indexes and objects were inserted
+
+319
+00:19:28,085 --> 00:19:32,140
+updated deleted or moved that apply to
+that fetches
+
+320
+00:19:33,004 --> 00:19:37,068
+I wanna dig a little deeper into the
+fetters I'll change details
+
+321
+00:19:38,004 --> 00:19:41,029
+when you create a federal assault by
+performing a fetish for a collection or
+
+322
+00:19:41,029 --> 00:19:42,128
+any other general-purpose fetch
+
+323
+00:19:43,028 --> 00:19:47,059
+the factors that will implicitly
+register itself with the photo library
+
+324
+00:19:47,059 --> 00:19:51,082
+for calculating changes and all those
+change details
+
+325
+00:19:51,082 --> 00:19:54,098
+are calculated in the background so they
+don't
+
+326
+00:19:54,098 --> 00:19:58,183
+they don't run while you're users
+interacting with your application
+
+327
+00:19:59,083 --> 00:20:02,932
+if you're providing if you're fetching a
+fete resulting you're not interested in
+
+328
+00:20:03,679 --> 00:20:04,740
+change details
+
+329
+00:20:04,074 --> 00:20:07,110
+you can opt out the their different
+calculation
+
+330
+00:20:08,001 --> 00:20:11,048
+by one other special options
+
+331
+00:20:11,057 --> 00:20:14,104
+but if you do want the details if you
+want those incremental
+
+332
+00:20:15,004 --> 00:20:18,073
+differences then it's important that you
+get the
+
+333
+00:20:18,073 --> 00:20:22,087
+updated fetch result for the veterans
+out that you started with
+
+334
+00:20:22,087 --> 00:20:25,087
+from the pH fetch result
+
+335
+00:20:25,087 --> 00:20:28,172
+change details object and I'm gonna walk
+you through an example
+
+336
+00:20:29,072 --> 00:20:33,119
+to demonstrate why that's so important
+
+337
+00:20:34,019 --> 00:20:38,019
+when the photo library receives a change
+if you've registered yourself
+
+338
+00:20:38,019 --> 00:20:41,046
+as an observer will call the photo
+library did change method
+
+339
+00:20:41,046 --> 00:20:45,102
+and pass you the pH change instance
+
+340
+00:20:46,002 --> 00:20:49,073
+in this case in this example which by
+the way this example is taken from the
+
+341
+00:20:49,073 --> 00:20:51,139
+sample code that's provided with the
+session
+
+342
+00:20:52,039 --> 00:20:55,115
+so I'm omitted some other details to
+make it will clear on stage
+
+343
+00:20:56,015 --> 00:20:59,057
+but although this is available in the
+sample code that you can download from
+
+344
+00:20:59,057 --> 00:21:00,156
+the
+
+345
+00:21:00,669 --> 00:21:03,695
+dub dub DC website
+
+346
+00:21:03,929 --> 00:21:08,340
+arm any I getting back to the first
+thing we're going to want to do in our
+
+347
+00:21:08,034 --> 00:21:09,503
+change handler here
+
+348
+00:21:09,809 --> 00:21:12,840
+is to I dispatched to the main cue
+
+349
+00:21:12,084 --> 00:21:15,663
+in the reason for that is because we're
+going to work with our user interface
+
+350
+00:21:16,419 --> 00:21:17,483
+objects are view controllers
+
+351
+00:21:18,059 --> 00:21:22,084
+and you know it's only safe to access
+those on the main cue
+
+352
+00:21:22,309 --> 00:21:25,870
+so once we've dispatched to the main cue
+
+353
+00:21:25,087 --> 00:21:30,096
+will ask the change instance whether any
+change details for the fetters alt that
+
+354
+00:21:30,096 --> 00:21:30,195
+we're working with
+
+355
+00:21:31,095 --> 00:21:34,101
+in our view controller and in this case
+we've got time
+
+356
+00:21:35,001 --> 00:21:38,100
+represent itself that assets that sir
+affect result that we're presenting
+
+357
+00:21:39,000 --> 00:21:43,019
+in a in a collection view
+
+358
+00:21:43,019 --> 00:21:46,060
+so if there's a change that affects the
+collection view the content
+
+359
+00:21:46,006 --> 00:21:46,091
+recollections you
+
+360
+00:21:47,045 --> 00:21:49,053
+we want to know what those details are
+so well as the change in stance for
+
+361
+00:21:50,025 --> 00:21:52,079
+those change details
+
+362
+00:21:52,079 --> 00:21:55,133
+and if there were any change details
+then we know we need to update
+
+363
+00:21:56,033 --> 00:22:00,122
+are FET result based on what those
+changes were
+
+364
+00:22:00,419 --> 00:22:03,508
+and the way to get those details are to
+get that update effect result as I was
+
+365
+00:22:04,309 --> 00:22:04,910
+saying
+
+366
+00:22:04,091 --> 00:22:07,160
+is to get it directly from the change
+details object
+
+367
+00:22:08,006 --> 00:22:11,072
+the change details have already done
+that work force and that we were sure
+
+368
+00:22:12,026 --> 00:22:15,071
+that the other details were going to ask
+for about inserts updates and deletes
+
+369
+00:22:15,071 --> 00:22:19,150
+are going to exactly match up to the new
+result that we're working with
+
+370
+00:22:20,005 --> 00:22:23,059
+so on the second slide here I'm gonna
+show you how
+
+371
+00:22:24,004 --> 00:22:27,077
+nicely this works with an object like
+the collection view
+
+372
+00:22:27,077 --> 00:22:31,486
+so now we can tell the collection view
+to perform a Batcave updates
+
+373
+00:22:32,179 --> 00:22:36,620
+and walk through the change details to
+see where they're removed indexes
+
+374
+00:22:36,062 --> 00:22:39,091
+if there were will translate them into
+index past that the collections you can
+
+375
+00:22:39,091 --> 00:22:39,186
+understand
+
+376
+00:22:40,086 --> 00:22:44,097
+and tell it to delete the items at those
+paths
+
+377
+00:22:44,097 --> 00:22:47,179
+similarly well as the change details
+with the inserted indexes in that fit
+
+378
+00:22:48,079 --> 00:22:49,083
+result
+
+379
+00:22:49,083 --> 00:22:54,148
+if there were what other collection view
+again to insert items at those paths
+
+380
+00:22:55,048 --> 00:22:58,144
+and same with changed index is dead
+affect the fete results
+
+381
+00:22:59,044 --> 00:23:03,073
+well as the collection view to reload
+those items
+
+382
+00:23:03,073 --> 00:23:06,087
+so now I'd like to take a moment to show
+you a demonstration
+
+383
+00:23:06,087 --> 00:23:09,088
+above the sample code that we've
+provided
+
+384
+00:23:09,097 --> 00:23:13,110
+with the session so the first thing I'm
+going to do before actually run
+
+385
+00:23:14,001 --> 00:23:17,038
+the sample app is sad just give your
+view
+
+386
+00:23:17,047 --> 00:23:20,061
+the photo library that we're working
+with here
+
+387
+00:23:20,061 --> 00:23:24,127
+aunt so I'm running the IOSA built-in
+Photos app
+
+388
+00:23:25,027 --> 00:23:28,053
+and you can see I've gotta series a
+smart albums
+
+389
+00:23:28,053 --> 00:23:31,202
+in this album list here and in
+particular
+
+390
+00:23:31,679 --> 00:23:35,600
+I've got 9 photos in my favorites
+library
+
+391
+00:23:35,006 --> 00:23:40,075
+now I'm going to switch over to the
+sample application
+
+392
+00:23:41,029 --> 00:23:45,088
+and we've got listing here with a
+special entry on top
+
+393
+00:23:45,088 --> 00:23:48,120
+all the photos in the photo library we
+can take a quick look you can see
+
+394
+00:23:49,002 --> 00:23:56,002
+got a pretty good size library here but
+we've also got a smart elements
+
+395
+00:23:56,038 --> 00:23:59,070
+so I'm going to tap on the favorite
+album
+
+396
+00:23:59,007 --> 00:24:02,012
+and you can see it's the same contents
+
+397
+00:24:02,075 --> 00:24:05,083
+but it's pretty obvious that one up
+there photos in this group doesn't
+
+398
+00:24:05,083 --> 00:24:06,090
+belong
+
+399
+00:24:06,009 --> 00:24:09,047
+so I'm gonna tap on my moose and
+
+400
+00:24:10,028 --> 00:24:13,307
+you can see when you look at the sample
+code we're gonna use
+
+401
+00:24:13,559 --> 00:24:16,583
+I'll bring up the menu with this added
+button
+
+402
+00:24:16,799 --> 00:24:21,400
+but when I press on favorite the code is
+going to create a change request
+
+403
+00:24:21,004 --> 00:24:25,092
+to set that asset as not being a
+favorite anymore
+
+404
+00:24:26,028 --> 00:24:30,062
+K when I back out to the favorite Smart
+Album
+
+405
+00:24:30,062 --> 00:24:34,109
+you'll notice the moose is gone nothing
+in the code actually asked to remove
+
+406
+00:24:35,009 --> 00:24:36,978
+that moves from that smart album
+
+407
+00:24:37,059 --> 00:24:40,130
+this is one other side effects I was
+talking about where change that I
+
+408
+00:24:40,013 --> 00:24:40,099
+requested
+
+409
+00:24:40,099 --> 00:24:46,197
+has triggered secondary change a that is
+reflected in the user interface
+
+410
+00:24:47,097 --> 00:24:51,098
+now if we switch back to the built in
+phone as application
+
+411
+00:24:52,007 --> 00:24:55,098
+you can see that changes immediately
+reflected there as well
+
+412
+00:24:55,098 --> 00:24:59,115
+the photos been taken out that favored
+Smart Album to
+
+413
+00:25:00,015 --> 00:25:03,107
+now there's one other thing I want to
+quickly go through to show you
+
+414
+00:25:04,007 --> 00:25:07,049
+in a in terms of the sample code and
+that is
+
+415
+00:25:07,049 --> 00:25:10,058
+if I go into the photo list
+
+416
+00:25:10,058 --> 00:25:14,125
+and I find a photo that I think the user
+wants to delete why I as the user want
+
+417
+00:25:15,025 --> 00:25:16,028
+to delete
+
+418
+00:25:16,028 --> 00:25:20,066
+I'm gonna go ahead and create a if you
+look at the sample code you see I create
+
+419
+00:25:20,066 --> 00:25:23,125
+a delete change request
+
+420
+00:25:24,025 --> 00:25:27,028
+but there's no code in the application
+to provide this prompt
+
+421
+00:25:27,028 --> 00:25:32,047
+this is the photo library performing
+some work out a process to let the user
+
+422
+00:25:32,299 --> 00:25:33,348
+know that an application
+
+423
+00:25:33,789 --> 00:25:37,590
+has requested a change that's
+destructive to their library
+
+424
+00:25:37,059 --> 00:25:41,114
+and asking for confirmation so you can
+see allow sample photos up to delete one
+
+425
+00:25:42,014 --> 00:25:43,022
+photo
+
+426
+00:25:43,022 --> 00:25:46,047
+and in this case I'm not going to delete
+it but you can see
+
+427
+00:25:46,047 --> 00:25:49,134
+how some the work that per is performed
+at a process can have such an impact on
+
+428
+00:25:50,034 --> 00:25:53,070
+your changes
+
+429
+00:25:53,007 --> 00:25:58,062
+alright well that covers the the work
+with model objects that I wanted
+
+430
+00:25:59,025 --> 00:26:03,039
+introduce from the photos framework but
+there's a lot more that you could see in
+
+431
+00:26:03,039 --> 00:26:05,053
+the sample application when you look at
+all the
+
+432
+00:26:05,053 --> 00:26:09,059
+images an image data that was presented
+so I'd like to invite Carl
+
+433
+00:26:09,059 --> 00:26:12,077
+up to talk about image and video data
+
+434
+00:26:12,077 --> 00:26:17,079
+thanks
+
+435
+00:26:17,097 --> 00:26:22,098
+good morning I my name is Karl school I
+also were coming I was for us remarks
+
+436
+00:26:23,007 --> 00:26:27,058
+so we've just been a little while
+talking about how you can discover and
+
+437
+00:26:27,058 --> 00:26:28,397
+work with the structure
+
+438
+00:26:28,919 --> 00:26:32,220
+up the users for a library and that's
+great but we're missing
+
+439
+00:26:32,022 --> 00:26:35,094
+a key ingredient cuz it is the user's
+photo library
+
+440
+00:26:35,094 --> 00:26:40,145
+how do we actually get a hold open
+display image and video data
+
+441
+00:26:41,045 --> 00:26:44,076
+before we began it's useful to know
+
+442
+00:26:44,076 --> 00:26:47,355
+that the user's photo library actually
+
+443
+00:26:48,039 --> 00:26:51,230
+caches a variety of representations for
+each
+
+444
+00:26:51,023 --> 00:26:55,582
+asset for images we might we might have
+representations that vary from
+
+445
+00:26:55,789 --> 00:26:59,190
+all the way from the full science
+original all the way down to small
+
+446
+00:26:59,019 --> 00:27:00,050
+thumbnails
+
+447
+00:27:00,005 --> 00:27:04,026
+videos might be cash it in writing a bit
+rates and sizes
+
+448
+00:27:04,071 --> 00:27:08,080
+they might even be streaming K with I
+clout photo library
+
+449
+00:27:09,061 --> 00:27:14,063
+we might not actually help all of those
+representations cast on desk summerall a
+
+450
+00:27:14,063 --> 00:27:17,134
+bomb or in some cases even on a might be
+available
+
+451
+00:27:18,034 --> 00:27:21,993
+that makes a campaign when you want to
+display image data
+
+452
+00:27:22,299 --> 00:27:25,700
+so what we have is we provide you with
+the class
+
+453
+00:27:25,007 --> 00:27:30,050
+the pH Image Manager the pH image
+manager's job is to abstract way
+
+454
+00:27:31,013 --> 00:27:34,802
+the shortest your decision from having
+to decide you know do I wanna thumbnail
+
+455
+00:27:34,919 --> 00:27:34,983
+by one
+
+456
+00:27:35,559 --> 00:27:39,582
+a medium size large what you want so
+basically it's a usage-based
+
+457
+00:27:39,789 --> 00:27:43,841
+API for images you tell us how big do
+you want the image what are you trying
+
+458
+00:27:44,309 --> 00:27:47,110
+to do with that are you trying to
+displayed in a small great on-screen are
+
+459
+00:27:47,011 --> 00:27:50,440
+you trying to you want the full size you
+want something that screen size
+
+460
+00:27:50,539 --> 00:27:54,650
+and will try to find the right the best
+available representation we have for you
+
+461
+00:27:54,065 --> 00:27:57,070
+similarly videos you tell us what
+quality you'd like and what you plan on
+
+462
+00:27:58,015 --> 00:28:01,037
+doing that that is a just for user
+playback are you planning on exporting
+
+463
+00:28:01,037 --> 00:28:03,111
+it or you can work with that in some
+other way
+
+464
+00:28:04,011 --> 00:28:07,052
+and we'll try to pick the right
+representation
+
+465
+00:28:07,052 --> 00:28:10,145
+one key thing here is that on like the
+model E
+
+466
+00:28:11,045 --> 00:28:14,070
+a fetching API which is largely
+synchronous
+
+467
+00:28:14,007 --> 00:28:17,976
+the image request API's are largely
+
+468
+00:28:18,669 --> 00:28:23,620
+a synchronous and that's because even if
+the data is available locally we may
+
+469
+00:28:23,062 --> 00:28:24,731
+have to do work
+
+470
+00:28:25,289 --> 00:28:28,490
+before we can handle the day-to-day pics
+after the right of a disk they have to
+
+471
+00:28:28,049 --> 00:28:28,127
+be decoded
+
+472
+00:28:29,027 --> 00:28:32,176
+but the most important case is
+
+473
+00:28:32,419 --> 00:28:36,350
+in the case of something like I called
+for a library we may not have the data
+
+474
+00:28:36,035 --> 00:28:38,069
+locally available at all
+
+475
+00:28:38,069 --> 00:28:41,102
+we may have to go out to the network get
+and and
+
+476
+00:28:42,002 --> 00:28:45,084
+bring it back to you so let's take a
+quick look
+
+477
+00:28:45,084 --> 00:28:48,663
+and what that looks like this is a very
+straightforward such
+
+478
+00:28:49,419 --> 00:28:52,419
+crossed I'm sorry image request are
+
+479
+00:28:52,419 --> 00:28:56,940
+in this case we're trying to fill a
+reserve a straightforward for across
+
+480
+00:28:56,094 --> 00:28:56,099
+created
+
+481
+00:28:57,044 --> 00:29:00,122
+on an iPhone turns out to be about 160
+by 160 pixels
+
+482
+00:29:01,022 --> 00:29:04,091
+so we set the target site we tell it
+that
+
+483
+00:29:04,289 --> 00:29:08,150
+the image should feel that target size
+and then we issue the request and when
+
+484
+00:29:08,015 --> 00:29:09,026
+it comes back
+
+485
+00:29:09,026 --> 00:29:13,055
+if there's any image data available were
+handed to you the info dictionary
+
+486
+00:29:13,289 --> 00:29:16,120
+is there and we'll tell you a little bit
+more about what we handed you back
+
+487
+00:29:16,012 --> 00:29:18,033
+specifically is it substandard is it
+
+488
+00:29:18,033 --> 00:29:21,033
+the right size good
+
+489
+00:29:21,033 --> 00:29:24,050
+so let's take a look at it a little bit
+more urban advanced image or crushed
+
+490
+00:29:24,005 --> 00:29:27,030
+so when you wanna make a more
+
+491
+00:29:27,075 --> 00:29:31,089
+advanced request you create an image
+request option
+
+492
+00:29:31,089 --> 00:29:34,111
+in this case occur after I create the
+option
+
+493
+00:29:35,011 --> 00:29:39,078
+I I really want this photo thank so I'm
+gonna tell the option that gas it
+
+494
+00:29:39,078 --> 00:29:42,149
+allowed to go out to the network can go
+out to the 2i cloud and fetch the data
+
+495
+00:29:43,049 --> 00:29:43,718
+down
+
+496
+00:29:44,159 --> 00:29:47,530
+because that might take a little bit I'm
+I'd like a progress and worthwhile
+
+497
+00:29:47,053 --> 00:29:50,100
+you think this is a good idea you can
+always show the user that we're in fact
+
+498
+00:29:51,000 --> 00:29:52,028
+doing work
+
+499
+00:29:52,028 --> 00:29:56,100
+K and then finally just said it as an
+option when you actually make the
+
+500
+00:29:57,000 --> 00:30:00,072
+request
+
+501
+00:30:00,072 --> 00:30:03,121
+I want to spend a second and talk about
+
+502
+00:30:04,021 --> 00:30:07,070
+the call back that actually produces the
+data
+
+503
+00:30:07,007 --> 00:30:10,039
+there's two things to keep in mind again
+
+504
+00:30:11,002 --> 00:30:15,033
+this block will take will be called back
+on the main thread
+
+505
+00:30:15,033 --> 00:30:18,112
+and the reason is because the feeling is
+the general you want to use it for even
+
+506
+00:30:19,012 --> 00:30:22,076
+a second call back you typically using
+for display on the main threat
+
+507
+00:30:22,076 --> 00:30:24,735
+there's an option a way to make a
+synchronous request if you're working in
+
+508
+00:30:25,419 --> 00:30:26,360
+back route
+
+509
+00:30:26,036 --> 00:30:31,073
+K the other thing is actually this blog
+can be called multiple times for each
+
+510
+00:30:31,073 --> 00:30:32,094
+request
+
+511
+00:30:32,094 --> 00:30:35,333
+because it turns out that a really
+common you
+
+512
+00:30:36,179 --> 00:30:41,228
+UI design is the user wants to see the
+image data as soon as possible
+
+513
+00:30:41,669 --> 00:30:46,070
+so we have any image data available will
+return that you
+
+514
+00:30:46,007 --> 00:30:52,040
+right away and then if that is
+insufficient to fulfill your request
+
+515
+00:30:52,004 --> 00:30:56,035
+we go out possibly to to the desk
+possibly I clout
+
+516
+00:30:56,071 --> 00:30:59,138
+will go get the data and when it arrives
+
+517
+00:31:00,038 --> 00:31:03,073
+then we'll call it a second time
+
+518
+00:31:03,073 --> 00:31:06,111
+thank you of course if the date is
+already available
+
+519
+00:31:07,011 --> 00:31:10,036
+then you only get the first call
+
+520
+00:31:10,036 --> 00:31:13,075
+let's take a quick look requesting be oh
+so in this case
+
+521
+00:31:13,075 --> 00:31:16,123
+the user has scroll to somebody on a
+they just want playback
+
+522
+00:31:17,023 --> 00:31:20,035
+so we're requesting a player item for
+the video
+
+523
+00:31:20,035 --> 00:31:23,110
+we get back a player and we can create
+an AB player up it looks very much like
+
+524
+00:31:24,001 --> 00:31:26,570
+the image crossed it's pretty
+straightforward
+
+525
+00:31:26,669 --> 00:31:29,757
+and again if we want a more advanced
+request
+
+526
+00:31:30,549 --> 00:31:34,600
+let's say the user now wants to push
+this
+
+527
+00:31:34,006 --> 00:31:37,565
+in this video up to their own sharing
+service a different sharing service
+
+528
+00:31:38,159 --> 00:31:42,020
+so now we're going to create a video
+request option
+
+529
+00:31:42,002 --> 00:31:46,040
+and of course because we're sharing it
+we want to be high quality we
+
+530
+00:31:46,004 --> 00:31:51,036
+you know we maybe you're on an iPhone
+and you want the full 1080 P
+
+531
+00:31:51,072 --> 00:31:55,381
+K so we wanted to be high quality and if
+it's not available
+
+532
+00:31:56,029 --> 00:31:59,055
+because we were playing a before that
+might have been streaming we are
+
+533
+00:31:59,289 --> 00:32:02,380
+you know we say okay it's all right you
+can go out to the network and download
+
+534
+00:32:02,038 --> 00:32:05,069
+and it's particularly important for
+videos of course to have progress
+
+535
+00:32:05,069 --> 00:32:06,158
+because
+
+536
+00:32:06,779 --> 00:32:11,340
+videos can be very large and then
+finally we set the option
+
+537
+00:32:11,034 --> 00:32:14,233
+note here that we're actually using a
+slightly different APR specifically
+
+538
+00:32:14,539 --> 00:32:15,650
+requesting X
+
+539
+00:32:15,065 --> 00:32:20,160
+this were specifically requesting an
+export session rather than a playback
+
+540
+00:32:21,006 --> 00:32:25,825
+so this is good we can fetch individual
+images and that works pretty well
+
+541
+00:32:26,419 --> 00:32:29,480
+by it's really common for
+
+542
+00:32:29,048 --> 00:32:33,049
+photo app to one ish old lotsa images
+the user doesn't want to scroll through
+
+543
+00:32:33,058 --> 00:32:34,134
+the images one at a time
+
+544
+00:32:35,034 --> 00:32:38,743
+they wanna see a great images in either
+a regular
+
+545
+00:32:39,049 --> 00:32:43,860
+square grid or a more interesting you
+know Thailand brick mortar layout
+
+546
+00:32:43,086 --> 00:32:46,114
+that poses some performance problems
+even if the individual images are
+
+547
+00:32:47,014 --> 00:32:49,022
+relatively cheap there's a lot of
+
+548
+00:32:49,022 --> 00:32:52,035
+so what do we do that the general thing
+the people want to do is you create a
+
+549
+00:32:52,035 --> 00:32:54,071
+cash around what the users looking at
+
+550
+00:32:54,071 --> 00:32:57,910
+figure out which direction they're going
+East are cashing ahead of demand you
+
+551
+00:32:58,549 --> 00:33:00,220
+stop cashing behind
+
+552
+00:33:00,022 --> 00:33:03,089
+so it's a pain Marie you can have to
+track all this data
+
+553
+00:33:03,089 --> 00:33:06,184
+you have to know to retrieve stuff from
+that cash we've already got an API for
+
+554
+00:33:07,084 --> 00:33:08,162
+doing a lot of this
+
+555
+00:33:09,062 --> 00:33:12,501
+and that API's the pH cashing Image
+Manager
+
+556
+00:33:13,059 --> 00:33:17,108
+K the caching image manager's job is
+exactly what it sounds like it's a job
+
+557
+00:33:17,549 --> 00:33:18,340
+is to cash
+
+558
+00:33:18,034 --> 00:33:22,110
+images on your behalf K as you make
+requests against the caching Image
+
+559
+00:33:23,001 --> 00:33:23,062
+Manager
+
+560
+00:33:23,071 --> 00:33:26,120
+if it's in its cash it will read it will
+return that directly if not it will
+
+561
+00:33:27,002 --> 00:33:31,045
+automatically fall back to the default
+image request behavior
+
+562
+00:33:31,063 --> 00:33:35,212
+at the general suggestion is that you
+create a caching Image Manager for each
+
+563
+00:33:35,779 --> 00:33:39,010
+sort of distinct view controller that
+you have up
+
+564
+00:33:39,001 --> 00:33:42,090
+that's because each view controller
+typically has it own display
+
+565
+00:33:42,009 --> 00:33:45,012
+I love image data I you know
+
+566
+00:33:46,002 --> 00:33:48,093
+a gridview controllers going to behave
+its gonna need different cashing
+
+567
+00:33:49,011 --> 00:33:49,960
+behaviors then
+
+568
+00:33:50,059 --> 00:33:53,590
+like upon up you are you're scrolling
+through
+
+569
+00:33:53,059 --> 00:33:56,115
+so let's take a quick look at what I'm
+talking about here so we have the user's
+
+570
+00:33:57,015 --> 00:33:58,794
+phone
+
+571
+00:33:58,929 --> 00:34:02,250
+looking at some nice pictures and the
+scrolling through now this is what the
+
+572
+00:34:02,025 --> 00:34:04,334
+user sees
+
+573
+00:34:04,559 --> 00:34:07,571
+but we know that underneath what they
+actually have is the sort of
+
+574
+00:34:07,679 --> 00:34:10,980
+long ScrollView all photos above and
+behind
+
+575
+00:34:10,098 --> 00:34:13,297
+and what they only see is the visible
+range
+
+576
+00:34:14,179 --> 00:34:18,225
+so as the scrolling down we wanna start
+cashing ahead of where they are
+
+577
+00:34:18,639 --> 00:34:22,000
+so that the data is available
+immediately when they one
+
+578
+00:34:22,000 --> 00:34:25,094
+you need to display it to the user and
+of course from Emma reasons we wanna
+
+579
+00:34:25,094 --> 00:34:26,152
+stop cashing behind
+
+580
+00:34:27,052 --> 00:34:31,411
+just sort of calculate this range
+maintain it and as you scroll
+
+581
+00:34:31,879 --> 00:34:35,940
+just keep update K the API for the image
+man
+
+582
+00:34:35,094 --> 00:34:38,513
+the caching Image Manager is actually
+pretty straightforward
+
+583
+00:34:39,359 --> 00:34:42,361
+you calculate what going to be visible
+soon
+
+584
+00:34:42,379 --> 00:34:45,710
+you tell us to start cashing it and out
+stuff is
+
+585
+00:34:45,071 --> 00:34:50,220
+scrolled of you tell us to stop cashing
+
+586
+00:34:50,859 --> 00:34:56,000
+the only key thing here is when you
+start and stopped cashing
+
+587
+00:34:56,000 --> 00:34:59,068
+used the same target size content mode
+and options
+
+588
+00:34:59,068 --> 00:35:02,072
+that you will use for the actual request
+image
+
+589
+00:35:02,072 --> 00:35:05,120
+otherwise we don't know how to look it
+up now
+
+590
+00:35:06,002 --> 00:35:09,025
+we know how to get hold image data
+weekend and we know how to get
+
+591
+00:35:09,043 --> 00:35:12,082
+hold it fast we know how to get ahold
+video data
+
+592
+00:35:12,082 --> 00:35:16,090
+but of course just looking at data is
+only half the story
+
+593
+00:35:16,009 --> 00:35:20,012
+users love to touch their photos they
+want to adjust them
+
+594
+00:35:20,093 --> 00:35:23,144
+crop it so much just right apply filter
+so their kids look
+
+595
+00:35:24,044 --> 00:35:27,066
+you know extra-special pretty so
+
+596
+00:35:27,066 --> 00:35:30,129
+much talk about editing
+
+597
+00:35:31,029 --> 00:35:34,035
+if the acid is editable the at its are
+now in place
+
+598
+00:35:34,089 --> 00:35:37,107
+okay you no longer need to save your
+edits as a new asset
+
+599
+00:35:38,007 --> 00:35:42,007
+you can at edit any asset edible
+
+600
+00:35:42,007 --> 00:35:46,069
+the edits are just like in the real
+photos up there are non-destructive the
+
+601
+00:35:46,069 --> 00:35:47,478
+user can always revert
+
+602
+00:35:48,099 --> 00:35:52,580
+you can also programmatically revert
+changes that you make a visible
+
+603
+00:35:52,058 --> 00:35:56,827
+everywhere the show up in your apt the
+shop in the photos up the shop in
+
+604
+00:35:57,349 --> 00:36:00,690
+male messages other third party apps
+
+605
+00:36:00,069 --> 00:36:03,165
+an with I club for the library they're
+actually visible cross
+
+606
+00:36:04,065 --> 00:36:07,784
+all your devices as well K
+
+607
+00:36:08,369 --> 00:36:11,920
+so how does editing work well
+
+608
+00:36:11,092 --> 00:36:14,181
+at a very simple basic level you ask us
+for
+
+609
+00:36:15,081 --> 00:36:20,116
+input image we handed to you
+
+610
+00:36:21,016 --> 00:36:25,079
+and you do whatever transformations you
+wanna do wanna you can crop it you can
+
+611
+00:36:25,079 --> 00:36:26,138
+edit it you can
+
+612
+00:36:27,038 --> 00:36:30,051
+going to you know pixel operations on it
+
+613
+00:36:30,051 --> 00:36:33,100
+and when you're done you generate a new
+image
+
+614
+00:36:34,000 --> 00:36:39,349
+a new output image and you handed to us
+and then we say that on top at the asset
+
+615
+00:36:39,349 --> 00:36:43,780
+but just take a look at how that works
+
+616
+00:36:43,078 --> 00:36:46,156
+K first you wanna ask us for the input
+image
+
+617
+00:36:47,056 --> 00:36:50,058
+you ask the asset for its content input
+
+618
+00:36:50,076 --> 00:36:55,101
+editing input me and what that comes
+with his the content editing input
+
+619
+00:36:56,001 --> 00:36:56,065
+carries a
+
+620
+00:36:56,065 --> 00:36:59,092
+bunch of information that you'll need in
+order to actually
+
+621
+00:36:59,092 --> 00:37:03,141
+do your work it gives you a URL with
+reference to the full site sasser
+
+622
+00:37:04,041 --> 00:37:08,043
+it gives you some orientation
+information so in this case
+
+623
+00:37:08,043 --> 00:37:11,097
+I'm creating a core image image and I'm
+sure I'm going to be using some other
+
+624
+00:37:11,097 --> 00:37:14,128
+need new filter stuff that we have
+available for you now
+
+625
+00:37:15,028 --> 00:37:18,113
+and I'm gonna do some work so
+
+626
+00:37:19,013 --> 00:37:23,067
+I don't work uses cropped it maybe is
+applied to filter looks great
+
+627
+00:37:23,067 --> 00:37:26,118
+how do we say that well you create
+
+628
+00:37:27,018 --> 00:37:31,021
+to da a content editing output you take
+your data
+
+629
+00:37:31,048 --> 00:37:35,055
+the fully output with the fully rendered
+output save it as a jeep eg right to the
+
+630
+00:37:35,055 --> 00:37:36,059
+URL
+
+631
+00:37:36,095 --> 00:37:39,156
+and then use that the adjustment data
+I'll talk about the adjustment in just a
+
+632
+00:37:40,056 --> 00:37:41,345
+second
+
+633
+00:37:41,849 --> 00:37:45,540
+and then how do you save it it's the
+same a saving any other model change
+
+634
+00:37:45,054 --> 00:37:49,054
+you create are ass a change request
+
+635
+00:37:49,054 --> 00:37:52,081
+you set the content editing output on it
+
+636
+00:37:52,081 --> 00:37:55,146
+but the whole thing and a change block
+and that's it
+
+637
+00:37:56,046 --> 00:37:59,069
+so I was a little bit misleading
+actually why I said it was that simple
+
+638
+00:37:59,069 --> 00:38:02,072
+so there's theirs alone another wrinkle
+cheese
+
+639
+00:38:02,099 --> 00:38:05,099
+what if
+
+640
+00:38:05,099 --> 00:38:09,448
+someone has already edited that image
+well
+
+641
+00:38:10,339 --> 00:38:13,400
+the key point here is that actually when
+you
+
+642
+00:38:13,004 --> 00:38:16,056
+editing image you actually have the base
+
+643
+00:38:16,092 --> 00:38:20,144
+image and some adjustment it your output
+image the thing that you give us that
+
+644
+00:38:21,044 --> 00:38:21,069
+the
+
+645
+00:38:21,067 --> 00:38:24,125
+and is actually the result of applying
+this adjustment to the base
+
+646
+00:38:25,025 --> 00:38:28,104
+image so really what we haven't you
+
+647
+00:38:29,004 --> 00:38:34,091
+is the base image plus whatever
+adjustment data is already on that image
+
+648
+00:38:34,091 --> 00:38:37,158
+and that way the user can continue
+editing as if they were
+
+649
+00:38:38,058 --> 00:38:42,104
+they had never left their editing
+session like you do a crop down
+
+650
+00:38:43,004 --> 00:38:46,031
+and what we can do is the original plus
+the crop
+
+651
+00:38:46,031 --> 00:38:49,088
+information so that you can show you to
+the crop but they can extend the crop in
+
+652
+00:38:49,088 --> 00:38:52,119
+an out they can remove it entirely they
+can change it
+
+653
+00:38:53,019 --> 00:38:56,088
+and when you're done you hand ass
+
+654
+00:38:56,088 --> 00:38:59,093
+your your output image ended
+
+655
+00:38:59,093 --> 00:39:02,191
+the new adjustment date so that cycle
+just continues to the next person that
+
+656
+00:39:03,091 --> 00:39:03,152
+asks
+
+657
+00:39:04,052 --> 00:39:09,105
+will get back the base image plus the
+new adjustment data
+
+658
+00:39:10,005 --> 00:39:14,040
+so how do you save the adjustment it
+well the adjustment data actually can be
+
+659
+00:39:14,004 --> 00:39:19,473
+use a peach adjustment data object but
+really the data can be whatever you want
+
+660
+00:39:19,869 --> 00:39:24,460
+right for instance it could be the name
+and parameters for current filter
+
+661
+00:39:24,046 --> 00:39:27,052
+it could be anything that you want that
+describes your
+
+662
+00:39:28,006 --> 00:39:33,068
+at its om notice here that actually be
+on just that data we also in ask you to
+
+663
+00:39:33,068 --> 00:39:36,076
+include a for manana fire format version
+
+664
+00:39:37,048 --> 00:39:41,066
+they basically are a way for you to
+identify
+
+665
+00:39:41,066 --> 00:39:45,275
+what edit it actually is whose who did
+this edit what's the format
+
+666
+00:39:45,869 --> 00:39:50,750
+a bit K and I'll talk a little bit more
+about that in a second
+
+667
+00:39:50,075 --> 00:39:54,076
+so I misled you again
+
+668
+00:39:54,076 --> 00:39:57,108
+there is one additional case of course
+what if
+
+669
+00:39:58,008 --> 00:40:01,040
+someone else had edit the image
+
+670
+00:40:01,004 --> 00:40:05,018
+it works this the scenario that I
+describe a force great if you were the
+
+671
+00:40:05,054 --> 00:40:06,097
+one who previously added
+
+672
+00:40:06,097 --> 00:40:09,098
+but whatevs somebody went to ap a
+
+673
+00:40:10,007 --> 00:40:13,055
+and they apply to crop and then they go
+to ap be
+
+674
+00:40:13,055 --> 00:40:16,844
+and they want to do more added well
+
+675
+00:40:17,339 --> 00:40:20,420
+you have to tell us what do you
+understand the adjustment it what ask
+
+676
+00:40:20,042 --> 00:40:22,091
+you will give you the pH adjustment data
+
+677
+00:40:22,091 --> 00:40:26,155
+you tell us do you understand what this
+is so looking at this is actually seems
+
+678
+00:40:27,055 --> 00:40:28,099
+relatively straightforward
+
+679
+00:40:28,099 --> 00:40:31,130
+but we're not putting any restrictions
+on what the form and identifying format
+
+680
+00:40:32,003 --> 00:40:33,038
+version can be
+
+681
+00:40:33,065 --> 00:40:36,067
+several developers from different
+companies could for instance get
+
+682
+00:40:36,067 --> 00:40:37,095
+together and define
+
+683
+00:40:37,095 --> 00:40:41,102
+a common identifiers version and yet
+adjustment data format and that way the
+
+684
+00:40:42,065 --> 00:40:44,103
+user could move seamlessly between those
+
+685
+00:40:45,003 --> 00:40:48,005
+those aP's K let's see what happens
+
+686
+00:40:48,023 --> 00:40:51,106
+depending on what you return when we ask
+you this question can you
+
+687
+00:40:52,006 --> 00:40:55,041
+understand us do you understand it
+
+688
+00:40:55,041 --> 00:40:58,053
+yes you say yes that's great we're
+headed the base
+
+689
+00:40:58,053 --> 00:41:02,152
+image and the adjustment data and you
+can behave as if the user had just
+
+690
+00:41:03,052 --> 00:41:06,131
+sort of turned around we did a second
+come back and started editing again
+
+691
+00:41:07,031 --> 00:41:11,032
+that sort of the ideal case what if you
+tell us
+
+692
+00:41:11,032 --> 00:41:15,081
+no you don't on this case unfortunately
+we don't have any choice we have to hand
+
+693
+00:41:15,369 --> 00:41:16,420
+you the fully rendered
+
+694
+00:41:16,042 --> 00:41:20,201
+output from the previous at the user can
+continue editing
+
+695
+00:41:20,579 --> 00:41:23,970
+but the cam back out like in this case
+the previous
+
+696
+00:41:23,097 --> 00:41:26,153
+ap applied in water filter it
+effectively blocking my filter we've
+
+697
+00:41:27,053 --> 00:41:29,122
+thrown away the color information we
+don't have it
+
+698
+00:41:30,022 --> 00:41:33,106
+if the user wants to go back they
+basically have to revert back to
+
+699
+00:41:34,006 --> 00:41:36,565
+original
+
+700
+00:41:36,619 --> 00:41:40,920
+so let's take a quick demo so here we
+are
+
+701
+00:41:40,092 --> 00:41:45,113
+is what we had before and gonna take a
+look
+
+702
+00:41:46,013 --> 00:41:49,065
+see let's look at our favorites again
+
+703
+00:41:49,065 --> 00:41:53,264
+and here we go she looks very nice
+
+704
+00:41:53,849 --> 00:41:58,720
+but I i wanna play with a little bit I
+think that this photo could be better
+
+705
+00:41:58,072 --> 00:42:02,106
+so actually I'm gonna what's trying
+assuras
+
+706
+00:42:03,006 --> 00:42:06,074
+what a you know what I didn't I don't
+know
+
+707
+00:42:06,074 --> 00:42:10,120
+that doesn't require it to me K so at
+this point we started with the original
+
+708
+00:42:11,002 --> 00:42:14,026
+image in there are no adjustments so we
+didn't even ask do you understand is it
+
+709
+00:42:14,044 --> 00:42:14,132
+doesn't matter
+
+710
+00:42:15,032 --> 00:42:18,071
+we had to do the Basij this time when I
+go into edit
+
+711
+00:42:18,359 --> 00:42:22,650
+what's gonna happen is we're gonna say
+do you understand the Edit
+
+712
+00:42:22,065 --> 00:42:25,774
+and this app have to be the same ap
+sources: gas and erstand
+
+713
+00:42:26,359 --> 00:42:29,364
+so this time I hand the other hand you
+the base image
+
+714
+00:42:29,859 --> 00:42:33,930
+which is effectively original plus the
+adjustment that a lot that did the post
+
+715
+00:42:33,093 --> 00:42:34,099
+rice
+
+716
+00:42:34,099 --> 00:42:37,126
+which allows us to switch a completely
+
+717
+00:42:38,026 --> 00:42:42,034
+and now it's in sepia night but it's not
+see be applied on top of the post rice
+
+718
+00:42:43,006 --> 00:42:43,775
+it CPR
+
+719
+00:42:43,829 --> 00:42:47,240
+applied instead at the pasta rice
+actually kinda like this I think I'm
+
+720
+00:42:47,024 --> 00:42:50,079
+gonna leave it I like that old-time look
+
+721
+00:42:50,079 --> 00:42:53,085
+and just to prove it look
+
+722
+00:42:54,039 --> 00:42:57,102
+the Photos app sees it as well all right
+
+723
+00:42:58,002 --> 00:43:01,067
+so we've talked about doing this in the
+context of your own application but of
+
+724
+00:43:01,067 --> 00:43:02,246
+course
+
+725
+00:43:02,849 --> 00:43:05,970
+as we showed in the keynote we can do
+this from inside
+
+726
+00:43:05,097 --> 00:43:08,115
+the Photos app as well and to tell you
+about how to do that
+
+727
+00:43:09,015 --> 00:43:16,015
+somebody
+
+728
+00:43:18,016 --> 00:43:22,099
+morning my name is Simon but they're and
+in this last part of the session
+
+729
+00:43:22,099 --> 00:43:25,438
+let's talk about photo editing
+extensions
+
+730
+00:43:26,329 --> 00:43:31,130
+so what up for anything extensions how
+can they be useful to you developers
+
+731
+00:43:31,013 --> 00:43:34,101
+and what do they bring to our users
+
+732
+00:43:35,001 --> 00:43:39,110
+through the new feature in I was eights
+that allows the users
+
+733
+00:43:39,119 --> 00:43:42,430
+to accept to access to your image
+
+734
+00:43:42,043 --> 00:43:45,106
+or video editing tool right from within
+
+735
+00:43:46,006 --> 00:43:50,048
+the built-in camera or photo
+applications
+
+736
+00:43:50,048 --> 00:43:53,144
+no need for the user to switch between
+applications no need for the user
+
+737
+00:43:54,044 --> 00:43:58,092
+to grant specific access rights to your
+application it's a very simple way
+
+738
+00:43:58,092 --> 00:44:01,130
+for your tour to reach its audience
+
+739
+00:44:02,003 --> 00:44:05,045
+we think it's a great way to put your
+creativity
+
+740
+00:44:05,072 --> 00:44:08,100
+inside the hands of our users
+
+741
+00:44:09,000 --> 00:44:12,023
+so this feature has been showing in a
+keynote on Monday but let me refresh our
+
+742
+00:44:12,023 --> 00:44:14,068
+memories with the two sides
+
+743
+00:44:14,068 --> 00:44:17,129
+so here we are on iphone editing and
+image
+
+744
+00:44:18,029 --> 00:44:22,101
+using the eye with eights built-in
+photos application
+
+745
+00:44:23,001 --> 00:44:26,009
+the user can tap on the top left button
+
+746
+00:44:26,081 --> 00:44:29,850
+an axis any available editing extension
+
+747
+00:44:30,579 --> 00:44:34,750
+can pick one and this could be your
+
+748
+00:44:34,075 --> 00:44:39,091
+editing tool extending the editing
+capabilities of the built-in aP's
+
+749
+00:44:39,091 --> 00:44:42,099
+for now the user can interact with
+whatever interface want to provide
+
+750
+00:44:43,071 --> 00:44:47,079
+and when they use is done the changes
+are saved right
+
+751
+00:44:47,079 --> 00:44:51,113
+in place inside the uses for the library
+no need to create the duplicated
+
+752
+00:44:52,013 --> 00:44:56,021
+assets and if the user has turned on I
+cut for the library
+
+753
+00:44:56,093 --> 00:44:59,098
+those changes will be applied to all
+other devices
+
+754
+00:45:00,043 --> 00:45:03,094
+to the user could go on his iPad and
+then draw your beautiful effects
+
+755
+00:45:03,094 --> 00:45:07,503
+on a larger screen saw what you need to
+create your own
+
+756
+00:45:08,349 --> 00:45:11,372
+for reading photo editing extension
+
+757
+00:45:11,579 --> 00:45:15,608
+and it turns out it's it's really simple
+it's basically three steps
+
+758
+00:45:15,869 --> 00:45:19,910
+the first one is to create not extension
+targets
+
+759
+00:45:19,091 --> 00:45:23,010
+the second one is to provide view
+controller which will manage to you I of
+
+760
+00:45:23,829 --> 00:45:25,450
+your extension
+
+761
+00:45:25,045 --> 00:45:29,096
+and then these you control a needs to
+adopt a specific protocol
+
+762
+00:45:29,096 --> 00:45:32,121
+which is a set of methods that photos
+will call
+
+763
+00:45:33,021 --> 00:45:38,069
+in order to communicate with your
+extension
+
+764
+00:45:38,069 --> 00:45:43,458
+the good news is the first two steps are
+really easy thanks to the new Xcode
+
+765
+00:45:44,079 --> 00:45:49,040
+basically all what you need to do is
+from your applications Xcode project
+
+766
+00:45:49,004 --> 00:45:54,039
+add a new target and select the photo
+editing extension templates
+
+767
+00:45:54,039 --> 00:45:57,116
+exclude we create whatever is necessary
+for you to get started
+
+768
+00:45:58,016 --> 00:46:02,064
+and have something working it we create
+a view controller
+
+769
+00:46:02,064 --> 00:46:06,065
+which you can start using or which you
+can replace with your own
+
+770
+00:46:06,074 --> 00:46:09,151
+if you happen to have you are existing
+tool or you can try that you want to
+
+771
+00:46:10,051 --> 00:46:10,145
+reuse
+
+772
+00:46:11,045 --> 00:46:14,049
+note about the user interface
+
+773
+00:46:14,049 --> 00:46:17,074
+you've seen for extensions are shown
+full stream
+
+774
+00:46:17,074 --> 00:46:20,082
+now the top bar with the council and
+unbuttons as well as
+
+775
+00:46:21,054 --> 00:46:27,055
+the title of your application is shown
+automatically for you by the Photos app
+
+776
+00:46:27,064 --> 00:46:30,073
+so you see you liked to design your
+extension not to have its own navigation
+
+777
+00:46:31,054 --> 00:46:34,098
+bar
+
+778
+00:46:34,098 --> 00:46:37,196
+now onto with the protocol at options
+for the protocol which is specific to
+
+779
+00:46:38,096 --> 00:46:40,122
+for two extensions
+
+780
+00:46:41,022 --> 00:46:44,093
+and this protocol is the finding the
+footage you a framework
+
+781
+00:46:44,093 --> 00:46:47,126
+and is the pH content editing controller
+
+782
+00:46:48,026 --> 00:46:51,625
+it consists of four method
+
+783
+00:46:51,859 --> 00:46:54,900
+and the first one quite obviously is
+called
+
+784
+00:46:54,009 --> 00:46:58,198
+when the user celexa extension and this
+is where you get
+
+785
+00:46:59,089 --> 00:47:05,060
+the input data before you extension is
+presented on screen
+
+786
+00:47:05,006 --> 00:47:09,067
+a simple implementation could look like
+this
+
+787
+00:47:09,067 --> 00:47:12,156
+and the first thing you might notice is
+that the input object which is given to
+
+788
+00:47:13,056 --> 00:47:13,118
+you
+
+789
+00:47:14,018 --> 00:47:17,104
+the kids content editing input is
+exactly the same object
+
+790
+00:47:18,004 --> 00:47:21,053
+as the one car described as a few
+minutes ago
+
+791
+00:47:21,089 --> 00:47:24,790
+so basically we have the exact same
+class is the exact same concepts
+
+792
+00:47:24,079 --> 00:47:27,628
+as when editing a photo using the photos
+from work
+
+793
+00:47:28,339 --> 00:47:32,414
+just here rap slightly differently for
+the specific needs of an extension
+
+794
+00:47:33,089 --> 00:47:36,390
+so you would typically read out
+
+795
+00:47:36,039 --> 00:47:39,088
+the input image in this particular case
+we're going to work with a Display Size
+
+796
+00:47:39,088 --> 00:47:40,317
+representation
+
+797
+00:47:41,109 --> 00:47:45,210
+we don't need the full-size image right
+away here then we need to decode any
+
+798
+00:47:45,021 --> 00:47:47,023
+input adjustment data
+
+799
+00:47:47,023 --> 00:47:51,046
+or fall back to some default settings
+does non
+
+800
+00:47:51,046 --> 00:47:55,046
+then you set up your yours interface to
+want the way you need its
+
+801
+00:47:55,046 --> 00:47:58,074
+and you to be find it useful to hold on
+to the input object
+
+802
+00:47:58,074 --> 00:48:02,163
+that was given to you now the user will
+interact with your extension
+
+803
+00:48:03,063 --> 00:48:07,032
+and when the user is done the second
+method will be called
+
+804
+00:48:07,599 --> 00:48:10,647
+and this is when your extension we need
+to provide the final
+
+805
+00:48:11,079 --> 00:48:15,140
+outputs data and headed back
+
+806
+00:48:15,014 --> 00:48:18,031
+7 implementation can look like this
+
+807
+00:48:18,031 --> 00:48:21,119
+for images issued raids a pic
+representation on the full-size image
+
+808
+00:48:22,019 --> 00:48:26,044
+with your effects a fight with used to
+create this adjustment stayed objects
+
+809
+00:48:26,044 --> 00:48:27,090
+which describe what ever you
+
+810
+00:48:27,009 --> 00:48:32,014
+applied to the input image and then you
+create an output object that wraps
+
+811
+00:48:32,095 --> 00:48:38,484
+all this information and when you're
+done you call the completion handler
+
+812
+00:48:39,339 --> 00:48:42,950
+you notice in this example that the flow
+is synchronous
+
+813
+00:48:42,095 --> 00:48:45,123
+but it doesn't have to be a if you
+prefer to have any sickness work fo
+
+814
+00:48:46,023 --> 00:48:49,050
+it's totally fine this have to call the
+completion handler
+
+815
+00:48:49,005 --> 00:48:55,018
+when you're output is ready
+
+816
+00:48:55,063 --> 00:48:58,150
+now you remember this story about
+resuming editing
+
+817
+00:48:59,005 --> 00:49:02,010
+so imagine that the user six-year
+extension
+
+818
+00:49:03,000 --> 00:49:06,026
+using an image or video that already has
+been edited
+
+819
+00:49:06,026 --> 00:49:10,335
+that has some adjustments data you
+remember the first question
+
+820
+00:49:10,569 --> 00:49:14,577
+that we ask you is do you understand the
+given the existing adjustment data or
+
+821
+00:49:15,369 --> 00:49:15,443
+not
+
+822
+00:49:16,109 --> 00:49:21,180
+and that way we can provide you with the
+appropriate inputs
+
+823
+00:49:21,018 --> 00:49:25,021
+and this is when this method can handle
+
+824
+00:49:25,021 --> 00:49:29,089
+adjustments data is going to get called
+on your extension
+
+825
+00:49:29,089 --> 00:49:32,123
+and a typically implementation could be
+a simple as
+
+826
+00:49:33,023 --> 00:49:36,114
+sticking with their you support the
+format identify your and version of the
+
+827
+00:49:37,014 --> 00:49:38,079
+such as India
+
+828
+00:49:38,079 --> 00:49:41,145
+and finally the last method previously
+
+829
+00:49:42,045 --> 00:49:45,050
+is when the user cancels your extension
+
+830
+00:49:45,095 --> 00:49:48,764
+one thing to note is which is not just
+is that this method can be called at any
+
+831
+00:49:49,619 --> 00:49:50,900
+time
+
+832
+00:49:50,009 --> 00:49:54,015
+so for example if your extension require
+some time to produce the output
+
+833
+00:49:54,096 --> 00:49:57,121
+for example you're editing a video the
+user could use
+
+834
+00:49:58,021 --> 00:50:01,054
+could decide to interrupt you and cancer
+right away at any time
+
+835
+00:50:01,054 --> 00:50:05,117
+so just keep that in mind
+
+836
+00:50:06,017 --> 00:50:09,056
+and this is basically all what you need
+them
+
+837
+00:50:09,056 --> 00:50:12,155
+to create your own photo editing
+extension so we're really excited to see
+
+838
+00:50:13,055 --> 00:50:13,128
+a
+
+839
+00:50:14,028 --> 00:50:17,090
+all the tools that you going to create
+and all the great ideas that you went to
+
+840
+00:50:17,009 --> 00:50:18,073
+provide to our users
+
+841
+00:50:19,054 --> 00:50:22,125
+using this API and let me conclude
+
+842
+00:50:23,025 --> 00:50:30,025
+with a short demo of that in action
+
+843
+00:50:30,349 --> 00:50:36,020
+so let's switch to our demo device
+
+844
+00:50:36,002 --> 00:50:40,041
+and I'm going to go to the full
+implications
+
+845
+00:50:40,041 --> 00:50:43,047
+and here is the image the that has been
+just applied
+
+846
+00:50:44,001 --> 00:50:47,090
+just has been edited by call with the
+city of inter
+
+847
+00:50:47,009 --> 00:50:50,428
+now it turns out that the simple at is
+actually vending a photo editing
+
+848
+00:50:51,319 --> 00:50:52,290
+extension
+
+849
+00:50:52,029 --> 00:50:55,046
+so what I can do is right from within
+the Photos app
+
+850
+00:50:55,046 --> 00:51:00,052
+top it it's select the top left
+extension button
+
+851
+00:51:00,052 --> 00:51:05,111
+and here you see our sample extension so
+let me select its
+
+852
+00:51:05,579 --> 00:51:09,010
+and what I can do is not only a plier
+outfielders but i can assume
+
+853
+00:51:09,001 --> 00:51:13,023
+resume what was previously did so for
+example I could decide here to bring
+
+854
+00:51:13,023 --> 00:51:14,162
+back the covers
+
+855
+00:51:14,369 --> 00:51:17,443
+and even and hands them something to
+replace the seeker figure that was
+
+856
+00:51:18,109 --> 00:51:19,470
+previously applied
+
+857
+00:51:19,047 --> 00:51:22,113
+and I'm going to choose a chrome feature
+
+858
+00:51:23,013 --> 00:51:26,030
+and that's it
+
+859
+00:51:26,003 --> 00:51:29,572
+you see how easy it is for the user in
+just a few taps
+
+860
+00:51:29,869 --> 00:51:36,869
+to use Europe photo editing extension
+
+861
+00:51:38,048 --> 00:51:41,141
+so our time to wrap up this session what
+have we learned
+
+862
+00:51:42,041 --> 00:51:46,046
+we've introduced the new photos from
+work which allows you to access
+
+863
+00:51:46,091 --> 00:51:49,117
+the whole photos the users for delivery
+in
+
+864
+00:51:50,017 --> 00:51:53,021
+and which allows you application to
+
+865
+00:51:53,021 --> 00:51:57,024
+gain all the features like the one that
+has which we provide with the photos
+
+866
+00:51:57,024 --> 00:51:59,393
+application
+
+867
+00:51:59,609 --> 00:52:03,270
+so you app can be a first-class citizen
+of the I was photos
+
+868
+00:52:03,027 --> 00:52:06,606
+eco-system and then we've seen how easy
+it is for you
+
+869
+00:52:06,849 --> 00:52:11,873
+to provide you editing 20 using the
+photos editing extensions
+
+870
+00:52:12,089 --> 00:52:16,140
+if you want more information you can
+contact our eventually something for
+
+871
+00:52:16,014 --> 00:52:19,963
+you can read out the condition and if
+you want to ask questions of an answer
+
+872
+00:52:20,089 --> 00:52:21,089
+as you can
+
+873
+00:52:21,089 --> 00:52:24,470
+on check out our developer forums
+
+874
+00:52:24,047 --> 00:52:27,139
+we have a couple related sessions some
+of them have really taken place to check
+
+875
+00:52:28,039 --> 00:52:29,071
+out the videos
+
+876
+00:52:29,071 --> 00:52:33,079
+like the one about what expenses you can
+create on I worse and worse than
+
+877
+00:52:33,079 --> 00:52:36,095
+or how we can capture contents from the
+camera
+
+878
+00:52:36,095 --> 00:52:39,734
+using even more control Nile on I was
+eights
+
+879
+00:52:40,589 --> 00:52:43,630
+and we have two sessions taking place
+this afternoon
+
+880
+00:52:43,063 --> 00:52:46,119
+if you're interested in knowing more
+about how to edit images
+
+881
+00:52:47,019 --> 00:52:50,026
+and apply your custom filters using Core
+Image
+
+882
+00:52:50,089 --> 00:52:53,104
+and with that I thank you very much for
+your attention
+
+883
+00:52:54,004 --> 00:52:54,073
+and so there is official
+

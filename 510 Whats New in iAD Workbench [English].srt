@@ -1,0 +1,3355 @@
+1
+00:00:14,016 --> 00:00:15,075
+good morning
+
+2
+00:00:15,075 --> 00:00:18,100
+and welcome to WWDC session on Ironwood
+branch
+
+3
+00:00:19,000 --> 00:00:22,088
+I'm prescod you up and I'm here with my
+colleague
+
+4
+00:00:22,088 --> 00:00:25,119
+ready to party to share with you how
+beautiful ring
+
+5
+00:00:26,019 --> 00:00:29,040
+the Ironwood branch platform we have
+some
+
+6
+00:00:29,004 --> 00:00:32,093
+awesome stuff you're bringing to you
+this fall and I can't wait to share it
+
+7
+00:00:33,029 --> 00:00:33,080
+with you
+
+8
+00:00:33,008 --> 00:00:38,030
+but before we go there knowing some of
+you are probably knew to advertising
+
+9
+00:00:39,002 --> 00:00:42,311
+and perhaps you know what I hadn't been
+for the first time
+
+10
+00:00:42,329 --> 00:00:45,630
+that stock with two foundational
+questions
+
+11
+00:00:45,063 --> 00:00:49,092
+why advertise and why
+
+12
+00:00:49,092 --> 00:00:52,123
+I had left after the fourth question
+
+13
+00:00:53,023 --> 00:00:57,030
+why advertise see you develop this app
+
+14
+00:00:57,003 --> 00:01:02,065
+you put a lot of time and energy in that
+and put it on the App Store
+
+15
+00:01:02,092 --> 00:01:05,108
+not do things can happen
+
+16
+00:01:06,008 --> 00:01:09,014
+first users can find your app
+
+17
+00:01:09,068 --> 00:01:13,096
+our second you can find users for your
+app
+
+18
+00:01:13,096 --> 00:01:17,138
+users will find your app if they know
+about you
+
+19
+00:01:18,038 --> 00:01:22,407
+audio app is featured in one other
+categories in the App Store
+
+20
+00:01:22,749 --> 00:01:26,390
+but with thousands of ups
+
+21
+00:01:26,039 --> 00:01:30,134
+coming on App Store everyday natural
+discovery of a rap
+
+22
+00:01:31,034 --> 00:01:35,046
+becomes increasingly difficult and you
+don't have much control on
+
+23
+00:01:35,046 --> 00:01:38,775
+so what can you do to take more control
+
+24
+00:01:39,189 --> 00:01:44,020
+on the success of your app you
+
+25
+00:01:44,002 --> 00:01:49,031
+can advertise when you advertise you can
+find the right users
+
+26
+00:01:49,049 --> 00:01:53,117
+that make the difference and when it
+comes to advertising
+
+27
+00:01:53,729 --> 00:01:57,840
+your ops audio products to millions
+
+28
+00:01:57,084 --> 00:02:01,085
+of Apple customers around the world I
+had
+
+29
+00:02:01,085 --> 00:02:04,444
+is your best choice why
+
+30
+00:02:05,209 --> 00:02:08,630
+because I had is part of Apple
+
+31
+00:02:08,063 --> 00:02:12,079
+and vino Apple users all
+
+32
+00:02:12,079 --> 00:02:15,086
+$800 million of them me know what
+
+33
+00:02:15,086 --> 00:02:18,090
+acts and other iTunes content they
+downloaded
+
+34
+00:02:18,009 --> 00:02:23,034
+and we know how and when the user last
+june
+
+35
+00:02:24,015 --> 00:02:28,109
+be introduced i'd workbench a
+self-service
+
+36
+00:02:29,009 --> 00:02:33,078
+mobile advertising platform that
+provides you
+
+37
+00:02:33,159 --> 00:02:36,340
+the simplest way to promote your product
+
+38
+00:02:36,034 --> 00:02:42,065
+to millions of Apple users around the
+world since we introduce I'd workbench
+
+39
+00:02:42,065 --> 00:02:46,076
+you've successfully help developers many
+of them
+
+40
+00:02:46,076 --> 00:02:50,195
+advertising for the very first time
+drive millions of visits
+
+41
+00:02:50,879 --> 00:02:54,896
+to the iTunes product fetus I'd
+workbench
+
+42
+00:02:55,049 --> 00:02:59,065
+is open to everyone and you can promote
+
+43
+00:02:59,209 --> 00:03:03,216
+anything using I'd workbench you can
+promote your aP's
+
+44
+00:03:03,909 --> 00:03:07,003
+you can promote your products your
+brand's
+
+45
+00:03:07,849 --> 00:03:11,390
+your service including your iTunes
+content
+
+46
+00:03:11,039 --> 00:03:14,087
+but its music books I movies
+
+47
+00:03:14,087 --> 00:03:19,087
+last June that mean to you sidewalk
+bench
+
+48
+00:03:19,087 --> 00:03:24,101
+we started in the US as the fourth Mike
+and a few months after that
+
+49
+00:03:25,001 --> 00:03:29,810
+be expanded internationally I will brent
+is now available
+
+50
+00:03:29,819 --> 00:03:32,861
+in 14 countries and expanding rapidly
+
+51
+00:03:33,239 --> 00:03:36,303
+now creating a campaign using I'd
+workbench
+
+52
+00:03:36,879 --> 00:03:39,937
+is very easy you can create one
+
+53
+00:03:40,459 --> 00:03:44,523
+in just a few minutes to demonstrate but
+a
+
+54
+00:03:45,099 --> 00:03:49,590
+I have official you how easy it is to
+advertise using I'd want bench
+
+55
+00:03:49,059 --> 00:03:52,818
+thank you punish good morning everyone
+
+56
+00:03:53,349 --> 00:03:57,730
+I'm ready to carry from my and
+engineering team I'm hitter demo
+
+57
+00:03:57,073 --> 00:04:02,087
+I had workbench in the family will see
+how easy it is to promote
+
+58
+00:04:02,087 --> 00:04:06,796
+an app during give them all
+
+59
+00:04:07,579 --> 00:04:11,596
+you thief lol options but I'm going to
+focus on a few
+
+60
+00:04:11,749 --> 00:04:18,749
+and the car more later let's get started
+I had workbench
+
+61
+00:04:18,087 --> 00:04:22,089
+effective herbal doin work bench for
+Apple dot com all you need
+
+62
+00:04:23,007 --> 00:04:26,105
+is an Apple ID to log in may login
+
+63
+00:04:27,005 --> 00:04:30,098
+the five page you go to if the National
+
+64
+00:04:30,098 --> 00:04:35,187
+dashboard is a summary of on the
+campaign and I think gives basic metrics
+
+65
+00:04:36,069 --> 00:04:43,069
+to get into the campaign creation flow
+left click on Create campaign
+
+66
+00:04:45,016 --> 00:04:48,094
+the first try you have is what do you
+want to promote
+
+67
+00:04:48,094 --> 00:04:51,141
+ap our product
+
+68
+00:04:52,041 --> 00:04:57,066
+netconnect ap be auditory apt
+
+69
+00:04:57,066 --> 00:05:01,072
+that are published in the App Store from
+my time in america
+
+70
+00:05:01,072 --> 00:05:05,921
+I add workbench automatically gets all
+absentia published to the App Store
+
+71
+00:05:06,569 --> 00:05:10,650
+and makes it available here so you can
+
+72
+00:05:10,065 --> 00:05:16,614
+promote to campaign let me Santa Clara
+
+73
+00:05:17,199 --> 00:05:20,300
+for big back my goal is to drive down
+looks
+
+74
+00:05:20,003 --> 00:05:25,302
+I'm going to CPC cost-per-click
+
+75
+00:05:25,599 --> 00:05:32,599
+looking at my campaign
+
+76
+00:05:34,016 --> 00:05:37,107
+picking on Mac will take me to step 2
+targeting
+
+77
+00:05:38,007 --> 00:05:41,062
+targeting is all about finding that
+night Rd in for a campaign
+
+78
+00:05:41,062 --> 00:05:44,064
+we have two options auto and manual
+
+79
+00:05:44,082 --> 00:05:48,128
+in Quetta auto I at feinstein guardian
+for you
+
+80
+00:05:49,028 --> 00:05:52,083
+in Getafe manual you get to said
+departing for france
+
+81
+00:05:52,083 --> 00:05:57,392
+never set out a next country where you
+are at it going to run
+
+82
+00:05:58,139 --> 00:06:04,530
+not affect United States next act added
+the combination of creating
+
+83
+00:06:04,053 --> 00:06:09,942
+and destination when effect banner for
+creative and definition i cant
+
+84
+00:06:10,419 --> 00:06:13,660
+I guess definition efforts to any
+
+85
+00:06:13,066 --> 00:06:16,091
+after product page menu that can
+
+86
+00:06:16,091 --> 00:06:19,100
+review the abbeydale and download the
+app right from there
+
+87
+00:06:20,081 --> 00:06:25,174
+next Friday defended if you're in with
+your campaign is going to run
+
+88
+00:06:26,074 --> 00:06:29,159
+the default started today and ended a
+month from now
+
+89
+00:06:30,059 --> 00:06:33,091
+limit and if next budget
+
+90
+00:06:33,091 --> 00:06:36,190
+how much money you're willing to spend
+on this camping man for two thousand
+
+91
+00:06:37,009 --> 00:06:37,588
+dollar
+
+92
+00:06:38,479 --> 00:06:42,080
+daily spangler is automatically
+calculated
+
+93
+00:06:42,008 --> 00:06:47,035
+CPC bit how much you are willing to pay
+
+94
+00:06:47,035 --> 00:06:50,072
+park-like the maximum you are willing to
+pay per click
+
+95
+00:06:50,072 --> 00:06:54,145
+made their 50 cent at Lady
+
+96
+00:06:55,045 --> 00:07:01,046
+CBA by an optional picking up calculate
+will give us the estimated number of
+
+97
+00:07:01,055 --> 00:07:01,134
+impressions
+
+98
+00:07:02,034 --> 00:07:06,093
+and perhaps if you want to see more
+impressions untapped
+
+99
+00:07:06,093 --> 00:07:09,146
+you can change the combination of
+
+100
+00:07:10,046 --> 00:07:13,625
+targeting budget in bed and your team up
+
+101
+00:07:14,039 --> 00:07:17,770
+next
+
+102
+00:07:17,077 --> 00:07:21,079
+name online I'm use the term line
+several times in this page
+
+103
+00:07:21,097 --> 00:07:24,144
+moneyline a line in a combination of
+them
+
+104
+00:07:25,044 --> 00:07:28,047
+targeting budget and bit you can have
+
+105
+00:07:28,047 --> 00:07:31,216
+several lines in a campaign London and
+if line
+
+106
+00:07:31,639 --> 00:07:34,750
+my simple art online
+
+107
+00:07:34,075 --> 00:07:39,087
+clicking on next will take me to the
+targeting summary page
+
+108
+00:07:39,087 --> 00:07:42,124
+met on the line for lifting for this
+campaign
+
+109
+00:07:43,024 --> 00:07:47,075
+we have diff 19 you can always add more
+lines by clicking on create Lamberton
+
+110
+00:07:47,075 --> 00:07:50,080
+looking on next de castille
+
+111
+00:07:50,008 --> 00:07:56,021
+neck that's kept me which is creating an
+act the first right we have
+
+112
+00:07:56,093 --> 00:07:59,186
+selecting a great man united going to
+run cried the universal app
+
+113
+00:08:00,086 --> 00:08:04,177
+so Testament detected back and game
+iPhone iPad and you know what's up that
+
+114
+00:08:05,077 --> 00:08:05,165
+said if you are so
+
+115
+00:08:06,065 --> 00:08:10,102
+for languish in a pic with English mean
+what right up there as well
+
+116
+00:08:11,002 --> 00:08:15,331
+then thats defined the creative it to
+try to
+
+117
+00:08:15,349 --> 00:08:20,010
+using a template and from my desktop
+from my desktop
+
+118
+00:08:20,001 --> 00:08:24,009
+Eve uploading your own banner
+
+119
+00:08:24,009 --> 00:08:30,518
+but for now let's select company dumping
+the a bestseller template for you to
+
+120
+00:08:30,599 --> 00:08:31,310
+make it easy
+
+121
+00:08:31,031 --> 00:08:38,031
+and you can see that different for max a
+for this template the prophetic Mariko
+
+122
+00:08:39,579 --> 00:08:43,070
+for title
+
+123
+00:08:43,007 --> 00:08:48,030
+that give the name of the app and for
+message
+
+124
+00:08:48,003 --> 00:08:54,027
+if you are somebody had a and for Carter
+action
+
+125
+00:08:54,054 --> 00:08:58,078
+you have therapy to find one are you can
+always send a custom text
+
+126
+00:08:58,078 --> 00:09:03,093
+not detect download now and he did the
+preview
+
+127
+00:09:03,093 --> 00:09:06,135
+how your banner is going to look on a
+new life
+
+128
+00:09:07,035 --> 00:09:12,088
+you can click on view of IVF to see how
+we are prepared to create do for
+
+129
+00:09:12,088 --> 00:09:19,088
+iPhone iPad portrait and landscape not
+have the ability
+
+130
+00:09:20,000 --> 00:09:27,000
+better definition iTunes I just got
+another fed up to the destination
+
+131
+00:09:29,001 --> 00:09:32,046
+its binding to the car I i cant product
+page
+
+132
+00:09:32,055 --> 00:09:36,081
+funded act to go live
+
+133
+00:09:36,081 --> 00:09:39,139
+we need also see a diff fluid the line
+that we have created
+
+134
+00:09:40,039 --> 00:09:44,114
+I found it on the line
+
+135
+00:09:45,014 --> 00:09:49,082
+thank you that name Matic orelon
+
+136
+00:09:49,082 --> 00:09:55,091
+picking on next will take us to the ax
+Armani page
+
+137
+00:09:55,829 --> 00:10:01,550
+where you'll see all the acts that are
+created for this campaign
+
+138
+00:10:01,055 --> 00:10:06,074
+on you can always create more act from
+here by clicking on create AAC
+
+139
+00:10:06,569 --> 00:10:09,810
+looking on next mistake after the
+campaign summary page %um you can give
+
+140
+00:10:09,081 --> 00:10:09,089
+you all the details
+
+141
+00:10:10,061 --> 00:10:14,030
+in one place when you're promoting
+
+142
+00:10:14,579 --> 00:10:18,230
+what you're targeting when you attack
+
+143
+00:10:18,023 --> 00:10:21,080
+Inc if you have not fed up the payment
+yet
+
+144
+00:10:21,008 --> 00:10:24,047
+which is a credit card you can always
+click here
+
+145
+00:10:25,019 --> 00:10:29,608
+but let summit
+
+146
+00:10:29,779 --> 00:10:33,730
+the creators are summit fr I aggregation
+review
+
+147
+00:10:33,073 --> 00:10:39,080
+after month an approach your camp end of
+life that's how simple it is
+
+148
+00:10:39,008 --> 00:10:43,027
+back to punish so next
+
+149
+00:10:43,099 --> 00:10:46,180
+let's take a deeper dive at the tools
+options
+
+150
+00:10:47,008 --> 00:10:51,008
+controls flexibility you have in making
+advertising work
+
+151
+00:10:51,008 --> 00:10:57,034
+using my workbench relook at the
+
+152
+00:10:58,006 --> 00:11:02,073
+chip look at the choices you have into
+the audience
+
+153
+00:11:02,073 --> 00:11:05,160
+the controls you have in setting a price
+
+154
+00:11:06,006 --> 00:11:10,006
+the tools and options you have to create
+an add
+
+155
+00:11:10,006 --> 00:11:14,091
+make an impact and finally the the data
+and insights you have
+
+156
+00:11:15,045 --> 00:11:18,554
+to understand your campaign performance
+and optimize
+
+157
+00:11:18,959 --> 00:11:25,110
+let's talk to choosing audience
+selecting the right audience for your
+
+158
+00:11:25,011 --> 00:11:25,110
+Apple product
+
+159
+00:11:26,001 --> 00:11:30,097
+is key but I'd workbench you make it
+very easy for you
+
+160
+00:11:31,006 --> 00:11:34,093
+to define your audience at the highest
+level
+
+161
+00:11:34,093 --> 00:11:37,742
+you have two options auto
+
+162
+00:11:38,579 --> 00:11:42,360
+and manual are targeting
+
+163
+00:11:42,036 --> 00:11:46,040
+which is signed the demo is the simplest
+and probably the most powerful option we
+
+164
+00:11:46,076 --> 00:11:47,093
+have 1 I'd workbench
+
+165
+00:11:47,093 --> 00:11:50,252
+this is where I had does
+
+166
+00:11:51,089 --> 00:11:54,810
+all the heavy lifting for you if you
+want control
+
+167
+00:11:54,081 --> 00:11:58,120
+you can choose manual when you choose
+manual
+
+168
+00:11:59,002 --> 00:12:03,071
+you'll have several options to define
+your audience
+
+169
+00:12:03,089 --> 00:12:06,978
+on the left side uses simple targeting
+options
+
+170
+00:12:07,779 --> 00:12:11,410
+like gender age geo
+
+171
+00:12:11,041 --> 00:12:15,098
+and device you can choose for aid you
+can choose specific
+
+172
+00:12:15,098 --> 00:12:18,139
+age group that you want to target for
+geo
+
+173
+00:12:19,039 --> 00:12:22,137
+you can choose I specify states and EM
+is
+
+174
+00:12:23,037 --> 00:12:26,114
+that you want to target for users on the
+right side
+
+175
+00:12:27,014 --> 00:12:31,077
+that some very powerful options starting
+to the top
+
+176
+00:12:31,077 --> 00:12:34,456
+iTunes preferences is an option
+
+177
+00:12:35,149 --> 00:12:41,190
+that is exclusive to I had this is where
+the power of the App Store
+
+178
+00:12:41,019 --> 00:12:45,091
+and iTunes Store comes together to help
+you find the right audience
+
+179
+00:12:45,091 --> 00:12:50,890
+when you make a selection here you're
+basically selecting users
+
+180
+00:12:51,709 --> 00:12:55,410
+called actually downloaded content in
+that category
+
+181
+00:12:55,041 --> 00:12:59,085
+so if you were to promote a health and
+fitness
+
+182
+00:12:59,085 --> 00:13:05,092
+ap wouldn't it be great if you could
+choose the audience
+
+183
+00:13:05,092 --> 00:13:10,371
+who like to download health and fitness
+aP's are who you who like to download
+
+184
+00:13:11,199 --> 00:13:15,020
+fitness and workout music retired
+workbench
+
+185
+00:13:15,002 --> 00:13:20,074
+you can do that very powerful the next
+the options
+
+186
+00:13:20,074 --> 00:13:24,085
+lets you define value at once very wanna
+show you add
+
+187
+00:13:24,085 --> 00:13:28,099
+which is actual notes when you wanna
+show you add
+
+188
+00:13:28,099 --> 00:13:31,147
+that scheduling and how often
+
+189
+00:13:32,047 --> 00:13:35,226
+do you wanna show and had to a
+particular user which is frequency
+
+190
+00:13:35,649 --> 00:13:36,170
+capping
+
+191
+00:13:36,017 --> 00:13:39,102
+you can mix and match any of these
+options
+
+192
+00:13:40,002 --> 00:13:43,088
+to define the right audience for your
+campaign
+
+193
+00:13:43,088 --> 00:13:47,166
+next let's look at the flexibility you
+have
+
+194
+00:13:48,066 --> 00:13:52,131
+and setting your price: with I'd
+workbench
+
+195
+00:13:53,031 --> 00:13:58,080
+you can choose how you wanna pay for
+your campaign if you want to pay for
+
+196
+00:13:58,008 --> 00:13:58,787
+every click
+
+197
+00:13:59,579 --> 00:14:04,010
+you can to CPC if you wanna pay for
+every thousand impressions
+
+198
+00:14:04,001 --> 00:14:07,099
+you can to see p.m. the bid you enter
+
+199
+00:14:07,099 --> 00:14:11,113
+is the maximum you're willing to pay
+when you win the auction
+
+200
+00:14:12,013 --> 00:14:16,031
+I'd workbench is a bit odd marketplace
+
+201
+00:14:16,031 --> 00:14:20,120
+and on this platform you have the peace
+of mind to know
+
+202
+00:14:20,399 --> 00:14:23,440
+that you only pay up anymore
+
+203
+00:14:23,044 --> 00:14:28,125
+than the next highest bidder now let's
+look at the options you have been
+
+204
+00:14:29,025 --> 00:14:29,114
+creating your ad
+
+205
+00:14:30,014 --> 00:14:33,036
+there are a range of options you have
+
+206
+00:14:33,036 --> 00:14:37,635
+when it comes to selecting your act you
+can have banner ads
+
+207
+00:14:37,959 --> 00:14:42,660
+video ads which are also known as people
+
+208
+00:14:42,066 --> 00:14:49,066
+are rich media ads if you want higher
+engagement of the user's guides
+
+209
+00:14:51,003 --> 00:14:55,035
+banner ads provide aid direct path to
+action
+
+210
+00:14:55,035 --> 00:14:59,103
+up on top of a banner you can take a
+user directly to an iTunes product page
+
+211
+00:15:00,003 --> 00:15:03,036
+are to a mobile website up on top of a
+banner
+
+212
+00:15:03,036 --> 00:15:07,087
+you can also take a user and show them a
+video
+
+213
+00:15:07,087 --> 00:15:12,556
+and then take them to iTunes product
+page are to a mobile website
+
+214
+00:15:13,339 --> 00:15:17,770
+let's take a look as an example how a
+banner ad looks like
+
+215
+00:15:17,077 --> 00:15:22,083
+here's a nap you see the add will render
+at the bottom
+
+216
+00:15:23,037 --> 00:15:27,066
+after a few seconds to ad will refresh
+
+217
+00:15:27,066 --> 00:15:31,122
+the use and engage us with the ad
+
+218
+00:15:32,022 --> 00:15:35,891
+and when the user clicks on it the user
+is taken to the App Store
+
+219
+00:15:36,089 --> 00:15:39,150
+the user can download the app at this
+point
+
+220
+00:15:39,699 --> 00:15:42,763
+now once the user downloads the app
+
+221
+00:15:43,339 --> 00:15:47,388
+we don't chill the same download add
+again to this user
+
+222
+00:15:47,829 --> 00:15:50,841
+which means you don't waste your money
+
+223
+00:15:50,949 --> 00:15:57,760
+showing ads to users who already have
+your app
+
+224
+00:15:57,076 --> 00:16:01,130
+Nexus video ads video ads the
+automatically
+
+225
+00:16:02,003 --> 00:16:06,039
+before a video content they play
+directly in a full screen mode
+
+226
+00:16:06,066 --> 00:16:10,077
+between you ads you can also have an
+optional call to action
+
+227
+00:16:10,077 --> 00:16:13,099
+which will take the user can I do this
+product page
+
+228
+00:16:13,099 --> 00:16:16,118
+on a mobile website here's an example
+
+229
+00:16:17,018 --> 00:16:21,026
+above you can chase lie or let the light
+chase you
+
+230
+00:16:21,098 --> 00:16:27,116
+introduce a nitrate and I O S
+bookmarking tool for natural light
+
+231
+00:16:28,016 --> 00:16:34,445
+light right for iPhone now available in
+the app's
+
+232
+00:16:34,589 --> 00:16:38,390
+as you noticed there was a lot more link
+at the bottom of that BDO
+
+233
+00:16:38,039 --> 00:16:41,988
+the user clicks on that lamar link and
+the user is taken tonight is perfect
+
+234
+00:16:42,339 --> 00:16:42,345
+beach
+
+235
+00:16:42,939 --> 00:16:46,430
+you can also have the user go to a
+mobile website
+
+236
+00:16:46,043 --> 00:16:49,048
+if you want to create rich media ads
+
+237
+00:16:49,093 --> 00:16:54,127
+for more hiring agement you can do that
+using I don't think as well
+
+238
+00:16:55,027 --> 00:16:58,946
+up on top of a banner you can in March
+your users
+
+239
+00:16:59,189 --> 00:17:02,730
+into a very custom product or brand
+experience
+
+240
+00:17:02,073 --> 00:17:05,762
+you can choose any combination of
+features and any combination of cargo
+
+241
+00:17:06,419 --> 00:17:07,280
+actions
+
+242
+00:17:07,028 --> 00:17:11,036
+to create a rich media I show you an
+example
+
+243
+00:17:11,036 --> 00:17:14,345
+but the couple I and had actually used
+really good features
+
+244
+00:17:14,669 --> 00:17:18,760
+to create a great experience let's take
+a look
+
+245
+00:17:19,579 --> 00:17:23,652
+here's the app you see the had been
+rendered
+
+246
+00:17:24,309 --> 00:17:29,700
+the user taps on the ad and it's taken
+is a must into a brand experience
+
+247
+00:17:29,007 --> 00:17:34,986
+the user can browse through the pictures
+gallery
+
+248
+00:17:35,679 --> 00:17:40,040
+the user has been it is still within the
+app
+
+249
+00:17:40,004 --> 00:17:43,083
+you can take the user to Facebook so you
+can have a Facebook integration
+
+250
+00:17:43,083 --> 00:17:46,180
+you can have the user like your page on
+Facebook
+
+251
+00:17:47,008 --> 00:17:52,052
+you can have the reservations Mar module
+within the app
+
+252
+00:17:53,024 --> 00:17:58,026
+finally you can integrate the app
+download right from this plea
+
+253
+00:17:58,026 --> 00:18:01,079
+so as you see I'm in the you can do a
+lot of things when it comes to reach me
+
+254
+00:18:01,079 --> 00:18:03,094
+gots
+
+255
+00:18:03,094 --> 00:18:06,096
+now that awesome add was created
+
+256
+00:18:07,014 --> 00:18:11,028
+using a free tool that is available to
+everyone
+
+257
+00:18:11,028 --> 00:18:14,122
+which is gone as I producer
+
+258
+00:18:15,022 --> 00:18:18,035
+without producer you can create
+
+259
+00:18:18,035 --> 00:18:22,129
+highly interactive rich media ads they
+made it so easy for you
+
+260
+00:18:23,029 --> 00:18:27,032
+that you can just drag and drop your
+assets in a visual layout
+
+261
+00:18:27,059 --> 00:18:31,070
+are you can customize the visual mail
+
+262
+00:18:31,007 --> 00:18:35,066
+you provide you with an extensive
+library a $4,500 blueprints
+
+263
+00:18:36,029 --> 00:18:39,097
+which I like templates and when you use
+one of these blueprints
+
+264
+00:18:39,097 --> 00:18:42,134
+the combat built in performance and Alex
+
+265
+00:18:43,034 --> 00:18:46,048
+so you can see how you use it is
+engaging and interacting
+
+266
+00:18:46,048 --> 00:18:51,073
+with the rich media ad and finally with
+I pretty the 4.2
+
+267
+00:18:51,073 --> 00:18:55,272
+that was introduced just two weeks ago
+
+268
+00:18:55,929 --> 00:18:59,002
+yet integrated I producer with workbench
+
+269
+00:18:59,659 --> 00:19:02,664
+which means if you create an ad using I
+producer
+
+270
+00:19:03,159 --> 00:19:07,233
+you can now applauded directly onto
+workbench
+
+271
+00:19:07,899 --> 00:19:11,090
+and then you go to work bench
+
+272
+00:19:11,009 --> 00:19:15,010
+you have it available to use
+
+273
+00:19:15,019 --> 00:19:18,036
+so want to create a campaign
+
+274
+00:19:18,036 --> 00:19:24,355
+your campaign is running and you want to
+see how the companies performing
+
+275
+00:19:24,679 --> 00:19:28,300
+when it comes to camp in performance
+people I do rich
+
+276
+00:19:28,003 --> 00:19:31,044
+and Alex that helps you understand how
+your campaign is doing
+
+277
+00:19:31,071 --> 00:19:34,072
+so you can take the right actions
+
+278
+00:19:34,072 --> 00:19:37,103
+to give you data performance metrics as
+well as conversion metrics
+
+279
+00:19:38,003 --> 00:19:41,005
+which includes you know what you spend
+is your top two readers
+
+280
+00:19:41,023 --> 00:19:46,086
+number of impressions you've got as well
+as the downloads that you received
+
+281
+00:19:46,086 --> 00:19:51,162
+so you can tune your campaign you
+provide you this data at every level
+
+282
+00:19:52,062 --> 00:19:55,088
+at the aggregate campaign level as well
+as
+
+283
+00:19:55,088 --> 00:19:58,184
+at Lord line and adults
+
+284
+00:19:59,084 --> 00:20:02,152
+you can also download is data as a CSV
+file
+
+285
+00:20:03,052 --> 00:20:06,146
+from any of the mouth extreme
+
+286
+00:20:07,046 --> 00:20:10,505
+so at this point I'll ask lobby to walk
+us through some of these tools and
+
+287
+00:20:10,919 --> 00:20:12,690
+options that we talked about
+
+288
+00:20:12,069 --> 00:20:18,097
+to make advertising work thank you very
+
+289
+00:20:18,097 --> 00:20:23,151
+in this demo I'm not to walk you through
+some of the core concepts that pressure
+
+290
+00:20:24,051 --> 00:20:25,057
+mention
+
+291
+00:20:26,011 --> 00:20:31,027
+touching targeting some of the new Act
+for Mac on our tix
+
+292
+00:20:31,027 --> 00:20:34,916
+let's get started have been working on a
+campaign
+
+293
+00:20:35,159 --> 00:20:42,159
+haha picnic that finished his campaign
+together
+
+294
+00:20:43,000 --> 00:20:43,549
+exceeded
+
+295
+00:20:43,549 --> 00:20:48,556
+campaign and pick just one line with a
+man you're targeting
+
+296
+00:20:48,619 --> 00:20:51,694
+and I want to finish show you what
+targeting I'm fed up
+
+297
+00:20:52,369 --> 00:20:59,369
+by editing the line and literally act
+after this one
+
+298
+00:20:59,989 --> 00:21:03,040
+the car running option
+
+299
+00:21:03,499 --> 00:21:09,730
+manipulative man you know and DEF
+
+300
+00:21:09,073 --> 00:21:15,902
+and for the country if you get in a good
+state defend a different targeting
+
+301
+00:21:16,559 --> 00:21:16,614
+options
+
+302
+00:21:17,109 --> 00:21:23,320
+that we have available you can see on
+the options on the left hand side
+
+303
+00:21:23,032 --> 00:21:26,961
+on the right you see the options have
+been selected by default
+
+304
+00:21:27,249 --> 00:21:33,342
+it's all let my partner
+
+305
+00:21:34,179 --> 00:21:39,216
+fee of the after a printer when affect
+lifestyle
+
+306
+00:21:39,549 --> 00:21:43,980
+fought on video and travel
+
+307
+00:21:43,098 --> 00:21:48,098
+never act out I wanted a similar thing
+
+308
+00:21:48,098 --> 00:21:51,107
+wanted to live style
+
+309
+00:21:52,007 --> 00:21:55,806
+and wanted a foot on radio
+
+310
+00:21:55,869 --> 00:22:00,910
+and travel economic Senate Mar
+
+311
+00:22:01,279 --> 00:22:05,590
+messed up on in a holics performing for
+Act I
+
+312
+00:22:05,059 --> 00:22:08,078
+my family did to create a banner
+
+313
+00:22:08,609 --> 00:22:12,100
+defend their gonna do video ethically do
+
+314
+00:22:12,001 --> 00:22:17,660
+a website on the destination my goal
+here is to drive traffic to the website
+
+315
+00:22:17,759 --> 00:22:21,765
+and for Friday
+
+316
+00:22:22,359 --> 00:22:25,423
+lividity fart not given them spend
+
+317
+00:22:25,999 --> 00:22:29,086
+budget and big here let's go to the next
+day
+
+318
+00:22:29,869 --> 00:22:33,320
+their weekend
+
+319
+00:22:33,032 --> 00:22:39,581
+create an act here we have to try since
+a banner our video
+
+320
+00:22:39,869 --> 00:22:46,869
+attack video and very wet act you want
+to attack Iran
+
+321
+00:22:47,045 --> 00:22:50,084
+are divided for Mac long-range that pic
+you are so
+
+322
+00:22:50,084 --> 00:22:54,283
+for language let's keep it at English
+
+323
+00:22:55,039 --> 00:22:59,710
+and he had that effect there they need
+to upload a video file
+
+324
+00:22:59,071 --> 00:23:02,119
+I am your friend
+
+325
+00:23:03,019 --> 00:23:06,988
+supports to format from the media file
+and furry
+
+326
+00:23:07,159 --> 00:23:11,160
+animal the nephew my specs here right
+here
+
+327
+00:23:11,259 --> 00:23:15,264
+the inkatha you to follow defect so you
+don't rip on any validation errors
+
+328
+00:23:15,759 --> 00:23:22,759
+let up
+
+329
+00:23:23,019 --> 00:23:26,076
+the fight is being uploaded from my
+laptop do the work myself much right now
+
+330
+00:23:26,076 --> 00:23:31,128
+watched the fiery just the fireworks the
+file will be transcoded
+
+331
+00:23:32,028 --> 00:23:36,036
+to multiple farm act disorder divider
+
+332
+00:23:36,036 --> 00:23:40,061
+Andalucian like iPhone hired Laura
+
+333
+00:23:40,061 --> 00:23:44,077
+iPad hi to them north it's uploading
+right now
+
+334
+00:23:44,077 --> 00:23:49,080
+many think
+
+335
+00:23:49,008 --> 00:23:53,029
+takes time I get them
+
+336
+00:23:54,001 --> 00:23:58,044
+defusing the network bandwidth I guess
+right now if you'd like to file a brief
+
+337
+00:23:58,044 --> 00:24:03,087
+Federer and you thought the status
+change the formatting did random video
+
+338
+00:24:03,087 --> 00:24:04,100
+transcoding is happening
+
+339
+00:24:05,000 --> 00:24:09,005
+did actually transforming the video
+disorder other devices
+
+340
+00:24:09,005 --> 00:24:12,063
+let's take a quick preview
+
+341
+00:24:12,063 --> 00:24:18,107
+you can chase like
+
+342
+00:24:19,007 --> 00:24:23,086
+or let the light Shishir introducing
+nitrate
+
+343
+00:24:23,086 --> 00:24:29,128
+and I always put marking time for
+natural light like right for iPhone now
+
+344
+00:24:30,028 --> 00:24:37,028
+available ironically video
+
+345
+00:24:38,045 --> 00:24:41,119
+100 one thing here
+
+346
+00:24:42,019 --> 00:24:47,115
+for you have an advertiser preparing one
+file
+
+347
+00:24:48,015 --> 00:24:52,047
+21 technical specification be assured I
+
+348
+00:24:52,047 --> 00:24:55,085
+your add video act is going to run
+
+349
+00:24:55,085 --> 00:25:00,098
+on all Apple devices in the best way
+possible
+
+350
+00:25:00,098 --> 00:25:05,154
+to back how simple it is still up
+
+351
+00:25:06,054 --> 00:25:12,148
+creativity actor you the flood effect
+for Mac the inca you to take advantage
+
+352
+00:25:13,048 --> 00:25:19,050
+of it accepted definition and the fed
+and I do have at
+
+353
+00:25:19,005 --> 00:25:22,012
+website you can you the URL right here
+
+354
+00:25:23,002 --> 00:25:30,002
+and then even after for the destination
+
+355
+00:25:31,051 --> 00:25:35,087
+the name I like the name like pregnant
+thank your
+
+356
+00:25:35,087 --> 00:25:38,168
+and likely would have if artifact to go
+live
+
+357
+00:25:39,068 --> 00:25:42,101
+in a defined in the line not defended
+the video online that they create an
+
+358
+00:25:43,001 --> 00:25:43,046
+earlier
+
+359
+00:25:43,046 --> 00:25:49,060
+name tag and I
+
+360
+00:25:49,006 --> 00:25:56,006
+name again my awesome video taking on
+extra day after the Act summary page
+
+361
+00:26:00,054 --> 00:26:04,058
+to tax that mr. of them
+
+362
+00:26:04,058 --> 00:26:09,135
+powerful act for Magglio at so far in my
+
+363
+00:26:10,035 --> 00:26:14,098
+two demos the mainly focused on
+
+364
+00:26:14,098 --> 00:26:18,124
+creating a campaign on editing a
+campaign focused on the baton parting
+
+365
+00:26:19,024 --> 00:26:22,102
+a knack for Mac once a campaign is
+created
+
+366
+00:26:23,002 --> 00:26:27,077
+the next thing to fogarty monitoring the
+performance of the campaign
+
+367
+00:26:27,077 --> 00:26:30,176
+to ensure that it is going toward the
+goal
+
+368
+00:26:31,076 --> 00:26:38,076
+your head out for in order to monitor
+the performance of the campaign
+
+369
+00:26:39,042 --> 00:26:43,118
+the aftermarket the next I want you to
+take
+
+370
+00:26:44,018 --> 00:26:50,027
+I want to take you to the Alltech FEI if
+have this to campaign
+
+371
+00:26:50,027 --> 00:26:54,069
+there have been running for a fifth
+month I want bill
+
+372
+00:26:54,069 --> 00:27:00,083
+show the performance of this campaign
+you see that actual just the basic meant
+
+373
+00:27:00,083 --> 00:27:00,154
+to expand
+
+374
+00:27:01,054 --> 00:27:04,054
+impression DDR and conversion
+
+375
+00:27:04,054 --> 00:27:08,150
+you can click on any of this metric and
+going to the death
+
+376
+00:27:09,005 --> 00:27:14,020
+may be far did you since campaign stock
+
+377
+00:27:14,065 --> 00:27:20,114
+and you have different custom dating if
+you can fact that they're prepared for
+
+378
+00:27:21,014 --> 00:27:21,046
+you
+
+379
+00:27:21,046 --> 00:27:28,046
+misconduct of 30 days back to spend for
+the last edited for this campaign
+
+380
+00:27:29,018 --> 00:27:34,042
+seems like we are spending more in the
+weekend gonna spend is coming down into
+
+381
+00:27:34,042 --> 00:27:34,090
+the death
+
+382
+00:27:34,009 --> 00:27:38,011
+you have different metric that you can
+view
+
+383
+00:27:39,001 --> 00:27:43,003
+have listed here and
+
+384
+00:27:43,012 --> 00:27:50,012
+you can overlay any metric on top of it
+are if you want to compare how ya been
+
+385
+00:27:50,016 --> 00:27:50,083
+spending
+
+386
+00:27:50,083 --> 00:27:53,155
+compared to the previous media you
+cannot affect
+
+387
+00:27:54,055 --> 00:27:57,060
+empirically with me that gives you
+
+388
+00:27:58,005 --> 00:28:02,030
+how the last edited is performing and a
+button up in a 30-day
+
+389
+00:28:02,003 --> 00:28:07,011
+only the pretty
+
+390
+00:28:07,038 --> 00:28:11,046
+need feature made you can overlay any
+metric here
+
+391
+00:28:11,046 --> 00:28:14,089
+and compared to the fan
+
+392
+00:28:14,089 --> 00:28:20,096
+I wanted average CPA madrick
+
+393
+00:28:20,096 --> 00:28:26,142
+impregnating less than two dollars for
+download here
+
+394
+00:28:27,042 --> 00:28:30,125
+that's going to the likes
+
+395
+00:28:31,025 --> 00:28:34,120
+buddy finally gives you the committed a
+number you can always
+
+396
+00:28:35,002 --> 00:28:39,087
+fact I'm thank you to staff to see how
+the line for performing
+
+397
+00:28:40,005 --> 00:28:44,028
+in fact we are spending more on this
+line on this one
+
+398
+00:28:44,028 --> 00:28:49,120
+and you can do similar analysis on that
+site at La
+
+399
+00:28:50,002 --> 00:28:54,035
+buddy far did you hear that the fan
+fucking video you can always change tab
+
+400
+00:28:54,053 --> 00:28:58,091
+the metric and change to the bank he did
+graph
+
+401
+00:28:58,091 --> 00:29:01,092
+pretty close on this to act your
+
+402
+00:29:01,092 --> 00:29:05,135
+may go back to the summary and find a
+couple of things here
+
+403
+00:29:06,035 --> 00:29:09,035
+you can easily toggle between a graph on
+the table you
+
+404
+00:29:09,035 --> 00:29:12,614
+features to do so
+
+405
+00:29:12,929 --> 00:29:17,610
+Rd you can scar down and you can click
+on Download via free
+
+406
+00:29:17,061 --> 00:29:20,099
+to get a file and your dad desktop
+
+407
+00:29:20,099 --> 00:29:23,127
+and offer announces and don't see if
+he's available
+
+408
+00:29:24,027 --> 00:29:27,094
+across the board on dashboard on every
+and XP
+
+409
+00:29:27,094 --> 00:29:31,192
+that we have
+
+410
+00:29:32,092 --> 00:29:35,149
+to toxic Greek or we offer you know how
+to measure it
+
+411
+00:29:36,049 --> 00:29:39,058
+the performance of your campaign
+
+412
+00:29:39,058 --> 00:29:42,062
+all the data that i've been showing last
+five minutes
+
+413
+00:29:42,062 --> 00:29:45,123
+back data is available to the API
+
+414
+00:29:46,023 --> 00:29:50,028
+connect them not to talk you through the
+complete overview of I add 120 API
+
+415
+00:29:50,028 --> 00:29:53,091
+that we have released this year say you
+are
+
+416
+00:29:53,091 --> 00:29:57,130
+you an advertiser you created multiple
+campaigns
+
+417
+00:29:58,003 --> 00:30:01,035
+on managing on earth campaign
+
+418
+00:30:01,062 --> 00:30:05,087
+and you want to scale be on the web
+interface
+
+419
+00:30:05,087 --> 00:30:09,096
+ABA Pheri for your aggravate her
+
+420
+00:30:09,096 --> 00:30:14,160
+want to get the metric unincorporated
+your own dashboard
+
+421
+00:30:15,006 --> 00:30:18,045
+ABA for you let's get into the
+
+422
+00:30:18,099 --> 00:30:25,099
+more details you can also use it for
+bulk operations
+
+423
+00:30:26,065 --> 00:30:31,082
+UPA's have two broad categories
+
+424
+00:30:31,082 --> 00:30:35,087
+reporting then you can get the metric
+
+425
+00:30:36,032 --> 00:30:39,105
+and perform their of Ryan and real-time
+analysis
+
+426
+00:30:40,005 --> 00:30:43,134
+what I mean by real-time analysis
+
+427
+00:30:43,179 --> 00:30:48,220
+you can write a program for example the
+grounds at the top of every hour
+
+428
+00:30:48,022 --> 00:30:51,081
+get the metrics a night at the data
+
+429
+00:30:51,081 --> 00:30:55,094
+and modify your campaign data you can't
+rape the bed
+
+430
+00:30:55,094 --> 00:31:00,083
+start and stop a campaign add that's
+what a popular B&M analysis
+
+431
+00:31:00,929 --> 00:31:07,004
+for of an analysis you can do you don't
+act
+
+432
+00:31:07,679 --> 00:31:11,590
+campaign management in the campaign to
+do
+
+433
+00:31:11,059 --> 00:31:18,059
+a bit but a campaign data and start and
+stop campaign find track
+
+434
+00:31:19,064 --> 00:31:23,125
+let's get into some very basic the
+talking about EPA here
+
+435
+00:31:24,025 --> 00:31:27,100
+for communication
+
+436
+00:31:28,000 --> 00:31:31,046
+APA you have Jason orange GPS
+
+437
+00:31:31,046 --> 00:31:34,097
+we want to keep the data protocol pretty
+simple 30 the Ghana dan
+
+438
+00:31:34,097 --> 00:31:37,106
+and unity that kept used a fun for data
+
+439
+00:31:38,087 --> 00:31:42,136
+got and its owner GDP at for security
+
+440
+00:31:43,036 --> 00:31:46,109
+the next authentication
+
+441
+00:31:47,009 --> 00:31:50,105
+the US plans to take the K private key
+
+442
+00:31:51,005 --> 00:31:54,030
+an access token and a combination
+
+443
+00:31:54,003 --> 00:31:58,080
+for a vindication making it a very
+strong authentication
+
+444
+00:31:59,007 --> 00:32:03,013
+I'm for key management you want to make
+it as easy as possible
+
+445
+00:32:03,067 --> 00:32:07,086
+so you can we having them interface for
+that on workbench
+
+446
+00:32:07,086 --> 00:32:11,133
+ap
+
+447
+00:32:12,033 --> 00:32:15,036
+so how do you manage your def a PIA
+
+448
+00:32:15,036 --> 00:32:18,107
+get the basics tab download Keith verify
+keefe
+
+449
+00:32:19,007 --> 00:32:22,058
+on in today
+
+450
+00:32:22,058 --> 00:32:25,150
+go to work bench got an API page
+
+451
+00:32:26,005 --> 00:32:29,093
+click on the download link to download
+the key
+
+452
+00:32:30,038 --> 00:32:33,056
+menu Donald the Keith did you read the
+file to have peace
+
+453
+00:32:33,056 --> 00:32:39,104
+and sample programs and family programs
+up already embedded with your keys
+
+454
+00:32:40,004 --> 00:32:44,008
+run the sample program and verify the
+key
+
+455
+00:32:44,044 --> 00:32:49,763
+fine and then don't know the API
+programming guide
+
+456
+00:32:50,159 --> 00:32:53,810
+read your own program deprive them on
+your farmers
+
+457
+00:32:53,081 --> 00:32:57,132
+and integrate that's how simple it is
+
+458
+00:32:58,032 --> 00:33:02,060
+new cookie walk in from the car matter
+
+459
+00:33:02,006 --> 00:33:05,090
+we have any session but session
+initialization which is key
+
+460
+00:33:06,044 --> 00:33:08,139
+because you need to pop aficionado for
+every method that you are going to Cali
+
+461
+00:33:09,039 --> 00:33:10,106
+a program
+
+462
+00:33:11,006 --> 00:33:15,012
+fun API campaign matter magnetometer
+
+463
+00:33:15,012 --> 00:33:18,025
+to get the campaign tito
+
+464
+00:33:18,025 --> 00:33:23,029
+reporting API to get the metrics
+
+465
+00:33:23,029 --> 00:33:26,090
+and campaign management API to update
+the details
+
+466
+00:33:26,009 --> 00:33:31,075
+as I left out on top
+
+467
+00:33:32,056 --> 00:33:35,145
+now I'm going to walk you decide on the
+fam program that every damn
+
+468
+00:33:36,045 --> 00:33:39,062
+using the highlighted made it here
+indexation
+
+469
+00:33:39,062 --> 00:33:44,128
+get campaign did out and a bit like
+
+470
+00:33:45,028 --> 00:33:48,123
+for here just summer program sample
+matter
+
+471
+00:33:49,023 --> 00:33:55,088
+man I'm trying to pass access token
+prepared the press tab
+
+472
+00:33:55,088 --> 00:33:58,126
+posted to the Federer
+
+473
+00:33:59,026 --> 00:34:02,039
+and get the response back and read
+defection from back
+
+474
+00:34:02,039 --> 00:34:07,073
+session ID from their funds once I get
+the fish in it.
+
+475
+00:34:07,073 --> 00:34:12,126
+iPad affection I D cue get the campaign
+to identify that
+
+476
+00:34:13,026 --> 00:34:16,122
+get the campaign a def and forget about
+running state
+
+477
+00:34:17,022 --> 00:34:22,070
+possible the summer get that fought back
+
+478
+00:34:22,007 --> 00:34:26,042
+next for the campaign you don't I got
+and passing
+
+479
+00:34:27,005 --> 00:34:31,083
+the line 95 which I want to increase the
+bid thank give the line at session ID
+
+480
+00:34:31,083 --> 00:34:36,088
+line I T and Phoebe Mb
+
+481
+00:34:37,033 --> 00:34:41,069
+pasta Federer and get their funds back
+
+482
+00:34:41,069 --> 00:34:48,069
+that's how simple it is to write the
+programs to communicate with API
+
+483
+00:34:49,429 --> 00:34:54,340
+powerful secular and easy to use
+
+484
+00:34:54,034 --> 00:34:57,096
+got paid out the death
+
+485
+00:34:57,096 --> 00:35:00,128
+I'm going to pass on to punish to walk
+us through
+
+486
+00:35:01,028 --> 00:35:04,092
+what's coming next take a fresh
+
+487
+00:35:04,092 --> 00:35:07,170
+think you're on the it's fascinating
+what you can do with the PI's
+
+488
+00:35:08,007 --> 00:35:13,101
+and how you can make by changes to your
+campaigns from your own user interface
+
+489
+00:35:14,064 --> 00:35:17,070
+so what's coming to spot
+
+490
+00:35:17,007 --> 00:35:21,010
+so far we've talked about how I had
+workbench can help you acquire new
+
+491
+00:35:22,000 --> 00:35:24,004
+customers
+
+492
+00:35:24,004 --> 00:35:28,088
+but that's just half the battle for you
+to grow your business
+
+493
+00:35:28,088 --> 00:35:32,121
+you also need to reengage picture
+existing customers
+
+494
+00:35:33,021 --> 00:35:36,084
+and have them do more of what you want
+
+495
+00:35:36,084 --> 00:35:39,087
+whether it's spending more time in your
+app
+
+496
+00:35:39,087 --> 00:35:44,101
+buy more of your products are even
+trying a new app
+
+497
+00:35:45,001 --> 00:35:48,015
+I came across a study recently on the
+web
+
+498
+00:35:48,015 --> 00:35:51,724
+by mobile analytics firm local ex which
+said
+
+499
+00:35:51,859 --> 00:35:54,900
+22 percent of the maps that were
+downloaded
+
+500
+00:35:54,009 --> 00:35:58,061
+were used only once and over sixty
+percent of them
+
+501
+00:35:59,042 --> 00:36:02,093
+will use less than 10 less than 10 times
+
+502
+00:36:02,093 --> 00:36:05,171
+now you want users to frequently engage
+with you up
+
+503
+00:36:06,071 --> 00:36:10,077
+on your website let's take a few
+examples how
+
+504
+00:36:10,077 --> 00:36:12,163
+engaged to be engaged in with your
+customers can help you grow your
+
+505
+00:36:13,063 --> 00:36:16,114
+business
+
+506
+00:36:17,014 --> 00:36:20,100
+first example is about a game app
+
+507
+00:36:21,000 --> 00:36:24,089
+see you came up with a new iPad washin
+
+508
+00:36:24,089 --> 00:36:27,110
+after iPhone game
+
+509
+00:36:28,001 --> 00:36:33,072
+now who would be the best customers for
+this new app
+
+510
+00:36:33,081 --> 00:36:38,130
+of course the user's who use that game
+on the iPhone
+
+511
+00:36:39,003 --> 00:36:42,011
+what if you had a way to connect
+
+512
+00:36:43,001 --> 00:36:46,086
+with these customers and informed them
+
+513
+00:36:46,095 --> 00:36:50,120
+about your new game and what if you
+could inform them
+
+514
+00:36:51,002 --> 00:36:56,090
+about this new game when they're on the
+iPad
+
+515
+00:36:57,008 --> 00:37:00,049
+arthur you enhance your app and United
+more levels
+
+516
+00:37:00,049 --> 00:37:05,117
+Morgan levels are you are more things
+that you wanna sell in Europe
+
+517
+00:37:06,017 --> 00:37:12,105
+what if you had a way to reengage with
+the user's
+
+518
+00:37:13,005 --> 00:37:16,039
+and Scholl are promote these levels
+
+519
+00:37:16,039 --> 00:37:20,060
+only to users were beached seven levels
+in a game
+
+520
+00:37:20,006 --> 00:37:24,048
+a show this much in NYS only to you to
+to users who actually buy merchandise
+
+521
+00:37:25,002 --> 00:37:28,004
+like this
+
+522
+00:37:28,022 --> 00:37:33,027
+and what about all those users who
+downloaded your %ah
+
+523
+00:37:33,072 --> 00:37:36,151
+but haven't used it in the last two
+weeks
+
+524
+00:37:37,051 --> 00:37:40,144
+what if you had a way to reconnect with
+them
+
+525
+00:37:41,044 --> 00:37:44,092
+and motivate them to try come back and
+try your
+
+526
+00:37:44,092 --> 00:37:47,103
+app again and what if you could connect
+with them
+
+527
+00:37:48,003 --> 00:37:53,102
+when they're not in your app let's take
+another example
+
+528
+00:37:54,002 --> 00:37:57,035
+a retailer see you have a regular
+
+529
+00:37:57,035 --> 00:38:00,133
+now you have users who browse through
+your product catalog
+
+530
+00:38:01,033 --> 00:38:05,292
+and acting to the shopping basket many
+of these users
+
+531
+00:38:05,589 --> 00:38:10,614
+exit the app before they actually make a
+purchase
+
+532
+00:38:10,839 --> 00:38:15,470
+what if you had a way to find these
+users
+
+533
+00:38:15,047 --> 00:38:18,083
+and bring them back to finish the
+purchase
+
+534
+00:38:18,083 --> 00:38:22,137
+and what if you could bring them back
+exactly at the point where dad left
+
+535
+00:38:23,037 --> 00:38:26,103
+in the shopping basket so they can
+finish the transaction
+
+536
+00:38:27,003 --> 00:38:30,091
+in next step
+
+537
+00:38:30,091 --> 00:38:34,098
+and if you want to send offers to a
+loyal customers
+
+538
+00:38:34,098 --> 00:38:37,182
+what if you could show these offers deal
+I'll customers irrespective of
+
+539
+00:38:38,082 --> 00:38:43,146
+what I was devised their own
+
+540
+00:38:44,046 --> 00:38:48,069
+and for users and your customers were
+items in the wish list
+
+541
+00:38:48,069 --> 00:38:52,072
+what if you could reconnect with these
+and inform them
+
+542
+00:38:52,072 --> 00:38:56,941
+when the items and the Restless are on
+sale
+
+543
+00:38:57,589 --> 00:39:00,980
+now in each of these examples that we
+talked about
+
+544
+00:39:00,098 --> 00:39:04,169
+you talked about reconnecting with a
+specific group of audience
+
+545
+00:39:05,069 --> 00:39:08,163
+whether it's all the customers who have
+downloaded iraq
+
+546
+00:39:09,063 --> 00:39:12,099
+are the Dharma users who haven't used to
+ap
+
+547
+00:39:12,099 --> 00:39:16,104
+are the loyal users who purchases for
+you
+
+548
+00:39:17,004 --> 00:39:20,028
+other users who have an abandoned car on
+your shopping
+
+549
+00:39:20,028 --> 00:39:23,030
+on your app be call
+
+550
+00:39:23,048 --> 00:39:27,121
+these group of audiences
+
+551
+00:39:28,021 --> 00:39:35,021
+segments now they're probably a million
+ways you could segment audience
+
+552
+00:39:35,023 --> 00:39:38,101
+you know your business and your app and
+users best
+
+553
+00:39:39,001 --> 00:39:43,017
+so you will segment two users the way
+you want it
+
+554
+00:39:43,017 --> 00:39:47,045
+and for you too easily create segments
+
+555
+00:39:47,045 --> 00:39:51,139
+you're introducing a new functionality
+this fall with I was 8
+
+556
+00:39:52,039 --> 00:39:55,103
+which we call audience segmentation
+
+557
+00:39:56,003 --> 00:39:59,077
+billing segments using audience
+segmentation is very easy
+
+558
+00:39:59,077 --> 00:40:02,143
+you could do it in just two steps
+
+559
+00:40:03,043 --> 00:40:07,076
+the first one is you get segment ID's
+
+560
+00:40:07,076 --> 00:40:11,108
+from Ironwood branch not every segment
+
+561
+00:40:12,008 --> 00:40:15,033
+is unique so it has a unique segment ID
+
+562
+00:40:15,033 --> 00:40:18,095
+you can download the segment ID's from
+I'd want bans
+
+563
+00:40:18,095 --> 00:40:22,127
+want to get the segment ID's you can
+integrate the segment ID's
+
+564
+00:40:23,027 --> 00:40:26,080
+in Iraq
+
+565
+00:40:26,008 --> 00:40:30,066
+you map the user behavior are the
+functionality you have in the app
+
+566
+00:40:31,038 --> 00:40:36,110
+BD segment ID and when a user
+demonstrates a particular user behavior
+
+567
+00:40:37,001 --> 00:40:41,003
+reaches the functionality city just a
+particular level
+
+568
+00:40:41,003 --> 00:40:45,070
+you in through my dad in a weight that
+you automatically make API call
+
+569
+00:40:45,097 --> 00:40:49,135
+using the new I O S it as decay
+
+570
+00:40:50,035 --> 00:40:54,039
+and past that segment ID onto one page
+
+571
+00:40:54,075 --> 00:40:58,148
+now when you do that your segments but
+automatically start getting populated
+
+572
+00:40:59,048 --> 00:41:03,070
+on i'd one-page here's an example
+segmentation was done
+
+573
+00:41:03,007 --> 00:41:06,083
+based on time spent in an app
+
+574
+00:41:07,046 --> 00:41:11,115
+various segments users who have spent
+less than one hour in the app
+
+575
+00:41:12,015 --> 00:41:15,038
+1 to 10 hours 10 to 20 and 20-plus
+
+576
+00:41:15,038 --> 00:41:21,100
+hours India now if you were to reconnect
+re-engage with these users
+
+577
+00:41:22,000 --> 00:41:25,069
+you would probably have a very different
+strategy when it comes to be engaging
+
+578
+00:41:25,069 --> 00:41:25,105
+you
+
+579
+00:41:26,005 --> 00:41:29,017
+with users who have spent less than out
+in your app
+
+580
+00:41:29,017 --> 00:41:34,076
+compared to have spent more than 20
+hours
+
+581
+00:41:34,076 --> 00:41:37,108
+here's another another example
+segmentation is based
+
+582
+00:41:38,008 --> 00:41:42,247
+on level the views
+
+583
+00:41:42,319 --> 00:41:45,670
+whenever you are you thirty just a
+particular level
+
+584
+00:41:45,067 --> 00:41:49,088
+the goal from level 1 to level 2 API
+call that I talked about his
+
+585
+00:41:49,088 --> 00:41:52,146
+automatically made from the client site
+from your apt
+
+586
+00:41:53,046 --> 00:41:56,425
+and the night segment ID's past and the
+user gets added
+
+587
+00:41:56,839 --> 00:42:00,670
+to this new segment so once you do
+segmentation this way
+
+588
+00:42:00,067 --> 00:42:03,089
+using Iowa City we can unlock
+
+589
+00:42:03,089 --> 00:42:07,142
+some amazing thanks which being brings
+us to the second thing that the
+
+590
+00:42:08,042 --> 00:42:09,981
+increasing this fall
+
+591
+00:42:10,359 --> 00:42:14,630
+because I like audience insights
+
+592
+00:42:14,063 --> 00:42:18,154
+then you're segments Beach a particular
+potential abusers
+
+593
+00:42:19,054 --> 00:42:23,080
+even show you unique audience insights
+into your segments
+
+594
+00:42:23,008 --> 00:42:26,066
+all for free at no charge
+
+595
+00:42:27,038 --> 00:42:30,073
+these insights are based on iTunes data
+
+596
+00:42:30,073 --> 00:42:33,662
+surveys show you how the distribution as
+up the users in your segment
+
+597
+00:42:34,319 --> 00:42:37,880
+the demographic distribution how age
+
+598
+00:42:37,088 --> 00:42:42,089
+gender Houseal income distribution is
+for these users
+
+599
+00:42:42,098 --> 00:42:45,937
+show you the top regions the top
+countries top States
+
+600
+00:42:46,819 --> 00:42:50,020
+the Emmys these users come from
+
+601
+00:42:50,002 --> 00:42:53,571
+the top languages these users have on
+the devices
+
+602
+00:42:53,589 --> 00:42:57,310
+as well as the top iTunes preferences of
+these users so you know
+
+603
+00:42:57,031 --> 00:43:00,052
+what are the things that really like to
+download
+
+604
+00:43:00,052 --> 00:43:03,133
+now once you have these unique insights
+you can take some
+
+605
+00:43:04,033 --> 00:43:08,272
+very tangible actions
+
+606
+00:43:08,569 --> 00:43:12,780
+if you know the demographics of the
+audience and in the segment
+
+607
+00:43:12,078 --> 00:43:15,099
+you can find junior ap pursuit
+
+608
+00:43:15,099 --> 00:43:18,198
+more of the demographics
+
+609
+00:43:19,089 --> 00:43:22,164
+if you know the top regions and the
+languages
+
+610
+00:43:22,839 --> 00:43:28,190
+of the audience you might want to
+consider localizing Europe
+
+611
+00:43:28,019 --> 00:43:31,088
+if you haven't English up and you know
+that the top region
+
+612
+00:43:31,088 --> 00:43:35,100
+is asia-pacific and the top language is
+Japanese
+
+613
+00:43:36,000 --> 00:43:39,018
+you might want to make a Japanese up
+
+614
+00:43:39,018 --> 00:43:43,927
+if you created a segment of all your
+lawyer users
+
+615
+00:43:44,089 --> 00:43:48,080
+now you understand the characteristics
+of those audience
+
+616
+00:43:48,008 --> 00:43:51,016
+and then using workbench targeting you
+can find
+
+617
+00:43:51,016 --> 00:43:55,695
+more of the same and you can't build
+your audience pool
+
+618
+00:43:55,839 --> 00:43:58,880
+and finally with audience segmentation
+
+619
+00:43:58,088 --> 00:44:02,110
+an audience targeting together we can
+bring you
+
+620
+00:44:03,001 --> 00:44:07,079
+another big thing which you're also
+introducing this fall
+
+621
+00:44:07,088 --> 00:44:11,027
+and recall it i dnt targeting
+
+622
+00:44:11,819 --> 00:44:16,980
+i dnt targeting lets you re engage with
+every segment that you have
+
+623
+00:44:16,098 --> 00:44:19,149
+in a customized me you can give a
+customer experience
+
+624
+00:44:20,049 --> 00:44:25,052
+each of your segments so now you when
+you had those garment users wouldn't use
+
+625
+00:44:25,079 --> 00:44:27,098
+your app
+
+626
+00:44:27,098 --> 00:44:30,101
+you can we engage with those users with
+that segment
+
+627
+00:44:31,001 --> 00:44:38,001
+show them a custom message motivate them
+to come back and try out again
+
+628
+00:44:39,069 --> 00:44:41,930
+and then you have users who have reached
+a certain level and you want to push
+
+629
+00:44:41,093 --> 00:44:43,272
+them to the next level
+
+630
+00:44:44,109 --> 00:44:49,010
+you can create a segment of the users
+who have reached a level two
+
+631
+00:44:49,001 --> 00:44:52,046
+show them a custom message about love
+pretty
+
+632
+00:44:52,046 --> 00:44:55,141
+and engage with that take them to level
+3
+
+633
+00:44:56,041 --> 00:45:00,056
+not open the app deep link them
+
+634
+00:45:00,056 --> 00:45:03,071
+directly to level three
+
+635
+00:45:03,071 --> 00:45:06,076
+and those users who had an abandoned
+card in your retail ap
+
+636
+00:45:06,076 --> 00:45:10,149
+you can re-engage are retarded those
+users
+
+637
+00:45:11,049 --> 00:45:14,092
+irrespective of what device they are on
+
+638
+00:45:14,092 --> 00:45:17,137
+and bring them back to your app
+
+639
+00:45:18,037 --> 00:45:22,216
+not only bring them back deep link them
+
+640
+00:45:22,549 --> 00:45:26,710
+directly to the shopping basket so the
+next step
+
+641
+00:45:26,071 --> 00:45:29,137
+they can finish the purchase
+
+642
+00:45:30,037 --> 00:45:34,037
+so really anything is possible for each
+of your segments
+
+643
+00:45:34,037 --> 00:45:37,099
+you can create that awesome message
+
+644
+00:45:37,099 --> 00:45:42,138
+and take the user to verify you want in
+the app are given to any website
+
+645
+00:45:43,038 --> 00:45:47,039
+now that's not it with the audience
+retargeting
+
+646
+00:45:47,039 --> 00:45:51,054
+actually find those users for you
+
+647
+00:45:51,054 --> 00:45:54,099
+on any I was device
+
+648
+00:45:54,099 --> 00:45:57,106
+so now when you have an example that he
+went to use your iPad
+
+649
+00:45:58,006 --> 00:46:01,062
+ap a new app now you can find
+
+650
+00:46:01,062 --> 00:46:04,100
+your iPhone app users
+
+651
+00:46:05,000 --> 00:46:08,067
+when they're on the iPad
+
+652
+00:46:08,067 --> 00:46:11,081
+so what you're introducing here is a
+crossed ap
+
+653
+00:46:11,081 --> 00:46:14,116
+cross a device retarding
+
+654
+00:46:15,016 --> 00:46:18,675
+docked is huge
+
+655
+00:46:18,819 --> 00:46:21,867
+what is unique about this the first
+thing is
+
+656
+00:46:22,299 --> 00:46:25,370
+automation that comes with it
+
+657
+00:46:25,037 --> 00:46:28,056
+when you both segments using I was 8
+
+658
+00:46:28,056 --> 00:46:32,147
+your segments are automatically updated
+in real time
+
+659
+00:46:33,047 --> 00:46:36,091
+no more of manually harvesting idea
+phase
+
+660
+00:46:36,091 --> 00:46:39,750
+sharing them with your network partners
+
+661
+00:46:40,569 --> 00:46:44,750
+your data is most secure when it's in
+one place
+
+662
+00:46:44,075 --> 00:46:48,144
+and there's no better place an Apple
+iPad but you create segments
+
+663
+00:46:48,819 --> 00:46:51,823
+this me same addition is automated
+
+664
+00:46:51,859 --> 00:46:54,930
+audience insights run based on
+segmentation
+
+665
+00:46:55,569 --> 00:46:59,770
+that the Obama updated as well as the
+audience retarding
+
+666
+00:46:59,077 --> 00:47:02,090
+is updated in real time
+
+667
+00:47:02,009 --> 00:47:05,057
+the next thing as privacy
+
+668
+00:47:06,038 --> 00:47:10,093
+audience to be targeting and the Sendai
+solution be talked about
+
+669
+00:47:10,093 --> 00:47:13,117
+is deeply integrated with the IRS
+
+670
+00:47:14,017 --> 00:47:17,052
+you get all the benefits of the built-in
+privacy controls
+
+671
+00:47:17,052 --> 00:47:22,076
+that comp the solutions complies with
+the limit at tracking
+
+672
+00:47:22,076 --> 00:47:25,112
+so now if you have a user who has limit
+at tracking
+
+673
+00:47:26,012 --> 00:47:29,231
+on but use that is removed automatically
+
+674
+00:47:29,339 --> 00:47:33,416
+from the segments so the user is not
+retarded
+
+675
+00:47:34,109 --> 00:47:39,250
+everything is automated you have nothing
+to worry about
+
+676
+00:47:39,025 --> 00:47:43,124
+so with the audience segmentation
+audience insights
+
+677
+00:47:44,024 --> 00:47:48,028
+an audience to targeting I had becomes
+I'd workbench
+
+678
+00:47:48,028 --> 00:47:51,081
+becomes a complete solution you cannot
+
+679
+00:47:51,081 --> 00:47:54,125
+only for acquire new users a new
+customers
+
+680
+00:47:55,025 --> 00:47:58,634
+you can now understand your existing
+users
+
+681
+00:47:58,859 --> 00:48:02,750
+and he engaged with them to grow your
+business
+
+682
+00:48:02,075 --> 00:48:06,083
+what is coming will be introducing to
+new ad formats
+
+683
+00:48:06,083 --> 00:48:09,090
+this phone interstitial ads
+
+684
+00:48:09,009 --> 00:48:13,018
+we can also call is full screen banners
+and medium rectangle
+
+685
+00:48:13,099 --> 00:48:16,183
+article as and Rec bodies ad formats
+
+686
+00:48:17,083 --> 00:48:20,102
+will be available on iPad as well as on
+iPhone
+
+687
+00:48:21,002 --> 00:48:25,017
+soviet-backed you'll have for at formats
+to choose
+
+688
+00:48:25,017 --> 00:48:28,065
+banner ads video ads
+
+689
+00:48:28,065 --> 00:48:31,152
+and officials an Amtrak
+
+690
+00:48:32,052 --> 00:48:36,149
+the next is gonna continue enhancing the
+I had were bent API's
+
+691
+00:48:37,049 --> 00:48:40,146
+willing to use I don't want API 2.0
+which will give you a full
+
+692
+00:48:41,046 --> 00:48:45,058
+read/write campaign creation capability
+
+693
+00:48:45,058 --> 00:48:48,103
+so if you work with a demand-side
+partner article as DSP
+
+694
+00:48:49,003 --> 00:48:53,087
+you can now have your DSP plug into I'd
+workbench
+
+695
+00:48:53,087 --> 00:48:56,104
+and create and manage campaigns on your
+behalf
+
+696
+00:48:57,004 --> 00:49:01,011
+from the own you I an interface that's a
+move to words programed buying
+
+697
+00:49:01,074 --> 00:49:05,081
+automated way of booking campaigns and
+managing them
+
+698
+00:49:05,081 --> 00:49:08,570
+from your own UI blood supply to APIs
+for segmentation that we talked about
+
+699
+00:49:09,299 --> 00:49:09,980
+Justin
+
+700
+00:49:09,098 --> 00:49:12,957
+a little bit ago and finally be
+continued that you expansion
+
+701
+00:49:13,839 --> 00:49:17,600
+be going more countries and then as but
+would think that we have in plans for
+
+702
+00:49:17,006 --> 00:49:19,070
+you
+
+703
+00:49:20,024 --> 00:49:23,099
+suitors to summarize you use at the sign
+the demos in Troy the talk
+
+704
+00:49:23,099 --> 00:49:28,198
+i'd workbenches the simplest way for you
+to reach Apple users
+
+705
+00:49:29,089 --> 00:49:32,310
+it's very powerful and it's open to
+everyone
+
+706
+00:49:32,031 --> 00:49:35,040
+so if you haven't tried workbench yet
+
+707
+00:49:35,004 --> 00:49:38,056
+go to i'd workbench for Apple dot com
+and login
+
+708
+00:49:38,092 --> 00:49:42,156
+but just your Apple ID make sure you
+take advantage of the API's that be
+
+709
+00:49:43,056 --> 00:49:44,123
+review today
+
+710
+00:49:45,023 --> 00:49:49,402
+the new art form at the probable down
+and coming in phone
+
+711
+00:49:49,609 --> 00:49:54,680
+and finally the key thing make sure you
+enable you up
+
+712
+00:49:54,068 --> 00:49:59,247
+for segmentation you can get those free
+insights that we just talked about
+
+713
+00:49:59,859 --> 00:50:03,950
+and you cannot sorry engage with your
+current customers
+
+714
+00:50:03,095 --> 00:50:07,120
+if you have more questions please reach
+out to our evangelistic
+
+715
+00:50:08,002 --> 00:50:11,024
+Mike Malone have
+
+716
+00:50:11,042 --> 00:50:14,095
+lot of documentation
+
+717
+00:50:14,095 --> 00:50:17,154
+on I had online want but help
+
+718
+00:50:18,054 --> 00:50:23,106
+and you can also find us in the Apple
+Developer Forum
+
+719
+00:50:24,006 --> 00:50:26,015
+there was a session but is very related
+to what some other things that we talk
+
+720
+00:50:26,096 --> 00:50:26,150
+about
+
+721
+00:50:27,005 --> 00:50:31,058
+today it was yesterday in case if you
+mess that make sure you watch it later
+
+722
+00:50:32,003 --> 00:50:33,051
+on
+
+723
+00:50:33,051 --> 00:50:36,096
+in that session we talked about how to
+use the API for segmentation
+
+724
+00:50:36,096 --> 00:50:39,135
+so if you're interested in that make
+sure you you take a look at that
+
+725
+00:50:40,035 --> 00:50:42,131
+that said thank you and have a great WTC
+
